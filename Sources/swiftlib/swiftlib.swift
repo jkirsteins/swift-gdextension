@@ -1,10 +1,55 @@
 import godot
 
-class TestClass {
-    let name: String
-    init(name: String) {
-        self.name = name
-        print("Initializing Swift TestClass: \(name)")
+struct SwiftSprite2D : GDClass {
+    
+//    let _owner: UnsafeRawPointer? = nil
+    
+    static var className = Swift.String(describing: Self.self)
+    static var parentName = "Sprite2D"
+    
+    static var gClassName = StringName(String(className))
+    static var gParentName = StringName(String(parentName))
+    
+    static func createInstance() -> SwiftSprite2D {
+        SwiftSprite2D()
+    }
+}
+
+//protocol GDClassProtocol {
+//    var _owner: UnsafeRawPointer? { get }
+//}
+
+protocol GDClass {
+    static var className: Swift.String { get }
+    static var parentName: Swift.String { get }
+    
+    static var gClassName: StringName { get }
+    static var gParentName: StringName { get }
+    
+    static func createInstance() -> Self
+}
+
+class ClassUserMetadata {
+    let type: Any.Type
+    let memoryLayoutSize: Int
+    
+    let className: Swift.String
+    let parentName: Swift.String
+    
+    let gClassName: StringName
+    let gParentName: StringName
+    
+    let createInstance: ()->any GDClass
+    
+    init<T: GDClass>(type: T.Type) {
+        self.type = type
+        self.memoryLayoutSize = MemoryLayout<T>.size
+        self.className = T.className
+        self.parentName = T.parentName
+        self.gClassName = T.gClassName
+        self.gParentName = T.gParentName
+        self.createInstance = { T.createInstance() }
+        print("Creating meta for", self)
     }
 }
 
@@ -16,9 +61,6 @@ let global_initialize: (@convention(c) (_ userdata: UnsafeMutableRawPointer?, _ 
     
     StringName.initialize_class()
     
-    var name = StringName(GString("SwiftSprite2D"))
-    var parentName = StringName(GString("Sprite2D"))
-    
     var toString: GDExtensionClassToString = {
         instPtr, optExtBool, optStringPtr in
         
@@ -27,19 +69,60 @@ let global_initialize: (@convention(c) (_ userdata: UnsafeMutableRawPointer?, _ 
     }
     
     var create: GDExtensionClassCreateInstance = {
-        _userdata in
+        opaqueUserdata in
         
-        print("entered create")
-        fatalError("fatal create")
+        guard let opaqueUserdata = opaqueUserdata else {
+            fatalError("Can not create when no user data passed")
+        }
+        let i = ensure_interface()
+        
+        // TODO: test if `free` crashes if we take retained here
+        let classUser: ClassUserMetadata = Unmanaged.fromOpaque(opaqueUserdata).takeUnretainedValue()
+        
+//        memalloc
+        
+        var _name = classUser.gClassName
+        var _parentName = classUser.gParentName
+        
+        print("Allocating base")
+        let basePtr = i.pointee.classdb_construct_object(_parentName._native_ptr())
+        
+        print("Done, allocating instance")
+        
+        let currentInstance: UnsafeMutablePointer<any GDClass> = .allocate(capacity: 1)
+        currentInstance.initialize(to: classUser.createInstance())
+        print("Allocated", currentInstance)
+        
+        print("Setting instance", currentInstance)
+        i.pointee.object_set_instance(basePtr, _name._native_ptr(), currentInstance)
+        
+        // callbacks
+        print("Setting instance binding")
+//        i.pointee.object_set_instance_binding(basePtr, gde_library, currentInstance, nil)
+        print("Done")
+        
+        return basePtr
     }
     
     var free: GDExtensionClassFreeInstance = {
-        _userdata, _instancePtr in
+        opaqueUserdata, _instancePtr in
         
-        print("entered free")
-        fatalError("fatal free")
+        guard let opaqueUserdata = opaqueUserdata else {
+            fatalError("Can not free when no user data passed")
+        }
+        
+        let classUser: ClassUserMetadata = Unmanaged.fromOpaque(opaqueUserdata).takeRetainedValue()
+        
+        let instancePtr: UnsafeMutablePointer<any GDClass> = .init(OpaquePointer(_instancePtr)!)
+        print("Deallocating", instancePtr)
+        instancePtr.deallocate()
     }
 
+    let user = ClassUserMetadata(type: SwiftSprite2D.self)
+    let opaqueUser = Unmanaged.passRetained(user).toOpaque()
+    
+    
+    
     var cci = GDExtensionClassCreationInfo(
         is_virtual: 0,
         is_abstract: 0,
@@ -57,12 +140,14 @@ let global_initialize: (@convention(c) (_ userdata: UnsafeMutableRawPointer?, _ 
         free_instance_func: free,
         get_virtual_func: nil,
         get_rid_func: nil,
-        class_userdata: nil)
+        class_userdata: opaqueUser)
     
     if p_level == GDEXTENSION_INITIALIZATION_SCENE {
-        print("==== REGISTERING CLASS \(name) \(name._native_ptr()) ====")
+        print("==== REGISTERING CLASS ====")
         gde_interface!.pointee.classdb_register_extension_class(
-            gde_library, name._native_ptr(), parentName._native_ptr(), &cci
+            gde_library,
+            SwiftSprite2D.gClassName._native_ptr(),
+            SwiftSprite2D.gParentName._native_ptr(), &cci
         )
         print("==== AFTER REGISTERING ====")
     }
