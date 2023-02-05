@@ -141,7 +141,7 @@ struct ExtensionApi_NativeStructure: Codable {
 
 struct ExtensionApi: Codable
 {
-    var header: ExtensionApi_Header
+    let header: ExtensionApi_Header
     let builtin_class_sizes: [ExtensionApi_BuiltinClassSizeConfiguration]
     let builtin_class_member_offsets: [ExtensionApi_BuiltinClassMemberOffsetsConfiguration]
     let global_constants: [ExtensionApi_GlobalConstant]

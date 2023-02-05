@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <class name="StringName" version="4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
 	<brief_description>
+	brief yo
 	</brief_description>
 	<description>
+	desc
 	</description>
 	<tutorials>
 	</tutorials>
 	<constructors>
 		<constructor name="StringName">
 			<return type="StringName" />
-			<description>
-			</description>
-		</constructor>
-		<constructor name="StringName">
-			<return type="StringName" />
-			<param index="0" name="from" type="StringName" />
-			<description>
-			</description>
-		</constructor>
-		<constructor name="StringName">
-			<return type="StringName" />
-			<param index="0" name="from" type="String" />
-			<description>
+			<description>My desc
 			</description>
 		</constructor>
 	</constructors>
