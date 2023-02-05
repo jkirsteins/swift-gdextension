@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="Transform2D" version="4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<constructors>
+		<constructor name="Transform2D">
+			<return type="Transform2D" />
+			<description>
+			</description>
+		</constructor>
+		<constructor name="Transform2D">
+			<return type="Transform2D" />
+			<param index="0" name="from" type="Transform2D" />
+			<description>
+			</description>
+		</constructor>
+		<constructor name="Transform2D">
+			<return type="Transform2D" />
+			<param index="0" name="rotation" type="float" />
+			<param index="1" name="position" type="Vector2" />
+			<description>
+			</description>
+		</constructor>
+		<constructor name="Transform2D">
+			<return type="Transform2D" />
+			<param index="0" name="rotation" type="float" />
+			<param index="1" name="scale" type="Vector2" />
+			<param index="2" name="skew" type="float" />
+			<param index="3" name="position" type="Vector2" />
+			<description>
+			</description>
+		</constructor>
+		<constructor name="Transform2D">
+			<return type="Transform2D" />
+			<param index="0" name="x_axis" type="Vector2" />
+			<param index="1" name="y_axis" type="Vector2" />
+			<param index="2" name="origin" type="Vector2" />
+			<description>
+			</description>
+		</constructor>
+	</constructors>
+	<methods>
+		<method name="affine_inverse" qualifiers="const">
+			<return type="Transform2D" />
+			<description>
+			</description>
+		</method>
+		<method name="basis_xform" qualifiers="const">
+			<return type="Vector2" />
+			<param index="0" name="v" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="basis_xform_inv" qualifiers="const">
+			<return type="Vector2" />
+			<param index="0" name="v" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="get_origin" qualifiers="const">
+			<return type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="get_rotation" qualifiers="const">
+			<return type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="get_scale" qualifiers="const">
+			<return type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="get_skew" qualifiers="const">
+			<return type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="interpolate_with" qualifiers="const">
+			<return type="Transform2D" />
+			<param index="0" name="xform" type="Transform2D" />
+			<param index="1" name="weight" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="inverse" qualifiers="const">
+			<return type="Transform2D" />
+			<description>
+			</description>
+		</method>
+		<method name="is_equal_approx" qualifiers="const">
+			<return type="bool" />
+			<param index="0" name="xform" type="Transform2D" />
+			<description>
+			</description>
+		</method>
+		<method name="is_finite" qualifiers="const">
+			<return type="bool" />
+			<description>
+			</description>
+		</method>
+		<method name="looking_at" qualifiers="const">
+			<return type="Transform2D" />
+			<param index="0" name="target" type="Vector2" default="Vector2(0, 0)" />
+			<description>
+			</description>
+		</method>
+		<method name="orthonormalized" qualifiers="const">
+			<return type="Transform2D" />
+			<description>
+			</description>
+		</method>
+		<method name="rotated" qualifiers="const">
+			<return type="Transform2D" />
+			<param index="0" name="angle" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="rotated_local" qualifiers="const">
+			<return type="Transform2D" />
+			<param index="0" name="angle" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="scaled" qualifiers="const">
+			<return type="Transform2D" />
+			<param index="0" name="scale" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="scaled_local" qualifiers="const">
+			<return type="Transform2D" />
+			<param index="0" name="scale" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="translated" qualifiers="const">
+			<return type="Transform2D" />
+			<param index="0" name="offset" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="translated_local" qualifiers="const">
+			<return type="Transform2D" />
+			<param index="0" name="offset" type="Vector2" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="origin" type="Vector2" setter="" getter="" default="Vector2(0, 0)">
+		</member>
+		<member name="x" type="Vector2" setter="" getter="" default="Vector2(1, 0)">
+		</member>
+		<member name="y" type="Vector2" setter="" getter="" default="Vector2(0, 1)">
+		</member>
+	</members>
+	<constants>
+		<constant name="IDENTITY" value="Transform2D(1, 0, 0, 1, 0, 0)">
+		</constant>
+		<constant name="FLIP_X" value="Transform2D(-1, 0, 0, 1, 0, 0)">
+		</constant>
+		<constant name="FLIP_Y" value="Transform2D(1, 0, 0, -1, 0, 0)">
+		</constant>
+	</constants>
+	<operators>
+		<operator name="operator !=">
+			<return type="bool" />
+			<param index="0" name="right" type="Transform2D" />
+			<description>
+			</description>
+		</operator>
+		<operator name="operator *">
+			<return type="PackedVector2Array" />
+			<param index="0" name="right" type="PackedVector2Array" />
+			<description>
+			</description>
+		</operator>
+		<operator name="operator *">
+			<return type="Rect2" />
+			<param index="0" name="right" type="Rect2" />
+			<description>
+			</description>
+		</operator>
+		<operator name="operator *">
+			<return type="Transform2D" />
+			<param index="0" name="right" type="Transform2D" />
+			<description>
+			</description>
+		</operator>
+		<operator name="operator *">
+			<return type="Vector2" />
+			<param index="0" name="right" type="Vector2" />
+			<description>
+			</description>
+		</operator>
+		<operator name="operator *">
+			<return type="Transform2D" />
+			<param index="0" name="right" type="float" />
+			<description>
+			</description>
+		</operator>
+		<operator name="operator *">
+			<return type="Transform2D" />
+			<param index="0" name="right" type="int" />
+			<description>
+			</description>
+		</operator>
+		<operator name="operator ==">
+			<return type="bool" />
+			<param index="0" name="right" type="Transform2D" />
+			<description>
+			</description>
+		</operator>
+		<operator name="operator []">
+			<return type="Vector2" />
+			<param index="0" name="index" type="int" />
+			<description>
+			</description>
+		</operator>
+	</operators>
+</class>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="Rect2i" version="4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<constructors>
+		<constructor name="Rect2i">
+			<return type="Rect2i" />
+			<description>
+			</description>
+		</constructor>
+		<constructor name="Rect2i">
+			<return type="Rect2i" />
+			<param index="0" name="from" type="Rect2i" />
+			<description>
+			</description>
+		</constructor>
+		<constructor name="Rect2i">
+			<return type="Rect2i" />
+			<param index="0" name="from" type="Rect2" />
+			<description>
+			</description>
+		</constructor>
+		<constructor name="Rect2i">
+			<return type="Rect2i" />
+			<param index="0" name="position" type="Vector2i" />
+			<param index="1" name="size" type="Vector2i" />
+			<description>
+			</description>
+		</constructor>
+		<constructor name="Rect2i">
+			<return type="Rect2i" />
+			<param index="0" name="x" type="int" />
+			<param index="1" name="y" type="int" />
+			<param index="2" name="width" type="int" />
+			<param index="3" name="height" type="int" />
+			<description>
+			</description>
+		</constructor>
+	</constructors>
+	<methods>
+		<method name="abs" qualifiers="const">
+			<return type="Rect2i" />
+			<description>
+			</description>
+		</method>
+		<method name="encloses" qualifiers="const">
+			<return type="bool" />
+			<param index="0" name="b" type="Rect2i" />
+			<description>
+			</description>
+		</method>
+		<method name="expand" qualifiers="const">
+			<return type="Rect2i" />
+			<param index="0" name="to" type="Vector2i" />
+			<description>
+			</description>
+		</method>
+		<method name="get_area" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_center" qualifiers="const">
+			<return type="Vector2i" />
+			<description>
+			</description>
+		</method>
+		<method name="grow" qualifiers="const">
+			<return type="Rect2i" />
+			<param index="0" name="amount" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="grow_individual" qualifiers="const">
+			<return type="Rect2i" />
+			<param index="0" name="left" type="int" />
+			<param index="1" name="top" type="int" />
+			<param index="2" name="right" type="int" />
+			<param index="3" name="bottom" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="grow_side" qualifiers="const">
+			<return type="Rect2i" />
+			<param index="0" name="side" type="int" />
+			<param index="1" name="amount" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="has_area" qualifiers="const">
+			<return type="bool" />
+			<description>
+			</description>
+		</method>
+		<method name="has_point" qualifiers="const">
+			<return type="bool" />
+			<param index="0" name="point" type="Vector2i" />
+			<description>
+			</description>
+		</method>
+		<method name="intersection" qualifiers="const">
+			<return type="Rect2i" />
+			<param index="0" name="b" type="Rect2i" />
+			<description>
+			</description>
+		</method>
+		<method name="intersects" qualifiers="const">
+			<return type="bool" />
+			<param index="0" name="b" type="Rect2i" />
+			<description>
+			</description>
+		</method>
+		<method name="merge" qualifiers="const">
+			<return type="Rect2i" />
+			<param index="0" name="b" type="Rect2i" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="end" type="Vector2i" setter="" getter="" default="Vector2i(0, 0)">
+		</member>
+		<member name="position" type="Vector2i" setter="" getter="" default="Vector2i(0, 0)">
+		</member>
+		<member name="size" type="Vector2i" setter="" getter="" default="Vector2i(0, 0)">
+		</member>
+	</members>
+	<operators>
+		<operator name="operator !=">
+			<return type="bool" />
+			<param index="0" name="right" type="Rect2i" />
+			<description>
+			</description>
+		</operator>
+		<operator name="operator ==">
+			<return type="bool" />
+			<param index="0" name="right" type="Rect2i" />
+			<description>
+			</description>
+		</operator>
+	</operators>
+</class>

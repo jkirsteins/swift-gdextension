@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="AABB" version="4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<constructors>
+		<constructor name="AABB">
+			<return type="AABB" />
+			<description>
+			</description>
+		</constructor>
+		<constructor name="AABB">
+			<return type="AABB" />
+			<param index="0" name="from" type="AABB" />
+			<description>
+			</description>
+		</constructor>
+		<constructor name="AABB">
+			<return type="AABB" />
+			<param index="0" name="position" type="Vector3" />
+			<param index="1" name="size" type="Vector3" />
+			<description>
+			</description>
+		</constructor>
+	</constructors>
+	<methods>
+		<method name="abs" qualifiers="const">
+			<return type="AABB" />
+			<description>
+			</description>
+		</method>
+		<method name="encloses" qualifiers="const">
+			<return type="bool" />
+			<param index="0" name="with" type="AABB" />
+			<description>
+			</description>
+		</method>
+		<method name="expand" qualifiers="const">
+			<return type="AABB" />
+			<param index="0" name="to_point" type="Vector3" />
+			<description>
+			</description>
+		</method>
+		<method name="get_center" qualifiers="const">
+			<return type="Vector3" />
+			<description>
+			</description>
+		</method>
+		<method name="get_endpoint" qualifiers="const">
+			<return type="Vector3" />
+			<param index="0" name="idx" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_longest_axis" qualifiers="const">
+			<return type="Vector3" />
+			<description>
+			</description>
+		</method>
+		<method name="get_longest_axis_index" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_longest_axis_size" qualifiers="const">
+			<return type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="get_shortest_axis" qualifiers="const">
+			<return type="Vector3" />
+			<description>
+			</description>
+		</method>
+		<method name="get_shortest_axis_index" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_shortest_axis_size" qualifiers="const">
+			<return type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="get_support" qualifiers="const">
+			<return type="Vector3" />
+			<param index="0" name="dir" type="Vector3" />
+			<description>
+			</description>
+		</method>
+		<method name="get_volume" qualifiers="const">
+			<return type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="grow" qualifiers="const">
+			<return type="AABB" />
+			<param index="0" name="by" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="has_point" qualifiers="const">
+			<return type="bool" />
+			<param index="0" name="point" type="Vector3" />
+			<description>
+			</description>
+		</method>
+		<method name="has_surface" qualifiers="const">
+			<return type="bool" />
+			<description>
+			</description>
+		</method>
+		<method name="has_volume" qualifiers="const">
+			<return type="bool" />
+			<description>
+			</description>
+		</method>
+		<method name="intersection" qualifiers="const">
+			<return type="AABB" />
+			<param index="0" name="with" type="AABB" />
+			<description>
+			</description>
+		</method>
+		<method name="intersects" qualifiers="const">
+			<return type="bool" />
+			<param index="0" name="with" type="AABB" />
+			<description>
+			</description>
+		</method>
+		<method name="intersects_plane" qualifiers="const">
+			<return type="bool" />
+			<param index="0" name="plane" type="Plane" />
+			<description>
+			</description>
+		</method>
+		<method name="intersects_ray" qualifiers="const">
+			<return type="Variant" />
+			<param index="0" name="from" type="Vector3" />
+			<param index="1" name="dir" type="Vector3" />
+			<description>
+			</description>
+		</method>
+		<method name="intersects_segment" qualifiers="const">
+			<return type="Variant" />
+			<param index="0" name="from" type="Vector3" />
+			<param index="1" name="to" type="Vector3" />
+			<description>
+			</description>
+		</method>
+		<method name="is_equal_approx" qualifiers="const">
+			<return type="bool" />
+			<param index="0" name="aabb" type="AABB" />
+			<description>
+			</description>
+		</method>
+		<method name="is_finite" qualifiers="const">
+			<return type="bool" />
+			<description>
+			</description>
+		</method>
+		<method name="merge" qualifiers="const">
+			<return type="AABB" />
+			<param index="0" name="with" type="AABB" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="end" type="Vector3" setter="" getter="" default="Vector3(0, 0, 0)">
+		</member>
+		<member name="position" type="Vector3" setter="" getter="" default="Vector3(0, 0, 0)">
+		</member>
+		<member name="size" type="Vector3" setter="" getter="" default="Vector3(0, 0, 0)">
+		</member>
+	</members>
+	<operators>
+		<operator name="operator !=">
+			<return type="bool" />
+			<param index="0" name="right" type="AABB" />
+			<description>
+			</description>
+		</operator>
+		<operator name="operator *">
+			<return type="AABB" />
+			<param index="0" name="right" type="Transform3D" />
+			<description>
+			</description>
+		</operator>
+		<operator name="operator ==">
+			<return type="bool" />
+			<param index="0" name="right" type="AABB" />
+			<description>
+			</description>
+		</operator>
+	</operators>
+</class>

@@ -1,0 +1,5 @@
+module godot_native {
+    header "gdextension_interface.h"
+    // link "sqlite3"
+    export *
+}

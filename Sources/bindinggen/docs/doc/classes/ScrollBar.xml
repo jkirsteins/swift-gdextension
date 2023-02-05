@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="ScrollBar" inherits="Range" version="4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<members>
+		<member name="custom_step" type="float" setter="set_custom_step" getter="get_custom_step" default="-1.0">
+		</member>
+		<member name="step" type="float" setter="set_step" getter="get_step" overrides="Range" default="0.0" />
+	</members>
+	<signals>
+		<signal name="scrolling">
+			<description>
+			</description>
+		</signal>
+	</signals>
+</class>

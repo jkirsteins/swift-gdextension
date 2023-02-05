@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="Signal" version="4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<constructors>
+		<constructor name="Signal">
+			<return type="Signal" />
+			<description>
+			</description>
+		</constructor>
+		<constructor name="Signal">
+			<return type="Signal" />
+			<param index="0" name="from" type="Signal" />
+			<description>
+			</description>
+		</constructor>
+		<constructor name="Signal">
+			<return type="Signal" />
+			<param index="0" name="object" type="Object" />
+			<param index="1" name="signal" type="StringName" />
+			<description>
+			</description>
+		</constructor>
+	</constructors>
+	<methods>
+		<method name="connect">
+			<return type="int" />
+			<param index="0" name="callable" type="Callable" />
+			<param index="1" name="flags" type="int" default="0" />
+			<description>
+			</description>
+		</method>
+		<method name="disconnect">
+			<return type="void" />
+			<param index="0" name="callable" type="Callable" />
+			<description>
+			</description>
+		</method>
+		<method name="emit" qualifiers="vararg const">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="get_connections" qualifiers="const">
+			<return type="Array" />
+			<description>
+			</description>
+		</method>
+		<method name="get_name" qualifiers="const">
+			<return type="StringName" />
+			<description>
+			</description>
+		</method>
+		<method name="get_object" qualifiers="const">
+			<return type="Object" />
+			<description>
+			</description>
+		</method>
+		<method name="get_object_id" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="is_connected" qualifiers="const">
+			<return type="bool" />
+			<param index="0" name="callable" type="Callable" />
+			<description>
+			</description>
+		</method>
+		<method name="is_null" qualifiers="const">
+			<return type="bool" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<operators>
+		<operator name="operator !=">
+			<return type="bool" />
+			<param index="0" name="right" type="Signal" />
+			<description>
+			</description>
+		</operator>
+		<operator name="operator ==">
+			<return type="bool" />
+			<param index="0" name="right" type="Signal" />
+			<description>
+			</description>
+		</operator>
+	</operators>
+</class>

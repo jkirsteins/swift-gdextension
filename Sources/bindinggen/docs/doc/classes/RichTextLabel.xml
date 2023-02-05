@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="RichTextLabel" inherits="Control" version="4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="add_image">
+			<return type="void" />
+			<param index="0" name="image" type="Texture2D" />
+			<param index="1" name="width" type="int" default="0" />
+			<param index="2" name="height" type="int" default="0" />
+			<param index="3" name="color" type="Color" default="Color(1, 1, 1, 1)" />
+			<param index="4" name="inline_align" type="int" enum="InlineAlignment" default="5" />
+			<param index="5" name="region" type="Rect2" default="Rect2(0, 0, 0, 0)" />
+			<description>
+			</description>
+		</method>
+		<method name="add_text">
+			<return type="void" />
+			<param index="0" name="text" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="append_text">
+			<return type="void" />
+			<param index="0" name="bbcode" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="clear">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="deselect">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="get_character_line">
+			<return type="int" />
+			<param index="0" name="character" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_character_paragraph">
+			<return type="int" />
+			<param index="0" name="character" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_content_height" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_content_width" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_line_count" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_line_offset">
+			<return type="float" />
+			<param index="0" name="line" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_menu" qualifiers="const">
+			<return type="PopupMenu" />
+			<description>
+			</description>
+		</method>
+		<method name="get_paragraph_count" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_paragraph_offset">
+			<return type="float" />
+			<param index="0" name="paragraph" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_parsed_text" qualifiers="const">
+			<return type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_selected_text" qualifiers="const">
+			<return type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_selection_from" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_selection_to" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_total_character_count" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_v_scroll_bar">
+			<return type="VScrollBar" />
+			<description>
+			</description>
+		</method>
+		<method name="get_visible_line_count" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_visible_paragraph_count" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="install_effect">
+			<return type="void" />
+			<param index="0" name="effect" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="is_menu_visible" qualifiers="const">
+			<return type="bool" />
+			<description>
+			</description>
+		</method>
+		<method name="is_ready" qualifiers="const">
+			<return type="bool" />
+			<description>
+			</description>
+		</method>
+		<method name="newline">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="parse_bbcode">
+			<return type="void" />
+			<param index="0" name="bbcode" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="parse_expressions_for_values">
+			<return type="Dictionary" />
+			<param index="0" name="expressions" type="PackedStringArray" />
+			<description>
+			</description>
+		</method>
+		<method name="pop">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="push_bgcolor">
+			<return type="void" />
+			<param index="0" name="bgcolor" type="Color" />
+			<description>
+			</description>
+		</method>
+		<method name="push_bold">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="push_bold_italics">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="push_cell">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="push_color">
+			<return type="void" />
+			<param index="0" name="color" type="Color" />
+			<description>
+			</description>
+		</method>
+		<method name="push_customfx">
+			<return type="void" />
+			<param index="0" name="effect" type="RichTextEffect" />
+			<param index="1" name="env" type="Dictionary" />
+			<description>
+			</description>
+		</method>
+		<method name="push_dropcap">
+			<return type="void" />
+			<param index="0" name="string" type="String" />
+			<param index="1" name="font" type="Font" />
+			<param index="2" name="size" type="int" />
+			<param index="3" name="dropcap_margins" type="Rect2" default="Rect2(0, 0, 0, 0)" />
+			<param index="4" name="color" type="Color" default="Color(1, 1, 1, 1)" />
+			<param index="5" name="outline_size" type="int" default="0" />
+			<param index="6" name="outline_color" type="Color" default="Color(0, 0, 0, 0)" />
+			<description>
+			</description>
+		</method>
+		<method name="push_fgcolor">
+			<return type="void" />
+			<param index="0" name="fgcolor" type="Color" />
+			<description>
+			</description>
+		</method>
+		<method name="push_font">
+			<return type="void" />
+			<param index="0" name="font" type="Font" />
+			<param index="1" name="font_size" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="push_font_size">
+			<return type="void" />
+			<param index="0" name="font_size" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="push_hint">
+			<return type="void" />
+			<param index="0" name="description" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="push_indent">
+			<return type="void" />
+			<param index="0" name="level" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="push_italics">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="push_list">
+			<return type="void" />
+			<param index="0" name="level" type="int" />
+			<param index="1" name="type" type="int" enum="RichTextLabel.ListType" />
+			<param index="2" name="capitalize" type="bool" />
+			<description>
+			</description>
+		</method>
+		<method name="push_meta">
+			<return type="void" />
+			<param index="0" name="data" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="push_mono">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="push_normal">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="push_outline_color">
+			<return type="void" />
+			<param index="0" name="color" type="Color" />
+			<description>
+			</description>
+		</method>
+		<method name="push_outline_size">
+			<return type="void" />
+			<param index="0" name="outline_size" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="push_paragraph">
+			<return type="void" />
+			<param index="0" name="alignment" type="int" enum="HorizontalAlignment" />
+			<param index="1" name="base_direction" type="int" enum="Control.TextDirection" default="0" />
+			<param index="2" name="language" type="String" default="&quot;&quot;" />
+			<param index="3" name="st_parser" type="int" enum="TextServer.StructuredTextParser" default="0" />
+			<description>
+			</description>
+		</method>
+		<method name="push_strikethrough">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="push_table">
+			<return type="void" />
+			<param index="0" name="columns" type="int" />
+			<param index="1" name="inline_align" type="int" enum="InlineAlignment" default="0" />
+			<param index="2" name="align_to_row" type="int" default="-1" />
+			<description>
+			</description>
+		</method>
+		<method name="push_underline">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="remove_paragraph">
+			<return type="bool" />
+			<param index="0" name="paragraph" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="scroll_to_line">
+			<return type="void" />
+			<param index="0" name="line" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="scroll_to_paragraph">
+			<return type="void" />
+			<param index="0" name="paragraph" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="scroll_to_selection">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="select_all">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="set_cell_border_color">
+			<return type="void" />
+			<param index="0" name="color" type="Color" />
+			<description>
+			</description>
+		</method>
+		<method name="set_cell_padding">
+			<return type="void" />
+			<param index="0" name="padding" type="Rect2" />
+			<description>
+			</description>
+		</method>
+		<method name="set_cell_row_background_color">
+			<return type="void" />
+			<param index="0" name="odd_row_bg" type="Color" />
+			<param index="1" name="even_row_bg" type="Color" />
+			<description>
+			</description>
+		</method>
+		<method name="set_cell_size_override">
+			<return type="void" />
+			<param index="0" name="min_size" type="Vector2" />
+			<param index="1" name="max_size" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="set_table_column_expand">
+			<return type="void" />
+			<param index="0" name="column" type="int" />
+			<param index="1" name="expand" type="bool" />
+			<param index="2" name="ratio" type="int" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="autowrap_mode" type="int" setter="set_autowrap_mode" getter="get_autowrap_mode" enum="TextServer.AutowrapMode" default="3">
+		</member>
+		<member name="bbcode_enabled" type="bool" setter="set_use_bbcode" getter="is_using_bbcode" default="false">
+		</member>
+		<member name="clip_contents" type="bool" setter="set_clip_contents" getter="is_clipping_contents" overrides="Control" default="true" />
+		<member name="context_menu_enabled" type="bool" setter="set_context_menu_enabled" getter="is_context_menu_enabled" default="false">
+		</member>
+		<member name="custom_effects" type="Array" setter="set_effects" getter="get_effects" default="[]">
+		</member>
+		<member name="deselect_on_focus_loss_enabled" type="bool" setter="set_deselect_on_focus_loss_enabled" getter="is_deselect_on_focus_loss_enabled" default="true">
+		</member>
+		<member name="fit_content" type="bool" setter="set_fit_content" getter="is_fit_content_enabled" default="false">
+		</member>
+		<member name="hint_underlined" type="bool" setter="set_hint_underline" getter="is_hint_underlined" default="true">
+		</member>
+		<member name="language" type="String" setter="set_language" getter="get_language" default="&quot;&quot;">
+		</member>
+		<member name="meta_underlined" type="bool" setter="set_meta_underline" getter="is_meta_underlined" default="true">
+		</member>
+		<member name="progress_bar_delay" type="int" setter="set_progress_bar_delay" getter="get_progress_bar_delay" default="1000">
+		</member>
+		<member name="scroll_active" type="bool" setter="set_scroll_active" getter="is_scroll_active" default="true">
+		</member>
+		<member name="scroll_following" type="bool" setter="set_scroll_follow" getter="is_scroll_following" default="false">
+		</member>
+		<member name="selection_enabled" type="bool" setter="set_selection_enabled" getter="is_selection_enabled" default="false">
+		</member>
+		<member name="shortcut_keys_enabled" type="bool" setter="set_shortcut_keys_enabled" getter="is_shortcut_keys_enabled" default="true">
+		</member>
+		<member name="structured_text_bidi_override" type="int" setter="set_structured_text_bidi_override" getter="get_structured_text_bidi_override" enum="TextServer.StructuredTextParser" default="0">
+		</member>
+		<member name="structured_text_bidi_override_options" type="Array" setter="set_structured_text_bidi_override_options" getter="get_structured_text_bidi_override_options" default="[]">
+		</member>
+		<member name="tab_size" type="int" setter="set_tab_size" getter="get_tab_size" default="4">
+		</member>
+		<member name="text" type="String" setter="set_text" getter="get_text" default="&quot;&quot;">
+		</member>
+		<member name="text_direction" type="int" setter="set_text_direction" getter="get_text_direction" enum="Control.TextDirection" default="0">
+		</member>
+		<member name="threaded" type="bool" setter="set_threaded" getter="is_threaded" default="false">
+		</member>
+		<member name="visible_characters" type="int" setter="set_visible_characters" getter="get_visible_characters" default="-1">
+		</member>
+		<member name="visible_characters_behavior" type="int" setter="set_visible_characters_behavior" getter="get_visible_characters_behavior" enum="TextServer.VisibleCharactersBehavior" default="0">
+		</member>
+		<member name="visible_ratio" type="float" setter="set_visible_ratio" getter="get_visible_ratio" default="1.0">
+		</member>
+	</members>
+	<signals>
+		<signal name="finished">
+			<description>
+			</description>
+		</signal>
+		<signal name="meta_clicked">
+			<param index="0" name="meta" type="Variant" />
+			<description>
+			</description>
+		</signal>
+		<signal name="meta_hover_ended">
+			<param index="0" name="meta" type="Variant" />
+			<description>
+			</description>
+		</signal>
+		<signal name="meta_hover_started">
+			<param index="0" name="meta" type="Variant" />
+			<description>
+			</description>
+		</signal>
+	</signals>
+	<constants>
+		<constant name="LIST_NUMBERS" value="0" enum="ListType">
+		</constant>
+		<constant name="LIST_LETTERS" value="1" enum="ListType">
+		</constant>
+		<constant name="LIST_ROMAN" value="2" enum="ListType">
+		</constant>
+		<constant name="LIST_DOTS" value="3" enum="ListType">
+		</constant>
+		<constant name="ITEM_FRAME" value="0" enum="ItemType">
+		</constant>
+		<constant name="ITEM_TEXT" value="1" enum="ItemType">
+		</constant>
+		<constant name="ITEM_IMAGE" value="2" enum="ItemType">
+		</constant>
+		<constant name="ITEM_NEWLINE" value="3" enum="ItemType">
+		</constant>
+		<constant name="ITEM_FONT" value="4" enum="ItemType">
+		</constant>
+		<constant name="ITEM_FONT_SIZE" value="5" enum="ItemType">
+		</constant>
+		<constant name="ITEM_FONT_FEATURES" value="6" enum="ItemType">
+		</constant>
+		<constant name="ITEM_COLOR" value="7" enum="ItemType">
+		</constant>
+		<constant name="ITEM_OUTLINE_SIZE" value="8" enum="ItemType">
+		</constant>
+		<constant name="ITEM_OUTLINE_COLOR" value="9" enum="ItemType">
+		</constant>
+		<constant name="ITEM_UNDERLINE" value="10" enum="ItemType">
+		</constant>
+		<constant name="ITEM_STRIKETHROUGH" value="11" enum="ItemType">
+		</constant>
+		<constant name="ITEM_PARAGRAPH" value="12" enum="ItemType">
+		</constant>
+		<constant name="ITEM_INDENT" value="13" enum="ItemType">
+		</constant>
+		<constant name="ITEM_LIST" value="14" enum="ItemType">
+		</constant>
+		<constant name="ITEM_TABLE" value="15" enum="ItemType">
+		</constant>
+		<constant name="ITEM_FADE" value="16" enum="ItemType">
+		</constant>
+		<constant name="ITEM_SHAKE" value="17" enum="ItemType">
+		</constant>
+		<constant name="ITEM_WAVE" value="18" enum="ItemType">
+		</constant>
+		<constant name="ITEM_TORNADO" value="19" enum="ItemType">
+		</constant>
+		<constant name="ITEM_RAINBOW" value="20" enum="ItemType">
+		</constant>
+		<constant name="ITEM_BGCOLOR" value="21" enum="ItemType">
+		</constant>
+		<constant name="ITEM_FGCOLOR" value="22" enum="ItemType">
+		</constant>
+		<constant name="ITEM_META" value="23" enum="ItemType">
+		</constant>
+		<constant name="ITEM_HINT" value="24" enum="ItemType">
+		</constant>
+		<constant name="ITEM_DROPCAP" value="25" enum="ItemType">
+		</constant>
+		<constant name="ITEM_CUSTOMFX" value="26" enum="ItemType">
+		</constant>
+	</constants>
+	<theme_items>
+		<theme_item name="default_color" data_type="color" type="Color" default="Color(1, 1, 1, 1)">
+		</theme_item>
+		<theme_item name="font_outline_color" data_type="color" type="Color" default="Color(1, 1, 1, 1)">
+		</theme_item>
+		<theme_item name="font_selected_color" data_type="color" type="Color" default="Color(0, 0, 0, 0)">
+		</theme_item>
+		<theme_item name="font_shadow_color" data_type="color" type="Color" default="Color(0, 0, 0, 0)">
+		</theme_item>
+		<theme_item name="selection_color" data_type="color" type="Color" default="Color(0.1, 0.1, 1, 0.8)">
+		</theme_item>
+		<theme_item name="table_border" data_type="color" type="Color" default="Color(0, 0, 0, 0)">
+		</theme_item>
+		<theme_item name="table_even_row_bg" data_type="color" type="Color" default="Color(0, 0, 0, 0)">
+		</theme_item>
+		<theme_item name="table_odd_row_bg" data_type="color" type="Color" default="Color(0, 0, 0, 0)">
+		</theme_item>
+		<theme_item name="line_separation" data_type="constant" type="int" default="0">
+		</theme_item>
+		<theme_item name="outline_size" data_type="constant" type="int" default="0">
+		</theme_item>
+		<theme_item name="shadow_offset_x" data_type="constant" type="int" default="1">
+		</theme_item>
+		<theme_item name="shadow_offset_y" data_type="constant" type="int" default="1">
+		</theme_item>
+		<theme_item name="shadow_outline_size" data_type="constant" type="int" default="1">
+		</theme_item>
+		<theme_item name="table_h_separation" data_type="constant" type="int" default="3">
+		</theme_item>
+		<theme_item name="table_v_separation" data_type="constant" type="int" default="3">
+		</theme_item>
+		<theme_item name="text_highlight_h_padding" data_type="constant" type="int" default="3">
+		</theme_item>
+		<theme_item name="text_highlight_v_padding" data_type="constant" type="int" default="3">
+		</theme_item>
+		<theme_item name="bold_font" data_type="font" type="Font">
+		</theme_item>
+		<theme_item name="bold_italics_font" data_type="font" type="Font">
+		</theme_item>
+		<theme_item name="italics_font" data_type="font" type="Font">
+		</theme_item>
+		<theme_item name="mono_font" data_type="font" type="Font">
+		</theme_item>
+		<theme_item name="normal_font" data_type="font" type="Font">
+		</theme_item>
+		<theme_item name="bold_font_size" data_type="font_size" type="int">
+		</theme_item>
+		<theme_item name="bold_italics_font_size" data_type="font_size" type="int">
+		</theme_item>
+		<theme_item name="italics_font_size" data_type="font_size" type="int">
+		</theme_item>
+		<theme_item name="mono_font_size" data_type="font_size" type="int">
+		</theme_item>
+		<theme_item name="normal_font_size" data_type="font_size" type="int">
+		</theme_item>
+		<theme_item name="focus" data_type="style" type="StyleBox">
+		</theme_item>
+		<theme_item name="normal" data_type="style" type="StyleBox">
+		</theme_item>
+	</theme_items>
+</class>

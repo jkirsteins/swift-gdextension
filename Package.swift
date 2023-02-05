@@ -23,12 +23,16 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .systemLibrary(name: "godot"),
+        .systemLibrary(name: "godot-native"),
         .target(name: "bindinggen", resources: [
-            .process("extension_api.json")]),
+            .copy("extension_api.json"),
+            .copy("docs/")]),
         .target(
             name: "swiftlib",
             dependencies: ["godot"]),
+        .target(
+            name: "godot",
+            dependencies: ["godot-native"]),
         .testTarget(
             name: "swiftlibTests",
             dependencies: ["swiftlib"]),

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="HSlider" inherits="Slider" version="4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<theme_items>
+		<theme_item name="grabber_offset" data_type="constant" type="int" default="0">
+		</theme_item>
+		<theme_item name="grabber" data_type="icon" type="Texture2D">
+		</theme_item>
+		<theme_item name="grabber_disabled" data_type="icon" type="Texture2D">
+		</theme_item>
+		<theme_item name="grabber_highlight" data_type="icon" type="Texture2D">
+		</theme_item>
+		<theme_item name="tick" data_type="icon" type="Texture2D">
+		</theme_item>
+		<theme_item name="grabber_area" data_type="style" type="StyleBox">
+		</theme_item>
+		<theme_item name="grabber_area_highlight" data_type="style" type="StyleBox">
+		</theme_item>
+		<theme_item name="slider" data_type="style" type="StyleBox">
+		</theme_item>
+	</theme_items>
+</class>

@@ -1,5 +1,0 @@
-module godot {
-    header "gdextension_interface.h"
-    // link "sqlite3"
-    export *
-}

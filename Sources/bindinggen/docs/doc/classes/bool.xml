@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="bool" version="4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<constructors>
+		<constructor name="bool">
+			<return type="bool" />
+			<description>
+			</description>
+		</constructor>
+		<constructor name="bool">
+			<return type="bool" />
+			<param index="0" name="from" type="bool" />
+			<description>
+			</description>
+		</constructor>
+		<constructor name="bool">
+			<return type="bool" />
+			<param index="0" name="from" type="float" />
+			<description>
+			</description>
+		</constructor>
+		<constructor name="bool">
+			<return type="bool" />
+			<param index="0" name="from" type="int" />
+			<description>
+			</description>
+		</constructor>
+	</constructors>
+	<operators>
+		<operator name="operator !=">
+			<return type="bool" />
+			<param index="0" name="right" type="bool" />
+			<description>
+			</description>
+		</operator>
+		<operator name="operator &lt;">
+			<return type="bool" />
+			<param index="0" name="right" type="bool" />
+			<description>
+			</description>
+		</operator>
+		<operator name="operator ==">
+			<return type="bool" />
+			<param index="0" name="right" type="bool" />
+			<description>
+			</description>
+		</operator>
+		<operator name="operator &gt;">
+			<return type="bool" />
+			<param index="0" name="right" type="bool" />
+			<description>
+			</description>
+		</operator>
+	</operators>
+</class>

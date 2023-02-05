@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="HSplitContainer" inherits="SplitContainer" version="4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<theme_items>
+		<theme_item name="autohide" data_type="constant" type="int" default="1">
+		</theme_item>
+		<theme_item name="minimum_grab_thickness" data_type="constant" type="int" default="6">
+		</theme_item>
+		<theme_item name="separation" data_type="constant" type="int" default="12">
+		</theme_item>
+		<theme_item name="grabber" data_type="icon" type="Texture2D">
+		</theme_item>
+	</theme_items>
+</class>

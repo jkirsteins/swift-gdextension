@@ -1,4 +1,5 @@
 import godot
+import godot_native
 
 struct SwiftSprite2D : GDClass {
     
@@ -18,16 +19,6 @@ struct SwiftSprite2D : GDClass {
 //protocol GDClassProtocol {
 //    var _owner: UnsafeRawPointer? { get }
 //}
-
-protocol GDClass {
-    static var className: Swift.String { get }
-    static var parentName: Swift.String { get }
-    
-    static var gClassName: StringName { get }
-    static var gParentName: StringName { get }
-    
-    static func createInstance() -> Self
-}
 
 class ClassUserMetadata {
     let type: Any.Type
@@ -59,7 +50,18 @@ let global_initialize: (@convention(c) (_ userdata: UnsafeMutableRawPointer?, _ 
         fatalError("NO INTERFACE")
     }
     
-    StringName.initialize_class()
+    print("p_level", p_level)
+    if p_level == GDEXTENSION_INITIALIZATION_SCENE {//} GDEXTENSION_INITIALIZATION_CORE {
+        print("Initializing class bindings")
+        initialize_classes(true)
+        return
+    }
+    
+    if p_level == GDEXTENSION_INITIALIZATION_CORE {
+        print("Initializing class constructors")
+        initialize_classes(false)
+        return
+    }
     
     var toString: GDExtensionClassToString = {
         instPtr, optExtBool, optStringPtr in
@@ -74,7 +76,7 @@ let global_initialize: (@convention(c) (_ userdata: UnsafeMutableRawPointer?, _ 
         guard let opaqueUserdata = opaqueUserdata else {
             fatalError("Can not create when no user data passed")
         }
-        let i = ensure_interface()
+        let i = gde_interface!
         
         // TODO: test if `free` crashes if we take retained here
         let classUser: ClassUserMetadata = Unmanaged.fromOpaque(opaqueUserdata).takeUnretainedValue()
@@ -157,9 +159,6 @@ let global_deinitialize: (@convention(c) (_ userdata: UnsafeMutableRawPointer?, 
     print("deinitialize from swift", p_level);
 }
 
-var gde_interface: UnsafeMutablePointer<godot.GDExtensionInterface>? = nil
-var gde_library: GDExtensionClassLibraryPtr? = nil
-
 @_cdecl("godot_extension_entry")
 func hello_extension_entry(
     p_interface: UnsafeMutablePointer<GDExtensionInterface>,
@@ -170,8 +169,7 @@ func hello_extension_entry(
     r_initialization.pointee.initialize = global_initialize
     r_initialization.pointee.deinitialize = global_deinitialize
     
-    gde_interface = p_interface
-    gde_library = p_library
+    godot.register_interface(p_interface, p_library)
     
     print("Entry point called")
     return 1;
