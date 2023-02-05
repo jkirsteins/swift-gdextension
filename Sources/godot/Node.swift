@@ -10,14 +10,12 @@ import godot_native
 extension ClassInitializer {
     static func initializeMethodBindings_Node() {
         let _nameStr1 = String(Swift.String(describing: Node.self))
-        let _name = StringName(_nameStr1)
+        let _name = StringName(from: _nameStr1)
         
         let _nameStr2 = String("\(Swift.String(describing: Node.self))\0")
-        let _name2 = StringName(_nameStr2)
+        let _name2 = StringName(from: _nameStr2)
         
-        let _addChild = StringName(String("add_child"))
-        let _addChild2 = StringName(String("add_child_2"))
-        print("Testing add_child native backing", _nameStr1.toNative().count, _nameStr2.toNative().count,  String("add_child").toNative())
+        let _addChild = StringName(from: "add_child")
         
         print("====== 1")
         Node._method_binding__add_child__3070154285 = Node.interface.pointee.classdb_get_method_bind(
@@ -26,17 +24,7 @@ extension ClassInitializer {
             3070154285)
         print("Got binding", Node._method_binding__add_child__3070154285)
         assert(Node._method_binding__add_child__3070154285 != nil, "Node.add_child could not be bound")
-        print("====== 2")
-        var t2 = Node.interface.pointee.classdb_get_method_bind(
-            _name._native_ptr(),
-            _addChild2._native_ptr(),
-            3070154285)
-        var t = Node.interface.pointee.classdb_get_method_bind(
-            _name._native_ptr(),
-            _addChild._native_ptr(),
-            30701)
         
-        print(t2, t, Node._method_binding__add_child__3070154285)
     }
     
     static func initializeConstructorBindings_Node() {

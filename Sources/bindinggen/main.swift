@@ -36,6 +36,10 @@ for builtin_class in decodedData.builtin_classes {
         continue
     }
     
-    export_builtin_class(builtin_class, decodedData)
+    export_builtin_class(
+        builtin_class,
+        builtin_sizes,
+        builtin_member_offsets,
+        decodedData)
 }
 

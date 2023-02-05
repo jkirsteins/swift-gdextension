@@ -8,8 +8,8 @@ struct SwiftSprite2D : GDClass {
     static var className = Swift.String(describing: Self.self)
     static var parentName = "Sprite2D"
     
-    static var gClassName = StringName(String(className))
-    static var gParentName = StringName(String(parentName))
+    static var gClassName = StringName(from: String(className))
+    static var gParentName = StringName(from: String(parentName))
     
     static func createInstance() -> SwiftSprite2D {
         SwiftSprite2D()

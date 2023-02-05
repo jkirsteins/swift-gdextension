@@ -10,7 +10,7 @@ import godot_native
 
 typealias GString = String
 
-extension String {
+extension StringOld {
     /// Create a native Swift `String` based on the Godot string's backing data
     /// - Returns: `Swift.String`
     public func toNative() -> Swift.String {
@@ -46,13 +46,13 @@ extension ClassInitializer {
     }
     
     static func initializeConstructorBindings_String() {
-        String._method_bindings__destructor =  String.interface.pointee.variant_get_ptr_destructor(
+        StringOld._method_bindings__destructor =  StringOld.interface.pointee.variant_get_ptr_destructor(
             GDEXTENSION_VARIANT_TYPE_STRING
         )
     }
 }
 
-public class String : BuiltinClass {
+public class StringOld : BuiltinClass {
     
     public static let SIZE = 8;
     
