@@ -3,14 +3,14 @@
 import Foundation
 import godot_native
 
-class __GodotName {
-    
-}
-
 public class Wrapped : Class
 {
     public class func initialize_class() {
-        
+        fatalError("Do not initialize Wrapped class")
+    }
+    
+    public class func create(from ptr: UnsafeRawPointer) -> Object {
+        fatalError("Do not initialize Wrapped directly")
     }
     
     public class var SIZE: Int { 0 }
@@ -26,10 +26,13 @@ public class Wrapped : Class
     public let opaque: UnsafeMutableRawPointer
 //    UnsafeMutablePointer<>
     
-//    init() {
-//        let opaque: UnsafeMutableBufferPointer<UInt8> = .allocate(capacity: Self.SIZE)
-//        self.opaque = .init(OpaquePointer(opaque.baseAddress!))
-//    }
+    init(from unsafe: UnsafeRawPointer) {
+        self.opaque = .init(mutating: unsafe)
+    }
+    
+    init(from unsafe: UnsafeMutableRawPointer) {
+        self.opaque = unsafe
+    }
     
     init(type: StringName) {
         self.opaque = Self.interface.pointee.classdb_construct_object(type._native_ptr())!

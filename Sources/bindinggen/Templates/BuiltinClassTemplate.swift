@@ -9,7 +9,7 @@ fileprivate var __godot_name_${className}: StringName! = nil
 
 ${classDoc}
 public class ${classNameWithParents} {
-    public class var __godot_name: ${className} { __godot_name_${className} }
+    public class var __godot_name: StringName { __godot_name_${className} }
 
     public static let SIZE = ${classSize};
 

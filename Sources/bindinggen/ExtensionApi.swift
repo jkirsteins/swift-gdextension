@@ -119,6 +119,27 @@ struct ExtensionApi_Class: Codable {
     let inherits: Swift.String?
     let api_type: Swift.String
     let enums: [ExtensionApi_Class_Enum]?
+    let methods: [ExtensionApi_Class_Method]?
+}
+
+struct ExtensionApi_Class_Method_ReturnValue: Codable {
+    let type: String
+}
+
+struct ExtensionApi_Class_Method_Arg: Codable {
+    let name: String
+    let type: String
+}
+
+struct ExtensionApi_Class_Method: Codable {
+    let name: String
+    let is_const: Bool
+    let is_vararg: Bool
+    let is_static: Bool
+    let is_virtual: Bool
+    let hash: Int?
+    let return_value: ExtensionApi_Class_Method_ReturnValue?
+    let arguments: [ExtensionApi_Class_Method_Arg]?
 }
 
 typealias ExtensionApi_Class_Enum = _ExtensionApi_SharedEnum

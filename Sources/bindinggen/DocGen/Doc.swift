@@ -4,7 +4,7 @@ import Foundation
 func get_docs(_ name: String) -> Doc? {
     let res = "docs/doc/classes/\(name)"
     guard let dataUrl = Bundle.module.url(forResource: res, withExtension: "xml") else {
-        fatalError("\(res) not found")
+//        fatalError("\(res) not found")
         return nil
     }
     let xmlData = try! Data(contentsOf: dataUrl)

@@ -5,15 +5,15 @@ import godot_native
 fileprivate var __godot_name_StringName: StringName! = nil
 
 /// An optimized string type for unique names.
-///
+/// 
 /// [StringName]s are immutable strings designed for general-purpose representation of unique names (also called "string interning"). [StringName] ensures that only one instance of a given name exists (so two [StringName]s with the same value are the same object). Comparing them is much faster than with regular [String]s, because only the pointers are compared, not the whole strings.
-///
+///  
 /// You will usually just pass a [String] to methods expecting a [StringName] and it will be automatically converted, but you may occasionally want to construct a [StringName] ahead of time with [StringName] or, in GDScript, the literal syntax [code]&"example"[/code].
-///
+///  
 /// See also [NodePath], which is a similar concept specifically designed to store pre-parsed node paths.
-///
+///  
 /// Some string methods have corresponding variations. Variations suffixed with [code]n[/code] ([method countn], [method findn], [method replacen], etc.) are [b]case-insensitive[/b] (they make no distinction between uppercase and lowercase letters). Method variations prefixed with [code]r[/code] ([method rfind], [method rsplit], etc.) are reversed, and start from the end of the string, instead of the beginning.
-///
+///  
 /// [b]Note:[/b] In a boolean context, a [StringName] will evaluate to [code]false[/code] if it is empty ([code]StringName("")[/code]). Otherwise, a [StringName] will always evaluate to [code]true[/code].
 public class StringName : BuiltinClass {
     public class var __godot_name: StringName { __godot_name_StringName }
