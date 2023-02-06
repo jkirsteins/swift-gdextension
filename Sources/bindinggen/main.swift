@@ -27,11 +27,16 @@ guard let builtin_member_offsets = decodedData.builtin_class_member_offsets.firs
 
 print("==> Builtin classes")
 for builtin_class in decodedData.builtin_classes {
+    // denylist - use the native types for these
     guard !["int", "float", "bool", "String", "Nil"].contains(builtin_class.name) else {
         print("    skipping \(builtin_class.name)")
         continue
     }
-    guard ["StringName"].contains(builtin_class.name) else {
+    
+    // allowlist
+    guard [
+        "StringName"
+    ].contains(builtin_class.name) else {
         print("    skipping \(builtin_class.name)")
         continue
     }
@@ -40,6 +45,21 @@ for builtin_class in decodedData.builtin_classes {
         builtin_class,
         builtin_sizes,
         builtin_member_offsets,
+        decodedData)
+}
+
+print("==> Classes")
+for godot_class in decodedData.classes {
+    // allowlist
+    guard [
+        "Node"
+    ].contains(godot_class.name) else {
+        print("    skipping \(godot_class.name)")
+        continue
+    }
+    
+    export_godot_class(
+        godot_class,
         decodedData)
 }
 

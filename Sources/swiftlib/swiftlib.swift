@@ -53,13 +53,13 @@ let global_initialize: (@convention(c) (_ userdata: UnsafeMutableRawPointer?, _ 
     print("p_level", p_level)
     if p_level == GDEXTENSION_INITIALIZATION_SCENE {//} GDEXTENSION_INITIALIZATION_CORE {
         print("Initializing class bindings")
-        initialize_classes(true)
+        initialize_classes(false)
         return
     }
     
     if p_level == GDEXTENSION_INITIALIZATION_CORE {
         print("Initializing class constructors")
-        initialize_classes(false)
+        initialize_classes(true)
         return
     }
     

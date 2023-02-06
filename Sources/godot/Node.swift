@@ -7,6 +7,8 @@
 
 import godot_native
 
+
+
 extension ClassInitializer {
     static func initializeMethodBindings_Node() {
         let _nameStr1 = String(Swift.String(describing: Node.self))

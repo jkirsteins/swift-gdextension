@@ -17,14 +17,18 @@ public protocol GDClass {
     static func createInstance() -> Self
 }
 
-public protocol BuiltinClass : Class { }
+public protocol BuiltinClass : Class {
+    static var SIZE: Int { get }
+}
 
 public protocol Class {
-    static var SIZE: Int { get }
+    static var __godot_name: StringName { get }
     
-    var opaque: UnsafeMutableBufferPointer<UInt8> { get }
+    var opaque: UnsafeMutableRawPointer { get }
     
     func _native_ptr() -> GDExtensionTypePtr
+    
+    static func initialize_class()
 }
 
 extension Class {
@@ -40,7 +44,7 @@ extension Class {
     }
     
     public func _native_ptr() -> GDExtensionTypePtr {
-        return .init(opaque.baseAddress!)
+        return opaque
     }
 }
 

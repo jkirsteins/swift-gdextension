@@ -11,14 +11,10 @@ public func register_interface(
     gde_library = p_library
 }
 
-public func initialize_classes(_ bindings: Bool) {
-    if (bindings) {
-        ClassInitializer.initializeMethodBindings_Node()
-        ClassInitializer.initializeMethodBindings_StringName()
-        ClassInitializer.initializeMethodBindings_String()
+public func initialize_classes(_ builtin: Bool) {
+    if (!builtin) {
+        Node.initialize_class()
     } else {
-        ClassInitializer.initializeConstructorBindings_Node()
-        ClassInitializer.initializeConstructorBindings_StringName()
-        ClassInitializer.initializeConstructorBindings_String()
+        StringName.initialize_class()
     }
 }
