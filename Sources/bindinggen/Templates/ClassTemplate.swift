@@ -133,16 +133,40 @@ fileprivate func instanceMethod(_ method: ExtensionApi_Class_Method, _ sizes: Ex
     let argMarshal: String
     
     func _sanitizeType(_ type: String) -> String {
-        let clean = type.replacingOccurrences(of: "enum::", with: "")
-        return remapType[clean] ?? clean
+        let typedArray = "typedarray::"
+        let enumStr = "enum::"
+        let bitField = "bitfield::"
+        
+        var isArray = false
+        
+        var clean = type
+        if clean.starts(with: typedArray) {
+            isArray = true
+            clean = String(clean[clean.index(clean.startIndex, offsetBy: typedArray.count)...])
+        } else if clean.starts(with: enumStr) {
+            clean = String(clean[clean.index(clean.startIndex, offsetBy: enumStr.count)...])
+        } else if clean.starts(with: bitField) {
+            clean = String(clean[clean.index(clean.startIndex, offsetBy: bitField.count)...])
+        } else if clean.contains(":") {
+            fatalError("Not sure how to sanitize type \(type)")
+        }
+        let resultType = remapType[clean] ?? clean
+        return isArray ? "[\(resultType)]" : resultType
     }
     
+    var resultType: String? = nil
     if let rv = method.return_value {
         returnSig = " -> \(_sanitizeType(rv.type))"
+        resultType = _sanitizeType(rv.type)
     } else {
         returnSig = ""
     }
     
+    // from marshal section
+    var indentAmount = 4
+    var indent = String(repeating: " ", count: indentAmount)
+    var closeMarshalledNests = 0
+
     if let rawArgs = method.arguments {
         let args = rawArgs.map { kvp in
             ExtensionApi_Class_Method_Arg(
@@ -150,25 +174,47 @@ fileprivate func instanceMethod(_ method: ExtensionApi_Class_Method, _ sizes: Ex
                     type: _sanitizeType(kvp.type))
         }
         let marshalled = args.filter({ $0.type == "String" }).map { $0.name }
+        let marshalSuffix = [
+            "String": "nativeStr",
+            "Int64": "nativeInt64",
+            "Bool": "nativeBool",
+            "Float64": "nativeFloat64",
+        ]
         
         func _prepMarshalledStrings() -> String {
             var res = [String]()
-            let indent = "    "
-            for marsh in marshalled {
-                res.append("\(indent)let \(marsh)_nativeStr = \(marsh)._create_native__kept()")
-                res.append("\(indent)defer { \(marsh)_nativeStr.deallocate() }")
+            for marsh in args {
+                
+                guard let marshalSuffix = marshalSuffix[marsh.type] else {
+                    continue
+                }
+                
+                if (marshalSuffix == "nativeStr") {
+                    res.append("\(indent)let \(marsh.name)_\(marshalSuffix) = \(marsh.name)._create_native__kept()")
+                    res.append("\(indent)defer { \(marsh.name)_\(marshalSuffix).deallocate() }")
+                } else if (marshalSuffix == "nativeInt64" || marshalSuffix == "nativeFloat64" || marshalSuffix == "nativeBool") {
+                    
+                    closeMarshalledNests += 1
+                    indentAmount *= 2
+                    indent = String(repeating: " ", count: indentAmount)
+                    
+                    res.append("withUnsafePointer(to: \(marsh.name)) { \(marsh.name)_\(marshalSuffix) in ")
+                } else {
+                    fatalError("Unknown marshal suffix: \(marshalSuffix)")
+                }
             }
+            
             guard res.count > 0 else { return "" }
             let result = res.joined(separator: "\n")
-            return String(result[result.index(result.startIndex, offsetBy: indent.count)...])
+            return String(result[result.index(result.startIndex, offsetBy: 0)...])
         }
         
         argCount = args.count
         argMarshal = _prepMarshalledStrings()
         argSig = args.map { "\($0.name): \($0.type)" }
         argInit = args.map { arg in
-            if marshalled.contains(arg.name) {
-                return "\(arg.name)_nativeStr"
+            if let marshalSuffix = marshalSuffix[arg.type] {
+                return ".init(\(arg.name)_\(marshalSuffix))"
             } else {
                 return ".init(\(arg.name)._native_ptr())"
             }
@@ -180,16 +226,42 @@ fileprivate func instanceMethod(_ method: ExtensionApi_Class_Method, _ sizes: Ex
         argMarshal = ""
     }
     
-    let lines = """
+    var lines = """
 public func \(method.name)(\(argSig.joined(separator: ", "))) \(returnSig) {
     \(argMarshal)
-    let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: \(argCount))
-    defer { args.deallocate() }
-    _ = args.initialize(from: [
-        \(argInit.joined(separator: ", "))
-    ])
-}
+\(indent)let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: \(argCount))
+\(indent)defer { args.deallocate() }
+\(indent)_ = args.initialize(from: [
+\(indent)    \(argInit.joined(separator: ", "))
+\(indent)])
+
+\(indent)// call here
+
+    \(resultType == nil ? "" : "var res: UnsafeRawPointer")
+    \(resultType == nil ? "" : "withUnsafeMutablePointer(to: &res) { resPtr in ")
+
+self.interface.pointee.object_method_bind_ptrcall(
+    Self._method_\(method.name)_\(method.hash ?? 0),
+    self._native_ptr(),
+    args.baseAddress!,
+    \(resultType == nil ? "nil" : "resPtr")
+)
+
+        \(resultType == nil ? "" : "}")
+    
+        \(resultType == nil ? "" : "return \(resultType!)(from: res)")
+
 """.split(separator: "\n").map { String($0) }
+    
+    for _ in 0..<closeMarshalledNests {
+        indentAmount /= 2
+        indent = String(repeating: " ", count: indentAmount)
+        
+        lines.append("\(indent)}")
+    }
+    
+    lines.append("}")
+    
     
     return MultiLineRenderable(lines: lines, indent: 0, prefix: nil)
 }
@@ -204,10 +276,37 @@ fileprivate let instanceMethods: RenderFunc = {
     return MultiLineRenderable(lines: lines, indent: 4, prefix: nil)
 }
 
+fileprivate func renderBitfieldEnum(_ en: ExtensionApi_Class_Enum) -> any Renderable
+{
+    guard en.is_bitfield else {
+        return renderEnum(en)
+    }
+    
+    let enumCases = en.values.map {
+        if $0.value == 0 {
+            return "static let \($0.name): \(en.name) = []"
+        } else {
+            return "static let \($0.name) = \(en.name)(rawValue: \($0.value))"
+        }
+    }
+    
+    return """
+public struct \(en.name): OptionSet {
+    public let rawValue: Int32
+
+    public init(rawValue: Int32) {
+        self.rawValue = rawValue
+    }
+
+    \(MultiLineRenderable(lines: enumCases, indent: 4, prefix: nil).render())
+}
+"""
+}
+
 fileprivate func renderEnum(_ en: ExtensionApi_Class_Enum) -> any Renderable
 {
     guard !en.is_bitfield else {
-        fatalError("bitfield enums not implemented")
+        return renderBitfieldEnum(en)
     }
     
     let enumCases = en.values.map {

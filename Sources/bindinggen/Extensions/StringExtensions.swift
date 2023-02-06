@@ -8,6 +8,10 @@ extension String {
     }
     
     func titlecasedWords() -> [String] {
+        // TODO: proper string transforms
+        if self == "AABB" {
+            return [self] }
+        
         return self.replacingOccurrences(of: "([A-Z])", with: " $1", options: .regularExpression, range: self.range(of: self))
             .trimmingCharacters(in: .whitespacesAndNewlines)
             .split(separator: " ")

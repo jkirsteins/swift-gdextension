@@ -34,8 +34,9 @@ for builtin_class in decodedData.builtin_classes {
     }
     
     // allowlist
-    guard [
-        "StringName"
+    let allowAll = false
+    guard allowAll || [
+        
     ].contains(builtin_class.name) else {
         print("    skipping \(builtin_class.name)")
         continue
@@ -51,16 +52,15 @@ for builtin_class in decodedData.builtin_classes {
 print("==> Classes")
 for godot_class in decodedData.classes {
     // allowlist
-//    guard [
-//        "Object",
-//        "Node",
-//        "Sprite2D",
-//        "Node2D",
-//        "CanvasItem"
-//    ].contains(godot_class.name) else {
-//        print("    skipping \(godot_class.name)")
-//        continue
-//    }
+    let allowAll = false
+    guard allowAll || [
+        "Node",
+        "Sprite2D",
+        "Node2D"
+    ].contains(godot_class.name) else {
+        print("    skipping \(godot_class.name)")
+        continue
+    }
     
     export_godot_class(
         godot_class,

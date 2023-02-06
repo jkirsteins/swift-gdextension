@@ -109,7 +109,7 @@ fileprivate let class_init_deinit_assign: RenderFunc =
 fileprivate var initializers: RenderFunc = {
     sut, sizeItem, api, doc in
     
-    let constr_inits: [MultiLineRenderable] = sut.constructors.map { c in
+    var constr_inits: [MultiLineRenderable] = sut.constructors.map { c in
         let args = (c.arguments ?? [])
 
         let marshalled = args.filter({ $0.type == "String" }).map { $0.name }
@@ -175,6 +175,18 @@ public init(\(argSig.joined(separator: ", "))) {
 }
 """.split(separator: "\n").map { String($0) }, indent: 0, prefix: nil)
     }
+    
+    let fromPtr = MultiLineRenderable(lines: """
+    init(from unsafe: UnsafeRawPointer) {
+        self.opaque = .init(mutating: unsafe)
+    }
+    
+    init(from unsafe: UnsafeMutableRawPointer) {
+        self.opaque = unsafe
+    }
+""".split(separator: "\n").map { String($0) }, indent: 0, prefix: nil)
+    
+    constr_inits.append(fromPtr)
     
     return MultiLineRenderable(lines: constr_inits,
                                indent: 4,
