@@ -13,8 +13,8 @@ public class ${classNameWithParents} {
 
     public static let SIZE = ${classSize};
 
-    public let opaque: UnsafeMutableRawPointer = .allocate(byteCount: SIZE, alignment: 4)
-
+    public let opaque: UnsafeMutableRawPointer
+    
     ${staticConstructorDestructorDecl}
 
     public class func initialize_class() {
@@ -112,6 +112,8 @@ fileprivate var initializers: RenderFunc = {
     var constr_inits: [MultiLineRenderable] = sut.constructors.map { c in
         let args = (c.arguments ?? [])
 
+        // TODO: unify type marshalling w class/builtinclass
+        
         let marshalled = args.filter({ $0.type == "String" }).map { $0.name }
 
         func _prepMarshalledStrings() -> String {
@@ -126,7 +128,7 @@ fileprivate var initializers: RenderFunc = {
             return String(result[result.index(result.startIndex, offsetBy: indent.count)...])
         }
 
-        let argSig = args.map { "\($0.name): \($0.type)" }
+        let argSig = args.map { "\($0.name): \(_sanitizeType($0.type))" }
         let argInit = args.map { arg in
             if marshalled.contains(arg.name) {
                 return "\(arg.name)_nativeStr"
@@ -164,6 +166,8 @@ fileprivate var initializers: RenderFunc = {
             ], indent: 0, prefix: "/// ")
         ] + """
 public init(\(argSig.joined(separator: ", "))) {
+    self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
+
     \(_prepMarshalledStrings())
 
     let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: \(args.count))

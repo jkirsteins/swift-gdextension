@@ -36,7 +36,14 @@ for builtin_class in decodedData.builtin_classes {
     // allowlist
     let allowAll = false
     guard allowAll || [
-        
+        "StringName",
+        "PackedStringArray",
+        "NodePath",
+        "Vector2",
+        "Vector2i",
+        "CanvasItem",
+        "Array",
+        "Variant"
     ].contains(builtin_class.name) else {
         print("    skipping \(builtin_class.name)")
         continue
@@ -54,9 +61,8 @@ for godot_class in decodedData.classes {
     // allowlist
     let allowAll = false
     guard allowAll || [
-        "Node",
-        "Sprite2D",
-        "Node2D"
+        "Object",
+        "Node"
     ].contains(godot_class.name) else {
         print("    skipping \(godot_class.name)")
         continue

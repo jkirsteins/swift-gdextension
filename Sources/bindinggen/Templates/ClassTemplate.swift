@@ -7,6 +7,34 @@
 
 import Foundation
 
+let remapType: [String:String] = [
+    "bool": "Bool",
+    "float": "Float64",
+    "int": "Int64"
+]
+
+func _sanitizeType(_ type: String) -> String {
+    let typedArray = "typedarray::"
+    let enumStr = "enum::"
+    let bitField = "bitfield::"
+    
+    var isArray = false
+    
+    var clean = type
+    if clean.starts(with: typedArray) {
+        isArray = true
+        clean = String(clean[clean.index(clean.startIndex, offsetBy: typedArray.count)...])
+    } else if clean.starts(with: enumStr) {
+        clean = String(clean[clean.index(clean.startIndex, offsetBy: enumStr.count)...])
+    } else if clean.starts(with: bitField) {
+        clean = String(clean[clean.index(clean.startIndex, offsetBy: bitField.count)...])
+    } else if clean.contains(":") {
+        fatalError("Not sure how to sanitize type \(type)")
+    }
+    let resultType = remapType[clean] ?? clean
+    return isArray ? "[\(resultType)]" : resultType
+}
+
 fileprivate let template = """
 import godot_native
 
@@ -120,39 +148,11 @@ fileprivate func instanceMethod(_ method: ExtensionApi_Class_Method, _ sizes: Ex
         fatalError("Proper native type sizing not implemented")
     }
     
-    let remapType: [String:String] = [
-        "bool": "Bool",
-        "float": "Float64",
-        "int": "Int64"
-    ]
-    
     let returnSig: String
     let argSig: [String]
     let argInit: [String]
     let argCount: Int
     let argMarshal: String
-    
-    func _sanitizeType(_ type: String) -> String {
-        let typedArray = "typedarray::"
-        let enumStr = "enum::"
-        let bitField = "bitfield::"
-        
-        var isArray = false
-        
-        var clean = type
-        if clean.starts(with: typedArray) {
-            isArray = true
-            clean = String(clean[clean.index(clean.startIndex, offsetBy: typedArray.count)...])
-        } else if clean.starts(with: enumStr) {
-            clean = String(clean[clean.index(clean.startIndex, offsetBy: enumStr.count)...])
-        } else if clean.starts(with: bitField) {
-            clean = String(clean[clean.index(clean.startIndex, offsetBy: bitField.count)...])
-        } else if clean.contains(":") {
-            fatalError("Not sure how to sanitize type \(type)")
-        }
-        let resultType = remapType[clean] ?? clean
-        return isArray ? "[\(resultType)]" : resultType
-    }
     
     var resultType: String? = nil
     if let rv = method.return_value {
