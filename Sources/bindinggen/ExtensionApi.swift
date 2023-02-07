@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct _ExtensionApi_SharedEnum: Codable {
+struct _ExtensionApi_SharedEnum: Codable, GodotEnum {
     let name: Swift.String
-    let is_bitfield: Bool
+    let is_bitfield: Bool?
     let values: [_ExtensionApi_SharedEnum_Value]
 }
 
-struct _ExtensionApi_SharedEnum_Value: Codable {
+struct _ExtensionApi_SharedEnum_Value: Codable, GodotEnumValue {
     let name: Swift.String
     let value: Int
 }
@@ -92,7 +92,10 @@ struct ExtensionApi_BuiltinClass: Codable {
     let operators: [ExtensionApi_BuiltinClass_Operator]
     let constructors: [ExtensionApi_BuiltinClass_Constructor]
     let has_destructor: Bool
+    let enums: [ExtensionApi_BuiltinClass_Enum]?
 }
+
+typealias ExtensionApi_BuiltinClass_Enum = ExtensionApi_Class_Enum
 
 struct ExtensionApi_BuiltinClass_Operator: Codable {
     let name: Swift.String
@@ -100,12 +103,12 @@ struct ExtensionApi_BuiltinClass_Operator: Codable {
     let return_type: Swift.String
 }
 
-struct ExtensionApi_BuiltinClass_Constructor: Codable {
+struct ExtensionApi_BuiltinClass_Constructor: Codable, Constructor {
     let index: Int
     let arguments: [ExtensionApi_BuiltinClass_Constructor_Argument]?
 }
 
-struct ExtensionApi_BuiltinClass_Constructor_Argument: Codable {
+struct ExtensionApi_BuiltinClass_Constructor_Argument: Codable, MethodArgument {
     let name: Swift.String
     let type: Swift.String
 }
@@ -126,12 +129,37 @@ struct ExtensionApi_Class_Method_ReturnValue: Codable {
     let type: String
 }
 
-struct ExtensionApi_Class_Method_Arg: Codable {
+protocol MethodArgument {
+    var name: String { get }
+    var type: String { get }
+}
+
+struct ExtensionApi_Class_Method_Arg: Codable, MethodArgument {
     let name: String
     let type: String
 }
 
-struct ExtensionApi_Class_Method: Codable {
+protocol Constructor {
+    associatedtype Argument: MethodArgument
+    
+    var index: Int { get }
+    var arguments: [Argument]? { get }
+}
+
+protocol Method {
+    associatedtype Argument: MethodArgument
+    var name: String { get }
+    var is_const: Bool { get }
+    var is_vararg: Bool { get }
+    var is_static: Bool { get }
+    var is_virtual: Bool { get }
+    var hash: Int? { get }
+    var arguments: [Argument]? { get }
+    
+    var return_value_type: String? { get }
+}
+
+struct ExtensionApi_Class_Method: Codable, Method {
     let name: String
     let is_const: Bool
     let is_vararg: Bool
@@ -139,7 +167,12 @@ struct ExtensionApi_Class_Method: Codable {
     let is_virtual: Bool
     let hash: Int?
     let return_value: ExtensionApi_Class_Method_ReturnValue?
-    let arguments: [ExtensionApi_Class_Method_Arg]?
+    let arguments: [
+        ExtensionApi_Class_Method_Arg]?
+    
+    var return_value_type: String? {
+        self.return_value?.type
+    }
 }
 
 typealias ExtensionApi_Class_Enum = _ExtensionApi_SharedEnum

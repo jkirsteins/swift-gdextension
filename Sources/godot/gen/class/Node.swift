@@ -415,1994 +415,1615 @@ public class Node : Object {
     }
 
     public func _process(delta: Float64)  {
-        withUnsafePointer(to: delta) { delta_nativeFloat64 in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+        withUnsafePointer(to: delta) { delta_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(delta_nativeFloat64)
+                .init(delta_native)
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method__process_0,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method__process_0,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
         }
     }
     public func _physics_process(delta: Float64)  {
-        withUnsafePointer(to: delta) { delta_nativeFloat64 in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+        withUnsafePointer(to: delta) { delta_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(delta_nativeFloat64)
+                .init(delta_native)
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method__physics_process_0,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method__physics_process_0,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
         }
     }
     public func _enter_tree()  {
-        
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method__enter_tree_0,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-    }
-    public func _exit_tree()  {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method__exit_tree_0,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-    }
-    public func _ready()  {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method__ready_0,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-    }
-    public func _get_configuration_warnings()  -> PackedStringArray {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method__get_configuration_warnings_0,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return PackedStringArray(from: res)
-    }
-    public func _input(event: InputEvent)  {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(event._native_ptr())
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method__input_0,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-    }
-    public func _shortcut_input(event: InputEvent)  {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(event._native_ptr())
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method__shortcut_input_0,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-    }
-    public func _unhandled_input(event: InputEvent)  {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(event._native_ptr())
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method__unhandled_input_0,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-    }
-    public func _unhandled_key_input(event: InputEvent)  {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(event._native_ptr())
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method__unhandled_key_input_0,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-    }
-    public func print_orphan_nodes()  {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_print_orphan_nodes_3218959716,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-    }
-    public func add_sibling(sibling: Node, force_readable_name: Bool)  {
-        withUnsafePointer(to: force_readable_name) { force_readable_name_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(sibling._native_ptr()), .init(force_readable_name_nativeBool)
+                
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_add_sibling_2570952461,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method__enter_tree_0,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+    }
+    public func _exit_tree()  {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method__exit_tree_0,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+    }
+    public func _ready()  {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method__ready_0,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+    }
+    public func _get_configuration_warnings() -> PackedStringArray {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method__get_configuration_warnings_0,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return PackedStringArray(from: __resPtr.pointee)
+    }
+    public func _input(event: InputEvent)  {
+        let event_native = event._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(event_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method__input_0,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+    }
+    public func _shortcut_input(event: InputEvent)  {
+        let event_native = event._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(event_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method__shortcut_input_0,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+    }
+    public func _unhandled_input(event: InputEvent)  {
+        let event_native = event._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(event_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method__unhandled_input_0,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+    }
+    public func _unhandled_key_input(event: InputEvent)  {
+        let event_native = event._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(event_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method__unhandled_key_input_0,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+    }
+    public func print_orphan_nodes()  {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_print_orphan_nodes_3218959716,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+    }
+    public func add_sibling(sibling: Node, force_readable_name: UInt8)  {
+        withUnsafePointer(to: force_readable_name) { force_readable_name_native in
+        let sibling_native = sibling._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(sibling_native), .init(force_readable_name_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_add_sibling_2570952461,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
         }
     }
     public func set_name(name: String)  {
-            let name_nativeStr = name._create_native__kept()
-        defer { name_nativeStr.deallocate() }
+        withUnsafePointer(to: name) { name_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(name_nativeStr)
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_name_83702148,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-    }
-    public func get_name()  -> StringName {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_name_2002593661,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return StringName(from: res)
-    }
-    public func add_child(node: Node, force_readable_name: Bool, internal: Node.InternalMode)  {
-        withUnsafePointer(to: force_readable_name) { force_readable_name_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(node._native_ptr()), .init(force_readable_name_nativeBool), .init(internal._native_ptr())
+                .init(name_native)
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_add_child_3070154285,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_name_83702148,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+        }
+    }
+    public func get_name() -> StringName {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_name_2002593661,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return StringName(from: __resPtr.pointee)
+    }
+    public func add_child(node: Node, force_readable_name: UInt8, `internal`: Node.InternalMode)  {
+        withUnsafePointer(to: force_readable_name) { force_readable_name_native in
+        withUnsafePointer(to: `internal`.rawValue) { internal_native in
+        let node_native = node._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(node_native), .init(force_readable_name_native), .init(internal_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_add_child_3070154285,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+        }
         }
     }
     public func remove_child(node: Node)  {
-        
+        let node_native = node._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(node._native_ptr())
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_remove_child_1078189570,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-    }
-    public func reparent(new_parent: Node, keep_global_transform: Bool)  {
-        withUnsafePointer(to: keep_global_transform) { keep_global_transform_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(new_parent._native_ptr()), .init(keep_global_transform_nativeBool)
+                .init(node_native)
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_reparent_2570952461,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-        }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_remove_child_1078189570,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
     }
-    public func get_child_count(include_internal: Bool)  -> Int64 {
-        withUnsafePointer(to: include_internal) { include_internal_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+    public func reparent(new_parent: Node, keep_global_transform: UInt8)  {
+        withUnsafePointer(to: keep_global_transform) { keep_global_transform_native in
+        let new_parent_native = new_parent._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(include_internal_nativeBool)
+                .init(new_parent_native), .init(keep_global_transform_native)
             ])
             // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_child_count_894402480,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Int64(from: res)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_reparent_2570952461,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
         }
     }
-    public func get_children(include_internal: Bool)  -> [Node] {
-        withUnsafePointer(to: include_internal) { include_internal_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+    public func get_child_count(include_internal: UInt8) -> Int64 {
+        withUnsafePointer(to: include_internal) { include_internal_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(include_internal_nativeBool)
+                .init(include_internal_native)
             ])
             // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_children_873284517,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return [Node](from: res)
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_child_count_894402480,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Int64(from: __resPtr.pointee)
         }
     }
-    public func get_child(idx: Int64, include_internal: Bool)  -> Node {
-        withUnsafePointer(to: idx) { idx_nativeInt64 in 
-    withUnsafePointer(to: include_internal) { include_internal_nativeBool in 
-                    let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
-                    defer { args.deallocate() }
-                    _ = args.initialize(from: [
-                        .init(idx_nativeInt64), .init(include_internal_nativeBool)
-                    ])
-                    // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_child_541253412,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Node(from: res)
-            }
+    public func get_children(include_internal: UInt8) -> [Node] {
+        withUnsafePointer(to: include_internal) { include_internal_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(include_internal_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_children_873284517,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return [Node](from: __resPtr.pointee)
         }
     }
-    public func has_node(path: NodePath)  -> Bool {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(path._native_ptr())
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_has_node_861721659,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
+    public func get_child(idx: Int64, include_internal: UInt8) -> Node {
+        withUnsafePointer(to: include_internal) { include_internal_native in
+        withUnsafePointer(to: idx) { idx_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(idx_native), .init(include_internal_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_child_541253412,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Node(from: __resPtr.pointee)
+        }
+        }
     }
-    public func get_node(path: NodePath)  -> Node {
-        
+    public func has_node(path: NodePath) -> UInt8 {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(path._native_ptr())
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_node_2734337346,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Node(from: res)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(path_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_has_node_861721659,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
     }
-    public func get_node_or_null(path: NodePath)  -> Node {
-        
+    public func get_node(path: NodePath) -> Node {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(path._native_ptr())
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_node_or_null_2734337346,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Node(from: res)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(path_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_node_2734337346,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Node(from: __resPtr.pointee)
     }
-    public func get_parent()  -> Node {
-        
+    public func get_node_or_null(path: NodePath) -> Node {
+        let path_native = path._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(path_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_node_or_null_2734337346,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Node(from: __resPtr.pointee)
+    }
+    public func get_parent() -> Node {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_parent_3160264692,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Node(from: res)
-    }
-    public func find_child(pattern: String, recursive: Bool, owned: Bool)  -> Node {
-            let pattern_nativeStr = pattern._create_native__kept()
-        defer { pattern_nativeStr.deallocate() }
-    withUnsafePointer(to: recursive) { recursive_nativeBool in 
-    withUnsafePointer(to: owned) { owned_nativeBool in 
-                    let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
-                    defer { args.deallocate() }
-                    _ = args.initialize(from: [
-                        .init(pattern_nativeStr), .init(recursive_nativeBool), .init(owned_nativeBool)
-                    ])
-                    // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_find_child_4253159453,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Node(from: res)
-            }
-        }
-    }
-    public func find_children(pattern: String, type: String, recursive: Bool, owned: Bool)  -> [Node] {
-            let pattern_nativeStr = pattern._create_native__kept()
-        defer { pattern_nativeStr.deallocate() }
-        let type_nativeStr = type._create_native__kept()
-        defer { type_nativeStr.deallocate() }
-    withUnsafePointer(to: recursive) { recursive_nativeBool in 
-    withUnsafePointer(to: owned) { owned_nativeBool in 
-                    let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 4)
-                    defer { args.deallocate() }
-                    _ = args.initialize(from: [
-                        .init(pattern_nativeStr), .init(type_nativeStr), .init(recursive_nativeBool), .init(owned_nativeBool)
-                    ])
-                    // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_find_children_1585018254,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return [Node](from: res)
-            }
-        }
-    }
-    public func find_parent(pattern: String)  -> Node {
-            let pattern_nativeStr = pattern._create_native__kept()
-        defer { pattern_nativeStr.deallocate() }
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(pattern_nativeStr)
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_find_parent_1140089439,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Node(from: res)
-    }
-    public func has_node_and_resource(path: NodePath)  -> Bool {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(path._native_ptr())
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_has_node_and_resource_861721659,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
-    }
-    public func get_node_and_resource(path: NodePath)  -> Array {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(path._native_ptr())
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_node_and_resource_502563882,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Array(from: res)
-    }
-    public func is_inside_tree()  -> Bool {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_is_inside_tree_36873697,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
-    }
-    public func is_ancestor_of(node: Node)  -> Bool {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(node._native_ptr())
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_is_ancestor_of_3093956946,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
-    }
-    public func is_greater_than(node: Node)  -> Bool {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(node._native_ptr())
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_is_greater_than_3093956946,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
-    }
-    public func get_path()  -> NodePath {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_path_4075236667,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return NodePath(from: res)
-    }
-    public func get_path_to(node: Node, use_unique_path: Bool)  -> NodePath {
-        withUnsafePointer(to: use_unique_path) { use_unique_path_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(node._native_ptr()), .init(use_unique_path_nativeBool)
+                
             ])
             // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_path_to_498846349,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return NodePath(from: res)
-        }
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_parent_3160264692,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Node(from: __resPtr.pointee)
     }
-    public func add_to_group(group: StringName, persistent: Bool)  {
-        withUnsafePointer(to: persistent) { persistent_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
+    public func find_child(pattern: String, recursive: UInt8, owned: UInt8) -> Node {
+        withUnsafePointer(to: owned) { owned_native in
+        withUnsafePointer(to: recursive) { recursive_native in
+        withUnsafePointer(to: pattern) { pattern_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(group._native_ptr()), .init(persistent_nativeBool)
+                .init(pattern_native), .init(recursive_native), .init(owned_native)
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_add_to_group_3683006648,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_find_child_4253159453,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Node(from: __resPtr.pointee)
+        }
+        }
+        }
+    }
+    public func find_children(pattern: String, `type`: String, recursive: UInt8, owned: UInt8) -> [Node] {
+        withUnsafePointer(to: owned) { owned_native in
+        withUnsafePointer(to: recursive) { recursive_native in
+        withUnsafePointer(to: `type`) { type_native in
+        withUnsafePointer(to: pattern) { pattern_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 4)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(pattern_native), .init(type_native), .init(recursive_native), .init(owned_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_find_children_1585018254,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return [Node](from: __resPtr.pointee)
+        }
+        }
+        }
+        }
+    }
+    public func find_parent(pattern: String) -> Node {
+        withUnsafePointer(to: pattern) { pattern_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(pattern_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_find_parent_1140089439,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Node(from: __resPtr.pointee)
+        }
+    }
+    public func has_node_and_resource(path: NodePath) -> UInt8 {
+        let path_native = path._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(path_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_has_node_and_resource_861721659,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
+    }
+    public func get_node_and_resource(path: NodePath) -> Array {
+        let path_native = path._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(path_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_node_and_resource_502563882,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Array(from: __resPtr.pointee)
+    }
+    public func is_inside_tree() -> UInt8 {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_is_inside_tree_36873697,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
+    }
+    public func is_ancestor_of(node: Node) -> UInt8 {
+        let node_native = node._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(node_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_is_ancestor_of_3093956946,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
+    }
+    public func is_greater_than(node: Node) -> UInt8 {
+        let node_native = node._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(node_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_is_greater_than_3093956946,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
+    }
+    public func get_path() -> NodePath {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_path_4075236667,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return NodePath(from: __resPtr.pointee)
+    }
+    public func get_path_to(node: Node, use_unique_path: UInt8) -> NodePath {
+        withUnsafePointer(to: use_unique_path) { use_unique_path_native in
+        let node_native = node._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(node_native), .init(use_unique_path_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_path_to_498846349,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return NodePath(from: __resPtr.pointee)
+        }
+    }
+    public func add_to_group(group: StringName, persistent: UInt8)  {
+        withUnsafePointer(to: persistent) { persistent_native in
+        let group_native = group._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(group_native), .init(persistent_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_add_to_group_3683006648,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
         }
     }
     public func remove_from_group(group: StringName)  {
-        
+        let group_native = group._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(group._native_ptr())
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_remove_from_group_3304788590,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(group_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_remove_from_group_3304788590,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
     }
-    public func is_in_group(group: StringName)  -> Bool {
-        
+    public func is_in_group(group: StringName) -> UInt8 {
+        let group_native = group._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(group._native_ptr())
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_is_in_group_2619796661,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(group_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_is_in_group_2619796661,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
     }
     public func move_child(child_node: Node, to_index: Int64)  {
-        withUnsafePointer(to: to_index) { to_index_nativeInt64 in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
+        withUnsafePointer(to: to_index) { to_index_native in
+        let child_node_native = child_node._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(child_node._native_ptr()), .init(to_index_nativeInt64)
+                .init(child_node_native), .init(to_index_native)
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_move_child_3315886247,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_move_child_3315886247,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
         }
     }
-    public func get_groups()  -> [StringName] {
-        
+    public func get_groups() -> [StringName] {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_groups_3995934104,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return [StringName](from: res)
-    }
-    public func set_owner(owner: Node)  {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(owner._native_ptr())
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_owner_1078189570,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-    }
-    public func get_owner()  -> Node {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_owner_3160264692,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Node(from: res)
-    }
-    public func get_index(include_internal: Bool)  -> Int64 {
-        withUnsafePointer(to: include_internal) { include_internal_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(include_internal_nativeBool)
+                
             ])
             // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_index_894402480,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Int64(from: res)
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_groups_3995934104,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return [StringName](from: __resPtr.pointee)
+    }
+    public func set_owner(owner: Node)  {
+        let owner_native = owner._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(owner_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_owner_1078189570,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+    }
+    public func get_owner() -> Node {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_owner_3160264692,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Node(from: __resPtr.pointee)
+    }
+    public func get_index(include_internal: UInt8) -> Int64 {
+        withUnsafePointer(to: include_internal) { include_internal_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(include_internal_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_index_894402480,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Int64(from: __resPtr.pointee)
         }
     }
     public func print_tree()  {
-        
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_print_tree_3218959716,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_print_tree_3218959716,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
     }
     public func print_tree_pretty()  {
-        
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_print_tree_pretty_3218959716,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_print_tree_pretty_3218959716,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
     }
     public func set_scene_file_path(scene_file_path: String)  {
-            let scene_file_path_nativeStr = scene_file_path._create_native__kept()
-        defer { scene_file_path_nativeStr.deallocate() }
+        withUnsafePointer(to: scene_file_path) { scene_file_path_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(scene_file_path_nativeStr)
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_scene_file_path_83702148,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(scene_file_path_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_scene_file_path_83702148,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+        }
     }
-    public func get_scene_file_path()  -> String {
-        
+    public func get_scene_file_path() -> String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_scene_file_path_201670096,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return String(from: res)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_scene_file_path_201670096,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return String(from: __resPtr.pointee)
     }
     public func propagate_notification(what: Int64)  {
-        withUnsafePointer(to: what) { what_nativeInt64 in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+        withUnsafePointer(to: what) { what_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(what_nativeInt64)
+                .init(what_native)
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_propagate_notification_1286410249,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_propagate_notification_1286410249,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
         }
     }
-    public func propagate_call(method: StringName, args: Array, parent_first: Bool)  {
-        withUnsafePointer(to: parent_first) { parent_first_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
+    public func propagate_call(method: StringName, args: Array, parent_first: UInt8)  {
+        withUnsafePointer(to: parent_first) { parent_first_native in
+        let args_native = args._native_ptr()
+        let method_native = method._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(method._native_ptr()), .init(args._native_ptr()), .init(parent_first_nativeBool)
+                .init(method_native), .init(args_native), .init(parent_first_native)
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_propagate_call_1667910434,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_propagate_call_1667910434,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
         }
     }
-    public func set_physics_process(enable: Bool)  {
-        withUnsafePointer(to: enable) { enable_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+    public func set_physics_process(enable: UInt8)  {
+        withUnsafePointer(to: enable) { enable_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(enable_nativeBool)
+                .init(enable_native)
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_physics_process_2586408642,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_physics_process_2586408642,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
         }
     }
-    public func get_physics_process_delta_time()  -> Float64 {
-        
+    public func get_physics_process_delta_time() -> Float64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_physics_process_delta_time_1740695150,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Float64(from: res)
-    }
-    public func is_physics_processing()  -> Bool {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_is_physics_processing_36873697,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
-    }
-    public func get_process_delta_time()  -> Float64 {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_process_delta_time_1740695150,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Float64(from: res)
-    }
-    public func set_process(enable: Bool)  {
-        withUnsafePointer(to: enable) { enable_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(enable_nativeBool)
+                
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_process_2586408642,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_physics_process_delta_time_1740695150,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Float64(from: __resPtr.pointee)
+    }
+    public func is_physics_processing() -> UInt8 {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_is_physics_processing_36873697,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
+    }
+    public func get_process_delta_time() -> Float64 {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_process_delta_time_1740695150,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Float64(from: __resPtr.pointee)
+    }
+    public func set_process(enable: UInt8)  {
+        withUnsafePointer(to: enable) { enable_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(enable_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_process_2586408642,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
         }
     }
     public func set_process_priority(priority: Int64)  {
-        withUnsafePointer(to: priority) { priority_nativeInt64 in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+        withUnsafePointer(to: priority) { priority_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(priority_nativeInt64)
+                .init(priority_native)
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_process_priority_1286410249,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_process_priority_1286410249,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
         }
     }
-    public func get_process_priority()  -> Int64 {
-        
+    public func get_process_priority() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_process_priority_3905245786,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Int64(from: res)
-    }
-    public func is_processing()  -> Bool {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_is_processing_36873697,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
-    }
-    public func set_process_input(enable: Bool)  {
-        withUnsafePointer(to: enable) { enable_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(enable_nativeBool)
+                
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_process_input_2586408642,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-        }
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_process_priority_3905245786,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Int64(from: __resPtr.pointee)
     }
-    public func is_processing_input()  -> Bool {
-        
+    public func is_processing() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_is_processing_input_36873697,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
-    }
-    public func set_process_shortcut_input(enable: Bool)  {
-        withUnsafePointer(to: enable) { enable_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(enable_nativeBool)
+                
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_process_shortcut_input_2586408642,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-        }
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_is_processing_36873697,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
     }
-    public func is_processing_shortcut_input()  -> Bool {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_is_processing_shortcut_input_36873697,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
-    }
-    public func set_process_unhandled_input(enable: Bool)  {
-        withUnsafePointer(to: enable) { enable_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+    public func set_process_input(enable: UInt8)  {
+        withUnsafePointer(to: enable) { enable_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(enable_nativeBool)
+                .init(enable_native)
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_process_unhandled_input_2586408642,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_process_input_2586408642,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
         }
     }
-    public func is_processing_unhandled_input()  -> Bool {
-        
+    public func is_processing_input() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_is_processing_unhandled_input_36873697,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
-    }
-    public func set_process_unhandled_key_input(enable: Bool)  {
-        withUnsafePointer(to: enable) { enable_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(enable_nativeBool)
+                
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_process_unhandled_key_input_2586408642,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_is_processing_input_36873697,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
+    }
+    public func set_process_shortcut_input(enable: UInt8)  {
+        withUnsafePointer(to: enable) { enable_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(enable_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_process_shortcut_input_2586408642,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
         }
     }
-    public func is_processing_unhandled_key_input()  -> Bool {
-        
+    public func is_processing_shortcut_input() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_is_processing_unhandled_key_input_36873697,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_is_processing_shortcut_input_36873697,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
+    }
+    public func set_process_unhandled_input(enable: UInt8)  {
+        withUnsafePointer(to: enable) { enable_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(enable_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_process_unhandled_input_2586408642,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+        }
+    }
+    public func is_processing_unhandled_input() -> UInt8 {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_is_processing_unhandled_input_36873697,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
+    }
+    public func set_process_unhandled_key_input(enable: UInt8)  {
+        withUnsafePointer(to: enable) { enable_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(enable_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_process_unhandled_key_input_2586408642,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+        }
+    }
+    public func is_processing_unhandled_key_input() -> UInt8 {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_is_processing_unhandled_key_input_36873697,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
     }
     public func set_process_mode(mode: Node.ProcessMode)  {
-        
+        withUnsafePointer(to: mode.rawValue) { mode_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(mode._native_ptr())
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_process_mode_1841290486,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-    }
-    public func get_process_mode()  -> Node.ProcessMode {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_process_mode_739966102,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Node.ProcessMode(from: res)
-    }
-    public func can_process()  -> Bool {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_can_process_36873697,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
-    }
-    public func set_display_folded(fold: Bool)  {
-        withUnsafePointer(to: fold) { fold_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(fold_nativeBool)
+                .init(mode_native)
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_display_folded_2586408642,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_process_mode_1841290486,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
         }
     }
-    public func is_displayed_folded()  -> Bool {
-        
+    public func get_process_mode() -> Node.ProcessMode {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_is_displayed_folded_36873697,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
-    }
-    public func set_process_internal(enable: Bool)  {
-        withUnsafePointer(to: enable) { enable_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(enable_nativeBool)
+                
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_process_internal_2586408642,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-        }
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_process_mode_739966102,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Node.ProcessMode(from: __resPtr.pointee)
     }
-    public func is_processing_internal()  -> Bool {
-        
+    public func can_process() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_is_processing_internal_36873697,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
-    }
-    public func set_physics_process_internal(enable: Bool)  {
-        withUnsafePointer(to: enable) { enable_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(enable_nativeBool)
+                
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_physics_process_internal_2586408642,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-        }
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_can_process_36873697,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
     }
-    public func is_physics_processing_internal()  -> Bool {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_is_physics_processing_internal_36873697,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
-    }
-    public func get_window()  -> Window {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_window_1757182445,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Window(from: res)
-    }
-    public func get_tree()  -> SceneTree {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_tree_2958820483,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return SceneTree(from: res)
-    }
-    public func create_tween()  -> Tween {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_create_tween_3426978995,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Tween(from: res)
-    }
-    public func duplicate(flags: Int64)  -> Node {
-        withUnsafePointer(to: flags) { flags_nativeInt64 in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-            defer { args.deallocate() }
-            _ = args.initialize(from: [
-                .init(flags_nativeInt64)
-            ])
-            // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_duplicate_3511555459,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Node(from: res)
-        }
-    }
-    public func replace_by(node: Node, keep_groups: Bool)  {
-        withUnsafePointer(to: keep_groups) { keep_groups_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
-            defer { args.deallocate() }
-            _ = args.initialize(from: [
-                .init(node._native_ptr()), .init(keep_groups_nativeBool)
-            ])
-            // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_replace_by_2570952461,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-        }
-    }
-    public func set_scene_instance_load_placeholder(load_placeholder: Bool)  {
-        withUnsafePointer(to: load_placeholder) { load_placeholder_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-            defer { args.deallocate() }
-            _ = args.initialize(from: [
-                .init(load_placeholder_nativeBool)
-            ])
-            // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_scene_instance_load_placeholder_2586408642,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-        }
-    }
-    public func get_scene_instance_load_placeholder()  -> Bool {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_scene_instance_load_placeholder_36873697,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
-    }
-    public func set_editable_instance(node: Node, is_editable: Bool)  {
-        withUnsafePointer(to: is_editable) { is_editable_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
-            defer { args.deallocate() }
-            _ = args.initialize(from: [
-                .init(node._native_ptr()), .init(is_editable_nativeBool)
-            ])
-            // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_editable_instance_2731852923,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-        }
-    }
-    public func is_editable_instance(node: Node)  -> Bool {
-        
+    public func set_display_folded(fold: UInt8)  {
+        withUnsafePointer(to: fold) { fold_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(node._native_ptr())
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_is_editable_instance_3093956946,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(fold_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_display_folded_2586408642,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+        }
     }
-    public func get_viewport()  -> Viewport {
-        
+    public func is_displayed_folded() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_viewport_3596683776,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Viewport(from: res)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_is_displayed_folded_36873697,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
+    }
+    public func set_process_internal(enable: UInt8)  {
+        withUnsafePointer(to: enable) { enable_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(enable_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_process_internal_2586408642,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+        }
+    }
+    public func is_processing_internal() -> UInt8 {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_is_processing_internal_36873697,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
+    }
+    public func set_physics_process_internal(enable: UInt8)  {
+        withUnsafePointer(to: enable) { enable_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(enable_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_physics_process_internal_2586408642,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+        }
+    }
+    public func is_physics_processing_internal() -> UInt8 {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_is_physics_processing_internal_36873697,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
+    }
+    public func get_window() -> Window {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_window_1757182445,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Window(from: __resPtr.pointee)
+    }
+    public func get_tree() -> SceneTree {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_tree_2958820483,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return SceneTree(from: __resPtr.pointee)
+    }
+    public func create_tween() -> Tween {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_create_tween_3426978995,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Tween(from: __resPtr.pointee)
+    }
+    public func duplicate(flags: Int64) -> Node {
+        withUnsafePointer(to: flags) { flags_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(flags_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_duplicate_3511555459,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Node(from: __resPtr.pointee)
+        }
+    }
+    public func replace_by(node: Node, keep_groups: UInt8)  {
+        withUnsafePointer(to: keep_groups) { keep_groups_native in
+        let node_native = node._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(node_native), .init(keep_groups_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_replace_by_2570952461,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+        }
+    }
+    public func set_scene_instance_load_placeholder(load_placeholder: UInt8)  {
+        withUnsafePointer(to: load_placeholder) { load_placeholder_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(load_placeholder_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_scene_instance_load_placeholder_2586408642,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+        }
+    }
+    public func get_scene_instance_load_placeholder() -> UInt8 {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_scene_instance_load_placeholder_36873697,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
+    }
+    public func set_editable_instance(node: Node, is_editable: UInt8)  {
+        withUnsafePointer(to: is_editable) { is_editable_native in
+        let node_native = node._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(node_native), .init(is_editable_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_editable_instance_2731852923,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+        }
+    }
+    public func is_editable_instance(node: Node) -> UInt8 {
+        let node_native = node._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(node_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_is_editable_instance_3093956946,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
+    }
+    public func get_viewport() -> Viewport {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_viewport_3596683776,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Viewport(from: __resPtr.pointee)
     }
     public func queue_free()  {
-        
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_queue_free_3218959716,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_queue_free_3218959716,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
     }
     public func request_ready()  {
-        
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_request_ready_3218959716,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_request_ready_3218959716,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
     }
-    public func set_multiplayer_authority(id: Int64, recursive: Bool)  {
-        withUnsafePointer(to: id) { id_nativeInt64 in 
-    withUnsafePointer(to: recursive) { recursive_nativeBool in 
-                    let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
-                    defer { args.deallocate() }
-                    _ = args.initialize(from: [
-                        .init(id_nativeInt64), .init(recursive_nativeBool)
-                    ])
-                    // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_multiplayer_authority_4023243586,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-            }
+    public func set_multiplayer_authority(id: Int64, recursive: UInt8)  {
+        withUnsafePointer(to: recursive) { recursive_native in
+        withUnsafePointer(to: id) { id_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(id_native), .init(recursive_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_multiplayer_authority_4023243586,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+        }
         }
     }
-    public func get_multiplayer_authority()  -> Int64 {
-        
+    public func get_multiplayer_authority() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_multiplayer_authority_3905245786,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Int64(from: res)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_multiplayer_authority_3905245786,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Int64(from: __resPtr.pointee)
     }
-    public func is_multiplayer_authority()  -> Bool {
-        
+    public func is_multiplayer_authority() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_is_multiplayer_authority_36873697,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_is_multiplayer_authority_36873697,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
     }
-    public func get_multiplayer()  -> MultiplayerAPI {
-        
+    public func get_multiplayer() -> MultiplayerAPI {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_multiplayer_406750475,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return MultiplayerAPI(from: res)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_multiplayer_406750475,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return MultiplayerAPI(from: __resPtr.pointee)
     }
     public func rpc_config(method: StringName, config: Variant)  {
-        
+        let config_native = config._native_ptr()
+        let method_native = method._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(method._native_ptr()), .init(config._native_ptr())
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_rpc_config_3776071444,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(method_native), .init(config_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_rpc_config_3776071444,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
     }
     public func set_editor_description(editor_description: String)  {
-            let editor_description_nativeStr = editor_description._create_native__kept()
-        defer { editor_description_nativeStr.deallocate() }
+        withUnsafePointer(to: editor_description) { editor_description_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(editor_description_nativeStr)
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_editor_description_83702148,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
-    }
-    public func get_editor_description()  -> String {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_get_editor_description_201670096,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return String(from: res)
-    }
-    public func set_unique_name_in_owner(enable: Bool)  {
-        withUnsafePointer(to: enable) { enable_nativeBool in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(enable_nativeBool)
+                .init(editor_description_native)
             ])
             // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_set_unique_name_in_owner_2586408642,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_editor_description_83702148,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
         }
     }
-    public func is_unique_name_in_owner()  -> Bool {
-        
+    public func get_editor_description() -> String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_is_unique_name_in_owner_36873697,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Bool(from: res)
-    }
-    public func rpc(method: StringName)  -> Error {
-        
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(method._native_ptr())
-        ])
-        // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_rpc_4047867050,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Error(from: res)
-    }
-    public func rpc_id(peer_id: Int64, method: StringName)  -> Error {
-        withUnsafePointer(to: peer_id) { peer_id_nativeInt64 in 
-            let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
-                .init(peer_id_nativeInt64), .init(method._native_ptr())
+                
             ])
             // call here
-        var res: UnsafeRawPointer
-        withUnsafeMutablePointer(to: &res) { resPtr in 
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_rpc_id_361499283,
-        self._native_ptr(),
-        args.baseAddress!,
-        resPtr
-    )
-            }
-        
-            return Error(from: res)
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_get_editor_description_201670096,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return String(from: __resPtr.pointee)
+    }
+    public func set_unique_name_in_owner(enable: UInt8)  {
+        withUnsafePointer(to: enable) { enable_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(enable_native)
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_set_unique_name_in_owner_2586408642,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+        }
+    }
+    public func is_unique_name_in_owner() -> UInt8 {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_is_unique_name_in_owner_36873697,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(from: __resPtr.pointee)
+    }
+    public func rpc(method: StringName) -> Error {
+        let method_native = method._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(method_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_rpc_4047867050,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Error(from: __resPtr.pointee)
+    }
+    public func rpc_id(peer_id: Int64, method: StringName) -> Error {
+        withUnsafePointer(to: peer_id) { peer_id_native in
+        let method_native = method._native_ptr()
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(peer_id_native), .init(method_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_rpc_id_361499283,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Error(from: __resPtr.pointee)
         }
     }
     public func update_configuration_warnings()  {
-        
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        // call here
-        
-        
-    self.interface.pointee.object_method_bind_ptrcall(
-        Self._method_update_configuration_warnings_3218959716,
-        self._native_ptr(),
-        args.baseAddress!,
-        nil
-    )
-            
-        
-            
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            self.interface.pointee.object_method_bind_ptrcall(
+                    Self._method_update_configuration_warnings_3218959716,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
     }
 }

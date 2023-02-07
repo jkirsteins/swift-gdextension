@@ -29,6 +29,8 @@ public protocol Class {
     func _native_ptr() -> GDExtensionTypePtr
     
     static func initialize_class()
+    
+    init(from: UnsafeRawPointer)
 }
 
 extension Class {

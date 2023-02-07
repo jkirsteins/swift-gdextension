@@ -42,6 +42,9 @@ fileprivate var __godot_name_NodePath: StringName! = nil
 ///  
 /// [b]Note:[/b] In the editor, [NodePath] properties are automatically updated when moving, renaming or deleting a node in the scene tree, but they are never updated at runtime.
 public class NodePath : BuiltinClass {
+
+    
+
     public class var __godot_name: StringName { __godot_name_NodePath }
 
     public static let SIZE = 8;
@@ -70,25 +73,26 @@ public class NodePath : BuiltinClass {
 
     /// Constructs an empty [NodePath].
     public init() {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        Self._constructor_0!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            Self._constructor_0!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Constructs a [NodePath] as a copy of the given [NodePath]. [code]NodePath("example")[/code] is equivalent to [code]^"example"[/code].
     public init(from: NodePath) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        let from_native = from._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(from._native_ptr())
-        ])
-        Self._constructor_1!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(from_native)
+            ])
+            // call here
+            Self._constructor_1!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Creates a NodePath from a string, e.g. [code]"Path2D/PathFollow2D/Sprite2D:texture:size"[/code]. A path is absolute if it starts with a slash. Absolute paths are only valid in the global scene tree, not within individual scenes. In a relative path, [code]"."[/code] and [code]".."[/code] indicate the current node and its parent.
     ///  
@@ -124,23 +128,23 @@ public class NodePath : BuiltinClass {
     ///  
     /// [/codeblock]
     public init(from: String) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        let from_nativeStr = from._create_native__kept()
-        defer { from_nativeStr.deallocate() }
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        withUnsafePointer(to: from) { from_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            from_nativeStr
-        ])
-        Self._constructor_2!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(from_native)
+            ])
+            // call here
+            Self._constructor_2!(self._native_ptr(), .init(args.baseAddress!))
+        }
     }
-        init(from unsafe: UnsafeRawPointer) {
-            self.opaque = .init(mutating: unsafe)
-        }
-        
-        init(from unsafe: UnsafeMutableRawPointer) {
-            self.opaque = unsafe
-        }
+    public required init(from unsafe: UnsafeRawPointer) {
+        self.opaque = .init(mutating: unsafe)
+    }
+    public required init(from unsafe: UnsafeMutableRawPointer) {
+        self.opaque = unsafe
+    }
 
     deinit {
         Self._destructor?(self._native_ptr())

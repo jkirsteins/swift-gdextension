@@ -25,6 +25,11 @@ guard let builtin_member_offsets = decodedData.builtin_class_member_offsets.firs
     fatalError("Failed to fetch builtin member offsets for config \(config)")
 }
 
+let globalAllowAll = true
+
+print("==> Generating Variant")
+export_builtin_variant(builtin_sizes, builtin_member_offsets, decodedData)
+
 print("==> Builtin classes")
 for builtin_class in decodedData.builtin_classes {
     // denylist - use the native types for these
@@ -34,16 +39,9 @@ for builtin_class in decodedData.builtin_classes {
     }
     
     // allowlist
-    let allowAll = false
+    let allowAll = globalAllowAll || true
     guard allowAll || [
-        "StringName",
-        "PackedStringArray",
-        "NodePath",
-        "Vector2",
-        "Vector2i",
-        "CanvasItem",
-        "Array",
-        "Variant"
+        
     ].contains(builtin_class.name) else {
         print("    skipping \(builtin_class.name)")
         continue
@@ -57,12 +55,30 @@ for builtin_class in decodedData.builtin_classes {
 }
 
 print("==> Classes")
+
 for godot_class in decodedData.classes {
     // allowlist
-    let allowAll = false
+    let allowAll = globalAllowAll || false
     guard allowAll || [
-        "Object",
-        "Node"
+        "EditorInspectorPlugin"
+//        "InputEvent",
+//        "SceneTree",
+//        "Window",
+//        "Tween",
+//        "MultiplayerAPI",
+//        "Resource",
+//        "RefCounted",
+//        "MultiplayerPeer",
+//        "Viewport",
+//        "MainLoop",
+//        "PacketPeer",
+//        "PackedScene",
+//        "CallbackTweener",
+//        "Tweener",
+//        "SceneState",
+//        "World2D",
+//        "ViewportTexture"
+//        "VisualShaderNodeMultiplyAdd"
     ].contains(godot_class.name) else {
         print("    skipping \(godot_class.name)")
         continue
@@ -74,3 +90,36 @@ for godot_class in decodedData.classes {
         decodedData)
 }
 
+print("==> Global enums")
+for godot_enum in decodedData.global_enums {
+    // allowlist
+    let allowAll = globalAllowAll || true
+    guard allowAll || [
+
+    ].contains(godot_enum.name) else {
+        print("    skipping \(godot_enum.name)")
+        continue
+    }
+    
+    export_godot_enum(
+        godot_enum,
+        builtin_sizes,
+        decodedData)
+}
+
+print("==> Global structures")
+for godot_struct in decodedData.native_structures {
+    // allowlist
+    let allowAll = globalAllowAll || true
+    guard allowAll || [
+        "PhysicsServer2DExtensionRayResult"
+    ].contains(godot_struct.name) else {
+        print("    skipping \(godot_struct.name)")
+        continue
+    }
+    
+    export_godot_struct(
+        godot_struct,
+        builtin_sizes,
+        decodedData)
+}

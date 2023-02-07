@@ -82,6 +82,9 @@ fileprivate var __godot_name_Array: StringName! = nil
 ///  
 /// [b]Note:[/b] When declaring an array with [code]const[/code], the array itself can still be mutated by defining the values at individual indices or pushing/removing elements. Using [code]const[/code] will only prevent assigning the constant with another value after it was initialized.
 public class Array : BuiltinClass {
+
+    
+
     public class var __godot_name: StringName { __godot_name_Array }
 
     public static let SIZE = 8;
@@ -137,143 +140,157 @@ public class Array : BuiltinClass {
 
     /// Constructs an empty [Array].
     public init() {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        Self._constructor_0!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            Self._constructor_0!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Creates a typed array from the [param base] array.
     public init(from: Array) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        let from_native = from._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(from._native_ptr())
-        ])
-        Self._constructor_1!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(from_native)
+            ])
+            // call here
+            Self._constructor_1!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Returns the same array as [param from]. If you need a copy of the array, use [method duplicate].
-    public init(base: Array, type: Int64, class_name: StringName, script: Variant) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+    public init(base: Array, `type`: Int64, class_name: StringName, script: Variant) {
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        withUnsafePointer(to: `type`) { type_native in
+        let script_native = script._native_ptr()
+        let class_name_native = class_name._native_ptr()
+        let base_native = base._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 4)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(base._native_ptr()), .init(type._native_ptr()), .init(class_name._native_ptr()), .init(script._native_ptr())
-        ])
-        Self._constructor_2!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(base_native), .init(type_native), .init(class_name_native), .init(script_native)
+            ])
+            // call here
+            Self._constructor_2!(self._native_ptr(), .init(args.baseAddress!))
+        }
     }
     /// Constructs an array from a [PackedByteArray].
     public init(from: PackedByteArray) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        let from_native = from._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(from._native_ptr())
-        ])
-        Self._constructor_3!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(from_native)
+            ])
+            // call here
+            Self._constructor_3!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Constructs an array from a [PackedColorArray].
     public init(from: PackedInt32Array) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        let from_native = from._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(from._native_ptr())
-        ])
-        Self._constructor_4!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(from_native)
+            ])
+            // call here
+            Self._constructor_4!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Constructs an array from a [PackedFloat32Array].
     public init(from: PackedInt64Array) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        let from_native = from._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(from._native_ptr())
-        ])
-        Self._constructor_5!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(from_native)
+            ])
+            // call here
+            Self._constructor_5!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Constructs an array from a [PackedFloat64Array].
     public init(from: PackedFloat32Array) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        let from_native = from._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(from._native_ptr())
-        ])
-        Self._constructor_6!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(from_native)
+            ])
+            // call here
+            Self._constructor_6!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Constructs an array from a [PackedInt32Array].
     public init(from: PackedFloat64Array) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        let from_native = from._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(from._native_ptr())
-        ])
-        Self._constructor_7!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(from_native)
+            ])
+            // call here
+            Self._constructor_7!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Constructs an array from a [PackedInt64Array].
     public init(from: PackedStringArray) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        let from_native = from._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(from._native_ptr())
-        ])
-        Self._constructor_8!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(from_native)
+            ])
+            // call here
+            Self._constructor_8!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Constructs an array from a [PackedStringArray].
     public init(from: PackedVector2Array) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        let from_native = from._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(from._native_ptr())
-        ])
-        Self._constructor_9!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(from_native)
+            ])
+            // call here
+            Self._constructor_9!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Constructs an array from a [PackedVector2Array].
     public init(from: PackedVector3Array) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        let from_native = from._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(from._native_ptr())
-        ])
-        Self._constructor_10!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(from_native)
+            ])
+            // call here
+            Self._constructor_10!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Constructs an array from a [PackedVector3Array].
     public init(from: PackedColorArray) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        let from_native = from._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(from._native_ptr())
-        ])
-        Self._constructor_11!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(from_native)
+            ])
+            // call here
+            Self._constructor_11!(self._native_ptr(), .init(args.baseAddress!))
     }
-        init(from unsafe: UnsafeRawPointer) {
-            self.opaque = .init(mutating: unsafe)
-        }
-        
-        init(from unsafe: UnsafeMutableRawPointer) {
-            self.opaque = unsafe
-        }
+    public required init(from unsafe: UnsafeRawPointer) {
+        self.opaque = .init(mutating: unsafe)
+    }
+    public required init(from unsafe: UnsafeMutableRawPointer) {
+        self.opaque = unsafe
+    }
 
     deinit {
         Self._destructor?(self._native_ptr())

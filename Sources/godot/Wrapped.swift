@@ -26,7 +26,7 @@ public class Wrapped : Class
     public let opaque: UnsafeMutableRawPointer
 //    UnsafeMutablePointer<>
     
-    init(from unsafe: UnsafeRawPointer) {
+    public required init(from unsafe: UnsafeRawPointer) {
         self.opaque = .init(mutating: unsafe)
     }
     

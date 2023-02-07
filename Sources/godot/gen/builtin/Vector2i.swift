@@ -12,6 +12,12 @@ fileprivate var __godot_name_Vector2i: StringName! = nil
 ///  
 /// [b]Note:[/b] In a boolean context, a Vector2i will evaluate to [code]false[/code] if it's equal to [code]Vector2i(0, 0)[/code]. Otherwise, a Vector2i will always evaluate to [code]true[/code].
 public class Vector2i : BuiltinClass {
+
+    public enum Axis : Int32 {
+        case AXIS_X = 0
+        case AXIS_Y = 1
+    }
+
     public class var __godot_name: StringName { __godot_name_Vector2i }
 
     public static let SIZE = 8;
@@ -43,55 +49,60 @@ public class Vector2i : BuiltinClass {
 
     /// Constructs a default-initialized [Vector2i] with all components set to [code]0[/code].
     public init() {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        Self._constructor_0!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            Self._constructor_0!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Constructs a [Vector2i] as a copy of the given [Vector2i].
     public init(from: Vector2i) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        let from_native = from._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(from._native_ptr())
-        ])
-        Self._constructor_1!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(from_native)
+            ])
+            // call here
+            Self._constructor_1!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Constructs a new [Vector2i] from [Vector2]. The floating point coordinates will be truncated.
     public init(from: Vector2) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        let from_native = from._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(from._native_ptr())
-        ])
-        Self._constructor_2!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(from_native)
+            ])
+            // call here
+            Self._constructor_2!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Constructs a new [Vector2i] from the given [param x] and [param y].
     public init(x: Int64, y: Int64) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        withUnsafePointer(to: y) { y_native in
+        withUnsafePointer(to: x) { x_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(x._native_ptr()), .init(y._native_ptr())
-        ])
-        Self._constructor_3!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(x_native), .init(y_native)
+            ])
+            // call here
+            Self._constructor_3!(self._native_ptr(), .init(args.baseAddress!))
+        }
+        }
     }
-        init(from unsafe: UnsafeRawPointer) {
-            self.opaque = .init(mutating: unsafe)
-        }
-        
-        init(from unsafe: UnsafeMutableRawPointer) {
-            self.opaque = unsafe
-        }
+    public required init(from unsafe: UnsafeRawPointer) {
+        self.opaque = .init(mutating: unsafe)
+    }
+    public required init(from unsafe: UnsafeMutableRawPointer) {
+        self.opaque = unsafe
+    }
 
     deinit {
         Self._destructor?(self._native_ptr())

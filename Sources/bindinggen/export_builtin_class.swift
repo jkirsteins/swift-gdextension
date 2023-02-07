@@ -194,3 +194,84 @@ func export_builtin_class(
     
     print("    generated \(fileurl.path)")
 }
+
+
+func export_builtin_variant(
+    _ sizes: ExtensionApi_BuiltinClassSizeConfiguration,
+    _ memberOffsets: ExtensionApi_BuiltinClassMemberOffsetsConfiguration,
+    _ full: ExtensionApi
+) {
+    let name = "Variant"
+
+    guard let doc = get_docs(name) else {
+        fatalError("Missing docs for \(name)")
+    }
+    guard let size = sizes.sizes.first(where: { $0.name == name }) else {
+        fatalError("Missing size information for \(name)")
+    }
+    
+    let classOutput = TemplatedRenderable(
+        variables: [
+            "variantSize" : size.size
+        ],
+        template: """
+public class Variant : BuiltinClass {
+    public class var __godot_name: StringName { __godot_name_Variant }
+
+    public static let SIZE = ${variantSize}
+
+    public let opaque: UnsafeMutableRawPointer
+    
+    public class func initialize_class() {
+        __godot_name_Variant = StringName(from: "Variant")
+    }
+
+    public init() {
+        self.opaque = Self.interface.pointee.mem_alloc(Self.SIZE)!
+    }
+
+    public required init(from unsafePtr: UnsafeRawPointer) {
+        self.opaque = .init(mutating: unsafePtr)
+    }
+
+    deinit {
+        self.interface.pointee.variant_destroy(opaque)
+        self.interface.pointee.mem_free(opaque)
+    }
+}
+""",
+        indent: 0)
+    let docOutput = DocMultiLineRenderable(lines: [
+        doc.brief_description,
+        SKIP_LINE,
+        doc.description
+    ], indent: 0, prefix: "/// ")
+    
+    let classAndDocOutput = MultiLineRenderable(lines: [
+        docOutput,
+        classOutput
+    ], indent: 0, prefix: nil)
+    
+    let output = TemplatedRenderable(variables: [
+        "body": classAndDocOutput
+        ], template: """
+import godot_native
+
+fileprivate var __godot_name_Variant: StringName! = nil
+
+${body}
+""", indent: 0)
+    
+    print("    generated \(_store(output, "builtin", name).path)")
+}
+
+func _store(_ renderable: any Renderable, _ folder: String, _ name: String) -> URL {
+    let dirurl = URL(filePath: "gen/\(folder)")
+    let fileurl = dirurl.appending(component: "\(name).swift")
+    
+    try! FileManager.default.createDirectory(at: dirurl, withIntermediateDirectories: true)
+    
+    try! renderable.render().write(to: fileurl, atomically: true, encoding: String.Encoding.utf8)
+    
+    return fileurl
+}

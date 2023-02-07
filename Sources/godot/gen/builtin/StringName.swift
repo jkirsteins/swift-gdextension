@@ -16,6 +16,9 @@ fileprivate var __godot_name_StringName: StringName! = nil
 ///  
 /// [b]Note:[/b] In a boolean context, a [StringName] will evaluate to [code]false[/code] if it is empty ([code]StringName("")[/code]). Otherwise, a [StringName] will always evaluate to [code]true[/code].
 public class StringName : BuiltinClass {
+
+    
+
     public class var __godot_name: StringName { __godot_name_StringName }
 
     public static let SIZE = 8;
@@ -44,45 +47,46 @@ public class StringName : BuiltinClass {
 
     /// Constructs an empty [StringName].
     public init() {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            
-        ])
-        Self._constructor_0!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            Self._constructor_0!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Constructs a [StringName] as a copy of the given [StringName].
     public init(from: StringName) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        let from_native = from._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            .init(from._native_ptr())
-        ])
-        Self._constructor_1!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(from_native)
+            ])
+            // call here
+            Self._constructor_1!(self._native_ptr(), .init(args.baseAddress!))
     }
     /// Creates a new [StringName] from the given [String]. In GDScript, [code]StringName("example")[/code] is equivalent to [code]&"example"[/code].
     public init(from: String) {
-        self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-        let from_nativeStr = from._create_native__kept()
-        defer { from_nativeStr.deallocate() }
+        self.opaque = .allocate(byteCount: 8, alignment: 4)
+        withUnsafePointer(to: from) { from_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
-        defer { args.deallocate() }
-        _ = args.initialize(from: [
-            from_nativeStr
-        ])
-        Self._constructor_2!(self._native_ptr(), .init(args.baseAddress!))
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(from_native)
+            ])
+            // call here
+            Self._constructor_2!(self._native_ptr(), .init(args.baseAddress!))
+        }
     }
-        init(from unsafe: UnsafeRawPointer) {
-            self.opaque = .init(mutating: unsafe)
-        }
-        
-        init(from unsafe: UnsafeMutableRawPointer) {
-            self.opaque = unsafe
-        }
+    public required init(from unsafe: UnsafeRawPointer) {
+        self.opaque = .init(mutating: unsafe)
+    }
+    public required init(from unsafe: UnsafeMutableRawPointer) {
+        self.opaque = unsafe
+    }
 
     deinit {
         Self._destructor?(self._native_ptr())

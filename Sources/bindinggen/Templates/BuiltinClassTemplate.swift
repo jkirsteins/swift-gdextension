@@ -9,6 +9,9 @@ fileprivate var __godot_name_${className}: StringName! = nil
 
 ${classDoc}
 public class ${classNameWithParents} {
+
+    ${nestedEnums}
+
     public class var __godot_name: StringName { __godot_name_${className} }
 
     public static let SIZE = ${classSize};
@@ -36,7 +39,7 @@ public class ${classNameWithParents} {
 
 
 fileprivate let class_doc: RenderFunc = {
-        sut, sizeItem, api, doc in
+        sut, sizes, sizeItem, api, doc in
     return DocMultiLineRenderable(lines: [
         doc.brief_description,
         SKIP_LINE,
@@ -45,7 +48,7 @@ fileprivate let class_doc: RenderFunc = {
 }
 
 fileprivate let class_init_typename: RenderFunc = {
-        sut, sizeItem, api, doc in
+        sut, sizes, sizeItem, api, doc in
     return MultiLineRenderable(lines: """
 
 """.split(separator: "\n").map { String($0) },
@@ -62,7 +65,7 @@ fileprivate let _constructor_decl: (ExtensionApi_BuiltinClass_Constructor)->Rend
 
 fileprivate let class_init_deinit_decl: RenderFunc =
 {
-    sut, sizeItem, api, doc in
+    sut, sizes, sizeItem, api, doc in
     
     let constructor_decl: [any Renderable] = sut.constructors.map {
         _constructor_decl($0)
@@ -82,7 +85,7 @@ fileprivate let class_init_deinit_decl: RenderFunc =
 
 fileprivate let class_init_deinit_assign: RenderFunc =
 {
-    sut, sizeItem, api, doc in
+    sut, sizes, sizeItem, api, doc in
     
     let variant = "GDEXTENSION_VARIANT_TYPE_\(sut.name.upperSnakeCased())"
     
@@ -107,35 +110,13 @@ fileprivate let class_init_deinit_assign: RenderFunc =
 }
 
 fileprivate var initializers: RenderFunc = {
-    sut, sizeItem, api, doc in
+    sut, sizes, sizeItem, api, doc in
     
     var constr_inits: [MultiLineRenderable] = sut.constructors.map { c in
+        
         let args = (c.arguments ?? [])
 
         // TODO: unify type marshalling w class/builtinclass
-        
-        let marshalled = args.filter({ $0.type == "String" }).map { $0.name }
-
-        func _prepMarshalledStrings() -> String {
-            var res = [String]()
-            let indent = "    "
-            for marsh in marshalled {
-                res.append("\(indent)let \(marsh)_nativeStr = \(marsh)._create_native__kept()")
-                res.append("\(indent)defer { \(marsh)_nativeStr.deallocate() }")
-            }
-            guard res.count > 0 else { return "" }
-            let result = res.joined(separator: "\n")
-            return String(result[result.index(result.startIndex, offsetBy: indent.count)...])
-        }
-
-        let argSig = args.map { "\($0.name): \(_sanitizeType($0.type))" }
-        let argInit = args.map { arg in
-            if marshalled.contains(arg.name) {
-                return "\(arg.name)_nativeStr"
-            } else {
-                return ".init(\(arg.name)._native_ptr())"
-            }
-        }
         
         func _get_constructor_doc() -> String {
             let cdocs: [Doc_Constructor] = doc.constructors?.constructor ?? []
@@ -158,36 +139,27 @@ fileprivate var initializers: RenderFunc = {
             return res.joined(separator: ", ")
         }
 
-        
         return MultiLineRenderable(lines:
         [
+            
             DocMultiLineRenderable(lines: [
                 _get_constructor_doc()
-            ], indent: 0, prefix: "/// ")
-        ] + """
-public init(\(argSig.joined(separator: ", "))) {
-    self.opaque = .allocate(byteCount: Self.SIZE, alignment: 4)
-
-    \(_prepMarshalledStrings())
-
-    let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: \(args.count))
-    defer { args.deallocate() }
-    _ = args.initialize(from: [
-        \(argInit.joined(separator: ", "))
-    ])
-    Self._constructor_\(c.index)!(self._native_ptr(), .init(args.baseAddress!))
-}
-""".split(separator: "\n").map { String($0) }, indent: 0, prefix: nil)
+            ], indent: 0, prefix: "/// "),
+            
+            InstanceMethodRenderable(method: ConfigurationSpecificConstructor(config: sizes, method: c, builtin_size: sizeItem.size))
+            
+        ], indent: 0, prefix: nil)
+                                   
     }
     
     let fromPtr = MultiLineRenderable(lines: """
-    init(from unsafe: UnsafeRawPointer) {
-        self.opaque = .init(mutating: unsafe)
-    }
-    
-    init(from unsafe: UnsafeMutableRawPointer) {
-        self.opaque = unsafe
-    }
+public required init(from unsafe: UnsafeRawPointer) {
+    self.opaque = .init(mutating: unsafe)
+}
+
+public required init(from unsafe: UnsafeMutableRawPointer) {
+    self.opaque = unsafe
+}
 """.split(separator: "\n").map { String($0) }, indent: 0, prefix: nil)
     
     constr_inits.append(fromPtr)
@@ -198,12 +170,27 @@ public init(\(argSig.joined(separator: ", "))) {
 }
 
 fileprivate var class_name_with_parents: RenderFunc = {
-    sut, sizeItem, api, doc in
+    sut, sizes, sizeItem, api, doc in
     
     return "\(sut.name) : BuiltinClass"
 }
 
-fileprivate typealias RenderFunc = (ExtensionApi_BuiltinClass, ExtensionApi_BuiltinClassSizeConfiguration_Item, ExtensionApi, Doc)->Renderable
+fileprivate typealias RenderFunc = (ExtensionApi_BuiltinClass,
+                                    ExtensionApi_BuiltinClassSizeConfiguration,
+                                    ExtensionApi_BuiltinClassSizeConfiguration_Item,
+                                    ExtensionApi,
+                                    Doc)->Renderable
+
+fileprivate let nestedEnums: RenderFunc = {
+    sut, sizes, sizeItem, api, doc in
+    
+    let enums = sut.enums ?? []
+    
+    let lines = enums.map {
+        EnumRenderable(en: $0, isGlobal: false)
+    }
+    return MultiLineRenderable(lines: lines, indent: 4, prefix: nil)
+}
 
 struct BuiltinClassTemplate {
     let sut: ExtensionApi_BuiltinClass
@@ -215,8 +202,9 @@ struct BuiltinClassTemplate {
     fileprivate let transforms: [String: RenderFunc] = [
         "classNameWithParents": class_name_with_parents,
         "classDoc": class_doc,
-        "className": { s, _, _, _ in s.name },
-        "classSize": { _, s, _, _ in s.size },
+        "nestedEnums": nestedEnums,
+        "className": { s, _, _, _, _ in s.name },
+        "classSize": { _, _, s, _, _ in s.size },
         "staticConstructorDestructorDecl": class_init_deinit_decl,
         "staticConstructorDestructorAssign": class_init_deinit_assign,
         "initializers": initializers
@@ -229,7 +217,7 @@ struct BuiltinClassTemplate {
         
         return transforms.reduce(template) {
             res, renderFunc in
-            try! res.replacing("${\(renderFunc.key)}", with: renderFunc.value(sut, sizeItem, full, doc).render())
+            res.replacing("${\(renderFunc.key)}", with: renderFunc.value(sut, sizes, sizeItem, full, doc).render())
         }
     }
     
