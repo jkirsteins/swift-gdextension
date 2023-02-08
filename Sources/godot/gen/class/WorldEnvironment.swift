@@ -9,7 +9,7 @@ fileprivate var __godot_name_WorldEnvironment: StringName! = nil
 /// The parameters defined in the [WorldEnvironment] can be overridden by an [Environment] node set on the current [Camera3D]. Additionally, only one [WorldEnvironment] may be instantiated in a given scene at a time.
 ///  
 /// The [WorldEnvironment] allows the user to specify default lighting parameters (e.g. ambient lighting), various post-processing effects (e.g. SSAO, DOF, Tonemapping), and how to draw the background (e.g. solid color, skybox). Usually, these are added in order to improve the realism/color balance of the scene.
-public class WorldEnvironment : Node {
+open class WorldEnvironment : Node {
 
     
 
@@ -20,20 +20,25 @@ public class WorldEnvironment : Node {
     static var _method_set_camera_attributes_2817810567: GDExtensionMethodBindPtr! = nil
     static var _method_get_camera_attributes_3921283215: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_WorldEnvironment = StringName(from: "WorldEnvironment")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_environment_4143518816_name = StringName(from: "set_environment")
-        self._method_set_environment_4143518816 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_environment_4143518816_name._native_ptr(), 4143518816)
+        self._method_set_environment_4143518816 = self.interface.pointee.classdb_get_method_bind(__godot_name_WorldEnvironment._native_ptr(), _method_set_environment_4143518816_name._native_ptr(), 4143518816)
         assert(WorldEnvironment._method_set_environment_4143518816 != nil)
         let _method_get_environment_3082064660_name = StringName(from: "get_environment")
-        self._method_get_environment_3082064660 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_environment_3082064660_name._native_ptr(), 3082064660)
+        self._method_get_environment_3082064660 = self.interface.pointee.classdb_get_method_bind(__godot_name_WorldEnvironment._native_ptr(), _method_get_environment_3082064660_name._native_ptr(), 3082064660)
         assert(WorldEnvironment._method_get_environment_3082064660 != nil)
         let _method_set_camera_attributes_2817810567_name = StringName(from: "set_camera_attributes")
-        self._method_set_camera_attributes_2817810567 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_camera_attributes_2817810567_name._native_ptr(), 2817810567)
+        self._method_set_camera_attributes_2817810567 = self.interface.pointee.classdb_get_method_bind(__godot_name_WorldEnvironment._native_ptr(), _method_set_camera_attributes_2817810567_name._native_ptr(), 2817810567)
         assert(WorldEnvironment._method_set_camera_attributes_2817810567 != nil)
         let _method_get_camera_attributes_3921283215_name = StringName(from: "get_camera_attributes")
-        self._method_get_camera_attributes_3921283215 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_camera_attributes_3921283215_name._native_ptr(), 3921283215)
+        self._method_get_camera_attributes_3921283215 = self.interface.pointee.classdb_get_method_bind(__godot_name_WorldEnvironment._native_ptr(), _method_get_camera_attributes_3921283215_name._native_ptr(), 3921283215)
         assert(WorldEnvironment._method_get_camera_attributes_3921283215 != nil)
     }
 
@@ -66,7 +71,7 @@ public class WorldEnvironment : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Environment(from: __resPtr.pointee)
+            return Environment(godot: __resPtr.pointee)
     }
     public func set_camera_attributes(camera_attributes: CameraAttributes)  {
         let camera_attributes_native = camera_attributes._native_ptr()
@@ -97,6 +102,6 @@ public class WorldEnvironment : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return CameraAttributes(from: __resPtr.pointee)
+            return CameraAttributes(godot: __resPtr.pointee)
     }
 }

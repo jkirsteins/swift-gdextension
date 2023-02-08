@@ -5,7 +5,7 @@ fileprivate var __godot_name_AudioEffectHighPassFilter: StringName! = nil
 /// Adds a high-pass filter to the audio bus.
 /// 
 /// Cuts frequencies lower than the [member AudioEffectFilter.cutoff_hz] and allows higher frequencies to pass.
-public class AudioEffectHighPassFilter : AudioEffectFilter {
+open class AudioEffectHighPassFilter : AudioEffectFilter {
 
     
 
@@ -13,8 +13,13 @@ public class AudioEffectHighPassFilter : AudioEffectFilter {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AudioEffectHighPassFilter = StringName(from: "AudioEffectHighPassFilter")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

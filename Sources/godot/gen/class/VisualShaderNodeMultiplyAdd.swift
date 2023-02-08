@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeMultiplyAdd: StringName! = nil
 /// Performs a fused multiply-add operation within the visual shader graph.
 /// 
 /// Uses three operands to compute [code](a * b + c)[/code] expression.
-public class VisualShaderNodeMultiplyAdd : VisualShaderNode {
+open class VisualShaderNodeMultiplyAdd : VisualShaderNode {
 
     public enum OpType : Int32 {
         case OP_TYPE_SCALAR = 0
@@ -20,14 +20,19 @@ public class VisualShaderNodeMultiplyAdd : VisualShaderNode {
     static var _method_set_op_type_1409862380: GDExtensionMethodBindPtr! = nil
     static var _method_get_op_type_2823201991: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeMultiplyAdd = StringName(from: "VisualShaderNodeMultiplyAdd")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_op_type_1409862380_name = StringName(from: "set_op_type")
-        self._method_set_op_type_1409862380 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_op_type_1409862380_name._native_ptr(), 1409862380)
+        self._method_set_op_type_1409862380 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeMultiplyAdd._native_ptr(), _method_set_op_type_1409862380_name._native_ptr(), 1409862380)
         assert(VisualShaderNodeMultiplyAdd._method_set_op_type_1409862380 != nil)
         let _method_get_op_type_2823201991_name = StringName(from: "get_op_type")
-        self._method_get_op_type_2823201991 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_op_type_2823201991_name._native_ptr(), 2823201991)
+        self._method_get_op_type_2823201991 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeMultiplyAdd._native_ptr(), _method_get_op_type_2823201991_name._native_ptr(), 2823201991)
         assert(VisualShaderNodeMultiplyAdd._method_get_op_type_2823201991 != nil)
     }
 
@@ -61,6 +66,6 @@ public class VisualShaderNodeMultiplyAdd : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return VisualShaderNodeMultiplyAdd.OpType(from: __resPtr.pointee)
+            return VisualShaderNodeMultiplyAdd.OpType(godot: __resPtr.pointee)
     }
 }

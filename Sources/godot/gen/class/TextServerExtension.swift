@@ -5,7 +5,7 @@ fileprivate var __godot_name_TextServerExtension: StringName! = nil
 /// Base class for TextServer custom implementations (plugins).
 /// 
 /// External TextServer implementations should inherit from this class.
-public class TextServerExtension : TextServer {
+open class TextServerExtension : TextServer {
 
     
 
@@ -206,8 +206,13 @@ public class TextServerExtension : TextServer {
     static var _method__parse_structured_text_0: GDExtensionMethodBindPtr! = nil
     static var _method__cleanup_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_TextServerExtension = StringName(from: "TextServerExtension")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
@@ -228,10 +233,10 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
-    public func _get_name() -> String {
+    public func _get_name() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -239,14 +244,13 @@ public class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_name_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func _get_features() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -263,7 +267,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _free_rid(rid: RID)  {
         let rid_native = rid._native_ptr()
@@ -296,10 +300,10 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _load_support_data(filename: String) -> UInt8 {
-        withUnsafePointer(to: filename) { filename_native in
+    public func _load_support_data(filename: godot.String) -> UInt8 {
+        let filename_native = filename._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -314,10 +318,9 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _get_support_data_filename() -> String {
+    public func _get_support_data_filename() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -325,16 +328,15 @@ public class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_support_data_filename_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func _get_support_data_info() -> String {
+    public func _get_support_data_info() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -342,17 +344,16 @@ public class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_support_data_info_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func _save_support_data(filename: String) -> UInt8 {
-        withUnsafePointer(to: filename) { filename_native in
+    public func _save_support_data(filename: godot.String) -> UInt8 {
+        let filename_native = filename._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -367,11 +368,10 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _is_locale_right_to_left(locale: String) -> UInt8 {
-        withUnsafePointer(to: locale) { locale_native in
+    public func _is_locale_right_to_left(locale: godot.String) -> UInt8 {
+        let locale_native = locale._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -386,11 +386,10 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _name_to_tag(name: String) -> Int64 {
-        withUnsafePointer(to: name) { name_native in
+    public func _name_to_tag(name: godot.String) -> Int64 {
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -405,10 +404,9 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
-        }
+            return Int64(godot: __resPtr.pointee)
     }
-    public func _tag_to_name(tag: Int64) -> String {
+    public func _tag_to_name(tag: Int64) -> godot.String {
         withUnsafePointer(to: tag) { tag_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
@@ -417,14 +415,13 @@ public class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__tag_to_name_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
         }
     }
     public func _create_font() -> RID {
@@ -441,7 +438,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _font_set_data(font_rid: RID, data: PackedByteArray)  {
         let data_native = data._native_ptr()
@@ -511,7 +508,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _font_get_face_count(font_rid: RID) -> Int64 {
         let font_rid_native = font_rid._native_ptr()
@@ -529,7 +526,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _font_set_style(font_rid: RID, style: TextServer.FontStyle)  {
         withUnsafePointer(to: style.rawValue) { style_native in
@@ -563,10 +560,10 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return TextServer.FontStyle(from: __resPtr.pointee)
+            return TextServer.FontStyle(godot: __resPtr.pointee)
     }
-    public func _font_set_name(font_rid: RID, name: String)  {
-        withUnsafePointer(to: name) { name_native in
+    public func _font_set_name(font_rid: RID, name: godot.String)  {
+        let name_native = name._native_ptr()
         let font_rid_native = font_rid._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
@@ -580,9 +577,8 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func _font_get_name(font_rid: RID) -> String {
+    public func _font_get_name(font_rid: RID) -> godot.String {
         let font_rid_native = font_rid._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
@@ -591,17 +587,16 @@ public class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__font_get_name_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func _font_set_style_name(font_rid: RID, name_style: String)  {
-        withUnsafePointer(to: name_style) { name_style_native in
+    public func _font_set_style_name(font_rid: RID, name_style: godot.String)  {
+        let name_style_native = name_style._native_ptr()
         let font_rid_native = font_rid._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
@@ -615,9 +610,8 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func _font_get_style_name(font_rid: RID) -> String {
+    public func _font_get_style_name(font_rid: RID) -> godot.String {
         let font_rid_native = font_rid._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
@@ -626,14 +620,13 @@ public class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__font_get_style_name_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func _font_set_weight(font_rid: RID, weight: Int64)  {
         withUnsafePointer(to: weight) { weight_native in
@@ -668,7 +661,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _font_set_stretch(font_rid: RID, stretch: Int64)  {
         withUnsafePointer(to: stretch) { stretch_native in
@@ -703,7 +696,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _font_set_antialiasing(font_rid: RID, antialiasing: TextServer.FontAntialiasing)  {
         withUnsafePointer(to: antialiasing.rawValue) { antialiasing_native in
@@ -737,7 +730,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return TextServer.FontAntialiasing(from: __resPtr.pointee)
+            return TextServer.FontAntialiasing(godot: __resPtr.pointee)
     }
     public func _font_set_generate_mipmaps(font_rid: RID, generate_mipmaps: UInt8)  {
         withUnsafePointer(to: generate_mipmaps) { generate_mipmaps_native in
@@ -772,7 +765,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _font_set_multichannel_signed_distance_field(font_rid: RID, msdf: UInt8)  {
         withUnsafePointer(to: msdf) { msdf_native in
@@ -807,7 +800,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _font_set_msdf_pixel_range(font_rid: RID, msdf_pixel_range: Int64)  {
         withUnsafePointer(to: msdf_pixel_range) { msdf_pixel_range_native in
@@ -842,7 +835,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _font_set_msdf_size(font_rid: RID, msdf_size: Int64)  {
         withUnsafePointer(to: msdf_size) { msdf_size_native in
@@ -877,7 +870,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _font_set_fixed_size(font_rid: RID, fixed_size: Int64)  {
         withUnsafePointer(to: fixed_size) { fixed_size_native in
@@ -912,7 +905,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _font_set_allow_system_fallback(font_rid: RID, allow_system_fallback: UInt8)  {
         withUnsafePointer(to: allow_system_fallback) { allow_system_fallback_native in
@@ -947,7 +940,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _font_set_force_autohinter(font_rid: RID, force_autohinter: UInt8)  {
         withUnsafePointer(to: force_autohinter) { force_autohinter_native in
@@ -982,7 +975,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _font_set_hinting(font_rid: RID, hinting: TextServer.Hinting)  {
         withUnsafePointer(to: hinting.rawValue) { hinting_native in
@@ -1016,7 +1009,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return TextServer.Hinting(from: __resPtr.pointee)
+            return TextServer.Hinting(godot: __resPtr.pointee)
     }
     public func _font_set_subpixel_positioning(font_rid: RID, subpixel_positioning: TextServer.SubpixelPositioning)  {
         withUnsafePointer(to: subpixel_positioning.rawValue) { subpixel_positioning_native in
@@ -1050,7 +1043,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return TextServer.SubpixelPositioning(from: __resPtr.pointee)
+            return TextServer.SubpixelPositioning(godot: __resPtr.pointee)
     }
     public func _font_set_embolden(font_rid: RID, strength: Float64)  {
         withUnsafePointer(to: strength) { strength_native in
@@ -1085,7 +1078,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _font_set_transform(font_rid: RID, transform: Transform2D)  {
         let transform_native = transform._native_ptr()
@@ -1118,7 +1111,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Transform2D(from: __resPtr.pointee)
+            return Transform2D(godot: __resPtr.pointee)
     }
     public func _font_set_variation_coordinates(font_rid: RID, variation_coordinates: Dictionary)  {
         let variation_coordinates_native = variation_coordinates._native_ptr()
@@ -1151,7 +1144,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
     }
     public func _font_set_oversampling(font_rid: RID, oversampling: Float64)  {
         withUnsafePointer(to: oversampling) { oversampling_native in
@@ -1186,7 +1179,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _font_get_size_cache_list(font_rid: RID) -> [Vector2i] {
         let font_rid_native = font_rid._native_ptr()
@@ -1203,7 +1196,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Vector2i](from: __resPtr.pointee)
+            return [Vector2i](godot: __resPtr.pointee)
     }
     public func _font_clear_size_cache(font_rid: RID)  {
         let font_rid_native = font_rid._native_ptr()
@@ -1272,7 +1265,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func _font_set_descent(font_rid: RID, size: Int64, descent: Float64)  {
@@ -1311,7 +1304,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func _font_set_underline_position(font_rid: RID, size: Int64, underline_position: Float64)  {
@@ -1350,7 +1343,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func _font_set_underline_thickness(font_rid: RID, size: Int64, underline_thickness: Float64)  {
@@ -1389,7 +1382,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func _font_set_scale(font_rid: RID, size: Int64, scale: Float64)  {
@@ -1428,7 +1421,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func _font_get_texture_count(font_rid: RID, size: Vector2i) -> Int64 {
@@ -1448,7 +1441,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _font_clear_textures(font_rid: RID, size: Vector2i)  {
         let size_native = size._native_ptr()
@@ -1520,7 +1513,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Image(from: __resPtr.pointee)
+            return Image(godot: __resPtr.pointee)
         }
     }
     public func _font_set_texture_offsets(font_rid: RID, size: Vector2i, texture_index: Int64, offset: PackedInt32Array)  {
@@ -1559,7 +1552,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
         }
     }
     public func _font_get_glyph_list(font_rid: RID, size: Vector2i) -> PackedInt32Array {
@@ -1578,7 +1571,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
     }
     public func _font_clear_glyphs(font_rid: RID, size: Vector2i)  {
         let size_native = size._native_ptr()
@@ -1631,7 +1624,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
         }
     }
@@ -1672,7 +1665,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
     }
     public func _font_set_glyph_offset(font_rid: RID, size: Vector2i, glyph: Int64, offset: Vector2)  {
@@ -1711,7 +1704,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
     }
     public func _font_set_glyph_size(font_rid: RID, size: Vector2i, glyph: Int64, gl_size: Vector2)  {
@@ -1750,7 +1743,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Rect2(from: __resPtr.pointee)
+            return Rect2(godot: __resPtr.pointee)
         }
     }
     public func _font_set_glyph_uv_rect(font_rid: RID, size: Vector2i, glyph: Int64, uv_rect: Rect2)  {
@@ -1790,7 +1783,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func _font_set_glyph_texture_idx(font_rid: RID, size: Vector2i, glyph: Int64, texture_idx: Int64)  {
@@ -1830,7 +1823,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
     }
     public func _font_get_glyph_texture_size(font_rid: RID, size: Vector2i, glyph: Int64) -> Vector2 {
@@ -1850,7 +1843,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
     }
     public func _font_get_glyph_contours(font_rid: RID, size: Int64, index: Int64) -> Dictionary {
@@ -1870,7 +1863,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
         }
         }
     }
@@ -1890,7 +1883,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Vector2i](from: __resPtr.pointee)
+            return [Vector2i](godot: __resPtr.pointee)
         }
     }
     public func _font_clear_kerning_map(font_rid: RID, size: Int64)  {
@@ -1964,7 +1957,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
     }
     public func _font_get_glyph_index(font_rid: RID, size: Int64, char: Int64, variation_selector: Int64) -> Int64 {
@@ -1986,7 +1979,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
         }
         }
@@ -2008,10 +2001,10 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
-    public func _font_get_supported_chars(font_rid: RID) -> String {
+    public func _font_get_supported_chars(font_rid: RID) -> godot.String {
         let font_rid_native = font_rid._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
@@ -2020,14 +2013,13 @@ public class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__font_get_supported_chars_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func _font_render_range(font_rid: RID, size: Vector2i, start: Int64, end: Int64)  {
         withUnsafePointer(to: end) { end_native in
@@ -2113,8 +2105,8 @@ public class TextServerExtension : TextServer {
         }
         }
     }
-    public func _font_is_language_supported(font_rid: RID, language: String) -> UInt8 {
-        withUnsafePointer(to: language) { language_native in
+    public func _font_is_language_supported(font_rid: RID, language: godot.String) -> UInt8 {
+        let language_native = language._native_ptr()
         let font_rid_native = font_rid._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
@@ -2130,12 +2122,11 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _font_set_language_support_override(font_rid: RID, language: String, supported: UInt8)  {
+    public func _font_set_language_support_override(font_rid: RID, language: godot.String, supported: UInt8)  {
         withUnsafePointer(to: supported) { supported_native in
-        withUnsafePointer(to: language) { language_native in
+        let language_native = language._native_ptr()
         let font_rid_native = font_rid._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
@@ -2150,10 +2141,9 @@ public class TextServerExtension : TextServer {
                     nil
                 )
         }
-        }
     }
-    public func _font_get_language_support_override(font_rid: RID, language: String) -> UInt8 {
-        withUnsafePointer(to: language) { language_native in
+    public func _font_get_language_support_override(font_rid: RID, language: godot.String) -> UInt8 {
+        let language_native = language._native_ptr()
         let font_rid_native = font_rid._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
@@ -2169,11 +2159,10 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _font_remove_language_support_override(font_rid: RID, language: String)  {
-        withUnsafePointer(to: language) { language_native in
+    public func _font_remove_language_support_override(font_rid: RID, language: godot.String)  {
+        let language_native = language._native_ptr()
         let font_rid_native = font_rid._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
@@ -2187,7 +2176,6 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
     public func _font_get_language_support_overrides(font_rid: RID) -> PackedStringArray {
         let font_rid_native = font_rid._native_ptr()
@@ -2204,10 +2192,10 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedStringArray(from: __resPtr.pointee)
+            return PackedStringArray(godot: __resPtr.pointee)
     }
-    public func _font_is_script_supported(font_rid: RID, script: String) -> UInt8 {
-        withUnsafePointer(to: script) { script_native in
+    public func _font_is_script_supported(font_rid: RID, script: godot.String) -> UInt8 {
+        let script_native = script._native_ptr()
         let font_rid_native = font_rid._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
@@ -2223,12 +2211,11 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _font_set_script_support_override(font_rid: RID, script: String, supported: UInt8)  {
+    public func _font_set_script_support_override(font_rid: RID, script: godot.String, supported: UInt8)  {
         withUnsafePointer(to: supported) { supported_native in
-        withUnsafePointer(to: script) { script_native in
+        let script_native = script._native_ptr()
         let font_rid_native = font_rid._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
@@ -2243,10 +2230,9 @@ public class TextServerExtension : TextServer {
                     nil
                 )
         }
-        }
     }
-    public func _font_get_script_support_override(font_rid: RID, script: String) -> UInt8 {
-        withUnsafePointer(to: script) { script_native in
+    public func _font_get_script_support_override(font_rid: RID, script: godot.String) -> UInt8 {
+        let script_native = script._native_ptr()
         let font_rid_native = font_rid._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
@@ -2262,11 +2248,10 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _font_remove_script_support_override(font_rid: RID, script: String)  {
-        withUnsafePointer(to: script) { script_native in
+    public func _font_remove_script_support_override(font_rid: RID, script: godot.String)  {
+        let script_native = script._native_ptr()
         let font_rid_native = font_rid._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
@@ -2280,7 +2265,6 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
     public func _font_get_script_support_overrides(font_rid: RID) -> PackedStringArray {
         let font_rid_native = font_rid._native_ptr()
@@ -2297,7 +2281,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedStringArray(from: __resPtr.pointee)
+            return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _font_set_opentype_feature_overrides(font_rid: RID, overrides: Dictionary)  {
         let overrides_native = overrides._native_ptr()
@@ -2330,7 +2314,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
     }
     public func _font_supported_feature_list(font_rid: RID) -> Dictionary {
         let font_rid_native = font_rid._native_ptr()
@@ -2347,7 +2331,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
     }
     public func _font_supported_variation_list(font_rid: RID) -> Dictionary {
         let font_rid_native = font_rid._native_ptr()
@@ -2364,7 +2348,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
     }
     public func _font_get_global_oversampling() -> Float64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -2381,7 +2365,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _font_set_global_oversampling(oversampling: Float64)  {
         withUnsafePointer(to: oversampling) { oversampling_native in
@@ -2415,7 +2399,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
         }
     }
@@ -2456,7 +2440,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
         }
     }
@@ -2507,7 +2491,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return TextServer.Direction(from: __resPtr.pointee)
+            return TextServer.Direction(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_inferred_direction(shaped: RID) -> TextServer.Direction {
         let shaped_native = shaped._native_ptr()
@@ -2524,7 +2508,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return TextServer.Direction(from: __resPtr.pointee)
+            return TextServer.Direction(godot: __resPtr.pointee)
     }
     public func _shaped_text_set_bidi_override(shaped: RID, override: Array)  {
         let override_native = override._native_ptr()
@@ -2542,8 +2526,8 @@ public class TextServerExtension : TextServer {
                     nil
                 )
     }
-    public func _shaped_text_set_custom_punctuation(shaped: RID, punct: String)  {
-        withUnsafePointer(to: punct) { punct_native in
+    public func _shaped_text_set_custom_punctuation(shaped: RID, punct: godot.String)  {
+        let punct_native = punct._native_ptr()
         let shaped_native = shaped._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
@@ -2557,9 +2541,8 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func _shaped_text_get_custom_punctuation(shaped: RID) -> String {
+    public func _shaped_text_get_custom_punctuation(shaped: RID) -> godot.String {
         let shaped_native = shaped._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
@@ -2568,14 +2551,13 @@ public class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__shaped_text_get_custom_punctuation_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func _shaped_text_set_orientation(shaped: RID, orientation: TextServer.Orientation)  {
         withUnsafePointer(to: orientation.rawValue) { orientation_native in
@@ -2609,7 +2591,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return TextServer.Orientation(from: __resPtr.pointee)
+            return TextServer.Orientation(godot: __resPtr.pointee)
     }
     public func _shaped_text_set_preserve_invalid(shaped: RID, enabled: UInt8)  {
         withUnsafePointer(to: enabled) { enabled_native in
@@ -2644,7 +2626,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _shaped_text_set_preserve_control(shaped: RID, enabled: UInt8)  {
         withUnsafePointer(to: enabled) { enabled_native in
@@ -2679,7 +2661,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _shaped_text_set_spacing(shaped: RID, spacing: TextServer.SpacingType, value: Int64)  {
         withUnsafePointer(to: value) { value_native in
@@ -2717,16 +2699,16 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
-    public func _shaped_text_add_string(shaped: RID, text: String, fonts: [RID], size: Int64, opentype_features: Dictionary, language: String, meta: Variant) -> UInt8 {
-        withUnsafePointer(to: language) { language_native in
+    public func _shaped_text_add_string(shaped: RID, text: godot.String, fonts: [RID], size: Int64, opentype_features: Dictionary, language: godot.String, meta: Variant) -> UInt8 {
         withUnsafePointer(to: size) { size_native in
-        withUnsafePointer(to: text) { text_native in
         let meta_native = meta._native_ptr()
+        let language_native = language._native_ptr()
         let opentype_features_native = opentype_features._native_ptr()
         let fonts_native = fonts._native_ptr()
+        let text_native = text._native_ptr()
         let shaped_native = shaped._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 7)
             defer { args.deallocate() }
@@ -2742,9 +2724,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
-        }
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func _shaped_text_add_object(shaped: RID, key: Variant, size: Vector2, inline_align: InlineAlignment, length: Int64, baseline: Float64) -> UInt8 {
@@ -2768,7 +2748,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
         }
@@ -2793,7 +2773,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
     }
@@ -2813,7 +2793,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _shaped_get_span_meta(shaped: RID, index: Int64) -> Variant {
         withUnsafePointer(to: index) { index_native in
@@ -2831,7 +2811,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
         }
     }
     public func _shaped_set_span_update_font(shaped: RID, index: Int64, fonts: [RID], size: Int64, opentype_features: Dictionary)  {
@@ -2872,7 +2852,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
         }
     }
@@ -2891,7 +2871,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _shaped_text_fit_to_width(shaped: RID, width: Float64, jst_flags: TextServer.JustificationFlag) -> Float64 {
         withUnsafePointer(to: width) { width_native in
@@ -2911,7 +2891,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
         }
     }
@@ -2932,7 +2912,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _shaped_text_shape(shaped: RID) -> UInt8 {
         let shaped_native = shaped._native_ptr()
@@ -2950,7 +2930,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _shaped_text_update_breaks(shaped: RID) -> UInt8 {
         let shaped_native = shaped._native_ptr()
@@ -2968,7 +2948,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _shaped_text_update_justification_ops(shaped: RID) -> UInt8 {
         let shaped_native = shaped._native_ptr()
@@ -2986,7 +2966,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _shaped_text_is_ready(shaped: RID) -> UInt8 {
         let shaped_native = shaped._native_ptr()
@@ -3004,7 +2984,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_glyphs(shaped: RID) -> UnsafePointer<Glyph> {
         let shaped_native = shaped._native_ptr()
@@ -3021,7 +3001,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UnsafePointer<Glyph>(from: __resPtr.pointee)
+            return UnsafePointer<Glyph>(godot: __resPtr.pointee)
     }
     public func _shaped_text_sort_logical(shaped: RID) -> UnsafePointer<Glyph> {
         let shaped_native = shaped._native_ptr()
@@ -3038,7 +3018,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UnsafePointer<Glyph>(from: __resPtr.pointee)
+            return UnsafePointer<Glyph>(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_glyph_count(shaped: RID) -> Int64 {
         let shaped_native = shaped._native_ptr()
@@ -3056,7 +3036,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_range(shaped: RID) -> Vector2i {
         let shaped_native = shaped._native_ptr()
@@ -3073,7 +3053,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2i(from: __resPtr.pointee)
+            return Vector2i(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_line_breaks_adv(shaped: RID, width: PackedFloat32Array, start: Int64, once: UInt8, break_flags: TextServer.LineBreakFlag) -> PackedInt32Array {
         withUnsafePointer(to: once) { once_native in
@@ -3094,7 +3074,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
         }
         }
         }
@@ -3117,7 +3097,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
         }
         }
         }
@@ -3138,7 +3118,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
         }
     }
     public func _shaped_text_get_trim_pos(shaped: RID) -> Int64 {
@@ -3157,7 +3137,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_ellipsis_pos(shaped: RID) -> Int64 {
         let shaped_native = shaped._native_ptr()
@@ -3175,7 +3155,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_ellipsis_glyph_count(shaped: RID) -> Int64 {
         let shaped_native = shaped._native_ptr()
@@ -3193,7 +3173,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_ellipsis_glyphs(shaped: RID) -> UnsafePointer<Glyph> {
         let shaped_native = shaped._native_ptr()
@@ -3210,7 +3190,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UnsafePointer<Glyph>(from: __resPtr.pointee)
+            return UnsafePointer<Glyph>(godot: __resPtr.pointee)
     }
     public func _shaped_text_overrun_trim_to_width(shaped: RID, width: Float64, trim_flags: TextServer.TextOverrunFlag)  {
         withUnsafePointer(to: width) { width_native in
@@ -3246,7 +3226,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Array(from: __resPtr.pointee)
+            return Array(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_object_rect(shaped: RID, key: Variant) -> Rect2 {
         let key_native = key._native_ptr()
@@ -3264,7 +3244,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Rect2(from: __resPtr.pointee)
+            return Rect2(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_size(shaped: RID) -> Vector2 {
         let shaped_native = shaped._native_ptr()
@@ -3281,7 +3261,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_ascent(shaped: RID) -> Float64 {
         let shaped_native = shaped._native_ptr()
@@ -3299,7 +3279,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_descent(shaped: RID) -> Float64 {
         let shaped_native = shaped._native_ptr()
@@ -3317,7 +3297,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_width(shaped: RID) -> Float64 {
         let shaped_native = shaped._native_ptr()
@@ -3335,7 +3315,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_underline_position(shaped: RID) -> Float64 {
         let shaped_native = shaped._native_ptr()
@@ -3353,7 +3333,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_underline_thickness(shaped: RID) -> Float64 {
         let shaped_native = shaped._native_ptr()
@@ -3371,7 +3351,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_dominant_direction_in_range(shaped: RID, start: Int64, end: Int64) -> Int64 {
         withUnsafePointer(to: end) { end_native in
@@ -3391,7 +3371,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
         }
     }
@@ -3431,7 +3411,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector2Array(from: __resPtr.pointee)
+            return PackedVector2Array(godot: __resPtr.pointee)
         }
         }
     }
@@ -3452,7 +3432,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func _shaped_text_hit_test_position(shaped: RID, coord: Float64) -> Int64 {
@@ -3472,7 +3452,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func _shaped_text_draw(shaped: RID, canvas: RID, pos: Vector2, clip_l: Float64, clip_r: Float64, color: Color)  {
@@ -3537,7 +3517,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
     }
     public func _shaped_text_next_grapheme_pos(shaped: RID, pos: Int64) -> Int64 {
@@ -3557,7 +3537,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func _shaped_text_prev_grapheme_pos(shaped: RID, pos: Int64) -> Int64 {
@@ -3577,12 +3557,12 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
-    public func _format_number(string: String, language: String) -> String {
-        withUnsafePointer(to: language) { language_native in
-        withUnsafePointer(to: string) { string_native in
+    public func _format_number(string: godot.String, language: godot.String) -> godot.String {
+        let language_native = language._native_ptr()
+        let string_native = string._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -3590,20 +3570,17 @@ public class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__format_number_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
-        }
-        }
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func _parse_number(string: String, language: String) -> String {
-        withUnsafePointer(to: language) { language_native in
-        withUnsafePointer(to: string) { string_native in
+    public func _parse_number(string: godot.String, language: godot.String) -> godot.String {
+        let language_native = language._native_ptr()
+        let string_native = string._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -3611,19 +3588,16 @@ public class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__parse_number_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
-        }
-        }
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func _percent_sign(language: String) -> String {
-        withUnsafePointer(to: language) { language_native in
+    public func _percent_sign(language: godot.String) -> godot.String {
+        let language_native = language._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -3631,18 +3605,16 @@ public class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__percent_sign_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
-        }
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func _strip_diacritics(string: String) -> String {
-        withUnsafePointer(to: string) { string_native in
+    public func _strip_diacritics(string: godot.String) -> godot.String {
+        let string_native = string._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -3650,18 +3622,16 @@ public class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__strip_diacritics_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
-        }
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func _is_valid_identifier(string: String) -> UInt8 {
-        withUnsafePointer(to: string) { string_native in
+    public func _is_valid_identifier(string: godot.String) -> UInt8 {
+        let string_native = string._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -3676,13 +3646,12 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _string_get_word_breaks(string: String, language: String, chars_per_line: Int64) -> PackedInt32Array {
+    public func _string_get_word_breaks(string: godot.String, language: godot.String, chars_per_line: Int64) -> PackedInt32Array {
         withUnsafePointer(to: chars_per_line) { chars_per_line_native in
-        withUnsafePointer(to: language) { language_native in
-        withUnsafePointer(to: string) { string_native in
+        let language_native = language._native_ptr()
+        let string_native = string._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -3696,14 +3665,12 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
-        }
-        }
+            return PackedInt32Array(godot: __resPtr.pointee)
         }
     }
-    public func _is_confusable(string: String, dict: PackedStringArray) -> Int64 {
-        withUnsafePointer(to: string) { string_native in
+    public func _is_confusable(string: godot.String, dict: PackedStringArray) -> Int64 {
         let dict_native = dict._native_ptr()
+        let string_native = string._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -3718,11 +3685,10 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
-        }
+            return Int64(godot: __resPtr.pointee)
     }
-    public func _spoof_check(string: String) -> UInt8 {
-        withUnsafePointer(to: string) { string_native in
+    public func _spoof_check(string: godot.String) -> UInt8 {
+        let string_native = string._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -3737,12 +3703,11 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _string_to_upper(string: String, language: String) -> String {
-        withUnsafePointer(to: language) { language_native in
-        withUnsafePointer(to: string) { string_native in
+    public func _string_to_upper(string: godot.String, language: godot.String) -> godot.String {
+        let language_native = language._native_ptr()
+        let string_native = string._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -3750,20 +3715,17 @@ public class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__string_to_upper_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
-        }
-        }
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func _string_to_lower(string: String, language: String) -> String {
-        withUnsafePointer(to: language) { language_native in
-        withUnsafePointer(to: string) { string_native in
+    public func _string_to_lower(string: godot.String, language: godot.String) -> godot.String {
+        let language_native = language._native_ptr()
+        let string_native = string._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -3771,20 +3733,17 @@ public class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__string_to_lower_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
-        }
-        }
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func _parse_structured_text(parser_type: TextServer.StructuredTextParser, args: Array, text: String) -> [Vector3i] {
-        withUnsafePointer(to: text) { text_native in
+    public func _parse_structured_text(parser_type: TextServer.StructuredTextParser, args: Array, text: godot.String) -> [Vector3i] {
         withUnsafePointer(to: parser_type.rawValue) { parser_type_native in
+        let text_native = text._native_ptr()
         let args_native = args._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
@@ -3799,8 +3758,7 @@ public class TextServerExtension : TextServer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Vector3i](from: __resPtr.pointee)
-        }
+            return [Vector3i](godot: __resPtr.pointee)
         }
     }
     public func _cleanup()  {

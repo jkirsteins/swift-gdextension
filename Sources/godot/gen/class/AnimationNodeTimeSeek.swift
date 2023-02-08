@@ -43,7 +43,7 @@ fileprivate var __godot_name_AnimationNodeTimeSeek: StringName! = nil
 /// [/csharp]
 ///  
 /// [/codeblocks]
-public class AnimationNodeTimeSeek : AnimationNode {
+open class AnimationNodeTimeSeek : AnimationNode {
 
     
 
@@ -51,8 +51,13 @@ public class AnimationNodeTimeSeek : AnimationNode {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AnimationNodeTimeSeek = StringName(from: "AnimationNodeTimeSeek")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

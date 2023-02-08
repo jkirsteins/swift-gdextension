@@ -11,7 +11,7 @@ fileprivate var __godot_name_AudioStreamPlayer3D: StringName! = nil
 /// See also [AudioStreamPlayer] to play a sound non-positionally.
 ///  
 /// [b]Note:[/b] Hiding an [AudioStreamPlayer3D] node does not disable its audio output. To temporarily disable an [AudioStreamPlayer3D]'s audio output, set [member volume_db] to a very low value like [code]-100[/code] (which isn't audible to human hearing).
-public class AudioStreamPlayer3D : Node3D {
+open class AudioStreamPlayer3D : Node3D {
 
     public enum AttenuationModel : Int32 {
         case ATTENUATION_INVERSE_DISTANCE = 0
@@ -73,143 +73,148 @@ public class AudioStreamPlayer3D : Node3D {
     static var _method_has_stream_playback_2240911060: GDExtensionMethodBindPtr! = nil
     static var _method_get_stream_playback_210135309: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AudioStreamPlayer3D = StringName(from: "AudioStreamPlayer3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_stream_2210767741_name = StringName(from: "set_stream")
-        self._method_set_stream_2210767741 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_stream_2210767741_name._native_ptr(), 2210767741)
+        self._method_set_stream_2210767741 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_stream_2210767741_name._native_ptr(), 2210767741)
         assert(AudioStreamPlayer3D._method_set_stream_2210767741 != nil)
         let _method_get_stream_160907539_name = StringName(from: "get_stream")
-        self._method_get_stream_160907539 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_stream_160907539_name._native_ptr(), 160907539)
+        self._method_get_stream_160907539 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_stream_160907539_name._native_ptr(), 160907539)
         assert(AudioStreamPlayer3D._method_get_stream_160907539 != nil)
         let _method_set_volume_db_373806689_name = StringName(from: "set_volume_db")
-        self._method_set_volume_db_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_volume_db_373806689_name._native_ptr(), 373806689)
+        self._method_set_volume_db_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_volume_db_373806689_name._native_ptr(), 373806689)
         assert(AudioStreamPlayer3D._method_set_volume_db_373806689 != nil)
         let _method_get_volume_db_1740695150_name = StringName(from: "get_volume_db")
-        self._method_get_volume_db_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_volume_db_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_volume_db_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_volume_db_1740695150_name._native_ptr(), 1740695150)
         assert(AudioStreamPlayer3D._method_get_volume_db_1740695150 != nil)
         let _method_set_unit_size_373806689_name = StringName(from: "set_unit_size")
-        self._method_set_unit_size_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_unit_size_373806689_name._native_ptr(), 373806689)
+        self._method_set_unit_size_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_unit_size_373806689_name._native_ptr(), 373806689)
         assert(AudioStreamPlayer3D._method_set_unit_size_373806689 != nil)
         let _method_get_unit_size_1740695150_name = StringName(from: "get_unit_size")
-        self._method_get_unit_size_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_unit_size_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_unit_size_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_unit_size_1740695150_name._native_ptr(), 1740695150)
         assert(AudioStreamPlayer3D._method_get_unit_size_1740695150 != nil)
         let _method_set_max_db_373806689_name = StringName(from: "set_max_db")
-        self._method_set_max_db_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_max_db_373806689_name._native_ptr(), 373806689)
+        self._method_set_max_db_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_max_db_373806689_name._native_ptr(), 373806689)
         assert(AudioStreamPlayer3D._method_set_max_db_373806689 != nil)
         let _method_get_max_db_1740695150_name = StringName(from: "get_max_db")
-        self._method_get_max_db_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_max_db_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_max_db_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_max_db_1740695150_name._native_ptr(), 1740695150)
         assert(AudioStreamPlayer3D._method_get_max_db_1740695150 != nil)
         let _method_set_pitch_scale_373806689_name = StringName(from: "set_pitch_scale")
-        self._method_set_pitch_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_pitch_scale_373806689_name._native_ptr(), 373806689)
+        self._method_set_pitch_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_pitch_scale_373806689_name._native_ptr(), 373806689)
         assert(AudioStreamPlayer3D._method_set_pitch_scale_373806689 != nil)
         let _method_get_pitch_scale_1740695150_name = StringName(from: "get_pitch_scale")
-        self._method_get_pitch_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_pitch_scale_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_pitch_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_pitch_scale_1740695150_name._native_ptr(), 1740695150)
         assert(AudioStreamPlayer3D._method_get_pitch_scale_1740695150 != nil)
         let _method_play_3041634712_name = StringName(from: "play")
-        self._method_play_3041634712 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_play_3041634712_name._native_ptr(), 3041634712)
+        self._method_play_3041634712 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_play_3041634712_name._native_ptr(), 3041634712)
         assert(AudioStreamPlayer3D._method_play_3041634712 != nil)
         let _method_seek_373806689_name = StringName(from: "seek")
-        self._method_seek_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_seek_373806689_name._native_ptr(), 373806689)
+        self._method_seek_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_seek_373806689_name._native_ptr(), 373806689)
         assert(AudioStreamPlayer3D._method_seek_373806689 != nil)
         let _method_stop_3218959716_name = StringName(from: "stop")
-        self._method_stop_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_stop_3218959716_name._native_ptr(), 3218959716)
+        self._method_stop_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_stop_3218959716_name._native_ptr(), 3218959716)
         assert(AudioStreamPlayer3D._method_stop_3218959716 != nil)
         let _method_is_playing_36873697_name = StringName(from: "is_playing")
-        self._method_is_playing_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_playing_36873697_name._native_ptr(), 36873697)
+        self._method_is_playing_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_is_playing_36873697_name._native_ptr(), 36873697)
         assert(AudioStreamPlayer3D._method_is_playing_36873697 != nil)
         let _method_get_playback_position_191475506_name = StringName(from: "get_playback_position")
-        self._method_get_playback_position_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_playback_position_191475506_name._native_ptr(), 191475506)
+        self._method_get_playback_position_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_playback_position_191475506_name._native_ptr(), 191475506)
         assert(AudioStreamPlayer3D._method_get_playback_position_191475506 != nil)
         let _method_set_bus_3304788590_name = StringName(from: "set_bus")
-        self._method_set_bus_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_bus_3304788590_name._native_ptr(), 3304788590)
+        self._method_set_bus_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_bus_3304788590_name._native_ptr(), 3304788590)
         assert(AudioStreamPlayer3D._method_set_bus_3304788590 != nil)
         let _method_get_bus_2002593661_name = StringName(from: "get_bus")
-        self._method_get_bus_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_bus_2002593661_name._native_ptr(), 2002593661)
+        self._method_get_bus_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_bus_2002593661_name._native_ptr(), 2002593661)
         assert(AudioStreamPlayer3D._method_get_bus_2002593661 != nil)
         let _method_set_autoplay_2586408642_name = StringName(from: "set_autoplay")
-        self._method_set_autoplay_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_autoplay_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_autoplay_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_autoplay_2586408642_name._native_ptr(), 2586408642)
         assert(AudioStreamPlayer3D._method_set_autoplay_2586408642 != nil)
         let _method_is_autoplay_enabled_2240911060_name = StringName(from: "is_autoplay_enabled")
-        self._method_is_autoplay_enabled_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_autoplay_enabled_2240911060_name._native_ptr(), 2240911060)
+        self._method_is_autoplay_enabled_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_is_autoplay_enabled_2240911060_name._native_ptr(), 2240911060)
         assert(AudioStreamPlayer3D._method_is_autoplay_enabled_2240911060 != nil)
         let _method_set_max_distance_373806689_name = StringName(from: "set_max_distance")
-        self._method_set_max_distance_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_max_distance_373806689_name._native_ptr(), 373806689)
+        self._method_set_max_distance_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_max_distance_373806689_name._native_ptr(), 373806689)
         assert(AudioStreamPlayer3D._method_set_max_distance_373806689 != nil)
         let _method_get_max_distance_1740695150_name = StringName(from: "get_max_distance")
-        self._method_get_max_distance_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_max_distance_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_max_distance_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_max_distance_1740695150_name._native_ptr(), 1740695150)
         assert(AudioStreamPlayer3D._method_get_max_distance_1740695150 != nil)
         let _method_set_area_mask_1286410249_name = StringName(from: "set_area_mask")
-        self._method_set_area_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_area_mask_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_area_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_area_mask_1286410249_name._native_ptr(), 1286410249)
         assert(AudioStreamPlayer3D._method_set_area_mask_1286410249 != nil)
         let _method_get_area_mask_3905245786_name = StringName(from: "get_area_mask")
-        self._method_get_area_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_area_mask_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_area_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_area_mask_3905245786_name._native_ptr(), 3905245786)
         assert(AudioStreamPlayer3D._method_get_area_mask_3905245786 != nil)
         let _method_set_emission_angle_373806689_name = StringName(from: "set_emission_angle")
-        self._method_set_emission_angle_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_emission_angle_373806689_name._native_ptr(), 373806689)
+        self._method_set_emission_angle_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_emission_angle_373806689_name._native_ptr(), 373806689)
         assert(AudioStreamPlayer3D._method_set_emission_angle_373806689 != nil)
         let _method_get_emission_angle_1740695150_name = StringName(from: "get_emission_angle")
-        self._method_get_emission_angle_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_emission_angle_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_emission_angle_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_emission_angle_1740695150_name._native_ptr(), 1740695150)
         assert(AudioStreamPlayer3D._method_get_emission_angle_1740695150 != nil)
         let _method_set_emission_angle_enabled_2586408642_name = StringName(from: "set_emission_angle_enabled")
-        self._method_set_emission_angle_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_emission_angle_enabled_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_emission_angle_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_emission_angle_enabled_2586408642_name._native_ptr(), 2586408642)
         assert(AudioStreamPlayer3D._method_set_emission_angle_enabled_2586408642 != nil)
         let _method_is_emission_angle_enabled_36873697_name = StringName(from: "is_emission_angle_enabled")
-        self._method_is_emission_angle_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_emission_angle_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_emission_angle_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_is_emission_angle_enabled_36873697_name._native_ptr(), 36873697)
         assert(AudioStreamPlayer3D._method_is_emission_angle_enabled_36873697 != nil)
         let _method_set_emission_angle_filter_attenuation_db_373806689_name = StringName(from: "set_emission_angle_filter_attenuation_db")
-        self._method_set_emission_angle_filter_attenuation_db_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_emission_angle_filter_attenuation_db_373806689_name._native_ptr(), 373806689)
+        self._method_set_emission_angle_filter_attenuation_db_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_emission_angle_filter_attenuation_db_373806689_name._native_ptr(), 373806689)
         assert(AudioStreamPlayer3D._method_set_emission_angle_filter_attenuation_db_373806689 != nil)
         let _method_get_emission_angle_filter_attenuation_db_1740695150_name = StringName(from: "get_emission_angle_filter_attenuation_db")
-        self._method_get_emission_angle_filter_attenuation_db_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_emission_angle_filter_attenuation_db_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_emission_angle_filter_attenuation_db_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_emission_angle_filter_attenuation_db_1740695150_name._native_ptr(), 1740695150)
         assert(AudioStreamPlayer3D._method_get_emission_angle_filter_attenuation_db_1740695150 != nil)
         let _method_set_attenuation_filter_cutoff_hz_373806689_name = StringName(from: "set_attenuation_filter_cutoff_hz")
-        self._method_set_attenuation_filter_cutoff_hz_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_attenuation_filter_cutoff_hz_373806689_name._native_ptr(), 373806689)
+        self._method_set_attenuation_filter_cutoff_hz_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_attenuation_filter_cutoff_hz_373806689_name._native_ptr(), 373806689)
         assert(AudioStreamPlayer3D._method_set_attenuation_filter_cutoff_hz_373806689 != nil)
         let _method_get_attenuation_filter_cutoff_hz_1740695150_name = StringName(from: "get_attenuation_filter_cutoff_hz")
-        self._method_get_attenuation_filter_cutoff_hz_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_attenuation_filter_cutoff_hz_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_attenuation_filter_cutoff_hz_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_attenuation_filter_cutoff_hz_1740695150_name._native_ptr(), 1740695150)
         assert(AudioStreamPlayer3D._method_get_attenuation_filter_cutoff_hz_1740695150 != nil)
         let _method_set_attenuation_filter_db_373806689_name = StringName(from: "set_attenuation_filter_db")
-        self._method_set_attenuation_filter_db_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_attenuation_filter_db_373806689_name._native_ptr(), 373806689)
+        self._method_set_attenuation_filter_db_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_attenuation_filter_db_373806689_name._native_ptr(), 373806689)
         assert(AudioStreamPlayer3D._method_set_attenuation_filter_db_373806689 != nil)
         let _method_get_attenuation_filter_db_1740695150_name = StringName(from: "get_attenuation_filter_db")
-        self._method_get_attenuation_filter_db_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_attenuation_filter_db_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_attenuation_filter_db_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_attenuation_filter_db_1740695150_name._native_ptr(), 1740695150)
         assert(AudioStreamPlayer3D._method_get_attenuation_filter_db_1740695150 != nil)
         let _method_set_attenuation_model_2988086229_name = StringName(from: "set_attenuation_model")
-        self._method_set_attenuation_model_2988086229 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_attenuation_model_2988086229_name._native_ptr(), 2988086229)
+        self._method_set_attenuation_model_2988086229 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_attenuation_model_2988086229_name._native_ptr(), 2988086229)
         assert(AudioStreamPlayer3D._method_set_attenuation_model_2988086229 != nil)
         let _method_get_attenuation_model_3035106060_name = StringName(from: "get_attenuation_model")
-        self._method_get_attenuation_model_3035106060 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_attenuation_model_3035106060_name._native_ptr(), 3035106060)
+        self._method_get_attenuation_model_3035106060 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_attenuation_model_3035106060_name._native_ptr(), 3035106060)
         assert(AudioStreamPlayer3D._method_get_attenuation_model_3035106060 != nil)
         let _method_set_doppler_tracking_3968161450_name = StringName(from: "set_doppler_tracking")
-        self._method_set_doppler_tracking_3968161450 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_doppler_tracking_3968161450_name._native_ptr(), 3968161450)
+        self._method_set_doppler_tracking_3968161450 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_doppler_tracking_3968161450_name._native_ptr(), 3968161450)
         assert(AudioStreamPlayer3D._method_set_doppler_tracking_3968161450 != nil)
         let _method_get_doppler_tracking_1702418664_name = StringName(from: "get_doppler_tracking")
-        self._method_get_doppler_tracking_1702418664 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_doppler_tracking_1702418664_name._native_ptr(), 1702418664)
+        self._method_get_doppler_tracking_1702418664 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_doppler_tracking_1702418664_name._native_ptr(), 1702418664)
         assert(AudioStreamPlayer3D._method_get_doppler_tracking_1702418664 != nil)
         let _method_set_stream_paused_2586408642_name = StringName(from: "set_stream_paused")
-        self._method_set_stream_paused_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_stream_paused_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_stream_paused_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_stream_paused_2586408642_name._native_ptr(), 2586408642)
         assert(AudioStreamPlayer3D._method_set_stream_paused_2586408642 != nil)
         let _method_get_stream_paused_36873697_name = StringName(from: "get_stream_paused")
-        self._method_get_stream_paused_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_stream_paused_36873697_name._native_ptr(), 36873697)
+        self._method_get_stream_paused_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_stream_paused_36873697_name._native_ptr(), 36873697)
         assert(AudioStreamPlayer3D._method_get_stream_paused_36873697 != nil)
         let _method_set_max_polyphony_1286410249_name = StringName(from: "set_max_polyphony")
-        self._method_set_max_polyphony_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_max_polyphony_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_max_polyphony_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_max_polyphony_1286410249_name._native_ptr(), 1286410249)
         assert(AudioStreamPlayer3D._method_set_max_polyphony_1286410249 != nil)
         let _method_get_max_polyphony_3905245786_name = StringName(from: "get_max_polyphony")
-        self._method_get_max_polyphony_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_max_polyphony_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_max_polyphony_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_max_polyphony_3905245786_name._native_ptr(), 3905245786)
         assert(AudioStreamPlayer3D._method_get_max_polyphony_3905245786 != nil)
         let _method_set_panning_strength_373806689_name = StringName(from: "set_panning_strength")
-        self._method_set_panning_strength_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_panning_strength_373806689_name._native_ptr(), 373806689)
+        self._method_set_panning_strength_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_set_panning_strength_373806689_name._native_ptr(), 373806689)
         assert(AudioStreamPlayer3D._method_set_panning_strength_373806689 != nil)
         let _method_get_panning_strength_1740695150_name = StringName(from: "get_panning_strength")
-        self._method_get_panning_strength_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_panning_strength_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_panning_strength_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_panning_strength_1740695150_name._native_ptr(), 1740695150)
         assert(AudioStreamPlayer3D._method_get_panning_strength_1740695150 != nil)
         let _method_has_stream_playback_2240911060_name = StringName(from: "has_stream_playback")
-        self._method_has_stream_playback_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_stream_playback_2240911060_name._native_ptr(), 2240911060)
+        self._method_has_stream_playback_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_has_stream_playback_2240911060_name._native_ptr(), 2240911060)
         assert(AudioStreamPlayer3D._method_has_stream_playback_2240911060 != nil)
         let _method_get_stream_playback_210135309_name = StringName(from: "get_stream_playback")
-        self._method_get_stream_playback_210135309 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_stream_playback_210135309_name._native_ptr(), 210135309)
+        self._method_get_stream_playback_210135309 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlayer3D._native_ptr(), _method_get_stream_playback_210135309_name._native_ptr(), 210135309)
         assert(AudioStreamPlayer3D._method_get_stream_playback_210135309 != nil)
     }
 
@@ -242,7 +247,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return AudioStream(from: __resPtr.pointee)
+            return AudioStream(godot: __resPtr.pointee)
     }
     public func set_volume_db(volume_db: Float64)  {
         withUnsafePointer(to: volume_db) { volume_db_native in
@@ -275,7 +280,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_unit_size(unit_size: Float64)  {
         withUnsafePointer(to: unit_size) { unit_size_native in
@@ -308,7 +313,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_max_db(max_db: Float64)  {
         withUnsafePointer(to: max_db) { max_db_native in
@@ -341,7 +346,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_pitch_scale(pitch_scale: Float64)  {
         withUnsafePointer(to: pitch_scale) { pitch_scale_native in
@@ -374,7 +379,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func play(from_position: Float64)  {
         withUnsafePointer(to: from_position) { from_position_native in
@@ -437,7 +442,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func get_playback_position() -> Float64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -454,7 +459,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_bus(bus: StringName)  {
         let bus_native = bus._native_ptr()
@@ -485,7 +490,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return StringName(from: __resPtr.pointee)
+            return StringName(godot: __resPtr.pointee)
     }
     public func set_autoplay(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -518,7 +523,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_max_distance(meters: Float64)  {
         withUnsafePointer(to: meters) { meters_native in
@@ -551,7 +556,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_area_mask(mask: Int64)  {
         withUnsafePointer(to: mask) { mask_native in
@@ -584,7 +589,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_emission_angle(degrees: Float64)  {
         withUnsafePointer(to: degrees) { degrees_native in
@@ -617,7 +622,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_emission_angle_enabled(enabled: UInt8)  {
         withUnsafePointer(to: enabled) { enabled_native in
@@ -650,7 +655,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_emission_angle_filter_attenuation_db(db: Float64)  {
         withUnsafePointer(to: db) { db_native in
@@ -683,7 +688,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_attenuation_filter_cutoff_hz(degrees: Float64)  {
         withUnsafePointer(to: degrees) { degrees_native in
@@ -716,7 +721,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_attenuation_filter_db(db: Float64)  {
         withUnsafePointer(to: db) { db_native in
@@ -749,7 +754,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_attenuation_model(model: AudioStreamPlayer3D.AttenuationModel)  {
         withUnsafePointer(to: model.rawValue) { model_native in
@@ -781,7 +786,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return AudioStreamPlayer3D.AttenuationModel(from: __resPtr.pointee)
+            return AudioStreamPlayer3D.AttenuationModel(godot: __resPtr.pointee)
     }
     public func set_doppler_tracking(mode: AudioStreamPlayer3D.DopplerTracking)  {
         withUnsafePointer(to: mode.rawValue) { mode_native in
@@ -813,7 +818,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return AudioStreamPlayer3D.DopplerTracking(from: __resPtr.pointee)
+            return AudioStreamPlayer3D.DopplerTracking(godot: __resPtr.pointee)
     }
     public func set_stream_paused(pause: UInt8)  {
         withUnsafePointer(to: pause) { pause_native in
@@ -846,7 +851,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_max_polyphony(max_polyphony: Int64)  {
         withUnsafePointer(to: max_polyphony) { max_polyphony_native in
@@ -879,7 +884,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_panning_strength(panning_strength: Float64)  {
         withUnsafePointer(to: panning_strength) { panning_strength_native in
@@ -912,7 +917,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func has_stream_playback() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -929,7 +934,7 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func get_stream_playback() -> AudioStreamPlayback {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -945,6 +950,6 @@ public class AudioStreamPlayer3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return AudioStreamPlayback(from: __resPtr.pointee)
+            return AudioStreamPlayback(godot: __resPtr.pointee)
     }
 }

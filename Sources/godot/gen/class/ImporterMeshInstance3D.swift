@@ -5,7 +5,7 @@ fileprivate var __godot_name_ImporterMeshInstance3D: StringName! = nil
 /// 
 /// 
 /// 
-public class ImporterMeshInstance3D : Node3D {
+open class ImporterMeshInstance3D : Node3D {
 
     
 
@@ -18,26 +18,31 @@ public class ImporterMeshInstance3D : Node3D {
     static var _method_set_skeleton_path_1348162250: GDExtensionMethodBindPtr! = nil
     static var _method_get_skeleton_path_4075236667: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ImporterMeshInstance3D = StringName(from: "ImporterMeshInstance3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_mesh_2255166972_name = StringName(from: "set_mesh")
-        self._method_set_mesh_2255166972 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_mesh_2255166972_name._native_ptr(), 2255166972)
+        self._method_set_mesh_2255166972 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMeshInstance3D._native_ptr(), _method_set_mesh_2255166972_name._native_ptr(), 2255166972)
         assert(ImporterMeshInstance3D._method_set_mesh_2255166972 != nil)
         let _method_get_mesh_3161779525_name = StringName(from: "get_mesh")
-        self._method_get_mesh_3161779525 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_mesh_3161779525_name._native_ptr(), 3161779525)
+        self._method_get_mesh_3161779525 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMeshInstance3D._native_ptr(), _method_get_mesh_3161779525_name._native_ptr(), 3161779525)
         assert(ImporterMeshInstance3D._method_get_mesh_3161779525 != nil)
         let _method_set_skin_3971435618_name = StringName(from: "set_skin")
-        self._method_set_skin_3971435618 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_skin_3971435618_name._native_ptr(), 3971435618)
+        self._method_set_skin_3971435618 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMeshInstance3D._native_ptr(), _method_set_skin_3971435618_name._native_ptr(), 3971435618)
         assert(ImporterMeshInstance3D._method_set_skin_3971435618 != nil)
         let _method_get_skin_2074563878_name = StringName(from: "get_skin")
-        self._method_get_skin_2074563878 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_skin_2074563878_name._native_ptr(), 2074563878)
+        self._method_get_skin_2074563878 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMeshInstance3D._native_ptr(), _method_get_skin_2074563878_name._native_ptr(), 2074563878)
         assert(ImporterMeshInstance3D._method_get_skin_2074563878 != nil)
         let _method_set_skeleton_path_1348162250_name = StringName(from: "set_skeleton_path")
-        self._method_set_skeleton_path_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_skeleton_path_1348162250_name._native_ptr(), 1348162250)
+        self._method_set_skeleton_path_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMeshInstance3D._native_ptr(), _method_set_skeleton_path_1348162250_name._native_ptr(), 1348162250)
         assert(ImporterMeshInstance3D._method_set_skeleton_path_1348162250 != nil)
         let _method_get_skeleton_path_4075236667_name = StringName(from: "get_skeleton_path")
-        self._method_get_skeleton_path_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_skeleton_path_4075236667_name._native_ptr(), 4075236667)
+        self._method_get_skeleton_path_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMeshInstance3D._native_ptr(), _method_get_skeleton_path_4075236667_name._native_ptr(), 4075236667)
         assert(ImporterMeshInstance3D._method_get_skeleton_path_4075236667 != nil)
     }
 
@@ -70,7 +75,7 @@ public class ImporterMeshInstance3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return ImporterMesh(from: __resPtr.pointee)
+            return ImporterMesh(godot: __resPtr.pointee)
     }
     public func set_skin(skin: Skin)  {
         let skin_native = skin._native_ptr()
@@ -101,7 +106,7 @@ public class ImporterMeshInstance3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Skin(from: __resPtr.pointee)
+            return Skin(godot: __resPtr.pointee)
     }
     public func set_skeleton_path(skeleton_path: NodePath)  {
         let skeleton_path_native = skeleton_path._native_ptr()
@@ -132,6 +137,6 @@ public class ImporterMeshInstance3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return NodePath(from: __resPtr.pointee)
+            return NodePath(godot: __resPtr.pointee)
     }
 }

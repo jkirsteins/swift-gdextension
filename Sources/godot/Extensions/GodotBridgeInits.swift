@@ -1,35 +1,35 @@
 import godot_native
 
-extension UInt8 {
-    init(from unsafePointer: UnsafeRawPointer) {
+public extension UInt8 {
+    init(godot unsafePointer: UnsafeRawPointer) {
         let target: UnsafePointer<UInt8> = .init(OpaquePointer(unsafePointer))
         self = target.pointee
     }
 }
 
-extension Float64 {
-    init(from unsafePointer: UnsafeRawPointer) {
+public extension Float64 {
+    init(godot unsafePointer: UnsafeRawPointer) {
         let target: UnsafePointer<Float64> = .init(OpaquePointer(unsafePointer))
         self = target.pointee
     }
 }
 
-extension RawRepresentable {
-    init(from unsafePointer: UnsafeRawPointer) where RawValue == Int32 {
+public extension RawRepresentable {
+    init(godot unsafePointer: UnsafeRawPointer) where RawValue == Int32 {
         let target: UnsafePointer<Int32> = .init(OpaquePointer(unsafePointer))
         self.init(rawValue: target.pointee)!
     }
 }
 
-extension Int64 {
-    init(from unsafePointer: UnsafeRawPointer) {
+public extension Int64 {
+    init(godot unsafePointer: UnsafeRawPointer) {
         let target: UnsafePointer<Int64> = .init(OpaquePointer(unsafePointer))
         self = target.pointee
     }
 }
 
-extension Swift.Array {
-    init(from unsafePointer: UnsafeRawPointer) {
+public extension Swift.Array {
+    init(godot unsafePointer: UnsafeRawPointer) {
         fatalError("How to handle Godot array bridging?")
     }
     
@@ -38,23 +38,41 @@ extension Swift.Array {
     }
 }
 
-extension UnsafeMutableRawPointer {
-    init(from: UnsafeRawPointer) {
-        self.init(mutating: from)
+public extension UnsafeMutableRawPointer {
+    init(godot unsafePtr: UnsafeRawPointer) {
+        self.init(mutating: unsafePtr)
     }
 }
 
-extension UnsafePointer {
-    init(from: UnsafeRawPointer) {
-        self.init(OpaquePointer(from))
+public extension UnsafePointer {
+    init(godot unsafePtr: UnsafeRawPointer) {
+        self.init(OpaquePointer(unsafePtr))
     }
 }
 
-extension String {
-    init(from unsafePointer: UnsafeRawPointer) {
-        guard let i = gde_interface else {
-            fatalError("No Godot interface available")
+public extension godot.String {
+    convenience init(from swiftString: Swift.String) {
+        let len = swiftString.utf8.count
+        let unsafe: UnsafeMutableRawPointer = .allocate(byteCount: len, alignment: 4)
+        swiftString.withCString { utf8Ptr in
+            Self.interface.pointee.string_new_with_utf8_chars_and_len(
+                unsafe,
+                utf8Ptr,
+                GDExtensionInt(len))
         }
+        self.init(godot: unsafe)
+    }
+}
+
+public extension godot.StringName {
+    convenience init(from swiftString: Swift.String) {
+        let gStr = godot.String(from: swiftString)
+        self.init(from: gStr)
+    }
+}
+
+public extension Swift.String {
+    init(godot unsafePointer: UnsafeRawPointer, i: UnsafePointer<GDExtensionInterface>) {
         
         let length = i.pointee.string_to_utf8_chars(
             unsafePointer,
@@ -71,17 +89,5 @@ extension String {
             length)
 
         self.init(cString: buf.baseAddress!)
-    }
-
-    func _create_native__kept() -> UnsafeRawPointer {
-        let len = self.utf8.count
-        let unsafe: UnsafeMutableRawPointer = .allocate(byteCount: len, alignment: 4)
-        self.withCString { utf8Ptr in
-            gde_interface!.pointee.string_new_with_utf8_chars_and_len(
-                unsafe,
-                utf8Ptr,
-                GDExtensionInt(len))
-        }
-        return .init(unsafe)
     }
 }

@@ -9,7 +9,7 @@ fileprivate var __godot_name_GridContainer: StringName! = nil
 /// Notice that grid layout will preserve the columns and rows for every size of the container, and that empty columns will be expanded automatically.
 ///  
 /// [b]Note:[/b] GridContainer only works with child nodes inheriting from Control. It won't rearrange child nodes inheriting from Node2D.
-public class GridContainer : Container {
+open class GridContainer : Container {
 
     
 
@@ -18,14 +18,19 @@ public class GridContainer : Container {
     static var _method_set_columns_1286410249: GDExtensionMethodBindPtr! = nil
     static var _method_get_columns_3905245786: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_GridContainer = StringName(from: "GridContainer")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_columns_1286410249_name = StringName(from: "set_columns")
-        self._method_set_columns_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_columns_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_columns_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridContainer._native_ptr(), _method_set_columns_1286410249_name._native_ptr(), 1286410249)
         assert(GridContainer._method_set_columns_1286410249 != nil)
         let _method_get_columns_3905245786_name = StringName(from: "get_columns")
-        self._method_get_columns_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_columns_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_columns_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridContainer._native_ptr(), _method_get_columns_3905245786_name._native_ptr(), 3905245786)
         assert(GridContainer._method_get_columns_3905245786 != nil)
     }
 
@@ -60,6 +65,6 @@ public class GridContainer : Container {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
 }

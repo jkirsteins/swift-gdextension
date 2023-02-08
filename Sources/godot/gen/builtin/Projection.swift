@@ -13,6 +13,11 @@ fileprivate var __godot_name_Projection: StringName! = nil
 /// Used internally as [Camera3D]'s projection matrix.
 public class Projection : BuiltinClass {
 
+    public static var interface: UnsafePointer<GDExtensionInterface>! = nil
+    public static var library: GDExtensionClassLibraryPtr! = nil
+    
+    var interface: UnsafePointer<GDExtensionInterface> { Self.interface }
+
     public enum Planes : Int32 {
         case PLANE_NEAR = 0
         case PLANE_FAR = 1
@@ -34,7 +39,10 @@ public class Projection : BuiltinClass {
     static var _constructor_3: GDExtensionPtrConstructor? = nil
     static var _destructor: GDExtensionPtrDestructor? = nil
 
-    public class func initialize_class() {
+    public class func initialize_class(_ ginit: GodotInitializer, _: GDExtensionInitializationLevel) {
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
+
         // Init constructors before assigning __godot_name
         Projection._constructor_0 =  Projection.interface.pointee.variant_get_ptr_constructor(GDEXTENSION_VARIANT_TYPE_PROJECTION, 0)
         assert(Projection._constructor_0 != nil)
@@ -44,10 +52,11 @@ public class Projection : BuiltinClass {
         assert(Projection._constructor_2 != nil)
         Projection._constructor_3 =  Projection.interface.pointee.variant_get_ptr_constructor(GDEXTENSION_VARIANT_TYPE_PROJECTION, 3)
         assert(Projection._constructor_3 != nil)
-        Projection._destructor =  Projection.interface.pointee.variant_get_ptr_destructor(GDEXTENSION_VARIANT_TYPE_PROJECTION)
-        assert(Projection._destructor != nil)
+    }
 
-        // At this point constructors must be assigned
+    public class func initialize_godot_name() {
+        // At this point constructors for String and StringName
+        // must be assigned
         __godot_name_Projection = StringName(from: "Projection")
     }
 
@@ -101,10 +110,10 @@ public class Projection : BuiltinClass {
             // call here
             Self._constructor_3!(self._native_ptr(), .init(args.baseAddress!))
     }
-    public required init(from unsafe: UnsafeRawPointer) {
+    public required init(godot unsafe: UnsafeRawPointer) {
         self.opaque = .init(mutating: unsafe)
     }
-    public required init(from unsafe: UnsafeMutableRawPointer) {
+    public required init(godot unsafe: UnsafeMutableRawPointer) {
         self.opaque = unsafe
     }
 

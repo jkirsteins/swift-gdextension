@@ -27,7 +27,7 @@ fileprivate var __godot_name_AnimationNodeStateMachinePlayback: StringName! = ni
 /// [/csharp]
 ///  
 /// [/codeblocks]
-public class AnimationNodeStateMachinePlayback : Resource {
+open class AnimationNodeStateMachinePlayback : Resource {
 
     
 
@@ -44,38 +44,43 @@ public class AnimationNodeStateMachinePlayback : Resource {
     static var _method_get_fading_from_node_2002593661: GDExtensionMethodBindPtr! = nil
     static var _method_get_travel_path_1139954409: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AnimationNodeStateMachinePlayback = StringName(from: "AnimationNodeStateMachinePlayback")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_travel_3683006648_name = StringName(from: "travel")
-        self._method_travel_3683006648 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_travel_3683006648_name._native_ptr(), 3683006648)
+        self._method_travel_3683006648 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachinePlayback._native_ptr(), _method_travel_3683006648_name._native_ptr(), 3683006648)
         assert(AnimationNodeStateMachinePlayback._method_travel_3683006648 != nil)
         let _method_start_3683006648_name = StringName(from: "start")
-        self._method_start_3683006648 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_start_3683006648_name._native_ptr(), 3683006648)
+        self._method_start_3683006648 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachinePlayback._native_ptr(), _method_start_3683006648_name._native_ptr(), 3683006648)
         assert(AnimationNodeStateMachinePlayback._method_start_3683006648 != nil)
         let _method_next_3218959716_name = StringName(from: "next")
-        self._method_next_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_next_3218959716_name._native_ptr(), 3218959716)
+        self._method_next_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachinePlayback._native_ptr(), _method_next_3218959716_name._native_ptr(), 3218959716)
         assert(AnimationNodeStateMachinePlayback._method_next_3218959716 != nil)
         let _method_stop_3218959716_name = StringName(from: "stop")
-        self._method_stop_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_stop_3218959716_name._native_ptr(), 3218959716)
+        self._method_stop_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachinePlayback._native_ptr(), _method_stop_3218959716_name._native_ptr(), 3218959716)
         assert(AnimationNodeStateMachinePlayback._method_stop_3218959716 != nil)
         let _method_is_playing_36873697_name = StringName(from: "is_playing")
-        self._method_is_playing_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_playing_36873697_name._native_ptr(), 36873697)
+        self._method_is_playing_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachinePlayback._native_ptr(), _method_is_playing_36873697_name._native_ptr(), 36873697)
         assert(AnimationNodeStateMachinePlayback._method_is_playing_36873697 != nil)
         let _method_get_current_node_2002593661_name = StringName(from: "get_current_node")
-        self._method_get_current_node_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_current_node_2002593661_name._native_ptr(), 2002593661)
+        self._method_get_current_node_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachinePlayback._native_ptr(), _method_get_current_node_2002593661_name._native_ptr(), 2002593661)
         assert(AnimationNodeStateMachinePlayback._method_get_current_node_2002593661 != nil)
         let _method_get_current_play_position_1740695150_name = StringName(from: "get_current_play_position")
-        self._method_get_current_play_position_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_current_play_position_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_current_play_position_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachinePlayback._native_ptr(), _method_get_current_play_position_1740695150_name._native_ptr(), 1740695150)
         assert(AnimationNodeStateMachinePlayback._method_get_current_play_position_1740695150 != nil)
         let _method_get_current_length_1740695150_name = StringName(from: "get_current_length")
-        self._method_get_current_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_current_length_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_current_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachinePlayback._native_ptr(), _method_get_current_length_1740695150_name._native_ptr(), 1740695150)
         assert(AnimationNodeStateMachinePlayback._method_get_current_length_1740695150 != nil)
         let _method_get_fading_from_node_2002593661_name = StringName(from: "get_fading_from_node")
-        self._method_get_fading_from_node_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_fading_from_node_2002593661_name._native_ptr(), 2002593661)
+        self._method_get_fading_from_node_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachinePlayback._native_ptr(), _method_get_fading_from_node_2002593661_name._native_ptr(), 2002593661)
         assert(AnimationNodeStateMachinePlayback._method_get_fading_from_node_2002593661 != nil)
         let _method_get_travel_path_1139954409_name = StringName(from: "get_travel_path")
-        self._method_get_travel_path_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_travel_path_1139954409_name._native_ptr(), 1139954409)
+        self._method_get_travel_path_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachinePlayback._native_ptr(), _method_get_travel_path_1139954409_name._native_ptr(), 1139954409)
         assert(AnimationNodeStateMachinePlayback._method_get_travel_path_1139954409 != nil)
     }
 
@@ -156,7 +161,7 @@ public class AnimationNodeStateMachinePlayback : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func get_current_node() -> StringName {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -172,7 +177,7 @@ public class AnimationNodeStateMachinePlayback : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return StringName(from: __resPtr.pointee)
+            return StringName(godot: __resPtr.pointee)
     }
     public func get_current_play_position() -> Float64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -189,7 +194,7 @@ public class AnimationNodeStateMachinePlayback : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func get_current_length() -> Float64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -206,7 +211,7 @@ public class AnimationNodeStateMachinePlayback : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func get_fading_from_node() -> StringName {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -222,7 +227,7 @@ public class AnimationNodeStateMachinePlayback : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return StringName(from: __resPtr.pointee)
+            return StringName(godot: __resPtr.pointee)
     }
     public func get_travel_path() -> PackedStringArray {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -238,6 +243,6 @@ public class AnimationNodeStateMachinePlayback : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedStringArray(from: __resPtr.pointee)
+            return PackedStringArray(godot: __resPtr.pointee)
     }
 }

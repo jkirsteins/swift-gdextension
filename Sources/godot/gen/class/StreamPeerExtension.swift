@@ -5,7 +5,7 @@ fileprivate var __godot_name_StreamPeerExtension: StringName! = nil
 /// 
 /// 
 /// 
-public class StreamPeerExtension : StreamPeer {
+open class StreamPeerExtension : StreamPeer {
 
     
 
@@ -17,8 +17,13 @@ public class StreamPeerExtension : StreamPeer {
     static var _method__put_partial_data_0: GDExtensionMethodBindPtr! = nil
     static var _method__get_available_bytes_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_StreamPeerExtension = StringName(from: "StreamPeerExtension")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
@@ -40,7 +45,7 @@ public class StreamPeerExtension : StreamPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
         }
@@ -62,7 +67,7 @@ public class StreamPeerExtension : StreamPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
         }
@@ -84,7 +89,7 @@ public class StreamPeerExtension : StreamPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
         }
@@ -106,7 +111,7 @@ public class StreamPeerExtension : StreamPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
         }
@@ -126,6 +131,6 @@ public class StreamPeerExtension : StreamPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
 }

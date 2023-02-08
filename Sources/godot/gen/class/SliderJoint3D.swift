@@ -5,7 +5,7 @@ fileprivate var __godot_name_SliderJoint3D: StringName! = nil
 /// Slider between two PhysicsBodies in 3D.
 /// 
 /// Slides across the X axis of the pivot object. See also [Generic6DOFJoint3D].
-public class SliderJoint3D : Joint3D {
+open class SliderJoint3D : Joint3D {
 
     public enum Param : Int32 {
         case PARAM_LINEAR_LIMIT_UPPER = 0
@@ -38,14 +38,19 @@ public class SliderJoint3D : Joint3D {
     static var _method_set_param_918243683: GDExtensionMethodBindPtr! = nil
     static var _method_get_param_959925627: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_SliderJoint3D = StringName(from: "SliderJoint3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_param_918243683_name = StringName(from: "set_param")
-        self._method_set_param_918243683 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_param_918243683_name._native_ptr(), 918243683)
+        self._method_set_param_918243683 = self.interface.pointee.classdb_get_method_bind(__godot_name_SliderJoint3D._native_ptr(), _method_set_param_918243683_name._native_ptr(), 918243683)
         assert(SliderJoint3D._method_set_param_918243683 != nil)
         let _method_get_param_959925627_name = StringName(from: "get_param")
-        self._method_get_param_959925627 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_param_959925627_name._native_ptr(), 959925627)
+        self._method_get_param_959925627 = self.interface.pointee.classdb_get_method_bind(__godot_name_SliderJoint3D._native_ptr(), _method_get_param_959925627_name._native_ptr(), 959925627)
         assert(SliderJoint3D._method_get_param_959925627 != nil)
     }
 
@@ -83,7 +88,7 @@ public class SliderJoint3D : Joint3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
 }

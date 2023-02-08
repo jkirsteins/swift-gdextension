@@ -5,7 +5,7 @@ fileprivate var __godot_name_CanvasModulate: StringName! = nil
 /// Tint the entire canvas.
 /// 
 /// [CanvasModulate] tints the canvas elements using its assigned [member color].
-public class CanvasModulate : Node2D {
+open class CanvasModulate : Node2D {
 
     
 
@@ -14,14 +14,19 @@ public class CanvasModulate : Node2D {
     static var _method_set_color_2920490490: GDExtensionMethodBindPtr! = nil
     static var _method_get_color_3444240500: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_CanvasModulate = StringName(from: "CanvasModulate")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_color_2920490490_name = StringName(from: "set_color")
-        self._method_set_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_color_2920490490_name._native_ptr(), 2920490490)
+        self._method_set_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasModulate._native_ptr(), _method_set_color_2920490490_name._native_ptr(), 2920490490)
         assert(CanvasModulate._method_set_color_2920490490 != nil)
         let _method_get_color_3444240500_name = StringName(from: "get_color")
-        self._method_get_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_color_3444240500_name._native_ptr(), 3444240500)
+        self._method_get_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasModulate._native_ptr(), _method_get_color_3444240500_name._native_ptr(), 3444240500)
         assert(CanvasModulate._method_get_color_3444240500 != nil)
     }
 
@@ -54,6 +59,6 @@ public class CanvasModulate : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Color(from: __resPtr.pointee)
+            return Color(godot: __resPtr.pointee)
     }
 }

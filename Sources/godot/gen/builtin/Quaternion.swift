@@ -13,6 +13,11 @@ fileprivate var __godot_name_Quaternion: StringName! = nil
 /// Due to its compactness and the way it is stored in memory, certain operations (obtaining axis-angle and performing SLERP, in particular) are more efficient and robust against floating-point errors.
 public class Quaternion : BuiltinClass {
 
+    public static var interface: UnsafePointer<GDExtensionInterface>! = nil
+    public static var library: GDExtensionClassLibraryPtr! = nil
+    
+    var interface: UnsafePointer<GDExtensionInterface> { Self.interface }
+
     
 
     public class var __godot_name: StringName { __godot_name_Quaternion }
@@ -29,7 +34,10 @@ public class Quaternion : BuiltinClass {
     static var _constructor_5: GDExtensionPtrConstructor? = nil
     static var _destructor: GDExtensionPtrDestructor? = nil
 
-    public class func initialize_class() {
+    public class func initialize_class(_ ginit: GodotInitializer, _: GDExtensionInitializationLevel) {
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
+
         // Init constructors before assigning __godot_name
         Quaternion._constructor_0 =  Quaternion.interface.pointee.variant_get_ptr_constructor(GDEXTENSION_VARIANT_TYPE_QUATERNION, 0)
         assert(Quaternion._constructor_0 != nil)
@@ -43,10 +51,11 @@ public class Quaternion : BuiltinClass {
         assert(Quaternion._constructor_4 != nil)
         Quaternion._constructor_5 =  Quaternion.interface.pointee.variant_get_ptr_constructor(GDEXTENSION_VARIANT_TYPE_QUATERNION, 5)
         assert(Quaternion._constructor_5 != nil)
-        Quaternion._destructor =  Quaternion.interface.pointee.variant_get_ptr_destructor(GDEXTENSION_VARIANT_TYPE_QUATERNION)
-        assert(Quaternion._destructor != nil)
+    }
 
-        // At this point constructors must be assigned
+    public class func initialize_godot_name() {
+        // At this point constructors for String and StringName
+        // must be assigned
         __godot_name_Quaternion = StringName(from: "Quaternion")
     }
 
@@ -131,10 +140,10 @@ public class Quaternion : BuiltinClass {
         }
         }
     }
-    public required init(from unsafe: UnsafeRawPointer) {
+    public required init(godot unsafe: UnsafeRawPointer) {
         self.opaque = .init(mutating: unsafe)
     }
-    public required init(from unsafe: UnsafeMutableRawPointer) {
+    public required init(godot unsafe: UnsafeMutableRawPointer) {
         self.opaque = unsafe
     }
 

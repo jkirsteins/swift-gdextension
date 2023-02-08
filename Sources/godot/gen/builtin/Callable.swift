@@ -87,6 +87,11 @@ fileprivate var __godot_name_Callable: StringName! = nil
 /// [/codeblock]
 public class Callable : BuiltinClass {
 
+    public static var interface: UnsafePointer<GDExtensionInterface>! = nil
+    public static var library: GDExtensionClassLibraryPtr! = nil
+    
+    var interface: UnsafePointer<GDExtensionInterface> { Self.interface }
+
     
 
     public class var __godot_name: StringName { __godot_name_Callable }
@@ -100,7 +105,10 @@ public class Callable : BuiltinClass {
     static var _constructor_2: GDExtensionPtrConstructor? = nil
     static var _destructor: GDExtensionPtrDestructor? = nil
 
-    public class func initialize_class() {
+    public class func initialize_class(_ ginit: GodotInitializer, _: GDExtensionInitializationLevel) {
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
+
         // Init constructors before assigning __godot_name
         Callable._constructor_0 =  Callable.interface.pointee.variant_get_ptr_constructor(GDEXTENSION_VARIANT_TYPE_CALLABLE, 0)
         assert(Callable._constructor_0 != nil)
@@ -110,8 +118,11 @@ public class Callable : BuiltinClass {
         assert(Callable._constructor_2 != nil)
         Callable._destructor =  Callable.interface.pointee.variant_get_ptr_destructor(GDEXTENSION_VARIANT_TYPE_CALLABLE)
         assert(Callable._destructor != nil)
+    }
 
-        // At this point constructors must be assigned
+    public class func initialize_godot_name() {
+        // At this point constructors for String and StringName
+        // must be assigned
         __godot_name_Callable = StringName(from: "Callable")
     }
 
@@ -151,10 +162,10 @@ public class Callable : BuiltinClass {
             // call here
             Self._constructor_2!(self._native_ptr(), .init(args.baseAddress!))
     }
-    public required init(from unsafe: UnsafeRawPointer) {
+    public required init(godot unsafe: UnsafeRawPointer) {
         self.opaque = .init(mutating: unsafe)
     }
-    public required init(from unsafe: UnsafeMutableRawPointer) {
+    public required init(godot unsafe: UnsafeMutableRawPointer) {
         self.opaque = unsafe
     }
 

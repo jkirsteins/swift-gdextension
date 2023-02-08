@@ -5,7 +5,7 @@ fileprivate var __godot_name_ResourceImporter: StringName! = nil
 /// Base class for the implementation of core resource importers.
 /// 
 /// This is the base class for the resource importers implemented in core. To implement your own resource importers using editor plugins, see [EditorImportPlugin].
-public class ResourceImporter : RefCounted {
+open class ResourceImporter : RefCounted {
 
     public enum ImportOrder : Int32 {
         case IMPORT_ORDER_DEFAULT = 0
@@ -16,8 +16,13 @@ public class ResourceImporter : RefCounted {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ResourceImporter = StringName(from: "ResourceImporter")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

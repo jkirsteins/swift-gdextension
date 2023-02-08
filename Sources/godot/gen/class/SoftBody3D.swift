@@ -7,7 +7,7 @@ fileprivate var __godot_name_SoftBody3D: StringName! = nil
 /// A deformable physics body. Used to create elastic or deformable objects such as cloth, rubber, or other flexible materials.
 ///  
 /// [b]Note:[/b] There are many known bugs in [SoftBody3D]. Therefore, it's not recommended to use them for things that can affect gameplay (such as a player character made entirely out of soft bodies).
-public class SoftBody3D : MeshInstance3D {
+open class SoftBody3D : MeshInstance3D {
 
     public enum DisableMode : Int32 {
         case DISABLE_MODE_REMOVE = 0
@@ -50,107 +50,112 @@ public class SoftBody3D : MeshInstance3D {
     static var _method_set_ray_pickable_2586408642: GDExtensionMethodBindPtr! = nil
     static var _method_is_ray_pickable_36873697: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_SoftBody3D = StringName(from: "SoftBody3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_get_physics_rid_2944877500_name = StringName(from: "get_physics_rid")
-        self._method_get_physics_rid_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_physics_rid_2944877500_name._native_ptr(), 2944877500)
+        self._method_get_physics_rid_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_get_physics_rid_2944877500_name._native_ptr(), 2944877500)
         assert(SoftBody3D._method_get_physics_rid_2944877500 != nil)
         let _method_set_collision_mask_1286410249_name = StringName(from: "set_collision_mask")
-        self._method_set_collision_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_collision_mask_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_collision_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_set_collision_mask_1286410249_name._native_ptr(), 1286410249)
         assert(SoftBody3D._method_set_collision_mask_1286410249 != nil)
         let _method_get_collision_mask_3905245786_name = StringName(from: "get_collision_mask")
-        self._method_get_collision_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_collision_mask_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_collision_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_get_collision_mask_3905245786_name._native_ptr(), 3905245786)
         assert(SoftBody3D._method_get_collision_mask_3905245786 != nil)
         let _method_set_collision_layer_1286410249_name = StringName(from: "set_collision_layer")
-        self._method_set_collision_layer_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_collision_layer_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_collision_layer_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_set_collision_layer_1286410249_name._native_ptr(), 1286410249)
         assert(SoftBody3D._method_set_collision_layer_1286410249 != nil)
         let _method_get_collision_layer_3905245786_name = StringName(from: "get_collision_layer")
-        self._method_get_collision_layer_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_collision_layer_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_collision_layer_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_get_collision_layer_3905245786_name._native_ptr(), 3905245786)
         assert(SoftBody3D._method_get_collision_layer_3905245786 != nil)
         let _method_set_collision_mask_value_300928843_name = StringName(from: "set_collision_mask_value")
-        self._method_set_collision_mask_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_collision_mask_value_300928843_name._native_ptr(), 300928843)
+        self._method_set_collision_mask_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_set_collision_mask_value_300928843_name._native_ptr(), 300928843)
         assert(SoftBody3D._method_set_collision_mask_value_300928843 != nil)
         let _method_get_collision_mask_value_1116898809_name = StringName(from: "get_collision_mask_value")
-        self._method_get_collision_mask_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_collision_mask_value_1116898809_name._native_ptr(), 1116898809)
+        self._method_get_collision_mask_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_get_collision_mask_value_1116898809_name._native_ptr(), 1116898809)
         assert(SoftBody3D._method_get_collision_mask_value_1116898809 != nil)
         let _method_set_collision_layer_value_300928843_name = StringName(from: "set_collision_layer_value")
-        self._method_set_collision_layer_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_collision_layer_value_300928843_name._native_ptr(), 300928843)
+        self._method_set_collision_layer_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_set_collision_layer_value_300928843_name._native_ptr(), 300928843)
         assert(SoftBody3D._method_set_collision_layer_value_300928843 != nil)
         let _method_get_collision_layer_value_1116898809_name = StringName(from: "get_collision_layer_value")
-        self._method_get_collision_layer_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_collision_layer_value_1116898809_name._native_ptr(), 1116898809)
+        self._method_get_collision_layer_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_get_collision_layer_value_1116898809_name._native_ptr(), 1116898809)
         assert(SoftBody3D._method_get_collision_layer_value_1116898809 != nil)
         let _method_set_parent_collision_ignore_1348162250_name = StringName(from: "set_parent_collision_ignore")
-        self._method_set_parent_collision_ignore_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_parent_collision_ignore_1348162250_name._native_ptr(), 1348162250)
+        self._method_set_parent_collision_ignore_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_set_parent_collision_ignore_1348162250_name._native_ptr(), 1348162250)
         assert(SoftBody3D._method_set_parent_collision_ignore_1348162250 != nil)
         let _method_get_parent_collision_ignore_4075236667_name = StringName(from: "get_parent_collision_ignore")
-        self._method_get_parent_collision_ignore_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_parent_collision_ignore_4075236667_name._native_ptr(), 4075236667)
+        self._method_get_parent_collision_ignore_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_get_parent_collision_ignore_4075236667_name._native_ptr(), 4075236667)
         assert(SoftBody3D._method_get_parent_collision_ignore_4075236667 != nil)
         let _method_set_disable_mode_1104158384_name = StringName(from: "set_disable_mode")
-        self._method_set_disable_mode_1104158384 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_disable_mode_1104158384_name._native_ptr(), 1104158384)
+        self._method_set_disable_mode_1104158384 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_set_disable_mode_1104158384_name._native_ptr(), 1104158384)
         assert(SoftBody3D._method_set_disable_mode_1104158384 != nil)
         let _method_get_disable_mode_4135042476_name = StringName(from: "get_disable_mode")
-        self._method_get_disable_mode_4135042476 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_disable_mode_4135042476_name._native_ptr(), 4135042476)
+        self._method_get_disable_mode_4135042476 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_get_disable_mode_4135042476_name._native_ptr(), 4135042476)
         assert(SoftBody3D._method_get_disable_mode_4135042476 != nil)
         let _method_get_collision_exceptions_2915620761_name = StringName(from: "get_collision_exceptions")
-        self._method_get_collision_exceptions_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_collision_exceptions_2915620761_name._native_ptr(), 2915620761)
+        self._method_get_collision_exceptions_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_get_collision_exceptions_2915620761_name._native_ptr(), 2915620761)
         assert(SoftBody3D._method_get_collision_exceptions_2915620761 != nil)
         let _method_add_collision_exception_with_1078189570_name = StringName(from: "add_collision_exception_with")
-        self._method_add_collision_exception_with_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_collision_exception_with_1078189570_name._native_ptr(), 1078189570)
+        self._method_add_collision_exception_with_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_add_collision_exception_with_1078189570_name._native_ptr(), 1078189570)
         assert(SoftBody3D._method_add_collision_exception_with_1078189570 != nil)
         let _method_remove_collision_exception_with_1078189570_name = StringName(from: "remove_collision_exception_with")
-        self._method_remove_collision_exception_with_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_collision_exception_with_1078189570_name._native_ptr(), 1078189570)
+        self._method_remove_collision_exception_with_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_remove_collision_exception_with_1078189570_name._native_ptr(), 1078189570)
         assert(SoftBody3D._method_remove_collision_exception_with_1078189570 != nil)
         let _method_set_simulation_precision_1286410249_name = StringName(from: "set_simulation_precision")
-        self._method_set_simulation_precision_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_simulation_precision_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_simulation_precision_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_set_simulation_precision_1286410249_name._native_ptr(), 1286410249)
         assert(SoftBody3D._method_set_simulation_precision_1286410249 != nil)
         let _method_get_simulation_precision_2455072627_name = StringName(from: "get_simulation_precision")
-        self._method_get_simulation_precision_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_simulation_precision_2455072627_name._native_ptr(), 2455072627)
+        self._method_get_simulation_precision_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_get_simulation_precision_2455072627_name._native_ptr(), 2455072627)
         assert(SoftBody3D._method_get_simulation_precision_2455072627 != nil)
         let _method_set_total_mass_373806689_name = StringName(from: "set_total_mass")
-        self._method_set_total_mass_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_total_mass_373806689_name._native_ptr(), 373806689)
+        self._method_set_total_mass_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_set_total_mass_373806689_name._native_ptr(), 373806689)
         assert(SoftBody3D._method_set_total_mass_373806689 != nil)
         let _method_get_total_mass_191475506_name = StringName(from: "get_total_mass")
-        self._method_get_total_mass_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_total_mass_191475506_name._native_ptr(), 191475506)
+        self._method_get_total_mass_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_get_total_mass_191475506_name._native_ptr(), 191475506)
         assert(SoftBody3D._method_get_total_mass_191475506 != nil)
         let _method_set_linear_stiffness_373806689_name = StringName(from: "set_linear_stiffness")
-        self._method_set_linear_stiffness_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_linear_stiffness_373806689_name._native_ptr(), 373806689)
+        self._method_set_linear_stiffness_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_set_linear_stiffness_373806689_name._native_ptr(), 373806689)
         assert(SoftBody3D._method_set_linear_stiffness_373806689 != nil)
         let _method_get_linear_stiffness_191475506_name = StringName(from: "get_linear_stiffness")
-        self._method_get_linear_stiffness_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_linear_stiffness_191475506_name._native_ptr(), 191475506)
+        self._method_get_linear_stiffness_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_get_linear_stiffness_191475506_name._native_ptr(), 191475506)
         assert(SoftBody3D._method_get_linear_stiffness_191475506 != nil)
         let _method_set_pressure_coefficient_373806689_name = StringName(from: "set_pressure_coefficient")
-        self._method_set_pressure_coefficient_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_pressure_coefficient_373806689_name._native_ptr(), 373806689)
+        self._method_set_pressure_coefficient_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_set_pressure_coefficient_373806689_name._native_ptr(), 373806689)
         assert(SoftBody3D._method_set_pressure_coefficient_373806689 != nil)
         let _method_get_pressure_coefficient_191475506_name = StringName(from: "get_pressure_coefficient")
-        self._method_get_pressure_coefficient_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_pressure_coefficient_191475506_name._native_ptr(), 191475506)
+        self._method_get_pressure_coefficient_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_get_pressure_coefficient_191475506_name._native_ptr(), 191475506)
         assert(SoftBody3D._method_get_pressure_coefficient_191475506 != nil)
         let _method_set_damping_coefficient_373806689_name = StringName(from: "set_damping_coefficient")
-        self._method_set_damping_coefficient_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_damping_coefficient_373806689_name._native_ptr(), 373806689)
+        self._method_set_damping_coefficient_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_set_damping_coefficient_373806689_name._native_ptr(), 373806689)
         assert(SoftBody3D._method_set_damping_coefficient_373806689 != nil)
         let _method_get_damping_coefficient_191475506_name = StringName(from: "get_damping_coefficient")
-        self._method_get_damping_coefficient_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_damping_coefficient_191475506_name._native_ptr(), 191475506)
+        self._method_get_damping_coefficient_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_get_damping_coefficient_191475506_name._native_ptr(), 191475506)
         assert(SoftBody3D._method_get_damping_coefficient_191475506 != nil)
         let _method_set_drag_coefficient_373806689_name = StringName(from: "set_drag_coefficient")
-        self._method_set_drag_coefficient_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_drag_coefficient_373806689_name._native_ptr(), 373806689)
+        self._method_set_drag_coefficient_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_set_drag_coefficient_373806689_name._native_ptr(), 373806689)
         assert(SoftBody3D._method_set_drag_coefficient_373806689 != nil)
         let _method_get_drag_coefficient_191475506_name = StringName(from: "get_drag_coefficient")
-        self._method_get_drag_coefficient_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_drag_coefficient_191475506_name._native_ptr(), 191475506)
+        self._method_get_drag_coefficient_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_get_drag_coefficient_191475506_name._native_ptr(), 191475506)
         assert(SoftBody3D._method_get_drag_coefficient_191475506 != nil)
         let _method_get_point_transform_871989493_name = StringName(from: "get_point_transform")
-        self._method_get_point_transform_871989493 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_point_transform_871989493_name._native_ptr(), 871989493)
+        self._method_get_point_transform_871989493 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_get_point_transform_871989493_name._native_ptr(), 871989493)
         assert(SoftBody3D._method_get_point_transform_871989493 != nil)
         let _method_set_point_pinned_3814935226_name = StringName(from: "set_point_pinned")
-        self._method_set_point_pinned_3814935226 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_point_pinned_3814935226_name._native_ptr(), 3814935226)
+        self._method_set_point_pinned_3814935226 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_set_point_pinned_3814935226_name._native_ptr(), 3814935226)
         assert(SoftBody3D._method_set_point_pinned_3814935226 != nil)
         let _method_is_point_pinned_1116898809_name = StringName(from: "is_point_pinned")
-        self._method_is_point_pinned_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_point_pinned_1116898809_name._native_ptr(), 1116898809)
+        self._method_is_point_pinned_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_is_point_pinned_1116898809_name._native_ptr(), 1116898809)
         assert(SoftBody3D._method_is_point_pinned_1116898809 != nil)
         let _method_set_ray_pickable_2586408642_name = StringName(from: "set_ray_pickable")
-        self._method_set_ray_pickable_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ray_pickable_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_ray_pickable_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_set_ray_pickable_2586408642_name._native_ptr(), 2586408642)
         assert(SoftBody3D._method_set_ray_pickable_2586408642 != nil)
         let _method_is_ray_pickable_36873697_name = StringName(from: "is_ray_pickable")
-        self._method_is_ray_pickable_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_ray_pickable_36873697_name._native_ptr(), 36873697)
+        self._method_is_ray_pickable_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SoftBody3D._native_ptr(), _method_is_ray_pickable_36873697_name._native_ptr(), 36873697)
         assert(SoftBody3D._method_is_ray_pickable_36873697 != nil)
     }
 
@@ -168,7 +173,7 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func set_collision_mask(collision_mask: Int64)  {
         withUnsafePointer(to: collision_mask) { collision_mask_native in
@@ -201,7 +206,7 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_collision_layer(collision_layer: Int64)  {
         withUnsafePointer(to: collision_layer) { collision_layer_native in
@@ -234,7 +239,7 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_collision_mask_value(layer_number: Int64, value: UInt8)  {
         withUnsafePointer(to: value) { value_native in
@@ -270,7 +275,7 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func set_collision_layer_value(layer_number: Int64, value: UInt8)  {
@@ -307,7 +312,7 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func set_parent_collision_ignore(parent_collision_ignore: NodePath)  {
@@ -339,7 +344,7 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return NodePath(from: __resPtr.pointee)
+            return NodePath(godot: __resPtr.pointee)
     }
     public func set_disable_mode(mode: SoftBody3D.DisableMode)  {
         withUnsafePointer(to: mode.rawValue) { mode_native in
@@ -371,7 +376,7 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return SoftBody3D.DisableMode(from: __resPtr.pointee)
+            return SoftBody3D.DisableMode(godot: __resPtr.pointee)
     }
     public func get_collision_exceptions() -> [PhysicsBody3D] {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -387,7 +392,7 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [PhysicsBody3D](from: __resPtr.pointee)
+            return [PhysicsBody3D](godot: __resPtr.pointee)
     }
     public func add_collision_exception_with(body: Node)  {
         let body_native = body._native_ptr()
@@ -450,7 +455,7 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_total_mass(mass: Float64)  {
         withUnsafePointer(to: mass) { mass_native in
@@ -483,7 +488,7 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_linear_stiffness(linear_stiffness: Float64)  {
         withUnsafePointer(to: linear_stiffness) { linear_stiffness_native in
@@ -516,7 +521,7 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_pressure_coefficient(pressure_coefficient: Float64)  {
         withUnsafePointer(to: pressure_coefficient) { pressure_coefficient_native in
@@ -549,7 +554,7 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_damping_coefficient(damping_coefficient: Float64)  {
         withUnsafePointer(to: damping_coefficient) { damping_coefficient_native in
@@ -582,7 +587,7 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_drag_coefficient(drag_coefficient: Float64)  {
         withUnsafePointer(to: drag_coefficient) { drag_coefficient_native in
@@ -615,7 +620,7 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func get_point_transform(point_index: Int64) -> Vector3 {
         withUnsafePointer(to: point_index) { point_index_native in
@@ -632,7 +637,7 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
         }
     }
     public func set_point_pinned(point_index: Int64, pinned: UInt8, attachment_path: NodePath)  {
@@ -670,7 +675,7 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func set_ray_pickable(ray_pickable: UInt8)  {
@@ -704,6 +709,6 @@ public class SoftBody3D : MeshInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

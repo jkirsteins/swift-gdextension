@@ -185,14 +185,7 @@ func export_builtin_class(
         memberOffsets: memberOffsets,
         full: full, doc: doc).render()
     
-    let dirurl = URL(filePath: "gen/builtin")
-    let fileurl = dirurl.appending(component: "\(sut.name).swift")
-    
-    try! FileManager.default.createDirectory(at: dirurl, withIntermediateDirectories: true)
-    
-    try! output.write(to: fileurl, atomically: true, encoding: String.Encoding.utf8)
-    
-    print("    generated \(fileurl.path)")
+    print("    generated \(_store(output, "builtin", sut.name).path)")
 }
 
 
@@ -215,14 +208,24 @@ func export_builtin_variant(
             "variantSize" : size.size
         ],
         template: """
+import godot_native
+
 public class Variant : BuiltinClass {
     public class var __godot_name: StringName { __godot_name_Variant }
+
+    public static var interface: UnsafePointer<GDExtensionInterface>! = nil
+    public static var library: GDExtensionClassLibraryPtr! = nil
+    
+    var interface: UnsafePointer<GDExtensionInterface> { Self.interface }
 
     public static let SIZE = ${variantSize}
 
     public let opaque: UnsafeMutableRawPointer
     
-    public class func initialize_class() {
+    public class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
+
         __godot_name_Variant = StringName(from: "Variant")
     }
 
@@ -230,7 +233,7 @@ public class Variant : BuiltinClass {
         self.opaque = Self.interface.pointee.mem_alloc(Self.SIZE)!
     }
 
-    public required init(from unsafePtr: UnsafeRawPointer) {
+    public required init(godot unsafePtr: UnsafeRawPointer) {
         self.opaque = .init(mutating: unsafePtr)
     }
 

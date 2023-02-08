@@ -5,7 +5,7 @@ fileprivate var __godot_name_GLTFDocument: StringName! = nil
 /// MISSING
 /// 
 /// MISSING
-public class GLTFDocument : Resource {
+open class GLTFDocument : Resource {
 
     
 
@@ -20,40 +20,45 @@ public class GLTFDocument : Resource {
     static var _method_register_gltf_document_extension_3752678331: GDExtensionMethodBindPtr! = nil
     static var _method_unregister_gltf_document_extension_2684415758: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_GLTFDocument = StringName(from: "GLTFDocument")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_append_from_file_1862991421_name = StringName(from: "append_from_file")
-        self._method_append_from_file_1862991421 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_append_from_file_1862991421_name._native_ptr(), 1862991421)
+        self._method_append_from_file_1862991421 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFDocument._native_ptr(), _method_append_from_file_1862991421_name._native_ptr(), 1862991421)
         assert(GLTFDocument._method_append_from_file_1862991421 != nil)
         let _method_append_from_buffer_2818062664_name = StringName(from: "append_from_buffer")
-        self._method_append_from_buffer_2818062664 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_append_from_buffer_2818062664_name._native_ptr(), 2818062664)
+        self._method_append_from_buffer_2818062664 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFDocument._native_ptr(), _method_append_from_buffer_2818062664_name._native_ptr(), 2818062664)
         assert(GLTFDocument._method_append_from_buffer_2818062664 != nil)
         let _method_append_from_scene_374125375_name = StringName(from: "append_from_scene")
-        self._method_append_from_scene_374125375 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_append_from_scene_374125375_name._native_ptr(), 374125375)
+        self._method_append_from_scene_374125375 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFDocument._native_ptr(), _method_append_from_scene_374125375_name._native_ptr(), 374125375)
         assert(GLTFDocument._method_append_from_scene_374125375 != nil)
         let _method_generate_scene_2770277081_name = StringName(from: "generate_scene")
-        self._method_generate_scene_2770277081 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_generate_scene_2770277081_name._native_ptr(), 2770277081)
+        self._method_generate_scene_2770277081 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFDocument._native_ptr(), _method_generate_scene_2770277081_name._native_ptr(), 2770277081)
         assert(GLTFDocument._method_generate_scene_2770277081 != nil)
         let _method_generate_buffer_741783455_name = StringName(from: "generate_buffer")
-        self._method_generate_buffer_741783455 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_generate_buffer_741783455_name._native_ptr(), 741783455)
+        self._method_generate_buffer_741783455 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFDocument._native_ptr(), _method_generate_buffer_741783455_name._native_ptr(), 741783455)
         assert(GLTFDocument._method_generate_buffer_741783455 != nil)
         let _method_write_to_filesystem_1784551478_name = StringName(from: "write_to_filesystem")
-        self._method_write_to_filesystem_1784551478 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_write_to_filesystem_1784551478_name._native_ptr(), 1784551478)
+        self._method_write_to_filesystem_1784551478 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFDocument._native_ptr(), _method_write_to_filesystem_1784551478_name._native_ptr(), 1784551478)
         assert(GLTFDocument._method_write_to_filesystem_1784551478 != nil)
         let _method_register_gltf_document_extension_3752678331_name = StringName(from: "register_gltf_document_extension")
-        self._method_register_gltf_document_extension_3752678331 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_register_gltf_document_extension_3752678331_name._native_ptr(), 3752678331)
+        self._method_register_gltf_document_extension_3752678331 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFDocument._native_ptr(), _method_register_gltf_document_extension_3752678331_name._native_ptr(), 3752678331)
         assert(GLTFDocument._method_register_gltf_document_extension_3752678331 != nil)
         let _method_unregister_gltf_document_extension_2684415758_name = StringName(from: "unregister_gltf_document_extension")
-        self._method_unregister_gltf_document_extension_2684415758 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_unregister_gltf_document_extension_2684415758_name._native_ptr(), 2684415758)
+        self._method_unregister_gltf_document_extension_2684415758 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFDocument._native_ptr(), _method_unregister_gltf_document_extension_2684415758_name._native_ptr(), 2684415758)
         assert(GLTFDocument._method_unregister_gltf_document_extension_2684415758 != nil)
     }
 
-    public func append_from_file(path: String, state: GLTFState, flags: Int64, base_path: String) -> Error {
-        withUnsafePointer(to: base_path) { base_path_native in
+    public func append_from_file(path: godot.String, state: GLTFState, flags: Int64, base_path: godot.String) -> Error {
         withUnsafePointer(to: flags) { flags_native in
-        withUnsafePointer(to: path) { path_native in
+        let base_path_native = base_path._native_ptr()
         let state_native = state._native_ptr()
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 4)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -67,15 +72,13 @@ public class GLTFDocument : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
-        }
+            return Error(godot: __resPtr.pointee)
         }
     }
-    public func append_from_buffer(bytes: PackedByteArray, base_path: String, state: GLTFState, flags: Int64) -> Error {
+    public func append_from_buffer(bytes: PackedByteArray, base_path: godot.String, state: GLTFState, flags: Int64) -> Error {
         withUnsafePointer(to: flags) { flags_native in
-        withUnsafePointer(to: base_path) { base_path_native in
         let state_native = state._native_ptr()
+        let base_path_native = base_path._native_ptr()
         let bytes_native = bytes._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 4)
             defer { args.deallocate() }
@@ -90,8 +93,7 @@ public class GLTFDocument : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func append_from_scene(node: Node, state: GLTFState, flags: Int64) -> Error {
@@ -111,7 +113,7 @@ public class GLTFDocument : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func generate_scene(state: GLTFState, bake_fps: Float64, trimming: UInt8, remove_immutable_tracks: UInt8) -> Node {
@@ -132,7 +134,7 @@ public class GLTFDocument : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Node(from: __resPtr.pointee)
+            return Node(godot: __resPtr.pointee)
         }
         }
         }
@@ -152,10 +154,10 @@ public class GLTFDocument : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
+            return PackedByteArray(godot: __resPtr.pointee)
     }
-    public func write_to_filesystem(state: GLTFState, path: String) -> Error {
-        withUnsafePointer(to: path) { path_native in
+    public func write_to_filesystem(state: GLTFState, path: godot.String) -> Error {
+        let path_native = path._native_ptr()
         let state_native = state._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
@@ -170,8 +172,7 @@ public class GLTFDocument : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
+            return Error(godot: __resPtr.pointee)
     }
     public func register_gltf_document_extension(`extension`: GLTFDocumentExtension, first_priority: UInt8)  {
         withUnsafePointer(to: first_priority) { first_priority_native in

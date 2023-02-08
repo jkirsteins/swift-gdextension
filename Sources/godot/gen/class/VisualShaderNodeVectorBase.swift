@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeVectorBase: StringName! = nil
 /// A base type for the nodes that perform vector operations within the visual shader graph.
 /// 
 /// This is an abstract class. See the derived types for descriptions of the possible operations.
-public class VisualShaderNodeVectorBase : VisualShaderNode {
+open class VisualShaderNodeVectorBase : VisualShaderNode {
 
     public enum OpType : Int32 {
         case OP_TYPE_VECTOR_2D = 0
@@ -19,14 +19,19 @@ public class VisualShaderNodeVectorBase : VisualShaderNode {
     static var _method_set_op_type_1692596998: GDExtensionMethodBindPtr! = nil
     static var _method_get_op_type_2568738462: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeVectorBase = StringName(from: "VisualShaderNodeVectorBase")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_op_type_1692596998_name = StringName(from: "set_op_type")
-        self._method_set_op_type_1692596998 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_op_type_1692596998_name._native_ptr(), 1692596998)
+        self._method_set_op_type_1692596998 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeVectorBase._native_ptr(), _method_set_op_type_1692596998_name._native_ptr(), 1692596998)
         assert(VisualShaderNodeVectorBase._method_set_op_type_1692596998 != nil)
         let _method_get_op_type_2568738462_name = StringName(from: "get_op_type")
-        self._method_get_op_type_2568738462 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_op_type_2568738462_name._native_ptr(), 2568738462)
+        self._method_get_op_type_2568738462 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeVectorBase._native_ptr(), _method_get_op_type_2568738462_name._native_ptr(), 2568738462)
         assert(VisualShaderNodeVectorBase._method_get_op_type_2568738462 != nil)
     }
 
@@ -60,6 +65,6 @@ public class VisualShaderNodeVectorBase : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return VisualShaderNodeVectorBase.OpType(from: __resPtr.pointee)
+            return VisualShaderNodeVectorBase.OpType(godot: __resPtr.pointee)
     }
 }

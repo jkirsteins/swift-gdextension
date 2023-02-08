@@ -11,6 +11,11 @@ fileprivate var __godot_name_PackedInt32Array: StringName! = nil
 /// [b]Note:[/b] This type stores signed 32-bit integers, which means it can take values in the interval [code][-2^31, 2^31 - 1][/code], i.e. [code][-2147483648, 2147483647][/code]. Exceeding those bounds will wrap around. In comparison, [int] uses signed 64-bit integers which can hold much larger values. If you need to pack 64-bit integers tightly, see [PackedInt64Array].
 public class PackedInt32Array : BuiltinClass {
 
+    public static var interface: UnsafePointer<GDExtensionInterface>! = nil
+    public static var library: GDExtensionClassLibraryPtr! = nil
+    
+    var interface: UnsafePointer<GDExtensionInterface> { Self.interface }
+
     
 
     public class var __godot_name: StringName { __godot_name_PackedInt32Array }
@@ -24,7 +29,10 @@ public class PackedInt32Array : BuiltinClass {
     static var _constructor_2: GDExtensionPtrConstructor? = nil
     static var _destructor: GDExtensionPtrDestructor? = nil
 
-    public class func initialize_class() {
+    public class func initialize_class(_ ginit: GodotInitializer, _: GDExtensionInitializationLevel) {
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
+
         // Init constructors before assigning __godot_name
         PackedInt32Array._constructor_0 =  PackedInt32Array.interface.pointee.variant_get_ptr_constructor(GDEXTENSION_VARIANT_TYPE_PACKED_INT32_ARRAY, 0)
         assert(PackedInt32Array._constructor_0 != nil)
@@ -34,8 +42,11 @@ public class PackedInt32Array : BuiltinClass {
         assert(PackedInt32Array._constructor_2 != nil)
         PackedInt32Array._destructor =  PackedInt32Array.interface.pointee.variant_get_ptr_destructor(GDEXTENSION_VARIANT_TYPE_PACKED_INT32_ARRAY)
         assert(PackedInt32Array._destructor != nil)
+    }
 
-        // At this point constructors must be assigned
+    public class func initialize_godot_name() {
+        // At this point constructors for String and StringName
+        // must be assigned
         __godot_name_PackedInt32Array = StringName(from: "PackedInt32Array")
     }
 
@@ -74,10 +85,10 @@ public class PackedInt32Array : BuiltinClass {
             // call here
             Self._constructor_2!(self._native_ptr(), .init(args.baseAddress!))
     }
-    public required init(from unsafe: UnsafeRawPointer) {
+    public required init(godot unsafe: UnsafeRawPointer) {
         self.opaque = .init(mutating: unsafe)
     }
-    public required init(from unsafe: UnsafeMutableRawPointer) {
+    public required init(godot unsafe: UnsafeMutableRawPointer) {
         self.opaque = unsafe
     }
 

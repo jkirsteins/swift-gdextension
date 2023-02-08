@@ -9,7 +9,7 @@ fileprivate var __godot_name_ConvexPolygonShape3D: StringName! = nil
 /// [b]Convex decomposition:[/b] Concave objects' collisions can be represented accurately using [i]several[/i] [ConvexPolygonShape3D]s. This allows dynamic physics bodies to have complex concave collisions (at a performance cost). This is available in the editor by selecting the [MeshInstance3D], going to the [b]Mesh[/b] menu and choosing [b]Create Multiple Convex Collision Siblings[/b]. Alternatively, [method MeshInstance3D.create_multiple_convex_collisions] can be called in a script to perform this decomposition at run-time.
 ///  
 /// [b]Performance:[/b] [ConvexPolygonShape3D] is faster to check collisions against compared to [ConcavePolygonShape3D], but it is slower than primitive collision shapes such as [SphereShape3D] or [BoxShape3D]. Its use should generally be limited to medium-sized objects that cannot have their collision accurately represented by a primitive shape.
-public class ConvexPolygonShape3D : Shape3D {
+open class ConvexPolygonShape3D : Shape3D {
 
     
 
@@ -18,14 +18,19 @@ public class ConvexPolygonShape3D : Shape3D {
     static var _method_set_points_334873810: GDExtensionMethodBindPtr! = nil
     static var _method_get_points_497664490: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ConvexPolygonShape3D = StringName(from: "ConvexPolygonShape3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_points_334873810_name = StringName(from: "set_points")
-        self._method_set_points_334873810 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_points_334873810_name._native_ptr(), 334873810)
+        self._method_set_points_334873810 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConvexPolygonShape3D._native_ptr(), _method_set_points_334873810_name._native_ptr(), 334873810)
         assert(ConvexPolygonShape3D._method_set_points_334873810 != nil)
         let _method_get_points_497664490_name = StringName(from: "get_points")
-        self._method_get_points_497664490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_points_497664490_name._native_ptr(), 497664490)
+        self._method_get_points_497664490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConvexPolygonShape3D._native_ptr(), _method_get_points_497664490_name._native_ptr(), 497664490)
         assert(ConvexPolygonShape3D._method_get_points_497664490 != nil)
     }
 
@@ -58,6 +63,6 @@ public class ConvexPolygonShape3D : Shape3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector3Array(from: __resPtr.pointee)
+            return PackedVector3Array(godot: __resPtr.pointee)
     }
 }

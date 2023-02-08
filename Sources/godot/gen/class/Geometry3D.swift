@@ -5,7 +5,7 @@ fileprivate var __godot_name_Geometry3D: StringName! = nil
 /// Helper node to calculate generic geometry operations in 3D space.
 /// 
 /// Geometry3D provides users with a set of helper functions to create geometric shapes, compute intersections between shapes, and process various other geometric operations.
-public class Geometry3D : Object {
+open class Geometry3D : Object {
 
     
 
@@ -24,44 +24,49 @@ public class Geometry3D : Object {
     static var _method_segment_intersects_convex_537425332: GDExtensionMethodBindPtr! = nil
     static var _method_clip_polygon_2603188319: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_Geometry3D = StringName(from: "Geometry3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_build_box_planes_3622277145_name = StringName(from: "build_box_planes")
-        self._method_build_box_planes_3622277145 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_build_box_planes_3622277145_name._native_ptr(), 3622277145)
+        self._method_build_box_planes_3622277145 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_build_box_planes_3622277145_name._native_ptr(), 3622277145)
         assert(Geometry3D._method_build_box_planes_3622277145 != nil)
         let _method_build_cylinder_planes_3142160516_name = StringName(from: "build_cylinder_planes")
-        self._method_build_cylinder_planes_3142160516 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_build_cylinder_planes_3142160516_name._native_ptr(), 3142160516)
+        self._method_build_cylinder_planes_3142160516 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_build_cylinder_planes_3142160516_name._native_ptr(), 3142160516)
         assert(Geometry3D._method_build_cylinder_planes_3142160516 != nil)
         let _method_build_capsule_planes_410870045_name = StringName(from: "build_capsule_planes")
-        self._method_build_capsule_planes_410870045 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_build_capsule_planes_410870045_name._native_ptr(), 410870045)
+        self._method_build_capsule_planes_410870045 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_build_capsule_planes_410870045_name._native_ptr(), 410870045)
         assert(Geometry3D._method_build_capsule_planes_410870045 != nil)
         let _method_get_closest_points_between_segments_1056373962_name = StringName(from: "get_closest_points_between_segments")
-        self._method_get_closest_points_between_segments_1056373962 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_closest_points_between_segments_1056373962_name._native_ptr(), 1056373962)
+        self._method_get_closest_points_between_segments_1056373962 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_get_closest_points_between_segments_1056373962_name._native_ptr(), 1056373962)
         assert(Geometry3D._method_get_closest_points_between_segments_1056373962 != nil)
         let _method_get_closest_point_to_segment_2168193209_name = StringName(from: "get_closest_point_to_segment")
-        self._method_get_closest_point_to_segment_2168193209 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_closest_point_to_segment_2168193209_name._native_ptr(), 2168193209)
+        self._method_get_closest_point_to_segment_2168193209 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_get_closest_point_to_segment_2168193209_name._native_ptr(), 2168193209)
         assert(Geometry3D._method_get_closest_point_to_segment_2168193209 != nil)
         let _method_get_closest_point_to_segment_uncapped_2168193209_name = StringName(from: "get_closest_point_to_segment_uncapped")
-        self._method_get_closest_point_to_segment_uncapped_2168193209 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_closest_point_to_segment_uncapped_2168193209_name._native_ptr(), 2168193209)
+        self._method_get_closest_point_to_segment_uncapped_2168193209 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_get_closest_point_to_segment_uncapped_2168193209_name._native_ptr(), 2168193209)
         assert(Geometry3D._method_get_closest_point_to_segment_uncapped_2168193209 != nil)
         let _method_ray_intersects_triangle_1718655448_name = StringName(from: "ray_intersects_triangle")
-        self._method_ray_intersects_triangle_1718655448 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_ray_intersects_triangle_1718655448_name._native_ptr(), 1718655448)
+        self._method_ray_intersects_triangle_1718655448 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_ray_intersects_triangle_1718655448_name._native_ptr(), 1718655448)
         assert(Geometry3D._method_ray_intersects_triangle_1718655448 != nil)
         let _method_segment_intersects_triangle_1718655448_name = StringName(from: "segment_intersects_triangle")
-        self._method_segment_intersects_triangle_1718655448 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_segment_intersects_triangle_1718655448_name._native_ptr(), 1718655448)
+        self._method_segment_intersects_triangle_1718655448 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_segment_intersects_triangle_1718655448_name._native_ptr(), 1718655448)
         assert(Geometry3D._method_segment_intersects_triangle_1718655448 != nil)
         let _method_segment_intersects_sphere_4080141172_name = StringName(from: "segment_intersects_sphere")
-        self._method_segment_intersects_sphere_4080141172 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_segment_intersects_sphere_4080141172_name._native_ptr(), 4080141172)
+        self._method_segment_intersects_sphere_4080141172 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_segment_intersects_sphere_4080141172_name._native_ptr(), 4080141172)
         assert(Geometry3D._method_segment_intersects_sphere_4080141172 != nil)
         let _method_segment_intersects_cylinder_2361316491_name = StringName(from: "segment_intersects_cylinder")
-        self._method_segment_intersects_cylinder_2361316491 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_segment_intersects_cylinder_2361316491_name._native_ptr(), 2361316491)
+        self._method_segment_intersects_cylinder_2361316491 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_segment_intersects_cylinder_2361316491_name._native_ptr(), 2361316491)
         assert(Geometry3D._method_segment_intersects_cylinder_2361316491 != nil)
         let _method_segment_intersects_convex_537425332_name = StringName(from: "segment_intersects_convex")
-        self._method_segment_intersects_convex_537425332 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_segment_intersects_convex_537425332_name._native_ptr(), 537425332)
+        self._method_segment_intersects_convex_537425332 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_segment_intersects_convex_537425332_name._native_ptr(), 537425332)
         assert(Geometry3D._method_segment_intersects_convex_537425332 != nil)
         let _method_clip_polygon_2603188319_name = StringName(from: "clip_polygon")
-        self._method_clip_polygon_2603188319 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clip_polygon_2603188319_name._native_ptr(), 2603188319)
+        self._method_clip_polygon_2603188319 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_clip_polygon_2603188319_name._native_ptr(), 2603188319)
         assert(Geometry3D._method_clip_polygon_2603188319 != nil)
     }
 
@@ -80,7 +85,7 @@ public class Geometry3D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Plane](from: __resPtr.pointee)
+            return [Plane](godot: __resPtr.pointee)
     }
     public func build_cylinder_planes(radius: Float64, height: Float64, sides: Int64, axis: Vector3.Axis) -> [Plane] {
         withUnsafePointer(to: sides) { sides_native in
@@ -100,7 +105,7 @@ public class Geometry3D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Plane](from: __resPtr.pointee)
+            return [Plane](godot: __resPtr.pointee)
         }
         }
         }
@@ -125,7 +130,7 @@ public class Geometry3D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Plane](from: __resPtr.pointee)
+            return [Plane](godot: __resPtr.pointee)
         }
         }
         }
@@ -150,7 +155,7 @@ public class Geometry3D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector3Array(from: __resPtr.pointee)
+            return PackedVector3Array(godot: __resPtr.pointee)
     }
     public func get_closest_point_to_segment(point: Vector3, s1: Vector3, s2: Vector3) -> Vector3 {
         let s2_native = s2._native_ptr()
@@ -169,7 +174,7 @@ public class Geometry3D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
     }
     public func get_closest_point_to_segment_uncapped(point: Vector3, s1: Vector3, s2: Vector3) -> Vector3 {
         let s2_native = s2._native_ptr()
@@ -188,7 +193,7 @@ public class Geometry3D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
     }
     public func ray_intersects_triangle(from: Vector3, dir: Vector3, a: Vector3, b: Vector3, c: Vector3) -> Variant {
         let c_native = c._native_ptr()
@@ -209,7 +214,7 @@ public class Geometry3D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
     }
     public func segment_intersects_triangle(from: Vector3, to: Vector3, a: Vector3, b: Vector3, c: Vector3) -> Variant {
         let c_native = c._native_ptr()
@@ -230,7 +235,7 @@ public class Geometry3D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
     }
     public func segment_intersects_sphere(from: Vector3, to: Vector3, sphere_position: Vector3, sphere_radius: Float64) -> PackedVector3Array {
         withUnsafePointer(to: sphere_radius) { sphere_radius_native in
@@ -250,7 +255,7 @@ public class Geometry3D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector3Array(from: __resPtr.pointee)
+            return PackedVector3Array(godot: __resPtr.pointee)
         }
     }
     public func segment_intersects_cylinder(from: Vector3, to: Vector3, height: Float64, radius: Float64) -> PackedVector3Array {
@@ -271,7 +276,7 @@ public class Geometry3D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector3Array(from: __resPtr.pointee)
+            return PackedVector3Array(godot: __resPtr.pointee)
         }
         }
     }
@@ -292,7 +297,7 @@ public class Geometry3D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector3Array(from: __resPtr.pointee)
+            return PackedVector3Array(godot: __resPtr.pointee)
     }
     public func clip_polygon(points: PackedVector3Array, plane: Plane) -> PackedVector3Array {
         let plane_native = plane._native_ptr()
@@ -310,6 +315,6 @@ public class Geometry3D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector3Array(from: __resPtr.pointee)
+            return PackedVector3Array(godot: __resPtr.pointee)
     }
 }

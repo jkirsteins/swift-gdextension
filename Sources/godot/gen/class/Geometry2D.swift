@@ -5,7 +5,7 @@ fileprivate var __godot_name_Geometry2D: StringName! = nil
 /// Helper node to calculate generic geometry operations in 2D space.
 /// 
 /// Geometry2D provides users with a set of helper functions to create geometric shapes, compute intersections between shapes, and process various other geometric operations.
-public class Geometry2D : Object {
+open class Geometry2D : Object {
 
     public enum PolyBooleanOperation : Int32 {
         case OPERATION_UNION = 0
@@ -52,77 +52,82 @@ public class Geometry2D : Object {
     static var _method_offset_polyline_328033063: GDExtensionMethodBindPtr! = nil
     static var _method_make_atlas_1337682371: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_Geometry2D = StringName(from: "Geometry2D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_is_point_in_circle_2929491703_name = StringName(from: "is_point_in_circle")
-        self._method_is_point_in_circle_2929491703 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_point_in_circle_2929491703_name._native_ptr(), 2929491703)
+        self._method_is_point_in_circle_2929491703 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_is_point_in_circle_2929491703_name._native_ptr(), 2929491703)
         assert(Geometry2D._method_is_point_in_circle_2929491703 != nil)
         let _method_segment_intersects_circle_1356928167_name = StringName(from: "segment_intersects_circle")
-        self._method_segment_intersects_circle_1356928167 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_segment_intersects_circle_1356928167_name._native_ptr(), 1356928167)
+        self._method_segment_intersects_circle_1356928167 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_segment_intersects_circle_1356928167_name._native_ptr(), 1356928167)
         assert(Geometry2D._method_segment_intersects_circle_1356928167 != nil)
         let _method_segment_intersects_segment_2058025344_name = StringName(from: "segment_intersects_segment")
-        self._method_segment_intersects_segment_2058025344 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_segment_intersects_segment_2058025344_name._native_ptr(), 2058025344)
+        self._method_segment_intersects_segment_2058025344 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_segment_intersects_segment_2058025344_name._native_ptr(), 2058025344)
         assert(Geometry2D._method_segment_intersects_segment_2058025344 != nil)
         let _method_line_intersects_line_2058025344_name = StringName(from: "line_intersects_line")
-        self._method_line_intersects_line_2058025344 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_line_intersects_line_2058025344_name._native_ptr(), 2058025344)
+        self._method_line_intersects_line_2058025344 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_line_intersects_line_2058025344_name._native_ptr(), 2058025344)
         assert(Geometry2D._method_line_intersects_line_2058025344 != nil)
         let _method_get_closest_points_between_segments_3344690961_name = StringName(from: "get_closest_points_between_segments")
-        self._method_get_closest_points_between_segments_3344690961 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_closest_points_between_segments_3344690961_name._native_ptr(), 3344690961)
+        self._method_get_closest_points_between_segments_3344690961 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_get_closest_points_between_segments_3344690961_name._native_ptr(), 3344690961)
         assert(Geometry2D._method_get_closest_points_between_segments_3344690961 != nil)
         let _method_get_closest_point_to_segment_4172901909_name = StringName(from: "get_closest_point_to_segment")
-        self._method_get_closest_point_to_segment_4172901909 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_closest_point_to_segment_4172901909_name._native_ptr(), 4172901909)
+        self._method_get_closest_point_to_segment_4172901909 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_get_closest_point_to_segment_4172901909_name._native_ptr(), 4172901909)
         assert(Geometry2D._method_get_closest_point_to_segment_4172901909 != nil)
         let _method_get_closest_point_to_segment_uncapped_4172901909_name = StringName(from: "get_closest_point_to_segment_uncapped")
-        self._method_get_closest_point_to_segment_uncapped_4172901909 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_closest_point_to_segment_uncapped_4172901909_name._native_ptr(), 4172901909)
+        self._method_get_closest_point_to_segment_uncapped_4172901909 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_get_closest_point_to_segment_uncapped_4172901909_name._native_ptr(), 4172901909)
         assert(Geometry2D._method_get_closest_point_to_segment_uncapped_4172901909 != nil)
         let _method_point_is_inside_triangle_1025948137_name = StringName(from: "point_is_inside_triangle")
-        self._method_point_is_inside_triangle_1025948137 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_point_is_inside_triangle_1025948137_name._native_ptr(), 1025948137)
+        self._method_point_is_inside_triangle_1025948137 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_point_is_inside_triangle_1025948137_name._native_ptr(), 1025948137)
         assert(Geometry2D._method_point_is_inside_triangle_1025948137 != nil)
         let _method_is_polygon_clockwise_1361156557_name = StringName(from: "is_polygon_clockwise")
-        self._method_is_polygon_clockwise_1361156557 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_polygon_clockwise_1361156557_name._native_ptr(), 1361156557)
+        self._method_is_polygon_clockwise_1361156557 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_is_polygon_clockwise_1361156557_name._native_ptr(), 1361156557)
         assert(Geometry2D._method_is_polygon_clockwise_1361156557 != nil)
         let _method_is_point_in_polygon_738277916_name = StringName(from: "is_point_in_polygon")
-        self._method_is_point_in_polygon_738277916 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_point_in_polygon_738277916_name._native_ptr(), 738277916)
+        self._method_is_point_in_polygon_738277916 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_is_point_in_polygon_738277916_name._native_ptr(), 738277916)
         assert(Geometry2D._method_is_point_in_polygon_738277916 != nil)
         let _method_triangulate_polygon_1389921771_name = StringName(from: "triangulate_polygon")
-        self._method_triangulate_polygon_1389921771 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_triangulate_polygon_1389921771_name._native_ptr(), 1389921771)
+        self._method_triangulate_polygon_1389921771 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_triangulate_polygon_1389921771_name._native_ptr(), 1389921771)
         assert(Geometry2D._method_triangulate_polygon_1389921771 != nil)
         let _method_triangulate_delaunay_1389921771_name = StringName(from: "triangulate_delaunay")
-        self._method_triangulate_delaunay_1389921771 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_triangulate_delaunay_1389921771_name._native_ptr(), 1389921771)
+        self._method_triangulate_delaunay_1389921771 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_triangulate_delaunay_1389921771_name._native_ptr(), 1389921771)
         assert(Geometry2D._method_triangulate_delaunay_1389921771 != nil)
         let _method_convex_hull_2004331998_name = StringName(from: "convex_hull")
-        self._method_convex_hull_2004331998 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_convex_hull_2004331998_name._native_ptr(), 2004331998)
+        self._method_convex_hull_2004331998 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_convex_hull_2004331998_name._native_ptr(), 2004331998)
         assert(Geometry2D._method_convex_hull_2004331998 != nil)
         let _method_decompose_polygon_in_convex_3982393695_name = StringName(from: "decompose_polygon_in_convex")
-        self._method_decompose_polygon_in_convex_3982393695 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_decompose_polygon_in_convex_3982393695_name._native_ptr(), 3982393695)
+        self._method_decompose_polygon_in_convex_3982393695 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_decompose_polygon_in_convex_3982393695_name._native_ptr(), 3982393695)
         assert(Geometry2D._method_decompose_polygon_in_convex_3982393695 != nil)
         let _method_merge_polygons_3637387053_name = StringName(from: "merge_polygons")
-        self._method_merge_polygons_3637387053 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_merge_polygons_3637387053_name._native_ptr(), 3637387053)
+        self._method_merge_polygons_3637387053 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_merge_polygons_3637387053_name._native_ptr(), 3637387053)
         assert(Geometry2D._method_merge_polygons_3637387053 != nil)
         let _method_clip_polygons_3637387053_name = StringName(from: "clip_polygons")
-        self._method_clip_polygons_3637387053 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clip_polygons_3637387053_name._native_ptr(), 3637387053)
+        self._method_clip_polygons_3637387053 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_clip_polygons_3637387053_name._native_ptr(), 3637387053)
         assert(Geometry2D._method_clip_polygons_3637387053 != nil)
         let _method_intersect_polygons_3637387053_name = StringName(from: "intersect_polygons")
-        self._method_intersect_polygons_3637387053 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_intersect_polygons_3637387053_name._native_ptr(), 3637387053)
+        self._method_intersect_polygons_3637387053 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_intersect_polygons_3637387053_name._native_ptr(), 3637387053)
         assert(Geometry2D._method_intersect_polygons_3637387053 != nil)
         let _method_exclude_polygons_3637387053_name = StringName(from: "exclude_polygons")
-        self._method_exclude_polygons_3637387053 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_exclude_polygons_3637387053_name._native_ptr(), 3637387053)
+        self._method_exclude_polygons_3637387053 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_exclude_polygons_3637387053_name._native_ptr(), 3637387053)
         assert(Geometry2D._method_exclude_polygons_3637387053 != nil)
         let _method_clip_polyline_with_polygon_3637387053_name = StringName(from: "clip_polyline_with_polygon")
-        self._method_clip_polyline_with_polygon_3637387053 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clip_polyline_with_polygon_3637387053_name._native_ptr(), 3637387053)
+        self._method_clip_polyline_with_polygon_3637387053 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_clip_polyline_with_polygon_3637387053_name._native_ptr(), 3637387053)
         assert(Geometry2D._method_clip_polyline_with_polygon_3637387053 != nil)
         let _method_intersect_polyline_with_polygon_3637387053_name = StringName(from: "intersect_polyline_with_polygon")
-        self._method_intersect_polyline_with_polygon_3637387053 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_intersect_polyline_with_polygon_3637387053_name._native_ptr(), 3637387053)
+        self._method_intersect_polyline_with_polygon_3637387053 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_intersect_polyline_with_polygon_3637387053_name._native_ptr(), 3637387053)
         assert(Geometry2D._method_intersect_polyline_with_polygon_3637387053 != nil)
         let _method_offset_polygon_3837618924_name = StringName(from: "offset_polygon")
-        self._method_offset_polygon_3837618924 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_offset_polygon_3837618924_name._native_ptr(), 3837618924)
+        self._method_offset_polygon_3837618924 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_offset_polygon_3837618924_name._native_ptr(), 3837618924)
         assert(Geometry2D._method_offset_polygon_3837618924 != nil)
         let _method_offset_polyline_328033063_name = StringName(from: "offset_polyline")
-        self._method_offset_polyline_328033063 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_offset_polyline_328033063_name._native_ptr(), 328033063)
+        self._method_offset_polyline_328033063 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_offset_polyline_328033063_name._native_ptr(), 328033063)
         assert(Geometry2D._method_offset_polyline_328033063 != nil)
         let _method_make_atlas_1337682371_name = StringName(from: "make_atlas")
-        self._method_make_atlas_1337682371 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_make_atlas_1337682371_name._native_ptr(), 1337682371)
+        self._method_make_atlas_1337682371 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry2D._native_ptr(), _method_make_atlas_1337682371_name._native_ptr(), 1337682371)
         assert(Geometry2D._method_make_atlas_1337682371 != nil)
     }
 
@@ -144,7 +149,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func segment_intersects_circle(segment_from: Vector2, segment_to: Vector2, circle_position: Vector2, circle_radius: Float64) -> Float64 {
@@ -166,7 +171,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func segment_intersects_segment(from_a: Vector2, to_a: Vector2, from_b: Vector2, to_b: Vector2) -> Variant {
@@ -187,7 +192,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
     }
     public func line_intersects_line(from_a: Vector2, dir_a: Vector2, from_b: Vector2, dir_b: Vector2) -> Variant {
         let dir_b_native = dir_b._native_ptr()
@@ -207,7 +212,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
     }
     public func get_closest_points_between_segments(p1: Vector2, q1: Vector2, p2: Vector2, q2: Vector2) -> PackedVector2Array {
         let q2_native = q2._native_ptr()
@@ -227,7 +232,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector2Array(from: __resPtr.pointee)
+            return PackedVector2Array(godot: __resPtr.pointee)
     }
     public func get_closest_point_to_segment(point: Vector2, s1: Vector2, s2: Vector2) -> Vector2 {
         let s2_native = s2._native_ptr()
@@ -246,7 +251,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func get_closest_point_to_segment_uncapped(point: Vector2, s1: Vector2, s2: Vector2) -> Vector2 {
         let s2_native = s2._native_ptr()
@@ -265,7 +270,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func point_is_inside_triangle(point: Vector2, a: Vector2, b: Vector2, c: Vector2) -> UInt8 {
         let c_native = c._native_ptr()
@@ -286,7 +291,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func is_polygon_clockwise(polygon: PackedVector2Array) -> UInt8 {
         let polygon_native = polygon._native_ptr()
@@ -304,7 +309,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func is_point_in_polygon(point: Vector2, polygon: PackedVector2Array) -> UInt8 {
         let polygon_native = polygon._native_ptr()
@@ -323,7 +328,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func triangulate_polygon(polygon: PackedVector2Array) -> PackedInt32Array {
         let polygon_native = polygon._native_ptr()
@@ -340,7 +345,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
     }
     public func triangulate_delaunay(points: PackedVector2Array) -> PackedInt32Array {
         let points_native = points._native_ptr()
@@ -357,7 +362,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
     }
     public func convex_hull(points: PackedVector2Array) -> PackedVector2Array {
         let points_native = points._native_ptr()
@@ -374,7 +379,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector2Array(from: __resPtr.pointee)
+            return PackedVector2Array(godot: __resPtr.pointee)
     }
     public func decompose_polygon_in_convex(polygon: PackedVector2Array) -> [PackedVector2Array] {
         let polygon_native = polygon._native_ptr()
@@ -391,7 +396,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [PackedVector2Array](from: __resPtr.pointee)
+            return [PackedVector2Array](godot: __resPtr.pointee)
     }
     public func merge_polygons(polygon_a: PackedVector2Array, polygon_b: PackedVector2Array) -> [PackedVector2Array] {
         let polygon_b_native = polygon_b._native_ptr()
@@ -409,7 +414,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [PackedVector2Array](from: __resPtr.pointee)
+            return [PackedVector2Array](godot: __resPtr.pointee)
     }
     public func clip_polygons(polygon_a: PackedVector2Array, polygon_b: PackedVector2Array) -> [PackedVector2Array] {
         let polygon_b_native = polygon_b._native_ptr()
@@ -427,7 +432,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [PackedVector2Array](from: __resPtr.pointee)
+            return [PackedVector2Array](godot: __resPtr.pointee)
     }
     public func intersect_polygons(polygon_a: PackedVector2Array, polygon_b: PackedVector2Array) -> [PackedVector2Array] {
         let polygon_b_native = polygon_b._native_ptr()
@@ -445,7 +450,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [PackedVector2Array](from: __resPtr.pointee)
+            return [PackedVector2Array](godot: __resPtr.pointee)
     }
     public func exclude_polygons(polygon_a: PackedVector2Array, polygon_b: PackedVector2Array) -> [PackedVector2Array] {
         let polygon_b_native = polygon_b._native_ptr()
@@ -463,7 +468,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [PackedVector2Array](from: __resPtr.pointee)
+            return [PackedVector2Array](godot: __resPtr.pointee)
     }
     public func clip_polyline_with_polygon(polyline: PackedVector2Array, polygon: PackedVector2Array) -> [PackedVector2Array] {
         let polygon_native = polygon._native_ptr()
@@ -481,7 +486,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [PackedVector2Array](from: __resPtr.pointee)
+            return [PackedVector2Array](godot: __resPtr.pointee)
     }
     public func intersect_polyline_with_polygon(polyline: PackedVector2Array, polygon: PackedVector2Array) -> [PackedVector2Array] {
         let polygon_native = polygon._native_ptr()
@@ -499,7 +504,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [PackedVector2Array](from: __resPtr.pointee)
+            return [PackedVector2Array](godot: __resPtr.pointee)
     }
     public func offset_polygon(polygon: PackedVector2Array, delta: Float64, join_type: Geometry2D.PolyJoinType) -> [PackedVector2Array] {
         withUnsafePointer(to: delta) { delta_native in
@@ -518,7 +523,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [PackedVector2Array](from: __resPtr.pointee)
+            return [PackedVector2Array](godot: __resPtr.pointee)
         }
         }
     }
@@ -540,7 +545,7 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [PackedVector2Array](from: __resPtr.pointee)
+            return [PackedVector2Array](godot: __resPtr.pointee)
         }
         }
         }
@@ -560,6 +565,6 @@ public class Geometry2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
     }
 }

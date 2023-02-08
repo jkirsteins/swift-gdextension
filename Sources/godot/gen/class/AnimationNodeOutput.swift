@@ -5,7 +5,7 @@ fileprivate var __godot_name_AnimationNodeOutput: StringName! = nil
 /// Generic output node to be added to [AnimationNodeBlendTree].
 /// 
 /// 
-public class AnimationNodeOutput : AnimationNode {
+open class AnimationNodeOutput : AnimationNode {
 
     
 
@@ -13,8 +13,13 @@ public class AnimationNodeOutput : AnimationNode {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AnimationNodeOutput = StringName(from: "AnimationNodeOutput")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

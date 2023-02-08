@@ -7,7 +7,7 @@ fileprivate var __godot_name_ImageTexture3D: StringName! = nil
 /// [ImageTexture3D] is a 3-dimensional [ImageTexture] that has a width, height, and depth. See also [ImageTextureLayered].
 ///  
 /// 3D textures are typically used to store density maps for [FogMaterial], color correction LUTs for [Environment], vector fields for [GPUParticlesAttractorVectorField3D] and collision maps for [GPUParticlesCollisionSDF3D]. 3D textures can also be used in custom shaders.
-public class ImageTexture3D : Texture3D {
+open class ImageTexture3D : Texture3D {
 
     
 
@@ -16,14 +16,19 @@ public class ImageTexture3D : Texture3D {
     static var _method_create_1130379827: GDExtensionMethodBindPtr! = nil
     static var _method_update_381264803: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ImageTexture3D = StringName(from: "ImageTexture3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_create_1130379827_name = StringName(from: "create")
-        self._method_create_1130379827 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_1130379827_name._native_ptr(), 1130379827)
+        self._method_create_1130379827 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImageTexture3D._native_ptr(), _method_create_1130379827_name._native_ptr(), 1130379827)
         assert(ImageTexture3D._method_create_1130379827 != nil)
         let _method_update_381264803_name = StringName(from: "update")
-        self._method_update_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_update_381264803_name._native_ptr(), 381264803)
+        self._method_update_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImageTexture3D._native_ptr(), _method_update_381264803_name._native_ptr(), 381264803)
         assert(ImageTexture3D._method_update_381264803 != nil)
     }
 
@@ -47,7 +52,7 @@ public class ImageTexture3D : Texture3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
         }

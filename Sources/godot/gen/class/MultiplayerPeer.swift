@@ -9,7 +9,7 @@ fileprivate var __godot_name_MultiplayerPeer: StringName! = nil
 /// [b]Note:[/b] The [MultiplayerAPI] protocol is an implementation detail and isn't meant to be used by non-Godot servers. It may change without notice.
 ///  
 /// [b]Note:[/b] When exporting to Android, make sure to enable the [code]INTERNET[/code] permission in the Android export preset before exporting the project or using one-click deploy. Otherwise, network communication of any kind will be blocked by Android.
-public class MultiplayerPeer : PacketPeer {
+open class MultiplayerPeer : PacketPeer {
 
     public enum ConnectionStatus : Int32 {
         case CONNECTION_DISCONNECTED = 0
@@ -42,59 +42,64 @@ public class MultiplayerPeer : PacketPeer {
     static var _method_is_refusing_new_connections_36873697: GDExtensionMethodBindPtr! = nil
     static var _method_is_server_relay_supported_36873697: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_MultiplayerPeer = StringName(from: "MultiplayerPeer")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_transfer_channel_1286410249_name = StringName(from: "set_transfer_channel")
-        self._method_set_transfer_channel_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_transfer_channel_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_transfer_channel_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_set_transfer_channel_1286410249_name._native_ptr(), 1286410249)
         assert(MultiplayerPeer._method_set_transfer_channel_1286410249 != nil)
         let _method_get_transfer_channel_3905245786_name = StringName(from: "get_transfer_channel")
-        self._method_get_transfer_channel_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_transfer_channel_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_transfer_channel_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_get_transfer_channel_3905245786_name._native_ptr(), 3905245786)
         assert(MultiplayerPeer._method_get_transfer_channel_3905245786 != nil)
         let _method_set_transfer_mode_950411049_name = StringName(from: "set_transfer_mode")
-        self._method_set_transfer_mode_950411049 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_transfer_mode_950411049_name._native_ptr(), 950411049)
+        self._method_set_transfer_mode_950411049 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_set_transfer_mode_950411049_name._native_ptr(), 950411049)
         assert(MultiplayerPeer._method_set_transfer_mode_950411049 != nil)
         let _method_get_transfer_mode_3369852622_name = StringName(from: "get_transfer_mode")
-        self._method_get_transfer_mode_3369852622 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_transfer_mode_3369852622_name._native_ptr(), 3369852622)
+        self._method_get_transfer_mode_3369852622 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_get_transfer_mode_3369852622_name._native_ptr(), 3369852622)
         assert(MultiplayerPeer._method_get_transfer_mode_3369852622 != nil)
         let _method_set_target_peer_1286410249_name = StringName(from: "set_target_peer")
-        self._method_set_target_peer_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_target_peer_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_target_peer_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_set_target_peer_1286410249_name._native_ptr(), 1286410249)
         assert(MultiplayerPeer._method_set_target_peer_1286410249 != nil)
         let _method_get_packet_peer_3905245786_name = StringName(from: "get_packet_peer")
-        self._method_get_packet_peer_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_packet_peer_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_packet_peer_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_get_packet_peer_3905245786_name._native_ptr(), 3905245786)
         assert(MultiplayerPeer._method_get_packet_peer_3905245786 != nil)
         let _method_get_packet_channel_3905245786_name = StringName(from: "get_packet_channel")
-        self._method_get_packet_channel_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_packet_channel_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_packet_channel_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_get_packet_channel_3905245786_name._native_ptr(), 3905245786)
         assert(MultiplayerPeer._method_get_packet_channel_3905245786 != nil)
         let _method_get_packet_mode_3369852622_name = StringName(from: "get_packet_mode")
-        self._method_get_packet_mode_3369852622 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_packet_mode_3369852622_name._native_ptr(), 3369852622)
+        self._method_get_packet_mode_3369852622 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_get_packet_mode_3369852622_name._native_ptr(), 3369852622)
         assert(MultiplayerPeer._method_get_packet_mode_3369852622 != nil)
         let _method_poll_3218959716_name = StringName(from: "poll")
-        self._method_poll_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_poll_3218959716_name._native_ptr(), 3218959716)
+        self._method_poll_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_poll_3218959716_name._native_ptr(), 3218959716)
         assert(MultiplayerPeer._method_poll_3218959716 != nil)
         let _method_close_3218959716_name = StringName(from: "close")
-        self._method_close_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_close_3218959716_name._native_ptr(), 3218959716)
+        self._method_close_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_close_3218959716_name._native_ptr(), 3218959716)
         assert(MultiplayerPeer._method_close_3218959716 != nil)
         let _method_disconnect_peer_4023243586_name = StringName(from: "disconnect_peer")
-        self._method_disconnect_peer_4023243586 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_disconnect_peer_4023243586_name._native_ptr(), 4023243586)
+        self._method_disconnect_peer_4023243586 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_disconnect_peer_4023243586_name._native_ptr(), 4023243586)
         assert(MultiplayerPeer._method_disconnect_peer_4023243586 != nil)
         let _method_get_connection_status_2147374275_name = StringName(from: "get_connection_status")
-        self._method_get_connection_status_2147374275 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_connection_status_2147374275_name._native_ptr(), 2147374275)
+        self._method_get_connection_status_2147374275 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_get_connection_status_2147374275_name._native_ptr(), 2147374275)
         assert(MultiplayerPeer._method_get_connection_status_2147374275 != nil)
         let _method_get_unique_id_3905245786_name = StringName(from: "get_unique_id")
-        self._method_get_unique_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_unique_id_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_unique_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_get_unique_id_3905245786_name._native_ptr(), 3905245786)
         assert(MultiplayerPeer._method_get_unique_id_3905245786 != nil)
         let _method_generate_unique_id_3905245786_name = StringName(from: "generate_unique_id")
-        self._method_generate_unique_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_generate_unique_id_3905245786_name._native_ptr(), 3905245786)
+        self._method_generate_unique_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_generate_unique_id_3905245786_name._native_ptr(), 3905245786)
         assert(MultiplayerPeer._method_generate_unique_id_3905245786 != nil)
         let _method_set_refuse_new_connections_2586408642_name = StringName(from: "set_refuse_new_connections")
-        self._method_set_refuse_new_connections_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_refuse_new_connections_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_refuse_new_connections_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_set_refuse_new_connections_2586408642_name._native_ptr(), 2586408642)
         assert(MultiplayerPeer._method_set_refuse_new_connections_2586408642 != nil)
         let _method_is_refusing_new_connections_36873697_name = StringName(from: "is_refusing_new_connections")
-        self._method_is_refusing_new_connections_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_refusing_new_connections_36873697_name._native_ptr(), 36873697)
+        self._method_is_refusing_new_connections_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_is_refusing_new_connections_36873697_name._native_ptr(), 36873697)
         assert(MultiplayerPeer._method_is_refusing_new_connections_36873697 != nil)
         let _method_is_server_relay_supported_36873697_name = StringName(from: "is_server_relay_supported")
-        self._method_is_server_relay_supported_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_server_relay_supported_36873697_name._native_ptr(), 36873697)
+        self._method_is_server_relay_supported_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerPeer._native_ptr(), _method_is_server_relay_supported_36873697_name._native_ptr(), 36873697)
         assert(MultiplayerPeer._method_is_server_relay_supported_36873697 != nil)
     }
 
@@ -129,7 +134,7 @@ public class MultiplayerPeer : PacketPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_transfer_mode(mode: MultiplayerPeer.TransferMode)  {
         withUnsafePointer(to: mode.rawValue) { mode_native in
@@ -161,7 +166,7 @@ public class MultiplayerPeer : PacketPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return MultiplayerPeer.TransferMode(from: __resPtr.pointee)
+            return MultiplayerPeer.TransferMode(godot: __resPtr.pointee)
     }
     public func set_target_peer(id: Int64)  {
         withUnsafePointer(to: id) { id_native in
@@ -194,7 +199,7 @@ public class MultiplayerPeer : PacketPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_packet_channel() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -211,7 +216,7 @@ public class MultiplayerPeer : PacketPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_packet_mode() -> MultiplayerPeer.TransferMode {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -227,7 +232,7 @@ public class MultiplayerPeer : PacketPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return MultiplayerPeer.TransferMode(from: __resPtr.pointee)
+            return MultiplayerPeer.TransferMode(godot: __resPtr.pointee)
     }
     public func poll()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -289,7 +294,7 @@ public class MultiplayerPeer : PacketPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return MultiplayerPeer.ConnectionStatus(from: __resPtr.pointee)
+            return MultiplayerPeer.ConnectionStatus(godot: __resPtr.pointee)
     }
     public func get_unique_id() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -306,7 +311,7 @@ public class MultiplayerPeer : PacketPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func generate_unique_id() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -323,7 +328,7 @@ public class MultiplayerPeer : PacketPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_refuse_new_connections(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -356,7 +361,7 @@ public class MultiplayerPeer : PacketPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func is_server_relay_supported() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -373,6 +378,6 @@ public class MultiplayerPeer : PacketPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

@@ -9,7 +9,7 @@ fileprivate var __godot_name_Image: StringName! = nil
 /// An [Image] cannot be assigned to a [code]texture[/code] property of an object directly (such as [Sprite2D]), and has to be converted manually to an [ImageTexture] first.
 ///  
 /// [b]Note:[/b] The maximum image size is 16384×16384 pixels due to graphics hardware limitations. Larger images may fail to import.
-public class Image : Resource {
+open class Image : Resource {
 
     public enum Format : Int32 {
         case FORMAT_L8 = 0
@@ -157,203 +157,208 @@ public class Image : Resource {
     static var _method_load_tga_from_buffer_680677267: GDExtensionMethodBindPtr! = nil
     static var _method_load_bmp_from_buffer_680677267: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_Image = StringName(from: "Image")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_get_width_3905245786_name = StringName(from: "get_width")
-        self._method_get_width_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_width_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_width_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_width_3905245786_name._native_ptr(), 3905245786)
         assert(Image._method_get_width_3905245786 != nil)
         let _method_get_height_3905245786_name = StringName(from: "get_height")
-        self._method_get_height_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_height_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_height_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_height_3905245786_name._native_ptr(), 3905245786)
         assert(Image._method_get_height_3905245786 != nil)
         let _method_get_size_3690982128_name = StringName(from: "get_size")
-        self._method_get_size_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_size_3690982128_name._native_ptr(), 3690982128)
+        self._method_get_size_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_size_3690982128_name._native_ptr(), 3690982128)
         assert(Image._method_get_size_3690982128 != nil)
         let _method_has_mipmaps_36873697_name = StringName(from: "has_mipmaps")
-        self._method_has_mipmaps_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_mipmaps_36873697_name._native_ptr(), 36873697)
+        self._method_has_mipmaps_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_has_mipmaps_36873697_name._native_ptr(), 36873697)
         assert(Image._method_has_mipmaps_36873697 != nil)
         let _method_get_format_3847873762_name = StringName(from: "get_format")
-        self._method_get_format_3847873762 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_format_3847873762_name._native_ptr(), 3847873762)
+        self._method_get_format_3847873762 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_format_3847873762_name._native_ptr(), 3847873762)
         assert(Image._method_get_format_3847873762 != nil)
         let _method_get_data_2362200018_name = StringName(from: "get_data")
-        self._method_get_data_2362200018 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_data_2362200018_name._native_ptr(), 2362200018)
+        self._method_get_data_2362200018 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_data_2362200018_name._native_ptr(), 2362200018)
         assert(Image._method_get_data_2362200018 != nil)
         let _method_convert_2120693146_name = StringName(from: "convert")
-        self._method_convert_2120693146 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_convert_2120693146_name._native_ptr(), 2120693146)
+        self._method_convert_2120693146 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_convert_2120693146_name._native_ptr(), 2120693146)
         assert(Image._method_convert_2120693146 != nil)
         let _method_get_mipmap_offset_923996154_name = StringName(from: "get_mipmap_offset")
-        self._method_get_mipmap_offset_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_mipmap_offset_923996154_name._native_ptr(), 923996154)
+        self._method_get_mipmap_offset_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_mipmap_offset_923996154_name._native_ptr(), 923996154)
         assert(Image._method_get_mipmap_offset_923996154 != nil)
         let _method_resize_to_po2_4189212329_name = StringName(from: "resize_to_po2")
-        self._method_resize_to_po2_4189212329 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_resize_to_po2_4189212329_name._native_ptr(), 4189212329)
+        self._method_resize_to_po2_4189212329 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_resize_to_po2_4189212329_name._native_ptr(), 4189212329)
         assert(Image._method_resize_to_po2_4189212329 != nil)
         let _method_resize_2461393748_name = StringName(from: "resize")
-        self._method_resize_2461393748 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_resize_2461393748_name._native_ptr(), 2461393748)
+        self._method_resize_2461393748 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_resize_2461393748_name._native_ptr(), 2461393748)
         assert(Image._method_resize_2461393748 != nil)
         let _method_shrink_x2_3218959716_name = StringName(from: "shrink_x2")
-        self._method_shrink_x2_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_shrink_x2_3218959716_name._native_ptr(), 3218959716)
+        self._method_shrink_x2_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_shrink_x2_3218959716_name._native_ptr(), 3218959716)
         assert(Image._method_shrink_x2_3218959716 != nil)
         let _method_crop_3937882851_name = StringName(from: "crop")
-        self._method_crop_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_crop_3937882851_name._native_ptr(), 3937882851)
+        self._method_crop_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_crop_3937882851_name._native_ptr(), 3937882851)
         assert(Image._method_crop_3937882851 != nil)
         let _method_flip_x_3218959716_name = StringName(from: "flip_x")
-        self._method_flip_x_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_flip_x_3218959716_name._native_ptr(), 3218959716)
+        self._method_flip_x_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_flip_x_3218959716_name._native_ptr(), 3218959716)
         assert(Image._method_flip_x_3218959716 != nil)
         let _method_flip_y_3218959716_name = StringName(from: "flip_y")
-        self._method_flip_y_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_flip_y_3218959716_name._native_ptr(), 3218959716)
+        self._method_flip_y_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_flip_y_3218959716_name._native_ptr(), 3218959716)
         assert(Image._method_flip_y_3218959716 != nil)
         let _method_generate_mipmaps_1633102583_name = StringName(from: "generate_mipmaps")
-        self._method_generate_mipmaps_1633102583 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_generate_mipmaps_1633102583_name._native_ptr(), 1633102583)
+        self._method_generate_mipmaps_1633102583 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_generate_mipmaps_1633102583_name._native_ptr(), 1633102583)
         assert(Image._method_generate_mipmaps_1633102583 != nil)
         let _method_clear_mipmaps_3218959716_name = StringName(from: "clear_mipmaps")
-        self._method_clear_mipmaps_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_mipmaps_3218959716_name._native_ptr(), 3218959716)
+        self._method_clear_mipmaps_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_clear_mipmaps_3218959716_name._native_ptr(), 3218959716)
         assert(Image._method_clear_mipmaps_3218959716 != nil)
         let _method_create_986942177_name = StringName(from: "create")
-        self._method_create_986942177 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_986942177_name._native_ptr(), 986942177)
+        self._method_create_986942177 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_create_986942177_name._native_ptr(), 986942177)
         assert(Image._method_create_986942177 != nil)
         let _method_create_from_data_299398494_name = StringName(from: "create_from_data")
-        self._method_create_from_data_299398494 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_from_data_299398494_name._native_ptr(), 299398494)
+        self._method_create_from_data_299398494 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_create_from_data_299398494_name._native_ptr(), 299398494)
         assert(Image._method_create_from_data_299398494 != nil)
         let _method_set_data_2740482212_name = StringName(from: "set_data")
-        self._method_set_data_2740482212 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_data_2740482212_name._native_ptr(), 2740482212)
+        self._method_set_data_2740482212 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_set_data_2740482212_name._native_ptr(), 2740482212)
         assert(Image._method_set_data_2740482212 != nil)
         let _method_is_empty_36873697_name = StringName(from: "is_empty")
-        self._method_is_empty_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_empty_36873697_name._native_ptr(), 36873697)
+        self._method_is_empty_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_is_empty_36873697_name._native_ptr(), 36873697)
         assert(Image._method_is_empty_36873697 != nil)
         let _method_load_166001499_name = StringName(from: "load")
-        self._method_load_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_load_166001499_name._native_ptr(), 166001499)
+        self._method_load_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_load_166001499_name._native_ptr(), 166001499)
         assert(Image._method_load_166001499 != nil)
         let _method_load_from_file_736337515_name = StringName(from: "load_from_file")
-        self._method_load_from_file_736337515 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_load_from_file_736337515_name._native_ptr(), 736337515)
+        self._method_load_from_file_736337515 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_load_from_file_736337515_name._native_ptr(), 736337515)
         assert(Image._method_load_from_file_736337515 != nil)
         let _method_save_png_2113323047_name = StringName(from: "save_png")
-        self._method_save_png_2113323047 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_save_png_2113323047_name._native_ptr(), 2113323047)
+        self._method_save_png_2113323047 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_save_png_2113323047_name._native_ptr(), 2113323047)
         assert(Image._method_save_png_2113323047 != nil)
         let _method_save_png_to_buffer_2362200018_name = StringName(from: "save_png_to_buffer")
-        self._method_save_png_to_buffer_2362200018 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_save_png_to_buffer_2362200018_name._native_ptr(), 2362200018)
+        self._method_save_png_to_buffer_2362200018 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_save_png_to_buffer_2362200018_name._native_ptr(), 2362200018)
         assert(Image._method_save_png_to_buffer_2362200018 != nil)
         let _method_save_jpg_578836491_name = StringName(from: "save_jpg")
-        self._method_save_jpg_578836491 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_save_jpg_578836491_name._native_ptr(), 578836491)
+        self._method_save_jpg_578836491 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_save_jpg_578836491_name._native_ptr(), 578836491)
         assert(Image._method_save_jpg_578836491 != nil)
         let _method_save_jpg_to_buffer_310747435_name = StringName(from: "save_jpg_to_buffer")
-        self._method_save_jpg_to_buffer_310747435 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_save_jpg_to_buffer_310747435_name._native_ptr(), 310747435)
+        self._method_save_jpg_to_buffer_310747435 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_save_jpg_to_buffer_310747435_name._native_ptr(), 310747435)
         assert(Image._method_save_jpg_to_buffer_310747435 != nil)
         let _method_save_exr_3108122999_name = StringName(from: "save_exr")
-        self._method_save_exr_3108122999 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_save_exr_3108122999_name._native_ptr(), 3108122999)
+        self._method_save_exr_3108122999 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_save_exr_3108122999_name._native_ptr(), 3108122999)
         assert(Image._method_save_exr_3108122999 != nil)
         let _method_save_exr_to_buffer_3178917920_name = StringName(from: "save_exr_to_buffer")
-        self._method_save_exr_to_buffer_3178917920 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_save_exr_to_buffer_3178917920_name._native_ptr(), 3178917920)
+        self._method_save_exr_to_buffer_3178917920 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_save_exr_to_buffer_3178917920_name._native_ptr(), 3178917920)
         assert(Image._method_save_exr_to_buffer_3178917920 != nil)
         let _method_save_webp_3594949219_name = StringName(from: "save_webp")
-        self._method_save_webp_3594949219 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_save_webp_3594949219_name._native_ptr(), 3594949219)
+        self._method_save_webp_3594949219 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_save_webp_3594949219_name._native_ptr(), 3594949219)
         assert(Image._method_save_webp_3594949219 != nil)
         let _method_save_webp_to_buffer_1235769281_name = StringName(from: "save_webp_to_buffer")
-        self._method_save_webp_to_buffer_1235769281 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_save_webp_to_buffer_1235769281_name._native_ptr(), 1235769281)
+        self._method_save_webp_to_buffer_1235769281 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_save_webp_to_buffer_1235769281_name._native_ptr(), 1235769281)
         assert(Image._method_save_webp_to_buffer_1235769281 != nil)
         let _method_detect_alpha_2030116505_name = StringName(from: "detect_alpha")
-        self._method_detect_alpha_2030116505 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_detect_alpha_2030116505_name._native_ptr(), 2030116505)
+        self._method_detect_alpha_2030116505 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_detect_alpha_2030116505_name._native_ptr(), 2030116505)
         assert(Image._method_detect_alpha_2030116505 != nil)
         let _method_is_invisible_36873697_name = StringName(from: "is_invisible")
-        self._method_is_invisible_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_invisible_36873697_name._native_ptr(), 36873697)
+        self._method_is_invisible_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_is_invisible_36873697_name._native_ptr(), 36873697)
         assert(Image._method_is_invisible_36873697 != nil)
         let _method_detect_used_channels_2703139984_name = StringName(from: "detect_used_channels")
-        self._method_detect_used_channels_2703139984 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_detect_used_channels_2703139984_name._native_ptr(), 2703139984)
+        self._method_detect_used_channels_2703139984 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_detect_used_channels_2703139984_name._native_ptr(), 2703139984)
         assert(Image._method_detect_used_channels_2703139984 != nil)
         let _method_compress_4094210332_name = StringName(from: "compress")
-        self._method_compress_4094210332 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_compress_4094210332_name._native_ptr(), 4094210332)
+        self._method_compress_4094210332 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_compress_4094210332_name._native_ptr(), 4094210332)
         assert(Image._method_compress_4094210332 != nil)
         let _method_compress_from_channels_279105990_name = StringName(from: "compress_from_channels")
-        self._method_compress_from_channels_279105990 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_compress_from_channels_279105990_name._native_ptr(), 279105990)
+        self._method_compress_from_channels_279105990 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_compress_from_channels_279105990_name._native_ptr(), 279105990)
         assert(Image._method_compress_from_channels_279105990 != nil)
         let _method_decompress_166280745_name = StringName(from: "decompress")
-        self._method_decompress_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_decompress_166280745_name._native_ptr(), 166280745)
+        self._method_decompress_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_decompress_166280745_name._native_ptr(), 166280745)
         assert(Image._method_decompress_166280745 != nil)
         let _method_is_compressed_36873697_name = StringName(from: "is_compressed")
-        self._method_is_compressed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_compressed_36873697_name._native_ptr(), 36873697)
+        self._method_is_compressed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_is_compressed_36873697_name._native_ptr(), 36873697)
         assert(Image._method_is_compressed_36873697 != nil)
         let _method_rotate_90_1901204267_name = StringName(from: "rotate_90")
-        self._method_rotate_90_1901204267 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_rotate_90_1901204267_name._native_ptr(), 1901204267)
+        self._method_rotate_90_1901204267 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_rotate_90_1901204267_name._native_ptr(), 1901204267)
         assert(Image._method_rotate_90_1901204267 != nil)
         let _method_rotate_180_3218959716_name = StringName(from: "rotate_180")
-        self._method_rotate_180_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_rotate_180_3218959716_name._native_ptr(), 3218959716)
+        self._method_rotate_180_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_rotate_180_3218959716_name._native_ptr(), 3218959716)
         assert(Image._method_rotate_180_3218959716 != nil)
         let _method_fix_alpha_edges_3218959716_name = StringName(from: "fix_alpha_edges")
-        self._method_fix_alpha_edges_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_fix_alpha_edges_3218959716_name._native_ptr(), 3218959716)
+        self._method_fix_alpha_edges_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_fix_alpha_edges_3218959716_name._native_ptr(), 3218959716)
         assert(Image._method_fix_alpha_edges_3218959716 != nil)
         let _method_premultiply_alpha_3218959716_name = StringName(from: "premultiply_alpha")
-        self._method_premultiply_alpha_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_premultiply_alpha_3218959716_name._native_ptr(), 3218959716)
+        self._method_premultiply_alpha_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_premultiply_alpha_3218959716_name._native_ptr(), 3218959716)
         assert(Image._method_premultiply_alpha_3218959716 != nil)
         let _method_srgb_to_linear_3218959716_name = StringName(from: "srgb_to_linear")
-        self._method_srgb_to_linear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_srgb_to_linear_3218959716_name._native_ptr(), 3218959716)
+        self._method_srgb_to_linear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_srgb_to_linear_3218959716_name._native_ptr(), 3218959716)
         assert(Image._method_srgb_to_linear_3218959716 != nil)
         let _method_normal_map_to_xy_3218959716_name = StringName(from: "normal_map_to_xy")
-        self._method_normal_map_to_xy_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_normal_map_to_xy_3218959716_name._native_ptr(), 3218959716)
+        self._method_normal_map_to_xy_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_normal_map_to_xy_3218959716_name._native_ptr(), 3218959716)
         assert(Image._method_normal_map_to_xy_3218959716 != nil)
         let _method_rgbe_to_srgb_564927088_name = StringName(from: "rgbe_to_srgb")
-        self._method_rgbe_to_srgb_564927088 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_rgbe_to_srgb_564927088_name._native_ptr(), 564927088)
+        self._method_rgbe_to_srgb_564927088 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_rgbe_to_srgb_564927088_name._native_ptr(), 564927088)
         assert(Image._method_rgbe_to_srgb_564927088 != nil)
         let _method_bump_map_to_normal_map_336773324_name = StringName(from: "bump_map_to_normal_map")
-        self._method_bump_map_to_normal_map_336773324 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_bump_map_to_normal_map_336773324_name._native_ptr(), 336773324)
+        self._method_bump_map_to_normal_map_336773324 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_bump_map_to_normal_map_336773324_name._native_ptr(), 336773324)
         assert(Image._method_bump_map_to_normal_map_336773324 != nil)
         let _method_compute_image_metrics_3080961247_name = StringName(from: "compute_image_metrics")
-        self._method_compute_image_metrics_3080961247 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_compute_image_metrics_3080961247_name._native_ptr(), 3080961247)
+        self._method_compute_image_metrics_3080961247 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_compute_image_metrics_3080961247_name._native_ptr(), 3080961247)
         assert(Image._method_compute_image_metrics_3080961247 != nil)
         let _method_blit_rect_2903928755_name = StringName(from: "blit_rect")
-        self._method_blit_rect_2903928755 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_blit_rect_2903928755_name._native_ptr(), 2903928755)
+        self._method_blit_rect_2903928755 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_blit_rect_2903928755_name._native_ptr(), 2903928755)
         assert(Image._method_blit_rect_2903928755 != nil)
         let _method_blit_rect_mask_3383581145_name = StringName(from: "blit_rect_mask")
-        self._method_blit_rect_mask_3383581145 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_blit_rect_mask_3383581145_name._native_ptr(), 3383581145)
+        self._method_blit_rect_mask_3383581145 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_blit_rect_mask_3383581145_name._native_ptr(), 3383581145)
         assert(Image._method_blit_rect_mask_3383581145 != nil)
         let _method_blend_rect_2903928755_name = StringName(from: "blend_rect")
-        self._method_blend_rect_2903928755 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_blend_rect_2903928755_name._native_ptr(), 2903928755)
+        self._method_blend_rect_2903928755 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_blend_rect_2903928755_name._native_ptr(), 2903928755)
         assert(Image._method_blend_rect_2903928755 != nil)
         let _method_blend_rect_mask_3383581145_name = StringName(from: "blend_rect_mask")
-        self._method_blend_rect_mask_3383581145 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_blend_rect_mask_3383581145_name._native_ptr(), 3383581145)
+        self._method_blend_rect_mask_3383581145 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_blend_rect_mask_3383581145_name._native_ptr(), 3383581145)
         assert(Image._method_blend_rect_mask_3383581145 != nil)
         let _method_fill_2920490490_name = StringName(from: "fill")
-        self._method_fill_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_fill_2920490490_name._native_ptr(), 2920490490)
+        self._method_fill_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_fill_2920490490_name._native_ptr(), 2920490490)
         assert(Image._method_fill_2920490490 != nil)
         let _method_fill_rect_514693913_name = StringName(from: "fill_rect")
-        self._method_fill_rect_514693913 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_fill_rect_514693913_name._native_ptr(), 514693913)
+        self._method_fill_rect_514693913 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_fill_rect_514693913_name._native_ptr(), 514693913)
         assert(Image._method_fill_rect_514693913 != nil)
         let _method_get_used_rect_410525958_name = StringName(from: "get_used_rect")
-        self._method_get_used_rect_410525958 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_used_rect_410525958_name._native_ptr(), 410525958)
+        self._method_get_used_rect_410525958 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_used_rect_410525958_name._native_ptr(), 410525958)
         assert(Image._method_get_used_rect_410525958 != nil)
         let _method_get_region_2601441065_name = StringName(from: "get_region")
-        self._method_get_region_2601441065 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_region_2601441065_name._native_ptr(), 2601441065)
+        self._method_get_region_2601441065 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_region_2601441065_name._native_ptr(), 2601441065)
         assert(Image._method_get_region_2601441065 != nil)
         let _method_copy_from_532598488_name = StringName(from: "copy_from")
-        self._method_copy_from_532598488 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_copy_from_532598488_name._native_ptr(), 532598488)
+        self._method_copy_from_532598488 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_copy_from_532598488_name._native_ptr(), 532598488)
         assert(Image._method_copy_from_532598488 != nil)
         let _method_get_pixelv_1532707496_name = StringName(from: "get_pixelv")
-        self._method_get_pixelv_1532707496 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_pixelv_1532707496_name._native_ptr(), 1532707496)
+        self._method_get_pixelv_1532707496 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_pixelv_1532707496_name._native_ptr(), 1532707496)
         assert(Image._method_get_pixelv_1532707496 != nil)
         let _method_get_pixel_2165839948_name = StringName(from: "get_pixel")
-        self._method_get_pixel_2165839948 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_pixel_2165839948_name._native_ptr(), 2165839948)
+        self._method_get_pixel_2165839948 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_pixel_2165839948_name._native_ptr(), 2165839948)
         assert(Image._method_get_pixel_2165839948 != nil)
         let _method_set_pixelv_287851464_name = StringName(from: "set_pixelv")
-        self._method_set_pixelv_287851464 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_pixelv_287851464_name._native_ptr(), 287851464)
+        self._method_set_pixelv_287851464 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_set_pixelv_287851464_name._native_ptr(), 287851464)
         assert(Image._method_set_pixelv_287851464 != nil)
         let _method_set_pixel_3733378741_name = StringName(from: "set_pixel")
-        self._method_set_pixel_3733378741 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_pixel_3733378741_name._native_ptr(), 3733378741)
+        self._method_set_pixel_3733378741 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_set_pixel_3733378741_name._native_ptr(), 3733378741)
         assert(Image._method_set_pixel_3733378741 != nil)
         let _method_adjust_bcs_2385087082_name = StringName(from: "adjust_bcs")
-        self._method_adjust_bcs_2385087082 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_adjust_bcs_2385087082_name._native_ptr(), 2385087082)
+        self._method_adjust_bcs_2385087082 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_adjust_bcs_2385087082_name._native_ptr(), 2385087082)
         assert(Image._method_adjust_bcs_2385087082 != nil)
         let _method_load_png_from_buffer_680677267_name = StringName(from: "load_png_from_buffer")
-        self._method_load_png_from_buffer_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_load_png_from_buffer_680677267_name._native_ptr(), 680677267)
+        self._method_load_png_from_buffer_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_load_png_from_buffer_680677267_name._native_ptr(), 680677267)
         assert(Image._method_load_png_from_buffer_680677267 != nil)
         let _method_load_jpg_from_buffer_680677267_name = StringName(from: "load_jpg_from_buffer")
-        self._method_load_jpg_from_buffer_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_load_jpg_from_buffer_680677267_name._native_ptr(), 680677267)
+        self._method_load_jpg_from_buffer_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_load_jpg_from_buffer_680677267_name._native_ptr(), 680677267)
         assert(Image._method_load_jpg_from_buffer_680677267 != nil)
         let _method_load_webp_from_buffer_680677267_name = StringName(from: "load_webp_from_buffer")
-        self._method_load_webp_from_buffer_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_load_webp_from_buffer_680677267_name._native_ptr(), 680677267)
+        self._method_load_webp_from_buffer_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_load_webp_from_buffer_680677267_name._native_ptr(), 680677267)
         assert(Image._method_load_webp_from_buffer_680677267 != nil)
         let _method_load_tga_from_buffer_680677267_name = StringName(from: "load_tga_from_buffer")
-        self._method_load_tga_from_buffer_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_load_tga_from_buffer_680677267_name._native_ptr(), 680677267)
+        self._method_load_tga_from_buffer_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_load_tga_from_buffer_680677267_name._native_ptr(), 680677267)
         assert(Image._method_load_tga_from_buffer_680677267 != nil)
         let _method_load_bmp_from_buffer_680677267_name = StringName(from: "load_bmp_from_buffer")
-        self._method_load_bmp_from_buffer_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_load_bmp_from_buffer_680677267_name._native_ptr(), 680677267)
+        self._method_load_bmp_from_buffer_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_load_bmp_from_buffer_680677267_name._native_ptr(), 680677267)
         assert(Image._method_load_bmp_from_buffer_680677267 != nil)
     }
 
@@ -372,7 +377,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_height() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -389,7 +394,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_size() -> Vector2i {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -405,7 +410,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2i(from: __resPtr.pointee)
+            return Vector2i(godot: __resPtr.pointee)
     }
     public func has_mipmaps() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -422,7 +427,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func get_format() -> Image.Format {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -438,7 +443,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Image.Format(from: __resPtr.pointee)
+            return Image.Format(godot: __resPtr.pointee)
     }
     public func get_data() -> PackedByteArray {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -454,7 +459,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
+            return PackedByteArray(godot: __resPtr.pointee)
     }
     public func convert(format: Image.Format)  {
         withUnsafePointer(to: format.rawValue) { format_native in
@@ -488,7 +493,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func resize_to_po2(square: UInt8, interpolation: Image.Interpolation)  {
@@ -604,7 +609,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func clear_mipmaps()  {
@@ -639,7 +644,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Image(from: __resPtr.pointee)
+            return Image(godot: __resPtr.pointee)
         }
         }
         }
@@ -664,7 +669,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Image(from: __resPtr.pointee)
+            return Image(godot: __resPtr.pointee)
         }
         }
         }
@@ -708,10 +713,10 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func load(path: String) -> Error {
-        withUnsafePointer(to: path) { path_native in
+    public func load(path: godot.String) -> Error {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -725,11 +730,10 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
+            return Error(godot: __resPtr.pointee)
     }
-    public func load_from_file(path: String) -> Image {
-        withUnsafePointer(to: path) { path_native in
+    public func load_from_file(path: godot.String) -> Image {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -743,11 +747,10 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Image(from: __resPtr.pointee)
-        }
+            return Image(godot: __resPtr.pointee)
     }
-    public func save_png(path: String) -> Error {
-        withUnsafePointer(to: path) { path_native in
+    public func save_png(path: godot.String) -> Error {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -761,8 +764,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
+            return Error(godot: __resPtr.pointee)
     }
     public func save_png_to_buffer() -> PackedByteArray {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -778,11 +780,11 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
+            return PackedByteArray(godot: __resPtr.pointee)
     }
-    public func save_jpg(path: String, quality: Float64) -> Error {
+    public func save_jpg(path: godot.String, quality: Float64) -> Error {
         withUnsafePointer(to: quality) { quality_native in
-        withUnsafePointer(to: path) { path_native in
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -796,8 +798,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func save_jpg_to_buffer(quality: Float64) -> PackedByteArray {
@@ -815,12 +816,12 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
+            return PackedByteArray(godot: __resPtr.pointee)
         }
     }
-    public func save_exr(path: String, grayscale: UInt8) -> Error {
+    public func save_exr(path: godot.String, grayscale: UInt8) -> Error {
         withUnsafePointer(to: grayscale) { grayscale_native in
-        withUnsafePointer(to: path) { path_native in
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -834,8 +835,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func save_exr_to_buffer(grayscale: UInt8) -> PackedByteArray {
@@ -853,13 +853,13 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
+            return PackedByteArray(godot: __resPtr.pointee)
         }
     }
-    public func save_webp(path: String, lossy: UInt8, quality: Float64) -> Error {
+    public func save_webp(path: godot.String, lossy: UInt8, quality: Float64) -> Error {
         withUnsafePointer(to: quality) { quality_native in
         withUnsafePointer(to: lossy) { lossy_native in
-        withUnsafePointer(to: path) { path_native in
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -873,8 +873,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
+            return Error(godot: __resPtr.pointee)
         }
         }
     }
@@ -894,7 +893,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
+            return PackedByteArray(godot: __resPtr.pointee)
         }
         }
     }
@@ -912,7 +911,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Image.AlphaMode(from: __resPtr.pointee)
+            return Image.AlphaMode(godot: __resPtr.pointee)
     }
     public func is_invisible() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -929,7 +928,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func detect_used_channels(source: Image.CompressSource) -> Image.UsedChannels {
         withUnsafePointer(to: source.rawValue) { source_native in
@@ -946,7 +945,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Image.UsedChannels(from: __resPtr.pointee)
+            return Image.UsedChannels(godot: __resPtr.pointee)
         }
     }
     public func compress(mode: Image.CompressMode, source: Image.CompressSource, astc_format: Image.ASTCFormat) -> Error {
@@ -966,7 +965,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
         }
@@ -988,7 +987,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
         }
@@ -1007,7 +1006,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func is_compressed() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -1024,7 +1023,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func rotate_90(direction: ClockDirection)  {
         withUnsafePointer(to: direction.rawValue) { direction_native in
@@ -1126,7 +1125,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Image(from: __resPtr.pointee)
+            return Image(godot: __resPtr.pointee)
     }
     public func bump_map_to_normal_map(bump_scale: Float64)  {
         withUnsafePointer(to: bump_scale) { bump_scale_native in
@@ -1160,7 +1159,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
         }
     }
     public func blit_rect(src: Image, src_rect: Rect2i, dst: Vector2i)  {
@@ -1278,7 +1277,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Rect2i(from: __resPtr.pointee)
+            return Rect2i(godot: __resPtr.pointee)
     }
     public func get_region(region: Rect2i) -> Image {
         let region_native = region._native_ptr()
@@ -1295,7 +1294,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Image(from: __resPtr.pointee)
+            return Image(godot: __resPtr.pointee)
     }
     public func copy_from(src: Image)  {
         let src_native = src._native_ptr()
@@ -1327,7 +1326,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Color(from: __resPtr.pointee)
+            return Color(godot: __resPtr.pointee)
     }
     public func get_pixel(x: Int64, y: Int64) -> Color {
         withUnsafePointer(to: y) { y_native in
@@ -1345,7 +1344,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Color(from: __resPtr.pointee)
+            return Color(godot: __resPtr.pointee)
         }
         }
     }
@@ -1419,7 +1418,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func load_jpg_from_buffer(buffer: PackedByteArray) -> Error {
         let buffer_native = buffer._native_ptr()
@@ -1436,7 +1435,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func load_webp_from_buffer(buffer: PackedByteArray) -> Error {
         let buffer_native = buffer._native_ptr()
@@ -1453,7 +1452,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func load_tga_from_buffer(buffer: PackedByteArray) -> Error {
         let buffer_native = buffer._native_ptr()
@@ -1470,7 +1469,7 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func load_bmp_from_buffer(buffer: PackedByteArray) -> Error {
         let buffer_native = buffer._native_ptr()
@@ -1487,6 +1486,6 @@ public class Image : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
 }

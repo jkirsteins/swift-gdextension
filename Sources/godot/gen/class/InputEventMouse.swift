@@ -5,7 +5,7 @@ fileprivate var __godot_name_InputEventMouse: StringName! = nil
 /// Base input event type for mouse events.
 /// 
 /// Stores general mouse events information.
-public class InputEventMouse : InputEventWithModifiers {
+open class InputEventMouse : InputEventWithModifiers {
 
     
 
@@ -18,26 +18,31 @@ public class InputEventMouse : InputEventWithModifiers {
     static var _method_set_global_position_743155724: GDExtensionMethodBindPtr! = nil
     static var _method_get_global_position_3341600327: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_InputEventMouse = StringName(from: "InputEventMouse")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_button_mask_3950145251_name = StringName(from: "set_button_mask")
-        self._method_set_button_mask_3950145251 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_button_mask_3950145251_name._native_ptr(), 3950145251)
+        self._method_set_button_mask_3950145251 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMouse._native_ptr(), _method_set_button_mask_3950145251_name._native_ptr(), 3950145251)
         assert(InputEventMouse._method_set_button_mask_3950145251 != nil)
         let _method_get_button_mask_2512161324_name = StringName(from: "get_button_mask")
-        self._method_get_button_mask_2512161324 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_button_mask_2512161324_name._native_ptr(), 2512161324)
+        self._method_get_button_mask_2512161324 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMouse._native_ptr(), _method_get_button_mask_2512161324_name._native_ptr(), 2512161324)
         assert(InputEventMouse._method_get_button_mask_2512161324 != nil)
         let _method_set_position_743155724_name = StringName(from: "set_position")
-        self._method_set_position_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_position_743155724_name._native_ptr(), 743155724)
+        self._method_set_position_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMouse._native_ptr(), _method_set_position_743155724_name._native_ptr(), 743155724)
         assert(InputEventMouse._method_set_position_743155724 != nil)
         let _method_get_position_3341600327_name = StringName(from: "get_position")
-        self._method_get_position_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_position_3341600327_name._native_ptr(), 3341600327)
+        self._method_get_position_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMouse._native_ptr(), _method_get_position_3341600327_name._native_ptr(), 3341600327)
         assert(InputEventMouse._method_get_position_3341600327 != nil)
         let _method_set_global_position_743155724_name = StringName(from: "set_global_position")
-        self._method_set_global_position_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_global_position_743155724_name._native_ptr(), 743155724)
+        self._method_set_global_position_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMouse._native_ptr(), _method_set_global_position_743155724_name._native_ptr(), 743155724)
         assert(InputEventMouse._method_set_global_position_743155724 != nil)
         let _method_get_global_position_3341600327_name = StringName(from: "get_global_position")
-        self._method_get_global_position_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_global_position_3341600327_name._native_ptr(), 3341600327)
+        self._method_get_global_position_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMouse._native_ptr(), _method_get_global_position_3341600327_name._native_ptr(), 3341600327)
         assert(InputEventMouse._method_get_global_position_3341600327 != nil)
     }
 
@@ -71,7 +76,7 @@ public class InputEventMouse : InputEventWithModifiers {
                     args.baseAddress!,
                     __resPtr
                 )
-            return MouseButtonMask(from: __resPtr.pointee)
+            return MouseButtonMask(godot: __resPtr.pointee)
     }
     public func set_position(position: Vector2)  {
         let position_native = position._native_ptr()
@@ -102,7 +107,7 @@ public class InputEventMouse : InputEventWithModifiers {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func set_global_position(global_position: Vector2)  {
         let global_position_native = global_position._native_ptr()
@@ -133,6 +138,6 @@ public class InputEventMouse : InputEventWithModifiers {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
 }

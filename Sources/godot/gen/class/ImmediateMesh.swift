@@ -5,7 +5,7 @@ fileprivate var __godot_name_ImmediateMesh: StringName! = nil
 /// Mesh optimized for creating geometry manually.
 /// 
 /// Mesh optimized for creating geometry manually, similar to OpenGL1.x immediate mode.
-public class ImmediateMesh : Mesh {
+open class ImmediateMesh : Mesh {
 
     
 
@@ -22,38 +22,43 @@ public class ImmediateMesh : Mesh {
     static var _method_surface_end_3218959716: GDExtensionMethodBindPtr! = nil
     static var _method_clear_surfaces_3218959716: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ImmediateMesh = StringName(from: "ImmediateMesh")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_surface_begin_3716480242_name = StringName(from: "surface_begin")
-        self._method_surface_begin_3716480242 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_surface_begin_3716480242_name._native_ptr(), 3716480242)
+        self._method_surface_begin_3716480242 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImmediateMesh._native_ptr(), _method_surface_begin_3716480242_name._native_ptr(), 3716480242)
         assert(ImmediateMesh._method_surface_begin_3716480242 != nil)
         let _method_surface_set_color_2920490490_name = StringName(from: "surface_set_color")
-        self._method_surface_set_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_surface_set_color_2920490490_name._native_ptr(), 2920490490)
+        self._method_surface_set_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImmediateMesh._native_ptr(), _method_surface_set_color_2920490490_name._native_ptr(), 2920490490)
         assert(ImmediateMesh._method_surface_set_color_2920490490 != nil)
         let _method_surface_set_normal_3460891852_name = StringName(from: "surface_set_normal")
-        self._method_surface_set_normal_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_surface_set_normal_3460891852_name._native_ptr(), 3460891852)
+        self._method_surface_set_normal_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImmediateMesh._native_ptr(), _method_surface_set_normal_3460891852_name._native_ptr(), 3460891852)
         assert(ImmediateMesh._method_surface_set_normal_3460891852 != nil)
         let _method_surface_set_tangent_3505987427_name = StringName(from: "surface_set_tangent")
-        self._method_surface_set_tangent_3505987427 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_surface_set_tangent_3505987427_name._native_ptr(), 3505987427)
+        self._method_surface_set_tangent_3505987427 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImmediateMesh._native_ptr(), _method_surface_set_tangent_3505987427_name._native_ptr(), 3505987427)
         assert(ImmediateMesh._method_surface_set_tangent_3505987427 != nil)
         let _method_surface_set_uv_743155724_name = StringName(from: "surface_set_uv")
-        self._method_surface_set_uv_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_surface_set_uv_743155724_name._native_ptr(), 743155724)
+        self._method_surface_set_uv_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImmediateMesh._native_ptr(), _method_surface_set_uv_743155724_name._native_ptr(), 743155724)
         assert(ImmediateMesh._method_surface_set_uv_743155724 != nil)
         let _method_surface_set_uv2_743155724_name = StringName(from: "surface_set_uv2")
-        self._method_surface_set_uv2_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_surface_set_uv2_743155724_name._native_ptr(), 743155724)
+        self._method_surface_set_uv2_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImmediateMesh._native_ptr(), _method_surface_set_uv2_743155724_name._native_ptr(), 743155724)
         assert(ImmediateMesh._method_surface_set_uv2_743155724 != nil)
         let _method_surface_add_vertex_3460891852_name = StringName(from: "surface_add_vertex")
-        self._method_surface_add_vertex_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_surface_add_vertex_3460891852_name._native_ptr(), 3460891852)
+        self._method_surface_add_vertex_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImmediateMesh._native_ptr(), _method_surface_add_vertex_3460891852_name._native_ptr(), 3460891852)
         assert(ImmediateMesh._method_surface_add_vertex_3460891852 != nil)
         let _method_surface_add_vertex_2d_743155724_name = StringName(from: "surface_add_vertex_2d")
-        self._method_surface_add_vertex_2d_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_surface_add_vertex_2d_743155724_name._native_ptr(), 743155724)
+        self._method_surface_add_vertex_2d_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImmediateMesh._native_ptr(), _method_surface_add_vertex_2d_743155724_name._native_ptr(), 743155724)
         assert(ImmediateMesh._method_surface_add_vertex_2d_743155724 != nil)
         let _method_surface_end_3218959716_name = StringName(from: "surface_end")
-        self._method_surface_end_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_surface_end_3218959716_name._native_ptr(), 3218959716)
+        self._method_surface_end_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImmediateMesh._native_ptr(), _method_surface_end_3218959716_name._native_ptr(), 3218959716)
         assert(ImmediateMesh._method_surface_end_3218959716 != nil)
         let _method_clear_surfaces_3218959716_name = StringName(from: "clear_surfaces")
-        self._method_clear_surfaces_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_surfaces_3218959716_name._native_ptr(), 3218959716)
+        self._method_clear_surfaces_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImmediateMesh._native_ptr(), _method_clear_surfaces_3218959716_name._native_ptr(), 3218959716)
         assert(ImmediateMesh._method_clear_surfaces_3218959716 != nil)
     }
 

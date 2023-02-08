@@ -5,7 +5,7 @@ fileprivate var __godot_name_PhysicsServer3DExtension: StringName! = nil
 /// 
 /// 
 /// 
-public class PhysicsServer3DExtension : PhysicsServer3D {
+open class PhysicsServer3DExtension : PhysicsServer3D {
 
     
 
@@ -202,14 +202,19 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
     static var _method_body_test_motion_is_excluding_body_4155700596: GDExtensionMethodBindPtr! = nil
     static var _method_body_test_motion_is_excluding_object_1116898809: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PhysicsServer3DExtension = StringName(from: "PhysicsServer3DExtension")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_body_test_motion_is_excluding_body_4155700596_name = StringName(from: "body_test_motion_is_excluding_body")
-        self._method_body_test_motion_is_excluding_body_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_test_motion_is_excluding_body_4155700596_name._native_ptr(), 4155700596)
+        self._method_body_test_motion_is_excluding_body_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer3DExtension._native_ptr(), _method_body_test_motion_is_excluding_body_4155700596_name._native_ptr(), 4155700596)
         assert(PhysicsServer3DExtension._method_body_test_motion_is_excluding_body_4155700596 != nil)
         let _method_body_test_motion_is_excluding_object_1116898809_name = StringName(from: "body_test_motion_is_excluding_object")
-        self._method_body_test_motion_is_excluding_object_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_test_motion_is_excluding_object_1116898809_name._native_ptr(), 1116898809)
+        self._method_body_test_motion_is_excluding_object_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer3DExtension._native_ptr(), _method_body_test_motion_is_excluding_object_1116898809_name._native_ptr(), 1116898809)
         assert(PhysicsServer3DExtension._method_body_test_motion_is_excluding_object_1116898809 != nil)
     }
 
@@ -227,7 +232,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _separation_ray_shape_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -243,7 +248,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _sphere_shape_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -259,7 +264,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _box_shape_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -275,7 +280,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _capsule_shape_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -291,7 +296,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _cylinder_shape_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -307,7 +312,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _convex_polygon_shape_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -323,7 +328,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _concave_polygon_shape_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -339,7 +344,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _heightmap_shape_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -355,7 +360,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _custom_shape_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -371,7 +376,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _shape_set_data(shape: RID, data: Variant)  {
         let data_native = data._native_ptr()
@@ -439,7 +444,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _shape_get_type(shape: RID) -> PhysicsServer3D.ShapeType {
         let shape_native = shape._native_ptr()
@@ -456,7 +461,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PhysicsServer3D.ShapeType(from: __resPtr.pointee)
+            return PhysicsServer3D.ShapeType(godot: __resPtr.pointee)
     }
     public func _shape_get_data(shape: RID) -> Variant {
         let shape_native = shape._native_ptr()
@@ -473,7 +478,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
     }
     public func _shape_get_custom_solver_bias(shape: RID) -> Float64 {
         let shape_native = shape._native_ptr()
@@ -491,7 +496,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _space_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -507,7 +512,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _space_set_active(space: RID, active: UInt8)  {
         withUnsafePointer(to: active) { active_native in
@@ -542,7 +547,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _space_set_param(space: RID, param: PhysicsServer3D.SpaceParameter, value: Float64)  {
         withUnsafePointer(to: value) { value_native in
@@ -580,7 +585,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func _space_get_direct_state(space: RID) -> PhysicsDirectSpaceState3D {
@@ -598,7 +603,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PhysicsDirectSpaceState3D(from: __resPtr.pointee)
+            return PhysicsDirectSpaceState3D(godot: __resPtr.pointee)
     }
     public func _space_set_debug_contacts(space: RID, max_contacts: Int64)  {
         withUnsafePointer(to: max_contacts) { max_contacts_native in
@@ -632,7 +637,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector3Array(from: __resPtr.pointee)
+            return PackedVector3Array(godot: __resPtr.pointee)
     }
     public func _space_get_contact_count(space: RID) -> Int64 {
         let space_native = space._native_ptr()
@@ -650,7 +655,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _area_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -666,7 +671,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _area_set_space(area: RID, space: RID)  {
         let space_native = space._native_ptr()
@@ -699,7 +704,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _area_add_shape(area: RID, shape: RID, transform: Transform3D, disabled: UInt8)  {
         withUnsafePointer(to: disabled) { disabled_native in
@@ -791,7 +796,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _area_get_shape(area: RID, shape_idx: Int64) -> RID {
         withUnsafePointer(to: shape_idx) { shape_idx_native in
@@ -809,7 +814,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
     }
     public func _area_get_shape_transform(area: RID, shape_idx: Int64) -> Transform3D {
@@ -828,7 +833,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Transform3D(from: __resPtr.pointee)
+            return Transform3D(godot: __resPtr.pointee)
         }
     }
     public func _area_remove_shape(area: RID, shape_idx: Int64)  {
@@ -896,7 +901,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _area_set_param(area: RID, param: PhysicsServer3D.AreaParameter, value: Variant)  {
         withUnsafePointer(to: param.rawValue) { param_native in
@@ -948,7 +953,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
         }
     }
     public func _area_get_transform(area: RID) -> Transform3D {
@@ -966,7 +971,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Transform3D(from: __resPtr.pointee)
+            return Transform3D(godot: __resPtr.pointee)
     }
     public func _area_set_collision_layer(area: RID, layer: Int64)  {
         withUnsafePointer(to: layer) { layer_native in
@@ -1001,7 +1006,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _area_set_collision_mask(area: RID, mask: Int64)  {
         withUnsafePointer(to: mask) { mask_native in
@@ -1036,7 +1041,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _area_set_monitorable(area: RID, monitorable: UInt8)  {
         withUnsafePointer(to: monitorable) { monitorable_native in
@@ -1118,7 +1123,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _body_set_space(body: RID, space: RID)  {
         let space_native = space._native_ptr()
@@ -1151,7 +1156,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _body_set_mode(body: RID, mode: PhysicsServer3D.BodyMode)  {
         withUnsafePointer(to: mode.rawValue) { mode_native in
@@ -1185,7 +1190,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PhysicsServer3D.BodyMode(from: __resPtr.pointee)
+            return PhysicsServer3D.BodyMode(godot: __resPtr.pointee)
     }
     public func _body_add_shape(body: RID, shape: RID, transform: Transform3D, disabled: UInt8)  {
         withUnsafePointer(to: disabled) { disabled_native in
@@ -1277,7 +1282,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _body_get_shape(body: RID, shape_idx: Int64) -> RID {
         withUnsafePointer(to: shape_idx) { shape_idx_native in
@@ -1295,7 +1300,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
     }
     public func _body_get_shape_transform(body: RID, shape_idx: Int64) -> Transform3D {
@@ -1314,7 +1319,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Transform3D(from: __resPtr.pointee)
+            return Transform3D(godot: __resPtr.pointee)
         }
     }
     public func _body_remove_shape(body: RID, shape_idx: Int64)  {
@@ -1382,7 +1387,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _body_set_enable_continuous_collision_detection(body: RID, enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -1417,7 +1422,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _body_set_collision_layer(body: RID, layer: Int64)  {
         withUnsafePointer(to: layer) { layer_native in
@@ -1452,7 +1457,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _body_set_collision_mask(body: RID, mask: Int64)  {
         withUnsafePointer(to: mask) { mask_native in
@@ -1487,7 +1492,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _body_set_collision_priority(body: RID, priority: Float64)  {
         withUnsafePointer(to: priority) { priority_native in
@@ -1522,7 +1527,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _body_set_user_flags(body: RID, flags: Int64)  {
         withUnsafePointer(to: flags) { flags_native in
@@ -1557,7 +1562,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _body_set_param(body: RID, param: PhysicsServer3D.BodyParameter, value: Variant)  {
         withUnsafePointer(to: param.rawValue) { param_native in
@@ -1593,7 +1598,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
         }
     }
     public func _body_reset_mass_properties(body: RID)  {
@@ -1645,7 +1650,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
         }
     }
     public func _body_apply_central_impulse(body: RID, impulse: Vector3)  {
@@ -1826,7 +1831,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
     }
     public func _body_set_constant_torque(body: RID, torque: Vector3)  {
         let torque_native = torque._native_ptr()
@@ -1859,7 +1864,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
     }
     public func _body_set_axis_velocity(body: RID, axis_velocity: Vector3)  {
         let axis_velocity_native = axis_velocity._native_ptr()
@@ -1913,7 +1918,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func _body_add_collision_exception(body: RID, excepted_body: RID)  {
@@ -1963,7 +1968,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [RID](from: __resPtr.pointee)
+            return [RID](godot: __resPtr.pointee)
     }
     public func _body_set_max_contacts_reported(body: RID, amount: Int64)  {
         withUnsafePointer(to: amount) { amount_native in
@@ -1998,7 +2003,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _body_set_contacts_reported_depth_threshold(body: RID, threshold: Float64)  {
         withUnsafePointer(to: threshold) { threshold_native in
@@ -2033,7 +2038,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _body_set_omit_force_integration(body: RID, enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -2068,7 +2073,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _body_set_state_sync_callback(body: RID, callable: Callable)  {
         let callable_native = callable._native_ptr()
@@ -2142,7 +2147,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
         }
@@ -2163,7 +2168,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PhysicsDirectBodyState3D(from: __resPtr.pointee)
+            return PhysicsDirectBodyState3D(godot: __resPtr.pointee)
     }
     public func _soft_body_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -2179,7 +2184,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _soft_body_update_rendering_server(body: RID, rendering_server_handler: PhysicsServer3DRenderingServerHandler)  {
         let rendering_server_handler_native = rendering_server_handler._native_ptr()
@@ -2228,7 +2233,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _soft_body_set_ray_pickable(body: RID, enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -2280,7 +2285,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _soft_body_set_collision_mask(body: RID, mask: Int64)  {
         withUnsafePointer(to: mask) { mask_native in
@@ -2315,7 +2320,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _soft_body_add_collision_exception(body: RID, body_b: RID)  {
         let body_b_native = body_b._native_ptr()
@@ -2364,7 +2369,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [RID](from: __resPtr.pointee)
+            return [RID](godot: __resPtr.pointee)
     }
     public func _soft_body_set_state(body: RID, state: PhysicsServer3D.BodyState, variant: Variant)  {
         withUnsafePointer(to: state.rawValue) { state_native in
@@ -2400,7 +2405,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
         }
     }
     public func _soft_body_set_transform(body: RID, transform: Transform3D)  {
@@ -2452,7 +2457,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _soft_body_set_total_mass(body: RID, total_mass: Float64)  {
         withUnsafePointer(to: total_mass) { total_mass_native in
@@ -2487,7 +2492,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _soft_body_set_linear_stiffness(body: RID, linear_stiffness: Float64)  {
         withUnsafePointer(to: linear_stiffness) { linear_stiffness_native in
@@ -2522,7 +2527,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _soft_body_set_pressure_coefficient(body: RID, pressure_coefficient: Float64)  {
         withUnsafePointer(to: pressure_coefficient) { pressure_coefficient_native in
@@ -2557,7 +2562,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _soft_body_set_damping_coefficient(body: RID, damping_coefficient: Float64)  {
         withUnsafePointer(to: damping_coefficient) { damping_coefficient_native in
@@ -2592,7 +2597,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _soft_body_set_drag_coefficient(body: RID, drag_coefficient: Float64)  {
         withUnsafePointer(to: drag_coefficient) { drag_coefficient_native in
@@ -2627,7 +2632,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _soft_body_set_mesh(body: RID, mesh: RID)  {
         let mesh_native = mesh._native_ptr()
@@ -2660,7 +2665,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return AABB(from: __resPtr.pointee)
+            return AABB(godot: __resPtr.pointee)
     }
     public func _soft_body_move_point(body: RID, point_index: Int64, global_position: Vector3)  {
         withUnsafePointer(to: point_index) { point_index_native in
@@ -2696,7 +2701,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
         }
     }
     public func _soft_body_remove_all_pinned_points(body: RID)  {
@@ -2750,7 +2755,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func _joint_create() -> RID {
@@ -2767,7 +2772,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _joint_clear(joint: RID)  {
         let joint_native = joint._native_ptr()
@@ -2839,7 +2844,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func _pin_joint_set_local_a(joint: RID, local_A: Vector3)  {
@@ -2873,7 +2878,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
     }
     public func _pin_joint_set_local_b(joint: RID, local_B: Vector3)  {
         let local_B_native = local_B._native_ptr()
@@ -2906,7 +2911,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
     }
     public func _joint_make_hinge(joint: RID, body_A: RID, hinge_A: Transform3D, body_B: RID, hinge_B: Transform3D)  {
         let hinge_B_native = hinge_B._native_ptr()
@@ -2984,7 +2989,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func _hinge_joint_set_flag(joint: RID, flag: PhysicsServer3D.HingeJointFlag, enabled: UInt8)  {
@@ -3023,7 +3028,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func _joint_make_slider(joint: RID, body_A: RID, local_ref_A: Transform3D, body_B: RID, local_ref_B: Transform3D)  {
@@ -3081,7 +3086,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func _joint_make_cone_twist(joint: RID, body_A: RID, local_ref_A: Transform3D, body_B: RID, local_ref_B: Transform3D)  {
@@ -3139,7 +3144,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func _joint_make_generic_6dof(joint: RID, body_A: RID, local_ref_A: Transform3D, body_B: RID, local_ref_B: Transform3D)  {
@@ -3200,7 +3205,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
         }
     }
@@ -3243,7 +3248,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
     }
@@ -3262,7 +3267,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PhysicsServer3D.JointType(from: __resPtr.pointee)
+            return PhysicsServer3D.JointType(godot: __resPtr.pointee)
     }
     public func _joint_set_solver_priority(joint: RID, priority: Int64)  {
         withUnsafePointer(to: priority) { priority_native in
@@ -3297,7 +3302,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _joint_disable_collisions_between_bodies(joint: RID, disable: UInt8)  {
         withUnsafePointer(to: disable) { disable_native in
@@ -3332,7 +3337,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _free_rid(rid: RID)  {
         let rid_native = rid._native_ptr()
@@ -3466,7 +3471,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_process_info(process_info: PhysicsServer3D.ProcessInfo) -> Int64 {
         withUnsafePointer(to: process_info.rawValue) { process_info_native in
@@ -3484,7 +3489,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func body_test_motion_is_excluding_body(body: RID) -> UInt8 {
@@ -3503,7 +3508,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func body_test_motion_is_excluding_object(object: Int64) -> UInt8 {
         withUnsafePointer(to: object) { object_native in
@@ -3521,7 +3526,7 @@ public class PhysicsServer3DExtension : PhysicsServer3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
 }

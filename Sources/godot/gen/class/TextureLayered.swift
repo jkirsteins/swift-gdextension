@@ -13,7 +13,7 @@ fileprivate var __godot_name_TextureLayered: StringName! = nil
 /// A [TextureLayered] can be loaded with [method ResourceLoader.load].
 ///  
 /// Internally, Godot maps these files to their respective counterparts in the target rendering driver (Vulkan, GLES3).
-public class TextureLayered : Texture {
+open class TextureLayered : Texture {
 
     public enum LayeredType : Int32 {
         case LAYERED_TYPE_2D_ARRAY = 0
@@ -38,29 +38,34 @@ public class TextureLayered : Texture {
     static var _method_has_mipmaps_36873697: GDExtensionMethodBindPtr! = nil
     static var _method_get_layer_data_3655284255: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_TextureLayered = StringName(from: "TextureLayered")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_get_format_3847873762_name = StringName(from: "get_format")
-        self._method_get_format_3847873762 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_format_3847873762_name._native_ptr(), 3847873762)
+        self._method_get_format_3847873762 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureLayered._native_ptr(), _method_get_format_3847873762_name._native_ptr(), 3847873762)
         assert(TextureLayered._method_get_format_3847873762 != nil)
         let _method_get_layered_type_518123893_name = StringName(from: "get_layered_type")
-        self._method_get_layered_type_518123893 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_layered_type_518123893_name._native_ptr(), 518123893)
+        self._method_get_layered_type_518123893 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureLayered._native_ptr(), _method_get_layered_type_518123893_name._native_ptr(), 518123893)
         assert(TextureLayered._method_get_layered_type_518123893 != nil)
         let _method_get_width_3905245786_name = StringName(from: "get_width")
-        self._method_get_width_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_width_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_width_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureLayered._native_ptr(), _method_get_width_3905245786_name._native_ptr(), 3905245786)
         assert(TextureLayered._method_get_width_3905245786 != nil)
         let _method_get_height_3905245786_name = StringName(from: "get_height")
-        self._method_get_height_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_height_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_height_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureLayered._native_ptr(), _method_get_height_3905245786_name._native_ptr(), 3905245786)
         assert(TextureLayered._method_get_height_3905245786 != nil)
         let _method_get_layers_3905245786_name = StringName(from: "get_layers")
-        self._method_get_layers_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_layers_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_layers_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureLayered._native_ptr(), _method_get_layers_3905245786_name._native_ptr(), 3905245786)
         assert(TextureLayered._method_get_layers_3905245786 != nil)
         let _method_has_mipmaps_36873697_name = StringName(from: "has_mipmaps")
-        self._method_has_mipmaps_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_mipmaps_36873697_name._native_ptr(), 36873697)
+        self._method_has_mipmaps_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureLayered._native_ptr(), _method_has_mipmaps_36873697_name._native_ptr(), 36873697)
         assert(TextureLayered._method_has_mipmaps_36873697 != nil)
         let _method_get_layer_data_3655284255_name = StringName(from: "get_layer_data")
-        self._method_get_layer_data_3655284255 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_layer_data_3655284255_name._native_ptr(), 3655284255)
+        self._method_get_layer_data_3655284255 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureLayered._native_ptr(), _method_get_layer_data_3655284255_name._native_ptr(), 3655284255)
         assert(TextureLayered._method_get_layer_data_3655284255 != nil)
     }
 
@@ -78,7 +83,7 @@ public class TextureLayered : Texture {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Image.Format(from: __resPtr.pointee)
+            return Image.Format(godot: __resPtr.pointee)
     }
     public func _get_layered_type() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -95,7 +100,7 @@ public class TextureLayered : Texture {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_width() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -112,7 +117,7 @@ public class TextureLayered : Texture {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_height() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -129,7 +134,7 @@ public class TextureLayered : Texture {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_layers() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -146,7 +151,7 @@ public class TextureLayered : Texture {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _has_mipmaps() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -163,7 +168,7 @@ public class TextureLayered : Texture {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_layer_data(layer_index: Int64) -> Image {
         withUnsafePointer(to: layer_index) { layer_index_native in
@@ -180,7 +185,7 @@ public class TextureLayered : Texture {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Image(from: __resPtr.pointee)
+            return Image(godot: __resPtr.pointee)
         }
     }
     public func get_format() -> Image.Format {
@@ -197,7 +202,7 @@ public class TextureLayered : Texture {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Image.Format(from: __resPtr.pointee)
+            return Image.Format(godot: __resPtr.pointee)
     }
     public func get_layered_type() -> TextureLayered.LayeredType {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -213,7 +218,7 @@ public class TextureLayered : Texture {
                     args.baseAddress!,
                     __resPtr
                 )
-            return TextureLayered.LayeredType(from: __resPtr.pointee)
+            return TextureLayered.LayeredType(godot: __resPtr.pointee)
     }
     public func get_width() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -230,7 +235,7 @@ public class TextureLayered : Texture {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_height() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -247,7 +252,7 @@ public class TextureLayered : Texture {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_layers() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -264,7 +269,7 @@ public class TextureLayered : Texture {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func has_mipmaps() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -281,7 +286,7 @@ public class TextureLayered : Texture {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func get_layer_data(layer: Int64) -> Image {
         withUnsafePointer(to: layer) { layer_native in
@@ -298,7 +303,7 @@ public class TextureLayered : Texture {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Image(from: __resPtr.pointee)
+            return Image(godot: __resPtr.pointee)
         }
     }
 }

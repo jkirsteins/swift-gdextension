@@ -5,7 +5,7 @@ fileprivate var __godot_name_VBoxContainer: StringName! = nil
 /// Vertical box container.
 /// 
 /// Vertical box container. See [BoxContainer].
-public class VBoxContainer : BoxContainer {
+open class VBoxContainer : BoxContainer {
 
     
 
@@ -13,8 +13,13 @@ public class VBoxContainer : BoxContainer {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VBoxContainer = StringName(from: "VBoxContainer")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

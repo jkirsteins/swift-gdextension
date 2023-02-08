@@ -5,7 +5,7 @@ fileprivate var __godot_name_PhysicsPointQueryParameters3D: StringName! = nil
 /// Parameters to be sent to a 3D point physics query.
 /// 
 /// This class contains the position and other parameters to be used for [method PhysicsDirectSpaceState3D.intersect_point].
-public class PhysicsPointQueryParameters3D : RefCounted {
+open class PhysicsPointQueryParameters3D : RefCounted {
 
     
 
@@ -22,38 +22,43 @@ public class PhysicsPointQueryParameters3D : RefCounted {
     static var _method_set_collide_with_areas_2586408642: GDExtensionMethodBindPtr! = nil
     static var _method_is_collide_with_areas_enabled_36873697: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PhysicsPointQueryParameters3D = StringName(from: "PhysicsPointQueryParameters3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_position_3460891852_name = StringName(from: "set_position")
-        self._method_set_position_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_position_3460891852_name._native_ptr(), 3460891852)
+        self._method_set_position_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsPointQueryParameters3D._native_ptr(), _method_set_position_3460891852_name._native_ptr(), 3460891852)
         assert(PhysicsPointQueryParameters3D._method_set_position_3460891852 != nil)
         let _method_get_position_3360562783_name = StringName(from: "get_position")
-        self._method_get_position_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_position_3360562783_name._native_ptr(), 3360562783)
+        self._method_get_position_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsPointQueryParameters3D._native_ptr(), _method_get_position_3360562783_name._native_ptr(), 3360562783)
         assert(PhysicsPointQueryParameters3D._method_get_position_3360562783 != nil)
         let _method_set_collision_mask_1286410249_name = StringName(from: "set_collision_mask")
-        self._method_set_collision_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_collision_mask_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_collision_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsPointQueryParameters3D._native_ptr(), _method_set_collision_mask_1286410249_name._native_ptr(), 1286410249)
         assert(PhysicsPointQueryParameters3D._method_set_collision_mask_1286410249 != nil)
         let _method_get_collision_mask_3905245786_name = StringName(from: "get_collision_mask")
-        self._method_get_collision_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_collision_mask_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_collision_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsPointQueryParameters3D._native_ptr(), _method_get_collision_mask_3905245786_name._native_ptr(), 3905245786)
         assert(PhysicsPointQueryParameters3D._method_get_collision_mask_3905245786 != nil)
         let _method_set_exclude_381264803_name = StringName(from: "set_exclude")
-        self._method_set_exclude_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_exclude_381264803_name._native_ptr(), 381264803)
+        self._method_set_exclude_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsPointQueryParameters3D._native_ptr(), _method_set_exclude_381264803_name._native_ptr(), 381264803)
         assert(PhysicsPointQueryParameters3D._method_set_exclude_381264803 != nil)
         let _method_get_exclude_3995934104_name = StringName(from: "get_exclude")
-        self._method_get_exclude_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_exclude_3995934104_name._native_ptr(), 3995934104)
+        self._method_get_exclude_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsPointQueryParameters3D._native_ptr(), _method_get_exclude_3995934104_name._native_ptr(), 3995934104)
         assert(PhysicsPointQueryParameters3D._method_get_exclude_3995934104 != nil)
         let _method_set_collide_with_bodies_2586408642_name = StringName(from: "set_collide_with_bodies")
-        self._method_set_collide_with_bodies_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_collide_with_bodies_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_collide_with_bodies_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsPointQueryParameters3D._native_ptr(), _method_set_collide_with_bodies_2586408642_name._native_ptr(), 2586408642)
         assert(PhysicsPointQueryParameters3D._method_set_collide_with_bodies_2586408642 != nil)
         let _method_is_collide_with_bodies_enabled_36873697_name = StringName(from: "is_collide_with_bodies_enabled")
-        self._method_is_collide_with_bodies_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_collide_with_bodies_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_collide_with_bodies_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsPointQueryParameters3D._native_ptr(), _method_is_collide_with_bodies_enabled_36873697_name._native_ptr(), 36873697)
         assert(PhysicsPointQueryParameters3D._method_is_collide_with_bodies_enabled_36873697 != nil)
         let _method_set_collide_with_areas_2586408642_name = StringName(from: "set_collide_with_areas")
-        self._method_set_collide_with_areas_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_collide_with_areas_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_collide_with_areas_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsPointQueryParameters3D._native_ptr(), _method_set_collide_with_areas_2586408642_name._native_ptr(), 2586408642)
         assert(PhysicsPointQueryParameters3D._method_set_collide_with_areas_2586408642 != nil)
         let _method_is_collide_with_areas_enabled_36873697_name = StringName(from: "is_collide_with_areas_enabled")
-        self._method_is_collide_with_areas_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_collide_with_areas_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_collide_with_areas_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsPointQueryParameters3D._native_ptr(), _method_is_collide_with_areas_enabled_36873697_name._native_ptr(), 36873697)
         assert(PhysicsPointQueryParameters3D._method_is_collide_with_areas_enabled_36873697 != nil)
     }
 
@@ -86,7 +91,7 @@ public class PhysicsPointQueryParameters3D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
     }
     public func set_collision_mask(collision_mask: Int64)  {
         withUnsafePointer(to: collision_mask) { collision_mask_native in
@@ -119,7 +124,7 @@ public class PhysicsPointQueryParameters3D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_exclude(exclude: [RID])  {
         let exclude_native = exclude._native_ptr()
@@ -150,7 +155,7 @@ public class PhysicsPointQueryParameters3D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [RID](from: __resPtr.pointee)
+            return [RID](godot: __resPtr.pointee)
     }
     public func set_collide_with_bodies(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -183,7 +188,7 @@ public class PhysicsPointQueryParameters3D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_collide_with_areas(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -216,6 +221,6 @@ public class PhysicsPointQueryParameters3D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

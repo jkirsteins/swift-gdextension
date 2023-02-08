@@ -5,7 +5,7 @@ fileprivate var __godot_name_PhysicsServer2D: StringName! = nil
 /// Server interface for low-level 2D physics access.
 /// 
 /// PhysicsServer2D is the server responsible for all 2D physics. It can create many kinds of physics objects, but does not insert them on the node tree.
-public class PhysicsServer2D : Object {
+open class PhysicsServer2D : Object {
 
     public enum SpaceParameter : Int32 {
         case SPACE_PARAM_CONTACT_RECYCLE_RADIUS = 0
@@ -231,356 +231,361 @@ public class PhysicsServer2D : Object {
     static var _method_set_active_2586408642: GDExtensionMethodBindPtr! = nil
     static var _method_get_process_info_576496006: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PhysicsServer2D = StringName(from: "PhysicsServer2D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_world_boundary_shape_create_529393457_name = StringName(from: "world_boundary_shape_create")
-        self._method_world_boundary_shape_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_world_boundary_shape_create_529393457_name._native_ptr(), 529393457)
+        self._method_world_boundary_shape_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_world_boundary_shape_create_529393457_name._native_ptr(), 529393457)
         assert(PhysicsServer2D._method_world_boundary_shape_create_529393457 != nil)
         let _method_separation_ray_shape_create_529393457_name = StringName(from: "separation_ray_shape_create")
-        self._method_separation_ray_shape_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_separation_ray_shape_create_529393457_name._native_ptr(), 529393457)
+        self._method_separation_ray_shape_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_separation_ray_shape_create_529393457_name._native_ptr(), 529393457)
         assert(PhysicsServer2D._method_separation_ray_shape_create_529393457 != nil)
         let _method_segment_shape_create_529393457_name = StringName(from: "segment_shape_create")
-        self._method_segment_shape_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_segment_shape_create_529393457_name._native_ptr(), 529393457)
+        self._method_segment_shape_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_segment_shape_create_529393457_name._native_ptr(), 529393457)
         assert(PhysicsServer2D._method_segment_shape_create_529393457 != nil)
         let _method_circle_shape_create_529393457_name = StringName(from: "circle_shape_create")
-        self._method_circle_shape_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_circle_shape_create_529393457_name._native_ptr(), 529393457)
+        self._method_circle_shape_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_circle_shape_create_529393457_name._native_ptr(), 529393457)
         assert(PhysicsServer2D._method_circle_shape_create_529393457 != nil)
         let _method_rectangle_shape_create_529393457_name = StringName(from: "rectangle_shape_create")
-        self._method_rectangle_shape_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_rectangle_shape_create_529393457_name._native_ptr(), 529393457)
+        self._method_rectangle_shape_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_rectangle_shape_create_529393457_name._native_ptr(), 529393457)
         assert(PhysicsServer2D._method_rectangle_shape_create_529393457 != nil)
         let _method_capsule_shape_create_529393457_name = StringName(from: "capsule_shape_create")
-        self._method_capsule_shape_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_capsule_shape_create_529393457_name._native_ptr(), 529393457)
+        self._method_capsule_shape_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_capsule_shape_create_529393457_name._native_ptr(), 529393457)
         assert(PhysicsServer2D._method_capsule_shape_create_529393457 != nil)
         let _method_convex_polygon_shape_create_529393457_name = StringName(from: "convex_polygon_shape_create")
-        self._method_convex_polygon_shape_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_convex_polygon_shape_create_529393457_name._native_ptr(), 529393457)
+        self._method_convex_polygon_shape_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_convex_polygon_shape_create_529393457_name._native_ptr(), 529393457)
         assert(PhysicsServer2D._method_convex_polygon_shape_create_529393457 != nil)
         let _method_concave_polygon_shape_create_529393457_name = StringName(from: "concave_polygon_shape_create")
-        self._method_concave_polygon_shape_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_concave_polygon_shape_create_529393457_name._native_ptr(), 529393457)
+        self._method_concave_polygon_shape_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_concave_polygon_shape_create_529393457_name._native_ptr(), 529393457)
         assert(PhysicsServer2D._method_concave_polygon_shape_create_529393457 != nil)
         let _method_shape_set_data_3175752987_name = StringName(from: "shape_set_data")
-        self._method_shape_set_data_3175752987 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_shape_set_data_3175752987_name._native_ptr(), 3175752987)
+        self._method_shape_set_data_3175752987 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_shape_set_data_3175752987_name._native_ptr(), 3175752987)
         assert(PhysicsServer2D._method_shape_set_data_3175752987 != nil)
         let _method_shape_get_type_1240598777_name = StringName(from: "shape_get_type")
-        self._method_shape_get_type_1240598777 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_shape_get_type_1240598777_name._native_ptr(), 1240598777)
+        self._method_shape_get_type_1240598777 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_shape_get_type_1240598777_name._native_ptr(), 1240598777)
         assert(PhysicsServer2D._method_shape_get_type_1240598777 != nil)
         let _method_shape_get_data_4171304767_name = StringName(from: "shape_get_data")
-        self._method_shape_get_data_4171304767 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_shape_get_data_4171304767_name._native_ptr(), 4171304767)
+        self._method_shape_get_data_4171304767 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_shape_get_data_4171304767_name._native_ptr(), 4171304767)
         assert(PhysicsServer2D._method_shape_get_data_4171304767 != nil)
         let _method_space_create_529393457_name = StringName(from: "space_create")
-        self._method_space_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_space_create_529393457_name._native_ptr(), 529393457)
+        self._method_space_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_space_create_529393457_name._native_ptr(), 529393457)
         assert(PhysicsServer2D._method_space_create_529393457 != nil)
         let _method_space_set_active_1265174801_name = StringName(from: "space_set_active")
-        self._method_space_set_active_1265174801 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_space_set_active_1265174801_name._native_ptr(), 1265174801)
+        self._method_space_set_active_1265174801 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_space_set_active_1265174801_name._native_ptr(), 1265174801)
         assert(PhysicsServer2D._method_space_set_active_1265174801 != nil)
         let _method_space_is_active_4155700596_name = StringName(from: "space_is_active")
-        self._method_space_is_active_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_space_is_active_4155700596_name._native_ptr(), 4155700596)
+        self._method_space_is_active_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_space_is_active_4155700596_name._native_ptr(), 4155700596)
         assert(PhysicsServer2D._method_space_is_active_4155700596 != nil)
         let _method_space_set_param_949194586_name = StringName(from: "space_set_param")
-        self._method_space_set_param_949194586 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_space_set_param_949194586_name._native_ptr(), 949194586)
+        self._method_space_set_param_949194586 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_space_set_param_949194586_name._native_ptr(), 949194586)
         assert(PhysicsServer2D._method_space_set_param_949194586 != nil)
         let _method_space_get_param_874111783_name = StringName(from: "space_get_param")
-        self._method_space_get_param_874111783 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_space_get_param_874111783_name._native_ptr(), 874111783)
+        self._method_space_get_param_874111783 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_space_get_param_874111783_name._native_ptr(), 874111783)
         assert(PhysicsServer2D._method_space_get_param_874111783 != nil)
         let _method_space_get_direct_state_3160173886_name = StringName(from: "space_get_direct_state")
-        self._method_space_get_direct_state_3160173886 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_space_get_direct_state_3160173886_name._native_ptr(), 3160173886)
+        self._method_space_get_direct_state_3160173886 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_space_get_direct_state_3160173886_name._native_ptr(), 3160173886)
         assert(PhysicsServer2D._method_space_get_direct_state_3160173886 != nil)
         let _method_area_create_529393457_name = StringName(from: "area_create")
-        self._method_area_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_create_529393457_name._native_ptr(), 529393457)
+        self._method_area_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_create_529393457_name._native_ptr(), 529393457)
         assert(PhysicsServer2D._method_area_create_529393457 != nil)
         let _method_area_set_space_395945892_name = StringName(from: "area_set_space")
-        self._method_area_set_space_395945892 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_set_space_395945892_name._native_ptr(), 395945892)
+        self._method_area_set_space_395945892 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_set_space_395945892_name._native_ptr(), 395945892)
         assert(PhysicsServer2D._method_area_set_space_395945892 != nil)
         let _method_area_get_space_3814569979_name = StringName(from: "area_get_space")
-        self._method_area_get_space_3814569979 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_get_space_3814569979_name._native_ptr(), 3814569979)
+        self._method_area_get_space_3814569979 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_get_space_3814569979_name._native_ptr(), 3814569979)
         assert(PhysicsServer2D._method_area_get_space_3814569979 != nil)
         let _method_area_add_shape_754862190_name = StringName(from: "area_add_shape")
-        self._method_area_add_shape_754862190 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_add_shape_754862190_name._native_ptr(), 754862190)
+        self._method_area_add_shape_754862190 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_add_shape_754862190_name._native_ptr(), 754862190)
         assert(PhysicsServer2D._method_area_add_shape_754862190 != nil)
         let _method_area_set_shape_2310537182_name = StringName(from: "area_set_shape")
-        self._method_area_set_shape_2310537182 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_set_shape_2310537182_name._native_ptr(), 2310537182)
+        self._method_area_set_shape_2310537182 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_set_shape_2310537182_name._native_ptr(), 2310537182)
         assert(PhysicsServer2D._method_area_set_shape_2310537182 != nil)
         let _method_area_set_shape_transform_736082694_name = StringName(from: "area_set_shape_transform")
-        self._method_area_set_shape_transform_736082694 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_set_shape_transform_736082694_name._native_ptr(), 736082694)
+        self._method_area_set_shape_transform_736082694 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_set_shape_transform_736082694_name._native_ptr(), 736082694)
         assert(PhysicsServer2D._method_area_set_shape_transform_736082694 != nil)
         let _method_area_set_shape_disabled_2658558584_name = StringName(from: "area_set_shape_disabled")
-        self._method_area_set_shape_disabled_2658558584 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_set_shape_disabled_2658558584_name._native_ptr(), 2658558584)
+        self._method_area_set_shape_disabled_2658558584 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_set_shape_disabled_2658558584_name._native_ptr(), 2658558584)
         assert(PhysicsServer2D._method_area_set_shape_disabled_2658558584 != nil)
         let _method_area_get_shape_count_2198884583_name = StringName(from: "area_get_shape_count")
-        self._method_area_get_shape_count_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_get_shape_count_2198884583_name._native_ptr(), 2198884583)
+        self._method_area_get_shape_count_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_get_shape_count_2198884583_name._native_ptr(), 2198884583)
         assert(PhysicsServer2D._method_area_get_shape_count_2198884583 != nil)
         let _method_area_get_shape_1066463050_name = StringName(from: "area_get_shape")
-        self._method_area_get_shape_1066463050 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_get_shape_1066463050_name._native_ptr(), 1066463050)
+        self._method_area_get_shape_1066463050 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_get_shape_1066463050_name._native_ptr(), 1066463050)
         assert(PhysicsServer2D._method_area_get_shape_1066463050 != nil)
         let _method_area_get_shape_transform_1324854622_name = StringName(from: "area_get_shape_transform")
-        self._method_area_get_shape_transform_1324854622 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_get_shape_transform_1324854622_name._native_ptr(), 1324854622)
+        self._method_area_get_shape_transform_1324854622 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_get_shape_transform_1324854622_name._native_ptr(), 1324854622)
         assert(PhysicsServer2D._method_area_get_shape_transform_1324854622 != nil)
         let _method_area_remove_shape_3411492887_name = StringName(from: "area_remove_shape")
-        self._method_area_remove_shape_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_remove_shape_3411492887_name._native_ptr(), 3411492887)
+        self._method_area_remove_shape_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_remove_shape_3411492887_name._native_ptr(), 3411492887)
         assert(PhysicsServer2D._method_area_remove_shape_3411492887 != nil)
         let _method_area_clear_shapes_2722037293_name = StringName(from: "area_clear_shapes")
-        self._method_area_clear_shapes_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_clear_shapes_2722037293_name._native_ptr(), 2722037293)
+        self._method_area_clear_shapes_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_clear_shapes_2722037293_name._native_ptr(), 2722037293)
         assert(PhysicsServer2D._method_area_clear_shapes_2722037293 != nil)
         let _method_area_set_collision_layer_3411492887_name = StringName(from: "area_set_collision_layer")
-        self._method_area_set_collision_layer_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_set_collision_layer_3411492887_name._native_ptr(), 3411492887)
+        self._method_area_set_collision_layer_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_set_collision_layer_3411492887_name._native_ptr(), 3411492887)
         assert(PhysicsServer2D._method_area_set_collision_layer_3411492887 != nil)
         let _method_area_get_collision_layer_2198884583_name = StringName(from: "area_get_collision_layer")
-        self._method_area_get_collision_layer_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_get_collision_layer_2198884583_name._native_ptr(), 2198884583)
+        self._method_area_get_collision_layer_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_get_collision_layer_2198884583_name._native_ptr(), 2198884583)
         assert(PhysicsServer2D._method_area_get_collision_layer_2198884583 != nil)
         let _method_area_set_collision_mask_3411492887_name = StringName(from: "area_set_collision_mask")
-        self._method_area_set_collision_mask_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_set_collision_mask_3411492887_name._native_ptr(), 3411492887)
+        self._method_area_set_collision_mask_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_set_collision_mask_3411492887_name._native_ptr(), 3411492887)
         assert(PhysicsServer2D._method_area_set_collision_mask_3411492887 != nil)
         let _method_area_get_collision_mask_2198884583_name = StringName(from: "area_get_collision_mask")
-        self._method_area_get_collision_mask_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_get_collision_mask_2198884583_name._native_ptr(), 2198884583)
+        self._method_area_get_collision_mask_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_get_collision_mask_2198884583_name._native_ptr(), 2198884583)
         assert(PhysicsServer2D._method_area_get_collision_mask_2198884583 != nil)
         let _method_area_set_param_1257146028_name = StringName(from: "area_set_param")
-        self._method_area_set_param_1257146028 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_set_param_1257146028_name._native_ptr(), 1257146028)
+        self._method_area_set_param_1257146028 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_set_param_1257146028_name._native_ptr(), 1257146028)
         assert(PhysicsServer2D._method_area_set_param_1257146028 != nil)
         let _method_area_set_transform_1246044741_name = StringName(from: "area_set_transform")
-        self._method_area_set_transform_1246044741 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_set_transform_1246044741_name._native_ptr(), 1246044741)
+        self._method_area_set_transform_1246044741 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_set_transform_1246044741_name._native_ptr(), 1246044741)
         assert(PhysicsServer2D._method_area_set_transform_1246044741 != nil)
         let _method_area_get_param_3047435120_name = StringName(from: "area_get_param")
-        self._method_area_get_param_3047435120 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_get_param_3047435120_name._native_ptr(), 3047435120)
+        self._method_area_get_param_3047435120 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_get_param_3047435120_name._native_ptr(), 3047435120)
         assert(PhysicsServer2D._method_area_get_param_3047435120 != nil)
         let _method_area_get_transform_213527486_name = StringName(from: "area_get_transform")
-        self._method_area_get_transform_213527486 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_get_transform_213527486_name._native_ptr(), 213527486)
+        self._method_area_get_transform_213527486 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_get_transform_213527486_name._native_ptr(), 213527486)
         assert(PhysicsServer2D._method_area_get_transform_213527486 != nil)
         let _method_area_attach_object_instance_id_3411492887_name = StringName(from: "area_attach_object_instance_id")
-        self._method_area_attach_object_instance_id_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_attach_object_instance_id_3411492887_name._native_ptr(), 3411492887)
+        self._method_area_attach_object_instance_id_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_attach_object_instance_id_3411492887_name._native_ptr(), 3411492887)
         assert(PhysicsServer2D._method_area_attach_object_instance_id_3411492887 != nil)
         let _method_area_get_object_instance_id_2198884583_name = StringName(from: "area_get_object_instance_id")
-        self._method_area_get_object_instance_id_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_get_object_instance_id_2198884583_name._native_ptr(), 2198884583)
+        self._method_area_get_object_instance_id_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_get_object_instance_id_2198884583_name._native_ptr(), 2198884583)
         assert(PhysicsServer2D._method_area_get_object_instance_id_2198884583 != nil)
         let _method_area_attach_canvas_instance_id_3411492887_name = StringName(from: "area_attach_canvas_instance_id")
-        self._method_area_attach_canvas_instance_id_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_attach_canvas_instance_id_3411492887_name._native_ptr(), 3411492887)
+        self._method_area_attach_canvas_instance_id_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_attach_canvas_instance_id_3411492887_name._native_ptr(), 3411492887)
         assert(PhysicsServer2D._method_area_attach_canvas_instance_id_3411492887 != nil)
         let _method_area_get_canvas_instance_id_2198884583_name = StringName(from: "area_get_canvas_instance_id")
-        self._method_area_get_canvas_instance_id_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_get_canvas_instance_id_2198884583_name._native_ptr(), 2198884583)
+        self._method_area_get_canvas_instance_id_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_get_canvas_instance_id_2198884583_name._native_ptr(), 2198884583)
         assert(PhysicsServer2D._method_area_get_canvas_instance_id_2198884583 != nil)
         let _method_area_set_monitor_callback_3379118538_name = StringName(from: "area_set_monitor_callback")
-        self._method_area_set_monitor_callback_3379118538 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_set_monitor_callback_3379118538_name._native_ptr(), 3379118538)
+        self._method_area_set_monitor_callback_3379118538 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_set_monitor_callback_3379118538_name._native_ptr(), 3379118538)
         assert(PhysicsServer2D._method_area_set_monitor_callback_3379118538 != nil)
         let _method_area_set_area_monitor_callback_3379118538_name = StringName(from: "area_set_area_monitor_callback")
-        self._method_area_set_area_monitor_callback_3379118538 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_set_area_monitor_callback_3379118538_name._native_ptr(), 3379118538)
+        self._method_area_set_area_monitor_callback_3379118538 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_set_area_monitor_callback_3379118538_name._native_ptr(), 3379118538)
         assert(PhysicsServer2D._method_area_set_area_monitor_callback_3379118538 != nil)
         let _method_area_set_monitorable_1265174801_name = StringName(from: "area_set_monitorable")
-        self._method_area_set_monitorable_1265174801 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_area_set_monitorable_1265174801_name._native_ptr(), 1265174801)
+        self._method_area_set_monitorable_1265174801 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_area_set_monitorable_1265174801_name._native_ptr(), 1265174801)
         assert(PhysicsServer2D._method_area_set_monitorable_1265174801 != nil)
         let _method_body_create_529393457_name = StringName(from: "body_create")
-        self._method_body_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_create_529393457_name._native_ptr(), 529393457)
+        self._method_body_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_create_529393457_name._native_ptr(), 529393457)
         assert(PhysicsServer2D._method_body_create_529393457 != nil)
         let _method_body_set_space_395945892_name = StringName(from: "body_set_space")
-        self._method_body_set_space_395945892 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_space_395945892_name._native_ptr(), 395945892)
+        self._method_body_set_space_395945892 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_space_395945892_name._native_ptr(), 395945892)
         assert(PhysicsServer2D._method_body_set_space_395945892 != nil)
         let _method_body_get_space_3814569979_name = StringName(from: "body_get_space")
-        self._method_body_get_space_3814569979 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_space_3814569979_name._native_ptr(), 3814569979)
+        self._method_body_get_space_3814569979 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_space_3814569979_name._native_ptr(), 3814569979)
         assert(PhysicsServer2D._method_body_get_space_3814569979 != nil)
         let _method_body_set_mode_1658067650_name = StringName(from: "body_set_mode")
-        self._method_body_set_mode_1658067650 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_mode_1658067650_name._native_ptr(), 1658067650)
+        self._method_body_set_mode_1658067650 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_mode_1658067650_name._native_ptr(), 1658067650)
         assert(PhysicsServer2D._method_body_set_mode_1658067650 != nil)
         let _method_body_get_mode_3261702585_name = StringName(from: "body_get_mode")
-        self._method_body_get_mode_3261702585 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_mode_3261702585_name._native_ptr(), 3261702585)
+        self._method_body_get_mode_3261702585 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_mode_3261702585_name._native_ptr(), 3261702585)
         assert(PhysicsServer2D._method_body_get_mode_3261702585 != nil)
         let _method_body_add_shape_754862190_name = StringName(from: "body_add_shape")
-        self._method_body_add_shape_754862190 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_add_shape_754862190_name._native_ptr(), 754862190)
+        self._method_body_add_shape_754862190 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_add_shape_754862190_name._native_ptr(), 754862190)
         assert(PhysicsServer2D._method_body_add_shape_754862190 != nil)
         let _method_body_set_shape_2310537182_name = StringName(from: "body_set_shape")
-        self._method_body_set_shape_2310537182 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_shape_2310537182_name._native_ptr(), 2310537182)
+        self._method_body_set_shape_2310537182 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_shape_2310537182_name._native_ptr(), 2310537182)
         assert(PhysicsServer2D._method_body_set_shape_2310537182 != nil)
         let _method_body_set_shape_transform_736082694_name = StringName(from: "body_set_shape_transform")
-        self._method_body_set_shape_transform_736082694 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_shape_transform_736082694_name._native_ptr(), 736082694)
+        self._method_body_set_shape_transform_736082694 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_shape_transform_736082694_name._native_ptr(), 736082694)
         assert(PhysicsServer2D._method_body_set_shape_transform_736082694 != nil)
         let _method_body_get_shape_count_2198884583_name = StringName(from: "body_get_shape_count")
-        self._method_body_get_shape_count_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_shape_count_2198884583_name._native_ptr(), 2198884583)
+        self._method_body_get_shape_count_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_shape_count_2198884583_name._native_ptr(), 2198884583)
         assert(PhysicsServer2D._method_body_get_shape_count_2198884583 != nil)
         let _method_body_get_shape_1066463050_name = StringName(from: "body_get_shape")
-        self._method_body_get_shape_1066463050 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_shape_1066463050_name._native_ptr(), 1066463050)
+        self._method_body_get_shape_1066463050 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_shape_1066463050_name._native_ptr(), 1066463050)
         assert(PhysicsServer2D._method_body_get_shape_1066463050 != nil)
         let _method_body_get_shape_transform_1324854622_name = StringName(from: "body_get_shape_transform")
-        self._method_body_get_shape_transform_1324854622 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_shape_transform_1324854622_name._native_ptr(), 1324854622)
+        self._method_body_get_shape_transform_1324854622 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_shape_transform_1324854622_name._native_ptr(), 1324854622)
         assert(PhysicsServer2D._method_body_get_shape_transform_1324854622 != nil)
         let _method_body_remove_shape_3411492887_name = StringName(from: "body_remove_shape")
-        self._method_body_remove_shape_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_remove_shape_3411492887_name._native_ptr(), 3411492887)
+        self._method_body_remove_shape_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_remove_shape_3411492887_name._native_ptr(), 3411492887)
         assert(PhysicsServer2D._method_body_remove_shape_3411492887 != nil)
         let _method_body_clear_shapes_2722037293_name = StringName(from: "body_clear_shapes")
-        self._method_body_clear_shapes_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_clear_shapes_2722037293_name._native_ptr(), 2722037293)
+        self._method_body_clear_shapes_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_clear_shapes_2722037293_name._native_ptr(), 2722037293)
         assert(PhysicsServer2D._method_body_clear_shapes_2722037293 != nil)
         let _method_body_set_shape_disabled_2658558584_name = StringName(from: "body_set_shape_disabled")
-        self._method_body_set_shape_disabled_2658558584 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_shape_disabled_2658558584_name._native_ptr(), 2658558584)
+        self._method_body_set_shape_disabled_2658558584 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_shape_disabled_2658558584_name._native_ptr(), 2658558584)
         assert(PhysicsServer2D._method_body_set_shape_disabled_2658558584 != nil)
         let _method_body_set_shape_as_one_way_collision_2556489974_name = StringName(from: "body_set_shape_as_one_way_collision")
-        self._method_body_set_shape_as_one_way_collision_2556489974 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_shape_as_one_way_collision_2556489974_name._native_ptr(), 2556489974)
+        self._method_body_set_shape_as_one_way_collision_2556489974 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_shape_as_one_way_collision_2556489974_name._native_ptr(), 2556489974)
         assert(PhysicsServer2D._method_body_set_shape_as_one_way_collision_2556489974 != nil)
         let _method_body_attach_object_instance_id_3411492887_name = StringName(from: "body_attach_object_instance_id")
-        self._method_body_attach_object_instance_id_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_attach_object_instance_id_3411492887_name._native_ptr(), 3411492887)
+        self._method_body_attach_object_instance_id_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_attach_object_instance_id_3411492887_name._native_ptr(), 3411492887)
         assert(PhysicsServer2D._method_body_attach_object_instance_id_3411492887 != nil)
         let _method_body_get_object_instance_id_2198884583_name = StringName(from: "body_get_object_instance_id")
-        self._method_body_get_object_instance_id_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_object_instance_id_2198884583_name._native_ptr(), 2198884583)
+        self._method_body_get_object_instance_id_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_object_instance_id_2198884583_name._native_ptr(), 2198884583)
         assert(PhysicsServer2D._method_body_get_object_instance_id_2198884583 != nil)
         let _method_body_attach_canvas_instance_id_3411492887_name = StringName(from: "body_attach_canvas_instance_id")
-        self._method_body_attach_canvas_instance_id_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_attach_canvas_instance_id_3411492887_name._native_ptr(), 3411492887)
+        self._method_body_attach_canvas_instance_id_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_attach_canvas_instance_id_3411492887_name._native_ptr(), 3411492887)
         assert(PhysicsServer2D._method_body_attach_canvas_instance_id_3411492887 != nil)
         let _method_body_get_canvas_instance_id_2198884583_name = StringName(from: "body_get_canvas_instance_id")
-        self._method_body_get_canvas_instance_id_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_canvas_instance_id_2198884583_name._native_ptr(), 2198884583)
+        self._method_body_get_canvas_instance_id_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_canvas_instance_id_2198884583_name._native_ptr(), 2198884583)
         assert(PhysicsServer2D._method_body_get_canvas_instance_id_2198884583 != nil)
         let _method_body_set_continuous_collision_detection_mode_1882257015_name = StringName(from: "body_set_continuous_collision_detection_mode")
-        self._method_body_set_continuous_collision_detection_mode_1882257015 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_continuous_collision_detection_mode_1882257015_name._native_ptr(), 1882257015)
+        self._method_body_set_continuous_collision_detection_mode_1882257015 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_continuous_collision_detection_mode_1882257015_name._native_ptr(), 1882257015)
         assert(PhysicsServer2D._method_body_set_continuous_collision_detection_mode_1882257015 != nil)
         let _method_body_get_continuous_collision_detection_mode_2661282217_name = StringName(from: "body_get_continuous_collision_detection_mode")
-        self._method_body_get_continuous_collision_detection_mode_2661282217 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_continuous_collision_detection_mode_2661282217_name._native_ptr(), 2661282217)
+        self._method_body_get_continuous_collision_detection_mode_2661282217 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_continuous_collision_detection_mode_2661282217_name._native_ptr(), 2661282217)
         assert(PhysicsServer2D._method_body_get_continuous_collision_detection_mode_2661282217 != nil)
         let _method_body_set_collision_layer_3411492887_name = StringName(from: "body_set_collision_layer")
-        self._method_body_set_collision_layer_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_collision_layer_3411492887_name._native_ptr(), 3411492887)
+        self._method_body_set_collision_layer_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_collision_layer_3411492887_name._native_ptr(), 3411492887)
         assert(PhysicsServer2D._method_body_set_collision_layer_3411492887 != nil)
         let _method_body_get_collision_layer_2198884583_name = StringName(from: "body_get_collision_layer")
-        self._method_body_get_collision_layer_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_collision_layer_2198884583_name._native_ptr(), 2198884583)
+        self._method_body_get_collision_layer_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_collision_layer_2198884583_name._native_ptr(), 2198884583)
         assert(PhysicsServer2D._method_body_get_collision_layer_2198884583 != nil)
         let _method_body_set_collision_mask_3411492887_name = StringName(from: "body_set_collision_mask")
-        self._method_body_set_collision_mask_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_collision_mask_3411492887_name._native_ptr(), 3411492887)
+        self._method_body_set_collision_mask_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_collision_mask_3411492887_name._native_ptr(), 3411492887)
         assert(PhysicsServer2D._method_body_set_collision_mask_3411492887 != nil)
         let _method_body_get_collision_mask_2198884583_name = StringName(from: "body_get_collision_mask")
-        self._method_body_get_collision_mask_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_collision_mask_2198884583_name._native_ptr(), 2198884583)
+        self._method_body_get_collision_mask_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_collision_mask_2198884583_name._native_ptr(), 2198884583)
         assert(PhysicsServer2D._method_body_get_collision_mask_2198884583 != nil)
         let _method_body_set_collision_priority_1794382983_name = StringName(from: "body_set_collision_priority")
-        self._method_body_set_collision_priority_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_collision_priority_1794382983_name._native_ptr(), 1794382983)
+        self._method_body_set_collision_priority_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_collision_priority_1794382983_name._native_ptr(), 1794382983)
         assert(PhysicsServer2D._method_body_set_collision_priority_1794382983 != nil)
         let _method_body_get_collision_priority_866169185_name = StringName(from: "body_get_collision_priority")
-        self._method_body_get_collision_priority_866169185 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_collision_priority_866169185_name._native_ptr(), 866169185)
+        self._method_body_get_collision_priority_866169185 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_collision_priority_866169185_name._native_ptr(), 866169185)
         assert(PhysicsServer2D._method_body_get_collision_priority_866169185 != nil)
         let _method_body_set_param_2715630609_name = StringName(from: "body_set_param")
-        self._method_body_set_param_2715630609 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_param_2715630609_name._native_ptr(), 2715630609)
+        self._method_body_set_param_2715630609 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_param_2715630609_name._native_ptr(), 2715630609)
         assert(PhysicsServer2D._method_body_set_param_2715630609 != nil)
         let _method_body_get_param_3208033526_name = StringName(from: "body_get_param")
-        self._method_body_get_param_3208033526 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_param_3208033526_name._native_ptr(), 3208033526)
+        self._method_body_get_param_3208033526 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_param_3208033526_name._native_ptr(), 3208033526)
         assert(PhysicsServer2D._method_body_get_param_3208033526 != nil)
         let _method_body_reset_mass_properties_2722037293_name = StringName(from: "body_reset_mass_properties")
-        self._method_body_reset_mass_properties_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_reset_mass_properties_2722037293_name._native_ptr(), 2722037293)
+        self._method_body_reset_mass_properties_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_reset_mass_properties_2722037293_name._native_ptr(), 2722037293)
         assert(PhysicsServer2D._method_body_reset_mass_properties_2722037293 != nil)
         let _method_body_set_state_1706355209_name = StringName(from: "body_set_state")
-        self._method_body_set_state_1706355209 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_state_1706355209_name._native_ptr(), 1706355209)
+        self._method_body_set_state_1706355209 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_state_1706355209_name._native_ptr(), 1706355209)
         assert(PhysicsServer2D._method_body_set_state_1706355209 != nil)
         let _method_body_get_state_4036367961_name = StringName(from: "body_get_state")
-        self._method_body_get_state_4036367961 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_state_4036367961_name._native_ptr(), 4036367961)
+        self._method_body_get_state_4036367961 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_state_4036367961_name._native_ptr(), 4036367961)
         assert(PhysicsServer2D._method_body_get_state_4036367961 != nil)
         let _method_body_apply_central_impulse_3201125042_name = StringName(from: "body_apply_central_impulse")
-        self._method_body_apply_central_impulse_3201125042 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_apply_central_impulse_3201125042_name._native_ptr(), 3201125042)
+        self._method_body_apply_central_impulse_3201125042 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_apply_central_impulse_3201125042_name._native_ptr(), 3201125042)
         assert(PhysicsServer2D._method_body_apply_central_impulse_3201125042 != nil)
         let _method_body_apply_torque_impulse_1794382983_name = StringName(from: "body_apply_torque_impulse")
-        self._method_body_apply_torque_impulse_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_apply_torque_impulse_1794382983_name._native_ptr(), 1794382983)
+        self._method_body_apply_torque_impulse_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_apply_torque_impulse_1794382983_name._native_ptr(), 1794382983)
         assert(PhysicsServer2D._method_body_apply_torque_impulse_1794382983 != nil)
         let _method_body_apply_impulse_34330743_name = StringName(from: "body_apply_impulse")
-        self._method_body_apply_impulse_34330743 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_apply_impulse_34330743_name._native_ptr(), 34330743)
+        self._method_body_apply_impulse_34330743 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_apply_impulse_34330743_name._native_ptr(), 34330743)
         assert(PhysicsServer2D._method_body_apply_impulse_34330743 != nil)
         let _method_body_apply_central_force_3201125042_name = StringName(from: "body_apply_central_force")
-        self._method_body_apply_central_force_3201125042 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_apply_central_force_3201125042_name._native_ptr(), 3201125042)
+        self._method_body_apply_central_force_3201125042 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_apply_central_force_3201125042_name._native_ptr(), 3201125042)
         assert(PhysicsServer2D._method_body_apply_central_force_3201125042 != nil)
         let _method_body_apply_force_34330743_name = StringName(from: "body_apply_force")
-        self._method_body_apply_force_34330743 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_apply_force_34330743_name._native_ptr(), 34330743)
+        self._method_body_apply_force_34330743 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_apply_force_34330743_name._native_ptr(), 34330743)
         assert(PhysicsServer2D._method_body_apply_force_34330743 != nil)
         let _method_body_apply_torque_1794382983_name = StringName(from: "body_apply_torque")
-        self._method_body_apply_torque_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_apply_torque_1794382983_name._native_ptr(), 1794382983)
+        self._method_body_apply_torque_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_apply_torque_1794382983_name._native_ptr(), 1794382983)
         assert(PhysicsServer2D._method_body_apply_torque_1794382983 != nil)
         let _method_body_add_constant_central_force_3201125042_name = StringName(from: "body_add_constant_central_force")
-        self._method_body_add_constant_central_force_3201125042 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_add_constant_central_force_3201125042_name._native_ptr(), 3201125042)
+        self._method_body_add_constant_central_force_3201125042 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_add_constant_central_force_3201125042_name._native_ptr(), 3201125042)
         assert(PhysicsServer2D._method_body_add_constant_central_force_3201125042 != nil)
         let _method_body_add_constant_force_34330743_name = StringName(from: "body_add_constant_force")
-        self._method_body_add_constant_force_34330743 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_add_constant_force_34330743_name._native_ptr(), 34330743)
+        self._method_body_add_constant_force_34330743 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_add_constant_force_34330743_name._native_ptr(), 34330743)
         assert(PhysicsServer2D._method_body_add_constant_force_34330743 != nil)
         let _method_body_add_constant_torque_1794382983_name = StringName(from: "body_add_constant_torque")
-        self._method_body_add_constant_torque_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_add_constant_torque_1794382983_name._native_ptr(), 1794382983)
+        self._method_body_add_constant_torque_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_add_constant_torque_1794382983_name._native_ptr(), 1794382983)
         assert(PhysicsServer2D._method_body_add_constant_torque_1794382983 != nil)
         let _method_body_set_constant_force_3201125042_name = StringName(from: "body_set_constant_force")
-        self._method_body_set_constant_force_3201125042 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_constant_force_3201125042_name._native_ptr(), 3201125042)
+        self._method_body_set_constant_force_3201125042 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_constant_force_3201125042_name._native_ptr(), 3201125042)
         assert(PhysicsServer2D._method_body_set_constant_force_3201125042 != nil)
         let _method_body_get_constant_force_2440833711_name = StringName(from: "body_get_constant_force")
-        self._method_body_get_constant_force_2440833711 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_constant_force_2440833711_name._native_ptr(), 2440833711)
+        self._method_body_get_constant_force_2440833711 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_constant_force_2440833711_name._native_ptr(), 2440833711)
         assert(PhysicsServer2D._method_body_get_constant_force_2440833711 != nil)
         let _method_body_set_constant_torque_1794382983_name = StringName(from: "body_set_constant_torque")
-        self._method_body_set_constant_torque_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_constant_torque_1794382983_name._native_ptr(), 1794382983)
+        self._method_body_set_constant_torque_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_constant_torque_1794382983_name._native_ptr(), 1794382983)
         assert(PhysicsServer2D._method_body_set_constant_torque_1794382983 != nil)
         let _method_body_get_constant_torque_866169185_name = StringName(from: "body_get_constant_torque")
-        self._method_body_get_constant_torque_866169185 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_constant_torque_866169185_name._native_ptr(), 866169185)
+        self._method_body_get_constant_torque_866169185 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_constant_torque_866169185_name._native_ptr(), 866169185)
         assert(PhysicsServer2D._method_body_get_constant_torque_866169185 != nil)
         let _method_body_set_axis_velocity_3201125042_name = StringName(from: "body_set_axis_velocity")
-        self._method_body_set_axis_velocity_3201125042 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_axis_velocity_3201125042_name._native_ptr(), 3201125042)
+        self._method_body_set_axis_velocity_3201125042 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_axis_velocity_3201125042_name._native_ptr(), 3201125042)
         assert(PhysicsServer2D._method_body_set_axis_velocity_3201125042 != nil)
         let _method_body_add_collision_exception_395945892_name = StringName(from: "body_add_collision_exception")
-        self._method_body_add_collision_exception_395945892 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_add_collision_exception_395945892_name._native_ptr(), 395945892)
+        self._method_body_add_collision_exception_395945892 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_add_collision_exception_395945892_name._native_ptr(), 395945892)
         assert(PhysicsServer2D._method_body_add_collision_exception_395945892 != nil)
         let _method_body_remove_collision_exception_395945892_name = StringName(from: "body_remove_collision_exception")
-        self._method_body_remove_collision_exception_395945892 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_remove_collision_exception_395945892_name._native_ptr(), 395945892)
+        self._method_body_remove_collision_exception_395945892 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_remove_collision_exception_395945892_name._native_ptr(), 395945892)
         assert(PhysicsServer2D._method_body_remove_collision_exception_395945892 != nil)
         let _method_body_set_max_contacts_reported_3411492887_name = StringName(from: "body_set_max_contacts_reported")
-        self._method_body_set_max_contacts_reported_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_max_contacts_reported_3411492887_name._native_ptr(), 3411492887)
+        self._method_body_set_max_contacts_reported_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_max_contacts_reported_3411492887_name._native_ptr(), 3411492887)
         assert(PhysicsServer2D._method_body_set_max_contacts_reported_3411492887 != nil)
         let _method_body_get_max_contacts_reported_2198884583_name = StringName(from: "body_get_max_contacts_reported")
-        self._method_body_get_max_contacts_reported_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_max_contacts_reported_2198884583_name._native_ptr(), 2198884583)
+        self._method_body_get_max_contacts_reported_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_max_contacts_reported_2198884583_name._native_ptr(), 2198884583)
         assert(PhysicsServer2D._method_body_get_max_contacts_reported_2198884583 != nil)
         let _method_body_set_omit_force_integration_1265174801_name = StringName(from: "body_set_omit_force_integration")
-        self._method_body_set_omit_force_integration_1265174801 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_omit_force_integration_1265174801_name._native_ptr(), 1265174801)
+        self._method_body_set_omit_force_integration_1265174801 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_omit_force_integration_1265174801_name._native_ptr(), 1265174801)
         assert(PhysicsServer2D._method_body_set_omit_force_integration_1265174801 != nil)
         let _method_body_is_omitting_force_integration_4155700596_name = StringName(from: "body_is_omitting_force_integration")
-        self._method_body_is_omitting_force_integration_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_is_omitting_force_integration_4155700596_name._native_ptr(), 4155700596)
+        self._method_body_is_omitting_force_integration_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_is_omitting_force_integration_4155700596_name._native_ptr(), 4155700596)
         assert(PhysicsServer2D._method_body_is_omitting_force_integration_4155700596 != nil)
         let _method_body_set_force_integration_callback_3059434249_name = StringName(from: "body_set_force_integration_callback")
-        self._method_body_set_force_integration_callback_3059434249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_set_force_integration_callback_3059434249_name._native_ptr(), 3059434249)
+        self._method_body_set_force_integration_callback_3059434249 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_set_force_integration_callback_3059434249_name._native_ptr(), 3059434249)
         assert(PhysicsServer2D._method_body_set_force_integration_callback_3059434249 != nil)
         let _method_body_test_motion_1699844009_name = StringName(from: "body_test_motion")
-        self._method_body_test_motion_1699844009 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_test_motion_1699844009_name._native_ptr(), 1699844009)
+        self._method_body_test_motion_1699844009 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_test_motion_1699844009_name._native_ptr(), 1699844009)
         assert(PhysicsServer2D._method_body_test_motion_1699844009 != nil)
         let _method_body_get_direct_state_1191931871_name = StringName(from: "body_get_direct_state")
-        self._method_body_get_direct_state_1191931871 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_body_get_direct_state_1191931871_name._native_ptr(), 1191931871)
+        self._method_body_get_direct_state_1191931871 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_body_get_direct_state_1191931871_name._native_ptr(), 1191931871)
         assert(PhysicsServer2D._method_body_get_direct_state_1191931871 != nil)
         let _method_joint_create_529393457_name = StringName(from: "joint_create")
-        self._method_joint_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_joint_create_529393457_name._native_ptr(), 529393457)
+        self._method_joint_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_joint_create_529393457_name._native_ptr(), 529393457)
         assert(PhysicsServer2D._method_joint_create_529393457 != nil)
         let _method_joint_clear_2722037293_name = StringName(from: "joint_clear")
-        self._method_joint_clear_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_joint_clear_2722037293_name._native_ptr(), 2722037293)
+        self._method_joint_clear_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_joint_clear_2722037293_name._native_ptr(), 2722037293)
         assert(PhysicsServer2D._method_joint_clear_2722037293 != nil)
         let _method_joint_set_param_3972556514_name = StringName(from: "joint_set_param")
-        self._method_joint_set_param_3972556514 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_joint_set_param_3972556514_name._native_ptr(), 3972556514)
+        self._method_joint_set_param_3972556514 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_joint_set_param_3972556514_name._native_ptr(), 3972556514)
         assert(PhysicsServer2D._method_joint_set_param_3972556514 != nil)
         let _method_joint_get_param_4016448949_name = StringName(from: "joint_get_param")
-        self._method_joint_get_param_4016448949 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_joint_get_param_4016448949_name._native_ptr(), 4016448949)
+        self._method_joint_get_param_4016448949 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_joint_get_param_4016448949_name._native_ptr(), 4016448949)
         assert(PhysicsServer2D._method_joint_get_param_4016448949 != nil)
         let _method_joint_disable_collisions_between_bodies_1265174801_name = StringName(from: "joint_disable_collisions_between_bodies")
-        self._method_joint_disable_collisions_between_bodies_1265174801 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_joint_disable_collisions_between_bodies_1265174801_name._native_ptr(), 1265174801)
+        self._method_joint_disable_collisions_between_bodies_1265174801 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_joint_disable_collisions_between_bodies_1265174801_name._native_ptr(), 1265174801)
         assert(PhysicsServer2D._method_joint_disable_collisions_between_bodies_1265174801 != nil)
         let _method_joint_is_disabled_collisions_between_bodies_4155700596_name = StringName(from: "joint_is_disabled_collisions_between_bodies")
-        self._method_joint_is_disabled_collisions_between_bodies_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_joint_is_disabled_collisions_between_bodies_4155700596_name._native_ptr(), 4155700596)
+        self._method_joint_is_disabled_collisions_between_bodies_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_joint_is_disabled_collisions_between_bodies_4155700596_name._native_ptr(), 4155700596)
         assert(PhysicsServer2D._method_joint_is_disabled_collisions_between_bodies_4155700596 != nil)
         let _method_joint_make_pin_2288600450_name = StringName(from: "joint_make_pin")
-        self._method_joint_make_pin_2288600450 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_joint_make_pin_2288600450_name._native_ptr(), 2288600450)
+        self._method_joint_make_pin_2288600450 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_joint_make_pin_2288600450_name._native_ptr(), 2288600450)
         assert(PhysicsServer2D._method_joint_make_pin_2288600450 != nil)
         let _method_joint_make_groove_3573265764_name = StringName(from: "joint_make_groove")
-        self._method_joint_make_groove_3573265764 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_joint_make_groove_3573265764_name._native_ptr(), 3573265764)
+        self._method_joint_make_groove_3573265764 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_joint_make_groove_3573265764_name._native_ptr(), 3573265764)
         assert(PhysicsServer2D._method_joint_make_groove_3573265764 != nil)
         let _method_joint_make_damped_spring_206603952_name = StringName(from: "joint_make_damped_spring")
-        self._method_joint_make_damped_spring_206603952 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_joint_make_damped_spring_206603952_name._native_ptr(), 206603952)
+        self._method_joint_make_damped_spring_206603952 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_joint_make_damped_spring_206603952_name._native_ptr(), 206603952)
         assert(PhysicsServer2D._method_joint_make_damped_spring_206603952 != nil)
         let _method_pin_joint_set_param_550574241_name = StringName(from: "pin_joint_set_param")
-        self._method_pin_joint_set_param_550574241 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_pin_joint_set_param_550574241_name._native_ptr(), 550574241)
+        self._method_pin_joint_set_param_550574241 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_pin_joint_set_param_550574241_name._native_ptr(), 550574241)
         assert(PhysicsServer2D._method_pin_joint_set_param_550574241 != nil)
         let _method_pin_joint_get_param_348281383_name = StringName(from: "pin_joint_get_param")
-        self._method_pin_joint_get_param_348281383 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_pin_joint_get_param_348281383_name._native_ptr(), 348281383)
+        self._method_pin_joint_get_param_348281383 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_pin_joint_get_param_348281383_name._native_ptr(), 348281383)
         assert(PhysicsServer2D._method_pin_joint_get_param_348281383 != nil)
         let _method_damped_spring_joint_set_param_220564071_name = StringName(from: "damped_spring_joint_set_param")
-        self._method_damped_spring_joint_set_param_220564071 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_damped_spring_joint_set_param_220564071_name._native_ptr(), 220564071)
+        self._method_damped_spring_joint_set_param_220564071 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_damped_spring_joint_set_param_220564071_name._native_ptr(), 220564071)
         assert(PhysicsServer2D._method_damped_spring_joint_set_param_220564071 != nil)
         let _method_damped_spring_joint_get_param_2075871277_name = StringName(from: "damped_spring_joint_get_param")
-        self._method_damped_spring_joint_get_param_2075871277 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_damped_spring_joint_get_param_2075871277_name._native_ptr(), 2075871277)
+        self._method_damped_spring_joint_get_param_2075871277 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_damped_spring_joint_get_param_2075871277_name._native_ptr(), 2075871277)
         assert(PhysicsServer2D._method_damped_spring_joint_get_param_2075871277 != nil)
         let _method_joint_get_type_4262502231_name = StringName(from: "joint_get_type")
-        self._method_joint_get_type_4262502231 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_joint_get_type_4262502231_name._native_ptr(), 4262502231)
+        self._method_joint_get_type_4262502231 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_joint_get_type_4262502231_name._native_ptr(), 4262502231)
         assert(PhysicsServer2D._method_joint_get_type_4262502231 != nil)
         let _method_free_rid_2722037293_name = StringName(from: "free_rid")
-        self._method_free_rid_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_free_rid_2722037293_name._native_ptr(), 2722037293)
+        self._method_free_rid_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_free_rid_2722037293_name._native_ptr(), 2722037293)
         assert(PhysicsServer2D._method_free_rid_2722037293 != nil)
         let _method_set_active_2586408642_name = StringName(from: "set_active")
-        self._method_set_active_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_active_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_active_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_set_active_2586408642_name._native_ptr(), 2586408642)
         assert(PhysicsServer2D._method_set_active_2586408642 != nil)
         let _method_get_process_info_576496006_name = StringName(from: "get_process_info")
-        self._method_get_process_info_576496006 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_process_info_576496006_name._native_ptr(), 576496006)
+        self._method_get_process_info_576496006 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2D._native_ptr(), _method_get_process_info_576496006_name._native_ptr(), 576496006)
         assert(PhysicsServer2D._method_get_process_info_576496006 != nil)
     }
 
@@ -598,7 +603,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func separation_ray_shape_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -614,7 +619,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func segment_shape_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -630,7 +635,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func circle_shape_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -646,7 +651,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func rectangle_shape_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -662,7 +667,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func capsule_shape_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -678,7 +683,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func convex_polygon_shape_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -694,7 +699,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func concave_polygon_shape_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -710,7 +715,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func shape_set_data(shape: RID, data: Variant)  {
         let data_native = data._native_ptr()
@@ -743,7 +748,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PhysicsServer2D.ShapeType(from: __resPtr.pointee)
+            return PhysicsServer2D.ShapeType(godot: __resPtr.pointee)
     }
     public func shape_get_data(shape: RID) -> Variant {
         let shape_native = shape._native_ptr()
@@ -760,7 +765,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
     }
     public func space_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -776,7 +781,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func space_set_active(space: RID, active: UInt8)  {
         withUnsafePointer(to: active) { active_native in
@@ -811,7 +816,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func space_set_param(space: RID, param: PhysicsServer2D.SpaceParameter, value: Float64)  {
         withUnsafePointer(to: value) { value_native in
@@ -849,7 +854,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func space_get_direct_state(space: RID) -> PhysicsDirectSpaceState2D {
@@ -867,7 +872,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PhysicsDirectSpaceState2D(from: __resPtr.pointee)
+            return PhysicsDirectSpaceState2D(godot: __resPtr.pointee)
     }
     public func area_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -883,7 +888,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func area_set_space(area: RID, space: RID)  {
         let space_native = space._native_ptr()
@@ -916,7 +921,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func area_add_shape(area: RID, shape: RID, transform: Transform2D, disabled: UInt8)  {
         withUnsafePointer(to: disabled) { disabled_native in
@@ -1008,7 +1013,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func area_get_shape(area: RID, shape_idx: Int64) -> RID {
         withUnsafePointer(to: shape_idx) { shape_idx_native in
@@ -1026,7 +1031,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
     }
     public func area_get_shape_transform(area: RID, shape_idx: Int64) -> Transform2D {
@@ -1045,7 +1050,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Transform2D(from: __resPtr.pointee)
+            return Transform2D(godot: __resPtr.pointee)
         }
     }
     public func area_remove_shape(area: RID, shape_idx: Int64)  {
@@ -1113,7 +1118,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func area_set_collision_mask(area: RID, mask: Int64)  {
         withUnsafePointer(to: mask) { mask_native in
@@ -1148,7 +1153,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func area_set_param(area: RID, param: PhysicsServer2D.AreaParameter, value: Variant)  {
         withUnsafePointer(to: param.rawValue) { param_native in
@@ -1200,7 +1205,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
         }
     }
     public func area_get_transform(area: RID) -> Transform2D {
@@ -1218,7 +1223,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Transform2D(from: __resPtr.pointee)
+            return Transform2D(godot: __resPtr.pointee)
     }
     public func area_attach_object_instance_id(area: RID, id: Int64)  {
         withUnsafePointer(to: id) { id_native in
@@ -1253,7 +1258,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func area_attach_canvas_instance_id(area: RID, id: Int64)  {
         withUnsafePointer(to: id) { id_native in
@@ -1288,7 +1293,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func area_set_monitor_callback(area: RID, callback: Callable)  {
         let callback_native = callback._native_ptr()
@@ -1353,7 +1358,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func body_set_space(body: RID, space: RID)  {
         let space_native = space._native_ptr()
@@ -1386,7 +1391,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func body_set_mode(body: RID, mode: PhysicsServer2D.BodyMode)  {
         withUnsafePointer(to: mode.rawValue) { mode_native in
@@ -1420,7 +1425,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PhysicsServer2D.BodyMode(from: __resPtr.pointee)
+            return PhysicsServer2D.BodyMode(godot: __resPtr.pointee)
     }
     public func body_add_shape(body: RID, shape: RID, transform: Transform2D, disabled: UInt8)  {
         withUnsafePointer(to: disabled) { disabled_native in
@@ -1493,7 +1498,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func body_get_shape(body: RID, shape_idx: Int64) -> RID {
         withUnsafePointer(to: shape_idx) { shape_idx_native in
@@ -1511,7 +1516,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
     }
     public func body_get_shape_transform(body: RID, shape_idx: Int64) -> Transform2D {
@@ -1530,7 +1535,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Transform2D(from: __resPtr.pointee)
+            return Transform2D(godot: __resPtr.pointee)
         }
     }
     public func body_remove_shape(body: RID, shape_idx: Int64)  {
@@ -1638,7 +1643,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func body_attach_canvas_instance_id(body: RID, id: Int64)  {
         withUnsafePointer(to: id) { id_native in
@@ -1673,7 +1678,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func body_set_continuous_collision_detection_mode(body: RID, mode: PhysicsServer2D.CCDMode)  {
         withUnsafePointer(to: mode.rawValue) { mode_native in
@@ -1707,7 +1712,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PhysicsServer2D.CCDMode(from: __resPtr.pointee)
+            return PhysicsServer2D.CCDMode(godot: __resPtr.pointee)
     }
     public func body_set_collision_layer(body: RID, layer: Int64)  {
         withUnsafePointer(to: layer) { layer_native in
@@ -1742,7 +1747,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func body_set_collision_mask(body: RID, mask: Int64)  {
         withUnsafePointer(to: mask) { mask_native in
@@ -1777,7 +1782,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func body_set_collision_priority(body: RID, priority: Float64)  {
         withUnsafePointer(to: priority) { priority_native in
@@ -1812,7 +1817,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func body_set_param(body: RID, param: PhysicsServer2D.BodyParameter, value: Variant)  {
         withUnsafePointer(to: param.rawValue) { param_native in
@@ -1848,7 +1853,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
         }
     }
     public func body_reset_mass_properties(body: RID)  {
@@ -1900,7 +1905,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
         }
     }
     public func body_apply_central_impulse(body: RID, impulse: Vector2)  {
@@ -2084,7 +2089,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func body_set_constant_torque(body: RID, torque: Float64)  {
         withUnsafePointer(to: torque) { torque_native in
@@ -2119,7 +2124,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func body_set_axis_velocity(body: RID, axis_velocity: Vector2)  {
         let axis_velocity_native = axis_velocity._native_ptr()
@@ -2202,7 +2207,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func body_set_omit_force_integration(body: RID, enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -2237,7 +2242,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func body_set_force_integration_callback(body: RID, callable: Callable, userdata: Variant)  {
         let userdata_native = userdata._native_ptr()
@@ -2274,7 +2279,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func body_get_direct_state(body: RID) -> PhysicsDirectBodyState2D {
         let body_native = body._native_ptr()
@@ -2291,7 +2296,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PhysicsDirectBodyState2D(from: __resPtr.pointee)
+            return PhysicsDirectBodyState2D(godot: __resPtr.pointee)
     }
     public func joint_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -2307,7 +2312,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func joint_clear(joint: RID)  {
         let joint_native = joint._native_ptr()
@@ -2360,7 +2365,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func joint_disable_collisions_between_bodies(joint: RID, disable: UInt8)  {
@@ -2396,7 +2401,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func joint_make_pin(joint: RID, anchor: Vector2, body_a: RID, body_b: RID)  {
         let body_b_native = body_b._native_ptr()
@@ -2491,7 +2496,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func damped_spring_joint_set_param(joint: RID, param: PhysicsServer2D.DampedSpringParam, value: Float64)  {
@@ -2530,7 +2535,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func joint_get_type(joint: RID) -> PhysicsServer2D.JointType {
@@ -2548,7 +2553,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PhysicsServer2D.JointType(from: __resPtr.pointee)
+            return PhysicsServer2D.JointType(godot: __resPtr.pointee)
     }
     public func free_rid(rid: RID)  {
         let rid_native = rid._native_ptr()
@@ -2597,7 +2602,7 @@ public class PhysicsServer2D : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
 }

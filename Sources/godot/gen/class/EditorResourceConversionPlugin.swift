@@ -38,7 +38,7 @@ fileprivate var __godot_name_EditorResourceConversionPlugin: StringName! = nil
 /// [/codeblocks]
 ///  
 /// To use an [EditorResourceConversionPlugin], register it using the [method EditorPlugin.add_resource_conversion_plugin] method first.
-public class EditorResourceConversionPlugin : RefCounted {
+open class EditorResourceConversionPlugin : RefCounted {
 
     
 
@@ -48,13 +48,18 @@ public class EditorResourceConversionPlugin : RefCounted {
     static var _method__handles_0: GDExtensionMethodBindPtr! = nil
     static var _method__convert_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorResourceConversionPlugin = StringName(from: "EditorResourceConversionPlugin")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
 
-    public func _converts_to() -> String {
+    public func _converts_to() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -62,14 +67,13 @@ public class EditorResourceConversionPlugin : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__converts_to_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func _handles(resource: Resource) -> UInt8 {
         let resource_native = resource._native_ptr()
@@ -87,7 +91,7 @@ public class EditorResourceConversionPlugin : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _convert(resource: Resource) -> Resource {
         let resource_native = resource._native_ptr()
@@ -104,6 +108,6 @@ public class EditorResourceConversionPlugin : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Resource(from: __resPtr.pointee)
+            return Resource(godot: __resPtr.pointee)
     }
 }

@@ -9,7 +9,7 @@ fileprivate var __godot_name_ViewportTexture: StringName! = nil
 /// To create a ViewportTexture in code, use the [method Viewport.get_texture] method on the target viewport.
 ///  
 /// [b]Note:[/b] When local to scene, this texture uses [method Resource.setup_local_to_scene] to set the proxy texture and flags in the local viewport.
-public class ViewportTexture : Texture2D {
+open class ViewportTexture : Texture2D {
 
     
 
@@ -18,14 +18,19 @@ public class ViewportTexture : Texture2D {
     static var _method_set_viewport_path_in_scene_1348162250: GDExtensionMethodBindPtr! = nil
     static var _method_get_viewport_path_in_scene_4075236667: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ViewportTexture = StringName(from: "ViewportTexture")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_viewport_path_in_scene_1348162250_name = StringName(from: "set_viewport_path_in_scene")
-        self._method_set_viewport_path_in_scene_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_viewport_path_in_scene_1348162250_name._native_ptr(), 1348162250)
+        self._method_set_viewport_path_in_scene_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_ViewportTexture._native_ptr(), _method_set_viewport_path_in_scene_1348162250_name._native_ptr(), 1348162250)
         assert(ViewportTexture._method_set_viewport_path_in_scene_1348162250 != nil)
         let _method_get_viewport_path_in_scene_4075236667_name = StringName(from: "get_viewport_path_in_scene")
-        self._method_get_viewport_path_in_scene_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_viewport_path_in_scene_4075236667_name._native_ptr(), 4075236667)
+        self._method_get_viewport_path_in_scene_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_ViewportTexture._native_ptr(), _method_get_viewport_path_in_scene_4075236667_name._native_ptr(), 4075236667)
         assert(ViewportTexture._method_get_viewport_path_in_scene_4075236667 != nil)
     }
 
@@ -58,6 +63,6 @@ public class ViewportTexture : Texture2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return NodePath(from: __resPtr.pointee)
+            return NodePath(godot: __resPtr.pointee)
     }
 }

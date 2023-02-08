@@ -9,7 +9,7 @@ fileprivate var __godot_name_TextureButton: StringName! = nil
 /// The "normal" state must contain a texture ([member texture_normal]); other textures are optional.
 ///  
 /// See also [BaseButton] which contains common properties and methods associated with this node.
-public class TextureButton : BaseButton {
+open class TextureButton : BaseButton {
 
     public enum StretchMode : Int32 {
         case STRETCH_SCALE = 0
@@ -44,68 +44,73 @@ public class TextureButton : BaseButton {
     static var _method_get_ignore_texture_size_36873697: GDExtensionMethodBindPtr! = nil
     static var _method_get_stretch_mode_33815122: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_TextureButton = StringName(from: "TextureButton")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_texture_normal_4051416890_name = StringName(from: "set_texture_normal")
-        self._method_set_texture_normal_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_texture_normal_4051416890_name._native_ptr(), 4051416890)
+        self._method_set_texture_normal_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_set_texture_normal_4051416890_name._native_ptr(), 4051416890)
         assert(TextureButton._method_set_texture_normal_4051416890 != nil)
         let _method_set_texture_pressed_4051416890_name = StringName(from: "set_texture_pressed")
-        self._method_set_texture_pressed_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_texture_pressed_4051416890_name._native_ptr(), 4051416890)
+        self._method_set_texture_pressed_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_set_texture_pressed_4051416890_name._native_ptr(), 4051416890)
         assert(TextureButton._method_set_texture_pressed_4051416890 != nil)
         let _method_set_texture_hover_4051416890_name = StringName(from: "set_texture_hover")
-        self._method_set_texture_hover_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_texture_hover_4051416890_name._native_ptr(), 4051416890)
+        self._method_set_texture_hover_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_set_texture_hover_4051416890_name._native_ptr(), 4051416890)
         assert(TextureButton._method_set_texture_hover_4051416890 != nil)
         let _method_set_texture_disabled_4051416890_name = StringName(from: "set_texture_disabled")
-        self._method_set_texture_disabled_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_texture_disabled_4051416890_name._native_ptr(), 4051416890)
+        self._method_set_texture_disabled_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_set_texture_disabled_4051416890_name._native_ptr(), 4051416890)
         assert(TextureButton._method_set_texture_disabled_4051416890 != nil)
         let _method_set_texture_focused_4051416890_name = StringName(from: "set_texture_focused")
-        self._method_set_texture_focused_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_texture_focused_4051416890_name._native_ptr(), 4051416890)
+        self._method_set_texture_focused_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_set_texture_focused_4051416890_name._native_ptr(), 4051416890)
         assert(TextureButton._method_set_texture_focused_4051416890 != nil)
         let _method_set_click_mask_698588216_name = StringName(from: "set_click_mask")
-        self._method_set_click_mask_698588216 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_click_mask_698588216_name._native_ptr(), 698588216)
+        self._method_set_click_mask_698588216 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_set_click_mask_698588216_name._native_ptr(), 698588216)
         assert(TextureButton._method_set_click_mask_698588216 != nil)
         let _method_set_ignore_texture_size_2586408642_name = StringName(from: "set_ignore_texture_size")
-        self._method_set_ignore_texture_size_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ignore_texture_size_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_ignore_texture_size_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_set_ignore_texture_size_2586408642_name._native_ptr(), 2586408642)
         assert(TextureButton._method_set_ignore_texture_size_2586408642 != nil)
         let _method_set_stretch_mode_252530840_name = StringName(from: "set_stretch_mode")
-        self._method_set_stretch_mode_252530840 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_stretch_mode_252530840_name._native_ptr(), 252530840)
+        self._method_set_stretch_mode_252530840 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_set_stretch_mode_252530840_name._native_ptr(), 252530840)
         assert(TextureButton._method_set_stretch_mode_252530840 != nil)
         let _method_set_flip_h_2586408642_name = StringName(from: "set_flip_h")
-        self._method_set_flip_h_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_flip_h_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_flip_h_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_set_flip_h_2586408642_name._native_ptr(), 2586408642)
         assert(TextureButton._method_set_flip_h_2586408642 != nil)
         let _method_is_flipped_h_36873697_name = StringName(from: "is_flipped_h")
-        self._method_is_flipped_h_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_flipped_h_36873697_name._native_ptr(), 36873697)
+        self._method_is_flipped_h_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_is_flipped_h_36873697_name._native_ptr(), 36873697)
         assert(TextureButton._method_is_flipped_h_36873697 != nil)
         let _method_set_flip_v_2586408642_name = StringName(from: "set_flip_v")
-        self._method_set_flip_v_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_flip_v_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_flip_v_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_set_flip_v_2586408642_name._native_ptr(), 2586408642)
         assert(TextureButton._method_set_flip_v_2586408642 != nil)
         let _method_is_flipped_v_36873697_name = StringName(from: "is_flipped_v")
-        self._method_is_flipped_v_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_flipped_v_36873697_name._native_ptr(), 36873697)
+        self._method_is_flipped_v_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_is_flipped_v_36873697_name._native_ptr(), 36873697)
         assert(TextureButton._method_is_flipped_v_36873697 != nil)
         let _method_get_texture_normal_3635182373_name = StringName(from: "get_texture_normal")
-        self._method_get_texture_normal_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_texture_normal_3635182373_name._native_ptr(), 3635182373)
+        self._method_get_texture_normal_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_get_texture_normal_3635182373_name._native_ptr(), 3635182373)
         assert(TextureButton._method_get_texture_normal_3635182373 != nil)
         let _method_get_texture_pressed_3635182373_name = StringName(from: "get_texture_pressed")
-        self._method_get_texture_pressed_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_texture_pressed_3635182373_name._native_ptr(), 3635182373)
+        self._method_get_texture_pressed_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_get_texture_pressed_3635182373_name._native_ptr(), 3635182373)
         assert(TextureButton._method_get_texture_pressed_3635182373 != nil)
         let _method_get_texture_hover_3635182373_name = StringName(from: "get_texture_hover")
-        self._method_get_texture_hover_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_texture_hover_3635182373_name._native_ptr(), 3635182373)
+        self._method_get_texture_hover_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_get_texture_hover_3635182373_name._native_ptr(), 3635182373)
         assert(TextureButton._method_get_texture_hover_3635182373 != nil)
         let _method_get_texture_disabled_3635182373_name = StringName(from: "get_texture_disabled")
-        self._method_get_texture_disabled_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_texture_disabled_3635182373_name._native_ptr(), 3635182373)
+        self._method_get_texture_disabled_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_get_texture_disabled_3635182373_name._native_ptr(), 3635182373)
         assert(TextureButton._method_get_texture_disabled_3635182373 != nil)
         let _method_get_texture_focused_3635182373_name = StringName(from: "get_texture_focused")
-        self._method_get_texture_focused_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_texture_focused_3635182373_name._native_ptr(), 3635182373)
+        self._method_get_texture_focused_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_get_texture_focused_3635182373_name._native_ptr(), 3635182373)
         assert(TextureButton._method_get_texture_focused_3635182373 != nil)
         let _method_get_click_mask_2459671998_name = StringName(from: "get_click_mask")
-        self._method_get_click_mask_2459671998 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_click_mask_2459671998_name._native_ptr(), 2459671998)
+        self._method_get_click_mask_2459671998 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_get_click_mask_2459671998_name._native_ptr(), 2459671998)
         assert(TextureButton._method_get_click_mask_2459671998 != nil)
         let _method_get_ignore_texture_size_36873697_name = StringName(from: "get_ignore_texture_size")
-        self._method_get_ignore_texture_size_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_ignore_texture_size_36873697_name._native_ptr(), 36873697)
+        self._method_get_ignore_texture_size_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_get_ignore_texture_size_36873697_name._native_ptr(), 36873697)
         assert(TextureButton._method_get_ignore_texture_size_36873697 != nil)
         let _method_get_stretch_mode_33815122_name = StringName(from: "get_stretch_mode")
-        self._method_get_stretch_mode_33815122 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_stretch_mode_33815122_name._native_ptr(), 33815122)
+        self._method_get_stretch_mode_33815122 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureButton._native_ptr(), _method_get_stretch_mode_33815122_name._native_ptr(), 33815122)
         assert(TextureButton._method_get_stretch_mode_33815122 != nil)
     }
 
@@ -262,7 +267,7 @@ public class TextureButton : BaseButton {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_flip_v(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -295,7 +300,7 @@ public class TextureButton : BaseButton {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func get_texture_normal() -> Texture2D {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -311,7 +316,7 @@ public class TextureButton : BaseButton {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture2D(from: __resPtr.pointee)
+            return Texture2D(godot: __resPtr.pointee)
     }
     public func get_texture_pressed() -> Texture2D {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -327,7 +332,7 @@ public class TextureButton : BaseButton {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture2D(from: __resPtr.pointee)
+            return Texture2D(godot: __resPtr.pointee)
     }
     public func get_texture_hover() -> Texture2D {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -343,7 +348,7 @@ public class TextureButton : BaseButton {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture2D(from: __resPtr.pointee)
+            return Texture2D(godot: __resPtr.pointee)
     }
     public func get_texture_disabled() -> Texture2D {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -359,7 +364,7 @@ public class TextureButton : BaseButton {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture2D(from: __resPtr.pointee)
+            return Texture2D(godot: __resPtr.pointee)
     }
     public func get_texture_focused() -> Texture2D {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -375,7 +380,7 @@ public class TextureButton : BaseButton {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture2D(from: __resPtr.pointee)
+            return Texture2D(godot: __resPtr.pointee)
     }
     public func get_click_mask() -> BitMap {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -391,7 +396,7 @@ public class TextureButton : BaseButton {
                     args.baseAddress!,
                     __resPtr
                 )
-            return BitMap(from: __resPtr.pointee)
+            return BitMap(godot: __resPtr.pointee)
     }
     public func get_ignore_texture_size() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -408,7 +413,7 @@ public class TextureButton : BaseButton {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func get_stretch_mode() -> TextureButton.StretchMode {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -424,6 +429,6 @@ public class TextureButton : BaseButton {
                     args.baseAddress!,
                     __resPtr
                 )
-            return TextureButton.StretchMode(from: __resPtr.pointee)
+            return TextureButton.StretchMode(godot: __resPtr.pointee)
     }
 }

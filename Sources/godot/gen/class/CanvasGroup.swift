@@ -35,7 +35,7 @@ fileprivate var __godot_name_CanvasGroup: StringName! = nil
 /// [/codeblock]
 ///  
 /// [b]Note:[/b] Since [CanvasGroup] and [member CanvasItem.clip_children] both utilize the backbuffer, children of a [CanvasGroup] who have their [member CanvasItem.clip_children] set to anything other than [constant CanvasItem.CLIP_CHILDREN_DISABLED] will not function correctly.
-public class CanvasGroup : Node2D {
+open class CanvasGroup : Node2D {
 
     
 
@@ -48,26 +48,31 @@ public class CanvasGroup : Node2D {
     static var _method_set_use_mipmaps_2586408642: GDExtensionMethodBindPtr! = nil
     static var _method_is_using_mipmaps_36873697: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_CanvasGroup = StringName(from: "CanvasGroup")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_fit_margin_373806689_name = StringName(from: "set_fit_margin")
-        self._method_set_fit_margin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_fit_margin_373806689_name._native_ptr(), 373806689)
+        self._method_set_fit_margin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasGroup._native_ptr(), _method_set_fit_margin_373806689_name._native_ptr(), 373806689)
         assert(CanvasGroup._method_set_fit_margin_373806689 != nil)
         let _method_get_fit_margin_1740695150_name = StringName(from: "get_fit_margin")
-        self._method_get_fit_margin_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_fit_margin_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_fit_margin_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasGroup._native_ptr(), _method_get_fit_margin_1740695150_name._native_ptr(), 1740695150)
         assert(CanvasGroup._method_get_fit_margin_1740695150 != nil)
         let _method_set_clear_margin_373806689_name = StringName(from: "set_clear_margin")
-        self._method_set_clear_margin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_clear_margin_373806689_name._native_ptr(), 373806689)
+        self._method_set_clear_margin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasGroup._native_ptr(), _method_set_clear_margin_373806689_name._native_ptr(), 373806689)
         assert(CanvasGroup._method_set_clear_margin_373806689 != nil)
         let _method_get_clear_margin_1740695150_name = StringName(from: "get_clear_margin")
-        self._method_get_clear_margin_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_clear_margin_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_clear_margin_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasGroup._native_ptr(), _method_get_clear_margin_1740695150_name._native_ptr(), 1740695150)
         assert(CanvasGroup._method_get_clear_margin_1740695150 != nil)
         let _method_set_use_mipmaps_2586408642_name = StringName(from: "set_use_mipmaps")
-        self._method_set_use_mipmaps_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_use_mipmaps_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_use_mipmaps_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasGroup._native_ptr(), _method_set_use_mipmaps_2586408642_name._native_ptr(), 2586408642)
         assert(CanvasGroup._method_set_use_mipmaps_2586408642 != nil)
         let _method_is_using_mipmaps_36873697_name = StringName(from: "is_using_mipmaps")
-        self._method_is_using_mipmaps_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_using_mipmaps_36873697_name._native_ptr(), 36873697)
+        self._method_is_using_mipmaps_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasGroup._native_ptr(), _method_is_using_mipmaps_36873697_name._native_ptr(), 36873697)
         assert(CanvasGroup._method_is_using_mipmaps_36873697 != nil)
     }
 
@@ -102,7 +107,7 @@ public class CanvasGroup : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_clear_margin(clear_margin: Float64)  {
         withUnsafePointer(to: clear_margin) { clear_margin_native in
@@ -135,7 +140,7 @@ public class CanvasGroup : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_use_mipmaps(use_mipmaps: UInt8)  {
         withUnsafePointer(to: use_mipmaps) { use_mipmaps_native in
@@ -168,6 +173,6 @@ public class CanvasGroup : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

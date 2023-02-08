@@ -9,7 +9,7 @@ fileprivate var __godot_name_AudioStreamGenerator: StringName! = nil
 /// See also [AudioEffectSpectrumAnalyzer] for performing real-time audio spectrum analysis.
 ///  
 /// [b]Note:[/b] Due to performance constraints, this class is best used from C# or from a compiled language via GDExtension. If you still want to use this class from GDScript, consider using a lower [member mix_rate] such as 11,025 Hz or 22,050 Hz.
-public class AudioStreamGenerator : AudioStream {
+open class AudioStreamGenerator : AudioStream {
 
     
 
@@ -20,20 +20,25 @@ public class AudioStreamGenerator : AudioStream {
     static var _method_set_buffer_length_373806689: GDExtensionMethodBindPtr! = nil
     static var _method_get_buffer_length_1740695150: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AudioStreamGenerator = StringName(from: "AudioStreamGenerator")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_mix_rate_373806689_name = StringName(from: "set_mix_rate")
-        self._method_set_mix_rate_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_mix_rate_373806689_name._native_ptr(), 373806689)
+        self._method_set_mix_rate_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamGenerator._native_ptr(), _method_set_mix_rate_373806689_name._native_ptr(), 373806689)
         assert(AudioStreamGenerator._method_set_mix_rate_373806689 != nil)
         let _method_get_mix_rate_1740695150_name = StringName(from: "get_mix_rate")
-        self._method_get_mix_rate_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_mix_rate_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_mix_rate_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamGenerator._native_ptr(), _method_get_mix_rate_1740695150_name._native_ptr(), 1740695150)
         assert(AudioStreamGenerator._method_get_mix_rate_1740695150 != nil)
         let _method_set_buffer_length_373806689_name = StringName(from: "set_buffer_length")
-        self._method_set_buffer_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_buffer_length_373806689_name._native_ptr(), 373806689)
+        self._method_set_buffer_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamGenerator._native_ptr(), _method_set_buffer_length_373806689_name._native_ptr(), 373806689)
         assert(AudioStreamGenerator._method_set_buffer_length_373806689 != nil)
         let _method_get_buffer_length_1740695150_name = StringName(from: "get_buffer_length")
-        self._method_get_buffer_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_buffer_length_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_buffer_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamGenerator._native_ptr(), _method_get_buffer_length_1740695150_name._native_ptr(), 1740695150)
         assert(AudioStreamGenerator._method_get_buffer_length_1740695150 != nil)
     }
 
@@ -68,7 +73,7 @@ public class AudioStreamGenerator : AudioStream {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_buffer_length(seconds: Float64)  {
         withUnsafePointer(to: seconds) { seconds_native in
@@ -101,6 +106,6 @@ public class AudioStreamGenerator : AudioStream {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
 }

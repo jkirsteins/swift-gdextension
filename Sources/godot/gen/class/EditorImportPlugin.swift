@@ -205,7 +205,7 @@ fileprivate var __godot_name_EditorImportPlugin: StringName! = nil
 /// [/codeblocks]
 ///  
 /// To use [EditorImportPlugin], register it using the [method EditorPlugin.add_import_plugin] method first.
-public class EditorImportPlugin : ResourceImporter {
+open class EditorImportPlugin : ResourceImporter {
 
     
 
@@ -224,13 +224,18 @@ public class EditorImportPlugin : ResourceImporter {
     static var _method__get_option_visibility_0: GDExtensionMethodBindPtr! = nil
     static var _method__import_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorImportPlugin = StringName(from: "EditorImportPlugin")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
 
-    public func _get_importer_name() -> String {
+    public func _get_importer_name() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -238,16 +243,15 @@ public class EditorImportPlugin : ResourceImporter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_importer_name_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func _get_visible_name() -> String {
+    public func _get_visible_name() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -255,14 +259,13 @@ public class EditorImportPlugin : ResourceImporter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_visible_name_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func _get_preset_count() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -279,9 +282,9 @@ public class EditorImportPlugin : ResourceImporter {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
-    public func _get_preset_name(preset_index: Int64) -> String {
+    public func _get_preset_name(preset_index: Int64) -> godot.String {
         withUnsafePointer(to: preset_index) { preset_index_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
@@ -290,14 +293,13 @@ public class EditorImportPlugin : ResourceImporter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_preset_name_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
         }
     }
     public func _get_recognized_extensions() -> PackedStringArray {
@@ -314,11 +316,11 @@ public class EditorImportPlugin : ResourceImporter {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedStringArray(from: __resPtr.pointee)
+            return PackedStringArray(godot: __resPtr.pointee)
     }
-    public func _get_import_options(path: String, preset_index: Int64) -> [Dictionary] {
+    public func _get_import_options(path: godot.String, preset_index: Int64) -> [Dictionary] {
         withUnsafePointer(to: preset_index) { preset_index_native in
-        withUnsafePointer(to: path) { path_native in
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -332,11 +334,10 @@ public class EditorImportPlugin : ResourceImporter {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Dictionary](from: __resPtr.pointee)
-        }
+            return [Dictionary](godot: __resPtr.pointee)
         }
     }
-    public func _get_save_extension() -> String {
+    public func _get_save_extension() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -344,16 +345,15 @@ public class EditorImportPlugin : ResourceImporter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_save_extension_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func _get_resource_type() -> String {
+    public func _get_resource_type() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -361,14 +361,13 @@ public class EditorImportPlugin : ResourceImporter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_resource_type_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func _get_priority() -> Float64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -385,7 +384,7 @@ public class EditorImportPlugin : ResourceImporter {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _get_import_order() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -402,12 +401,12 @@ public class EditorImportPlugin : ResourceImporter {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
-    public func _get_option_visibility(path: String, option_name: StringName, options: Dictionary) -> UInt8 {
-        withUnsafePointer(to: path) { path_native in
+    public func _get_option_visibility(path: godot.String, option_name: StringName, options: Dictionary) -> UInt8 {
         let options_native = options._native_ptr()
         let option_name_native = option_name._native_ptr()
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -422,15 +421,14 @@ public class EditorImportPlugin : ResourceImporter {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _import(source_file: String, save_path: String, options: Dictionary, platform_variants: [String], gen_files: [String]) -> Error {
-        withUnsafePointer(to: save_path) { save_path_native in
-        withUnsafePointer(to: source_file) { source_file_native in
+    public func _import(source_file: godot.String, save_path: godot.String, options: Dictionary, platform_variants: [godot.String], gen_files: [godot.String]) -> Error {
         let gen_files_native = gen_files._native_ptr()
         let platform_variants_native = platform_variants._native_ptr()
         let options_native = options._native_ptr()
+        let save_path_native = save_path._native_ptr()
+        let source_file_native = source_file._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 5)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -444,8 +442,6 @@ public class EditorImportPlugin : ResourceImporter {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
-        }
+            return Error(godot: __resPtr.pointee)
     }
 }

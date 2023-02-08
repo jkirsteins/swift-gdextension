@@ -97,7 +97,7 @@ fileprivate var __godot_name_MainLoop: StringName! = nil
 /// [/csharp]
 ///  
 /// [/codeblocks]
-public class MainLoop : Object {
+open class MainLoop : Object {
 
     
 
@@ -108,8 +108,13 @@ public class MainLoop : Object {
     static var _method__process_0: GDExtensionMethodBindPtr! = nil
     static var _method__finalize_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_MainLoop = StringName(from: "MainLoop")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
@@ -144,7 +149,7 @@ public class MainLoop : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func _process(delta: Float64) -> UInt8 {
@@ -163,7 +168,7 @@ public class MainLoop : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func _finalize()  {

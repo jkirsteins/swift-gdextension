@@ -9,7 +9,7 @@ fileprivate var __godot_name_ColorPickerButton: StringName! = nil
 /// See also [BaseButton] which contains common properties and methods associated with this node.
 ///  
 /// [b]Note:[/b] By default, the button may not be wide enough for the color preview swatch to be visible. Make sure to set [member Control.custom_minimum_size] to a big enough value to give the button enough space.
-public class ColorPickerButton : Button {
+open class ColorPickerButton : Button {
 
     
 
@@ -22,26 +22,31 @@ public class ColorPickerButton : Button {
     static var _method_set_edit_alpha_2586408642: GDExtensionMethodBindPtr! = nil
     static var _method_is_editing_alpha_36873697: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ColorPickerButton = StringName(from: "ColorPickerButton")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_pick_color_2920490490_name = StringName(from: "set_pick_color")
-        self._method_set_pick_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_pick_color_2920490490_name._native_ptr(), 2920490490)
+        self._method_set_pick_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPickerButton._native_ptr(), _method_set_pick_color_2920490490_name._native_ptr(), 2920490490)
         assert(ColorPickerButton._method_set_pick_color_2920490490 != nil)
         let _method_get_pick_color_3444240500_name = StringName(from: "get_pick_color")
-        self._method_get_pick_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_pick_color_3444240500_name._native_ptr(), 3444240500)
+        self._method_get_pick_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPickerButton._native_ptr(), _method_get_pick_color_3444240500_name._native_ptr(), 3444240500)
         assert(ColorPickerButton._method_get_pick_color_3444240500 != nil)
         let _method_get_picker_331835996_name = StringName(from: "get_picker")
-        self._method_get_picker_331835996 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_picker_331835996_name._native_ptr(), 331835996)
+        self._method_get_picker_331835996 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPickerButton._native_ptr(), _method_get_picker_331835996_name._native_ptr(), 331835996)
         assert(ColorPickerButton._method_get_picker_331835996 != nil)
         let _method_get_popup_1322440207_name = StringName(from: "get_popup")
-        self._method_get_popup_1322440207 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_popup_1322440207_name._native_ptr(), 1322440207)
+        self._method_get_popup_1322440207 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPickerButton._native_ptr(), _method_get_popup_1322440207_name._native_ptr(), 1322440207)
         assert(ColorPickerButton._method_get_popup_1322440207 != nil)
         let _method_set_edit_alpha_2586408642_name = StringName(from: "set_edit_alpha")
-        self._method_set_edit_alpha_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_edit_alpha_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_edit_alpha_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPickerButton._native_ptr(), _method_set_edit_alpha_2586408642_name._native_ptr(), 2586408642)
         assert(ColorPickerButton._method_set_edit_alpha_2586408642 != nil)
         let _method_is_editing_alpha_36873697_name = StringName(from: "is_editing_alpha")
-        self._method_is_editing_alpha_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_editing_alpha_36873697_name._native_ptr(), 36873697)
+        self._method_is_editing_alpha_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPickerButton._native_ptr(), _method_is_editing_alpha_36873697_name._native_ptr(), 36873697)
         assert(ColorPickerButton._method_is_editing_alpha_36873697 != nil)
     }
 
@@ -74,7 +79,7 @@ public class ColorPickerButton : Button {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Color(from: __resPtr.pointee)
+            return Color(godot: __resPtr.pointee)
     }
     public func get_picker() -> ColorPicker {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -90,7 +95,7 @@ public class ColorPickerButton : Button {
                     args.baseAddress!,
                     __resPtr
                 )
-            return ColorPicker(from: __resPtr.pointee)
+            return ColorPicker(godot: __resPtr.pointee)
     }
     public func get_popup() -> PopupPanel {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -106,7 +111,7 @@ public class ColorPickerButton : Button {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PopupPanel(from: __resPtr.pointee)
+            return PopupPanel(godot: __resPtr.pointee)
     }
     public func set_edit_alpha(show: UInt8)  {
         withUnsafePointer(to: show) { show_native in
@@ -139,6 +144,6 @@ public class ColorPickerButton : Button {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

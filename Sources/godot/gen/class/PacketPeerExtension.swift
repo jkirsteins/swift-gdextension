@@ -5,7 +5,7 @@ fileprivate var __godot_name_PacketPeerExtension: StringName! = nil
 /// 
 /// 
 /// 
-public class PacketPeerExtension : PacketPeer {
+open class PacketPeerExtension : PacketPeer {
 
     
 
@@ -16,8 +16,13 @@ public class PacketPeerExtension : PacketPeer {
     static var _method__get_available_packet_count_0: GDExtensionMethodBindPtr! = nil
     static var _method__get_max_packet_size_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PacketPeerExtension = StringName(from: "PacketPeerExtension")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
@@ -38,7 +43,7 @@ public class PacketPeerExtension : PacketPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
     }
@@ -58,7 +63,7 @@ public class PacketPeerExtension : PacketPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
     }
@@ -77,7 +82,7 @@ public class PacketPeerExtension : PacketPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_max_packet_size() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -94,6 +99,6 @@ public class PacketPeerExtension : PacketPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
 }

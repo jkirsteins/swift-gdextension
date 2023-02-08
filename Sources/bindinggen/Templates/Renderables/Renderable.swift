@@ -99,7 +99,7 @@ ${deallocateResultIfMarshalling}
 
 ${body}
 
-return ${resultType}(from: __resPtr.pointee)
+return ${resultType}(godot: __resPtr.pointee)
 """
     
     let without_result_wrapper = """

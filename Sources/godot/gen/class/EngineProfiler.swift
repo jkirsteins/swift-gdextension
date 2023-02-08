@@ -7,7 +7,7 @@ fileprivate var __godot_name_EngineProfiler: StringName! = nil
 /// This class can be used to implement custom profilers that are able to interact with the engine and editor debugger.
 ///  
 /// See [EngineDebugger] and [EditorDebuggerPlugin] for more information.
-public class EngineProfiler : RefCounted {
+open class EngineProfiler : RefCounted {
 
     
 
@@ -17,8 +17,13 @@ public class EngineProfiler : RefCounted {
     static var _method__add_frame_0: GDExtensionMethodBindPtr! = nil
     static var _method__tick_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_EngineProfiler = StringName(from: "EngineProfiler")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

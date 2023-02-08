@@ -5,7 +5,7 @@ fileprivate var __godot_name_InputEventWithModifiers: StringName! = nil
 /// Base class for keys events with modifiers.
 /// 
 /// Contains keys events information with modifiers support like [kbd]Shift[/kbd] or [kbd]Alt[/kbd]. See [method Node._input].
-public class InputEventWithModifiers : InputEventFromWindow {
+open class InputEventWithModifiers : InputEventFromWindow {
 
     
 
@@ -24,44 +24,49 @@ public class InputEventWithModifiers : InputEventFromWindow {
     static var _method_is_meta_pressed_36873697: GDExtensionMethodBindPtr! = nil
     static var _method_get_modifiers_mask_1258259499: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_InputEventWithModifiers = StringName(from: "InputEventWithModifiers")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_command_or_control_autoremap_2586408642_name = StringName(from: "set_command_or_control_autoremap")
-        self._method_set_command_or_control_autoremap_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_command_or_control_autoremap_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_command_or_control_autoremap_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventWithModifiers._native_ptr(), _method_set_command_or_control_autoremap_2586408642_name._native_ptr(), 2586408642)
         assert(InputEventWithModifiers._method_set_command_or_control_autoremap_2586408642 != nil)
         let _method_is_command_or_control_autoremap_36873697_name = StringName(from: "is_command_or_control_autoremap")
-        self._method_is_command_or_control_autoremap_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_command_or_control_autoremap_36873697_name._native_ptr(), 36873697)
+        self._method_is_command_or_control_autoremap_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventWithModifiers._native_ptr(), _method_is_command_or_control_autoremap_36873697_name._native_ptr(), 36873697)
         assert(InputEventWithModifiers._method_is_command_or_control_autoremap_36873697 != nil)
         let _method_is_command_or_control_pressed_36873697_name = StringName(from: "is_command_or_control_pressed")
-        self._method_is_command_or_control_pressed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_command_or_control_pressed_36873697_name._native_ptr(), 36873697)
+        self._method_is_command_or_control_pressed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventWithModifiers._native_ptr(), _method_is_command_or_control_pressed_36873697_name._native_ptr(), 36873697)
         assert(InputEventWithModifiers._method_is_command_or_control_pressed_36873697 != nil)
         let _method_set_alt_pressed_2586408642_name = StringName(from: "set_alt_pressed")
-        self._method_set_alt_pressed_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_alt_pressed_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_alt_pressed_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventWithModifiers._native_ptr(), _method_set_alt_pressed_2586408642_name._native_ptr(), 2586408642)
         assert(InputEventWithModifiers._method_set_alt_pressed_2586408642 != nil)
         let _method_is_alt_pressed_36873697_name = StringName(from: "is_alt_pressed")
-        self._method_is_alt_pressed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_alt_pressed_36873697_name._native_ptr(), 36873697)
+        self._method_is_alt_pressed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventWithModifiers._native_ptr(), _method_is_alt_pressed_36873697_name._native_ptr(), 36873697)
         assert(InputEventWithModifiers._method_is_alt_pressed_36873697 != nil)
         let _method_set_shift_pressed_2586408642_name = StringName(from: "set_shift_pressed")
-        self._method_set_shift_pressed_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_shift_pressed_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_shift_pressed_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventWithModifiers._native_ptr(), _method_set_shift_pressed_2586408642_name._native_ptr(), 2586408642)
         assert(InputEventWithModifiers._method_set_shift_pressed_2586408642 != nil)
         let _method_is_shift_pressed_36873697_name = StringName(from: "is_shift_pressed")
-        self._method_is_shift_pressed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_shift_pressed_36873697_name._native_ptr(), 36873697)
+        self._method_is_shift_pressed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventWithModifiers._native_ptr(), _method_is_shift_pressed_36873697_name._native_ptr(), 36873697)
         assert(InputEventWithModifiers._method_is_shift_pressed_36873697 != nil)
         let _method_set_ctrl_pressed_2586408642_name = StringName(from: "set_ctrl_pressed")
-        self._method_set_ctrl_pressed_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ctrl_pressed_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_ctrl_pressed_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventWithModifiers._native_ptr(), _method_set_ctrl_pressed_2586408642_name._native_ptr(), 2586408642)
         assert(InputEventWithModifiers._method_set_ctrl_pressed_2586408642 != nil)
         let _method_is_ctrl_pressed_36873697_name = StringName(from: "is_ctrl_pressed")
-        self._method_is_ctrl_pressed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_ctrl_pressed_36873697_name._native_ptr(), 36873697)
+        self._method_is_ctrl_pressed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventWithModifiers._native_ptr(), _method_is_ctrl_pressed_36873697_name._native_ptr(), 36873697)
         assert(InputEventWithModifiers._method_is_ctrl_pressed_36873697 != nil)
         let _method_set_meta_pressed_2586408642_name = StringName(from: "set_meta_pressed")
-        self._method_set_meta_pressed_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_meta_pressed_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_meta_pressed_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventWithModifiers._native_ptr(), _method_set_meta_pressed_2586408642_name._native_ptr(), 2586408642)
         assert(InputEventWithModifiers._method_set_meta_pressed_2586408642 != nil)
         let _method_is_meta_pressed_36873697_name = StringName(from: "is_meta_pressed")
-        self._method_is_meta_pressed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_meta_pressed_36873697_name._native_ptr(), 36873697)
+        self._method_is_meta_pressed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventWithModifiers._native_ptr(), _method_is_meta_pressed_36873697_name._native_ptr(), 36873697)
         assert(InputEventWithModifiers._method_is_meta_pressed_36873697 != nil)
         let _method_get_modifiers_mask_1258259499_name = StringName(from: "get_modifiers_mask")
-        self._method_get_modifiers_mask_1258259499 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_modifiers_mask_1258259499_name._native_ptr(), 1258259499)
+        self._method_get_modifiers_mask_1258259499 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventWithModifiers._native_ptr(), _method_get_modifiers_mask_1258259499_name._native_ptr(), 1258259499)
         assert(InputEventWithModifiers._method_get_modifiers_mask_1258259499 != nil)
     }
 
@@ -96,7 +101,7 @@ public class InputEventWithModifiers : InputEventFromWindow {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func is_command_or_control_pressed() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -113,7 +118,7 @@ public class InputEventWithModifiers : InputEventFromWindow {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_alt_pressed(pressed: UInt8)  {
         withUnsafePointer(to: pressed) { pressed_native in
@@ -146,7 +151,7 @@ public class InputEventWithModifiers : InputEventFromWindow {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_shift_pressed(pressed: UInt8)  {
         withUnsafePointer(to: pressed) { pressed_native in
@@ -179,7 +184,7 @@ public class InputEventWithModifiers : InputEventFromWindow {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_ctrl_pressed(pressed: UInt8)  {
         withUnsafePointer(to: pressed) { pressed_native in
@@ -212,7 +217,7 @@ public class InputEventWithModifiers : InputEventFromWindow {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_meta_pressed(pressed: UInt8)  {
         withUnsafePointer(to: pressed) { pressed_native in
@@ -245,7 +250,7 @@ public class InputEventWithModifiers : InputEventFromWindow {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func get_modifiers_mask() -> KeyModifierMask {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -261,6 +266,6 @@ public class InputEventWithModifiers : InputEventFromWindow {
                     args.baseAddress!,
                     __resPtr
                 )
-            return KeyModifierMask(from: __resPtr.pointee)
+            return KeyModifierMask(godot: __resPtr.pointee)
     }
 }

@@ -9,7 +9,7 @@ fileprivate var __godot_name_ParallaxLayer: StringName! = nil
 /// This node's children will be affected by its scroll offset.
 ///  
 /// [b]Note:[/b] Any changes to this node's position and scale made after it enters the scene will be ignored.
-public class ParallaxLayer : Node2D {
+open class ParallaxLayer : Node2D {
 
     
 
@@ -22,26 +22,31 @@ public class ParallaxLayer : Node2D {
     static var _method_set_mirroring_743155724: GDExtensionMethodBindPtr! = nil
     static var _method_get_mirroring_3341600327: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ParallaxLayer = StringName(from: "ParallaxLayer")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_motion_scale_743155724_name = StringName(from: "set_motion_scale")
-        self._method_set_motion_scale_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_motion_scale_743155724_name._native_ptr(), 743155724)
+        self._method_set_motion_scale_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxLayer._native_ptr(), _method_set_motion_scale_743155724_name._native_ptr(), 743155724)
         assert(ParallaxLayer._method_set_motion_scale_743155724 != nil)
         let _method_get_motion_scale_3341600327_name = StringName(from: "get_motion_scale")
-        self._method_get_motion_scale_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_motion_scale_3341600327_name._native_ptr(), 3341600327)
+        self._method_get_motion_scale_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxLayer._native_ptr(), _method_get_motion_scale_3341600327_name._native_ptr(), 3341600327)
         assert(ParallaxLayer._method_get_motion_scale_3341600327 != nil)
         let _method_set_motion_offset_743155724_name = StringName(from: "set_motion_offset")
-        self._method_set_motion_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_motion_offset_743155724_name._native_ptr(), 743155724)
+        self._method_set_motion_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxLayer._native_ptr(), _method_set_motion_offset_743155724_name._native_ptr(), 743155724)
         assert(ParallaxLayer._method_set_motion_offset_743155724 != nil)
         let _method_get_motion_offset_3341600327_name = StringName(from: "get_motion_offset")
-        self._method_get_motion_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_motion_offset_3341600327_name._native_ptr(), 3341600327)
+        self._method_get_motion_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxLayer._native_ptr(), _method_get_motion_offset_3341600327_name._native_ptr(), 3341600327)
         assert(ParallaxLayer._method_get_motion_offset_3341600327 != nil)
         let _method_set_mirroring_743155724_name = StringName(from: "set_mirroring")
-        self._method_set_mirroring_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_mirroring_743155724_name._native_ptr(), 743155724)
+        self._method_set_mirroring_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxLayer._native_ptr(), _method_set_mirroring_743155724_name._native_ptr(), 743155724)
         assert(ParallaxLayer._method_set_mirroring_743155724 != nil)
         let _method_get_mirroring_3341600327_name = StringName(from: "get_mirroring")
-        self._method_get_mirroring_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_mirroring_3341600327_name._native_ptr(), 3341600327)
+        self._method_get_mirroring_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxLayer._native_ptr(), _method_get_mirroring_3341600327_name._native_ptr(), 3341600327)
         assert(ParallaxLayer._method_get_mirroring_3341600327 != nil)
     }
 
@@ -74,7 +79,7 @@ public class ParallaxLayer : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func set_motion_offset(offset: Vector2)  {
         let offset_native = offset._native_ptr()
@@ -105,7 +110,7 @@ public class ParallaxLayer : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func set_mirroring(mirror: Vector2)  {
         let mirror_native = mirror._native_ptr()
@@ -136,6 +141,6 @@ public class ParallaxLayer : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
 }

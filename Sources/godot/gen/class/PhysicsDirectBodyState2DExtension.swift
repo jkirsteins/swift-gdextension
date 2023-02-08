@@ -5,7 +5,7 @@ fileprivate var __godot_name_PhysicsDirectBodyState2DExtension: StringName! = ni
 /// 
 /// 
 /// 
-public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
+open class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
 
     
 
@@ -55,8 +55,13 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
     static var _method__integrate_forces_0: GDExtensionMethodBindPtr! = nil
     static var _method__get_space_state_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PhysicsDirectBodyState2DExtension = StringName(from: "PhysicsDirectBodyState2DExtension")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
@@ -75,7 +80,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func _get_total_linear_damp() -> Float64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -92,7 +97,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _get_total_angular_damp() -> Float64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -109,7 +114,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _get_center_of_mass() -> Vector2 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -125,7 +130,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func _get_center_of_mass_local() -> Vector2 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -141,7 +146,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func _get_inverse_mass() -> Float64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -158,7 +163,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _get_inverse_inertia() -> Float64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -175,7 +180,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _set_linear_velocity(velocity: Vector2)  {
         let velocity_native = velocity._native_ptr()
@@ -206,7 +211,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func _set_angular_velocity(velocity: Float64)  {
         withUnsafePointer(to: velocity) { velocity_native in
@@ -239,7 +244,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _set_transform(transform: Transform2D)  {
         let transform_native = transform._native_ptr()
@@ -270,7 +275,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Transform2D(from: __resPtr.pointee)
+            return Transform2D(godot: __resPtr.pointee)
     }
     public func _get_velocity_at_local_position(local_position: Vector2) -> Vector2 {
         let local_position_native = local_position._native_ptr()
@@ -287,7 +292,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func _apply_central_impulse(impulse: Vector2)  {
         let impulse_native = impulse._native_ptr()
@@ -459,7 +464,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func _set_constant_torque(torque: Float64)  {
         withUnsafePointer(to: torque) { torque_native in
@@ -492,7 +497,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _set_sleep_state(enabled: UInt8)  {
         withUnsafePointer(to: enabled) { enabled_native in
@@ -525,7 +530,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_contact_count() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -542,7 +547,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_contact_local_position(contact_idx: Int64) -> Vector2 {
         withUnsafePointer(to: contact_idx) { contact_idx_native in
@@ -559,7 +564,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
     }
     public func _get_contact_local_normal(contact_idx: Int64) -> Vector2 {
@@ -577,7 +582,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
     }
     public func _get_contact_local_shape(contact_idx: Int64) -> Int64 {
@@ -596,7 +601,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func _get_contact_collider(contact_idx: Int64) -> RID {
@@ -614,7 +619,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
     }
     public func _get_contact_collider_position(contact_idx: Int64) -> Vector2 {
@@ -632,7 +637,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
     }
     public func _get_contact_collider_id(contact_idx: Int64) -> Int64 {
@@ -651,7 +656,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func _get_contact_collider_object(contact_idx: Int64) -> Object {
@@ -669,7 +674,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Object(from: __resPtr.pointee)
+            return Object(godot: __resPtr.pointee)
         }
     }
     public func _get_contact_collider_shape(contact_idx: Int64) -> Int64 {
@@ -688,7 +693,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func _get_contact_collider_velocity_at_position(contact_idx: Int64) -> Vector2 {
@@ -706,7 +711,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
     }
     public func _get_contact_impulse(contact_idx: Int64) -> Vector2 {
@@ -724,7 +729,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
     }
     public func _get_step() -> Float64 {
@@ -742,7 +747,7 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _integrate_forces()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -772,6 +777,6 @@ public class PhysicsDirectBodyState2DExtension : PhysicsDirectBodyState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PhysicsDirectSpaceState2D(from: __resPtr.pointee)
+            return PhysicsDirectSpaceState2D(godot: __resPtr.pointee)
     }
 }

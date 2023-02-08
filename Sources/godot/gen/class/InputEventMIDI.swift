@@ -107,7 +107,7 @@ fileprivate var __godot_name_InputEventMIDI: StringName! = nil
 /// [/codeblocks]
 ///  
 /// Note that Godot does not currently support MIDI output, so there is no way to emit MIDI signals from Godot. Only MIDI input works.
-public class InputEventMIDI : InputEvent {
+open class InputEventMIDI : InputEvent {
 
     
 
@@ -130,56 +130,61 @@ public class InputEventMIDI : InputEvent {
     static var _method_set_controller_value_1286410249: GDExtensionMethodBindPtr! = nil
     static var _method_get_controller_value_3905245786: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_InputEventMIDI = StringName(from: "InputEventMIDI")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_channel_1286410249_name = StringName(from: "set_channel")
-        self._method_set_channel_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_channel_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_channel_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_set_channel_1286410249_name._native_ptr(), 1286410249)
         assert(InputEventMIDI._method_set_channel_1286410249 != nil)
         let _method_get_channel_3905245786_name = StringName(from: "get_channel")
-        self._method_get_channel_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_channel_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_channel_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_get_channel_3905245786_name._native_ptr(), 3905245786)
         assert(InputEventMIDI._method_get_channel_3905245786 != nil)
         let _method_set_message_1064271510_name = StringName(from: "set_message")
-        self._method_set_message_1064271510 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_message_1064271510_name._native_ptr(), 1064271510)
+        self._method_set_message_1064271510 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_set_message_1064271510_name._native_ptr(), 1064271510)
         assert(InputEventMIDI._method_set_message_1064271510 != nil)
         let _method_get_message_1936512097_name = StringName(from: "get_message")
-        self._method_get_message_1936512097 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_message_1936512097_name._native_ptr(), 1936512097)
+        self._method_get_message_1936512097 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_get_message_1936512097_name._native_ptr(), 1936512097)
         assert(InputEventMIDI._method_get_message_1936512097 != nil)
         let _method_set_pitch_1286410249_name = StringName(from: "set_pitch")
-        self._method_set_pitch_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_pitch_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_pitch_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_set_pitch_1286410249_name._native_ptr(), 1286410249)
         assert(InputEventMIDI._method_set_pitch_1286410249 != nil)
         let _method_get_pitch_3905245786_name = StringName(from: "get_pitch")
-        self._method_get_pitch_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_pitch_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_pitch_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_get_pitch_3905245786_name._native_ptr(), 3905245786)
         assert(InputEventMIDI._method_get_pitch_3905245786 != nil)
         let _method_set_velocity_1286410249_name = StringName(from: "set_velocity")
-        self._method_set_velocity_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_velocity_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_velocity_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_set_velocity_1286410249_name._native_ptr(), 1286410249)
         assert(InputEventMIDI._method_set_velocity_1286410249 != nil)
         let _method_get_velocity_3905245786_name = StringName(from: "get_velocity")
-        self._method_get_velocity_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_velocity_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_velocity_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_get_velocity_3905245786_name._native_ptr(), 3905245786)
         assert(InputEventMIDI._method_get_velocity_3905245786 != nil)
         let _method_set_instrument_1286410249_name = StringName(from: "set_instrument")
-        self._method_set_instrument_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_instrument_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_instrument_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_set_instrument_1286410249_name._native_ptr(), 1286410249)
         assert(InputEventMIDI._method_set_instrument_1286410249 != nil)
         let _method_get_instrument_3905245786_name = StringName(from: "get_instrument")
-        self._method_get_instrument_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_instrument_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_instrument_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_get_instrument_3905245786_name._native_ptr(), 3905245786)
         assert(InputEventMIDI._method_get_instrument_3905245786 != nil)
         let _method_set_pressure_1286410249_name = StringName(from: "set_pressure")
-        self._method_set_pressure_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_pressure_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_pressure_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_set_pressure_1286410249_name._native_ptr(), 1286410249)
         assert(InputEventMIDI._method_set_pressure_1286410249 != nil)
         let _method_get_pressure_3905245786_name = StringName(from: "get_pressure")
-        self._method_get_pressure_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_pressure_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_pressure_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_get_pressure_3905245786_name._native_ptr(), 3905245786)
         assert(InputEventMIDI._method_get_pressure_3905245786 != nil)
         let _method_set_controller_number_1286410249_name = StringName(from: "set_controller_number")
-        self._method_set_controller_number_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_controller_number_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_controller_number_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_set_controller_number_1286410249_name._native_ptr(), 1286410249)
         assert(InputEventMIDI._method_set_controller_number_1286410249 != nil)
         let _method_get_controller_number_3905245786_name = StringName(from: "get_controller_number")
-        self._method_get_controller_number_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_controller_number_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_controller_number_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_get_controller_number_3905245786_name._native_ptr(), 3905245786)
         assert(InputEventMIDI._method_get_controller_number_3905245786 != nil)
         let _method_set_controller_value_1286410249_name = StringName(from: "set_controller_value")
-        self._method_set_controller_value_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_controller_value_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_controller_value_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_set_controller_value_1286410249_name._native_ptr(), 1286410249)
         assert(InputEventMIDI._method_set_controller_value_1286410249 != nil)
         let _method_get_controller_value_3905245786_name = StringName(from: "get_controller_value")
-        self._method_get_controller_value_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_controller_value_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_controller_value_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_get_controller_value_3905245786_name._native_ptr(), 3905245786)
         assert(InputEventMIDI._method_get_controller_value_3905245786 != nil)
     }
 
@@ -214,7 +219,7 @@ public class InputEventMIDI : InputEvent {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_message(message: MIDIMessage)  {
         withUnsafePointer(to: message.rawValue) { message_native in
@@ -246,7 +251,7 @@ public class InputEventMIDI : InputEvent {
                     args.baseAddress!,
                     __resPtr
                 )
-            return MIDIMessage(from: __resPtr.pointee)
+            return MIDIMessage(godot: __resPtr.pointee)
     }
     public func set_pitch(pitch: Int64)  {
         withUnsafePointer(to: pitch) { pitch_native in
@@ -279,7 +284,7 @@ public class InputEventMIDI : InputEvent {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_velocity(velocity: Int64)  {
         withUnsafePointer(to: velocity) { velocity_native in
@@ -312,7 +317,7 @@ public class InputEventMIDI : InputEvent {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_instrument(instrument: Int64)  {
         withUnsafePointer(to: instrument) { instrument_native in
@@ -345,7 +350,7 @@ public class InputEventMIDI : InputEvent {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_pressure(pressure: Int64)  {
         withUnsafePointer(to: pressure) { pressure_native in
@@ -378,7 +383,7 @@ public class InputEventMIDI : InputEvent {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_controller_number(controller_number: Int64)  {
         withUnsafePointer(to: controller_number) { controller_number_native in
@@ -411,7 +416,7 @@ public class InputEventMIDI : InputEvent {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_controller_value(controller_value: Int64)  {
         withUnsafePointer(to: controller_value) { controller_value_native in
@@ -444,6 +449,6 @@ public class InputEventMIDI : InputEvent {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
 }

@@ -19,7 +19,7 @@ fileprivate var __godot_name_CompressedTexture2DArray: StringName! = nil
 /// Using [b]VRAM Compressed[/b] also improves loading times, as VRAM-compressed textures are faster to load compared to textures using lossless or lossy compression. VRAM compression can exhibit noticeable artifacts and is intended to be used for 3D rendering, not 2D.
 ///  
 /// See [Texture2DArray] for a general description of texture arrays.
-public class CompressedTexture2DArray : CompressedTextureLayered {
+open class CompressedTexture2DArray : CompressedTextureLayered {
 
     
 
@@ -27,8 +27,13 @@ public class CompressedTexture2DArray : CompressedTextureLayered {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_CompressedTexture2DArray = StringName(from: "CompressedTexture2DArray")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

@@ -97,7 +97,7 @@ fileprivate var __godot_name_EditorScenePostImport: StringName! = nil
 /// [/csharp]
 ///  
 /// [/codeblocks]
-public class EditorScenePostImport : RefCounted {
+open class EditorScenePostImport : RefCounted {
 
     
 
@@ -106,11 +106,16 @@ public class EditorScenePostImport : RefCounted {
     static var _method__post_import_0: GDExtensionMethodBindPtr! = nil
     static var _method_get_source_file_201670096: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorScenePostImport = StringName(from: "EditorScenePostImport")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_get_source_file_201670096_name = StringName(from: "get_source_file")
-        self._method_get_source_file_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_source_file_201670096_name._native_ptr(), 201670096)
+        self._method_get_source_file_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorScenePostImport._native_ptr(), _method_get_source_file_201670096_name._native_ptr(), 201670096)
         assert(EditorScenePostImport._method_get_source_file_201670096 != nil)
     }
 
@@ -129,9 +134,9 @@ public class EditorScenePostImport : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Object(from: __resPtr.pointee)
+            return Object(godot: __resPtr.pointee)
     }
-    public func get_source_file() -> String {
+    public func get_source_file() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -139,13 +144,12 @@ public class EditorScenePostImport : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_source_file_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
 }

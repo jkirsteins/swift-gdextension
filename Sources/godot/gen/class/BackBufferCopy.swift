@@ -7,7 +7,7 @@ fileprivate var __godot_name_BackBufferCopy: StringName! = nil
 /// Node for back-buffering the currently-displayed screen. The region defined in the [BackBufferCopy] node is buffered with the content of the screen it covers, or the entire screen according to the copy mode set. Use the screen texture in your shader scripts to access the buffer.
 ///  
 /// [b]Note:[/b] Since this node inherits from [Node2D] (and not [Control]), anchors and margins won't apply to child [Control]-derived nodes. This can be problematic when resizing the window. To avoid this, add [Control]-derived nodes as [i]siblings[/i] to the [BackBufferCopy] node instead of adding them as children.
-public class BackBufferCopy : Node2D {
+open class BackBufferCopy : Node2D {
 
     public enum CopyMode : Int32 {
         case COPY_MODE_DISABLED = 0
@@ -22,20 +22,25 @@ public class BackBufferCopy : Node2D {
     static var _method_set_copy_mode_1713538590: GDExtensionMethodBindPtr! = nil
     static var _method_get_copy_mode_3271169440: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_BackBufferCopy = StringName(from: "BackBufferCopy")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_rect_2046264180_name = StringName(from: "set_rect")
-        self._method_set_rect_2046264180 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_rect_2046264180_name._native_ptr(), 2046264180)
+        self._method_set_rect_2046264180 = self.interface.pointee.classdb_get_method_bind(__godot_name_BackBufferCopy._native_ptr(), _method_set_rect_2046264180_name._native_ptr(), 2046264180)
         assert(BackBufferCopy._method_set_rect_2046264180 != nil)
         let _method_get_rect_1639390495_name = StringName(from: "get_rect")
-        self._method_get_rect_1639390495 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_rect_1639390495_name._native_ptr(), 1639390495)
+        self._method_get_rect_1639390495 = self.interface.pointee.classdb_get_method_bind(__godot_name_BackBufferCopy._native_ptr(), _method_get_rect_1639390495_name._native_ptr(), 1639390495)
         assert(BackBufferCopy._method_get_rect_1639390495 != nil)
         let _method_set_copy_mode_1713538590_name = StringName(from: "set_copy_mode")
-        self._method_set_copy_mode_1713538590 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_copy_mode_1713538590_name._native_ptr(), 1713538590)
+        self._method_set_copy_mode_1713538590 = self.interface.pointee.classdb_get_method_bind(__godot_name_BackBufferCopy._native_ptr(), _method_set_copy_mode_1713538590_name._native_ptr(), 1713538590)
         assert(BackBufferCopy._method_set_copy_mode_1713538590 != nil)
         let _method_get_copy_mode_3271169440_name = StringName(from: "get_copy_mode")
-        self._method_get_copy_mode_3271169440 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_copy_mode_3271169440_name._native_ptr(), 3271169440)
+        self._method_get_copy_mode_3271169440 = self.interface.pointee.classdb_get_method_bind(__godot_name_BackBufferCopy._native_ptr(), _method_get_copy_mode_3271169440_name._native_ptr(), 3271169440)
         assert(BackBufferCopy._method_get_copy_mode_3271169440 != nil)
     }
 
@@ -68,7 +73,7 @@ public class BackBufferCopy : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Rect2(from: __resPtr.pointee)
+            return Rect2(godot: __resPtr.pointee)
     }
     public func set_copy_mode(copy_mode: BackBufferCopy.CopyMode)  {
         withUnsafePointer(to: copy_mode.rawValue) { copy_mode_native in
@@ -100,6 +105,6 @@ public class BackBufferCopy : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return BackBufferCopy.CopyMode(from: __resPtr.pointee)
+            return BackBufferCopy.CopyMode(godot: __resPtr.pointee)
     }
 }

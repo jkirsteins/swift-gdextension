@@ -9,7 +9,7 @@ fileprivate var __godot_name_ConeTwistJoint3D: StringName! = nil
 /// The twist axis is initiated as the X axis of the [Joint3D].
 ///  
 /// Once the Bodies swing, the twist axis is calculated as the middle of the x-axes of the Joint3D in the local space of the two Bodies. See also [Generic6DOFJoint3D].
-public class ConeTwistJoint3D : Joint3D {
+open class ConeTwistJoint3D : Joint3D {
 
     public enum Param : Int32 {
         case PARAM_SWING_SPAN = 0
@@ -25,14 +25,19 @@ public class ConeTwistJoint3D : Joint3D {
     static var _method_set_param_1062470226: GDExtensionMethodBindPtr! = nil
     static var _method_get_param_2928790850: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ConeTwistJoint3D = StringName(from: "ConeTwistJoint3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_param_1062470226_name = StringName(from: "set_param")
-        self._method_set_param_1062470226 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_param_1062470226_name._native_ptr(), 1062470226)
+        self._method_set_param_1062470226 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConeTwistJoint3D._native_ptr(), _method_set_param_1062470226_name._native_ptr(), 1062470226)
         assert(ConeTwistJoint3D._method_set_param_1062470226 != nil)
         let _method_get_param_2928790850_name = StringName(from: "get_param")
-        self._method_get_param_2928790850 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_param_2928790850_name._native_ptr(), 2928790850)
+        self._method_get_param_2928790850 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConeTwistJoint3D._native_ptr(), _method_get_param_2928790850_name._native_ptr(), 2928790850)
         assert(ConeTwistJoint3D._method_get_param_2928790850 != nil)
     }
 
@@ -70,7 +75,7 @@ public class ConeTwistJoint3D : Joint3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
 }

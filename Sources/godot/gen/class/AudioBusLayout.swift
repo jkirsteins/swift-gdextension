@@ -5,7 +5,7 @@ fileprivate var __godot_name_AudioBusLayout: StringName! = nil
 /// Stores information about the audio buses.
 /// 
 /// Stores position, muting, solo, bypass, effects, effect position, volume, and the connections between buses. See [AudioServer] for usage.
-public class AudioBusLayout : Resource {
+open class AudioBusLayout : Resource {
 
     
 
@@ -13,8 +13,13 @@ public class AudioBusLayout : Resource {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AudioBusLayout = StringName(from: "AudioBusLayout")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

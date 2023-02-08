@@ -45,6 +45,11 @@ fileprivate var __godot_name_Signal: StringName! = nil
 /// [/codeblocks]
 public class Signal : BuiltinClass {
 
+    public static var interface: UnsafePointer<GDExtensionInterface>! = nil
+    public static var library: GDExtensionClassLibraryPtr! = nil
+    
+    var interface: UnsafePointer<GDExtensionInterface> { Self.interface }
+
     
 
     public class var __godot_name: StringName { __godot_name_Signal }
@@ -58,7 +63,10 @@ public class Signal : BuiltinClass {
     static var _constructor_2: GDExtensionPtrConstructor? = nil
     static var _destructor: GDExtensionPtrDestructor? = nil
 
-    public class func initialize_class() {
+    public class func initialize_class(_ ginit: GodotInitializer, _: GDExtensionInitializationLevel) {
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
+
         // Init constructors before assigning __godot_name
         Signal._constructor_0 =  Signal.interface.pointee.variant_get_ptr_constructor(GDEXTENSION_VARIANT_TYPE_SIGNAL, 0)
         assert(Signal._constructor_0 != nil)
@@ -68,8 +76,11 @@ public class Signal : BuiltinClass {
         assert(Signal._constructor_2 != nil)
         Signal._destructor =  Signal.interface.pointee.variant_get_ptr_destructor(GDEXTENSION_VARIANT_TYPE_SIGNAL)
         assert(Signal._destructor != nil)
+    }
 
-        // At this point constructors must be assigned
+    public class func initialize_godot_name() {
+        // At this point constructors for String and StringName
+        // must be assigned
         __godot_name_Signal = StringName(from: "Signal")
     }
 
@@ -109,10 +120,10 @@ public class Signal : BuiltinClass {
             // call here
             Self._constructor_2!(self._native_ptr(), .init(args.baseAddress!))
     }
-    public required init(from unsafe: UnsafeRawPointer) {
+    public required init(godot unsafe: UnsafeRawPointer) {
         self.opaque = .init(mutating: unsafe)
     }
-    public required init(from unsafe: UnsafeMutableRawPointer) {
+    public required init(godot unsafe: UnsafeMutableRawPointer) {
         self.opaque = unsafe
     }
 

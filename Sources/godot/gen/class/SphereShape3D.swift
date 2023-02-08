@@ -7,7 +7,7 @@ fileprivate var __godot_name_SphereShape3D: StringName! = nil
 /// 3D sphere shape to be added as a [i]direct[/i] child of a [PhysicsBody3D] or [Area3D] using a [CollisionShape3D] node. This shape is useful for modeling sphere-like 3D objects.
 ///  
 /// [b]Performance:[/b] Being a primitive collision shape, [SphereShape3D] is the fastest collision shape to check collisions against, as it only requires a distance check with the shape's origin.
-public class SphereShape3D : Shape3D {
+open class SphereShape3D : Shape3D {
 
     
 
@@ -16,14 +16,19 @@ public class SphereShape3D : Shape3D {
     static var _method_set_radius_373806689: GDExtensionMethodBindPtr! = nil
     static var _method_get_radius_1740695150: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_SphereShape3D = StringName(from: "SphereShape3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_radius_373806689_name = StringName(from: "set_radius")
-        self._method_set_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_radius_373806689_name._native_ptr(), 373806689)
+        self._method_set_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SphereShape3D._native_ptr(), _method_set_radius_373806689_name._native_ptr(), 373806689)
         assert(SphereShape3D._method_set_radius_373806689 != nil)
         let _method_get_radius_1740695150_name = StringName(from: "get_radius")
-        self._method_get_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_radius_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_SphereShape3D._native_ptr(), _method_get_radius_1740695150_name._native_ptr(), 1740695150)
         assert(SphereShape3D._method_get_radius_1740695150 != nil)
     }
 
@@ -58,6 +63,6 @@ public class SphereShape3D : Shape3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
 }

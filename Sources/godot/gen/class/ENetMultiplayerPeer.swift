@@ -5,7 +5,7 @@ fileprivate var __godot_name_ENetMultiplayerPeer: StringName! = nil
 /// MISSING
 /// 
 /// MISSING
-public class ENetMultiplayerPeer : MultiplayerPeer {
+open class ENetMultiplayerPeer : MultiplayerPeer {
 
     
 
@@ -19,29 +19,34 @@ public class ENetMultiplayerPeer : MultiplayerPeer {
     static var _method_get_host_4103238886: GDExtensionMethodBindPtr! = nil
     static var _method_get_peer_3793311544: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ENetMultiplayerPeer = StringName(from: "ENetMultiplayerPeer")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_create_server_1616151701_name = StringName(from: "create_server")
-        self._method_create_server_1616151701 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_server_1616151701_name._native_ptr(), 1616151701)
+        self._method_create_server_1616151701 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetMultiplayerPeer._native_ptr(), _method_create_server_1616151701_name._native_ptr(), 1616151701)
         assert(ENetMultiplayerPeer._method_create_server_1616151701 != nil)
         let _method_create_client_920217784_name = StringName(from: "create_client")
-        self._method_create_client_920217784 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_client_920217784_name._native_ptr(), 920217784)
+        self._method_create_client_920217784 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetMultiplayerPeer._native_ptr(), _method_create_client_920217784_name._native_ptr(), 920217784)
         assert(ENetMultiplayerPeer._method_create_client_920217784 != nil)
         let _method_create_mesh_844576869_name = StringName(from: "create_mesh")
-        self._method_create_mesh_844576869 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_mesh_844576869_name._native_ptr(), 844576869)
+        self._method_create_mesh_844576869 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetMultiplayerPeer._native_ptr(), _method_create_mesh_844576869_name._native_ptr(), 844576869)
         assert(ENetMultiplayerPeer._method_create_mesh_844576869 != nil)
         let _method_add_mesh_peer_1293458335_name = StringName(from: "add_mesh_peer")
-        self._method_add_mesh_peer_1293458335 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_mesh_peer_1293458335_name._native_ptr(), 1293458335)
+        self._method_add_mesh_peer_1293458335 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetMultiplayerPeer._native_ptr(), _method_add_mesh_peer_1293458335_name._native_ptr(), 1293458335)
         assert(ENetMultiplayerPeer._method_add_mesh_peer_1293458335 != nil)
         let _method_set_bind_ip_83702148_name = StringName(from: "set_bind_ip")
-        self._method_set_bind_ip_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_bind_ip_83702148_name._native_ptr(), 83702148)
+        self._method_set_bind_ip_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetMultiplayerPeer._native_ptr(), _method_set_bind_ip_83702148_name._native_ptr(), 83702148)
         assert(ENetMultiplayerPeer._method_set_bind_ip_83702148 != nil)
         let _method_get_host_4103238886_name = StringName(from: "get_host")
-        self._method_get_host_4103238886 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_host_4103238886_name._native_ptr(), 4103238886)
+        self._method_get_host_4103238886 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetMultiplayerPeer._native_ptr(), _method_get_host_4103238886_name._native_ptr(), 4103238886)
         assert(ENetMultiplayerPeer._method_get_host_4103238886 != nil)
         let _method_get_peer_3793311544_name = StringName(from: "get_peer")
-        self._method_get_peer_3793311544 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_peer_3793311544_name._native_ptr(), 3793311544)
+        self._method_get_peer_3793311544 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetMultiplayerPeer._native_ptr(), _method_get_peer_3793311544_name._native_ptr(), 3793311544)
         assert(ENetMultiplayerPeer._method_get_peer_3793311544 != nil)
     }
 
@@ -64,20 +69,20 @@ public class ENetMultiplayerPeer : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
         }
         }
         }
     }
-    public func create_client(address: String, port: Int64, channel_count: Int64, in_bandwidth: Int64, out_bandwidth: Int64, local_port: Int64) -> Error {
+    public func create_client(address: godot.String, port: Int64, channel_count: Int64, in_bandwidth: Int64, out_bandwidth: Int64, local_port: Int64) -> Error {
         withUnsafePointer(to: local_port) { local_port_native in
         withUnsafePointer(to: out_bandwidth) { out_bandwidth_native in
         withUnsafePointer(to: in_bandwidth) { in_bandwidth_native in
         withUnsafePointer(to: channel_count) { channel_count_native in
         withUnsafePointer(to: port) { port_native in
-        withUnsafePointer(to: address) { address_native in
+        let address_native = address._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 6)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -91,8 +96,7 @@ public class ENetMultiplayerPeer : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
+            return Error(godot: __resPtr.pointee)
         }
         }
         }
@@ -114,7 +118,7 @@ public class ENetMultiplayerPeer : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func add_mesh_peer(peer_id: Int64, host: ENetConnection) -> Error {
@@ -133,11 +137,11 @@ public class ENetMultiplayerPeer : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
     }
-    public func set_bind_ip(ip: String)  {
-        withUnsafePointer(to: ip) { ip_native in
+    public func set_bind_ip(ip: godot.String)  {
+        let ip_native = ip._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -150,7 +154,6 @@ public class ENetMultiplayerPeer : MultiplayerPeer {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
     public func get_host() -> ENetConnection {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -166,7 +169,7 @@ public class ENetMultiplayerPeer : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return ENetConnection(from: __resPtr.pointee)
+            return ENetConnection(godot: __resPtr.pointee)
     }
     public func get_peer(id: Int64) -> ENetPacketPeer {
         withUnsafePointer(to: id) { id_native in
@@ -183,7 +186,7 @@ public class ENetMultiplayerPeer : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return ENetPacketPeer(from: __resPtr.pointee)
+            return ENetPacketPeer(godot: __resPtr.pointee)
         }
     }
 }

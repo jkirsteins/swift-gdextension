@@ -9,7 +9,7 @@ fileprivate var __godot_name_AtlasTexture: StringName! = nil
 /// Multiple [AtlasTexture] resources can be cropped from the same [member atlas]. Packing many smaller textures into a singular large texture helps to optimize video memory costs and render calls.
 ///  
 /// [b]Note:[/b] [AtlasTexture] cannot be used in an [AnimatedTexture], and may not tile properly in nodes such as [TextureRect], when inside other [AtlasTexture] resources.
-public class AtlasTexture : Texture2D {
+open class AtlasTexture : Texture2D {
 
     
 
@@ -24,32 +24,37 @@ public class AtlasTexture : Texture2D {
     static var _method_set_filter_clip_2586408642: GDExtensionMethodBindPtr! = nil
     static var _method_has_filter_clip_36873697: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AtlasTexture = StringName(from: "AtlasTexture")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_atlas_4051416890_name = StringName(from: "set_atlas")
-        self._method_set_atlas_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_atlas_4051416890_name._native_ptr(), 4051416890)
+        self._method_set_atlas_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_AtlasTexture._native_ptr(), _method_set_atlas_4051416890_name._native_ptr(), 4051416890)
         assert(AtlasTexture._method_set_atlas_4051416890 != nil)
         let _method_get_atlas_3635182373_name = StringName(from: "get_atlas")
-        self._method_get_atlas_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_atlas_3635182373_name._native_ptr(), 3635182373)
+        self._method_get_atlas_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_AtlasTexture._native_ptr(), _method_get_atlas_3635182373_name._native_ptr(), 3635182373)
         assert(AtlasTexture._method_get_atlas_3635182373 != nil)
         let _method_set_region_2046264180_name = StringName(from: "set_region")
-        self._method_set_region_2046264180 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_region_2046264180_name._native_ptr(), 2046264180)
+        self._method_set_region_2046264180 = self.interface.pointee.classdb_get_method_bind(__godot_name_AtlasTexture._native_ptr(), _method_set_region_2046264180_name._native_ptr(), 2046264180)
         assert(AtlasTexture._method_set_region_2046264180 != nil)
         let _method_get_region_1639390495_name = StringName(from: "get_region")
-        self._method_get_region_1639390495 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_region_1639390495_name._native_ptr(), 1639390495)
+        self._method_get_region_1639390495 = self.interface.pointee.classdb_get_method_bind(__godot_name_AtlasTexture._native_ptr(), _method_get_region_1639390495_name._native_ptr(), 1639390495)
         assert(AtlasTexture._method_get_region_1639390495 != nil)
         let _method_set_margin_2046264180_name = StringName(from: "set_margin")
-        self._method_set_margin_2046264180 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_margin_2046264180_name._native_ptr(), 2046264180)
+        self._method_set_margin_2046264180 = self.interface.pointee.classdb_get_method_bind(__godot_name_AtlasTexture._native_ptr(), _method_set_margin_2046264180_name._native_ptr(), 2046264180)
         assert(AtlasTexture._method_set_margin_2046264180 != nil)
         let _method_get_margin_1639390495_name = StringName(from: "get_margin")
-        self._method_get_margin_1639390495 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_margin_1639390495_name._native_ptr(), 1639390495)
+        self._method_get_margin_1639390495 = self.interface.pointee.classdb_get_method_bind(__godot_name_AtlasTexture._native_ptr(), _method_get_margin_1639390495_name._native_ptr(), 1639390495)
         assert(AtlasTexture._method_get_margin_1639390495 != nil)
         let _method_set_filter_clip_2586408642_name = StringName(from: "set_filter_clip")
-        self._method_set_filter_clip_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_filter_clip_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_filter_clip_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AtlasTexture._native_ptr(), _method_set_filter_clip_2586408642_name._native_ptr(), 2586408642)
         assert(AtlasTexture._method_set_filter_clip_2586408642 != nil)
         let _method_has_filter_clip_36873697_name = StringName(from: "has_filter_clip")
-        self._method_has_filter_clip_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_filter_clip_36873697_name._native_ptr(), 36873697)
+        self._method_has_filter_clip_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AtlasTexture._native_ptr(), _method_has_filter_clip_36873697_name._native_ptr(), 36873697)
         assert(AtlasTexture._method_has_filter_clip_36873697 != nil)
     }
 
@@ -82,7 +87,7 @@ public class AtlasTexture : Texture2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture2D(from: __resPtr.pointee)
+            return Texture2D(godot: __resPtr.pointee)
     }
     public func set_region(region: Rect2)  {
         let region_native = region._native_ptr()
@@ -113,7 +118,7 @@ public class AtlasTexture : Texture2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Rect2(from: __resPtr.pointee)
+            return Rect2(godot: __resPtr.pointee)
     }
     public func set_margin(margin: Rect2)  {
         let margin_native = margin._native_ptr()
@@ -144,7 +149,7 @@ public class AtlasTexture : Texture2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Rect2(from: __resPtr.pointee)
+            return Rect2(godot: __resPtr.pointee)
     }
     public func set_filter_clip(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -177,6 +182,6 @@ public class AtlasTexture : Texture2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

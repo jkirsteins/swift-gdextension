@@ -5,7 +5,7 @@ fileprivate var __godot_name_AudioEffectAmplify: StringName! = nil
 /// Adds an amplifying audio effect to an audio bus.
 /// 
 /// Increases or decreases the volume being routed through the audio bus.
-public class AudioEffectAmplify : AudioEffect {
+open class AudioEffectAmplify : AudioEffect {
 
     
 
@@ -14,14 +14,19 @@ public class AudioEffectAmplify : AudioEffect {
     static var _method_set_volume_db_373806689: GDExtensionMethodBindPtr! = nil
     static var _method_get_volume_db_1740695150: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AudioEffectAmplify = StringName(from: "AudioEffectAmplify")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_volume_db_373806689_name = StringName(from: "set_volume_db")
-        self._method_set_volume_db_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_volume_db_373806689_name._native_ptr(), 373806689)
+        self._method_set_volume_db_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectAmplify._native_ptr(), _method_set_volume_db_373806689_name._native_ptr(), 373806689)
         assert(AudioEffectAmplify._method_set_volume_db_373806689 != nil)
         let _method_get_volume_db_1740695150_name = StringName(from: "get_volume_db")
-        self._method_get_volume_db_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_volume_db_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_volume_db_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectAmplify._native_ptr(), _method_get_volume_db_1740695150_name._native_ptr(), 1740695150)
         assert(AudioEffectAmplify._method_get_volume_db_1740695150 != nil)
     }
 
@@ -56,6 +61,6 @@ public class AudioEffectAmplify : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
 }

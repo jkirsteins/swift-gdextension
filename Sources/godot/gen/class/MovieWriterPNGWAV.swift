@@ -5,7 +5,7 @@ fileprivate var __godot_name_MovieWriterPNGWAV: StringName! = nil
 /// MISSING
 /// 
 /// MISSING
-public class MovieWriterPNGWAV : MovieWriter {
+open class MovieWriterPNGWAV : MovieWriter {
 
     
 
@@ -13,8 +13,13 @@ public class MovieWriterPNGWAV : MovieWriter {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_MovieWriterPNGWAV = StringName(from: "MovieWriterPNGWAV")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

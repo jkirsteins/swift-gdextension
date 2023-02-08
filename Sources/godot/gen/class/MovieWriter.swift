@@ -17,7 +17,7 @@ fileprivate var __godot_name_MovieWriter: StringName! = nil
 /// [b]Editor usage:[/b] A default movie file path can be specified in [member ProjectSettings.editor/movie_writer/movie_file]. Alternatively, for running single scenes, a [code]movie_path[/code] metadata can be added to the root node, specifying the path to a movie file that will be used when recording that scene. Once a path is set, click the video reel icon in the top-right corner of the editor to enable Movie Maker mode, then run any scene as usual. The engine will start recording as soon as the splash screen is finished, and it will only stop recording when the engine quits. Click the video reel icon again to disable Movie Maker mode. Note that toggling Movie Maker mode does not affect project instances that are already running.
 ///  
 /// [b]Note:[/b] MovieWriter is available for use in both the editor and exported projects, but it is [i]not[/i] designed for use by end users to record videos while playing. Players wishing to record gameplay videos should install tools such as [url=https://obsproject.com/]OBS Studio[/url] or [url=https://www.maartenbaert.be/simplescreenrecorder/]SimpleScreenRecorder[/url] instead.
-public class MovieWriter : Object {
+open class MovieWriter : Object {
 
     
 
@@ -31,11 +31,16 @@ public class MovieWriter : Object {
     static var _method__write_end_0: GDExtensionMethodBindPtr! = nil
     static var _method_add_writer_4023702871: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_MovieWriter = StringName(from: "MovieWriter")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_add_writer_4023702871_name = StringName(from: "add_writer")
-        self._method_add_writer_4023702871 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_writer_4023702871_name._native_ptr(), 4023702871)
+        self._method_add_writer_4023702871 = self.interface.pointee.classdb_get_method_bind(__godot_name_MovieWriter._native_ptr(), _method_add_writer_4023702871_name._native_ptr(), 4023702871)
         assert(MovieWriter._method_add_writer_4023702871 != nil)
     }
 
@@ -54,7 +59,7 @@ public class MovieWriter : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_audio_speaker_mode() -> AudioServer.SpeakerMode {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -70,10 +75,10 @@ public class MovieWriter : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return AudioServer.SpeakerMode(from: __resPtr.pointee)
+            return AudioServer.SpeakerMode(godot: __resPtr.pointee)
     }
-    public func _handles_file(path: String) -> UInt8 {
-        withUnsafePointer(to: path) { path_native in
+    public func _handles_file(path: godot.String) -> UInt8 {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -88,12 +93,11 @@ public class MovieWriter : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _write_begin(movie_size: Vector2i, fps: Int64, base_path: String) -> Error {
-        withUnsafePointer(to: base_path) { base_path_native in
+    public func _write_begin(movie_size: Vector2i, fps: Int64, base_path: godot.String) -> Error {
         withUnsafePointer(to: fps) { fps_native in
+        let base_path_native = base_path._native_ptr()
         let movie_size_native = movie_size._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
@@ -108,8 +112,7 @@ public class MovieWriter : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func _write_frame(frame_image: Image, audio_frame_block: UnsafeRawPointer) -> Error {
@@ -128,7 +131,7 @@ public class MovieWriter : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func _write_end()  {

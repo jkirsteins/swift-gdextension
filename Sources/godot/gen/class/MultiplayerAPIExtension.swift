@@ -126,7 +126,7 @@ fileprivate var __godot_name_MultiplayerAPIExtension: StringName! = nil
 /// [/codeblocks]
 ///  
 /// Native extensions can alternatively use the [method MultiplayerAPI.set_default_interface] method during initialization to configure themselves as the default implementation.
-public class MultiplayerAPIExtension : MultiplayerAPI {
+open class MultiplayerAPIExtension : MultiplayerAPI {
 
     
 
@@ -142,8 +142,13 @@ public class MultiplayerAPIExtension : MultiplayerAPI {
     static var _method__object_configuration_add_0: GDExtensionMethodBindPtr! = nil
     static var _method__object_configuration_remove_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_MultiplayerAPIExtension = StringName(from: "MultiplayerAPIExtension")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
@@ -162,7 +167,7 @@ public class MultiplayerAPIExtension : MultiplayerAPI {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func _set_multiplayer_peer(multiplayer_peer: MultiplayerPeer)  {
         let multiplayer_peer_native = multiplayer_peer._native_ptr()
@@ -193,7 +198,7 @@ public class MultiplayerAPIExtension : MultiplayerAPI {
                     args.baseAddress!,
                     __resPtr
                 )
-            return MultiplayerPeer(from: __resPtr.pointee)
+            return MultiplayerPeer(godot: __resPtr.pointee)
     }
     public func _get_unique_id() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -210,7 +215,7 @@ public class MultiplayerAPIExtension : MultiplayerAPI {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_peer_ids() -> PackedInt32Array {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -226,7 +231,7 @@ public class MultiplayerAPIExtension : MultiplayerAPI {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
     }
     public func _rpc(peer: Int64, object: Object, method: StringName, args: Array) -> Error {
         withUnsafePointer(to: peer) { peer_native in
@@ -246,7 +251,7 @@ public class MultiplayerAPIExtension : MultiplayerAPI {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func _get_remote_sender_id() -> Int64 {
@@ -264,7 +269,7 @@ public class MultiplayerAPIExtension : MultiplayerAPI {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _object_configuration_add(object: Object, configuration: Variant) -> Error {
         let configuration_native = configuration._native_ptr()
@@ -282,7 +287,7 @@ public class MultiplayerAPIExtension : MultiplayerAPI {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func _object_configuration_remove(object: Object, configuration: Variant) -> Error {
         let configuration_native = configuration._native_ptr()
@@ -300,6 +305,6 @@ public class MultiplayerAPIExtension : MultiplayerAPI {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
 }

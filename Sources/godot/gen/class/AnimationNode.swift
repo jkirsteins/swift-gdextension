@@ -7,7 +7,7 @@ fileprivate var __godot_name_AnimationNode: StringName! = nil
 /// Base resource for [AnimationTree] nodes. In general, it's not used directly, but you can create custom ones with custom blending formulas.
 ///  
 /// Inherit this when creating nodes mainly for use in [AnimationNodeBlendTree], otherwise [AnimationRootNode] should be used instead.
-public class AnimationNode : Resource {
+open class AnimationNode : Resource {
 
     public enum FilterAction : Int32 {
         case FILTER_IGNORE = 0
@@ -42,53 +42,58 @@ public class AnimationNode : Resource {
     static var _method_set_parameter_3776071444: GDExtensionMethodBindPtr! = nil
     static var _method_get_parameter_2760726917: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AnimationNode = StringName(from: "AnimationNode")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_add_input_2323990056_name = StringName(from: "add_input")
-        self._method_add_input_2323990056 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_input_2323990056_name._native_ptr(), 2323990056)
+        self._method_add_input_2323990056 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNode._native_ptr(), _method_add_input_2323990056_name._native_ptr(), 2323990056)
         assert(AnimationNode._method_add_input_2323990056 != nil)
         let _method_remove_input_1286410249_name = StringName(from: "remove_input")
-        self._method_remove_input_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_input_1286410249_name._native_ptr(), 1286410249)
+        self._method_remove_input_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNode._native_ptr(), _method_remove_input_1286410249_name._native_ptr(), 1286410249)
         assert(AnimationNode._method_remove_input_1286410249 != nil)
         let _method_set_input_name_215573526_name = StringName(from: "set_input_name")
-        self._method_set_input_name_215573526 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_input_name_215573526_name._native_ptr(), 215573526)
+        self._method_set_input_name_215573526 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNode._native_ptr(), _method_set_input_name_215573526_name._native_ptr(), 215573526)
         assert(AnimationNode._method_set_input_name_215573526 != nil)
         let _method_get_input_name_844755477_name = StringName(from: "get_input_name")
-        self._method_get_input_name_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_input_name_844755477_name._native_ptr(), 844755477)
+        self._method_get_input_name_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNode._native_ptr(), _method_get_input_name_844755477_name._native_ptr(), 844755477)
         assert(AnimationNode._method_get_input_name_844755477 != nil)
         let _method_get_input_count_3905245786_name = StringName(from: "get_input_count")
-        self._method_get_input_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_input_count_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_input_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNode._native_ptr(), _method_get_input_count_3905245786_name._native_ptr(), 3905245786)
         assert(AnimationNode._method_get_input_count_3905245786 != nil)
         let _method_find_input_1321353865_name = StringName(from: "find_input")
-        self._method_find_input_1321353865 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_find_input_1321353865_name._native_ptr(), 1321353865)
+        self._method_find_input_1321353865 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNode._native_ptr(), _method_find_input_1321353865_name._native_ptr(), 1321353865)
         assert(AnimationNode._method_find_input_1321353865 != nil)
         let _method_set_filter_path_3868023870_name = StringName(from: "set_filter_path")
-        self._method_set_filter_path_3868023870 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_filter_path_3868023870_name._native_ptr(), 3868023870)
+        self._method_set_filter_path_3868023870 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNode._native_ptr(), _method_set_filter_path_3868023870_name._native_ptr(), 3868023870)
         assert(AnimationNode._method_set_filter_path_3868023870 != nil)
         let _method_is_path_filtered_861721659_name = StringName(from: "is_path_filtered")
-        self._method_is_path_filtered_861721659 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_path_filtered_861721659_name._native_ptr(), 861721659)
+        self._method_is_path_filtered_861721659 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNode._native_ptr(), _method_is_path_filtered_861721659_name._native_ptr(), 861721659)
         assert(AnimationNode._method_is_path_filtered_861721659 != nil)
         let _method_set_filter_enabled_2586408642_name = StringName(from: "set_filter_enabled")
-        self._method_set_filter_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_filter_enabled_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_filter_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNode._native_ptr(), _method_set_filter_enabled_2586408642_name._native_ptr(), 2586408642)
         assert(AnimationNode._method_set_filter_enabled_2586408642 != nil)
         let _method_is_filter_enabled_36873697_name = StringName(from: "is_filter_enabled")
-        self._method_is_filter_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_filter_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_filter_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNode._native_ptr(), _method_is_filter_enabled_36873697_name._native_ptr(), 36873697)
         assert(AnimationNode._method_is_filter_enabled_36873697 != nil)
         let _method_blend_animation_11797022_name = StringName(from: "blend_animation")
-        self._method_blend_animation_11797022 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_blend_animation_11797022_name._native_ptr(), 11797022)
+        self._method_blend_animation_11797022 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNode._native_ptr(), _method_blend_animation_11797022_name._native_ptr(), 11797022)
         assert(AnimationNode._method_blend_animation_11797022 != nil)
         let _method_blend_node_308530085_name = StringName(from: "blend_node")
-        self._method_blend_node_308530085 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_blend_node_308530085_name._native_ptr(), 308530085)
+        self._method_blend_node_308530085 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNode._native_ptr(), _method_blend_node_308530085_name._native_ptr(), 308530085)
         assert(AnimationNode._method_blend_node_308530085 != nil)
         let _method_blend_input_1365393708_name = StringName(from: "blend_input")
-        self._method_blend_input_1365393708 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_blend_input_1365393708_name._native_ptr(), 1365393708)
+        self._method_blend_input_1365393708 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNode._native_ptr(), _method_blend_input_1365393708_name._native_ptr(), 1365393708)
         assert(AnimationNode._method_blend_input_1365393708 != nil)
         let _method_set_parameter_3776071444_name = StringName(from: "set_parameter")
-        self._method_set_parameter_3776071444 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_parameter_3776071444_name._native_ptr(), 3776071444)
+        self._method_set_parameter_3776071444 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNode._native_ptr(), _method_set_parameter_3776071444_name._native_ptr(), 3776071444)
         assert(AnimationNode._method_set_parameter_3776071444 != nil)
         let _method_get_parameter_2760726917_name = StringName(from: "get_parameter")
-        self._method_get_parameter_2760726917 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_parameter_2760726917_name._native_ptr(), 2760726917)
+        self._method_get_parameter_2760726917 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNode._native_ptr(), _method_get_parameter_2760726917_name._native_ptr(), 2760726917)
         assert(AnimationNode._method_get_parameter_2760726917 != nil)
     }
 
@@ -106,7 +111,7 @@ public class AnimationNode : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
     }
     public func _get_parameter_list() -> Array {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -122,7 +127,7 @@ public class AnimationNode : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Array(from: __resPtr.pointee)
+            return Array(godot: __resPtr.pointee)
     }
     public func _get_child_by_name(name: StringName) -> AnimationNode {
         let name_native = name._native_ptr()
@@ -139,7 +144,7 @@ public class AnimationNode : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return AnimationNode(from: __resPtr.pointee)
+            return AnimationNode(godot: __resPtr.pointee)
     }
     public func _get_parameter_default_value(parameter: StringName) -> Variant {
         let parameter_native = parameter._native_ptr()
@@ -156,7 +161,7 @@ public class AnimationNode : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
     }
     public func _is_parameter_read_only(parameter: StringName) -> UInt8 {
         let parameter_native = parameter._native_ptr()
@@ -174,7 +179,7 @@ public class AnimationNode : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _process(time: Float64, seek: UInt8, is_external_seeking: UInt8) -> Float64 {
         withUnsafePointer(to: is_external_seeking) { is_external_seeking_native in
@@ -194,12 +199,12 @@ public class AnimationNode : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
         }
         }
     }
-    public func _get_caption() -> String {
+    public func _get_caption() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -207,14 +212,13 @@ public class AnimationNode : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_caption_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func _has_filter() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -231,10 +235,10 @@ public class AnimationNode : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func add_input(name: String) -> UInt8 {
-        withUnsafePointer(to: name) { name_native in
+    public func add_input(name: godot.String) -> UInt8 {
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -249,8 +253,7 @@ public class AnimationNode : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
     public func remove_input(index: Int64)  {
         withUnsafePointer(to: index) { index_native in
@@ -268,9 +271,9 @@ public class AnimationNode : Resource {
                 )
         }
     }
-    public func set_input_name(input: Int64, name: String) -> UInt8 {
-        withUnsafePointer(to: name) { name_native in
+    public func set_input_name(input: Int64, name: godot.String) -> UInt8 {
         withUnsafePointer(to: input) { input_native in
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -285,11 +288,10 @@ public class AnimationNode : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
         }
     }
-    public func get_input_name(input: Int64) -> String {
+    public func get_input_name(input: Int64) -> godot.String {
         withUnsafePointer(to: input) { input_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
@@ -298,14 +300,13 @@ public class AnimationNode : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_input_name_844755477,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
         }
     }
     public func get_input_count() -> Int64 {
@@ -323,10 +324,10 @@ public class AnimationNode : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
-    public func find_input(name: String) -> Int64 {
-        withUnsafePointer(to: name) { name_native in
+    public func find_input(name: godot.String) -> Int64 {
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -341,8 +342,7 @@ public class AnimationNode : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
-        }
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_filter_path(path: NodePath, enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -377,7 +377,7 @@ public class AnimationNode : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_filter_enabled(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -410,7 +410,7 @@ public class AnimationNode : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func blend_animation(animation: StringName, time: Float64, delta: Float64, seeked: UInt8, is_external_seeking: UInt8, blend: Float64, looped_flag: Animation.LoopedFlag)  {
         withUnsafePointer(to: blend) { blend_native in
@@ -462,7 +462,7 @@ public class AnimationNode : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
         }
         }
@@ -492,7 +492,7 @@ public class AnimationNode : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
         }
         }
@@ -532,6 +532,6 @@ public class AnimationNode : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
     }
 }

@@ -11,7 +11,7 @@ fileprivate var __godot_name_VisibleOnScreenEnabler3D: StringName! = nil
 /// [b]Note:[/b] VisibleOnScreenEnabler3D uses an approximate heuristic for performance reasons. It doesn't take walls and other occlusion into account. The heuristic is an implementation detail and may change in future versions. If you need precise visibility checking, use another method such as adding an [Area3D] node as a child of a [Camera3D] node and/or [method Vector3.dot].
 ///  
 /// [b]Note:[/b] VisibleOnScreenEnabler3D will not affect nodes added after scene initialization.
-public class VisibleOnScreenEnabler3D : VisibleOnScreenNotifier3D {
+open class VisibleOnScreenEnabler3D : VisibleOnScreenNotifier3D {
 
     public enum EnableMode : Int32 {
         case ENABLE_MODE_INHERIT = 0
@@ -26,20 +26,25 @@ public class VisibleOnScreenEnabler3D : VisibleOnScreenNotifier3D {
     static var _method_set_enable_node_path_1348162250: GDExtensionMethodBindPtr! = nil
     static var _method_get_enable_node_path_277076166: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisibleOnScreenEnabler3D = StringName(from: "VisibleOnScreenEnabler3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_enable_mode_320303646_name = StringName(from: "set_enable_mode")
-        self._method_set_enable_mode_320303646 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_enable_mode_320303646_name._native_ptr(), 320303646)
+        self._method_set_enable_mode_320303646 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisibleOnScreenEnabler3D._native_ptr(), _method_set_enable_mode_320303646_name._native_ptr(), 320303646)
         assert(VisibleOnScreenEnabler3D._method_set_enable_mode_320303646 != nil)
         let _method_get_enable_mode_3352990031_name = StringName(from: "get_enable_mode")
-        self._method_get_enable_mode_3352990031 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_enable_mode_3352990031_name._native_ptr(), 3352990031)
+        self._method_get_enable_mode_3352990031 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisibleOnScreenEnabler3D._native_ptr(), _method_get_enable_mode_3352990031_name._native_ptr(), 3352990031)
         assert(VisibleOnScreenEnabler3D._method_get_enable_mode_3352990031 != nil)
         let _method_set_enable_node_path_1348162250_name = StringName(from: "set_enable_node_path")
-        self._method_set_enable_node_path_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_enable_node_path_1348162250_name._native_ptr(), 1348162250)
+        self._method_set_enable_node_path_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisibleOnScreenEnabler3D._native_ptr(), _method_set_enable_node_path_1348162250_name._native_ptr(), 1348162250)
         assert(VisibleOnScreenEnabler3D._method_set_enable_node_path_1348162250 != nil)
         let _method_get_enable_node_path_277076166_name = StringName(from: "get_enable_node_path")
-        self._method_get_enable_node_path_277076166 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_enable_node_path_277076166_name._native_ptr(), 277076166)
+        self._method_get_enable_node_path_277076166 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisibleOnScreenEnabler3D._native_ptr(), _method_get_enable_node_path_277076166_name._native_ptr(), 277076166)
         assert(VisibleOnScreenEnabler3D._method_get_enable_node_path_277076166 != nil)
     }
 
@@ -73,7 +78,7 @@ public class VisibleOnScreenEnabler3D : VisibleOnScreenNotifier3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return VisibleOnScreenEnabler3D.EnableMode(from: __resPtr.pointee)
+            return VisibleOnScreenEnabler3D.EnableMode(godot: __resPtr.pointee)
     }
     public func set_enable_node_path(path: NodePath)  {
         let path_native = path._native_ptr()
@@ -104,6 +109,6 @@ public class VisibleOnScreenEnabler3D : VisibleOnScreenNotifier3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return NodePath(from: __resPtr.pointee)
+            return NodePath(godot: __resPtr.pointee)
     }
 }

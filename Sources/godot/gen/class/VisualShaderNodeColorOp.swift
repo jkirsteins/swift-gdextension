@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeColorOp: StringName! = nil
 /// A [Color] operator to be used within the visual shader graph.
 /// 
 /// Applies [member operator] to two color inputs.
-public class VisualShaderNodeColorOp : VisualShaderNode {
+open class VisualShaderNodeColorOp : VisualShaderNode {
 
     public enum Operator : Int32 {
         case OP_SCREEN = 0
@@ -25,14 +25,19 @@ public class VisualShaderNodeColorOp : VisualShaderNode {
     static var _method_set_operator_4260370673: GDExtensionMethodBindPtr! = nil
     static var _method_get_operator_1950956529: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeColorOp = StringName(from: "VisualShaderNodeColorOp")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_operator_4260370673_name = StringName(from: "set_operator")
-        self._method_set_operator_4260370673 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_operator_4260370673_name._native_ptr(), 4260370673)
+        self._method_set_operator_4260370673 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeColorOp._native_ptr(), _method_set_operator_4260370673_name._native_ptr(), 4260370673)
         assert(VisualShaderNodeColorOp._method_set_operator_4260370673 != nil)
         let _method_get_operator_1950956529_name = StringName(from: "get_operator")
-        self._method_get_operator_1950956529 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_operator_1950956529_name._native_ptr(), 1950956529)
+        self._method_get_operator_1950956529 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeColorOp._native_ptr(), _method_get_operator_1950956529_name._native_ptr(), 1950956529)
         assert(VisualShaderNodeColorOp._method_get_operator_1950956529 != nil)
     }
 
@@ -66,6 +71,6 @@ public class VisualShaderNodeColorOp : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return VisualShaderNodeColorOp.Operator(from: __resPtr.pointee)
+            return VisualShaderNodeColorOp.Operator(godot: __resPtr.pointee)
     }
 }

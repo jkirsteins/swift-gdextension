@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeTexture3D: StringName! = nil
 /// Performs a 3D texture lookup within the visual shader graph.
 /// 
 /// Performs a lookup operation on the provided texture, with support for multiple texture sources to choose from.
-public class VisualShaderNodeTexture3D : VisualShaderNodeSample3D {
+open class VisualShaderNodeTexture3D : VisualShaderNodeSample3D {
 
     
 
@@ -14,14 +14,19 @@ public class VisualShaderNodeTexture3D : VisualShaderNodeSample3D {
     static var _method_set_texture_1188404210: GDExtensionMethodBindPtr! = nil
     static var _method_get_texture_373985333: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeTexture3D = StringName(from: "VisualShaderNodeTexture3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_texture_1188404210_name = StringName(from: "set_texture")
-        self._method_set_texture_1188404210 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_texture_1188404210_name._native_ptr(), 1188404210)
+        self._method_set_texture_1188404210 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTexture3D._native_ptr(), _method_set_texture_1188404210_name._native_ptr(), 1188404210)
         assert(VisualShaderNodeTexture3D._method_set_texture_1188404210 != nil)
         let _method_get_texture_373985333_name = StringName(from: "get_texture")
-        self._method_get_texture_373985333 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_texture_373985333_name._native_ptr(), 373985333)
+        self._method_get_texture_373985333 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTexture3D._native_ptr(), _method_get_texture_373985333_name._native_ptr(), 373985333)
         assert(VisualShaderNodeTexture3D._method_get_texture_373985333 != nil)
     }
 
@@ -54,6 +59,6 @@ public class VisualShaderNodeTexture3D : VisualShaderNodeSample3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture3D(from: __resPtr.pointee)
+            return Texture3D(godot: __resPtr.pointee)
     }
 }

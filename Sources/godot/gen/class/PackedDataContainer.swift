@@ -5,7 +5,7 @@ fileprivate var __godot_name_PackedDataContainer: StringName! = nil
 /// 
 /// 
 /// 
-public class PackedDataContainer : Resource {
+open class PackedDataContainer : Resource {
 
     
 
@@ -14,14 +14,19 @@ public class PackedDataContainer : Resource {
     static var _method_pack_966674026: GDExtensionMethodBindPtr! = nil
     static var _method_size_3905245786: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PackedDataContainer = StringName(from: "PackedDataContainer")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_pack_966674026_name = StringName(from: "pack")
-        self._method_pack_966674026 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_pack_966674026_name._native_ptr(), 966674026)
+        self._method_pack_966674026 = self.interface.pointee.classdb_get_method_bind(__godot_name_PackedDataContainer._native_ptr(), _method_pack_966674026_name._native_ptr(), 966674026)
         assert(PackedDataContainer._method_pack_966674026 != nil)
         let _method_size_3905245786_name = StringName(from: "size")
-        self._method_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_size_3905245786_name._native_ptr(), 3905245786)
+        self._method_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_PackedDataContainer._native_ptr(), _method_size_3905245786_name._native_ptr(), 3905245786)
         assert(PackedDataContainer._method_size_3905245786 != nil)
     }
 
@@ -40,7 +45,7 @@ public class PackedDataContainer : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func size() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -57,6 +62,6 @@ public class PackedDataContainer : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
 }

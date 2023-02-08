@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeVec4Parameter: StringName! = nil
 /// A 4D vector parameter to be used within the visual shader graph.
 /// 
 /// Translated to [code]uniform vec4[/code] in the shader language.
-public class VisualShaderNodeVec4Parameter : VisualShaderNodeParameter {
+open class VisualShaderNodeVec4Parameter : VisualShaderNodeParameter {
 
     
 
@@ -16,20 +16,25 @@ public class VisualShaderNodeVec4Parameter : VisualShaderNodeParameter {
     static var _method_set_default_value_643568085: GDExtensionMethodBindPtr! = nil
     static var _method_get_default_value_2435802345: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeVec4Parameter = StringName(from: "VisualShaderNodeVec4Parameter")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_default_value_enabled_2586408642_name = StringName(from: "set_default_value_enabled")
-        self._method_set_default_value_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_default_value_enabled_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_default_value_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeVec4Parameter._native_ptr(), _method_set_default_value_enabled_2586408642_name._native_ptr(), 2586408642)
         assert(VisualShaderNodeVec4Parameter._method_set_default_value_enabled_2586408642 != nil)
         let _method_is_default_value_enabled_36873697_name = StringName(from: "is_default_value_enabled")
-        self._method_is_default_value_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_default_value_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_default_value_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeVec4Parameter._native_ptr(), _method_is_default_value_enabled_36873697_name._native_ptr(), 36873697)
         assert(VisualShaderNodeVec4Parameter._method_is_default_value_enabled_36873697 != nil)
         let _method_set_default_value_643568085_name = StringName(from: "set_default_value")
-        self._method_set_default_value_643568085 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_default_value_643568085_name._native_ptr(), 643568085)
+        self._method_set_default_value_643568085 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeVec4Parameter._native_ptr(), _method_set_default_value_643568085_name._native_ptr(), 643568085)
         assert(VisualShaderNodeVec4Parameter._method_set_default_value_643568085 != nil)
         let _method_get_default_value_2435802345_name = StringName(from: "get_default_value")
-        self._method_get_default_value_2435802345 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_default_value_2435802345_name._native_ptr(), 2435802345)
+        self._method_get_default_value_2435802345 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeVec4Parameter._native_ptr(), _method_get_default_value_2435802345_name._native_ptr(), 2435802345)
         assert(VisualShaderNodeVec4Parameter._method_get_default_value_2435802345 != nil)
     }
 
@@ -64,7 +69,7 @@ public class VisualShaderNodeVec4Parameter : VisualShaderNodeParameter {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_default_value(value: Vector4)  {
         let value_native = value._native_ptr()
@@ -95,6 +100,6 @@ public class VisualShaderNodeVec4Parameter : VisualShaderNodeParameter {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector4(from: __resPtr.pointee)
+            return Vector4(godot: __resPtr.pointee)
     }
 }

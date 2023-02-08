@@ -7,7 +7,7 @@ fileprivate var __godot_name_AudioEffectSpectrumAnalyzer: StringName! = nil
 /// This audio effect does not affect sound output, but can be used for real-time audio visualizations.
 ///  
 /// See also [AudioStreamGenerator] for procedurally generating sounds.
-public class AudioEffectSpectrumAnalyzer : AudioEffect {
+open class AudioEffectSpectrumAnalyzer : AudioEffect {
 
     public enum FFTSize : Int32 {
         case FFT_SIZE_256 = 0
@@ -27,26 +27,31 @@ public class AudioEffectSpectrumAnalyzer : AudioEffect {
     static var _method_set_fft_size_1202879215: GDExtensionMethodBindPtr! = nil
     static var _method_get_fft_size_3925405343: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AudioEffectSpectrumAnalyzer = StringName(from: "AudioEffectSpectrumAnalyzer")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_buffer_length_373806689_name = StringName(from: "set_buffer_length")
-        self._method_set_buffer_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_buffer_length_373806689_name._native_ptr(), 373806689)
+        self._method_set_buffer_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectSpectrumAnalyzer._native_ptr(), _method_set_buffer_length_373806689_name._native_ptr(), 373806689)
         assert(AudioEffectSpectrumAnalyzer._method_set_buffer_length_373806689 != nil)
         let _method_get_buffer_length_1740695150_name = StringName(from: "get_buffer_length")
-        self._method_get_buffer_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_buffer_length_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_buffer_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectSpectrumAnalyzer._native_ptr(), _method_get_buffer_length_1740695150_name._native_ptr(), 1740695150)
         assert(AudioEffectSpectrumAnalyzer._method_get_buffer_length_1740695150 != nil)
         let _method_set_tap_back_pos_373806689_name = StringName(from: "set_tap_back_pos")
-        self._method_set_tap_back_pos_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_tap_back_pos_373806689_name._native_ptr(), 373806689)
+        self._method_set_tap_back_pos_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectSpectrumAnalyzer._native_ptr(), _method_set_tap_back_pos_373806689_name._native_ptr(), 373806689)
         assert(AudioEffectSpectrumAnalyzer._method_set_tap_back_pos_373806689 != nil)
         let _method_get_tap_back_pos_1740695150_name = StringName(from: "get_tap_back_pos")
-        self._method_get_tap_back_pos_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_tap_back_pos_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_tap_back_pos_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectSpectrumAnalyzer._native_ptr(), _method_get_tap_back_pos_1740695150_name._native_ptr(), 1740695150)
         assert(AudioEffectSpectrumAnalyzer._method_get_tap_back_pos_1740695150 != nil)
         let _method_set_fft_size_1202879215_name = StringName(from: "set_fft_size")
-        self._method_set_fft_size_1202879215 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_fft_size_1202879215_name._native_ptr(), 1202879215)
+        self._method_set_fft_size_1202879215 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectSpectrumAnalyzer._native_ptr(), _method_set_fft_size_1202879215_name._native_ptr(), 1202879215)
         assert(AudioEffectSpectrumAnalyzer._method_set_fft_size_1202879215 != nil)
         let _method_get_fft_size_3925405343_name = StringName(from: "get_fft_size")
-        self._method_get_fft_size_3925405343 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_fft_size_3925405343_name._native_ptr(), 3925405343)
+        self._method_get_fft_size_3925405343 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectSpectrumAnalyzer._native_ptr(), _method_get_fft_size_3925405343_name._native_ptr(), 3925405343)
         assert(AudioEffectSpectrumAnalyzer._method_get_fft_size_3925405343 != nil)
     }
 
@@ -81,7 +86,7 @@ public class AudioEffectSpectrumAnalyzer : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_tap_back_pos(seconds: Float64)  {
         withUnsafePointer(to: seconds) { seconds_native in
@@ -114,7 +119,7 @@ public class AudioEffectSpectrumAnalyzer : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_fft_size(size: AudioEffectSpectrumAnalyzer.FFTSize)  {
         withUnsafePointer(to: size.rawValue) { size_native in
@@ -146,6 +151,6 @@ public class AudioEffectSpectrumAnalyzer : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return AudioEffectSpectrumAnalyzer.FFTSize(from: __resPtr.pointee)
+            return AudioEffectSpectrumAnalyzer.FFTSize(godot: __resPtr.pointee)
     }
 }

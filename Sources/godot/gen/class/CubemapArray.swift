@@ -13,7 +13,7 @@ fileprivate var __godot_name_CubemapArray: StringName! = nil
 /// To create such a texture file yourself, reimport your image files using the Godot Editor import presets.
 ///  
 /// [b]Note:[/b] [CubemapArray] is not supported in the OpenGL 3 rendering backend.
-public class CubemapArray : ImageTextureLayered {
+open class CubemapArray : ImageTextureLayered {
 
     
 
@@ -21,11 +21,16 @@ public class CubemapArray : ImageTextureLayered {
 
     static var _method_create_placeholder_121922552: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_CubemapArray = StringName(from: "CubemapArray")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_create_placeholder_121922552_name = StringName(from: "create_placeholder")
-        self._method_create_placeholder_121922552 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_placeholder_121922552_name._native_ptr(), 121922552)
+        self._method_create_placeholder_121922552 = self.interface.pointee.classdb_get_method_bind(__godot_name_CubemapArray._native_ptr(), _method_create_placeholder_121922552_name._native_ptr(), 121922552)
         assert(CubemapArray._method_create_placeholder_121922552 != nil)
     }
 
@@ -43,6 +48,6 @@ public class CubemapArray : ImageTextureLayered {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Resource(from: __resPtr.pointee)
+            return Resource(godot: __resPtr.pointee)
     }
 }

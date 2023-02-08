@@ -5,7 +5,7 @@ fileprivate var __godot_name_AudioEffectSpectrumAnalyzerInstance: StringName! = 
 /// 
 /// 
 /// 
-public class AudioEffectSpectrumAnalyzerInstance : AudioEffectInstance {
+open class AudioEffectSpectrumAnalyzerInstance : AudioEffectInstance {
 
     public enum MagnitudeMode : Int32 {
         case MAGNITUDE_AVERAGE = 0
@@ -16,11 +16,16 @@ public class AudioEffectSpectrumAnalyzerInstance : AudioEffectInstance {
 
     static var _method_get_magnitude_for_frequency_range_2693213071: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AudioEffectSpectrumAnalyzerInstance = StringName(from: "AudioEffectSpectrumAnalyzerInstance")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_get_magnitude_for_frequency_range_2693213071_name = StringName(from: "get_magnitude_for_frequency_range")
-        self._method_get_magnitude_for_frequency_range_2693213071 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_magnitude_for_frequency_range_2693213071_name._native_ptr(), 2693213071)
+        self._method_get_magnitude_for_frequency_range_2693213071 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectSpectrumAnalyzerInstance._native_ptr(), _method_get_magnitude_for_frequency_range_2693213071_name._native_ptr(), 2693213071)
         assert(AudioEffectSpectrumAnalyzerInstance._method_get_magnitude_for_frequency_range_2693213071 != nil)
     }
 
@@ -41,7 +46,7 @@ public class AudioEffectSpectrumAnalyzerInstance : AudioEffectInstance {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
         }
         }

@@ -13,7 +13,7 @@ fileprivate var __godot_name_RenderingDevice: StringName! = nil
 /// [b]Local RenderingDevices:[/b] Using [method RenderingServer.create_local_rendering_device], you can create "secondary" rendering devices to perform drawing and GPU compute operations on separate threads.
 ///  
 /// [b]Note:[/b] [RenderingDevice] is not available when running in headless mode or when using the OpenGL renderer.
-public class RenderingDevice : Object {
+open class RenderingDevice : Object {
 
     public enum DeviceType : Int32 {
         case DEVICE_TYPE_OTHER = 0
@@ -657,281 +657,286 @@ public class RenderingDevice : Object {
     static var _method_get_memory_usage_251690689: GDExtensionMethodBindPtr! = nil
     static var _method_get_driver_resource_501815484: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_RenderingDevice = StringName(from: "RenderingDevice")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_texture_create_3011278298_name = StringName(from: "texture_create")
-        self._method_texture_create_3011278298 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_texture_create_3011278298_name._native_ptr(), 3011278298)
+        self._method_texture_create_3011278298 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_texture_create_3011278298_name._native_ptr(), 3011278298)
         assert(RenderingDevice._method_texture_create_3011278298 != nil)
         let _method_texture_create_shared_3178156134_name = StringName(from: "texture_create_shared")
-        self._method_texture_create_shared_3178156134 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_texture_create_shared_3178156134_name._native_ptr(), 3178156134)
+        self._method_texture_create_shared_3178156134 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_texture_create_shared_3178156134_name._native_ptr(), 3178156134)
         assert(RenderingDevice._method_texture_create_shared_3178156134 != nil)
         let _method_texture_create_shared_from_slice_864132525_name = StringName(from: "texture_create_shared_from_slice")
-        self._method_texture_create_shared_from_slice_864132525 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_texture_create_shared_from_slice_864132525_name._native_ptr(), 864132525)
+        self._method_texture_create_shared_from_slice_864132525 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_texture_create_shared_from_slice_864132525_name._native_ptr(), 864132525)
         assert(RenderingDevice._method_texture_create_shared_from_slice_864132525 != nil)
         let _method_texture_update_2736912341_name = StringName(from: "texture_update")
-        self._method_texture_update_2736912341 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_texture_update_2736912341_name._native_ptr(), 2736912341)
+        self._method_texture_update_2736912341 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_texture_update_2736912341_name._native_ptr(), 2736912341)
         assert(RenderingDevice._method_texture_update_2736912341 != nil)
         let _method_texture_get_data_1859412099_name = StringName(from: "texture_get_data")
-        self._method_texture_get_data_1859412099 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_texture_get_data_1859412099_name._native_ptr(), 1859412099)
+        self._method_texture_get_data_1859412099 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_texture_get_data_1859412099_name._native_ptr(), 1859412099)
         assert(RenderingDevice._method_texture_get_data_1859412099 != nil)
         let _method_texture_is_format_supported_for_usage_2592520478_name = StringName(from: "texture_is_format_supported_for_usage")
-        self._method_texture_is_format_supported_for_usage_2592520478 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_texture_is_format_supported_for_usage_2592520478_name._native_ptr(), 2592520478)
+        self._method_texture_is_format_supported_for_usage_2592520478 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_texture_is_format_supported_for_usage_2592520478_name._native_ptr(), 2592520478)
         assert(RenderingDevice._method_texture_is_format_supported_for_usage_2592520478 != nil)
         let _method_texture_is_shared_3521089500_name = StringName(from: "texture_is_shared")
-        self._method_texture_is_shared_3521089500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_texture_is_shared_3521089500_name._native_ptr(), 3521089500)
+        self._method_texture_is_shared_3521089500 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_texture_is_shared_3521089500_name._native_ptr(), 3521089500)
         assert(RenderingDevice._method_texture_is_shared_3521089500 != nil)
         let _method_texture_is_valid_3521089500_name = StringName(from: "texture_is_valid")
-        self._method_texture_is_valid_3521089500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_texture_is_valid_3521089500_name._native_ptr(), 3521089500)
+        self._method_texture_is_valid_3521089500 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_texture_is_valid_3521089500_name._native_ptr(), 3521089500)
         assert(RenderingDevice._method_texture_is_valid_3521089500 != nil)
         let _method_texture_copy_3741367532_name = StringName(from: "texture_copy")
-        self._method_texture_copy_3741367532 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_texture_copy_3741367532_name._native_ptr(), 3741367532)
+        self._method_texture_copy_3741367532 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_texture_copy_3741367532_name._native_ptr(), 3741367532)
         assert(RenderingDevice._method_texture_copy_3741367532 != nil)
         let _method_texture_clear_3423681478_name = StringName(from: "texture_clear")
-        self._method_texture_clear_3423681478 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_texture_clear_3423681478_name._native_ptr(), 3423681478)
+        self._method_texture_clear_3423681478 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_texture_clear_3423681478_name._native_ptr(), 3423681478)
         assert(RenderingDevice._method_texture_clear_3423681478 != nil)
         let _method_texture_resolve_multisample_2126834943_name = StringName(from: "texture_resolve_multisample")
-        self._method_texture_resolve_multisample_2126834943 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_texture_resolve_multisample_2126834943_name._native_ptr(), 2126834943)
+        self._method_texture_resolve_multisample_2126834943 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_texture_resolve_multisample_2126834943_name._native_ptr(), 2126834943)
         assert(RenderingDevice._method_texture_resolve_multisample_2126834943 != nil)
         let _method_framebuffer_format_create_2635475316_name = StringName(from: "framebuffer_format_create")
-        self._method_framebuffer_format_create_2635475316 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_framebuffer_format_create_2635475316_name._native_ptr(), 2635475316)
+        self._method_framebuffer_format_create_2635475316 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_framebuffer_format_create_2635475316_name._native_ptr(), 2635475316)
         assert(RenderingDevice._method_framebuffer_format_create_2635475316 != nil)
         let _method_framebuffer_format_create_multipass_1992489524_name = StringName(from: "framebuffer_format_create_multipass")
-        self._method_framebuffer_format_create_multipass_1992489524 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_framebuffer_format_create_multipass_1992489524_name._native_ptr(), 1992489524)
+        self._method_framebuffer_format_create_multipass_1992489524 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_framebuffer_format_create_multipass_1992489524_name._native_ptr(), 1992489524)
         assert(RenderingDevice._method_framebuffer_format_create_multipass_1992489524 != nil)
         let _method_framebuffer_format_create_empty_555930169_name = StringName(from: "framebuffer_format_create_empty")
-        self._method_framebuffer_format_create_empty_555930169 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_framebuffer_format_create_empty_555930169_name._native_ptr(), 555930169)
+        self._method_framebuffer_format_create_empty_555930169 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_framebuffer_format_create_empty_555930169_name._native_ptr(), 555930169)
         assert(RenderingDevice._method_framebuffer_format_create_empty_555930169 != nil)
         let _method_framebuffer_format_get_texture_samples_1036806638_name = StringName(from: "framebuffer_format_get_texture_samples")
-        self._method_framebuffer_format_get_texture_samples_1036806638 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_framebuffer_format_get_texture_samples_1036806638_name._native_ptr(), 1036806638)
+        self._method_framebuffer_format_get_texture_samples_1036806638 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_framebuffer_format_get_texture_samples_1036806638_name._native_ptr(), 1036806638)
         assert(RenderingDevice._method_framebuffer_format_get_texture_samples_1036806638 != nil)
         let _method_framebuffer_create_1884747791_name = StringName(from: "framebuffer_create")
-        self._method_framebuffer_create_1884747791 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_framebuffer_create_1884747791_name._native_ptr(), 1884747791)
+        self._method_framebuffer_create_1884747791 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_framebuffer_create_1884747791_name._native_ptr(), 1884747791)
         assert(RenderingDevice._method_framebuffer_create_1884747791 != nil)
         let _method_framebuffer_create_multipass_452534725_name = StringName(from: "framebuffer_create_multipass")
-        self._method_framebuffer_create_multipass_452534725 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_framebuffer_create_multipass_452534725_name._native_ptr(), 452534725)
+        self._method_framebuffer_create_multipass_452534725 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_framebuffer_create_multipass_452534725_name._native_ptr(), 452534725)
         assert(RenderingDevice._method_framebuffer_create_multipass_452534725 != nil)
         let _method_framebuffer_create_empty_382373098_name = StringName(from: "framebuffer_create_empty")
-        self._method_framebuffer_create_empty_382373098 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_framebuffer_create_empty_382373098_name._native_ptr(), 382373098)
+        self._method_framebuffer_create_empty_382373098 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_framebuffer_create_empty_382373098_name._native_ptr(), 382373098)
         assert(RenderingDevice._method_framebuffer_create_empty_382373098 != nil)
         let _method_framebuffer_get_format_3917799429_name = StringName(from: "framebuffer_get_format")
-        self._method_framebuffer_get_format_3917799429 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_framebuffer_get_format_3917799429_name._native_ptr(), 3917799429)
+        self._method_framebuffer_get_format_3917799429 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_framebuffer_get_format_3917799429_name._native_ptr(), 3917799429)
         assert(RenderingDevice._method_framebuffer_get_format_3917799429 != nil)
         let _method_framebuffer_is_valid_4155700596_name = StringName(from: "framebuffer_is_valid")
-        self._method_framebuffer_is_valid_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_framebuffer_is_valid_4155700596_name._native_ptr(), 4155700596)
+        self._method_framebuffer_is_valid_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_framebuffer_is_valid_4155700596_name._native_ptr(), 4155700596)
         assert(RenderingDevice._method_framebuffer_is_valid_4155700596 != nil)
         let _method_sampler_create_2327892535_name = StringName(from: "sampler_create")
-        self._method_sampler_create_2327892535 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_sampler_create_2327892535_name._native_ptr(), 2327892535)
+        self._method_sampler_create_2327892535 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_sampler_create_2327892535_name._native_ptr(), 2327892535)
         assert(RenderingDevice._method_sampler_create_2327892535 != nil)
         let _method_vertex_buffer_create_3491282828_name = StringName(from: "vertex_buffer_create")
-        self._method_vertex_buffer_create_3491282828 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_vertex_buffer_create_3491282828_name._native_ptr(), 3491282828)
+        self._method_vertex_buffer_create_3491282828 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_vertex_buffer_create_3491282828_name._native_ptr(), 3491282828)
         assert(RenderingDevice._method_vertex_buffer_create_3491282828 != nil)
         let _method_vertex_format_create_1242678479_name = StringName(from: "vertex_format_create")
-        self._method_vertex_format_create_1242678479 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_vertex_format_create_1242678479_name._native_ptr(), 1242678479)
+        self._method_vertex_format_create_1242678479 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_vertex_format_create_1242678479_name._native_ptr(), 1242678479)
         assert(RenderingDevice._method_vertex_format_create_1242678479 != nil)
         let _method_vertex_array_create_3137892244_name = StringName(from: "vertex_array_create")
-        self._method_vertex_array_create_3137892244 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_vertex_array_create_3137892244_name._native_ptr(), 3137892244)
+        self._method_vertex_array_create_3137892244 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_vertex_array_create_3137892244_name._native_ptr(), 3137892244)
         assert(RenderingDevice._method_vertex_array_create_3137892244 != nil)
         let _method_index_buffer_create_975915977_name = StringName(from: "index_buffer_create")
-        self._method_index_buffer_create_975915977 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_index_buffer_create_975915977_name._native_ptr(), 975915977)
+        self._method_index_buffer_create_975915977 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_index_buffer_create_975915977_name._native_ptr(), 975915977)
         assert(RenderingDevice._method_index_buffer_create_975915977 != nil)
         let _method_index_array_create_2256026069_name = StringName(from: "index_array_create")
-        self._method_index_array_create_2256026069 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_index_array_create_2256026069_name._native_ptr(), 2256026069)
+        self._method_index_array_create_2256026069 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_index_array_create_2256026069_name._native_ptr(), 2256026069)
         assert(RenderingDevice._method_index_array_create_2256026069 != nil)
         let _method_shader_compile_spirv_from_source_3459523685_name = StringName(from: "shader_compile_spirv_from_source")
-        self._method_shader_compile_spirv_from_source_3459523685 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_shader_compile_spirv_from_source_3459523685_name._native_ptr(), 3459523685)
+        self._method_shader_compile_spirv_from_source_3459523685 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_shader_compile_spirv_from_source_3459523685_name._native_ptr(), 3459523685)
         assert(RenderingDevice._method_shader_compile_spirv_from_source_3459523685 != nil)
         let _method_shader_compile_binary_from_spirv_1395027180_name = StringName(from: "shader_compile_binary_from_spirv")
-        self._method_shader_compile_binary_from_spirv_1395027180 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_shader_compile_binary_from_spirv_1395027180_name._native_ptr(), 1395027180)
+        self._method_shader_compile_binary_from_spirv_1395027180 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_shader_compile_binary_from_spirv_1395027180_name._native_ptr(), 1395027180)
         assert(RenderingDevice._method_shader_compile_binary_from_spirv_1395027180 != nil)
         let _method_shader_create_from_spirv_3297482566_name = StringName(from: "shader_create_from_spirv")
-        self._method_shader_create_from_spirv_3297482566 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_shader_create_from_spirv_3297482566_name._native_ptr(), 3297482566)
+        self._method_shader_create_from_spirv_3297482566 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_shader_create_from_spirv_3297482566_name._native_ptr(), 3297482566)
         assert(RenderingDevice._method_shader_create_from_spirv_3297482566 != nil)
         let _method_shader_create_from_bytecode_3049171473_name = StringName(from: "shader_create_from_bytecode")
-        self._method_shader_create_from_bytecode_3049171473 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_shader_create_from_bytecode_3049171473_name._native_ptr(), 3049171473)
+        self._method_shader_create_from_bytecode_3049171473 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_shader_create_from_bytecode_3049171473_name._native_ptr(), 3049171473)
         assert(RenderingDevice._method_shader_create_from_bytecode_3049171473 != nil)
         let _method_shader_get_vertex_input_attribute_mask_3917799429_name = StringName(from: "shader_get_vertex_input_attribute_mask")
-        self._method_shader_get_vertex_input_attribute_mask_3917799429 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_shader_get_vertex_input_attribute_mask_3917799429_name._native_ptr(), 3917799429)
+        self._method_shader_get_vertex_input_attribute_mask_3917799429 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_shader_get_vertex_input_attribute_mask_3917799429_name._native_ptr(), 3917799429)
         assert(RenderingDevice._method_shader_get_vertex_input_attribute_mask_3917799429 != nil)
         let _method_uniform_buffer_create_1453158401_name = StringName(from: "uniform_buffer_create")
-        self._method_uniform_buffer_create_1453158401 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_uniform_buffer_create_1453158401_name._native_ptr(), 1453158401)
+        self._method_uniform_buffer_create_1453158401 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_uniform_buffer_create_1453158401_name._native_ptr(), 1453158401)
         assert(RenderingDevice._method_uniform_buffer_create_1453158401 != nil)
         let _method_storage_buffer_create_1173156076_name = StringName(from: "storage_buffer_create")
-        self._method_storage_buffer_create_1173156076 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_storage_buffer_create_1173156076_name._native_ptr(), 1173156076)
+        self._method_storage_buffer_create_1173156076 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_storage_buffer_create_1173156076_name._native_ptr(), 1173156076)
         assert(RenderingDevice._method_storage_buffer_create_1173156076 != nil)
         let _method_texture_buffer_create_2344087557_name = StringName(from: "texture_buffer_create")
-        self._method_texture_buffer_create_2344087557 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_texture_buffer_create_2344087557_name._native_ptr(), 2344087557)
+        self._method_texture_buffer_create_2344087557 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_texture_buffer_create_2344087557_name._native_ptr(), 2344087557)
         assert(RenderingDevice._method_texture_buffer_create_2344087557 != nil)
         let _method_uniform_set_create_2280795797_name = StringName(from: "uniform_set_create")
-        self._method_uniform_set_create_2280795797 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_uniform_set_create_2280795797_name._native_ptr(), 2280795797)
+        self._method_uniform_set_create_2280795797 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_uniform_set_create_2280795797_name._native_ptr(), 2280795797)
         assert(RenderingDevice._method_uniform_set_create_2280795797 != nil)
         let _method_uniform_set_is_valid_3521089500_name = StringName(from: "uniform_set_is_valid")
-        self._method_uniform_set_is_valid_3521089500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_uniform_set_is_valid_3521089500_name._native_ptr(), 3521089500)
+        self._method_uniform_set_is_valid_3521089500 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_uniform_set_is_valid_3521089500_name._native_ptr(), 3521089500)
         assert(RenderingDevice._method_uniform_set_is_valid_3521089500 != nil)
         let _method_buffer_update_652628289_name = StringName(from: "buffer_update")
-        self._method_buffer_update_652628289 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_buffer_update_652628289_name._native_ptr(), 652628289)
+        self._method_buffer_update_652628289 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_buffer_update_652628289_name._native_ptr(), 652628289)
         assert(RenderingDevice._method_buffer_update_652628289 != nil)
         let _method_buffer_clear_1645170096_name = StringName(from: "buffer_clear")
-        self._method_buffer_clear_1645170096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_buffer_clear_1645170096_name._native_ptr(), 1645170096)
+        self._method_buffer_clear_1645170096 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_buffer_clear_1645170096_name._native_ptr(), 1645170096)
         assert(RenderingDevice._method_buffer_clear_1645170096 != nil)
         let _method_buffer_get_data_1102329001_name = StringName(from: "buffer_get_data")
-        self._method_buffer_get_data_1102329001 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_buffer_get_data_1102329001_name._native_ptr(), 1102329001)
+        self._method_buffer_get_data_1102329001 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_buffer_get_data_1102329001_name._native_ptr(), 1102329001)
         assert(RenderingDevice._method_buffer_get_data_1102329001 != nil)
         let _method_render_pipeline_create_2911419500_name = StringName(from: "render_pipeline_create")
-        self._method_render_pipeline_create_2911419500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_render_pipeline_create_2911419500_name._native_ptr(), 2911419500)
+        self._method_render_pipeline_create_2911419500 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_render_pipeline_create_2911419500_name._native_ptr(), 2911419500)
         assert(RenderingDevice._method_render_pipeline_create_2911419500 != nil)
         let _method_render_pipeline_is_valid_3521089500_name = StringName(from: "render_pipeline_is_valid")
-        self._method_render_pipeline_is_valid_3521089500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_render_pipeline_is_valid_3521089500_name._native_ptr(), 3521089500)
+        self._method_render_pipeline_is_valid_3521089500 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_render_pipeline_is_valid_3521089500_name._native_ptr(), 3521089500)
         assert(RenderingDevice._method_render_pipeline_is_valid_3521089500 != nil)
         let _method_compute_pipeline_create_403593840_name = StringName(from: "compute_pipeline_create")
-        self._method_compute_pipeline_create_403593840 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_compute_pipeline_create_403593840_name._native_ptr(), 403593840)
+        self._method_compute_pipeline_create_403593840 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_compute_pipeline_create_403593840_name._native_ptr(), 403593840)
         assert(RenderingDevice._method_compute_pipeline_create_403593840 != nil)
         let _method_compute_pipeline_is_valid_3521089500_name = StringName(from: "compute_pipeline_is_valid")
-        self._method_compute_pipeline_is_valid_3521089500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_compute_pipeline_is_valid_3521089500_name._native_ptr(), 3521089500)
+        self._method_compute_pipeline_is_valid_3521089500 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_compute_pipeline_is_valid_3521089500_name._native_ptr(), 3521089500)
         assert(RenderingDevice._method_compute_pipeline_is_valid_3521089500 != nil)
         let _method_screen_get_width_1591665591_name = StringName(from: "screen_get_width")
-        self._method_screen_get_width_1591665591 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_screen_get_width_1591665591_name._native_ptr(), 1591665591)
+        self._method_screen_get_width_1591665591 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_screen_get_width_1591665591_name._native_ptr(), 1591665591)
         assert(RenderingDevice._method_screen_get_width_1591665591 != nil)
         let _method_screen_get_height_1591665591_name = StringName(from: "screen_get_height")
-        self._method_screen_get_height_1591665591 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_screen_get_height_1591665591_name._native_ptr(), 1591665591)
+        self._method_screen_get_height_1591665591 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_screen_get_height_1591665591_name._native_ptr(), 1591665591)
         assert(RenderingDevice._method_screen_get_height_1591665591 != nil)
         let _method_screen_get_framebuffer_format_3905245786_name = StringName(from: "screen_get_framebuffer_format")
-        self._method_screen_get_framebuffer_format_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_screen_get_framebuffer_format_3905245786_name._native_ptr(), 3905245786)
+        self._method_screen_get_framebuffer_format_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_screen_get_framebuffer_format_3905245786_name._native_ptr(), 3905245786)
         assert(RenderingDevice._method_screen_get_framebuffer_format_3905245786 != nil)
         let _method_draw_list_begin_for_screen_3988079995_name = StringName(from: "draw_list_begin_for_screen")
-        self._method_draw_list_begin_for_screen_3988079995 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_list_begin_for_screen_3988079995_name._native_ptr(), 3988079995)
+        self._method_draw_list_begin_for_screen_3988079995 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_list_begin_for_screen_3988079995_name._native_ptr(), 3988079995)
         assert(RenderingDevice._method_draw_list_begin_for_screen_3988079995 != nil)
         let _method_draw_list_begin_4252992020_name = StringName(from: "draw_list_begin")
-        self._method_draw_list_begin_4252992020 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_list_begin_4252992020_name._native_ptr(), 4252992020)
+        self._method_draw_list_begin_4252992020 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_list_begin_4252992020_name._native_ptr(), 4252992020)
         assert(RenderingDevice._method_draw_list_begin_4252992020 != nil)
         let _method_draw_list_begin_split_832527510_name = StringName(from: "draw_list_begin_split")
-        self._method_draw_list_begin_split_832527510 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_list_begin_split_832527510_name._native_ptr(), 832527510)
+        self._method_draw_list_begin_split_832527510 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_list_begin_split_832527510_name._native_ptr(), 832527510)
         assert(RenderingDevice._method_draw_list_begin_split_832527510 != nil)
         let _method_draw_list_set_blend_constants_2878471219_name = StringName(from: "draw_list_set_blend_constants")
-        self._method_draw_list_set_blend_constants_2878471219 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_list_set_blend_constants_2878471219_name._native_ptr(), 2878471219)
+        self._method_draw_list_set_blend_constants_2878471219 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_list_set_blend_constants_2878471219_name._native_ptr(), 2878471219)
         assert(RenderingDevice._method_draw_list_set_blend_constants_2878471219 != nil)
         let _method_draw_list_bind_render_pipeline_4040184819_name = StringName(from: "draw_list_bind_render_pipeline")
-        self._method_draw_list_bind_render_pipeline_4040184819 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_list_bind_render_pipeline_4040184819_name._native_ptr(), 4040184819)
+        self._method_draw_list_bind_render_pipeline_4040184819 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_list_bind_render_pipeline_4040184819_name._native_ptr(), 4040184819)
         assert(RenderingDevice._method_draw_list_bind_render_pipeline_4040184819 != nil)
         let _method_draw_list_bind_uniform_set_749655778_name = StringName(from: "draw_list_bind_uniform_set")
-        self._method_draw_list_bind_uniform_set_749655778 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_list_bind_uniform_set_749655778_name._native_ptr(), 749655778)
+        self._method_draw_list_bind_uniform_set_749655778 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_list_bind_uniform_set_749655778_name._native_ptr(), 749655778)
         assert(RenderingDevice._method_draw_list_bind_uniform_set_749655778 != nil)
         let _method_draw_list_bind_vertex_array_4040184819_name = StringName(from: "draw_list_bind_vertex_array")
-        self._method_draw_list_bind_vertex_array_4040184819 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_list_bind_vertex_array_4040184819_name._native_ptr(), 4040184819)
+        self._method_draw_list_bind_vertex_array_4040184819 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_list_bind_vertex_array_4040184819_name._native_ptr(), 4040184819)
         assert(RenderingDevice._method_draw_list_bind_vertex_array_4040184819 != nil)
         let _method_draw_list_bind_index_array_4040184819_name = StringName(from: "draw_list_bind_index_array")
-        self._method_draw_list_bind_index_array_4040184819 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_list_bind_index_array_4040184819_name._native_ptr(), 4040184819)
+        self._method_draw_list_bind_index_array_4040184819 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_list_bind_index_array_4040184819_name._native_ptr(), 4040184819)
         assert(RenderingDevice._method_draw_list_bind_index_array_4040184819 != nil)
         let _method_draw_list_set_push_constant_2772371345_name = StringName(from: "draw_list_set_push_constant")
-        self._method_draw_list_set_push_constant_2772371345 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_list_set_push_constant_2772371345_name._native_ptr(), 2772371345)
+        self._method_draw_list_set_push_constant_2772371345 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_list_set_push_constant_2772371345_name._native_ptr(), 2772371345)
         assert(RenderingDevice._method_draw_list_set_push_constant_2772371345 != nil)
         let _method_draw_list_draw_3710874499_name = StringName(from: "draw_list_draw")
-        self._method_draw_list_draw_3710874499 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_list_draw_3710874499_name._native_ptr(), 3710874499)
+        self._method_draw_list_draw_3710874499 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_list_draw_3710874499_name._native_ptr(), 3710874499)
         assert(RenderingDevice._method_draw_list_draw_3710874499 != nil)
         let _method_draw_list_enable_scissor_338791288_name = StringName(from: "draw_list_enable_scissor")
-        self._method_draw_list_enable_scissor_338791288 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_list_enable_scissor_338791288_name._native_ptr(), 338791288)
+        self._method_draw_list_enable_scissor_338791288 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_list_enable_scissor_338791288_name._native_ptr(), 338791288)
         assert(RenderingDevice._method_draw_list_enable_scissor_338791288 != nil)
         let _method_draw_list_disable_scissor_1286410249_name = StringName(from: "draw_list_disable_scissor")
-        self._method_draw_list_disable_scissor_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_list_disable_scissor_1286410249_name._native_ptr(), 1286410249)
+        self._method_draw_list_disable_scissor_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_list_disable_scissor_1286410249_name._native_ptr(), 1286410249)
         assert(RenderingDevice._method_draw_list_disable_scissor_1286410249 != nil)
         let _method_draw_list_switch_to_next_pass_2455072627_name = StringName(from: "draw_list_switch_to_next_pass")
-        self._method_draw_list_switch_to_next_pass_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_list_switch_to_next_pass_2455072627_name._native_ptr(), 2455072627)
+        self._method_draw_list_switch_to_next_pass_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_list_switch_to_next_pass_2455072627_name._native_ptr(), 2455072627)
         assert(RenderingDevice._method_draw_list_switch_to_next_pass_2455072627 != nil)
         let _method_draw_list_switch_to_next_pass_split_2865087369_name = StringName(from: "draw_list_switch_to_next_pass_split")
-        self._method_draw_list_switch_to_next_pass_split_2865087369 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_list_switch_to_next_pass_split_2865087369_name._native_ptr(), 2865087369)
+        self._method_draw_list_switch_to_next_pass_split_2865087369 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_list_switch_to_next_pass_split_2865087369_name._native_ptr(), 2865087369)
         assert(RenderingDevice._method_draw_list_switch_to_next_pass_split_2865087369 != nil)
         let _method_draw_list_end_422991495_name = StringName(from: "draw_list_end")
-        self._method_draw_list_end_422991495 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_list_end_422991495_name._native_ptr(), 422991495)
+        self._method_draw_list_end_422991495 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_list_end_422991495_name._native_ptr(), 422991495)
         assert(RenderingDevice._method_draw_list_end_422991495 != nil)
         let _method_compute_list_begin_968564752_name = StringName(from: "compute_list_begin")
-        self._method_compute_list_begin_968564752 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_compute_list_begin_968564752_name._native_ptr(), 968564752)
+        self._method_compute_list_begin_968564752 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_compute_list_begin_968564752_name._native_ptr(), 968564752)
         assert(RenderingDevice._method_compute_list_begin_968564752 != nil)
         let _method_compute_list_bind_compute_pipeline_4040184819_name = StringName(from: "compute_list_bind_compute_pipeline")
-        self._method_compute_list_bind_compute_pipeline_4040184819 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_compute_list_bind_compute_pipeline_4040184819_name._native_ptr(), 4040184819)
+        self._method_compute_list_bind_compute_pipeline_4040184819 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_compute_list_bind_compute_pipeline_4040184819_name._native_ptr(), 4040184819)
         assert(RenderingDevice._method_compute_list_bind_compute_pipeline_4040184819 != nil)
         let _method_compute_list_set_push_constant_2772371345_name = StringName(from: "compute_list_set_push_constant")
-        self._method_compute_list_set_push_constant_2772371345 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_compute_list_set_push_constant_2772371345_name._native_ptr(), 2772371345)
+        self._method_compute_list_set_push_constant_2772371345 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_compute_list_set_push_constant_2772371345_name._native_ptr(), 2772371345)
         assert(RenderingDevice._method_compute_list_set_push_constant_2772371345 != nil)
         let _method_compute_list_bind_uniform_set_749655778_name = StringName(from: "compute_list_bind_uniform_set")
-        self._method_compute_list_bind_uniform_set_749655778 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_compute_list_bind_uniform_set_749655778_name._native_ptr(), 749655778)
+        self._method_compute_list_bind_uniform_set_749655778 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_compute_list_bind_uniform_set_749655778_name._native_ptr(), 749655778)
         assert(RenderingDevice._method_compute_list_bind_uniform_set_749655778 != nil)
         let _method_compute_list_dispatch_4275841770_name = StringName(from: "compute_list_dispatch")
-        self._method_compute_list_dispatch_4275841770 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_compute_list_dispatch_4275841770_name._native_ptr(), 4275841770)
+        self._method_compute_list_dispatch_4275841770 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_compute_list_dispatch_4275841770_name._native_ptr(), 4275841770)
         assert(RenderingDevice._method_compute_list_dispatch_4275841770 != nil)
         let _method_compute_list_add_barrier_1286410249_name = StringName(from: "compute_list_add_barrier")
-        self._method_compute_list_add_barrier_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_compute_list_add_barrier_1286410249_name._native_ptr(), 1286410249)
+        self._method_compute_list_add_barrier_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_compute_list_add_barrier_1286410249_name._native_ptr(), 1286410249)
         assert(RenderingDevice._method_compute_list_add_barrier_1286410249 != nil)
         let _method_compute_list_end_422991495_name = StringName(from: "compute_list_end")
-        self._method_compute_list_end_422991495 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_compute_list_end_422991495_name._native_ptr(), 422991495)
+        self._method_compute_list_end_422991495 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_compute_list_end_422991495_name._native_ptr(), 422991495)
         assert(RenderingDevice._method_compute_list_end_422991495 != nil)
         let _method_free_rid_2722037293_name = StringName(from: "free_rid")
-        self._method_free_rid_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_free_rid_2722037293_name._native_ptr(), 2722037293)
+        self._method_free_rid_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_free_rid_2722037293_name._native_ptr(), 2722037293)
         assert(RenderingDevice._method_free_rid_2722037293 != nil)
         let _method_capture_timestamp_83702148_name = StringName(from: "capture_timestamp")
-        self._method_capture_timestamp_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_capture_timestamp_83702148_name._native_ptr(), 83702148)
+        self._method_capture_timestamp_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_capture_timestamp_83702148_name._native_ptr(), 83702148)
         assert(RenderingDevice._method_capture_timestamp_83702148 != nil)
         let _method_get_captured_timestamps_count_3905245786_name = StringName(from: "get_captured_timestamps_count")
-        self._method_get_captured_timestamps_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_captured_timestamps_count_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_captured_timestamps_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_get_captured_timestamps_count_3905245786_name._native_ptr(), 3905245786)
         assert(RenderingDevice._method_get_captured_timestamps_count_3905245786 != nil)
         let _method_get_captured_timestamps_frame_3905245786_name = StringName(from: "get_captured_timestamps_frame")
-        self._method_get_captured_timestamps_frame_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_captured_timestamps_frame_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_captured_timestamps_frame_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_get_captured_timestamps_frame_3905245786_name._native_ptr(), 3905245786)
         assert(RenderingDevice._method_get_captured_timestamps_frame_3905245786 != nil)
         let _method_get_captured_timestamp_gpu_time_923996154_name = StringName(from: "get_captured_timestamp_gpu_time")
-        self._method_get_captured_timestamp_gpu_time_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_captured_timestamp_gpu_time_923996154_name._native_ptr(), 923996154)
+        self._method_get_captured_timestamp_gpu_time_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_get_captured_timestamp_gpu_time_923996154_name._native_ptr(), 923996154)
         assert(RenderingDevice._method_get_captured_timestamp_gpu_time_923996154 != nil)
         let _method_get_captured_timestamp_cpu_time_923996154_name = StringName(from: "get_captured_timestamp_cpu_time")
-        self._method_get_captured_timestamp_cpu_time_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_captured_timestamp_cpu_time_923996154_name._native_ptr(), 923996154)
+        self._method_get_captured_timestamp_cpu_time_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_get_captured_timestamp_cpu_time_923996154_name._native_ptr(), 923996154)
         assert(RenderingDevice._method_get_captured_timestamp_cpu_time_923996154 != nil)
         let _method_get_captured_timestamp_name_844755477_name = StringName(from: "get_captured_timestamp_name")
-        self._method_get_captured_timestamp_name_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_captured_timestamp_name_844755477_name._native_ptr(), 844755477)
+        self._method_get_captured_timestamp_name_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_get_captured_timestamp_name_844755477_name._native_ptr(), 844755477)
         assert(RenderingDevice._method_get_captured_timestamp_name_844755477 != nil)
         let _method_limit_get_1559202131_name = StringName(from: "limit_get")
-        self._method_limit_get_1559202131 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_limit_get_1559202131_name._native_ptr(), 1559202131)
+        self._method_limit_get_1559202131 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_limit_get_1559202131_name._native_ptr(), 1559202131)
         assert(RenderingDevice._method_limit_get_1559202131 != nil)
         let _method_get_frame_delay_3905245786_name = StringName(from: "get_frame_delay")
-        self._method_get_frame_delay_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_frame_delay_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_frame_delay_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_get_frame_delay_3905245786_name._native_ptr(), 3905245786)
         assert(RenderingDevice._method_get_frame_delay_3905245786 != nil)
         let _method_submit_3218959716_name = StringName(from: "submit")
-        self._method_submit_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_submit_3218959716_name._native_ptr(), 3218959716)
+        self._method_submit_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_submit_3218959716_name._native_ptr(), 3218959716)
         assert(RenderingDevice._method_submit_3218959716 != nil)
         let _method_sync_3218959716_name = StringName(from: "sync")
-        self._method_sync_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_sync_3218959716_name._native_ptr(), 3218959716)
+        self._method_sync_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_sync_3218959716_name._native_ptr(), 3218959716)
         assert(RenderingDevice._method_sync_3218959716 != nil)
         let _method_barrier_266666049_name = StringName(from: "barrier")
-        self._method_barrier_266666049 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_barrier_266666049_name._native_ptr(), 266666049)
+        self._method_barrier_266666049 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_barrier_266666049_name._native_ptr(), 266666049)
         assert(RenderingDevice._method_barrier_266666049 != nil)
         let _method_full_barrier_3218959716_name = StringName(from: "full_barrier")
-        self._method_full_barrier_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_full_barrier_3218959716_name._native_ptr(), 3218959716)
+        self._method_full_barrier_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_full_barrier_3218959716_name._native_ptr(), 3218959716)
         assert(RenderingDevice._method_full_barrier_3218959716 != nil)
         let _method_create_local_device_2846302423_name = StringName(from: "create_local_device")
-        self._method_create_local_device_2846302423 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_local_device_2846302423_name._native_ptr(), 2846302423)
+        self._method_create_local_device_2846302423 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_create_local_device_2846302423_name._native_ptr(), 2846302423)
         assert(RenderingDevice._method_create_local_device_2846302423 != nil)
         let _method_set_resource_name_2726140452_name = StringName(from: "set_resource_name")
-        self._method_set_resource_name_2726140452 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_resource_name_2726140452_name._native_ptr(), 2726140452)
+        self._method_set_resource_name_2726140452 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_set_resource_name_2726140452_name._native_ptr(), 2726140452)
         assert(RenderingDevice._method_set_resource_name_2726140452 != nil)
         let _method_draw_command_begin_label_1636512886_name = StringName(from: "draw_command_begin_label")
-        self._method_draw_command_begin_label_1636512886 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_command_begin_label_1636512886_name._native_ptr(), 1636512886)
+        self._method_draw_command_begin_label_1636512886 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_command_begin_label_1636512886_name._native_ptr(), 1636512886)
         assert(RenderingDevice._method_draw_command_begin_label_1636512886 != nil)
         let _method_draw_command_insert_label_1636512886_name = StringName(from: "draw_command_insert_label")
-        self._method_draw_command_insert_label_1636512886 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_command_insert_label_1636512886_name._native_ptr(), 1636512886)
+        self._method_draw_command_insert_label_1636512886 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_command_insert_label_1636512886_name._native_ptr(), 1636512886)
         assert(RenderingDevice._method_draw_command_insert_label_1636512886 != nil)
         let _method_draw_command_end_label_3218959716_name = StringName(from: "draw_command_end_label")
-        self._method_draw_command_end_label_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_draw_command_end_label_3218959716_name._native_ptr(), 3218959716)
+        self._method_draw_command_end_label_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_draw_command_end_label_3218959716_name._native_ptr(), 3218959716)
         assert(RenderingDevice._method_draw_command_end_label_3218959716 != nil)
         let _method_get_device_vendor_name_201670096_name = StringName(from: "get_device_vendor_name")
-        self._method_get_device_vendor_name_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_device_vendor_name_201670096_name._native_ptr(), 201670096)
+        self._method_get_device_vendor_name_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_get_device_vendor_name_201670096_name._native_ptr(), 201670096)
         assert(RenderingDevice._method_get_device_vendor_name_201670096 != nil)
         let _method_get_device_name_201670096_name = StringName(from: "get_device_name")
-        self._method_get_device_name_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_device_name_201670096_name._native_ptr(), 201670096)
+        self._method_get_device_name_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_get_device_name_201670096_name._native_ptr(), 201670096)
         assert(RenderingDevice._method_get_device_name_201670096 != nil)
         let _method_get_device_pipeline_cache_uuid_201670096_name = StringName(from: "get_device_pipeline_cache_uuid")
-        self._method_get_device_pipeline_cache_uuid_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_device_pipeline_cache_uuid_201670096_name._native_ptr(), 201670096)
+        self._method_get_device_pipeline_cache_uuid_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_get_device_pipeline_cache_uuid_201670096_name._native_ptr(), 201670096)
         assert(RenderingDevice._method_get_device_pipeline_cache_uuid_201670096 != nil)
         let _method_get_memory_usage_251690689_name = StringName(from: "get_memory_usage")
-        self._method_get_memory_usage_251690689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_memory_usage_251690689_name._native_ptr(), 251690689)
+        self._method_get_memory_usage_251690689 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_get_memory_usage_251690689_name._native_ptr(), 251690689)
         assert(RenderingDevice._method_get_memory_usage_251690689 != nil)
         let _method_get_driver_resource_501815484_name = StringName(from: "get_driver_resource")
-        self._method_get_driver_resource_501815484 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_driver_resource_501815484_name._native_ptr(), 501815484)
+        self._method_get_driver_resource_501815484 = self.interface.pointee.classdb_get_method_bind(__godot_name_RenderingDevice._native_ptr(), _method_get_driver_resource_501815484_name._native_ptr(), 501815484)
         assert(RenderingDevice._method_get_driver_resource_501815484 != nil)
     }
 
@@ -952,7 +957,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func texture_create_shared(view: RDTextureView, with_texture: RID) -> RID {
         let with_texture_native = with_texture._native_ptr()
@@ -970,7 +975,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func texture_create_shared_from_slice(view: RDTextureView, with_texture: RID, layer: Int64, mipmap: Int64, mipmaps: Int64, slice_type: RenderingDevice.TextureSliceType) -> RID {
         withUnsafePointer(to: mipmaps) { mipmaps_native in
@@ -992,7 +997,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
         }
         }
@@ -1016,7 +1021,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
     }
@@ -1036,7 +1041,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
+            return PackedByteArray(godot: __resPtr.pointee)
         }
     }
     public func texture_is_format_supported_for_usage(format: RenderingDevice.DataFormat, usage_flags: RenderingDevice.TextureUsageBits) -> UInt8 {
@@ -1056,7 +1061,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
     }
@@ -1076,7 +1081,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func texture_is_valid(texture: RID) -> UInt8 {
         let texture_native = texture._native_ptr()
@@ -1094,7 +1099,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func texture_copy(from_texture: RID, to_texture: RID, from_pos: Vector3, to_pos: Vector3, size: Vector3, src_mipmap: Int64, dst_mipmap: Int64, src_layer: Int64, dst_layer: Int64, post_barrier: RenderingDevice.BarrierMask) -> Error {
         withUnsafePointer(to: dst_layer) { dst_layer_native in
@@ -1120,7 +1125,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
         }
@@ -1148,7 +1153,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
         }
@@ -1172,7 +1177,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func framebuffer_format_create(attachments: [RDAttachmentFormat], view_count: Int64) -> Int64 {
@@ -1192,7 +1197,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func framebuffer_format_create_multipass(attachments: [RDAttachmentFormat], passes: [RDFramebufferPass], view_count: Int64) -> Int64 {
@@ -1213,7 +1218,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func framebuffer_format_create_empty(samples: RenderingDevice.TextureSamples) -> Int64 {
@@ -1232,7 +1237,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func framebuffer_format_get_texture_samples(format: Int64, render_pass: Int64) -> RenderingDevice.TextureSamples {
@@ -1251,7 +1256,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RenderingDevice.TextureSamples(from: __resPtr.pointee)
+            return RenderingDevice.TextureSamples(godot: __resPtr.pointee)
         }
         }
     }
@@ -1272,7 +1277,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
         }
     }
@@ -1294,7 +1299,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
         }
     }
@@ -1315,7 +1320,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
         }
     }
@@ -1335,7 +1340,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func framebuffer_is_valid(framebuffer: RID) -> UInt8 {
         let framebuffer_native = framebuffer._native_ptr()
@@ -1353,7 +1358,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func sampler_create(state: RDSamplerState) -> RID {
         let state_native = state._native_ptr()
@@ -1370,7 +1375,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func vertex_buffer_create(size_bytes: Int64, data: PackedByteArray, use_as_storage: UInt8) -> RID {
         withUnsafePointer(to: use_as_storage) { use_as_storage_native in
@@ -1389,7 +1394,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
         }
     }
@@ -1409,7 +1414,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func vertex_array_create(vertex_count: Int64, vertex_format: Int64, src_buffers: [RID], offsets: PackedInt64Array) -> RID {
         withUnsafePointer(to: vertex_format) { vertex_format_native in
@@ -1429,7 +1434,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
         }
     }
@@ -1451,7 +1456,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
         }
         }
@@ -1473,7 +1478,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
         }
     }
@@ -1493,11 +1498,11 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RDShaderSPIRV(from: __resPtr.pointee)
+            return RDShaderSPIRV(godot: __resPtr.pointee)
         }
     }
-    public func shader_compile_binary_from_spirv(spirv_data: RDShaderSPIRV, name: String) -> PackedByteArray {
-        withUnsafePointer(to: name) { name_native in
+    public func shader_compile_binary_from_spirv(spirv_data: RDShaderSPIRV, name: godot.String) -> PackedByteArray {
+        let name_native = name._native_ptr()
         let spirv_data_native = spirv_data._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
@@ -1512,11 +1517,10 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
-        }
+            return PackedByteArray(godot: __resPtr.pointee)
     }
-    public func shader_create_from_spirv(spirv_data: RDShaderSPIRV, name: String) -> RID {
-        withUnsafePointer(to: name) { name_native in
+    public func shader_create_from_spirv(spirv_data: RDShaderSPIRV, name: godot.String) -> RID {
+        let name_native = name._native_ptr()
         let spirv_data_native = spirv_data._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
@@ -1531,8 +1535,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
-        }
+            return RID(godot: __resPtr.pointee)
     }
     public func shader_create_from_bytecode(binary_data: PackedByteArray) -> RID {
         let binary_data_native = binary_data._native_ptr()
@@ -1549,7 +1552,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func shader_get_vertex_input_attribute_mask(shader: RID) -> Int64 {
         let shader_native = shader._native_ptr()
@@ -1567,7 +1570,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func uniform_buffer_create(size_bytes: Int64, data: PackedByteArray) -> RID {
         withUnsafePointer(to: size_bytes) { size_bytes_native in
@@ -1585,7 +1588,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
     }
     public func storage_buffer_create(size_bytes: Int64, data: PackedByteArray, usage: RenderingDevice.StorageBufferUsage) -> RID {
@@ -1605,7 +1608,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
         }
     }
@@ -1626,7 +1629,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
         }
     }
@@ -1647,7 +1650,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
     }
     public func uniform_set_is_valid(uniform_set: RID) -> UInt8 {
@@ -1666,7 +1669,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func buffer_update(buffer: RID, offset: Int64, size_bytes: Int64, data: PackedByteArray, post_barrier: RenderingDevice.BarrierMask) -> Error {
         withUnsafePointer(to: size_bytes) { size_bytes_native in
@@ -1687,7 +1690,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
         }
@@ -1710,7 +1713,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
         }
@@ -1730,7 +1733,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
+            return PackedByteArray(godot: __resPtr.pointee)
     }
     public func render_pipeline_create(shader: RID, framebuffer_format: Int64, vertex_format: Int64, primitive: RenderingDevice.RenderPrimitive, rasterization_state: RDPipelineRasterizationState, multisample_state: RDPipelineMultisampleState, stencil_state: RDPipelineDepthStencilState, color_blend_state: RDPipelineColorBlendState, dynamic_state_flags: RenderingDevice.PipelineDynamicStateFlags, for_render_pass: Int64, specialization_constants: [RDPipelineSpecializationConstant]) -> RID {
         withUnsafePointer(to: for_render_pass) { for_render_pass_native in
@@ -1757,7 +1760,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
         }
         }
         }
@@ -1780,7 +1783,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func compute_pipeline_create(shader: RID, specialization_constants: [RDPipelineSpecializationConstant]) -> RID {
         let specialization_constants_native = specialization_constants._native_ptr()
@@ -1798,7 +1801,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func compute_pipeline_is_valid(compute_pieline: RID) -> UInt8 {
         let compute_pieline_native = compute_pieline._native_ptr()
@@ -1816,7 +1819,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func screen_get_width(screen: Int64) -> Int64 {
         withUnsafePointer(to: screen) { screen_native in
@@ -1834,7 +1837,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func screen_get_height(screen: Int64) -> Int64 {
@@ -1853,7 +1856,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func screen_get_framebuffer_format() -> Int64 {
@@ -1871,7 +1874,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func draw_list_begin_for_screen(screen: Int64, clear_color: Color) -> Int64 {
         withUnsafePointer(to: screen) { screen_native in
@@ -1890,7 +1893,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func draw_list_begin(framebuffer: RID, initial_color_action: RenderingDevice.InitialAction, final_color_action: RenderingDevice.FinalAction, initial_depth_action: RenderingDevice.InitialAction, final_depth_action: RenderingDevice.FinalAction, clear_color_values: PackedColorArray, clear_depth: Float64, clear_stencil: Int64, region: Rect2, storage_textures: Array) -> Int64 {
@@ -1918,7 +1921,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
         }
         }
@@ -1951,7 +1954,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt64Array(from: __resPtr.pointee)
+            return PackedInt64Array(godot: __resPtr.pointee)
         }
         }
         }
@@ -2136,7 +2139,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func draw_list_switch_to_next_pass_split(splits: Int64) -> PackedInt64Array {
         withUnsafePointer(to: splits) { splits_native in
@@ -2153,7 +2156,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt64Array(from: __resPtr.pointee)
+            return PackedInt64Array(godot: __resPtr.pointee)
         }
     }
     public func draw_list_end(post_barrier: RenderingDevice.BarrierMask)  {
@@ -2188,7 +2191,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func compute_list_bind_compute_pipeline(compute_list: Int64, compute_pipeline: RID)  {
@@ -2315,8 +2318,8 @@ public class RenderingDevice : Object {
                     nil
                 )
     }
-    public func capture_timestamp(name: String)  {
-        withUnsafePointer(to: name) { name_native in
+    public func capture_timestamp(name: godot.String)  {
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -2329,7 +2332,6 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
     public func get_captured_timestamps_count() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -2346,7 +2348,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_captured_timestamps_frame() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -2363,7 +2365,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_captured_timestamp_gpu_time(index: Int64) -> Int64 {
         withUnsafePointer(to: index) { index_native in
@@ -2381,7 +2383,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func get_captured_timestamp_cpu_time(index: Int64) -> Int64 {
@@ -2400,10 +2402,10 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
-    public func get_captured_timestamp_name(index: Int64) -> String {
+    public func get_captured_timestamp_name(index: Int64) -> godot.String {
         withUnsafePointer(to: index) { index_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
@@ -2412,14 +2414,13 @@ public class RenderingDevice : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_captured_timestamp_name_844755477,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
         }
     }
     public func limit_get(limit: RenderingDevice.Limit) -> Int64 {
@@ -2438,7 +2439,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func get_frame_delay() -> Int64 {
@@ -2456,7 +2457,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func submit()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -2532,10 +2533,10 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RenderingDevice(from: __resPtr.pointee)
+            return RenderingDevice(godot: __resPtr.pointee)
     }
-    public func set_resource_name(id: RID, name: String)  {
-        withUnsafePointer(to: name) { name_native in
+    public func set_resource_name(id: RID, name: godot.String)  {
+        let name_native = name._native_ptr()
         let id_native = id._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
@@ -2549,11 +2550,10 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func draw_command_begin_label(name: String, color: Color)  {
-        withUnsafePointer(to: name) { name_native in
+    public func draw_command_begin_label(name: godot.String, color: Color)  {
         let color_native = color._native_ptr()
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -2566,11 +2566,10 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func draw_command_insert_label(name: String, color: Color)  {
-        withUnsafePointer(to: name) { name_native in
+    public func draw_command_insert_label(name: godot.String, color: Color)  {
         let color_native = color._native_ptr()
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -2583,7 +2582,6 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
     public func draw_command_end_label()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -2599,7 +2597,7 @@ public class RenderingDevice : Object {
                     nil
                 )
     }
-    public func get_device_vendor_name() -> String {
+    public func get_device_vendor_name() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -2607,16 +2605,15 @@ public class RenderingDevice : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_device_vendor_name_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func get_device_name() -> String {
+    public func get_device_name() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -2624,16 +2621,15 @@ public class RenderingDevice : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_device_name_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func get_device_pipeline_cache_uuid() -> String {
+    public func get_device_pipeline_cache_uuid() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -2641,14 +2637,13 @@ public class RenderingDevice : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_device_pipeline_cache_uuid_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func get_memory_usage(`type`: RenderingDevice.MemoryType) -> Int64 {
         withUnsafePointer(to: `type`.rawValue) { type_native in
@@ -2666,7 +2661,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func get_driver_resource(resource: RenderingDevice.DriverResource, rid: RID, index: Int64) -> Int64 {
@@ -2687,7 +2682,7 @@ public class RenderingDevice : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
         }
     }

@@ -7,7 +7,7 @@ fileprivate var __godot_name_ImageFormatLoaderExtension: StringName! = nil
 /// The engine supports multiple image formats out of the box (PNG, SVG, JPEG, WebP to name a few), but you can choose to implement support for additional image formats by extending this class.
 ///  
 /// Be sure to respect the documented return types and values. You should create an instance of it, and call [method add_format_loader] to register that loader during the initialization phase.
-public class ImageFormatLoaderExtension : ImageFormatLoader {
+open class ImageFormatLoaderExtension : ImageFormatLoader {
 
     
 
@@ -18,14 +18,19 @@ public class ImageFormatLoaderExtension : ImageFormatLoader {
     static var _method_add_format_loader_3218959716: GDExtensionMethodBindPtr! = nil
     static var _method_remove_format_loader_3218959716: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ImageFormatLoaderExtension = StringName(from: "ImageFormatLoaderExtension")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_add_format_loader_3218959716_name = StringName(from: "add_format_loader")
-        self._method_add_format_loader_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_format_loader_3218959716_name._native_ptr(), 3218959716)
+        self._method_add_format_loader_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImageFormatLoaderExtension._native_ptr(), _method_add_format_loader_3218959716_name._native_ptr(), 3218959716)
         assert(ImageFormatLoaderExtension._method_add_format_loader_3218959716 != nil)
         let _method_remove_format_loader_3218959716_name = StringName(from: "remove_format_loader")
-        self._method_remove_format_loader_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_format_loader_3218959716_name._native_ptr(), 3218959716)
+        self._method_remove_format_loader_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImageFormatLoaderExtension._native_ptr(), _method_remove_format_loader_3218959716_name._native_ptr(), 3218959716)
         assert(ImageFormatLoaderExtension._method_remove_format_loader_3218959716 != nil)
     }
 
@@ -43,7 +48,7 @@ public class ImageFormatLoaderExtension : ImageFormatLoader {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedStringArray(from: __resPtr.pointee)
+            return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _load_image(image: Image, fileaccess: FileAccess, flags: ImageFormatLoader.LoaderFlags, scale: Float64) -> Error {
         withUnsafePointer(to: scale) { scale_native in
@@ -63,7 +68,7 @@ public class ImageFormatLoaderExtension : ImageFormatLoader {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
     }

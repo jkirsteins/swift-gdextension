@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeParticleAccelerator: StringName! = 
 /// A visual shader node that accelerates particles.
 /// 
 /// Particle accelerator can be used in "process" step of particle shader. It will accelerate the particles. Connect it to the Velocity output port.
-public class VisualShaderNodeParticleAccelerator : VisualShaderNode {
+open class VisualShaderNodeParticleAccelerator : VisualShaderNode {
 
     public enum Mode : Int32 {
         case MODE_LINEAR = 0
@@ -19,14 +19,19 @@ public class VisualShaderNodeParticleAccelerator : VisualShaderNode {
     static var _method_set_mode_3457585749: GDExtensionMethodBindPtr! = nil
     static var _method_get_mode_2660365633: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeParticleAccelerator = StringName(from: "VisualShaderNodeParticleAccelerator")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_mode_3457585749_name = StringName(from: "set_mode")
-        self._method_set_mode_3457585749 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_mode_3457585749_name._native_ptr(), 3457585749)
+        self._method_set_mode_3457585749 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParticleAccelerator._native_ptr(), _method_set_mode_3457585749_name._native_ptr(), 3457585749)
         assert(VisualShaderNodeParticleAccelerator._method_set_mode_3457585749 != nil)
         let _method_get_mode_2660365633_name = StringName(from: "get_mode")
-        self._method_get_mode_2660365633 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_mode_2660365633_name._native_ptr(), 2660365633)
+        self._method_get_mode_2660365633 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParticleAccelerator._native_ptr(), _method_get_mode_2660365633_name._native_ptr(), 2660365633)
         assert(VisualShaderNodeParticleAccelerator._method_get_mode_2660365633 != nil)
     }
 
@@ -60,6 +65,6 @@ public class VisualShaderNodeParticleAccelerator : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return VisualShaderNodeParticleAccelerator.Mode(from: __resPtr.pointee)
+            return VisualShaderNodeParticleAccelerator.Mode(godot: __resPtr.pointee)
     }
 }

@@ -5,7 +5,7 @@ fileprivate var __godot_name_EditorSceneFormatImporterFBX: StringName! = nil
 /// MISSING
 /// 
 /// MISSING
-public class EditorSceneFormatImporterFBX : EditorSceneFormatImporter {
+open class EditorSceneFormatImporterFBX : EditorSceneFormatImporter {
 
     
 
@@ -13,8 +13,13 @@ public class EditorSceneFormatImporterFBX : EditorSceneFormatImporter {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorSceneFormatImporterFBX = StringName(from: "EditorSceneFormatImporterFBX")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

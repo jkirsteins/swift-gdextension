@@ -5,7 +5,7 @@ fileprivate var __godot_name_PrismMesh: StringName! = nil
 /// Class representing a prism-shaped [PrimitiveMesh].
 /// 
 /// Class representing a prism-shaped [PrimitiveMesh].
-public class PrismMesh : PrimitiveMesh {
+open class PrismMesh : PrimitiveMesh {
 
     
 
@@ -22,38 +22,43 @@ public class PrismMesh : PrimitiveMesh {
     static var _method_set_subdivide_depth_1286410249: GDExtensionMethodBindPtr! = nil
     static var _method_get_subdivide_depth_3905245786: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PrismMesh = StringName(from: "PrismMesh")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_left_to_right_373806689_name = StringName(from: "set_left_to_right")
-        self._method_set_left_to_right_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_left_to_right_373806689_name._native_ptr(), 373806689)
+        self._method_set_left_to_right_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PrismMesh._native_ptr(), _method_set_left_to_right_373806689_name._native_ptr(), 373806689)
         assert(PrismMesh._method_set_left_to_right_373806689 != nil)
         let _method_get_left_to_right_1740695150_name = StringName(from: "get_left_to_right")
-        self._method_get_left_to_right_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_left_to_right_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_left_to_right_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PrismMesh._native_ptr(), _method_get_left_to_right_1740695150_name._native_ptr(), 1740695150)
         assert(PrismMesh._method_get_left_to_right_1740695150 != nil)
         let _method_set_size_3460891852_name = StringName(from: "set_size")
-        self._method_set_size_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_size_3460891852_name._native_ptr(), 3460891852)
+        self._method_set_size_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_PrismMesh._native_ptr(), _method_set_size_3460891852_name._native_ptr(), 3460891852)
         assert(PrismMesh._method_set_size_3460891852 != nil)
         let _method_get_size_3360562783_name = StringName(from: "get_size")
-        self._method_get_size_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_size_3360562783_name._native_ptr(), 3360562783)
+        self._method_get_size_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_PrismMesh._native_ptr(), _method_get_size_3360562783_name._native_ptr(), 3360562783)
         assert(PrismMesh._method_get_size_3360562783 != nil)
         let _method_set_subdivide_width_1286410249_name = StringName(from: "set_subdivide_width")
-        self._method_set_subdivide_width_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_subdivide_width_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_subdivide_width_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_PrismMesh._native_ptr(), _method_set_subdivide_width_1286410249_name._native_ptr(), 1286410249)
         assert(PrismMesh._method_set_subdivide_width_1286410249 != nil)
         let _method_get_subdivide_width_3905245786_name = StringName(from: "get_subdivide_width")
-        self._method_get_subdivide_width_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_subdivide_width_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_subdivide_width_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_PrismMesh._native_ptr(), _method_get_subdivide_width_3905245786_name._native_ptr(), 3905245786)
         assert(PrismMesh._method_get_subdivide_width_3905245786 != nil)
         let _method_set_subdivide_height_1286410249_name = StringName(from: "set_subdivide_height")
-        self._method_set_subdivide_height_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_subdivide_height_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_subdivide_height_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_PrismMesh._native_ptr(), _method_set_subdivide_height_1286410249_name._native_ptr(), 1286410249)
         assert(PrismMesh._method_set_subdivide_height_1286410249 != nil)
         let _method_get_subdivide_height_3905245786_name = StringName(from: "get_subdivide_height")
-        self._method_get_subdivide_height_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_subdivide_height_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_subdivide_height_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_PrismMesh._native_ptr(), _method_get_subdivide_height_3905245786_name._native_ptr(), 3905245786)
         assert(PrismMesh._method_get_subdivide_height_3905245786 != nil)
         let _method_set_subdivide_depth_1286410249_name = StringName(from: "set_subdivide_depth")
-        self._method_set_subdivide_depth_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_subdivide_depth_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_subdivide_depth_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_PrismMesh._native_ptr(), _method_set_subdivide_depth_1286410249_name._native_ptr(), 1286410249)
         assert(PrismMesh._method_set_subdivide_depth_1286410249 != nil)
         let _method_get_subdivide_depth_3905245786_name = StringName(from: "get_subdivide_depth")
-        self._method_get_subdivide_depth_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_subdivide_depth_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_subdivide_depth_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_PrismMesh._native_ptr(), _method_get_subdivide_depth_3905245786_name._native_ptr(), 3905245786)
         assert(PrismMesh._method_get_subdivide_depth_3905245786 != nil)
     }
 
@@ -88,7 +93,7 @@ public class PrismMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_size(size: Vector3)  {
         let size_native = size._native_ptr()
@@ -119,7 +124,7 @@ public class PrismMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
     }
     public func set_subdivide_width(segments: Int64)  {
         withUnsafePointer(to: segments) { segments_native in
@@ -152,7 +157,7 @@ public class PrismMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_subdivide_height(segments: Int64)  {
         withUnsafePointer(to: segments) { segments_native in
@@ -185,7 +190,7 @@ public class PrismMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_subdivide_depth(segments: Int64)  {
         withUnsafePointer(to: segments) { segments_native in
@@ -218,6 +223,6 @@ public class PrismMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
 }

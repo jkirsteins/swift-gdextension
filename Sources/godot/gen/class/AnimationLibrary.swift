@@ -5,7 +5,7 @@ fileprivate var __godot_name_AnimationLibrary: StringName! = nil
 /// Container for [Animation] resources.
 /// 
 /// An animation library stores a set of animations accessible through [StringName] keys, for use with [AnimationPlayer] nodes.
-public class AnimationLibrary : Resource {
+open class AnimationLibrary : Resource {
 
     
 
@@ -18,26 +18,31 @@ public class AnimationLibrary : Resource {
     static var _method_get_animation_2933122410: GDExtensionMethodBindPtr! = nil
     static var _method_get_animation_list_3995934104: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AnimationLibrary = StringName(from: "AnimationLibrary")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_add_animation_1811855551_name = StringName(from: "add_animation")
-        self._method_add_animation_1811855551 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_animation_1811855551_name._native_ptr(), 1811855551)
+        self._method_add_animation_1811855551 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationLibrary._native_ptr(), _method_add_animation_1811855551_name._native_ptr(), 1811855551)
         assert(AnimationLibrary._method_add_animation_1811855551 != nil)
         let _method_remove_animation_3304788590_name = StringName(from: "remove_animation")
-        self._method_remove_animation_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_animation_3304788590_name._native_ptr(), 3304788590)
+        self._method_remove_animation_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationLibrary._native_ptr(), _method_remove_animation_3304788590_name._native_ptr(), 3304788590)
         assert(AnimationLibrary._method_remove_animation_3304788590 != nil)
         let _method_rename_animation_3740211285_name = StringName(from: "rename_animation")
-        self._method_rename_animation_3740211285 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_rename_animation_3740211285_name._native_ptr(), 3740211285)
+        self._method_rename_animation_3740211285 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationLibrary._native_ptr(), _method_rename_animation_3740211285_name._native_ptr(), 3740211285)
         assert(AnimationLibrary._method_rename_animation_3740211285 != nil)
         let _method_has_animation_2619796661_name = StringName(from: "has_animation")
-        self._method_has_animation_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_animation_2619796661_name._native_ptr(), 2619796661)
+        self._method_has_animation_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationLibrary._native_ptr(), _method_has_animation_2619796661_name._native_ptr(), 2619796661)
         assert(AnimationLibrary._method_has_animation_2619796661 != nil)
         let _method_get_animation_2933122410_name = StringName(from: "get_animation")
-        self._method_get_animation_2933122410 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_animation_2933122410_name._native_ptr(), 2933122410)
+        self._method_get_animation_2933122410 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationLibrary._native_ptr(), _method_get_animation_2933122410_name._native_ptr(), 2933122410)
         assert(AnimationLibrary._method_get_animation_2933122410 != nil)
         let _method_get_animation_list_3995934104_name = StringName(from: "get_animation_list")
-        self._method_get_animation_list_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_animation_list_3995934104_name._native_ptr(), 3995934104)
+        self._method_get_animation_list_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationLibrary._native_ptr(), _method_get_animation_list_3995934104_name._native_ptr(), 3995934104)
         assert(AnimationLibrary._method_get_animation_list_3995934104 != nil)
     }
 
@@ -57,7 +62,7 @@ public class AnimationLibrary : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func remove_animation(name: StringName)  {
         let name_native = name._native_ptr()
@@ -106,7 +111,7 @@ public class AnimationLibrary : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func get_animation(name: StringName) -> Animation {
         let name_native = name._native_ptr()
@@ -123,7 +128,7 @@ public class AnimationLibrary : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Animation(from: __resPtr.pointee)
+            return Animation(godot: __resPtr.pointee)
     }
     public func get_animation_list() -> [StringName] {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -139,6 +144,6 @@ public class AnimationLibrary : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [StringName](from: __resPtr.pointee)
+            return [StringName](godot: __resPtr.pointee)
     }
 }

@@ -5,7 +5,7 @@ fileprivate var __godot_name_AudioEffectInstance: StringName! = nil
 /// 
 /// 
 /// 
-public class AudioEffectInstance : RefCounted {
+open class AudioEffectInstance : RefCounted {
 
     
 
@@ -14,8 +14,13 @@ public class AudioEffectInstance : RefCounted {
     static var _method__process_0: GDExtensionMethodBindPtr! = nil
     static var _method__process_silence_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AudioEffectInstance = StringName(from: "AudioEffectInstance")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
@@ -55,6 +60,6 @@ public class AudioEffectInstance : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

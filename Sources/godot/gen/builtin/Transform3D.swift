@@ -11,6 +11,11 @@ fileprivate var __godot_name_Transform3D: StringName! = nil
 /// For more information, read the "Matrices and transforms" documentation article.
 public class Transform3D : BuiltinClass {
 
+    public static var interface: UnsafePointer<GDExtensionInterface>! = nil
+    public static var library: GDExtensionClassLibraryPtr! = nil
+    
+    var interface: UnsafePointer<GDExtensionInterface> { Self.interface }
+
     
 
     public class var __godot_name: StringName { __godot_name_Transform3D }
@@ -26,7 +31,10 @@ public class Transform3D : BuiltinClass {
     static var _constructor_4: GDExtensionPtrConstructor? = nil
     static var _destructor: GDExtensionPtrDestructor? = nil
 
-    public class func initialize_class() {
+    public class func initialize_class(_ ginit: GodotInitializer, _: GDExtensionInitializationLevel) {
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
+
         // Init constructors before assigning __godot_name
         Transform3D._constructor_0 =  Transform3D.interface.pointee.variant_get_ptr_constructor(GDEXTENSION_VARIANT_TYPE_TRANSFORM3D, 0)
         assert(Transform3D._constructor_0 != nil)
@@ -38,10 +46,11 @@ public class Transform3D : BuiltinClass {
         assert(Transform3D._constructor_3 != nil)
         Transform3D._constructor_4 =  Transform3D.interface.pointee.variant_get_ptr_constructor(GDEXTENSION_VARIANT_TYPE_TRANSFORM3D, 4)
         assert(Transform3D._constructor_4 != nil)
-        Transform3D._destructor =  Transform3D.interface.pointee.variant_get_ptr_destructor(GDEXTENSION_VARIANT_TYPE_TRANSFORM3D)
-        assert(Transform3D._destructor != nil)
+    }
 
-        // At this point constructors must be assigned
+    public class func initialize_godot_name() {
+        // At this point constructors for String and StringName
+        // must be assigned
         __godot_name_Transform3D = StringName(from: "Transform3D")
     }
 
@@ -108,10 +117,10 @@ public class Transform3D : BuiltinClass {
             // call here
             Self._constructor_4!(self._native_ptr(), .init(args.baseAddress!))
     }
-    public required init(from unsafe: UnsafeRawPointer) {
+    public required init(godot unsafe: UnsafeRawPointer) {
         self.opaque = .init(mutating: unsafe)
     }
-    public required init(from unsafe: UnsafeMutableRawPointer) {
+    public required init(godot unsafe: UnsafeMutableRawPointer) {
         self.opaque = unsafe
     }
 

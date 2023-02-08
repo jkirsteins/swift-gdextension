@@ -5,7 +5,7 @@ fileprivate var __godot_name_VideoStreamPlayback: StringName! = nil
 /// Internal class used by [VideoStream] to manage playback state when played from a [VideoStreamPlayer].
 /// 
 /// This class is intended to be overridden by video decoder extensions with custom implementations of [VideoStream].
-public class VideoStreamPlayback : Resource {
+open class VideoStreamPlayback : Resource {
 
     
 
@@ -26,11 +26,16 @@ public class VideoStreamPlayback : Resource {
     static var _method__get_mix_rate_0: GDExtensionMethodBindPtr! = nil
     static var _method_mix_audio_1369271885: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VideoStreamPlayback = StringName(from: "VideoStreamPlayback")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_mix_audio_1369271885_name = StringName(from: "mix_audio")
-        self._method_mix_audio_1369271885 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_mix_audio_1369271885_name._native_ptr(), 1369271885)
+        self._method_mix_audio_1369271885 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayback._native_ptr(), _method_mix_audio_1369271885_name._native_ptr(), 1369271885)
         assert(VideoStreamPlayback._method_mix_audio_1369271885 != nil)
     }
 
@@ -77,7 +82,7 @@ public class VideoStreamPlayback : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _set_paused(paused: UInt8)  {
         withUnsafePointer(to: paused) { paused_native in
@@ -110,7 +115,7 @@ public class VideoStreamPlayback : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_length() -> Float64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -127,7 +132,7 @@ public class VideoStreamPlayback : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _get_playback_position() -> Float64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -144,7 +149,7 @@ public class VideoStreamPlayback : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _seek(time: Float64)  {
         withUnsafePointer(to: time) { time_native in
@@ -192,7 +197,7 @@ public class VideoStreamPlayback : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture2D(from: __resPtr.pointee)
+            return Texture2D(godot: __resPtr.pointee)
     }
     public func _update(delta: Float64)  {
         withUnsafePointer(to: delta) { delta_native in
@@ -225,7 +230,7 @@ public class VideoStreamPlayback : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_mix_rate() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -242,7 +247,7 @@ public class VideoStreamPlayback : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func mix_audio(num_frames: Int64, buffer: PackedFloat32Array, offset: Int64) -> Int64 {
         withUnsafePointer(to: offset) { offset_native in
@@ -262,7 +267,7 @@ public class VideoStreamPlayback : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
         }
     }

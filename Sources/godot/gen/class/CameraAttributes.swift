@@ -11,7 +11,7 @@ fileprivate var __godot_name_CameraAttributes: StringName! = nil
 /// See also [Environment] for general 3D environment settings.
 ///  
 /// This is a pure virtual class that is inherited by [CameraAttributesPhysical] and [CameraAttributesPractical].
-public class CameraAttributes : Resource {
+open class CameraAttributes : Resource {
 
     
 
@@ -28,38 +28,43 @@ public class CameraAttributes : Resource {
     static var _method_set_auto_exposure_scale_373806689: GDExtensionMethodBindPtr! = nil
     static var _method_get_auto_exposure_scale_1740695150: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_CameraAttributes = StringName(from: "CameraAttributes")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_exposure_multiplier_373806689_name = StringName(from: "set_exposure_multiplier")
-        self._method_set_exposure_multiplier_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_exposure_multiplier_373806689_name._native_ptr(), 373806689)
+        self._method_set_exposure_multiplier_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraAttributes._native_ptr(), _method_set_exposure_multiplier_373806689_name._native_ptr(), 373806689)
         assert(CameraAttributes._method_set_exposure_multiplier_373806689 != nil)
         let _method_get_exposure_multiplier_1740695150_name = StringName(from: "get_exposure_multiplier")
-        self._method_get_exposure_multiplier_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_exposure_multiplier_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_exposure_multiplier_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraAttributes._native_ptr(), _method_get_exposure_multiplier_1740695150_name._native_ptr(), 1740695150)
         assert(CameraAttributes._method_get_exposure_multiplier_1740695150 != nil)
         let _method_set_exposure_sensitivity_373806689_name = StringName(from: "set_exposure_sensitivity")
-        self._method_set_exposure_sensitivity_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_exposure_sensitivity_373806689_name._native_ptr(), 373806689)
+        self._method_set_exposure_sensitivity_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraAttributes._native_ptr(), _method_set_exposure_sensitivity_373806689_name._native_ptr(), 373806689)
         assert(CameraAttributes._method_set_exposure_sensitivity_373806689 != nil)
         let _method_get_exposure_sensitivity_1740695150_name = StringName(from: "get_exposure_sensitivity")
-        self._method_get_exposure_sensitivity_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_exposure_sensitivity_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_exposure_sensitivity_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraAttributes._native_ptr(), _method_get_exposure_sensitivity_1740695150_name._native_ptr(), 1740695150)
         assert(CameraAttributes._method_get_exposure_sensitivity_1740695150 != nil)
         let _method_set_auto_exposure_enabled_2586408642_name = StringName(from: "set_auto_exposure_enabled")
-        self._method_set_auto_exposure_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_auto_exposure_enabled_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_auto_exposure_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraAttributes._native_ptr(), _method_set_auto_exposure_enabled_2586408642_name._native_ptr(), 2586408642)
         assert(CameraAttributes._method_set_auto_exposure_enabled_2586408642 != nil)
         let _method_is_auto_exposure_enabled_36873697_name = StringName(from: "is_auto_exposure_enabled")
-        self._method_is_auto_exposure_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_auto_exposure_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_auto_exposure_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraAttributes._native_ptr(), _method_is_auto_exposure_enabled_36873697_name._native_ptr(), 36873697)
         assert(CameraAttributes._method_is_auto_exposure_enabled_36873697 != nil)
         let _method_set_auto_exposure_speed_373806689_name = StringName(from: "set_auto_exposure_speed")
-        self._method_set_auto_exposure_speed_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_auto_exposure_speed_373806689_name._native_ptr(), 373806689)
+        self._method_set_auto_exposure_speed_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraAttributes._native_ptr(), _method_set_auto_exposure_speed_373806689_name._native_ptr(), 373806689)
         assert(CameraAttributes._method_set_auto_exposure_speed_373806689 != nil)
         let _method_get_auto_exposure_speed_1740695150_name = StringName(from: "get_auto_exposure_speed")
-        self._method_get_auto_exposure_speed_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_auto_exposure_speed_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_auto_exposure_speed_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraAttributes._native_ptr(), _method_get_auto_exposure_speed_1740695150_name._native_ptr(), 1740695150)
         assert(CameraAttributes._method_get_auto_exposure_speed_1740695150 != nil)
         let _method_set_auto_exposure_scale_373806689_name = StringName(from: "set_auto_exposure_scale")
-        self._method_set_auto_exposure_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_auto_exposure_scale_373806689_name._native_ptr(), 373806689)
+        self._method_set_auto_exposure_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraAttributes._native_ptr(), _method_set_auto_exposure_scale_373806689_name._native_ptr(), 373806689)
         assert(CameraAttributes._method_set_auto_exposure_scale_373806689 != nil)
         let _method_get_auto_exposure_scale_1740695150_name = StringName(from: "get_auto_exposure_scale")
-        self._method_get_auto_exposure_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_auto_exposure_scale_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_auto_exposure_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraAttributes._native_ptr(), _method_get_auto_exposure_scale_1740695150_name._native_ptr(), 1740695150)
         assert(CameraAttributes._method_get_auto_exposure_scale_1740695150 != nil)
     }
 
@@ -94,7 +99,7 @@ public class CameraAttributes : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_exposure_sensitivity(sensitivity: Float64)  {
         withUnsafePointer(to: sensitivity) { sensitivity_native in
@@ -127,7 +132,7 @@ public class CameraAttributes : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_auto_exposure_enabled(enabled: UInt8)  {
         withUnsafePointer(to: enabled) { enabled_native in
@@ -160,7 +165,7 @@ public class CameraAttributes : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_auto_exposure_speed(exposure_speed: Float64)  {
         withUnsafePointer(to: exposure_speed) { exposure_speed_native in
@@ -193,7 +198,7 @@ public class CameraAttributes : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_auto_exposure_scale(exposure_grey: Float64)  {
         withUnsafePointer(to: exposure_grey) { exposure_grey_native in
@@ -226,6 +231,6 @@ public class CameraAttributes : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
 }

@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeParticleBoxEmitter: StringName! = n
 /// A visual shader node that makes particles emitted in a box shape.
 /// 
 /// [VisualShaderNodeParticleEmitter] that makes the particles emitted in box shape with the specified extents.
-public class VisualShaderNodeParticleBoxEmitter : VisualShaderNodeParticleEmitter {
+open class VisualShaderNodeParticleBoxEmitter : VisualShaderNodeParticleEmitter {
 
     
 
@@ -13,8 +13,13 @@ public class VisualShaderNodeParticleBoxEmitter : VisualShaderNodeParticleEmitte
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeParticleBoxEmitter = StringName(from: "VisualShaderNodeParticleBoxEmitter")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

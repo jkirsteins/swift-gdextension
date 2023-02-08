@@ -11,7 +11,7 @@ fileprivate var __godot_name_Camera2D: StringName! = nil
 /// This node is intended to be a simple helper to get things going quickly, but more functionality may be desired to change how the camera works. To make your own custom camera node, inherit it from [Node2D] and change the transform of the canvas by setting [member Viewport.canvas_transform] in [Viewport] (you can obtain the current [Viewport] by using [method Node.get_viewport]).
 ///  
 /// Note that the [Camera2D] node's [code]position[/code] doesn't represent the actual position of the screen, which may differ due to applied smoothing or limits. You can use [method get_screen_center_position] to get the real position.
-public class Camera2D : Node2D {
+open class Camera2D : Node2D {
 
     public enum AnchorMode : Int32 {
         case ANCHOR_MODE_FIXED_TOP_LEFT = 0
@@ -74,155 +74,160 @@ public class Camera2D : Node2D {
     static var _method_set_margin_drawing_enabled_2586408642: GDExtensionMethodBindPtr! = nil
     static var _method_is_margin_drawing_enabled_36873697: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_Camera2D = StringName(from: "Camera2D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_offset_743155724_name = StringName(from: "set_offset")
-        self._method_set_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_offset_743155724_name._native_ptr(), 743155724)
+        self._method_set_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_offset_743155724_name._native_ptr(), 743155724)
         assert(Camera2D._method_set_offset_743155724 != nil)
         let _method_get_offset_3341600327_name = StringName(from: "get_offset")
-        self._method_get_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_offset_3341600327_name._native_ptr(), 3341600327)
+        self._method_get_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_get_offset_3341600327_name._native_ptr(), 3341600327)
         assert(Camera2D._method_get_offset_3341600327 != nil)
         let _method_set_anchor_mode_2050398218_name = StringName(from: "set_anchor_mode")
-        self._method_set_anchor_mode_2050398218 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_anchor_mode_2050398218_name._native_ptr(), 2050398218)
+        self._method_set_anchor_mode_2050398218 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_anchor_mode_2050398218_name._native_ptr(), 2050398218)
         assert(Camera2D._method_set_anchor_mode_2050398218 != nil)
         let _method_get_anchor_mode_155978067_name = StringName(from: "get_anchor_mode")
-        self._method_get_anchor_mode_155978067 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_anchor_mode_155978067_name._native_ptr(), 155978067)
+        self._method_get_anchor_mode_155978067 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_get_anchor_mode_155978067_name._native_ptr(), 155978067)
         assert(Camera2D._method_get_anchor_mode_155978067 != nil)
         let _method_set_ignore_rotation_2586408642_name = StringName(from: "set_ignore_rotation")
-        self._method_set_ignore_rotation_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ignore_rotation_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_ignore_rotation_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_ignore_rotation_2586408642_name._native_ptr(), 2586408642)
         assert(Camera2D._method_set_ignore_rotation_2586408642 != nil)
         let _method_is_ignoring_rotation_36873697_name = StringName(from: "is_ignoring_rotation")
-        self._method_is_ignoring_rotation_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_ignoring_rotation_36873697_name._native_ptr(), 36873697)
+        self._method_is_ignoring_rotation_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_is_ignoring_rotation_36873697_name._native_ptr(), 36873697)
         assert(Camera2D._method_is_ignoring_rotation_36873697 != nil)
         let _method_set_process_callback_4201947462_name = StringName(from: "set_process_callback")
-        self._method_set_process_callback_4201947462 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_process_callback_4201947462_name._native_ptr(), 4201947462)
+        self._method_set_process_callback_4201947462 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_process_callback_4201947462_name._native_ptr(), 4201947462)
         assert(Camera2D._method_set_process_callback_4201947462 != nil)
         let _method_get_process_callback_2325344499_name = StringName(from: "get_process_callback")
-        self._method_get_process_callback_2325344499 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_process_callback_2325344499_name._native_ptr(), 2325344499)
+        self._method_get_process_callback_2325344499 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_get_process_callback_2325344499_name._native_ptr(), 2325344499)
         assert(Camera2D._method_get_process_callback_2325344499 != nil)
         let _method_set_enabled_2586408642_name = StringName(from: "set_enabled")
-        self._method_set_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_enabled_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_enabled_2586408642_name._native_ptr(), 2586408642)
         assert(Camera2D._method_set_enabled_2586408642 != nil)
         let _method_is_enabled_36873697_name = StringName(from: "is_enabled")
-        self._method_is_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_is_enabled_36873697_name._native_ptr(), 36873697)
         assert(Camera2D._method_is_enabled_36873697 != nil)
         let _method_make_current_3218959716_name = StringName(from: "make_current")
-        self._method_make_current_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_make_current_3218959716_name._native_ptr(), 3218959716)
+        self._method_make_current_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_make_current_3218959716_name._native_ptr(), 3218959716)
         assert(Camera2D._method_make_current_3218959716 != nil)
         let _method_is_current_36873697_name = StringName(from: "is_current")
-        self._method_is_current_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_current_36873697_name._native_ptr(), 36873697)
+        self._method_is_current_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_is_current_36873697_name._native_ptr(), 36873697)
         assert(Camera2D._method_is_current_36873697 != nil)
         let _method_set_limit_437707142_name = StringName(from: "set_limit")
-        self._method_set_limit_437707142 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_limit_437707142_name._native_ptr(), 437707142)
+        self._method_set_limit_437707142 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_limit_437707142_name._native_ptr(), 437707142)
         assert(Camera2D._method_set_limit_437707142 != nil)
         let _method_get_limit_1983885014_name = StringName(from: "get_limit")
-        self._method_get_limit_1983885014 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_limit_1983885014_name._native_ptr(), 1983885014)
+        self._method_get_limit_1983885014 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_get_limit_1983885014_name._native_ptr(), 1983885014)
         assert(Camera2D._method_get_limit_1983885014 != nil)
         let _method_set_limit_smoothing_enabled_2586408642_name = StringName(from: "set_limit_smoothing_enabled")
-        self._method_set_limit_smoothing_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_limit_smoothing_enabled_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_limit_smoothing_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_limit_smoothing_enabled_2586408642_name._native_ptr(), 2586408642)
         assert(Camera2D._method_set_limit_smoothing_enabled_2586408642 != nil)
         let _method_is_limit_smoothing_enabled_36873697_name = StringName(from: "is_limit_smoothing_enabled")
-        self._method_is_limit_smoothing_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_limit_smoothing_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_limit_smoothing_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_is_limit_smoothing_enabled_36873697_name._native_ptr(), 36873697)
         assert(Camera2D._method_is_limit_smoothing_enabled_36873697 != nil)
         let _method_set_drag_vertical_enabled_2586408642_name = StringName(from: "set_drag_vertical_enabled")
-        self._method_set_drag_vertical_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_drag_vertical_enabled_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_drag_vertical_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_drag_vertical_enabled_2586408642_name._native_ptr(), 2586408642)
         assert(Camera2D._method_set_drag_vertical_enabled_2586408642 != nil)
         let _method_is_drag_vertical_enabled_36873697_name = StringName(from: "is_drag_vertical_enabled")
-        self._method_is_drag_vertical_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_drag_vertical_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_drag_vertical_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_is_drag_vertical_enabled_36873697_name._native_ptr(), 36873697)
         assert(Camera2D._method_is_drag_vertical_enabled_36873697 != nil)
         let _method_set_drag_horizontal_enabled_2586408642_name = StringName(from: "set_drag_horizontal_enabled")
-        self._method_set_drag_horizontal_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_drag_horizontal_enabled_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_drag_horizontal_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_drag_horizontal_enabled_2586408642_name._native_ptr(), 2586408642)
         assert(Camera2D._method_set_drag_horizontal_enabled_2586408642 != nil)
         let _method_is_drag_horizontal_enabled_36873697_name = StringName(from: "is_drag_horizontal_enabled")
-        self._method_is_drag_horizontal_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_drag_horizontal_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_drag_horizontal_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_is_drag_horizontal_enabled_36873697_name._native_ptr(), 36873697)
         assert(Camera2D._method_is_drag_horizontal_enabled_36873697 != nil)
         let _method_set_drag_vertical_offset_373806689_name = StringName(from: "set_drag_vertical_offset")
-        self._method_set_drag_vertical_offset_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_drag_vertical_offset_373806689_name._native_ptr(), 373806689)
+        self._method_set_drag_vertical_offset_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_drag_vertical_offset_373806689_name._native_ptr(), 373806689)
         assert(Camera2D._method_set_drag_vertical_offset_373806689 != nil)
         let _method_get_drag_vertical_offset_1740695150_name = StringName(from: "get_drag_vertical_offset")
-        self._method_get_drag_vertical_offset_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_drag_vertical_offset_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_drag_vertical_offset_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_get_drag_vertical_offset_1740695150_name._native_ptr(), 1740695150)
         assert(Camera2D._method_get_drag_vertical_offset_1740695150 != nil)
         let _method_set_drag_horizontal_offset_373806689_name = StringName(from: "set_drag_horizontal_offset")
-        self._method_set_drag_horizontal_offset_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_drag_horizontal_offset_373806689_name._native_ptr(), 373806689)
+        self._method_set_drag_horizontal_offset_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_drag_horizontal_offset_373806689_name._native_ptr(), 373806689)
         assert(Camera2D._method_set_drag_horizontal_offset_373806689 != nil)
         let _method_get_drag_horizontal_offset_1740695150_name = StringName(from: "get_drag_horizontal_offset")
-        self._method_get_drag_horizontal_offset_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_drag_horizontal_offset_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_drag_horizontal_offset_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_get_drag_horizontal_offset_1740695150_name._native_ptr(), 1740695150)
         assert(Camera2D._method_get_drag_horizontal_offset_1740695150 != nil)
         let _method_set_drag_margin_4290182280_name = StringName(from: "set_drag_margin")
-        self._method_set_drag_margin_4290182280 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_drag_margin_4290182280_name._native_ptr(), 4290182280)
+        self._method_set_drag_margin_4290182280 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_drag_margin_4290182280_name._native_ptr(), 4290182280)
         assert(Camera2D._method_set_drag_margin_4290182280 != nil)
         let _method_get_drag_margin_2869120046_name = StringName(from: "get_drag_margin")
-        self._method_get_drag_margin_2869120046 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_drag_margin_2869120046_name._native_ptr(), 2869120046)
+        self._method_get_drag_margin_2869120046 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_get_drag_margin_2869120046_name._native_ptr(), 2869120046)
         assert(Camera2D._method_get_drag_margin_2869120046 != nil)
         let _method_get_target_position_3341600327_name = StringName(from: "get_target_position")
-        self._method_get_target_position_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_target_position_3341600327_name._native_ptr(), 3341600327)
+        self._method_get_target_position_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_get_target_position_3341600327_name._native_ptr(), 3341600327)
         assert(Camera2D._method_get_target_position_3341600327 != nil)
         let _method_get_screen_center_position_3341600327_name = StringName(from: "get_screen_center_position")
-        self._method_get_screen_center_position_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_screen_center_position_3341600327_name._native_ptr(), 3341600327)
+        self._method_get_screen_center_position_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_get_screen_center_position_3341600327_name._native_ptr(), 3341600327)
         assert(Camera2D._method_get_screen_center_position_3341600327 != nil)
         let _method_set_zoom_743155724_name = StringName(from: "set_zoom")
-        self._method_set_zoom_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_zoom_743155724_name._native_ptr(), 743155724)
+        self._method_set_zoom_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_zoom_743155724_name._native_ptr(), 743155724)
         assert(Camera2D._method_set_zoom_743155724 != nil)
         let _method_get_zoom_3341600327_name = StringName(from: "get_zoom")
-        self._method_get_zoom_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_zoom_3341600327_name._native_ptr(), 3341600327)
+        self._method_get_zoom_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_get_zoom_3341600327_name._native_ptr(), 3341600327)
         assert(Camera2D._method_get_zoom_3341600327 != nil)
         let _method_set_custom_viewport_1078189570_name = StringName(from: "set_custom_viewport")
-        self._method_set_custom_viewport_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_custom_viewport_1078189570_name._native_ptr(), 1078189570)
+        self._method_set_custom_viewport_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_custom_viewport_1078189570_name._native_ptr(), 1078189570)
         assert(Camera2D._method_set_custom_viewport_1078189570 != nil)
         let _method_get_custom_viewport_3160264692_name = StringName(from: "get_custom_viewport")
-        self._method_get_custom_viewport_3160264692 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_custom_viewport_3160264692_name._native_ptr(), 3160264692)
+        self._method_get_custom_viewport_3160264692 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_get_custom_viewport_3160264692_name._native_ptr(), 3160264692)
         assert(Camera2D._method_get_custom_viewport_3160264692 != nil)
         let _method_set_position_smoothing_speed_373806689_name = StringName(from: "set_position_smoothing_speed")
-        self._method_set_position_smoothing_speed_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_position_smoothing_speed_373806689_name._native_ptr(), 373806689)
+        self._method_set_position_smoothing_speed_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_position_smoothing_speed_373806689_name._native_ptr(), 373806689)
         assert(Camera2D._method_set_position_smoothing_speed_373806689 != nil)
         let _method_get_position_smoothing_speed_1740695150_name = StringName(from: "get_position_smoothing_speed")
-        self._method_get_position_smoothing_speed_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_position_smoothing_speed_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_position_smoothing_speed_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_get_position_smoothing_speed_1740695150_name._native_ptr(), 1740695150)
         assert(Camera2D._method_get_position_smoothing_speed_1740695150 != nil)
         let _method_set_position_smoothing_enabled_2586408642_name = StringName(from: "set_position_smoothing_enabled")
-        self._method_set_position_smoothing_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_position_smoothing_enabled_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_position_smoothing_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_position_smoothing_enabled_2586408642_name._native_ptr(), 2586408642)
         assert(Camera2D._method_set_position_smoothing_enabled_2586408642 != nil)
         let _method_is_position_smoothing_enabled_36873697_name = StringName(from: "is_position_smoothing_enabled")
-        self._method_is_position_smoothing_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_position_smoothing_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_position_smoothing_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_is_position_smoothing_enabled_36873697_name._native_ptr(), 36873697)
         assert(Camera2D._method_is_position_smoothing_enabled_36873697 != nil)
         let _method_set_rotation_smoothing_enabled_2586408642_name = StringName(from: "set_rotation_smoothing_enabled")
-        self._method_set_rotation_smoothing_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_rotation_smoothing_enabled_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_rotation_smoothing_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_rotation_smoothing_enabled_2586408642_name._native_ptr(), 2586408642)
         assert(Camera2D._method_set_rotation_smoothing_enabled_2586408642 != nil)
         let _method_is_rotation_smoothing_enabled_36873697_name = StringName(from: "is_rotation_smoothing_enabled")
-        self._method_is_rotation_smoothing_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_rotation_smoothing_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_rotation_smoothing_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_is_rotation_smoothing_enabled_36873697_name._native_ptr(), 36873697)
         assert(Camera2D._method_is_rotation_smoothing_enabled_36873697 != nil)
         let _method_set_rotation_smoothing_speed_373806689_name = StringName(from: "set_rotation_smoothing_speed")
-        self._method_set_rotation_smoothing_speed_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_rotation_smoothing_speed_373806689_name._native_ptr(), 373806689)
+        self._method_set_rotation_smoothing_speed_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_rotation_smoothing_speed_373806689_name._native_ptr(), 373806689)
         assert(Camera2D._method_set_rotation_smoothing_speed_373806689 != nil)
         let _method_get_rotation_smoothing_speed_1740695150_name = StringName(from: "get_rotation_smoothing_speed")
-        self._method_get_rotation_smoothing_speed_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_rotation_smoothing_speed_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_rotation_smoothing_speed_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_get_rotation_smoothing_speed_1740695150_name._native_ptr(), 1740695150)
         assert(Camera2D._method_get_rotation_smoothing_speed_1740695150 != nil)
         let _method_force_update_scroll_3218959716_name = StringName(from: "force_update_scroll")
-        self._method_force_update_scroll_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_force_update_scroll_3218959716_name._native_ptr(), 3218959716)
+        self._method_force_update_scroll_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_force_update_scroll_3218959716_name._native_ptr(), 3218959716)
         assert(Camera2D._method_force_update_scroll_3218959716 != nil)
         let _method_reset_smoothing_3218959716_name = StringName(from: "reset_smoothing")
-        self._method_reset_smoothing_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_reset_smoothing_3218959716_name._native_ptr(), 3218959716)
+        self._method_reset_smoothing_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_reset_smoothing_3218959716_name._native_ptr(), 3218959716)
         assert(Camera2D._method_reset_smoothing_3218959716 != nil)
         let _method_align_3218959716_name = StringName(from: "align")
-        self._method_align_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_align_3218959716_name._native_ptr(), 3218959716)
+        self._method_align_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_align_3218959716_name._native_ptr(), 3218959716)
         assert(Camera2D._method_align_3218959716 != nil)
         let _method_set_screen_drawing_enabled_2586408642_name = StringName(from: "set_screen_drawing_enabled")
-        self._method_set_screen_drawing_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_screen_drawing_enabled_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_screen_drawing_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_screen_drawing_enabled_2586408642_name._native_ptr(), 2586408642)
         assert(Camera2D._method_set_screen_drawing_enabled_2586408642 != nil)
         let _method_is_screen_drawing_enabled_36873697_name = StringName(from: "is_screen_drawing_enabled")
-        self._method_is_screen_drawing_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_screen_drawing_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_screen_drawing_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_is_screen_drawing_enabled_36873697_name._native_ptr(), 36873697)
         assert(Camera2D._method_is_screen_drawing_enabled_36873697 != nil)
         let _method_set_limit_drawing_enabled_2586408642_name = StringName(from: "set_limit_drawing_enabled")
-        self._method_set_limit_drawing_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_limit_drawing_enabled_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_limit_drawing_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_limit_drawing_enabled_2586408642_name._native_ptr(), 2586408642)
         assert(Camera2D._method_set_limit_drawing_enabled_2586408642 != nil)
         let _method_is_limit_drawing_enabled_36873697_name = StringName(from: "is_limit_drawing_enabled")
-        self._method_is_limit_drawing_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_limit_drawing_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_limit_drawing_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_is_limit_drawing_enabled_36873697_name._native_ptr(), 36873697)
         assert(Camera2D._method_is_limit_drawing_enabled_36873697 != nil)
         let _method_set_margin_drawing_enabled_2586408642_name = StringName(from: "set_margin_drawing_enabled")
-        self._method_set_margin_drawing_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_margin_drawing_enabled_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_margin_drawing_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_set_margin_drawing_enabled_2586408642_name._native_ptr(), 2586408642)
         assert(Camera2D._method_set_margin_drawing_enabled_2586408642 != nil)
         let _method_is_margin_drawing_enabled_36873697_name = StringName(from: "is_margin_drawing_enabled")
-        self._method_is_margin_drawing_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_margin_drawing_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_margin_drawing_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera2D._native_ptr(), _method_is_margin_drawing_enabled_36873697_name._native_ptr(), 36873697)
         assert(Camera2D._method_is_margin_drawing_enabled_36873697 != nil)
     }
 
@@ -255,7 +260,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func set_anchor_mode(anchor_mode: Camera2D.AnchorMode)  {
         withUnsafePointer(to: anchor_mode.rawValue) { anchor_mode_native in
@@ -287,7 +292,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Camera2D.AnchorMode(from: __resPtr.pointee)
+            return Camera2D.AnchorMode(godot: __resPtr.pointee)
     }
     public func set_ignore_rotation(ignore: UInt8)  {
         withUnsafePointer(to: ignore) { ignore_native in
@@ -320,7 +325,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_process_callback(mode: Camera2D.Camera2DProcessCallback)  {
         withUnsafePointer(to: mode.rawValue) { mode_native in
@@ -352,7 +357,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Camera2D.Camera2DProcessCallback(from: __resPtr.pointee)
+            return Camera2D.Camera2DProcessCallback(godot: __resPtr.pointee)
     }
     public func set_enabled(enabled: UInt8)  {
         withUnsafePointer(to: enabled) { enabled_native in
@@ -385,7 +390,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func make_current()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -416,7 +421,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_limit(margin: Side, limit: Int64)  {
         withUnsafePointer(to: limit) { limit_native in
@@ -452,7 +457,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func set_limit_smoothing_enabled(limit_smoothing_enabled: UInt8)  {
@@ -486,7 +491,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_drag_vertical_enabled(enabled: UInt8)  {
         withUnsafePointer(to: enabled) { enabled_native in
@@ -519,7 +524,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_drag_horizontal_enabled(enabled: UInt8)  {
         withUnsafePointer(to: enabled) { enabled_native in
@@ -552,7 +557,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_drag_vertical_offset(offset: Float64)  {
         withUnsafePointer(to: offset) { offset_native in
@@ -585,7 +590,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_drag_horizontal_offset(offset: Float64)  {
         withUnsafePointer(to: offset) { offset_native in
@@ -618,7 +623,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_drag_margin(margin: Side, drag_margin: Float64)  {
         withUnsafePointer(to: drag_margin) { drag_margin_native in
@@ -654,7 +659,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func get_target_position() -> Vector2 {
@@ -671,7 +676,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func get_screen_center_position() -> Vector2 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -687,7 +692,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func set_zoom(zoom: Vector2)  {
         let zoom_native = zoom._native_ptr()
@@ -718,7 +723,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func set_custom_viewport(viewport: Node)  {
         let viewport_native = viewport._native_ptr()
@@ -749,7 +754,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Node(from: __resPtr.pointee)
+            return Node(godot: __resPtr.pointee)
     }
     public func set_position_smoothing_speed(position_smoothing_speed: Float64)  {
         withUnsafePointer(to: position_smoothing_speed) { position_smoothing_speed_native in
@@ -782,7 +787,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_position_smoothing_enabled(position_smoothing_speed: UInt8)  {
         withUnsafePointer(to: position_smoothing_speed) { position_smoothing_speed_native in
@@ -815,7 +820,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_rotation_smoothing_enabled(enabled: UInt8)  {
         withUnsafePointer(to: enabled) { enabled_native in
@@ -848,7 +853,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_rotation_smoothing_speed(speed: Float64)  {
         withUnsafePointer(to: speed) { speed_native in
@@ -881,7 +886,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func force_update_scroll()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -956,7 +961,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_limit_drawing_enabled(limit_drawing_enabled: UInt8)  {
         withUnsafePointer(to: limit_drawing_enabled) { limit_drawing_enabled_native in
@@ -989,7 +994,7 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_margin_drawing_enabled(margin_drawing_enabled: UInt8)  {
         withUnsafePointer(to: margin_drawing_enabled) { margin_drawing_enabled_native in
@@ -1022,6 +1027,6 @@ public class Camera2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

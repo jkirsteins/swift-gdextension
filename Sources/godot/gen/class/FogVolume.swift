@@ -9,7 +9,7 @@ fileprivate var __godot_name_FogVolume: StringName! = nil
 /// Performance of [FogVolume]s is directly related to their relative size on the screen and the complexity of their attached [FogMaterial]. It is best to keep [FogVolume]s relatively small and simple where possible.
 ///  
 /// [b]Note:[/b] [FogVolume]s only have a visible effect if [member Environment.volumetric_fog_enabled] is [code]true[/code]. If you don't want fog to be globally visible (but only within [FogVolume] nodes), set [member Environment.volumetric_fog_density] to [code]0.0[/code].
-public class FogVolume : VisualInstance3D {
+open class FogVolume : VisualInstance3D {
 
     
 
@@ -22,26 +22,31 @@ public class FogVolume : VisualInstance3D {
     static var _method_set_material_2757459619: GDExtensionMethodBindPtr! = nil
     static var _method_get_material_5934680: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_FogVolume = StringName(from: "FogVolume")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_size_3460891852_name = StringName(from: "set_size")
-        self._method_set_size_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_size_3460891852_name._native_ptr(), 3460891852)
+        self._method_set_size_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_FogVolume._native_ptr(), _method_set_size_3460891852_name._native_ptr(), 3460891852)
         assert(FogVolume._method_set_size_3460891852 != nil)
         let _method_get_size_3360562783_name = StringName(from: "get_size")
-        self._method_get_size_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_size_3360562783_name._native_ptr(), 3360562783)
+        self._method_get_size_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_FogVolume._native_ptr(), _method_get_size_3360562783_name._native_ptr(), 3360562783)
         assert(FogVolume._method_get_size_3360562783 != nil)
         let _method_set_shape_1416323362_name = StringName(from: "set_shape")
-        self._method_set_shape_1416323362 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_shape_1416323362_name._native_ptr(), 1416323362)
+        self._method_set_shape_1416323362 = self.interface.pointee.classdb_get_method_bind(__godot_name_FogVolume._native_ptr(), _method_set_shape_1416323362_name._native_ptr(), 1416323362)
         assert(FogVolume._method_set_shape_1416323362 != nil)
         let _method_get_shape_3920334604_name = StringName(from: "get_shape")
-        self._method_get_shape_3920334604 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_shape_3920334604_name._native_ptr(), 3920334604)
+        self._method_get_shape_3920334604 = self.interface.pointee.classdb_get_method_bind(__godot_name_FogVolume._native_ptr(), _method_get_shape_3920334604_name._native_ptr(), 3920334604)
         assert(FogVolume._method_get_shape_3920334604 != nil)
         let _method_set_material_2757459619_name = StringName(from: "set_material")
-        self._method_set_material_2757459619 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_material_2757459619_name._native_ptr(), 2757459619)
+        self._method_set_material_2757459619 = self.interface.pointee.classdb_get_method_bind(__godot_name_FogVolume._native_ptr(), _method_set_material_2757459619_name._native_ptr(), 2757459619)
         assert(FogVolume._method_set_material_2757459619 != nil)
         let _method_get_material_5934680_name = StringName(from: "get_material")
-        self._method_get_material_5934680 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_material_5934680_name._native_ptr(), 5934680)
+        self._method_get_material_5934680 = self.interface.pointee.classdb_get_method_bind(__godot_name_FogVolume._native_ptr(), _method_get_material_5934680_name._native_ptr(), 5934680)
         assert(FogVolume._method_get_material_5934680 != nil)
     }
 
@@ -74,7 +79,7 @@ public class FogVolume : VisualInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
     }
     public func set_shape(shape: RenderingServer.FogVolumeShape)  {
         withUnsafePointer(to: shape.rawValue) { shape_native in
@@ -106,7 +111,7 @@ public class FogVolume : VisualInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RenderingServer.FogVolumeShape(from: __resPtr.pointee)
+            return RenderingServer.FogVolumeShape(godot: __resPtr.pointee)
     }
     public func set_material(material: Material)  {
         let material_native = material._native_ptr()
@@ -137,6 +142,6 @@ public class FogVolume : VisualInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Material(from: __resPtr.pointee)
+            return Material(godot: __resPtr.pointee)
     }
 }

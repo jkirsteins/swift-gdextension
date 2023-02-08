@@ -77,7 +77,7 @@ fileprivate var __godot_name_NavigationPolygon: StringName! = nil
 /// [/csharp]
 ///  
 /// [/codeblocks]
-public class NavigationPolygon : Resource {
+open class NavigationPolygon : Resource {
 
     
 
@@ -99,53 +99,58 @@ public class NavigationPolygon : Resource {
     static var _method_clear_outlines_3218959716: GDExtensionMethodBindPtr! = nil
     static var _method_make_polygons_from_outlines_3218959716: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_NavigationPolygon = StringName(from: "NavigationPolygon")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_vertices_1509147220_name = StringName(from: "set_vertices")
-        self._method_set_vertices_1509147220 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_vertices_1509147220_name._native_ptr(), 1509147220)
+        self._method_set_vertices_1509147220 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPolygon._native_ptr(), _method_set_vertices_1509147220_name._native_ptr(), 1509147220)
         assert(NavigationPolygon._method_set_vertices_1509147220 != nil)
         let _method_get_vertices_2961356807_name = StringName(from: "get_vertices")
-        self._method_get_vertices_2961356807 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_vertices_2961356807_name._native_ptr(), 2961356807)
+        self._method_get_vertices_2961356807 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPolygon._native_ptr(), _method_get_vertices_2961356807_name._native_ptr(), 2961356807)
         assert(NavigationPolygon._method_get_vertices_2961356807 != nil)
         let _method_add_polygon_3614634198_name = StringName(from: "add_polygon")
-        self._method_add_polygon_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_polygon_3614634198_name._native_ptr(), 3614634198)
+        self._method_add_polygon_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPolygon._native_ptr(), _method_add_polygon_3614634198_name._native_ptr(), 3614634198)
         assert(NavigationPolygon._method_add_polygon_3614634198 != nil)
         let _method_get_polygon_count_3905245786_name = StringName(from: "get_polygon_count")
-        self._method_get_polygon_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_polygon_count_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_polygon_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPolygon._native_ptr(), _method_get_polygon_count_3905245786_name._native_ptr(), 3905245786)
         assert(NavigationPolygon._method_get_polygon_count_3905245786 != nil)
         let _method_get_polygon_3668444399_name = StringName(from: "get_polygon")
-        self._method_get_polygon_3668444399 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_polygon_3668444399_name._native_ptr(), 3668444399)
+        self._method_get_polygon_3668444399 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPolygon._native_ptr(), _method_get_polygon_3668444399_name._native_ptr(), 3668444399)
         assert(NavigationPolygon._method_get_polygon_3668444399 != nil)
         let _method_clear_polygons_3218959716_name = StringName(from: "clear_polygons")
-        self._method_clear_polygons_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_polygons_3218959716_name._native_ptr(), 3218959716)
+        self._method_clear_polygons_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPolygon._native_ptr(), _method_clear_polygons_3218959716_name._native_ptr(), 3218959716)
         assert(NavigationPolygon._method_clear_polygons_3218959716 != nil)
         let _method_get_navigation_mesh_330232164_name = StringName(from: "get_navigation_mesh")
-        self._method_get_navigation_mesh_330232164 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_navigation_mesh_330232164_name._native_ptr(), 330232164)
+        self._method_get_navigation_mesh_330232164 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPolygon._native_ptr(), _method_get_navigation_mesh_330232164_name._native_ptr(), 330232164)
         assert(NavigationPolygon._method_get_navigation_mesh_330232164 != nil)
         let _method_add_outline_1509147220_name = StringName(from: "add_outline")
-        self._method_add_outline_1509147220 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_outline_1509147220_name._native_ptr(), 1509147220)
+        self._method_add_outline_1509147220 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPolygon._native_ptr(), _method_add_outline_1509147220_name._native_ptr(), 1509147220)
         assert(NavigationPolygon._method_add_outline_1509147220 != nil)
         let _method_add_outline_at_index_1569738947_name = StringName(from: "add_outline_at_index")
-        self._method_add_outline_at_index_1569738947 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_outline_at_index_1569738947_name._native_ptr(), 1569738947)
+        self._method_add_outline_at_index_1569738947 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPolygon._native_ptr(), _method_add_outline_at_index_1569738947_name._native_ptr(), 1569738947)
         assert(NavigationPolygon._method_add_outline_at_index_1569738947 != nil)
         let _method_get_outline_count_3905245786_name = StringName(from: "get_outline_count")
-        self._method_get_outline_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_outline_count_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_outline_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPolygon._native_ptr(), _method_get_outline_count_3905245786_name._native_ptr(), 3905245786)
         assert(NavigationPolygon._method_get_outline_count_3905245786 != nil)
         let _method_set_outline_1201971903_name = StringName(from: "set_outline")
-        self._method_set_outline_1201971903 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_outline_1201971903_name._native_ptr(), 1201971903)
+        self._method_set_outline_1201971903 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPolygon._native_ptr(), _method_set_outline_1201971903_name._native_ptr(), 1201971903)
         assert(NavigationPolygon._method_set_outline_1201971903 != nil)
         let _method_get_outline_3946907486_name = StringName(from: "get_outline")
-        self._method_get_outline_3946907486 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_outline_3946907486_name._native_ptr(), 3946907486)
+        self._method_get_outline_3946907486 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPolygon._native_ptr(), _method_get_outline_3946907486_name._native_ptr(), 3946907486)
         assert(NavigationPolygon._method_get_outline_3946907486 != nil)
         let _method_remove_outline_1286410249_name = StringName(from: "remove_outline")
-        self._method_remove_outline_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_outline_1286410249_name._native_ptr(), 1286410249)
+        self._method_remove_outline_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPolygon._native_ptr(), _method_remove_outline_1286410249_name._native_ptr(), 1286410249)
         assert(NavigationPolygon._method_remove_outline_1286410249 != nil)
         let _method_clear_outlines_3218959716_name = StringName(from: "clear_outlines")
-        self._method_clear_outlines_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_outlines_3218959716_name._native_ptr(), 3218959716)
+        self._method_clear_outlines_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPolygon._native_ptr(), _method_clear_outlines_3218959716_name._native_ptr(), 3218959716)
         assert(NavigationPolygon._method_clear_outlines_3218959716 != nil)
         let _method_make_polygons_from_outlines_3218959716_name = StringName(from: "make_polygons_from_outlines")
-        self._method_make_polygons_from_outlines_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_make_polygons_from_outlines_3218959716_name._native_ptr(), 3218959716)
+        self._method_make_polygons_from_outlines_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPolygon._native_ptr(), _method_make_polygons_from_outlines_3218959716_name._native_ptr(), 3218959716)
         assert(NavigationPolygon._method_make_polygons_from_outlines_3218959716 != nil)
     }
 
@@ -178,7 +183,7 @@ public class NavigationPolygon : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector2Array(from: __resPtr.pointee)
+            return PackedVector2Array(godot: __resPtr.pointee)
     }
     public func add_polygon(polygon: PackedInt32Array)  {
         let polygon_native = polygon._native_ptr()
@@ -210,7 +215,7 @@ public class NavigationPolygon : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_polygon(idx: Int64) -> PackedInt32Array {
         withUnsafePointer(to: idx) { idx_native in
@@ -227,7 +232,7 @@ public class NavigationPolygon : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
         }
     }
     public func clear_polygons()  {
@@ -258,7 +263,7 @@ public class NavigationPolygon : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return NavigationMesh(from: __resPtr.pointee)
+            return NavigationMesh(godot: __resPtr.pointee)
     }
     public func add_outline(outline: PackedVector2Array)  {
         let outline_native = outline._native_ptr()
@@ -307,7 +312,7 @@ public class NavigationPolygon : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_outline(idx: Int64, outline: PackedVector2Array)  {
         withUnsafePointer(to: idx) { idx_native in
@@ -341,7 +346,7 @@ public class NavigationPolygon : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector2Array(from: __resPtr.pointee)
+            return PackedVector2Array(godot: __resPtr.pointee)
         }
     }
     public func remove_outline(idx: Int64)  {

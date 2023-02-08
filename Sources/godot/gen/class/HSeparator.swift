@@ -5,7 +5,7 @@ fileprivate var __godot_name_HSeparator: StringName! = nil
 /// Horizontal separator.
 /// 
 /// Horizontal separator. See [Separator]. Even though it looks horizontal, it is used to separate objects vertically.
-public class HSeparator : Separator {
+open class HSeparator : Separator {
 
     
 
@@ -13,8 +13,13 @@ public class HSeparator : Separator {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_HSeparator = StringName(from: "HSeparator")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

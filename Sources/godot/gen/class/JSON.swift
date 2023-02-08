@@ -61,7 +61,7 @@ fileprivate var __godot_name_JSON: StringName! = nil
 /// - Numbers are parsed using [method String.to_float] which is generally more lax than the JSON specification.
 ///  
 /// - Certain errors, such as invalid Unicode sequences, do not cause a parser error. Instead, the string is cleansed and an error is logged to the console.
-public class JSON : Resource {
+open class JSON : Resource {
 
     
 
@@ -76,39 +76,44 @@ public class JSON : Resource {
     static var _method_get_error_line_3905245786: GDExtensionMethodBindPtr! = nil
     static var _method_get_error_message_201670096: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_JSON = StringName(from: "JSON")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_stringify_2656701787_name = StringName(from: "stringify")
-        self._method_stringify_2656701787 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_stringify_2656701787_name._native_ptr(), 2656701787)
+        self._method_stringify_2656701787 = self.interface.pointee.classdb_get_method_bind(__godot_name_JSON._native_ptr(), _method_stringify_2656701787_name._native_ptr(), 2656701787)
         assert(JSON._method_stringify_2656701787 != nil)
         let _method_parse_string_309047738_name = StringName(from: "parse_string")
-        self._method_parse_string_309047738 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_parse_string_309047738_name._native_ptr(), 309047738)
+        self._method_parse_string_309047738 = self.interface.pointee.classdb_get_method_bind(__godot_name_JSON._native_ptr(), _method_parse_string_309047738_name._native_ptr(), 309047738)
         assert(JSON._method_parse_string_309047738 != nil)
         let _method_parse_885841341_name = StringName(from: "parse")
-        self._method_parse_885841341 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_parse_885841341_name._native_ptr(), 885841341)
+        self._method_parse_885841341 = self.interface.pointee.classdb_get_method_bind(__godot_name_JSON._native_ptr(), _method_parse_885841341_name._native_ptr(), 885841341)
         assert(JSON._method_parse_885841341 != nil)
         let _method_get_data_1214101251_name = StringName(from: "get_data")
-        self._method_get_data_1214101251 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_data_1214101251_name._native_ptr(), 1214101251)
+        self._method_get_data_1214101251 = self.interface.pointee.classdb_get_method_bind(__godot_name_JSON._native_ptr(), _method_get_data_1214101251_name._native_ptr(), 1214101251)
         assert(JSON._method_get_data_1214101251 != nil)
         let _method_set_data_1114965689_name = StringName(from: "set_data")
-        self._method_set_data_1114965689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_data_1114965689_name._native_ptr(), 1114965689)
+        self._method_set_data_1114965689 = self.interface.pointee.classdb_get_method_bind(__godot_name_JSON._native_ptr(), _method_set_data_1114965689_name._native_ptr(), 1114965689)
         assert(JSON._method_set_data_1114965689 != nil)
         let _method_get_parsed_text_201670096_name = StringName(from: "get_parsed_text")
-        self._method_get_parsed_text_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_parsed_text_201670096_name._native_ptr(), 201670096)
+        self._method_get_parsed_text_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_JSON._native_ptr(), _method_get_parsed_text_201670096_name._native_ptr(), 201670096)
         assert(JSON._method_get_parsed_text_201670096 != nil)
         let _method_get_error_line_3905245786_name = StringName(from: "get_error_line")
-        self._method_get_error_line_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_error_line_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_error_line_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_JSON._native_ptr(), _method_get_error_line_3905245786_name._native_ptr(), 3905245786)
         assert(JSON._method_get_error_line_3905245786 != nil)
         let _method_get_error_message_201670096_name = StringName(from: "get_error_message")
-        self._method_get_error_message_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_error_message_201670096_name._native_ptr(), 201670096)
+        self._method_get_error_message_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_JSON._native_ptr(), _method_get_error_message_201670096_name._native_ptr(), 201670096)
         assert(JSON._method_get_error_message_201670096 != nil)
     }
 
-    public func stringify(data: Variant, indent: String, sort_keys: UInt8, full_precision: UInt8) -> String {
+    public func stringify(data: Variant, indent: godot.String, sort_keys: UInt8, full_precision: UInt8) -> godot.String {
         withUnsafePointer(to: full_precision) { full_precision_native in
         withUnsafePointer(to: sort_keys) { sort_keys_native in
-        withUnsafePointer(to: indent) { indent_native in
+        let indent_native = indent._native_ptr()
         let data_native = data._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 4)
             defer { args.deallocate() }
@@ -117,20 +122,18 @@ public class JSON : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_stringify_2656701787,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
-        }
+            return godot.String(godot: __resPtr.pointee)
         }
         }
     }
-    public func parse_string(json_string: String) -> Variant {
-        withUnsafePointer(to: json_string) { json_string_native in
+    public func parse_string(json_string: godot.String) -> Variant {
+        let json_string_native = json_string._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -144,12 +147,11 @@ public class JSON : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
-        }
+            return Variant(godot: __resPtr.pointee)
     }
-    public func parse(json_text: String, keep_text: UInt8) -> Error {
+    public func parse(json_text: godot.String, keep_text: UInt8) -> Error {
         withUnsafePointer(to: keep_text) { keep_text_native in
-        withUnsafePointer(to: json_text) { json_text_native in
+        let json_text_native = json_text._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -163,8 +165,7 @@ public class JSON : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func get_data() -> Variant {
@@ -181,7 +182,7 @@ public class JSON : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
     }
     public func set_data(data: Variant)  {
         let data_native = data._native_ptr()
@@ -198,7 +199,7 @@ public class JSON : Resource {
                     nil
                 )
     }
-    public func get_parsed_text() -> String {
+    public func get_parsed_text() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -206,14 +207,13 @@ public class JSON : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_parsed_text_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func get_error_line() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -230,9 +230,9 @@ public class JSON : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
-    public func get_error_message() -> String {
+    public func get_error_message() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -240,13 +240,12 @@ public class JSON : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_error_message_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
 }

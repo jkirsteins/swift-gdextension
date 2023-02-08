@@ -7,7 +7,7 @@ fileprivate var __godot_name_Path3D: StringName! = nil
 /// Can have [PathFollow3D] child nodes moving along the [Curve3D]. See [PathFollow3D] for more information on the usage.
 ///  
 /// Note that the path is considered as relative to the moved nodes (children of [PathFollow3D]). As such, the curve should usually start with a zero vector [code](0, 0, 0)[/code].
-public class Path3D : Node3D {
+open class Path3D : Node3D {
 
     
 
@@ -16,14 +16,19 @@ public class Path3D : Node3D {
     static var _method_set_curve_408955118: GDExtensionMethodBindPtr! = nil
     static var _method_get_curve_4244715212: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_Path3D = StringName(from: "Path3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_curve_408955118_name = StringName(from: "set_curve")
-        self._method_set_curve_408955118 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_curve_408955118_name._native_ptr(), 408955118)
+        self._method_set_curve_408955118 = self.interface.pointee.classdb_get_method_bind(__godot_name_Path3D._native_ptr(), _method_set_curve_408955118_name._native_ptr(), 408955118)
         assert(Path3D._method_set_curve_408955118 != nil)
         let _method_get_curve_4244715212_name = StringName(from: "get_curve")
-        self._method_get_curve_4244715212 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_curve_4244715212_name._native_ptr(), 4244715212)
+        self._method_get_curve_4244715212 = self.interface.pointee.classdb_get_method_bind(__godot_name_Path3D._native_ptr(), _method_get_curve_4244715212_name._native_ptr(), 4244715212)
         assert(Path3D._method_get_curve_4244715212 != nil)
     }
 
@@ -56,6 +61,6 @@ public class Path3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Curve3D(from: __resPtr.pointee)
+            return Curve3D(godot: __resPtr.pointee)
     }
 }

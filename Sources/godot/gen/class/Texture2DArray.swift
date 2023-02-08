@@ -9,7 +9,7 @@ fileprivate var __godot_name_Texture2DArray: StringName! = nil
 /// A Texture2DArray is also different from an [AtlasTexture]: In a Texture2DArray, all images are treated separately. In an atlas, the regions (i.e. the single images) can be of different sizes. Furthermore, you usually need to add a padding around the regions, to prevent accidental UV mapping to more than one region. The same goes for mipmapping: Mipmap chains are handled separately for each layer. In an atlas, the slicing has to be done manually in the fragment shader.
 ///  
 /// To create such a texture file yourself, reimport your image files using the Godot Editor import presets.
-public class Texture2DArray : ImageTextureLayered {
+open class Texture2DArray : ImageTextureLayered {
 
     
 
@@ -17,11 +17,16 @@ public class Texture2DArray : ImageTextureLayered {
 
     static var _method_create_placeholder_121922552: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_Texture2DArray = StringName(from: "Texture2DArray")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_create_placeholder_121922552_name = StringName(from: "create_placeholder")
-        self._method_create_placeholder_121922552 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_placeholder_121922552_name._native_ptr(), 121922552)
+        self._method_create_placeholder_121922552 = self.interface.pointee.classdb_get_method_bind(__godot_name_Texture2DArray._native_ptr(), _method_create_placeholder_121922552_name._native_ptr(), 121922552)
         assert(Texture2DArray._method_create_placeholder_121922552 != nil)
     }
 
@@ -39,6 +44,6 @@ public class Texture2DArray : ImageTextureLayered {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Resource(from: __resPtr.pointee)
+            return Resource(godot: __resPtr.pointee)
     }
 }

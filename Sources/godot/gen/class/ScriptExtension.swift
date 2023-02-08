@@ -5,7 +5,7 @@ fileprivate var __godot_name_ScriptExtension: StringName! = nil
 /// 
 /// 
 /// 
-public class ScriptExtension : Script {
+open class ScriptExtension : Script {
 
     
 
@@ -43,8 +43,13 @@ public class ScriptExtension : Script {
     static var _method__is_placeholder_fallback_enabled_0: GDExtensionMethodBindPtr! = nil
     static var _method__get_rpc_config_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ScriptExtension = StringName(from: "ScriptExtension")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
@@ -64,7 +69,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _placeholder_erased(placeholder: UnsafeMutableRawPointer)  {
         withUnsafePointer(to: placeholder) { placeholder_native in
@@ -97,7 +102,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_base_script() -> Script {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -113,7 +118,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Script(from: __resPtr.pointee)
+            return Script(godot: __resPtr.pointee)
     }
     public func _inherits_script(script: Script) -> UInt8 {
         let script_native = script._native_ptr()
@@ -131,7 +136,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_instance_base_type() -> StringName {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -147,7 +152,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return StringName(from: __resPtr.pointee)
+            return StringName(godot: __resPtr.pointee)
     }
     public func _instance_create(for_object: Object) -> UnsafeMutableRawPointer {
         let for_object_native = for_object._native_ptr()
@@ -164,7 +169,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UnsafeMutableRawPointer(from: __resPtr.pointee)
+            return UnsafeMutableRawPointer(godot: __resPtr.pointee)
     }
     public func _placeholder_instance_create(for_object: Object) -> UnsafeMutableRawPointer {
         let for_object_native = for_object._native_ptr()
@@ -181,7 +186,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UnsafeMutableRawPointer(from: __resPtr.pointee)
+            return UnsafeMutableRawPointer(godot: __resPtr.pointee)
     }
     public func _instance_has(object: Object) -> UInt8 {
         let object_native = object._native_ptr()
@@ -199,7 +204,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _has_source_code() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -216,9 +221,9 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _get_source_code() -> String {
+    public func _get_source_code() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -226,17 +231,16 @@ public class ScriptExtension : Script {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_source_code_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func _set_source_code(code: String)  {
-        withUnsafePointer(to: code) { code_native in
+    public func _set_source_code(code: godot.String)  {
+        let code_native = code._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -249,7 +253,6 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
     public func _reload(keep_state: UInt8) -> Error {
         withUnsafePointer(to: keep_state) { keep_state_native in
@@ -266,7 +269,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func _get_documentation() -> [Dictionary] {
@@ -283,7 +286,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Dictionary](from: __resPtr.pointee)
+            return [Dictionary](godot: __resPtr.pointee)
     }
     public func _has_method(method: StringName) -> UInt8 {
         let method_native = method._native_ptr()
@@ -301,7 +304,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_method_info(method: StringName) -> Dictionary {
         let method_native = method._native_ptr()
@@ -318,7 +321,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
     }
     public func _is_tool() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -335,7 +338,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _is_valid() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -352,7 +355,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_language() -> ScriptLanguage {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -368,7 +371,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return ScriptLanguage(from: __resPtr.pointee)
+            return ScriptLanguage(godot: __resPtr.pointee)
     }
     public func _has_script_signal(signal: StringName) -> UInt8 {
         let signal_native = signal._native_ptr()
@@ -386,7 +389,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_script_signal_list() -> [Dictionary] {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -402,7 +405,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Dictionary](from: __resPtr.pointee)
+            return [Dictionary](godot: __resPtr.pointee)
     }
     public func _has_property_default_value(property: StringName) -> UInt8 {
         let property_native = property._native_ptr()
@@ -420,7 +423,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_property_default_value(property: StringName) -> Variant {
         let property_native = property._native_ptr()
@@ -437,7 +440,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
     }
     public func _update_exports()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -467,7 +470,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Dictionary](from: __resPtr.pointee)
+            return [Dictionary](godot: __resPtr.pointee)
     }
     public func _get_script_property_list() -> [Dictionary] {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -483,7 +486,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Dictionary](from: __resPtr.pointee)
+            return [Dictionary](godot: __resPtr.pointee)
     }
     public func _get_member_line(member: StringName) -> Int64 {
         let member_native = member._native_ptr()
@@ -501,7 +504,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_constants() -> Dictionary {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -517,7 +520,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
     }
     public func _get_members() -> [StringName] {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -533,7 +536,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [StringName](from: __resPtr.pointee)
+            return [StringName](godot: __resPtr.pointee)
     }
     public func _is_placeholder_fallback_enabled() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -550,7 +553,7 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_rpc_config() -> Variant {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -566,6 +569,6 @@ public class ScriptExtension : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
     }
 }

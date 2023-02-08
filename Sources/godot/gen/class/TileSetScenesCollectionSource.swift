@@ -7,7 +7,7 @@ fileprivate var __godot_name_TileSetScenesCollectionSource: StringName! = nil
 /// When placed on a [TileMap], tiles from [TileSetScenesCollectionSource] will automatically instantiate an associated scene at the cell's position in the TileMap.
 ///  
 /// Scenes are instantiated as children of the [TileMap] when it enters the tree. If you add/remove a scene tile in the [TileMap] that is already inside the tree, the [TileMap] will automatically instantiate/free the scene accordingly.
-public class TileSetScenesCollectionSource : TileSetSource {
+open class TileSetScenesCollectionSource : TileSetSource {
 
     
 
@@ -25,41 +25,46 @@ public class TileSetScenesCollectionSource : TileSetSource {
     static var _method_remove_scene_tile_1286410249: GDExtensionMethodBindPtr! = nil
     static var _method_get_next_scene_tile_id_3905245786: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_TileSetScenesCollectionSource = StringName(from: "TileSetScenesCollectionSource")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_get_scene_tiles_count_2455072627_name = StringName(from: "get_scene_tiles_count")
-        self._method_get_scene_tiles_count_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_scene_tiles_count_2455072627_name._native_ptr(), 2455072627)
+        self._method_get_scene_tiles_count_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetScenesCollectionSource._native_ptr(), _method_get_scene_tiles_count_2455072627_name._native_ptr(), 2455072627)
         assert(TileSetScenesCollectionSource._method_get_scene_tiles_count_2455072627 != nil)
         let _method_get_scene_tile_id_3744713108_name = StringName(from: "get_scene_tile_id")
-        self._method_get_scene_tile_id_3744713108 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_scene_tile_id_3744713108_name._native_ptr(), 3744713108)
+        self._method_get_scene_tile_id_3744713108 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetScenesCollectionSource._native_ptr(), _method_get_scene_tile_id_3744713108_name._native_ptr(), 3744713108)
         assert(TileSetScenesCollectionSource._method_get_scene_tile_id_3744713108 != nil)
         let _method_has_scene_tile_id_3067735520_name = StringName(from: "has_scene_tile_id")
-        self._method_has_scene_tile_id_3067735520 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_scene_tile_id_3067735520_name._native_ptr(), 3067735520)
+        self._method_has_scene_tile_id_3067735520 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetScenesCollectionSource._native_ptr(), _method_has_scene_tile_id_3067735520_name._native_ptr(), 3067735520)
         assert(TileSetScenesCollectionSource._method_has_scene_tile_id_3067735520 != nil)
         let _method_create_scene_tile_2633389122_name = StringName(from: "create_scene_tile")
-        self._method_create_scene_tile_2633389122 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_scene_tile_2633389122_name._native_ptr(), 2633389122)
+        self._method_create_scene_tile_2633389122 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetScenesCollectionSource._native_ptr(), _method_create_scene_tile_2633389122_name._native_ptr(), 2633389122)
         assert(TileSetScenesCollectionSource._method_create_scene_tile_2633389122 != nil)
         let _method_set_scene_tile_id_3937882851_name = StringName(from: "set_scene_tile_id")
-        self._method_set_scene_tile_id_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_scene_tile_id_3937882851_name._native_ptr(), 3937882851)
+        self._method_set_scene_tile_id_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetScenesCollectionSource._native_ptr(), _method_set_scene_tile_id_3937882851_name._native_ptr(), 3937882851)
         assert(TileSetScenesCollectionSource._method_set_scene_tile_id_3937882851 != nil)
         let _method_set_scene_tile_scene_3435852839_name = StringName(from: "set_scene_tile_scene")
-        self._method_set_scene_tile_scene_3435852839 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_scene_tile_scene_3435852839_name._native_ptr(), 3435852839)
+        self._method_set_scene_tile_scene_3435852839 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetScenesCollectionSource._native_ptr(), _method_set_scene_tile_scene_3435852839_name._native_ptr(), 3435852839)
         assert(TileSetScenesCollectionSource._method_set_scene_tile_scene_3435852839 != nil)
         let _method_get_scene_tile_scene_511017218_name = StringName(from: "get_scene_tile_scene")
-        self._method_get_scene_tile_scene_511017218 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_scene_tile_scene_511017218_name._native_ptr(), 511017218)
+        self._method_get_scene_tile_scene_511017218 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetScenesCollectionSource._native_ptr(), _method_get_scene_tile_scene_511017218_name._native_ptr(), 511017218)
         assert(TileSetScenesCollectionSource._method_get_scene_tile_scene_511017218 != nil)
         let _method_set_scene_tile_display_placeholder_300928843_name = StringName(from: "set_scene_tile_display_placeholder")
-        self._method_set_scene_tile_display_placeholder_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_scene_tile_display_placeholder_300928843_name._native_ptr(), 300928843)
+        self._method_set_scene_tile_display_placeholder_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetScenesCollectionSource._native_ptr(), _method_set_scene_tile_display_placeholder_300928843_name._native_ptr(), 300928843)
         assert(TileSetScenesCollectionSource._method_set_scene_tile_display_placeholder_300928843 != nil)
         let _method_get_scene_tile_display_placeholder_1116898809_name = StringName(from: "get_scene_tile_display_placeholder")
-        self._method_get_scene_tile_display_placeholder_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_scene_tile_display_placeholder_1116898809_name._native_ptr(), 1116898809)
+        self._method_get_scene_tile_display_placeholder_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetScenesCollectionSource._native_ptr(), _method_get_scene_tile_display_placeholder_1116898809_name._native_ptr(), 1116898809)
         assert(TileSetScenesCollectionSource._method_get_scene_tile_display_placeholder_1116898809 != nil)
         let _method_remove_scene_tile_1286410249_name = StringName(from: "remove_scene_tile")
-        self._method_remove_scene_tile_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_scene_tile_1286410249_name._native_ptr(), 1286410249)
+        self._method_remove_scene_tile_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetScenesCollectionSource._native_ptr(), _method_remove_scene_tile_1286410249_name._native_ptr(), 1286410249)
         assert(TileSetScenesCollectionSource._method_remove_scene_tile_1286410249 != nil)
         let _method_get_next_scene_tile_id_3905245786_name = StringName(from: "get_next_scene_tile_id")
-        self._method_get_next_scene_tile_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_next_scene_tile_id_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_next_scene_tile_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetScenesCollectionSource._native_ptr(), _method_get_next_scene_tile_id_3905245786_name._native_ptr(), 3905245786)
         assert(TileSetScenesCollectionSource._method_get_next_scene_tile_id_3905245786 != nil)
     }
 
@@ -78,7 +83,7 @@ public class TileSetScenesCollectionSource : TileSetSource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_scene_tile_id(index: Int64) -> Int64 {
         withUnsafePointer(to: index) { index_native in
@@ -96,7 +101,7 @@ public class TileSetScenesCollectionSource : TileSetSource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func has_scene_tile_id(id: Int64) -> UInt8 {
@@ -115,7 +120,7 @@ public class TileSetScenesCollectionSource : TileSetSource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func create_scene_tile(packed_scene: PackedScene, id_override: Int64) -> Int64 {
@@ -135,7 +140,7 @@ public class TileSetScenesCollectionSource : TileSetSource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func set_scene_tile_id(id: Int64, new_id: Int64)  {
@@ -188,7 +193,7 @@ public class TileSetScenesCollectionSource : TileSetSource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedScene(from: __resPtr.pointee)
+            return PackedScene(godot: __resPtr.pointee)
         }
     }
     public func set_scene_tile_display_placeholder(id: Int64, display_placeholder: UInt8)  {
@@ -225,7 +230,7 @@ public class TileSetScenesCollectionSource : TileSetSource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func remove_scene_tile(id: Int64)  {
@@ -259,6 +264,6 @@ public class TileSetScenesCollectionSource : TileSetSource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
 }

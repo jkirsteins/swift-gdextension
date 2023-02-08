@@ -7,7 +7,7 @@ fileprivate var __godot_name_RDFramebufferPass: StringName! = nil
 /// This class contains the list of attachment descriptions for a framebuffer pass. Each points with an index to a previously supplied list of texture attachments.
 ///  
 /// Multipass framebuffers can optimize some configurations in mobile, on desktop they provide little to no advantage.
-public class RDFramebufferPass : RefCounted {
+open class RDFramebufferPass : RefCounted {
 
     
 
@@ -24,38 +24,43 @@ public class RDFramebufferPass : RefCounted {
     static var _method_set_depth_attachment_1286410249: GDExtensionMethodBindPtr! = nil
     static var _method_get_depth_attachment_3905245786: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_RDFramebufferPass = StringName(from: "RDFramebufferPass")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_color_attachments_3614634198_name = StringName(from: "set_color_attachments")
-        self._method_set_color_attachments_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_color_attachments_3614634198_name._native_ptr(), 3614634198)
+        self._method_set_color_attachments_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDFramebufferPass._native_ptr(), _method_set_color_attachments_3614634198_name._native_ptr(), 3614634198)
         assert(RDFramebufferPass._method_set_color_attachments_3614634198 != nil)
         let _method_get_color_attachments_1930428628_name = StringName(from: "get_color_attachments")
-        self._method_get_color_attachments_1930428628 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_color_attachments_1930428628_name._native_ptr(), 1930428628)
+        self._method_get_color_attachments_1930428628 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDFramebufferPass._native_ptr(), _method_get_color_attachments_1930428628_name._native_ptr(), 1930428628)
         assert(RDFramebufferPass._method_get_color_attachments_1930428628 != nil)
         let _method_set_input_attachments_3614634198_name = StringName(from: "set_input_attachments")
-        self._method_set_input_attachments_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_input_attachments_3614634198_name._native_ptr(), 3614634198)
+        self._method_set_input_attachments_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDFramebufferPass._native_ptr(), _method_set_input_attachments_3614634198_name._native_ptr(), 3614634198)
         assert(RDFramebufferPass._method_set_input_attachments_3614634198 != nil)
         let _method_get_input_attachments_1930428628_name = StringName(from: "get_input_attachments")
-        self._method_get_input_attachments_1930428628 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_input_attachments_1930428628_name._native_ptr(), 1930428628)
+        self._method_get_input_attachments_1930428628 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDFramebufferPass._native_ptr(), _method_get_input_attachments_1930428628_name._native_ptr(), 1930428628)
         assert(RDFramebufferPass._method_get_input_attachments_1930428628 != nil)
         let _method_set_resolve_attachments_3614634198_name = StringName(from: "set_resolve_attachments")
-        self._method_set_resolve_attachments_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_resolve_attachments_3614634198_name._native_ptr(), 3614634198)
+        self._method_set_resolve_attachments_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDFramebufferPass._native_ptr(), _method_set_resolve_attachments_3614634198_name._native_ptr(), 3614634198)
         assert(RDFramebufferPass._method_set_resolve_attachments_3614634198 != nil)
         let _method_get_resolve_attachments_1930428628_name = StringName(from: "get_resolve_attachments")
-        self._method_get_resolve_attachments_1930428628 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_resolve_attachments_1930428628_name._native_ptr(), 1930428628)
+        self._method_get_resolve_attachments_1930428628 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDFramebufferPass._native_ptr(), _method_get_resolve_attachments_1930428628_name._native_ptr(), 1930428628)
         assert(RDFramebufferPass._method_get_resolve_attachments_1930428628 != nil)
         let _method_set_preserve_attachments_3614634198_name = StringName(from: "set_preserve_attachments")
-        self._method_set_preserve_attachments_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_preserve_attachments_3614634198_name._native_ptr(), 3614634198)
+        self._method_set_preserve_attachments_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDFramebufferPass._native_ptr(), _method_set_preserve_attachments_3614634198_name._native_ptr(), 3614634198)
         assert(RDFramebufferPass._method_set_preserve_attachments_3614634198 != nil)
         let _method_get_preserve_attachments_1930428628_name = StringName(from: "get_preserve_attachments")
-        self._method_get_preserve_attachments_1930428628 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_preserve_attachments_1930428628_name._native_ptr(), 1930428628)
+        self._method_get_preserve_attachments_1930428628 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDFramebufferPass._native_ptr(), _method_get_preserve_attachments_1930428628_name._native_ptr(), 1930428628)
         assert(RDFramebufferPass._method_get_preserve_attachments_1930428628 != nil)
         let _method_set_depth_attachment_1286410249_name = StringName(from: "set_depth_attachment")
-        self._method_set_depth_attachment_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_depth_attachment_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_depth_attachment_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDFramebufferPass._native_ptr(), _method_set_depth_attachment_1286410249_name._native_ptr(), 1286410249)
         assert(RDFramebufferPass._method_set_depth_attachment_1286410249 != nil)
         let _method_get_depth_attachment_3905245786_name = StringName(from: "get_depth_attachment")
-        self._method_get_depth_attachment_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_depth_attachment_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_depth_attachment_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDFramebufferPass._native_ptr(), _method_get_depth_attachment_3905245786_name._native_ptr(), 3905245786)
         assert(RDFramebufferPass._method_get_depth_attachment_3905245786 != nil)
     }
 
@@ -88,7 +93,7 @@ public class RDFramebufferPass : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
     }
     public func set_input_attachments(p_member: PackedInt32Array)  {
         let p_member_native = p_member._native_ptr()
@@ -119,7 +124,7 @@ public class RDFramebufferPass : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
     }
     public func set_resolve_attachments(p_member: PackedInt32Array)  {
         let p_member_native = p_member._native_ptr()
@@ -150,7 +155,7 @@ public class RDFramebufferPass : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
     }
     public func set_preserve_attachments(p_member: PackedInt32Array)  {
         let p_member_native = p_member._native_ptr()
@@ -181,7 +186,7 @@ public class RDFramebufferPass : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
     }
     public func set_depth_attachment(p_member: Int64)  {
         withUnsafePointer(to: p_member) { p_member_native in
@@ -214,6 +219,6 @@ public class RDFramebufferPass : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
 }

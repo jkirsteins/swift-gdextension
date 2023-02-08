@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeRandomRange: StringName! = nil
 /// A visual shader node that generates a pseudo-random scalar.
 /// 
 /// Random range node will output a pseudo-random scalar value in the specified range, based on the seed. The value is always the same for the given seed and range, so you should provide a changing input, e.g. by using time.
-public class VisualShaderNodeRandomRange : VisualShaderNode {
+open class VisualShaderNodeRandomRange : VisualShaderNode {
 
     
 
@@ -13,8 +13,13 @@ public class VisualShaderNodeRandomRange : VisualShaderNode {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeRandomRange = StringName(from: "VisualShaderNodeRandomRange")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

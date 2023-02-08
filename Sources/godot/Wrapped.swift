@@ -3,10 +3,17 @@
 import Foundation
 import godot_native
 
-public class Wrapped : Class
+open class Wrapped : Class
 {
-    public class func initialize_class() {
-        fatalError("Do not initialize Wrapped class")
+    public static var interface: UnsafePointer<GDExtensionInterface>! = nil
+    public static var library: GDExtensionClassLibraryPtr! = nil
+    
+    var interface: UnsafePointer<GDExtensionInterface> { Self.interface }
+    
+    public class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
     }
     
     public class func create(from ptr: UnsafeRawPointer) -> Object {
@@ -26,11 +33,11 @@ public class Wrapped : Class
     public let opaque: UnsafeMutableRawPointer
 //    UnsafeMutablePointer<>
     
-    public required init(from unsafe: UnsafeRawPointer) {
+    public required init(godot unsafe: UnsafeRawPointer) {
         self.opaque = .init(mutating: unsafe)
     }
     
-    init(from unsafe: UnsafeMutableRawPointer) {
+    init(godot unsafe: UnsafeMutableRawPointer) {
         self.opaque = unsafe
     }
     

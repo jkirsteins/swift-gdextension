@@ -25,7 +25,7 @@ guard let builtin_member_offsets = decodedData.builtin_class_member_offsets.firs
     fatalError("Failed to fetch builtin member offsets for config \(config)")
 }
 
-let globalAllowAll = true
+let globalAllowAll = false
 
 print("==> Generating Variant")
 export_builtin_variant(builtin_sizes, builtin_member_offsets, decodedData)
@@ -33,7 +33,7 @@ export_builtin_variant(builtin_sizes, builtin_member_offsets, decodedData)
 print("==> Builtin classes")
 for builtin_class in decodedData.builtin_classes {
     // denylist - use the native types for these
-    guard !["int", "float", "bool", "String", "Nil"].contains(builtin_class.name) else {
+    guard !["int", "float", "bool", "Nil"].contains(builtin_class.name) else {
         print("    skipping \(builtin_class.name)")
         continue
     }
@@ -41,7 +41,7 @@ for builtin_class in decodedData.builtin_classes {
     // allowlist
     let allowAll = globalAllowAll || true
     guard allowAll || [
-        
+        "String"
     ].contains(builtin_class.name) else {
         print("    skipping \(builtin_class.name)")
         continue
@@ -60,7 +60,8 @@ for godot_class in decodedData.classes {
     // allowlist
     let allowAll = globalAllowAll || false
     guard allowAll || [
-        "EditorInspectorPlugin"
+        "EditorInspectorPlugin",
+        "AESContext"
 //        "InputEvent",
 //        "SceneTree",
 //        "Window",
@@ -93,7 +94,7 @@ for godot_class in decodedData.classes {
 print("==> Global enums")
 for godot_enum in decodedData.global_enums {
     // allowlist
-    let allowAll = globalAllowAll || true
+    let allowAll = globalAllowAll || false
     guard allowAll || [
 
     ].contains(godot_enum.name) else {
@@ -110,7 +111,7 @@ for godot_enum in decodedData.global_enums {
 print("==> Global structures")
 for godot_struct in decodedData.native_structures {
     // allowlist
-    let allowAll = globalAllowAll || true
+    let allowAll = globalAllowAll || false
     guard allowAll || [
         "PhysicsServer2DExtensionRayResult"
     ].contains(godot_struct.name) else {
@@ -123,3 +124,6 @@ for godot_struct in decodedData.native_structures {
         builtin_sizes,
         decodedData)
 }
+
+print("==> Misc.")
+export_module_initializers(decodedData, builtin_sizes)

@@ -55,7 +55,7 @@ fileprivate var __godot_name_JavaScriptObject: StringName! = nil
 /// [/codeblock]
 ///  
 /// [b]Note:[/b] Only available in the Web platform.
-public class JavaScriptObject : RefCounted {
+open class JavaScriptObject : RefCounted {
 
     
 
@@ -63,8 +63,13 @@ public class JavaScriptObject : RefCounted {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_JavaScriptObject = StringName(from: "JavaScriptObject")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeGroupBase: StringName! = nil
 /// Base class for a family of nodes with variable number of input and output ports within the visual shader graph.
 /// 
 /// Currently, has no direct usage, use the derived classes instead.
-public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
+open class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
 
     
 
@@ -33,76 +33,81 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
     static var _method_get_free_input_port_id_3905245786: GDExtensionMethodBindPtr! = nil
     static var _method_get_free_output_port_id_3905245786: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeGroupBase = StringName(from: "VisualShaderNodeGroupBase")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_inputs_83702148_name = StringName(from: "set_inputs")
-        self._method_set_inputs_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_inputs_83702148_name._native_ptr(), 83702148)
+        self._method_set_inputs_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_set_inputs_83702148_name._native_ptr(), 83702148)
         assert(VisualShaderNodeGroupBase._method_set_inputs_83702148 != nil)
         let _method_get_inputs_201670096_name = StringName(from: "get_inputs")
-        self._method_get_inputs_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_inputs_201670096_name._native_ptr(), 201670096)
+        self._method_get_inputs_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_get_inputs_201670096_name._native_ptr(), 201670096)
         assert(VisualShaderNodeGroupBase._method_get_inputs_201670096 != nil)
         let _method_set_outputs_83702148_name = StringName(from: "set_outputs")
-        self._method_set_outputs_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_outputs_83702148_name._native_ptr(), 83702148)
+        self._method_set_outputs_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_set_outputs_83702148_name._native_ptr(), 83702148)
         assert(VisualShaderNodeGroupBase._method_set_outputs_83702148 != nil)
         let _method_get_outputs_201670096_name = StringName(from: "get_outputs")
-        self._method_get_outputs_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_outputs_201670096_name._native_ptr(), 201670096)
+        self._method_get_outputs_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_get_outputs_201670096_name._native_ptr(), 201670096)
         assert(VisualShaderNodeGroupBase._method_get_outputs_201670096 != nil)
         let _method_is_valid_port_name_3927539163_name = StringName(from: "is_valid_port_name")
-        self._method_is_valid_port_name_3927539163 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_valid_port_name_3927539163_name._native_ptr(), 3927539163)
+        self._method_is_valid_port_name_3927539163 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_is_valid_port_name_3927539163_name._native_ptr(), 3927539163)
         assert(VisualShaderNodeGroupBase._method_is_valid_port_name_3927539163 != nil)
         let _method_add_input_port_2285447957_name = StringName(from: "add_input_port")
-        self._method_add_input_port_2285447957 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_input_port_2285447957_name._native_ptr(), 2285447957)
+        self._method_add_input_port_2285447957 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_add_input_port_2285447957_name._native_ptr(), 2285447957)
         assert(VisualShaderNodeGroupBase._method_add_input_port_2285447957 != nil)
         let _method_remove_input_port_1286410249_name = StringName(from: "remove_input_port")
-        self._method_remove_input_port_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_input_port_1286410249_name._native_ptr(), 1286410249)
+        self._method_remove_input_port_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_remove_input_port_1286410249_name._native_ptr(), 1286410249)
         assert(VisualShaderNodeGroupBase._method_remove_input_port_1286410249 != nil)
         let _method_get_input_port_count_3905245786_name = StringName(from: "get_input_port_count")
-        self._method_get_input_port_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_input_port_count_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_input_port_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_get_input_port_count_3905245786_name._native_ptr(), 3905245786)
         assert(VisualShaderNodeGroupBase._method_get_input_port_count_3905245786 != nil)
         let _method_has_input_port_1116898809_name = StringName(from: "has_input_port")
-        self._method_has_input_port_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_input_port_1116898809_name._native_ptr(), 1116898809)
+        self._method_has_input_port_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_has_input_port_1116898809_name._native_ptr(), 1116898809)
         assert(VisualShaderNodeGroupBase._method_has_input_port_1116898809 != nil)
         let _method_clear_input_ports_3218959716_name = StringName(from: "clear_input_ports")
-        self._method_clear_input_ports_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_input_ports_3218959716_name._native_ptr(), 3218959716)
+        self._method_clear_input_ports_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_clear_input_ports_3218959716_name._native_ptr(), 3218959716)
         assert(VisualShaderNodeGroupBase._method_clear_input_ports_3218959716 != nil)
         let _method_add_output_port_2285447957_name = StringName(from: "add_output_port")
-        self._method_add_output_port_2285447957 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_output_port_2285447957_name._native_ptr(), 2285447957)
+        self._method_add_output_port_2285447957 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_add_output_port_2285447957_name._native_ptr(), 2285447957)
         assert(VisualShaderNodeGroupBase._method_add_output_port_2285447957 != nil)
         let _method_remove_output_port_1286410249_name = StringName(from: "remove_output_port")
-        self._method_remove_output_port_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_output_port_1286410249_name._native_ptr(), 1286410249)
+        self._method_remove_output_port_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_remove_output_port_1286410249_name._native_ptr(), 1286410249)
         assert(VisualShaderNodeGroupBase._method_remove_output_port_1286410249 != nil)
         let _method_get_output_port_count_3905245786_name = StringName(from: "get_output_port_count")
-        self._method_get_output_port_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_output_port_count_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_output_port_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_get_output_port_count_3905245786_name._native_ptr(), 3905245786)
         assert(VisualShaderNodeGroupBase._method_get_output_port_count_3905245786 != nil)
         let _method_has_output_port_1116898809_name = StringName(from: "has_output_port")
-        self._method_has_output_port_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_output_port_1116898809_name._native_ptr(), 1116898809)
+        self._method_has_output_port_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_has_output_port_1116898809_name._native_ptr(), 1116898809)
         assert(VisualShaderNodeGroupBase._method_has_output_port_1116898809 != nil)
         let _method_clear_output_ports_3218959716_name = StringName(from: "clear_output_ports")
-        self._method_clear_output_ports_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_output_ports_3218959716_name._native_ptr(), 3218959716)
+        self._method_clear_output_ports_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_clear_output_ports_3218959716_name._native_ptr(), 3218959716)
         assert(VisualShaderNodeGroupBase._method_clear_output_ports_3218959716 != nil)
         let _method_set_input_port_name_501894301_name = StringName(from: "set_input_port_name")
-        self._method_set_input_port_name_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_input_port_name_501894301_name._native_ptr(), 501894301)
+        self._method_set_input_port_name_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_set_input_port_name_501894301_name._native_ptr(), 501894301)
         assert(VisualShaderNodeGroupBase._method_set_input_port_name_501894301 != nil)
         let _method_set_input_port_type_3937882851_name = StringName(from: "set_input_port_type")
-        self._method_set_input_port_type_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_input_port_type_3937882851_name._native_ptr(), 3937882851)
+        self._method_set_input_port_type_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_set_input_port_type_3937882851_name._native_ptr(), 3937882851)
         assert(VisualShaderNodeGroupBase._method_set_input_port_type_3937882851 != nil)
         let _method_set_output_port_name_501894301_name = StringName(from: "set_output_port_name")
-        self._method_set_output_port_name_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_output_port_name_501894301_name._native_ptr(), 501894301)
+        self._method_set_output_port_name_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_set_output_port_name_501894301_name._native_ptr(), 501894301)
         assert(VisualShaderNodeGroupBase._method_set_output_port_name_501894301 != nil)
         let _method_set_output_port_type_3937882851_name = StringName(from: "set_output_port_type")
-        self._method_set_output_port_type_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_output_port_type_3937882851_name._native_ptr(), 3937882851)
+        self._method_set_output_port_type_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_set_output_port_type_3937882851_name._native_ptr(), 3937882851)
         assert(VisualShaderNodeGroupBase._method_set_output_port_type_3937882851 != nil)
         let _method_get_free_input_port_id_3905245786_name = StringName(from: "get_free_input_port_id")
-        self._method_get_free_input_port_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_free_input_port_id_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_free_input_port_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_get_free_input_port_id_3905245786_name._native_ptr(), 3905245786)
         assert(VisualShaderNodeGroupBase._method_get_free_input_port_id_3905245786 != nil)
         let _method_get_free_output_port_id_3905245786_name = StringName(from: "get_free_output_port_id")
-        self._method_get_free_output_port_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_free_output_port_id_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_free_output_port_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeGroupBase._native_ptr(), _method_get_free_output_port_id_3905245786_name._native_ptr(), 3905245786)
         assert(VisualShaderNodeGroupBase._method_get_free_output_port_id_3905245786 != nil)
     }
 
-    public func set_inputs(inputs: String)  {
-        withUnsafePointer(to: inputs) { inputs_native in
+    public func set_inputs(inputs: godot.String)  {
+        let inputs_native = inputs._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -115,9 +120,8 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func get_inputs() -> String {
+    public func get_inputs() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -125,17 +129,16 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_inputs_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func set_outputs(outputs: String)  {
-        withUnsafePointer(to: outputs) { outputs_native in
+    public func set_outputs(outputs: godot.String)  {
+        let outputs_native = outputs._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -148,9 +151,8 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func get_outputs() -> String {
+    public func get_outputs() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -158,17 +160,16 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_outputs_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func is_valid_port_name(name: String) -> UInt8 {
-        withUnsafePointer(to: name) { name_native in
+    public func is_valid_port_name(name: godot.String) -> UInt8 {
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -183,13 +184,12 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func add_input_port(id: Int64, `type`: Int64, name: String)  {
-        withUnsafePointer(to: name) { name_native in
+    public func add_input_port(id: Int64, `type`: Int64, name: godot.String)  {
         withUnsafePointer(to: `type`) { type_native in
         withUnsafePointer(to: id) { id_native in
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -202,7 +202,6 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
                     args.baseAddress!,
                     nil
                 )
-        }
         }
         }
     }
@@ -237,7 +236,7 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func has_input_port(id: Int64) -> UInt8 {
         withUnsafePointer(to: id) { id_native in
@@ -255,7 +254,7 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func clear_input_ports()  {
@@ -272,10 +271,10 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
                     nil
                 )
     }
-    public func add_output_port(id: Int64, `type`: Int64, name: String)  {
-        withUnsafePointer(to: name) { name_native in
+    public func add_output_port(id: Int64, `type`: Int64, name: godot.String)  {
         withUnsafePointer(to: `type`) { type_native in
         withUnsafePointer(to: id) { id_native in
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -288,7 +287,6 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
                     args.baseAddress!,
                     nil
                 )
-        }
         }
         }
     }
@@ -323,7 +321,7 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func has_output_port(id: Int64) -> UInt8 {
         withUnsafePointer(to: id) { id_native in
@@ -341,7 +339,7 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func clear_output_ports()  {
@@ -358,9 +356,9 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
                     nil
                 )
     }
-    public func set_input_port_name(id: Int64, name: String)  {
-        withUnsafePointer(to: name) { name_native in
+    public func set_input_port_name(id: Int64, name: godot.String)  {
         withUnsafePointer(to: id) { id_native in
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -373,7 +371,6 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
                     args.baseAddress!,
                     nil
                 )
-        }
         }
     }
     public func set_input_port_type(id: Int64, `type`: Int64)  {
@@ -394,9 +391,9 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
         }
         }
     }
-    public func set_output_port_name(id: Int64, name: String)  {
-        withUnsafePointer(to: name) { name_native in
+    public func set_output_port_name(id: Int64, name: godot.String)  {
         withUnsafePointer(to: id) { id_native in
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -409,7 +406,6 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
                     args.baseAddress!,
                     nil
                 )
-        }
         }
     }
     public func set_output_port_type(id: Int64, `type`: Int64)  {
@@ -445,7 +441,7 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_free_output_port_id() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -462,6 +458,6 @@ public class VisualShaderNodeGroupBase : VisualShaderNodeResizableBase {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
 }

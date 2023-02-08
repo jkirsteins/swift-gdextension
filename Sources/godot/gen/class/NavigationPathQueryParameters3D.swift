@@ -5,7 +5,7 @@ fileprivate var __godot_name_NavigationPathQueryParameters3D: StringName! = nil
 /// Parameters to be sent to a 3D navigation path query.
 /// 
 /// This class contains the start and target position and other parameters to be used with [method NavigationServer3D.query_path].
-public class NavigationPathQueryParameters3D : RefCounted {
+open class NavigationPathQueryParameters3D : RefCounted {
 
     public enum PathfindingAlgorithm : Int32 {
         case PATHFINDING_ALGORITHM_ASTAR = 0
@@ -43,50 +43,55 @@ public class NavigationPathQueryParameters3D : RefCounted {
     static var _method_set_metadata_flags_2713846708: GDExtensionMethodBindPtr! = nil
     static var _method_get_metadata_flags_1582332802: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_NavigationPathQueryParameters3D = StringName(from: "NavigationPathQueryParameters3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_pathfinding_algorithm_394560454_name = StringName(from: "set_pathfinding_algorithm")
-        self._method_set_pathfinding_algorithm_394560454 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_pathfinding_algorithm_394560454_name._native_ptr(), 394560454)
+        self._method_set_pathfinding_algorithm_394560454 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryParameters3D._native_ptr(), _method_set_pathfinding_algorithm_394560454_name._native_ptr(), 394560454)
         assert(NavigationPathQueryParameters3D._method_set_pathfinding_algorithm_394560454 != nil)
         let _method_get_pathfinding_algorithm_3398491350_name = StringName(from: "get_pathfinding_algorithm")
-        self._method_get_pathfinding_algorithm_3398491350 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_pathfinding_algorithm_3398491350_name._native_ptr(), 3398491350)
+        self._method_get_pathfinding_algorithm_3398491350 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryParameters3D._native_ptr(), _method_get_pathfinding_algorithm_3398491350_name._native_ptr(), 3398491350)
         assert(NavigationPathQueryParameters3D._method_get_pathfinding_algorithm_3398491350 != nil)
         let _method_set_path_postprocessing_2267362344_name = StringName(from: "set_path_postprocessing")
-        self._method_set_path_postprocessing_2267362344 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_path_postprocessing_2267362344_name._native_ptr(), 2267362344)
+        self._method_set_path_postprocessing_2267362344 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryParameters3D._native_ptr(), _method_set_path_postprocessing_2267362344_name._native_ptr(), 2267362344)
         assert(NavigationPathQueryParameters3D._method_set_path_postprocessing_2267362344 != nil)
         let _method_get_path_postprocessing_3883858360_name = StringName(from: "get_path_postprocessing")
-        self._method_get_path_postprocessing_3883858360 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_path_postprocessing_3883858360_name._native_ptr(), 3883858360)
+        self._method_get_path_postprocessing_3883858360 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryParameters3D._native_ptr(), _method_get_path_postprocessing_3883858360_name._native_ptr(), 3883858360)
         assert(NavigationPathQueryParameters3D._method_get_path_postprocessing_3883858360 != nil)
         let _method_set_map_2722037293_name = StringName(from: "set_map")
-        self._method_set_map_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_map_2722037293_name._native_ptr(), 2722037293)
+        self._method_set_map_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryParameters3D._native_ptr(), _method_set_map_2722037293_name._native_ptr(), 2722037293)
         assert(NavigationPathQueryParameters3D._method_set_map_2722037293 != nil)
         let _method_get_map_2944877500_name = StringName(from: "get_map")
-        self._method_get_map_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_map_2944877500_name._native_ptr(), 2944877500)
+        self._method_get_map_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryParameters3D._native_ptr(), _method_get_map_2944877500_name._native_ptr(), 2944877500)
         assert(NavigationPathQueryParameters3D._method_get_map_2944877500 != nil)
         let _method_set_start_position_3460891852_name = StringName(from: "set_start_position")
-        self._method_set_start_position_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_start_position_3460891852_name._native_ptr(), 3460891852)
+        self._method_set_start_position_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryParameters3D._native_ptr(), _method_set_start_position_3460891852_name._native_ptr(), 3460891852)
         assert(NavigationPathQueryParameters3D._method_set_start_position_3460891852 != nil)
         let _method_get_start_position_3360562783_name = StringName(from: "get_start_position")
-        self._method_get_start_position_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_start_position_3360562783_name._native_ptr(), 3360562783)
+        self._method_get_start_position_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryParameters3D._native_ptr(), _method_get_start_position_3360562783_name._native_ptr(), 3360562783)
         assert(NavigationPathQueryParameters3D._method_get_start_position_3360562783 != nil)
         let _method_set_target_position_3460891852_name = StringName(from: "set_target_position")
-        self._method_set_target_position_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_target_position_3460891852_name._native_ptr(), 3460891852)
+        self._method_set_target_position_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryParameters3D._native_ptr(), _method_set_target_position_3460891852_name._native_ptr(), 3460891852)
         assert(NavigationPathQueryParameters3D._method_set_target_position_3460891852 != nil)
         let _method_get_target_position_3360562783_name = StringName(from: "get_target_position")
-        self._method_get_target_position_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_target_position_3360562783_name._native_ptr(), 3360562783)
+        self._method_get_target_position_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryParameters3D._native_ptr(), _method_get_target_position_3360562783_name._native_ptr(), 3360562783)
         assert(NavigationPathQueryParameters3D._method_get_target_position_3360562783 != nil)
         let _method_set_navigation_layers_1286410249_name = StringName(from: "set_navigation_layers")
-        self._method_set_navigation_layers_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_navigation_layers_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_navigation_layers_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryParameters3D._native_ptr(), _method_set_navigation_layers_1286410249_name._native_ptr(), 1286410249)
         assert(NavigationPathQueryParameters3D._method_set_navigation_layers_1286410249 != nil)
         let _method_get_navigation_layers_3905245786_name = StringName(from: "get_navigation_layers")
-        self._method_get_navigation_layers_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_navigation_layers_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_navigation_layers_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryParameters3D._native_ptr(), _method_get_navigation_layers_3905245786_name._native_ptr(), 3905245786)
         assert(NavigationPathQueryParameters3D._method_get_navigation_layers_3905245786 != nil)
         let _method_set_metadata_flags_2713846708_name = StringName(from: "set_metadata_flags")
-        self._method_set_metadata_flags_2713846708 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_metadata_flags_2713846708_name._native_ptr(), 2713846708)
+        self._method_set_metadata_flags_2713846708 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryParameters3D._native_ptr(), _method_set_metadata_flags_2713846708_name._native_ptr(), 2713846708)
         assert(NavigationPathQueryParameters3D._method_set_metadata_flags_2713846708 != nil)
         let _method_get_metadata_flags_1582332802_name = StringName(from: "get_metadata_flags")
-        self._method_get_metadata_flags_1582332802 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_metadata_flags_1582332802_name._native_ptr(), 1582332802)
+        self._method_get_metadata_flags_1582332802 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryParameters3D._native_ptr(), _method_get_metadata_flags_1582332802_name._native_ptr(), 1582332802)
         assert(NavigationPathQueryParameters3D._method_get_metadata_flags_1582332802 != nil)
     }
 
@@ -120,7 +125,7 @@ public class NavigationPathQueryParameters3D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return NavigationPathQueryParameters3D.PathfindingAlgorithm(from: __resPtr.pointee)
+            return NavigationPathQueryParameters3D.PathfindingAlgorithm(godot: __resPtr.pointee)
     }
     public func set_path_postprocessing(path_postprocessing: NavigationPathQueryParameters3D.PathPostProcessing)  {
         withUnsafePointer(to: path_postprocessing.rawValue) { path_postprocessing_native in
@@ -152,7 +157,7 @@ public class NavigationPathQueryParameters3D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return NavigationPathQueryParameters3D.PathPostProcessing(from: __resPtr.pointee)
+            return NavigationPathQueryParameters3D.PathPostProcessing(godot: __resPtr.pointee)
     }
     public func set_map(map: RID)  {
         let map_native = map._native_ptr()
@@ -183,7 +188,7 @@ public class NavigationPathQueryParameters3D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func set_start_position(start_position: Vector3)  {
         let start_position_native = start_position._native_ptr()
@@ -214,7 +219,7 @@ public class NavigationPathQueryParameters3D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
     }
     public func set_target_position(target_position: Vector3)  {
         let target_position_native = target_position._native_ptr()
@@ -245,7 +250,7 @@ public class NavigationPathQueryParameters3D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
     }
     public func set_navigation_layers(navigation_layers: Int64)  {
         withUnsafePointer(to: navigation_layers) { navigation_layers_native in
@@ -278,7 +283,7 @@ public class NavigationPathQueryParameters3D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_metadata_flags(flags: NavigationPathQueryParameters3D.PathMetadataFlags)  {
         withUnsafePointer(to: flags.rawValue) { flags_native in
@@ -310,6 +315,6 @@ public class NavigationPathQueryParameters3D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return NavigationPathQueryParameters3D.PathMetadataFlags(from: __resPtr.pointee)
+            return NavigationPathQueryParameters3D.PathMetadataFlags(godot: __resPtr.pointee)
     }
 }

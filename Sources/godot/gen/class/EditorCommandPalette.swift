@@ -37,7 +37,7 @@ fileprivate var __godot_name_EditorCommandPalette: StringName! = nil
 /// [/codeblocks]
 ///  
 /// [b]Note:[/b] This class shouldn't be instantiated directly. Instead, access the singleton using [method EditorInterface.get_command_palette].
-public class EditorCommandPalette : ConfirmationDialog {
+open class EditorCommandPalette : ConfirmationDialog {
 
     
 
@@ -46,22 +46,27 @@ public class EditorCommandPalette : ConfirmationDialog {
     static var _method_add_command_3664614892: GDExtensionMethodBindPtr! = nil
     static var _method_remove_command_83702148: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorCommandPalette = StringName(from: "EditorCommandPalette")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_add_command_3664614892_name = StringName(from: "add_command")
-        self._method_add_command_3664614892 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_command_3664614892_name._native_ptr(), 3664614892)
+        self._method_add_command_3664614892 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorCommandPalette._native_ptr(), _method_add_command_3664614892_name._native_ptr(), 3664614892)
         assert(EditorCommandPalette._method_add_command_3664614892 != nil)
         let _method_remove_command_83702148_name = StringName(from: "remove_command")
-        self._method_remove_command_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_command_83702148_name._native_ptr(), 83702148)
+        self._method_remove_command_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorCommandPalette._native_ptr(), _method_remove_command_83702148_name._native_ptr(), 83702148)
         assert(EditorCommandPalette._method_remove_command_83702148 != nil)
     }
 
-    public func add_command(command_name: String, key_name: String, binded_callable: Callable, shortcut_text: String)  {
-        withUnsafePointer(to: shortcut_text) { shortcut_text_native in
-        withUnsafePointer(to: key_name) { key_name_native in
-        withUnsafePointer(to: command_name) { command_name_native in
+    public func add_command(command_name: godot.String, key_name: godot.String, binded_callable: Callable, shortcut_text: godot.String)  {
+        let shortcut_text_native = shortcut_text._native_ptr()
         let binded_callable_native = binded_callable._native_ptr()
+        let key_name_native = key_name._native_ptr()
+        let command_name_native = command_name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 4)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -74,12 +79,9 @@ public class EditorCommandPalette : ConfirmationDialog {
                     args.baseAddress!,
                     nil
                 )
-        }
-        }
-        }
     }
-    public func remove_command(key_name: String)  {
-        withUnsafePointer(to: key_name) { key_name_native in
+    public func remove_command(key_name: godot.String)  {
+        let key_name_native = key_name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -92,6 +94,5 @@ public class EditorCommandPalette : ConfirmationDialog {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
 }

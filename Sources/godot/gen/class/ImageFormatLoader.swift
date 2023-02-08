@@ -5,7 +5,7 @@ fileprivate var __godot_name_ImageFormatLoader: StringName! = nil
 /// Base class to add support for specific image formats.
 /// 
 /// The engine supports multiple image formats out of the box (PNG, SVG, JPEG, WebP to name a few), but you can choose to implement support for additional image formats by extending [ImageFormatLoaderExtension].
-public class ImageFormatLoader : RefCounted {
+open class ImageFormatLoader : RefCounted {
 
     public struct LoaderFlags: OptionSet {
         public let rawValue: Int32
@@ -21,8 +21,13 @@ public class ImageFormatLoader : RefCounted {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ImageFormatLoader = StringName(from: "ImageFormatLoader")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

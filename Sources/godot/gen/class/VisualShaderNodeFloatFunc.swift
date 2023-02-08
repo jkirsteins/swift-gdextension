@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeFloatFunc: StringName! = nil
 /// A scalar floating-point function to be used within the visual shader graph.
 /// 
 /// Accept a floating-point scalar ([code]x[/code]) to the input port and transform it according to [member function].
-public class VisualShaderNodeFloatFunc : VisualShaderNode {
+open class VisualShaderNodeFloatFunc : VisualShaderNode {
 
     public enum Function : Int32 {
         case FUNC_SIN = 0
@@ -48,14 +48,19 @@ public class VisualShaderNodeFloatFunc : VisualShaderNode {
     static var _method_set_function_536026177: GDExtensionMethodBindPtr! = nil
     static var _method_get_function_2033948868: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeFloatFunc = StringName(from: "VisualShaderNodeFloatFunc")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_function_536026177_name = StringName(from: "set_function")
-        self._method_set_function_536026177 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_function_536026177_name._native_ptr(), 536026177)
+        self._method_set_function_536026177 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeFloatFunc._native_ptr(), _method_set_function_536026177_name._native_ptr(), 536026177)
         assert(VisualShaderNodeFloatFunc._method_set_function_536026177 != nil)
         let _method_get_function_2033948868_name = StringName(from: "get_function")
-        self._method_get_function_2033948868 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_function_2033948868_name._native_ptr(), 2033948868)
+        self._method_get_function_2033948868 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeFloatFunc._native_ptr(), _method_get_function_2033948868_name._native_ptr(), 2033948868)
         assert(VisualShaderNodeFloatFunc._method_get_function_2033948868 != nil)
     }
 
@@ -89,6 +94,6 @@ public class VisualShaderNodeFloatFunc : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return VisualShaderNodeFloatFunc.Function(from: __resPtr.pointee)
+            return VisualShaderNodeFloatFunc.Function(godot: __resPtr.pointee)
     }
 }

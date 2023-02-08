@@ -5,7 +5,7 @@ fileprivate var __godot_name_Popup: StringName! = nil
 /// Popup is a base window container for popup-like subwindows.
 /// 
 /// Popup is a base window container for popup-like subwindows. It's a modal by default (see [member Window.popup_window]) and has helpers for custom popup behavior.
-public class Popup : Window {
+open class Popup : Window {
 
     
 
@@ -13,8 +13,13 @@ public class Popup : Window {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_Popup = StringName(from: "Popup")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

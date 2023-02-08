@@ -7,7 +7,7 @@ fileprivate var __godot_name_ArrayOccluder3D: StringName! = nil
 /// [ArrayOccluder3D] stores an arbitrary 3D polygon shape that can be used by the engine's occlusion culling system. This is analogous to [ArrayMesh], but for occluders.
 ///  
 /// See [OccluderInstance3D]'s documentation for instructions on setting up occlusion culling.
-public class ArrayOccluder3D : Occluder3D {
+open class ArrayOccluder3D : Occluder3D {
 
     
 
@@ -17,17 +17,22 @@ public class ArrayOccluder3D : Occluder3D {
     static var _method_set_vertices_334873810: GDExtensionMethodBindPtr! = nil
     static var _method_set_indices_3614634198: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ArrayOccluder3D = StringName(from: "ArrayOccluder3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_arrays_3233972621_name = StringName(from: "set_arrays")
-        self._method_set_arrays_3233972621 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_arrays_3233972621_name._native_ptr(), 3233972621)
+        self._method_set_arrays_3233972621 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayOccluder3D._native_ptr(), _method_set_arrays_3233972621_name._native_ptr(), 3233972621)
         assert(ArrayOccluder3D._method_set_arrays_3233972621 != nil)
         let _method_set_vertices_334873810_name = StringName(from: "set_vertices")
-        self._method_set_vertices_334873810 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_vertices_334873810_name._native_ptr(), 334873810)
+        self._method_set_vertices_334873810 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayOccluder3D._native_ptr(), _method_set_vertices_334873810_name._native_ptr(), 334873810)
         assert(ArrayOccluder3D._method_set_vertices_334873810 != nil)
         let _method_set_indices_3614634198_name = StringName(from: "set_indices")
-        self._method_set_indices_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_indices_3614634198_name._native_ptr(), 3614634198)
+        self._method_set_indices_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayOccluder3D._native_ptr(), _method_set_indices_3614634198_name._native_ptr(), 3614634198)
         assert(ArrayOccluder3D._method_set_indices_3614634198 != nil)
     }
 

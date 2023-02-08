@@ -5,7 +5,7 @@ fileprivate var __godot_name_AudioEffectChorus: StringName! = nil
 /// Adds a chorus audio effect.
 /// 
 /// Adds a chorus audio effect. The effect applies a filter with voices to duplicate the audio source and manipulate it through the filter.
-public class AudioEffectChorus : AudioEffect {
+open class AudioEffectChorus : AudioEffect {
 
     
 
@@ -30,62 +30,67 @@ public class AudioEffectChorus : AudioEffect {
     static var _method_set_dry_373806689: GDExtensionMethodBindPtr! = nil
     static var _method_get_dry_1740695150: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AudioEffectChorus = StringName(from: "AudioEffectChorus")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_voice_count_1286410249_name = StringName(from: "set_voice_count")
-        self._method_set_voice_count_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_voice_count_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_voice_count_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_set_voice_count_1286410249_name._native_ptr(), 1286410249)
         assert(AudioEffectChorus._method_set_voice_count_1286410249 != nil)
         let _method_get_voice_count_3905245786_name = StringName(from: "get_voice_count")
-        self._method_get_voice_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_voice_count_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_voice_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_get_voice_count_3905245786_name._native_ptr(), 3905245786)
         assert(AudioEffectChorus._method_get_voice_count_3905245786 != nil)
         let _method_set_voice_delay_ms_1602489585_name = StringName(from: "set_voice_delay_ms")
-        self._method_set_voice_delay_ms_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_voice_delay_ms_1602489585_name._native_ptr(), 1602489585)
+        self._method_set_voice_delay_ms_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_set_voice_delay_ms_1602489585_name._native_ptr(), 1602489585)
         assert(AudioEffectChorus._method_set_voice_delay_ms_1602489585 != nil)
         let _method_get_voice_delay_ms_2339986948_name = StringName(from: "get_voice_delay_ms")
-        self._method_get_voice_delay_ms_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_voice_delay_ms_2339986948_name._native_ptr(), 2339986948)
+        self._method_get_voice_delay_ms_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_get_voice_delay_ms_2339986948_name._native_ptr(), 2339986948)
         assert(AudioEffectChorus._method_get_voice_delay_ms_2339986948 != nil)
         let _method_set_voice_rate_hz_1602489585_name = StringName(from: "set_voice_rate_hz")
-        self._method_set_voice_rate_hz_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_voice_rate_hz_1602489585_name._native_ptr(), 1602489585)
+        self._method_set_voice_rate_hz_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_set_voice_rate_hz_1602489585_name._native_ptr(), 1602489585)
         assert(AudioEffectChorus._method_set_voice_rate_hz_1602489585 != nil)
         let _method_get_voice_rate_hz_2339986948_name = StringName(from: "get_voice_rate_hz")
-        self._method_get_voice_rate_hz_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_voice_rate_hz_2339986948_name._native_ptr(), 2339986948)
+        self._method_get_voice_rate_hz_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_get_voice_rate_hz_2339986948_name._native_ptr(), 2339986948)
         assert(AudioEffectChorus._method_get_voice_rate_hz_2339986948 != nil)
         let _method_set_voice_depth_ms_1602489585_name = StringName(from: "set_voice_depth_ms")
-        self._method_set_voice_depth_ms_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_voice_depth_ms_1602489585_name._native_ptr(), 1602489585)
+        self._method_set_voice_depth_ms_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_set_voice_depth_ms_1602489585_name._native_ptr(), 1602489585)
         assert(AudioEffectChorus._method_set_voice_depth_ms_1602489585 != nil)
         let _method_get_voice_depth_ms_2339986948_name = StringName(from: "get_voice_depth_ms")
-        self._method_get_voice_depth_ms_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_voice_depth_ms_2339986948_name._native_ptr(), 2339986948)
+        self._method_get_voice_depth_ms_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_get_voice_depth_ms_2339986948_name._native_ptr(), 2339986948)
         assert(AudioEffectChorus._method_get_voice_depth_ms_2339986948 != nil)
         let _method_set_voice_level_db_1602489585_name = StringName(from: "set_voice_level_db")
-        self._method_set_voice_level_db_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_voice_level_db_1602489585_name._native_ptr(), 1602489585)
+        self._method_set_voice_level_db_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_set_voice_level_db_1602489585_name._native_ptr(), 1602489585)
         assert(AudioEffectChorus._method_set_voice_level_db_1602489585 != nil)
         let _method_get_voice_level_db_2339986948_name = StringName(from: "get_voice_level_db")
-        self._method_get_voice_level_db_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_voice_level_db_2339986948_name._native_ptr(), 2339986948)
+        self._method_get_voice_level_db_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_get_voice_level_db_2339986948_name._native_ptr(), 2339986948)
         assert(AudioEffectChorus._method_get_voice_level_db_2339986948 != nil)
         let _method_set_voice_cutoff_hz_1602489585_name = StringName(from: "set_voice_cutoff_hz")
-        self._method_set_voice_cutoff_hz_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_voice_cutoff_hz_1602489585_name._native_ptr(), 1602489585)
+        self._method_set_voice_cutoff_hz_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_set_voice_cutoff_hz_1602489585_name._native_ptr(), 1602489585)
         assert(AudioEffectChorus._method_set_voice_cutoff_hz_1602489585 != nil)
         let _method_get_voice_cutoff_hz_2339986948_name = StringName(from: "get_voice_cutoff_hz")
-        self._method_get_voice_cutoff_hz_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_voice_cutoff_hz_2339986948_name._native_ptr(), 2339986948)
+        self._method_get_voice_cutoff_hz_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_get_voice_cutoff_hz_2339986948_name._native_ptr(), 2339986948)
         assert(AudioEffectChorus._method_get_voice_cutoff_hz_2339986948 != nil)
         let _method_set_voice_pan_1602489585_name = StringName(from: "set_voice_pan")
-        self._method_set_voice_pan_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_voice_pan_1602489585_name._native_ptr(), 1602489585)
+        self._method_set_voice_pan_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_set_voice_pan_1602489585_name._native_ptr(), 1602489585)
         assert(AudioEffectChorus._method_set_voice_pan_1602489585 != nil)
         let _method_get_voice_pan_2339986948_name = StringName(from: "get_voice_pan")
-        self._method_get_voice_pan_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_voice_pan_2339986948_name._native_ptr(), 2339986948)
+        self._method_get_voice_pan_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_get_voice_pan_2339986948_name._native_ptr(), 2339986948)
         assert(AudioEffectChorus._method_get_voice_pan_2339986948 != nil)
         let _method_set_wet_373806689_name = StringName(from: "set_wet")
-        self._method_set_wet_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_wet_373806689_name._native_ptr(), 373806689)
+        self._method_set_wet_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_set_wet_373806689_name._native_ptr(), 373806689)
         assert(AudioEffectChorus._method_set_wet_373806689 != nil)
         let _method_get_wet_1740695150_name = StringName(from: "get_wet")
-        self._method_get_wet_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_wet_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_wet_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_get_wet_1740695150_name._native_ptr(), 1740695150)
         assert(AudioEffectChorus._method_get_wet_1740695150 != nil)
         let _method_set_dry_373806689_name = StringName(from: "set_dry")
-        self._method_set_dry_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_dry_373806689_name._native_ptr(), 373806689)
+        self._method_set_dry_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_set_dry_373806689_name._native_ptr(), 373806689)
         assert(AudioEffectChorus._method_set_dry_373806689 != nil)
         let _method_get_dry_1740695150_name = StringName(from: "get_dry")
-        self._method_get_dry_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_dry_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_dry_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectChorus._native_ptr(), _method_get_dry_1740695150_name._native_ptr(), 1740695150)
         assert(AudioEffectChorus._method_get_dry_1740695150 != nil)
     }
 
@@ -120,7 +125,7 @@ public class AudioEffectChorus : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_voice_delay_ms(voice_idx: Int64, delay_ms: Float64)  {
         withUnsafePointer(to: delay_ms) { delay_ms_native in
@@ -156,7 +161,7 @@ public class AudioEffectChorus : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func set_voice_rate_hz(voice_idx: Int64, rate_hz: Float64)  {
@@ -193,7 +198,7 @@ public class AudioEffectChorus : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func set_voice_depth_ms(voice_idx: Int64, depth_ms: Float64)  {
@@ -230,7 +235,7 @@ public class AudioEffectChorus : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func set_voice_level_db(voice_idx: Int64, level_db: Float64)  {
@@ -267,7 +272,7 @@ public class AudioEffectChorus : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func set_voice_cutoff_hz(voice_idx: Int64, cutoff_hz: Float64)  {
@@ -304,7 +309,7 @@ public class AudioEffectChorus : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func set_voice_pan(voice_idx: Int64, pan: Float64)  {
@@ -341,7 +346,7 @@ public class AudioEffectChorus : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func set_wet(amount: Float64)  {
@@ -375,7 +380,7 @@ public class AudioEffectChorus : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_dry(amount: Float64)  {
         withUnsafePointer(to: amount) { amount_native in
@@ -408,6 +413,6 @@ public class AudioEffectChorus : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
 }

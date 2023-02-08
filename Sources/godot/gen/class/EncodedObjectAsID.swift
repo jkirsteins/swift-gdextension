@@ -7,7 +7,7 @@ fileprivate var __godot_name_EncodedObjectAsID: StringName! = nil
 /// Utility class which holds a reference to the internal identifier of an [Object] instance, as given by [method Object.get_instance_id]. This ID can then be used to retrieve the object instance with [method @GlobalScope.instance_from_id].
 ///  
 /// This class is used internally by the editor inspector and script debugger, but can also be used in plugins to pass and display objects as their IDs.
-public class EncodedObjectAsID : RefCounted {
+open class EncodedObjectAsID : RefCounted {
 
     
 
@@ -16,14 +16,19 @@ public class EncodedObjectAsID : RefCounted {
     static var _method_set_object_id_1286410249: GDExtensionMethodBindPtr! = nil
     static var _method_get_object_id_3905245786: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_EncodedObjectAsID = StringName(from: "EncodedObjectAsID")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_object_id_1286410249_name = StringName(from: "set_object_id")
-        self._method_set_object_id_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_object_id_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_object_id_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_EncodedObjectAsID._native_ptr(), _method_set_object_id_1286410249_name._native_ptr(), 1286410249)
         assert(EncodedObjectAsID._method_set_object_id_1286410249 != nil)
         let _method_get_object_id_3905245786_name = StringName(from: "get_object_id")
-        self._method_get_object_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_object_id_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_object_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_EncodedObjectAsID._native_ptr(), _method_get_object_id_3905245786_name._native_ptr(), 3905245786)
         assert(EncodedObjectAsID._method_get_object_id_3905245786 != nil)
     }
 
@@ -58,6 +63,6 @@ public class EncodedObjectAsID : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
 }

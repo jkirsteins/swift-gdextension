@@ -89,7 +89,7 @@ fileprivate var __godot_name_MeshDataTool: StringName! = nil
 /// See also [ArrayMesh], [ImmediateMesh] and [SurfaceTool] for procedural geometry generation.
 ///  
 /// [b]Note:[/b] Godot uses clockwise [url=https://learnopengl.com/Advanced-OpenGL/Face-culling]winding order[/url] for front faces of triangle primitive modes.
-public class MeshDataTool : RefCounted {
+open class MeshDataTool : RefCounted {
 
     
 
@@ -134,122 +134,127 @@ public class MeshDataTool : RefCounted {
     static var _method_set_material_2757459619: GDExtensionMethodBindPtr! = nil
     static var _method_get_material_5934680: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_MeshDataTool = StringName(from: "MeshDataTool")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
+        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
         assert(MeshDataTool._method_clear_3218959716 != nil)
         let _method_create_from_surface_2727020678_name = StringName(from: "create_from_surface")
-        self._method_create_from_surface_2727020678 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_from_surface_2727020678_name._native_ptr(), 2727020678)
+        self._method_create_from_surface_2727020678 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_create_from_surface_2727020678_name._native_ptr(), 2727020678)
         assert(MeshDataTool._method_create_from_surface_2727020678 != nil)
         let _method_commit_to_surface_3521099812_name = StringName(from: "commit_to_surface")
-        self._method_commit_to_surface_3521099812 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_commit_to_surface_3521099812_name._native_ptr(), 3521099812)
+        self._method_commit_to_surface_3521099812 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_commit_to_surface_3521099812_name._native_ptr(), 3521099812)
         assert(MeshDataTool._method_commit_to_surface_3521099812 != nil)
         let _method_get_format_3905245786_name = StringName(from: "get_format")
-        self._method_get_format_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_format_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_format_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_format_3905245786_name._native_ptr(), 3905245786)
         assert(MeshDataTool._method_get_format_3905245786 != nil)
         let _method_get_vertex_count_3905245786_name = StringName(from: "get_vertex_count")
-        self._method_get_vertex_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_vertex_count_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_vertex_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_vertex_count_3905245786_name._native_ptr(), 3905245786)
         assert(MeshDataTool._method_get_vertex_count_3905245786 != nil)
         let _method_get_edge_count_3905245786_name = StringName(from: "get_edge_count")
-        self._method_get_edge_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_edge_count_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_edge_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_edge_count_3905245786_name._native_ptr(), 3905245786)
         assert(MeshDataTool._method_get_edge_count_3905245786 != nil)
         let _method_get_face_count_3905245786_name = StringName(from: "get_face_count")
-        self._method_get_face_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_face_count_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_face_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_face_count_3905245786_name._native_ptr(), 3905245786)
         assert(MeshDataTool._method_get_face_count_3905245786 != nil)
         let _method_set_vertex_1530502735_name = StringName(from: "set_vertex")
-        self._method_set_vertex_1530502735 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_vertex_1530502735_name._native_ptr(), 1530502735)
+        self._method_set_vertex_1530502735 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_set_vertex_1530502735_name._native_ptr(), 1530502735)
         assert(MeshDataTool._method_set_vertex_1530502735 != nil)
         let _method_get_vertex_711720468_name = StringName(from: "get_vertex")
-        self._method_get_vertex_711720468 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_vertex_711720468_name._native_ptr(), 711720468)
+        self._method_get_vertex_711720468 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_vertex_711720468_name._native_ptr(), 711720468)
         assert(MeshDataTool._method_get_vertex_711720468 != nil)
         let _method_set_vertex_normal_1530502735_name = StringName(from: "set_vertex_normal")
-        self._method_set_vertex_normal_1530502735 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_vertex_normal_1530502735_name._native_ptr(), 1530502735)
+        self._method_set_vertex_normal_1530502735 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_set_vertex_normal_1530502735_name._native_ptr(), 1530502735)
         assert(MeshDataTool._method_set_vertex_normal_1530502735 != nil)
         let _method_get_vertex_normal_711720468_name = StringName(from: "get_vertex_normal")
-        self._method_get_vertex_normal_711720468 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_vertex_normal_711720468_name._native_ptr(), 711720468)
+        self._method_get_vertex_normal_711720468 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_vertex_normal_711720468_name._native_ptr(), 711720468)
         assert(MeshDataTool._method_get_vertex_normal_711720468 != nil)
         let _method_set_vertex_tangent_1104099133_name = StringName(from: "set_vertex_tangent")
-        self._method_set_vertex_tangent_1104099133 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_vertex_tangent_1104099133_name._native_ptr(), 1104099133)
+        self._method_set_vertex_tangent_1104099133 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_set_vertex_tangent_1104099133_name._native_ptr(), 1104099133)
         assert(MeshDataTool._method_set_vertex_tangent_1104099133 != nil)
         let _method_get_vertex_tangent_1372055458_name = StringName(from: "get_vertex_tangent")
-        self._method_get_vertex_tangent_1372055458 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_vertex_tangent_1372055458_name._native_ptr(), 1372055458)
+        self._method_get_vertex_tangent_1372055458 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_vertex_tangent_1372055458_name._native_ptr(), 1372055458)
         assert(MeshDataTool._method_get_vertex_tangent_1372055458 != nil)
         let _method_set_vertex_uv_163021252_name = StringName(from: "set_vertex_uv")
-        self._method_set_vertex_uv_163021252 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_vertex_uv_163021252_name._native_ptr(), 163021252)
+        self._method_set_vertex_uv_163021252 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_set_vertex_uv_163021252_name._native_ptr(), 163021252)
         assert(MeshDataTool._method_set_vertex_uv_163021252 != nil)
         let _method_get_vertex_uv_2299179447_name = StringName(from: "get_vertex_uv")
-        self._method_get_vertex_uv_2299179447 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_vertex_uv_2299179447_name._native_ptr(), 2299179447)
+        self._method_get_vertex_uv_2299179447 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_vertex_uv_2299179447_name._native_ptr(), 2299179447)
         assert(MeshDataTool._method_get_vertex_uv_2299179447 != nil)
         let _method_set_vertex_uv2_163021252_name = StringName(from: "set_vertex_uv2")
-        self._method_set_vertex_uv2_163021252 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_vertex_uv2_163021252_name._native_ptr(), 163021252)
+        self._method_set_vertex_uv2_163021252 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_set_vertex_uv2_163021252_name._native_ptr(), 163021252)
         assert(MeshDataTool._method_set_vertex_uv2_163021252 != nil)
         let _method_get_vertex_uv2_2299179447_name = StringName(from: "get_vertex_uv2")
-        self._method_get_vertex_uv2_2299179447 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_vertex_uv2_2299179447_name._native_ptr(), 2299179447)
+        self._method_get_vertex_uv2_2299179447 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_vertex_uv2_2299179447_name._native_ptr(), 2299179447)
         assert(MeshDataTool._method_get_vertex_uv2_2299179447 != nil)
         let _method_set_vertex_color_2878471219_name = StringName(from: "set_vertex_color")
-        self._method_set_vertex_color_2878471219 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_vertex_color_2878471219_name._native_ptr(), 2878471219)
+        self._method_set_vertex_color_2878471219 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_set_vertex_color_2878471219_name._native_ptr(), 2878471219)
         assert(MeshDataTool._method_set_vertex_color_2878471219 != nil)
         let _method_get_vertex_color_3457211756_name = StringName(from: "get_vertex_color")
-        self._method_get_vertex_color_3457211756 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_vertex_color_3457211756_name._native_ptr(), 3457211756)
+        self._method_get_vertex_color_3457211756 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_vertex_color_3457211756_name._native_ptr(), 3457211756)
         assert(MeshDataTool._method_get_vertex_color_3457211756 != nil)
         let _method_set_vertex_bones_3500328261_name = StringName(from: "set_vertex_bones")
-        self._method_set_vertex_bones_3500328261 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_vertex_bones_3500328261_name._native_ptr(), 3500328261)
+        self._method_set_vertex_bones_3500328261 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_set_vertex_bones_3500328261_name._native_ptr(), 3500328261)
         assert(MeshDataTool._method_set_vertex_bones_3500328261 != nil)
         let _method_get_vertex_bones_1706082319_name = StringName(from: "get_vertex_bones")
-        self._method_get_vertex_bones_1706082319 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_vertex_bones_1706082319_name._native_ptr(), 1706082319)
+        self._method_get_vertex_bones_1706082319 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_vertex_bones_1706082319_name._native_ptr(), 1706082319)
         assert(MeshDataTool._method_get_vertex_bones_1706082319 != nil)
         let _method_set_vertex_weights_1345852415_name = StringName(from: "set_vertex_weights")
-        self._method_set_vertex_weights_1345852415 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_vertex_weights_1345852415_name._native_ptr(), 1345852415)
+        self._method_set_vertex_weights_1345852415 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_set_vertex_weights_1345852415_name._native_ptr(), 1345852415)
         assert(MeshDataTool._method_set_vertex_weights_1345852415 != nil)
         let _method_get_vertex_weights_1542882410_name = StringName(from: "get_vertex_weights")
-        self._method_get_vertex_weights_1542882410 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_vertex_weights_1542882410_name._native_ptr(), 1542882410)
+        self._method_get_vertex_weights_1542882410 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_vertex_weights_1542882410_name._native_ptr(), 1542882410)
         assert(MeshDataTool._method_get_vertex_weights_1542882410 != nil)
         let _method_set_vertex_meta_2152698145_name = StringName(from: "set_vertex_meta")
-        self._method_set_vertex_meta_2152698145 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_vertex_meta_2152698145_name._native_ptr(), 2152698145)
+        self._method_set_vertex_meta_2152698145 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_set_vertex_meta_2152698145_name._native_ptr(), 2152698145)
         assert(MeshDataTool._method_set_vertex_meta_2152698145 != nil)
         let _method_get_vertex_meta_4227898402_name = StringName(from: "get_vertex_meta")
-        self._method_get_vertex_meta_4227898402 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_vertex_meta_4227898402_name._native_ptr(), 4227898402)
+        self._method_get_vertex_meta_4227898402 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_vertex_meta_4227898402_name._native_ptr(), 4227898402)
         assert(MeshDataTool._method_get_vertex_meta_4227898402 != nil)
         let _method_get_vertex_edges_1706082319_name = StringName(from: "get_vertex_edges")
-        self._method_get_vertex_edges_1706082319 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_vertex_edges_1706082319_name._native_ptr(), 1706082319)
+        self._method_get_vertex_edges_1706082319 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_vertex_edges_1706082319_name._native_ptr(), 1706082319)
         assert(MeshDataTool._method_get_vertex_edges_1706082319 != nil)
         let _method_get_vertex_faces_1706082319_name = StringName(from: "get_vertex_faces")
-        self._method_get_vertex_faces_1706082319 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_vertex_faces_1706082319_name._native_ptr(), 1706082319)
+        self._method_get_vertex_faces_1706082319 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_vertex_faces_1706082319_name._native_ptr(), 1706082319)
         assert(MeshDataTool._method_get_vertex_faces_1706082319 != nil)
         let _method_get_edge_vertex_3175239445_name = StringName(from: "get_edge_vertex")
-        self._method_get_edge_vertex_3175239445 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_edge_vertex_3175239445_name._native_ptr(), 3175239445)
+        self._method_get_edge_vertex_3175239445 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_edge_vertex_3175239445_name._native_ptr(), 3175239445)
         assert(MeshDataTool._method_get_edge_vertex_3175239445 != nil)
         let _method_get_edge_faces_1706082319_name = StringName(from: "get_edge_faces")
-        self._method_get_edge_faces_1706082319 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_edge_faces_1706082319_name._native_ptr(), 1706082319)
+        self._method_get_edge_faces_1706082319 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_edge_faces_1706082319_name._native_ptr(), 1706082319)
         assert(MeshDataTool._method_get_edge_faces_1706082319 != nil)
         let _method_set_edge_meta_2152698145_name = StringName(from: "set_edge_meta")
-        self._method_set_edge_meta_2152698145 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_edge_meta_2152698145_name._native_ptr(), 2152698145)
+        self._method_set_edge_meta_2152698145 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_set_edge_meta_2152698145_name._native_ptr(), 2152698145)
         assert(MeshDataTool._method_set_edge_meta_2152698145 != nil)
         let _method_get_edge_meta_4227898402_name = StringName(from: "get_edge_meta")
-        self._method_get_edge_meta_4227898402 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_edge_meta_4227898402_name._native_ptr(), 4227898402)
+        self._method_get_edge_meta_4227898402 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_edge_meta_4227898402_name._native_ptr(), 4227898402)
         assert(MeshDataTool._method_get_edge_meta_4227898402 != nil)
         let _method_get_face_vertex_3175239445_name = StringName(from: "get_face_vertex")
-        self._method_get_face_vertex_3175239445 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_face_vertex_3175239445_name._native_ptr(), 3175239445)
+        self._method_get_face_vertex_3175239445 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_face_vertex_3175239445_name._native_ptr(), 3175239445)
         assert(MeshDataTool._method_get_face_vertex_3175239445 != nil)
         let _method_get_face_edge_3175239445_name = StringName(from: "get_face_edge")
-        self._method_get_face_edge_3175239445 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_face_edge_3175239445_name._native_ptr(), 3175239445)
+        self._method_get_face_edge_3175239445 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_face_edge_3175239445_name._native_ptr(), 3175239445)
         assert(MeshDataTool._method_get_face_edge_3175239445 != nil)
         let _method_set_face_meta_2152698145_name = StringName(from: "set_face_meta")
-        self._method_set_face_meta_2152698145 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_face_meta_2152698145_name._native_ptr(), 2152698145)
+        self._method_set_face_meta_2152698145 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_set_face_meta_2152698145_name._native_ptr(), 2152698145)
         assert(MeshDataTool._method_set_face_meta_2152698145 != nil)
         let _method_get_face_meta_4227898402_name = StringName(from: "get_face_meta")
-        self._method_get_face_meta_4227898402 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_face_meta_4227898402_name._native_ptr(), 4227898402)
+        self._method_get_face_meta_4227898402 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_face_meta_4227898402_name._native_ptr(), 4227898402)
         assert(MeshDataTool._method_get_face_meta_4227898402 != nil)
         let _method_get_face_normal_711720468_name = StringName(from: "get_face_normal")
-        self._method_get_face_normal_711720468 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_face_normal_711720468_name._native_ptr(), 711720468)
+        self._method_get_face_normal_711720468 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_face_normal_711720468_name._native_ptr(), 711720468)
         assert(MeshDataTool._method_get_face_normal_711720468 != nil)
         let _method_set_material_2757459619_name = StringName(from: "set_material")
-        self._method_set_material_2757459619 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_material_2757459619_name._native_ptr(), 2757459619)
+        self._method_set_material_2757459619 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_set_material_2757459619_name._native_ptr(), 2757459619)
         assert(MeshDataTool._method_set_material_2757459619 != nil)
         let _method_get_material_5934680_name = StringName(from: "get_material")
-        self._method_get_material_5934680 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_material_5934680_name._native_ptr(), 5934680)
+        self._method_get_material_5934680 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshDataTool._native_ptr(), _method_get_material_5934680_name._native_ptr(), 5934680)
         assert(MeshDataTool._method_get_material_5934680 != nil)
     }
 
@@ -283,7 +288,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func commit_to_surface(mesh: ArrayMesh) -> Error {
@@ -301,7 +306,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func get_format() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -318,7 +323,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_vertex_count() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -335,7 +340,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_edge_count() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -352,7 +357,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_face_count() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -369,7 +374,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_vertex(idx: Int64, vertex: Vector3)  {
         withUnsafePointer(to: idx) { idx_native in
@@ -403,7 +408,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
         }
     }
     public func set_vertex_normal(idx: Int64, normal: Vector3)  {
@@ -438,7 +443,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
         }
     }
     public func set_vertex_tangent(idx: Int64, tangent: Plane)  {
@@ -473,7 +478,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Plane(from: __resPtr.pointee)
+            return Plane(godot: __resPtr.pointee)
         }
     }
     public func set_vertex_uv(idx: Int64, uv: Vector2)  {
@@ -508,7 +513,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
     }
     public func set_vertex_uv2(idx: Int64, uv2: Vector2)  {
@@ -543,7 +548,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
     }
     public func set_vertex_color(idx: Int64, color: Color)  {
@@ -578,7 +583,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Color(from: __resPtr.pointee)
+            return Color(godot: __resPtr.pointee)
         }
     }
     public func set_vertex_bones(idx: Int64, bones: PackedInt32Array)  {
@@ -613,7 +618,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
         }
     }
     public func set_vertex_weights(idx: Int64, weights: PackedFloat32Array)  {
@@ -648,7 +653,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedFloat32Array(from: __resPtr.pointee)
+            return PackedFloat32Array(godot: __resPtr.pointee)
         }
     }
     public func set_vertex_meta(idx: Int64, meta: Variant)  {
@@ -683,7 +688,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
         }
     }
     public func get_vertex_edges(idx: Int64) -> PackedInt32Array {
@@ -701,7 +706,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
         }
     }
     public func get_vertex_faces(idx: Int64) -> PackedInt32Array {
@@ -719,7 +724,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
         }
     }
     public func get_edge_vertex(idx: Int64, vertex: Int64) -> Int64 {
@@ -739,7 +744,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
         }
     }
@@ -758,7 +763,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
         }
     }
     public func set_edge_meta(idx: Int64, meta: Variant)  {
@@ -793,7 +798,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
         }
     }
     public func get_face_vertex(idx: Int64, vertex: Int64) -> Int64 {
@@ -813,7 +818,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
         }
     }
@@ -834,7 +839,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
         }
     }
@@ -870,7 +875,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
         }
     }
     public func get_face_normal(idx: Int64) -> Vector3 {
@@ -888,7 +893,7 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
         }
     }
     public func set_material(material: Material)  {
@@ -920,6 +925,6 @@ public class MeshDataTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Material(from: __resPtr.pointee)
+            return Material(godot: __resPtr.pointee)
     }
 }

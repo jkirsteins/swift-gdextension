@@ -17,7 +17,7 @@ fileprivate var __godot_name_AudioEffectCompressor: StringName! = nil
 /// - Sidechained. This can reduce the sound level sidechained with another audio bus for threshold detection. This technique is common in video game mixing to the level of music and SFX while voices are being heard.
 ///  
 /// - Accentuates transients by using a wider attack, making effects sound more punchy.
-public class AudioEffectCompressor : AudioEffect {
+open class AudioEffectCompressor : AudioEffect {
 
     
 
@@ -38,50 +38,55 @@ public class AudioEffectCompressor : AudioEffect {
     static var _method_set_sidechain_3304788590: GDExtensionMethodBindPtr! = nil
     static var _method_get_sidechain_2002593661: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AudioEffectCompressor = StringName(from: "AudioEffectCompressor")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_threshold_373806689_name = StringName(from: "set_threshold")
-        self._method_set_threshold_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_threshold_373806689_name._native_ptr(), 373806689)
+        self._method_set_threshold_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectCompressor._native_ptr(), _method_set_threshold_373806689_name._native_ptr(), 373806689)
         assert(AudioEffectCompressor._method_set_threshold_373806689 != nil)
         let _method_get_threshold_1740695150_name = StringName(from: "get_threshold")
-        self._method_get_threshold_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_threshold_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_threshold_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectCompressor._native_ptr(), _method_get_threshold_1740695150_name._native_ptr(), 1740695150)
         assert(AudioEffectCompressor._method_get_threshold_1740695150 != nil)
         let _method_set_ratio_373806689_name = StringName(from: "set_ratio")
-        self._method_set_ratio_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ratio_373806689_name._native_ptr(), 373806689)
+        self._method_set_ratio_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectCompressor._native_ptr(), _method_set_ratio_373806689_name._native_ptr(), 373806689)
         assert(AudioEffectCompressor._method_set_ratio_373806689 != nil)
         let _method_get_ratio_1740695150_name = StringName(from: "get_ratio")
-        self._method_get_ratio_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_ratio_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_ratio_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectCompressor._native_ptr(), _method_get_ratio_1740695150_name._native_ptr(), 1740695150)
         assert(AudioEffectCompressor._method_get_ratio_1740695150 != nil)
         let _method_set_gain_373806689_name = StringName(from: "set_gain")
-        self._method_set_gain_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_gain_373806689_name._native_ptr(), 373806689)
+        self._method_set_gain_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectCompressor._native_ptr(), _method_set_gain_373806689_name._native_ptr(), 373806689)
         assert(AudioEffectCompressor._method_set_gain_373806689 != nil)
         let _method_get_gain_1740695150_name = StringName(from: "get_gain")
-        self._method_get_gain_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_gain_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_gain_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectCompressor._native_ptr(), _method_get_gain_1740695150_name._native_ptr(), 1740695150)
         assert(AudioEffectCompressor._method_get_gain_1740695150 != nil)
         let _method_set_attack_us_373806689_name = StringName(from: "set_attack_us")
-        self._method_set_attack_us_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_attack_us_373806689_name._native_ptr(), 373806689)
+        self._method_set_attack_us_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectCompressor._native_ptr(), _method_set_attack_us_373806689_name._native_ptr(), 373806689)
         assert(AudioEffectCompressor._method_set_attack_us_373806689 != nil)
         let _method_get_attack_us_1740695150_name = StringName(from: "get_attack_us")
-        self._method_get_attack_us_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_attack_us_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_attack_us_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectCompressor._native_ptr(), _method_get_attack_us_1740695150_name._native_ptr(), 1740695150)
         assert(AudioEffectCompressor._method_get_attack_us_1740695150 != nil)
         let _method_set_release_ms_373806689_name = StringName(from: "set_release_ms")
-        self._method_set_release_ms_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_release_ms_373806689_name._native_ptr(), 373806689)
+        self._method_set_release_ms_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectCompressor._native_ptr(), _method_set_release_ms_373806689_name._native_ptr(), 373806689)
         assert(AudioEffectCompressor._method_set_release_ms_373806689 != nil)
         let _method_get_release_ms_1740695150_name = StringName(from: "get_release_ms")
-        self._method_get_release_ms_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_release_ms_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_release_ms_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectCompressor._native_ptr(), _method_get_release_ms_1740695150_name._native_ptr(), 1740695150)
         assert(AudioEffectCompressor._method_get_release_ms_1740695150 != nil)
         let _method_set_mix_373806689_name = StringName(from: "set_mix")
-        self._method_set_mix_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_mix_373806689_name._native_ptr(), 373806689)
+        self._method_set_mix_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectCompressor._native_ptr(), _method_set_mix_373806689_name._native_ptr(), 373806689)
         assert(AudioEffectCompressor._method_set_mix_373806689 != nil)
         let _method_get_mix_1740695150_name = StringName(from: "get_mix")
-        self._method_get_mix_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_mix_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_mix_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectCompressor._native_ptr(), _method_get_mix_1740695150_name._native_ptr(), 1740695150)
         assert(AudioEffectCompressor._method_get_mix_1740695150 != nil)
         let _method_set_sidechain_3304788590_name = StringName(from: "set_sidechain")
-        self._method_set_sidechain_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_sidechain_3304788590_name._native_ptr(), 3304788590)
+        self._method_set_sidechain_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectCompressor._native_ptr(), _method_set_sidechain_3304788590_name._native_ptr(), 3304788590)
         assert(AudioEffectCompressor._method_set_sidechain_3304788590 != nil)
         let _method_get_sidechain_2002593661_name = StringName(from: "get_sidechain")
-        self._method_get_sidechain_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_sidechain_2002593661_name._native_ptr(), 2002593661)
+        self._method_get_sidechain_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectCompressor._native_ptr(), _method_get_sidechain_2002593661_name._native_ptr(), 2002593661)
         assert(AudioEffectCompressor._method_get_sidechain_2002593661 != nil)
     }
 
@@ -116,7 +121,7 @@ public class AudioEffectCompressor : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_ratio(ratio: Float64)  {
         withUnsafePointer(to: ratio) { ratio_native in
@@ -149,7 +154,7 @@ public class AudioEffectCompressor : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_gain(gain: Float64)  {
         withUnsafePointer(to: gain) { gain_native in
@@ -182,7 +187,7 @@ public class AudioEffectCompressor : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_attack_us(attack_us: Float64)  {
         withUnsafePointer(to: attack_us) { attack_us_native in
@@ -215,7 +220,7 @@ public class AudioEffectCompressor : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_release_ms(release_ms: Float64)  {
         withUnsafePointer(to: release_ms) { release_ms_native in
@@ -248,7 +253,7 @@ public class AudioEffectCompressor : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_mix(mix: Float64)  {
         withUnsafePointer(to: mix) { mix_native in
@@ -281,7 +286,7 @@ public class AudioEffectCompressor : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_sidechain(sidechain: StringName)  {
         let sidechain_native = sidechain._native_ptr()
@@ -312,6 +317,6 @@ public class AudioEffectCompressor : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return StringName(from: __resPtr.pointee)
+            return StringName(godot: __resPtr.pointee)
     }
 }

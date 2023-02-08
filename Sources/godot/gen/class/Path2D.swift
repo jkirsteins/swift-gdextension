@@ -7,7 +7,7 @@ fileprivate var __godot_name_Path2D: StringName! = nil
 /// Can have [PathFollow2D] child nodes moving along the [Curve2D]. See [PathFollow2D] for more information on usage.
 ///  
 /// [b]Note:[/b] The path is considered as relative to the moved nodes (children of [PathFollow2D]). As such, the curve should usually start with a zero vector ([code](0, 0)[/code]).
-public class Path2D : Node2D {
+open class Path2D : Node2D {
 
     
 
@@ -16,14 +16,19 @@ public class Path2D : Node2D {
     static var _method_set_curve_659985499: GDExtensionMethodBindPtr! = nil
     static var _method_get_curve_660369445: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_Path2D = StringName(from: "Path2D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_curve_659985499_name = StringName(from: "set_curve")
-        self._method_set_curve_659985499 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_curve_659985499_name._native_ptr(), 659985499)
+        self._method_set_curve_659985499 = self.interface.pointee.classdb_get_method_bind(__godot_name_Path2D._native_ptr(), _method_set_curve_659985499_name._native_ptr(), 659985499)
         assert(Path2D._method_set_curve_659985499 != nil)
         let _method_get_curve_660369445_name = StringName(from: "get_curve")
-        self._method_get_curve_660369445 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_curve_660369445_name._native_ptr(), 660369445)
+        self._method_get_curve_660369445 = self.interface.pointee.classdb_get_method_bind(__godot_name_Path2D._native_ptr(), _method_get_curve_660369445_name._native_ptr(), 660369445)
         assert(Path2D._method_get_curve_660369445 != nil)
     }
 
@@ -56,6 +61,6 @@ public class Path2D : Node2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Curve2D(from: __resPtr.pointee)
+            return Curve2D(godot: __resPtr.pointee)
     }
 }

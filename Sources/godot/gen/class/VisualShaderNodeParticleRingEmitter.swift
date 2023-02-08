@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeParticleRingEmitter: StringName! = 
 /// A visual shader node that makes particles emitted in a ring shape.
 /// 
 /// [VisualShaderNodeParticleEmitter] that makes the particles emitted in ring shape with the specified inner and outer radii and height.
-public class VisualShaderNodeParticleRingEmitter : VisualShaderNodeParticleEmitter {
+open class VisualShaderNodeParticleRingEmitter : VisualShaderNodeParticleEmitter {
 
     
 
@@ -13,8 +13,13 @@ public class VisualShaderNodeParticleRingEmitter : VisualShaderNodeParticleEmitt
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeParticleRingEmitter = StringName(from: "VisualShaderNodeParticleRingEmitter")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

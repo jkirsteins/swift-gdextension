@@ -101,7 +101,7 @@ fileprivate var __godot_name_HashingContext: StringName! = nil
 /// [/csharp]
 ///  
 /// [/codeblocks]
-public class HashingContext : RefCounted {
+open class HashingContext : RefCounted {
 
     public enum HashType : Int32 {
         case HASH_MD5 = 0
@@ -115,17 +115,22 @@ public class HashingContext : RefCounted {
     static var _method_update_680677267: GDExtensionMethodBindPtr! = nil
     static var _method_finish_2115431945: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_HashingContext = StringName(from: "HashingContext")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_start_3940338335_name = StringName(from: "start")
-        self._method_start_3940338335 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_start_3940338335_name._native_ptr(), 3940338335)
+        self._method_start_3940338335 = self.interface.pointee.classdb_get_method_bind(__godot_name_HashingContext._native_ptr(), _method_start_3940338335_name._native_ptr(), 3940338335)
         assert(HashingContext._method_start_3940338335 != nil)
         let _method_update_680677267_name = StringName(from: "update")
-        self._method_update_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_update_680677267_name._native_ptr(), 680677267)
+        self._method_update_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_HashingContext._native_ptr(), _method_update_680677267_name._native_ptr(), 680677267)
         assert(HashingContext._method_update_680677267 != nil)
         let _method_finish_2115431945_name = StringName(from: "finish")
-        self._method_finish_2115431945 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_finish_2115431945_name._native_ptr(), 2115431945)
+        self._method_finish_2115431945 = self.interface.pointee.classdb_get_method_bind(__godot_name_HashingContext._native_ptr(), _method_finish_2115431945_name._native_ptr(), 2115431945)
         assert(HashingContext._method_finish_2115431945 != nil)
     }
 
@@ -144,7 +149,7 @@ public class HashingContext : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func update(chunk: PackedByteArray) -> Error {
@@ -162,7 +167,7 @@ public class HashingContext : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func finish() -> PackedByteArray {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -178,6 +183,6 @@ public class HashingContext : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
+            return PackedByteArray(godot: __resPtr.pointee)
     }
 }

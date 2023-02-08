@@ -11,7 +11,7 @@ fileprivate var __godot_name_VehicleBody3D: StringName! = nil
 /// [b]Note:[/b] This class has known issues and isn't designed to provide realistic 3D vehicle physics. If you want advanced vehicle physics, you will probably have to write your own physics integration using another [PhysicsBody3D] class.
 ///  
 /// [b]Warning:[/b] With a non-uniform scale this node will probably not function as expected. Please make sure to keep its scale uniform (i.e. the same on all axes), and change the size(s) of its collision shape(s) instead.
-public class VehicleBody3D : RigidBody3D {
+open class VehicleBody3D : RigidBody3D {
 
     
 
@@ -24,26 +24,31 @@ public class VehicleBody3D : RigidBody3D {
     static var _method_set_steering_373806689: GDExtensionMethodBindPtr! = nil
     static var _method_get_steering_1740695150: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VehicleBody3D = StringName(from: "VehicleBody3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_engine_force_373806689_name = StringName(from: "set_engine_force")
-        self._method_set_engine_force_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_engine_force_373806689_name._native_ptr(), 373806689)
+        self._method_set_engine_force_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleBody3D._native_ptr(), _method_set_engine_force_373806689_name._native_ptr(), 373806689)
         assert(VehicleBody3D._method_set_engine_force_373806689 != nil)
         let _method_get_engine_force_1740695150_name = StringName(from: "get_engine_force")
-        self._method_get_engine_force_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_engine_force_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_engine_force_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleBody3D._native_ptr(), _method_get_engine_force_1740695150_name._native_ptr(), 1740695150)
         assert(VehicleBody3D._method_get_engine_force_1740695150 != nil)
         let _method_set_brake_373806689_name = StringName(from: "set_brake")
-        self._method_set_brake_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_brake_373806689_name._native_ptr(), 373806689)
+        self._method_set_brake_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleBody3D._native_ptr(), _method_set_brake_373806689_name._native_ptr(), 373806689)
         assert(VehicleBody3D._method_set_brake_373806689 != nil)
         let _method_get_brake_1740695150_name = StringName(from: "get_brake")
-        self._method_get_brake_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_brake_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_brake_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleBody3D._native_ptr(), _method_get_brake_1740695150_name._native_ptr(), 1740695150)
         assert(VehicleBody3D._method_get_brake_1740695150 != nil)
         let _method_set_steering_373806689_name = StringName(from: "set_steering")
-        self._method_set_steering_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_steering_373806689_name._native_ptr(), 373806689)
+        self._method_set_steering_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleBody3D._native_ptr(), _method_set_steering_373806689_name._native_ptr(), 373806689)
         assert(VehicleBody3D._method_set_steering_373806689 != nil)
         let _method_get_steering_1740695150_name = StringName(from: "get_steering")
-        self._method_get_steering_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_steering_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_steering_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleBody3D._native_ptr(), _method_get_steering_1740695150_name._native_ptr(), 1740695150)
         assert(VehicleBody3D._method_get_steering_1740695150 != nil)
     }
 
@@ -78,7 +83,7 @@ public class VehicleBody3D : RigidBody3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_brake(brake: Float64)  {
         withUnsafePointer(to: brake) { brake_native in
@@ -111,7 +116,7 @@ public class VehicleBody3D : RigidBody3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_steering(steering: Float64)  {
         withUnsafePointer(to: steering) { steering_native in
@@ -144,6 +149,6 @@ public class VehicleBody3D : RigidBody3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
 }

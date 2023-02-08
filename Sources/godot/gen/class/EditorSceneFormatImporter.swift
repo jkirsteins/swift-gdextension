@@ -7,7 +7,7 @@ fileprivate var __godot_name_EditorSceneFormatImporter: StringName! = nil
 /// [EditorSceneFormatImporter] allows to define an importer script for a third-party 3D format.
 ///  
 /// To use [EditorSceneFormatImporter], register it using the [method EditorPlugin.add_scene_format_importer_plugin] method first.
-public class EditorSceneFormatImporter : RefCounted {
+open class EditorSceneFormatImporter : RefCounted {
 
     
 
@@ -19,8 +19,13 @@ public class EditorSceneFormatImporter : RefCounted {
     static var _method__get_import_options_0: GDExtensionMethodBindPtr! = nil
     static var _method__get_option_visibility_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorSceneFormatImporter = StringName(from: "EditorSceneFormatImporter")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
@@ -40,7 +45,7 @@ public class EditorSceneFormatImporter : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_extensions() -> PackedStringArray {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -56,12 +61,12 @@ public class EditorSceneFormatImporter : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedStringArray(from: __resPtr.pointee)
+            return PackedStringArray(godot: __resPtr.pointee)
     }
-    public func _import_scene(path: String, flags: Int64, options: Dictionary) -> Object {
+    public func _import_scene(path: godot.String, flags: Int64, options: Dictionary) -> Object {
         withUnsafePointer(to: flags) { flags_native in
-        withUnsafePointer(to: path) { path_native in
         let options_native = options._native_ptr()
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -75,12 +80,11 @@ public class EditorSceneFormatImporter : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Object(from: __resPtr.pointee)
-        }
+            return Object(godot: __resPtr.pointee)
         }
     }
-    public func _get_import_options(path: String)  {
-        withUnsafePointer(to: path) { path_native in
+    public func _get_import_options(path: godot.String)  {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -93,12 +97,11 @@ public class EditorSceneFormatImporter : RefCounted {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func _get_option_visibility(path: String, for_animation: UInt8, option: String) -> Variant {
-        withUnsafePointer(to: option) { option_native in
+    public func _get_option_visibility(path: godot.String, for_animation: UInt8, option: godot.String) -> Variant {
         withUnsafePointer(to: for_animation) { for_animation_native in
-        withUnsafePointer(to: path) { path_native in
+        let option_native = option._native_ptr()
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -112,9 +115,7 @@ public class EditorSceneFormatImporter : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
-        }
-        }
+            return Variant(godot: __resPtr.pointee)
         }
     }
 }

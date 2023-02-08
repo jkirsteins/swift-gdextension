@@ -9,7 +9,7 @@ fileprivate var __godot_name_CameraServer: StringName! = nil
 /// It is notably used to provide AR modules with a video feed from the camera.
 ///  
 /// [b]Note:[/b] This class is currently only implemented on macOS and iOS. On other platforms, no [CameraFeed]s will be available.
-public class CameraServer : Object {
+open class CameraServer : Object {
 
     public struct FeedImage: RawRepresentable {
         public let rawValue: Int32
@@ -30,23 +30,28 @@ public class CameraServer : Object {
     static var _method_add_feed_3204782488: GDExtensionMethodBindPtr! = nil
     static var _method_remove_feed_3204782488: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_CameraServer = StringName(from: "CameraServer")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_get_feed_361927068_name = StringName(from: "get_feed")
-        self._method_get_feed_361927068 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_feed_361927068_name._native_ptr(), 361927068)
+        self._method_get_feed_361927068 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraServer._native_ptr(), _method_get_feed_361927068_name._native_ptr(), 361927068)
         assert(CameraServer._method_get_feed_361927068 != nil)
         let _method_get_feed_count_2455072627_name = StringName(from: "get_feed_count")
-        self._method_get_feed_count_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_feed_count_2455072627_name._native_ptr(), 2455072627)
+        self._method_get_feed_count_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraServer._native_ptr(), _method_get_feed_count_2455072627_name._native_ptr(), 2455072627)
         assert(CameraServer._method_get_feed_count_2455072627 != nil)
         let _method_feeds_2915620761_name = StringName(from: "feeds")
-        self._method_feeds_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_feeds_2915620761_name._native_ptr(), 2915620761)
+        self._method_feeds_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraServer._native_ptr(), _method_feeds_2915620761_name._native_ptr(), 2915620761)
         assert(CameraServer._method_feeds_2915620761 != nil)
         let _method_add_feed_3204782488_name = StringName(from: "add_feed")
-        self._method_add_feed_3204782488 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_feed_3204782488_name._native_ptr(), 3204782488)
+        self._method_add_feed_3204782488 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraServer._native_ptr(), _method_add_feed_3204782488_name._native_ptr(), 3204782488)
         assert(CameraServer._method_add_feed_3204782488 != nil)
         let _method_remove_feed_3204782488_name = StringName(from: "remove_feed")
-        self._method_remove_feed_3204782488 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_feed_3204782488_name._native_ptr(), 3204782488)
+        self._method_remove_feed_3204782488 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraServer._native_ptr(), _method_remove_feed_3204782488_name._native_ptr(), 3204782488)
         assert(CameraServer._method_remove_feed_3204782488 != nil)
     }
 
@@ -65,7 +70,7 @@ public class CameraServer : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return CameraFeed(from: __resPtr.pointee)
+            return CameraFeed(godot: __resPtr.pointee)
         }
     }
     public func get_feed_count() -> Int64 {
@@ -83,7 +88,7 @@ public class CameraServer : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func feeds() -> [CameraFeed] {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -99,7 +104,7 @@ public class CameraServer : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [CameraFeed](from: __resPtr.pointee)
+            return [CameraFeed](godot: __resPtr.pointee)
     }
     public func add_feed(feed: CameraFeed)  {
         let feed_native = feed._native_ptr()

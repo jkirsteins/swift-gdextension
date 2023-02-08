@@ -11,7 +11,7 @@ fileprivate var __godot_name_ConcavePolygonShape3D: StringName! = nil
 /// [b]Performance:[/b] Due to its complexity, [ConcavePolygonShape3D] is the slowest collision shape to check collisions against. Its use should generally be limited to level geometry. For convex geometry, using [ConvexPolygonShape3D] will perform better. For dynamic physics bodies that need concave collision, several [ConvexPolygonShape3D]s can be used to represent its collision by using convex decomposition; see [ConvexPolygonShape3D]'s documentation for instructions. However, consider using primitive collision shapes such as [SphereShape3D] or [BoxShape3D] first.
 ///  
 /// [b]Warning:[/b] Using this shape for an [Area3D] (via a [CollisionShape3D] node, created e.g. by using the [i]Create Trimesh Collision Sibling[/i] option in the [i]Mesh[/i] menu that appears when selecting a [MeshInstance3D] node) may give unexpected results: the area will only detect collisions with the triangle faces in the [ConcavePolygonShape3D] (and not with any "inside" of the shape, for example); moreover it will only detect all such collisions if [member backface_collision] is [code]true[/code].
-public class ConcavePolygonShape3D : Shape3D {
+open class ConcavePolygonShape3D : Shape3D {
 
     
 
@@ -22,20 +22,25 @@ public class ConcavePolygonShape3D : Shape3D {
     static var _method_set_backface_collision_enabled_2586408642: GDExtensionMethodBindPtr! = nil
     static var _method_is_backface_collision_enabled_36873697: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ConcavePolygonShape3D = StringName(from: "ConcavePolygonShape3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_faces_334873810_name = StringName(from: "set_faces")
-        self._method_set_faces_334873810 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_faces_334873810_name._native_ptr(), 334873810)
+        self._method_set_faces_334873810 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConcavePolygonShape3D._native_ptr(), _method_set_faces_334873810_name._native_ptr(), 334873810)
         assert(ConcavePolygonShape3D._method_set_faces_334873810 != nil)
         let _method_get_faces_497664490_name = StringName(from: "get_faces")
-        self._method_get_faces_497664490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_faces_497664490_name._native_ptr(), 497664490)
+        self._method_get_faces_497664490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConcavePolygonShape3D._native_ptr(), _method_get_faces_497664490_name._native_ptr(), 497664490)
         assert(ConcavePolygonShape3D._method_get_faces_497664490 != nil)
         let _method_set_backface_collision_enabled_2586408642_name = StringName(from: "set_backface_collision_enabled")
-        self._method_set_backface_collision_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_backface_collision_enabled_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_backface_collision_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConcavePolygonShape3D._native_ptr(), _method_set_backface_collision_enabled_2586408642_name._native_ptr(), 2586408642)
         assert(ConcavePolygonShape3D._method_set_backface_collision_enabled_2586408642 != nil)
         let _method_is_backface_collision_enabled_36873697_name = StringName(from: "is_backface_collision_enabled")
-        self._method_is_backface_collision_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_backface_collision_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_backface_collision_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConcavePolygonShape3D._native_ptr(), _method_is_backface_collision_enabled_36873697_name._native_ptr(), 36873697)
         assert(ConcavePolygonShape3D._method_is_backface_collision_enabled_36873697 != nil)
     }
 
@@ -68,7 +73,7 @@ public class ConcavePolygonShape3D : Shape3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector3Array(from: __resPtr.pointee)
+            return PackedVector3Array(godot: __resPtr.pointee)
     }
     public func set_backface_collision_enabled(enabled: UInt8)  {
         withUnsafePointer(to: enabled) { enabled_native in
@@ -101,6 +106,6 @@ public class ConcavePolygonShape3D : Shape3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

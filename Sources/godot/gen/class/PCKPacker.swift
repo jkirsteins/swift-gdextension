@@ -35,7 +35,7 @@ fileprivate var __godot_name_PCKPacker: StringName! = nil
 /// [/codeblocks]
 ///  
 /// The above [PCKPacker] creates package [code]test.pck[/code], then adds a file named [code]text.txt[/code] at the root of the package.
-public class PCKPacker : RefCounted {
+open class PCKPacker : RefCounted {
 
     
 
@@ -45,25 +45,30 @@ public class PCKPacker : RefCounted {
     static var _method_add_file_2215643711: GDExtensionMethodBindPtr! = nil
     static var _method_flush_1633102583: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PCKPacker = StringName(from: "PCKPacker")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_pck_start_3232891339_name = StringName(from: "pck_start")
-        self._method_pck_start_3232891339 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_pck_start_3232891339_name._native_ptr(), 3232891339)
+        self._method_pck_start_3232891339 = self.interface.pointee.classdb_get_method_bind(__godot_name_PCKPacker._native_ptr(), _method_pck_start_3232891339_name._native_ptr(), 3232891339)
         assert(PCKPacker._method_pck_start_3232891339 != nil)
         let _method_add_file_2215643711_name = StringName(from: "add_file")
-        self._method_add_file_2215643711 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_file_2215643711_name._native_ptr(), 2215643711)
+        self._method_add_file_2215643711 = self.interface.pointee.classdb_get_method_bind(__godot_name_PCKPacker._native_ptr(), _method_add_file_2215643711_name._native_ptr(), 2215643711)
         assert(PCKPacker._method_add_file_2215643711 != nil)
         let _method_flush_1633102583_name = StringName(from: "flush")
-        self._method_flush_1633102583 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_flush_1633102583_name._native_ptr(), 1633102583)
+        self._method_flush_1633102583 = self.interface.pointee.classdb_get_method_bind(__godot_name_PCKPacker._native_ptr(), _method_flush_1633102583_name._native_ptr(), 1633102583)
         assert(PCKPacker._method_flush_1633102583 != nil)
     }
 
-    public func pck_start(pck_name: String, alignment: Int64, key: String, encrypt_directory: UInt8) -> Error {
+    public func pck_start(pck_name: godot.String, alignment: Int64, key: godot.String, encrypt_directory: UInt8) -> Error {
         withUnsafePointer(to: encrypt_directory) { encrypt_directory_native in
-        withUnsafePointer(to: key) { key_native in
         withUnsafePointer(to: alignment) { alignment_native in
-        withUnsafePointer(to: pck_name) { pck_name_native in
+        let key_native = key._native_ptr()
+        let pck_name_native = pck_name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 4)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -77,16 +82,14 @@ public class PCKPacker : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
-        }
+            return Error(godot: __resPtr.pointee)
         }
         }
     }
-    public func add_file(pck_path: String, source_path: String, encrypt: UInt8) -> Error {
+    public func add_file(pck_path: godot.String, source_path: godot.String, encrypt: UInt8) -> Error {
         withUnsafePointer(to: encrypt) { encrypt_native in
-        withUnsafePointer(to: source_path) { source_path_native in
-        withUnsafePointer(to: pck_path) { pck_path_native in
+        let source_path_native = source_path._native_ptr()
+        let pck_path_native = pck_path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -100,9 +103,7 @@ public class PCKPacker : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
-        }
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func flush(verbose: UInt8) -> Error {
@@ -120,7 +121,7 @@ public class PCKPacker : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
     }
 }

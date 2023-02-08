@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeIntFunc: StringName! = nil
 /// A scalar integer function to be used within the visual shader graph.
 /// 
 /// Accept an integer scalar ([code]x[/code]) to the input port and transform it according to [member function].
-public class VisualShaderNodeIntFunc : VisualShaderNode {
+open class VisualShaderNodeIntFunc : VisualShaderNode {
 
     public enum Function : Int32 {
         case FUNC_ABS = 0
@@ -20,14 +20,19 @@ public class VisualShaderNodeIntFunc : VisualShaderNode {
     static var _method_set_function_424195284: GDExtensionMethodBindPtr! = nil
     static var _method_get_function_2753496911: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeIntFunc = StringName(from: "VisualShaderNodeIntFunc")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_function_424195284_name = StringName(from: "set_function")
-        self._method_set_function_424195284 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_function_424195284_name._native_ptr(), 424195284)
+        self._method_set_function_424195284 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeIntFunc._native_ptr(), _method_set_function_424195284_name._native_ptr(), 424195284)
         assert(VisualShaderNodeIntFunc._method_set_function_424195284 != nil)
         let _method_get_function_2753496911_name = StringName(from: "get_function")
-        self._method_get_function_2753496911 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_function_2753496911_name._native_ptr(), 2753496911)
+        self._method_get_function_2753496911 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeIntFunc._native_ptr(), _method_get_function_2753496911_name._native_ptr(), 2753496911)
         assert(VisualShaderNodeIntFunc._method_get_function_2753496911 != nil)
     }
 
@@ -61,6 +66,6 @@ public class VisualShaderNodeIntFunc : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return VisualShaderNodeIntFunc.Function(from: __resPtr.pointee)
+            return VisualShaderNodeIntFunc.Function(godot: __resPtr.pointee)
     }
 }

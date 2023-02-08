@@ -5,7 +5,7 @@ fileprivate var __godot_name_GLTFSkin: StringName! = nil
 /// MISSING
 /// 
 /// MISSING
-public class GLTFSkin : Resource {
+open class GLTFSkin : Resource {
 
     
 
@@ -32,68 +32,73 @@ public class GLTFSkin : Resource {
     static var _method_get_godot_skin_1032037385: GDExtensionMethodBindPtr! = nil
     static var _method_set_godot_skin_3971435618: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_GLTFSkin = StringName(from: "GLTFSkin")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_get_skin_root_2455072627_name = StringName(from: "get_skin_root")
-        self._method_get_skin_root_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_skin_root_2455072627_name._native_ptr(), 2455072627)
+        self._method_get_skin_root_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_get_skin_root_2455072627_name._native_ptr(), 2455072627)
         assert(GLTFSkin._method_get_skin_root_2455072627 != nil)
         let _method_set_skin_root_1286410249_name = StringName(from: "set_skin_root")
-        self._method_set_skin_root_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_skin_root_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_skin_root_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_set_skin_root_1286410249_name._native_ptr(), 1286410249)
         assert(GLTFSkin._method_set_skin_root_1286410249 != nil)
         let _method_get_joints_original_969006518_name = StringName(from: "get_joints_original")
-        self._method_get_joints_original_969006518 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_joints_original_969006518_name._native_ptr(), 969006518)
+        self._method_get_joints_original_969006518 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_get_joints_original_969006518_name._native_ptr(), 969006518)
         assert(GLTFSkin._method_get_joints_original_969006518 != nil)
         let _method_set_joints_original_3614634198_name = StringName(from: "set_joints_original")
-        self._method_set_joints_original_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_joints_original_3614634198_name._native_ptr(), 3614634198)
+        self._method_set_joints_original_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_set_joints_original_3614634198_name._native_ptr(), 3614634198)
         assert(GLTFSkin._method_set_joints_original_3614634198 != nil)
         let _method_get_inverse_binds_2915620761_name = StringName(from: "get_inverse_binds")
-        self._method_get_inverse_binds_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_inverse_binds_2915620761_name._native_ptr(), 2915620761)
+        self._method_get_inverse_binds_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_get_inverse_binds_2915620761_name._native_ptr(), 2915620761)
         assert(GLTFSkin._method_get_inverse_binds_2915620761 != nil)
         let _method_set_inverse_binds_381264803_name = StringName(from: "set_inverse_binds")
-        self._method_set_inverse_binds_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_inverse_binds_381264803_name._native_ptr(), 381264803)
+        self._method_set_inverse_binds_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_set_inverse_binds_381264803_name._native_ptr(), 381264803)
         assert(GLTFSkin._method_set_inverse_binds_381264803 != nil)
         let _method_get_joints_969006518_name = StringName(from: "get_joints")
-        self._method_get_joints_969006518 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_joints_969006518_name._native_ptr(), 969006518)
+        self._method_get_joints_969006518 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_get_joints_969006518_name._native_ptr(), 969006518)
         assert(GLTFSkin._method_get_joints_969006518 != nil)
         let _method_set_joints_3614634198_name = StringName(from: "set_joints")
-        self._method_set_joints_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_joints_3614634198_name._native_ptr(), 3614634198)
+        self._method_set_joints_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_set_joints_3614634198_name._native_ptr(), 3614634198)
         assert(GLTFSkin._method_set_joints_3614634198 != nil)
         let _method_get_non_joints_969006518_name = StringName(from: "get_non_joints")
-        self._method_get_non_joints_969006518 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_non_joints_969006518_name._native_ptr(), 969006518)
+        self._method_get_non_joints_969006518 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_get_non_joints_969006518_name._native_ptr(), 969006518)
         assert(GLTFSkin._method_get_non_joints_969006518 != nil)
         let _method_set_non_joints_3614634198_name = StringName(from: "set_non_joints")
-        self._method_set_non_joints_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_non_joints_3614634198_name._native_ptr(), 3614634198)
+        self._method_set_non_joints_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_set_non_joints_3614634198_name._native_ptr(), 3614634198)
         assert(GLTFSkin._method_set_non_joints_3614634198 != nil)
         let _method_get_roots_969006518_name = StringName(from: "get_roots")
-        self._method_get_roots_969006518 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_roots_969006518_name._native_ptr(), 969006518)
+        self._method_get_roots_969006518 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_get_roots_969006518_name._native_ptr(), 969006518)
         assert(GLTFSkin._method_get_roots_969006518 != nil)
         let _method_set_roots_3614634198_name = StringName(from: "set_roots")
-        self._method_set_roots_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_roots_3614634198_name._native_ptr(), 3614634198)
+        self._method_set_roots_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_set_roots_3614634198_name._native_ptr(), 3614634198)
         assert(GLTFSkin._method_set_roots_3614634198 != nil)
         let _method_get_skeleton_2455072627_name = StringName(from: "get_skeleton")
-        self._method_get_skeleton_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_skeleton_2455072627_name._native_ptr(), 2455072627)
+        self._method_get_skeleton_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_get_skeleton_2455072627_name._native_ptr(), 2455072627)
         assert(GLTFSkin._method_get_skeleton_2455072627 != nil)
         let _method_set_skeleton_1286410249_name = StringName(from: "set_skeleton")
-        self._method_set_skeleton_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_skeleton_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_skeleton_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_set_skeleton_1286410249_name._native_ptr(), 1286410249)
         assert(GLTFSkin._method_set_skeleton_1286410249 != nil)
         let _method_get_joint_i_to_bone_i_2382534195_name = StringName(from: "get_joint_i_to_bone_i")
-        self._method_get_joint_i_to_bone_i_2382534195 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_joint_i_to_bone_i_2382534195_name._native_ptr(), 2382534195)
+        self._method_get_joint_i_to_bone_i_2382534195 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_get_joint_i_to_bone_i_2382534195_name._native_ptr(), 2382534195)
         assert(GLTFSkin._method_get_joint_i_to_bone_i_2382534195 != nil)
         let _method_set_joint_i_to_bone_i_4155329257_name = StringName(from: "set_joint_i_to_bone_i")
-        self._method_set_joint_i_to_bone_i_4155329257 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_joint_i_to_bone_i_4155329257_name._native_ptr(), 4155329257)
+        self._method_set_joint_i_to_bone_i_4155329257 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_set_joint_i_to_bone_i_4155329257_name._native_ptr(), 4155329257)
         assert(GLTFSkin._method_set_joint_i_to_bone_i_4155329257 != nil)
         let _method_get_joint_i_to_name_2382534195_name = StringName(from: "get_joint_i_to_name")
-        self._method_get_joint_i_to_name_2382534195 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_joint_i_to_name_2382534195_name._native_ptr(), 2382534195)
+        self._method_get_joint_i_to_name_2382534195 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_get_joint_i_to_name_2382534195_name._native_ptr(), 2382534195)
         assert(GLTFSkin._method_get_joint_i_to_name_2382534195 != nil)
         let _method_set_joint_i_to_name_4155329257_name = StringName(from: "set_joint_i_to_name")
-        self._method_set_joint_i_to_name_4155329257 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_joint_i_to_name_4155329257_name._native_ptr(), 4155329257)
+        self._method_set_joint_i_to_name_4155329257 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_set_joint_i_to_name_4155329257_name._native_ptr(), 4155329257)
         assert(GLTFSkin._method_set_joint_i_to_name_4155329257 != nil)
         let _method_get_godot_skin_1032037385_name = StringName(from: "get_godot_skin")
-        self._method_get_godot_skin_1032037385 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_godot_skin_1032037385_name._native_ptr(), 1032037385)
+        self._method_get_godot_skin_1032037385 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_get_godot_skin_1032037385_name._native_ptr(), 1032037385)
         assert(GLTFSkin._method_get_godot_skin_1032037385 != nil)
         let _method_set_godot_skin_3971435618_name = StringName(from: "set_godot_skin")
-        self._method_set_godot_skin_3971435618 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_godot_skin_3971435618_name._native_ptr(), 3971435618)
+        self._method_set_godot_skin_3971435618 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkin._native_ptr(), _method_set_godot_skin_3971435618_name._native_ptr(), 3971435618)
         assert(GLTFSkin._method_set_godot_skin_3971435618 != nil)
     }
 
@@ -112,7 +117,7 @@ public class GLTFSkin : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_skin_root(skin_root: Int64)  {
         withUnsafePointer(to: skin_root) { skin_root_native in
@@ -144,7 +149,7 @@ public class GLTFSkin : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
     }
     public func set_joints_original(joints_original: PackedInt32Array)  {
         let joints_original_native = joints_original._native_ptr()
@@ -175,7 +180,7 @@ public class GLTFSkin : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Transform3D](from: __resPtr.pointee)
+            return [Transform3D](godot: __resPtr.pointee)
     }
     public func set_inverse_binds(inverse_binds: [Transform3D])  {
         let inverse_binds_native = inverse_binds._native_ptr()
@@ -206,7 +211,7 @@ public class GLTFSkin : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
     }
     public func set_joints(joints: PackedInt32Array)  {
         let joints_native = joints._native_ptr()
@@ -237,7 +242,7 @@ public class GLTFSkin : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
     }
     public func set_non_joints(non_joints: PackedInt32Array)  {
         let non_joints_native = non_joints._native_ptr()
@@ -268,7 +273,7 @@ public class GLTFSkin : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
     }
     public func set_roots(roots: PackedInt32Array)  {
         let roots_native = roots._native_ptr()
@@ -300,7 +305,7 @@ public class GLTFSkin : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_skeleton(skeleton: Int64)  {
         withUnsafePointer(to: skeleton) { skeleton_native in
@@ -332,7 +337,7 @@ public class GLTFSkin : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
     }
     public func set_joint_i_to_bone_i(joint_i_to_bone_i: Dictionary)  {
         let joint_i_to_bone_i_native = joint_i_to_bone_i._native_ptr()
@@ -363,7 +368,7 @@ public class GLTFSkin : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
     }
     public func set_joint_i_to_name(joint_i_to_name: Dictionary)  {
         let joint_i_to_name_native = joint_i_to_name._native_ptr()
@@ -394,7 +399,7 @@ public class GLTFSkin : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Skin(from: __resPtr.pointee)
+            return Skin(godot: __resPtr.pointee)
     }
     public func set_godot_skin(godot_skin: Skin)  {
         let godot_skin_native = godot_skin._native_ptr()

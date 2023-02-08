@@ -5,7 +5,7 @@ fileprivate var __godot_name_SkinReference: StringName! = nil
 /// 
 /// 
 /// 
-public class SkinReference : RefCounted {
+open class SkinReference : RefCounted {
 
     
 
@@ -14,14 +14,19 @@ public class SkinReference : RefCounted {
     static var _method_get_skeleton_2944877500: GDExtensionMethodBindPtr! = nil
     static var _method_get_skin_2074563878: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_SkinReference = StringName(from: "SkinReference")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_get_skeleton_2944877500_name = StringName(from: "get_skeleton")
-        self._method_get_skeleton_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_skeleton_2944877500_name._native_ptr(), 2944877500)
+        self._method_get_skeleton_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkinReference._native_ptr(), _method_get_skeleton_2944877500_name._native_ptr(), 2944877500)
         assert(SkinReference._method_get_skeleton_2944877500 != nil)
         let _method_get_skin_2074563878_name = StringName(from: "get_skin")
-        self._method_get_skin_2074563878 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_skin_2074563878_name._native_ptr(), 2074563878)
+        self._method_get_skin_2074563878 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkinReference._native_ptr(), _method_get_skin_2074563878_name._native_ptr(), 2074563878)
         assert(SkinReference._method_get_skin_2074563878 != nil)
     }
 
@@ -39,7 +44,7 @@ public class SkinReference : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func get_skin() -> Skin {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -55,6 +60,6 @@ public class SkinReference : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Skin(from: __resPtr.pointee)
+            return Skin(godot: __resPtr.pointee)
     }
 }

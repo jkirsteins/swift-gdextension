@@ -5,7 +5,7 @@ fileprivate var __godot_name_GDScriptNativeClass: StringName! = nil
 /// MISSING
 /// 
 /// MISSING
-public class GDScriptNativeClass : RefCounted {
+open class GDScriptNativeClass : RefCounted {
 
     
 
@@ -13,11 +13,16 @@ public class GDScriptNativeClass : RefCounted {
 
     static var _method_new_1460262497: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_GDScriptNativeClass = StringName(from: "GDScriptNativeClass")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_new_1460262497_name = StringName(from: "new")
-        self._method_new_1460262497 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_new_1460262497_name._native_ptr(), 1460262497)
+        self._method_new_1460262497 = self.interface.pointee.classdb_get_method_bind(__godot_name_GDScriptNativeClass._native_ptr(), _method_new_1460262497_name._native_ptr(), 1460262497)
         assert(GDScriptNativeClass._method_new_1460262497 != nil)
     }
 
@@ -35,6 +40,6 @@ public class GDScriptNativeClass : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
     }
 }

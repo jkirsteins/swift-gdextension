@@ -7,7 +7,7 @@ fileprivate var __godot_name_MethodTweener: StringName! = nil
 /// [MethodTweener] is similar to a combination of [CallbackTweener] and [PropertyTweener]. It calls a method providing an interpolated value as a parameter. See [method Tween.tween_method] for more usage information.
 ///  
 /// [b]Note:[/b] [method Tween.tween_method] is the only correct way to create [MethodTweener]. Any [MethodTweener] created manually will not function correctly.
-public class MethodTweener : Tweener {
+open class MethodTweener : Tweener {
 
     
 
@@ -17,17 +17,22 @@ public class MethodTweener : Tweener {
     static var _method_set_trans_3740975367: GDExtensionMethodBindPtr! = nil
     static var _method_set_ease_315540545: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_MethodTweener = StringName(from: "MethodTweener")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_delay_266477812_name = StringName(from: "set_delay")
-        self._method_set_delay_266477812 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_delay_266477812_name._native_ptr(), 266477812)
+        self._method_set_delay_266477812 = self.interface.pointee.classdb_get_method_bind(__godot_name_MethodTweener._native_ptr(), _method_set_delay_266477812_name._native_ptr(), 266477812)
         assert(MethodTweener._method_set_delay_266477812 != nil)
         let _method_set_trans_3740975367_name = StringName(from: "set_trans")
-        self._method_set_trans_3740975367 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_trans_3740975367_name._native_ptr(), 3740975367)
+        self._method_set_trans_3740975367 = self.interface.pointee.classdb_get_method_bind(__godot_name_MethodTweener._native_ptr(), _method_set_trans_3740975367_name._native_ptr(), 3740975367)
         assert(MethodTweener._method_set_trans_3740975367 != nil)
         let _method_set_ease_315540545_name = StringName(from: "set_ease")
-        self._method_set_ease_315540545 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ease_315540545_name._native_ptr(), 315540545)
+        self._method_set_ease_315540545 = self.interface.pointee.classdb_get_method_bind(__godot_name_MethodTweener._native_ptr(), _method_set_ease_315540545_name._native_ptr(), 315540545)
         assert(MethodTweener._method_set_ease_315540545 != nil)
     }
 
@@ -46,7 +51,7 @@ public class MethodTweener : Tweener {
                     args.baseAddress!,
                     __resPtr
                 )
-            return MethodTweener(from: __resPtr.pointee)
+            return MethodTweener(godot: __resPtr.pointee)
         }
     }
     public func set_trans(trans: Tween.TransitionType) -> MethodTweener {
@@ -64,7 +69,7 @@ public class MethodTweener : Tweener {
                     args.baseAddress!,
                     __resPtr
                 )
-            return MethodTweener(from: __resPtr.pointee)
+            return MethodTweener(godot: __resPtr.pointee)
         }
     }
     public func set_ease(ease: Tween.EaseType) -> MethodTweener {
@@ -82,7 +87,7 @@ public class MethodTweener : Tweener {
                     args.baseAddress!,
                     __resPtr
                 )
-            return MethodTweener(from: __resPtr.pointee)
+            return MethodTweener(godot: __resPtr.pointee)
         }
     }
 }

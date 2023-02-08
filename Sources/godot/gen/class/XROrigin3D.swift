@@ -11,7 +11,7 @@ fileprivate var __godot_name_XROrigin3D: StringName! = nil
 /// It is the position of this node that you update when your character needs to move through your game world while we're not moving in the real world. Movement in the real world is always in relation to this origin point.
 ///  
 /// For example, if your character is driving a car, the XROrigin3D node should be a child node of this car. Or, if you're implementing a teleport system to move your character, you should change the position of this node.
-public class XROrigin3D : Node3D {
+open class XROrigin3D : Node3D {
 
     
 
@@ -22,20 +22,25 @@ public class XROrigin3D : Node3D {
     static var _method_set_current_2586408642: GDExtensionMethodBindPtr! = nil
     static var _method_is_current_36873697: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_XROrigin3D = StringName(from: "XROrigin3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_world_scale_373806689_name = StringName(from: "set_world_scale")
-        self._method_set_world_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_world_scale_373806689_name._native_ptr(), 373806689)
+        self._method_set_world_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_XROrigin3D._native_ptr(), _method_set_world_scale_373806689_name._native_ptr(), 373806689)
         assert(XROrigin3D._method_set_world_scale_373806689 != nil)
         let _method_get_world_scale_1740695150_name = StringName(from: "get_world_scale")
-        self._method_get_world_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_world_scale_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_world_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_XROrigin3D._native_ptr(), _method_get_world_scale_1740695150_name._native_ptr(), 1740695150)
         assert(XROrigin3D._method_get_world_scale_1740695150 != nil)
         let _method_set_current_2586408642_name = StringName(from: "set_current")
-        self._method_set_current_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_current_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_current_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_XROrigin3D._native_ptr(), _method_set_current_2586408642_name._native_ptr(), 2586408642)
         assert(XROrigin3D._method_set_current_2586408642 != nil)
         let _method_is_current_36873697_name = StringName(from: "is_current")
-        self._method_is_current_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_current_36873697_name._native_ptr(), 36873697)
+        self._method_is_current_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_XROrigin3D._native_ptr(), _method_is_current_36873697_name._native_ptr(), 36873697)
         assert(XROrigin3D._method_is_current_36873697 != nil)
     }
 
@@ -70,7 +75,7 @@ public class XROrigin3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_current(enabled: UInt8)  {
         withUnsafePointer(to: enabled) { enabled_native in
@@ -103,6 +108,6 @@ public class XROrigin3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

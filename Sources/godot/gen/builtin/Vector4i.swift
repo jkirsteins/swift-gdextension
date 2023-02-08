@@ -11,6 +11,11 @@ fileprivate var __godot_name_Vector4i: StringName! = nil
 /// It uses integer coordinates and is therefore preferable to [Vector4] when exact precision is required. Note that the values are limited to 32 bits, and unlike [Vector4] this cannot be configured with an engine build option. Use [int] or [PackedInt64Array] if 64-bit values are needed.
 public class Vector4i : BuiltinClass {
 
+    public static var interface: UnsafePointer<GDExtensionInterface>! = nil
+    public static var library: GDExtensionClassLibraryPtr! = nil
+    
+    var interface: UnsafePointer<GDExtensionInterface> { Self.interface }
+
     public enum Axis : Int32 {
         case AXIS_X = 0
         case AXIS_Y = 1
@@ -30,7 +35,10 @@ public class Vector4i : BuiltinClass {
     static var _constructor_3: GDExtensionPtrConstructor? = nil
     static var _destructor: GDExtensionPtrDestructor? = nil
 
-    public class func initialize_class() {
+    public class func initialize_class(_ ginit: GodotInitializer, _: GDExtensionInitializationLevel) {
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
+
         // Init constructors before assigning __godot_name
         Vector4i._constructor_0 =  Vector4i.interface.pointee.variant_get_ptr_constructor(GDEXTENSION_VARIANT_TYPE_VECTOR4I, 0)
         assert(Vector4i._constructor_0 != nil)
@@ -40,10 +48,11 @@ public class Vector4i : BuiltinClass {
         assert(Vector4i._constructor_2 != nil)
         Vector4i._constructor_3 =  Vector4i.interface.pointee.variant_get_ptr_constructor(GDEXTENSION_VARIANT_TYPE_VECTOR4I, 3)
         assert(Vector4i._constructor_3 != nil)
-        Vector4i._destructor =  Vector4i.interface.pointee.variant_get_ptr_destructor(GDEXTENSION_VARIANT_TYPE_VECTOR4I)
-        assert(Vector4i._destructor != nil)
+    }
 
-        // At this point constructors must be assigned
+    public class func initialize_godot_name() {
+        // At this point constructors for String and StringName
+        // must be assigned
         __godot_name_Vector4i = StringName(from: "Vector4i")
     }
 
@@ -101,10 +110,10 @@ public class Vector4i : BuiltinClass {
         }
         }
     }
-    public required init(from unsafe: UnsafeRawPointer) {
+    public required init(godot unsafe: UnsafeRawPointer) {
         self.opaque = .init(mutating: unsafe)
     }
-    public required init(from unsafe: UnsafeMutableRawPointer) {
+    public required init(godot unsafe: UnsafeMutableRawPointer) {
         self.opaque = unsafe
     }
 

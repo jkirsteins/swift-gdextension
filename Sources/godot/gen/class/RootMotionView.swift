@@ -7,7 +7,7 @@ fileprivate var __godot_name_RootMotionView: StringName! = nil
 /// [i]Root motion[/i] refers to an animation technique where a mesh's skeleton is used to give impulse to a character. When working with 3D animations, a popular technique is for animators to use the root skeleton bone to give motion to the rest of the skeleton. This allows animating characters in a way where steps actually match the floor below. It also allows precise interaction with objects during cinematics. See also [AnimationTree].
 ///  
 /// [b]Note:[/b] [RootMotionView] is only visible in the editor. It will be hidden automatically in the running project.
-public class RootMotionView : VisualInstance3D {
+open class RootMotionView : VisualInstance3D {
 
     
 
@@ -24,38 +24,43 @@ public class RootMotionView : VisualInstance3D {
     static var _method_set_zero_y_2586408642: GDExtensionMethodBindPtr! = nil
     static var _method_get_zero_y_36873697: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_RootMotionView = StringName(from: "RootMotionView")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_animation_path_1348162250_name = StringName(from: "set_animation_path")
-        self._method_set_animation_path_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_animation_path_1348162250_name._native_ptr(), 1348162250)
+        self._method_set_animation_path_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_RootMotionView._native_ptr(), _method_set_animation_path_1348162250_name._native_ptr(), 1348162250)
         assert(RootMotionView._method_set_animation_path_1348162250 != nil)
         let _method_get_animation_path_4075236667_name = StringName(from: "get_animation_path")
-        self._method_get_animation_path_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_animation_path_4075236667_name._native_ptr(), 4075236667)
+        self._method_get_animation_path_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_RootMotionView._native_ptr(), _method_get_animation_path_4075236667_name._native_ptr(), 4075236667)
         assert(RootMotionView._method_get_animation_path_4075236667 != nil)
         let _method_set_color_2920490490_name = StringName(from: "set_color")
-        self._method_set_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_color_2920490490_name._native_ptr(), 2920490490)
+        self._method_set_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_RootMotionView._native_ptr(), _method_set_color_2920490490_name._native_ptr(), 2920490490)
         assert(RootMotionView._method_set_color_2920490490 != nil)
         let _method_get_color_3444240500_name = StringName(from: "get_color")
-        self._method_get_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_color_3444240500_name._native_ptr(), 3444240500)
+        self._method_get_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_RootMotionView._native_ptr(), _method_get_color_3444240500_name._native_ptr(), 3444240500)
         assert(RootMotionView._method_get_color_3444240500 != nil)
         let _method_set_cell_size_373806689_name = StringName(from: "set_cell_size")
-        self._method_set_cell_size_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_cell_size_373806689_name._native_ptr(), 373806689)
+        self._method_set_cell_size_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_RootMotionView._native_ptr(), _method_set_cell_size_373806689_name._native_ptr(), 373806689)
         assert(RootMotionView._method_set_cell_size_373806689 != nil)
         let _method_get_cell_size_1740695150_name = StringName(from: "get_cell_size")
-        self._method_get_cell_size_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_cell_size_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_cell_size_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_RootMotionView._native_ptr(), _method_get_cell_size_1740695150_name._native_ptr(), 1740695150)
         assert(RootMotionView._method_get_cell_size_1740695150 != nil)
         let _method_set_radius_373806689_name = StringName(from: "set_radius")
-        self._method_set_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_radius_373806689_name._native_ptr(), 373806689)
+        self._method_set_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_RootMotionView._native_ptr(), _method_set_radius_373806689_name._native_ptr(), 373806689)
         assert(RootMotionView._method_set_radius_373806689 != nil)
         let _method_get_radius_1740695150_name = StringName(from: "get_radius")
-        self._method_get_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_radius_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_RootMotionView._native_ptr(), _method_get_radius_1740695150_name._native_ptr(), 1740695150)
         assert(RootMotionView._method_get_radius_1740695150 != nil)
         let _method_set_zero_y_2586408642_name = StringName(from: "set_zero_y")
-        self._method_set_zero_y_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_zero_y_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_zero_y_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RootMotionView._native_ptr(), _method_set_zero_y_2586408642_name._native_ptr(), 2586408642)
         assert(RootMotionView._method_set_zero_y_2586408642 != nil)
         let _method_get_zero_y_36873697_name = StringName(from: "get_zero_y")
-        self._method_get_zero_y_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_zero_y_36873697_name._native_ptr(), 36873697)
+        self._method_get_zero_y_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RootMotionView._native_ptr(), _method_get_zero_y_36873697_name._native_ptr(), 36873697)
         assert(RootMotionView._method_get_zero_y_36873697 != nil)
     }
 
@@ -88,7 +93,7 @@ public class RootMotionView : VisualInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return NodePath(from: __resPtr.pointee)
+            return NodePath(godot: __resPtr.pointee)
     }
     public func set_color(color: Color)  {
         let color_native = color._native_ptr()
@@ -119,7 +124,7 @@ public class RootMotionView : VisualInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Color(from: __resPtr.pointee)
+            return Color(godot: __resPtr.pointee)
     }
     public func set_cell_size(size: Float64)  {
         withUnsafePointer(to: size) { size_native in
@@ -152,7 +157,7 @@ public class RootMotionView : VisualInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_radius(size: Float64)  {
         withUnsafePointer(to: size) { size_native in
@@ -185,7 +190,7 @@ public class RootMotionView : VisualInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_zero_y(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -218,6 +223,6 @@ public class RootMotionView : VisualInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

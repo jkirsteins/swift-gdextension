@@ -5,7 +5,7 @@ fileprivate var __godot_name_Mesh: StringName! = nil
 /// A [Resource] that contains vertex array-based geometry.
 /// 
 /// Mesh is a type of [Resource] that contains vertex array-based geometry, divided in [i]surfaces[/i]. Each surface contains a completely separate array and a material used to draw it. Design wise, a mesh with multiple surfaces is preferred to a single surface, because objects created in 3D editing software commonly contain multiple materials.
-public class Mesh : Resource {
+open class Mesh : Resource {
 
     public enum PrimitiveType : Int32 {
         case PRIMITIVE_POINTS = 0
@@ -109,50 +109,55 @@ public class Mesh : Resource {
     static var _method_get_faces_497664490: GDExtensionMethodBindPtr! = nil
     static var _method_generate_triangle_mesh_3476533166: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_Mesh = StringName(from: "Mesh")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_lightmap_size_hint_1130785943_name = StringName(from: "set_lightmap_size_hint")
-        self._method_set_lightmap_size_hint_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_lightmap_size_hint_1130785943_name._native_ptr(), 1130785943)
+        self._method_set_lightmap_size_hint_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_Mesh._native_ptr(), _method_set_lightmap_size_hint_1130785943_name._native_ptr(), 1130785943)
         assert(Mesh._method_set_lightmap_size_hint_1130785943 != nil)
         let _method_get_lightmap_size_hint_3690982128_name = StringName(from: "get_lightmap_size_hint")
-        self._method_get_lightmap_size_hint_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_lightmap_size_hint_3690982128_name._native_ptr(), 3690982128)
+        self._method_get_lightmap_size_hint_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_Mesh._native_ptr(), _method_get_lightmap_size_hint_3690982128_name._native_ptr(), 3690982128)
         assert(Mesh._method_get_lightmap_size_hint_3690982128 != nil)
         let _method_get_aabb_1068685055_name = StringName(from: "get_aabb")
-        self._method_get_aabb_1068685055 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_aabb_1068685055_name._native_ptr(), 1068685055)
+        self._method_get_aabb_1068685055 = self.interface.pointee.classdb_get_method_bind(__godot_name_Mesh._native_ptr(), _method_get_aabb_1068685055_name._native_ptr(), 1068685055)
         assert(Mesh._method_get_aabb_1068685055 != nil)
         let _method_get_surface_count_3905245786_name = StringName(from: "get_surface_count")
-        self._method_get_surface_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_surface_count_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_surface_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Mesh._native_ptr(), _method_get_surface_count_3905245786_name._native_ptr(), 3905245786)
         assert(Mesh._method_get_surface_count_3905245786 != nil)
         let _method_surface_get_arrays_663333327_name = StringName(from: "surface_get_arrays")
-        self._method_surface_get_arrays_663333327 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_surface_get_arrays_663333327_name._native_ptr(), 663333327)
+        self._method_surface_get_arrays_663333327 = self.interface.pointee.classdb_get_method_bind(__godot_name_Mesh._native_ptr(), _method_surface_get_arrays_663333327_name._native_ptr(), 663333327)
         assert(Mesh._method_surface_get_arrays_663333327 != nil)
         let _method_surface_get_blend_shape_arrays_663333327_name = StringName(from: "surface_get_blend_shape_arrays")
-        self._method_surface_get_blend_shape_arrays_663333327 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_surface_get_blend_shape_arrays_663333327_name._native_ptr(), 663333327)
+        self._method_surface_get_blend_shape_arrays_663333327 = self.interface.pointee.classdb_get_method_bind(__godot_name_Mesh._native_ptr(), _method_surface_get_blend_shape_arrays_663333327_name._native_ptr(), 663333327)
         assert(Mesh._method_surface_get_blend_shape_arrays_663333327 != nil)
         let _method_surface_set_material_3671737478_name = StringName(from: "surface_set_material")
-        self._method_surface_set_material_3671737478 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_surface_set_material_3671737478_name._native_ptr(), 3671737478)
+        self._method_surface_set_material_3671737478 = self.interface.pointee.classdb_get_method_bind(__godot_name_Mesh._native_ptr(), _method_surface_set_material_3671737478_name._native_ptr(), 3671737478)
         assert(Mesh._method_surface_set_material_3671737478 != nil)
         let _method_surface_get_material_2897466400_name = StringName(from: "surface_get_material")
-        self._method_surface_get_material_2897466400 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_surface_get_material_2897466400_name._native_ptr(), 2897466400)
+        self._method_surface_get_material_2897466400 = self.interface.pointee.classdb_get_method_bind(__godot_name_Mesh._native_ptr(), _method_surface_get_material_2897466400_name._native_ptr(), 2897466400)
         assert(Mesh._method_surface_get_material_2897466400 != nil)
         let _method_create_placeholder_121922552_name = StringName(from: "create_placeholder")
-        self._method_create_placeholder_121922552 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_placeholder_121922552_name._native_ptr(), 121922552)
+        self._method_create_placeholder_121922552 = self.interface.pointee.classdb_get_method_bind(__godot_name_Mesh._native_ptr(), _method_create_placeholder_121922552_name._native_ptr(), 121922552)
         assert(Mesh._method_create_placeholder_121922552 != nil)
         let _method_create_trimesh_shape_4160111210_name = StringName(from: "create_trimesh_shape")
-        self._method_create_trimesh_shape_4160111210 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_trimesh_shape_4160111210_name._native_ptr(), 4160111210)
+        self._method_create_trimesh_shape_4160111210 = self.interface.pointee.classdb_get_method_bind(__godot_name_Mesh._native_ptr(), _method_create_trimesh_shape_4160111210_name._native_ptr(), 4160111210)
         assert(Mesh._method_create_trimesh_shape_4160111210 != nil)
         let _method_create_convex_shape_2529984628_name = StringName(from: "create_convex_shape")
-        self._method_create_convex_shape_2529984628 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_convex_shape_2529984628_name._native_ptr(), 2529984628)
+        self._method_create_convex_shape_2529984628 = self.interface.pointee.classdb_get_method_bind(__godot_name_Mesh._native_ptr(), _method_create_convex_shape_2529984628_name._native_ptr(), 2529984628)
         assert(Mesh._method_create_convex_shape_2529984628 != nil)
         let _method_create_outline_1208642001_name = StringName(from: "create_outline")
-        self._method_create_outline_1208642001 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_outline_1208642001_name._native_ptr(), 1208642001)
+        self._method_create_outline_1208642001 = self.interface.pointee.classdb_get_method_bind(__godot_name_Mesh._native_ptr(), _method_create_outline_1208642001_name._native_ptr(), 1208642001)
         assert(Mesh._method_create_outline_1208642001 != nil)
         let _method_get_faces_497664490_name = StringName(from: "get_faces")
-        self._method_get_faces_497664490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_faces_497664490_name._native_ptr(), 497664490)
+        self._method_get_faces_497664490 = self.interface.pointee.classdb_get_method_bind(__godot_name_Mesh._native_ptr(), _method_get_faces_497664490_name._native_ptr(), 497664490)
         assert(Mesh._method_get_faces_497664490 != nil)
         let _method_generate_triangle_mesh_3476533166_name = StringName(from: "generate_triangle_mesh")
-        self._method_generate_triangle_mesh_3476533166 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_generate_triangle_mesh_3476533166_name._native_ptr(), 3476533166)
+        self._method_generate_triangle_mesh_3476533166 = self.interface.pointee.classdb_get_method_bind(__godot_name_Mesh._native_ptr(), _method_generate_triangle_mesh_3476533166_name._native_ptr(), 3476533166)
         assert(Mesh._method_generate_triangle_mesh_3476533166 != nil)
     }
 
@@ -171,7 +176,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _surface_get_array_len(index: Int64) -> Int64 {
         withUnsafePointer(to: index) { index_native in
@@ -189,7 +194,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func _surface_get_array_index_len(index: Int64) -> Int64 {
@@ -208,7 +213,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func _surface_get_arrays(index: Int64) -> Array {
@@ -226,7 +231,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Array(from: __resPtr.pointee)
+            return Array(godot: __resPtr.pointee)
         }
     }
     public func _surface_get_blend_shape_arrays(index: Int64) -> [Array] {
@@ -244,7 +249,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Array](from: __resPtr.pointee)
+            return [Array](godot: __resPtr.pointee)
         }
     }
     public func _surface_get_lods(index: Int64) -> Dictionary {
@@ -262,7 +267,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
         }
     }
     public func _surface_get_format(index: Int64) -> Int64 {
@@ -281,7 +286,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func _surface_get_primitive_type(index: Int64) -> Int64 {
@@ -300,7 +305,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func _surface_set_material(index: Int64, material: Material)  {
@@ -335,7 +340,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Material(from: __resPtr.pointee)
+            return Material(godot: __resPtr.pointee)
         }
     }
     public func _get_blend_shape_count() -> Int64 {
@@ -353,7 +358,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_blend_shape_name(index: Int64) -> StringName {
         withUnsafePointer(to: index) { index_native in
@@ -370,7 +375,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return StringName(from: __resPtr.pointee)
+            return StringName(godot: __resPtr.pointee)
         }
     }
     public func _set_blend_shape_name(index: Int64, name: StringName)  {
@@ -404,7 +409,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return AABB(from: __resPtr.pointee)
+            return AABB(godot: __resPtr.pointee)
     }
     public func set_lightmap_size_hint(size: Vector2i)  {
         let size_native = size._native_ptr()
@@ -435,7 +440,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2i(from: __resPtr.pointee)
+            return Vector2i(godot: __resPtr.pointee)
     }
     public func get_aabb() -> AABB {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -451,7 +456,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return AABB(from: __resPtr.pointee)
+            return AABB(godot: __resPtr.pointee)
     }
     public func get_surface_count() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -468,7 +473,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func surface_get_arrays(surf_idx: Int64) -> Array {
         withUnsafePointer(to: surf_idx) { surf_idx_native in
@@ -485,7 +490,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Array(from: __resPtr.pointee)
+            return Array(godot: __resPtr.pointee)
         }
     }
     public func surface_get_blend_shape_arrays(surf_idx: Int64) -> [Array] {
@@ -503,7 +508,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Array](from: __resPtr.pointee)
+            return [Array](godot: __resPtr.pointee)
         }
     }
     public func surface_set_material(surf_idx: Int64, material: Material)  {
@@ -538,7 +543,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Material(from: __resPtr.pointee)
+            return Material(godot: __resPtr.pointee)
         }
     }
     public func create_placeholder() -> Resource {
@@ -555,7 +560,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Resource(from: __resPtr.pointee)
+            return Resource(godot: __resPtr.pointee)
     }
     public func create_trimesh_shape() -> ConcavePolygonShape3D {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -571,7 +576,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return ConcavePolygonShape3D(from: __resPtr.pointee)
+            return ConcavePolygonShape3D(godot: __resPtr.pointee)
     }
     public func create_convex_shape(clean: UInt8, simplify: UInt8) -> ConvexPolygonShape3D {
         withUnsafePointer(to: simplify) { simplify_native in
@@ -589,7 +594,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return ConvexPolygonShape3D(from: __resPtr.pointee)
+            return ConvexPolygonShape3D(godot: __resPtr.pointee)
         }
         }
     }
@@ -608,7 +613,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Mesh(from: __resPtr.pointee)
+            return Mesh(godot: __resPtr.pointee)
         }
     }
     public func get_faces() -> PackedVector3Array {
@@ -625,7 +630,7 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector3Array(from: __resPtr.pointee)
+            return PackedVector3Array(godot: __resPtr.pointee)
     }
     public func generate_triangle_mesh() -> TriangleMesh {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -641,6 +646,6 @@ public class Mesh : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return TriangleMesh(from: __resPtr.pointee)
+            return TriangleMesh(godot: __resPtr.pointee)
     }
 }

@@ -5,7 +5,7 @@ fileprivate var __godot_name_TextureProgressBar: StringName! = nil
 /// Texture-based progress bar. Useful for loading screens and life or stamina bars.
 /// 
 /// TextureProgressBar works like [ProgressBar], but uses up to 3 textures instead of Godot's [Theme] resource. It can be used to create horizontal, vertical and radial progress bars.
-public class TextureProgressBar : Range {
+open class TextureProgressBar : Range {
 
     public enum FillMode : Int32 {
         case FILL_LEFT_TO_RIGHT = 0
@@ -48,86 +48,91 @@ public class TextureProgressBar : Range {
     static var _method_set_nine_patch_stretch_2586408642: GDExtensionMethodBindPtr! = nil
     static var _method_get_nine_patch_stretch_36873697: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_TextureProgressBar = StringName(from: "TextureProgressBar")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_under_texture_4051416890_name = StringName(from: "set_under_texture")
-        self._method_set_under_texture_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_under_texture_4051416890_name._native_ptr(), 4051416890)
+        self._method_set_under_texture_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_set_under_texture_4051416890_name._native_ptr(), 4051416890)
         assert(TextureProgressBar._method_set_under_texture_4051416890 != nil)
         let _method_get_under_texture_3635182373_name = StringName(from: "get_under_texture")
-        self._method_get_under_texture_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_under_texture_3635182373_name._native_ptr(), 3635182373)
+        self._method_get_under_texture_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_get_under_texture_3635182373_name._native_ptr(), 3635182373)
         assert(TextureProgressBar._method_get_under_texture_3635182373 != nil)
         let _method_set_progress_texture_4051416890_name = StringName(from: "set_progress_texture")
-        self._method_set_progress_texture_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_progress_texture_4051416890_name._native_ptr(), 4051416890)
+        self._method_set_progress_texture_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_set_progress_texture_4051416890_name._native_ptr(), 4051416890)
         assert(TextureProgressBar._method_set_progress_texture_4051416890 != nil)
         let _method_get_progress_texture_3635182373_name = StringName(from: "get_progress_texture")
-        self._method_get_progress_texture_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_progress_texture_3635182373_name._native_ptr(), 3635182373)
+        self._method_get_progress_texture_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_get_progress_texture_3635182373_name._native_ptr(), 3635182373)
         assert(TextureProgressBar._method_get_progress_texture_3635182373 != nil)
         let _method_set_over_texture_4051416890_name = StringName(from: "set_over_texture")
-        self._method_set_over_texture_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_over_texture_4051416890_name._native_ptr(), 4051416890)
+        self._method_set_over_texture_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_set_over_texture_4051416890_name._native_ptr(), 4051416890)
         assert(TextureProgressBar._method_set_over_texture_4051416890 != nil)
         let _method_get_over_texture_3635182373_name = StringName(from: "get_over_texture")
-        self._method_get_over_texture_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_over_texture_3635182373_name._native_ptr(), 3635182373)
+        self._method_get_over_texture_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_get_over_texture_3635182373_name._native_ptr(), 3635182373)
         assert(TextureProgressBar._method_get_over_texture_3635182373 != nil)
         let _method_set_fill_mode_1286410249_name = StringName(from: "set_fill_mode")
-        self._method_set_fill_mode_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_fill_mode_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_fill_mode_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_set_fill_mode_1286410249_name._native_ptr(), 1286410249)
         assert(TextureProgressBar._method_set_fill_mode_1286410249 != nil)
         let _method_get_fill_mode_2455072627_name = StringName(from: "get_fill_mode")
-        self._method_get_fill_mode_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_fill_mode_2455072627_name._native_ptr(), 2455072627)
+        self._method_get_fill_mode_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_get_fill_mode_2455072627_name._native_ptr(), 2455072627)
         assert(TextureProgressBar._method_get_fill_mode_2455072627 != nil)
         let _method_set_tint_under_2920490490_name = StringName(from: "set_tint_under")
-        self._method_set_tint_under_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_tint_under_2920490490_name._native_ptr(), 2920490490)
+        self._method_set_tint_under_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_set_tint_under_2920490490_name._native_ptr(), 2920490490)
         assert(TextureProgressBar._method_set_tint_under_2920490490 != nil)
         let _method_get_tint_under_3444240500_name = StringName(from: "get_tint_under")
-        self._method_get_tint_under_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_tint_under_3444240500_name._native_ptr(), 3444240500)
+        self._method_get_tint_under_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_get_tint_under_3444240500_name._native_ptr(), 3444240500)
         assert(TextureProgressBar._method_get_tint_under_3444240500 != nil)
         let _method_set_tint_progress_2920490490_name = StringName(from: "set_tint_progress")
-        self._method_set_tint_progress_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_tint_progress_2920490490_name._native_ptr(), 2920490490)
+        self._method_set_tint_progress_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_set_tint_progress_2920490490_name._native_ptr(), 2920490490)
         assert(TextureProgressBar._method_set_tint_progress_2920490490 != nil)
         let _method_get_tint_progress_3444240500_name = StringName(from: "get_tint_progress")
-        self._method_get_tint_progress_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_tint_progress_3444240500_name._native_ptr(), 3444240500)
+        self._method_get_tint_progress_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_get_tint_progress_3444240500_name._native_ptr(), 3444240500)
         assert(TextureProgressBar._method_get_tint_progress_3444240500 != nil)
         let _method_set_tint_over_2920490490_name = StringName(from: "set_tint_over")
-        self._method_set_tint_over_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_tint_over_2920490490_name._native_ptr(), 2920490490)
+        self._method_set_tint_over_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_set_tint_over_2920490490_name._native_ptr(), 2920490490)
         assert(TextureProgressBar._method_set_tint_over_2920490490 != nil)
         let _method_get_tint_over_3444240500_name = StringName(from: "get_tint_over")
-        self._method_get_tint_over_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_tint_over_3444240500_name._native_ptr(), 3444240500)
+        self._method_get_tint_over_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_get_tint_over_3444240500_name._native_ptr(), 3444240500)
         assert(TextureProgressBar._method_get_tint_over_3444240500 != nil)
         let _method_set_texture_progress_offset_743155724_name = StringName(from: "set_texture_progress_offset")
-        self._method_set_texture_progress_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_texture_progress_offset_743155724_name._native_ptr(), 743155724)
+        self._method_set_texture_progress_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_set_texture_progress_offset_743155724_name._native_ptr(), 743155724)
         assert(TextureProgressBar._method_set_texture_progress_offset_743155724 != nil)
         let _method_get_texture_progress_offset_3341600327_name = StringName(from: "get_texture_progress_offset")
-        self._method_get_texture_progress_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_texture_progress_offset_3341600327_name._native_ptr(), 3341600327)
+        self._method_get_texture_progress_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_get_texture_progress_offset_3341600327_name._native_ptr(), 3341600327)
         assert(TextureProgressBar._method_get_texture_progress_offset_3341600327 != nil)
         let _method_set_radial_initial_angle_373806689_name = StringName(from: "set_radial_initial_angle")
-        self._method_set_radial_initial_angle_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_radial_initial_angle_373806689_name._native_ptr(), 373806689)
+        self._method_set_radial_initial_angle_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_set_radial_initial_angle_373806689_name._native_ptr(), 373806689)
         assert(TextureProgressBar._method_set_radial_initial_angle_373806689 != nil)
         let _method_get_radial_initial_angle_191475506_name = StringName(from: "get_radial_initial_angle")
-        self._method_get_radial_initial_angle_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_radial_initial_angle_191475506_name._native_ptr(), 191475506)
+        self._method_get_radial_initial_angle_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_get_radial_initial_angle_191475506_name._native_ptr(), 191475506)
         assert(TextureProgressBar._method_get_radial_initial_angle_191475506 != nil)
         let _method_set_radial_center_offset_743155724_name = StringName(from: "set_radial_center_offset")
-        self._method_set_radial_center_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_radial_center_offset_743155724_name._native_ptr(), 743155724)
+        self._method_set_radial_center_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_set_radial_center_offset_743155724_name._native_ptr(), 743155724)
         assert(TextureProgressBar._method_set_radial_center_offset_743155724 != nil)
         let _method_get_radial_center_offset_1497962370_name = StringName(from: "get_radial_center_offset")
-        self._method_get_radial_center_offset_1497962370 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_radial_center_offset_1497962370_name._native_ptr(), 1497962370)
+        self._method_get_radial_center_offset_1497962370 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_get_radial_center_offset_1497962370_name._native_ptr(), 1497962370)
         assert(TextureProgressBar._method_get_radial_center_offset_1497962370 != nil)
         let _method_set_fill_degrees_373806689_name = StringName(from: "set_fill_degrees")
-        self._method_set_fill_degrees_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_fill_degrees_373806689_name._native_ptr(), 373806689)
+        self._method_set_fill_degrees_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_set_fill_degrees_373806689_name._native_ptr(), 373806689)
         assert(TextureProgressBar._method_set_fill_degrees_373806689 != nil)
         let _method_get_fill_degrees_191475506_name = StringName(from: "get_fill_degrees")
-        self._method_get_fill_degrees_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_fill_degrees_191475506_name._native_ptr(), 191475506)
+        self._method_get_fill_degrees_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_get_fill_degrees_191475506_name._native_ptr(), 191475506)
         assert(TextureProgressBar._method_get_fill_degrees_191475506 != nil)
         let _method_set_stretch_margin_437707142_name = StringName(from: "set_stretch_margin")
-        self._method_set_stretch_margin_437707142 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_stretch_margin_437707142_name._native_ptr(), 437707142)
+        self._method_set_stretch_margin_437707142 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_set_stretch_margin_437707142_name._native_ptr(), 437707142)
         assert(TextureProgressBar._method_set_stretch_margin_437707142 != nil)
         let _method_get_stretch_margin_1983885014_name = StringName(from: "get_stretch_margin")
-        self._method_get_stretch_margin_1983885014 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_stretch_margin_1983885014_name._native_ptr(), 1983885014)
+        self._method_get_stretch_margin_1983885014 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_get_stretch_margin_1983885014_name._native_ptr(), 1983885014)
         assert(TextureProgressBar._method_get_stretch_margin_1983885014 != nil)
         let _method_set_nine_patch_stretch_2586408642_name = StringName(from: "set_nine_patch_stretch")
-        self._method_set_nine_patch_stretch_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_nine_patch_stretch_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_nine_patch_stretch_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_set_nine_patch_stretch_2586408642_name._native_ptr(), 2586408642)
         assert(TextureProgressBar._method_set_nine_patch_stretch_2586408642 != nil)
         let _method_get_nine_patch_stretch_36873697_name = StringName(from: "get_nine_patch_stretch")
-        self._method_get_nine_patch_stretch_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_nine_patch_stretch_36873697_name._native_ptr(), 36873697)
+        self._method_get_nine_patch_stretch_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureProgressBar._native_ptr(), _method_get_nine_patch_stretch_36873697_name._native_ptr(), 36873697)
         assert(TextureProgressBar._method_get_nine_patch_stretch_36873697 != nil)
     }
 
@@ -160,7 +165,7 @@ public class TextureProgressBar : Range {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture2D(from: __resPtr.pointee)
+            return Texture2D(godot: __resPtr.pointee)
     }
     public func set_progress_texture(tex: Texture2D)  {
         let tex_native = tex._native_ptr()
@@ -191,7 +196,7 @@ public class TextureProgressBar : Range {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture2D(from: __resPtr.pointee)
+            return Texture2D(godot: __resPtr.pointee)
     }
     public func set_over_texture(tex: Texture2D)  {
         let tex_native = tex._native_ptr()
@@ -222,7 +227,7 @@ public class TextureProgressBar : Range {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture2D(from: __resPtr.pointee)
+            return Texture2D(godot: __resPtr.pointee)
     }
     public func set_fill_mode(mode: Int64)  {
         withUnsafePointer(to: mode) { mode_native in
@@ -255,7 +260,7 @@ public class TextureProgressBar : Range {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_tint_under(tint: Color)  {
         let tint_native = tint._native_ptr()
@@ -286,7 +291,7 @@ public class TextureProgressBar : Range {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Color(from: __resPtr.pointee)
+            return Color(godot: __resPtr.pointee)
     }
     public func set_tint_progress(tint: Color)  {
         let tint_native = tint._native_ptr()
@@ -317,7 +322,7 @@ public class TextureProgressBar : Range {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Color(from: __resPtr.pointee)
+            return Color(godot: __resPtr.pointee)
     }
     public func set_tint_over(tint: Color)  {
         let tint_native = tint._native_ptr()
@@ -348,7 +353,7 @@ public class TextureProgressBar : Range {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Color(from: __resPtr.pointee)
+            return Color(godot: __resPtr.pointee)
     }
     public func set_texture_progress_offset(offset: Vector2)  {
         let offset_native = offset._native_ptr()
@@ -379,7 +384,7 @@ public class TextureProgressBar : Range {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func set_radial_initial_angle(mode: Float64)  {
         withUnsafePointer(to: mode) { mode_native in
@@ -412,7 +417,7 @@ public class TextureProgressBar : Range {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_radial_center_offset(mode: Vector2)  {
         let mode_native = mode._native_ptr()
@@ -443,7 +448,7 @@ public class TextureProgressBar : Range {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func set_fill_degrees(mode: Float64)  {
         withUnsafePointer(to: mode) { mode_native in
@@ -476,7 +481,7 @@ public class TextureProgressBar : Range {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_stretch_margin(margin: Side, value: Int64)  {
         withUnsafePointer(to: value) { value_native in
@@ -512,7 +517,7 @@ public class TextureProgressBar : Range {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func set_nine_patch_stretch(stretch: UInt8)  {
@@ -546,6 +551,6 @@ public class TextureProgressBar : Range {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

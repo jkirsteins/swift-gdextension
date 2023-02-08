@@ -5,7 +5,7 @@ fileprivate var __godot_name_AudioStreamPlayback: StringName! = nil
 /// Meta class for playing back audio.
 /// 
 /// Can play, loop, pause a scroll through audio. See [AudioStream] and [AudioStreamOggVorbis] for usage.
-public class AudioStreamPlayback : RefCounted {
+open class AudioStreamPlayback : RefCounted {
 
     
 
@@ -20,8 +20,13 @@ public class AudioStreamPlayback : RefCounted {
     static var _method__mix_0: GDExtensionMethodBindPtr! = nil
     static var _method__tag_used_streams_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AudioStreamPlayback = StringName(from: "AudioStreamPlayback")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
@@ -71,7 +76,7 @@ public class AudioStreamPlayback : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_loop_count() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -88,7 +93,7 @@ public class AudioStreamPlayback : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_playback_position() -> Float64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -105,7 +110,7 @@ public class AudioStreamPlayback : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func _seek(position: Float64)  {
         withUnsafePointer(to: position) { position_native in
@@ -141,7 +146,7 @@ public class AudioStreamPlayback : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
         }
         }

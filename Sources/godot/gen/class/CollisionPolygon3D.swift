@@ -9,7 +9,7 @@ fileprivate var __godot_name_CollisionPolygon3D: StringName! = nil
 /// [b]Note:[/b] Since this is an editor-only helper, properties modified during gameplay will have no effect.
 ///  
 /// [b]Warning:[/b] A non-uniformly scaled CollisionPolygon3D node will probably not function as expected. Please make sure to keep its scale uniform (i.e. the same on all axes), and change its [member polygon]'s vertices instead.
-public class CollisionPolygon3D : Node3D {
+open class CollisionPolygon3D : Node3D {
 
     
 
@@ -24,32 +24,37 @@ public class CollisionPolygon3D : Node3D {
     static var _method_set_margin_373806689: GDExtensionMethodBindPtr! = nil
     static var _method_get_margin_1740695150: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_CollisionPolygon3D = StringName(from: "CollisionPolygon3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_depth_373806689_name = StringName(from: "set_depth")
-        self._method_set_depth_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_depth_373806689_name._native_ptr(), 373806689)
+        self._method_set_depth_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionPolygon3D._native_ptr(), _method_set_depth_373806689_name._native_ptr(), 373806689)
         assert(CollisionPolygon3D._method_set_depth_373806689 != nil)
         let _method_get_depth_1740695150_name = StringName(from: "get_depth")
-        self._method_get_depth_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_depth_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_depth_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionPolygon3D._native_ptr(), _method_get_depth_1740695150_name._native_ptr(), 1740695150)
         assert(CollisionPolygon3D._method_get_depth_1740695150 != nil)
         let _method_set_polygon_1509147220_name = StringName(from: "set_polygon")
-        self._method_set_polygon_1509147220 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_polygon_1509147220_name._native_ptr(), 1509147220)
+        self._method_set_polygon_1509147220 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionPolygon3D._native_ptr(), _method_set_polygon_1509147220_name._native_ptr(), 1509147220)
         assert(CollisionPolygon3D._method_set_polygon_1509147220 != nil)
         let _method_get_polygon_2961356807_name = StringName(from: "get_polygon")
-        self._method_get_polygon_2961356807 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_polygon_2961356807_name._native_ptr(), 2961356807)
+        self._method_get_polygon_2961356807 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionPolygon3D._native_ptr(), _method_get_polygon_2961356807_name._native_ptr(), 2961356807)
         assert(CollisionPolygon3D._method_get_polygon_2961356807 != nil)
         let _method_set_disabled_2586408642_name = StringName(from: "set_disabled")
-        self._method_set_disabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_disabled_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_disabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionPolygon3D._native_ptr(), _method_set_disabled_2586408642_name._native_ptr(), 2586408642)
         assert(CollisionPolygon3D._method_set_disabled_2586408642 != nil)
         let _method_is_disabled_36873697_name = StringName(from: "is_disabled")
-        self._method_is_disabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_disabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_disabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionPolygon3D._native_ptr(), _method_is_disabled_36873697_name._native_ptr(), 36873697)
         assert(CollisionPolygon3D._method_is_disabled_36873697 != nil)
         let _method_set_margin_373806689_name = StringName(from: "set_margin")
-        self._method_set_margin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_margin_373806689_name._native_ptr(), 373806689)
+        self._method_set_margin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionPolygon3D._native_ptr(), _method_set_margin_373806689_name._native_ptr(), 373806689)
         assert(CollisionPolygon3D._method_set_margin_373806689 != nil)
         let _method_get_margin_1740695150_name = StringName(from: "get_margin")
-        self._method_get_margin_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_margin_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_margin_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionPolygon3D._native_ptr(), _method_get_margin_1740695150_name._native_ptr(), 1740695150)
         assert(CollisionPolygon3D._method_get_margin_1740695150 != nil)
     }
 
@@ -84,7 +89,7 @@ public class CollisionPolygon3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_polygon(polygon: PackedVector2Array)  {
         let polygon_native = polygon._native_ptr()
@@ -115,7 +120,7 @@ public class CollisionPolygon3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector2Array(from: __resPtr.pointee)
+            return PackedVector2Array(godot: __resPtr.pointee)
     }
     public func set_disabled(disabled: UInt8)  {
         withUnsafePointer(to: disabled) { disabled_native in
@@ -148,7 +153,7 @@ public class CollisionPolygon3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_margin(margin: Float64)  {
         withUnsafePointer(to: margin) { margin_native in
@@ -181,6 +186,6 @@ public class CollisionPolygon3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
 }

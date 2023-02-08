@@ -267,6 +267,11 @@ fileprivate var __godot_name_Dictionary: StringName! = nil
 /// [b]Note:[/b] When declaring a dictionary with [code]const[/code], the dictionary becomes read-only. A read-only Dictionary's entries cannot be overridden at run-time. This does [i]not[/i] affect nested [Array] and [Dictionary] values.
 public class Dictionary : BuiltinClass {
 
+    public static var interface: UnsafePointer<GDExtensionInterface>! = nil
+    public static var library: GDExtensionClassLibraryPtr! = nil
+    
+    var interface: UnsafePointer<GDExtensionInterface> { Self.interface }
+
     
 
     public class var __godot_name: StringName { __godot_name_Dictionary }
@@ -279,7 +284,10 @@ public class Dictionary : BuiltinClass {
     static var _constructor_1: GDExtensionPtrConstructor? = nil
     static var _destructor: GDExtensionPtrDestructor? = nil
 
-    public class func initialize_class() {
+    public class func initialize_class(_ ginit: GodotInitializer, _: GDExtensionInitializationLevel) {
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
+
         // Init constructors before assigning __godot_name
         Dictionary._constructor_0 =  Dictionary.interface.pointee.variant_get_ptr_constructor(GDEXTENSION_VARIANT_TYPE_DICTIONARY, 0)
         assert(Dictionary._constructor_0 != nil)
@@ -287,8 +295,11 @@ public class Dictionary : BuiltinClass {
         assert(Dictionary._constructor_1 != nil)
         Dictionary._destructor =  Dictionary.interface.pointee.variant_get_ptr_destructor(GDEXTENSION_VARIANT_TYPE_DICTIONARY)
         assert(Dictionary._destructor != nil)
+    }
 
-        // At this point constructors must be assigned
+    public class func initialize_godot_name() {
+        // At this point constructors for String and StringName
+        // must be assigned
         __godot_name_Dictionary = StringName(from: "Dictionary")
     }
 
@@ -315,10 +326,10 @@ public class Dictionary : BuiltinClass {
             // call here
             Self._constructor_1!(self._native_ptr(), .init(args.baseAddress!))
     }
-    public required init(from unsafe: UnsafeRawPointer) {
+    public required init(godot unsafe: UnsafeRawPointer) {
         self.opaque = .init(mutating: unsafe)
     }
-    public required init(from unsafe: UnsafeMutableRawPointer) {
+    public required init(godot unsafe: UnsafeMutableRawPointer) {
         self.opaque = unsafe
     }
 

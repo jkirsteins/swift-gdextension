@@ -11,7 +11,7 @@ fileprivate var __godot_name_SkeletonModification2DCCDIK: StringName! = nil
 /// [b]Note:[/b] The CCDIK modifier has [code]ccdik_joints[/code], which are the data objects that hold the data for each joint in the CCDIK chain. This is different from a bone! CCDIK joints hold the data needed for each bone in the bone chain used by CCDIK.
 ///  
 /// CCDIK also fully supports angle constraints, allowing for more control over how a solution is met.
-public class SkeletonModification2DCCDIK : SkeletonModification2D {
+open class SkeletonModification2DCCDIK : SkeletonModification2D {
 
     
 
@@ -38,68 +38,73 @@ public class SkeletonModification2DCCDIK : SkeletonModification2D {
     static var _method_set_ccdik_joint_constraint_angle_invert_300928843: GDExtensionMethodBindPtr! = nil
     static var _method_get_ccdik_joint_constraint_angle_invert_1116898809: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_SkeletonModification2DCCDIK = StringName(from: "SkeletonModification2DCCDIK")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_target_node_1348162250_name = StringName(from: "set_target_node")
-        self._method_set_target_node_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_target_node_1348162250_name._native_ptr(), 1348162250)
+        self._method_set_target_node_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_set_target_node_1348162250_name._native_ptr(), 1348162250)
         assert(SkeletonModification2DCCDIK._method_set_target_node_1348162250 != nil)
         let _method_get_target_node_4075236667_name = StringName(from: "get_target_node")
-        self._method_get_target_node_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_target_node_4075236667_name._native_ptr(), 4075236667)
+        self._method_get_target_node_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_get_target_node_4075236667_name._native_ptr(), 4075236667)
         assert(SkeletonModification2DCCDIK._method_get_target_node_4075236667 != nil)
         let _method_set_tip_node_1348162250_name = StringName(from: "set_tip_node")
-        self._method_set_tip_node_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_tip_node_1348162250_name._native_ptr(), 1348162250)
+        self._method_set_tip_node_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_set_tip_node_1348162250_name._native_ptr(), 1348162250)
         assert(SkeletonModification2DCCDIK._method_set_tip_node_1348162250 != nil)
         let _method_get_tip_node_4075236667_name = StringName(from: "get_tip_node")
-        self._method_get_tip_node_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_tip_node_4075236667_name._native_ptr(), 4075236667)
+        self._method_get_tip_node_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_get_tip_node_4075236667_name._native_ptr(), 4075236667)
         assert(SkeletonModification2DCCDIK._method_get_tip_node_4075236667 != nil)
         let _method_set_ccdik_data_chain_length_1286410249_name = StringName(from: "set_ccdik_data_chain_length")
-        self._method_set_ccdik_data_chain_length_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ccdik_data_chain_length_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_ccdik_data_chain_length_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_set_ccdik_data_chain_length_1286410249_name._native_ptr(), 1286410249)
         assert(SkeletonModification2DCCDIK._method_set_ccdik_data_chain_length_1286410249 != nil)
         let _method_get_ccdik_data_chain_length_2455072627_name = StringName(from: "get_ccdik_data_chain_length")
-        self._method_get_ccdik_data_chain_length_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_ccdik_data_chain_length_2455072627_name._native_ptr(), 2455072627)
+        self._method_get_ccdik_data_chain_length_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_get_ccdik_data_chain_length_2455072627_name._native_ptr(), 2455072627)
         assert(SkeletonModification2DCCDIK._method_get_ccdik_data_chain_length_2455072627 != nil)
         let _method_set_ccdik_joint_bone2d_node_2761262315_name = StringName(from: "set_ccdik_joint_bone2d_node")
-        self._method_set_ccdik_joint_bone2d_node_2761262315 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ccdik_joint_bone2d_node_2761262315_name._native_ptr(), 2761262315)
+        self._method_set_ccdik_joint_bone2d_node_2761262315 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_set_ccdik_joint_bone2d_node_2761262315_name._native_ptr(), 2761262315)
         assert(SkeletonModification2DCCDIK._method_set_ccdik_joint_bone2d_node_2761262315 != nil)
         let _method_get_ccdik_joint_bone2d_node_408788394_name = StringName(from: "get_ccdik_joint_bone2d_node")
-        self._method_get_ccdik_joint_bone2d_node_408788394 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_ccdik_joint_bone2d_node_408788394_name._native_ptr(), 408788394)
+        self._method_get_ccdik_joint_bone2d_node_408788394 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_get_ccdik_joint_bone2d_node_408788394_name._native_ptr(), 408788394)
         assert(SkeletonModification2DCCDIK._method_get_ccdik_joint_bone2d_node_408788394 != nil)
         let _method_set_ccdik_joint_bone_index_3937882851_name = StringName(from: "set_ccdik_joint_bone_index")
-        self._method_set_ccdik_joint_bone_index_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ccdik_joint_bone_index_3937882851_name._native_ptr(), 3937882851)
+        self._method_set_ccdik_joint_bone_index_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_set_ccdik_joint_bone_index_3937882851_name._native_ptr(), 3937882851)
         assert(SkeletonModification2DCCDIK._method_set_ccdik_joint_bone_index_3937882851 != nil)
         let _method_get_ccdik_joint_bone_index_923996154_name = StringName(from: "get_ccdik_joint_bone_index")
-        self._method_get_ccdik_joint_bone_index_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_ccdik_joint_bone_index_923996154_name._native_ptr(), 923996154)
+        self._method_get_ccdik_joint_bone_index_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_get_ccdik_joint_bone_index_923996154_name._native_ptr(), 923996154)
         assert(SkeletonModification2DCCDIK._method_get_ccdik_joint_bone_index_923996154 != nil)
         let _method_set_ccdik_joint_rotate_from_joint_300928843_name = StringName(from: "set_ccdik_joint_rotate_from_joint")
-        self._method_set_ccdik_joint_rotate_from_joint_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ccdik_joint_rotate_from_joint_300928843_name._native_ptr(), 300928843)
+        self._method_set_ccdik_joint_rotate_from_joint_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_set_ccdik_joint_rotate_from_joint_300928843_name._native_ptr(), 300928843)
         assert(SkeletonModification2DCCDIK._method_set_ccdik_joint_rotate_from_joint_300928843 != nil)
         let _method_get_ccdik_joint_rotate_from_joint_1116898809_name = StringName(from: "get_ccdik_joint_rotate_from_joint")
-        self._method_get_ccdik_joint_rotate_from_joint_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_ccdik_joint_rotate_from_joint_1116898809_name._native_ptr(), 1116898809)
+        self._method_get_ccdik_joint_rotate_from_joint_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_get_ccdik_joint_rotate_from_joint_1116898809_name._native_ptr(), 1116898809)
         assert(SkeletonModification2DCCDIK._method_get_ccdik_joint_rotate_from_joint_1116898809 != nil)
         let _method_set_ccdik_joint_enable_constraint_300928843_name = StringName(from: "set_ccdik_joint_enable_constraint")
-        self._method_set_ccdik_joint_enable_constraint_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ccdik_joint_enable_constraint_300928843_name._native_ptr(), 300928843)
+        self._method_set_ccdik_joint_enable_constraint_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_set_ccdik_joint_enable_constraint_300928843_name._native_ptr(), 300928843)
         assert(SkeletonModification2DCCDIK._method_set_ccdik_joint_enable_constraint_300928843 != nil)
         let _method_get_ccdik_joint_enable_constraint_1116898809_name = StringName(from: "get_ccdik_joint_enable_constraint")
-        self._method_get_ccdik_joint_enable_constraint_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_ccdik_joint_enable_constraint_1116898809_name._native_ptr(), 1116898809)
+        self._method_get_ccdik_joint_enable_constraint_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_get_ccdik_joint_enable_constraint_1116898809_name._native_ptr(), 1116898809)
         assert(SkeletonModification2DCCDIK._method_get_ccdik_joint_enable_constraint_1116898809 != nil)
         let _method_set_ccdik_joint_constraint_angle_min_1602489585_name = StringName(from: "set_ccdik_joint_constraint_angle_min")
-        self._method_set_ccdik_joint_constraint_angle_min_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ccdik_joint_constraint_angle_min_1602489585_name._native_ptr(), 1602489585)
+        self._method_set_ccdik_joint_constraint_angle_min_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_set_ccdik_joint_constraint_angle_min_1602489585_name._native_ptr(), 1602489585)
         assert(SkeletonModification2DCCDIK._method_set_ccdik_joint_constraint_angle_min_1602489585 != nil)
         let _method_get_ccdik_joint_constraint_angle_min_2339986948_name = StringName(from: "get_ccdik_joint_constraint_angle_min")
-        self._method_get_ccdik_joint_constraint_angle_min_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_ccdik_joint_constraint_angle_min_2339986948_name._native_ptr(), 2339986948)
+        self._method_get_ccdik_joint_constraint_angle_min_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_get_ccdik_joint_constraint_angle_min_2339986948_name._native_ptr(), 2339986948)
         assert(SkeletonModification2DCCDIK._method_get_ccdik_joint_constraint_angle_min_2339986948 != nil)
         let _method_set_ccdik_joint_constraint_angle_max_1602489585_name = StringName(from: "set_ccdik_joint_constraint_angle_max")
-        self._method_set_ccdik_joint_constraint_angle_max_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ccdik_joint_constraint_angle_max_1602489585_name._native_ptr(), 1602489585)
+        self._method_set_ccdik_joint_constraint_angle_max_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_set_ccdik_joint_constraint_angle_max_1602489585_name._native_ptr(), 1602489585)
         assert(SkeletonModification2DCCDIK._method_set_ccdik_joint_constraint_angle_max_1602489585 != nil)
         let _method_get_ccdik_joint_constraint_angle_max_2339986948_name = StringName(from: "get_ccdik_joint_constraint_angle_max")
-        self._method_get_ccdik_joint_constraint_angle_max_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_ccdik_joint_constraint_angle_max_2339986948_name._native_ptr(), 2339986948)
+        self._method_get_ccdik_joint_constraint_angle_max_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_get_ccdik_joint_constraint_angle_max_2339986948_name._native_ptr(), 2339986948)
         assert(SkeletonModification2DCCDIK._method_get_ccdik_joint_constraint_angle_max_2339986948 != nil)
         let _method_set_ccdik_joint_constraint_angle_invert_300928843_name = StringName(from: "set_ccdik_joint_constraint_angle_invert")
-        self._method_set_ccdik_joint_constraint_angle_invert_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ccdik_joint_constraint_angle_invert_300928843_name._native_ptr(), 300928843)
+        self._method_set_ccdik_joint_constraint_angle_invert_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_set_ccdik_joint_constraint_angle_invert_300928843_name._native_ptr(), 300928843)
         assert(SkeletonModification2DCCDIK._method_set_ccdik_joint_constraint_angle_invert_300928843 != nil)
         let _method_get_ccdik_joint_constraint_angle_invert_1116898809_name = StringName(from: "get_ccdik_joint_constraint_angle_invert")
-        self._method_get_ccdik_joint_constraint_angle_invert_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_ccdik_joint_constraint_angle_invert_1116898809_name._native_ptr(), 1116898809)
+        self._method_get_ccdik_joint_constraint_angle_invert_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DCCDIK._native_ptr(), _method_get_ccdik_joint_constraint_angle_invert_1116898809_name._native_ptr(), 1116898809)
         assert(SkeletonModification2DCCDIK._method_get_ccdik_joint_constraint_angle_invert_1116898809 != nil)
     }
 
@@ -132,7 +137,7 @@ public class SkeletonModification2DCCDIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return NodePath(from: __resPtr.pointee)
+            return NodePath(godot: __resPtr.pointee)
     }
     public func set_tip_node(tip_nodepath: NodePath)  {
         let tip_nodepath_native = tip_nodepath._native_ptr()
@@ -163,7 +168,7 @@ public class SkeletonModification2DCCDIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return NodePath(from: __resPtr.pointee)
+            return NodePath(godot: __resPtr.pointee)
     }
     public func set_ccdik_data_chain_length(length: Int64)  {
         withUnsafePointer(to: length) { length_native in
@@ -196,7 +201,7 @@ public class SkeletonModification2DCCDIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_ccdik_joint_bone2d_node(joint_idx: Int64, bone2d_nodepath: NodePath)  {
         withUnsafePointer(to: joint_idx) { joint_idx_native in
@@ -230,7 +235,7 @@ public class SkeletonModification2DCCDIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return NodePath(from: __resPtr.pointee)
+            return NodePath(godot: __resPtr.pointee)
         }
     }
     public func set_ccdik_joint_bone_index(joint_idx: Int64, bone_idx: Int64)  {
@@ -267,7 +272,7 @@ public class SkeletonModification2DCCDIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func set_ccdik_joint_rotate_from_joint(joint_idx: Int64, rotate_from_joint: UInt8)  {
@@ -304,7 +309,7 @@ public class SkeletonModification2DCCDIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func set_ccdik_joint_enable_constraint(joint_idx: Int64, enable_constraint: UInt8)  {
@@ -341,7 +346,7 @@ public class SkeletonModification2DCCDIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func set_ccdik_joint_constraint_angle_min(joint_idx: Int64, angle_min: Float64)  {
@@ -378,7 +383,7 @@ public class SkeletonModification2DCCDIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func set_ccdik_joint_constraint_angle_max(joint_idx: Int64, angle_max: Float64)  {
@@ -415,7 +420,7 @@ public class SkeletonModification2DCCDIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func set_ccdik_joint_constraint_angle_invert(joint_idx: Int64, invert: UInt8)  {
@@ -452,7 +457,7 @@ public class SkeletonModification2DCCDIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
 }

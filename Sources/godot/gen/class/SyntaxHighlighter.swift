@@ -9,7 +9,7 @@ fileprivate var __godot_name_SyntaxHighlighter: StringName! = nil
 /// The associated [TextEdit] node will call into the [SyntaxHighlighter] on a as needed basis.
 ///  
 /// [b]Note:[/b] Each Syntax highlighter instance should not be shared across multiple [TextEdit] nodes.
-public class SyntaxHighlighter : Resource {
+open class SyntaxHighlighter : Resource {
 
     
 
@@ -23,20 +23,25 @@ public class SyntaxHighlighter : Resource {
     static var _method_clear_highlighting_cache_3218959716: GDExtensionMethodBindPtr! = nil
     static var _method_get_text_edit_2185802765: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_SyntaxHighlighter = StringName(from: "SyntaxHighlighter")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_get_line_syntax_highlighting_3554694381_name = StringName(from: "get_line_syntax_highlighting")
-        self._method_get_line_syntax_highlighting_3554694381 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_line_syntax_highlighting_3554694381_name._native_ptr(), 3554694381)
+        self._method_get_line_syntax_highlighting_3554694381 = self.interface.pointee.classdb_get_method_bind(__godot_name_SyntaxHighlighter._native_ptr(), _method_get_line_syntax_highlighting_3554694381_name._native_ptr(), 3554694381)
         assert(SyntaxHighlighter._method_get_line_syntax_highlighting_3554694381 != nil)
         let _method_update_cache_3218959716_name = StringName(from: "update_cache")
-        self._method_update_cache_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_update_cache_3218959716_name._native_ptr(), 3218959716)
+        self._method_update_cache_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SyntaxHighlighter._native_ptr(), _method_update_cache_3218959716_name._native_ptr(), 3218959716)
         assert(SyntaxHighlighter._method_update_cache_3218959716 != nil)
         let _method_clear_highlighting_cache_3218959716_name = StringName(from: "clear_highlighting_cache")
-        self._method_clear_highlighting_cache_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_highlighting_cache_3218959716_name._native_ptr(), 3218959716)
+        self._method_clear_highlighting_cache_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SyntaxHighlighter._native_ptr(), _method_clear_highlighting_cache_3218959716_name._native_ptr(), 3218959716)
         assert(SyntaxHighlighter._method_clear_highlighting_cache_3218959716 != nil)
         let _method_get_text_edit_2185802765_name = StringName(from: "get_text_edit")
-        self._method_get_text_edit_2185802765 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_text_edit_2185802765_name._native_ptr(), 2185802765)
+        self._method_get_text_edit_2185802765 = self.interface.pointee.classdb_get_method_bind(__godot_name_SyntaxHighlighter._native_ptr(), _method_get_text_edit_2185802765_name._native_ptr(), 2185802765)
         assert(SyntaxHighlighter._method_get_text_edit_2185802765 != nil)
     }
 
@@ -55,7 +60,7 @@ public class SyntaxHighlighter : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
         }
     }
     public func _clear_highlighting_cache()  {
@@ -101,7 +106,7 @@ public class SyntaxHighlighter : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
         }
     }
     public func update_cache()  {
@@ -146,6 +151,6 @@ public class SyntaxHighlighter : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return TextEdit(from: __resPtr.pointee)
+            return TextEdit(godot: __resPtr.pointee)
     }
 }

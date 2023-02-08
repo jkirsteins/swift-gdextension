@@ -15,7 +15,7 @@ fileprivate var __godot_name_GPUParticlesCollision3D: StringName! = nil
 /// [b]Note:[/b] Particle collision only affects [GPUParticles3D], not [CPUParticles3D].
 ///  
 /// [b]Note:[/b] Particles pushed by a collider that is being moved will not be interpolated, which can result in visible stuttering. This can be alleviated by setting [member GPUParticles3D.fixed_fps] to [code]0[/code] or a value that matches or exceeds the target framerate.
-public class GPUParticlesCollision3D : VisualInstance3D {
+open class GPUParticlesCollision3D : VisualInstance3D {
 
     
 
@@ -24,14 +24,19 @@ public class GPUParticlesCollision3D : VisualInstance3D {
     static var _method_set_cull_mask_1286410249: GDExtensionMethodBindPtr! = nil
     static var _method_get_cull_mask_3905245786: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_GPUParticlesCollision3D = StringName(from: "GPUParticlesCollision3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_cull_mask_1286410249_name = StringName(from: "set_cull_mask")
-        self._method_set_cull_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_cull_mask_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_cull_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollision3D._native_ptr(), _method_set_cull_mask_1286410249_name._native_ptr(), 1286410249)
         assert(GPUParticlesCollision3D._method_set_cull_mask_1286410249 != nil)
         let _method_get_cull_mask_3905245786_name = StringName(from: "get_cull_mask")
-        self._method_get_cull_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_cull_mask_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_cull_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollision3D._native_ptr(), _method_get_cull_mask_3905245786_name._native_ptr(), 3905245786)
         assert(GPUParticlesCollision3D._method_get_cull_mask_3905245786 != nil)
     }
 
@@ -66,6 +71,6 @@ public class GPUParticlesCollision3D : VisualInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
 }

@@ -9,7 +9,7 @@ fileprivate var __godot_name_Resource: StringName! = nil
 /// In GDScript, resources can loaded from disk by their [member resource_path] using [method @GDScript.load] or [method @GDScript.preload].
 ///  
 /// [b]Note:[/b] In C#, resources will not be freed instantly after they are no longer in use. Instead, garbage collection will run periodically and will free resources that are no longer in use. This means that unused resources will linger on for a while before being removed.
-public class Resource : RefCounted {
+open class Resource : RefCounted {
 
     
 
@@ -28,49 +28,54 @@ public class Resource : RefCounted {
     static var _method_emit_changed_3218959716: GDExtensionMethodBindPtr! = nil
     static var _method_duplicate_482882304: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_Resource = StringName(from: "Resource")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_path_83702148_name = StringName(from: "set_path")
-        self._method_set_path_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_path_83702148_name._native_ptr(), 83702148)
+        self._method_set_path_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_Resource._native_ptr(), _method_set_path_83702148_name._native_ptr(), 83702148)
         assert(Resource._method_set_path_83702148 != nil)
         let _method_take_over_path_83702148_name = StringName(from: "take_over_path")
-        self._method_take_over_path_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_take_over_path_83702148_name._native_ptr(), 83702148)
+        self._method_take_over_path_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_Resource._native_ptr(), _method_take_over_path_83702148_name._native_ptr(), 83702148)
         assert(Resource._method_take_over_path_83702148 != nil)
         let _method_get_path_201670096_name = StringName(from: "get_path")
-        self._method_get_path_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_path_201670096_name._native_ptr(), 201670096)
+        self._method_get_path_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_Resource._native_ptr(), _method_get_path_201670096_name._native_ptr(), 201670096)
         assert(Resource._method_get_path_201670096 != nil)
         let _method_set_name_83702148_name = StringName(from: "set_name")
-        self._method_set_name_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_name_83702148_name._native_ptr(), 83702148)
+        self._method_set_name_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_Resource._native_ptr(), _method_set_name_83702148_name._native_ptr(), 83702148)
         assert(Resource._method_set_name_83702148 != nil)
         let _method_get_name_201670096_name = StringName(from: "get_name")
-        self._method_get_name_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_name_201670096_name._native_ptr(), 201670096)
+        self._method_get_name_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_Resource._native_ptr(), _method_get_name_201670096_name._native_ptr(), 201670096)
         assert(Resource._method_get_name_201670096 != nil)
         let _method_get_rid_2944877500_name = StringName(from: "get_rid")
-        self._method_get_rid_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_rid_2944877500_name._native_ptr(), 2944877500)
+        self._method_get_rid_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name_Resource._native_ptr(), _method_get_rid_2944877500_name._native_ptr(), 2944877500)
         assert(Resource._method_get_rid_2944877500 != nil)
         let _method_set_local_to_scene_2586408642_name = StringName(from: "set_local_to_scene")
-        self._method_set_local_to_scene_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_local_to_scene_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_local_to_scene_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Resource._native_ptr(), _method_set_local_to_scene_2586408642_name._native_ptr(), 2586408642)
         assert(Resource._method_set_local_to_scene_2586408642 != nil)
         let _method_is_local_to_scene_36873697_name = StringName(from: "is_local_to_scene")
-        self._method_is_local_to_scene_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_local_to_scene_36873697_name._native_ptr(), 36873697)
+        self._method_is_local_to_scene_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Resource._native_ptr(), _method_is_local_to_scene_36873697_name._native_ptr(), 36873697)
         assert(Resource._method_is_local_to_scene_36873697 != nil)
         let _method_get_local_scene_3160264692_name = StringName(from: "get_local_scene")
-        self._method_get_local_scene_3160264692 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_local_scene_3160264692_name._native_ptr(), 3160264692)
+        self._method_get_local_scene_3160264692 = self.interface.pointee.classdb_get_method_bind(__godot_name_Resource._native_ptr(), _method_get_local_scene_3160264692_name._native_ptr(), 3160264692)
         assert(Resource._method_get_local_scene_3160264692 != nil)
         let _method_setup_local_to_scene_3218959716_name = StringName(from: "setup_local_to_scene")
-        self._method_setup_local_to_scene_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_setup_local_to_scene_3218959716_name._native_ptr(), 3218959716)
+        self._method_setup_local_to_scene_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Resource._native_ptr(), _method_setup_local_to_scene_3218959716_name._native_ptr(), 3218959716)
         assert(Resource._method_setup_local_to_scene_3218959716 != nil)
         let _method_emit_changed_3218959716_name = StringName(from: "emit_changed")
-        self._method_emit_changed_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_emit_changed_3218959716_name._native_ptr(), 3218959716)
+        self._method_emit_changed_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Resource._native_ptr(), _method_emit_changed_3218959716_name._native_ptr(), 3218959716)
         assert(Resource._method_emit_changed_3218959716 != nil)
         let _method_duplicate_482882304_name = StringName(from: "duplicate")
-        self._method_duplicate_482882304 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_duplicate_482882304_name._native_ptr(), 482882304)
+        self._method_duplicate_482882304 = self.interface.pointee.classdb_get_method_bind(__godot_name_Resource._native_ptr(), _method_duplicate_482882304_name._native_ptr(), 482882304)
         assert(Resource._method_duplicate_482882304 != nil)
     }
 
-    public func set_path(path: String)  {
-        withUnsafePointer(to: path) { path_native in
+    public func set_path(path: godot.String)  {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -83,10 +88,9 @@ public class Resource : RefCounted {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func take_over_path(path: String)  {
-        withUnsafePointer(to: path) { path_native in
+    public func take_over_path(path: godot.String)  {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -99,9 +103,8 @@ public class Resource : RefCounted {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func get_path() -> String {
+    public func get_path() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -109,17 +112,16 @@ public class Resource : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_path_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func set_name(name: String)  {
-        withUnsafePointer(to: name) { name_native in
+    public func set_name(name: godot.String)  {
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -132,9 +134,8 @@ public class Resource : RefCounted {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func get_name() -> String {
+    public func get_name() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -142,14 +143,13 @@ public class Resource : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_name_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func get_rid() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -165,7 +165,7 @@ public class Resource : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func set_local_to_scene(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -198,7 +198,7 @@ public class Resource : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func get_local_scene() -> Node {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -214,7 +214,7 @@ public class Resource : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Node(from: __resPtr.pointee)
+            return Node(godot: __resPtr.pointee)
     }
     public func setup_local_to_scene()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -259,7 +259,7 @@ public class Resource : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Resource(from: __resPtr.pointee)
+            return Resource(godot: __resPtr.pointee)
         }
     }
 }

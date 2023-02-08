@@ -5,7 +5,7 @@ fileprivate var __godot_name_AudioEffectLowShelfFilter: StringName! = nil
 /// Adds a low-shelf filter to the audio bus.
 /// 
 /// Reduces all frequencies below the [member AudioEffectFilter.cutoff_hz].
-public class AudioEffectLowShelfFilter : AudioEffectFilter {
+open class AudioEffectLowShelfFilter : AudioEffectFilter {
 
     
 
@@ -13,8 +13,13 @@ public class AudioEffectLowShelfFilter : AudioEffectFilter {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AudioEffectLowShelfFilter = StringName(from: "AudioEffectLowShelfFilter")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

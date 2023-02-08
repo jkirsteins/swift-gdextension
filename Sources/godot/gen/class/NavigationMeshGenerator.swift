@@ -13,7 +13,7 @@ fileprivate var __godot_name_NavigationMeshGenerator: StringName! = nil
 /// The finalized navigation mesh is then returned and stored inside the [NavigationMesh] for use as a resource inside [NavigationRegion3D] nodes.
 ///  
 /// [b]Note:[/b] Using meshes to not only define walkable surfaces but also obstruct navigation baking does not always work. The navigation baking has no concept of what is a geometry "inside" when dealing with mesh source geometry and this is intentional. Depending on current baking parameters, as soon as the obstructing mesh is large enough to fit a navigation mesh area inside, the baking will generate navigation mesh areas that are inside the obstructing source geometry mesh.
-public class NavigationMeshGenerator : Object {
+open class NavigationMeshGenerator : Object {
 
     
 
@@ -22,14 +22,19 @@ public class NavigationMeshGenerator : Object {
     static var _method_bake_1401173477: GDExtensionMethodBindPtr! = nil
     static var _method_clear_2923361153: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_NavigationMeshGenerator = StringName(from: "NavigationMeshGenerator")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_bake_1401173477_name = StringName(from: "bake")
-        self._method_bake_1401173477 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_bake_1401173477_name._native_ptr(), 1401173477)
+        self._method_bake_1401173477 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMeshGenerator._native_ptr(), _method_bake_1401173477_name._native_ptr(), 1401173477)
         assert(NavigationMeshGenerator._method_bake_1401173477 != nil)
         let _method_clear_2923361153_name = StringName(from: "clear")
-        self._method_clear_2923361153 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_2923361153_name._native_ptr(), 2923361153)
+        self._method_clear_2923361153 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMeshGenerator._native_ptr(), _method_clear_2923361153_name._native_ptr(), 2923361153)
         assert(NavigationMeshGenerator._method_clear_2923361153 != nil)
     }
 

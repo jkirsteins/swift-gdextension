@@ -9,7 +9,7 @@ fileprivate var __godot_name_ResourceLoader: StringName! = nil
 /// It uses the many [ResourceFormatLoader] classes registered in the engine (either built-in or from a plugin) to load files into memory and convert them to a format that can be used by the engine.
 ///  
 /// [b]Note:[/b] You have to import the files into the engine first to load them using [method load]. If you want to load [Image]s at run-time, you may use [method Image.load]. If you want to import audio files, you can use the snippet described in [member AudioStreamMP3.data].
-public class ResourceLoader : Object {
+open class ResourceLoader : Object {
 
     public enum ThreadLoadStatus : Int32 {
         case THREAD_LOAD_INVALID_RESOURCE = 0
@@ -38,52 +38,57 @@ public class ResourceLoader : Object {
     static var _method_exists_2220807150: GDExtensionMethodBindPtr! = nil
     static var _method_get_resource_uid_1597066294: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ResourceLoader = StringName(from: "ResourceLoader")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_load_threaded_request_1939848623_name = StringName(from: "load_threaded_request")
-        self._method_load_threaded_request_1939848623 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_load_threaded_request_1939848623_name._native_ptr(), 1939848623)
+        self._method_load_threaded_request_1939848623 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceLoader._native_ptr(), _method_load_threaded_request_1939848623_name._native_ptr(), 1939848623)
         assert(ResourceLoader._method_load_threaded_request_1939848623 != nil)
         let _method_load_threaded_get_status_3931021148_name = StringName(from: "load_threaded_get_status")
-        self._method_load_threaded_get_status_3931021148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_load_threaded_get_status_3931021148_name._native_ptr(), 3931021148)
+        self._method_load_threaded_get_status_3931021148 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceLoader._native_ptr(), _method_load_threaded_get_status_3931021148_name._native_ptr(), 3931021148)
         assert(ResourceLoader._method_load_threaded_get_status_3931021148 != nil)
         let _method_load_threaded_get_1748875256_name = StringName(from: "load_threaded_get")
-        self._method_load_threaded_get_1748875256 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_load_threaded_get_1748875256_name._native_ptr(), 1748875256)
+        self._method_load_threaded_get_1748875256 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceLoader._native_ptr(), _method_load_threaded_get_1748875256_name._native_ptr(), 1748875256)
         assert(ResourceLoader._method_load_threaded_get_1748875256 != nil)
         let _method_load_2622212233_name = StringName(from: "load")
-        self._method_load_2622212233 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_load_2622212233_name._native_ptr(), 2622212233)
+        self._method_load_2622212233 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceLoader._native_ptr(), _method_load_2622212233_name._native_ptr(), 2622212233)
         assert(ResourceLoader._method_load_2622212233 != nil)
         let _method_get_recognized_extensions_for_type_3538744774_name = StringName(from: "get_recognized_extensions_for_type")
-        self._method_get_recognized_extensions_for_type_3538744774 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_recognized_extensions_for_type_3538744774_name._native_ptr(), 3538744774)
+        self._method_get_recognized_extensions_for_type_3538744774 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceLoader._native_ptr(), _method_get_recognized_extensions_for_type_3538744774_name._native_ptr(), 3538744774)
         assert(ResourceLoader._method_get_recognized_extensions_for_type_3538744774 != nil)
         let _method_add_resource_format_loader_2896595483_name = StringName(from: "add_resource_format_loader")
-        self._method_add_resource_format_loader_2896595483 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_resource_format_loader_2896595483_name._native_ptr(), 2896595483)
+        self._method_add_resource_format_loader_2896595483 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceLoader._native_ptr(), _method_add_resource_format_loader_2896595483_name._native_ptr(), 2896595483)
         assert(ResourceLoader._method_add_resource_format_loader_2896595483 != nil)
         let _method_remove_resource_format_loader_405397102_name = StringName(from: "remove_resource_format_loader")
-        self._method_remove_resource_format_loader_405397102 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_resource_format_loader_405397102_name._native_ptr(), 405397102)
+        self._method_remove_resource_format_loader_405397102 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceLoader._native_ptr(), _method_remove_resource_format_loader_405397102_name._native_ptr(), 405397102)
         assert(ResourceLoader._method_remove_resource_format_loader_405397102 != nil)
         let _method_set_abort_on_missing_resources_2586408642_name = StringName(from: "set_abort_on_missing_resources")
-        self._method_set_abort_on_missing_resources_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_abort_on_missing_resources_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_abort_on_missing_resources_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceLoader._native_ptr(), _method_set_abort_on_missing_resources_2586408642_name._native_ptr(), 2586408642)
         assert(ResourceLoader._method_set_abort_on_missing_resources_2586408642 != nil)
         let _method_get_dependencies_3538744774_name = StringName(from: "get_dependencies")
-        self._method_get_dependencies_3538744774 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_dependencies_3538744774_name._native_ptr(), 3538744774)
+        self._method_get_dependencies_3538744774 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceLoader._native_ptr(), _method_get_dependencies_3538744774_name._native_ptr(), 3538744774)
         assert(ResourceLoader._method_get_dependencies_3538744774 != nil)
         let _method_has_cached_2323990056_name = StringName(from: "has_cached")
-        self._method_has_cached_2323990056 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_cached_2323990056_name._native_ptr(), 2323990056)
+        self._method_has_cached_2323990056 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceLoader._native_ptr(), _method_has_cached_2323990056_name._native_ptr(), 2323990056)
         assert(ResourceLoader._method_has_cached_2323990056 != nil)
         let _method_exists_2220807150_name = StringName(from: "exists")
-        self._method_exists_2220807150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_exists_2220807150_name._native_ptr(), 2220807150)
+        self._method_exists_2220807150 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceLoader._native_ptr(), _method_exists_2220807150_name._native_ptr(), 2220807150)
         assert(ResourceLoader._method_exists_2220807150 != nil)
         let _method_get_resource_uid_1597066294_name = StringName(from: "get_resource_uid")
-        self._method_get_resource_uid_1597066294 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_resource_uid_1597066294_name._native_ptr(), 1597066294)
+        self._method_get_resource_uid_1597066294 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceLoader._native_ptr(), _method_get_resource_uid_1597066294_name._native_ptr(), 1597066294)
         assert(ResourceLoader._method_get_resource_uid_1597066294 != nil)
     }
 
-    public func load_threaded_request(path: String, type_hint: String, use_sub_threads: UInt8, cache_mode: ResourceLoader.CacheMode) -> Error {
+    public func load_threaded_request(path: godot.String, type_hint: godot.String, use_sub_threads: UInt8, cache_mode: ResourceLoader.CacheMode) -> Error {
         withUnsafePointer(to: use_sub_threads) { use_sub_threads_native in
-        withUnsafePointer(to: type_hint) { type_hint_native in
-        withUnsafePointer(to: path) { path_native in
         withUnsafePointer(to: cache_mode.rawValue) { cache_mode_native in
+        let type_hint_native = type_hint._native_ptr()
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 4)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -97,15 +102,13 @@ public class ResourceLoader : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
-        }
+            return Error(godot: __resPtr.pointee)
         }
         }
     }
-    public func load_threaded_get_status(path: String, progress: Array) -> ResourceLoader.ThreadLoadStatus {
-        withUnsafePointer(to: path) { path_native in
+    public func load_threaded_get_status(path: godot.String, progress: Array) -> ResourceLoader.ThreadLoadStatus {
         let progress_native = progress._native_ptr()
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -119,11 +122,10 @@ public class ResourceLoader : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return ResourceLoader.ThreadLoadStatus(from: __resPtr.pointee)
-        }
+            return ResourceLoader.ThreadLoadStatus(godot: __resPtr.pointee)
     }
-    public func load_threaded_get(path: String) -> Resource {
-        withUnsafePointer(to: path) { path_native in
+    public func load_threaded_get(path: godot.String) -> Resource {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -137,13 +139,12 @@ public class ResourceLoader : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Resource(from: __resPtr.pointee)
-        }
+            return Resource(godot: __resPtr.pointee)
     }
-    public func load(path: String, type_hint: String, cache_mode: ResourceLoader.CacheMode) -> Resource {
-        withUnsafePointer(to: type_hint) { type_hint_native in
-        withUnsafePointer(to: path) { path_native in
+    public func load(path: godot.String, type_hint: godot.String, cache_mode: ResourceLoader.CacheMode) -> Resource {
         withUnsafePointer(to: cache_mode.rawValue) { cache_mode_native in
+        let type_hint_native = type_hint._native_ptr()
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -157,13 +158,11 @@ public class ResourceLoader : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Resource(from: __resPtr.pointee)
-        }
-        }
+            return Resource(godot: __resPtr.pointee)
         }
     }
-    public func get_recognized_extensions_for_type(`type`: String) -> PackedStringArray {
-        withUnsafePointer(to: `type`) { type_native in
+    public func get_recognized_extensions_for_type(`type`: godot.String) -> PackedStringArray {
+        let type_native = `type`._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -177,8 +176,7 @@ public class ResourceLoader : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedStringArray(from: __resPtr.pointee)
-        }
+            return PackedStringArray(godot: __resPtr.pointee)
     }
     public func add_resource_format_loader(format_loader: ResourceFormatLoader, at_front: UInt8)  {
         withUnsafePointer(to: at_front) { at_front_native in
@@ -228,8 +226,8 @@ public class ResourceLoader : Object {
                 )
         }
     }
-    public func get_dependencies(path: String) -> PackedStringArray {
-        withUnsafePointer(to: path) { path_native in
+    public func get_dependencies(path: godot.String) -> PackedStringArray {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -243,11 +241,10 @@ public class ResourceLoader : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedStringArray(from: __resPtr.pointee)
-        }
+            return PackedStringArray(godot: __resPtr.pointee)
     }
-    public func has_cached(path: String) -> UInt8 {
-        withUnsafePointer(to: path) { path_native in
+    public func has_cached(path: godot.String) -> UInt8 {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -262,12 +259,11 @@ public class ResourceLoader : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func exists(path: String, type_hint: String) -> UInt8 {
-        withUnsafePointer(to: type_hint) { type_hint_native in
-        withUnsafePointer(to: path) { path_native in
+    public func exists(path: godot.String, type_hint: godot.String) -> UInt8 {
+        let type_hint_native = type_hint._native_ptr()
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -282,12 +278,10 @@ public class ResourceLoader : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func get_resource_uid(path: String) -> Int64 {
-        withUnsafePointer(to: path) { path_native in
+    public func get_resource_uid(path: godot.String) -> Int64 {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -302,7 +296,6 @@ public class ResourceLoader : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
-        }
+            return Int64(godot: __resPtr.pointee)
     }
 }

@@ -5,7 +5,7 @@ fileprivate var __godot_name_GrooveJoint2D: StringName! = nil
 /// Groove constraint for 2D physics.
 /// 
 /// Groove constraint for 2D physics. This is useful for making a body "slide" through a segment placed in another.
-public class GrooveJoint2D : Joint2D {
+open class GrooveJoint2D : Joint2D {
 
     
 
@@ -16,20 +16,25 @@ public class GrooveJoint2D : Joint2D {
     static var _method_set_initial_offset_373806689: GDExtensionMethodBindPtr! = nil
     static var _method_get_initial_offset_1740695150: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_GrooveJoint2D = StringName(from: "GrooveJoint2D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_length_373806689_name = StringName(from: "set_length")
-        self._method_set_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_length_373806689_name._native_ptr(), 373806689)
+        self._method_set_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GrooveJoint2D._native_ptr(), _method_set_length_373806689_name._native_ptr(), 373806689)
         assert(GrooveJoint2D._method_set_length_373806689 != nil)
         let _method_get_length_1740695150_name = StringName(from: "get_length")
-        self._method_get_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_length_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GrooveJoint2D._native_ptr(), _method_get_length_1740695150_name._native_ptr(), 1740695150)
         assert(GrooveJoint2D._method_get_length_1740695150 != nil)
         let _method_set_initial_offset_373806689_name = StringName(from: "set_initial_offset")
-        self._method_set_initial_offset_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_initial_offset_373806689_name._native_ptr(), 373806689)
+        self._method_set_initial_offset_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GrooveJoint2D._native_ptr(), _method_set_initial_offset_373806689_name._native_ptr(), 373806689)
         assert(GrooveJoint2D._method_set_initial_offset_373806689 != nil)
         let _method_get_initial_offset_1740695150_name = StringName(from: "get_initial_offset")
-        self._method_get_initial_offset_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_initial_offset_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_initial_offset_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GrooveJoint2D._native_ptr(), _method_get_initial_offset_1740695150_name._native_ptr(), 1740695150)
         assert(GrooveJoint2D._method_get_initial_offset_1740695150 != nil)
     }
 
@@ -64,7 +69,7 @@ public class GrooveJoint2D : Joint2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_initial_offset(offset: Float64)  {
         withUnsafePointer(to: offset) { offset_native in
@@ -97,6 +102,6 @@ public class GrooveJoint2D : Joint2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
 }

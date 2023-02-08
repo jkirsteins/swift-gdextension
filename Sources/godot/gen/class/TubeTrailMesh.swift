@@ -5,7 +5,7 @@ fileprivate var __godot_name_TubeTrailMesh: StringName! = nil
 /// 
 /// 
 /// 
-public class TubeTrailMesh : PrimitiveMesh {
+open class TubeTrailMesh : PrimitiveMesh {
 
     
 
@@ -28,56 +28,61 @@ public class TubeTrailMesh : PrimitiveMesh {
     static var _method_set_curve_270443179: GDExtensionMethodBindPtr! = nil
     static var _method_get_curve_2460114913: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_TubeTrailMesh = StringName(from: "TubeTrailMesh")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_radius_373806689_name = StringName(from: "set_radius")
-        self._method_set_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_radius_373806689_name._native_ptr(), 373806689)
+        self._method_set_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_TubeTrailMesh._native_ptr(), _method_set_radius_373806689_name._native_ptr(), 373806689)
         assert(TubeTrailMesh._method_set_radius_373806689 != nil)
         let _method_get_radius_1740695150_name = StringName(from: "get_radius")
-        self._method_get_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_radius_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_TubeTrailMesh._native_ptr(), _method_get_radius_1740695150_name._native_ptr(), 1740695150)
         assert(TubeTrailMesh._method_get_radius_1740695150 != nil)
         let _method_set_radial_steps_1286410249_name = StringName(from: "set_radial_steps")
-        self._method_set_radial_steps_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_radial_steps_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_radial_steps_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TubeTrailMesh._native_ptr(), _method_set_radial_steps_1286410249_name._native_ptr(), 1286410249)
         assert(TubeTrailMesh._method_set_radial_steps_1286410249 != nil)
         let _method_get_radial_steps_3905245786_name = StringName(from: "get_radial_steps")
-        self._method_get_radial_steps_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_radial_steps_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_radial_steps_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TubeTrailMesh._native_ptr(), _method_get_radial_steps_3905245786_name._native_ptr(), 3905245786)
         assert(TubeTrailMesh._method_get_radial_steps_3905245786 != nil)
         let _method_set_sections_1286410249_name = StringName(from: "set_sections")
-        self._method_set_sections_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_sections_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_sections_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TubeTrailMesh._native_ptr(), _method_set_sections_1286410249_name._native_ptr(), 1286410249)
         assert(TubeTrailMesh._method_set_sections_1286410249 != nil)
         let _method_get_sections_3905245786_name = StringName(from: "get_sections")
-        self._method_get_sections_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_sections_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_sections_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TubeTrailMesh._native_ptr(), _method_get_sections_3905245786_name._native_ptr(), 3905245786)
         assert(TubeTrailMesh._method_get_sections_3905245786 != nil)
         let _method_set_section_length_373806689_name = StringName(from: "set_section_length")
-        self._method_set_section_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_section_length_373806689_name._native_ptr(), 373806689)
+        self._method_set_section_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_TubeTrailMesh._native_ptr(), _method_set_section_length_373806689_name._native_ptr(), 373806689)
         assert(TubeTrailMesh._method_set_section_length_373806689 != nil)
         let _method_get_section_length_1740695150_name = StringName(from: "get_section_length")
-        self._method_get_section_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_section_length_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_section_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_TubeTrailMesh._native_ptr(), _method_get_section_length_1740695150_name._native_ptr(), 1740695150)
         assert(TubeTrailMesh._method_get_section_length_1740695150 != nil)
         let _method_set_section_rings_1286410249_name = StringName(from: "set_section_rings")
-        self._method_set_section_rings_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_section_rings_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_section_rings_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TubeTrailMesh._native_ptr(), _method_set_section_rings_1286410249_name._native_ptr(), 1286410249)
         assert(TubeTrailMesh._method_set_section_rings_1286410249 != nil)
         let _method_get_section_rings_3905245786_name = StringName(from: "get_section_rings")
-        self._method_get_section_rings_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_section_rings_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_section_rings_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TubeTrailMesh._native_ptr(), _method_get_section_rings_3905245786_name._native_ptr(), 3905245786)
         assert(TubeTrailMesh._method_get_section_rings_3905245786 != nil)
         let _method_set_cap_top_2586408642_name = StringName(from: "set_cap_top")
-        self._method_set_cap_top_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_cap_top_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_cap_top_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TubeTrailMesh._native_ptr(), _method_set_cap_top_2586408642_name._native_ptr(), 2586408642)
         assert(TubeTrailMesh._method_set_cap_top_2586408642 != nil)
         let _method_is_cap_top_36873697_name = StringName(from: "is_cap_top")
-        self._method_is_cap_top_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_cap_top_36873697_name._native_ptr(), 36873697)
+        self._method_is_cap_top_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TubeTrailMesh._native_ptr(), _method_is_cap_top_36873697_name._native_ptr(), 36873697)
         assert(TubeTrailMesh._method_is_cap_top_36873697 != nil)
         let _method_set_cap_bottom_2586408642_name = StringName(from: "set_cap_bottom")
-        self._method_set_cap_bottom_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_cap_bottom_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_cap_bottom_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TubeTrailMesh._native_ptr(), _method_set_cap_bottom_2586408642_name._native_ptr(), 2586408642)
         assert(TubeTrailMesh._method_set_cap_bottom_2586408642 != nil)
         let _method_is_cap_bottom_36873697_name = StringName(from: "is_cap_bottom")
-        self._method_is_cap_bottom_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_cap_bottom_36873697_name._native_ptr(), 36873697)
+        self._method_is_cap_bottom_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TubeTrailMesh._native_ptr(), _method_is_cap_bottom_36873697_name._native_ptr(), 36873697)
         assert(TubeTrailMesh._method_is_cap_bottom_36873697 != nil)
         let _method_set_curve_270443179_name = StringName(from: "set_curve")
-        self._method_set_curve_270443179 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_curve_270443179_name._native_ptr(), 270443179)
+        self._method_set_curve_270443179 = self.interface.pointee.classdb_get_method_bind(__godot_name_TubeTrailMesh._native_ptr(), _method_set_curve_270443179_name._native_ptr(), 270443179)
         assert(TubeTrailMesh._method_set_curve_270443179 != nil)
         let _method_get_curve_2460114913_name = StringName(from: "get_curve")
-        self._method_get_curve_2460114913 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_curve_2460114913_name._native_ptr(), 2460114913)
+        self._method_get_curve_2460114913 = self.interface.pointee.classdb_get_method_bind(__godot_name_TubeTrailMesh._native_ptr(), _method_get_curve_2460114913_name._native_ptr(), 2460114913)
         assert(TubeTrailMesh._method_get_curve_2460114913 != nil)
     }
 
@@ -112,7 +117,7 @@ public class TubeTrailMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_radial_steps(radial_steps: Int64)  {
         withUnsafePointer(to: radial_steps) { radial_steps_native in
@@ -145,7 +150,7 @@ public class TubeTrailMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_sections(sections: Int64)  {
         withUnsafePointer(to: sections) { sections_native in
@@ -178,7 +183,7 @@ public class TubeTrailMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_section_length(section_length: Float64)  {
         withUnsafePointer(to: section_length) { section_length_native in
@@ -211,7 +216,7 @@ public class TubeTrailMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_section_rings(section_rings: Int64)  {
         withUnsafePointer(to: section_rings) { section_rings_native in
@@ -244,7 +249,7 @@ public class TubeTrailMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_cap_top(cap_top: UInt8)  {
         withUnsafePointer(to: cap_top) { cap_top_native in
@@ -277,7 +282,7 @@ public class TubeTrailMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_cap_bottom(cap_bottom: UInt8)  {
         withUnsafePointer(to: cap_bottom) { cap_bottom_native in
@@ -310,7 +315,7 @@ public class TubeTrailMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_curve(curve: Curve)  {
         let curve_native = curve._native_ptr()
@@ -341,6 +346,6 @@ public class TubeTrailMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Curve(from: __resPtr.pointee)
+            return Curve(godot: __resPtr.pointee)
     }
 }

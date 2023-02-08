@@ -7,7 +7,7 @@ fileprivate var __godot_name_MultiMeshInstance3D: StringName! = nil
 /// [MultiMeshInstance3D] is a specialized node to instance [GeometryInstance3D]s based on a [MultiMesh] resource.
 ///  
 /// This is useful to optimize the rendering of a high number of instances of a given mesh (for example trees in a forest or grass strands).
-public class MultiMeshInstance3D : GeometryInstance3D {
+open class MultiMeshInstance3D : GeometryInstance3D {
 
     
 
@@ -16,14 +16,19 @@ public class MultiMeshInstance3D : GeometryInstance3D {
     static var _method_set_multimesh_2246127404: GDExtensionMethodBindPtr! = nil
     static var _method_get_multimesh_1385450523: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_MultiMeshInstance3D = StringName(from: "MultiMeshInstance3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_multimesh_2246127404_name = StringName(from: "set_multimesh")
-        self._method_set_multimesh_2246127404 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_multimesh_2246127404_name._native_ptr(), 2246127404)
+        self._method_set_multimesh_2246127404 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMeshInstance3D._native_ptr(), _method_set_multimesh_2246127404_name._native_ptr(), 2246127404)
         assert(MultiMeshInstance3D._method_set_multimesh_2246127404 != nil)
         let _method_get_multimesh_1385450523_name = StringName(from: "get_multimesh")
-        self._method_get_multimesh_1385450523 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_multimesh_1385450523_name._native_ptr(), 1385450523)
+        self._method_get_multimesh_1385450523 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMeshInstance3D._native_ptr(), _method_get_multimesh_1385450523_name._native_ptr(), 1385450523)
         assert(MultiMeshInstance3D._method_get_multimesh_1385450523 != nil)
     }
 
@@ -56,6 +61,6 @@ public class MultiMeshInstance3D : GeometryInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return MultiMesh(from: __resPtr.pointee)
+            return MultiMesh(godot: __resPtr.pointee)
     }
 }

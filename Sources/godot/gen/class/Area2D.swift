@@ -9,7 +9,7 @@ fileprivate var __godot_name_Area2D: StringName! = nil
 /// To give the area its shape, add a [CollisionShape2D] or a [CollisionPolygon2D] node as a [i]direct[/i] child (or add multiple such nodes as direct children) of the area.
 ///  
 /// [b]Warning:[/b] See [ConcavePolygonShape2D] for a warning about possibly unexpected behavior when using that shape for an area.
-public class Area2D : CollisionObject2D {
+open class Area2D : CollisionObject2D {
 
     public enum SpaceOverride : Int32 {
         case SPACE_OVERRIDE_DISABLED = 0
@@ -58,116 +58,121 @@ public class Area2D : CollisionObject2D {
     static var _method_set_audio_bus_override_2586408642: GDExtensionMethodBindPtr! = nil
     static var _method_is_overriding_audio_bus_36873697: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_Area2D = StringName(from: "Area2D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_gravity_space_override_mode_2879900038_name = StringName(from: "set_gravity_space_override_mode")
-        self._method_set_gravity_space_override_mode_2879900038 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_gravity_space_override_mode_2879900038_name._native_ptr(), 2879900038)
+        self._method_set_gravity_space_override_mode_2879900038 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_set_gravity_space_override_mode_2879900038_name._native_ptr(), 2879900038)
         assert(Area2D._method_set_gravity_space_override_mode_2879900038 != nil)
         let _method_get_gravity_space_override_mode_3990256304_name = StringName(from: "get_gravity_space_override_mode")
-        self._method_get_gravity_space_override_mode_3990256304 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_gravity_space_override_mode_3990256304_name._native_ptr(), 3990256304)
+        self._method_get_gravity_space_override_mode_3990256304 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_get_gravity_space_override_mode_3990256304_name._native_ptr(), 3990256304)
         assert(Area2D._method_get_gravity_space_override_mode_3990256304 != nil)
         let _method_set_gravity_is_point_2586408642_name = StringName(from: "set_gravity_is_point")
-        self._method_set_gravity_is_point_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_gravity_is_point_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_gravity_is_point_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_set_gravity_is_point_2586408642_name._native_ptr(), 2586408642)
         assert(Area2D._method_set_gravity_is_point_2586408642 != nil)
         let _method_is_gravity_a_point_36873697_name = StringName(from: "is_gravity_a_point")
-        self._method_is_gravity_a_point_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_gravity_a_point_36873697_name._native_ptr(), 36873697)
+        self._method_is_gravity_a_point_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_is_gravity_a_point_36873697_name._native_ptr(), 36873697)
         assert(Area2D._method_is_gravity_a_point_36873697 != nil)
         let _method_set_gravity_point_unit_distance_373806689_name = StringName(from: "set_gravity_point_unit_distance")
-        self._method_set_gravity_point_unit_distance_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_gravity_point_unit_distance_373806689_name._native_ptr(), 373806689)
+        self._method_set_gravity_point_unit_distance_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_set_gravity_point_unit_distance_373806689_name._native_ptr(), 373806689)
         assert(Area2D._method_set_gravity_point_unit_distance_373806689 != nil)
         let _method_get_gravity_point_unit_distance_1740695150_name = StringName(from: "get_gravity_point_unit_distance")
-        self._method_get_gravity_point_unit_distance_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_gravity_point_unit_distance_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_gravity_point_unit_distance_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_get_gravity_point_unit_distance_1740695150_name._native_ptr(), 1740695150)
         assert(Area2D._method_get_gravity_point_unit_distance_1740695150 != nil)
         let _method_set_gravity_point_center_743155724_name = StringName(from: "set_gravity_point_center")
-        self._method_set_gravity_point_center_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_gravity_point_center_743155724_name._native_ptr(), 743155724)
+        self._method_set_gravity_point_center_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_set_gravity_point_center_743155724_name._native_ptr(), 743155724)
         assert(Area2D._method_set_gravity_point_center_743155724 != nil)
         let _method_get_gravity_point_center_3341600327_name = StringName(from: "get_gravity_point_center")
-        self._method_get_gravity_point_center_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_gravity_point_center_3341600327_name._native_ptr(), 3341600327)
+        self._method_get_gravity_point_center_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_get_gravity_point_center_3341600327_name._native_ptr(), 3341600327)
         assert(Area2D._method_get_gravity_point_center_3341600327 != nil)
         let _method_set_gravity_direction_743155724_name = StringName(from: "set_gravity_direction")
-        self._method_set_gravity_direction_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_gravity_direction_743155724_name._native_ptr(), 743155724)
+        self._method_set_gravity_direction_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_set_gravity_direction_743155724_name._native_ptr(), 743155724)
         assert(Area2D._method_set_gravity_direction_743155724 != nil)
         let _method_get_gravity_direction_3341600327_name = StringName(from: "get_gravity_direction")
-        self._method_get_gravity_direction_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_gravity_direction_3341600327_name._native_ptr(), 3341600327)
+        self._method_get_gravity_direction_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_get_gravity_direction_3341600327_name._native_ptr(), 3341600327)
         assert(Area2D._method_get_gravity_direction_3341600327 != nil)
         let _method_set_gravity_373806689_name = StringName(from: "set_gravity")
-        self._method_set_gravity_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_gravity_373806689_name._native_ptr(), 373806689)
+        self._method_set_gravity_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_set_gravity_373806689_name._native_ptr(), 373806689)
         assert(Area2D._method_set_gravity_373806689 != nil)
         let _method_get_gravity_1740695150_name = StringName(from: "get_gravity")
-        self._method_get_gravity_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_gravity_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_gravity_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_get_gravity_1740695150_name._native_ptr(), 1740695150)
         assert(Area2D._method_get_gravity_1740695150 != nil)
         let _method_set_linear_damp_space_override_mode_2879900038_name = StringName(from: "set_linear_damp_space_override_mode")
-        self._method_set_linear_damp_space_override_mode_2879900038 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_linear_damp_space_override_mode_2879900038_name._native_ptr(), 2879900038)
+        self._method_set_linear_damp_space_override_mode_2879900038 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_set_linear_damp_space_override_mode_2879900038_name._native_ptr(), 2879900038)
         assert(Area2D._method_set_linear_damp_space_override_mode_2879900038 != nil)
         let _method_get_linear_damp_space_override_mode_3990256304_name = StringName(from: "get_linear_damp_space_override_mode")
-        self._method_get_linear_damp_space_override_mode_3990256304 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_linear_damp_space_override_mode_3990256304_name._native_ptr(), 3990256304)
+        self._method_get_linear_damp_space_override_mode_3990256304 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_get_linear_damp_space_override_mode_3990256304_name._native_ptr(), 3990256304)
         assert(Area2D._method_get_linear_damp_space_override_mode_3990256304 != nil)
         let _method_set_angular_damp_space_override_mode_2879900038_name = StringName(from: "set_angular_damp_space_override_mode")
-        self._method_set_angular_damp_space_override_mode_2879900038 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_angular_damp_space_override_mode_2879900038_name._native_ptr(), 2879900038)
+        self._method_set_angular_damp_space_override_mode_2879900038 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_set_angular_damp_space_override_mode_2879900038_name._native_ptr(), 2879900038)
         assert(Area2D._method_set_angular_damp_space_override_mode_2879900038 != nil)
         let _method_get_angular_damp_space_override_mode_3990256304_name = StringName(from: "get_angular_damp_space_override_mode")
-        self._method_get_angular_damp_space_override_mode_3990256304 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_angular_damp_space_override_mode_3990256304_name._native_ptr(), 3990256304)
+        self._method_get_angular_damp_space_override_mode_3990256304 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_get_angular_damp_space_override_mode_3990256304_name._native_ptr(), 3990256304)
         assert(Area2D._method_get_angular_damp_space_override_mode_3990256304 != nil)
         let _method_set_linear_damp_373806689_name = StringName(from: "set_linear_damp")
-        self._method_set_linear_damp_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_linear_damp_373806689_name._native_ptr(), 373806689)
+        self._method_set_linear_damp_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_set_linear_damp_373806689_name._native_ptr(), 373806689)
         assert(Area2D._method_set_linear_damp_373806689 != nil)
         let _method_get_linear_damp_1740695150_name = StringName(from: "get_linear_damp")
-        self._method_get_linear_damp_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_linear_damp_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_linear_damp_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_get_linear_damp_1740695150_name._native_ptr(), 1740695150)
         assert(Area2D._method_get_linear_damp_1740695150 != nil)
         let _method_set_angular_damp_373806689_name = StringName(from: "set_angular_damp")
-        self._method_set_angular_damp_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_angular_damp_373806689_name._native_ptr(), 373806689)
+        self._method_set_angular_damp_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_set_angular_damp_373806689_name._native_ptr(), 373806689)
         assert(Area2D._method_set_angular_damp_373806689 != nil)
         let _method_get_angular_damp_1740695150_name = StringName(from: "get_angular_damp")
-        self._method_get_angular_damp_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_angular_damp_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_angular_damp_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_get_angular_damp_1740695150_name._native_ptr(), 1740695150)
         assert(Area2D._method_get_angular_damp_1740695150 != nil)
         let _method_set_priority_373806689_name = StringName(from: "set_priority")
-        self._method_set_priority_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_priority_373806689_name._native_ptr(), 373806689)
+        self._method_set_priority_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_set_priority_373806689_name._native_ptr(), 373806689)
         assert(Area2D._method_set_priority_373806689 != nil)
         let _method_get_priority_1740695150_name = StringName(from: "get_priority")
-        self._method_get_priority_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_priority_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_priority_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_get_priority_1740695150_name._native_ptr(), 1740695150)
         assert(Area2D._method_get_priority_1740695150 != nil)
         let _method_set_monitoring_2586408642_name = StringName(from: "set_monitoring")
-        self._method_set_monitoring_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_monitoring_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_monitoring_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_set_monitoring_2586408642_name._native_ptr(), 2586408642)
         assert(Area2D._method_set_monitoring_2586408642 != nil)
         let _method_is_monitoring_36873697_name = StringName(from: "is_monitoring")
-        self._method_is_monitoring_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_monitoring_36873697_name._native_ptr(), 36873697)
+        self._method_is_monitoring_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_is_monitoring_36873697_name._native_ptr(), 36873697)
         assert(Area2D._method_is_monitoring_36873697 != nil)
         let _method_set_monitorable_2586408642_name = StringName(from: "set_monitorable")
-        self._method_set_monitorable_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_monitorable_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_monitorable_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_set_monitorable_2586408642_name._native_ptr(), 2586408642)
         assert(Area2D._method_set_monitorable_2586408642 != nil)
         let _method_is_monitorable_36873697_name = StringName(from: "is_monitorable")
-        self._method_is_monitorable_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_monitorable_36873697_name._native_ptr(), 36873697)
+        self._method_is_monitorable_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_is_monitorable_36873697_name._native_ptr(), 36873697)
         assert(Area2D._method_is_monitorable_36873697 != nil)
         let _method_get_overlapping_bodies_3995934104_name = StringName(from: "get_overlapping_bodies")
-        self._method_get_overlapping_bodies_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_overlapping_bodies_3995934104_name._native_ptr(), 3995934104)
+        self._method_get_overlapping_bodies_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_get_overlapping_bodies_3995934104_name._native_ptr(), 3995934104)
         assert(Area2D._method_get_overlapping_bodies_3995934104 != nil)
         let _method_get_overlapping_areas_3995934104_name = StringName(from: "get_overlapping_areas")
-        self._method_get_overlapping_areas_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_overlapping_areas_3995934104_name._native_ptr(), 3995934104)
+        self._method_get_overlapping_areas_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_get_overlapping_areas_3995934104_name._native_ptr(), 3995934104)
         assert(Area2D._method_get_overlapping_areas_3995934104 != nil)
         let _method_has_overlapping_bodies_36873697_name = StringName(from: "has_overlapping_bodies")
-        self._method_has_overlapping_bodies_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_overlapping_bodies_36873697_name._native_ptr(), 36873697)
+        self._method_has_overlapping_bodies_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_has_overlapping_bodies_36873697_name._native_ptr(), 36873697)
         assert(Area2D._method_has_overlapping_bodies_36873697 != nil)
         let _method_has_overlapping_areas_36873697_name = StringName(from: "has_overlapping_areas")
-        self._method_has_overlapping_areas_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_overlapping_areas_36873697_name._native_ptr(), 36873697)
+        self._method_has_overlapping_areas_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_has_overlapping_areas_36873697_name._native_ptr(), 36873697)
         assert(Area2D._method_has_overlapping_areas_36873697 != nil)
         let _method_overlaps_body_3093956946_name = StringName(from: "overlaps_body")
-        self._method_overlaps_body_3093956946 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_overlaps_body_3093956946_name._native_ptr(), 3093956946)
+        self._method_overlaps_body_3093956946 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_overlaps_body_3093956946_name._native_ptr(), 3093956946)
         assert(Area2D._method_overlaps_body_3093956946 != nil)
         let _method_overlaps_area_3093956946_name = StringName(from: "overlaps_area")
-        self._method_overlaps_area_3093956946 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_overlaps_area_3093956946_name._native_ptr(), 3093956946)
+        self._method_overlaps_area_3093956946 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_overlaps_area_3093956946_name._native_ptr(), 3093956946)
         assert(Area2D._method_overlaps_area_3093956946 != nil)
         let _method_set_audio_bus_name_3304788590_name = StringName(from: "set_audio_bus_name")
-        self._method_set_audio_bus_name_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_audio_bus_name_3304788590_name._native_ptr(), 3304788590)
+        self._method_set_audio_bus_name_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_set_audio_bus_name_3304788590_name._native_ptr(), 3304788590)
         assert(Area2D._method_set_audio_bus_name_3304788590 != nil)
         let _method_get_audio_bus_name_2002593661_name = StringName(from: "get_audio_bus_name")
-        self._method_get_audio_bus_name_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_audio_bus_name_2002593661_name._native_ptr(), 2002593661)
+        self._method_get_audio_bus_name_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_get_audio_bus_name_2002593661_name._native_ptr(), 2002593661)
         assert(Area2D._method_get_audio_bus_name_2002593661 != nil)
         let _method_set_audio_bus_override_2586408642_name = StringName(from: "set_audio_bus_override")
-        self._method_set_audio_bus_override_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_audio_bus_override_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_audio_bus_override_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_set_audio_bus_override_2586408642_name._native_ptr(), 2586408642)
         assert(Area2D._method_set_audio_bus_override_2586408642 != nil)
         let _method_is_overriding_audio_bus_36873697_name = StringName(from: "is_overriding_audio_bus")
-        self._method_is_overriding_audio_bus_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_overriding_audio_bus_36873697_name._native_ptr(), 36873697)
+        self._method_is_overriding_audio_bus_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Area2D._native_ptr(), _method_is_overriding_audio_bus_36873697_name._native_ptr(), 36873697)
         assert(Area2D._method_is_overriding_audio_bus_36873697 != nil)
     }
 
@@ -201,7 +206,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Area2D.SpaceOverride(from: __resPtr.pointee)
+            return Area2D.SpaceOverride(godot: __resPtr.pointee)
     }
     public func set_gravity_is_point(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -234,7 +239,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_gravity_point_unit_distance(distance_scale: Float64)  {
         withUnsafePointer(to: distance_scale) { distance_scale_native in
@@ -267,7 +272,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_gravity_point_center(center: Vector2)  {
         let center_native = center._native_ptr()
@@ -298,7 +303,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func set_gravity_direction(direction: Vector2)  {
         let direction_native = direction._native_ptr()
@@ -329,7 +334,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func set_gravity(gravity: Float64)  {
         withUnsafePointer(to: gravity) { gravity_native in
@@ -362,7 +367,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_linear_damp_space_override_mode(space_override_mode: Area2D.SpaceOverride)  {
         withUnsafePointer(to: space_override_mode.rawValue) { space_override_mode_native in
@@ -394,7 +399,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Area2D.SpaceOverride(from: __resPtr.pointee)
+            return Area2D.SpaceOverride(godot: __resPtr.pointee)
     }
     public func set_angular_damp_space_override_mode(space_override_mode: Area2D.SpaceOverride)  {
         withUnsafePointer(to: space_override_mode.rawValue) { space_override_mode_native in
@@ -426,7 +431,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Area2D.SpaceOverride(from: __resPtr.pointee)
+            return Area2D.SpaceOverride(godot: __resPtr.pointee)
     }
     public func set_linear_damp(linear_damp: Float64)  {
         withUnsafePointer(to: linear_damp) { linear_damp_native in
@@ -459,7 +464,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_angular_damp(angular_damp: Float64)  {
         withUnsafePointer(to: angular_damp) { angular_damp_native in
@@ -492,7 +497,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_priority(priority: Float64)  {
         withUnsafePointer(to: priority) { priority_native in
@@ -525,7 +530,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_monitoring(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -558,7 +563,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_monitorable(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -591,7 +596,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func get_overlapping_bodies() -> [Node2D] {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -607,7 +612,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Node2D](from: __resPtr.pointee)
+            return [Node2D](godot: __resPtr.pointee)
     }
     public func get_overlapping_areas() -> [Area2D] {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -623,7 +628,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Area2D](from: __resPtr.pointee)
+            return [Area2D](godot: __resPtr.pointee)
     }
     public func has_overlapping_bodies() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -640,7 +645,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func has_overlapping_areas() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -657,7 +662,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func overlaps_body(body: Node) -> UInt8 {
         let body_native = body._native_ptr()
@@ -675,7 +680,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func overlaps_area(area: Node) -> UInt8 {
         let area_native = area._native_ptr()
@@ -693,7 +698,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_audio_bus_name(name: StringName)  {
         let name_native = name._native_ptr()
@@ -724,7 +729,7 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return StringName(from: __resPtr.pointee)
+            return StringName(godot: __resPtr.pointee)
     }
     public func set_audio_bus_override(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -757,6 +762,6 @@ public class Area2D : CollisionObject2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

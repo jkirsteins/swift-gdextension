@@ -131,7 +131,7 @@ fileprivate var __godot_name_Crypto: StringName! = nil
 /// [/csharp]
 ///  
 /// [/codeblocks]
-public class Crypto : RefCounted {
+open class Crypto : RefCounted {
 
     
 
@@ -147,35 +147,40 @@ public class Crypto : RefCounted {
     static var _method_hmac_digest_2368951203: GDExtensionMethodBindPtr! = nil
     static var _method_constant_time_compare_1024142237: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_Crypto = StringName(from: "Crypto")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_generate_random_bytes_47165747_name = StringName(from: "generate_random_bytes")
-        self._method_generate_random_bytes_47165747 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_generate_random_bytes_47165747_name._native_ptr(), 47165747)
+        self._method_generate_random_bytes_47165747 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_generate_random_bytes_47165747_name._native_ptr(), 47165747)
         assert(Crypto._method_generate_random_bytes_47165747 != nil)
         let _method_generate_rsa_1237515462_name = StringName(from: "generate_rsa")
-        self._method_generate_rsa_1237515462 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_generate_rsa_1237515462_name._native_ptr(), 1237515462)
+        self._method_generate_rsa_1237515462 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_generate_rsa_1237515462_name._native_ptr(), 1237515462)
         assert(Crypto._method_generate_rsa_1237515462 != nil)
         let _method_generate_self_signed_certificate_947314696_name = StringName(from: "generate_self_signed_certificate")
-        self._method_generate_self_signed_certificate_947314696 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_generate_self_signed_certificate_947314696_name._native_ptr(), 947314696)
+        self._method_generate_self_signed_certificate_947314696 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_generate_self_signed_certificate_947314696_name._native_ptr(), 947314696)
         assert(Crypto._method_generate_self_signed_certificate_947314696 != nil)
         let _method_sign_1673662703_name = StringName(from: "sign")
-        self._method_sign_1673662703 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_sign_1673662703_name._native_ptr(), 1673662703)
+        self._method_sign_1673662703 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_sign_1673662703_name._native_ptr(), 1673662703)
         assert(Crypto._method_sign_1673662703 != nil)
         let _method_verify_2805902225_name = StringName(from: "verify")
-        self._method_verify_2805902225 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_verify_2805902225_name._native_ptr(), 2805902225)
+        self._method_verify_2805902225 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_verify_2805902225_name._native_ptr(), 2805902225)
         assert(Crypto._method_verify_2805902225 != nil)
         let _method_encrypt_2361793670_name = StringName(from: "encrypt")
-        self._method_encrypt_2361793670 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_encrypt_2361793670_name._native_ptr(), 2361793670)
+        self._method_encrypt_2361793670 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_encrypt_2361793670_name._native_ptr(), 2361793670)
         assert(Crypto._method_encrypt_2361793670 != nil)
         let _method_decrypt_2361793670_name = StringName(from: "decrypt")
-        self._method_decrypt_2361793670 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_decrypt_2361793670_name._native_ptr(), 2361793670)
+        self._method_decrypt_2361793670 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_decrypt_2361793670_name._native_ptr(), 2361793670)
         assert(Crypto._method_decrypt_2361793670 != nil)
         let _method_hmac_digest_2368951203_name = StringName(from: "hmac_digest")
-        self._method_hmac_digest_2368951203 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_hmac_digest_2368951203_name._native_ptr(), 2368951203)
+        self._method_hmac_digest_2368951203 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_hmac_digest_2368951203_name._native_ptr(), 2368951203)
         assert(Crypto._method_hmac_digest_2368951203 != nil)
         let _method_constant_time_compare_1024142237_name = StringName(from: "constant_time_compare")
-        self._method_constant_time_compare_1024142237 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_constant_time_compare_1024142237_name._native_ptr(), 1024142237)
+        self._method_constant_time_compare_1024142237 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_constant_time_compare_1024142237_name._native_ptr(), 1024142237)
         assert(Crypto._method_constant_time_compare_1024142237 != nil)
     }
 
@@ -194,7 +199,7 @@ public class Crypto : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
+            return PackedByteArray(godot: __resPtr.pointee)
         }
     }
     public func generate_rsa(size: Int64) -> CryptoKey {
@@ -212,13 +217,13 @@ public class Crypto : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return CryptoKey(from: __resPtr.pointee)
+            return CryptoKey(godot: __resPtr.pointee)
         }
     }
-    public func generate_self_signed_certificate(key: CryptoKey, issuer_name: String, not_before: String, not_after: String) -> X509Certificate {
-        withUnsafePointer(to: not_after) { not_after_native in
-        withUnsafePointer(to: not_before) { not_before_native in
-        withUnsafePointer(to: issuer_name) { issuer_name_native in
+    public func generate_self_signed_certificate(key: CryptoKey, issuer_name: godot.String, not_before: godot.String, not_after: godot.String) -> X509Certificate {
+        let not_after_native = not_after._native_ptr()
+        let not_before_native = not_before._native_ptr()
+        let issuer_name_native = issuer_name._native_ptr()
         let key_native = key._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 4)
             defer { args.deallocate() }
@@ -233,10 +238,7 @@ public class Crypto : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return X509Certificate(from: __resPtr.pointee)
-        }
-        }
-        }
+            return X509Certificate(godot: __resPtr.pointee)
     }
     public func sign(hash_type: HashingContext.HashType, hash: PackedByteArray, key: CryptoKey) -> PackedByteArray {
         withUnsafePointer(to: hash_type.rawValue) { hash_type_native in
@@ -255,7 +257,7 @@ public class Crypto : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
+            return PackedByteArray(godot: __resPtr.pointee)
         }
     }
     public func verify(hash_type: HashingContext.HashType, hash: PackedByteArray, signature: PackedByteArray, key: CryptoKey) -> UInt8 {
@@ -277,7 +279,7 @@ public class Crypto : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func encrypt(key: CryptoKey, plaintext: PackedByteArray) -> PackedByteArray {
@@ -296,7 +298,7 @@ public class Crypto : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
+            return PackedByteArray(godot: __resPtr.pointee)
     }
     public func decrypt(key: CryptoKey, ciphertext: PackedByteArray) -> PackedByteArray {
         let ciphertext_native = ciphertext._native_ptr()
@@ -314,7 +316,7 @@ public class Crypto : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
+            return PackedByteArray(godot: __resPtr.pointee)
     }
     public func hmac_digest(hash_type: HashingContext.HashType, key: PackedByteArray, msg: PackedByteArray) -> PackedByteArray {
         withUnsafePointer(to: hash_type.rawValue) { hash_type_native in
@@ -333,7 +335,7 @@ public class Crypto : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
+            return PackedByteArray(godot: __resPtr.pointee)
         }
     }
     public func constant_time_compare(trusted: PackedByteArray, received: PackedByteArray) -> UInt8 {
@@ -353,6 +355,6 @@ public class Crypto : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

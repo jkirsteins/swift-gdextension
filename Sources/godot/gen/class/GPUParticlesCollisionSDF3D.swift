@@ -15,7 +15,7 @@ fileprivate var __godot_name_GPUParticlesCollisionSDF3D: StringName! = nil
 /// [b]Note:[/b] [member ParticleProcessMaterial.collision_mode] must be [constant ParticleProcessMaterial.COLLISION_RIGID] or [constant ParticleProcessMaterial.COLLISION_HIDE_ON_CONTACT] on the [GPUParticles3D]'s process material for collision to work.
 ///  
 /// [b]Note:[/b] Particle collision only affects [GPUParticles3D], not [CPUParticles3D].
-public class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
+open class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
 
     public enum Resolution : Int32 {
         case RESOLUTION_16 = 0
@@ -42,44 +42,49 @@ public class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
     static var _method_set_bake_mask_value_300928843: GDExtensionMethodBindPtr! = nil
     static var _method_get_bake_mask_value_1116898809: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_GPUParticlesCollisionSDF3D = StringName(from: "GPUParticlesCollisionSDF3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_size_3460891852_name = StringName(from: "set_size")
-        self._method_set_size_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_size_3460891852_name._native_ptr(), 3460891852)
+        self._method_set_size_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_set_size_3460891852_name._native_ptr(), 3460891852)
         assert(GPUParticlesCollisionSDF3D._method_set_size_3460891852 != nil)
         let _method_get_size_3360562783_name = StringName(from: "get_size")
-        self._method_get_size_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_size_3360562783_name._native_ptr(), 3360562783)
+        self._method_get_size_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_get_size_3360562783_name._native_ptr(), 3360562783)
         assert(GPUParticlesCollisionSDF3D._method_get_size_3360562783 != nil)
         let _method_set_resolution_1155629297_name = StringName(from: "set_resolution")
-        self._method_set_resolution_1155629297 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_resolution_1155629297_name._native_ptr(), 1155629297)
+        self._method_set_resolution_1155629297 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_set_resolution_1155629297_name._native_ptr(), 1155629297)
         assert(GPUParticlesCollisionSDF3D._method_set_resolution_1155629297 != nil)
         let _method_get_resolution_2919555867_name = StringName(from: "get_resolution")
-        self._method_get_resolution_2919555867 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_resolution_2919555867_name._native_ptr(), 2919555867)
+        self._method_get_resolution_2919555867 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_get_resolution_2919555867_name._native_ptr(), 2919555867)
         assert(GPUParticlesCollisionSDF3D._method_get_resolution_2919555867 != nil)
         let _method_set_texture_1188404210_name = StringName(from: "set_texture")
-        self._method_set_texture_1188404210 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_texture_1188404210_name._native_ptr(), 1188404210)
+        self._method_set_texture_1188404210 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_set_texture_1188404210_name._native_ptr(), 1188404210)
         assert(GPUParticlesCollisionSDF3D._method_set_texture_1188404210 != nil)
         let _method_get_texture_373985333_name = StringName(from: "get_texture")
-        self._method_get_texture_373985333 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_texture_373985333_name._native_ptr(), 373985333)
+        self._method_get_texture_373985333 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_get_texture_373985333_name._native_ptr(), 373985333)
         assert(GPUParticlesCollisionSDF3D._method_get_texture_373985333 != nil)
         let _method_set_thickness_373806689_name = StringName(from: "set_thickness")
-        self._method_set_thickness_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_thickness_373806689_name._native_ptr(), 373806689)
+        self._method_set_thickness_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_set_thickness_373806689_name._native_ptr(), 373806689)
         assert(GPUParticlesCollisionSDF3D._method_set_thickness_373806689 != nil)
         let _method_get_thickness_1740695150_name = StringName(from: "get_thickness")
-        self._method_get_thickness_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_thickness_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_thickness_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_get_thickness_1740695150_name._native_ptr(), 1740695150)
         assert(GPUParticlesCollisionSDF3D._method_get_thickness_1740695150 != nil)
         let _method_set_bake_mask_1286410249_name = StringName(from: "set_bake_mask")
-        self._method_set_bake_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_bake_mask_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_bake_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_set_bake_mask_1286410249_name._native_ptr(), 1286410249)
         assert(GPUParticlesCollisionSDF3D._method_set_bake_mask_1286410249 != nil)
         let _method_get_bake_mask_3905245786_name = StringName(from: "get_bake_mask")
-        self._method_get_bake_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_bake_mask_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_bake_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_get_bake_mask_3905245786_name._native_ptr(), 3905245786)
         assert(GPUParticlesCollisionSDF3D._method_get_bake_mask_3905245786 != nil)
         let _method_set_bake_mask_value_300928843_name = StringName(from: "set_bake_mask_value")
-        self._method_set_bake_mask_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_bake_mask_value_300928843_name._native_ptr(), 300928843)
+        self._method_set_bake_mask_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_set_bake_mask_value_300928843_name._native_ptr(), 300928843)
         assert(GPUParticlesCollisionSDF3D._method_set_bake_mask_value_300928843 != nil)
         let _method_get_bake_mask_value_1116898809_name = StringName(from: "get_bake_mask_value")
-        self._method_get_bake_mask_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_bake_mask_value_1116898809_name._native_ptr(), 1116898809)
+        self._method_get_bake_mask_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_get_bake_mask_value_1116898809_name._native_ptr(), 1116898809)
         assert(GPUParticlesCollisionSDF3D._method_get_bake_mask_value_1116898809 != nil)
     }
 
@@ -112,7 +117,7 @@ public class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
     }
     public func set_resolution(resolution: GPUParticlesCollisionSDF3D.Resolution)  {
         withUnsafePointer(to: resolution.rawValue) { resolution_native in
@@ -144,7 +149,7 @@ public class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return GPUParticlesCollisionSDF3D.Resolution(from: __resPtr.pointee)
+            return GPUParticlesCollisionSDF3D.Resolution(godot: __resPtr.pointee)
     }
     public func set_texture(texture: Texture3D)  {
         let texture_native = texture._native_ptr()
@@ -175,7 +180,7 @@ public class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture3D(from: __resPtr.pointee)
+            return Texture3D(godot: __resPtr.pointee)
     }
     public func set_thickness(thickness: Float64)  {
         withUnsafePointer(to: thickness) { thickness_native in
@@ -208,7 +213,7 @@ public class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_bake_mask(mask: Int64)  {
         withUnsafePointer(to: mask) { mask_native in
@@ -241,7 +246,7 @@ public class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_bake_mask_value(layer_number: Int64, value: UInt8)  {
         withUnsafePointer(to: value) { value_native in
@@ -277,7 +282,7 @@ public class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
 }

@@ -181,7 +181,7 @@ fileprivate var __godot_name_EditorTranslationParserPlugin: StringName! = nil
 /// [/codeblocks]
 ///  
 /// To use [EditorTranslationParserPlugin], register it using the [method EditorPlugin.add_translation_parser_plugin] method first.
-public class EditorTranslationParserPlugin : RefCounted {
+open class EditorTranslationParserPlugin : RefCounted {
 
     
 
@@ -190,16 +190,21 @@ public class EditorTranslationParserPlugin : RefCounted {
     static var _method__parse_file_0: GDExtensionMethodBindPtr! = nil
     static var _method__get_recognized_extensions_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorTranslationParserPlugin = StringName(from: "EditorTranslationParserPlugin")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
 
-    public func _parse_file(path: String, msgids: [String], msgids_context_plural: [Array])  {
-        withUnsafePointer(to: path) { path_native in
+    public func _parse_file(path: godot.String, msgids: [godot.String], msgids_context_plural: [Array])  {
         let msgids_context_plural_native = msgids_context_plural._native_ptr()
         let msgids_native = msgids._native_ptr()
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -212,7 +217,6 @@ public class EditorTranslationParserPlugin : RefCounted {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
     public func _get_recognized_extensions() -> PackedStringArray {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -228,6 +232,6 @@ public class EditorTranslationParserPlugin : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedStringArray(from: __resPtr.pointee)
+            return PackedStringArray(godot: __resPtr.pointee)
     }
 }

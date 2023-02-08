@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeFloatConstant: StringName! = nil
 /// A scalar floating-point constant to be used within the visual shader graph.
 /// 
 /// Translated to [code]float[/code] in the shader language.
-public class VisualShaderNodeFloatConstant : VisualShaderNodeConstant {
+open class VisualShaderNodeFloatConstant : VisualShaderNodeConstant {
 
     
 
@@ -14,14 +14,19 @@ public class VisualShaderNodeFloatConstant : VisualShaderNodeConstant {
     static var _method_set_constant_373806689: GDExtensionMethodBindPtr! = nil
     static var _method_get_constant_1740695150: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeFloatConstant = StringName(from: "VisualShaderNodeFloatConstant")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_constant_373806689_name = StringName(from: "set_constant")
-        self._method_set_constant_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_constant_373806689_name._native_ptr(), 373806689)
+        self._method_set_constant_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeFloatConstant._native_ptr(), _method_set_constant_373806689_name._native_ptr(), 373806689)
         assert(VisualShaderNodeFloatConstant._method_set_constant_373806689 != nil)
         let _method_get_constant_1740695150_name = StringName(from: "get_constant")
-        self._method_get_constant_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_constant_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_constant_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeFloatConstant._native_ptr(), _method_get_constant_1740695150_name._native_ptr(), 1740695150)
         assert(VisualShaderNodeFloatConstant._method_get_constant_1740695150 != nil)
     }
 
@@ -56,6 +61,6 @@ public class VisualShaderNodeFloatConstant : VisualShaderNodeConstant {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
 }

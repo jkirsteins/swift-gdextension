@@ -7,7 +7,7 @@ fileprivate var __godot_name_VisualShader: StringName! = nil
 /// This class allows you to define a custom shader program that can be used for various materials to render objects.
 ///  
 /// The visual shader editor creates the shader.
-public class VisualShader : Shader {
+open class VisualShader : Shader {
 
     public enum `Typ` : Int32 {
         case TYPE_VERTEX = 0
@@ -62,68 +62,73 @@ public class VisualShader : Shader {
     static var _method_remove_varying_83702148: GDExtensionMethodBindPtr! = nil
     static var _method_has_varying_3927539163: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShader = StringName(from: "VisualShader")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_mode_3978014962_name = StringName(from: "set_mode")
-        self._method_set_mode_3978014962 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_mode_3978014962_name._native_ptr(), 3978014962)
+        self._method_set_mode_3978014962 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_set_mode_3978014962_name._native_ptr(), 3978014962)
         assert(VisualShader._method_set_mode_3978014962 != nil)
         let _method_add_node_1560769431_name = StringName(from: "add_node")
-        self._method_add_node_1560769431 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_node_1560769431_name._native_ptr(), 1560769431)
+        self._method_add_node_1560769431 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_add_node_1560769431_name._native_ptr(), 1560769431)
         assert(VisualShader._method_add_node_1560769431 != nil)
         let _method_get_node_3784670312_name = StringName(from: "get_node")
-        self._method_get_node_3784670312 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_node_3784670312_name._native_ptr(), 3784670312)
+        self._method_get_node_3784670312 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_get_node_3784670312_name._native_ptr(), 3784670312)
         assert(VisualShader._method_get_node_3784670312 != nil)
         let _method_set_node_position_2726660721_name = StringName(from: "set_node_position")
-        self._method_set_node_position_2726660721 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_node_position_2726660721_name._native_ptr(), 2726660721)
+        self._method_set_node_position_2726660721 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_set_node_position_2726660721_name._native_ptr(), 2726660721)
         assert(VisualShader._method_set_node_position_2726660721 != nil)
         let _method_get_node_position_2175036082_name = StringName(from: "get_node_position")
-        self._method_get_node_position_2175036082 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_node_position_2175036082_name._native_ptr(), 2175036082)
+        self._method_get_node_position_2175036082 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_get_node_position_2175036082_name._native_ptr(), 2175036082)
         assert(VisualShader._method_get_node_position_2175036082 != nil)
         let _method_get_node_list_2370592410_name = StringName(from: "get_node_list")
-        self._method_get_node_list_2370592410 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_node_list_2370592410_name._native_ptr(), 2370592410)
+        self._method_get_node_list_2370592410 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_get_node_list_2370592410_name._native_ptr(), 2370592410)
         assert(VisualShader._method_get_node_list_2370592410 != nil)
         let _method_get_valid_node_id_629467342_name = StringName(from: "get_valid_node_id")
-        self._method_get_valid_node_id_629467342 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_valid_node_id_629467342_name._native_ptr(), 629467342)
+        self._method_get_valid_node_id_629467342 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_get_valid_node_id_629467342_name._native_ptr(), 629467342)
         assert(VisualShader._method_get_valid_node_id_629467342 != nil)
         let _method_remove_node_844050912_name = StringName(from: "remove_node")
-        self._method_remove_node_844050912 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_node_844050912_name._native_ptr(), 844050912)
+        self._method_remove_node_844050912 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_remove_node_844050912_name._native_ptr(), 844050912)
         assert(VisualShader._method_remove_node_844050912 != nil)
         let _method_replace_node_3144735253_name = StringName(from: "replace_node")
-        self._method_replace_node_3144735253 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_replace_node_3144735253_name._native_ptr(), 3144735253)
+        self._method_replace_node_3144735253 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_replace_node_3144735253_name._native_ptr(), 3144735253)
         assert(VisualShader._method_replace_node_3144735253 != nil)
         let _method_is_node_connection_3922381898_name = StringName(from: "is_node_connection")
-        self._method_is_node_connection_3922381898 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_node_connection_3922381898_name._native_ptr(), 3922381898)
+        self._method_is_node_connection_3922381898 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_is_node_connection_3922381898_name._native_ptr(), 3922381898)
         assert(VisualShader._method_is_node_connection_3922381898 != nil)
         let _method_can_connect_nodes_3922381898_name = StringName(from: "can_connect_nodes")
-        self._method_can_connect_nodes_3922381898 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_can_connect_nodes_3922381898_name._native_ptr(), 3922381898)
+        self._method_can_connect_nodes_3922381898 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_can_connect_nodes_3922381898_name._native_ptr(), 3922381898)
         assert(VisualShader._method_can_connect_nodes_3922381898 != nil)
         let _method_connect_nodes_3081049573_name = StringName(from: "connect_nodes")
-        self._method_connect_nodes_3081049573 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_connect_nodes_3081049573_name._native_ptr(), 3081049573)
+        self._method_connect_nodes_3081049573 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_connect_nodes_3081049573_name._native_ptr(), 3081049573)
         assert(VisualShader._method_connect_nodes_3081049573 != nil)
         let _method_disconnect_nodes_2268060358_name = StringName(from: "disconnect_nodes")
-        self._method_disconnect_nodes_2268060358 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_disconnect_nodes_2268060358_name._native_ptr(), 2268060358)
+        self._method_disconnect_nodes_2268060358 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_disconnect_nodes_2268060358_name._native_ptr(), 2268060358)
         assert(VisualShader._method_disconnect_nodes_2268060358 != nil)
         let _method_connect_nodes_forced_2268060358_name = StringName(from: "connect_nodes_forced")
-        self._method_connect_nodes_forced_2268060358 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_connect_nodes_forced_2268060358_name._native_ptr(), 2268060358)
+        self._method_connect_nodes_forced_2268060358 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_connect_nodes_forced_2268060358_name._native_ptr(), 2268060358)
         assert(VisualShader._method_connect_nodes_forced_2268060358 != nil)
         let _method_get_node_connections_1441964831_name = StringName(from: "get_node_connections")
-        self._method_get_node_connections_1441964831 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_node_connections_1441964831_name._native_ptr(), 1441964831)
+        self._method_get_node_connections_1441964831 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_get_node_connections_1441964831_name._native_ptr(), 1441964831)
         assert(VisualShader._method_get_node_connections_1441964831 != nil)
         let _method_set_graph_offset_743155724_name = StringName(from: "set_graph_offset")
-        self._method_set_graph_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_graph_offset_743155724_name._native_ptr(), 743155724)
+        self._method_set_graph_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_set_graph_offset_743155724_name._native_ptr(), 743155724)
         assert(VisualShader._method_set_graph_offset_743155724 != nil)
         let _method_get_graph_offset_3341600327_name = StringName(from: "get_graph_offset")
-        self._method_get_graph_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_graph_offset_3341600327_name._native_ptr(), 3341600327)
+        self._method_get_graph_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_get_graph_offset_3341600327_name._native_ptr(), 3341600327)
         assert(VisualShader._method_get_graph_offset_3341600327 != nil)
         let _method_add_varying_2084110726_name = StringName(from: "add_varying")
-        self._method_add_varying_2084110726 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_varying_2084110726_name._native_ptr(), 2084110726)
+        self._method_add_varying_2084110726 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_add_varying_2084110726_name._native_ptr(), 2084110726)
         assert(VisualShader._method_add_varying_2084110726 != nil)
         let _method_remove_varying_83702148_name = StringName(from: "remove_varying")
-        self._method_remove_varying_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_varying_83702148_name._native_ptr(), 83702148)
+        self._method_remove_varying_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_remove_varying_83702148_name._native_ptr(), 83702148)
         assert(VisualShader._method_remove_varying_83702148 != nil)
         let _method_has_varying_3927539163_name = StringName(from: "has_varying")
-        self._method_has_varying_3927539163 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_varying_3927539163_name._native_ptr(), 3927539163)
+        self._method_has_varying_3927539163 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_has_varying_3927539163_name._native_ptr(), 3927539163)
         assert(VisualShader._method_has_varying_3927539163 != nil)
     }
 
@@ -179,7 +184,7 @@ public class VisualShader : Shader {
                     args.baseAddress!,
                     __resPtr
                 )
-            return VisualShaderNode(from: __resPtr.pointee)
+            return VisualShaderNode(godot: __resPtr.pointee)
         }
         }
     }
@@ -218,7 +223,7 @@ public class VisualShader : Shader {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
         }
     }
@@ -237,7 +242,7 @@ public class VisualShader : Shader {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
         }
     }
     public func get_valid_node_id(`type`: VisualShader.`Typ`) -> Int64 {
@@ -256,7 +261,7 @@ public class VisualShader : Shader {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func remove_node(`type`: VisualShader.`Typ`, id: Int64)  {
@@ -316,7 +321,7 @@ public class VisualShader : Shader {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
         }
@@ -343,7 +348,7 @@ public class VisualShader : Shader {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
         }
@@ -369,7 +374,7 @@ public class VisualShader : Shader {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
         }
@@ -439,7 +444,7 @@ public class VisualShader : Shader {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Dictionary](from: __resPtr.pointee)
+            return [Dictionary](godot: __resPtr.pointee)
         }
     }
     public func set_graph_offset(offset: Vector2)  {
@@ -471,12 +476,12 @@ public class VisualShader : Shader {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
-    public func add_varying(name: String, mode: VisualShader.VaryingMode, `type`: VisualShader.VaryingType)  {
-        withUnsafePointer(to: name) { name_native in
+    public func add_varying(name: godot.String, mode: VisualShader.VaryingMode, `type`: VisualShader.VaryingType)  {
         withUnsafePointer(to: `type`.rawValue) { type_native in
         withUnsafePointer(to: mode.rawValue) { mode_native in
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -491,10 +496,9 @@ public class VisualShader : Shader {
                 )
         }
         }
-        }
     }
-    public func remove_varying(name: String)  {
-        withUnsafePointer(to: name) { name_native in
+    public func remove_varying(name: godot.String)  {
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -507,10 +511,9 @@ public class VisualShader : Shader {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func has_varying(name: String) -> UInt8 {
-        withUnsafePointer(to: name) { name_native in
+    public func has_varying(name: godot.String) -> UInt8 {
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -525,7 +528,6 @@ public class VisualShader : Shader {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
 }

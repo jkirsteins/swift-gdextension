@@ -89,7 +89,7 @@ fileprivate var __godot_name_HMACContext: StringName! = nil
 /// [/csharp]
 ///  
 /// [/codeblocks]
-public class HMACContext : RefCounted {
+open class HMACContext : RefCounted {
 
     
 
@@ -99,17 +99,22 @@ public class HMACContext : RefCounted {
     static var _method_update_680677267: GDExtensionMethodBindPtr! = nil
     static var _method_finish_2115431945: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_HMACContext = StringName(from: "HMACContext")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_start_3537364598_name = StringName(from: "start")
-        self._method_start_3537364598 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_start_3537364598_name._native_ptr(), 3537364598)
+        self._method_start_3537364598 = self.interface.pointee.classdb_get_method_bind(__godot_name_HMACContext._native_ptr(), _method_start_3537364598_name._native_ptr(), 3537364598)
         assert(HMACContext._method_start_3537364598 != nil)
         let _method_update_680677267_name = StringName(from: "update")
-        self._method_update_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_update_680677267_name._native_ptr(), 680677267)
+        self._method_update_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_HMACContext._native_ptr(), _method_update_680677267_name._native_ptr(), 680677267)
         assert(HMACContext._method_update_680677267 != nil)
         let _method_finish_2115431945_name = StringName(from: "finish")
-        self._method_finish_2115431945 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_finish_2115431945_name._native_ptr(), 2115431945)
+        self._method_finish_2115431945 = self.interface.pointee.classdb_get_method_bind(__godot_name_HMACContext._native_ptr(), _method_finish_2115431945_name._native_ptr(), 2115431945)
         assert(HMACContext._method_finish_2115431945 != nil)
     }
 
@@ -129,7 +134,7 @@ public class HMACContext : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func update(data: PackedByteArray) -> Error {
@@ -147,7 +152,7 @@ public class HMACContext : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func finish() -> PackedByteArray {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -163,6 +168,6 @@ public class HMACContext : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
+            return PackedByteArray(godot: __resPtr.pointee)
     }
 }

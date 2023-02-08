@@ -5,7 +5,7 @@ fileprivate var __godot_name_StyleBoxEmpty: StringName! = nil
 /// Empty stylebox (does not display anything).
 /// 
 /// Empty stylebox (really does not display anything).
-public class StyleBoxEmpty : StyleBox {
+open class StyleBoxEmpty : StyleBox {
 
     
 
@@ -13,8 +13,13 @@ public class StyleBoxEmpty : StyleBox {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_StyleBoxEmpty = StringName(from: "StyleBoxEmpty")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

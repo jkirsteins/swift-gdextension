@@ -41,7 +41,7 @@ fileprivate var __godot_name_ScriptCreateDialog: StringName! = nil
 /// [/csharp]
 ///  
 /// [/codeblocks]
-public class ScriptCreateDialog : ConfirmationDialog {
+open class ScriptCreateDialog : ConfirmationDialog {
 
     
 
@@ -49,19 +49,24 @@ public class ScriptCreateDialog : ConfirmationDialog {
 
     static var _method_config_4210001628: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_ScriptCreateDialog = StringName(from: "ScriptCreateDialog")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_config_4210001628_name = StringName(from: "config")
-        self._method_config_4210001628 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_config_4210001628_name._native_ptr(), 4210001628)
+        self._method_config_4210001628 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScriptCreateDialog._native_ptr(), _method_config_4210001628_name._native_ptr(), 4210001628)
         assert(ScriptCreateDialog._method_config_4210001628 != nil)
     }
 
-    public func config(inherits: String, path: String, built_in_enabled: UInt8, load_enabled: UInt8)  {
+    public func config(inherits: godot.String, path: godot.String, built_in_enabled: UInt8, load_enabled: UInt8)  {
         withUnsafePointer(to: load_enabled) { load_enabled_native in
         withUnsafePointer(to: built_in_enabled) { built_in_enabled_native in
-        withUnsafePointer(to: path) { path_native in
-        withUnsafePointer(to: inherits) { inherits_native in
+        let path_native = path._native_ptr()
+        let inherits_native = inherits._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 4)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -74,8 +79,6 @@ public class ScriptCreateDialog : ConfirmationDialog {
                     args.baseAddress!,
                     nil
                 )
-        }
-        }
         }
         }
     }

@@ -7,7 +7,7 @@ fileprivate var __godot_name_SphereOccluder3D: StringName! = nil
 /// [SphereOccluder3D] stores a sphere shape that can be used by the engine's occlusion culling system.
 ///  
 /// See [OccluderInstance3D]'s documentation for instructions on setting up occlusion culling.
-public class SphereOccluder3D : Occluder3D {
+open class SphereOccluder3D : Occluder3D {
 
     
 
@@ -16,14 +16,19 @@ public class SphereOccluder3D : Occluder3D {
     static var _method_set_radius_373806689: GDExtensionMethodBindPtr! = nil
     static var _method_get_radius_1740695150: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_SphereOccluder3D = StringName(from: "SphereOccluder3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_radius_373806689_name = StringName(from: "set_radius")
-        self._method_set_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_radius_373806689_name._native_ptr(), 373806689)
+        self._method_set_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SphereOccluder3D._native_ptr(), _method_set_radius_373806689_name._native_ptr(), 373806689)
         assert(SphereOccluder3D._method_set_radius_373806689 != nil)
         let _method_get_radius_1740695150_name = StringName(from: "get_radius")
-        self._method_get_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_radius_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_SphereOccluder3D._native_ptr(), _method_get_radius_1740695150_name._native_ptr(), 1740695150)
         assert(SphereOccluder3D._method_get_radius_1740695150 != nil)
     }
 
@@ -58,6 +63,6 @@ public class SphereOccluder3D : Occluder3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
 }

@@ -5,7 +5,7 @@ fileprivate var __godot_name_PhysicsDirectSpaceState2DExtension: StringName! = n
 /// 
 /// 
 /// 
-public class PhysicsDirectSpaceState2DExtension : PhysicsDirectSpaceState2D {
+open class PhysicsDirectSpaceState2DExtension : PhysicsDirectSpaceState2D {
 
     
 
@@ -19,11 +19,16 @@ public class PhysicsDirectSpaceState2DExtension : PhysicsDirectSpaceState2D {
     static var _method__rest_info_0: GDExtensionMethodBindPtr! = nil
     static var _method_is_body_excluded_from_query_4155700596: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PhysicsDirectSpaceState2DExtension = StringName(from: "PhysicsDirectSpaceState2DExtension")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_is_body_excluded_from_query_4155700596_name = StringName(from: "is_body_excluded_from_query")
-        self._method_is_body_excluded_from_query_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_body_excluded_from_query_4155700596_name._native_ptr(), 4155700596)
+        self._method_is_body_excluded_from_query_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectSpaceState2DExtension._native_ptr(), _method_is_body_excluded_from_query_4155700596_name._native_ptr(), 4155700596)
         assert(PhysicsDirectSpaceState2DExtension._method_is_body_excluded_from_query_4155700596 != nil)
     }
 
@@ -49,7 +54,7 @@ public class PhysicsDirectSpaceState2DExtension : PhysicsDirectSpaceState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
         }
@@ -78,7 +83,7 @@ public class PhysicsDirectSpaceState2DExtension : PhysicsDirectSpaceState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
         }
         }
@@ -110,7 +115,7 @@ public class PhysicsDirectSpaceState2DExtension : PhysicsDirectSpaceState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
         }
         }
@@ -142,7 +147,7 @@ public class PhysicsDirectSpaceState2DExtension : PhysicsDirectSpaceState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
         }
@@ -175,7 +180,7 @@ public class PhysicsDirectSpaceState2DExtension : PhysicsDirectSpaceState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
         }
@@ -207,7 +212,7 @@ public class PhysicsDirectSpaceState2DExtension : PhysicsDirectSpaceState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
         }
@@ -230,6 +235,6 @@ public class PhysicsDirectSpaceState2DExtension : PhysicsDirectSpaceState2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

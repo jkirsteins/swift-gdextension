@@ -43,7 +43,7 @@ fileprivate var __godot_name_ImageTexture: StringName! = nil
 /// An [ImageTexture] is not meant to be operated from within the editor interface directly, and is mostly useful for rendering images on screen dynamically via code. If you need to generate images procedurally from within the editor, consider saving and importing images as custom texture resources implementing a new [EditorImportPlugin].
 ///  
 /// [b]Note:[/b] The maximum texture size is 16384×16384 pixels due to graphics hardware limitations.
-public class ImageTexture : Texture2D {
+open class ImageTexture : Texture2D {
 
     
 
@@ -55,23 +55,28 @@ public class ImageTexture : Texture2D {
     static var _method_update_532598488: GDExtensionMethodBindPtr! = nil
     static var _method_set_size_override_1130785943: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ImageTexture = StringName(from: "ImageTexture")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_create_from_image_2775144163_name = StringName(from: "create_from_image")
-        self._method_create_from_image_2775144163 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_from_image_2775144163_name._native_ptr(), 2775144163)
+        self._method_create_from_image_2775144163 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImageTexture._native_ptr(), _method_create_from_image_2775144163_name._native_ptr(), 2775144163)
         assert(ImageTexture._method_create_from_image_2775144163 != nil)
         let _method_get_format_3847873762_name = StringName(from: "get_format")
-        self._method_get_format_3847873762 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_format_3847873762_name._native_ptr(), 3847873762)
+        self._method_get_format_3847873762 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImageTexture._native_ptr(), _method_get_format_3847873762_name._native_ptr(), 3847873762)
         assert(ImageTexture._method_get_format_3847873762 != nil)
         let _method_set_image_532598488_name = StringName(from: "set_image")
-        self._method_set_image_532598488 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_image_532598488_name._native_ptr(), 532598488)
+        self._method_set_image_532598488 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImageTexture._native_ptr(), _method_set_image_532598488_name._native_ptr(), 532598488)
         assert(ImageTexture._method_set_image_532598488 != nil)
         let _method_update_532598488_name = StringName(from: "update")
-        self._method_update_532598488 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_update_532598488_name._native_ptr(), 532598488)
+        self._method_update_532598488 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImageTexture._native_ptr(), _method_update_532598488_name._native_ptr(), 532598488)
         assert(ImageTexture._method_update_532598488 != nil)
         let _method_set_size_override_1130785943_name = StringName(from: "set_size_override")
-        self._method_set_size_override_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_size_override_1130785943_name._native_ptr(), 1130785943)
+        self._method_set_size_override_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImageTexture._native_ptr(), _method_set_size_override_1130785943_name._native_ptr(), 1130785943)
         assert(ImageTexture._method_set_size_override_1130785943 != nil)
     }
 
@@ -90,7 +95,7 @@ public class ImageTexture : Texture2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return ImageTexture(from: __resPtr.pointee)
+            return ImageTexture(godot: __resPtr.pointee)
     }
     public func get_format() -> Image.Format {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -106,7 +111,7 @@ public class ImageTexture : Texture2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Image.Format(from: __resPtr.pointee)
+            return Image.Format(godot: __resPtr.pointee)
     }
     public func set_image(image: Image)  {
         let image_native = image._native_ptr()

@@ -9,6 +9,11 @@ fileprivate var __godot_name_Plane: StringName! = nil
 /// Plane represents a normalized plane equation. Basically, "normal" is the normal of the plane (a,b,c normalized), and "d" is the distance from the origin to the plane (in the direction of "normal"). "Over" or "Above" the plane is considered the side of the plane towards where the normal is pointing.
 public class Plane : BuiltinClass {
 
+    public static var interface: UnsafePointer<GDExtensionInterface>! = nil
+    public static var library: GDExtensionClassLibraryPtr! = nil
+    
+    var interface: UnsafePointer<GDExtensionInterface> { Self.interface }
+
     
 
     public class var __godot_name: StringName { __godot_name_Plane }
@@ -26,7 +31,10 @@ public class Plane : BuiltinClass {
     static var _constructor_6: GDExtensionPtrConstructor? = nil
     static var _destructor: GDExtensionPtrDestructor? = nil
 
-    public class func initialize_class() {
+    public class func initialize_class(_ ginit: GodotInitializer, _: GDExtensionInitializationLevel) {
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
+
         // Init constructors before assigning __godot_name
         Plane._constructor_0 =  Plane.interface.pointee.variant_get_ptr_constructor(GDEXTENSION_VARIANT_TYPE_PLANE, 0)
         assert(Plane._constructor_0 != nil)
@@ -42,10 +50,11 @@ public class Plane : BuiltinClass {
         assert(Plane._constructor_5 != nil)
         Plane._constructor_6 =  Plane.interface.pointee.variant_get_ptr_constructor(GDEXTENSION_VARIANT_TYPE_PLANE, 6)
         assert(Plane._constructor_6 != nil)
-        Plane._destructor =  Plane.interface.pointee.variant_get_ptr_destructor(GDEXTENSION_VARIANT_TYPE_PLANE)
-        assert(Plane._destructor != nil)
+    }
 
-        // At this point constructors must be assigned
+    public class func initialize_godot_name() {
+        // At this point constructors for String and StringName
+        // must be assigned
         __godot_name_Plane = StringName(from: "Plane")
     }
 
@@ -150,10 +159,10 @@ public class Plane : BuiltinClass {
         }
         }
     }
-    public required init(from unsafe: UnsafeRawPointer) {
+    public required init(godot unsafe: UnsafeRawPointer) {
         self.opaque = .init(mutating: unsafe)
     }
-    public required init(from unsafe: UnsafeMutableRawPointer) {
+    public required init(godot unsafe: UnsafeMutableRawPointer) {
         self.opaque = unsafe
     }
 

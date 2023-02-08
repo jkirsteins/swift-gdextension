@@ -5,7 +5,7 @@ fileprivate var __godot_name_SpriteFrames: StringName! = nil
 /// Sprite frame library for AnimatedSprite2D and AnimatedSprite3D.
 /// 
 /// Sprite frame library for an [AnimatedSprite2D] or [AnimatedSprite3D] node. Contains frames and animation data for playback.
-public class SpriteFrames : Resource {
+open class SpriteFrames : Resource {
 
     
 
@@ -29,59 +29,64 @@ public class SpriteFrames : Resource {
     static var _method_clear_3304788590: GDExtensionMethodBindPtr! = nil
     static var _method_clear_all_3218959716: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_SpriteFrames = StringName(from: "SpriteFrames")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_add_animation_3304788590_name = StringName(from: "add_animation")
-        self._method_add_animation_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_animation_3304788590_name._native_ptr(), 3304788590)
+        self._method_add_animation_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_add_animation_3304788590_name._native_ptr(), 3304788590)
         assert(SpriteFrames._method_add_animation_3304788590 != nil)
         let _method_has_animation_2619796661_name = StringName(from: "has_animation")
-        self._method_has_animation_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_animation_2619796661_name._native_ptr(), 2619796661)
+        self._method_has_animation_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_has_animation_2619796661_name._native_ptr(), 2619796661)
         assert(SpriteFrames._method_has_animation_2619796661 != nil)
         let _method_remove_animation_3304788590_name = StringName(from: "remove_animation")
-        self._method_remove_animation_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_animation_3304788590_name._native_ptr(), 3304788590)
+        self._method_remove_animation_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_remove_animation_3304788590_name._native_ptr(), 3304788590)
         assert(SpriteFrames._method_remove_animation_3304788590 != nil)
         let _method_rename_animation_3740211285_name = StringName(from: "rename_animation")
-        self._method_rename_animation_3740211285 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_rename_animation_3740211285_name._native_ptr(), 3740211285)
+        self._method_rename_animation_3740211285 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_rename_animation_3740211285_name._native_ptr(), 3740211285)
         assert(SpriteFrames._method_rename_animation_3740211285 != nil)
         let _method_get_animation_names_1139954409_name = StringName(from: "get_animation_names")
-        self._method_get_animation_names_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_animation_names_1139954409_name._native_ptr(), 1139954409)
+        self._method_get_animation_names_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_get_animation_names_1139954409_name._native_ptr(), 1139954409)
         assert(SpriteFrames._method_get_animation_names_1139954409 != nil)
         let _method_set_animation_speed_4135858297_name = StringName(from: "set_animation_speed")
-        self._method_set_animation_speed_4135858297 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_animation_speed_4135858297_name._native_ptr(), 4135858297)
+        self._method_set_animation_speed_4135858297 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_set_animation_speed_4135858297_name._native_ptr(), 4135858297)
         assert(SpriteFrames._method_set_animation_speed_4135858297 != nil)
         let _method_get_animation_speed_2349060816_name = StringName(from: "get_animation_speed")
-        self._method_get_animation_speed_2349060816 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_animation_speed_2349060816_name._native_ptr(), 2349060816)
+        self._method_get_animation_speed_2349060816 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_get_animation_speed_2349060816_name._native_ptr(), 2349060816)
         assert(SpriteFrames._method_get_animation_speed_2349060816 != nil)
         let _method_set_animation_loop_2524380260_name = StringName(from: "set_animation_loop")
-        self._method_set_animation_loop_2524380260 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_animation_loop_2524380260_name._native_ptr(), 2524380260)
+        self._method_set_animation_loop_2524380260 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_set_animation_loop_2524380260_name._native_ptr(), 2524380260)
         assert(SpriteFrames._method_set_animation_loop_2524380260 != nil)
         let _method_get_animation_loop_2619796661_name = StringName(from: "get_animation_loop")
-        self._method_get_animation_loop_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_animation_loop_2619796661_name._native_ptr(), 2619796661)
+        self._method_get_animation_loop_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_get_animation_loop_2619796661_name._native_ptr(), 2619796661)
         assert(SpriteFrames._method_get_animation_loop_2619796661 != nil)
         let _method_add_frame_407562921_name = StringName(from: "add_frame")
-        self._method_add_frame_407562921 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_frame_407562921_name._native_ptr(), 407562921)
+        self._method_add_frame_407562921 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_add_frame_407562921_name._native_ptr(), 407562921)
         assert(SpriteFrames._method_add_frame_407562921 != nil)
         let _method_set_frame_3155743884_name = StringName(from: "set_frame")
-        self._method_set_frame_3155743884 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_frame_3155743884_name._native_ptr(), 3155743884)
+        self._method_set_frame_3155743884 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_set_frame_3155743884_name._native_ptr(), 3155743884)
         assert(SpriteFrames._method_set_frame_3155743884 != nil)
         let _method_remove_frame_2415702435_name = StringName(from: "remove_frame")
-        self._method_remove_frame_2415702435 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_frame_2415702435_name._native_ptr(), 2415702435)
+        self._method_remove_frame_2415702435 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_remove_frame_2415702435_name._native_ptr(), 2415702435)
         assert(SpriteFrames._method_remove_frame_2415702435 != nil)
         let _method_get_frame_count_2458036349_name = StringName(from: "get_frame_count")
-        self._method_get_frame_count_2458036349 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_frame_count_2458036349_name._native_ptr(), 2458036349)
+        self._method_get_frame_count_2458036349 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_get_frame_count_2458036349_name._native_ptr(), 2458036349)
         assert(SpriteFrames._method_get_frame_count_2458036349 != nil)
         let _method_get_frame_texture_2900517879_name = StringName(from: "get_frame_texture")
-        self._method_get_frame_texture_2900517879 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_frame_texture_2900517879_name._native_ptr(), 2900517879)
+        self._method_get_frame_texture_2900517879 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_get_frame_texture_2900517879_name._native_ptr(), 2900517879)
         assert(SpriteFrames._method_get_frame_texture_2900517879 != nil)
         let _method_get_frame_duration_1129309260_name = StringName(from: "get_frame_duration")
-        self._method_get_frame_duration_1129309260 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_frame_duration_1129309260_name._native_ptr(), 1129309260)
+        self._method_get_frame_duration_1129309260 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_get_frame_duration_1129309260_name._native_ptr(), 1129309260)
         assert(SpriteFrames._method_get_frame_duration_1129309260 != nil)
         let _method_clear_3304788590_name = StringName(from: "clear")
-        self._method_clear_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_3304788590_name._native_ptr(), 3304788590)
+        self._method_clear_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_clear_3304788590_name._native_ptr(), 3304788590)
         assert(SpriteFrames._method_clear_3304788590 != nil)
         let _method_clear_all_3218959716_name = StringName(from: "clear_all")
-        self._method_clear_all_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_all_3218959716_name._native_ptr(), 3218959716)
+        self._method_clear_all_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteFrames._native_ptr(), _method_clear_all_3218959716_name._native_ptr(), 3218959716)
         assert(SpriteFrames._method_clear_all_3218959716 != nil)
     }
 
@@ -116,7 +121,7 @@ public class SpriteFrames : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func remove_animation(anim: StringName)  {
         let anim_native = anim._native_ptr()
@@ -163,7 +168,7 @@ public class SpriteFrames : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedStringArray(from: __resPtr.pointee)
+            return PackedStringArray(godot: __resPtr.pointee)
     }
     public func set_animation_speed(anim: StringName, fps: Float64)  {
         withUnsafePointer(to: fps) { fps_native in
@@ -198,7 +203,7 @@ public class SpriteFrames : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_animation_loop(anim: StringName, loop: UInt8)  {
         withUnsafePointer(to: loop) { loop_native in
@@ -233,7 +238,7 @@ public class SpriteFrames : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func add_frame(anim: StringName, texture: Texture2D, duration: Float64, at_position: Int64)  {
         withUnsafePointer(to: at_position) { at_position_native in
@@ -308,7 +313,7 @@ public class SpriteFrames : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_frame_texture(anim: StringName, idx: Int64) -> Texture2D {
         withUnsafePointer(to: idx) { idx_native in
@@ -326,7 +331,7 @@ public class SpriteFrames : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture2D(from: __resPtr.pointee)
+            return Texture2D(godot: __resPtr.pointee)
         }
     }
     public func get_frame_duration(anim: StringName, idx: Int64) -> Float64 {
@@ -346,7 +351,7 @@ public class SpriteFrames : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func clear(anim: StringName)  {

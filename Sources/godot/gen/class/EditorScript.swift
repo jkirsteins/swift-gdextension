@@ -53,7 +53,7 @@ fileprivate var __godot_name_EditorScript: StringName! = nil
 /// [b]Note:[/b] The script is run in the Editor context, which means the output is visible in the console window started with the Editor (stdout) instead of the usual Godot [b]Output[/b] dock.
 ///  
 /// [b]Note:[/b] EditorScript is [RefCounted], meaning it is destroyed when nothing references it. This can cause errors during asynchronous operations if there are no references to the script.
-public class EditorScript : RefCounted {
+open class EditorScript : RefCounted {
 
     
 
@@ -64,17 +64,22 @@ public class EditorScript : RefCounted {
     static var _method_get_scene_1818953479: GDExtensionMethodBindPtr! = nil
     static var _method_get_editor_interface_4223731786: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorScript = StringName(from: "EditorScript")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_add_root_node_1078189570_name = StringName(from: "add_root_node")
-        self._method_add_root_node_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_root_node_1078189570_name._native_ptr(), 1078189570)
+        self._method_add_root_node_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorScript._native_ptr(), _method_add_root_node_1078189570_name._native_ptr(), 1078189570)
         assert(EditorScript._method_add_root_node_1078189570 != nil)
         let _method_get_scene_1818953479_name = StringName(from: "get_scene")
-        self._method_get_scene_1818953479 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_scene_1818953479_name._native_ptr(), 1818953479)
+        self._method_get_scene_1818953479 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorScript._native_ptr(), _method_get_scene_1818953479_name._native_ptr(), 1818953479)
         assert(EditorScript._method_get_scene_1818953479 != nil)
         let _method_get_editor_interface_4223731786_name = StringName(from: "get_editor_interface")
-        self._method_get_editor_interface_4223731786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_editor_interface_4223731786_name._native_ptr(), 4223731786)
+        self._method_get_editor_interface_4223731786 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorScript._native_ptr(), _method_get_editor_interface_4223731786_name._native_ptr(), 4223731786)
         assert(EditorScript._method_get_editor_interface_4223731786 != nil)
     }
 
@@ -121,7 +126,7 @@ public class EditorScript : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Node(from: __resPtr.pointee)
+            return Node(godot: __resPtr.pointee)
     }
     public func get_editor_interface() -> EditorInterface {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -137,6 +142,6 @@ public class EditorScript : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return EditorInterface(from: __resPtr.pointee)
+            return EditorInterface(godot: __resPtr.pointee)
     }
 }

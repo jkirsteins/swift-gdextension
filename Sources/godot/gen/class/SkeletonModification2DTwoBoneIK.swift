@@ -7,7 +7,7 @@ fileprivate var __godot_name_SkeletonModification2DTwoBoneIK: StringName! = nil
 /// This [SkeletonModification2D] uses an algorithm typically called TwoBoneIK. This algorithm works by leveraging the law of cosigns and the lengths of the bones to figure out what rotation the bones currently have, and what rotation they need to make a complete triangle, where the first bone, the second bone, and the target form the three vertices of the triangle. Because the algorithm works by making a triangle, it can only operate on two bones.
 ///  
 /// TwoBoneIK is great for arms, legs, and really any joints that can be represented by just two bones that bend to reach a target. This solver is more lightweight than [SkeletonModification2DFABRIK], but gives similar, natural looking results.
-public class SkeletonModification2DTwoBoneIK : SkeletonModification2D {
+open class SkeletonModification2DTwoBoneIK : SkeletonModification2D {
 
     
 
@@ -30,56 +30,61 @@ public class SkeletonModification2DTwoBoneIK : SkeletonModification2D {
     static var _method_set_joint_two_bone_idx_1286410249: GDExtensionMethodBindPtr! = nil
     static var _method_get_joint_two_bone_idx_3905245786: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_SkeletonModification2DTwoBoneIK = StringName(from: "SkeletonModification2DTwoBoneIK")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_target_node_1348162250_name = StringName(from: "set_target_node")
-        self._method_set_target_node_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_target_node_1348162250_name._native_ptr(), 1348162250)
+        self._method_set_target_node_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DTwoBoneIK._native_ptr(), _method_set_target_node_1348162250_name._native_ptr(), 1348162250)
         assert(SkeletonModification2DTwoBoneIK._method_set_target_node_1348162250 != nil)
         let _method_get_target_node_4075236667_name = StringName(from: "get_target_node")
-        self._method_get_target_node_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_target_node_4075236667_name._native_ptr(), 4075236667)
+        self._method_get_target_node_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DTwoBoneIK._native_ptr(), _method_get_target_node_4075236667_name._native_ptr(), 4075236667)
         assert(SkeletonModification2DTwoBoneIK._method_get_target_node_4075236667 != nil)
         let _method_set_target_minimum_distance_373806689_name = StringName(from: "set_target_minimum_distance")
-        self._method_set_target_minimum_distance_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_target_minimum_distance_373806689_name._native_ptr(), 373806689)
+        self._method_set_target_minimum_distance_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DTwoBoneIK._native_ptr(), _method_set_target_minimum_distance_373806689_name._native_ptr(), 373806689)
         assert(SkeletonModification2DTwoBoneIK._method_set_target_minimum_distance_373806689 != nil)
         let _method_get_target_minimum_distance_1740695150_name = StringName(from: "get_target_minimum_distance")
-        self._method_get_target_minimum_distance_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_target_minimum_distance_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_target_minimum_distance_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DTwoBoneIK._native_ptr(), _method_get_target_minimum_distance_1740695150_name._native_ptr(), 1740695150)
         assert(SkeletonModification2DTwoBoneIK._method_get_target_minimum_distance_1740695150 != nil)
         let _method_set_target_maximum_distance_373806689_name = StringName(from: "set_target_maximum_distance")
-        self._method_set_target_maximum_distance_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_target_maximum_distance_373806689_name._native_ptr(), 373806689)
+        self._method_set_target_maximum_distance_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DTwoBoneIK._native_ptr(), _method_set_target_maximum_distance_373806689_name._native_ptr(), 373806689)
         assert(SkeletonModification2DTwoBoneIK._method_set_target_maximum_distance_373806689 != nil)
         let _method_get_target_maximum_distance_1740695150_name = StringName(from: "get_target_maximum_distance")
-        self._method_get_target_maximum_distance_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_target_maximum_distance_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_target_maximum_distance_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DTwoBoneIK._native_ptr(), _method_get_target_maximum_distance_1740695150_name._native_ptr(), 1740695150)
         assert(SkeletonModification2DTwoBoneIK._method_get_target_maximum_distance_1740695150 != nil)
         let _method_set_flip_bend_direction_2586408642_name = StringName(from: "set_flip_bend_direction")
-        self._method_set_flip_bend_direction_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_flip_bend_direction_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_flip_bend_direction_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DTwoBoneIK._native_ptr(), _method_set_flip_bend_direction_2586408642_name._native_ptr(), 2586408642)
         assert(SkeletonModification2DTwoBoneIK._method_set_flip_bend_direction_2586408642 != nil)
         let _method_get_flip_bend_direction_36873697_name = StringName(from: "get_flip_bend_direction")
-        self._method_get_flip_bend_direction_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_flip_bend_direction_36873697_name._native_ptr(), 36873697)
+        self._method_get_flip_bend_direction_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DTwoBoneIK._native_ptr(), _method_get_flip_bend_direction_36873697_name._native_ptr(), 36873697)
         assert(SkeletonModification2DTwoBoneIK._method_get_flip_bend_direction_36873697 != nil)
         let _method_set_joint_one_bone2d_node_1348162250_name = StringName(from: "set_joint_one_bone2d_node")
-        self._method_set_joint_one_bone2d_node_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_joint_one_bone2d_node_1348162250_name._native_ptr(), 1348162250)
+        self._method_set_joint_one_bone2d_node_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DTwoBoneIK._native_ptr(), _method_set_joint_one_bone2d_node_1348162250_name._native_ptr(), 1348162250)
         assert(SkeletonModification2DTwoBoneIK._method_set_joint_one_bone2d_node_1348162250 != nil)
         let _method_get_joint_one_bone2d_node_4075236667_name = StringName(from: "get_joint_one_bone2d_node")
-        self._method_get_joint_one_bone2d_node_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_joint_one_bone2d_node_4075236667_name._native_ptr(), 4075236667)
+        self._method_get_joint_one_bone2d_node_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DTwoBoneIK._native_ptr(), _method_get_joint_one_bone2d_node_4075236667_name._native_ptr(), 4075236667)
         assert(SkeletonModification2DTwoBoneIK._method_get_joint_one_bone2d_node_4075236667 != nil)
         let _method_set_joint_one_bone_idx_1286410249_name = StringName(from: "set_joint_one_bone_idx")
-        self._method_set_joint_one_bone_idx_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_joint_one_bone_idx_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_joint_one_bone_idx_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DTwoBoneIK._native_ptr(), _method_set_joint_one_bone_idx_1286410249_name._native_ptr(), 1286410249)
         assert(SkeletonModification2DTwoBoneIK._method_set_joint_one_bone_idx_1286410249 != nil)
         let _method_get_joint_one_bone_idx_3905245786_name = StringName(from: "get_joint_one_bone_idx")
-        self._method_get_joint_one_bone_idx_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_joint_one_bone_idx_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_joint_one_bone_idx_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DTwoBoneIK._native_ptr(), _method_get_joint_one_bone_idx_3905245786_name._native_ptr(), 3905245786)
         assert(SkeletonModification2DTwoBoneIK._method_get_joint_one_bone_idx_3905245786 != nil)
         let _method_set_joint_two_bone2d_node_1348162250_name = StringName(from: "set_joint_two_bone2d_node")
-        self._method_set_joint_two_bone2d_node_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_joint_two_bone2d_node_1348162250_name._native_ptr(), 1348162250)
+        self._method_set_joint_two_bone2d_node_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DTwoBoneIK._native_ptr(), _method_set_joint_two_bone2d_node_1348162250_name._native_ptr(), 1348162250)
         assert(SkeletonModification2DTwoBoneIK._method_set_joint_two_bone2d_node_1348162250 != nil)
         let _method_get_joint_two_bone2d_node_4075236667_name = StringName(from: "get_joint_two_bone2d_node")
-        self._method_get_joint_two_bone2d_node_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_joint_two_bone2d_node_4075236667_name._native_ptr(), 4075236667)
+        self._method_get_joint_two_bone2d_node_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DTwoBoneIK._native_ptr(), _method_get_joint_two_bone2d_node_4075236667_name._native_ptr(), 4075236667)
         assert(SkeletonModification2DTwoBoneIK._method_get_joint_two_bone2d_node_4075236667 != nil)
         let _method_set_joint_two_bone_idx_1286410249_name = StringName(from: "set_joint_two_bone_idx")
-        self._method_set_joint_two_bone_idx_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_joint_two_bone_idx_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_joint_two_bone_idx_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DTwoBoneIK._native_ptr(), _method_set_joint_two_bone_idx_1286410249_name._native_ptr(), 1286410249)
         assert(SkeletonModification2DTwoBoneIK._method_set_joint_two_bone_idx_1286410249 != nil)
         let _method_get_joint_two_bone_idx_3905245786_name = StringName(from: "get_joint_two_bone_idx")
-        self._method_get_joint_two_bone_idx_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_joint_two_bone_idx_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_joint_two_bone_idx_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DTwoBoneIK._native_ptr(), _method_get_joint_two_bone_idx_3905245786_name._native_ptr(), 3905245786)
         assert(SkeletonModification2DTwoBoneIK._method_get_joint_two_bone_idx_3905245786 != nil)
     }
 
@@ -112,7 +117,7 @@ public class SkeletonModification2DTwoBoneIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return NodePath(from: __resPtr.pointee)
+            return NodePath(godot: __resPtr.pointee)
     }
     public func set_target_minimum_distance(minimum_distance: Float64)  {
         withUnsafePointer(to: minimum_distance) { minimum_distance_native in
@@ -145,7 +150,7 @@ public class SkeletonModification2DTwoBoneIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_target_maximum_distance(maximum_distance: Float64)  {
         withUnsafePointer(to: maximum_distance) { maximum_distance_native in
@@ -178,7 +183,7 @@ public class SkeletonModification2DTwoBoneIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_flip_bend_direction(flip_direction: UInt8)  {
         withUnsafePointer(to: flip_direction) { flip_direction_native in
@@ -211,7 +216,7 @@ public class SkeletonModification2DTwoBoneIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_joint_one_bone2d_node(bone2d_node: NodePath)  {
         let bone2d_node_native = bone2d_node._native_ptr()
@@ -242,7 +247,7 @@ public class SkeletonModification2DTwoBoneIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return NodePath(from: __resPtr.pointee)
+            return NodePath(godot: __resPtr.pointee)
     }
     public func set_joint_one_bone_idx(bone_idx: Int64)  {
         withUnsafePointer(to: bone_idx) { bone_idx_native in
@@ -275,7 +280,7 @@ public class SkeletonModification2DTwoBoneIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_joint_two_bone2d_node(bone2d_node: NodePath)  {
         let bone2d_node_native = bone2d_node._native_ptr()
@@ -306,7 +311,7 @@ public class SkeletonModification2DTwoBoneIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return NodePath(from: __resPtr.pointee)
+            return NodePath(godot: __resPtr.pointee)
     }
     public func set_joint_two_bone_idx(bone_idx: Int64)  {
         withUnsafePointer(to: bone_idx) { bone_idx_native in
@@ -339,6 +344,6 @@ public class SkeletonModification2DTwoBoneIK : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
 }

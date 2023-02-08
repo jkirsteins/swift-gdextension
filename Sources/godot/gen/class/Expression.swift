@@ -85,7 +85,7 @@ fileprivate var __godot_name_Expression: StringName! = nil
 /// [/csharp]
 ///  
 /// [/codeblocks]
-public class Expression : RefCounted {
+open class Expression : RefCounted {
 
     
 
@@ -96,26 +96,31 @@ public class Expression : RefCounted {
     static var _method_has_execute_failed_36873697: GDExtensionMethodBindPtr! = nil
     static var _method_get_error_text_201670096: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_Expression = StringName(from: "Expression")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_parse_3658149758_name = StringName(from: "parse")
-        self._method_parse_3658149758 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_parse_3658149758_name._native_ptr(), 3658149758)
+        self._method_parse_3658149758 = self.interface.pointee.classdb_get_method_bind(__godot_name_Expression._native_ptr(), _method_parse_3658149758_name._native_ptr(), 3658149758)
         assert(Expression._method_parse_3658149758 != nil)
         let _method_execute_3712471238_name = StringName(from: "execute")
-        self._method_execute_3712471238 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_execute_3712471238_name._native_ptr(), 3712471238)
+        self._method_execute_3712471238 = self.interface.pointee.classdb_get_method_bind(__godot_name_Expression._native_ptr(), _method_execute_3712471238_name._native_ptr(), 3712471238)
         assert(Expression._method_execute_3712471238 != nil)
         let _method_has_execute_failed_36873697_name = StringName(from: "has_execute_failed")
-        self._method_has_execute_failed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_execute_failed_36873697_name._native_ptr(), 36873697)
+        self._method_has_execute_failed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Expression._native_ptr(), _method_has_execute_failed_36873697_name._native_ptr(), 36873697)
         assert(Expression._method_has_execute_failed_36873697 != nil)
         let _method_get_error_text_201670096_name = StringName(from: "get_error_text")
-        self._method_get_error_text_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_error_text_201670096_name._native_ptr(), 201670096)
+        self._method_get_error_text_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_Expression._native_ptr(), _method_get_error_text_201670096_name._native_ptr(), 201670096)
         assert(Expression._method_get_error_text_201670096 != nil)
     }
 
-    public func parse(expression: String, input_names: PackedStringArray) -> Error {
-        withUnsafePointer(to: expression) { expression_native in
+    public func parse(expression: godot.String, input_names: PackedStringArray) -> Error {
         let input_names_native = input_names._native_ptr()
+        let expression_native = expression._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -129,8 +134,7 @@ public class Expression : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
+            return Error(godot: __resPtr.pointee)
     }
     public func execute(inputs: Array, base_instance: Object, show_error: UInt8, const_calls_only: UInt8) -> Variant {
         withUnsafePointer(to: const_calls_only) { const_calls_only_native in
@@ -150,7 +154,7 @@ public class Expression : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
         }
         }
     }
@@ -169,9 +173,9 @@ public class Expression : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func get_error_text() -> String {
+    public func get_error_text() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -179,13 +183,12 @@ public class Expression : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_error_text_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
 }

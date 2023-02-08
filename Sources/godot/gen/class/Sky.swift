@@ -5,7 +5,7 @@ fileprivate var __godot_name_Sky: StringName! = nil
 /// Background that uses a [Material] to draw a sky.
 /// 
 /// The [Sky] class uses a [Material] to draw the background and update the reflection/radiance cubemaps.
-public class Sky : Resource {
+open class Sky : Resource {
 
     public enum RadianceSize : Int32 {
         case RADIANCE_SIZE_32 = 0
@@ -33,26 +33,31 @@ public class Sky : Resource {
     static var _method_set_material_2757459619: GDExtensionMethodBindPtr! = nil
     static var _method_get_material_5934680: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_Sky = StringName(from: "Sky")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_radiance_size_1512957179_name = StringName(from: "set_radiance_size")
-        self._method_set_radiance_size_1512957179 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_radiance_size_1512957179_name._native_ptr(), 1512957179)
+        self._method_set_radiance_size_1512957179 = self.interface.pointee.classdb_get_method_bind(__godot_name_Sky._native_ptr(), _method_set_radiance_size_1512957179_name._native_ptr(), 1512957179)
         assert(Sky._method_set_radiance_size_1512957179 != nil)
         let _method_get_radiance_size_2708733976_name = StringName(from: "get_radiance_size")
-        self._method_get_radiance_size_2708733976 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_radiance_size_2708733976_name._native_ptr(), 2708733976)
+        self._method_get_radiance_size_2708733976 = self.interface.pointee.classdb_get_method_bind(__godot_name_Sky._native_ptr(), _method_get_radiance_size_2708733976_name._native_ptr(), 2708733976)
         assert(Sky._method_get_radiance_size_2708733976 != nil)
         let _method_set_process_mode_875986769_name = StringName(from: "set_process_mode")
-        self._method_set_process_mode_875986769 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_process_mode_875986769_name._native_ptr(), 875986769)
+        self._method_set_process_mode_875986769 = self.interface.pointee.classdb_get_method_bind(__godot_name_Sky._native_ptr(), _method_set_process_mode_875986769_name._native_ptr(), 875986769)
         assert(Sky._method_set_process_mode_875986769 != nil)
         let _method_get_process_mode_731245043_name = StringName(from: "get_process_mode")
-        self._method_get_process_mode_731245043 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_process_mode_731245043_name._native_ptr(), 731245043)
+        self._method_get_process_mode_731245043 = self.interface.pointee.classdb_get_method_bind(__godot_name_Sky._native_ptr(), _method_get_process_mode_731245043_name._native_ptr(), 731245043)
         assert(Sky._method_get_process_mode_731245043 != nil)
         let _method_set_material_2757459619_name = StringName(from: "set_material")
-        self._method_set_material_2757459619 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_material_2757459619_name._native_ptr(), 2757459619)
+        self._method_set_material_2757459619 = self.interface.pointee.classdb_get_method_bind(__godot_name_Sky._native_ptr(), _method_set_material_2757459619_name._native_ptr(), 2757459619)
         assert(Sky._method_set_material_2757459619 != nil)
         let _method_get_material_5934680_name = StringName(from: "get_material")
-        self._method_get_material_5934680 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_material_5934680_name._native_ptr(), 5934680)
+        self._method_get_material_5934680 = self.interface.pointee.classdb_get_method_bind(__godot_name_Sky._native_ptr(), _method_get_material_5934680_name._native_ptr(), 5934680)
         assert(Sky._method_get_material_5934680 != nil)
     }
 
@@ -86,7 +91,7 @@ public class Sky : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Sky.RadianceSize(from: __resPtr.pointee)
+            return Sky.RadianceSize(godot: __resPtr.pointee)
     }
     public func set_process_mode(mode: Sky.ProcessMode)  {
         withUnsafePointer(to: mode.rawValue) { mode_native in
@@ -118,7 +123,7 @@ public class Sky : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Sky.ProcessMode(from: __resPtr.pointee)
+            return Sky.ProcessMode(godot: __resPtr.pointee)
     }
     public func set_material(material: Material)  {
         let material_native = material._native_ptr()
@@ -149,6 +154,6 @@ public class Sky : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Material(from: __resPtr.pointee)
+            return Material(godot: __resPtr.pointee)
     }
 }

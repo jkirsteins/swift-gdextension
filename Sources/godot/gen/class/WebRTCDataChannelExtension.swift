@@ -5,7 +5,7 @@ fileprivate var __godot_name_WebRTCDataChannelExtension: StringName! = nil
 /// MISSING
 /// 
 /// MISSING
-public class WebRTCDataChannelExtension : WebRTCDataChannel {
+open class WebRTCDataChannelExtension : WebRTCDataChannel {
 
     
 
@@ -30,8 +30,13 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
     static var _method__is_negotiated_0: GDExtensionMethodBindPtr! = nil
     static var _method__get_buffered_amount_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_WebRTCDataChannelExtension = StringName(from: "WebRTCDataChannelExtension")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
@@ -52,7 +57,7 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
     }
@@ -72,7 +77,7 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
     }
@@ -91,7 +96,7 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_max_packet_size() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -108,7 +113,7 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _poll() -> Error {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -124,7 +129,7 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func _close()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -170,7 +175,7 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
                     args.baseAddress!,
                     __resPtr
                 )
-            return WebRTCDataChannel.WriteMode(from: __resPtr.pointee)
+            return WebRTCDataChannel.WriteMode(godot: __resPtr.pointee)
     }
     public func _was_string_packet() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -187,7 +192,7 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_ready_state() -> WebRTCDataChannel.ChannelState {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -203,9 +208,9 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
                     args.baseAddress!,
                     __resPtr
                 )
-            return WebRTCDataChannel.ChannelState(from: __resPtr.pointee)
+            return WebRTCDataChannel.ChannelState(godot: __resPtr.pointee)
     }
-    public func _get_label() -> String {
+    public func _get_label() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -213,14 +218,13 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_label_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func _is_ordered() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -237,7 +241,7 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_id() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -254,7 +258,7 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_max_packet_life_time() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -271,7 +275,7 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_max_retransmits() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -288,9 +292,9 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
-    public func _get_protocol() -> String {
+    public func _get_protocol() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -298,14 +302,13 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_protocol_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func _is_negotiated() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -322,7 +325,7 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_buffered_amount() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -339,6 +342,6 @@ public class WebRTCDataChannelExtension : WebRTCDataChannel {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
 }

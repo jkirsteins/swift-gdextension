@@ -5,7 +5,7 @@ fileprivate var __godot_name_CapsuleMesh: StringName! = nil
 /// Class representing a capsule-shaped [PrimitiveMesh].
 /// 
 /// Class representing a capsule-shaped [PrimitiveMesh].
-public class CapsuleMesh : PrimitiveMesh {
+open class CapsuleMesh : PrimitiveMesh {
 
     
 
@@ -20,32 +20,37 @@ public class CapsuleMesh : PrimitiveMesh {
     static var _method_set_rings_1286410249: GDExtensionMethodBindPtr! = nil
     static var _method_get_rings_3905245786: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_CapsuleMesh = StringName(from: "CapsuleMesh")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_radius_373806689_name = StringName(from: "set_radius")
-        self._method_set_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_radius_373806689_name._native_ptr(), 373806689)
+        self._method_set_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CapsuleMesh._native_ptr(), _method_set_radius_373806689_name._native_ptr(), 373806689)
         assert(CapsuleMesh._method_set_radius_373806689 != nil)
         let _method_get_radius_1740695150_name = StringName(from: "get_radius")
-        self._method_get_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_radius_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CapsuleMesh._native_ptr(), _method_get_radius_1740695150_name._native_ptr(), 1740695150)
         assert(CapsuleMesh._method_get_radius_1740695150 != nil)
         let _method_set_height_373806689_name = StringName(from: "set_height")
-        self._method_set_height_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_height_373806689_name._native_ptr(), 373806689)
+        self._method_set_height_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CapsuleMesh._native_ptr(), _method_set_height_373806689_name._native_ptr(), 373806689)
         assert(CapsuleMesh._method_set_height_373806689 != nil)
         let _method_get_height_1740695150_name = StringName(from: "get_height")
-        self._method_get_height_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_height_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_height_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CapsuleMesh._native_ptr(), _method_get_height_1740695150_name._native_ptr(), 1740695150)
         assert(CapsuleMesh._method_get_height_1740695150 != nil)
         let _method_set_radial_segments_1286410249_name = StringName(from: "set_radial_segments")
-        self._method_set_radial_segments_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_radial_segments_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_radial_segments_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CapsuleMesh._native_ptr(), _method_set_radial_segments_1286410249_name._native_ptr(), 1286410249)
         assert(CapsuleMesh._method_set_radial_segments_1286410249 != nil)
         let _method_get_radial_segments_3905245786_name = StringName(from: "get_radial_segments")
-        self._method_get_radial_segments_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_radial_segments_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_radial_segments_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CapsuleMesh._native_ptr(), _method_get_radial_segments_3905245786_name._native_ptr(), 3905245786)
         assert(CapsuleMesh._method_get_radial_segments_3905245786 != nil)
         let _method_set_rings_1286410249_name = StringName(from: "set_rings")
-        self._method_set_rings_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_rings_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_rings_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CapsuleMesh._native_ptr(), _method_set_rings_1286410249_name._native_ptr(), 1286410249)
         assert(CapsuleMesh._method_set_rings_1286410249 != nil)
         let _method_get_rings_3905245786_name = StringName(from: "get_rings")
-        self._method_get_rings_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_rings_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_rings_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CapsuleMesh._native_ptr(), _method_get_rings_3905245786_name._native_ptr(), 3905245786)
         assert(CapsuleMesh._method_get_rings_3905245786 != nil)
     }
 
@@ -80,7 +85,7 @@ public class CapsuleMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_height(height: Float64)  {
         withUnsafePointer(to: height) { height_native in
@@ -113,7 +118,7 @@ public class CapsuleMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_radial_segments(segments: Int64)  {
         withUnsafePointer(to: segments) { segments_native in
@@ -146,7 +151,7 @@ public class CapsuleMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_rings(rings: Int64)  {
         withUnsafePointer(to: rings) { rings_native in
@@ -179,6 +184,6 @@ public class CapsuleMesh : PrimitiveMesh {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
 }

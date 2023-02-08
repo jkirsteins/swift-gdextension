@@ -11,7 +11,7 @@ fileprivate var __godot_name_TileSetSource: StringName! = nil
 /// Depending on the TileSet source type, those IDs might have restrictions on their values, this is why the base [TileSetSource] class only exposes getters for them.
 ///  
 /// You can iterate over all tiles exposed by a TileSetSource by first iterating over coordinates IDs using [method get_tiles_count] and [method get_tile_id], then over alternative IDs using [method get_alternative_tiles_count] and [method get_alternative_tile_id].
-public class TileSetSource : Resource {
+open class TileSetSource : Resource {
 
     
 
@@ -24,26 +24,31 @@ public class TileSetSource : Resource {
     static var _method_get_alternative_tile_id_89881719: GDExtensionMethodBindPtr! = nil
     static var _method_has_alternative_tile_1073731340: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_TileSetSource = StringName(from: "TileSetSource")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_get_tiles_count_3905245786_name = StringName(from: "get_tiles_count")
-        self._method_get_tiles_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_tiles_count_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_tiles_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetSource._native_ptr(), _method_get_tiles_count_3905245786_name._native_ptr(), 3905245786)
         assert(TileSetSource._method_get_tiles_count_3905245786 != nil)
         let _method_get_tile_id_880721226_name = StringName(from: "get_tile_id")
-        self._method_get_tile_id_880721226 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_tile_id_880721226_name._native_ptr(), 880721226)
+        self._method_get_tile_id_880721226 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetSource._native_ptr(), _method_get_tile_id_880721226_name._native_ptr(), 880721226)
         assert(TileSetSource._method_get_tile_id_880721226 != nil)
         let _method_has_tile_3900751641_name = StringName(from: "has_tile")
-        self._method_has_tile_3900751641 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_tile_3900751641_name._native_ptr(), 3900751641)
+        self._method_has_tile_3900751641 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetSource._native_ptr(), _method_has_tile_3900751641_name._native_ptr(), 3900751641)
         assert(TileSetSource._method_has_tile_3900751641 != nil)
         let _method_get_alternative_tiles_count_2485466453_name = StringName(from: "get_alternative_tiles_count")
-        self._method_get_alternative_tiles_count_2485466453 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_alternative_tiles_count_2485466453_name._native_ptr(), 2485466453)
+        self._method_get_alternative_tiles_count_2485466453 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetSource._native_ptr(), _method_get_alternative_tiles_count_2485466453_name._native_ptr(), 2485466453)
         assert(TileSetSource._method_get_alternative_tiles_count_2485466453 != nil)
         let _method_get_alternative_tile_id_89881719_name = StringName(from: "get_alternative_tile_id")
-        self._method_get_alternative_tile_id_89881719 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_alternative_tile_id_89881719_name._native_ptr(), 89881719)
+        self._method_get_alternative_tile_id_89881719 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetSource._native_ptr(), _method_get_alternative_tile_id_89881719_name._native_ptr(), 89881719)
         assert(TileSetSource._method_get_alternative_tile_id_89881719 != nil)
         let _method_has_alternative_tile_1073731340_name = StringName(from: "has_alternative_tile")
-        self._method_has_alternative_tile_1073731340 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_alternative_tile_1073731340_name._native_ptr(), 1073731340)
+        self._method_has_alternative_tile_1073731340 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetSource._native_ptr(), _method_has_alternative_tile_1073731340_name._native_ptr(), 1073731340)
         assert(TileSetSource._method_has_alternative_tile_1073731340 != nil)
     }
 
@@ -62,7 +67,7 @@ public class TileSetSource : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_tile_id(index: Int64) -> Vector2i {
         withUnsafePointer(to: index) { index_native in
@@ -79,7 +84,7 @@ public class TileSetSource : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2i(from: __resPtr.pointee)
+            return Vector2i(godot: __resPtr.pointee)
         }
     }
     public func has_tile(atlas_coords: Vector2i) -> UInt8 {
@@ -98,7 +103,7 @@ public class TileSetSource : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func get_alternative_tiles_count(atlas_coords: Vector2i) -> Int64 {
         let atlas_coords_native = atlas_coords._native_ptr()
@@ -116,7 +121,7 @@ public class TileSetSource : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_alternative_tile_id(atlas_coords: Vector2i, index: Int64) -> Int64 {
         withUnsafePointer(to: index) { index_native in
@@ -135,7 +140,7 @@ public class TileSetSource : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func has_alternative_tile(atlas_coords: Vector2i, alternative_tile: Int64) -> UInt8 {
@@ -155,7 +160,7 @@ public class TileSetSource : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
 }

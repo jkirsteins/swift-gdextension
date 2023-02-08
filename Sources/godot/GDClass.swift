@@ -7,14 +7,19 @@
 
 import godot_native
 
-public protocol GDClass {
-    static var className: Swift.String { get }
-    static var parentName: Swift.String { get }
+public protocol GDClass: Class {
+//    static var __godot_name: StringName { get }
     
-    static var gClassName: StringName { get }
-    static var gParentName: StringName { get }
-    
-    static func createInstance() -> Self
+    static var __godot_name: StringName { get }
+
+    static func setup_class()
+}
+
+public extension GDClass {
+    static func initialize_gd_class() {
+//        Self.initialize_class()
+//        self.setup_class()
+    }
 }
 
 public protocol BuiltinClass : Class {
@@ -28,21 +33,17 @@ public protocol Class {
     
     func _native_ptr() -> GDExtensionTypePtr
     
-    static func initialize_class()
+    static func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel)
     
-    init(from: UnsafeRawPointer)
+    init(godot: UnsafeRawPointer)
+    
+    static var interface: UnsafePointer<GDExtensionInterface>! { get }
+    static var library: GDExtensionClassLibraryPtr! { get }
 }
 
 extension Class {
-    var interface: UnsafeMutablePointer<GDExtensionInterface> {
+    var interface: UnsafePointer<GDExtensionInterface> {
         Self.interface
-    }
-    
-    static var interface: UnsafeMutablePointer<GDExtensionInterface> {
-        guard let i = gde_interface else {
-            fatalError("Interface unavailable")
-        }
-        return i
     }
     
     public func _native_ptr() -> GDExtensionTypePtr {
@@ -51,14 +52,5 @@ extension Class {
 }
 
 extension GDClass {
-    var interface: UnsafeMutablePointer<GDExtensionInterface> {
-        Self.interface
-    }
     
-    static var interface: UnsafeMutablePointer<GDExtensionInterface> {
-        guard let i = gde_interface else {
-            fatalError("Interface unavailable")
-        }
-        return i
-    }
 }

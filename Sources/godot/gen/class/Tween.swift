@@ -176,7 +176,7 @@ fileprivate var __godot_name_Tween: StringName! = nil
 /// [b]Note:[/b] All [Tween]s will automatically start by default. To prevent a [Tween] from autostarting, you can call [method stop] immediately after it is created.
 ///  
 /// [b]Note:[/b] [Tween]s are processing after all of nodes in the current frame, i.e. after [method Node._process] or [method Node._physics_process] (depending on [enum TweenProcessMode]).
-public class Tween : RefCounted {
+open class Tween : RefCounted {
 
     public enum TweenProcessMode : Int32 {
         case TWEEN_PROCESS_PHYSICS = 0
@@ -233,77 +233,82 @@ public class Tween : RefCounted {
     static var _method_chain_3426978995: GDExtensionMethodBindPtr! = nil
     static var _method_interpolate_value_3452526450: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_Tween = StringName(from: "Tween")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_tween_property_4049770449_name = StringName(from: "tween_property")
-        self._method_tween_property_4049770449 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_tween_property_4049770449_name._native_ptr(), 4049770449)
+        self._method_tween_property_4049770449 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_tween_property_4049770449_name._native_ptr(), 4049770449)
         assert(Tween._method_tween_property_4049770449 != nil)
         let _method_tween_interval_413360199_name = StringName(from: "tween_interval")
-        self._method_tween_interval_413360199 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_tween_interval_413360199_name._native_ptr(), 413360199)
+        self._method_tween_interval_413360199 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_tween_interval_413360199_name._native_ptr(), 413360199)
         assert(Tween._method_tween_interval_413360199 != nil)
         let _method_tween_callback_1540176488_name = StringName(from: "tween_callback")
-        self._method_tween_callback_1540176488 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_tween_callback_1540176488_name._native_ptr(), 1540176488)
+        self._method_tween_callback_1540176488 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_tween_callback_1540176488_name._native_ptr(), 1540176488)
         assert(Tween._method_tween_callback_1540176488 != nil)
         let _method_tween_method_2337877153_name = StringName(from: "tween_method")
-        self._method_tween_method_2337877153 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_tween_method_2337877153_name._native_ptr(), 2337877153)
+        self._method_tween_method_2337877153 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_tween_method_2337877153_name._native_ptr(), 2337877153)
         assert(Tween._method_tween_method_2337877153 != nil)
         let _method_custom_step_330693286_name = StringName(from: "custom_step")
-        self._method_custom_step_330693286 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_custom_step_330693286_name._native_ptr(), 330693286)
+        self._method_custom_step_330693286 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_custom_step_330693286_name._native_ptr(), 330693286)
         assert(Tween._method_custom_step_330693286 != nil)
         let _method_stop_3218959716_name = StringName(from: "stop")
-        self._method_stop_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_stop_3218959716_name._native_ptr(), 3218959716)
+        self._method_stop_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_stop_3218959716_name._native_ptr(), 3218959716)
         assert(Tween._method_stop_3218959716 != nil)
         let _method_pause_3218959716_name = StringName(from: "pause")
-        self._method_pause_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_pause_3218959716_name._native_ptr(), 3218959716)
+        self._method_pause_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_pause_3218959716_name._native_ptr(), 3218959716)
         assert(Tween._method_pause_3218959716 != nil)
         let _method_play_3218959716_name = StringName(from: "play")
-        self._method_play_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_play_3218959716_name._native_ptr(), 3218959716)
+        self._method_play_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_play_3218959716_name._native_ptr(), 3218959716)
         assert(Tween._method_play_3218959716 != nil)
         let _method_kill_3218959716_name = StringName(from: "kill")
-        self._method_kill_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_kill_3218959716_name._native_ptr(), 3218959716)
+        self._method_kill_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_kill_3218959716_name._native_ptr(), 3218959716)
         assert(Tween._method_kill_3218959716 != nil)
         let _method_get_total_elapsed_time_1740695150_name = StringName(from: "get_total_elapsed_time")
-        self._method_get_total_elapsed_time_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_total_elapsed_time_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_total_elapsed_time_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_get_total_elapsed_time_1740695150_name._native_ptr(), 1740695150)
         assert(Tween._method_get_total_elapsed_time_1740695150 != nil)
         let _method_is_running_2240911060_name = StringName(from: "is_running")
-        self._method_is_running_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_running_2240911060_name._native_ptr(), 2240911060)
+        self._method_is_running_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_is_running_2240911060_name._native_ptr(), 2240911060)
         assert(Tween._method_is_running_2240911060 != nil)
         let _method_is_valid_2240911060_name = StringName(from: "is_valid")
-        self._method_is_valid_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_valid_2240911060_name._native_ptr(), 2240911060)
+        self._method_is_valid_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_is_valid_2240911060_name._native_ptr(), 2240911060)
         assert(Tween._method_is_valid_2240911060 != nil)
         let _method_bind_node_2946786331_name = StringName(from: "bind_node")
-        self._method_bind_node_2946786331 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_bind_node_2946786331_name._native_ptr(), 2946786331)
+        self._method_bind_node_2946786331 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_bind_node_2946786331_name._native_ptr(), 2946786331)
         assert(Tween._method_bind_node_2946786331 != nil)
         let _method_set_process_mode_855258840_name = StringName(from: "set_process_mode")
-        self._method_set_process_mode_855258840 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_process_mode_855258840_name._native_ptr(), 855258840)
+        self._method_set_process_mode_855258840 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_set_process_mode_855258840_name._native_ptr(), 855258840)
         assert(Tween._method_set_process_mode_855258840 != nil)
         let _method_set_pause_mode_3363368837_name = StringName(from: "set_pause_mode")
-        self._method_set_pause_mode_3363368837 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_pause_mode_3363368837_name._native_ptr(), 3363368837)
+        self._method_set_pause_mode_3363368837 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_set_pause_mode_3363368837_name._native_ptr(), 3363368837)
         assert(Tween._method_set_pause_mode_3363368837 != nil)
         let _method_set_parallel_1942052223_name = StringName(from: "set_parallel")
-        self._method_set_parallel_1942052223 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_parallel_1942052223_name._native_ptr(), 1942052223)
+        self._method_set_parallel_1942052223 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_set_parallel_1942052223_name._native_ptr(), 1942052223)
         assert(Tween._method_set_parallel_1942052223 != nil)
         let _method_set_loops_2670836414_name = StringName(from: "set_loops")
-        self._method_set_loops_2670836414 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_loops_2670836414_name._native_ptr(), 2670836414)
+        self._method_set_loops_2670836414 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_set_loops_2670836414_name._native_ptr(), 2670836414)
         assert(Tween._method_set_loops_2670836414 != nil)
         let _method_set_speed_scale_3961971106_name = StringName(from: "set_speed_scale")
-        self._method_set_speed_scale_3961971106 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_speed_scale_3961971106_name._native_ptr(), 3961971106)
+        self._method_set_speed_scale_3961971106 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_set_speed_scale_3961971106_name._native_ptr(), 3961971106)
         assert(Tween._method_set_speed_scale_3961971106 != nil)
         let _method_set_trans_3965963875_name = StringName(from: "set_trans")
-        self._method_set_trans_3965963875 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_trans_3965963875_name._native_ptr(), 3965963875)
+        self._method_set_trans_3965963875 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_set_trans_3965963875_name._native_ptr(), 3965963875)
         assert(Tween._method_set_trans_3965963875 != nil)
         let _method_set_ease_1208117252_name = StringName(from: "set_ease")
-        self._method_set_ease_1208117252 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ease_1208117252_name._native_ptr(), 1208117252)
+        self._method_set_ease_1208117252 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_set_ease_1208117252_name._native_ptr(), 1208117252)
         assert(Tween._method_set_ease_1208117252 != nil)
         let _method_parallel_3426978995_name = StringName(from: "parallel")
-        self._method_parallel_3426978995 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_parallel_3426978995_name._native_ptr(), 3426978995)
+        self._method_parallel_3426978995 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_parallel_3426978995_name._native_ptr(), 3426978995)
         assert(Tween._method_parallel_3426978995 != nil)
         let _method_chain_3426978995_name = StringName(from: "chain")
-        self._method_chain_3426978995 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_chain_3426978995_name._native_ptr(), 3426978995)
+        self._method_chain_3426978995 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_chain_3426978995_name._native_ptr(), 3426978995)
         assert(Tween._method_chain_3426978995 != nil)
         let _method_interpolate_value_3452526450_name = StringName(from: "interpolate_value")
-        self._method_interpolate_value_3452526450 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_interpolate_value_3452526450_name._native_ptr(), 3452526450)
+        self._method_interpolate_value_3452526450 = self.interface.pointee.classdb_get_method_bind(__godot_name_Tween._native_ptr(), _method_interpolate_value_3452526450_name._native_ptr(), 3452526450)
         assert(Tween._method_interpolate_value_3452526450 != nil)
     }
 
@@ -325,7 +330,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PropertyTweener(from: __resPtr.pointee)
+            return PropertyTweener(godot: __resPtr.pointee)
         }
     }
     public func tween_interval(time: Float64) -> IntervalTweener {
@@ -343,7 +348,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return IntervalTweener(from: __resPtr.pointee)
+            return IntervalTweener(godot: __resPtr.pointee)
         }
     }
     public func tween_callback(callback: Callable) -> CallbackTweener {
@@ -361,7 +366,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return CallbackTweener(from: __resPtr.pointee)
+            return CallbackTweener(godot: __resPtr.pointee)
     }
     public func tween_method(method: Callable, from: Variant, to: Variant, duration: Float64) -> MethodTweener {
         withUnsafePointer(to: duration) { duration_native in
@@ -381,7 +386,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return MethodTweener(from: __resPtr.pointee)
+            return MethodTweener(godot: __resPtr.pointee)
         }
     }
     public func custom_step(delta: Float64) -> UInt8 {
@@ -400,7 +405,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func stop()  {
@@ -474,7 +479,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func is_running() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -491,7 +496,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func is_valid() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -508,7 +513,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func bind_node(node: Node) -> Tween {
         let node_native = node._native_ptr()
@@ -525,7 +530,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Tween(from: __resPtr.pointee)
+            return Tween(godot: __resPtr.pointee)
     }
     public func set_process_mode(mode: Tween.TweenProcessMode) -> Tween {
         withUnsafePointer(to: mode.rawValue) { mode_native in
@@ -542,7 +547,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Tween(from: __resPtr.pointee)
+            return Tween(godot: __resPtr.pointee)
         }
     }
     public func set_pause_mode(mode: Tween.TweenPauseMode) -> Tween {
@@ -560,7 +565,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Tween(from: __resPtr.pointee)
+            return Tween(godot: __resPtr.pointee)
         }
     }
     public func set_parallel(parallel: UInt8) -> Tween {
@@ -578,7 +583,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Tween(from: __resPtr.pointee)
+            return Tween(godot: __resPtr.pointee)
         }
     }
     public func set_loops(loops: Int64) -> Tween {
@@ -596,7 +601,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Tween(from: __resPtr.pointee)
+            return Tween(godot: __resPtr.pointee)
         }
     }
     public func set_speed_scale(speed: Float64) -> Tween {
@@ -614,7 +619,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Tween(from: __resPtr.pointee)
+            return Tween(godot: __resPtr.pointee)
         }
     }
     public func set_trans(trans: Tween.TransitionType) -> Tween {
@@ -632,7 +637,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Tween(from: __resPtr.pointee)
+            return Tween(godot: __resPtr.pointee)
         }
     }
     public func set_ease(ease: Tween.EaseType) -> Tween {
@@ -650,7 +655,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Tween(from: __resPtr.pointee)
+            return Tween(godot: __resPtr.pointee)
         }
     }
     public func parallel() -> Tween {
@@ -667,7 +672,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Tween(from: __resPtr.pointee)
+            return Tween(godot: __resPtr.pointee)
     }
     public func chain() -> Tween {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -683,7 +688,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Tween(from: __resPtr.pointee)
+            return Tween(godot: __resPtr.pointee)
     }
     public func interpolate_value(initial_value: Variant, delta_value: Variant, elapsed_time: Float64, duration: Float64, trans_type: Tween.TransitionType, ease_type: Tween.EaseType) -> Variant {
         withUnsafePointer(to: duration) { duration_native in
@@ -705,7 +710,7 @@ public class Tween : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
         }
         }
         }

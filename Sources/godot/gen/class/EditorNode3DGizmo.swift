@@ -5,7 +5,7 @@ fileprivate var __godot_name_EditorNode3DGizmo: StringName! = nil
 /// Gizmo for editing Node3D objects.
 /// 
 /// Gizmo that is used for providing custom visualization and editing (handles and subgizmos) for Node3D objects. Can be overridden to create custom gizmos, but for simple gizmos creating a [EditorNode3DGizmoPlugin] is usually recommended.
-public class EditorNode3DGizmo : Node3DGizmo {
+open class EditorNode3DGizmo : Node3DGizmo {
 
     
 
@@ -36,47 +36,52 @@ public class EditorNode3DGizmo : Node3DGizmo {
     static var _method_is_subgizmo_selected_1116898809: GDExtensionMethodBindPtr! = nil
     static var _method_get_subgizmo_selection_1930428628: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorNode3DGizmo = StringName(from: "EditorNode3DGizmo")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_add_lines_302451090_name = StringName(from: "add_lines")
-        self._method_add_lines_302451090 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_lines_302451090_name._native_ptr(), 302451090)
+        self._method_add_lines_302451090 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmo._native_ptr(), _method_add_lines_302451090_name._native_ptr(), 302451090)
         assert(EditorNode3DGizmo._method_add_lines_302451090 != nil)
         let _method_add_mesh_1868867708_name = StringName(from: "add_mesh")
-        self._method_add_mesh_1868867708 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_mesh_1868867708_name._native_ptr(), 1868867708)
+        self._method_add_mesh_1868867708 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmo._native_ptr(), _method_add_mesh_1868867708_name._native_ptr(), 1868867708)
         assert(EditorNode3DGizmo._method_add_mesh_1868867708 != nil)
         let _method_add_collision_segments_334873810_name = StringName(from: "add_collision_segments")
-        self._method_add_collision_segments_334873810 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_collision_segments_334873810_name._native_ptr(), 334873810)
+        self._method_add_collision_segments_334873810 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmo._native_ptr(), _method_add_collision_segments_334873810_name._native_ptr(), 334873810)
         assert(EditorNode3DGizmo._method_add_collision_segments_334873810 != nil)
         let _method_add_collision_triangles_54901064_name = StringName(from: "add_collision_triangles")
-        self._method_add_collision_triangles_54901064 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_collision_triangles_54901064_name._native_ptr(), 54901064)
+        self._method_add_collision_triangles_54901064 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmo._native_ptr(), _method_add_collision_triangles_54901064_name._native_ptr(), 54901064)
         assert(EditorNode3DGizmo._method_add_collision_triangles_54901064 != nil)
         let _method_add_unscaled_billboard_3719733075_name = StringName(from: "add_unscaled_billboard")
-        self._method_add_unscaled_billboard_3719733075 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_unscaled_billboard_3719733075_name._native_ptr(), 3719733075)
+        self._method_add_unscaled_billboard_3719733075 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmo._native_ptr(), _method_add_unscaled_billboard_3719733075_name._native_ptr(), 3719733075)
         assert(EditorNode3DGizmo._method_add_unscaled_billboard_3719733075 != nil)
         let _method_add_handles_2254560097_name = StringName(from: "add_handles")
-        self._method_add_handles_2254560097 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_handles_2254560097_name._native_ptr(), 2254560097)
+        self._method_add_handles_2254560097 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmo._native_ptr(), _method_add_handles_2254560097_name._native_ptr(), 2254560097)
         assert(EditorNode3DGizmo._method_add_handles_2254560097 != nil)
         let _method_set_node_3d_1078189570_name = StringName(from: "set_node_3d")
-        self._method_set_node_3d_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_node_3d_1078189570_name._native_ptr(), 1078189570)
+        self._method_set_node_3d_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmo._native_ptr(), _method_set_node_3d_1078189570_name._native_ptr(), 1078189570)
         assert(EditorNode3DGizmo._method_set_node_3d_1078189570 != nil)
         let _method_get_node_3d_151077316_name = StringName(from: "get_node_3d")
-        self._method_get_node_3d_151077316 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_node_3d_151077316_name._native_ptr(), 151077316)
+        self._method_get_node_3d_151077316 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmo._native_ptr(), _method_get_node_3d_151077316_name._native_ptr(), 151077316)
         assert(EditorNode3DGizmo._method_get_node_3d_151077316 != nil)
         let _method_get_plugin_4250544552_name = StringName(from: "get_plugin")
-        self._method_get_plugin_4250544552 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_plugin_4250544552_name._native_ptr(), 4250544552)
+        self._method_get_plugin_4250544552 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmo._native_ptr(), _method_get_plugin_4250544552_name._native_ptr(), 4250544552)
         assert(EditorNode3DGizmo._method_get_plugin_4250544552 != nil)
         let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
+        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmo._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
         assert(EditorNode3DGizmo._method_clear_3218959716 != nil)
         let _method_set_hidden_2586408642_name = StringName(from: "set_hidden")
-        self._method_set_hidden_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_hidden_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_hidden_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmo._native_ptr(), _method_set_hidden_2586408642_name._native_ptr(), 2586408642)
         assert(EditorNode3DGizmo._method_set_hidden_2586408642 != nil)
         let _method_is_subgizmo_selected_1116898809_name = StringName(from: "is_subgizmo_selected")
-        self._method_is_subgizmo_selected_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_subgizmo_selected_1116898809_name._native_ptr(), 1116898809)
+        self._method_is_subgizmo_selected_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmo._native_ptr(), _method_is_subgizmo_selected_1116898809_name._native_ptr(), 1116898809)
         assert(EditorNode3DGizmo._method_is_subgizmo_selected_1116898809 != nil)
         let _method_get_subgizmo_selection_1930428628_name = StringName(from: "get_subgizmo_selection")
-        self._method_get_subgizmo_selection_1930428628 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_subgizmo_selection_1930428628_name._native_ptr(), 1930428628)
+        self._method_get_subgizmo_selection_1930428628 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmo._native_ptr(), _method_get_subgizmo_selection_1930428628_name._native_ptr(), 1930428628)
         assert(EditorNode3DGizmo._method_get_subgizmo_selection_1930428628 != nil)
     }
 
@@ -94,7 +99,7 @@ public class EditorNode3DGizmo : Node3DGizmo {
                     nil
                 )
     }
-    public func _get_handle_name(id: Int64, secondary: UInt8) -> String {
+    public func _get_handle_name(id: Int64, secondary: UInt8) -> godot.String {
         withUnsafePointer(to: secondary) { secondary_native in
         withUnsafePointer(to: id) { id_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
@@ -104,14 +109,13 @@ public class EditorNode3DGizmo : Node3DGizmo {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_handle_name_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
         }
         }
     }
@@ -132,7 +136,7 @@ public class EditorNode3DGizmo : Node3DGizmo {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
     }
@@ -152,7 +156,7 @@ public class EditorNode3DGizmo : Node3DGizmo {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
         }
         }
     }
@@ -214,7 +218,7 @@ public class EditorNode3DGizmo : Node3DGizmo {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _subgizmos_intersect_frustum(camera: Camera3D, frustum: [Plane]) -> PackedInt32Array {
         let frustum_native = frustum._native_ptr()
@@ -232,7 +236,7 @@ public class EditorNode3DGizmo : Node3DGizmo {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
     }
     public func _set_subgizmo_transform(id: Int64, transform: Transform3D)  {
         withUnsafePointer(to: id) { id_native in
@@ -266,7 +270,7 @@ public class EditorNode3DGizmo : Node3DGizmo {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Transform3D(from: __resPtr.pointee)
+            return Transform3D(godot: __resPtr.pointee)
         }
     }
     public func _commit_subgizmos(ids: PackedInt32Array, restores: [Transform3D], cancel: UInt8)  {
@@ -422,7 +426,7 @@ public class EditorNode3DGizmo : Node3DGizmo {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Node3D(from: __resPtr.pointee)
+            return Node3D(godot: __resPtr.pointee)
     }
     public func get_plugin() -> EditorNode3DGizmoPlugin {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -438,7 +442,7 @@ public class EditorNode3DGizmo : Node3DGizmo {
                     args.baseAddress!,
                     __resPtr
                 )
-            return EditorNode3DGizmoPlugin(from: __resPtr.pointee)
+            return EditorNode3DGizmoPlugin(godot: __resPtr.pointee)
     }
     public func clear()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -486,7 +490,7 @@ public class EditorNode3DGizmo : Node3DGizmo {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func get_subgizmo_selection() -> PackedInt32Array {
@@ -503,6 +507,6 @@ public class EditorNode3DGizmo : Node3DGizmo {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
     }
 }

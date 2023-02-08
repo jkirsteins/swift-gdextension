@@ -5,7 +5,7 @@ fileprivate var __godot_name_ScrollBar: StringName! = nil
 /// Base class for scroll bars.
 /// 
 /// Scrollbars are a [Range]-based [Control], that display a draggable area (the size of the page). Horizontal ([HScrollBar]) and Vertical ([VScrollBar]) versions are available.
-public class ScrollBar : Range {
+open class ScrollBar : Range {
 
     
 
@@ -14,14 +14,19 @@ public class ScrollBar : Range {
     static var _method_set_custom_step_373806689: GDExtensionMethodBindPtr! = nil
     static var _method_get_custom_step_1740695150: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ScrollBar = StringName(from: "ScrollBar")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_custom_step_373806689_name = StringName(from: "set_custom_step")
-        self._method_set_custom_step_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_custom_step_373806689_name._native_ptr(), 373806689)
+        self._method_set_custom_step_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollBar._native_ptr(), _method_set_custom_step_373806689_name._native_ptr(), 373806689)
         assert(ScrollBar._method_set_custom_step_373806689 != nil)
         let _method_get_custom_step_1740695150_name = StringName(from: "get_custom_step")
-        self._method_get_custom_step_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_custom_step_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_custom_step_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollBar._native_ptr(), _method_get_custom_step_1740695150_name._native_ptr(), 1740695150)
         assert(ScrollBar._method_get_custom_step_1740695150 != nil)
     }
 
@@ -56,6 +61,6 @@ public class ScrollBar : Range {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
 }

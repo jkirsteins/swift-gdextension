@@ -9,7 +9,7 @@ fileprivate var __godot_name_PlaceholderTexture3D: StringName! = nil
 /// - When running the project exported in dedicated server mode, only the texture's dimensions are kept (as they may be relied upon for gameplay purposes or positioning of other elements). This allows reducing the exported PCK's size significantly.
 ///  
 /// - When this subclass is missing due to using a different engine version or build (e.g. modules disabled).
-public class PlaceholderTexture3D : Texture3D {
+open class PlaceholderTexture3D : Texture3D {
 
     
 
@@ -18,14 +18,19 @@ public class PlaceholderTexture3D : Texture3D {
     static var _method_set_size_560364750: GDExtensionMethodBindPtr! = nil
     static var _method_get_size_2785653706: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PlaceholderTexture3D = StringName(from: "PlaceholderTexture3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_size_560364750_name = StringName(from: "set_size")
-        self._method_set_size_560364750 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_size_560364750_name._native_ptr(), 560364750)
+        self._method_set_size_560364750 = self.interface.pointee.classdb_get_method_bind(__godot_name_PlaceholderTexture3D._native_ptr(), _method_set_size_560364750_name._native_ptr(), 560364750)
         assert(PlaceholderTexture3D._method_set_size_560364750 != nil)
         let _method_get_size_2785653706_name = StringName(from: "get_size")
-        self._method_get_size_2785653706 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_size_2785653706_name._native_ptr(), 2785653706)
+        self._method_get_size_2785653706 = self.interface.pointee.classdb_get_method_bind(__godot_name_PlaceholderTexture3D._native_ptr(), _method_get_size_2785653706_name._native_ptr(), 2785653706)
         assert(PlaceholderTexture3D._method_get_size_2785653706 != nil)
     }
 
@@ -58,6 +63,6 @@ public class PlaceholderTexture3D : Texture3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3i(from: __resPtr.pointee)
+            return Vector3i(godot: __resPtr.pointee)
     }
 }

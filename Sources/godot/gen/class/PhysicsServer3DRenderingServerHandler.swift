@@ -5,7 +5,7 @@ fileprivate var __godot_name_PhysicsServer3DRenderingServerHandler: StringName! 
 /// 
 /// 
 /// 
-public class PhysicsServer3DRenderingServerHandler : Object {
+open class PhysicsServer3DRenderingServerHandler : Object {
 
     
 
@@ -15,8 +15,13 @@ public class PhysicsServer3DRenderingServerHandler : Object {
     static var _method__set_normal_0: GDExtensionMethodBindPtr! = nil
     static var _method__set_aabb_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PhysicsServer3DRenderingServerHandler = StringName(from: "PhysicsServer3DRenderingServerHandler")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

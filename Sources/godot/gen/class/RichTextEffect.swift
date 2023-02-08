@@ -29,7 +29,7 @@ fileprivate var __godot_name_RichTextEffect: StringName! = nil
 /// [/codeblocks]
 ///  
 /// [b]Note:[/b] As soon as a [RichTextLabel] contains at least one [RichTextEffect], it will continuously process the effect unless the project is paused. This may impact battery life negatively.
-public class RichTextEffect : Resource {
+open class RichTextEffect : Resource {
 
     
 
@@ -37,8 +37,13 @@ public class RichTextEffect : Resource {
 
     static var _method__process_custom_fx_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_RichTextEffect = StringName(from: "RichTextEffect")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
@@ -59,6 +64,6 @@ public class RichTextEffect : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

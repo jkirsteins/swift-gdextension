@@ -5,7 +5,7 @@ fileprivate var __godot_name_EditorResourcePreviewGenerator: StringName! = nil
 /// Custom generator of previews.
 /// 
 /// Custom code to generate previews. Please check [code]file_dialog/thumbnail_size[/code] in [EditorSettings] to find out the right size to do previews at.
-public class EditorResourcePreviewGenerator : RefCounted {
+open class EditorResourcePreviewGenerator : RefCounted {
 
     
 
@@ -17,14 +17,19 @@ public class EditorResourcePreviewGenerator : RefCounted {
     static var _method__generate_small_preview_automatically_0: GDExtensionMethodBindPtr! = nil
     static var _method__can_generate_small_preview_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorResourcePreviewGenerator = StringName(from: "EditorResourcePreviewGenerator")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
 
-    public func _handles(`type`: String) -> UInt8 {
-        withUnsafePointer(to: `type`) { type_native in
+    public func _handles(`type`: godot.String) -> UInt8 {
+        let type_native = `type`._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -39,8 +44,7 @@ public class EditorResourcePreviewGenerator : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _generate(resource: Resource, size: Vector2i) -> Texture2D {
         let size_native = size._native_ptr()
@@ -58,11 +62,11 @@ public class EditorResourcePreviewGenerator : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture2D(from: __resPtr.pointee)
+            return Texture2D(godot: __resPtr.pointee)
     }
-    public func _generate_from_path(path: String, size: Vector2i) -> Texture2D {
-        withUnsafePointer(to: path) { path_native in
+    public func _generate_from_path(path: godot.String, size: Vector2i) -> Texture2D {
         let size_native = size._native_ptr()
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -76,8 +80,7 @@ public class EditorResourcePreviewGenerator : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture2D(from: __resPtr.pointee)
-        }
+            return Texture2D(godot: __resPtr.pointee)
     }
     public func _generate_small_preview_automatically() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -94,7 +97,7 @@ public class EditorResourcePreviewGenerator : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _can_generate_small_preview() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -111,6 +114,6 @@ public class EditorResourcePreviewGenerator : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

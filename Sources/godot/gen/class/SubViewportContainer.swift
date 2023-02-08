@@ -9,7 +9,7 @@ fileprivate var __godot_name_SubViewportContainer: StringName! = nil
 /// [b]Note:[/b] Changing a SubViewportContainer's [member Control.scale] will cause its contents to appear distorted. To change its visual size without causing distortion, adjust the node's margins instead (if it's not already in a container).
 ///  
 /// [b]Note:[/b] The SubViewportContainer forwards mouse-enter and mouse-exit notifications to its sub-viewports.
-public class SubViewportContainer : Container {
+open class SubViewportContainer : Container {
 
     
 
@@ -20,20 +20,25 @@ public class SubViewportContainer : Container {
     static var _method_set_stretch_shrink_1286410249: GDExtensionMethodBindPtr! = nil
     static var _method_get_stretch_shrink_3905245786: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_SubViewportContainer = StringName(from: "SubViewportContainer")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_stretch_2586408642_name = StringName(from: "set_stretch")
-        self._method_set_stretch_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_stretch_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_stretch_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SubViewportContainer._native_ptr(), _method_set_stretch_2586408642_name._native_ptr(), 2586408642)
         assert(SubViewportContainer._method_set_stretch_2586408642 != nil)
         let _method_is_stretch_enabled_36873697_name = StringName(from: "is_stretch_enabled")
-        self._method_is_stretch_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_stretch_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_stretch_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SubViewportContainer._native_ptr(), _method_is_stretch_enabled_36873697_name._native_ptr(), 36873697)
         assert(SubViewportContainer._method_is_stretch_enabled_36873697 != nil)
         let _method_set_stretch_shrink_1286410249_name = StringName(from: "set_stretch_shrink")
-        self._method_set_stretch_shrink_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_stretch_shrink_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_stretch_shrink_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SubViewportContainer._native_ptr(), _method_set_stretch_shrink_1286410249_name._native_ptr(), 1286410249)
         assert(SubViewportContainer._method_set_stretch_shrink_1286410249 != nil)
         let _method_get_stretch_shrink_3905245786_name = StringName(from: "get_stretch_shrink")
-        self._method_get_stretch_shrink_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_stretch_shrink_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_stretch_shrink_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_SubViewportContainer._native_ptr(), _method_get_stretch_shrink_3905245786_name._native_ptr(), 3905245786)
         assert(SubViewportContainer._method_get_stretch_shrink_3905245786 != nil)
     }
 
@@ -68,7 +73,7 @@ public class SubViewportContainer : Container {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_stretch_shrink(amount: Int64)  {
         withUnsafePointer(to: amount) { amount_native in
@@ -101,6 +106,6 @@ public class SubViewportContainer : Container {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
 }

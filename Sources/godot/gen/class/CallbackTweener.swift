@@ -7,7 +7,7 @@ fileprivate var __godot_name_CallbackTweener: StringName! = nil
 /// [CallbackTweener] is used to call a method in a tweening sequence. See [method Tween.tween_callback] for more usage information.
 ///  
 /// [b]Note:[/b] [method Tween.tween_callback] is the only correct way to create [CallbackTweener]. Any [CallbackTweener] created manually will not function correctly.
-public class CallbackTweener : Tweener {
+open class CallbackTweener : Tweener {
 
     
 
@@ -15,11 +15,16 @@ public class CallbackTweener : Tweener {
 
     static var _method_set_delay_3008182292: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_CallbackTweener = StringName(from: "CallbackTweener")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_delay_3008182292_name = StringName(from: "set_delay")
-        self._method_set_delay_3008182292 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_delay_3008182292_name._native_ptr(), 3008182292)
+        self._method_set_delay_3008182292 = self.interface.pointee.classdb_get_method_bind(__godot_name_CallbackTweener._native_ptr(), _method_set_delay_3008182292_name._native_ptr(), 3008182292)
         assert(CallbackTweener._method_set_delay_3008182292 != nil)
     }
 
@@ -38,7 +43,7 @@ public class CallbackTweener : Tweener {
                     args.baseAddress!,
                     __resPtr
                 )
-            return CallbackTweener(from: __resPtr.pointee)
+            return CallbackTweener(godot: __resPtr.pointee)
         }
     }
 }

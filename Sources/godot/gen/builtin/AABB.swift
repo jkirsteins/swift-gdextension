@@ -15,6 +15,11 @@ fileprivate var __godot_name_AABB: StringName! = nil
 /// [b]Note:[/b] Unlike [Rect2], [AABB] does not have a variant that uses integer coordinates.
 public class AABB : BuiltinClass {
 
+    public static var interface: UnsafePointer<GDExtensionInterface>! = nil
+    public static var library: GDExtensionClassLibraryPtr! = nil
+    
+    var interface: UnsafePointer<GDExtensionInterface> { Self.interface }
+
     
 
     public class var __godot_name: StringName { __godot_name_AABB }
@@ -28,7 +33,10 @@ public class AABB : BuiltinClass {
     static var _constructor_2: GDExtensionPtrConstructor? = nil
     static var _destructor: GDExtensionPtrDestructor? = nil
 
-    public class func initialize_class() {
+    public class func initialize_class(_ ginit: GodotInitializer, _: GDExtensionInitializationLevel) {
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
+
         // Init constructors before assigning __godot_name
         AABB._constructor_0 =  AABB.interface.pointee.variant_get_ptr_constructor(GDEXTENSION_VARIANT_TYPE_AABB, 0)
         assert(AABB._constructor_0 != nil)
@@ -36,10 +44,11 @@ public class AABB : BuiltinClass {
         assert(AABB._constructor_1 != nil)
         AABB._constructor_2 =  AABB.interface.pointee.variant_get_ptr_constructor(GDEXTENSION_VARIANT_TYPE_AABB, 2)
         assert(AABB._constructor_2 != nil)
-        AABB._destructor =  AABB.interface.pointee.variant_get_ptr_destructor(GDEXTENSION_VARIANT_TYPE_AABB)
-        assert(AABB._destructor != nil)
+    }
 
-        // At this point constructors must be assigned
+    public class func initialize_godot_name() {
+        // At this point constructors for String and StringName
+        // must be assigned
         __godot_name_AABB = StringName(from: "AABB")
     }
 
@@ -79,10 +88,10 @@ public class AABB : BuiltinClass {
             // call here
             Self._constructor_2!(self._native_ptr(), .init(args.baseAddress!))
     }
-    public required init(from unsafe: UnsafeRawPointer) {
+    public required init(godot unsafe: UnsafeRawPointer) {
         self.opaque = .init(mutating: unsafe)
     }
-    public required init(from unsafe: UnsafeMutableRawPointer) {
+    public required init(godot unsafe: UnsafeMutableRawPointer) {
         self.opaque = unsafe
     }
 

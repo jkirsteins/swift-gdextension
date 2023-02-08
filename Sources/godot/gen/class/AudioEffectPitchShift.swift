@@ -7,7 +7,7 @@ fileprivate var __godot_name_AudioEffectPitchShift: StringName! = nil
 /// Raises or lowers the pitch of original sound.
 /// 
 /// Allows modulation of pitch independently of tempo. All frequencies can be increased/decreased with minimal effect on transients.
-public class AudioEffectPitchShift : AudioEffect {
+open class AudioEffectPitchShift : AudioEffect {
 
     public enum FFTSize : Int32 {
         case FFT_SIZE_256 = 0
@@ -27,26 +27,31 @@ public class AudioEffectPitchShift : AudioEffect {
     static var _method_set_fft_size_2323518741: GDExtensionMethodBindPtr! = nil
     static var _method_get_fft_size_2361246789: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AudioEffectPitchShift = StringName(from: "AudioEffectPitchShift")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_pitch_scale_373806689_name = StringName(from: "set_pitch_scale")
-        self._method_set_pitch_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_pitch_scale_373806689_name._native_ptr(), 373806689)
+        self._method_set_pitch_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectPitchShift._native_ptr(), _method_set_pitch_scale_373806689_name._native_ptr(), 373806689)
         assert(AudioEffectPitchShift._method_set_pitch_scale_373806689 != nil)
         let _method_get_pitch_scale_1740695150_name = StringName(from: "get_pitch_scale")
-        self._method_get_pitch_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_pitch_scale_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_pitch_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectPitchShift._native_ptr(), _method_get_pitch_scale_1740695150_name._native_ptr(), 1740695150)
         assert(AudioEffectPitchShift._method_get_pitch_scale_1740695150 != nil)
         let _method_set_oversampling_1286410249_name = StringName(from: "set_oversampling")
-        self._method_set_oversampling_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_oversampling_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_oversampling_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectPitchShift._native_ptr(), _method_set_oversampling_1286410249_name._native_ptr(), 1286410249)
         assert(AudioEffectPitchShift._method_set_oversampling_1286410249 != nil)
         let _method_get_oversampling_3905245786_name = StringName(from: "get_oversampling")
-        self._method_get_oversampling_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_oversampling_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_oversampling_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectPitchShift._native_ptr(), _method_get_oversampling_3905245786_name._native_ptr(), 3905245786)
         assert(AudioEffectPitchShift._method_get_oversampling_3905245786 != nil)
         let _method_set_fft_size_2323518741_name = StringName(from: "set_fft_size")
-        self._method_set_fft_size_2323518741 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_fft_size_2323518741_name._native_ptr(), 2323518741)
+        self._method_set_fft_size_2323518741 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectPitchShift._native_ptr(), _method_set_fft_size_2323518741_name._native_ptr(), 2323518741)
         assert(AudioEffectPitchShift._method_set_fft_size_2323518741 != nil)
         let _method_get_fft_size_2361246789_name = StringName(from: "get_fft_size")
-        self._method_get_fft_size_2361246789 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_fft_size_2361246789_name._native_ptr(), 2361246789)
+        self._method_get_fft_size_2361246789 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectPitchShift._native_ptr(), _method_get_fft_size_2361246789_name._native_ptr(), 2361246789)
         assert(AudioEffectPitchShift._method_get_fft_size_2361246789 != nil)
     }
 
@@ -81,7 +86,7 @@ public class AudioEffectPitchShift : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_oversampling(amount: Int64)  {
         withUnsafePointer(to: amount) { amount_native in
@@ -114,7 +119,7 @@ public class AudioEffectPitchShift : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_fft_size(size: AudioEffectPitchShift.FFTSize)  {
         withUnsafePointer(to: size.rawValue) { size_native in
@@ -146,6 +151,6 @@ public class AudioEffectPitchShift : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return AudioEffectPitchShift.FFTSize(from: __resPtr.pointee)
+            return AudioEffectPitchShift.FFTSize(godot: __resPtr.pointee)
     }
 }

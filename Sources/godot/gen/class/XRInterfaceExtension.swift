@@ -5,7 +5,7 @@ fileprivate var __godot_name_XRInterfaceExtension: StringName! = nil
 /// Base class for XR interface extensions (plugins).
 /// 
 /// External XR interface plugins should inherit from this class.
-public class XRInterfaceExtension : XRInterface {
+open class XRInterfaceExtension : XRInterface {
 
     
 
@@ -47,23 +47,28 @@ public class XRInterfaceExtension : XRInterface {
     static var _method_add_blit_258596971: GDExtensionMethodBindPtr! = nil
     static var _method_get_render_target_texture_41030802: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_XRInterfaceExtension = StringName(from: "XRInterfaceExtension")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_get_color_texture_529393457_name = StringName(from: "get_color_texture")
-        self._method_get_color_texture_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_color_texture_529393457_name._native_ptr(), 529393457)
+        self._method_get_color_texture_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterfaceExtension._native_ptr(), _method_get_color_texture_529393457_name._native_ptr(), 529393457)
         assert(XRInterfaceExtension._method_get_color_texture_529393457 != nil)
         let _method_get_depth_texture_529393457_name = StringName(from: "get_depth_texture")
-        self._method_get_depth_texture_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_depth_texture_529393457_name._native_ptr(), 529393457)
+        self._method_get_depth_texture_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterfaceExtension._native_ptr(), _method_get_depth_texture_529393457_name._native_ptr(), 529393457)
         assert(XRInterfaceExtension._method_get_depth_texture_529393457 != nil)
         let _method_get_velocity_texture_529393457_name = StringName(from: "get_velocity_texture")
-        self._method_get_velocity_texture_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_velocity_texture_529393457_name._native_ptr(), 529393457)
+        self._method_get_velocity_texture_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterfaceExtension._native_ptr(), _method_get_velocity_texture_529393457_name._native_ptr(), 529393457)
         assert(XRInterfaceExtension._method_get_velocity_texture_529393457 != nil)
         let _method_add_blit_258596971_name = StringName(from: "add_blit")
-        self._method_add_blit_258596971 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_blit_258596971_name._native_ptr(), 258596971)
+        self._method_add_blit_258596971 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterfaceExtension._native_ptr(), _method_add_blit_258596971_name._native_ptr(), 258596971)
         assert(XRInterfaceExtension._method_add_blit_258596971 != nil)
         let _method_get_render_target_texture_41030802_name = StringName(from: "get_render_target_texture")
-        self._method_get_render_target_texture_41030802 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_render_target_texture_41030802_name._native_ptr(), 41030802)
+        self._method_get_render_target_texture_41030802 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterfaceExtension._native_ptr(), _method_get_render_target_texture_41030802_name._native_ptr(), 41030802)
         assert(XRInterfaceExtension._method_get_render_target_texture_41030802 != nil)
     }
 
@@ -81,7 +86,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return StringName(from: __resPtr.pointee)
+            return StringName(godot: __resPtr.pointee)
     }
     public func _get_capabilities() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -98,7 +103,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _is_initialized() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -115,7 +120,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _initialize() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -132,7 +137,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _uninitialize()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -164,7 +169,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func _get_play_area_mode() -> XRInterface.PlayAreaMode {
@@ -181,7 +186,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return XRInterface.PlayAreaMode(from: __resPtr.pointee)
+            return XRInterface.PlayAreaMode(godot: __resPtr.pointee)
     }
     public func _set_play_area_mode(mode: XRInterface.PlayAreaMode) -> UInt8 {
         withUnsafePointer(to: mode.rawValue) { mode_native in
@@ -199,7 +204,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func _get_play_area() -> PackedVector3Array {
@@ -216,7 +221,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector3Array(from: __resPtr.pointee)
+            return PackedVector3Array(godot: __resPtr.pointee)
     }
     public func _get_render_target_size() -> Vector2 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -232,7 +237,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func _get_view_count() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -249,7 +254,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_camera_transform() -> Transform3D {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -265,7 +270,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Transform3D(from: __resPtr.pointee)
+            return Transform3D(godot: __resPtr.pointee)
     }
     public func _get_transform_for_view(view: Int64, cam_transform: Transform3D) -> Transform3D {
         withUnsafePointer(to: view) { view_native in
@@ -283,7 +288,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Transform3D(from: __resPtr.pointee)
+            return Transform3D(godot: __resPtr.pointee)
         }
     }
     public func _get_projection_for_view(view: Int64, aspect: Float64, z_near: Float64, z_far: Float64) -> PackedFloat64Array {
@@ -304,7 +309,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedFloat64Array(from: __resPtr.pointee)
+            return PackedFloat64Array(godot: __resPtr.pointee)
         }
         }
         }
@@ -324,7 +329,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _process()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -370,7 +375,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _post_draw_viewport(render_target: RID, screen_rect: Rect2)  {
         let screen_rect_native = screen_rect._native_ptr()
@@ -416,7 +421,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedStringArray(from: __resPtr.pointee)
+            return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _get_suggested_pose_names(tracker_name: StringName) -> PackedStringArray {
         let tracker_name_native = tracker_name._native_ptr()
@@ -433,7 +438,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedStringArray(from: __resPtr.pointee)
+            return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _get_tracking_status() -> XRInterface.TrackingStatus {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -449,15 +454,15 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return XRInterface.TrackingStatus(from: __resPtr.pointee)
+            return XRInterface.TrackingStatus(godot: __resPtr.pointee)
     }
-    public func _trigger_haptic_pulse(action_name: String, tracker_name: StringName, frequency: Float64, amplitude: Float64, duration_sec: Float64, delay_sec: Float64)  {
+    public func _trigger_haptic_pulse(action_name: godot.String, tracker_name: StringName, frequency: Float64, amplitude: Float64, duration_sec: Float64, delay_sec: Float64)  {
         withUnsafePointer(to: delay_sec) { delay_sec_native in
         withUnsafePointer(to: duration_sec) { duration_sec_native in
         withUnsafePointer(to: amplitude) { amplitude_native in
         withUnsafePointer(to: frequency) { frequency_native in
-        withUnsafePointer(to: action_name) { action_name_native in
         let tracker_name_native = tracker_name._native_ptr()
+        let action_name_native = action_name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 6)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -470,7 +475,6 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     nil
                 )
-        }
         }
         }
         }
@@ -491,7 +495,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _set_anchor_detection_is_enabled(enabled: UInt8)  {
         withUnsafePointer(to: enabled) { enabled_native in
@@ -524,7 +528,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_color_texture() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -540,7 +544,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _get_depth_texture() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -556,7 +560,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func _get_velocity_texture() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -572,7 +576,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func get_color_texture() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -588,7 +592,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func get_depth_texture() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -604,7 +608,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func get_velocity_texture() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -620,7 +624,7 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func add_blit(render_target: RID, src_rect: Rect2, dst_rect: Rect2i, use_layer: UInt8, layer: Int64, apply_lens_distortion: UInt8, eye_center: Vector2, k1: Float64, k2: Float64, upscale: Float64, aspect_ratio: Float64)  {
         withUnsafePointer(to: aspect_ratio) { aspect_ratio_native in
@@ -669,6 +673,6 @@ public class XRInterfaceExtension : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
 }

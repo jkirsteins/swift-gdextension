@@ -74,7 +74,7 @@ fileprivate var __godot_name_EditorDebuggerPlugin: StringName! = nil
 /// [/gdscript]
 ///  
 /// [/codeblocks]
-public class EditorDebuggerPlugin : RefCounted {
+open class EditorDebuggerPlugin : RefCounted {
 
     
 
@@ -86,14 +86,19 @@ public class EditorDebuggerPlugin : RefCounted {
     static var _method_get_session_3061968499: GDExtensionMethodBindPtr! = nil
     static var _method_get_sessions_2915620761: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorDebuggerPlugin = StringName(from: "EditorDebuggerPlugin")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_get_session_3061968499_name = StringName(from: "get_session")
-        self._method_get_session_3061968499 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_session_3061968499_name._native_ptr(), 3061968499)
+        self._method_get_session_3061968499 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorDebuggerPlugin._native_ptr(), _method_get_session_3061968499_name._native_ptr(), 3061968499)
         assert(EditorDebuggerPlugin._method_get_session_3061968499 != nil)
         let _method_get_sessions_2915620761_name = StringName(from: "get_sessions")
-        self._method_get_sessions_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_sessions_2915620761_name._native_ptr(), 2915620761)
+        self._method_get_sessions_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorDebuggerPlugin._native_ptr(), _method_get_sessions_2915620761_name._native_ptr(), 2915620761)
         assert(EditorDebuggerPlugin._method_get_sessions_2915620761 != nil)
     }
 
@@ -113,8 +118,8 @@ public class EditorDebuggerPlugin : RefCounted {
                 )
         }
     }
-    public func _has_capture(capture: String) -> UInt8 {
-        withUnsafePointer(to: capture) { capture_native in
+    public func _has_capture(capture: godot.String) -> UInt8 {
+        let capture_native = capture._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -129,13 +134,12 @@ public class EditorDebuggerPlugin : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _capture(message: String, data: Array, session_id: Int64) -> UInt8 {
+    public func _capture(message: godot.String, data: Array, session_id: Int64) -> UInt8 {
         withUnsafePointer(to: session_id) { session_id_native in
-        withUnsafePointer(to: message) { message_native in
         let data_native = data._native_ptr()
+        let message_native = message._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -150,8 +154,7 @@ public class EditorDebuggerPlugin : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func get_session(id: Int64) -> EditorDebuggerSession {
@@ -169,7 +172,7 @@ public class EditorDebuggerPlugin : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return EditorDebuggerSession(from: __resPtr.pointee)
+            return EditorDebuggerSession(godot: __resPtr.pointee)
         }
     }
     public func get_sessions() -> Array {
@@ -186,6 +189,6 @@ public class EditorDebuggerPlugin : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Array(from: __resPtr.pointee)
+            return Array(godot: __resPtr.pointee)
     }
 }

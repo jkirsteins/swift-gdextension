@@ -5,7 +5,7 @@ fileprivate var __godot_name_MultiplayerPeerExtension: StringName! = nil
 /// Class that can be inherited to implement custom multiplayer API networking layers via GDExtension.
 /// 
 /// This class is designed to be inherited from a GDExtension plugin to implement custom networking layers for the multiplayer API (such as WebRTC). All the methods below [b]must[/b] be implemented to have a working custom multiplayer implementation. See also [MultiplayerAPI].
-public class MultiplayerPeerExtension : MultiplayerPeer {
+open class MultiplayerPeerExtension : MultiplayerPeer {
 
     
 
@@ -32,8 +32,13 @@ public class MultiplayerPeerExtension : MultiplayerPeer {
     static var _method__is_refusing_new_connections_0: GDExtensionMethodBindPtr! = nil
     static var _method__get_connection_status_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_MultiplayerPeerExtension = StringName(from: "MultiplayerPeerExtension")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
@@ -54,7 +59,7 @@ public class MultiplayerPeerExtension : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
     }
@@ -74,7 +79,7 @@ public class MultiplayerPeerExtension : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
         }
         }
     }
@@ -93,7 +98,7 @@ public class MultiplayerPeerExtension : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_max_packet_size() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -110,7 +115,7 @@ public class MultiplayerPeerExtension : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_packet_script() -> PackedByteArray {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -126,7 +131,7 @@ public class MultiplayerPeerExtension : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedByteArray(from: __resPtr.pointee)
+            return PackedByteArray(godot: __resPtr.pointee)
     }
     public func _put_packet_script(p_buffer: PackedByteArray) -> Error {
         let p_buffer_native = p_buffer._native_ptr()
@@ -143,7 +148,7 @@ public class MultiplayerPeerExtension : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func _set_transfer_channel(p_channel: Int64)  {
         withUnsafePointer(to: p_channel) { p_channel_native in
@@ -176,7 +181,7 @@ public class MultiplayerPeerExtension : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _set_transfer_mode(p_mode: MultiplayerPeer.TransferMode)  {
         withUnsafePointer(to: p_mode.rawValue) { p_mode_native in
@@ -208,7 +213,7 @@ public class MultiplayerPeerExtension : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return MultiplayerPeer.TransferMode(from: __resPtr.pointee)
+            return MultiplayerPeer.TransferMode(godot: __resPtr.pointee)
     }
     public func _set_target_peer(p_peer: Int64)  {
         withUnsafePointer(to: p_peer) { p_peer_native in
@@ -241,7 +246,7 @@ public class MultiplayerPeerExtension : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _is_server() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -258,7 +263,7 @@ public class MultiplayerPeerExtension : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _poll()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -321,7 +326,7 @@ public class MultiplayerPeerExtension : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _set_refuse_new_connections(p_enable: UInt8)  {
         withUnsafePointer(to: p_enable) { p_enable_native in
@@ -354,7 +359,7 @@ public class MultiplayerPeerExtension : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_connection_status() -> MultiplayerPeer.ConnectionStatus {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -370,6 +375,6 @@ public class MultiplayerPeerExtension : MultiplayerPeer {
                     args.baseAddress!,
                     __resPtr
                 )
-            return MultiplayerPeer.ConnectionStatus(from: __resPtr.pointee)
+            return MultiplayerPeer.ConnectionStatus(godot: __resPtr.pointee)
     }
 }

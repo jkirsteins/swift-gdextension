@@ -7,7 +7,7 @@ fileprivate var __godot_name_PhysicsBody3D: StringName! = nil
 /// PhysicsBody3D is an abstract base class for implementing a physics body. All *Body3D types inherit from it.
 ///  
 /// [b]Warning:[/b] With a non-uniform scale this node will probably not function as expected. Please make sure to keep its scale uniform (i.e. the same on all axes), and change the size(s) of its collision shape(s) instead.
-public class PhysicsBody3D : CollisionObject3D {
+open class PhysicsBody3D : CollisionObject3D {
 
     
 
@@ -21,29 +21,34 @@ public class PhysicsBody3D : CollisionObject3D {
     static var _method_add_collision_exception_with_1078189570: GDExtensionMethodBindPtr! = nil
     static var _method_remove_collision_exception_with_1078189570: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PhysicsBody3D = StringName(from: "PhysicsBody3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_move_and_collide_1140990067_name = StringName(from: "move_and_collide")
-        self._method_move_and_collide_1140990067 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_move_and_collide_1140990067_name._native_ptr(), 1140990067)
+        self._method_move_and_collide_1140990067 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsBody3D._native_ptr(), _method_move_and_collide_1140990067_name._native_ptr(), 1140990067)
         assert(PhysicsBody3D._method_move_and_collide_1140990067 != nil)
         let _method_test_move_2082761915_name = StringName(from: "test_move")
-        self._method_test_move_2082761915 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_test_move_2082761915_name._native_ptr(), 2082761915)
+        self._method_test_move_2082761915 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsBody3D._native_ptr(), _method_test_move_2082761915_name._native_ptr(), 2082761915)
         assert(PhysicsBody3D._method_test_move_2082761915 != nil)
         let _method_set_axis_lock_1787895195_name = StringName(from: "set_axis_lock")
-        self._method_set_axis_lock_1787895195 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_axis_lock_1787895195_name._native_ptr(), 1787895195)
+        self._method_set_axis_lock_1787895195 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsBody3D._native_ptr(), _method_set_axis_lock_1787895195_name._native_ptr(), 1787895195)
         assert(PhysicsBody3D._method_set_axis_lock_1787895195 != nil)
         let _method_get_axis_lock_2264617709_name = StringName(from: "get_axis_lock")
-        self._method_get_axis_lock_2264617709 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_axis_lock_2264617709_name._native_ptr(), 2264617709)
+        self._method_get_axis_lock_2264617709 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsBody3D._native_ptr(), _method_get_axis_lock_2264617709_name._native_ptr(), 2264617709)
         assert(PhysicsBody3D._method_get_axis_lock_2264617709 != nil)
         let _method_get_collision_exceptions_2915620761_name = StringName(from: "get_collision_exceptions")
-        self._method_get_collision_exceptions_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_collision_exceptions_2915620761_name._native_ptr(), 2915620761)
+        self._method_get_collision_exceptions_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsBody3D._native_ptr(), _method_get_collision_exceptions_2915620761_name._native_ptr(), 2915620761)
         assert(PhysicsBody3D._method_get_collision_exceptions_2915620761 != nil)
         let _method_add_collision_exception_with_1078189570_name = StringName(from: "add_collision_exception_with")
-        self._method_add_collision_exception_with_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_collision_exception_with_1078189570_name._native_ptr(), 1078189570)
+        self._method_add_collision_exception_with_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsBody3D._native_ptr(), _method_add_collision_exception_with_1078189570_name._native_ptr(), 1078189570)
         assert(PhysicsBody3D._method_add_collision_exception_with_1078189570 != nil)
         let _method_remove_collision_exception_with_1078189570_name = StringName(from: "remove_collision_exception_with")
-        self._method_remove_collision_exception_with_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_collision_exception_with_1078189570_name._native_ptr(), 1078189570)
+        self._method_remove_collision_exception_with_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsBody3D._native_ptr(), _method_remove_collision_exception_with_1078189570_name._native_ptr(), 1078189570)
         assert(PhysicsBody3D._method_remove_collision_exception_with_1078189570 != nil)
     }
 
@@ -66,7 +71,7 @@ public class PhysicsBody3D : CollisionObject3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return KinematicCollision3D(from: __resPtr.pointee)
+            return KinematicCollision3D(godot: __resPtr.pointee)
         }
         }
         }
@@ -93,7 +98,7 @@ public class PhysicsBody3D : CollisionObject3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
         }
@@ -132,7 +137,7 @@ public class PhysicsBody3D : CollisionObject3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func get_collision_exceptions() -> [PhysicsBody3D] {
@@ -149,7 +154,7 @@ public class PhysicsBody3D : CollisionObject3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [PhysicsBody3D](from: __resPtr.pointee)
+            return [PhysicsBody3D](godot: __resPtr.pointee)
     }
     public func add_collision_exception_with(body: Node)  {
         let body_native = body._native_ptr()

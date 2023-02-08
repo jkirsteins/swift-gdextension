@@ -5,7 +5,7 @@ fileprivate var __godot_name_AudioStreamPlaybackResampled: StringName! = nil
 /// 
 /// 
 /// 
-public class AudioStreamPlaybackResampled : AudioStreamPlayback {
+open class AudioStreamPlaybackResampled : AudioStreamPlayback {
 
     
 
@@ -15,11 +15,16 @@ public class AudioStreamPlaybackResampled : AudioStreamPlayback {
     static var _method__get_stream_sampling_rate_0: GDExtensionMethodBindPtr! = nil
     static var _method_begin_resample_3218959716: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AudioStreamPlaybackResampled = StringName(from: "AudioStreamPlaybackResampled")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_begin_resample_3218959716_name = StringName(from: "begin_resample")
-        self._method_begin_resample_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_begin_resample_3218959716_name._native_ptr(), 3218959716)
+        self._method_begin_resample_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlaybackResampled._native_ptr(), _method_begin_resample_3218959716_name._native_ptr(), 3218959716)
         assert(AudioStreamPlaybackResampled._method_begin_resample_3218959716 != nil)
     }
 
@@ -40,7 +45,7 @@ public class AudioStreamPlaybackResampled : AudioStreamPlayback {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
         }
     }
@@ -59,7 +64,7 @@ public class AudioStreamPlaybackResampled : AudioStreamPlayback {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func begin_resample()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)

@@ -5,7 +5,7 @@ fileprivate var __godot_name_GLTFDocumentExtension: StringName! = nil
 /// MISSING
 /// 
 /// MISSING
-public class GLTFDocumentExtension : Resource {
+open class GLTFDocumentExtension : Resource {
 
     
 
@@ -23,8 +23,13 @@ public class GLTFDocumentExtension : Resource {
     static var _method__export_node_0: GDExtensionMethodBindPtr! = nil
     static var _method__export_post_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_GLTFDocumentExtension = StringName(from: "GLTFDocumentExtension")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
@@ -45,7 +50,7 @@ public class GLTFDocumentExtension : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func _get_supported_extensions() -> PackedStringArray {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -61,7 +66,7 @@ public class GLTFDocumentExtension : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedStringArray(from: __resPtr.pointee)
+            return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _parse_node_extensions(state: GLTFState, gltf_node: GLTFNode, extensions: Dictionary) -> Error {
         let extensions_native = extensions._native_ptr()
@@ -80,7 +85,7 @@ public class GLTFDocumentExtension : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func _generate_scene_node(state: GLTFState, gltf_node: GLTFNode, scene_parent: Node) -> Node3D {
         let scene_parent_native = scene_parent._native_ptr()
@@ -99,7 +104,7 @@ public class GLTFDocumentExtension : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Node3D(from: __resPtr.pointee)
+            return Node3D(godot: __resPtr.pointee)
     }
     public func _import_post_parse(state: GLTFState) -> Error {
         let state_native = state._native_ptr()
@@ -116,7 +121,7 @@ public class GLTFDocumentExtension : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func _import_node(state: GLTFState, gltf_node: GLTFNode, json: Dictionary, node: Node) -> Error {
         let node_native = node._native_ptr()
@@ -136,7 +141,7 @@ public class GLTFDocumentExtension : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func _import_post(state: GLTFState, root: Node) -> Error {
         let root_native = root._native_ptr()
@@ -154,7 +159,7 @@ public class GLTFDocumentExtension : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func _export_preflight(state: GLTFState, root: Node) -> Error {
         let root_native = root._native_ptr()
@@ -172,7 +177,7 @@ public class GLTFDocumentExtension : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func _convert_scene_node(state: GLTFState, gltf_node: GLTFNode, scene_node: Node)  {
         let scene_node_native = scene_node._native_ptr()
@@ -209,7 +214,7 @@ public class GLTFDocumentExtension : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func _export_post(state: GLTFState) -> Error {
         let state_native = state._native_ptr()
@@ -226,6 +231,6 @@ public class GLTFDocumentExtension : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
 }

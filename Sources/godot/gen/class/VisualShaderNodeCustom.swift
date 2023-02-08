@@ -17,7 +17,7 @@ fileprivate var __godot_name_VisualShaderNodeCustom: StringName! = nil
 /// class_name VisualShaderNodeNoise
 ///  
 /// [/codeblock]
-public class VisualShaderNodeCustom : VisualShaderNode {
+open class VisualShaderNodeCustom : VisualShaderNode {
 
     
 
@@ -39,13 +39,18 @@ public class VisualShaderNodeCustom : VisualShaderNode {
     static var _method__is_highend_0: GDExtensionMethodBindPtr! = nil
     static var _method__is_available_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeCustom = StringName(from: "VisualShaderNodeCustom")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
 
-    public func _get_name() -> String {
+    public func _get_name() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -53,16 +58,15 @@ public class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_name_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func _get_description() -> String {
+    public func _get_description() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -70,16 +74,15 @@ public class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_description_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func _get_category() -> String {
+    public func _get_category() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -87,14 +90,13 @@ public class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_category_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func _get_return_icon_type() -> VisualShaderNode.PortType {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -110,7 +112,7 @@ public class VisualShaderNodeCustom : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return VisualShaderNode.PortType(from: __resPtr.pointee)
+            return VisualShaderNode.PortType(godot: __resPtr.pointee)
     }
     public func _get_input_port_count() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -127,7 +129,7 @@ public class VisualShaderNodeCustom : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_input_port_type(port: Int64) -> VisualShaderNode.PortType {
         withUnsafePointer(to: port) { port_native in
@@ -144,10 +146,10 @@ public class VisualShaderNodeCustom : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return VisualShaderNode.PortType(from: __resPtr.pointee)
+            return VisualShaderNode.PortType(godot: __resPtr.pointee)
         }
     }
-    public func _get_input_port_name(port: Int64) -> String {
+    public func _get_input_port_name(port: Int64) -> godot.String {
         withUnsafePointer(to: port) { port_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
@@ -156,14 +158,13 @@ public class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_input_port_name_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
         }
     }
     public func _get_output_port_count() -> Int64 {
@@ -181,7 +182,7 @@ public class VisualShaderNodeCustom : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _get_output_port_type(port: Int64) -> VisualShaderNode.PortType {
         withUnsafePointer(to: port) { port_native in
@@ -198,10 +199,10 @@ public class VisualShaderNodeCustom : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return VisualShaderNode.PortType(from: __resPtr.pointee)
+            return VisualShaderNode.PortType(godot: __resPtr.pointee)
         }
     }
-    public func _get_output_port_name(port: Int64) -> String {
+    public func _get_output_port_name(port: Int64) -> godot.String {
         withUnsafePointer(to: port) { port_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
@@ -210,17 +211,16 @@ public class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_output_port_name_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
         }
     }
-    public func _get_code(input_vars: [String], output_vars: [String], mode: Shader.Mode, `type`: VisualShader.`Typ`) -> String {
+    public func _get_code(input_vars: [godot.String], output_vars: [godot.String], mode: Shader.Mode, `type`: VisualShader.`Typ`) -> godot.String {
         withUnsafePointer(to: `type`.rawValue) { type_native in
         withUnsafePointer(to: mode.rawValue) { mode_native in
         let output_vars_native = output_vars._native_ptr()
@@ -232,18 +232,17 @@ public class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_code_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
         }
         }
     }
-    public func _get_func_code(mode: Shader.Mode, `type`: VisualShader.`Typ`) -> String {
+    public func _get_func_code(mode: Shader.Mode, `type`: VisualShader.`Typ`) -> godot.String {
         withUnsafePointer(to: `type`.rawValue) { type_native in
         withUnsafePointer(to: mode.rawValue) { mode_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
@@ -253,18 +252,17 @@ public class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_func_code_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
         }
         }
     }
-    public func _get_global_code(mode: Shader.Mode) -> String {
+    public func _get_global_code(mode: Shader.Mode) -> godot.String {
         withUnsafePointer(to: mode.rawValue) { mode_native in
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
@@ -273,14 +271,13 @@ public class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_global_code_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
         }
     }
     public func _is_highend() -> UInt8 {
@@ -298,7 +295,7 @@ public class VisualShaderNodeCustom : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _is_available(mode: Shader.Mode, `type`: VisualShader.`Typ`) -> UInt8 {
         withUnsafePointer(to: `type`.rawValue) { type_native in
@@ -317,7 +314,7 @@ public class VisualShaderNodeCustom : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
     }

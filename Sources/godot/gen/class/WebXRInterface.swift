@@ -5,7 +5,7 @@ fileprivate var __godot_name_WebXRInterface: StringName! = nil
 /// MISSING
 /// 
 /// MISSING
-public class WebXRInterface : XRInterface {
+open class WebXRInterface : XRInterface {
 
     public enum TargetRayMode : Int32 {
         case TARGET_RAY_MODE_UNKNOWN = 0
@@ -31,55 +31,60 @@ public class WebXRInterface : XRInterface {
     static var _method_get_input_source_target_ray_mode_2852387453: GDExtensionMethodBindPtr! = nil
     static var _method_get_visibility_state_201670096: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_WebXRInterface = StringName(from: "WebXRInterface")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_is_session_supported_83702148_name = StringName(from: "is_session_supported")
-        self._method_is_session_supported_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_session_supported_83702148_name._native_ptr(), 83702148)
+        self._method_is_session_supported_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebXRInterface._native_ptr(), _method_is_session_supported_83702148_name._native_ptr(), 83702148)
         assert(WebXRInterface._method_is_session_supported_83702148 != nil)
         let _method_set_session_mode_83702148_name = StringName(from: "set_session_mode")
-        self._method_set_session_mode_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_session_mode_83702148_name._native_ptr(), 83702148)
+        self._method_set_session_mode_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebXRInterface._native_ptr(), _method_set_session_mode_83702148_name._native_ptr(), 83702148)
         assert(WebXRInterface._method_set_session_mode_83702148 != nil)
         let _method_get_session_mode_201670096_name = StringName(from: "get_session_mode")
-        self._method_get_session_mode_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_session_mode_201670096_name._native_ptr(), 201670096)
+        self._method_get_session_mode_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebXRInterface._native_ptr(), _method_get_session_mode_201670096_name._native_ptr(), 201670096)
         assert(WebXRInterface._method_get_session_mode_201670096 != nil)
         let _method_set_required_features_83702148_name = StringName(from: "set_required_features")
-        self._method_set_required_features_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_required_features_83702148_name._native_ptr(), 83702148)
+        self._method_set_required_features_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebXRInterface._native_ptr(), _method_set_required_features_83702148_name._native_ptr(), 83702148)
         assert(WebXRInterface._method_set_required_features_83702148 != nil)
         let _method_get_required_features_201670096_name = StringName(from: "get_required_features")
-        self._method_get_required_features_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_required_features_201670096_name._native_ptr(), 201670096)
+        self._method_get_required_features_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebXRInterface._native_ptr(), _method_get_required_features_201670096_name._native_ptr(), 201670096)
         assert(WebXRInterface._method_get_required_features_201670096 != nil)
         let _method_set_optional_features_83702148_name = StringName(from: "set_optional_features")
-        self._method_set_optional_features_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_optional_features_83702148_name._native_ptr(), 83702148)
+        self._method_set_optional_features_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebXRInterface._native_ptr(), _method_set_optional_features_83702148_name._native_ptr(), 83702148)
         assert(WebXRInterface._method_set_optional_features_83702148 != nil)
         let _method_get_optional_features_201670096_name = StringName(from: "get_optional_features")
-        self._method_get_optional_features_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_optional_features_201670096_name._native_ptr(), 201670096)
+        self._method_get_optional_features_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebXRInterface._native_ptr(), _method_get_optional_features_201670096_name._native_ptr(), 201670096)
         assert(WebXRInterface._method_get_optional_features_201670096 != nil)
         let _method_get_reference_space_type_201670096_name = StringName(from: "get_reference_space_type")
-        self._method_get_reference_space_type_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_reference_space_type_201670096_name._native_ptr(), 201670096)
+        self._method_get_reference_space_type_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebXRInterface._native_ptr(), _method_get_reference_space_type_201670096_name._native_ptr(), 201670096)
         assert(WebXRInterface._method_get_reference_space_type_201670096 != nil)
         let _method_set_requested_reference_space_types_83702148_name = StringName(from: "set_requested_reference_space_types")
-        self._method_set_requested_reference_space_types_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_requested_reference_space_types_83702148_name._native_ptr(), 83702148)
+        self._method_set_requested_reference_space_types_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebXRInterface._native_ptr(), _method_set_requested_reference_space_types_83702148_name._native_ptr(), 83702148)
         assert(WebXRInterface._method_set_requested_reference_space_types_83702148 != nil)
         let _method_get_requested_reference_space_types_201670096_name = StringName(from: "get_requested_reference_space_types")
-        self._method_get_requested_reference_space_types_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_requested_reference_space_types_201670096_name._native_ptr(), 201670096)
+        self._method_get_requested_reference_space_types_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebXRInterface._native_ptr(), _method_get_requested_reference_space_types_201670096_name._native_ptr(), 201670096)
         assert(WebXRInterface._method_get_requested_reference_space_types_201670096 != nil)
         let _method_is_input_source_active_1116898809_name = StringName(from: "is_input_source_active")
-        self._method_is_input_source_active_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_input_source_active_1116898809_name._native_ptr(), 1116898809)
+        self._method_is_input_source_active_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebXRInterface._native_ptr(), _method_is_input_source_active_1116898809_name._native_ptr(), 1116898809)
         assert(WebXRInterface._method_is_input_source_active_1116898809 != nil)
         let _method_get_input_source_tracker_636011756_name = StringName(from: "get_input_source_tracker")
-        self._method_get_input_source_tracker_636011756 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_input_source_tracker_636011756_name._native_ptr(), 636011756)
+        self._method_get_input_source_tracker_636011756 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebXRInterface._native_ptr(), _method_get_input_source_tracker_636011756_name._native_ptr(), 636011756)
         assert(WebXRInterface._method_get_input_source_tracker_636011756 != nil)
         let _method_get_input_source_target_ray_mode_2852387453_name = StringName(from: "get_input_source_target_ray_mode")
-        self._method_get_input_source_target_ray_mode_2852387453 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_input_source_target_ray_mode_2852387453_name._native_ptr(), 2852387453)
+        self._method_get_input_source_target_ray_mode_2852387453 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebXRInterface._native_ptr(), _method_get_input_source_target_ray_mode_2852387453_name._native_ptr(), 2852387453)
         assert(WebXRInterface._method_get_input_source_target_ray_mode_2852387453 != nil)
         let _method_get_visibility_state_201670096_name = StringName(from: "get_visibility_state")
-        self._method_get_visibility_state_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_visibility_state_201670096_name._native_ptr(), 201670096)
+        self._method_get_visibility_state_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebXRInterface._native_ptr(), _method_get_visibility_state_201670096_name._native_ptr(), 201670096)
         assert(WebXRInterface._method_get_visibility_state_201670096 != nil)
     }
 
-    public func is_session_supported(session_mode: String)  {
-        withUnsafePointer(to: session_mode) { session_mode_native in
+    public func is_session_supported(session_mode: godot.String)  {
+        let session_mode_native = session_mode._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -92,10 +97,9 @@ public class WebXRInterface : XRInterface {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func set_session_mode(session_mode: String)  {
-        withUnsafePointer(to: session_mode) { session_mode_native in
+    public func set_session_mode(session_mode: godot.String)  {
+        let session_mode_native = session_mode._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -108,9 +112,8 @@ public class WebXRInterface : XRInterface {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func get_session_mode() -> String {
+    public func get_session_mode() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -118,17 +121,16 @@ public class WebXRInterface : XRInterface {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_session_mode_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func set_required_features(required_features: String)  {
-        withUnsafePointer(to: required_features) { required_features_native in
+    public func set_required_features(required_features: godot.String)  {
+        let required_features_native = required_features._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -141,9 +143,8 @@ public class WebXRInterface : XRInterface {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func get_required_features() -> String {
+    public func get_required_features() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -151,17 +152,16 @@ public class WebXRInterface : XRInterface {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_required_features_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func set_optional_features(optional_features: String)  {
-        withUnsafePointer(to: optional_features) { optional_features_native in
+    public func set_optional_features(optional_features: godot.String)  {
+        let optional_features_native = optional_features._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -174,9 +174,8 @@ public class WebXRInterface : XRInterface {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func get_optional_features() -> String {
+    public func get_optional_features() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -184,16 +183,15 @@ public class WebXRInterface : XRInterface {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_optional_features_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func get_reference_space_type() -> String {
+    public func get_reference_space_type() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -201,17 +199,16 @@ public class WebXRInterface : XRInterface {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_reference_space_type_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func set_requested_reference_space_types(requested_reference_space_types: String)  {
-        withUnsafePointer(to: requested_reference_space_types) { requested_reference_space_types_native in
+    public func set_requested_reference_space_types(requested_reference_space_types: godot.String)  {
+        let requested_reference_space_types_native = requested_reference_space_types._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -224,9 +221,8 @@ public class WebXRInterface : XRInterface {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func get_requested_reference_space_types() -> String {
+    public func get_requested_reference_space_types() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -234,14 +230,13 @@ public class WebXRInterface : XRInterface {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_requested_reference_space_types_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func is_input_source_active(input_source_id: Int64) -> UInt8 {
         withUnsafePointer(to: input_source_id) { input_source_id_native in
@@ -259,7 +254,7 @@ public class WebXRInterface : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func get_input_source_tracker(input_source_id: Int64) -> XRPositionalTracker {
@@ -277,7 +272,7 @@ public class WebXRInterface : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return XRPositionalTracker(from: __resPtr.pointee)
+            return XRPositionalTracker(godot: __resPtr.pointee)
         }
     }
     public func get_input_source_target_ray_mode(input_source_id: Int64) -> WebXRInterface.TargetRayMode {
@@ -295,10 +290,10 @@ public class WebXRInterface : XRInterface {
                     args.baseAddress!,
                     __resPtr
                 )
-            return WebXRInterface.TargetRayMode(from: __resPtr.pointee)
+            return WebXRInterface.TargetRayMode(godot: __resPtr.pointee)
         }
     }
-    public func get_visibility_state() -> String {
+    public func get_visibility_state() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -306,13 +301,12 @@ public class WebXRInterface : XRInterface {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_visibility_state_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
 }

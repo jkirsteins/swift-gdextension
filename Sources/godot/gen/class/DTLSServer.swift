@@ -271,7 +271,7 @@ fileprivate var __godot_name_DTLSServer: StringName! = nil
 /// [/csharp]
 ///  
 /// [/codeblocks]
-public class DTLSServer : RefCounted {
+open class DTLSServer : RefCounted {
 
     
 
@@ -280,14 +280,19 @@ public class DTLSServer : RefCounted {
     static var _method_setup_1262296096: GDExtensionMethodBindPtr! = nil
     static var _method_take_connection_3946580474: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_DTLSServer = StringName(from: "DTLSServer")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_setup_1262296096_name = StringName(from: "setup")
-        self._method_setup_1262296096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_setup_1262296096_name._native_ptr(), 1262296096)
+        self._method_setup_1262296096 = self.interface.pointee.classdb_get_method_bind(__godot_name_DTLSServer._native_ptr(), _method_setup_1262296096_name._native_ptr(), 1262296096)
         assert(DTLSServer._method_setup_1262296096 != nil)
         let _method_take_connection_3946580474_name = StringName(from: "take_connection")
-        self._method_take_connection_3946580474 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_take_connection_3946580474_name._native_ptr(), 3946580474)
+        self._method_take_connection_3946580474 = self.interface.pointee.classdb_get_method_bind(__godot_name_DTLSServer._native_ptr(), _method_take_connection_3946580474_name._native_ptr(), 3946580474)
         assert(DTLSServer._method_take_connection_3946580474 != nil)
     }
 
@@ -306,7 +311,7 @@ public class DTLSServer : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func take_connection(udp_peer: PacketPeerUDP) -> PacketPeerDTLS {
         let udp_peer_native = udp_peer._native_ptr()
@@ -323,6 +328,6 @@ public class DTLSServer : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PacketPeerDTLS(from: __resPtr.pointee)
+            return PacketPeerDTLS(godot: __resPtr.pointee)
     }
 }

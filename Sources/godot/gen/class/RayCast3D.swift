@@ -13,7 +13,7 @@ fileprivate var __godot_name_RayCast3D: StringName! = nil
 /// Only enabled raycasts will be able to query the space and report collisions.
 ///  
 /// RayCast3D calculates intersection every physics frame (see [Node]), and the result is cached so it can be used later until the next frame. If multiple queries are required between physics frames (or during the same frame), use [method force_raycast_update] after adjusting the raycast.
-public class RayCast3D : Node3D {
+open class RayCast3D : Node3D {
 
     
 
@@ -52,104 +52,109 @@ public class RayCast3D : Node3D {
     static var _method_set_debug_shape_thickness_1286410249: GDExtensionMethodBindPtr! = nil
     static var _method_get_debug_shape_thickness_3905245786: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_RayCast3D = StringName(from: "RayCast3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_enabled_2586408642_name = StringName(from: "set_enabled")
-        self._method_set_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_enabled_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_set_enabled_2586408642_name._native_ptr(), 2586408642)
         assert(RayCast3D._method_set_enabled_2586408642 != nil)
         let _method_is_enabled_36873697_name = StringName(from: "is_enabled")
-        self._method_is_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_is_enabled_36873697_name._native_ptr(), 36873697)
         assert(RayCast3D._method_is_enabled_36873697 != nil)
         let _method_set_target_position_3460891852_name = StringName(from: "set_target_position")
-        self._method_set_target_position_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_target_position_3460891852_name._native_ptr(), 3460891852)
+        self._method_set_target_position_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_set_target_position_3460891852_name._native_ptr(), 3460891852)
         assert(RayCast3D._method_set_target_position_3460891852 != nil)
         let _method_get_target_position_3360562783_name = StringName(from: "get_target_position")
-        self._method_get_target_position_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_target_position_3360562783_name._native_ptr(), 3360562783)
+        self._method_get_target_position_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_get_target_position_3360562783_name._native_ptr(), 3360562783)
         assert(RayCast3D._method_get_target_position_3360562783 != nil)
         let _method_is_colliding_36873697_name = StringName(from: "is_colliding")
-        self._method_is_colliding_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_colliding_36873697_name._native_ptr(), 36873697)
+        self._method_is_colliding_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_is_colliding_36873697_name._native_ptr(), 36873697)
         assert(RayCast3D._method_is_colliding_36873697 != nil)
         let _method_force_raycast_update_3218959716_name = StringName(from: "force_raycast_update")
-        self._method_force_raycast_update_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_force_raycast_update_3218959716_name._native_ptr(), 3218959716)
+        self._method_force_raycast_update_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_force_raycast_update_3218959716_name._native_ptr(), 3218959716)
         assert(RayCast3D._method_force_raycast_update_3218959716 != nil)
         let _method_get_collider_1981248198_name = StringName(from: "get_collider")
-        self._method_get_collider_1981248198 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_collider_1981248198_name._native_ptr(), 1981248198)
+        self._method_get_collider_1981248198 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_get_collider_1981248198_name._native_ptr(), 1981248198)
         assert(RayCast3D._method_get_collider_1981248198 != nil)
         let _method_get_collider_rid_2944877500_name = StringName(from: "get_collider_rid")
-        self._method_get_collider_rid_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_collider_rid_2944877500_name._native_ptr(), 2944877500)
+        self._method_get_collider_rid_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_get_collider_rid_2944877500_name._native_ptr(), 2944877500)
         assert(RayCast3D._method_get_collider_rid_2944877500 != nil)
         let _method_get_collider_shape_3905245786_name = StringName(from: "get_collider_shape")
-        self._method_get_collider_shape_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_collider_shape_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_collider_shape_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_get_collider_shape_3905245786_name._native_ptr(), 3905245786)
         assert(RayCast3D._method_get_collider_shape_3905245786 != nil)
         let _method_get_collision_point_3360562783_name = StringName(from: "get_collision_point")
-        self._method_get_collision_point_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_collision_point_3360562783_name._native_ptr(), 3360562783)
+        self._method_get_collision_point_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_get_collision_point_3360562783_name._native_ptr(), 3360562783)
         assert(RayCast3D._method_get_collision_point_3360562783 != nil)
         let _method_get_collision_normal_3360562783_name = StringName(from: "get_collision_normal")
-        self._method_get_collision_normal_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_collision_normal_3360562783_name._native_ptr(), 3360562783)
+        self._method_get_collision_normal_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_get_collision_normal_3360562783_name._native_ptr(), 3360562783)
         assert(RayCast3D._method_get_collision_normal_3360562783 != nil)
         let _method_add_exception_rid_2722037293_name = StringName(from: "add_exception_rid")
-        self._method_add_exception_rid_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_exception_rid_2722037293_name._native_ptr(), 2722037293)
+        self._method_add_exception_rid_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_add_exception_rid_2722037293_name._native_ptr(), 2722037293)
         assert(RayCast3D._method_add_exception_rid_2722037293 != nil)
         let _method_add_exception_1976431078_name = StringName(from: "add_exception")
-        self._method_add_exception_1976431078 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_exception_1976431078_name._native_ptr(), 1976431078)
+        self._method_add_exception_1976431078 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_add_exception_1976431078_name._native_ptr(), 1976431078)
         assert(RayCast3D._method_add_exception_1976431078 != nil)
         let _method_remove_exception_rid_2722037293_name = StringName(from: "remove_exception_rid")
-        self._method_remove_exception_rid_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_exception_rid_2722037293_name._native_ptr(), 2722037293)
+        self._method_remove_exception_rid_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_remove_exception_rid_2722037293_name._native_ptr(), 2722037293)
         assert(RayCast3D._method_remove_exception_rid_2722037293 != nil)
         let _method_remove_exception_1976431078_name = StringName(from: "remove_exception")
-        self._method_remove_exception_1976431078 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_exception_1976431078_name._native_ptr(), 1976431078)
+        self._method_remove_exception_1976431078 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_remove_exception_1976431078_name._native_ptr(), 1976431078)
         assert(RayCast3D._method_remove_exception_1976431078 != nil)
         let _method_clear_exceptions_3218959716_name = StringName(from: "clear_exceptions")
-        self._method_clear_exceptions_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_exceptions_3218959716_name._native_ptr(), 3218959716)
+        self._method_clear_exceptions_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_clear_exceptions_3218959716_name._native_ptr(), 3218959716)
         assert(RayCast3D._method_clear_exceptions_3218959716 != nil)
         let _method_set_collision_mask_1286410249_name = StringName(from: "set_collision_mask")
-        self._method_set_collision_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_collision_mask_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_collision_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_set_collision_mask_1286410249_name._native_ptr(), 1286410249)
         assert(RayCast3D._method_set_collision_mask_1286410249 != nil)
         let _method_get_collision_mask_3905245786_name = StringName(from: "get_collision_mask")
-        self._method_get_collision_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_collision_mask_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_collision_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_get_collision_mask_3905245786_name._native_ptr(), 3905245786)
         assert(RayCast3D._method_get_collision_mask_3905245786 != nil)
         let _method_set_collision_mask_value_300928843_name = StringName(from: "set_collision_mask_value")
-        self._method_set_collision_mask_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_collision_mask_value_300928843_name._native_ptr(), 300928843)
+        self._method_set_collision_mask_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_set_collision_mask_value_300928843_name._native_ptr(), 300928843)
         assert(RayCast3D._method_set_collision_mask_value_300928843 != nil)
         let _method_get_collision_mask_value_1116898809_name = StringName(from: "get_collision_mask_value")
-        self._method_get_collision_mask_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_collision_mask_value_1116898809_name._native_ptr(), 1116898809)
+        self._method_get_collision_mask_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_get_collision_mask_value_1116898809_name._native_ptr(), 1116898809)
         assert(RayCast3D._method_get_collision_mask_value_1116898809 != nil)
         let _method_set_exclude_parent_body_2586408642_name = StringName(from: "set_exclude_parent_body")
-        self._method_set_exclude_parent_body_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_exclude_parent_body_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_exclude_parent_body_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_set_exclude_parent_body_2586408642_name._native_ptr(), 2586408642)
         assert(RayCast3D._method_set_exclude_parent_body_2586408642 != nil)
         let _method_get_exclude_parent_body_36873697_name = StringName(from: "get_exclude_parent_body")
-        self._method_get_exclude_parent_body_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_exclude_parent_body_36873697_name._native_ptr(), 36873697)
+        self._method_get_exclude_parent_body_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_get_exclude_parent_body_36873697_name._native_ptr(), 36873697)
         assert(RayCast3D._method_get_exclude_parent_body_36873697 != nil)
         let _method_set_collide_with_areas_2586408642_name = StringName(from: "set_collide_with_areas")
-        self._method_set_collide_with_areas_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_collide_with_areas_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_collide_with_areas_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_set_collide_with_areas_2586408642_name._native_ptr(), 2586408642)
         assert(RayCast3D._method_set_collide_with_areas_2586408642 != nil)
         let _method_is_collide_with_areas_enabled_36873697_name = StringName(from: "is_collide_with_areas_enabled")
-        self._method_is_collide_with_areas_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_collide_with_areas_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_collide_with_areas_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_is_collide_with_areas_enabled_36873697_name._native_ptr(), 36873697)
         assert(RayCast3D._method_is_collide_with_areas_enabled_36873697 != nil)
         let _method_set_collide_with_bodies_2586408642_name = StringName(from: "set_collide_with_bodies")
-        self._method_set_collide_with_bodies_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_collide_with_bodies_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_collide_with_bodies_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_set_collide_with_bodies_2586408642_name._native_ptr(), 2586408642)
         assert(RayCast3D._method_set_collide_with_bodies_2586408642 != nil)
         let _method_is_collide_with_bodies_enabled_36873697_name = StringName(from: "is_collide_with_bodies_enabled")
-        self._method_is_collide_with_bodies_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_collide_with_bodies_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_collide_with_bodies_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_is_collide_with_bodies_enabled_36873697_name._native_ptr(), 36873697)
         assert(RayCast3D._method_is_collide_with_bodies_enabled_36873697 != nil)
         let _method_set_hit_from_inside_2586408642_name = StringName(from: "set_hit_from_inside")
-        self._method_set_hit_from_inside_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_hit_from_inside_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_hit_from_inside_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_set_hit_from_inside_2586408642_name._native_ptr(), 2586408642)
         assert(RayCast3D._method_set_hit_from_inside_2586408642 != nil)
         let _method_is_hit_from_inside_enabled_36873697_name = StringName(from: "is_hit_from_inside_enabled")
-        self._method_is_hit_from_inside_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_hit_from_inside_enabled_36873697_name._native_ptr(), 36873697)
+        self._method_is_hit_from_inside_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_is_hit_from_inside_enabled_36873697_name._native_ptr(), 36873697)
         assert(RayCast3D._method_is_hit_from_inside_enabled_36873697 != nil)
         let _method_set_debug_shape_custom_color_2920490490_name = StringName(from: "set_debug_shape_custom_color")
-        self._method_set_debug_shape_custom_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_debug_shape_custom_color_2920490490_name._native_ptr(), 2920490490)
+        self._method_set_debug_shape_custom_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_set_debug_shape_custom_color_2920490490_name._native_ptr(), 2920490490)
         assert(RayCast3D._method_set_debug_shape_custom_color_2920490490 != nil)
         let _method_get_debug_shape_custom_color_3444240500_name = StringName(from: "get_debug_shape_custom_color")
-        self._method_get_debug_shape_custom_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_debug_shape_custom_color_3444240500_name._native_ptr(), 3444240500)
+        self._method_get_debug_shape_custom_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_get_debug_shape_custom_color_3444240500_name._native_ptr(), 3444240500)
         assert(RayCast3D._method_get_debug_shape_custom_color_3444240500 != nil)
         let _method_set_debug_shape_thickness_1286410249_name = StringName(from: "set_debug_shape_thickness")
-        self._method_set_debug_shape_thickness_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_debug_shape_thickness_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_debug_shape_thickness_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_set_debug_shape_thickness_1286410249_name._native_ptr(), 1286410249)
         assert(RayCast3D._method_set_debug_shape_thickness_1286410249 != nil)
         let _method_get_debug_shape_thickness_3905245786_name = StringName(from: "get_debug_shape_thickness")
-        self._method_get_debug_shape_thickness_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_debug_shape_thickness_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_debug_shape_thickness_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast3D._native_ptr(), _method_get_debug_shape_thickness_3905245786_name._native_ptr(), 3905245786)
         assert(RayCast3D._method_get_debug_shape_thickness_3905245786 != nil)
     }
 
@@ -184,7 +189,7 @@ public class RayCast3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_target_position(local_point: Vector3)  {
         let local_point_native = local_point._native_ptr()
@@ -215,7 +220,7 @@ public class RayCast3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
     }
     public func is_colliding() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -232,7 +237,7 @@ public class RayCast3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func force_raycast_update()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -262,7 +267,7 @@ public class RayCast3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Object(from: __resPtr.pointee)
+            return Object(godot: __resPtr.pointee)
     }
     public func get_collider_rid() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -278,7 +283,7 @@ public class RayCast3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RID(from: __resPtr.pointee)
+            return RID(godot: __resPtr.pointee)
     }
     public func get_collider_shape() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -295,7 +300,7 @@ public class RayCast3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_collision_point() -> Vector3 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -311,7 +316,7 @@ public class RayCast3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
     }
     public func get_collision_normal() -> Vector3 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -327,7 +332,7 @@ public class RayCast3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
     }
     public func add_exception_rid(rid: RID)  {
         let rid_native = rid._native_ptr()
@@ -434,7 +439,7 @@ public class RayCast3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_collision_mask_value(layer_number: Int64, value: UInt8)  {
         withUnsafePointer(to: value) { value_native in
@@ -470,7 +475,7 @@ public class RayCast3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func set_exclude_parent_body(mask: UInt8)  {
@@ -504,7 +509,7 @@ public class RayCast3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_collide_with_areas(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -537,7 +542,7 @@ public class RayCast3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_collide_with_bodies(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -570,7 +575,7 @@ public class RayCast3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_hit_from_inside(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -603,7 +608,7 @@ public class RayCast3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_debug_shape_custom_color(debug_shape_custom_color: Color)  {
         let debug_shape_custom_color_native = debug_shape_custom_color._native_ptr()
@@ -634,7 +639,7 @@ public class RayCast3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Color(from: __resPtr.pointee)
+            return Color(godot: __resPtr.pointee)
     }
     public func set_debug_shape_thickness(debug_shape_thickness: Int64)  {
         withUnsafePointer(to: debug_shape_thickness) { debug_shape_thickness_native in
@@ -667,6 +672,6 @@ public class RayCast3D : Node3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
 }

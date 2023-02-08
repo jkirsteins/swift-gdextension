@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeIntOp: StringName! = nil
 /// An integer scalar operator to be used within the visual shader graph.
 /// 
 /// Applies [member operator] to two integer inputs: [code]a[/code] and [code]b[/code].
-public class VisualShaderNodeIntOp : VisualShaderNode {
+open class VisualShaderNodeIntOp : VisualShaderNode {
 
     public enum Operator : Int32 {
         case OP_ADD = 0
@@ -28,14 +28,19 @@ public class VisualShaderNodeIntOp : VisualShaderNode {
     static var _method_set_operator_1677909323: GDExtensionMethodBindPtr! = nil
     static var _method_get_operator_1236987913: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeIntOp = StringName(from: "VisualShaderNodeIntOp")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_operator_1677909323_name = StringName(from: "set_operator")
-        self._method_set_operator_1677909323 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_operator_1677909323_name._native_ptr(), 1677909323)
+        self._method_set_operator_1677909323 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeIntOp._native_ptr(), _method_set_operator_1677909323_name._native_ptr(), 1677909323)
         assert(VisualShaderNodeIntOp._method_set_operator_1677909323 != nil)
         let _method_get_operator_1236987913_name = StringName(from: "get_operator")
-        self._method_get_operator_1236987913 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_operator_1236987913_name._native_ptr(), 1236987913)
+        self._method_get_operator_1236987913 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeIntOp._native_ptr(), _method_get_operator_1236987913_name._native_ptr(), 1236987913)
         assert(VisualShaderNodeIntOp._method_get_operator_1236987913 != nil)
     }
 
@@ -69,6 +74,6 @@ public class VisualShaderNodeIntOp : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return VisualShaderNodeIntOp.Operator(from: __resPtr.pointee)
+            return VisualShaderNodeIntOp.Operator(godot: __resPtr.pointee)
     }
 }

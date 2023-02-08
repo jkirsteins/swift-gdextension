@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeParticleRandomness: StringName! = n
 /// Visual shader node for randomizing particle values.
 /// 
 /// Randomness node will output pseudo-random values of the given type based on the specified minimum and maximum values.
-public class VisualShaderNodeParticleRandomness : VisualShaderNode {
+open class VisualShaderNodeParticleRandomness : VisualShaderNode {
 
     public enum OpType : Int32 {
         case OP_TYPE_SCALAR = 0
@@ -20,14 +20,19 @@ public class VisualShaderNodeParticleRandomness : VisualShaderNode {
     static var _method_set_op_type_2060089061: GDExtensionMethodBindPtr! = nil
     static var _method_get_op_type_3597061078: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeParticleRandomness = StringName(from: "VisualShaderNodeParticleRandomness")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_op_type_2060089061_name = StringName(from: "set_op_type")
-        self._method_set_op_type_2060089061 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_op_type_2060089061_name._native_ptr(), 2060089061)
+        self._method_set_op_type_2060089061 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParticleRandomness._native_ptr(), _method_set_op_type_2060089061_name._native_ptr(), 2060089061)
         assert(VisualShaderNodeParticleRandomness._method_set_op_type_2060089061 != nil)
         let _method_get_op_type_3597061078_name = StringName(from: "get_op_type")
-        self._method_get_op_type_3597061078 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_op_type_3597061078_name._native_ptr(), 3597061078)
+        self._method_get_op_type_3597061078 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParticleRandomness._native_ptr(), _method_get_op_type_3597061078_name._native_ptr(), 3597061078)
         assert(VisualShaderNodeParticleRandomness._method_get_op_type_3597061078 != nil)
     }
 
@@ -61,6 +66,6 @@ public class VisualShaderNodeParticleRandomness : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return VisualShaderNodeParticleRandomness.OpType(from: __resPtr.pointee)
+            return VisualShaderNodeParticleRandomness.OpType(godot: __resPtr.pointee)
     }
 }

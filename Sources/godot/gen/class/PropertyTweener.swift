@@ -7,7 +7,7 @@ fileprivate var __godot_name_PropertyTweener: StringName! = nil
 /// [PropertyTweener] is used to interpolate a property in an object. See [method Tween.tween_property] for more usage information.
 ///  
 /// [b]Note:[/b] [method Tween.tween_property] is the only correct way to create [PropertyTweener]. Any [PropertyTweener] created manually will not function correctly.
-public class PropertyTweener : Tweener {
+open class PropertyTweener : Tweener {
 
     
 
@@ -20,26 +20,31 @@ public class PropertyTweener : Tweener {
     static var _method_set_ease_1080455622: GDExtensionMethodBindPtr! = nil
     static var _method_set_delay_2171559331: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PropertyTweener = StringName(from: "PropertyTweener")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_from_4190193059_name = StringName(from: "from")
-        self._method_from_4190193059 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_from_4190193059_name._native_ptr(), 4190193059)
+        self._method_from_4190193059 = self.interface.pointee.classdb_get_method_bind(__godot_name_PropertyTweener._native_ptr(), _method_from_4190193059_name._native_ptr(), 4190193059)
         assert(PropertyTweener._method_from_4190193059 != nil)
         let _method_from_current_4279177709_name = StringName(from: "from_current")
-        self._method_from_current_4279177709 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_from_current_4279177709_name._native_ptr(), 4279177709)
+        self._method_from_current_4279177709 = self.interface.pointee.classdb_get_method_bind(__godot_name_PropertyTweener._native_ptr(), _method_from_current_4279177709_name._native_ptr(), 4279177709)
         assert(PropertyTweener._method_from_current_4279177709 != nil)
         let _method_as_relative_4279177709_name = StringName(from: "as_relative")
-        self._method_as_relative_4279177709 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_as_relative_4279177709_name._native_ptr(), 4279177709)
+        self._method_as_relative_4279177709 = self.interface.pointee.classdb_get_method_bind(__godot_name_PropertyTweener._native_ptr(), _method_as_relative_4279177709_name._native_ptr(), 4279177709)
         assert(PropertyTweener._method_as_relative_4279177709 != nil)
         let _method_set_trans_1899107404_name = StringName(from: "set_trans")
-        self._method_set_trans_1899107404 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_trans_1899107404_name._native_ptr(), 1899107404)
+        self._method_set_trans_1899107404 = self.interface.pointee.classdb_get_method_bind(__godot_name_PropertyTweener._native_ptr(), _method_set_trans_1899107404_name._native_ptr(), 1899107404)
         assert(PropertyTweener._method_set_trans_1899107404 != nil)
         let _method_set_ease_1080455622_name = StringName(from: "set_ease")
-        self._method_set_ease_1080455622 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ease_1080455622_name._native_ptr(), 1080455622)
+        self._method_set_ease_1080455622 = self.interface.pointee.classdb_get_method_bind(__godot_name_PropertyTweener._native_ptr(), _method_set_ease_1080455622_name._native_ptr(), 1080455622)
         assert(PropertyTweener._method_set_ease_1080455622 != nil)
         let _method_set_delay_2171559331_name = StringName(from: "set_delay")
-        self._method_set_delay_2171559331 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_delay_2171559331_name._native_ptr(), 2171559331)
+        self._method_set_delay_2171559331 = self.interface.pointee.classdb_get_method_bind(__godot_name_PropertyTweener._native_ptr(), _method_set_delay_2171559331_name._native_ptr(), 2171559331)
         assert(PropertyTweener._method_set_delay_2171559331 != nil)
     }
 
@@ -58,7 +63,7 @@ public class PropertyTweener : Tweener {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PropertyTweener(from: __resPtr.pointee)
+            return PropertyTweener(godot: __resPtr.pointee)
     }
     public func from_current() -> PropertyTweener {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -74,7 +79,7 @@ public class PropertyTweener : Tweener {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PropertyTweener(from: __resPtr.pointee)
+            return PropertyTweener(godot: __resPtr.pointee)
     }
     public func as_relative() -> PropertyTweener {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -90,7 +95,7 @@ public class PropertyTweener : Tweener {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PropertyTweener(from: __resPtr.pointee)
+            return PropertyTweener(godot: __resPtr.pointee)
     }
     public func set_trans(trans: Tween.TransitionType) -> PropertyTweener {
         withUnsafePointer(to: trans.rawValue) { trans_native in
@@ -107,7 +112,7 @@ public class PropertyTweener : Tweener {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PropertyTweener(from: __resPtr.pointee)
+            return PropertyTweener(godot: __resPtr.pointee)
         }
     }
     public func set_ease(ease: Tween.EaseType) -> PropertyTweener {
@@ -125,7 +130,7 @@ public class PropertyTweener : Tweener {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PropertyTweener(from: __resPtr.pointee)
+            return PropertyTweener(godot: __resPtr.pointee)
         }
     }
     public func set_delay(delay: Float64) -> PropertyTweener {
@@ -143,7 +148,7 @@ public class PropertyTweener : Tweener {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PropertyTweener(from: __resPtr.pointee)
+            return PropertyTweener(godot: __resPtr.pointee)
         }
     }
 }

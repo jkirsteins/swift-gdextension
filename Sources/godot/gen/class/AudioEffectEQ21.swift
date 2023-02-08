@@ -51,7 +51,7 @@ fileprivate var __godot_name_AudioEffectEQ21: StringName! = nil
 /// Band 21: 22000 Hz
 ///  
 /// See also [AudioEffectEQ], [AudioEffectEQ6], [AudioEffectEQ10].
-public class AudioEffectEQ21 : AudioEffectEQ {
+open class AudioEffectEQ21 : AudioEffectEQ {
 
     
 
@@ -59,8 +59,13 @@ public class AudioEffectEQ21 : AudioEffectEQ {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AudioEffectEQ21 = StringName(from: "AudioEffectEQ21")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

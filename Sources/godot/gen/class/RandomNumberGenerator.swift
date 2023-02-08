@@ -21,7 +21,7 @@ fileprivate var __godot_name_RandomNumberGenerator: StringName! = nil
 /// [/codeblock]
 ///  
 /// [b]Note:[/b] The default values of [member seed] and [member state] properties are pseudo-random, and change when calling [method randomize]. The [code]0[/code] value documented here is a placeholder, and not the actual default seed.
-public class RandomNumberGenerator : RefCounted {
+open class RandomNumberGenerator : RefCounted {
 
     
 
@@ -38,38 +38,43 @@ public class RandomNumberGenerator : RefCounted {
     static var _method_randi_range_50157827: GDExtensionMethodBindPtr! = nil
     static var _method_randomize_3218959716: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_RandomNumberGenerator = StringName(from: "RandomNumberGenerator")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_seed_1286410249_name = StringName(from: "set_seed")
-        self._method_set_seed_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_seed_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_seed_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_set_seed_1286410249_name._native_ptr(), 1286410249)
         assert(RandomNumberGenerator._method_set_seed_1286410249 != nil)
         let _method_get_seed_2455072627_name = StringName(from: "get_seed")
-        self._method_get_seed_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_seed_2455072627_name._native_ptr(), 2455072627)
+        self._method_get_seed_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_get_seed_2455072627_name._native_ptr(), 2455072627)
         assert(RandomNumberGenerator._method_get_seed_2455072627 != nil)
         let _method_set_state_1286410249_name = StringName(from: "set_state")
-        self._method_set_state_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_state_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_state_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_set_state_1286410249_name._native_ptr(), 1286410249)
         assert(RandomNumberGenerator._method_set_state_1286410249 != nil)
         let _method_get_state_3905245786_name = StringName(from: "get_state")
-        self._method_get_state_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_state_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_state_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_get_state_3905245786_name._native_ptr(), 3905245786)
         assert(RandomNumberGenerator._method_get_state_3905245786 != nil)
         let _method_randi_2455072627_name = StringName(from: "randi")
-        self._method_randi_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_randi_2455072627_name._native_ptr(), 2455072627)
+        self._method_randi_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_randi_2455072627_name._native_ptr(), 2455072627)
         assert(RandomNumberGenerator._method_randi_2455072627 != nil)
         let _method_randf_191475506_name = StringName(from: "randf")
-        self._method_randf_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_randf_191475506_name._native_ptr(), 191475506)
+        self._method_randf_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_randf_191475506_name._native_ptr(), 191475506)
         assert(RandomNumberGenerator._method_randf_191475506 != nil)
         let _method_randfn_2207676613_name = StringName(from: "randfn")
-        self._method_randfn_2207676613 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_randfn_2207676613_name._native_ptr(), 2207676613)
+        self._method_randfn_2207676613 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_randfn_2207676613_name._native_ptr(), 2207676613)
         assert(RandomNumberGenerator._method_randfn_2207676613 != nil)
         let _method_randf_range_4269894367_name = StringName(from: "randf_range")
-        self._method_randf_range_4269894367 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_randf_range_4269894367_name._native_ptr(), 4269894367)
+        self._method_randf_range_4269894367 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_randf_range_4269894367_name._native_ptr(), 4269894367)
         assert(RandomNumberGenerator._method_randf_range_4269894367 != nil)
         let _method_randi_range_50157827_name = StringName(from: "randi_range")
-        self._method_randi_range_50157827 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_randi_range_50157827_name._native_ptr(), 50157827)
+        self._method_randi_range_50157827 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_randi_range_50157827_name._native_ptr(), 50157827)
         assert(RandomNumberGenerator._method_randi_range_50157827 != nil)
         let _method_randomize_3218959716_name = StringName(from: "randomize")
-        self._method_randomize_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_randomize_3218959716_name._native_ptr(), 3218959716)
+        self._method_randomize_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_randomize_3218959716_name._native_ptr(), 3218959716)
         assert(RandomNumberGenerator._method_randomize_3218959716 != nil)
     }
 
@@ -104,7 +109,7 @@ public class RandomNumberGenerator : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_state(state: Int64)  {
         withUnsafePointer(to: state) { state_native in
@@ -137,7 +142,7 @@ public class RandomNumberGenerator : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func randi() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -154,7 +159,7 @@ public class RandomNumberGenerator : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func randf() -> Float64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -171,7 +176,7 @@ public class RandomNumberGenerator : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func randfn(mean: Float64, deviation: Float64) -> Float64 {
         withUnsafePointer(to: deviation) { deviation_native in
@@ -190,7 +195,7 @@ public class RandomNumberGenerator : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
         }
     }
@@ -211,7 +216,7 @@ public class RandomNumberGenerator : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
         }
     }
@@ -232,7 +237,7 @@ public class RandomNumberGenerator : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
         }
     }

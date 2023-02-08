@@ -5,7 +5,7 @@ fileprivate var __godot_name_EditorPlugin: StringName! = nil
 /// Used by the editor to extend its functionality.
 /// 
 /// Plugins are used by the editor to extend functionality. The most common types of plugins are those which edit a given node or resource type, import plugins and export plugins. See also [EditorScript] to add functions to the editor.
-public class EditorPlugin : Node {
+open class EditorPlugin : Node {
 
     public enum CustomControlContainer : Int32 {
         case CONTAINER_TOOLBAR = 0
@@ -107,137 +107,142 @@ public class EditorPlugin : Node {
     static var _method_add_debugger_plugin_3749880309: GDExtensionMethodBindPtr! = nil
     static var _method_remove_debugger_plugin_3749880309: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorPlugin = StringName(from: "EditorPlugin")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_add_control_to_container_3092750152_name = StringName(from: "add_control_to_container")
-        self._method_add_control_to_container_3092750152 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_control_to_container_3092750152_name._native_ptr(), 3092750152)
+        self._method_add_control_to_container_3092750152 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_control_to_container_3092750152_name._native_ptr(), 3092750152)
         assert(EditorPlugin._method_add_control_to_container_3092750152 != nil)
         let _method_add_control_to_bottom_panel_3526039376_name = StringName(from: "add_control_to_bottom_panel")
-        self._method_add_control_to_bottom_panel_3526039376 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_control_to_bottom_panel_3526039376_name._native_ptr(), 3526039376)
+        self._method_add_control_to_bottom_panel_3526039376 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_control_to_bottom_panel_3526039376_name._native_ptr(), 3526039376)
         assert(EditorPlugin._method_add_control_to_bottom_panel_3526039376 != nil)
         let _method_add_control_to_dock_3354871258_name = StringName(from: "add_control_to_dock")
-        self._method_add_control_to_dock_3354871258 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_control_to_dock_3354871258_name._native_ptr(), 3354871258)
+        self._method_add_control_to_dock_3354871258 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_control_to_dock_3354871258_name._native_ptr(), 3354871258)
         assert(EditorPlugin._method_add_control_to_dock_3354871258 != nil)
         let _method_remove_control_from_docks_1496901182_name = StringName(from: "remove_control_from_docks")
-        self._method_remove_control_from_docks_1496901182 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_control_from_docks_1496901182_name._native_ptr(), 1496901182)
+        self._method_remove_control_from_docks_1496901182 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_remove_control_from_docks_1496901182_name._native_ptr(), 1496901182)
         assert(EditorPlugin._method_remove_control_from_docks_1496901182 != nil)
         let _method_remove_control_from_bottom_panel_1496901182_name = StringName(from: "remove_control_from_bottom_panel")
-        self._method_remove_control_from_bottom_panel_1496901182 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_control_from_bottom_panel_1496901182_name._native_ptr(), 1496901182)
+        self._method_remove_control_from_bottom_panel_1496901182 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_remove_control_from_bottom_panel_1496901182_name._native_ptr(), 1496901182)
         assert(EditorPlugin._method_remove_control_from_bottom_panel_1496901182 != nil)
         let _method_remove_control_from_container_3092750152_name = StringName(from: "remove_control_from_container")
-        self._method_remove_control_from_container_3092750152 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_control_from_container_3092750152_name._native_ptr(), 3092750152)
+        self._method_remove_control_from_container_3092750152 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_remove_control_from_container_3092750152_name._native_ptr(), 3092750152)
         assert(EditorPlugin._method_remove_control_from_container_3092750152 != nil)
         let _method_add_tool_menu_item_2137474292_name = StringName(from: "add_tool_menu_item")
-        self._method_add_tool_menu_item_2137474292 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_tool_menu_item_2137474292_name._native_ptr(), 2137474292)
+        self._method_add_tool_menu_item_2137474292 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_tool_menu_item_2137474292_name._native_ptr(), 2137474292)
         assert(EditorPlugin._method_add_tool_menu_item_2137474292 != nil)
         let _method_add_tool_submenu_item_1019428915_name = StringName(from: "add_tool_submenu_item")
-        self._method_add_tool_submenu_item_1019428915 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_tool_submenu_item_1019428915_name._native_ptr(), 1019428915)
+        self._method_add_tool_submenu_item_1019428915 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_tool_submenu_item_1019428915_name._native_ptr(), 1019428915)
         assert(EditorPlugin._method_add_tool_submenu_item_1019428915 != nil)
         let _method_remove_tool_menu_item_83702148_name = StringName(from: "remove_tool_menu_item")
-        self._method_remove_tool_menu_item_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_tool_menu_item_83702148_name._native_ptr(), 83702148)
+        self._method_remove_tool_menu_item_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_remove_tool_menu_item_83702148_name._native_ptr(), 83702148)
         assert(EditorPlugin._method_remove_tool_menu_item_83702148 != nil)
         let _method_get_export_as_menu_1775878644_name = StringName(from: "get_export_as_menu")
-        self._method_get_export_as_menu_1775878644 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_export_as_menu_1775878644_name._native_ptr(), 1775878644)
+        self._method_get_export_as_menu_1775878644 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_get_export_as_menu_1775878644_name._native_ptr(), 1775878644)
         assert(EditorPlugin._method_get_export_as_menu_1775878644 != nil)
         let _method_add_custom_type_1986814599_name = StringName(from: "add_custom_type")
-        self._method_add_custom_type_1986814599 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_custom_type_1986814599_name._native_ptr(), 1986814599)
+        self._method_add_custom_type_1986814599 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_custom_type_1986814599_name._native_ptr(), 1986814599)
         assert(EditorPlugin._method_add_custom_type_1986814599 != nil)
         let _method_remove_custom_type_83702148_name = StringName(from: "remove_custom_type")
-        self._method_remove_custom_type_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_custom_type_83702148_name._native_ptr(), 83702148)
+        self._method_remove_custom_type_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_remove_custom_type_83702148_name._native_ptr(), 83702148)
         assert(EditorPlugin._method_remove_custom_type_83702148 != nil)
         let _method_add_autoload_singleton_3186203200_name = StringName(from: "add_autoload_singleton")
-        self._method_add_autoload_singleton_3186203200 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_autoload_singleton_3186203200_name._native_ptr(), 3186203200)
+        self._method_add_autoload_singleton_3186203200 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_autoload_singleton_3186203200_name._native_ptr(), 3186203200)
         assert(EditorPlugin._method_add_autoload_singleton_3186203200 != nil)
         let _method_remove_autoload_singleton_83702148_name = StringName(from: "remove_autoload_singleton")
-        self._method_remove_autoload_singleton_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_autoload_singleton_83702148_name._native_ptr(), 83702148)
+        self._method_remove_autoload_singleton_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_remove_autoload_singleton_83702148_name._native_ptr(), 83702148)
         assert(EditorPlugin._method_remove_autoload_singleton_83702148 != nil)
         let _method_update_overlays_3905245786_name = StringName(from: "update_overlays")
-        self._method_update_overlays_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_update_overlays_3905245786_name._native_ptr(), 3905245786)
+        self._method_update_overlays_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_update_overlays_3905245786_name._native_ptr(), 3905245786)
         assert(EditorPlugin._method_update_overlays_3905245786 != nil)
         let _method_make_bottom_panel_item_visible_1496901182_name = StringName(from: "make_bottom_panel_item_visible")
-        self._method_make_bottom_panel_item_visible_1496901182 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_make_bottom_panel_item_visible_1496901182_name._native_ptr(), 1496901182)
+        self._method_make_bottom_panel_item_visible_1496901182 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_make_bottom_panel_item_visible_1496901182_name._native_ptr(), 1496901182)
         assert(EditorPlugin._method_make_bottom_panel_item_visible_1496901182 != nil)
         let _method_hide_bottom_panel_3218959716_name = StringName(from: "hide_bottom_panel")
-        self._method_hide_bottom_panel_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_hide_bottom_panel_3218959716_name._native_ptr(), 3218959716)
+        self._method_hide_bottom_panel_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_hide_bottom_panel_3218959716_name._native_ptr(), 3218959716)
         assert(EditorPlugin._method_hide_bottom_panel_3218959716 != nil)
         let _method_get_undo_redo_773492341_name = StringName(from: "get_undo_redo")
-        self._method_get_undo_redo_773492341 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_undo_redo_773492341_name._native_ptr(), 773492341)
+        self._method_get_undo_redo_773492341 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_get_undo_redo_773492341_name._native_ptr(), 773492341)
         assert(EditorPlugin._method_get_undo_redo_773492341 != nil)
         let _method_add_undo_redo_inspector_hook_callback_1611583062_name = StringName(from: "add_undo_redo_inspector_hook_callback")
-        self._method_add_undo_redo_inspector_hook_callback_1611583062 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_undo_redo_inspector_hook_callback_1611583062_name._native_ptr(), 1611583062)
+        self._method_add_undo_redo_inspector_hook_callback_1611583062 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_undo_redo_inspector_hook_callback_1611583062_name._native_ptr(), 1611583062)
         assert(EditorPlugin._method_add_undo_redo_inspector_hook_callback_1611583062 != nil)
         let _method_remove_undo_redo_inspector_hook_callback_1611583062_name = StringName(from: "remove_undo_redo_inspector_hook_callback")
-        self._method_remove_undo_redo_inspector_hook_callback_1611583062 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_undo_redo_inspector_hook_callback_1611583062_name._native_ptr(), 1611583062)
+        self._method_remove_undo_redo_inspector_hook_callback_1611583062 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_remove_undo_redo_inspector_hook_callback_1611583062_name._native_ptr(), 1611583062)
         assert(EditorPlugin._method_remove_undo_redo_inspector_hook_callback_1611583062 != nil)
         let _method_queue_save_layout_3218959716_name = StringName(from: "queue_save_layout")
-        self._method_queue_save_layout_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_queue_save_layout_3218959716_name._native_ptr(), 3218959716)
+        self._method_queue_save_layout_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_queue_save_layout_3218959716_name._native_ptr(), 3218959716)
         assert(EditorPlugin._method_queue_save_layout_3218959716 != nil)
         let _method_add_translation_parser_plugin_3116463128_name = StringName(from: "add_translation_parser_plugin")
-        self._method_add_translation_parser_plugin_3116463128 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_translation_parser_plugin_3116463128_name._native_ptr(), 3116463128)
+        self._method_add_translation_parser_plugin_3116463128 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_translation_parser_plugin_3116463128_name._native_ptr(), 3116463128)
         assert(EditorPlugin._method_add_translation_parser_plugin_3116463128 != nil)
         let _method_remove_translation_parser_plugin_3116463128_name = StringName(from: "remove_translation_parser_plugin")
-        self._method_remove_translation_parser_plugin_3116463128 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_translation_parser_plugin_3116463128_name._native_ptr(), 3116463128)
+        self._method_remove_translation_parser_plugin_3116463128 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_remove_translation_parser_plugin_3116463128_name._native_ptr(), 3116463128)
         assert(EditorPlugin._method_remove_translation_parser_plugin_3116463128 != nil)
         let _method_add_import_plugin_3113975762_name = StringName(from: "add_import_plugin")
-        self._method_add_import_plugin_3113975762 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_import_plugin_3113975762_name._native_ptr(), 3113975762)
+        self._method_add_import_plugin_3113975762 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_import_plugin_3113975762_name._native_ptr(), 3113975762)
         assert(EditorPlugin._method_add_import_plugin_3113975762 != nil)
         let _method_remove_import_plugin_2312482773_name = StringName(from: "remove_import_plugin")
-        self._method_remove_import_plugin_2312482773 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_import_plugin_2312482773_name._native_ptr(), 2312482773)
+        self._method_remove_import_plugin_2312482773 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_remove_import_plugin_2312482773_name._native_ptr(), 2312482773)
         assert(EditorPlugin._method_remove_import_plugin_2312482773 != nil)
         let _method_add_scene_format_importer_plugin_2764104752_name = StringName(from: "add_scene_format_importer_plugin")
-        self._method_add_scene_format_importer_plugin_2764104752 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_scene_format_importer_plugin_2764104752_name._native_ptr(), 2764104752)
+        self._method_add_scene_format_importer_plugin_2764104752 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_scene_format_importer_plugin_2764104752_name._native_ptr(), 2764104752)
         assert(EditorPlugin._method_add_scene_format_importer_plugin_2764104752 != nil)
         let _method_remove_scene_format_importer_plugin_2637776123_name = StringName(from: "remove_scene_format_importer_plugin")
-        self._method_remove_scene_format_importer_plugin_2637776123 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_scene_format_importer_plugin_2637776123_name._native_ptr(), 2637776123)
+        self._method_remove_scene_format_importer_plugin_2637776123 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_remove_scene_format_importer_plugin_2637776123_name._native_ptr(), 2637776123)
         assert(EditorPlugin._method_remove_scene_format_importer_plugin_2637776123 != nil)
         let _method_add_scene_post_import_plugin_3492436322_name = StringName(from: "add_scene_post_import_plugin")
-        self._method_add_scene_post_import_plugin_3492436322 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_scene_post_import_plugin_3492436322_name._native_ptr(), 3492436322)
+        self._method_add_scene_post_import_plugin_3492436322 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_scene_post_import_plugin_3492436322_name._native_ptr(), 3492436322)
         assert(EditorPlugin._method_add_scene_post_import_plugin_3492436322 != nil)
         let _method_remove_scene_post_import_plugin_3045178206_name = StringName(from: "remove_scene_post_import_plugin")
-        self._method_remove_scene_post_import_plugin_3045178206 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_scene_post_import_plugin_3045178206_name._native_ptr(), 3045178206)
+        self._method_remove_scene_post_import_plugin_3045178206 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_remove_scene_post_import_plugin_3045178206_name._native_ptr(), 3045178206)
         assert(EditorPlugin._method_remove_scene_post_import_plugin_3045178206 != nil)
         let _method_add_export_plugin_4095952207_name = StringName(from: "add_export_plugin")
-        self._method_add_export_plugin_4095952207 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_export_plugin_4095952207_name._native_ptr(), 4095952207)
+        self._method_add_export_plugin_4095952207 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_export_plugin_4095952207_name._native_ptr(), 4095952207)
         assert(EditorPlugin._method_add_export_plugin_4095952207 != nil)
         let _method_remove_export_plugin_4095952207_name = StringName(from: "remove_export_plugin")
-        self._method_remove_export_plugin_4095952207 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_export_plugin_4095952207_name._native_ptr(), 4095952207)
+        self._method_remove_export_plugin_4095952207 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_remove_export_plugin_4095952207_name._native_ptr(), 4095952207)
         assert(EditorPlugin._method_remove_export_plugin_4095952207 != nil)
         let _method_add_node_3d_gizmo_plugin_1541015022_name = StringName(from: "add_node_3d_gizmo_plugin")
-        self._method_add_node_3d_gizmo_plugin_1541015022 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_node_3d_gizmo_plugin_1541015022_name._native_ptr(), 1541015022)
+        self._method_add_node_3d_gizmo_plugin_1541015022 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_node_3d_gizmo_plugin_1541015022_name._native_ptr(), 1541015022)
         assert(EditorPlugin._method_add_node_3d_gizmo_plugin_1541015022 != nil)
         let _method_remove_node_3d_gizmo_plugin_1541015022_name = StringName(from: "remove_node_3d_gizmo_plugin")
-        self._method_remove_node_3d_gizmo_plugin_1541015022 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_node_3d_gizmo_plugin_1541015022_name._native_ptr(), 1541015022)
+        self._method_remove_node_3d_gizmo_plugin_1541015022 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_remove_node_3d_gizmo_plugin_1541015022_name._native_ptr(), 1541015022)
         assert(EditorPlugin._method_remove_node_3d_gizmo_plugin_1541015022 != nil)
         let _method_add_inspector_plugin_546395733_name = StringName(from: "add_inspector_plugin")
-        self._method_add_inspector_plugin_546395733 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_inspector_plugin_546395733_name._native_ptr(), 546395733)
+        self._method_add_inspector_plugin_546395733 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_inspector_plugin_546395733_name._native_ptr(), 546395733)
         assert(EditorPlugin._method_add_inspector_plugin_546395733 != nil)
         let _method_remove_inspector_plugin_546395733_name = StringName(from: "remove_inspector_plugin")
-        self._method_remove_inspector_plugin_546395733 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_inspector_plugin_546395733_name._native_ptr(), 546395733)
+        self._method_remove_inspector_plugin_546395733 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_remove_inspector_plugin_546395733_name._native_ptr(), 546395733)
         assert(EditorPlugin._method_remove_inspector_plugin_546395733 != nil)
         let _method_add_resource_conversion_plugin_2124849111_name = StringName(from: "add_resource_conversion_plugin")
-        self._method_add_resource_conversion_plugin_2124849111 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_resource_conversion_plugin_2124849111_name._native_ptr(), 2124849111)
+        self._method_add_resource_conversion_plugin_2124849111 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_resource_conversion_plugin_2124849111_name._native_ptr(), 2124849111)
         assert(EditorPlugin._method_add_resource_conversion_plugin_2124849111 != nil)
         let _method_remove_resource_conversion_plugin_2124849111_name = StringName(from: "remove_resource_conversion_plugin")
-        self._method_remove_resource_conversion_plugin_2124849111 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_resource_conversion_plugin_2124849111_name._native_ptr(), 2124849111)
+        self._method_remove_resource_conversion_plugin_2124849111 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_remove_resource_conversion_plugin_2124849111_name._native_ptr(), 2124849111)
         assert(EditorPlugin._method_remove_resource_conversion_plugin_2124849111 != nil)
         let _method_set_input_event_forwarding_always_enabled_3218959716_name = StringName(from: "set_input_event_forwarding_always_enabled")
-        self._method_set_input_event_forwarding_always_enabled_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_input_event_forwarding_always_enabled_3218959716_name._native_ptr(), 3218959716)
+        self._method_set_input_event_forwarding_always_enabled_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_set_input_event_forwarding_always_enabled_3218959716_name._native_ptr(), 3218959716)
         assert(EditorPlugin._method_set_input_event_forwarding_always_enabled_3218959716 != nil)
         let _method_set_force_draw_over_forwarding_enabled_3218959716_name = StringName(from: "set_force_draw_over_forwarding_enabled")
-        self._method_set_force_draw_over_forwarding_enabled_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_force_draw_over_forwarding_enabled_3218959716_name._native_ptr(), 3218959716)
+        self._method_set_force_draw_over_forwarding_enabled_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_set_force_draw_over_forwarding_enabled_3218959716_name._native_ptr(), 3218959716)
         assert(EditorPlugin._method_set_force_draw_over_forwarding_enabled_3218959716 != nil)
         let _method_get_editor_interface_4223731786_name = StringName(from: "get_editor_interface")
-        self._method_get_editor_interface_4223731786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_editor_interface_4223731786_name._native_ptr(), 4223731786)
+        self._method_get_editor_interface_4223731786 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_get_editor_interface_4223731786_name._native_ptr(), 4223731786)
         assert(EditorPlugin._method_get_editor_interface_4223731786 != nil)
         let _method_get_script_create_dialog_3121871482_name = StringName(from: "get_script_create_dialog")
-        self._method_get_script_create_dialog_3121871482 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_script_create_dialog_3121871482_name._native_ptr(), 3121871482)
+        self._method_get_script_create_dialog_3121871482 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_get_script_create_dialog_3121871482_name._native_ptr(), 3121871482)
         assert(EditorPlugin._method_get_script_create_dialog_3121871482 != nil)
         let _method_add_debugger_plugin_3749880309_name = StringName(from: "add_debugger_plugin")
-        self._method_add_debugger_plugin_3749880309 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_debugger_plugin_3749880309_name._native_ptr(), 3749880309)
+        self._method_add_debugger_plugin_3749880309 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_add_debugger_plugin_3749880309_name._native_ptr(), 3749880309)
         assert(EditorPlugin._method_add_debugger_plugin_3749880309 != nil)
         let _method_remove_debugger_plugin_3749880309_name = StringName(from: "remove_debugger_plugin")
-        self._method_remove_debugger_plugin_3749880309 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_debugger_plugin_3749880309_name._native_ptr(), 3749880309)
+        self._method_remove_debugger_plugin_3749880309 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPlugin._native_ptr(), _method_remove_debugger_plugin_3749880309_name._native_ptr(), 3749880309)
         assert(EditorPlugin._method_remove_debugger_plugin_3749880309 != nil)
     }
 
@@ -257,7 +262,7 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _forward_canvas_draw_over_viewport(viewport_control: Control)  {
         let viewport_control_native = viewport_control._native_ptr()
@@ -306,7 +311,7 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func _forward_3d_draw_over_viewport(viewport_control: Control)  {
         let viewport_control_native = viewport_control._native_ptr()
@@ -338,7 +343,7 @@ public class EditorPlugin : Node {
                     nil
                 )
     }
-    public func _get_plugin_name() -> String {
+    public func _get_plugin_name() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -346,14 +351,13 @@ public class EditorPlugin : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_plugin_name_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func _get_plugin_icon() -> Texture2D {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -369,7 +373,7 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture2D(from: __resPtr.pointee)
+            return Texture2D(godot: __resPtr.pointee)
     }
     public func _has_main_screen() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -386,7 +390,7 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _make_visible(visible: UInt8)  {
         withUnsafePointer(to: visible) { visible_native in
@@ -435,7 +439,7 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_state() -> Dictionary {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -451,7 +455,7 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
     }
     public func _set_state(state: Dictionary)  {
         let state_native = state._native_ptr()
@@ -524,7 +528,7 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedStringArray(from: __resPtr.pointee)
+            return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _set_window_layout(configuration: ConfigFile)  {
         let configuration_native = configuration._native_ptr()
@@ -571,7 +575,7 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _enable_plugin()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -618,8 +622,8 @@ public class EditorPlugin : Node {
                 )
         }
     }
-    public func add_control_to_bottom_panel(control: Control, title: String) -> Button {
-        withUnsafePointer(to: title) { title_native in
+    public func add_control_to_bottom_panel(control: Control, title: godot.String) -> Button {
+        let title_native = title._native_ptr()
         let control_native = control._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
@@ -634,8 +638,7 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Button(from: __resPtr.pointee)
-        }
+            return Button(godot: __resPtr.pointee)
     }
     public func add_control_to_dock(slot: EditorPlugin.DockSlot, control: Control)  {
         withUnsafePointer(to: slot.rawValue) { slot_native in
@@ -701,9 +704,9 @@ public class EditorPlugin : Node {
                 )
         }
     }
-    public func add_tool_menu_item(name: String, callable: Callable)  {
-        withUnsafePointer(to: name) { name_native in
+    public func add_tool_menu_item(name: godot.String, callable: Callable)  {
         let callable_native = callable._native_ptr()
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -716,11 +719,10 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func add_tool_submenu_item(name: String, submenu: PopupMenu)  {
-        withUnsafePointer(to: name) { name_native in
+    public func add_tool_submenu_item(name: godot.String, submenu: PopupMenu)  {
         let submenu_native = submenu._native_ptr()
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -733,10 +735,9 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func remove_tool_menu_item(name: String)  {
-        withUnsafePointer(to: name) { name_native in
+    public func remove_tool_menu_item(name: godot.String)  {
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -749,7 +750,6 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
     public func get_export_as_menu() -> PopupMenu {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -765,13 +765,13 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PopupMenu(from: __resPtr.pointee)
+            return PopupMenu(godot: __resPtr.pointee)
     }
-    public func add_custom_type(`type`: String, base: String, script: Script, icon: Texture2D)  {
-        withUnsafePointer(to: base) { base_native in
-        withUnsafePointer(to: `type`) { type_native in
+    public func add_custom_type(`type`: godot.String, base: godot.String, script: Script, icon: Texture2D)  {
         let icon_native = icon._native_ptr()
         let script_native = script._native_ptr()
+        let base_native = base._native_ptr()
+        let type_native = `type`._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 4)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -784,11 +784,9 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     nil
                 )
-        }
-        }
     }
-    public func remove_custom_type(`type`: String)  {
-        withUnsafePointer(to: `type`) { type_native in
+    public func remove_custom_type(`type`: godot.String)  {
+        let type_native = `type`._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -801,11 +799,10 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func add_autoload_singleton(name: String, path: String)  {
-        withUnsafePointer(to: path) { path_native in
-        withUnsafePointer(to: name) { name_native in
+    public func add_autoload_singleton(name: godot.String, path: godot.String)  {
+        let path_native = path._native_ptr()
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -818,11 +815,9 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     nil
                 )
-        }
-        }
     }
-    public func remove_autoload_singleton(name: String)  {
-        withUnsafePointer(to: name) { name_native in
+    public func remove_autoload_singleton(name: godot.String)  {
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -835,7 +830,6 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
     public func update_overlays() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -852,7 +846,7 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func make_bottom_panel_item_visible(item: Control)  {
         let item_native = item._native_ptr()
@@ -897,7 +891,7 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return EditorUndoRedoManager(from: __resPtr.pointee)
+            return EditorUndoRedoManager(godot: __resPtr.pointee)
     }
     public func add_undo_redo_inspector_hook_callback(callable: Callable)  {
         let callable_native = callable._native_ptr()
@@ -1231,7 +1225,7 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return EditorInterface(from: __resPtr.pointee)
+            return EditorInterface(godot: __resPtr.pointee)
     }
     public func get_script_create_dialog() -> ScriptCreateDialog {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -1247,7 +1241,7 @@ public class EditorPlugin : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return ScriptCreateDialog(from: __resPtr.pointee)
+            return ScriptCreateDialog(godot: __resPtr.pointee)
     }
     public func add_debugger_plugin(script: EditorDebuggerPlugin)  {
         let script_native = script._native_ptr()

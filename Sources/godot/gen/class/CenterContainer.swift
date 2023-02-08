@@ -5,7 +5,7 @@ fileprivate var __godot_name_CenterContainer: StringName! = nil
 /// Keeps children controls centered.
 /// 
 /// CenterContainer keeps children controls centered. This container keeps all children to their minimum size, in the center.
-public class CenterContainer : Container {
+open class CenterContainer : Container {
 
     
 
@@ -14,14 +14,19 @@ public class CenterContainer : Container {
     static var _method_set_use_top_left_2586408642: GDExtensionMethodBindPtr! = nil
     static var _method_is_using_top_left_36873697: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_CenterContainer = StringName(from: "CenterContainer")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_use_top_left_2586408642_name = StringName(from: "set_use_top_left")
-        self._method_set_use_top_left_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_use_top_left_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_use_top_left_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CenterContainer._native_ptr(), _method_set_use_top_left_2586408642_name._native_ptr(), 2586408642)
         assert(CenterContainer._method_set_use_top_left_2586408642 != nil)
         let _method_is_using_top_left_36873697_name = StringName(from: "is_using_top_left")
-        self._method_is_using_top_left_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_using_top_left_36873697_name._native_ptr(), 36873697)
+        self._method_is_using_top_left_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CenterContainer._native_ptr(), _method_is_using_top_left_36873697_name._native_ptr(), 36873697)
         assert(CenterContainer._method_is_using_top_left_36873697 != nil)
     }
 
@@ -56,6 +61,6 @@ public class CenterContainer : Container {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

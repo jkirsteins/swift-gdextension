@@ -5,7 +5,7 @@ fileprivate var __godot_name_AStar2D: StringName! = nil
 /// AStar class representation that uses 2D vectors as edges.
 /// 
 /// This is a wrapper for the [AStar3D] class which uses 2D vectors instead of 3D vectors.
-public class AStar2D : RefCounted {
+open class AStar2D : RefCounted {
 
     
 
@@ -37,77 +37,82 @@ public class AStar2D : RefCounted {
     static var _method_get_point_path_281625055: GDExtensionMethodBindPtr! = nil
     static var _method_get_id_path_3404614526: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AStar2D = StringName(from: "AStar2D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_get_available_point_id_3905245786_name = StringName(from: "get_available_point_id")
-        self._method_get_available_point_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_available_point_id_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_available_point_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_get_available_point_id_3905245786_name._native_ptr(), 3905245786)
         assert(AStar2D._method_get_available_point_id_3905245786 != nil)
         let _method_add_point_3370185124_name = StringName(from: "add_point")
-        self._method_add_point_3370185124 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_point_3370185124_name._native_ptr(), 3370185124)
+        self._method_add_point_3370185124 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_add_point_3370185124_name._native_ptr(), 3370185124)
         assert(AStar2D._method_add_point_3370185124 != nil)
         let _method_get_point_position_2299179447_name = StringName(from: "get_point_position")
-        self._method_get_point_position_2299179447 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_point_position_2299179447_name._native_ptr(), 2299179447)
+        self._method_get_point_position_2299179447 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_get_point_position_2299179447_name._native_ptr(), 2299179447)
         assert(AStar2D._method_get_point_position_2299179447 != nil)
         let _method_set_point_position_163021252_name = StringName(from: "set_point_position")
-        self._method_set_point_position_163021252 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_point_position_163021252_name._native_ptr(), 163021252)
+        self._method_set_point_position_163021252 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_set_point_position_163021252_name._native_ptr(), 163021252)
         assert(AStar2D._method_set_point_position_163021252 != nil)
         let _method_get_point_weight_scale_2339986948_name = StringName(from: "get_point_weight_scale")
-        self._method_get_point_weight_scale_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_point_weight_scale_2339986948_name._native_ptr(), 2339986948)
+        self._method_get_point_weight_scale_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_get_point_weight_scale_2339986948_name._native_ptr(), 2339986948)
         assert(AStar2D._method_get_point_weight_scale_2339986948 != nil)
         let _method_set_point_weight_scale_1602489585_name = StringName(from: "set_point_weight_scale")
-        self._method_set_point_weight_scale_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_point_weight_scale_1602489585_name._native_ptr(), 1602489585)
+        self._method_set_point_weight_scale_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_set_point_weight_scale_1602489585_name._native_ptr(), 1602489585)
         assert(AStar2D._method_set_point_weight_scale_1602489585 != nil)
         let _method_remove_point_1286410249_name = StringName(from: "remove_point")
-        self._method_remove_point_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_remove_point_1286410249_name._native_ptr(), 1286410249)
+        self._method_remove_point_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_remove_point_1286410249_name._native_ptr(), 1286410249)
         assert(AStar2D._method_remove_point_1286410249 != nil)
         let _method_has_point_1116898809_name = StringName(from: "has_point")
-        self._method_has_point_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_point_1116898809_name._native_ptr(), 1116898809)
+        self._method_has_point_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_has_point_1116898809_name._native_ptr(), 1116898809)
         assert(AStar2D._method_has_point_1116898809 != nil)
         let _method_get_point_connections_2865087369_name = StringName(from: "get_point_connections")
-        self._method_get_point_connections_2865087369 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_point_connections_2865087369_name._native_ptr(), 2865087369)
+        self._method_get_point_connections_2865087369 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_get_point_connections_2865087369_name._native_ptr(), 2865087369)
         assert(AStar2D._method_get_point_connections_2865087369 != nil)
         let _method_get_point_ids_3851388692_name = StringName(from: "get_point_ids")
-        self._method_get_point_ids_3851388692 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_point_ids_3851388692_name._native_ptr(), 3851388692)
+        self._method_get_point_ids_3851388692 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_get_point_ids_3851388692_name._native_ptr(), 3851388692)
         assert(AStar2D._method_get_point_ids_3851388692 != nil)
         let _method_set_point_disabled_4023243586_name = StringName(from: "set_point_disabled")
-        self._method_set_point_disabled_4023243586 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_point_disabled_4023243586_name._native_ptr(), 4023243586)
+        self._method_set_point_disabled_4023243586 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_set_point_disabled_4023243586_name._native_ptr(), 4023243586)
         assert(AStar2D._method_set_point_disabled_4023243586 != nil)
         let _method_is_point_disabled_1116898809_name = StringName(from: "is_point_disabled")
-        self._method_is_point_disabled_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_point_disabled_1116898809_name._native_ptr(), 1116898809)
+        self._method_is_point_disabled_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_is_point_disabled_1116898809_name._native_ptr(), 1116898809)
         assert(AStar2D._method_is_point_disabled_1116898809 != nil)
         let _method_connect_points_3785370599_name = StringName(from: "connect_points")
-        self._method_connect_points_3785370599 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_connect_points_3785370599_name._native_ptr(), 3785370599)
+        self._method_connect_points_3785370599 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_connect_points_3785370599_name._native_ptr(), 3785370599)
         assert(AStar2D._method_connect_points_3785370599 != nil)
         let _method_disconnect_points_3785370599_name = StringName(from: "disconnect_points")
-        self._method_disconnect_points_3785370599 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_disconnect_points_3785370599_name._native_ptr(), 3785370599)
+        self._method_disconnect_points_3785370599 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_disconnect_points_3785370599_name._native_ptr(), 3785370599)
         assert(AStar2D._method_disconnect_points_3785370599 != nil)
         let _method_are_points_connected_4063588998_name = StringName(from: "are_points_connected")
-        self._method_are_points_connected_4063588998 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_are_points_connected_4063588998_name._native_ptr(), 4063588998)
+        self._method_are_points_connected_4063588998 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_are_points_connected_4063588998_name._native_ptr(), 4063588998)
         assert(AStar2D._method_are_points_connected_4063588998 != nil)
         let _method_get_point_count_3905245786_name = StringName(from: "get_point_count")
-        self._method_get_point_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_point_count_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_point_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_get_point_count_3905245786_name._native_ptr(), 3905245786)
         assert(AStar2D._method_get_point_count_3905245786 != nil)
         let _method_get_point_capacity_3905245786_name = StringName(from: "get_point_capacity")
-        self._method_get_point_capacity_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_point_capacity_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_point_capacity_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_get_point_capacity_3905245786_name._native_ptr(), 3905245786)
         assert(AStar2D._method_get_point_capacity_3905245786 != nil)
         let _method_reserve_space_1286410249_name = StringName(from: "reserve_space")
-        self._method_reserve_space_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_reserve_space_1286410249_name._native_ptr(), 1286410249)
+        self._method_reserve_space_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_reserve_space_1286410249_name._native_ptr(), 1286410249)
         assert(AStar2D._method_reserve_space_1286410249 != nil)
         let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
+        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
         assert(AStar2D._method_clear_3218959716 != nil)
         let _method_get_closest_point_2300324924_name = StringName(from: "get_closest_point")
-        self._method_get_closest_point_2300324924 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_closest_point_2300324924_name._native_ptr(), 2300324924)
+        self._method_get_closest_point_2300324924 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_get_closest_point_2300324924_name._native_ptr(), 2300324924)
         assert(AStar2D._method_get_closest_point_2300324924 != nil)
         let _method_get_closest_position_in_segment_2656412154_name = StringName(from: "get_closest_position_in_segment")
-        self._method_get_closest_position_in_segment_2656412154 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_closest_position_in_segment_2656412154_name._native_ptr(), 2656412154)
+        self._method_get_closest_position_in_segment_2656412154 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_get_closest_position_in_segment_2656412154_name._native_ptr(), 2656412154)
         assert(AStar2D._method_get_closest_position_in_segment_2656412154 != nil)
         let _method_get_point_path_281625055_name = StringName(from: "get_point_path")
-        self._method_get_point_path_281625055 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_point_path_281625055_name._native_ptr(), 281625055)
+        self._method_get_point_path_281625055 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_get_point_path_281625055_name._native_ptr(), 281625055)
         assert(AStar2D._method_get_point_path_281625055 != nil)
         let _method_get_id_path_3404614526_name = StringName(from: "get_id_path")
-        self._method_get_id_path_3404614526 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_id_path_3404614526_name._native_ptr(), 3404614526)
+        self._method_get_id_path_3404614526 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar2D._native_ptr(), _method_get_id_path_3404614526_name._native_ptr(), 3404614526)
         assert(AStar2D._method_get_id_path_3404614526 != nil)
     }
 
@@ -128,7 +133,7 @@ public class AStar2D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
         }
     }
@@ -149,7 +154,7 @@ public class AStar2D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
         }
     }
@@ -168,7 +173,7 @@ public class AStar2D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func add_point(id: Int64, position: Vector2, weight_scale: Float64)  {
         withUnsafePointer(to: weight_scale) { weight_scale_native in
@@ -204,7 +209,7 @@ public class AStar2D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
         }
     }
     public func set_point_position(id: Int64, position: Vector2)  {
@@ -240,7 +245,7 @@ public class AStar2D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
     public func set_point_weight_scale(id: Int64, weight_scale: Float64)  {
@@ -293,7 +298,7 @@ public class AStar2D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func get_point_connections(id: Int64) -> PackedInt64Array {
@@ -311,7 +316,7 @@ public class AStar2D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt64Array(from: __resPtr.pointee)
+            return PackedInt64Array(godot: __resPtr.pointee)
         }
     }
     public func get_point_ids() -> PackedInt64Array {
@@ -328,7 +333,7 @@ public class AStar2D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt64Array(from: __resPtr.pointee)
+            return PackedInt64Array(godot: __resPtr.pointee)
     }
     public func set_point_disabled(id: Int64, disabled: UInt8)  {
         withUnsafePointer(to: disabled) { disabled_native in
@@ -364,7 +369,7 @@ public class AStar2D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
     }
     public func connect_points(id: Int64, to_id: Int64, bidirectional: UInt8)  {
@@ -425,7 +430,7 @@ public class AStar2D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
         }
@@ -445,7 +450,7 @@ public class AStar2D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_point_capacity() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -462,7 +467,7 @@ public class AStar2D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func reserve_space(num_nodes: Int64)  {
         withUnsafePointer(to: num_nodes) { num_nodes_native in
@@ -511,7 +516,7 @@ public class AStar2D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
     }
     public func get_closest_position_in_segment(to_position: Vector2) -> Vector2 {
@@ -529,7 +534,7 @@ public class AStar2D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func get_point_path(from_id: Int64, to_id: Int64) -> PackedVector2Array {
         withUnsafePointer(to: to_id) { to_id_native in
@@ -547,7 +552,7 @@ public class AStar2D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector2Array(from: __resPtr.pointee)
+            return PackedVector2Array(godot: __resPtr.pointee)
         }
         }
     }
@@ -567,7 +572,7 @@ public class AStar2D : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt64Array(from: __resPtr.pointee)
+            return PackedInt64Array(godot: __resPtr.pointee)
         }
         }
     }

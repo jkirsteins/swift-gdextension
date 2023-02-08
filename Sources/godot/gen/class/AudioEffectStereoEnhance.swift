@@ -5,7 +5,7 @@ fileprivate var __godot_name_AudioEffectStereoEnhance: StringName! = nil
 /// An audio effect that can be used to adjust the intensity of stereo panning.
 /// 
 /// An audio effect that can be used to adjust the intensity of stereo panning.
-public class AudioEffectStereoEnhance : AudioEffect {
+open class AudioEffectStereoEnhance : AudioEffect {
 
     
 
@@ -18,26 +18,31 @@ public class AudioEffectStereoEnhance : AudioEffect {
     static var _method_set_surround_373806689: GDExtensionMethodBindPtr! = nil
     static var _method_get_surround_1740695150: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AudioEffectStereoEnhance = StringName(from: "AudioEffectStereoEnhance")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_pan_pullout_373806689_name = StringName(from: "set_pan_pullout")
-        self._method_set_pan_pullout_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_pan_pullout_373806689_name._native_ptr(), 373806689)
+        self._method_set_pan_pullout_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectStereoEnhance._native_ptr(), _method_set_pan_pullout_373806689_name._native_ptr(), 373806689)
         assert(AudioEffectStereoEnhance._method_set_pan_pullout_373806689 != nil)
         let _method_get_pan_pullout_1740695150_name = StringName(from: "get_pan_pullout")
-        self._method_get_pan_pullout_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_pan_pullout_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_pan_pullout_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectStereoEnhance._native_ptr(), _method_get_pan_pullout_1740695150_name._native_ptr(), 1740695150)
         assert(AudioEffectStereoEnhance._method_get_pan_pullout_1740695150 != nil)
         let _method_set_time_pullout_373806689_name = StringName(from: "set_time_pullout")
-        self._method_set_time_pullout_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_time_pullout_373806689_name._native_ptr(), 373806689)
+        self._method_set_time_pullout_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectStereoEnhance._native_ptr(), _method_set_time_pullout_373806689_name._native_ptr(), 373806689)
         assert(AudioEffectStereoEnhance._method_set_time_pullout_373806689 != nil)
         let _method_get_time_pullout_1740695150_name = StringName(from: "get_time_pullout")
-        self._method_get_time_pullout_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_time_pullout_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_time_pullout_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectStereoEnhance._native_ptr(), _method_get_time_pullout_1740695150_name._native_ptr(), 1740695150)
         assert(AudioEffectStereoEnhance._method_get_time_pullout_1740695150 != nil)
         let _method_set_surround_373806689_name = StringName(from: "set_surround")
-        self._method_set_surround_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_surround_373806689_name._native_ptr(), 373806689)
+        self._method_set_surround_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectStereoEnhance._native_ptr(), _method_set_surround_373806689_name._native_ptr(), 373806689)
         assert(AudioEffectStereoEnhance._method_set_surround_373806689 != nil)
         let _method_get_surround_1740695150_name = StringName(from: "get_surround")
-        self._method_get_surround_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_surround_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_surround_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectStereoEnhance._native_ptr(), _method_get_surround_1740695150_name._native_ptr(), 1740695150)
         assert(AudioEffectStereoEnhance._method_get_surround_1740695150 != nil)
     }
 
@@ -72,7 +77,7 @@ public class AudioEffectStereoEnhance : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_time_pullout(amount: Float64)  {
         withUnsafePointer(to: amount) { amount_native in
@@ -105,7 +110,7 @@ public class AudioEffectStereoEnhance : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_surround(amount: Float64)  {
         withUnsafePointer(to: amount) { amount_native in
@@ -138,6 +143,6 @@ public class AudioEffectStereoEnhance : AudioEffect {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
 }

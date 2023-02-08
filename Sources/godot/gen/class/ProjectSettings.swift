@@ -11,7 +11,7 @@ fileprivate var __godot_name_ProjectSettings: StringName! = nil
 /// [b]Feature tags:[/b] Project settings can be overridden for specific platforms and configurations (debug, release, ...) using [url=$DOCS_URL/tutorials/export/feature_tags.html]feature tags[/url].
 ///  
 /// [b]Overriding:[/b] Any project setting can be overridden by creating a file named [code]override.cfg[/code] in the project's root directory. This can also be used in exported projects by placing this file in the same directory as the project binary. Overriding will still take the base project settings' [url=$DOCS_URL/tutorials/export/feature_tags.html]feature tags[/url] in account. Therefore, make sure to [i]also[/i] override the setting with the desired feature tags if you want them to override base project settings on all platforms and configurations.
-public class ProjectSettings : Object {
+open class ProjectSettings : Object {
 
     
 
@@ -33,58 +33,63 @@ public class ProjectSettings : Object {
     static var _method_load_resource_pack_3001721055: GDExtensionMethodBindPtr! = nil
     static var _method_save_custom_166001499: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ProjectSettings = StringName(from: "ProjectSettings")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_has_setting_3927539163_name = StringName(from: "has_setting")
-        self._method_has_setting_3927539163 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_has_setting_3927539163_name._native_ptr(), 3927539163)
+        self._method_has_setting_3927539163 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_has_setting_3927539163_name._native_ptr(), 3927539163)
         assert(ProjectSettings._method_has_setting_3927539163 != nil)
         let _method_set_setting_402577236_name = StringName(from: "set_setting")
-        self._method_set_setting_402577236 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_setting_402577236_name._native_ptr(), 402577236)
+        self._method_set_setting_402577236 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_set_setting_402577236_name._native_ptr(), 402577236)
         assert(ProjectSettings._method_set_setting_402577236 != nil)
         let _method_get_setting_223050753_name = StringName(from: "get_setting")
-        self._method_get_setting_223050753 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_setting_223050753_name._native_ptr(), 223050753)
+        self._method_get_setting_223050753 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_get_setting_223050753_name._native_ptr(), 223050753)
         assert(ProjectSettings._method_get_setting_223050753 != nil)
         let _method_get_setting_with_override_2760726917_name = StringName(from: "get_setting_with_override")
-        self._method_get_setting_with_override_2760726917 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_setting_with_override_2760726917_name._native_ptr(), 2760726917)
+        self._method_get_setting_with_override_2760726917 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_get_setting_with_override_2760726917_name._native_ptr(), 2760726917)
         assert(ProjectSettings._method_get_setting_with_override_2760726917 != nil)
         let _method_set_order_2956805083_name = StringName(from: "set_order")
-        self._method_set_order_2956805083 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_order_2956805083_name._native_ptr(), 2956805083)
+        self._method_set_order_2956805083 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_set_order_2956805083_name._native_ptr(), 2956805083)
         assert(ProjectSettings._method_set_order_2956805083 != nil)
         let _method_get_order_1321353865_name = StringName(from: "get_order")
-        self._method_get_order_1321353865 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_order_1321353865_name._native_ptr(), 1321353865)
+        self._method_get_order_1321353865 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_get_order_1321353865_name._native_ptr(), 1321353865)
         assert(ProjectSettings._method_get_order_1321353865 != nil)
         let _method_set_initial_value_402577236_name = StringName(from: "set_initial_value")
-        self._method_set_initial_value_402577236 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_initial_value_402577236_name._native_ptr(), 402577236)
+        self._method_set_initial_value_402577236 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_set_initial_value_402577236_name._native_ptr(), 402577236)
         assert(ProjectSettings._method_set_initial_value_402577236 != nil)
         let _method_add_property_info_4155329257_name = StringName(from: "add_property_info")
-        self._method_add_property_info_4155329257 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_property_info_4155329257_name._native_ptr(), 4155329257)
+        self._method_add_property_info_4155329257 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_add_property_info_4155329257_name._native_ptr(), 4155329257)
         assert(ProjectSettings._method_add_property_info_4155329257 != nil)
         let _method_set_restart_if_changed_2678287736_name = StringName(from: "set_restart_if_changed")
-        self._method_set_restart_if_changed_2678287736 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_restart_if_changed_2678287736_name._native_ptr(), 2678287736)
+        self._method_set_restart_if_changed_2678287736 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_set_restart_if_changed_2678287736_name._native_ptr(), 2678287736)
         assert(ProjectSettings._method_set_restart_if_changed_2678287736 != nil)
         let _method_clear_83702148_name = StringName(from: "clear")
-        self._method_clear_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_83702148_name._native_ptr(), 83702148)
+        self._method_clear_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_clear_83702148_name._native_ptr(), 83702148)
         assert(ProjectSettings._method_clear_83702148 != nil)
         let _method_localize_path_3135753539_name = StringName(from: "localize_path")
-        self._method_localize_path_3135753539 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_localize_path_3135753539_name._native_ptr(), 3135753539)
+        self._method_localize_path_3135753539 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_localize_path_3135753539_name._native_ptr(), 3135753539)
         assert(ProjectSettings._method_localize_path_3135753539 != nil)
         let _method_globalize_path_3135753539_name = StringName(from: "globalize_path")
-        self._method_globalize_path_3135753539 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_globalize_path_3135753539_name._native_ptr(), 3135753539)
+        self._method_globalize_path_3135753539 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_globalize_path_3135753539_name._native_ptr(), 3135753539)
         assert(ProjectSettings._method_globalize_path_3135753539 != nil)
         let _method_save_166280745_name = StringName(from: "save")
-        self._method_save_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_save_166280745_name._native_ptr(), 166280745)
+        self._method_save_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_save_166280745_name._native_ptr(), 166280745)
         assert(ProjectSettings._method_save_166280745 != nil)
         let _method_load_resource_pack_3001721055_name = StringName(from: "load_resource_pack")
-        self._method_load_resource_pack_3001721055 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_load_resource_pack_3001721055_name._native_ptr(), 3001721055)
+        self._method_load_resource_pack_3001721055 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_load_resource_pack_3001721055_name._native_ptr(), 3001721055)
         assert(ProjectSettings._method_load_resource_pack_3001721055 != nil)
         let _method_save_custom_166001499_name = StringName(from: "save_custom")
-        self._method_save_custom_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_save_custom_166001499_name._native_ptr(), 166001499)
+        self._method_save_custom_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_save_custom_166001499_name._native_ptr(), 166001499)
         assert(ProjectSettings._method_save_custom_166001499 != nil)
     }
 
-    public func has_setting(name: String) -> UInt8 {
-        withUnsafePointer(to: name) { name_native in
+    public func has_setting(name: godot.String) -> UInt8 {
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -99,12 +104,11 @@ public class ProjectSettings : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func set_setting(name: String, value: Variant)  {
-        withUnsafePointer(to: name) { name_native in
+    public func set_setting(name: godot.String, value: Variant)  {
         let value_native = value._native_ptr()
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -117,11 +121,10 @@ public class ProjectSettings : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func get_setting(name: String, default_value: Variant) -> Variant {
-        withUnsafePointer(to: name) { name_native in
+    public func get_setting(name: godot.String, default_value: Variant) -> Variant {
         let default_value_native = default_value._native_ptr()
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -135,8 +138,7 @@ public class ProjectSettings : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
-        }
+            return Variant(godot: __resPtr.pointee)
     }
     public func get_setting_with_override(name: StringName) -> Variant {
         let name_native = name._native_ptr()
@@ -153,11 +155,11 @@ public class ProjectSettings : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
     }
-    public func set_order(name: String, position: Int64)  {
+    public func set_order(name: godot.String, position: Int64)  {
         withUnsafePointer(to: position) { position_native in
-        withUnsafePointer(to: name) { name_native in
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -171,10 +173,9 @@ public class ProjectSettings : Object {
                     nil
                 )
         }
-        }
     }
-    public func get_order(name: String) -> Int64 {
-        withUnsafePointer(to: name) { name_native in
+    public func get_order(name: godot.String) -> Int64 {
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -189,12 +190,11 @@ public class ProjectSettings : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
-        }
+            return Int64(godot: __resPtr.pointee)
     }
-    public func set_initial_value(name: String, value: Variant)  {
-        withUnsafePointer(to: name) { name_native in
+    public func set_initial_value(name: godot.String, value: Variant)  {
         let value_native = value._native_ptr()
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -207,7 +207,6 @@ public class ProjectSettings : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
     public func add_property_info(hint: Dictionary)  {
         let hint_native = hint._native_ptr()
@@ -224,9 +223,9 @@ public class ProjectSettings : Object {
                     nil
                 )
     }
-    public func set_restart_if_changed(name: String, restart: UInt8)  {
+    public func set_restart_if_changed(name: godot.String, restart: UInt8)  {
         withUnsafePointer(to: restart) { restart_native in
-        withUnsafePointer(to: name) { name_native in
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -240,10 +239,9 @@ public class ProjectSettings : Object {
                     nil
                 )
         }
-        }
     }
-    public func clear(name: String)  {
-        withUnsafePointer(to: name) { name_native in
+    public func clear(name: godot.String)  {
+        let name_native = name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -256,10 +254,9 @@ public class ProjectSettings : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func localize_path(path: String) -> String {
-        withUnsafePointer(to: path) { path_native in
+    public func localize_path(path: godot.String) -> godot.String {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -267,18 +264,16 @@ public class ProjectSettings : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_localize_path_3135753539,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
-        }
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func globalize_path(path: String) -> String {
-        withUnsafePointer(to: path) { path_native in
+    public func globalize_path(path: godot.String) -> godot.String {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -286,15 +281,13 @@ public class ProjectSettings : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_globalize_path_3135753539,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
-        }
+            return godot.String(godot: __resPtr.pointee)
     }
     public func save() -> Error {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -310,12 +303,12 @@ public class ProjectSettings : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
-    public func load_resource_pack(pack: String, replace_files: UInt8, offset: Int64) -> UInt8 {
+    public func load_resource_pack(pack: godot.String, replace_files: UInt8, offset: Int64) -> UInt8 {
         withUnsafePointer(to: offset) { offset_native in
         withUnsafePointer(to: replace_files) { replace_files_native in
-        withUnsafePointer(to: pack) { pack_native in
+        let pack_native = pack._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -330,13 +323,12 @@ public class ProjectSettings : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
         }
         }
     }
-    public func save_custom(file: String) -> Error {
-        withUnsafePointer(to: file) { file_native in
+    public func save_custom(file: godot.String) -> Error {
+        let file_native = file._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -350,7 +342,6 @@ public class ProjectSettings : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
+            return Error(godot: __resPtr.pointee)
     }
 }

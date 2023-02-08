@@ -5,7 +5,7 @@ fileprivate var __godot_name_InputEventShortcut: StringName! = nil
 /// 
 /// 
 /// 
-public class InputEventShortcut : InputEvent {
+open class InputEventShortcut : InputEvent {
 
     
 
@@ -14,14 +14,19 @@ public class InputEventShortcut : InputEvent {
     static var _method_set_shortcut_857163497: GDExtensionMethodBindPtr! = nil
     static var _method_get_shortcut_3766804753: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_InputEventShortcut = StringName(from: "InputEventShortcut")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_shortcut_857163497_name = StringName(from: "set_shortcut")
-        self._method_set_shortcut_857163497 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_shortcut_857163497_name._native_ptr(), 857163497)
+        self._method_set_shortcut_857163497 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventShortcut._native_ptr(), _method_set_shortcut_857163497_name._native_ptr(), 857163497)
         assert(InputEventShortcut._method_set_shortcut_857163497 != nil)
         let _method_get_shortcut_3766804753_name = StringName(from: "get_shortcut")
-        self._method_get_shortcut_3766804753 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_shortcut_3766804753_name._native_ptr(), 3766804753)
+        self._method_get_shortcut_3766804753 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventShortcut._native_ptr(), _method_get_shortcut_3766804753_name._native_ptr(), 3766804753)
         assert(InputEventShortcut._method_get_shortcut_3766804753 != nil)
     }
 
@@ -54,6 +59,6 @@ public class InputEventShortcut : InputEvent {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Shortcut(from: __resPtr.pointee)
+            return Shortcut(godot: __resPtr.pointee)
     }
 }

@@ -5,7 +5,7 @@ fileprivate var __godot_name_CSharpScript: StringName! = nil
 /// MISSING
 /// 
 /// MISSING
-public class CSharpScript : Script {
+open class CSharpScript : Script {
 
     
 
@@ -13,11 +13,16 @@ public class CSharpScript : Script {
 
     static var _method_new_1545262638: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_CSharpScript = StringName(from: "CSharpScript")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_new_1545262638_name = StringName(from: "new")
-        self._method_new_1545262638 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_new_1545262638_name._native_ptr(), 1545262638)
+        self._method_new_1545262638 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSharpScript._native_ptr(), _method_new_1545262638_name._native_ptr(), 1545262638)
         assert(CSharpScript._method_new_1545262638 != nil)
     }
 
@@ -35,6 +40,6 @@ public class CSharpScript : Script {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Variant(from: __resPtr.pointee)
+            return Variant(godot: __resPtr.pointee)
     }
 }

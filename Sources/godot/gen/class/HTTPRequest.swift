@@ -282,7 +282,7 @@ fileprivate var __godot_name_HTTPRequest: StringName! = nil
 /// [/codeblocks]
 ///  
 /// [b]Gzipped response bodies[/b]: HTTPRequest will automatically handle decompression of response bodies. A [code]Accept-Encoding[/code] header will be automatically added to each of your requests, unless one is already specified. Any response with a [code]Content-Encoding: gzip[/code] header will automatically be decompressed and delivered to you as uncompressed bytes.
-public class HTTPRequest : Node {
+open class HTTPRequest : Node {
 
     public enum Result : Int32 {
         case RESULT_SUCCESS = 0
@@ -327,85 +327,90 @@ public class HTTPRequest : Node {
     static var _method_set_http_proxy_2956805083: GDExtensionMethodBindPtr! = nil
     static var _method_set_https_proxy_2956805083: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_HTTPRequest = StringName(from: "HTTPRequest")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_request_2720304520_name = StringName(from: "request")
-        self._method_request_2720304520 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_request_2720304520_name._native_ptr(), 2720304520)
+        self._method_request_2720304520 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_request_2720304520_name._native_ptr(), 2720304520)
         assert(HTTPRequest._method_request_2720304520 != nil)
         let _method_request_raw_4282724657_name = StringName(from: "request_raw")
-        self._method_request_raw_4282724657 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_request_raw_4282724657_name._native_ptr(), 4282724657)
+        self._method_request_raw_4282724657 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_request_raw_4282724657_name._native_ptr(), 4282724657)
         assert(HTTPRequest._method_request_raw_4282724657 != nil)
         let _method_cancel_request_3218959716_name = StringName(from: "cancel_request")
-        self._method_cancel_request_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_cancel_request_3218959716_name._native_ptr(), 3218959716)
+        self._method_cancel_request_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_cancel_request_3218959716_name._native_ptr(), 3218959716)
         assert(HTTPRequest._method_cancel_request_3218959716 != nil)
         let _method_set_tls_options_2210231844_name = StringName(from: "set_tls_options")
-        self._method_set_tls_options_2210231844 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_tls_options_2210231844_name._native_ptr(), 2210231844)
+        self._method_set_tls_options_2210231844 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_set_tls_options_2210231844_name._native_ptr(), 2210231844)
         assert(HTTPRequest._method_set_tls_options_2210231844 != nil)
         let _method_get_http_client_status_1426656811_name = StringName(from: "get_http_client_status")
-        self._method_get_http_client_status_1426656811 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_http_client_status_1426656811_name._native_ptr(), 1426656811)
+        self._method_get_http_client_status_1426656811 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_get_http_client_status_1426656811_name._native_ptr(), 1426656811)
         assert(HTTPRequest._method_get_http_client_status_1426656811 != nil)
         let _method_set_use_threads_2586408642_name = StringName(from: "set_use_threads")
-        self._method_set_use_threads_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_use_threads_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_use_threads_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_set_use_threads_2586408642_name._native_ptr(), 2586408642)
         assert(HTTPRequest._method_set_use_threads_2586408642 != nil)
         let _method_is_using_threads_36873697_name = StringName(from: "is_using_threads")
-        self._method_is_using_threads_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_using_threads_36873697_name._native_ptr(), 36873697)
+        self._method_is_using_threads_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_is_using_threads_36873697_name._native_ptr(), 36873697)
         assert(HTTPRequest._method_is_using_threads_36873697 != nil)
         let _method_set_accept_gzip_2586408642_name = StringName(from: "set_accept_gzip")
-        self._method_set_accept_gzip_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_accept_gzip_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_accept_gzip_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_set_accept_gzip_2586408642_name._native_ptr(), 2586408642)
         assert(HTTPRequest._method_set_accept_gzip_2586408642 != nil)
         let _method_is_accepting_gzip_36873697_name = StringName(from: "is_accepting_gzip")
-        self._method_is_accepting_gzip_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_accepting_gzip_36873697_name._native_ptr(), 36873697)
+        self._method_is_accepting_gzip_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_is_accepting_gzip_36873697_name._native_ptr(), 36873697)
         assert(HTTPRequest._method_is_accepting_gzip_36873697 != nil)
         let _method_set_body_size_limit_1286410249_name = StringName(from: "set_body_size_limit")
-        self._method_set_body_size_limit_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_body_size_limit_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_body_size_limit_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_set_body_size_limit_1286410249_name._native_ptr(), 1286410249)
         assert(HTTPRequest._method_set_body_size_limit_1286410249 != nil)
         let _method_get_body_size_limit_3905245786_name = StringName(from: "get_body_size_limit")
-        self._method_get_body_size_limit_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_body_size_limit_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_body_size_limit_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_get_body_size_limit_3905245786_name._native_ptr(), 3905245786)
         assert(HTTPRequest._method_get_body_size_limit_3905245786 != nil)
         let _method_set_max_redirects_1286410249_name = StringName(from: "set_max_redirects")
-        self._method_set_max_redirects_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_max_redirects_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_max_redirects_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_set_max_redirects_1286410249_name._native_ptr(), 1286410249)
         assert(HTTPRequest._method_set_max_redirects_1286410249 != nil)
         let _method_get_max_redirects_3905245786_name = StringName(from: "get_max_redirects")
-        self._method_get_max_redirects_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_max_redirects_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_max_redirects_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_get_max_redirects_3905245786_name._native_ptr(), 3905245786)
         assert(HTTPRequest._method_get_max_redirects_3905245786 != nil)
         let _method_set_download_file_83702148_name = StringName(from: "set_download_file")
-        self._method_set_download_file_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_download_file_83702148_name._native_ptr(), 83702148)
+        self._method_set_download_file_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_set_download_file_83702148_name._native_ptr(), 83702148)
         assert(HTTPRequest._method_set_download_file_83702148 != nil)
         let _method_get_download_file_201670096_name = StringName(from: "get_download_file")
-        self._method_get_download_file_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_download_file_201670096_name._native_ptr(), 201670096)
+        self._method_get_download_file_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_get_download_file_201670096_name._native_ptr(), 201670096)
         assert(HTTPRequest._method_get_download_file_201670096 != nil)
         let _method_get_downloaded_bytes_3905245786_name = StringName(from: "get_downloaded_bytes")
-        self._method_get_downloaded_bytes_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_downloaded_bytes_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_downloaded_bytes_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_get_downloaded_bytes_3905245786_name._native_ptr(), 3905245786)
         assert(HTTPRequest._method_get_downloaded_bytes_3905245786 != nil)
         let _method_get_body_size_3905245786_name = StringName(from: "get_body_size")
-        self._method_get_body_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_body_size_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_body_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_get_body_size_3905245786_name._native_ptr(), 3905245786)
         assert(HTTPRequest._method_get_body_size_3905245786 != nil)
         let _method_set_timeout_373806689_name = StringName(from: "set_timeout")
-        self._method_set_timeout_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_timeout_373806689_name._native_ptr(), 373806689)
+        self._method_set_timeout_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_set_timeout_373806689_name._native_ptr(), 373806689)
         assert(HTTPRequest._method_set_timeout_373806689 != nil)
         let _method_get_timeout_191475506_name = StringName(from: "get_timeout")
-        self._method_get_timeout_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_timeout_191475506_name._native_ptr(), 191475506)
+        self._method_get_timeout_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_get_timeout_191475506_name._native_ptr(), 191475506)
         assert(HTTPRequest._method_get_timeout_191475506 != nil)
         let _method_set_download_chunk_size_1286410249_name = StringName(from: "set_download_chunk_size")
-        self._method_set_download_chunk_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_download_chunk_size_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_download_chunk_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_set_download_chunk_size_1286410249_name._native_ptr(), 1286410249)
         assert(HTTPRequest._method_set_download_chunk_size_1286410249 != nil)
         let _method_get_download_chunk_size_3905245786_name = StringName(from: "get_download_chunk_size")
-        self._method_get_download_chunk_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_download_chunk_size_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_download_chunk_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_get_download_chunk_size_3905245786_name._native_ptr(), 3905245786)
         assert(HTTPRequest._method_get_download_chunk_size_3905245786 != nil)
         let _method_set_http_proxy_2956805083_name = StringName(from: "set_http_proxy")
-        self._method_set_http_proxy_2956805083 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_http_proxy_2956805083_name._native_ptr(), 2956805083)
+        self._method_set_http_proxy_2956805083 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_set_http_proxy_2956805083_name._native_ptr(), 2956805083)
         assert(HTTPRequest._method_set_http_proxy_2956805083 != nil)
         let _method_set_https_proxy_2956805083_name = StringName(from: "set_https_proxy")
-        self._method_set_https_proxy_2956805083 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_https_proxy_2956805083_name._native_ptr(), 2956805083)
+        self._method_set_https_proxy_2956805083 = self.interface.pointee.classdb_get_method_bind(__godot_name_HTTPRequest._native_ptr(), _method_set_https_proxy_2956805083_name._native_ptr(), 2956805083)
         assert(HTTPRequest._method_set_https_proxy_2956805083 != nil)
     }
 
-    public func request(url: String, custom_headers: PackedStringArray, method: HTTPClient.Method, request_data: String) -> Error {
-        withUnsafePointer(to: request_data) { request_data_native in
-        withUnsafePointer(to: url) { url_native in
+    public func request(url: godot.String, custom_headers: PackedStringArray, method: HTTPClient.Method, request_data: godot.String) -> Error {
         withUnsafePointer(to: method.rawValue) { method_native in
+        let request_data_native = request_data._native_ptr()
         let custom_headers_native = custom_headers._native_ptr()
+        let url_native = url._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 4)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -419,16 +424,14 @@ public class HTTPRequest : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
-        }
+            return Error(godot: __resPtr.pointee)
         }
     }
-    public func request_raw(url: String, custom_headers: PackedStringArray, method: HTTPClient.Method, request_data_raw: PackedByteArray) -> Error {
-        withUnsafePointer(to: url) { url_native in
+    public func request_raw(url: godot.String, custom_headers: PackedStringArray, method: HTTPClient.Method, request_data_raw: PackedByteArray) -> Error {
         withUnsafePointer(to: method.rawValue) { method_native in
         let request_data_raw_native = request_data_raw._native_ptr()
         let custom_headers_native = custom_headers._native_ptr()
+        let url_native = url._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 4)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -442,8 +445,7 @@ public class HTTPRequest : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
+            return Error(godot: __resPtr.pointee)
         }
     }
     public func cancel_request()  {
@@ -489,7 +491,7 @@ public class HTTPRequest : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return HTTPClient.Status(from: __resPtr.pointee)
+            return HTTPClient.Status(godot: __resPtr.pointee)
     }
     public func set_use_threads(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -522,7 +524,7 @@ public class HTTPRequest : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_accept_gzip(enable: UInt8)  {
         withUnsafePointer(to: enable) { enable_native in
@@ -555,7 +557,7 @@ public class HTTPRequest : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_body_size_limit(bytes: Int64)  {
         withUnsafePointer(to: bytes) { bytes_native in
@@ -588,7 +590,7 @@ public class HTTPRequest : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_max_redirects(amount: Int64)  {
         withUnsafePointer(to: amount) { amount_native in
@@ -621,10 +623,10 @@ public class HTTPRequest : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
-    public func set_download_file(path: String)  {
-        withUnsafePointer(to: path) { path_native in
+    public func set_download_file(path: godot.String)  {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -637,9 +639,8 @@ public class HTTPRequest : Node {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func get_download_file() -> String {
+    public func get_download_file() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -647,14 +648,13 @@ public class HTTPRequest : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_download_file_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func get_downloaded_bytes() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -671,7 +671,7 @@ public class HTTPRequest : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func get_body_size() -> Int64 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -688,7 +688,7 @@ public class HTTPRequest : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_timeout(timeout: Float64)  {
         withUnsafePointer(to: timeout) { timeout_native in
@@ -721,7 +721,7 @@ public class HTTPRequest : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_download_chunk_size(chunk_size: Int64)  {
         withUnsafePointer(to: chunk_size) { chunk_size_native in
@@ -754,11 +754,11 @@ public class HTTPRequest : Node {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
-    public func set_http_proxy(host: String, port: Int64)  {
+    public func set_http_proxy(host: godot.String, port: Int64)  {
         withUnsafePointer(to: port) { port_native in
-        withUnsafePointer(to: host) { host_native in
+        let host_native = host._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -772,11 +772,10 @@ public class HTTPRequest : Node {
                     nil
                 )
         }
-        }
     }
-    public func set_https_proxy(host: String, port: Int64)  {
+    public func set_https_proxy(host: godot.String, port: Int64)  {
         withUnsafePointer(to: port) { port_native in
-        withUnsafePointer(to: host) { host_native in
+        let host_native = host._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -789,7 +788,6 @@ public class HTTPRequest : Node {
                     args.baseAddress!,
                     nil
                 )
-        }
         }
     }
 }

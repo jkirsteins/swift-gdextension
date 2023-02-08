@@ -5,7 +5,7 @@ fileprivate var __godot_name_EditorVCSInterface: StringName! = nil
 /// Version Control System (VCS) interface, which reads and writes to the local VCS in use.
 /// 
 /// Defines the API that the editor uses to extract information from the underlying VCS. The implementation of this API is included in VCS plugins, which are GDExtension plugins that inherit [EditorVCSInterface] and are attached (on demand) to the singleton instance of [EditorVCSInterface]. Instead of performing the task themselves, all the virtual functions listed below are calling the internally overridden functions in the VCS plugins to provide a plug-n-play experience. A custom VCS plugin is supposed to inherit from [EditorVCSInterface] and override each of these virtual functions.
-public class EditorVCSInterface : Object {
+open class EditorVCSInterface : Object {
 
     public enum ChangeType : Int32 {
         case CHANGE_TYPE_NEW = 0
@@ -55,37 +55,42 @@ public class EditorVCSInterface : Object {
     static var _method_add_line_diffs_into_diff_hunk_4015243225: GDExtensionMethodBindPtr! = nil
     static var _method_popup_error_83702148: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorVCSInterface = StringName(from: "EditorVCSInterface")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_create_diff_line_2901184053_name = StringName(from: "create_diff_line")
-        self._method_create_diff_line_2901184053 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_diff_line_2901184053_name._native_ptr(), 2901184053)
+        self._method_create_diff_line_2901184053 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorVCSInterface._native_ptr(), _method_create_diff_line_2901184053_name._native_ptr(), 2901184053)
         assert(EditorVCSInterface._method_create_diff_line_2901184053 != nil)
         let _method_create_diff_hunk_3784842090_name = StringName(from: "create_diff_hunk")
-        self._method_create_diff_hunk_3784842090 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_diff_hunk_3784842090_name._native_ptr(), 3784842090)
+        self._method_create_diff_hunk_3784842090 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorVCSInterface._native_ptr(), _method_create_diff_hunk_3784842090_name._native_ptr(), 3784842090)
         assert(EditorVCSInterface._method_create_diff_hunk_3784842090 != nil)
         let _method_create_diff_file_2723227684_name = StringName(from: "create_diff_file")
-        self._method_create_diff_file_2723227684 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_diff_file_2723227684_name._native_ptr(), 2723227684)
+        self._method_create_diff_file_2723227684 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorVCSInterface._native_ptr(), _method_create_diff_file_2723227684_name._native_ptr(), 2723227684)
         assert(EditorVCSInterface._method_create_diff_file_2723227684 != nil)
         let _method_create_commit_1075983584_name = StringName(from: "create_commit")
-        self._method_create_commit_1075983584 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_commit_1075983584_name._native_ptr(), 1075983584)
+        self._method_create_commit_1075983584 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorVCSInterface._native_ptr(), _method_create_commit_1075983584_name._native_ptr(), 1075983584)
         assert(EditorVCSInterface._method_create_commit_1075983584 != nil)
         let _method_create_status_file_1083471673_name = StringName(from: "create_status_file")
-        self._method_create_status_file_1083471673 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_status_file_1083471673_name._native_ptr(), 1083471673)
+        self._method_create_status_file_1083471673 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorVCSInterface._native_ptr(), _method_create_status_file_1083471673_name._native_ptr(), 1083471673)
         assert(EditorVCSInterface._method_create_status_file_1083471673 != nil)
         let _method_add_diff_hunks_into_diff_file_4015243225_name = StringName(from: "add_diff_hunks_into_diff_file")
-        self._method_add_diff_hunks_into_diff_file_4015243225 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_diff_hunks_into_diff_file_4015243225_name._native_ptr(), 4015243225)
+        self._method_add_diff_hunks_into_diff_file_4015243225 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorVCSInterface._native_ptr(), _method_add_diff_hunks_into_diff_file_4015243225_name._native_ptr(), 4015243225)
         assert(EditorVCSInterface._method_add_diff_hunks_into_diff_file_4015243225 != nil)
         let _method_add_line_diffs_into_diff_hunk_4015243225_name = StringName(from: "add_line_diffs_into_diff_hunk")
-        self._method_add_line_diffs_into_diff_hunk_4015243225 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_line_diffs_into_diff_hunk_4015243225_name._native_ptr(), 4015243225)
+        self._method_add_line_diffs_into_diff_hunk_4015243225 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorVCSInterface._native_ptr(), _method_add_line_diffs_into_diff_hunk_4015243225_name._native_ptr(), 4015243225)
         assert(EditorVCSInterface._method_add_line_diffs_into_diff_hunk_4015243225 != nil)
         let _method_popup_error_83702148_name = StringName(from: "popup_error")
-        self._method_popup_error_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_popup_error_83702148_name._native_ptr(), 83702148)
+        self._method_popup_error_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorVCSInterface._native_ptr(), _method_popup_error_83702148_name._native_ptr(), 83702148)
         assert(EditorVCSInterface._method_popup_error_83702148 != nil)
     }
 
-    public func _initialize(project_path: String) -> UInt8 {
-        withUnsafePointer(to: project_path) { project_path_native in
+    public func _initialize(project_path: godot.String) -> UInt8 {
+        let project_path_native = project_path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -100,15 +105,14 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _set_credentials(username: String, password: String, ssh_public_key_path: String, ssh_private_key_path: String, ssh_passphrase: String)  {
-        withUnsafePointer(to: ssh_passphrase) { ssh_passphrase_native in
-        withUnsafePointer(to: ssh_private_key_path) { ssh_private_key_path_native in
-        withUnsafePointer(to: ssh_public_key_path) { ssh_public_key_path_native in
-        withUnsafePointer(to: password) { password_native in
-        withUnsafePointer(to: username) { username_native in
+    public func _set_credentials(username: godot.String, password: godot.String, ssh_public_key_path: godot.String, ssh_private_key_path: godot.String, ssh_passphrase: godot.String)  {
+        let ssh_passphrase_native = ssh_passphrase._native_ptr()
+        let ssh_private_key_path_native = ssh_private_key_path._native_ptr()
+        let ssh_public_key_path_native = ssh_public_key_path._native_ptr()
+        let password_native = password._native_ptr()
+        let username_native = username._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 5)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -121,11 +125,6 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
-        }
-        }
-        }
-        }
     }
     public func _get_modified_files_data() -> [Dictionary] {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -141,10 +140,10 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Dictionary](from: __resPtr.pointee)
+            return [Dictionary](godot: __resPtr.pointee)
     }
-    public func _stage_file(file_path: String)  {
-        withUnsafePointer(to: file_path) { file_path_native in
+    public func _stage_file(file_path: godot.String)  {
+        let file_path_native = file_path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -157,10 +156,9 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func _unstage_file(file_path: String)  {
-        withUnsafePointer(to: file_path) { file_path_native in
+    public func _unstage_file(file_path: godot.String)  {
+        let file_path_native = file_path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -173,10 +171,9 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func _discard_file(file_path: String)  {
-        withUnsafePointer(to: file_path) { file_path_native in
+    public func _discard_file(file_path: godot.String)  {
+        let file_path_native = file_path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -189,10 +186,9 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func _commit(msg: String)  {
-        withUnsafePointer(to: msg) { msg_native in
+    public func _commit(msg: godot.String)  {
+        let msg_native = msg._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -205,11 +201,10 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func _get_diff(identifier: String, area: Int64) -> [Dictionary] {
+    public func _get_diff(identifier: godot.String, area: Int64) -> [Dictionary] {
         withUnsafePointer(to: area) { area_native in
-        withUnsafePointer(to: identifier) { identifier_native in
+        let identifier_native = identifier._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -223,8 +218,7 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Dictionary](from: __resPtr.pointee)
-        }
+            return [Dictionary](godot: __resPtr.pointee)
         }
     }
     public func _shut_down() -> UInt8 {
@@ -242,9 +236,9 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _get_vcs_name() -> String {
+    public func _get_vcs_name() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -252,14 +246,13 @@ public class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_vcs_name_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func _get_previous_commits(max_commits: Int64) -> [Dictionary] {
         withUnsafePointer(to: max_commits) { max_commits_native in
@@ -276,10 +269,10 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Dictionary](from: __resPtr.pointee)
+            return [Dictionary](godot: __resPtr.pointee)
         }
     }
-    public func _get_branch_list() -> [String] {
+    public func _get_branch_list() -> [godot.String] {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -293,9 +286,9 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [String](from: __resPtr.pointee)
+            return [godot.String](godot: __resPtr.pointee)
     }
-    public func _get_remotes() -> [String] {
+    public func _get_remotes() -> [godot.String] {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -309,10 +302,10 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [String](from: __resPtr.pointee)
+            return [godot.String](godot: __resPtr.pointee)
     }
-    public func _create_branch(branch_name: String)  {
-        withUnsafePointer(to: branch_name) { branch_name_native in
+    public func _create_branch(branch_name: godot.String)  {
+        let branch_name_native = branch_name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -325,10 +318,9 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func _remove_branch(branch_name: String)  {
-        withUnsafePointer(to: branch_name) { branch_name_native in
+    public func _remove_branch(branch_name: godot.String)  {
+        let branch_name_native = branch_name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -341,11 +333,10 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func _create_remote(remote_name: String, remote_url: String)  {
-        withUnsafePointer(to: remote_url) { remote_url_native in
-        withUnsafePointer(to: remote_name) { remote_name_native in
+    public func _create_remote(remote_name: godot.String, remote_url: godot.String)  {
+        let remote_url_native = remote_url._native_ptr()
+        let remote_name_native = remote_name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -358,11 +349,9 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
-        }
     }
-    public func _remove_remote(remote_name: String)  {
-        withUnsafePointer(to: remote_name) { remote_name_native in
+    public func _remove_remote(remote_name: godot.String)  {
+        let remote_name_native = remote_name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -375,9 +364,8 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func _get_current_branch_name() -> String {
+    public func _get_current_branch_name() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -385,17 +373,16 @@ public class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_current_branch_name_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
-    public func _checkout_branch(branch_name: String) -> UInt8 {
-        withUnsafePointer(to: branch_name) { branch_name_native in
+    public func _checkout_branch(branch_name: godot.String) -> UInt8 {
+        let branch_name_native = branch_name._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -410,11 +397,10 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
+            return UInt8(godot: __resPtr.pointee)
     }
-    public func _pull(remote: String)  {
-        withUnsafePointer(to: remote) { remote_native in
+    public func _pull(remote: godot.String)  {
+        let remote_native = remote._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -427,11 +413,10 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func _push(remote: String, force: UInt8)  {
+    public func _push(remote: godot.String, force: UInt8)  {
         withUnsafePointer(to: force) { force_native in
-        withUnsafePointer(to: remote) { remote_native in
+        let remote_native = remote._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -445,10 +430,9 @@ public class EditorVCSInterface : Object {
                     nil
                 )
         }
-        }
     }
-    public func _fetch(remote: String)  {
-        withUnsafePointer(to: remote) { remote_native in
+    public func _fetch(remote: godot.String)  {
+        let remote_native = remote._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -461,11 +445,10 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func _get_line_diff(file_path: String, text: String) -> [Dictionary] {
-        withUnsafePointer(to: text) { text_native in
-        withUnsafePointer(to: file_path) { file_path_native in
+    public func _get_line_diff(file_path: godot.String, text: godot.String) -> [Dictionary] {
+        let text_native = text._native_ptr()
+        let file_path_native = file_path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -479,15 +462,13 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [Dictionary](from: __resPtr.pointee)
-        }
-        }
+            return [Dictionary](godot: __resPtr.pointee)
     }
-    public func create_diff_line(new_line_no: Int64, old_line_no: Int64, content: String, status: String) -> Dictionary {
-        withUnsafePointer(to: status) { status_native in
-        withUnsafePointer(to: content) { content_native in
+    public func create_diff_line(new_line_no: Int64, old_line_no: Int64, content: godot.String, status: godot.String) -> Dictionary {
         withUnsafePointer(to: old_line_no) { old_line_no_native in
         withUnsafePointer(to: new_line_no) { new_line_no_native in
+        let status_native = status._native_ptr()
+        let content_native = content._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 4)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -501,9 +482,7 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
-        }
-        }
+            return Dictionary(godot: __resPtr.pointee)
         }
         }
     }
@@ -525,15 +504,15 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
         }
         }
         }
         }
     }
-    public func create_diff_file(new_file: String, old_file: String) -> Dictionary {
-        withUnsafePointer(to: old_file) { old_file_native in
-        withUnsafePointer(to: new_file) { new_file_native in
+    public func create_diff_file(new_file: godot.String, old_file: godot.String) -> Dictionary {
+        let old_file_native = old_file._native_ptr()
+        let new_file_native = new_file._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -547,16 +526,14 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
-        }
-        }
+            return Dictionary(godot: __resPtr.pointee)
     }
-    public func create_commit(msg: String, author: String, id: String, unix_timestamp: Int64, offset_minutes: Int64) -> Dictionary {
+    public func create_commit(msg: godot.String, author: godot.String, id: godot.String, unix_timestamp: Int64, offset_minutes: Int64) -> Dictionary {
         withUnsafePointer(to: offset_minutes) { offset_minutes_native in
         withUnsafePointer(to: unix_timestamp) { unix_timestamp_native in
-        withUnsafePointer(to: id) { id_native in
-        withUnsafePointer(to: author) { author_native in
-        withUnsafePointer(to: msg) { msg_native in
+        let id_native = id._native_ptr()
+        let author_native = author._native_ptr()
+        let msg_native = msg._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 5)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -570,17 +547,14 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
-        }
-        }
-        }
+            return Dictionary(godot: __resPtr.pointee)
         }
         }
     }
-    public func create_status_file(file_path: String, change_type: EditorVCSInterface.ChangeType, area: EditorVCSInterface.TreeArea) -> Dictionary {
-        withUnsafePointer(to: file_path) { file_path_native in
+    public func create_status_file(file_path: godot.String, change_type: EditorVCSInterface.ChangeType, area: EditorVCSInterface.TreeArea) -> Dictionary {
         withUnsafePointer(to: area.rawValue) { area_native in
         withUnsafePointer(to: change_type.rawValue) { change_type_native in
+        let file_path_native = file_path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -594,8 +568,7 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
-        }
+            return Dictionary(godot: __resPtr.pointee)
         }
         }
     }
@@ -615,7 +588,7 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
     }
     public func add_line_diffs_into_diff_hunk(diff_hunk: Dictionary, line_diffs: [Dictionary]) -> Dictionary {
         let line_diffs_native = line_diffs._native_ptr()
@@ -633,10 +606,10 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Dictionary(from: __resPtr.pointee)
+            return Dictionary(godot: __resPtr.pointee)
     }
-    public func popup_error(msg: String)  {
-        withUnsafePointer(to: msg) { msg_native in
+    public func popup_error(msg: godot.String)  {
+        let msg_native = msg._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -649,6 +622,5 @@ public class EditorVCSInterface : Object {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
 }

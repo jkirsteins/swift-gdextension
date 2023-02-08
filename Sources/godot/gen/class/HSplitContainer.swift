@@ -5,7 +5,7 @@ fileprivate var __godot_name_HSplitContainer: StringName! = nil
 /// Horizontal split container.
 /// 
 /// Horizontal split container. See [SplitContainer]. This goes from left to right.
-public class HSplitContainer : SplitContainer {
+open class HSplitContainer : SplitContainer {
 
     
 
@@ -13,8 +13,13 @@ public class HSplitContainer : SplitContainer {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_HSplitContainer = StringName(from: "HSplitContainer")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

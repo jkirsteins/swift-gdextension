@@ -129,18 +129,25 @@ fileprivate var __godot_name_Variant: StringName! = nil
 /// [b]Containers (Array and Dictionary):[/b] Both are implemented using variants. A [Dictionary] can match any datatype used as key to any other datatype. An [Array] just holds an array of Variants. Of course, a Variant can also hold a [Dictionary] and an [Array] inside, making it even more flexible.
 ///  
 /// Modifications to a container will modify all references to it. A [Mutex] should be created to lock it if multi-threaded access is desired.
+import godot_native
 public class Variant : BuiltinClass {
     public class var __godot_name: StringName { __godot_name_Variant }
+    public static var interface: UnsafePointer<GDExtensionInterface>! = nil
+    public static var library: GDExtensionClassLibraryPtr! = nil
+    
+    var interface: UnsafePointer<GDExtensionInterface> { Self.interface }
     public static let SIZE = 40
     public let opaque: UnsafeMutableRawPointer
     
-    public class func initialize_class() {
+    public class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
         __godot_name_Variant = StringName(from: "Variant")
     }
     public init() {
         self.opaque = Self.interface.pointee.mem_alloc(Self.SIZE)!
     }
-    public required init(from unsafePtr: UnsafeRawPointer) {
+    public required init(godot unsafePtr: UnsafeRawPointer) {
         self.opaque = .init(mutating: unsafePtr)
     }
     deinit {

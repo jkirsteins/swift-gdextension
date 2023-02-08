@@ -5,7 +5,7 @@ fileprivate var __godot_name_GLTFAnimation: StringName! = nil
 /// MISSING
 /// 
 /// MISSING
-public class GLTFAnimation : Resource {
+open class GLTFAnimation : Resource {
 
     
 
@@ -14,14 +14,19 @@ public class GLTFAnimation : Resource {
     static var _method_get_loop_36873697: GDExtensionMethodBindPtr! = nil
     static var _method_set_loop_2586408642: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_GLTFAnimation = StringName(from: "GLTFAnimation")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_get_loop_36873697_name = StringName(from: "get_loop")
-        self._method_get_loop_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_loop_36873697_name._native_ptr(), 36873697)
+        self._method_get_loop_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFAnimation._native_ptr(), _method_get_loop_36873697_name._native_ptr(), 36873697)
         assert(GLTFAnimation._method_get_loop_36873697 != nil)
         let _method_set_loop_2586408642_name = StringName(from: "set_loop")
-        self._method_set_loop_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_loop_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_loop_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFAnimation._native_ptr(), _method_set_loop_2586408642_name._native_ptr(), 2586408642)
         assert(GLTFAnimation._method_set_loop_2586408642 != nil)
     }
 
@@ -40,7 +45,7 @@ public class GLTFAnimation : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_loop(loop: UInt8)  {
         withUnsafePointer(to: loop) { loop_native in

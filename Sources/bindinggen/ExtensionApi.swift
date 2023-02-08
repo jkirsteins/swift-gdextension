@@ -155,7 +155,6 @@ protocol Method {
     var is_virtual: Bool { get }
     var hash: Int? { get }
     var arguments: [Argument]? { get }
-    
     var return_value_type: String? { get }
 }
 

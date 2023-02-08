@@ -9,7 +9,7 @@ fileprivate var __godot_name_ConvexPolygonShape2D: StringName! = nil
 /// The main difference between a [ConvexPolygonShape2D] and a [ConcavePolygonShape2D] is that a concave polygon assumes it is concave and uses a more complex method of collision detection, and a convex one forces itself to be convex to speed up collision detection.
 ///  
 /// [b]Performance:[/b] [ConvexPolygonShape2D] is faster to check collisions against compared to [ConcavePolygonShape2D], but it is slower than primitive collision shapes such as [CircleShape2D] or [RectangleShape2D]. Its use should generally be limited to medium-sized objects that cannot have their collision accurately represented by a primitive shape.
-public class ConvexPolygonShape2D : Shape2D {
+open class ConvexPolygonShape2D : Shape2D {
 
     
 
@@ -19,17 +19,22 @@ public class ConvexPolygonShape2D : Shape2D {
     static var _method_set_points_1509147220: GDExtensionMethodBindPtr! = nil
     static var _method_get_points_2961356807: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ConvexPolygonShape2D = StringName(from: "ConvexPolygonShape2D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_point_cloud_1509147220_name = StringName(from: "set_point_cloud")
-        self._method_set_point_cloud_1509147220 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_point_cloud_1509147220_name._native_ptr(), 1509147220)
+        self._method_set_point_cloud_1509147220 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConvexPolygonShape2D._native_ptr(), _method_set_point_cloud_1509147220_name._native_ptr(), 1509147220)
         assert(ConvexPolygonShape2D._method_set_point_cloud_1509147220 != nil)
         let _method_set_points_1509147220_name = StringName(from: "set_points")
-        self._method_set_points_1509147220 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_points_1509147220_name._native_ptr(), 1509147220)
+        self._method_set_points_1509147220 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConvexPolygonShape2D._native_ptr(), _method_set_points_1509147220_name._native_ptr(), 1509147220)
         assert(ConvexPolygonShape2D._method_set_points_1509147220 != nil)
         let _method_get_points_2961356807_name = StringName(from: "get_points")
-        self._method_get_points_2961356807 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_points_2961356807_name._native_ptr(), 2961356807)
+        self._method_get_points_2961356807 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConvexPolygonShape2D._native_ptr(), _method_get_points_2961356807_name._native_ptr(), 2961356807)
         assert(ConvexPolygonShape2D._method_get_points_2961356807 != nil)
     }
 
@@ -77,6 +82,6 @@ public class ConvexPolygonShape2D : Shape2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedVector2Array(from: __resPtr.pointee)
+            return PackedVector2Array(godot: __resPtr.pointee)
     }
 }

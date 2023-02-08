@@ -7,7 +7,7 @@ fileprivate var __godot_name_EditorSyntaxHighlighter: StringName! = nil
 /// Base syntax highlighter resource all editor syntax highlighters extend from, it is used in the [ScriptEditor].
 ///  
 /// Add a syntax highlighter to an individual script by calling [method ScriptEditorBase.add_syntax_highlighter]. To apply to all scripts on open, call [method ScriptEditor.register_syntax_highlighter]
-public class EditorSyntaxHighlighter : SyntaxHighlighter {
+open class EditorSyntaxHighlighter : SyntaxHighlighter {
 
     
 
@@ -16,13 +16,18 @@ public class EditorSyntaxHighlighter : SyntaxHighlighter {
     static var _method__get_name_0: GDExtensionMethodBindPtr! = nil
     static var _method__get_supported_languages_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorSyntaxHighlighter = StringName(from: "EditorSyntaxHighlighter")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
 
-    public func _get_name() -> String {
+    public func _get_name() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -30,14 +35,13 @@ public class EditorSyntaxHighlighter : SyntaxHighlighter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method__get_name_0,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
     public func _get_supported_languages() -> PackedStringArray {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -53,6 +57,6 @@ public class EditorSyntaxHighlighter : SyntaxHighlighter {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedStringArray(from: __resPtr.pointee)
+            return PackedStringArray(godot: __resPtr.pointee)
     }
 }

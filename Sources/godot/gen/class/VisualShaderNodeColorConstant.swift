@@ -7,7 +7,7 @@ fileprivate var __godot_name_VisualShaderNodeColorConstant: StringName! = nil
 /// Has two output ports representing RGB and alpha channels of [Color].
 ///  
 /// Translated to [code]vec3 rgb[/code] and [code]float alpha[/code] in the shader language.
-public class VisualShaderNodeColorConstant : VisualShaderNodeConstant {
+open class VisualShaderNodeColorConstant : VisualShaderNodeConstant {
 
     
 
@@ -16,14 +16,19 @@ public class VisualShaderNodeColorConstant : VisualShaderNodeConstant {
     static var _method_set_constant_2920490490: GDExtensionMethodBindPtr! = nil
     static var _method_get_constant_3444240500: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeColorConstant = StringName(from: "VisualShaderNodeColorConstant")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_constant_2920490490_name = StringName(from: "set_constant")
-        self._method_set_constant_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_constant_2920490490_name._native_ptr(), 2920490490)
+        self._method_set_constant_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeColorConstant._native_ptr(), _method_set_constant_2920490490_name._native_ptr(), 2920490490)
         assert(VisualShaderNodeColorConstant._method_set_constant_2920490490 != nil)
         let _method_get_constant_3444240500_name = StringName(from: "get_constant")
-        self._method_get_constant_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_constant_3444240500_name._native_ptr(), 3444240500)
+        self._method_get_constant_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeColorConstant._native_ptr(), _method_get_constant_3444240500_name._native_ptr(), 3444240500)
         assert(VisualShaderNodeColorConstant._method_get_constant_3444240500 != nil)
     }
 
@@ -56,6 +61,6 @@ public class VisualShaderNodeColorConstant : VisualShaderNodeConstant {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Color(from: __resPtr.pointee)
+            return Color(godot: __resPtr.pointee)
     }
 }

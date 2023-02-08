@@ -5,7 +5,7 @@ fileprivate var __godot_name_VideoStream: StringName! = nil
 /// Base resource for video streams.
 /// 
 /// Base resource type for all video streams. Classes that derive from [VideoStream] can all be used as resource types to play back videos in [VideoStreamPlayer].
-public class VideoStream : Resource {
+open class VideoStream : Resource {
 
     
 
@@ -15,14 +15,19 @@ public class VideoStream : Resource {
     static var _method_set_file_83702148: GDExtensionMethodBindPtr! = nil
     static var _method_get_file_2841200299: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VideoStream = StringName(from: "VideoStream")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_file_83702148_name = StringName(from: "set_file")
-        self._method_set_file_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_file_83702148_name._native_ptr(), 83702148)
+        self._method_set_file_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStream._native_ptr(), _method_set_file_83702148_name._native_ptr(), 83702148)
         assert(VideoStream._method_set_file_83702148 != nil)
         let _method_get_file_2841200299_name = StringName(from: "get_file")
-        self._method_get_file_2841200299 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_file_2841200299_name._native_ptr(), 2841200299)
+        self._method_get_file_2841200299 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStream._native_ptr(), _method_get_file_2841200299_name._native_ptr(), 2841200299)
         assert(VideoStream._method_get_file_2841200299 != nil)
     }
 
@@ -40,10 +45,10 @@ public class VideoStream : Resource {
                     args.baseAddress!,
                     __resPtr
                 )
-            return VideoStreamPlayback(from: __resPtr.pointee)
+            return VideoStreamPlayback(godot: __resPtr.pointee)
     }
-    public func set_file(file: String)  {
-        withUnsafePointer(to: file) { file_native in
+    public func set_file(file: godot.String)  {
+        let file_native = file._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -56,9 +61,8 @@ public class VideoStream : Resource {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func get_file() -> String {
+    public func get_file() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -66,13 +70,12 @@ public class VideoStream : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_file_2841200299,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
 }

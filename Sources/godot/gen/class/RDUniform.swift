@@ -5,7 +5,7 @@ fileprivate var __godot_name_RDUniform: StringName! = nil
 /// 
 /// 
 /// 
-public class RDUniform : RefCounted {
+open class RDUniform : RefCounted {
 
     
 
@@ -19,29 +19,34 @@ public class RDUniform : RefCounted {
     static var _method_clear_ids_3218959716: GDExtensionMethodBindPtr! = nil
     static var _method_get_ids_3995934104: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_RDUniform = StringName(from: "RDUniform")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_uniform_type_1664894931_name = StringName(from: "set_uniform_type")
-        self._method_set_uniform_type_1664894931 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_uniform_type_1664894931_name._native_ptr(), 1664894931)
+        self._method_set_uniform_type_1664894931 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDUniform._native_ptr(), _method_set_uniform_type_1664894931_name._native_ptr(), 1664894931)
         assert(RDUniform._method_set_uniform_type_1664894931 != nil)
         let _method_get_uniform_type_475470040_name = StringName(from: "get_uniform_type")
-        self._method_get_uniform_type_475470040 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_uniform_type_475470040_name._native_ptr(), 475470040)
+        self._method_get_uniform_type_475470040 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDUniform._native_ptr(), _method_get_uniform_type_475470040_name._native_ptr(), 475470040)
         assert(RDUniform._method_get_uniform_type_475470040 != nil)
         let _method_set_binding_1286410249_name = StringName(from: "set_binding")
-        self._method_set_binding_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_binding_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_binding_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDUniform._native_ptr(), _method_set_binding_1286410249_name._native_ptr(), 1286410249)
         assert(RDUniform._method_set_binding_1286410249 != nil)
         let _method_get_binding_3905245786_name = StringName(from: "get_binding")
-        self._method_get_binding_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_binding_3905245786_name._native_ptr(), 3905245786)
+        self._method_get_binding_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDUniform._native_ptr(), _method_get_binding_3905245786_name._native_ptr(), 3905245786)
         assert(RDUniform._method_get_binding_3905245786 != nil)
         let _method_add_id_2722037293_name = StringName(from: "add_id")
-        self._method_add_id_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_id_2722037293_name._native_ptr(), 2722037293)
+        self._method_add_id_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDUniform._native_ptr(), _method_add_id_2722037293_name._native_ptr(), 2722037293)
         assert(RDUniform._method_add_id_2722037293 != nil)
         let _method_clear_ids_3218959716_name = StringName(from: "clear_ids")
-        self._method_clear_ids_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_ids_3218959716_name._native_ptr(), 3218959716)
+        self._method_clear_ids_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDUniform._native_ptr(), _method_clear_ids_3218959716_name._native_ptr(), 3218959716)
         assert(RDUniform._method_clear_ids_3218959716 != nil)
         let _method_get_ids_3995934104_name = StringName(from: "get_ids")
-        self._method_get_ids_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_ids_3995934104_name._native_ptr(), 3995934104)
+        self._method_get_ids_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDUniform._native_ptr(), _method_get_ids_3995934104_name._native_ptr(), 3995934104)
         assert(RDUniform._method_get_ids_3995934104 != nil)
     }
 
@@ -75,7 +80,7 @@ public class RDUniform : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RenderingDevice.UniformType(from: __resPtr.pointee)
+            return RenderingDevice.UniformType(godot: __resPtr.pointee)
     }
     public func set_binding(p_member: Int64)  {
         withUnsafePointer(to: p_member) { p_member_native in
@@ -108,7 +113,7 @@ public class RDUniform : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func add_id(id: RID)  {
         let id_native = id._native_ptr()
@@ -153,6 +158,6 @@ public class RDUniform : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return [RID](from: __resPtr.pointee)
+            return [RID](godot: __resPtr.pointee)
     }
 }

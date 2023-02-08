@@ -7,7 +7,7 @@ fileprivate var __godot_name_SkeletonModification2DPhysicalBones: StringName! = 
 /// This modification takes the transforms of [PhysicalBone2D] nodes and applies them to [Bone2D] nodes. This allows the [Bone2D] nodes to react to physics thanks to the linked [PhysicalBone2D] nodes.
 ///  
 /// Experimental. Physical bones may be changed in the future to perform the position update of [Bone2D] on their own.
-public class SkeletonModification2DPhysicalBones : SkeletonModification2D {
+open class SkeletonModification2DPhysicalBones : SkeletonModification2D {
 
     
 
@@ -21,29 +21,34 @@ public class SkeletonModification2DPhysicalBones : SkeletonModification2D {
     static var _method_start_simulation_2787316981: GDExtensionMethodBindPtr! = nil
     static var _method_stop_simulation_2787316981: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_SkeletonModification2DPhysicalBones = StringName(from: "SkeletonModification2DPhysicalBones")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_physical_bone_chain_length_1286410249_name = StringName(from: "set_physical_bone_chain_length")
-        self._method_set_physical_bone_chain_length_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_physical_bone_chain_length_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_physical_bone_chain_length_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DPhysicalBones._native_ptr(), _method_set_physical_bone_chain_length_1286410249_name._native_ptr(), 1286410249)
         assert(SkeletonModification2DPhysicalBones._method_set_physical_bone_chain_length_1286410249 != nil)
         let _method_get_physical_bone_chain_length_2455072627_name = StringName(from: "get_physical_bone_chain_length")
-        self._method_get_physical_bone_chain_length_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_physical_bone_chain_length_2455072627_name._native_ptr(), 2455072627)
+        self._method_get_physical_bone_chain_length_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DPhysicalBones._native_ptr(), _method_get_physical_bone_chain_length_2455072627_name._native_ptr(), 2455072627)
         assert(SkeletonModification2DPhysicalBones._method_get_physical_bone_chain_length_2455072627 != nil)
         let _method_set_physical_bone_node_2761262315_name = StringName(from: "set_physical_bone_node")
-        self._method_set_physical_bone_node_2761262315 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_physical_bone_node_2761262315_name._native_ptr(), 2761262315)
+        self._method_set_physical_bone_node_2761262315 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DPhysicalBones._native_ptr(), _method_set_physical_bone_node_2761262315_name._native_ptr(), 2761262315)
         assert(SkeletonModification2DPhysicalBones._method_set_physical_bone_node_2761262315 != nil)
         let _method_get_physical_bone_node_408788394_name = StringName(from: "get_physical_bone_node")
-        self._method_get_physical_bone_node_408788394 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_physical_bone_node_408788394_name._native_ptr(), 408788394)
+        self._method_get_physical_bone_node_408788394 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DPhysicalBones._native_ptr(), _method_get_physical_bone_node_408788394_name._native_ptr(), 408788394)
         assert(SkeletonModification2DPhysicalBones._method_get_physical_bone_node_408788394 != nil)
         let _method_fetch_physical_bones_3218959716_name = StringName(from: "fetch_physical_bones")
-        self._method_fetch_physical_bones_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_fetch_physical_bones_3218959716_name._native_ptr(), 3218959716)
+        self._method_fetch_physical_bones_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DPhysicalBones._native_ptr(), _method_fetch_physical_bones_3218959716_name._native_ptr(), 3218959716)
         assert(SkeletonModification2DPhysicalBones._method_fetch_physical_bones_3218959716 != nil)
         let _method_start_simulation_2787316981_name = StringName(from: "start_simulation")
-        self._method_start_simulation_2787316981 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_start_simulation_2787316981_name._native_ptr(), 2787316981)
+        self._method_start_simulation_2787316981 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DPhysicalBones._native_ptr(), _method_start_simulation_2787316981_name._native_ptr(), 2787316981)
         assert(SkeletonModification2DPhysicalBones._method_start_simulation_2787316981 != nil)
         let _method_stop_simulation_2787316981_name = StringName(from: "stop_simulation")
-        self._method_stop_simulation_2787316981 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_stop_simulation_2787316981_name._native_ptr(), 2787316981)
+        self._method_stop_simulation_2787316981 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DPhysicalBones._native_ptr(), _method_stop_simulation_2787316981_name._native_ptr(), 2787316981)
         assert(SkeletonModification2DPhysicalBones._method_stop_simulation_2787316981 != nil)
     }
 
@@ -78,7 +83,7 @@ public class SkeletonModification2DPhysicalBones : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
     }
     public func set_physical_bone_node(joint_idx: Int64, physicalbone2d_node: NodePath)  {
         withUnsafePointer(to: joint_idx) { joint_idx_native in
@@ -112,7 +117,7 @@ public class SkeletonModification2DPhysicalBones : SkeletonModification2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return NodePath(from: __resPtr.pointee)
+            return NodePath(godot: __resPtr.pointee)
         }
     }
     public func fetch_physical_bones()  {

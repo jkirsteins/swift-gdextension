@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeTransformOp: StringName! = nil
 /// A [Transform3D] operator to be used within the visual shader graph.
 /// 
 /// Applies [member operator] to two transform (4x4 matrices) inputs.
-public class VisualShaderNodeTransformOp : VisualShaderNode {
+open class VisualShaderNodeTransformOp : VisualShaderNode {
 
     public enum Operator : Int32 {
         case OP_AxB = 0
@@ -25,14 +25,19 @@ public class VisualShaderNodeTransformOp : VisualShaderNode {
     static var _method_set_operator_2287310733: GDExtensionMethodBindPtr! = nil
     static var _method_get_operator_1238663601: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeTransformOp = StringName(from: "VisualShaderNodeTransformOp")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_operator_2287310733_name = StringName(from: "set_operator")
-        self._method_set_operator_2287310733 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_operator_2287310733_name._native_ptr(), 2287310733)
+        self._method_set_operator_2287310733 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTransformOp._native_ptr(), _method_set_operator_2287310733_name._native_ptr(), 2287310733)
         assert(VisualShaderNodeTransformOp._method_set_operator_2287310733 != nil)
         let _method_get_operator_1238663601_name = StringName(from: "get_operator")
-        self._method_get_operator_1238663601 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_operator_1238663601_name._native_ptr(), 1238663601)
+        self._method_get_operator_1238663601 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTransformOp._native_ptr(), _method_get_operator_1238663601_name._native_ptr(), 1238663601)
         assert(VisualShaderNodeTransformOp._method_get_operator_1238663601 != nil)
     }
 
@@ -66,6 +71,6 @@ public class VisualShaderNodeTransformOp : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return VisualShaderNodeTransformOp.Operator(from: __resPtr.pointee)
+            return VisualShaderNodeTransformOp.Operator(godot: __resPtr.pointee)
     }
 }

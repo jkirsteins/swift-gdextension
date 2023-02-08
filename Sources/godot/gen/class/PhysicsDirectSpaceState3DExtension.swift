@@ -5,7 +5,7 @@ fileprivate var __godot_name_PhysicsDirectSpaceState3DExtension: StringName! = n
 /// 
 /// 
 /// 
-public class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
+open class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
 
     
 
@@ -20,11 +20,16 @@ public class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
     static var _method__get_closest_point_to_object_volume_0: GDExtensionMethodBindPtr! = nil
     static var _method_is_body_excluded_from_query_4155700596: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PhysicsDirectSpaceState3DExtension = StringName(from: "PhysicsDirectSpaceState3DExtension")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_is_body_excluded_from_query_4155700596_name = StringName(from: "is_body_excluded_from_query")
-        self._method_is_body_excluded_from_query_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_body_excluded_from_query_4155700596_name._native_ptr(), 4155700596)
+        self._method_is_body_excluded_from_query_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectSpaceState3DExtension._native_ptr(), _method_is_body_excluded_from_query_4155700596_name._native_ptr(), 4155700596)
         assert(PhysicsDirectSpaceState3DExtension._method_is_body_excluded_from_query_4155700596 != nil)
     }
 
@@ -51,7 +56,7 @@ public class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
         }
@@ -80,7 +85,7 @@ public class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
         }
         }
@@ -111,7 +116,7 @@ public class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Int64(from: __resPtr.pointee)
+            return Int64(godot: __resPtr.pointee)
         }
         }
         }
@@ -144,7 +149,7 @@ public class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
         }
@@ -178,7 +183,7 @@ public class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
         }
@@ -210,7 +215,7 @@ public class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
         }
         }
         }
@@ -233,7 +238,7 @@ public class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector3(from: __resPtr.pointee)
+            return Vector3(godot: __resPtr.pointee)
     }
     public func is_body_excluded_from_query(body: RID) -> UInt8 {
         let body_native = body._native_ptr()
@@ -251,6 +256,6 @@ public class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

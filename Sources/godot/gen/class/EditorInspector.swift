@@ -15,7 +15,7 @@ fileprivate var __godot_name_EditorInspector: StringName! = nil
 /// If a property has [constant PROPERTY_USAGE_SUBGROUP] usage, a subgroup will be created in the same way as a group, and a second-level section will be created for each subgroup.
 ///  
 /// [b]Note:[/b] Unlike sections created from path-like property names, [EditorInspector] won't capitalize the name for sections created from groups. So properties with group usage usually use capitalized names instead of snake_cased names.
-public class EditorInspector : ScrollContainer {
+open class EditorInspector : ScrollContainer {
 
     
 
@@ -23,15 +23,20 @@ public class EditorInspector : ScrollContainer {
 
     static var _method_get_selected_path_201670096: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorInspector = StringName(from: "EditorInspector")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_get_selected_path_201670096_name = StringName(from: "get_selected_path")
-        self._method_get_selected_path_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_selected_path_201670096_name._native_ptr(), 201670096)
+        self._method_get_selected_path_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInspector._native_ptr(), _method_get_selected_path_201670096_name._native_ptr(), 201670096)
         assert(EditorInspector._method_get_selected_path_201670096 != nil)
     }
 
-    public func get_selected_path() -> String {
+    public func get_selected_path() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -39,13 +44,12 @@ public class EditorInspector : ScrollContainer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            defer { __resPtr.deallocate() }
             self.interface.pointee.object_method_bind_ptrcall(
                     Self._method_get_selected_path_201670096,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
-            return String(from: __resPtr.pointee)
+            return godot.String(godot: __resPtr.pointee)
     }
 }

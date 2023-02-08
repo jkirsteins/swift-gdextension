@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeParticleEmit: StringName! = nil
 /// A visual shader node that forces to emit a particle from a sub-emitter.
 /// 
 /// This node internally calls [code]emit_subparticle[/code] shader method. It will emit a particle from the configured sub-emitter and also allows to customize how its emitted. Requires a sub-emitter assigned to the particles node with this shader.
-public class VisualShaderNodeParticleEmit : VisualShaderNode {
+open class VisualShaderNodeParticleEmit : VisualShaderNode {
 
     public enum EmitFlags : Int32 {
         case EMIT_FLAG_POSITION = 1
@@ -20,14 +20,19 @@ public class VisualShaderNodeParticleEmit : VisualShaderNode {
     static var _method_set_flags_3960756792: GDExtensionMethodBindPtr! = nil
     static var _method_get_flags_171277835: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeParticleEmit = StringName(from: "VisualShaderNodeParticleEmit")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_flags_3960756792_name = StringName(from: "set_flags")
-        self._method_set_flags_3960756792 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_flags_3960756792_name._native_ptr(), 3960756792)
+        self._method_set_flags_3960756792 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParticleEmit._native_ptr(), _method_set_flags_3960756792_name._native_ptr(), 3960756792)
         assert(VisualShaderNodeParticleEmit._method_set_flags_3960756792 != nil)
         let _method_get_flags_171277835_name = StringName(from: "get_flags")
-        self._method_get_flags_171277835 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_flags_171277835_name._native_ptr(), 171277835)
+        self._method_get_flags_171277835 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParticleEmit._native_ptr(), _method_get_flags_171277835_name._native_ptr(), 171277835)
         assert(VisualShaderNodeParticleEmit._method_get_flags_171277835 != nil)
     }
 
@@ -61,6 +66,6 @@ public class VisualShaderNodeParticleEmit : VisualShaderNode {
                     args.baseAddress!,
                     __resPtr
                 )
-            return VisualShaderNodeParticleEmit.EmitFlags(from: __resPtr.pointee)
+            return VisualShaderNodeParticleEmit.EmitFlags(godot: __resPtr.pointee)
     }
 }

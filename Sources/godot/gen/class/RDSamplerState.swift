@@ -5,7 +5,7 @@ fileprivate var __godot_name_RDSamplerState: StringName! = nil
 /// 
 /// 
 /// 
-public class RDSamplerState : RefCounted {
+open class RDSamplerState : RefCounted {
 
     
 
@@ -42,98 +42,103 @@ public class RDSamplerState : RefCounted {
     static var _method_set_unnormalized_uvw_2586408642: GDExtensionMethodBindPtr! = nil
     static var _method_get_unnormalized_uvw_36873697: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_RDSamplerState = StringName(from: "RDSamplerState")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_mag_filter_1493420382_name = StringName(from: "set_mag_filter")
-        self._method_set_mag_filter_1493420382 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_mag_filter_1493420382_name._native_ptr(), 1493420382)
+        self._method_set_mag_filter_1493420382 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_set_mag_filter_1493420382_name._native_ptr(), 1493420382)
         assert(RDSamplerState._method_set_mag_filter_1493420382 != nil)
         let _method_get_mag_filter_2209202801_name = StringName(from: "get_mag_filter")
-        self._method_get_mag_filter_2209202801 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_mag_filter_2209202801_name._native_ptr(), 2209202801)
+        self._method_get_mag_filter_2209202801 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_get_mag_filter_2209202801_name._native_ptr(), 2209202801)
         assert(RDSamplerState._method_get_mag_filter_2209202801 != nil)
         let _method_set_min_filter_1493420382_name = StringName(from: "set_min_filter")
-        self._method_set_min_filter_1493420382 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_min_filter_1493420382_name._native_ptr(), 1493420382)
+        self._method_set_min_filter_1493420382 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_set_min_filter_1493420382_name._native_ptr(), 1493420382)
         assert(RDSamplerState._method_set_min_filter_1493420382 != nil)
         let _method_get_min_filter_2209202801_name = StringName(from: "get_min_filter")
-        self._method_get_min_filter_2209202801 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_min_filter_2209202801_name._native_ptr(), 2209202801)
+        self._method_get_min_filter_2209202801 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_get_min_filter_2209202801_name._native_ptr(), 2209202801)
         assert(RDSamplerState._method_get_min_filter_2209202801 != nil)
         let _method_set_mip_filter_1493420382_name = StringName(from: "set_mip_filter")
-        self._method_set_mip_filter_1493420382 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_mip_filter_1493420382_name._native_ptr(), 1493420382)
+        self._method_set_mip_filter_1493420382 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_set_mip_filter_1493420382_name._native_ptr(), 1493420382)
         assert(RDSamplerState._method_set_mip_filter_1493420382 != nil)
         let _method_get_mip_filter_2209202801_name = StringName(from: "get_mip_filter")
-        self._method_get_mip_filter_2209202801 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_mip_filter_2209202801_name._native_ptr(), 2209202801)
+        self._method_get_mip_filter_2209202801 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_get_mip_filter_2209202801_name._native_ptr(), 2209202801)
         assert(RDSamplerState._method_get_mip_filter_2209202801 != nil)
         let _method_set_repeat_u_246127626_name = StringName(from: "set_repeat_u")
-        self._method_set_repeat_u_246127626 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_repeat_u_246127626_name._native_ptr(), 246127626)
+        self._method_set_repeat_u_246127626 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_set_repeat_u_246127626_name._native_ptr(), 246127626)
         assert(RDSamplerState._method_set_repeat_u_246127626 != nil)
         let _method_get_repeat_u_3227895872_name = StringName(from: "get_repeat_u")
-        self._method_get_repeat_u_3227895872 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_repeat_u_3227895872_name._native_ptr(), 3227895872)
+        self._method_get_repeat_u_3227895872 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_get_repeat_u_3227895872_name._native_ptr(), 3227895872)
         assert(RDSamplerState._method_get_repeat_u_3227895872 != nil)
         let _method_set_repeat_v_246127626_name = StringName(from: "set_repeat_v")
-        self._method_set_repeat_v_246127626 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_repeat_v_246127626_name._native_ptr(), 246127626)
+        self._method_set_repeat_v_246127626 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_set_repeat_v_246127626_name._native_ptr(), 246127626)
         assert(RDSamplerState._method_set_repeat_v_246127626 != nil)
         let _method_get_repeat_v_3227895872_name = StringName(from: "get_repeat_v")
-        self._method_get_repeat_v_3227895872 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_repeat_v_3227895872_name._native_ptr(), 3227895872)
+        self._method_get_repeat_v_3227895872 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_get_repeat_v_3227895872_name._native_ptr(), 3227895872)
         assert(RDSamplerState._method_get_repeat_v_3227895872 != nil)
         let _method_set_repeat_w_246127626_name = StringName(from: "set_repeat_w")
-        self._method_set_repeat_w_246127626 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_repeat_w_246127626_name._native_ptr(), 246127626)
+        self._method_set_repeat_w_246127626 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_set_repeat_w_246127626_name._native_ptr(), 246127626)
         assert(RDSamplerState._method_set_repeat_w_246127626 != nil)
         let _method_get_repeat_w_3227895872_name = StringName(from: "get_repeat_w")
-        self._method_get_repeat_w_3227895872 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_repeat_w_3227895872_name._native_ptr(), 3227895872)
+        self._method_get_repeat_w_3227895872 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_get_repeat_w_3227895872_name._native_ptr(), 3227895872)
         assert(RDSamplerState._method_get_repeat_w_3227895872 != nil)
         let _method_set_lod_bias_373806689_name = StringName(from: "set_lod_bias")
-        self._method_set_lod_bias_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_lod_bias_373806689_name._native_ptr(), 373806689)
+        self._method_set_lod_bias_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_set_lod_bias_373806689_name._native_ptr(), 373806689)
         assert(RDSamplerState._method_set_lod_bias_373806689 != nil)
         let _method_get_lod_bias_1740695150_name = StringName(from: "get_lod_bias")
-        self._method_get_lod_bias_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_lod_bias_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_lod_bias_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_get_lod_bias_1740695150_name._native_ptr(), 1740695150)
         assert(RDSamplerState._method_get_lod_bias_1740695150 != nil)
         let _method_set_use_anisotropy_2586408642_name = StringName(from: "set_use_anisotropy")
-        self._method_set_use_anisotropy_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_use_anisotropy_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_use_anisotropy_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_set_use_anisotropy_2586408642_name._native_ptr(), 2586408642)
         assert(RDSamplerState._method_set_use_anisotropy_2586408642 != nil)
         let _method_get_use_anisotropy_36873697_name = StringName(from: "get_use_anisotropy")
-        self._method_get_use_anisotropy_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_use_anisotropy_36873697_name._native_ptr(), 36873697)
+        self._method_get_use_anisotropy_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_get_use_anisotropy_36873697_name._native_ptr(), 36873697)
         assert(RDSamplerState._method_get_use_anisotropy_36873697 != nil)
         let _method_set_anisotropy_max_373806689_name = StringName(from: "set_anisotropy_max")
-        self._method_set_anisotropy_max_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_anisotropy_max_373806689_name._native_ptr(), 373806689)
+        self._method_set_anisotropy_max_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_set_anisotropy_max_373806689_name._native_ptr(), 373806689)
         assert(RDSamplerState._method_set_anisotropy_max_373806689 != nil)
         let _method_get_anisotropy_max_1740695150_name = StringName(from: "get_anisotropy_max")
-        self._method_get_anisotropy_max_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_anisotropy_max_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_anisotropy_max_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_get_anisotropy_max_1740695150_name._native_ptr(), 1740695150)
         assert(RDSamplerState._method_get_anisotropy_max_1740695150 != nil)
         let _method_set_enable_compare_2586408642_name = StringName(from: "set_enable_compare")
-        self._method_set_enable_compare_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_enable_compare_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_enable_compare_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_set_enable_compare_2586408642_name._native_ptr(), 2586408642)
         assert(RDSamplerState._method_set_enable_compare_2586408642 != nil)
         let _method_get_enable_compare_36873697_name = StringName(from: "get_enable_compare")
-        self._method_get_enable_compare_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_enable_compare_36873697_name._native_ptr(), 36873697)
+        self._method_get_enable_compare_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_get_enable_compare_36873697_name._native_ptr(), 36873697)
         assert(RDSamplerState._method_get_enable_compare_36873697 != nil)
         let _method_set_compare_op_2573711505_name = StringName(from: "set_compare_op")
-        self._method_set_compare_op_2573711505 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_compare_op_2573711505_name._native_ptr(), 2573711505)
+        self._method_set_compare_op_2573711505 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_set_compare_op_2573711505_name._native_ptr(), 2573711505)
         assert(RDSamplerState._method_set_compare_op_2573711505 != nil)
         let _method_get_compare_op_269730778_name = StringName(from: "get_compare_op")
-        self._method_get_compare_op_269730778 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_compare_op_269730778_name._native_ptr(), 269730778)
+        self._method_get_compare_op_269730778 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_get_compare_op_269730778_name._native_ptr(), 269730778)
         assert(RDSamplerState._method_get_compare_op_269730778 != nil)
         let _method_set_min_lod_373806689_name = StringName(from: "set_min_lod")
-        self._method_set_min_lod_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_min_lod_373806689_name._native_ptr(), 373806689)
+        self._method_set_min_lod_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_set_min_lod_373806689_name._native_ptr(), 373806689)
         assert(RDSamplerState._method_set_min_lod_373806689 != nil)
         let _method_get_min_lod_1740695150_name = StringName(from: "get_min_lod")
-        self._method_get_min_lod_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_min_lod_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_min_lod_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_get_min_lod_1740695150_name._native_ptr(), 1740695150)
         assert(RDSamplerState._method_get_min_lod_1740695150 != nil)
         let _method_set_max_lod_373806689_name = StringName(from: "set_max_lod")
-        self._method_set_max_lod_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_max_lod_373806689_name._native_ptr(), 373806689)
+        self._method_set_max_lod_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_set_max_lod_373806689_name._native_ptr(), 373806689)
         assert(RDSamplerState._method_set_max_lod_373806689 != nil)
         let _method_get_max_lod_1740695150_name = StringName(from: "get_max_lod")
-        self._method_get_max_lod_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_max_lod_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_max_lod_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_get_max_lod_1740695150_name._native_ptr(), 1740695150)
         assert(RDSamplerState._method_get_max_lod_1740695150 != nil)
         let _method_set_border_color_1115869595_name = StringName(from: "set_border_color")
-        self._method_set_border_color_1115869595 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_border_color_1115869595_name._native_ptr(), 1115869595)
+        self._method_set_border_color_1115869595 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_set_border_color_1115869595_name._native_ptr(), 1115869595)
         assert(RDSamplerState._method_set_border_color_1115869595 != nil)
         let _method_get_border_color_3514246478_name = StringName(from: "get_border_color")
-        self._method_get_border_color_3514246478 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_border_color_3514246478_name._native_ptr(), 3514246478)
+        self._method_get_border_color_3514246478 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_get_border_color_3514246478_name._native_ptr(), 3514246478)
         assert(RDSamplerState._method_get_border_color_3514246478 != nil)
         let _method_set_unnormalized_uvw_2586408642_name = StringName(from: "set_unnormalized_uvw")
-        self._method_set_unnormalized_uvw_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_unnormalized_uvw_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_unnormalized_uvw_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_set_unnormalized_uvw_2586408642_name._native_ptr(), 2586408642)
         assert(RDSamplerState._method_set_unnormalized_uvw_2586408642 != nil)
         let _method_get_unnormalized_uvw_36873697_name = StringName(from: "get_unnormalized_uvw")
-        self._method_get_unnormalized_uvw_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_unnormalized_uvw_36873697_name._native_ptr(), 36873697)
+        self._method_get_unnormalized_uvw_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDSamplerState._native_ptr(), _method_get_unnormalized_uvw_36873697_name._native_ptr(), 36873697)
         assert(RDSamplerState._method_get_unnormalized_uvw_36873697 != nil)
     }
 
@@ -167,7 +172,7 @@ public class RDSamplerState : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RenderingDevice.SamplerFilter(from: __resPtr.pointee)
+            return RenderingDevice.SamplerFilter(godot: __resPtr.pointee)
     }
     public func set_min_filter(p_member: RenderingDevice.SamplerFilter)  {
         withUnsafePointer(to: p_member.rawValue) { p_member_native in
@@ -199,7 +204,7 @@ public class RDSamplerState : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RenderingDevice.SamplerFilter(from: __resPtr.pointee)
+            return RenderingDevice.SamplerFilter(godot: __resPtr.pointee)
     }
     public func set_mip_filter(p_member: RenderingDevice.SamplerFilter)  {
         withUnsafePointer(to: p_member.rawValue) { p_member_native in
@@ -231,7 +236,7 @@ public class RDSamplerState : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RenderingDevice.SamplerFilter(from: __resPtr.pointee)
+            return RenderingDevice.SamplerFilter(godot: __resPtr.pointee)
     }
     public func set_repeat_u(p_member: RenderingDevice.SamplerRepeatMode)  {
         withUnsafePointer(to: p_member.rawValue) { p_member_native in
@@ -263,7 +268,7 @@ public class RDSamplerState : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RenderingDevice.SamplerRepeatMode(from: __resPtr.pointee)
+            return RenderingDevice.SamplerRepeatMode(godot: __resPtr.pointee)
     }
     public func set_repeat_v(p_member: RenderingDevice.SamplerRepeatMode)  {
         withUnsafePointer(to: p_member.rawValue) { p_member_native in
@@ -295,7 +300,7 @@ public class RDSamplerState : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RenderingDevice.SamplerRepeatMode(from: __resPtr.pointee)
+            return RenderingDevice.SamplerRepeatMode(godot: __resPtr.pointee)
     }
     public func set_repeat_w(p_member: RenderingDevice.SamplerRepeatMode)  {
         withUnsafePointer(to: p_member.rawValue) { p_member_native in
@@ -327,7 +332,7 @@ public class RDSamplerState : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RenderingDevice.SamplerRepeatMode(from: __resPtr.pointee)
+            return RenderingDevice.SamplerRepeatMode(godot: __resPtr.pointee)
     }
     public func set_lod_bias(p_member: Float64)  {
         withUnsafePointer(to: p_member) { p_member_native in
@@ -360,7 +365,7 @@ public class RDSamplerState : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_use_anisotropy(p_member: UInt8)  {
         withUnsafePointer(to: p_member) { p_member_native in
@@ -393,7 +398,7 @@ public class RDSamplerState : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_anisotropy_max(p_member: Float64)  {
         withUnsafePointer(to: p_member) { p_member_native in
@@ -426,7 +431,7 @@ public class RDSamplerState : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_enable_compare(p_member: UInt8)  {
         withUnsafePointer(to: p_member) { p_member_native in
@@ -459,7 +464,7 @@ public class RDSamplerState : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_compare_op(p_member: RenderingDevice.CompareOperator)  {
         withUnsafePointer(to: p_member.rawValue) { p_member_native in
@@ -491,7 +496,7 @@ public class RDSamplerState : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RenderingDevice.CompareOperator(from: __resPtr.pointee)
+            return RenderingDevice.CompareOperator(godot: __resPtr.pointee)
     }
     public func set_min_lod(p_member: Float64)  {
         withUnsafePointer(to: p_member) { p_member_native in
@@ -524,7 +529,7 @@ public class RDSamplerState : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_max_lod(p_member: Float64)  {
         withUnsafePointer(to: p_member) { p_member_native in
@@ -557,7 +562,7 @@ public class RDSamplerState : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_border_color(p_member: RenderingDevice.SamplerBorderColor)  {
         withUnsafePointer(to: p_member.rawValue) { p_member_native in
@@ -589,7 +594,7 @@ public class RDSamplerState : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return RenderingDevice.SamplerBorderColor(from: __resPtr.pointee)
+            return RenderingDevice.SamplerBorderColor(godot: __resPtr.pointee)
     }
     public func set_unnormalized_uvw(p_member: UInt8)  {
         withUnsafePointer(to: p_member) { p_member_native in
@@ -622,6 +627,6 @@ public class RDSamplerState : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

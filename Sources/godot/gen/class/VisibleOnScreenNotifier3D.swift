@@ -9,7 +9,7 @@ fileprivate var __godot_name_VisibleOnScreenNotifier3D: StringName! = nil
 /// If you want nodes to be disabled automatically when they exit the screen, use [VisibleOnScreenEnabler3D] instead.
 ///  
 /// [b]Note:[/b] VisibleOnScreenNotifier3D uses an approximate heuristic for performance reasons. It doesn't take walls and other occlusion into account. The heuristic is an implementation detail and may change in future versions. If you need precise visibility checking, use another method such as adding an [Area3D] node as a child of a [Camera3D] node and/or [method Vector3.dot].
-public class VisibleOnScreenNotifier3D : VisualInstance3D {
+open class VisibleOnScreenNotifier3D : VisualInstance3D {
 
     
 
@@ -18,14 +18,19 @@ public class VisibleOnScreenNotifier3D : VisualInstance3D {
     static var _method_set_aabb_259215842: GDExtensionMethodBindPtr! = nil
     static var _method_is_on_screen_36873697: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisibleOnScreenNotifier3D = StringName(from: "VisibleOnScreenNotifier3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_aabb_259215842_name = StringName(from: "set_aabb")
-        self._method_set_aabb_259215842 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_aabb_259215842_name._native_ptr(), 259215842)
+        self._method_set_aabb_259215842 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisibleOnScreenNotifier3D._native_ptr(), _method_set_aabb_259215842_name._native_ptr(), 259215842)
         assert(VisibleOnScreenNotifier3D._method_set_aabb_259215842 != nil)
         let _method_is_on_screen_36873697_name = StringName(from: "is_on_screen")
-        self._method_is_on_screen_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_on_screen_36873697_name._native_ptr(), 36873697)
+        self._method_is_on_screen_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisibleOnScreenNotifier3D._native_ptr(), _method_is_on_screen_36873697_name._native_ptr(), 36873697)
         assert(VisibleOnScreenNotifier3D._method_is_on_screen_36873697 != nil)
     }
 
@@ -59,6 +64,6 @@ public class VisibleOnScreenNotifier3D : VisualInstance3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

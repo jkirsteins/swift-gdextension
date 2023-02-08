@@ -13,7 +13,7 @@ fileprivate var __godot_name_PortableCompressedTexture2D: StringName! = nil
 /// For portable, self contained 3D textures that work on both desktop and mobile, Basis Universal is recommended (although it has a small quality cost and longer compression time as a tradeoff).
 ///  
 /// This resource is intended to be created from code.
-public class PortableCompressedTexture2D : Texture2D {
+open class PortableCompressedTexture2D : Texture2D {
 
     public enum CompressionMode : Int32 {
         case COMPRESSION_MODE_LOSSLESS = 0
@@ -36,35 +36,40 @@ public class PortableCompressedTexture2D : Texture2D {
     static var _method_set_keep_all_compressed_buffers_2586408642: GDExtensionMethodBindPtr! = nil
     static var _method_is_keeping_all_compressed_buffers_2240911060: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PortableCompressedTexture2D = StringName(from: "PortableCompressedTexture2D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_create_from_image_97251393_name = StringName(from: "create_from_image")
-        self._method_create_from_image_97251393 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_from_image_97251393_name._native_ptr(), 97251393)
+        self._method_create_from_image_97251393 = self.interface.pointee.classdb_get_method_bind(__godot_name_PortableCompressedTexture2D._native_ptr(), _method_create_from_image_97251393_name._native_ptr(), 97251393)
         assert(PortableCompressedTexture2D._method_create_from_image_97251393 != nil)
         let _method_get_format_3847873762_name = StringName(from: "get_format")
-        self._method_get_format_3847873762 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_format_3847873762_name._native_ptr(), 3847873762)
+        self._method_get_format_3847873762 = self.interface.pointee.classdb_get_method_bind(__godot_name_PortableCompressedTexture2D._native_ptr(), _method_get_format_3847873762_name._native_ptr(), 3847873762)
         assert(PortableCompressedTexture2D._method_get_format_3847873762 != nil)
         let _method_get_compression_mode_3265612739_name = StringName(from: "get_compression_mode")
-        self._method_get_compression_mode_3265612739 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_compression_mode_3265612739_name._native_ptr(), 3265612739)
+        self._method_get_compression_mode_3265612739 = self.interface.pointee.classdb_get_method_bind(__godot_name_PortableCompressedTexture2D._native_ptr(), _method_get_compression_mode_3265612739_name._native_ptr(), 3265612739)
         assert(PortableCompressedTexture2D._method_get_compression_mode_3265612739 != nil)
         let _method_set_size_override_743155724_name = StringName(from: "set_size_override")
-        self._method_set_size_override_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_size_override_743155724_name._native_ptr(), 743155724)
+        self._method_set_size_override_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_PortableCompressedTexture2D._native_ptr(), _method_set_size_override_743155724_name._native_ptr(), 743155724)
         assert(PortableCompressedTexture2D._method_set_size_override_743155724 != nil)
         let _method_get_size_override_3341600327_name = StringName(from: "get_size_override")
-        self._method_get_size_override_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_size_override_3341600327_name._native_ptr(), 3341600327)
+        self._method_get_size_override_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_PortableCompressedTexture2D._native_ptr(), _method_get_size_override_3341600327_name._native_ptr(), 3341600327)
         assert(PortableCompressedTexture2D._method_get_size_override_3341600327 != nil)
         let _method_set_keep_compressed_buffer_2586408642_name = StringName(from: "set_keep_compressed_buffer")
-        self._method_set_keep_compressed_buffer_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_keep_compressed_buffer_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_keep_compressed_buffer_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PortableCompressedTexture2D._native_ptr(), _method_set_keep_compressed_buffer_2586408642_name._native_ptr(), 2586408642)
         assert(PortableCompressedTexture2D._method_set_keep_compressed_buffer_2586408642 != nil)
         let _method_is_keeping_compressed_buffer_36873697_name = StringName(from: "is_keeping_compressed_buffer")
-        self._method_is_keeping_compressed_buffer_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_keeping_compressed_buffer_36873697_name._native_ptr(), 36873697)
+        self._method_is_keeping_compressed_buffer_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PortableCompressedTexture2D._native_ptr(), _method_is_keeping_compressed_buffer_36873697_name._native_ptr(), 36873697)
         assert(PortableCompressedTexture2D._method_is_keeping_compressed_buffer_36873697 != nil)
         let _method_set_keep_all_compressed_buffers_2586408642_name = StringName(from: "set_keep_all_compressed_buffers")
-        self._method_set_keep_all_compressed_buffers_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_keep_all_compressed_buffers_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_keep_all_compressed_buffers_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PortableCompressedTexture2D._native_ptr(), _method_set_keep_all_compressed_buffers_2586408642_name._native_ptr(), 2586408642)
         assert(PortableCompressedTexture2D._method_set_keep_all_compressed_buffers_2586408642 != nil)
         let _method_is_keeping_all_compressed_buffers_2240911060_name = StringName(from: "is_keeping_all_compressed_buffers")
-        self._method_is_keeping_all_compressed_buffers_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_is_keeping_all_compressed_buffers_2240911060_name._native_ptr(), 2240911060)
+        self._method_is_keeping_all_compressed_buffers_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_PortableCompressedTexture2D._native_ptr(), _method_is_keeping_all_compressed_buffers_2240911060_name._native_ptr(), 2240911060)
         assert(PortableCompressedTexture2D._method_is_keeping_all_compressed_buffers_2240911060 != nil)
     }
 
@@ -103,7 +108,7 @@ public class PortableCompressedTexture2D : Texture2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Image.Format(from: __resPtr.pointee)
+            return Image.Format(godot: __resPtr.pointee)
     }
     public func get_compression_mode() -> PortableCompressedTexture2D.CompressionMode {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -119,7 +124,7 @@ public class PortableCompressedTexture2D : Texture2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PortableCompressedTexture2D.CompressionMode(from: __resPtr.pointee)
+            return PortableCompressedTexture2D.CompressionMode(godot: __resPtr.pointee)
     }
     public func set_size_override(size: Vector2)  {
         let size_native = size._native_ptr()
@@ -150,7 +155,7 @@ public class PortableCompressedTexture2D : Texture2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Vector2(from: __resPtr.pointee)
+            return Vector2(godot: __resPtr.pointee)
     }
     public func set_keep_compressed_buffer(keep: UInt8)  {
         withUnsafePointer(to: keep) { keep_native in
@@ -183,7 +188,7 @@ public class PortableCompressedTexture2D : Texture2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func set_keep_all_compressed_buffers(keep: UInt8)  {
         withUnsafePointer(to: keep) { keep_native in
@@ -216,6 +221,6 @@ public class PortableCompressedTexture2D : Texture2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

@@ -11,6 +11,6 @@ struct GodotPointer<Pointee: Class> {
     var opaque: UnsafeRawPointer
     
     var pointee: Pointee {
-        Pointee(from: opaque)
+        Pointee(godot: opaque)
     }
 }

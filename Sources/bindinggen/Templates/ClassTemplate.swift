@@ -12,7 +12,7 @@ struct ConfigurationSpecificType {
     let sanitizedType: String
     
     var isSwiftType: Bool {
-        remaps.keys.contains(self.type) || self.type == "String"
+        remaps.keys.contains(self.type) && self.type != "String"
 //        ["int", "bool", "float", "String"].contains(self.type)
     }
     
@@ -23,11 +23,14 @@ struct ConfigurationSpecificType {
     
     let typeRemaps: [String:[String:String]] = [
         "double_64": [
+            "Nil": "nil",
             "bool": "UInt8",
             "float": "Float64",
             "real_t": "Float64",
             "int": "Int64",
             "uint": "UInt64",
+            
+            "String": "godot.String",
             
             "uint8_t": "UInt8",
             "uint16_t": "UInt16",
@@ -270,7 +273,7 @@ import godot_native
 fileprivate var __godot_name_${className}: StringName! = nil
 
 ${classDoc}
-public class ${classNameWithParents} {
+open class ${classNameWithParents} {
 
     ${nestedEnums}
 
@@ -278,8 +281,13 @@ public class ${classNameWithParents} {
 
     ${staticMethodBindingDecl}
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == ${expectedInitLevel} else { return }
+
         __godot_name_${className} = StringName(from: "${className}")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         ${staticMethodBindingAssign_nonVirtual}
     }
@@ -307,8 +315,8 @@ fileprivate let class_doc: RenderFunc = {
 fileprivate let class_static_init: RenderFunc = {
     sut, sizes, api, doc in
     return MultiLineRenderable(lines: """
-public override class func create(from ptr: UnsafeRawPointer) -> \(sut.name) {
-    return \(sut.name)(from: ptr)
+public override class func create(godot ptr: UnsafeRawPointer) -> \(sut.name) {
+    return \(sut.name)(godot: ptr)
 }
 """.split(separator: "\n").map { String($0) },
                                indent: 0,
@@ -346,7 +354,7 @@ fileprivate let staticMethodBindingDecl: RenderFunc = {
 fileprivate let staticMethodBindingAssign_nonVirtual: RenderFunc = {
     sut, sizes, api, doc in
     let methods = sut.methods ?? []
-    let renderables = methods.flatMap { m in
+    let renderables = methods.filter({ !$0.is_virtual }).flatMap { m in
         let m_name = "_method_\(m.name)_\(m.hash ?? 0)"
         
         guard let hash = m.hash else {
@@ -363,7 +371,7 @@ fileprivate let staticMethodBindingAssign_nonVirtual: RenderFunc = {
 //            )
                 
             "let \(m_name)_name = StringName(from: \"\(m.name)\")",
-            "self.\(m_name) = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), \(m_name)_name._native_ptr(), \(hash))",
+            "self.\(m_name) = self.interface.pointee.classdb_get_method_bind(__godot_name_\(sut.name)._native_ptr(), \(m_name)_name._native_ptr(), \(hash))",
             "assert(\(sut.name).\(m_name) != nil)"
         ]
     }
@@ -455,6 +463,17 @@ struct ClassTemplate {
     fileprivate let transforms: [String: RenderFunc] = [
         "classNameWithParents": class_name_with_parents,
         "classDoc": class_doc,
+        "expectedInitLevel": { s, _, _, _ in
+            
+            let typeToVarName: [String?:String] = [
+                "editor": "GDEXTENSION_INITIALIZATION_EDITOR",
+                "core": "GDEXTENSION_INITIALIZATION_CORE"
+            ]
+            
+            let level = typeToVarName[s.api_type] ?? "GDEXTENSION_INITIALIZATION_SCENE"
+            
+            return level
+        },
         "staticMethodBindingDecl": staticMethodBindingDecl,
         "staticMethodBindingAssign_nonVirtual": staticMethodBindingAssign_nonVirtual,
         "className": { s, _, _, _ in s.name },
@@ -466,7 +485,7 @@ struct ClassTemplate {
     func render() -> String {
         transforms.reduce(template) {
             res, renderFunc in
-            try! res.replacing("${\(renderFunc.key)}", with: renderFunc.value(sut, sizes, full, doc).render())
+            res.replacing("${\(renderFunc.key)}", with: renderFunc.value(sut, sizes, full, doc).render())
         }
     }
     

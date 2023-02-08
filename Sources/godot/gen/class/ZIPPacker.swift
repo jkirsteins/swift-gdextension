@@ -5,7 +5,7 @@ fileprivate var __godot_name_ZIPPacker: StringName! = nil
 /// MISSING
 /// 
 /// MISSING
-public class ZIPPacker : RefCounted {
+open class ZIPPacker : RefCounted {
 
     public enum ZipAppend : Int32 {
         case APPEND_CREATE = 0
@@ -21,29 +21,34 @@ public class ZIPPacker : RefCounted {
     static var _method_close_file_166280745: GDExtensionMethodBindPtr! = nil
     static var _method_close_166280745: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ZIPPacker = StringName(from: "ZIPPacker")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_open_3715508516_name = StringName(from: "open")
-        self._method_open_3715508516 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_open_3715508516_name._native_ptr(), 3715508516)
+        self._method_open_3715508516 = self.interface.pointee.classdb_get_method_bind(__godot_name_ZIPPacker._native_ptr(), _method_open_3715508516_name._native_ptr(), 3715508516)
         assert(ZIPPacker._method_open_3715508516 != nil)
         let _method_start_file_166001499_name = StringName(from: "start_file")
-        self._method_start_file_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_start_file_166001499_name._native_ptr(), 166001499)
+        self._method_start_file_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_ZIPPacker._native_ptr(), _method_start_file_166001499_name._native_ptr(), 166001499)
         assert(ZIPPacker._method_start_file_166001499 != nil)
         let _method_write_file_680677267_name = StringName(from: "write_file")
-        self._method_write_file_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_write_file_680677267_name._native_ptr(), 680677267)
+        self._method_write_file_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_ZIPPacker._native_ptr(), _method_write_file_680677267_name._native_ptr(), 680677267)
         assert(ZIPPacker._method_write_file_680677267 != nil)
         let _method_close_file_166280745_name = StringName(from: "close_file")
-        self._method_close_file_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_close_file_166280745_name._native_ptr(), 166280745)
+        self._method_close_file_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_ZIPPacker._native_ptr(), _method_close_file_166280745_name._native_ptr(), 166280745)
         assert(ZIPPacker._method_close_file_166280745 != nil)
         let _method_close_166280745_name = StringName(from: "close")
-        self._method_close_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_close_166280745_name._native_ptr(), 166280745)
+        self._method_close_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_ZIPPacker._native_ptr(), _method_close_166280745_name._native_ptr(), 166280745)
         assert(ZIPPacker._method_close_166280745 != nil)
     }
 
-    public func open(path: String, append: ZIPPacker.ZipAppend) -> Error {
-        withUnsafePointer(to: path) { path_native in
+    public func open(path: godot.String, append: ZIPPacker.ZipAppend) -> Error {
         withUnsafePointer(to: append.rawValue) { append_native in
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -57,12 +62,11 @@ public class ZIPPacker : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
+            return Error(godot: __resPtr.pointee)
         }
     }
-    public func start_file(path: String) -> Error {
-        withUnsafePointer(to: path) { path_native in
+    public func start_file(path: godot.String) -> Error {
+        let path_native = path._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -76,8 +80,7 @@ public class ZIPPacker : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
-        }
+            return Error(godot: __resPtr.pointee)
     }
     public func write_file(data: PackedByteArray) -> Error {
         let data_native = data._native_ptr()
@@ -94,7 +97,7 @@ public class ZIPPacker : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func close_file() -> Error {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -110,7 +113,7 @@ public class ZIPPacker : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
     public func close() -> Error {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -126,6 +129,6 @@ public class ZIPPacker : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Error(from: __resPtr.pointee)
+            return Error(godot: __resPtr.pointee)
     }
 }

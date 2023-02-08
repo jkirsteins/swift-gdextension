@@ -47,7 +47,7 @@ fileprivate var __godot_name_SurfaceTool: StringName! = nil
 /// See also [ArrayMesh], [ImmediateMesh] and [MeshDataTool] for procedural geometry generation.
 ///  
 /// [b]Note:[/b] Godot uses clockwise [url=https://learnopengl.com/Advanced-OpenGL/Face-culling]winding order[/url] for front faces of triangle primitive modes.
-public class SurfaceTool : RefCounted {
+open class SurfaceTool : RefCounted {
 
     public enum CustomFormat : Int32 {
         case CUSTOM_RGBA8_UNORM = 0
@@ -100,104 +100,109 @@ public class SurfaceTool : RefCounted {
     static var _method_commit_4107864055: GDExtensionMethodBindPtr! = nil
     static var _method_commit_to_arrays_2915620761: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_SurfaceTool = StringName(from: "SurfaceTool")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_skin_weight_count_618679515_name = StringName(from: "set_skin_weight_count")
-        self._method_set_skin_weight_count_618679515 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_skin_weight_count_618679515_name._native_ptr(), 618679515)
+        self._method_set_skin_weight_count_618679515 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_skin_weight_count_618679515_name._native_ptr(), 618679515)
         assert(SurfaceTool._method_set_skin_weight_count_618679515 != nil)
         let _method_get_skin_weight_count_1072401130_name = StringName(from: "get_skin_weight_count")
-        self._method_get_skin_weight_count_1072401130 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_skin_weight_count_1072401130_name._native_ptr(), 1072401130)
+        self._method_get_skin_weight_count_1072401130 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_get_skin_weight_count_1072401130_name._native_ptr(), 1072401130)
         assert(SurfaceTool._method_get_skin_weight_count_1072401130 != nil)
         let _method_set_custom_format_4087759856_name = StringName(from: "set_custom_format")
-        self._method_set_custom_format_4087759856 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_custom_format_4087759856_name._native_ptr(), 4087759856)
+        self._method_set_custom_format_4087759856 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_custom_format_4087759856_name._native_ptr(), 4087759856)
         assert(SurfaceTool._method_set_custom_format_4087759856 != nil)
         let _method_get_custom_format_839863283_name = StringName(from: "get_custom_format")
-        self._method_get_custom_format_839863283 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_custom_format_839863283_name._native_ptr(), 839863283)
+        self._method_get_custom_format_839863283 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_get_custom_format_839863283_name._native_ptr(), 839863283)
         assert(SurfaceTool._method_get_custom_format_839863283 != nil)
         let _method_begin_2230304113_name = StringName(from: "begin")
-        self._method_begin_2230304113 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_begin_2230304113_name._native_ptr(), 2230304113)
+        self._method_begin_2230304113 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_begin_2230304113_name._native_ptr(), 2230304113)
         assert(SurfaceTool._method_begin_2230304113 != nil)
         let _method_add_vertex_3460891852_name = StringName(from: "add_vertex")
-        self._method_add_vertex_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_vertex_3460891852_name._native_ptr(), 3460891852)
+        self._method_add_vertex_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_add_vertex_3460891852_name._native_ptr(), 3460891852)
         assert(SurfaceTool._method_add_vertex_3460891852 != nil)
         let _method_set_color_2920490490_name = StringName(from: "set_color")
-        self._method_set_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_color_2920490490_name._native_ptr(), 2920490490)
+        self._method_set_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_color_2920490490_name._native_ptr(), 2920490490)
         assert(SurfaceTool._method_set_color_2920490490 != nil)
         let _method_set_normal_3460891852_name = StringName(from: "set_normal")
-        self._method_set_normal_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_normal_3460891852_name._native_ptr(), 3460891852)
+        self._method_set_normal_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_normal_3460891852_name._native_ptr(), 3460891852)
         assert(SurfaceTool._method_set_normal_3460891852 != nil)
         let _method_set_tangent_3505987427_name = StringName(from: "set_tangent")
-        self._method_set_tangent_3505987427 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_tangent_3505987427_name._native_ptr(), 3505987427)
+        self._method_set_tangent_3505987427 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_tangent_3505987427_name._native_ptr(), 3505987427)
         assert(SurfaceTool._method_set_tangent_3505987427 != nil)
         let _method_set_uv_743155724_name = StringName(from: "set_uv")
-        self._method_set_uv_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_uv_743155724_name._native_ptr(), 743155724)
+        self._method_set_uv_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_uv_743155724_name._native_ptr(), 743155724)
         assert(SurfaceTool._method_set_uv_743155724 != nil)
         let _method_set_uv2_743155724_name = StringName(from: "set_uv2")
-        self._method_set_uv2_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_uv2_743155724_name._native_ptr(), 743155724)
+        self._method_set_uv2_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_uv2_743155724_name._native_ptr(), 743155724)
         assert(SurfaceTool._method_set_uv2_743155724 != nil)
         let _method_set_bones_3614634198_name = StringName(from: "set_bones")
-        self._method_set_bones_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_bones_3614634198_name._native_ptr(), 3614634198)
+        self._method_set_bones_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_bones_3614634198_name._native_ptr(), 3614634198)
         assert(SurfaceTool._method_set_bones_3614634198 != nil)
         let _method_set_weights_2899603908_name = StringName(from: "set_weights")
-        self._method_set_weights_2899603908 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_weights_2899603908_name._native_ptr(), 2899603908)
+        self._method_set_weights_2899603908 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_weights_2899603908_name._native_ptr(), 2899603908)
         assert(SurfaceTool._method_set_weights_2899603908 != nil)
         let _method_set_custom_2878471219_name = StringName(from: "set_custom")
-        self._method_set_custom_2878471219 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_custom_2878471219_name._native_ptr(), 2878471219)
+        self._method_set_custom_2878471219 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_custom_2878471219_name._native_ptr(), 2878471219)
         assert(SurfaceTool._method_set_custom_2878471219 != nil)
         let _method_set_smooth_group_1286410249_name = StringName(from: "set_smooth_group")
-        self._method_set_smooth_group_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_smooth_group_1286410249_name._native_ptr(), 1286410249)
+        self._method_set_smooth_group_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_smooth_group_1286410249_name._native_ptr(), 1286410249)
         assert(SurfaceTool._method_set_smooth_group_1286410249 != nil)
         let _method_add_triangle_fan_297960074_name = StringName(from: "add_triangle_fan")
-        self._method_add_triangle_fan_297960074 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_triangle_fan_297960074_name._native_ptr(), 297960074)
+        self._method_add_triangle_fan_297960074 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_add_triangle_fan_297960074_name._native_ptr(), 297960074)
         assert(SurfaceTool._method_add_triangle_fan_297960074 != nil)
         let _method_add_index_1286410249_name = StringName(from: "add_index")
-        self._method_add_index_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_index_1286410249_name._native_ptr(), 1286410249)
+        self._method_add_index_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_add_index_1286410249_name._native_ptr(), 1286410249)
         assert(SurfaceTool._method_add_index_1286410249 != nil)
         let _method_index_3218959716_name = StringName(from: "index")
-        self._method_index_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_index_3218959716_name._native_ptr(), 3218959716)
+        self._method_index_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_index_3218959716_name._native_ptr(), 3218959716)
         assert(SurfaceTool._method_index_3218959716 != nil)
         let _method_deindex_3218959716_name = StringName(from: "deindex")
-        self._method_deindex_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_deindex_3218959716_name._native_ptr(), 3218959716)
+        self._method_deindex_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_deindex_3218959716_name._native_ptr(), 3218959716)
         assert(SurfaceTool._method_deindex_3218959716 != nil)
         let _method_generate_normals_107499316_name = StringName(from: "generate_normals")
-        self._method_generate_normals_107499316 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_generate_normals_107499316_name._native_ptr(), 107499316)
+        self._method_generate_normals_107499316 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_generate_normals_107499316_name._native_ptr(), 107499316)
         assert(SurfaceTool._method_generate_normals_107499316 != nil)
         let _method_generate_tangents_3218959716_name = StringName(from: "generate_tangents")
-        self._method_generate_tangents_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_generate_tangents_3218959716_name._native_ptr(), 3218959716)
+        self._method_generate_tangents_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_generate_tangents_3218959716_name._native_ptr(), 3218959716)
         assert(SurfaceTool._method_generate_tangents_3218959716 != nil)
         let _method_optimize_indices_for_cache_3218959716_name = StringName(from: "optimize_indices_for_cache")
-        self._method_optimize_indices_for_cache_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_optimize_indices_for_cache_3218959716_name._native_ptr(), 3218959716)
+        self._method_optimize_indices_for_cache_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_optimize_indices_for_cache_3218959716_name._native_ptr(), 3218959716)
         assert(SurfaceTool._method_optimize_indices_for_cache_3218959716 != nil)
         let _method_get_aabb_1068685055_name = StringName(from: "get_aabb")
-        self._method_get_aabb_1068685055 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_aabb_1068685055_name._native_ptr(), 1068685055)
+        self._method_get_aabb_1068685055 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_get_aabb_1068685055_name._native_ptr(), 1068685055)
         assert(SurfaceTool._method_get_aabb_1068685055 != nil)
         let _method_generate_lod_1894448909_name = StringName(from: "generate_lod")
-        self._method_generate_lod_1894448909 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_generate_lod_1894448909_name._native_ptr(), 1894448909)
+        self._method_generate_lod_1894448909 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_generate_lod_1894448909_name._native_ptr(), 1894448909)
         assert(SurfaceTool._method_generate_lod_1894448909 != nil)
         let _method_set_material_2757459619_name = StringName(from: "set_material")
-        self._method_set_material_2757459619 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_material_2757459619_name._native_ptr(), 2757459619)
+        self._method_set_material_2757459619 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_material_2757459619_name._native_ptr(), 2757459619)
         assert(SurfaceTool._method_set_material_2757459619 != nil)
         let _method_get_primitive_type_768822145_name = StringName(from: "get_primitive_type")
-        self._method_get_primitive_type_768822145 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_primitive_type_768822145_name._native_ptr(), 768822145)
+        self._method_get_primitive_type_768822145 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_get_primitive_type_768822145_name._native_ptr(), 768822145)
         assert(SurfaceTool._method_get_primitive_type_768822145 != nil)
         let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
+        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
         assert(SurfaceTool._method_clear_3218959716 != nil)
         let _method_create_from_1767024570_name = StringName(from: "create_from")
-        self._method_create_from_1767024570 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_from_1767024570_name._native_ptr(), 1767024570)
+        self._method_create_from_1767024570 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_create_from_1767024570_name._native_ptr(), 1767024570)
         assert(SurfaceTool._method_create_from_1767024570 != nil)
         let _method_create_from_blend_shape_1306185582_name = StringName(from: "create_from_blend_shape")
-        self._method_create_from_blend_shape_1306185582 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_create_from_blend_shape_1306185582_name._native_ptr(), 1306185582)
+        self._method_create_from_blend_shape_1306185582 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_create_from_blend_shape_1306185582_name._native_ptr(), 1306185582)
         assert(SurfaceTool._method_create_from_blend_shape_1306185582 != nil)
         let _method_append_from_2217967155_name = StringName(from: "append_from")
-        self._method_append_from_2217967155 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_append_from_2217967155_name._native_ptr(), 2217967155)
+        self._method_append_from_2217967155 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_append_from_2217967155_name._native_ptr(), 2217967155)
         assert(SurfaceTool._method_append_from_2217967155 != nil)
         let _method_commit_4107864055_name = StringName(from: "commit")
-        self._method_commit_4107864055 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_commit_4107864055_name._native_ptr(), 4107864055)
+        self._method_commit_4107864055 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_commit_4107864055_name._native_ptr(), 4107864055)
         assert(SurfaceTool._method_commit_4107864055 != nil)
         let _method_commit_to_arrays_2915620761_name = StringName(from: "commit_to_arrays")
-        self._method_commit_to_arrays_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_commit_to_arrays_2915620761_name._native_ptr(), 2915620761)
+        self._method_commit_to_arrays_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_commit_to_arrays_2915620761_name._native_ptr(), 2915620761)
         assert(SurfaceTool._method_commit_to_arrays_2915620761 != nil)
     }
 
@@ -231,7 +236,7 @@ public class SurfaceTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return SurfaceTool.SkinWeightCount(from: __resPtr.pointee)
+            return SurfaceTool.SkinWeightCount(godot: __resPtr.pointee)
     }
     public func set_custom_format(channel_index: Int64, format: SurfaceTool.CustomFormat)  {
         withUnsafePointer(to: channel_index) { channel_index_native in
@@ -266,7 +271,7 @@ public class SurfaceTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return SurfaceTool.CustomFormat(from: __resPtr.pointee)
+            return SurfaceTool.CustomFormat(godot: __resPtr.pointee)
         }
     }
     public func begin(primitive: Mesh.PrimitiveType)  {
@@ -560,7 +565,7 @@ public class SurfaceTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return AABB(from: __resPtr.pointee)
+            return AABB(godot: __resPtr.pointee)
     }
     public func generate_lod(nd_threshold: Float64, target_index_count: Int64) -> PackedInt32Array {
         withUnsafePointer(to: target_index_count) { target_index_count_native in
@@ -578,7 +583,7 @@ public class SurfaceTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedInt32Array(from: __resPtr.pointee)
+            return PackedInt32Array(godot: __resPtr.pointee)
         }
         }
     }
@@ -611,7 +616,7 @@ public class SurfaceTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Mesh.PrimitiveType(from: __resPtr.pointee)
+            return Mesh.PrimitiveType(godot: __resPtr.pointee)
     }
     public func clear()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -644,9 +649,9 @@ public class SurfaceTool : RefCounted {
                 )
         }
     }
-    public func create_from_blend_shape(existing: Mesh, surface: Int64, blend_shape: String)  {
-        withUnsafePointer(to: blend_shape) { blend_shape_native in
+    public func create_from_blend_shape(existing: Mesh, surface: Int64, blend_shape: godot.String)  {
         withUnsafePointer(to: surface) { surface_native in
+        let blend_shape_native = blend_shape._native_ptr()
         let existing_native = existing._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
@@ -660,7 +665,6 @@ public class SurfaceTool : RefCounted {
                     args.baseAddress!,
                     nil
                 )
-        }
         }
     }
     public func append_from(existing: Mesh, surface: Int64, transform: Transform3D)  {
@@ -697,7 +701,7 @@ public class SurfaceTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return ArrayMesh(from: __resPtr.pointee)
+            return ArrayMesh(godot: __resPtr.pointee)
         }
     }
     public func commit_to_arrays() -> Array {
@@ -714,6 +718,6 @@ public class SurfaceTool : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Array(from: __resPtr.pointee)
+            return Array(godot: __resPtr.pointee)
     }
 }

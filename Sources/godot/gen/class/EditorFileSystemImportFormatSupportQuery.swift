@@ -5,7 +5,7 @@ fileprivate var __godot_name_EditorFileSystemImportFormatSupportQuery: StringNam
 /// Used to query and configure import format support.
 /// 
 /// This class is used to query and configure a certain import format. It is used in conjunction with asset format import plugins.
-public class EditorFileSystemImportFormatSupportQuery : RefCounted {
+open class EditorFileSystemImportFormatSupportQuery : RefCounted {
 
     
 
@@ -15,8 +15,13 @@ public class EditorFileSystemImportFormatSupportQuery : RefCounted {
     static var _method__get_file_extensions_0: GDExtensionMethodBindPtr! = nil
     static var _method__query_0: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorFileSystemImportFormatSupportQuery = StringName(from: "EditorFileSystemImportFormatSupportQuery")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }
@@ -36,7 +41,7 @@ public class EditorFileSystemImportFormatSupportQuery : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _get_file_extensions() -> PackedStringArray {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -52,7 +57,7 @@ public class EditorFileSystemImportFormatSupportQuery : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return PackedStringArray(from: __resPtr.pointee)
+            return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _query() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -69,6 +74,6 @@ public class EditorFileSystemImportFormatSupportQuery : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }

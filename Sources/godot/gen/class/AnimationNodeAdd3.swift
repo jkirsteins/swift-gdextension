@@ -13,7 +13,7 @@ fileprivate var __godot_name_AnimationNodeAdd3: StringName! = nil
 /// - A -add animation to blend with when the blend amount is in the [code][-1.0, 0.0][/code] range.
 ///  
 /// - A +add animation to blend with when the blend amount is in the [code][0.0, 1.0][/code] range
-public class AnimationNodeAdd3 : AnimationNodeSync {
+open class AnimationNodeAdd3 : AnimationNodeSync {
 
     
 
@@ -21,8 +21,13 @@ public class AnimationNodeAdd3 : AnimationNodeSync {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_AnimationNodeAdd3 = StringName(from: "AnimationNodeAdd3")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

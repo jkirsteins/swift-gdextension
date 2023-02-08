@@ -5,7 +5,7 @@ fileprivate var __godot_name_PinJoint2D: StringName! = nil
 /// Pin joint for 2D shapes.
 /// 
 /// Pin joint for 2D rigid bodies. It pins two bodies (dynamic or static) together.
-public class PinJoint2D : Joint2D {
+open class PinJoint2D : Joint2D {
 
     
 
@@ -14,14 +14,19 @@ public class PinJoint2D : Joint2D {
     static var _method_set_softness_373806689: GDExtensionMethodBindPtr! = nil
     static var _method_get_softness_1740695150: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PinJoint2D = StringName(from: "PinJoint2D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_softness_373806689_name = StringName(from: "set_softness")
-        self._method_set_softness_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_softness_373806689_name._native_ptr(), 373806689)
+        self._method_set_softness_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PinJoint2D._native_ptr(), _method_set_softness_373806689_name._native_ptr(), 373806689)
         assert(PinJoint2D._method_set_softness_373806689 != nil)
         let _method_get_softness_1740695150_name = StringName(from: "get_softness")
-        self._method_get_softness_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_softness_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_softness_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PinJoint2D._native_ptr(), _method_get_softness_1740695150_name._native_ptr(), 1740695150)
         assert(PinJoint2D._method_get_softness_1740695150 != nil)
     }
 
@@ -56,6 +61,6 @@ public class PinJoint2D : Joint2D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
 }

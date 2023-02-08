@@ -5,7 +5,7 @@ fileprivate var __godot_name_VisualShaderNodeVectorLen: StringName! = nil
 /// Returns the length of a [Vector3] within the visual shader graph.
 /// 
 /// Translated to [code]length(p0)[/code] in the shader language.
-public class VisualShaderNodeVectorLen : VisualShaderNodeVectorBase {
+open class VisualShaderNodeVectorLen : VisualShaderNodeVectorBase {
 
     
 
@@ -13,8 +13,13 @@ public class VisualShaderNodeVectorLen : VisualShaderNodeVectorBase {
 
     
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_VisualShaderNodeVectorLen = StringName(from: "VisualShaderNodeVectorLen")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         
     }

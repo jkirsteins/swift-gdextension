@@ -17,7 +17,7 @@ fileprivate var __godot_name_EditorInspectorPlugin: StringName! = nil
 /// On each of these calls, the "add" functions can be called.
 ///  
 /// To use [EditorInspectorPlugin], register it using the [method EditorPlugin.add_inspector_plugin] method first.
-public class EditorInspectorPlugin : RefCounted {
+open class EditorInspectorPlugin : RefCounted {
 
     
 
@@ -33,17 +33,22 @@ public class EditorInspectorPlugin : RefCounted {
     static var _method_add_property_editor_3406284123: GDExtensionMethodBindPtr! = nil
     static var _method_add_property_editor_for_multiple_properties_788598683: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
+
         __godot_name_EditorInspectorPlugin = StringName(from: "EditorInspectorPlugin")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_add_custom_control_1496901182_name = StringName(from: "add_custom_control")
-        self._method_add_custom_control_1496901182 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_custom_control_1496901182_name._native_ptr(), 1496901182)
+        self._method_add_custom_control_1496901182 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInspectorPlugin._native_ptr(), _method_add_custom_control_1496901182_name._native_ptr(), 1496901182)
         assert(EditorInspectorPlugin._method_add_custom_control_1496901182 != nil)
         let _method_add_property_editor_3406284123_name = StringName(from: "add_property_editor")
-        self._method_add_property_editor_3406284123 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_property_editor_3406284123_name._native_ptr(), 3406284123)
+        self._method_add_property_editor_3406284123 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInspectorPlugin._native_ptr(), _method_add_property_editor_3406284123_name._native_ptr(), 3406284123)
         assert(EditorInspectorPlugin._method_add_property_editor_3406284123 != nil)
         let _method_add_property_editor_for_multiple_properties_788598683_name = StringName(from: "add_property_editor_for_multiple_properties")
-        self._method_add_property_editor_for_multiple_properties_788598683 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_add_property_editor_for_multiple_properties_788598683_name._native_ptr(), 788598683)
+        self._method_add_property_editor_for_multiple_properties_788598683 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInspectorPlugin._native_ptr(), _method_add_property_editor_for_multiple_properties_788598683_name._native_ptr(), 788598683)
         assert(EditorInspectorPlugin._method_add_property_editor_for_multiple_properties_788598683 != nil)
     }
 
@@ -63,7 +68,7 @@ public class EditorInspectorPlugin : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
     public func _parse_begin(object: Object)  {
         let object_native = object._native_ptr()
@@ -80,8 +85,8 @@ public class EditorInspectorPlugin : RefCounted {
                     nil
                 )
     }
-    public func _parse_category(object: Object, category: String)  {
-        withUnsafePointer(to: category) { category_native in
+    public func _parse_category(object: Object, category: godot.String)  {
+        let category_native = category._native_ptr()
         let object_native = object._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
@@ -95,10 +100,9 @@ public class EditorInspectorPlugin : RefCounted {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func _parse_group(object: Object, group: String)  {
-        withUnsafePointer(to: group) { group_native in
+    public func _parse_group(object: Object, group: godot.String)  {
+        let group_native = group._native_ptr()
         let object_native = object._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
             defer { args.deallocate() }
@@ -112,15 +116,14 @@ public class EditorInspectorPlugin : RefCounted {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
-    public func _parse_property(object: Object, `type`: Variant.`Typ`, name: String, hint_type: PropertyHint, hint_string: String, usage_flags: PropertyUsageFlags, wide: UInt8) -> UInt8 {
+    public func _parse_property(object: Object, `type`: Variant.`Typ`, name: godot.String, hint_type: PropertyHint, hint_string: godot.String, usage_flags: PropertyUsageFlags, wide: UInt8) -> UInt8 {
         withUnsafePointer(to: wide) { wide_native in
-        withUnsafePointer(to: hint_string) { hint_string_native in
-        withUnsafePointer(to: name) { name_native in
         withUnsafePointer(to: usage_flags.rawValue) { usage_flags_native in
         withUnsafePointer(to: hint_type.rawValue) { hint_type_native in
         withUnsafePointer(to: `type`.rawValue) { type_native in
+        let hint_string_native = hint_string._native_ptr()
+        let name_native = name._native_ptr()
         let object_native = object._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 7)
             defer { args.deallocate() }
@@ -136,9 +139,7 @@ public class EditorInspectorPlugin : RefCounted {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
-        }
-        }
+            return UInt8(godot: __resPtr.pointee)
         }
         }
         }
@@ -174,10 +175,10 @@ public class EditorInspectorPlugin : RefCounted {
                     nil
                 )
     }
-    public func add_property_editor(property: String, editor: Control, add_to_end: UInt8)  {
+    public func add_property_editor(property: godot.String, editor: Control, add_to_end: UInt8)  {
         withUnsafePointer(to: add_to_end) { add_to_end_native in
-        withUnsafePointer(to: property) { property_native in
         let editor_native = editor._native_ptr()
+        let property_native = property._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -191,12 +192,11 @@ public class EditorInspectorPlugin : RefCounted {
                     nil
                 )
         }
-        }
     }
-    public func add_property_editor_for_multiple_properties(label: String, properties: PackedStringArray, editor: Control)  {
-        withUnsafePointer(to: label) { label_native in
+    public func add_property_editor_for_multiple_properties(label: godot.String, properties: PackedStringArray, editor: Control)  {
         let editor_native = editor._native_ptr()
         let properties_native = properties._native_ptr()
+        let label_native = label._native_ptr()
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 3)
             defer { args.deallocate() }
             _ = args.initialize(from: [
@@ -209,6 +209,5 @@ public class EditorInspectorPlugin : RefCounted {
                     args.baseAddress!,
                     nil
                 )
-        }
     }
 }

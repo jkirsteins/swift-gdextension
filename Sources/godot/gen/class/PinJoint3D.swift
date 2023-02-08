@@ -5,7 +5,7 @@ fileprivate var __godot_name_PinJoint3D: StringName! = nil
 /// Pin joint for 3D PhysicsBodies.
 /// 
 /// Pin joint for 3D rigid bodies. It pins 2 bodies (dynamic or static) together. See also [Generic6DOFJoint3D].
-public class PinJoint3D : Joint3D {
+open class PinJoint3D : Joint3D {
 
     public enum Param : Int32 {
         case PARAM_BIAS = 0
@@ -18,14 +18,19 @@ public class PinJoint3D : Joint3D {
     static var _method_set_param_2059913726: GDExtensionMethodBindPtr! = nil
     static var _method_get_param_1758438771: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_PinJoint3D = StringName(from: "PinJoint3D")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_param_2059913726_name = StringName(from: "set_param")
-        self._method_set_param_2059913726 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_param_2059913726_name._native_ptr(), 2059913726)
+        self._method_set_param_2059913726 = self.interface.pointee.classdb_get_method_bind(__godot_name_PinJoint3D._native_ptr(), _method_set_param_2059913726_name._native_ptr(), 2059913726)
         assert(PinJoint3D._method_set_param_2059913726 != nil)
         let _method_get_param_1758438771_name = StringName(from: "get_param")
-        self._method_get_param_1758438771 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_param_1758438771_name._native_ptr(), 1758438771)
+        self._method_get_param_1758438771 = self.interface.pointee.classdb_get_method_bind(__godot_name_PinJoint3D._native_ptr(), _method_get_param_1758438771_name._native_ptr(), 1758438771)
         assert(PinJoint3D._method_get_param_1758438771 != nil)
     }
 
@@ -63,7 +68,7 @@ public class PinJoint3D : Joint3D {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
         }
     }
 }

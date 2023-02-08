@@ -9,7 +9,7 @@ fileprivate var __godot_name_ProceduralSkyMaterial: StringName! = nil
 /// The [ProceduralSkyMaterial] uses a lightweight shader to draw the sky and is thus suited for real time updates. When you do not need a quick sky that is not realistic, this is a good option. If you need a more realistic option, try using [PhysicalSkyMaterial] instead.
 ///  
 /// The [ProceduralSkyMaterial] supports up to 4 suns. Each sun takes its color, energy, and direction from the corresponding [DirectionalLight3D] in the scene.
-public class ProceduralSkyMaterial : Material {
+open class ProceduralSkyMaterial : Material {
 
     
 
@@ -42,86 +42,91 @@ public class ProceduralSkyMaterial : Material {
     static var _method_set_use_debanding_2586408642: GDExtensionMethodBindPtr! = nil
     static var _method_get_use_debanding_36873697: GDExtensionMethodBindPtr! = nil
     
-    public override class func initialize_class() {
+    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+        
+        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+
         __godot_name_ProceduralSkyMaterial = StringName(from: "ProceduralSkyMaterial")
+        Self.interface = ginit.p_interface
+        Self.library = ginit.p_library
 
         let _method_set_sky_top_color_2920490490_name = StringName(from: "set_sky_top_color")
-        self._method_set_sky_top_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_sky_top_color_2920490490_name._native_ptr(), 2920490490)
+        self._method_set_sky_top_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_set_sky_top_color_2920490490_name._native_ptr(), 2920490490)
         assert(ProceduralSkyMaterial._method_set_sky_top_color_2920490490 != nil)
         let _method_get_sky_top_color_3444240500_name = StringName(from: "get_sky_top_color")
-        self._method_get_sky_top_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_sky_top_color_3444240500_name._native_ptr(), 3444240500)
+        self._method_get_sky_top_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_get_sky_top_color_3444240500_name._native_ptr(), 3444240500)
         assert(ProceduralSkyMaterial._method_get_sky_top_color_3444240500 != nil)
         let _method_set_sky_horizon_color_2920490490_name = StringName(from: "set_sky_horizon_color")
-        self._method_set_sky_horizon_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_sky_horizon_color_2920490490_name._native_ptr(), 2920490490)
+        self._method_set_sky_horizon_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_set_sky_horizon_color_2920490490_name._native_ptr(), 2920490490)
         assert(ProceduralSkyMaterial._method_set_sky_horizon_color_2920490490 != nil)
         let _method_get_sky_horizon_color_3444240500_name = StringName(from: "get_sky_horizon_color")
-        self._method_get_sky_horizon_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_sky_horizon_color_3444240500_name._native_ptr(), 3444240500)
+        self._method_get_sky_horizon_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_get_sky_horizon_color_3444240500_name._native_ptr(), 3444240500)
         assert(ProceduralSkyMaterial._method_get_sky_horizon_color_3444240500 != nil)
         let _method_set_sky_curve_373806689_name = StringName(from: "set_sky_curve")
-        self._method_set_sky_curve_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_sky_curve_373806689_name._native_ptr(), 373806689)
+        self._method_set_sky_curve_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_set_sky_curve_373806689_name._native_ptr(), 373806689)
         assert(ProceduralSkyMaterial._method_set_sky_curve_373806689 != nil)
         let _method_get_sky_curve_1740695150_name = StringName(from: "get_sky_curve")
-        self._method_get_sky_curve_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_sky_curve_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_sky_curve_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_get_sky_curve_1740695150_name._native_ptr(), 1740695150)
         assert(ProceduralSkyMaterial._method_get_sky_curve_1740695150 != nil)
         let _method_set_sky_energy_multiplier_373806689_name = StringName(from: "set_sky_energy_multiplier")
-        self._method_set_sky_energy_multiplier_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_sky_energy_multiplier_373806689_name._native_ptr(), 373806689)
+        self._method_set_sky_energy_multiplier_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_set_sky_energy_multiplier_373806689_name._native_ptr(), 373806689)
         assert(ProceduralSkyMaterial._method_set_sky_energy_multiplier_373806689 != nil)
         let _method_get_sky_energy_multiplier_1740695150_name = StringName(from: "get_sky_energy_multiplier")
-        self._method_get_sky_energy_multiplier_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_sky_energy_multiplier_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_sky_energy_multiplier_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_get_sky_energy_multiplier_1740695150_name._native_ptr(), 1740695150)
         assert(ProceduralSkyMaterial._method_get_sky_energy_multiplier_1740695150 != nil)
         let _method_set_sky_cover_4051416890_name = StringName(from: "set_sky_cover")
-        self._method_set_sky_cover_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_sky_cover_4051416890_name._native_ptr(), 4051416890)
+        self._method_set_sky_cover_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_set_sky_cover_4051416890_name._native_ptr(), 4051416890)
         assert(ProceduralSkyMaterial._method_set_sky_cover_4051416890 != nil)
         let _method_get_sky_cover_3635182373_name = StringName(from: "get_sky_cover")
-        self._method_get_sky_cover_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_sky_cover_3635182373_name._native_ptr(), 3635182373)
+        self._method_get_sky_cover_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_get_sky_cover_3635182373_name._native_ptr(), 3635182373)
         assert(ProceduralSkyMaterial._method_get_sky_cover_3635182373 != nil)
         let _method_set_sky_cover_modulate_2920490490_name = StringName(from: "set_sky_cover_modulate")
-        self._method_set_sky_cover_modulate_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_sky_cover_modulate_2920490490_name._native_ptr(), 2920490490)
+        self._method_set_sky_cover_modulate_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_set_sky_cover_modulate_2920490490_name._native_ptr(), 2920490490)
         assert(ProceduralSkyMaterial._method_set_sky_cover_modulate_2920490490 != nil)
         let _method_get_sky_cover_modulate_3444240500_name = StringName(from: "get_sky_cover_modulate")
-        self._method_get_sky_cover_modulate_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_sky_cover_modulate_3444240500_name._native_ptr(), 3444240500)
+        self._method_get_sky_cover_modulate_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_get_sky_cover_modulate_3444240500_name._native_ptr(), 3444240500)
         assert(ProceduralSkyMaterial._method_get_sky_cover_modulate_3444240500 != nil)
         let _method_set_ground_bottom_color_2920490490_name = StringName(from: "set_ground_bottom_color")
-        self._method_set_ground_bottom_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ground_bottom_color_2920490490_name._native_ptr(), 2920490490)
+        self._method_set_ground_bottom_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_set_ground_bottom_color_2920490490_name._native_ptr(), 2920490490)
         assert(ProceduralSkyMaterial._method_set_ground_bottom_color_2920490490 != nil)
         let _method_get_ground_bottom_color_3444240500_name = StringName(from: "get_ground_bottom_color")
-        self._method_get_ground_bottom_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_ground_bottom_color_3444240500_name._native_ptr(), 3444240500)
+        self._method_get_ground_bottom_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_get_ground_bottom_color_3444240500_name._native_ptr(), 3444240500)
         assert(ProceduralSkyMaterial._method_get_ground_bottom_color_3444240500 != nil)
         let _method_set_ground_horizon_color_2920490490_name = StringName(from: "set_ground_horizon_color")
-        self._method_set_ground_horizon_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ground_horizon_color_2920490490_name._native_ptr(), 2920490490)
+        self._method_set_ground_horizon_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_set_ground_horizon_color_2920490490_name._native_ptr(), 2920490490)
         assert(ProceduralSkyMaterial._method_set_ground_horizon_color_2920490490 != nil)
         let _method_get_ground_horizon_color_3444240500_name = StringName(from: "get_ground_horizon_color")
-        self._method_get_ground_horizon_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_ground_horizon_color_3444240500_name._native_ptr(), 3444240500)
+        self._method_get_ground_horizon_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_get_ground_horizon_color_3444240500_name._native_ptr(), 3444240500)
         assert(ProceduralSkyMaterial._method_get_ground_horizon_color_3444240500 != nil)
         let _method_set_ground_curve_373806689_name = StringName(from: "set_ground_curve")
-        self._method_set_ground_curve_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ground_curve_373806689_name._native_ptr(), 373806689)
+        self._method_set_ground_curve_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_set_ground_curve_373806689_name._native_ptr(), 373806689)
         assert(ProceduralSkyMaterial._method_set_ground_curve_373806689 != nil)
         let _method_get_ground_curve_1740695150_name = StringName(from: "get_ground_curve")
-        self._method_get_ground_curve_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_ground_curve_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_ground_curve_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_get_ground_curve_1740695150_name._native_ptr(), 1740695150)
         assert(ProceduralSkyMaterial._method_get_ground_curve_1740695150 != nil)
         let _method_set_ground_energy_multiplier_373806689_name = StringName(from: "set_ground_energy_multiplier")
-        self._method_set_ground_energy_multiplier_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_ground_energy_multiplier_373806689_name._native_ptr(), 373806689)
+        self._method_set_ground_energy_multiplier_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_set_ground_energy_multiplier_373806689_name._native_ptr(), 373806689)
         assert(ProceduralSkyMaterial._method_set_ground_energy_multiplier_373806689 != nil)
         let _method_get_ground_energy_multiplier_1740695150_name = StringName(from: "get_ground_energy_multiplier")
-        self._method_get_ground_energy_multiplier_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_ground_energy_multiplier_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_ground_energy_multiplier_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_get_ground_energy_multiplier_1740695150_name._native_ptr(), 1740695150)
         assert(ProceduralSkyMaterial._method_get_ground_energy_multiplier_1740695150 != nil)
         let _method_set_sun_angle_max_373806689_name = StringName(from: "set_sun_angle_max")
-        self._method_set_sun_angle_max_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_sun_angle_max_373806689_name._native_ptr(), 373806689)
+        self._method_set_sun_angle_max_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_set_sun_angle_max_373806689_name._native_ptr(), 373806689)
         assert(ProceduralSkyMaterial._method_set_sun_angle_max_373806689 != nil)
         let _method_get_sun_angle_max_1740695150_name = StringName(from: "get_sun_angle_max")
-        self._method_get_sun_angle_max_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_sun_angle_max_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_sun_angle_max_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_get_sun_angle_max_1740695150_name._native_ptr(), 1740695150)
         assert(ProceduralSkyMaterial._method_get_sun_angle_max_1740695150 != nil)
         let _method_set_sun_curve_373806689_name = StringName(from: "set_sun_curve")
-        self._method_set_sun_curve_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_sun_curve_373806689_name._native_ptr(), 373806689)
+        self._method_set_sun_curve_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_set_sun_curve_373806689_name._native_ptr(), 373806689)
         assert(ProceduralSkyMaterial._method_set_sun_curve_373806689 != nil)
         let _method_get_sun_curve_1740695150_name = StringName(from: "get_sun_curve")
-        self._method_get_sun_curve_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_sun_curve_1740695150_name._native_ptr(), 1740695150)
+        self._method_get_sun_curve_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_get_sun_curve_1740695150_name._native_ptr(), 1740695150)
         assert(ProceduralSkyMaterial._method_get_sun_curve_1740695150 != nil)
         let _method_set_use_debanding_2586408642_name = StringName(from: "set_use_debanding")
-        self._method_set_use_debanding_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_set_use_debanding_2586408642_name._native_ptr(), 2586408642)
+        self._method_set_use_debanding_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_set_use_debanding_2586408642_name._native_ptr(), 2586408642)
         assert(ProceduralSkyMaterial._method_set_use_debanding_2586408642 != nil)
         let _method_get_use_debanding_36873697_name = StringName(from: "get_use_debanding")
-        self._method_get_use_debanding_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name._native_ptr(), _method_get_use_debanding_36873697_name._native_ptr(), 36873697)
+        self._method_get_use_debanding_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProceduralSkyMaterial._native_ptr(), _method_get_use_debanding_36873697_name._native_ptr(), 36873697)
         assert(ProceduralSkyMaterial._method_get_use_debanding_36873697 != nil)
     }
 
@@ -154,7 +159,7 @@ public class ProceduralSkyMaterial : Material {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Color(from: __resPtr.pointee)
+            return Color(godot: __resPtr.pointee)
     }
     public func set_sky_horizon_color(color: Color)  {
         let color_native = color._native_ptr()
@@ -185,7 +190,7 @@ public class ProceduralSkyMaterial : Material {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Color(from: __resPtr.pointee)
+            return Color(godot: __resPtr.pointee)
     }
     public func set_sky_curve(curve: Float64)  {
         withUnsafePointer(to: curve) { curve_native in
@@ -218,7 +223,7 @@ public class ProceduralSkyMaterial : Material {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_sky_energy_multiplier(multiplier: Float64)  {
         withUnsafePointer(to: multiplier) { multiplier_native in
@@ -251,7 +256,7 @@ public class ProceduralSkyMaterial : Material {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_sky_cover(sky_cover: Texture2D)  {
         let sky_cover_native = sky_cover._native_ptr()
@@ -282,7 +287,7 @@ public class ProceduralSkyMaterial : Material {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Texture2D(from: __resPtr.pointee)
+            return Texture2D(godot: __resPtr.pointee)
     }
     public func set_sky_cover_modulate(color: Color)  {
         let color_native = color._native_ptr()
@@ -313,7 +318,7 @@ public class ProceduralSkyMaterial : Material {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Color(from: __resPtr.pointee)
+            return Color(godot: __resPtr.pointee)
     }
     public func set_ground_bottom_color(color: Color)  {
         let color_native = color._native_ptr()
@@ -344,7 +349,7 @@ public class ProceduralSkyMaterial : Material {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Color(from: __resPtr.pointee)
+            return Color(godot: __resPtr.pointee)
     }
     public func set_ground_horizon_color(color: Color)  {
         let color_native = color._native_ptr()
@@ -375,7 +380,7 @@ public class ProceduralSkyMaterial : Material {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Color(from: __resPtr.pointee)
+            return Color(godot: __resPtr.pointee)
     }
     public func set_ground_curve(curve: Float64)  {
         withUnsafePointer(to: curve) { curve_native in
@@ -408,7 +413,7 @@ public class ProceduralSkyMaterial : Material {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_ground_energy_multiplier(energy: Float64)  {
         withUnsafePointer(to: energy) { energy_native in
@@ -441,7 +446,7 @@ public class ProceduralSkyMaterial : Material {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_sun_angle_max(degrees: Float64)  {
         withUnsafePointer(to: degrees) { degrees_native in
@@ -474,7 +479,7 @@ public class ProceduralSkyMaterial : Material {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_sun_curve(curve: Float64)  {
         withUnsafePointer(to: curve) { curve_native in
@@ -507,7 +512,7 @@ public class ProceduralSkyMaterial : Material {
                     args.baseAddress!,
                     __resPtr
                 )
-            return Float64(from: __resPtr.pointee)
+            return Float64(godot: __resPtr.pointee)
     }
     public func set_use_debanding(use_debanding: UInt8)  {
         withUnsafePointer(to: use_debanding) { use_debanding_native in
@@ -540,6 +545,6 @@ public class ProceduralSkyMaterial : Material {
                     args.baseAddress!,
                     __resPtr
                 )
-            return UInt8(from: __resPtr.pointee)
+            return UInt8(godot: __resPtr.pointee)
     }
 }
