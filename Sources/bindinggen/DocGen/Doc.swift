@@ -18,6 +18,13 @@ func get_docs(_ name: String) -> Doc? {
     return decodedData
 }
 
+func get_global_docs() -> Doc {
+    guard let result = get_docs("@GlobalScope") else {
+        fatalError("Could not load global scope docs")
+    }
+    return result
+}
+
 struct Doc_Constructor_Return: Codable {
     let type: String
 }
@@ -49,7 +56,7 @@ struct Doc_Method: Codable {
     let name: String
     let qualifiers: String?
     let `params`: [Doc_Method_Param]
-    let `return`: Doc_Method_Return
+    let `return`: Doc_Method_Return?
     let description: String
 }
 

@@ -149,6 +149,83 @@ struct DocRenderable_Header: Renderable {
     }
 }
 
+struct DocRenderable_Method: Renderable {
+    let doc: Doc_Method
+    let method: any Method
+    let indent: Int
+    let config: ExtensionApi_BuiltinClassSizeConfiguration
+    
+    let template = """
+${summary}
+ 
+${parameters}
+ 
+${returns}
+"""
+    let paramsTemplate = """
+- Parameters:
+  ${parameterItems}
+"""
+    let paramItemTemplate = "- ${paramName}: ${summary}"
+    let returnTemplate = "- Returns: ${summary}"
+    
+    func render() -> String {
+        
+        let argNames = (method.arguments ?? []).map { $0.name }
+        let argDocs = argNames.map { argName in
+            (argName, doc.params.first(where: {$0.name == argName}))
+        }
+        
+        let argLines = argDocs.map({
+            argDoc in
+            
+            TemplatedRenderable(
+                variables: [
+                    "paramName": argDoc.0,
+                    "summary": ""
+                ],
+                template: paramItemTemplate,
+                indent: 0)
+        })
+        
+        let paramsRenderer: (any Renderable)?
+        if argLines.count > 0 {
+            paramsRenderer = TemplatedRenderable(
+                variables: [
+                    "parameterItems": MultiLineRenderable(lines: argLines, indent: 2, prefix: nil)
+                ],
+                template: paramsTemplate,
+                indent: 0)
+        } else {
+            paramsRenderer = nil
+        }
+        
+        let returnRenderer: (any Renderable)?
+        if let _ = doc.return {
+            returnRenderer = TemplatedRenderable(
+                variables: [
+                    "summary": "see summary"
+                ],
+                template: returnTemplate,
+                indent: 0)
+        } else {
+            returnRenderer = nil
+        }
+        
+        let result = TemplatedRenderable(
+            variables: [
+                "summary": doc.description,
+                "parameters": paramsRenderer ?? "",
+                "returns": returnRenderer ?? "",
+            ],
+            template: template,
+            indent: 0)
+        
+        let rendered = MultiLineRenderable(lines: [result], indent: 0, prefix: "/// ").render()
+        return rendered
+    }
+}
+
 func export_godot_enum(
     _ sut: ExtensionApi_GlobalEnum,
     _ sizes: ExtensionApi_BuiltinClassSizeConfiguration,

@@ -59,11 +59,20 @@ struct InstanceMethodRenderable : Renderable {
     
     init(method: ConfigurationSpecificMethod) {
         self.method = method
-        self.outer_template = """
+        
+        if method.is_utility {
+            self.outer_template = """
+   public static func ${methodName}(${argSignature}) ${returnSignature} {
+       ${body}
+   }
+   """
+        } else {
+            self.outer_template = """
    public func ${methodName}(${argSignature}) ${returnSignature} {
        ${body}
    }
    """
+        }
     }
     
     init(method: ConfigurationSpecificConstructor) {
@@ -120,6 +129,29 @@ self.interface.pointee.object_method_bind_ptrcall(
 )
 """
     
+    let invoke_binding_template__utility__no_ret = """
+let __function_name: StringName = .init(from: "${name}")
+let __function = Wrapped.interface.pointee.variant_get_ptr_utility_function(
+        __function_name._native_ptr(),
+        ${hash})
+assert(__function != nil)
+
+var ret = Variant()
+withUnsafeMutablePointer(to: &ret) { retPtr in
+    __function!(retPtr, args.baseAddress!, ${argCount})
+}
+"""
+    
+    let invoke_binding_template__utility__ret = """
+let __function_name: StringName = .init(from: "${name}")
+let __function = Wrapped.interface.pointee.variant_get_ptr_utility_function(
+        __function_name._native_ptr(),
+        ${hash})
+assert(__function != nil)
+
+__function!(__resPtr, args.baseAddress!, ${argCount})
+"""
+    
     let invoke_binding_template__method__virtual = """
 fatalError("Not implemented: virtual default results")
 """
@@ -134,11 +166,46 @@ Self.${methodBindingName}!(self._native_ptr(), .init(args.baseAddress!))
             ".init(\($0.pointerName))"
         }.joined(separator: ", ")
         
-        let argSignature = rawArgs.map { "\($0.unsanitizedName.sanitizedName): \($0.type.sanitizedType)" }.joined(separator: ", ")
+        let argSignature: String
+        
+        // utility methods without arg names
+        if method.is_utility {
+            argSignature = rawArgs.map { "_ \($0.unsanitizedName.sanitizedName): \($0.type.sanitizedType)" }.joined(separator: ", ")
+        } else {
+            argSignature = rawArgs.map { "\($0.unsanitizedName.sanitizedName): \($0.type.sanitizedType)" }.joined(separator: ", ")
+        }
+        
         let returnSignature = self.method.has_return ? "-> \(self.method.sanitized_return_type!.sanitizedType)" : ""
         
         let bindingCall: any Renderable
-        if self.method.is_virtual {
+        if self.method.is_utility {
+            guard let hash = self.method.method_hash else {
+                fatalError("No hash for utility \(self.method.method_name ?? "<unknown>")")
+            }
+            guard let name = self.method.method_name else {
+                fatalError("No name for utility")
+            }
+            
+            if self.method.has_return {
+                bindingCall = TemplatedRenderable(
+                    variables: [
+                        "name": name,
+                        "hash": hash,
+                        "argCount": self.method.args?.count ?? 0
+                    ],
+                    template: invoke_binding_template__utility__ret,
+                    indent: 0)
+            } else {
+                bindingCall = TemplatedRenderable(
+                    variables: [
+                        "name": name,
+                        "hash": hash,
+                        "argCount": self.method.args?.count ?? 0
+                    ],
+                    template: invoke_binding_template__utility__no_ret,
+                    indent: 0)
+            }
+        } else if self.method.is_virtual {
             guard !self.method.is_constructor else { fatalError() }
             
             bindingCall = TemplatedRenderable(
@@ -163,7 +230,7 @@ Self.${methodBindingName}!(self._native_ptr(), .init(args.baseAddress!))
                     indent: 4)
             } else {
                 guard let hash = self.method.method_hash else {
-                    fatalError("No hash for \(self.method.method_name)")
+                    fatalError("No hash for \(self.method.method_name ?? "<unknown>")")
                 }
                 
                 bindingCall = TemplatedRenderable(
@@ -365,7 +432,7 @@ struct MultiLineRenderable: Renderable {
             return int
         })
         
-        return _applyIndentToMultiline(explodeInternal, indent: self.indent)
+        return _applyIndentToMultiline(explodeInternal, indent: self.indent, prefix: prefix)
     }
 }
 

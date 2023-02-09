@@ -28,6 +28,15 @@ class ClassUserMetadata {
 let global_initialize: (@convention(c) (_ userdata: UnsafeMutableRawPointer?, _ p_level: GDExtensionInitializationLevel)->()) = {userdata,p_level in
     
     print("Initializing from swift")
+    
+    if p_level == GDEXTENSION_INITIALIZATION_SCENE {
+        let test = Utility.wrapi(-6, -5, -1)
+        assert(test == -2)
+        let x = Utility.wrapi(10, 4, 7)
+        assert(x == 4)
+        fatalError("yay")
+    }
+    
 //    guard let interface: GDExtensionInterface = gde_interface?.pointee else {
 //        fatalError("NO INTERFACE")
 //    }
@@ -155,6 +164,9 @@ func hello_extension_entry(
         p_interface,
         p_library,
         r_initialization)
+    
+    initializer.register_scene_initializer(global_initialize)
+    initializer.register_scene_terminator(global_deinitialize)
     
     return initializer.initialize();
     

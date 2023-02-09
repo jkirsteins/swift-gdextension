@@ -3,9 +3,9 @@ import godot_native
 var gInit: GodotInitializer? = nil
 
 
-typealias InitializerType = (@convention(c) (_ userdata: UnsafeMutableRawPointer?, _ p_level: GDExtensionInitializationLevel)->())
+public typealias InitializerType = (@convention(c) (_ userdata: UnsafeMutableRawPointer?, _ p_level: GDExtensionInitializationLevel)->())
 
-typealias DeinitializerType = (@convention(c) (_ userdata: UnsafeMutableRawPointer?, _ p_level: GDExtensionInitializationLevel)->())
+public typealias DeinitializerType = (@convention(c) (_ userdata: UnsafeMutableRawPointer?, _ p_level: GDExtensionInitializationLevel)->())
 
 public class GodotInitializer {
     let p_interface: UnsafePointer<GDExtensionInterface>
@@ -81,11 +81,11 @@ public class GodotInitializer {
         print("Initializing level... \(p_level)")
     }
     
-    func register_scene_initializer(_ i: InitializerType) {
+    public func register_scene_initializer(_ i: InitializerType) {
         self.sceneInitializers.append(i)
     }
     
-    func register_scene_terminator(_ t: DeinitializerType) {
+    public func register_scene_terminator(_ t: DeinitializerType) {
         self.sceneTerminators.append(t)
     }
     

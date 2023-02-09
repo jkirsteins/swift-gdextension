@@ -70,16 +70,24 @@ typealias ExtensionApi_GlobalEnum = _ExtensionApi_SharedEnum
 
 // MARK: utility_functions
 
-struct ExtensionApi_UtilityFunction: Codable {
+struct ExtensionApi_UtilityFunction: Codable, Method {
+    var is_const: Bool { false }
+    var is_utility: Bool { true }
+    var is_static: Bool { false }
+    
+    var is_virtual: Bool { false }
+    
+    var return_value_type: String? { self.return_type }
+    
     let name: Swift.String
     let return_type: Swift.String?
     let category: Swift.String
     let is_vararg: Bool
-    let hash: Int
+    var hash: Int?
     let arguments: [ExtensionApi_UtilityFunction_Argument]?
 }
 
-struct ExtensionApi_UtilityFunction_Argument: Codable {
+struct ExtensionApi_UtilityFunction_Argument: Codable, MethodArgument {
     let name: Swift.String
     let type: Swift.String
 }
@@ -153,6 +161,7 @@ protocol Method {
     var is_vararg: Bool { get }
     var is_static: Bool { get }
     var is_virtual: Bool { get }
+    var is_utility: Bool { get }
     var hash: Int? { get }
     var arguments: [Argument]? { get }
     var return_value_type: String? { get }
@@ -172,6 +181,8 @@ struct ExtensionApi_Class_Method: Codable, Method {
     var return_value_type: String? {
         self.return_value?.type
     }
+    
+    var is_utility: Bool { false }
 }
 
 typealias ExtensionApi_Class_Enum = _ExtensionApi_SharedEnum

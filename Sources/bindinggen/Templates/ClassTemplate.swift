@@ -195,6 +195,10 @@ struct ConfigurationSpecificMethod: ConfigurationSpecificCallable {
         method.name
     }
     
+    var is_utility: Bool {
+        method.is_utility
+    }
+    
     var method_hash: Int? {
         method.hash
     }
@@ -228,6 +232,7 @@ protocol ConfigurationSpecificCallable {
     var method_hash: Int? { get }
     var is_constructor: Bool { get }
     var is_virtual: Bool { get }
+    var is_utility: Bool { get }
     var builtin_size: Int { get }
 }
 
@@ -242,6 +247,8 @@ struct ConfigurationSpecificConstructor: ConfigurationSpecificCallable {
     var method_name: String? {
         nil
     }
+    
+    var is_utility: Bool { false }
     
     var method_hash: Int? {
         nil

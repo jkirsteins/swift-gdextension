@@ -27,6 +27,9 @@ guard let builtin_member_offsets = decodedData.builtin_class_member_offsets.firs
 
 let globalAllowAll = FileManager.default.fileExists(atPath: "/tmp/all") || false
 
+print("==> Generating utility functions")
+export_utility_functions(decodedData, builtin_sizes)
+
 print("==> Generating Variant")
 export_builtin_variant(builtin_sizes, builtin_member_offsets, decodedData)
 
@@ -39,7 +42,7 @@ for builtin_class in decodedData.builtin_classes {
     }
     
     // allowlist
-    let allowAll = globalAllowAll || true
+    let allowAll = globalAllowAll || false
     guard allowAll || [
         "String"
     ].contains(builtin_class.name) else {
@@ -60,8 +63,7 @@ for godot_class in decodedData.classes {
     // allowlist
     let allowAll = globalAllowAll || false
     guard allowAll || [
-        "EditorInspectorPlugin",
-        "AESContext"
+        "Node"
 //        "InputEvent",
 //        "SceneTree",
 //        "Window",
