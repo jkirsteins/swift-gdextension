@@ -13,35 +13,31 @@ open class Shortcut : Resource {
 
     public override class var __godot_name: StringName { __godot_name_Shortcut }
 
-    static var _method_set_events_381264803: GDExtensionMethodBindPtr! = nil
-    static var _method_get_events_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_has_valid_event_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_matches_event_3738334489: GDExtensionMethodBindPtr! = nil
-    static var _method_get_as_text_201670096: GDExtensionMethodBindPtr! = nil
+    static var _method_set_events_381264803: StringName! = nil
+    static var _method_get_events_3995934104: StringName! = nil
+    static var _method_has_valid_event_36873697: StringName! = nil
+    static var _method_matches_event_3738334489: StringName! = nil
+    static var _method_get_as_text_201670096: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Shortcut == nil)
         __godot_name_Shortcut = StringName(from: "Shortcut")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_events_381264803_name = StringName(from: "set_events")
-        self._method_set_events_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shortcut._native_ptr(), _method_set_events_381264803_name._native_ptr(), 381264803)
-        assert(Shortcut._method_set_events_381264803 != nil)
-        let _method_get_events_3995934104_name = StringName(from: "get_events")
-        self._method_get_events_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shortcut._native_ptr(), _method_get_events_3995934104_name._native_ptr(), 3995934104)
-        assert(Shortcut._method_get_events_3995934104 != nil)
-        let _method_has_valid_event_36873697_name = StringName(from: "has_valid_event")
-        self._method_has_valid_event_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shortcut._native_ptr(), _method_has_valid_event_36873697_name._native_ptr(), 36873697)
-        assert(Shortcut._method_has_valid_event_36873697 != nil)
-        let _method_matches_event_3738334489_name = StringName(from: "matches_event")
-        self._method_matches_event_3738334489 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shortcut._native_ptr(), _method_matches_event_3738334489_name._native_ptr(), 3738334489)
-        assert(Shortcut._method_matches_event_3738334489 != nil)
-        let _method_get_as_text_201670096_name = StringName(from: "get_as_text")
-        self._method_get_as_text_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shortcut._native_ptr(), _method_get_as_text_201670096_name._native_ptr(), 201670096)
-        assert(Shortcut._method_get_as_text_201670096 != nil)
+        self._method_set_events_381264803 = StringName(from: "set_events")
+        assert(self._method_set_events_381264803 != nil)
+        self._method_get_events_3995934104 = StringName(from: "get_events")
+        assert(self._method_get_events_3995934104 != nil)
+        self._method_has_valid_event_36873697 = StringName(from: "has_valid_event")
+        assert(self._method_has_valid_event_36873697 != nil)
+        self._method_matches_event_3738334489 = StringName(from: "matches_event")
+        assert(self._method_matches_event_3738334489 != nil)
+        self._method_get_as_text_201670096 = StringName(from: "get_as_text")
+        assert(self._method_get_as_text_201670096 != nil)
     }
 
     public func set_events(events: Array)  {
@@ -52,8 +48,13 @@ open class Shortcut : Resource {
                 .init(events_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_events_381264803,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_events_381264803._native_ptr(),
+                    381264803)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -67,8 +68,13 @@ open class Shortcut : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_events_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_events_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -84,8 +90,13 @@ open class Shortcut : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_valid_event_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_valid_event_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -102,8 +113,13 @@ open class Shortcut : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_matches_event_3738334489,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_matches_event_3738334489._native_ptr(),
+                    3738334489)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -118,8 +134,13 @@ open class Shortcut : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_as_text_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_as_text_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

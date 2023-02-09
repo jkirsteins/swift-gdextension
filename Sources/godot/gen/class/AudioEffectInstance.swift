@@ -11,13 +11,14 @@ open class AudioEffectInstance : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_AudioEffectInstance }
 
-    static var _method__process_0: GDExtensionMethodBindPtr! = nil
-    static var _method__process_silence_0: GDExtensionMethodBindPtr! = nil
+    static var _method__process_0: StringName! = nil
+    static var _method__process_silence_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AudioEffectInstance == nil)
         __godot_name_AudioEffectInstance = StringName(from: "AudioEffectInstance")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -35,12 +36,7 @@ open class AudioEffectInstance : RefCounted {
                 .init(src_buffer_native), .init(dst_buffer_native), .init(frame_count_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__process_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
         }
@@ -54,12 +50,7 @@ open class AudioEffectInstance : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__process_silence_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
 }

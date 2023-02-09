@@ -15,39 +15,34 @@ open class EditorPaths : Object {
 
     public override class var __godot_name: StringName { __godot_name_EditorPaths }
 
-    static var _method_get_data_dir_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_config_dir_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cache_dir_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_is_self_contained_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_self_contained_file_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_project_settings_dir_201670096: GDExtensionMethodBindPtr! = nil
+    static var _method_get_data_dir_201670096: StringName! = nil
+    static var _method_get_config_dir_201670096: StringName! = nil
+    static var _method_get_cache_dir_201670096: StringName! = nil
+    static var _method_is_self_contained_36873697: StringName! = nil
+    static var _method_get_self_contained_file_201670096: StringName! = nil
+    static var _method_get_project_settings_dir_201670096: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorPaths == nil)
         __godot_name_EditorPaths = StringName(from: "EditorPaths")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_data_dir_201670096_name = StringName(from: "get_data_dir")
-        self._method_get_data_dir_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPaths._native_ptr(), _method_get_data_dir_201670096_name._native_ptr(), 201670096)
-        assert(EditorPaths._method_get_data_dir_201670096 != nil)
-        let _method_get_config_dir_201670096_name = StringName(from: "get_config_dir")
-        self._method_get_config_dir_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPaths._native_ptr(), _method_get_config_dir_201670096_name._native_ptr(), 201670096)
-        assert(EditorPaths._method_get_config_dir_201670096 != nil)
-        let _method_get_cache_dir_201670096_name = StringName(from: "get_cache_dir")
-        self._method_get_cache_dir_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPaths._native_ptr(), _method_get_cache_dir_201670096_name._native_ptr(), 201670096)
-        assert(EditorPaths._method_get_cache_dir_201670096 != nil)
-        let _method_is_self_contained_36873697_name = StringName(from: "is_self_contained")
-        self._method_is_self_contained_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPaths._native_ptr(), _method_is_self_contained_36873697_name._native_ptr(), 36873697)
-        assert(EditorPaths._method_is_self_contained_36873697 != nil)
-        let _method_get_self_contained_file_201670096_name = StringName(from: "get_self_contained_file")
-        self._method_get_self_contained_file_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPaths._native_ptr(), _method_get_self_contained_file_201670096_name._native_ptr(), 201670096)
-        assert(EditorPaths._method_get_self_contained_file_201670096 != nil)
-        let _method_get_project_settings_dir_201670096_name = StringName(from: "get_project_settings_dir")
-        self._method_get_project_settings_dir_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorPaths._native_ptr(), _method_get_project_settings_dir_201670096_name._native_ptr(), 201670096)
-        assert(EditorPaths._method_get_project_settings_dir_201670096 != nil)
+        self._method_get_data_dir_201670096 = StringName(from: "get_data_dir")
+        assert(self._method_get_data_dir_201670096 != nil)
+        self._method_get_config_dir_201670096 = StringName(from: "get_config_dir")
+        assert(self._method_get_config_dir_201670096 != nil)
+        self._method_get_cache_dir_201670096 = StringName(from: "get_cache_dir")
+        assert(self._method_get_cache_dir_201670096 != nil)
+        self._method_is_self_contained_36873697 = StringName(from: "is_self_contained")
+        assert(self._method_is_self_contained_36873697 != nil)
+        self._method_get_self_contained_file_201670096 = StringName(from: "get_self_contained_file")
+        assert(self._method_get_self_contained_file_201670096 != nil)
+        self._method_get_project_settings_dir_201670096 = StringName(from: "get_project_settings_dir")
+        assert(self._method_get_project_settings_dir_201670096 != nil)
     }
 
     public func get_data_dir() -> godot.String {
@@ -58,8 +53,13 @@ open class EditorPaths : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_data_dir_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_data_dir_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -74,8 +74,13 @@ open class EditorPaths : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_config_dir_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_config_dir_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -90,8 +95,13 @@ open class EditorPaths : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cache_dir_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cache_dir_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -107,8 +117,13 @@ open class EditorPaths : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_self_contained_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_self_contained_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -123,8 +138,13 @@ open class EditorPaths : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_self_contained_file_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_self_contained_file_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -139,8 +159,13 @@ open class EditorPaths : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_project_settings_dir_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_project_settings_dir_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

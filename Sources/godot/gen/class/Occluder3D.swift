@@ -13,23 +13,22 @@ open class Occluder3D : Resource {
 
     public override class var __godot_name: StringName { __godot_name_Occluder3D }
 
-    static var _method_get_vertices_497664490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_indices_1930428628: GDExtensionMethodBindPtr! = nil
+    static var _method_get_vertices_497664490: StringName! = nil
+    static var _method_get_indices_1930428628: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Occluder3D == nil)
         __godot_name_Occluder3D = StringName(from: "Occluder3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_vertices_497664490_name = StringName(from: "get_vertices")
-        self._method_get_vertices_497664490 = self.interface.pointee.classdb_get_method_bind(__godot_name_Occluder3D._native_ptr(), _method_get_vertices_497664490_name._native_ptr(), 497664490)
-        assert(Occluder3D._method_get_vertices_497664490 != nil)
-        let _method_get_indices_1930428628_name = StringName(from: "get_indices")
-        self._method_get_indices_1930428628 = self.interface.pointee.classdb_get_method_bind(__godot_name_Occluder3D._native_ptr(), _method_get_indices_1930428628_name._native_ptr(), 1930428628)
-        assert(Occluder3D._method_get_indices_1930428628 != nil)
+        self._method_get_vertices_497664490 = StringName(from: "get_vertices")
+        assert(self._method_get_vertices_497664490 != nil)
+        self._method_get_indices_1930428628 = StringName(from: "get_indices")
+        assert(self._method_get_indices_1930428628 != nil)
     }
 
     public func get_vertices() -> PackedVector3Array {
@@ -40,8 +39,13 @@ open class Occluder3D : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_vertices_497664490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_vertices_497664490._native_ptr(),
+                    497664490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -56,8 +60,13 @@ open class Occluder3D : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_indices_1930428628,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_indices_1930428628._native_ptr(),
+                    1930428628)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -22,47 +22,40 @@ open class VisualShaderNode : Resource {
 
     public override class var __godot_name: StringName { __godot_name_VisualShaderNode }
 
-    static var _method_set_output_port_for_preview_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_output_port_for_preview_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_input_port_default_value_150923387: GDExtensionMethodBindPtr! = nil
-    static var _method_get_input_port_default_value_4227898402: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_input_port_default_value_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_default_input_values_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_default_input_values_381264803: GDExtensionMethodBindPtr! = nil
-    static var _method_get_default_input_values_3995934104: GDExtensionMethodBindPtr! = nil
+    static var _method_set_output_port_for_preview_1286410249: StringName! = nil
+    static var _method_get_output_port_for_preview_3905245786: StringName! = nil
+    static var _method_set_input_port_default_value_150923387: StringName! = nil
+    static var _method_get_input_port_default_value_4227898402: StringName! = nil
+    static var _method_remove_input_port_default_value_1286410249: StringName! = nil
+    static var _method_clear_default_input_values_3218959716: StringName! = nil
+    static var _method_set_default_input_values_381264803: StringName! = nil
+    static var _method_get_default_input_values_3995934104: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShaderNode == nil)
         __godot_name_VisualShaderNode = StringName(from: "VisualShaderNode")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_output_port_for_preview_1286410249_name = StringName(from: "set_output_port_for_preview")
-        self._method_set_output_port_for_preview_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNode._native_ptr(), _method_set_output_port_for_preview_1286410249_name._native_ptr(), 1286410249)
-        assert(VisualShaderNode._method_set_output_port_for_preview_1286410249 != nil)
-        let _method_get_output_port_for_preview_3905245786_name = StringName(from: "get_output_port_for_preview")
-        self._method_get_output_port_for_preview_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNode._native_ptr(), _method_get_output_port_for_preview_3905245786_name._native_ptr(), 3905245786)
-        assert(VisualShaderNode._method_get_output_port_for_preview_3905245786 != nil)
-        let _method_set_input_port_default_value_150923387_name = StringName(from: "set_input_port_default_value")
-        self._method_set_input_port_default_value_150923387 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNode._native_ptr(), _method_set_input_port_default_value_150923387_name._native_ptr(), 150923387)
-        assert(VisualShaderNode._method_set_input_port_default_value_150923387 != nil)
-        let _method_get_input_port_default_value_4227898402_name = StringName(from: "get_input_port_default_value")
-        self._method_get_input_port_default_value_4227898402 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNode._native_ptr(), _method_get_input_port_default_value_4227898402_name._native_ptr(), 4227898402)
-        assert(VisualShaderNode._method_get_input_port_default_value_4227898402 != nil)
-        let _method_remove_input_port_default_value_1286410249_name = StringName(from: "remove_input_port_default_value")
-        self._method_remove_input_port_default_value_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNode._native_ptr(), _method_remove_input_port_default_value_1286410249_name._native_ptr(), 1286410249)
-        assert(VisualShaderNode._method_remove_input_port_default_value_1286410249 != nil)
-        let _method_clear_default_input_values_3218959716_name = StringName(from: "clear_default_input_values")
-        self._method_clear_default_input_values_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNode._native_ptr(), _method_clear_default_input_values_3218959716_name._native_ptr(), 3218959716)
-        assert(VisualShaderNode._method_clear_default_input_values_3218959716 != nil)
-        let _method_set_default_input_values_381264803_name = StringName(from: "set_default_input_values")
-        self._method_set_default_input_values_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNode._native_ptr(), _method_set_default_input_values_381264803_name._native_ptr(), 381264803)
-        assert(VisualShaderNode._method_set_default_input_values_381264803 != nil)
-        let _method_get_default_input_values_3995934104_name = StringName(from: "get_default_input_values")
-        self._method_get_default_input_values_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNode._native_ptr(), _method_get_default_input_values_3995934104_name._native_ptr(), 3995934104)
-        assert(VisualShaderNode._method_get_default_input_values_3995934104 != nil)
+        self._method_set_output_port_for_preview_1286410249 = StringName(from: "set_output_port_for_preview")
+        assert(self._method_set_output_port_for_preview_1286410249 != nil)
+        self._method_get_output_port_for_preview_3905245786 = StringName(from: "get_output_port_for_preview")
+        assert(self._method_get_output_port_for_preview_3905245786 != nil)
+        self._method_set_input_port_default_value_150923387 = StringName(from: "set_input_port_default_value")
+        assert(self._method_set_input_port_default_value_150923387 != nil)
+        self._method_get_input_port_default_value_4227898402 = StringName(from: "get_input_port_default_value")
+        assert(self._method_get_input_port_default_value_4227898402 != nil)
+        self._method_remove_input_port_default_value_1286410249 = StringName(from: "remove_input_port_default_value")
+        assert(self._method_remove_input_port_default_value_1286410249 != nil)
+        self._method_clear_default_input_values_3218959716 = StringName(from: "clear_default_input_values")
+        assert(self._method_clear_default_input_values_3218959716 != nil)
+        self._method_set_default_input_values_381264803 = StringName(from: "set_default_input_values")
+        assert(self._method_set_default_input_values_381264803 != nil)
+        self._method_get_default_input_values_3995934104 = StringName(from: "get_default_input_values")
+        assert(self._method_get_default_input_values_3995934104 != nil)
     }
 
     public func set_output_port_for_preview(port: Int64)  {
@@ -73,8 +66,13 @@ open class VisualShaderNode : Resource {
                 .init(port_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_output_port_for_preview_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_output_port_for_preview_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -90,8 +88,13 @@ open class VisualShaderNode : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_output_port_for_preview_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_output_port_for_preview_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -108,8 +111,13 @@ open class VisualShaderNode : Resource {
                 .init(port_native), .init(value_native), .init(prev_value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_input_port_default_value_150923387,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_input_port_default_value_150923387._native_ptr(),
+                    150923387)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -125,8 +133,13 @@ open class VisualShaderNode : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_input_port_default_value_4227898402,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_input_port_default_value_4227898402._native_ptr(),
+                    4227898402)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -142,8 +155,13 @@ open class VisualShaderNode : Resource {
                 .init(port_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_input_port_default_value_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_input_port_default_value_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -157,8 +175,13 @@ open class VisualShaderNode : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_default_input_values_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_default_input_values_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -172,8 +195,13 @@ open class VisualShaderNode : Resource {
                 .init(values_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_default_input_values_381264803,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_default_input_values_381264803._native_ptr(),
+                    381264803)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -187,8 +215,13 @@ open class VisualShaderNode : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_default_input_values_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_default_input_values_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

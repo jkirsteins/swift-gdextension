@@ -132,20 +132,21 @@ open class MultiplayerAPIExtension : MultiplayerAPI {
 
     public override class var __godot_name: StringName { __godot_name_MultiplayerAPIExtension }
 
-    static var _method__poll_0: GDExtensionMethodBindPtr! = nil
-    static var _method__set_multiplayer_peer_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_multiplayer_peer_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_unique_id_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_peer_ids_0: GDExtensionMethodBindPtr! = nil
-    static var _method__rpc_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_remote_sender_id_0: GDExtensionMethodBindPtr! = nil
-    static var _method__object_configuration_add_0: GDExtensionMethodBindPtr! = nil
-    static var _method__object_configuration_remove_0: GDExtensionMethodBindPtr! = nil
+    static var _method__poll_0: StringName! = nil
+    static var _method__set_multiplayer_peer_0: StringName! = nil
+    static var _method__get_multiplayer_peer_0: StringName! = nil
+    static var _method__get_unique_id_0: StringName! = nil
+    static var _method__get_peer_ids_0: StringName! = nil
+    static var _method__rpc_0: StringName! = nil
+    static var _method__get_remote_sender_id_0: StringName! = nil
+    static var _method__object_configuration_add_0: StringName! = nil
+    static var _method__object_configuration_remove_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_MultiplayerAPIExtension == nil)
         __godot_name_MultiplayerAPIExtension = StringName(from: "MultiplayerAPIExtension")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -161,12 +162,7 @@ open class MultiplayerAPIExtension : MultiplayerAPI {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__poll_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _set_multiplayer_peer(multiplayer_peer: MultiplayerPeer)  {
@@ -177,12 +173,7 @@ open class MultiplayerAPIExtension : MultiplayerAPI {
                 .init(multiplayer_peer_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__set_multiplayer_peer_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _get_multiplayer_peer() -> MultiplayerPeer {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -192,12 +183,7 @@ open class MultiplayerAPIExtension : MultiplayerAPI {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_multiplayer_peer_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return MultiplayerPeer(godot: __resPtr.pointee)
     }
     public func _get_unique_id() -> Int64 {
@@ -209,12 +195,7 @@ open class MultiplayerAPIExtension : MultiplayerAPI {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_unique_id_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _get_peer_ids() -> PackedInt32Array {
@@ -225,12 +206,7 @@ open class MultiplayerAPIExtension : MultiplayerAPI {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_peer_ids_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedInt32Array(godot: __resPtr.pointee)
     }
     public func _rpc(peer: Int64, object: Object, method: StringName, args: Array) -> Error {
@@ -245,12 +221,7 @@ open class MultiplayerAPIExtension : MultiplayerAPI {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__rpc_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
         }
     }
@@ -263,12 +234,7 @@ open class MultiplayerAPIExtension : MultiplayerAPI {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_remote_sender_id_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _object_configuration_add(object: Object, configuration: Variant) -> Error {
@@ -281,12 +247,7 @@ open class MultiplayerAPIExtension : MultiplayerAPI {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__object_configuration_add_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _object_configuration_remove(object: Object, configuration: Variant) -> Error {
@@ -299,12 +260,7 @@ open class MultiplayerAPIExtension : MultiplayerAPI {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__object_configuration_remove_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
 }

@@ -50,450 +50,351 @@ open class RichTextLabel : Control {
         case ITEM_DROPCAP = 25
         case ITEM_CUSTOMFX = 26
     }
+    public enum MenuItems : Int32 {
+        case MENU_COPY = 0
+        case MENU_SELECT_ALL = 1
+        case MENU_MAX = 2
+    }
 
     public override class var __godot_name: StringName { __godot_name_RichTextLabel }
 
-    static var _method_get_parsed_text_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_add_text_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_set_text_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_add_image_3346058748: GDExtensionMethodBindPtr! = nil
-    static var _method_newline_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_paragraph_3067735520: GDExtensionMethodBindPtr! = nil
-    static var _method_push_font_3014009009: GDExtensionMethodBindPtr! = nil
-    static var _method_push_font_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_push_normal_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_push_bold_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_push_bold_italics_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_push_italics_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_push_mono_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_push_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_push_outline_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_push_outline_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_push_paragraph_1037160898: GDExtensionMethodBindPtr! = nil
-    static var _method_push_indent_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_push_list_2241060727: GDExtensionMethodBindPtr! = nil
-    static var _method_push_meta_1114965689: GDExtensionMethodBindPtr! = nil
-    static var _method_push_hint_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_push_underline_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_push_strikethrough_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_push_table_1125058220: GDExtensionMethodBindPtr! = nil
-    static var _method_push_dropcap_311501835: GDExtensionMethodBindPtr! = nil
-    static var _method_set_table_column_expand_4258957458: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cell_row_background_color_3465483165: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cell_border_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cell_size_override_3108078480: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cell_padding_2046264180: GDExtensionMethodBindPtr! = nil
-    static var _method_push_cell_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_push_fgcolor_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_push_bgcolor_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_push_customfx_2337942958: GDExtensionMethodBindPtr! = nil
-    static var _method_pop_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_structured_text_bidi_override_55961453: GDExtensionMethodBindPtr! = nil
-    static var _method_get_structured_text_bidi_override_3385126229: GDExtensionMethodBindPtr! = nil
-    static var _method_set_structured_text_bidi_override_options_381264803: GDExtensionMethodBindPtr! = nil
-    static var _method_get_structured_text_bidi_override_options_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_set_text_direction_119160795: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_direction_797257663: GDExtensionMethodBindPtr! = nil
-    static var _method_set_language_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_language_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_autowrap_mode_3289138044: GDExtensionMethodBindPtr! = nil
-    static var _method_get_autowrap_mode_1549071663: GDExtensionMethodBindPtr! = nil
-    static var _method_set_meta_underline_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_meta_underlined_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_hint_underline_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_hint_underlined_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_scroll_active_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_scroll_active_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_scroll_follow_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_scroll_following_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_v_scroll_bar_2630340773: GDExtensionMethodBindPtr! = nil
-    static var _method_scroll_to_line_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_scroll_to_paragraph_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_scroll_to_selection_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tab_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tab_size_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fit_content_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_fit_content_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_selection_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_selection_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_context_menu_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_context_menu_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shortcut_keys_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_shortcut_keys_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_deselect_on_focus_loss_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_deselect_on_focus_loss_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selection_from_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selection_to_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_select_all_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selected_text_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_deselect_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_parse_bbcode_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_append_text_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_is_ready_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_threaded_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_threaded_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_progress_bar_delay_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_progress_bar_delay_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_visible_characters_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_visible_characters_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_visible_characters_behavior_258789322: GDExtensionMethodBindPtr! = nil
-    static var _method_set_visible_characters_behavior_3383839701: GDExtensionMethodBindPtr! = nil
-    static var _method_set_visible_ratio_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_visible_ratio_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_character_line_3744713108: GDExtensionMethodBindPtr! = nil
-    static var _method_get_character_paragraph_3744713108: GDExtensionMethodBindPtr! = nil
-    static var _method_get_total_character_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_bbcode_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_using_bbcode_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_visible_line_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_paragraph_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_visible_paragraph_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_content_height_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_content_width_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_offset_4025615559: GDExtensionMethodBindPtr! = nil
-    static var _method_get_paragraph_offset_4025615559: GDExtensionMethodBindPtr! = nil
-    static var _method_parse_expressions_for_values_1522900837: GDExtensionMethodBindPtr! = nil
-    static var _method_set_effects_381264803: GDExtensionMethodBindPtr! = nil
-    static var _method_get_effects_2915620761: GDExtensionMethodBindPtr! = nil
-    static var _method_install_effect_1114965689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_menu_229722558: GDExtensionMethodBindPtr! = nil
-    static var _method_is_menu_visible_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_get_parsed_text_201670096: StringName! = nil
+    static var _method_add_text_83702148: StringName! = nil
+    static var _method_set_text_83702148: StringName! = nil
+    static var _method_add_image_3346058748: StringName! = nil
+    static var _method_newline_3218959716: StringName! = nil
+    static var _method_remove_paragraph_3067735520: StringName! = nil
+    static var _method_push_font_3014009009: StringName! = nil
+    static var _method_push_font_size_1286410249: StringName! = nil
+    static var _method_push_normal_3218959716: StringName! = nil
+    static var _method_push_bold_3218959716: StringName! = nil
+    static var _method_push_bold_italics_3218959716: StringName! = nil
+    static var _method_push_italics_3218959716: StringName! = nil
+    static var _method_push_mono_3218959716: StringName! = nil
+    static var _method_push_color_2920490490: StringName! = nil
+    static var _method_push_outline_size_1286410249: StringName! = nil
+    static var _method_push_outline_color_2920490490: StringName! = nil
+    static var _method_push_paragraph_1037160898: StringName! = nil
+    static var _method_push_indent_1286410249: StringName! = nil
+    static var _method_push_list_2241060727: StringName! = nil
+    static var _method_push_meta_1114965689: StringName! = nil
+    static var _method_push_hint_83702148: StringName! = nil
+    static var _method_push_underline_3218959716: StringName! = nil
+    static var _method_push_strikethrough_3218959716: StringName! = nil
+    static var _method_push_table_1125058220: StringName! = nil
+    static var _method_push_dropcap_311501835: StringName! = nil
+    static var _method_set_table_column_expand_4258957458: StringName! = nil
+    static var _method_set_cell_row_background_color_3465483165: StringName! = nil
+    static var _method_set_cell_border_color_2920490490: StringName! = nil
+    static var _method_set_cell_size_override_3108078480: StringName! = nil
+    static var _method_set_cell_padding_2046264180: StringName! = nil
+    static var _method_push_cell_3218959716: StringName! = nil
+    static var _method_push_fgcolor_2920490490: StringName! = nil
+    static var _method_push_bgcolor_2920490490: StringName! = nil
+    static var _method_push_customfx_2337942958: StringName! = nil
+    static var _method_pop_3218959716: StringName! = nil
+    static var _method_clear_3218959716: StringName! = nil
+    static var _method_set_structured_text_bidi_override_55961453: StringName! = nil
+    static var _method_get_structured_text_bidi_override_3385126229: StringName! = nil
+    static var _method_set_structured_text_bidi_override_options_381264803: StringName! = nil
+    static var _method_get_structured_text_bidi_override_options_3995934104: StringName! = nil
+    static var _method_set_text_direction_119160795: StringName! = nil
+    static var _method_get_text_direction_797257663: StringName! = nil
+    static var _method_set_language_83702148: StringName! = nil
+    static var _method_get_language_201670096: StringName! = nil
+    static var _method_set_autowrap_mode_3289138044: StringName! = nil
+    static var _method_get_autowrap_mode_1549071663: StringName! = nil
+    static var _method_set_meta_underline_2586408642: StringName! = nil
+    static var _method_is_meta_underlined_36873697: StringName! = nil
+    static var _method_set_hint_underline_2586408642: StringName! = nil
+    static var _method_is_hint_underlined_36873697: StringName! = nil
+    static var _method_set_scroll_active_2586408642: StringName! = nil
+    static var _method_is_scroll_active_36873697: StringName! = nil
+    static var _method_set_scroll_follow_2586408642: StringName! = nil
+    static var _method_is_scroll_following_36873697: StringName! = nil
+    static var _method_get_v_scroll_bar_2630340773: StringName! = nil
+    static var _method_scroll_to_line_1286410249: StringName! = nil
+    static var _method_scroll_to_paragraph_1286410249: StringName! = nil
+    static var _method_scroll_to_selection_3218959716: StringName! = nil
+    static var _method_set_tab_size_1286410249: StringName! = nil
+    static var _method_get_tab_size_3905245786: StringName! = nil
+    static var _method_set_fit_content_2586408642: StringName! = nil
+    static var _method_is_fit_content_enabled_36873697: StringName! = nil
+    static var _method_set_selection_enabled_2586408642: StringName! = nil
+    static var _method_is_selection_enabled_36873697: StringName! = nil
+    static var _method_set_context_menu_enabled_2586408642: StringName! = nil
+    static var _method_is_context_menu_enabled_36873697: StringName! = nil
+    static var _method_set_shortcut_keys_enabled_2586408642: StringName! = nil
+    static var _method_is_shortcut_keys_enabled_36873697: StringName! = nil
+    static var _method_set_deselect_on_focus_loss_enabled_2586408642: StringName! = nil
+    static var _method_is_deselect_on_focus_loss_enabled_36873697: StringName! = nil
+    static var _method_get_selection_from_3905245786: StringName! = nil
+    static var _method_get_selection_to_3905245786: StringName! = nil
+    static var _method_select_all_3218959716: StringName! = nil
+    static var _method_get_selected_text_201670096: StringName! = nil
+    static var _method_deselect_3218959716: StringName! = nil
+    static var _method_parse_bbcode_83702148: StringName! = nil
+    static var _method_append_text_83702148: StringName! = nil
+    static var _method_get_text_201670096: StringName! = nil
+    static var _method_is_ready_36873697: StringName! = nil
+    static var _method_set_threaded_2586408642: StringName! = nil
+    static var _method_is_threaded_36873697: StringName! = nil
+    static var _method_set_progress_bar_delay_1286410249: StringName! = nil
+    static var _method_get_progress_bar_delay_3905245786: StringName! = nil
+    static var _method_set_visible_characters_1286410249: StringName! = nil
+    static var _method_get_visible_characters_3905245786: StringName! = nil
+    static var _method_get_visible_characters_behavior_258789322: StringName! = nil
+    static var _method_set_visible_characters_behavior_3383839701: StringName! = nil
+    static var _method_set_visible_ratio_373806689: StringName! = nil
+    static var _method_get_visible_ratio_1740695150: StringName! = nil
+    static var _method_get_character_line_3744713108: StringName! = nil
+    static var _method_get_character_paragraph_3744713108: StringName! = nil
+    static var _method_get_total_character_count_3905245786: StringName! = nil
+    static var _method_set_use_bbcode_2586408642: StringName! = nil
+    static var _method_is_using_bbcode_36873697: StringName! = nil
+    static var _method_get_line_count_3905245786: StringName! = nil
+    static var _method_get_visible_line_count_3905245786: StringName! = nil
+    static var _method_get_paragraph_count_3905245786: StringName! = nil
+    static var _method_get_visible_paragraph_count_3905245786: StringName! = nil
+    static var _method_get_content_height_3905245786: StringName! = nil
+    static var _method_get_content_width_3905245786: StringName! = nil
+    static var _method_get_line_offset_4025615559: StringName! = nil
+    static var _method_get_paragraph_offset_4025615559: StringName! = nil
+    static var _method_parse_expressions_for_values_1522900837: StringName! = nil
+    static var _method_set_effects_381264803: StringName! = nil
+    static var _method_get_effects_2915620761: StringName! = nil
+    static var _method_install_effect_1114965689: StringName! = nil
+    static var _method_get_menu_229722558: StringName! = nil
+    static var _method_is_menu_visible_36873697: StringName! = nil
+    static var _method_menu_option_1286410249: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_RichTextLabel == nil)
         __godot_name_RichTextLabel = StringName(from: "RichTextLabel")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_parsed_text_201670096_name = StringName(from: "get_parsed_text")
-        self._method_get_parsed_text_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_parsed_text_201670096_name._native_ptr(), 201670096)
-        assert(RichTextLabel._method_get_parsed_text_201670096 != nil)
-        let _method_add_text_83702148_name = StringName(from: "add_text")
-        self._method_add_text_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_add_text_83702148_name._native_ptr(), 83702148)
-        assert(RichTextLabel._method_add_text_83702148 != nil)
-        let _method_set_text_83702148_name = StringName(from: "set_text")
-        self._method_set_text_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_text_83702148_name._native_ptr(), 83702148)
-        assert(RichTextLabel._method_set_text_83702148 != nil)
-        let _method_add_image_3346058748_name = StringName(from: "add_image")
-        self._method_add_image_3346058748 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_add_image_3346058748_name._native_ptr(), 3346058748)
-        assert(RichTextLabel._method_add_image_3346058748 != nil)
-        let _method_newline_3218959716_name = StringName(from: "newline")
-        self._method_newline_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_newline_3218959716_name._native_ptr(), 3218959716)
-        assert(RichTextLabel._method_newline_3218959716 != nil)
-        let _method_remove_paragraph_3067735520_name = StringName(from: "remove_paragraph")
-        self._method_remove_paragraph_3067735520 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_remove_paragraph_3067735520_name._native_ptr(), 3067735520)
-        assert(RichTextLabel._method_remove_paragraph_3067735520 != nil)
-        let _method_push_font_3014009009_name = StringName(from: "push_font")
-        self._method_push_font_3014009009 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_font_3014009009_name._native_ptr(), 3014009009)
-        assert(RichTextLabel._method_push_font_3014009009 != nil)
-        let _method_push_font_size_1286410249_name = StringName(from: "push_font_size")
-        self._method_push_font_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_font_size_1286410249_name._native_ptr(), 1286410249)
-        assert(RichTextLabel._method_push_font_size_1286410249 != nil)
-        let _method_push_normal_3218959716_name = StringName(from: "push_normal")
-        self._method_push_normal_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_normal_3218959716_name._native_ptr(), 3218959716)
-        assert(RichTextLabel._method_push_normal_3218959716 != nil)
-        let _method_push_bold_3218959716_name = StringName(from: "push_bold")
-        self._method_push_bold_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_bold_3218959716_name._native_ptr(), 3218959716)
-        assert(RichTextLabel._method_push_bold_3218959716 != nil)
-        let _method_push_bold_italics_3218959716_name = StringName(from: "push_bold_italics")
-        self._method_push_bold_italics_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_bold_italics_3218959716_name._native_ptr(), 3218959716)
-        assert(RichTextLabel._method_push_bold_italics_3218959716 != nil)
-        let _method_push_italics_3218959716_name = StringName(from: "push_italics")
-        self._method_push_italics_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_italics_3218959716_name._native_ptr(), 3218959716)
-        assert(RichTextLabel._method_push_italics_3218959716 != nil)
-        let _method_push_mono_3218959716_name = StringName(from: "push_mono")
-        self._method_push_mono_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_mono_3218959716_name._native_ptr(), 3218959716)
-        assert(RichTextLabel._method_push_mono_3218959716 != nil)
-        let _method_push_color_2920490490_name = StringName(from: "push_color")
-        self._method_push_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_color_2920490490_name._native_ptr(), 2920490490)
-        assert(RichTextLabel._method_push_color_2920490490 != nil)
-        let _method_push_outline_size_1286410249_name = StringName(from: "push_outline_size")
-        self._method_push_outline_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_outline_size_1286410249_name._native_ptr(), 1286410249)
-        assert(RichTextLabel._method_push_outline_size_1286410249 != nil)
-        let _method_push_outline_color_2920490490_name = StringName(from: "push_outline_color")
-        self._method_push_outline_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_outline_color_2920490490_name._native_ptr(), 2920490490)
-        assert(RichTextLabel._method_push_outline_color_2920490490 != nil)
-        let _method_push_paragraph_1037160898_name = StringName(from: "push_paragraph")
-        self._method_push_paragraph_1037160898 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_paragraph_1037160898_name._native_ptr(), 1037160898)
-        assert(RichTextLabel._method_push_paragraph_1037160898 != nil)
-        let _method_push_indent_1286410249_name = StringName(from: "push_indent")
-        self._method_push_indent_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_indent_1286410249_name._native_ptr(), 1286410249)
-        assert(RichTextLabel._method_push_indent_1286410249 != nil)
-        let _method_push_list_2241060727_name = StringName(from: "push_list")
-        self._method_push_list_2241060727 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_list_2241060727_name._native_ptr(), 2241060727)
-        assert(RichTextLabel._method_push_list_2241060727 != nil)
-        let _method_push_meta_1114965689_name = StringName(from: "push_meta")
-        self._method_push_meta_1114965689 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_meta_1114965689_name._native_ptr(), 1114965689)
-        assert(RichTextLabel._method_push_meta_1114965689 != nil)
-        let _method_push_hint_83702148_name = StringName(from: "push_hint")
-        self._method_push_hint_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_hint_83702148_name._native_ptr(), 83702148)
-        assert(RichTextLabel._method_push_hint_83702148 != nil)
-        let _method_push_underline_3218959716_name = StringName(from: "push_underline")
-        self._method_push_underline_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_underline_3218959716_name._native_ptr(), 3218959716)
-        assert(RichTextLabel._method_push_underline_3218959716 != nil)
-        let _method_push_strikethrough_3218959716_name = StringName(from: "push_strikethrough")
-        self._method_push_strikethrough_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_strikethrough_3218959716_name._native_ptr(), 3218959716)
-        assert(RichTextLabel._method_push_strikethrough_3218959716 != nil)
-        let _method_push_table_1125058220_name = StringName(from: "push_table")
-        self._method_push_table_1125058220 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_table_1125058220_name._native_ptr(), 1125058220)
-        assert(RichTextLabel._method_push_table_1125058220 != nil)
-        let _method_push_dropcap_311501835_name = StringName(from: "push_dropcap")
-        self._method_push_dropcap_311501835 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_dropcap_311501835_name._native_ptr(), 311501835)
-        assert(RichTextLabel._method_push_dropcap_311501835 != nil)
-        let _method_set_table_column_expand_4258957458_name = StringName(from: "set_table_column_expand")
-        self._method_set_table_column_expand_4258957458 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_table_column_expand_4258957458_name._native_ptr(), 4258957458)
-        assert(RichTextLabel._method_set_table_column_expand_4258957458 != nil)
-        let _method_set_cell_row_background_color_3465483165_name = StringName(from: "set_cell_row_background_color")
-        self._method_set_cell_row_background_color_3465483165 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_cell_row_background_color_3465483165_name._native_ptr(), 3465483165)
-        assert(RichTextLabel._method_set_cell_row_background_color_3465483165 != nil)
-        let _method_set_cell_border_color_2920490490_name = StringName(from: "set_cell_border_color")
-        self._method_set_cell_border_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_cell_border_color_2920490490_name._native_ptr(), 2920490490)
-        assert(RichTextLabel._method_set_cell_border_color_2920490490 != nil)
-        let _method_set_cell_size_override_3108078480_name = StringName(from: "set_cell_size_override")
-        self._method_set_cell_size_override_3108078480 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_cell_size_override_3108078480_name._native_ptr(), 3108078480)
-        assert(RichTextLabel._method_set_cell_size_override_3108078480 != nil)
-        let _method_set_cell_padding_2046264180_name = StringName(from: "set_cell_padding")
-        self._method_set_cell_padding_2046264180 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_cell_padding_2046264180_name._native_ptr(), 2046264180)
-        assert(RichTextLabel._method_set_cell_padding_2046264180 != nil)
-        let _method_push_cell_3218959716_name = StringName(from: "push_cell")
-        self._method_push_cell_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_cell_3218959716_name._native_ptr(), 3218959716)
-        assert(RichTextLabel._method_push_cell_3218959716 != nil)
-        let _method_push_fgcolor_2920490490_name = StringName(from: "push_fgcolor")
-        self._method_push_fgcolor_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_fgcolor_2920490490_name._native_ptr(), 2920490490)
-        assert(RichTextLabel._method_push_fgcolor_2920490490 != nil)
-        let _method_push_bgcolor_2920490490_name = StringName(from: "push_bgcolor")
-        self._method_push_bgcolor_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_bgcolor_2920490490_name._native_ptr(), 2920490490)
-        assert(RichTextLabel._method_push_bgcolor_2920490490 != nil)
-        let _method_push_customfx_2337942958_name = StringName(from: "push_customfx")
-        self._method_push_customfx_2337942958 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_push_customfx_2337942958_name._native_ptr(), 2337942958)
-        assert(RichTextLabel._method_push_customfx_2337942958 != nil)
-        let _method_pop_3218959716_name = StringName(from: "pop")
-        self._method_pop_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_pop_3218959716_name._native_ptr(), 3218959716)
-        assert(RichTextLabel._method_pop_3218959716 != nil)
-        let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
-        assert(RichTextLabel._method_clear_3218959716 != nil)
-        let _method_set_structured_text_bidi_override_55961453_name = StringName(from: "set_structured_text_bidi_override")
-        self._method_set_structured_text_bidi_override_55961453 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_structured_text_bidi_override_55961453_name._native_ptr(), 55961453)
-        assert(RichTextLabel._method_set_structured_text_bidi_override_55961453 != nil)
-        let _method_get_structured_text_bidi_override_3385126229_name = StringName(from: "get_structured_text_bidi_override")
-        self._method_get_structured_text_bidi_override_3385126229 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_structured_text_bidi_override_3385126229_name._native_ptr(), 3385126229)
-        assert(RichTextLabel._method_get_structured_text_bidi_override_3385126229 != nil)
-        let _method_set_structured_text_bidi_override_options_381264803_name = StringName(from: "set_structured_text_bidi_override_options")
-        self._method_set_structured_text_bidi_override_options_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_structured_text_bidi_override_options_381264803_name._native_ptr(), 381264803)
-        assert(RichTextLabel._method_set_structured_text_bidi_override_options_381264803 != nil)
-        let _method_get_structured_text_bidi_override_options_3995934104_name = StringName(from: "get_structured_text_bidi_override_options")
-        self._method_get_structured_text_bidi_override_options_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_structured_text_bidi_override_options_3995934104_name._native_ptr(), 3995934104)
-        assert(RichTextLabel._method_get_structured_text_bidi_override_options_3995934104 != nil)
-        let _method_set_text_direction_119160795_name = StringName(from: "set_text_direction")
-        self._method_set_text_direction_119160795 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_text_direction_119160795_name._native_ptr(), 119160795)
-        assert(RichTextLabel._method_set_text_direction_119160795 != nil)
-        let _method_get_text_direction_797257663_name = StringName(from: "get_text_direction")
-        self._method_get_text_direction_797257663 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_text_direction_797257663_name._native_ptr(), 797257663)
-        assert(RichTextLabel._method_get_text_direction_797257663 != nil)
-        let _method_set_language_83702148_name = StringName(from: "set_language")
-        self._method_set_language_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_language_83702148_name._native_ptr(), 83702148)
-        assert(RichTextLabel._method_set_language_83702148 != nil)
-        let _method_get_language_201670096_name = StringName(from: "get_language")
-        self._method_get_language_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_language_201670096_name._native_ptr(), 201670096)
-        assert(RichTextLabel._method_get_language_201670096 != nil)
-        let _method_set_autowrap_mode_3289138044_name = StringName(from: "set_autowrap_mode")
-        self._method_set_autowrap_mode_3289138044 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_autowrap_mode_3289138044_name._native_ptr(), 3289138044)
-        assert(RichTextLabel._method_set_autowrap_mode_3289138044 != nil)
-        let _method_get_autowrap_mode_1549071663_name = StringName(from: "get_autowrap_mode")
-        self._method_get_autowrap_mode_1549071663 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_autowrap_mode_1549071663_name._native_ptr(), 1549071663)
-        assert(RichTextLabel._method_get_autowrap_mode_1549071663 != nil)
-        let _method_set_meta_underline_2586408642_name = StringName(from: "set_meta_underline")
-        self._method_set_meta_underline_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_meta_underline_2586408642_name._native_ptr(), 2586408642)
-        assert(RichTextLabel._method_set_meta_underline_2586408642 != nil)
-        let _method_is_meta_underlined_36873697_name = StringName(from: "is_meta_underlined")
-        self._method_is_meta_underlined_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_is_meta_underlined_36873697_name._native_ptr(), 36873697)
-        assert(RichTextLabel._method_is_meta_underlined_36873697 != nil)
-        let _method_set_hint_underline_2586408642_name = StringName(from: "set_hint_underline")
-        self._method_set_hint_underline_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_hint_underline_2586408642_name._native_ptr(), 2586408642)
-        assert(RichTextLabel._method_set_hint_underline_2586408642 != nil)
-        let _method_is_hint_underlined_36873697_name = StringName(from: "is_hint_underlined")
-        self._method_is_hint_underlined_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_is_hint_underlined_36873697_name._native_ptr(), 36873697)
-        assert(RichTextLabel._method_is_hint_underlined_36873697 != nil)
-        let _method_set_scroll_active_2586408642_name = StringName(from: "set_scroll_active")
-        self._method_set_scroll_active_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_scroll_active_2586408642_name._native_ptr(), 2586408642)
-        assert(RichTextLabel._method_set_scroll_active_2586408642 != nil)
-        let _method_is_scroll_active_36873697_name = StringName(from: "is_scroll_active")
-        self._method_is_scroll_active_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_is_scroll_active_36873697_name._native_ptr(), 36873697)
-        assert(RichTextLabel._method_is_scroll_active_36873697 != nil)
-        let _method_set_scroll_follow_2586408642_name = StringName(from: "set_scroll_follow")
-        self._method_set_scroll_follow_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_scroll_follow_2586408642_name._native_ptr(), 2586408642)
-        assert(RichTextLabel._method_set_scroll_follow_2586408642 != nil)
-        let _method_is_scroll_following_36873697_name = StringName(from: "is_scroll_following")
-        self._method_is_scroll_following_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_is_scroll_following_36873697_name._native_ptr(), 36873697)
-        assert(RichTextLabel._method_is_scroll_following_36873697 != nil)
-        let _method_get_v_scroll_bar_2630340773_name = StringName(from: "get_v_scroll_bar")
-        self._method_get_v_scroll_bar_2630340773 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_v_scroll_bar_2630340773_name._native_ptr(), 2630340773)
-        assert(RichTextLabel._method_get_v_scroll_bar_2630340773 != nil)
-        let _method_scroll_to_line_1286410249_name = StringName(from: "scroll_to_line")
-        self._method_scroll_to_line_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_scroll_to_line_1286410249_name._native_ptr(), 1286410249)
-        assert(RichTextLabel._method_scroll_to_line_1286410249 != nil)
-        let _method_scroll_to_paragraph_1286410249_name = StringName(from: "scroll_to_paragraph")
-        self._method_scroll_to_paragraph_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_scroll_to_paragraph_1286410249_name._native_ptr(), 1286410249)
-        assert(RichTextLabel._method_scroll_to_paragraph_1286410249 != nil)
-        let _method_scroll_to_selection_3218959716_name = StringName(from: "scroll_to_selection")
-        self._method_scroll_to_selection_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_scroll_to_selection_3218959716_name._native_ptr(), 3218959716)
-        assert(RichTextLabel._method_scroll_to_selection_3218959716 != nil)
-        let _method_set_tab_size_1286410249_name = StringName(from: "set_tab_size")
-        self._method_set_tab_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_tab_size_1286410249_name._native_ptr(), 1286410249)
-        assert(RichTextLabel._method_set_tab_size_1286410249 != nil)
-        let _method_get_tab_size_3905245786_name = StringName(from: "get_tab_size")
-        self._method_get_tab_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_tab_size_3905245786_name._native_ptr(), 3905245786)
-        assert(RichTextLabel._method_get_tab_size_3905245786 != nil)
-        let _method_set_fit_content_2586408642_name = StringName(from: "set_fit_content")
-        self._method_set_fit_content_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_fit_content_2586408642_name._native_ptr(), 2586408642)
-        assert(RichTextLabel._method_set_fit_content_2586408642 != nil)
-        let _method_is_fit_content_enabled_36873697_name = StringName(from: "is_fit_content_enabled")
-        self._method_is_fit_content_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_is_fit_content_enabled_36873697_name._native_ptr(), 36873697)
-        assert(RichTextLabel._method_is_fit_content_enabled_36873697 != nil)
-        let _method_set_selection_enabled_2586408642_name = StringName(from: "set_selection_enabled")
-        self._method_set_selection_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_selection_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(RichTextLabel._method_set_selection_enabled_2586408642 != nil)
-        let _method_is_selection_enabled_36873697_name = StringName(from: "is_selection_enabled")
-        self._method_is_selection_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_is_selection_enabled_36873697_name._native_ptr(), 36873697)
-        assert(RichTextLabel._method_is_selection_enabled_36873697 != nil)
-        let _method_set_context_menu_enabled_2586408642_name = StringName(from: "set_context_menu_enabled")
-        self._method_set_context_menu_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_context_menu_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(RichTextLabel._method_set_context_menu_enabled_2586408642 != nil)
-        let _method_is_context_menu_enabled_36873697_name = StringName(from: "is_context_menu_enabled")
-        self._method_is_context_menu_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_is_context_menu_enabled_36873697_name._native_ptr(), 36873697)
-        assert(RichTextLabel._method_is_context_menu_enabled_36873697 != nil)
-        let _method_set_shortcut_keys_enabled_2586408642_name = StringName(from: "set_shortcut_keys_enabled")
-        self._method_set_shortcut_keys_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_shortcut_keys_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(RichTextLabel._method_set_shortcut_keys_enabled_2586408642 != nil)
-        let _method_is_shortcut_keys_enabled_36873697_name = StringName(from: "is_shortcut_keys_enabled")
-        self._method_is_shortcut_keys_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_is_shortcut_keys_enabled_36873697_name._native_ptr(), 36873697)
-        assert(RichTextLabel._method_is_shortcut_keys_enabled_36873697 != nil)
-        let _method_set_deselect_on_focus_loss_enabled_2586408642_name = StringName(from: "set_deselect_on_focus_loss_enabled")
-        self._method_set_deselect_on_focus_loss_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_deselect_on_focus_loss_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(RichTextLabel._method_set_deselect_on_focus_loss_enabled_2586408642 != nil)
-        let _method_is_deselect_on_focus_loss_enabled_36873697_name = StringName(from: "is_deselect_on_focus_loss_enabled")
-        self._method_is_deselect_on_focus_loss_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_is_deselect_on_focus_loss_enabled_36873697_name._native_ptr(), 36873697)
-        assert(RichTextLabel._method_is_deselect_on_focus_loss_enabled_36873697 != nil)
-        let _method_get_selection_from_3905245786_name = StringName(from: "get_selection_from")
-        self._method_get_selection_from_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_selection_from_3905245786_name._native_ptr(), 3905245786)
-        assert(RichTextLabel._method_get_selection_from_3905245786 != nil)
-        let _method_get_selection_to_3905245786_name = StringName(from: "get_selection_to")
-        self._method_get_selection_to_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_selection_to_3905245786_name._native_ptr(), 3905245786)
-        assert(RichTextLabel._method_get_selection_to_3905245786 != nil)
-        let _method_select_all_3218959716_name = StringName(from: "select_all")
-        self._method_select_all_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_select_all_3218959716_name._native_ptr(), 3218959716)
-        assert(RichTextLabel._method_select_all_3218959716 != nil)
-        let _method_get_selected_text_201670096_name = StringName(from: "get_selected_text")
-        self._method_get_selected_text_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_selected_text_201670096_name._native_ptr(), 201670096)
-        assert(RichTextLabel._method_get_selected_text_201670096 != nil)
-        let _method_deselect_3218959716_name = StringName(from: "deselect")
-        self._method_deselect_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_deselect_3218959716_name._native_ptr(), 3218959716)
-        assert(RichTextLabel._method_deselect_3218959716 != nil)
-        let _method_parse_bbcode_83702148_name = StringName(from: "parse_bbcode")
-        self._method_parse_bbcode_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_parse_bbcode_83702148_name._native_ptr(), 83702148)
-        assert(RichTextLabel._method_parse_bbcode_83702148 != nil)
-        let _method_append_text_83702148_name = StringName(from: "append_text")
-        self._method_append_text_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_append_text_83702148_name._native_ptr(), 83702148)
-        assert(RichTextLabel._method_append_text_83702148 != nil)
-        let _method_get_text_201670096_name = StringName(from: "get_text")
-        self._method_get_text_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_text_201670096_name._native_ptr(), 201670096)
-        assert(RichTextLabel._method_get_text_201670096 != nil)
-        let _method_is_ready_36873697_name = StringName(from: "is_ready")
-        self._method_is_ready_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_is_ready_36873697_name._native_ptr(), 36873697)
-        assert(RichTextLabel._method_is_ready_36873697 != nil)
-        let _method_set_threaded_2586408642_name = StringName(from: "set_threaded")
-        self._method_set_threaded_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_threaded_2586408642_name._native_ptr(), 2586408642)
-        assert(RichTextLabel._method_set_threaded_2586408642 != nil)
-        let _method_is_threaded_36873697_name = StringName(from: "is_threaded")
-        self._method_is_threaded_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_is_threaded_36873697_name._native_ptr(), 36873697)
-        assert(RichTextLabel._method_is_threaded_36873697 != nil)
-        let _method_set_progress_bar_delay_1286410249_name = StringName(from: "set_progress_bar_delay")
-        self._method_set_progress_bar_delay_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_progress_bar_delay_1286410249_name._native_ptr(), 1286410249)
-        assert(RichTextLabel._method_set_progress_bar_delay_1286410249 != nil)
-        let _method_get_progress_bar_delay_3905245786_name = StringName(from: "get_progress_bar_delay")
-        self._method_get_progress_bar_delay_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_progress_bar_delay_3905245786_name._native_ptr(), 3905245786)
-        assert(RichTextLabel._method_get_progress_bar_delay_3905245786 != nil)
-        let _method_set_visible_characters_1286410249_name = StringName(from: "set_visible_characters")
-        self._method_set_visible_characters_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_visible_characters_1286410249_name._native_ptr(), 1286410249)
-        assert(RichTextLabel._method_set_visible_characters_1286410249 != nil)
-        let _method_get_visible_characters_3905245786_name = StringName(from: "get_visible_characters")
-        self._method_get_visible_characters_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_visible_characters_3905245786_name._native_ptr(), 3905245786)
-        assert(RichTextLabel._method_get_visible_characters_3905245786 != nil)
-        let _method_get_visible_characters_behavior_258789322_name = StringName(from: "get_visible_characters_behavior")
-        self._method_get_visible_characters_behavior_258789322 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_visible_characters_behavior_258789322_name._native_ptr(), 258789322)
-        assert(RichTextLabel._method_get_visible_characters_behavior_258789322 != nil)
-        let _method_set_visible_characters_behavior_3383839701_name = StringName(from: "set_visible_characters_behavior")
-        self._method_set_visible_characters_behavior_3383839701 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_visible_characters_behavior_3383839701_name._native_ptr(), 3383839701)
-        assert(RichTextLabel._method_set_visible_characters_behavior_3383839701 != nil)
-        let _method_set_visible_ratio_373806689_name = StringName(from: "set_visible_ratio")
-        self._method_set_visible_ratio_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_visible_ratio_373806689_name._native_ptr(), 373806689)
-        assert(RichTextLabel._method_set_visible_ratio_373806689 != nil)
-        let _method_get_visible_ratio_1740695150_name = StringName(from: "get_visible_ratio")
-        self._method_get_visible_ratio_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_visible_ratio_1740695150_name._native_ptr(), 1740695150)
-        assert(RichTextLabel._method_get_visible_ratio_1740695150 != nil)
-        let _method_get_character_line_3744713108_name = StringName(from: "get_character_line")
-        self._method_get_character_line_3744713108 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_character_line_3744713108_name._native_ptr(), 3744713108)
-        assert(RichTextLabel._method_get_character_line_3744713108 != nil)
-        let _method_get_character_paragraph_3744713108_name = StringName(from: "get_character_paragraph")
-        self._method_get_character_paragraph_3744713108 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_character_paragraph_3744713108_name._native_ptr(), 3744713108)
-        assert(RichTextLabel._method_get_character_paragraph_3744713108 != nil)
-        let _method_get_total_character_count_3905245786_name = StringName(from: "get_total_character_count")
-        self._method_get_total_character_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_total_character_count_3905245786_name._native_ptr(), 3905245786)
-        assert(RichTextLabel._method_get_total_character_count_3905245786 != nil)
-        let _method_set_use_bbcode_2586408642_name = StringName(from: "set_use_bbcode")
-        self._method_set_use_bbcode_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_use_bbcode_2586408642_name._native_ptr(), 2586408642)
-        assert(RichTextLabel._method_set_use_bbcode_2586408642 != nil)
-        let _method_is_using_bbcode_36873697_name = StringName(from: "is_using_bbcode")
-        self._method_is_using_bbcode_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_is_using_bbcode_36873697_name._native_ptr(), 36873697)
-        assert(RichTextLabel._method_is_using_bbcode_36873697 != nil)
-        let _method_get_line_count_3905245786_name = StringName(from: "get_line_count")
-        self._method_get_line_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_line_count_3905245786_name._native_ptr(), 3905245786)
-        assert(RichTextLabel._method_get_line_count_3905245786 != nil)
-        let _method_get_visible_line_count_3905245786_name = StringName(from: "get_visible_line_count")
-        self._method_get_visible_line_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_visible_line_count_3905245786_name._native_ptr(), 3905245786)
-        assert(RichTextLabel._method_get_visible_line_count_3905245786 != nil)
-        let _method_get_paragraph_count_3905245786_name = StringName(from: "get_paragraph_count")
-        self._method_get_paragraph_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_paragraph_count_3905245786_name._native_ptr(), 3905245786)
-        assert(RichTextLabel._method_get_paragraph_count_3905245786 != nil)
-        let _method_get_visible_paragraph_count_3905245786_name = StringName(from: "get_visible_paragraph_count")
-        self._method_get_visible_paragraph_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_visible_paragraph_count_3905245786_name._native_ptr(), 3905245786)
-        assert(RichTextLabel._method_get_visible_paragraph_count_3905245786 != nil)
-        let _method_get_content_height_3905245786_name = StringName(from: "get_content_height")
-        self._method_get_content_height_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_content_height_3905245786_name._native_ptr(), 3905245786)
-        assert(RichTextLabel._method_get_content_height_3905245786 != nil)
-        let _method_get_content_width_3905245786_name = StringName(from: "get_content_width")
-        self._method_get_content_width_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_content_width_3905245786_name._native_ptr(), 3905245786)
-        assert(RichTextLabel._method_get_content_width_3905245786 != nil)
-        let _method_get_line_offset_4025615559_name = StringName(from: "get_line_offset")
-        self._method_get_line_offset_4025615559 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_line_offset_4025615559_name._native_ptr(), 4025615559)
-        assert(RichTextLabel._method_get_line_offset_4025615559 != nil)
-        let _method_get_paragraph_offset_4025615559_name = StringName(from: "get_paragraph_offset")
-        self._method_get_paragraph_offset_4025615559 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_paragraph_offset_4025615559_name._native_ptr(), 4025615559)
-        assert(RichTextLabel._method_get_paragraph_offset_4025615559 != nil)
-        let _method_parse_expressions_for_values_1522900837_name = StringName(from: "parse_expressions_for_values")
-        self._method_parse_expressions_for_values_1522900837 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_parse_expressions_for_values_1522900837_name._native_ptr(), 1522900837)
-        assert(RichTextLabel._method_parse_expressions_for_values_1522900837 != nil)
-        let _method_set_effects_381264803_name = StringName(from: "set_effects")
-        self._method_set_effects_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_set_effects_381264803_name._native_ptr(), 381264803)
-        assert(RichTextLabel._method_set_effects_381264803 != nil)
-        let _method_get_effects_2915620761_name = StringName(from: "get_effects")
-        self._method_get_effects_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_effects_2915620761_name._native_ptr(), 2915620761)
-        assert(RichTextLabel._method_get_effects_2915620761 != nil)
-        let _method_install_effect_1114965689_name = StringName(from: "install_effect")
-        self._method_install_effect_1114965689 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_install_effect_1114965689_name._native_ptr(), 1114965689)
-        assert(RichTextLabel._method_install_effect_1114965689 != nil)
-        let _method_get_menu_229722558_name = StringName(from: "get_menu")
-        self._method_get_menu_229722558 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_get_menu_229722558_name._native_ptr(), 229722558)
-        assert(RichTextLabel._method_get_menu_229722558 != nil)
-        let _method_is_menu_visible_36873697_name = StringName(from: "is_menu_visible")
-        self._method_is_menu_visible_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RichTextLabel._native_ptr(), _method_is_menu_visible_36873697_name._native_ptr(), 36873697)
-        assert(RichTextLabel._method_is_menu_visible_36873697 != nil)
+        self._method_get_parsed_text_201670096 = StringName(from: "get_parsed_text")
+        assert(self._method_get_parsed_text_201670096 != nil)
+        self._method_add_text_83702148 = StringName(from: "add_text")
+        assert(self._method_add_text_83702148 != nil)
+        self._method_set_text_83702148 = StringName(from: "set_text")
+        assert(self._method_set_text_83702148 != nil)
+        self._method_add_image_3346058748 = StringName(from: "add_image")
+        assert(self._method_add_image_3346058748 != nil)
+        self._method_newline_3218959716 = StringName(from: "newline")
+        assert(self._method_newline_3218959716 != nil)
+        self._method_remove_paragraph_3067735520 = StringName(from: "remove_paragraph")
+        assert(self._method_remove_paragraph_3067735520 != nil)
+        self._method_push_font_3014009009 = StringName(from: "push_font")
+        assert(self._method_push_font_3014009009 != nil)
+        self._method_push_font_size_1286410249 = StringName(from: "push_font_size")
+        assert(self._method_push_font_size_1286410249 != nil)
+        self._method_push_normal_3218959716 = StringName(from: "push_normal")
+        assert(self._method_push_normal_3218959716 != nil)
+        self._method_push_bold_3218959716 = StringName(from: "push_bold")
+        assert(self._method_push_bold_3218959716 != nil)
+        self._method_push_bold_italics_3218959716 = StringName(from: "push_bold_italics")
+        assert(self._method_push_bold_italics_3218959716 != nil)
+        self._method_push_italics_3218959716 = StringName(from: "push_italics")
+        assert(self._method_push_italics_3218959716 != nil)
+        self._method_push_mono_3218959716 = StringName(from: "push_mono")
+        assert(self._method_push_mono_3218959716 != nil)
+        self._method_push_color_2920490490 = StringName(from: "push_color")
+        assert(self._method_push_color_2920490490 != nil)
+        self._method_push_outline_size_1286410249 = StringName(from: "push_outline_size")
+        assert(self._method_push_outline_size_1286410249 != nil)
+        self._method_push_outline_color_2920490490 = StringName(from: "push_outline_color")
+        assert(self._method_push_outline_color_2920490490 != nil)
+        self._method_push_paragraph_1037160898 = StringName(from: "push_paragraph")
+        assert(self._method_push_paragraph_1037160898 != nil)
+        self._method_push_indent_1286410249 = StringName(from: "push_indent")
+        assert(self._method_push_indent_1286410249 != nil)
+        self._method_push_list_2241060727 = StringName(from: "push_list")
+        assert(self._method_push_list_2241060727 != nil)
+        self._method_push_meta_1114965689 = StringName(from: "push_meta")
+        assert(self._method_push_meta_1114965689 != nil)
+        self._method_push_hint_83702148 = StringName(from: "push_hint")
+        assert(self._method_push_hint_83702148 != nil)
+        self._method_push_underline_3218959716 = StringName(from: "push_underline")
+        assert(self._method_push_underline_3218959716 != nil)
+        self._method_push_strikethrough_3218959716 = StringName(from: "push_strikethrough")
+        assert(self._method_push_strikethrough_3218959716 != nil)
+        self._method_push_table_1125058220 = StringName(from: "push_table")
+        assert(self._method_push_table_1125058220 != nil)
+        self._method_push_dropcap_311501835 = StringName(from: "push_dropcap")
+        assert(self._method_push_dropcap_311501835 != nil)
+        self._method_set_table_column_expand_4258957458 = StringName(from: "set_table_column_expand")
+        assert(self._method_set_table_column_expand_4258957458 != nil)
+        self._method_set_cell_row_background_color_3465483165 = StringName(from: "set_cell_row_background_color")
+        assert(self._method_set_cell_row_background_color_3465483165 != nil)
+        self._method_set_cell_border_color_2920490490 = StringName(from: "set_cell_border_color")
+        assert(self._method_set_cell_border_color_2920490490 != nil)
+        self._method_set_cell_size_override_3108078480 = StringName(from: "set_cell_size_override")
+        assert(self._method_set_cell_size_override_3108078480 != nil)
+        self._method_set_cell_padding_2046264180 = StringName(from: "set_cell_padding")
+        assert(self._method_set_cell_padding_2046264180 != nil)
+        self._method_push_cell_3218959716 = StringName(from: "push_cell")
+        assert(self._method_push_cell_3218959716 != nil)
+        self._method_push_fgcolor_2920490490 = StringName(from: "push_fgcolor")
+        assert(self._method_push_fgcolor_2920490490 != nil)
+        self._method_push_bgcolor_2920490490 = StringName(from: "push_bgcolor")
+        assert(self._method_push_bgcolor_2920490490 != nil)
+        self._method_push_customfx_2337942958 = StringName(from: "push_customfx")
+        assert(self._method_push_customfx_2337942958 != nil)
+        self._method_pop_3218959716 = StringName(from: "pop")
+        assert(self._method_pop_3218959716 != nil)
+        self._method_clear_3218959716 = StringName(from: "clear")
+        assert(self._method_clear_3218959716 != nil)
+        self._method_set_structured_text_bidi_override_55961453 = StringName(from: "set_structured_text_bidi_override")
+        assert(self._method_set_structured_text_bidi_override_55961453 != nil)
+        self._method_get_structured_text_bidi_override_3385126229 = StringName(from: "get_structured_text_bidi_override")
+        assert(self._method_get_structured_text_bidi_override_3385126229 != nil)
+        self._method_set_structured_text_bidi_override_options_381264803 = StringName(from: "set_structured_text_bidi_override_options")
+        assert(self._method_set_structured_text_bidi_override_options_381264803 != nil)
+        self._method_get_structured_text_bidi_override_options_3995934104 = StringName(from: "get_structured_text_bidi_override_options")
+        assert(self._method_get_structured_text_bidi_override_options_3995934104 != nil)
+        self._method_set_text_direction_119160795 = StringName(from: "set_text_direction")
+        assert(self._method_set_text_direction_119160795 != nil)
+        self._method_get_text_direction_797257663 = StringName(from: "get_text_direction")
+        assert(self._method_get_text_direction_797257663 != nil)
+        self._method_set_language_83702148 = StringName(from: "set_language")
+        assert(self._method_set_language_83702148 != nil)
+        self._method_get_language_201670096 = StringName(from: "get_language")
+        assert(self._method_get_language_201670096 != nil)
+        self._method_set_autowrap_mode_3289138044 = StringName(from: "set_autowrap_mode")
+        assert(self._method_set_autowrap_mode_3289138044 != nil)
+        self._method_get_autowrap_mode_1549071663 = StringName(from: "get_autowrap_mode")
+        assert(self._method_get_autowrap_mode_1549071663 != nil)
+        self._method_set_meta_underline_2586408642 = StringName(from: "set_meta_underline")
+        assert(self._method_set_meta_underline_2586408642 != nil)
+        self._method_is_meta_underlined_36873697 = StringName(from: "is_meta_underlined")
+        assert(self._method_is_meta_underlined_36873697 != nil)
+        self._method_set_hint_underline_2586408642 = StringName(from: "set_hint_underline")
+        assert(self._method_set_hint_underline_2586408642 != nil)
+        self._method_is_hint_underlined_36873697 = StringName(from: "is_hint_underlined")
+        assert(self._method_is_hint_underlined_36873697 != nil)
+        self._method_set_scroll_active_2586408642 = StringName(from: "set_scroll_active")
+        assert(self._method_set_scroll_active_2586408642 != nil)
+        self._method_is_scroll_active_36873697 = StringName(from: "is_scroll_active")
+        assert(self._method_is_scroll_active_36873697 != nil)
+        self._method_set_scroll_follow_2586408642 = StringName(from: "set_scroll_follow")
+        assert(self._method_set_scroll_follow_2586408642 != nil)
+        self._method_is_scroll_following_36873697 = StringName(from: "is_scroll_following")
+        assert(self._method_is_scroll_following_36873697 != nil)
+        self._method_get_v_scroll_bar_2630340773 = StringName(from: "get_v_scroll_bar")
+        assert(self._method_get_v_scroll_bar_2630340773 != nil)
+        self._method_scroll_to_line_1286410249 = StringName(from: "scroll_to_line")
+        assert(self._method_scroll_to_line_1286410249 != nil)
+        self._method_scroll_to_paragraph_1286410249 = StringName(from: "scroll_to_paragraph")
+        assert(self._method_scroll_to_paragraph_1286410249 != nil)
+        self._method_scroll_to_selection_3218959716 = StringName(from: "scroll_to_selection")
+        assert(self._method_scroll_to_selection_3218959716 != nil)
+        self._method_set_tab_size_1286410249 = StringName(from: "set_tab_size")
+        assert(self._method_set_tab_size_1286410249 != nil)
+        self._method_get_tab_size_3905245786 = StringName(from: "get_tab_size")
+        assert(self._method_get_tab_size_3905245786 != nil)
+        self._method_set_fit_content_2586408642 = StringName(from: "set_fit_content")
+        assert(self._method_set_fit_content_2586408642 != nil)
+        self._method_is_fit_content_enabled_36873697 = StringName(from: "is_fit_content_enabled")
+        assert(self._method_is_fit_content_enabled_36873697 != nil)
+        self._method_set_selection_enabled_2586408642 = StringName(from: "set_selection_enabled")
+        assert(self._method_set_selection_enabled_2586408642 != nil)
+        self._method_is_selection_enabled_36873697 = StringName(from: "is_selection_enabled")
+        assert(self._method_is_selection_enabled_36873697 != nil)
+        self._method_set_context_menu_enabled_2586408642 = StringName(from: "set_context_menu_enabled")
+        assert(self._method_set_context_menu_enabled_2586408642 != nil)
+        self._method_is_context_menu_enabled_36873697 = StringName(from: "is_context_menu_enabled")
+        assert(self._method_is_context_menu_enabled_36873697 != nil)
+        self._method_set_shortcut_keys_enabled_2586408642 = StringName(from: "set_shortcut_keys_enabled")
+        assert(self._method_set_shortcut_keys_enabled_2586408642 != nil)
+        self._method_is_shortcut_keys_enabled_36873697 = StringName(from: "is_shortcut_keys_enabled")
+        assert(self._method_is_shortcut_keys_enabled_36873697 != nil)
+        self._method_set_deselect_on_focus_loss_enabled_2586408642 = StringName(from: "set_deselect_on_focus_loss_enabled")
+        assert(self._method_set_deselect_on_focus_loss_enabled_2586408642 != nil)
+        self._method_is_deselect_on_focus_loss_enabled_36873697 = StringName(from: "is_deselect_on_focus_loss_enabled")
+        assert(self._method_is_deselect_on_focus_loss_enabled_36873697 != nil)
+        self._method_get_selection_from_3905245786 = StringName(from: "get_selection_from")
+        assert(self._method_get_selection_from_3905245786 != nil)
+        self._method_get_selection_to_3905245786 = StringName(from: "get_selection_to")
+        assert(self._method_get_selection_to_3905245786 != nil)
+        self._method_select_all_3218959716 = StringName(from: "select_all")
+        assert(self._method_select_all_3218959716 != nil)
+        self._method_get_selected_text_201670096 = StringName(from: "get_selected_text")
+        assert(self._method_get_selected_text_201670096 != nil)
+        self._method_deselect_3218959716 = StringName(from: "deselect")
+        assert(self._method_deselect_3218959716 != nil)
+        self._method_parse_bbcode_83702148 = StringName(from: "parse_bbcode")
+        assert(self._method_parse_bbcode_83702148 != nil)
+        self._method_append_text_83702148 = StringName(from: "append_text")
+        assert(self._method_append_text_83702148 != nil)
+        self._method_get_text_201670096 = StringName(from: "get_text")
+        assert(self._method_get_text_201670096 != nil)
+        self._method_is_ready_36873697 = StringName(from: "is_ready")
+        assert(self._method_is_ready_36873697 != nil)
+        self._method_set_threaded_2586408642 = StringName(from: "set_threaded")
+        assert(self._method_set_threaded_2586408642 != nil)
+        self._method_is_threaded_36873697 = StringName(from: "is_threaded")
+        assert(self._method_is_threaded_36873697 != nil)
+        self._method_set_progress_bar_delay_1286410249 = StringName(from: "set_progress_bar_delay")
+        assert(self._method_set_progress_bar_delay_1286410249 != nil)
+        self._method_get_progress_bar_delay_3905245786 = StringName(from: "get_progress_bar_delay")
+        assert(self._method_get_progress_bar_delay_3905245786 != nil)
+        self._method_set_visible_characters_1286410249 = StringName(from: "set_visible_characters")
+        assert(self._method_set_visible_characters_1286410249 != nil)
+        self._method_get_visible_characters_3905245786 = StringName(from: "get_visible_characters")
+        assert(self._method_get_visible_characters_3905245786 != nil)
+        self._method_get_visible_characters_behavior_258789322 = StringName(from: "get_visible_characters_behavior")
+        assert(self._method_get_visible_characters_behavior_258789322 != nil)
+        self._method_set_visible_characters_behavior_3383839701 = StringName(from: "set_visible_characters_behavior")
+        assert(self._method_set_visible_characters_behavior_3383839701 != nil)
+        self._method_set_visible_ratio_373806689 = StringName(from: "set_visible_ratio")
+        assert(self._method_set_visible_ratio_373806689 != nil)
+        self._method_get_visible_ratio_1740695150 = StringName(from: "get_visible_ratio")
+        assert(self._method_get_visible_ratio_1740695150 != nil)
+        self._method_get_character_line_3744713108 = StringName(from: "get_character_line")
+        assert(self._method_get_character_line_3744713108 != nil)
+        self._method_get_character_paragraph_3744713108 = StringName(from: "get_character_paragraph")
+        assert(self._method_get_character_paragraph_3744713108 != nil)
+        self._method_get_total_character_count_3905245786 = StringName(from: "get_total_character_count")
+        assert(self._method_get_total_character_count_3905245786 != nil)
+        self._method_set_use_bbcode_2586408642 = StringName(from: "set_use_bbcode")
+        assert(self._method_set_use_bbcode_2586408642 != nil)
+        self._method_is_using_bbcode_36873697 = StringName(from: "is_using_bbcode")
+        assert(self._method_is_using_bbcode_36873697 != nil)
+        self._method_get_line_count_3905245786 = StringName(from: "get_line_count")
+        assert(self._method_get_line_count_3905245786 != nil)
+        self._method_get_visible_line_count_3905245786 = StringName(from: "get_visible_line_count")
+        assert(self._method_get_visible_line_count_3905245786 != nil)
+        self._method_get_paragraph_count_3905245786 = StringName(from: "get_paragraph_count")
+        assert(self._method_get_paragraph_count_3905245786 != nil)
+        self._method_get_visible_paragraph_count_3905245786 = StringName(from: "get_visible_paragraph_count")
+        assert(self._method_get_visible_paragraph_count_3905245786 != nil)
+        self._method_get_content_height_3905245786 = StringName(from: "get_content_height")
+        assert(self._method_get_content_height_3905245786 != nil)
+        self._method_get_content_width_3905245786 = StringName(from: "get_content_width")
+        assert(self._method_get_content_width_3905245786 != nil)
+        self._method_get_line_offset_4025615559 = StringName(from: "get_line_offset")
+        assert(self._method_get_line_offset_4025615559 != nil)
+        self._method_get_paragraph_offset_4025615559 = StringName(from: "get_paragraph_offset")
+        assert(self._method_get_paragraph_offset_4025615559 != nil)
+        self._method_parse_expressions_for_values_1522900837 = StringName(from: "parse_expressions_for_values")
+        assert(self._method_parse_expressions_for_values_1522900837 != nil)
+        self._method_set_effects_381264803 = StringName(from: "set_effects")
+        assert(self._method_set_effects_381264803 != nil)
+        self._method_get_effects_2915620761 = StringName(from: "get_effects")
+        assert(self._method_get_effects_2915620761 != nil)
+        self._method_install_effect_1114965689 = StringName(from: "install_effect")
+        assert(self._method_install_effect_1114965689 != nil)
+        self._method_get_menu_229722558 = StringName(from: "get_menu")
+        assert(self._method_get_menu_229722558 != nil)
+        self._method_is_menu_visible_36873697 = StringName(from: "is_menu_visible")
+        assert(self._method_is_menu_visible_36873697 != nil)
+        self._method_menu_option_1286410249 = StringName(from: "menu_option")
+        assert(self._method_menu_option_1286410249 != nil)
     }
 
     public func get_parsed_text() -> godot.String {
@@ -504,8 +405,13 @@ open class RichTextLabel : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_parsed_text_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_parsed_text_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -520,8 +426,13 @@ open class RichTextLabel : Control {
                 .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_text_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_text_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -535,8 +446,13 @@ open class RichTextLabel : Control {
                 .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_text_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_text_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -555,8 +471,13 @@ open class RichTextLabel : Control {
                 .init(image_native), .init(width_native), .init(height_native), .init(color_native), .init(inline_align_native), .init(region_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_image_3346058748,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_image_3346058748._native_ptr(),
+                    3346058748)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -572,8 +493,13 @@ open class RichTextLabel : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_newline_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_newline_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -589,8 +515,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_paragraph_3067735520,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_paragraph_3067735520._native_ptr(),
+                    3067735520)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -607,8 +538,13 @@ open class RichTextLabel : Control {
                 .init(font_native), .init(font_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_font_3014009009,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_font_3014009009._native_ptr(),
+                    3014009009)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -623,8 +559,13 @@ open class RichTextLabel : Control {
                 .init(font_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_font_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_font_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -638,8 +579,13 @@ open class RichTextLabel : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_normal_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_normal_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -652,8 +598,13 @@ open class RichTextLabel : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_bold_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_bold_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -666,8 +617,13 @@ open class RichTextLabel : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_bold_italics_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_bold_italics_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -680,8 +636,13 @@ open class RichTextLabel : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_italics_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_italics_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -694,8 +655,13 @@ open class RichTextLabel : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_mono_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_mono_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -709,8 +675,13 @@ open class RichTextLabel : Control {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -724,8 +695,13 @@ open class RichTextLabel : Control {
                 .init(outline_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_outline_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_outline_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -740,8 +716,13 @@ open class RichTextLabel : Control {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_outline_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_outline_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -758,8 +739,13 @@ open class RichTextLabel : Control {
                 .init(alignment_native), .init(base_direction_native), .init(language_native), .init(st_parser_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_paragraph_1037160898,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_paragraph_1037160898._native_ptr(),
+                    1037160898)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -776,8 +762,13 @@ open class RichTextLabel : Control {
                 .init(level_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_indent_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_indent_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -794,8 +785,13 @@ open class RichTextLabel : Control {
                 .init(level_native), .init(type_native), .init(capitalize_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_list_2241060727,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_list_2241060727._native_ptr(),
+                    2241060727)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -812,8 +808,13 @@ open class RichTextLabel : Control {
                 .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_meta_1114965689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_meta_1114965689._native_ptr(),
+                    1114965689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -827,8 +828,13 @@ open class RichTextLabel : Control {
                 .init(description_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_hint_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_hint_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -841,8 +847,13 @@ open class RichTextLabel : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_underline_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_underline_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -855,8 +866,13 @@ open class RichTextLabel : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_strikethrough_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_strikethrough_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -872,8 +888,13 @@ open class RichTextLabel : Control {
                 .init(columns_native), .init(inline_align_native), .init(align_to_row_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_table_1125058220,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_table_1125058220._native_ptr(),
+                    1125058220)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -896,8 +917,13 @@ open class RichTextLabel : Control {
                 .init(string_native), .init(font_native), .init(size_native), .init(dropcap_margins_native), .init(color_native), .init(outline_size_native), .init(outline_color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_dropcap_311501835,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_dropcap_311501835._native_ptr(),
+                    311501835)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -915,8 +941,13 @@ open class RichTextLabel : Control {
                 .init(column_native), .init(expand_native), .init(ratio_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_table_column_expand_4258957458,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_table_column_expand_4258957458._native_ptr(),
+                    4258957458)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -934,8 +965,13 @@ open class RichTextLabel : Control {
                 .init(odd_row_bg_native), .init(even_row_bg_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cell_row_background_color_3465483165,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cell_row_background_color_3465483165._native_ptr(),
+                    3465483165)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -949,8 +985,13 @@ open class RichTextLabel : Control {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cell_border_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cell_border_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -965,8 +1006,13 @@ open class RichTextLabel : Control {
                 .init(min_size_native), .init(max_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cell_size_override_3108078480,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cell_size_override_3108078480._native_ptr(),
+                    3108078480)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -980,8 +1026,13 @@ open class RichTextLabel : Control {
                 .init(padding_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cell_padding_2046264180,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cell_padding_2046264180._native_ptr(),
+                    2046264180)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -994,8 +1045,13 @@ open class RichTextLabel : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_cell_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_cell_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1009,8 +1065,13 @@ open class RichTextLabel : Control {
                 .init(fgcolor_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_fgcolor_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_fgcolor_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1024,8 +1085,13 @@ open class RichTextLabel : Control {
                 .init(bgcolor_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_bgcolor_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_bgcolor_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1040,8 +1106,13 @@ open class RichTextLabel : Control {
                 .init(effect_native), .init(env_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_push_customfx_2337942958,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_push_customfx_2337942958._native_ptr(),
+                    2337942958)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1054,8 +1125,13 @@ open class RichTextLabel : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_pop_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_pop_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1068,8 +1144,13 @@ open class RichTextLabel : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1083,8 +1164,13 @@ open class RichTextLabel : Control {
                 .init(parser_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_structured_text_bidi_override_55961453,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_structured_text_bidi_override_55961453._native_ptr(),
+                    55961453)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1099,8 +1185,13 @@ open class RichTextLabel : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_structured_text_bidi_override_3385126229,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_structured_text_bidi_override_3385126229._native_ptr(),
+                    3385126229)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1115,8 +1206,13 @@ open class RichTextLabel : Control {
                 .init(args_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_structured_text_bidi_override_options_381264803,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_structured_text_bidi_override_options_381264803._native_ptr(),
+                    381264803)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1130,8 +1226,13 @@ open class RichTextLabel : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_structured_text_bidi_override_options_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_structured_text_bidi_override_options_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1146,8 +1247,13 @@ open class RichTextLabel : Control {
                 .init(direction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_text_direction_119160795,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_text_direction_119160795._native_ptr(),
+                    119160795)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1162,8 +1268,13 @@ open class RichTextLabel : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_direction_797257663,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_direction_797257663._native_ptr(),
+                    797257663)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1178,8 +1289,13 @@ open class RichTextLabel : Control {
                 .init(language_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_language_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_language_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1193,8 +1309,13 @@ open class RichTextLabel : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_language_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_language_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1209,8 +1330,13 @@ open class RichTextLabel : Control {
                 .init(autowrap_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_autowrap_mode_3289138044,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_autowrap_mode_3289138044._native_ptr(),
+                    3289138044)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1225,8 +1351,13 @@ open class RichTextLabel : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_autowrap_mode_1549071663,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_autowrap_mode_1549071663._native_ptr(),
+                    1549071663)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1241,8 +1372,13 @@ open class RichTextLabel : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_meta_underline_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_meta_underline_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1258,8 +1394,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_meta_underlined_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_meta_underlined_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1274,8 +1415,13 @@ open class RichTextLabel : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_hint_underline_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_hint_underline_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1291,8 +1437,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_hint_underlined_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_hint_underlined_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1307,8 +1458,13 @@ open class RichTextLabel : Control {
                 .init(active_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_scroll_active_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_scroll_active_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1324,8 +1480,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_scroll_active_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_scroll_active_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1340,8 +1501,13 @@ open class RichTextLabel : Control {
                 .init(follow_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_scroll_follow_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_scroll_follow_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1357,8 +1523,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_scroll_following_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_scroll_following_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1373,8 +1544,13 @@ open class RichTextLabel : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_v_scroll_bar_2630340773,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_v_scroll_bar_2630340773._native_ptr(),
+                    2630340773)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1389,8 +1565,13 @@ open class RichTextLabel : Control {
                 .init(line_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_scroll_to_line_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_scroll_to_line_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1405,8 +1586,13 @@ open class RichTextLabel : Control {
                 .init(paragraph_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_scroll_to_paragraph_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_scroll_to_paragraph_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1420,8 +1606,13 @@ open class RichTextLabel : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_scroll_to_selection_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_scroll_to_selection_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1435,8 +1626,13 @@ open class RichTextLabel : Control {
                 .init(spaces_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tab_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tab_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1452,8 +1648,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tab_size_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tab_size_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1468,8 +1669,13 @@ open class RichTextLabel : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fit_content_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fit_content_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1485,8 +1691,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_fit_content_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_fit_content_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1501,8 +1712,13 @@ open class RichTextLabel : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_selection_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_selection_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1518,8 +1734,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_selection_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_selection_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1534,8 +1755,13 @@ open class RichTextLabel : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_context_menu_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_context_menu_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1551,8 +1777,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_context_menu_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_context_menu_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1567,8 +1798,13 @@ open class RichTextLabel : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shortcut_keys_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shortcut_keys_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1584,8 +1820,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_shortcut_keys_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_shortcut_keys_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1600,8 +1841,13 @@ open class RichTextLabel : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_deselect_on_focus_loss_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_deselect_on_focus_loss_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1617,8 +1863,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_deselect_on_focus_loss_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_deselect_on_focus_loss_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1634,8 +1885,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selection_from_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selection_from_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1651,8 +1907,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selection_to_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selection_to_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1666,8 +1927,13 @@ open class RichTextLabel : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_select_all_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_select_all_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1681,8 +1947,13 @@ open class RichTextLabel : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selected_text_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selected_text_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1696,8 +1967,13 @@ open class RichTextLabel : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_deselect_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_deselect_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1711,8 +1987,13 @@ open class RichTextLabel : Control {
                 .init(bbcode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_parse_bbcode_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_parse_bbcode_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1726,8 +2007,13 @@ open class RichTextLabel : Control {
                 .init(bbcode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_append_text_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_append_text_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1741,8 +2027,13 @@ open class RichTextLabel : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1758,8 +2049,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_ready_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_ready_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1774,8 +2070,13 @@ open class RichTextLabel : Control {
                 .init(threaded_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_threaded_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_threaded_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1791,8 +2092,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_threaded_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_threaded_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1807,8 +2113,13 @@ open class RichTextLabel : Control {
                 .init(delay_ms_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_progress_bar_delay_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_progress_bar_delay_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1824,8 +2135,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_progress_bar_delay_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_progress_bar_delay_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1840,8 +2156,13 @@ open class RichTextLabel : Control {
                 .init(amount_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_visible_characters_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_visible_characters_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1857,8 +2178,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_visible_characters_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_visible_characters_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1873,8 +2199,13 @@ open class RichTextLabel : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_visible_characters_behavior_258789322,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_visible_characters_behavior_258789322._native_ptr(),
+                    258789322)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1889,8 +2220,13 @@ open class RichTextLabel : Control {
                 .init(behavior_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_visible_characters_behavior_3383839701,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_visible_characters_behavior_3383839701._native_ptr(),
+                    3383839701)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1905,8 +2241,13 @@ open class RichTextLabel : Control {
                 .init(ratio_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_visible_ratio_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_visible_ratio_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1922,8 +2263,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_visible_ratio_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_visible_ratio_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1940,8 +2286,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_character_line_3744713108,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_character_line_3744713108._native_ptr(),
+                    3744713108)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1959,8 +2310,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_character_paragraph_3744713108,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_character_paragraph_3744713108._native_ptr(),
+                    3744713108)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1977,8 +2333,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_total_character_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_total_character_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1993,8 +2354,13 @@ open class RichTextLabel : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_bbcode_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_bbcode_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2010,8 +2376,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_using_bbcode_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_using_bbcode_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2027,8 +2398,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2044,8 +2420,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_visible_line_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_visible_line_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2061,8 +2442,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_paragraph_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_paragraph_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2078,8 +2464,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_visible_paragraph_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_visible_paragraph_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2095,8 +2486,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_content_height_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_content_height_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2112,8 +2508,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_content_width_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_content_width_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2130,8 +2531,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_offset_4025615559,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_offset_4025615559._native_ptr(),
+                    4025615559)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2149,8 +2555,13 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_paragraph_offset_4025615559,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_paragraph_offset_4025615559._native_ptr(),
+                    4025615559)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2167,8 +2578,13 @@ open class RichTextLabel : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_parse_expressions_for_values_1522900837,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_parse_expressions_for_values_1522900837._native_ptr(),
+                    1522900837)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2183,8 +2599,13 @@ open class RichTextLabel : Control {
                 .init(effects_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_effects_381264803,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_effects_381264803._native_ptr(),
+                    381264803)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2198,8 +2619,13 @@ open class RichTextLabel : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_effects_2915620761,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_effects_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2214,8 +2640,13 @@ open class RichTextLabel : Control {
                 .init(effect_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_install_effect_1114965689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_install_effect_1114965689._native_ptr(),
+                    1114965689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2229,8 +2660,13 @@ open class RichTextLabel : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_menu_229722558,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_menu_229722558._native_ptr(),
+                    229722558)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2246,12 +2682,38 @@ open class RichTextLabel : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_menu_visible_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_menu_visible_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
             return UInt8(godot: __resPtr.pointee)
+    }
+    public func menu_option(option: Int64)  {
+        withUnsafePointer(to: option) { option_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(option_native)
+            ])
+            // call here
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_menu_option_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    nil
+                )
+        }
     }
 }

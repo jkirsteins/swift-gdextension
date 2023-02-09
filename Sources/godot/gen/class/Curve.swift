@@ -17,119 +17,94 @@ open class Curve : Resource {
 
     public override class var __godot_name: StringName { __godot_name_Curve }
 
-    static var _method_get_point_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_point_count_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_add_point_2766148617: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_point_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_points_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_position_2299179447: GDExtensionMethodBindPtr! = nil
-    static var _method_set_point_value_1602489585: GDExtensionMethodBindPtr! = nil
-    static var _method_set_point_offset_3780573764: GDExtensionMethodBindPtr! = nil
-    static var _method_sample_3919130443: GDExtensionMethodBindPtr! = nil
-    static var _method_sample_baked_3919130443: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_left_tangent_2339986948: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_right_tangent_2339986948: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_left_mode_426950354: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_right_mode_426950354: GDExtensionMethodBindPtr! = nil
-    static var _method_set_point_left_tangent_1602489585: GDExtensionMethodBindPtr! = nil
-    static var _method_set_point_right_tangent_1602489585: GDExtensionMethodBindPtr! = nil
-    static var _method_set_point_left_mode_1217242874: GDExtensionMethodBindPtr! = nil
-    static var _method_set_point_right_mode_1217242874: GDExtensionMethodBindPtr! = nil
-    static var _method_get_min_value_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_min_value_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_max_value_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_max_value_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_clean_dupes_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_bake_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bake_resolution_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bake_resolution_1286410249: GDExtensionMethodBindPtr! = nil
+    static var _method_get_point_count_3905245786: StringName! = nil
+    static var _method_set_point_count_1286410249: StringName! = nil
+    static var _method_add_point_2766148617: StringName! = nil
+    static var _method_remove_point_1286410249: StringName! = nil
+    static var _method_clear_points_3218959716: StringName! = nil
+    static var _method_get_point_position_2299179447: StringName! = nil
+    static var _method_set_point_value_1602489585: StringName! = nil
+    static var _method_set_point_offset_3780573764: StringName! = nil
+    static var _method_sample_3919130443: StringName! = nil
+    static var _method_sample_baked_3919130443: StringName! = nil
+    static var _method_get_point_left_tangent_2339986948: StringName! = nil
+    static var _method_get_point_right_tangent_2339986948: StringName! = nil
+    static var _method_get_point_left_mode_426950354: StringName! = nil
+    static var _method_get_point_right_mode_426950354: StringName! = nil
+    static var _method_set_point_left_tangent_1602489585: StringName! = nil
+    static var _method_set_point_right_tangent_1602489585: StringName! = nil
+    static var _method_set_point_left_mode_1217242874: StringName! = nil
+    static var _method_set_point_right_mode_1217242874: StringName! = nil
+    static var _method_get_min_value_1740695150: StringName! = nil
+    static var _method_set_min_value_373806689: StringName! = nil
+    static var _method_get_max_value_1740695150: StringName! = nil
+    static var _method_set_max_value_373806689: StringName! = nil
+    static var _method_clean_dupes_3218959716: StringName! = nil
+    static var _method_bake_3218959716: StringName! = nil
+    static var _method_get_bake_resolution_3905245786: StringName! = nil
+    static var _method_set_bake_resolution_1286410249: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Curve == nil)
         __godot_name_Curve = StringName(from: "Curve")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_point_count_3905245786_name = StringName(from: "get_point_count")
-        self._method_get_point_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_get_point_count_3905245786_name._native_ptr(), 3905245786)
-        assert(Curve._method_get_point_count_3905245786 != nil)
-        let _method_set_point_count_1286410249_name = StringName(from: "set_point_count")
-        self._method_set_point_count_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_set_point_count_1286410249_name._native_ptr(), 1286410249)
-        assert(Curve._method_set_point_count_1286410249 != nil)
-        let _method_add_point_2766148617_name = StringName(from: "add_point")
-        self._method_add_point_2766148617 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_add_point_2766148617_name._native_ptr(), 2766148617)
-        assert(Curve._method_add_point_2766148617 != nil)
-        let _method_remove_point_1286410249_name = StringName(from: "remove_point")
-        self._method_remove_point_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_remove_point_1286410249_name._native_ptr(), 1286410249)
-        assert(Curve._method_remove_point_1286410249 != nil)
-        let _method_clear_points_3218959716_name = StringName(from: "clear_points")
-        self._method_clear_points_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_clear_points_3218959716_name._native_ptr(), 3218959716)
-        assert(Curve._method_clear_points_3218959716 != nil)
-        let _method_get_point_position_2299179447_name = StringName(from: "get_point_position")
-        self._method_get_point_position_2299179447 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_get_point_position_2299179447_name._native_ptr(), 2299179447)
-        assert(Curve._method_get_point_position_2299179447 != nil)
-        let _method_set_point_value_1602489585_name = StringName(from: "set_point_value")
-        self._method_set_point_value_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_set_point_value_1602489585_name._native_ptr(), 1602489585)
-        assert(Curve._method_set_point_value_1602489585 != nil)
-        let _method_set_point_offset_3780573764_name = StringName(from: "set_point_offset")
-        self._method_set_point_offset_3780573764 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_set_point_offset_3780573764_name._native_ptr(), 3780573764)
-        assert(Curve._method_set_point_offset_3780573764 != nil)
-        let _method_sample_3919130443_name = StringName(from: "sample")
-        self._method_sample_3919130443 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_sample_3919130443_name._native_ptr(), 3919130443)
-        assert(Curve._method_sample_3919130443 != nil)
-        let _method_sample_baked_3919130443_name = StringName(from: "sample_baked")
-        self._method_sample_baked_3919130443 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_sample_baked_3919130443_name._native_ptr(), 3919130443)
-        assert(Curve._method_sample_baked_3919130443 != nil)
-        let _method_get_point_left_tangent_2339986948_name = StringName(from: "get_point_left_tangent")
-        self._method_get_point_left_tangent_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_get_point_left_tangent_2339986948_name._native_ptr(), 2339986948)
-        assert(Curve._method_get_point_left_tangent_2339986948 != nil)
-        let _method_get_point_right_tangent_2339986948_name = StringName(from: "get_point_right_tangent")
-        self._method_get_point_right_tangent_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_get_point_right_tangent_2339986948_name._native_ptr(), 2339986948)
-        assert(Curve._method_get_point_right_tangent_2339986948 != nil)
-        let _method_get_point_left_mode_426950354_name = StringName(from: "get_point_left_mode")
-        self._method_get_point_left_mode_426950354 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_get_point_left_mode_426950354_name._native_ptr(), 426950354)
-        assert(Curve._method_get_point_left_mode_426950354 != nil)
-        let _method_get_point_right_mode_426950354_name = StringName(from: "get_point_right_mode")
-        self._method_get_point_right_mode_426950354 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_get_point_right_mode_426950354_name._native_ptr(), 426950354)
-        assert(Curve._method_get_point_right_mode_426950354 != nil)
-        let _method_set_point_left_tangent_1602489585_name = StringName(from: "set_point_left_tangent")
-        self._method_set_point_left_tangent_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_set_point_left_tangent_1602489585_name._native_ptr(), 1602489585)
-        assert(Curve._method_set_point_left_tangent_1602489585 != nil)
-        let _method_set_point_right_tangent_1602489585_name = StringName(from: "set_point_right_tangent")
-        self._method_set_point_right_tangent_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_set_point_right_tangent_1602489585_name._native_ptr(), 1602489585)
-        assert(Curve._method_set_point_right_tangent_1602489585 != nil)
-        let _method_set_point_left_mode_1217242874_name = StringName(from: "set_point_left_mode")
-        self._method_set_point_left_mode_1217242874 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_set_point_left_mode_1217242874_name._native_ptr(), 1217242874)
-        assert(Curve._method_set_point_left_mode_1217242874 != nil)
-        let _method_set_point_right_mode_1217242874_name = StringName(from: "set_point_right_mode")
-        self._method_set_point_right_mode_1217242874 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_set_point_right_mode_1217242874_name._native_ptr(), 1217242874)
-        assert(Curve._method_set_point_right_mode_1217242874 != nil)
-        let _method_get_min_value_1740695150_name = StringName(from: "get_min_value")
-        self._method_get_min_value_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_get_min_value_1740695150_name._native_ptr(), 1740695150)
-        assert(Curve._method_get_min_value_1740695150 != nil)
-        let _method_set_min_value_373806689_name = StringName(from: "set_min_value")
-        self._method_set_min_value_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_set_min_value_373806689_name._native_ptr(), 373806689)
-        assert(Curve._method_set_min_value_373806689 != nil)
-        let _method_get_max_value_1740695150_name = StringName(from: "get_max_value")
-        self._method_get_max_value_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_get_max_value_1740695150_name._native_ptr(), 1740695150)
-        assert(Curve._method_get_max_value_1740695150 != nil)
-        let _method_set_max_value_373806689_name = StringName(from: "set_max_value")
-        self._method_set_max_value_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_set_max_value_373806689_name._native_ptr(), 373806689)
-        assert(Curve._method_set_max_value_373806689 != nil)
-        let _method_clean_dupes_3218959716_name = StringName(from: "clean_dupes")
-        self._method_clean_dupes_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_clean_dupes_3218959716_name._native_ptr(), 3218959716)
-        assert(Curve._method_clean_dupes_3218959716 != nil)
-        let _method_bake_3218959716_name = StringName(from: "bake")
-        self._method_bake_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_bake_3218959716_name._native_ptr(), 3218959716)
-        assert(Curve._method_bake_3218959716 != nil)
-        let _method_get_bake_resolution_3905245786_name = StringName(from: "get_bake_resolution")
-        self._method_get_bake_resolution_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_get_bake_resolution_3905245786_name._native_ptr(), 3905245786)
-        assert(Curve._method_get_bake_resolution_3905245786 != nil)
-        let _method_set_bake_resolution_1286410249_name = StringName(from: "set_bake_resolution")
-        self._method_set_bake_resolution_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Curve._native_ptr(), _method_set_bake_resolution_1286410249_name._native_ptr(), 1286410249)
-        assert(Curve._method_set_bake_resolution_1286410249 != nil)
+        self._method_get_point_count_3905245786 = StringName(from: "get_point_count")
+        assert(self._method_get_point_count_3905245786 != nil)
+        self._method_set_point_count_1286410249 = StringName(from: "set_point_count")
+        assert(self._method_set_point_count_1286410249 != nil)
+        self._method_add_point_2766148617 = StringName(from: "add_point")
+        assert(self._method_add_point_2766148617 != nil)
+        self._method_remove_point_1286410249 = StringName(from: "remove_point")
+        assert(self._method_remove_point_1286410249 != nil)
+        self._method_clear_points_3218959716 = StringName(from: "clear_points")
+        assert(self._method_clear_points_3218959716 != nil)
+        self._method_get_point_position_2299179447 = StringName(from: "get_point_position")
+        assert(self._method_get_point_position_2299179447 != nil)
+        self._method_set_point_value_1602489585 = StringName(from: "set_point_value")
+        assert(self._method_set_point_value_1602489585 != nil)
+        self._method_set_point_offset_3780573764 = StringName(from: "set_point_offset")
+        assert(self._method_set_point_offset_3780573764 != nil)
+        self._method_sample_3919130443 = StringName(from: "sample")
+        assert(self._method_sample_3919130443 != nil)
+        self._method_sample_baked_3919130443 = StringName(from: "sample_baked")
+        assert(self._method_sample_baked_3919130443 != nil)
+        self._method_get_point_left_tangent_2339986948 = StringName(from: "get_point_left_tangent")
+        assert(self._method_get_point_left_tangent_2339986948 != nil)
+        self._method_get_point_right_tangent_2339986948 = StringName(from: "get_point_right_tangent")
+        assert(self._method_get_point_right_tangent_2339986948 != nil)
+        self._method_get_point_left_mode_426950354 = StringName(from: "get_point_left_mode")
+        assert(self._method_get_point_left_mode_426950354 != nil)
+        self._method_get_point_right_mode_426950354 = StringName(from: "get_point_right_mode")
+        assert(self._method_get_point_right_mode_426950354 != nil)
+        self._method_set_point_left_tangent_1602489585 = StringName(from: "set_point_left_tangent")
+        assert(self._method_set_point_left_tangent_1602489585 != nil)
+        self._method_set_point_right_tangent_1602489585 = StringName(from: "set_point_right_tangent")
+        assert(self._method_set_point_right_tangent_1602489585 != nil)
+        self._method_set_point_left_mode_1217242874 = StringName(from: "set_point_left_mode")
+        assert(self._method_set_point_left_mode_1217242874 != nil)
+        self._method_set_point_right_mode_1217242874 = StringName(from: "set_point_right_mode")
+        assert(self._method_set_point_right_mode_1217242874 != nil)
+        self._method_get_min_value_1740695150 = StringName(from: "get_min_value")
+        assert(self._method_get_min_value_1740695150 != nil)
+        self._method_set_min_value_373806689 = StringName(from: "set_min_value")
+        assert(self._method_set_min_value_373806689 != nil)
+        self._method_get_max_value_1740695150 = StringName(from: "get_max_value")
+        assert(self._method_get_max_value_1740695150 != nil)
+        self._method_set_max_value_373806689 = StringName(from: "set_max_value")
+        assert(self._method_set_max_value_373806689 != nil)
+        self._method_clean_dupes_3218959716 = StringName(from: "clean_dupes")
+        assert(self._method_clean_dupes_3218959716 != nil)
+        self._method_bake_3218959716 = StringName(from: "bake")
+        assert(self._method_bake_3218959716 != nil)
+        self._method_get_bake_resolution_3905245786 = StringName(from: "get_bake_resolution")
+        assert(self._method_get_bake_resolution_3905245786 != nil)
+        self._method_set_bake_resolution_1286410249 = StringName(from: "set_bake_resolution")
+        assert(self._method_set_bake_resolution_1286410249 != nil)
     }
 
     public func get_point_count() -> Int64 {
@@ -141,8 +116,13 @@ open class Curve : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -157,8 +137,13 @@ open class Curve : Resource {
                 .init(count_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_point_count_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_point_count_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -179,8 +164,13 @@ open class Curve : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_point_2766148617,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_point_2766148617._native_ptr(),
+                    2766148617)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -199,8 +189,13 @@ open class Curve : Resource {
                 .init(index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_point_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_point_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -214,8 +209,13 @@ open class Curve : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_points_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_points_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -230,8 +230,13 @@ open class Curve : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_position_2299179447,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_position_2299179447._native_ptr(),
+                    2299179447)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -248,8 +253,13 @@ open class Curve : Resource {
                 .init(index_native), .init(y_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_point_value_1602489585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_point_value_1602489585._native_ptr(),
+                    1602489585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -268,8 +278,13 @@ open class Curve : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_point_offset_3780573764,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_point_offset_3780573764._native_ptr(),
+                    3780573764)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -288,8 +303,13 @@ open class Curve : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_sample_3919130443,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_sample_3919130443._native_ptr(),
+                    3919130443)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -307,8 +327,13 @@ open class Curve : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_sample_baked_3919130443,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_sample_baked_3919130443._native_ptr(),
+                    3919130443)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -326,8 +351,13 @@ open class Curve : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_left_tangent_2339986948,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_left_tangent_2339986948._native_ptr(),
+                    2339986948)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -345,8 +375,13 @@ open class Curve : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_right_tangent_2339986948,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_right_tangent_2339986948._native_ptr(),
+                    2339986948)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -363,8 +398,13 @@ open class Curve : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_left_mode_426950354,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_left_mode_426950354._native_ptr(),
+                    426950354)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -381,8 +421,13 @@ open class Curve : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_right_mode_426950354,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_right_mode_426950354._native_ptr(),
+                    426950354)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -399,8 +444,13 @@ open class Curve : Resource {
                 .init(index_native), .init(tangent_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_point_left_tangent_1602489585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_point_left_tangent_1602489585._native_ptr(),
+                    1602489585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -417,8 +467,13 @@ open class Curve : Resource {
                 .init(index_native), .init(tangent_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_point_right_tangent_1602489585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_point_right_tangent_1602489585._native_ptr(),
+                    1602489585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -435,8 +490,13 @@ open class Curve : Resource {
                 .init(index_native), .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_point_left_mode_1217242874,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_point_left_mode_1217242874._native_ptr(),
+                    1217242874)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -453,8 +513,13 @@ open class Curve : Resource {
                 .init(index_native), .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_point_right_mode_1217242874,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_point_right_mode_1217242874._native_ptr(),
+                    1217242874)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -471,8 +536,13 @@ open class Curve : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_min_value_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_min_value_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -487,8 +557,13 @@ open class Curve : Resource {
                 .init(min_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_min_value_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_min_value_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -504,8 +579,13 @@ open class Curve : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_max_value_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_max_value_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -520,8 +600,13 @@ open class Curve : Resource {
                 .init(max_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_max_value_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_max_value_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -535,8 +620,13 @@ open class Curve : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clean_dupes_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clean_dupes_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -549,8 +639,13 @@ open class Curve : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_bake_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_bake_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -565,8 +660,13 @@ open class Curve : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bake_resolution_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bake_resolution_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -581,8 +681,13 @@ open class Curve : Resource {
                 .init(resolution_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bake_resolution_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bake_resolution_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

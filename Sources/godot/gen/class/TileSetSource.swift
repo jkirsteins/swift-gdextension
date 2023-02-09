@@ -17,39 +17,34 @@ open class TileSetSource : Resource {
 
     public override class var __godot_name: StringName { __godot_name_TileSetSource }
 
-    static var _method_get_tiles_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tile_id_880721226: GDExtensionMethodBindPtr! = nil
-    static var _method_has_tile_3900751641: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alternative_tiles_count_2485466453: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alternative_tile_id_89881719: GDExtensionMethodBindPtr! = nil
-    static var _method_has_alternative_tile_1073731340: GDExtensionMethodBindPtr! = nil
+    static var _method_get_tiles_count_3905245786: StringName! = nil
+    static var _method_get_tile_id_880721226: StringName! = nil
+    static var _method_has_tile_3900751641: StringName! = nil
+    static var _method_get_alternative_tiles_count_2485466453: StringName! = nil
+    static var _method_get_alternative_tile_id_89881719: StringName! = nil
+    static var _method_has_alternative_tile_1073731340: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_TileSetSource == nil)
         __godot_name_TileSetSource = StringName(from: "TileSetSource")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_tiles_count_3905245786_name = StringName(from: "get_tiles_count")
-        self._method_get_tiles_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetSource._native_ptr(), _method_get_tiles_count_3905245786_name._native_ptr(), 3905245786)
-        assert(TileSetSource._method_get_tiles_count_3905245786 != nil)
-        let _method_get_tile_id_880721226_name = StringName(from: "get_tile_id")
-        self._method_get_tile_id_880721226 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetSource._native_ptr(), _method_get_tile_id_880721226_name._native_ptr(), 880721226)
-        assert(TileSetSource._method_get_tile_id_880721226 != nil)
-        let _method_has_tile_3900751641_name = StringName(from: "has_tile")
-        self._method_has_tile_3900751641 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetSource._native_ptr(), _method_has_tile_3900751641_name._native_ptr(), 3900751641)
-        assert(TileSetSource._method_has_tile_3900751641 != nil)
-        let _method_get_alternative_tiles_count_2485466453_name = StringName(from: "get_alternative_tiles_count")
-        self._method_get_alternative_tiles_count_2485466453 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetSource._native_ptr(), _method_get_alternative_tiles_count_2485466453_name._native_ptr(), 2485466453)
-        assert(TileSetSource._method_get_alternative_tiles_count_2485466453 != nil)
-        let _method_get_alternative_tile_id_89881719_name = StringName(from: "get_alternative_tile_id")
-        self._method_get_alternative_tile_id_89881719 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetSource._native_ptr(), _method_get_alternative_tile_id_89881719_name._native_ptr(), 89881719)
-        assert(TileSetSource._method_get_alternative_tile_id_89881719 != nil)
-        let _method_has_alternative_tile_1073731340_name = StringName(from: "has_alternative_tile")
-        self._method_has_alternative_tile_1073731340 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetSource._native_ptr(), _method_has_alternative_tile_1073731340_name._native_ptr(), 1073731340)
-        assert(TileSetSource._method_has_alternative_tile_1073731340 != nil)
+        self._method_get_tiles_count_3905245786 = StringName(from: "get_tiles_count")
+        assert(self._method_get_tiles_count_3905245786 != nil)
+        self._method_get_tile_id_880721226 = StringName(from: "get_tile_id")
+        assert(self._method_get_tile_id_880721226 != nil)
+        self._method_has_tile_3900751641 = StringName(from: "has_tile")
+        assert(self._method_has_tile_3900751641 != nil)
+        self._method_get_alternative_tiles_count_2485466453 = StringName(from: "get_alternative_tiles_count")
+        assert(self._method_get_alternative_tiles_count_2485466453 != nil)
+        self._method_get_alternative_tile_id_89881719 = StringName(from: "get_alternative_tile_id")
+        assert(self._method_get_alternative_tile_id_89881719 != nil)
+        self._method_has_alternative_tile_1073731340 = StringName(from: "has_alternative_tile")
+        assert(self._method_has_alternative_tile_1073731340 != nil)
     }
 
     public func get_tiles_count() -> Int64 {
@@ -61,8 +56,13 @@ open class TileSetSource : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tiles_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tiles_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -78,8 +78,13 @@ open class TileSetSource : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tile_id_880721226,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tile_id_880721226._native_ptr(),
+                    880721226)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -97,8 +102,13 @@ open class TileSetSource : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_tile_3900751641,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_tile_3900751641._native_ptr(),
+                    3900751641)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -115,8 +125,13 @@ open class TileSetSource : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alternative_tiles_count_2485466453,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alternative_tiles_count_2485466453._native_ptr(),
+                    2485466453)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -134,8 +149,13 @@ open class TileSetSource : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alternative_tile_id_89881719,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alternative_tile_id_89881719._native_ptr(),
+                    89881719)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -154,8 +174,13 @@ open class TileSetSource : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_alternative_tile_1073731340,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_alternative_tile_1073731340._native_ptr(),
+                    1073731340)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

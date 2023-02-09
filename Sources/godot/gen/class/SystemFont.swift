@@ -19,119 +19,94 @@ open class SystemFont : Font {
 
     public override class var __godot_name: StringName { __godot_name_SystemFont }
 
-    static var _method_set_antialiasing_1669900: GDExtensionMethodBindPtr! = nil
-    static var _method_get_antialiasing_4262718649: GDExtensionMethodBindPtr! = nil
-    static var _method_set_generate_mipmaps_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_generate_mipmaps_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_allow_system_fallback_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_allow_system_fallback_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_force_autohinter_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_force_autohinter_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_hinting_1827459492: GDExtensionMethodBindPtr! = nil
-    static var _method_get_hinting_3683214614: GDExtensionMethodBindPtr! = nil
-    static var _method_set_subpixel_positioning_4225742182: GDExtensionMethodBindPtr! = nil
-    static var _method_get_subpixel_positioning_1069238588: GDExtensionMethodBindPtr! = nil
-    static var _method_set_multichannel_signed_distance_field_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_multichannel_signed_distance_field_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_msdf_pixel_range_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_msdf_pixel_range_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_msdf_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_msdf_size_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_oversampling_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_oversampling_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_font_names_1139954409: GDExtensionMethodBindPtr! = nil
-    static var _method_set_font_names_4015028928: GDExtensionMethodBindPtr! = nil
-    static var _method_get_font_italic_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_font_italic_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_font_weight_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_font_stretch_1286410249: GDExtensionMethodBindPtr! = nil
+    static var _method_set_antialiasing_1669900: StringName! = nil
+    static var _method_get_antialiasing_4262718649: StringName! = nil
+    static var _method_set_generate_mipmaps_2586408642: StringName! = nil
+    static var _method_get_generate_mipmaps_36873697: StringName! = nil
+    static var _method_set_allow_system_fallback_2586408642: StringName! = nil
+    static var _method_is_allow_system_fallback_36873697: StringName! = nil
+    static var _method_set_force_autohinter_2586408642: StringName! = nil
+    static var _method_is_force_autohinter_36873697: StringName! = nil
+    static var _method_set_hinting_1827459492: StringName! = nil
+    static var _method_get_hinting_3683214614: StringName! = nil
+    static var _method_set_subpixel_positioning_4225742182: StringName! = nil
+    static var _method_get_subpixel_positioning_1069238588: StringName! = nil
+    static var _method_set_multichannel_signed_distance_field_2586408642: StringName! = nil
+    static var _method_is_multichannel_signed_distance_field_36873697: StringName! = nil
+    static var _method_set_msdf_pixel_range_1286410249: StringName! = nil
+    static var _method_get_msdf_pixel_range_3905245786: StringName! = nil
+    static var _method_set_msdf_size_1286410249: StringName! = nil
+    static var _method_get_msdf_size_3905245786: StringName! = nil
+    static var _method_set_oversampling_373806689: StringName! = nil
+    static var _method_get_oversampling_1740695150: StringName! = nil
+    static var _method_get_font_names_1139954409: StringName! = nil
+    static var _method_set_font_names_4015028928: StringName! = nil
+    static var _method_get_font_italic_36873697: StringName! = nil
+    static var _method_set_font_italic_2586408642: StringName! = nil
+    static var _method_set_font_weight_1286410249: StringName! = nil
+    static var _method_set_font_stretch_1286410249: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_SystemFont == nil)
         __godot_name_SystemFont = StringName(from: "SystemFont")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_antialiasing_1669900_name = StringName(from: "set_antialiasing")
-        self._method_set_antialiasing_1669900 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_set_antialiasing_1669900_name._native_ptr(), 1669900)
-        assert(SystemFont._method_set_antialiasing_1669900 != nil)
-        let _method_get_antialiasing_4262718649_name = StringName(from: "get_antialiasing")
-        self._method_get_antialiasing_4262718649 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_get_antialiasing_4262718649_name._native_ptr(), 4262718649)
-        assert(SystemFont._method_get_antialiasing_4262718649 != nil)
-        let _method_set_generate_mipmaps_2586408642_name = StringName(from: "set_generate_mipmaps")
-        self._method_set_generate_mipmaps_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_set_generate_mipmaps_2586408642_name._native_ptr(), 2586408642)
-        assert(SystemFont._method_set_generate_mipmaps_2586408642 != nil)
-        let _method_get_generate_mipmaps_36873697_name = StringName(from: "get_generate_mipmaps")
-        self._method_get_generate_mipmaps_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_get_generate_mipmaps_36873697_name._native_ptr(), 36873697)
-        assert(SystemFont._method_get_generate_mipmaps_36873697 != nil)
-        let _method_set_allow_system_fallback_2586408642_name = StringName(from: "set_allow_system_fallback")
-        self._method_set_allow_system_fallback_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_set_allow_system_fallback_2586408642_name._native_ptr(), 2586408642)
-        assert(SystemFont._method_set_allow_system_fallback_2586408642 != nil)
-        let _method_is_allow_system_fallback_36873697_name = StringName(from: "is_allow_system_fallback")
-        self._method_is_allow_system_fallback_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_is_allow_system_fallback_36873697_name._native_ptr(), 36873697)
-        assert(SystemFont._method_is_allow_system_fallback_36873697 != nil)
-        let _method_set_force_autohinter_2586408642_name = StringName(from: "set_force_autohinter")
-        self._method_set_force_autohinter_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_set_force_autohinter_2586408642_name._native_ptr(), 2586408642)
-        assert(SystemFont._method_set_force_autohinter_2586408642 != nil)
-        let _method_is_force_autohinter_36873697_name = StringName(from: "is_force_autohinter")
-        self._method_is_force_autohinter_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_is_force_autohinter_36873697_name._native_ptr(), 36873697)
-        assert(SystemFont._method_is_force_autohinter_36873697 != nil)
-        let _method_set_hinting_1827459492_name = StringName(from: "set_hinting")
-        self._method_set_hinting_1827459492 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_set_hinting_1827459492_name._native_ptr(), 1827459492)
-        assert(SystemFont._method_set_hinting_1827459492 != nil)
-        let _method_get_hinting_3683214614_name = StringName(from: "get_hinting")
-        self._method_get_hinting_3683214614 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_get_hinting_3683214614_name._native_ptr(), 3683214614)
-        assert(SystemFont._method_get_hinting_3683214614 != nil)
-        let _method_set_subpixel_positioning_4225742182_name = StringName(from: "set_subpixel_positioning")
-        self._method_set_subpixel_positioning_4225742182 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_set_subpixel_positioning_4225742182_name._native_ptr(), 4225742182)
-        assert(SystemFont._method_set_subpixel_positioning_4225742182 != nil)
-        let _method_get_subpixel_positioning_1069238588_name = StringName(from: "get_subpixel_positioning")
-        self._method_get_subpixel_positioning_1069238588 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_get_subpixel_positioning_1069238588_name._native_ptr(), 1069238588)
-        assert(SystemFont._method_get_subpixel_positioning_1069238588 != nil)
-        let _method_set_multichannel_signed_distance_field_2586408642_name = StringName(from: "set_multichannel_signed_distance_field")
-        self._method_set_multichannel_signed_distance_field_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_set_multichannel_signed_distance_field_2586408642_name._native_ptr(), 2586408642)
-        assert(SystemFont._method_set_multichannel_signed_distance_field_2586408642 != nil)
-        let _method_is_multichannel_signed_distance_field_36873697_name = StringName(from: "is_multichannel_signed_distance_field")
-        self._method_is_multichannel_signed_distance_field_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_is_multichannel_signed_distance_field_36873697_name._native_ptr(), 36873697)
-        assert(SystemFont._method_is_multichannel_signed_distance_field_36873697 != nil)
-        let _method_set_msdf_pixel_range_1286410249_name = StringName(from: "set_msdf_pixel_range")
-        self._method_set_msdf_pixel_range_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_set_msdf_pixel_range_1286410249_name._native_ptr(), 1286410249)
-        assert(SystemFont._method_set_msdf_pixel_range_1286410249 != nil)
-        let _method_get_msdf_pixel_range_3905245786_name = StringName(from: "get_msdf_pixel_range")
-        self._method_get_msdf_pixel_range_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_get_msdf_pixel_range_3905245786_name._native_ptr(), 3905245786)
-        assert(SystemFont._method_get_msdf_pixel_range_3905245786 != nil)
-        let _method_set_msdf_size_1286410249_name = StringName(from: "set_msdf_size")
-        self._method_set_msdf_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_set_msdf_size_1286410249_name._native_ptr(), 1286410249)
-        assert(SystemFont._method_set_msdf_size_1286410249 != nil)
-        let _method_get_msdf_size_3905245786_name = StringName(from: "get_msdf_size")
-        self._method_get_msdf_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_get_msdf_size_3905245786_name._native_ptr(), 3905245786)
-        assert(SystemFont._method_get_msdf_size_3905245786 != nil)
-        let _method_set_oversampling_373806689_name = StringName(from: "set_oversampling")
-        self._method_set_oversampling_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_set_oversampling_373806689_name._native_ptr(), 373806689)
-        assert(SystemFont._method_set_oversampling_373806689 != nil)
-        let _method_get_oversampling_1740695150_name = StringName(from: "get_oversampling")
-        self._method_get_oversampling_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_get_oversampling_1740695150_name._native_ptr(), 1740695150)
-        assert(SystemFont._method_get_oversampling_1740695150 != nil)
-        let _method_get_font_names_1139954409_name = StringName(from: "get_font_names")
-        self._method_get_font_names_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_get_font_names_1139954409_name._native_ptr(), 1139954409)
-        assert(SystemFont._method_get_font_names_1139954409 != nil)
-        let _method_set_font_names_4015028928_name = StringName(from: "set_font_names")
-        self._method_set_font_names_4015028928 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_set_font_names_4015028928_name._native_ptr(), 4015028928)
-        assert(SystemFont._method_set_font_names_4015028928 != nil)
-        let _method_get_font_italic_36873697_name = StringName(from: "get_font_italic")
-        self._method_get_font_italic_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_get_font_italic_36873697_name._native_ptr(), 36873697)
-        assert(SystemFont._method_get_font_italic_36873697 != nil)
-        let _method_set_font_italic_2586408642_name = StringName(from: "set_font_italic")
-        self._method_set_font_italic_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_set_font_italic_2586408642_name._native_ptr(), 2586408642)
-        assert(SystemFont._method_set_font_italic_2586408642 != nil)
-        let _method_set_font_weight_1286410249_name = StringName(from: "set_font_weight")
-        self._method_set_font_weight_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_set_font_weight_1286410249_name._native_ptr(), 1286410249)
-        assert(SystemFont._method_set_font_weight_1286410249 != nil)
-        let _method_set_font_stretch_1286410249_name = StringName(from: "set_font_stretch")
-        self._method_set_font_stretch_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SystemFont._native_ptr(), _method_set_font_stretch_1286410249_name._native_ptr(), 1286410249)
-        assert(SystemFont._method_set_font_stretch_1286410249 != nil)
+        self._method_set_antialiasing_1669900 = StringName(from: "set_antialiasing")
+        assert(self._method_set_antialiasing_1669900 != nil)
+        self._method_get_antialiasing_4262718649 = StringName(from: "get_antialiasing")
+        assert(self._method_get_antialiasing_4262718649 != nil)
+        self._method_set_generate_mipmaps_2586408642 = StringName(from: "set_generate_mipmaps")
+        assert(self._method_set_generate_mipmaps_2586408642 != nil)
+        self._method_get_generate_mipmaps_36873697 = StringName(from: "get_generate_mipmaps")
+        assert(self._method_get_generate_mipmaps_36873697 != nil)
+        self._method_set_allow_system_fallback_2586408642 = StringName(from: "set_allow_system_fallback")
+        assert(self._method_set_allow_system_fallback_2586408642 != nil)
+        self._method_is_allow_system_fallback_36873697 = StringName(from: "is_allow_system_fallback")
+        assert(self._method_is_allow_system_fallback_36873697 != nil)
+        self._method_set_force_autohinter_2586408642 = StringName(from: "set_force_autohinter")
+        assert(self._method_set_force_autohinter_2586408642 != nil)
+        self._method_is_force_autohinter_36873697 = StringName(from: "is_force_autohinter")
+        assert(self._method_is_force_autohinter_36873697 != nil)
+        self._method_set_hinting_1827459492 = StringName(from: "set_hinting")
+        assert(self._method_set_hinting_1827459492 != nil)
+        self._method_get_hinting_3683214614 = StringName(from: "get_hinting")
+        assert(self._method_get_hinting_3683214614 != nil)
+        self._method_set_subpixel_positioning_4225742182 = StringName(from: "set_subpixel_positioning")
+        assert(self._method_set_subpixel_positioning_4225742182 != nil)
+        self._method_get_subpixel_positioning_1069238588 = StringName(from: "get_subpixel_positioning")
+        assert(self._method_get_subpixel_positioning_1069238588 != nil)
+        self._method_set_multichannel_signed_distance_field_2586408642 = StringName(from: "set_multichannel_signed_distance_field")
+        assert(self._method_set_multichannel_signed_distance_field_2586408642 != nil)
+        self._method_is_multichannel_signed_distance_field_36873697 = StringName(from: "is_multichannel_signed_distance_field")
+        assert(self._method_is_multichannel_signed_distance_field_36873697 != nil)
+        self._method_set_msdf_pixel_range_1286410249 = StringName(from: "set_msdf_pixel_range")
+        assert(self._method_set_msdf_pixel_range_1286410249 != nil)
+        self._method_get_msdf_pixel_range_3905245786 = StringName(from: "get_msdf_pixel_range")
+        assert(self._method_get_msdf_pixel_range_3905245786 != nil)
+        self._method_set_msdf_size_1286410249 = StringName(from: "set_msdf_size")
+        assert(self._method_set_msdf_size_1286410249 != nil)
+        self._method_get_msdf_size_3905245786 = StringName(from: "get_msdf_size")
+        assert(self._method_get_msdf_size_3905245786 != nil)
+        self._method_set_oversampling_373806689 = StringName(from: "set_oversampling")
+        assert(self._method_set_oversampling_373806689 != nil)
+        self._method_get_oversampling_1740695150 = StringName(from: "get_oversampling")
+        assert(self._method_get_oversampling_1740695150 != nil)
+        self._method_get_font_names_1139954409 = StringName(from: "get_font_names")
+        assert(self._method_get_font_names_1139954409 != nil)
+        self._method_set_font_names_4015028928 = StringName(from: "set_font_names")
+        assert(self._method_set_font_names_4015028928 != nil)
+        self._method_get_font_italic_36873697 = StringName(from: "get_font_italic")
+        assert(self._method_get_font_italic_36873697 != nil)
+        self._method_set_font_italic_2586408642 = StringName(from: "set_font_italic")
+        assert(self._method_set_font_italic_2586408642 != nil)
+        self._method_set_font_weight_1286410249 = StringName(from: "set_font_weight")
+        assert(self._method_set_font_weight_1286410249 != nil)
+        self._method_set_font_stretch_1286410249 = StringName(from: "set_font_stretch")
+        assert(self._method_set_font_stretch_1286410249 != nil)
     }
 
     public func set_antialiasing(antialiasing: TextServer.FontAntialiasing)  {
@@ -142,8 +117,13 @@ open class SystemFont : Font {
                 .init(antialiasing_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_antialiasing_1669900,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_antialiasing_1669900._native_ptr(),
+                    1669900)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -158,8 +138,13 @@ open class SystemFont : Font {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_antialiasing_4262718649,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_antialiasing_4262718649._native_ptr(),
+                    4262718649)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -174,8 +159,13 @@ open class SystemFont : Font {
                 .init(generate_mipmaps_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_generate_mipmaps_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_generate_mipmaps_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -191,8 +181,13 @@ open class SystemFont : Font {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_generate_mipmaps_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_generate_mipmaps_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -207,8 +202,13 @@ open class SystemFont : Font {
                 .init(allow_system_fallback_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_allow_system_fallback_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_allow_system_fallback_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -224,8 +224,13 @@ open class SystemFont : Font {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_allow_system_fallback_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_allow_system_fallback_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -240,8 +245,13 @@ open class SystemFont : Font {
                 .init(force_autohinter_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_force_autohinter_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_force_autohinter_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -257,8 +267,13 @@ open class SystemFont : Font {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_force_autohinter_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_force_autohinter_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -273,8 +288,13 @@ open class SystemFont : Font {
                 .init(hinting_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_hinting_1827459492,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_hinting_1827459492._native_ptr(),
+                    1827459492)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -289,8 +309,13 @@ open class SystemFont : Font {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_hinting_3683214614,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_hinting_3683214614._native_ptr(),
+                    3683214614)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -305,8 +330,13 @@ open class SystemFont : Font {
                 .init(subpixel_positioning_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_subpixel_positioning_4225742182,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_subpixel_positioning_4225742182._native_ptr(),
+                    4225742182)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -321,8 +351,13 @@ open class SystemFont : Font {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_subpixel_positioning_1069238588,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_subpixel_positioning_1069238588._native_ptr(),
+                    1069238588)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -337,8 +372,13 @@ open class SystemFont : Font {
                 .init(msdf_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_multichannel_signed_distance_field_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_multichannel_signed_distance_field_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -354,8 +394,13 @@ open class SystemFont : Font {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_multichannel_signed_distance_field_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_multichannel_signed_distance_field_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -370,8 +415,13 @@ open class SystemFont : Font {
                 .init(msdf_pixel_range_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_msdf_pixel_range_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_msdf_pixel_range_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -387,8 +437,13 @@ open class SystemFont : Font {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_msdf_pixel_range_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_msdf_pixel_range_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -403,8 +458,13 @@ open class SystemFont : Font {
                 .init(msdf_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_msdf_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_msdf_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -420,8 +480,13 @@ open class SystemFont : Font {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_msdf_size_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_msdf_size_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -436,8 +501,13 @@ open class SystemFont : Font {
                 .init(oversampling_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_oversampling_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_oversampling_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -453,8 +523,13 @@ open class SystemFont : Font {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_oversampling_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_oversampling_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -469,8 +544,13 @@ open class SystemFont : Font {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_font_names_1139954409,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_font_names_1139954409._native_ptr(),
+                    1139954409)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -485,8 +565,13 @@ open class SystemFont : Font {
                 .init(names_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_font_names_4015028928,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_font_names_4015028928._native_ptr(),
+                    4015028928)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -501,8 +586,13 @@ open class SystemFont : Font {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_font_italic_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_font_italic_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -517,8 +607,13 @@ open class SystemFont : Font {
                 .init(italic_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_font_italic_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_font_italic_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -533,8 +628,13 @@ open class SystemFont : Font {
                 .init(weight_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_font_weight_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_font_weight_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -549,8 +649,13 @@ open class SystemFont : Font {
                 .init(stretch_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_font_stretch_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_font_stretch_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

@@ -17,6 +17,7 @@ open class EditorSceneFormatImporterBlend : EditorSceneFormatImporter {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorSceneFormatImporterBlend == nil)
         __godot_name_EditorSceneFormatImporterBlend = StringName(from: "EditorSceneFormatImporterBlend")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library

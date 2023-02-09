@@ -67,143 +67,112 @@ open class SurfaceTool : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_SurfaceTool }
 
-    static var _method_set_skin_weight_count_618679515: GDExtensionMethodBindPtr! = nil
-    static var _method_get_skin_weight_count_1072401130: GDExtensionMethodBindPtr! = nil
-    static var _method_set_custom_format_4087759856: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_format_839863283: GDExtensionMethodBindPtr! = nil
-    static var _method_begin_2230304113: GDExtensionMethodBindPtr! = nil
-    static var _method_add_vertex_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_set_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_set_normal_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tangent_3505987427: GDExtensionMethodBindPtr! = nil
-    static var _method_set_uv_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_set_uv2_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bones_3614634198: GDExtensionMethodBindPtr! = nil
-    static var _method_set_weights_2899603908: GDExtensionMethodBindPtr! = nil
-    static var _method_set_custom_2878471219: GDExtensionMethodBindPtr! = nil
-    static var _method_set_smooth_group_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_add_triangle_fan_297960074: GDExtensionMethodBindPtr! = nil
-    static var _method_add_index_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_index_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_deindex_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_generate_normals_107499316: GDExtensionMethodBindPtr! = nil
-    static var _method_generate_tangents_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_optimize_indices_for_cache_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_aabb_1068685055: GDExtensionMethodBindPtr! = nil
-    static var _method_generate_lod_1894448909: GDExtensionMethodBindPtr! = nil
-    static var _method_set_material_2757459619: GDExtensionMethodBindPtr! = nil
-    static var _method_get_primitive_type_768822145: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_create_from_1767024570: GDExtensionMethodBindPtr! = nil
-    static var _method_create_from_blend_shape_1306185582: GDExtensionMethodBindPtr! = nil
-    static var _method_append_from_2217967155: GDExtensionMethodBindPtr! = nil
-    static var _method_commit_4107864055: GDExtensionMethodBindPtr! = nil
-    static var _method_commit_to_arrays_2915620761: GDExtensionMethodBindPtr! = nil
+    static var _method_set_skin_weight_count_618679515: StringName! = nil
+    static var _method_get_skin_weight_count_1072401130: StringName! = nil
+    static var _method_set_custom_format_4087759856: StringName! = nil
+    static var _method_get_custom_format_839863283: StringName! = nil
+    static var _method_begin_2230304113: StringName! = nil
+    static var _method_add_vertex_3460891852: StringName! = nil
+    static var _method_set_color_2920490490: StringName! = nil
+    static var _method_set_normal_3460891852: StringName! = nil
+    static var _method_set_tangent_3505987427: StringName! = nil
+    static var _method_set_uv_743155724: StringName! = nil
+    static var _method_set_uv2_743155724: StringName! = nil
+    static var _method_set_bones_3614634198: StringName! = nil
+    static var _method_set_weights_2899603908: StringName! = nil
+    static var _method_set_custom_2878471219: StringName! = nil
+    static var _method_set_smooth_group_1286410249: StringName! = nil
+    static var _method_add_triangle_fan_297960074: StringName! = nil
+    static var _method_add_index_1286410249: StringName! = nil
+    static var _method_index_3218959716: StringName! = nil
+    static var _method_deindex_3218959716: StringName! = nil
+    static var _method_generate_normals_107499316: StringName! = nil
+    static var _method_generate_tangents_3218959716: StringName! = nil
+    static var _method_optimize_indices_for_cache_3218959716: StringName! = nil
+    static var _method_get_aabb_1068685055: StringName! = nil
+    static var _method_generate_lod_1894448909: StringName! = nil
+    static var _method_set_material_2757459619: StringName! = nil
+    static var _method_get_primitive_type_768822145: StringName! = nil
+    static var _method_clear_3218959716: StringName! = nil
+    static var _method_create_from_1767024570: StringName! = nil
+    static var _method_create_from_blend_shape_1306185582: StringName! = nil
+    static var _method_append_from_2217967155: StringName! = nil
+    static var _method_commit_4107864055: StringName! = nil
+    static var _method_commit_to_arrays_2915620761: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_SurfaceTool == nil)
         __godot_name_SurfaceTool = StringName(from: "SurfaceTool")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_skin_weight_count_618679515_name = StringName(from: "set_skin_weight_count")
-        self._method_set_skin_weight_count_618679515 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_skin_weight_count_618679515_name._native_ptr(), 618679515)
-        assert(SurfaceTool._method_set_skin_weight_count_618679515 != nil)
-        let _method_get_skin_weight_count_1072401130_name = StringName(from: "get_skin_weight_count")
-        self._method_get_skin_weight_count_1072401130 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_get_skin_weight_count_1072401130_name._native_ptr(), 1072401130)
-        assert(SurfaceTool._method_get_skin_weight_count_1072401130 != nil)
-        let _method_set_custom_format_4087759856_name = StringName(from: "set_custom_format")
-        self._method_set_custom_format_4087759856 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_custom_format_4087759856_name._native_ptr(), 4087759856)
-        assert(SurfaceTool._method_set_custom_format_4087759856 != nil)
-        let _method_get_custom_format_839863283_name = StringName(from: "get_custom_format")
-        self._method_get_custom_format_839863283 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_get_custom_format_839863283_name._native_ptr(), 839863283)
-        assert(SurfaceTool._method_get_custom_format_839863283 != nil)
-        let _method_begin_2230304113_name = StringName(from: "begin")
-        self._method_begin_2230304113 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_begin_2230304113_name._native_ptr(), 2230304113)
-        assert(SurfaceTool._method_begin_2230304113 != nil)
-        let _method_add_vertex_3460891852_name = StringName(from: "add_vertex")
-        self._method_add_vertex_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_add_vertex_3460891852_name._native_ptr(), 3460891852)
-        assert(SurfaceTool._method_add_vertex_3460891852 != nil)
-        let _method_set_color_2920490490_name = StringName(from: "set_color")
-        self._method_set_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_color_2920490490_name._native_ptr(), 2920490490)
-        assert(SurfaceTool._method_set_color_2920490490 != nil)
-        let _method_set_normal_3460891852_name = StringName(from: "set_normal")
-        self._method_set_normal_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_normal_3460891852_name._native_ptr(), 3460891852)
-        assert(SurfaceTool._method_set_normal_3460891852 != nil)
-        let _method_set_tangent_3505987427_name = StringName(from: "set_tangent")
-        self._method_set_tangent_3505987427 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_tangent_3505987427_name._native_ptr(), 3505987427)
-        assert(SurfaceTool._method_set_tangent_3505987427 != nil)
-        let _method_set_uv_743155724_name = StringName(from: "set_uv")
-        self._method_set_uv_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_uv_743155724_name._native_ptr(), 743155724)
-        assert(SurfaceTool._method_set_uv_743155724 != nil)
-        let _method_set_uv2_743155724_name = StringName(from: "set_uv2")
-        self._method_set_uv2_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_uv2_743155724_name._native_ptr(), 743155724)
-        assert(SurfaceTool._method_set_uv2_743155724 != nil)
-        let _method_set_bones_3614634198_name = StringName(from: "set_bones")
-        self._method_set_bones_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_bones_3614634198_name._native_ptr(), 3614634198)
-        assert(SurfaceTool._method_set_bones_3614634198 != nil)
-        let _method_set_weights_2899603908_name = StringName(from: "set_weights")
-        self._method_set_weights_2899603908 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_weights_2899603908_name._native_ptr(), 2899603908)
-        assert(SurfaceTool._method_set_weights_2899603908 != nil)
-        let _method_set_custom_2878471219_name = StringName(from: "set_custom")
-        self._method_set_custom_2878471219 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_custom_2878471219_name._native_ptr(), 2878471219)
-        assert(SurfaceTool._method_set_custom_2878471219 != nil)
-        let _method_set_smooth_group_1286410249_name = StringName(from: "set_smooth_group")
-        self._method_set_smooth_group_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_smooth_group_1286410249_name._native_ptr(), 1286410249)
-        assert(SurfaceTool._method_set_smooth_group_1286410249 != nil)
-        let _method_add_triangle_fan_297960074_name = StringName(from: "add_triangle_fan")
-        self._method_add_triangle_fan_297960074 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_add_triangle_fan_297960074_name._native_ptr(), 297960074)
-        assert(SurfaceTool._method_add_triangle_fan_297960074 != nil)
-        let _method_add_index_1286410249_name = StringName(from: "add_index")
-        self._method_add_index_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_add_index_1286410249_name._native_ptr(), 1286410249)
-        assert(SurfaceTool._method_add_index_1286410249 != nil)
-        let _method_index_3218959716_name = StringName(from: "index")
-        self._method_index_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_index_3218959716_name._native_ptr(), 3218959716)
-        assert(SurfaceTool._method_index_3218959716 != nil)
-        let _method_deindex_3218959716_name = StringName(from: "deindex")
-        self._method_deindex_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_deindex_3218959716_name._native_ptr(), 3218959716)
-        assert(SurfaceTool._method_deindex_3218959716 != nil)
-        let _method_generate_normals_107499316_name = StringName(from: "generate_normals")
-        self._method_generate_normals_107499316 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_generate_normals_107499316_name._native_ptr(), 107499316)
-        assert(SurfaceTool._method_generate_normals_107499316 != nil)
-        let _method_generate_tangents_3218959716_name = StringName(from: "generate_tangents")
-        self._method_generate_tangents_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_generate_tangents_3218959716_name._native_ptr(), 3218959716)
-        assert(SurfaceTool._method_generate_tangents_3218959716 != nil)
-        let _method_optimize_indices_for_cache_3218959716_name = StringName(from: "optimize_indices_for_cache")
-        self._method_optimize_indices_for_cache_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_optimize_indices_for_cache_3218959716_name._native_ptr(), 3218959716)
-        assert(SurfaceTool._method_optimize_indices_for_cache_3218959716 != nil)
-        let _method_get_aabb_1068685055_name = StringName(from: "get_aabb")
-        self._method_get_aabb_1068685055 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_get_aabb_1068685055_name._native_ptr(), 1068685055)
-        assert(SurfaceTool._method_get_aabb_1068685055 != nil)
-        let _method_generate_lod_1894448909_name = StringName(from: "generate_lod")
-        self._method_generate_lod_1894448909 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_generate_lod_1894448909_name._native_ptr(), 1894448909)
-        assert(SurfaceTool._method_generate_lod_1894448909 != nil)
-        let _method_set_material_2757459619_name = StringName(from: "set_material")
-        self._method_set_material_2757459619 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_set_material_2757459619_name._native_ptr(), 2757459619)
-        assert(SurfaceTool._method_set_material_2757459619 != nil)
-        let _method_get_primitive_type_768822145_name = StringName(from: "get_primitive_type")
-        self._method_get_primitive_type_768822145 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_get_primitive_type_768822145_name._native_ptr(), 768822145)
-        assert(SurfaceTool._method_get_primitive_type_768822145 != nil)
-        let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
-        assert(SurfaceTool._method_clear_3218959716 != nil)
-        let _method_create_from_1767024570_name = StringName(from: "create_from")
-        self._method_create_from_1767024570 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_create_from_1767024570_name._native_ptr(), 1767024570)
-        assert(SurfaceTool._method_create_from_1767024570 != nil)
-        let _method_create_from_blend_shape_1306185582_name = StringName(from: "create_from_blend_shape")
-        self._method_create_from_blend_shape_1306185582 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_create_from_blend_shape_1306185582_name._native_ptr(), 1306185582)
-        assert(SurfaceTool._method_create_from_blend_shape_1306185582 != nil)
-        let _method_append_from_2217967155_name = StringName(from: "append_from")
-        self._method_append_from_2217967155 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_append_from_2217967155_name._native_ptr(), 2217967155)
-        assert(SurfaceTool._method_append_from_2217967155 != nil)
-        let _method_commit_4107864055_name = StringName(from: "commit")
-        self._method_commit_4107864055 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_commit_4107864055_name._native_ptr(), 4107864055)
-        assert(SurfaceTool._method_commit_4107864055 != nil)
-        let _method_commit_to_arrays_2915620761_name = StringName(from: "commit_to_arrays")
-        self._method_commit_to_arrays_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_SurfaceTool._native_ptr(), _method_commit_to_arrays_2915620761_name._native_ptr(), 2915620761)
-        assert(SurfaceTool._method_commit_to_arrays_2915620761 != nil)
+        self._method_set_skin_weight_count_618679515 = StringName(from: "set_skin_weight_count")
+        assert(self._method_set_skin_weight_count_618679515 != nil)
+        self._method_get_skin_weight_count_1072401130 = StringName(from: "get_skin_weight_count")
+        assert(self._method_get_skin_weight_count_1072401130 != nil)
+        self._method_set_custom_format_4087759856 = StringName(from: "set_custom_format")
+        assert(self._method_set_custom_format_4087759856 != nil)
+        self._method_get_custom_format_839863283 = StringName(from: "get_custom_format")
+        assert(self._method_get_custom_format_839863283 != nil)
+        self._method_begin_2230304113 = StringName(from: "begin")
+        assert(self._method_begin_2230304113 != nil)
+        self._method_add_vertex_3460891852 = StringName(from: "add_vertex")
+        assert(self._method_add_vertex_3460891852 != nil)
+        self._method_set_color_2920490490 = StringName(from: "set_color")
+        assert(self._method_set_color_2920490490 != nil)
+        self._method_set_normal_3460891852 = StringName(from: "set_normal")
+        assert(self._method_set_normal_3460891852 != nil)
+        self._method_set_tangent_3505987427 = StringName(from: "set_tangent")
+        assert(self._method_set_tangent_3505987427 != nil)
+        self._method_set_uv_743155724 = StringName(from: "set_uv")
+        assert(self._method_set_uv_743155724 != nil)
+        self._method_set_uv2_743155724 = StringName(from: "set_uv2")
+        assert(self._method_set_uv2_743155724 != nil)
+        self._method_set_bones_3614634198 = StringName(from: "set_bones")
+        assert(self._method_set_bones_3614634198 != nil)
+        self._method_set_weights_2899603908 = StringName(from: "set_weights")
+        assert(self._method_set_weights_2899603908 != nil)
+        self._method_set_custom_2878471219 = StringName(from: "set_custom")
+        assert(self._method_set_custom_2878471219 != nil)
+        self._method_set_smooth_group_1286410249 = StringName(from: "set_smooth_group")
+        assert(self._method_set_smooth_group_1286410249 != nil)
+        self._method_add_triangle_fan_297960074 = StringName(from: "add_triangle_fan")
+        assert(self._method_add_triangle_fan_297960074 != nil)
+        self._method_add_index_1286410249 = StringName(from: "add_index")
+        assert(self._method_add_index_1286410249 != nil)
+        self._method_index_3218959716 = StringName(from: "index")
+        assert(self._method_index_3218959716 != nil)
+        self._method_deindex_3218959716 = StringName(from: "deindex")
+        assert(self._method_deindex_3218959716 != nil)
+        self._method_generate_normals_107499316 = StringName(from: "generate_normals")
+        assert(self._method_generate_normals_107499316 != nil)
+        self._method_generate_tangents_3218959716 = StringName(from: "generate_tangents")
+        assert(self._method_generate_tangents_3218959716 != nil)
+        self._method_optimize_indices_for_cache_3218959716 = StringName(from: "optimize_indices_for_cache")
+        assert(self._method_optimize_indices_for_cache_3218959716 != nil)
+        self._method_get_aabb_1068685055 = StringName(from: "get_aabb")
+        assert(self._method_get_aabb_1068685055 != nil)
+        self._method_generate_lod_1894448909 = StringName(from: "generate_lod")
+        assert(self._method_generate_lod_1894448909 != nil)
+        self._method_set_material_2757459619 = StringName(from: "set_material")
+        assert(self._method_set_material_2757459619 != nil)
+        self._method_get_primitive_type_768822145 = StringName(from: "get_primitive_type")
+        assert(self._method_get_primitive_type_768822145 != nil)
+        self._method_clear_3218959716 = StringName(from: "clear")
+        assert(self._method_clear_3218959716 != nil)
+        self._method_create_from_1767024570 = StringName(from: "create_from")
+        assert(self._method_create_from_1767024570 != nil)
+        self._method_create_from_blend_shape_1306185582 = StringName(from: "create_from_blend_shape")
+        assert(self._method_create_from_blend_shape_1306185582 != nil)
+        self._method_append_from_2217967155 = StringName(from: "append_from")
+        assert(self._method_append_from_2217967155 != nil)
+        self._method_commit_4107864055 = StringName(from: "commit")
+        assert(self._method_commit_4107864055 != nil)
+        self._method_commit_to_arrays_2915620761 = StringName(from: "commit_to_arrays")
+        assert(self._method_commit_to_arrays_2915620761 != nil)
     }
 
     public func set_skin_weight_count(count: SurfaceTool.SkinWeightCount)  {
@@ -214,8 +183,13 @@ open class SurfaceTool : RefCounted {
                 .init(count_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_skin_weight_count_618679515,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_skin_weight_count_618679515._native_ptr(),
+                    618679515)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -230,8 +204,13 @@ open class SurfaceTool : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_skin_weight_count_1072401130,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_skin_weight_count_1072401130._native_ptr(),
+                    1072401130)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -247,8 +226,13 @@ open class SurfaceTool : RefCounted {
                 .init(channel_index_native), .init(format_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_custom_format_4087759856,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_custom_format_4087759856._native_ptr(),
+                    4087759856)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -265,8 +249,13 @@ open class SurfaceTool : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_format_839863283,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_format_839863283._native_ptr(),
+                    839863283)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -282,8 +271,13 @@ open class SurfaceTool : RefCounted {
                 .init(primitive_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_begin_2230304113,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_begin_2230304113._native_ptr(),
+                    2230304113)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -298,8 +292,13 @@ open class SurfaceTool : RefCounted {
                 .init(vertex_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_vertex_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_vertex_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -313,8 +312,13 @@ open class SurfaceTool : RefCounted {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -328,8 +332,13 @@ open class SurfaceTool : RefCounted {
                 .init(normal_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_normal_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_normal_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -343,8 +352,13 @@ open class SurfaceTool : RefCounted {
                 .init(tangent_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tangent_3505987427,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tangent_3505987427._native_ptr(),
+                    3505987427)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -358,8 +372,13 @@ open class SurfaceTool : RefCounted {
                 .init(uv_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_uv_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_uv_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -373,8 +392,13 @@ open class SurfaceTool : RefCounted {
                 .init(uv2_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_uv2_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_uv2_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -388,8 +412,13 @@ open class SurfaceTool : RefCounted {
                 .init(bones_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bones_3614634198,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bones_3614634198._native_ptr(),
+                    3614634198)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -403,8 +432,13 @@ open class SurfaceTool : RefCounted {
                 .init(weights_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_weights_2899603908,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_weights_2899603908._native_ptr(),
+                    2899603908)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -419,8 +453,13 @@ open class SurfaceTool : RefCounted {
                 .init(channel_index_native), .init(custom_color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_custom_2878471219,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_custom_2878471219._native_ptr(),
+                    2878471219)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -435,8 +474,13 @@ open class SurfaceTool : RefCounted {
                 .init(index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_smooth_group_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_smooth_group_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -456,8 +500,13 @@ open class SurfaceTool : RefCounted {
                 .init(vertices_native), .init(uvs_native), .init(colors_native), .init(uv2s_native), .init(normals_native), .init(tangents_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_triangle_fan_297960074,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_triangle_fan_297960074._native_ptr(),
+                    297960074)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -471,8 +520,13 @@ open class SurfaceTool : RefCounted {
                 .init(index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_index_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_index_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -486,8 +540,13 @@ open class SurfaceTool : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_index_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_index_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -500,8 +559,13 @@ open class SurfaceTool : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_deindex_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_deindex_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -515,8 +579,13 @@ open class SurfaceTool : RefCounted {
                 .init(flip_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_generate_normals_107499316,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_generate_normals_107499316._native_ptr(),
+                    107499316)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -530,8 +599,13 @@ open class SurfaceTool : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_generate_tangents_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_generate_tangents_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -544,8 +618,13 @@ open class SurfaceTool : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_optimize_indices_for_cache_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_optimize_indices_for_cache_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -559,8 +638,13 @@ open class SurfaceTool : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_aabb_1068685055,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_aabb_1068685055._native_ptr(),
+                    1068685055)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -577,8 +661,13 @@ open class SurfaceTool : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_generate_lod_1894448909,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_generate_lod_1894448909._native_ptr(),
+                    1894448909)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -595,8 +684,13 @@ open class SurfaceTool : RefCounted {
                 .init(material_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_material_2757459619,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_material_2757459619._native_ptr(),
+                    2757459619)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -610,8 +704,13 @@ open class SurfaceTool : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_primitive_type_768822145,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_primitive_type_768822145._native_ptr(),
+                    768822145)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -625,8 +724,13 @@ open class SurfaceTool : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -641,8 +745,13 @@ open class SurfaceTool : RefCounted {
                 .init(existing_native), .init(surface_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_from_1767024570,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_from_1767024570._native_ptr(),
+                    1767024570)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -659,8 +768,13 @@ open class SurfaceTool : RefCounted {
                 .init(existing_native), .init(surface_native), .init(blend_shape_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_from_blend_shape_1306185582,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_from_blend_shape_1306185582._native_ptr(),
+                    1306185582)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -677,8 +791,13 @@ open class SurfaceTool : RefCounted {
                 .init(existing_native), .init(surface_native), .init(transform_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_append_from_2217967155,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_append_from_2217967155._native_ptr(),
+                    2217967155)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -695,8 +814,13 @@ open class SurfaceTool : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_commit_4107864055,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_commit_4107864055._native_ptr(),
+                    4107864055)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -712,8 +836,13 @@ open class SurfaceTool : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_commit_to_arrays_2915620761,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_commit_to_arrays_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

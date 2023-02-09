@@ -15,34 +15,31 @@ open class SyntaxHighlighter : Resource {
 
     public override class var __godot_name: StringName { __godot_name_SyntaxHighlighter }
 
-    static var _method__get_line_syntax_highlighting_0: GDExtensionMethodBindPtr! = nil
-    static var _method__clear_highlighting_cache_0: GDExtensionMethodBindPtr! = nil
-    static var _method__update_cache_0: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_syntax_highlighting_3554694381: GDExtensionMethodBindPtr! = nil
-    static var _method_update_cache_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_highlighting_cache_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_edit_2185802765: GDExtensionMethodBindPtr! = nil
+    static var _method__get_line_syntax_highlighting_0: StringName! = nil
+    static var _method__clear_highlighting_cache_0: StringName! = nil
+    static var _method__update_cache_0: StringName! = nil
+    static var _method_get_line_syntax_highlighting_3554694381: StringName! = nil
+    static var _method_update_cache_3218959716: StringName! = nil
+    static var _method_clear_highlighting_cache_3218959716: StringName! = nil
+    static var _method_get_text_edit_2185802765: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_SyntaxHighlighter == nil)
         __godot_name_SyntaxHighlighter = StringName(from: "SyntaxHighlighter")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_line_syntax_highlighting_3554694381_name = StringName(from: "get_line_syntax_highlighting")
-        self._method_get_line_syntax_highlighting_3554694381 = self.interface.pointee.classdb_get_method_bind(__godot_name_SyntaxHighlighter._native_ptr(), _method_get_line_syntax_highlighting_3554694381_name._native_ptr(), 3554694381)
-        assert(SyntaxHighlighter._method_get_line_syntax_highlighting_3554694381 != nil)
-        let _method_update_cache_3218959716_name = StringName(from: "update_cache")
-        self._method_update_cache_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SyntaxHighlighter._native_ptr(), _method_update_cache_3218959716_name._native_ptr(), 3218959716)
-        assert(SyntaxHighlighter._method_update_cache_3218959716 != nil)
-        let _method_clear_highlighting_cache_3218959716_name = StringName(from: "clear_highlighting_cache")
-        self._method_clear_highlighting_cache_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SyntaxHighlighter._native_ptr(), _method_clear_highlighting_cache_3218959716_name._native_ptr(), 3218959716)
-        assert(SyntaxHighlighter._method_clear_highlighting_cache_3218959716 != nil)
-        let _method_get_text_edit_2185802765_name = StringName(from: "get_text_edit")
-        self._method_get_text_edit_2185802765 = self.interface.pointee.classdb_get_method_bind(__godot_name_SyntaxHighlighter._native_ptr(), _method_get_text_edit_2185802765_name._native_ptr(), 2185802765)
-        assert(SyntaxHighlighter._method_get_text_edit_2185802765 != nil)
+        self._method_get_line_syntax_highlighting_3554694381 = StringName(from: "get_line_syntax_highlighting")
+        assert(self._method_get_line_syntax_highlighting_3554694381 != nil)
+        self._method_update_cache_3218959716 = StringName(from: "update_cache")
+        assert(self._method_update_cache_3218959716 != nil)
+        self._method_clear_highlighting_cache_3218959716 = StringName(from: "clear_highlighting_cache")
+        assert(self._method_clear_highlighting_cache_3218959716 != nil)
+        self._method_get_text_edit_2185802765 = StringName(from: "get_text_edit")
+        assert(self._method_get_text_edit_2185802765 != nil)
     }
 
     public func _get_line_syntax_highlighting(line: Int64) -> Dictionary {
@@ -54,12 +51,7 @@ open class SyntaxHighlighter : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_line_syntax_highlighting_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Dictionary(godot: __resPtr.pointee)
         }
     }
@@ -70,12 +62,7 @@ open class SyntaxHighlighter : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__clear_highlighting_cache_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _update_cache()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -84,12 +71,7 @@ open class SyntaxHighlighter : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__update_cache_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func get_line_syntax_highlighting(line: Int64) -> Dictionary {
         withUnsafePointer(to: line) { line_native in
@@ -100,8 +82,13 @@ open class SyntaxHighlighter : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_syntax_highlighting_3554694381,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_syntax_highlighting_3554694381._native_ptr(),
+                    3554694381)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -116,8 +103,13 @@ open class SyntaxHighlighter : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_update_cache_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_update_cache_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -130,8 +122,13 @@ open class SyntaxHighlighter : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_highlighting_cache_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_highlighting_cache_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -145,8 +142,13 @@ open class SyntaxHighlighter : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_edit_2185802765,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_edit_2185802765._native_ptr(),
+                    2185802765)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -23,23 +23,22 @@ open class CompressedTexture2D : Texture2D {
 
     public override class var __godot_name: StringName { __godot_name_CompressedTexture2D }
 
-    static var _method_load_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_get_load_path_201670096: GDExtensionMethodBindPtr! = nil
+    static var _method_load_166001499: StringName! = nil
+    static var _method_get_load_path_201670096: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CompressedTexture2D == nil)
         __godot_name_CompressedTexture2D = StringName(from: "CompressedTexture2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_load_166001499_name = StringName(from: "load")
-        self._method_load_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_CompressedTexture2D._native_ptr(), _method_load_166001499_name._native_ptr(), 166001499)
-        assert(CompressedTexture2D._method_load_166001499 != nil)
-        let _method_get_load_path_201670096_name = StringName(from: "get_load_path")
-        self._method_get_load_path_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_CompressedTexture2D._native_ptr(), _method_get_load_path_201670096_name._native_ptr(), 201670096)
-        assert(CompressedTexture2D._method_get_load_path_201670096 != nil)
+        self._method_load_166001499 = StringName(from: "load")
+        assert(self._method_load_166001499 != nil)
+        self._method_get_load_path_201670096 = StringName(from: "get_load_path")
+        assert(self._method_get_load_path_201670096 != nil)
     }
 
     public func load(path: godot.String) -> Error {
@@ -51,8 +50,13 @@ open class CompressedTexture2D : Texture2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_load_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_load_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -67,8 +71,13 @@ open class CompressedTexture2D : Texture2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_load_path_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_load_path_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

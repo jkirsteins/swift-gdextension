@@ -15,35 +15,31 @@ open class AudioEffectRecord : AudioEffect {
 
     public override class var __godot_name: StringName { __godot_name_AudioEffectRecord }
 
-    static var _method_set_recording_active_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_recording_active_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_format_60648488: GDExtensionMethodBindPtr! = nil
-    static var _method_get_format_3151724922: GDExtensionMethodBindPtr! = nil
-    static var _method_get_recording_2964110865: GDExtensionMethodBindPtr! = nil
+    static var _method_set_recording_active_2586408642: StringName! = nil
+    static var _method_is_recording_active_36873697: StringName! = nil
+    static var _method_set_format_60648488: StringName! = nil
+    static var _method_get_format_3151724922: StringName! = nil
+    static var _method_get_recording_2964110865: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AudioEffectRecord == nil)
         __godot_name_AudioEffectRecord = StringName(from: "AudioEffectRecord")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_recording_active_2586408642_name = StringName(from: "set_recording_active")
-        self._method_set_recording_active_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectRecord._native_ptr(), _method_set_recording_active_2586408642_name._native_ptr(), 2586408642)
-        assert(AudioEffectRecord._method_set_recording_active_2586408642 != nil)
-        let _method_is_recording_active_36873697_name = StringName(from: "is_recording_active")
-        self._method_is_recording_active_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectRecord._native_ptr(), _method_is_recording_active_36873697_name._native_ptr(), 36873697)
-        assert(AudioEffectRecord._method_is_recording_active_36873697 != nil)
-        let _method_set_format_60648488_name = StringName(from: "set_format")
-        self._method_set_format_60648488 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectRecord._native_ptr(), _method_set_format_60648488_name._native_ptr(), 60648488)
-        assert(AudioEffectRecord._method_set_format_60648488 != nil)
-        let _method_get_format_3151724922_name = StringName(from: "get_format")
-        self._method_get_format_3151724922 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectRecord._native_ptr(), _method_get_format_3151724922_name._native_ptr(), 3151724922)
-        assert(AudioEffectRecord._method_get_format_3151724922 != nil)
-        let _method_get_recording_2964110865_name = StringName(from: "get_recording")
-        self._method_get_recording_2964110865 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectRecord._native_ptr(), _method_get_recording_2964110865_name._native_ptr(), 2964110865)
-        assert(AudioEffectRecord._method_get_recording_2964110865 != nil)
+        self._method_set_recording_active_2586408642 = StringName(from: "set_recording_active")
+        assert(self._method_set_recording_active_2586408642 != nil)
+        self._method_is_recording_active_36873697 = StringName(from: "is_recording_active")
+        assert(self._method_is_recording_active_36873697 != nil)
+        self._method_set_format_60648488 = StringName(from: "set_format")
+        assert(self._method_set_format_60648488 != nil)
+        self._method_get_format_3151724922 = StringName(from: "get_format")
+        assert(self._method_get_format_3151724922 != nil)
+        self._method_get_recording_2964110865 = StringName(from: "get_recording")
+        assert(self._method_get_recording_2964110865 != nil)
     }
 
     public func set_recording_active(record: UInt8)  {
@@ -54,8 +50,13 @@ open class AudioEffectRecord : AudioEffect {
                 .init(record_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_recording_active_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_recording_active_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -71,8 +72,13 @@ open class AudioEffectRecord : AudioEffect {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_recording_active_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_recording_active_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -87,8 +93,13 @@ open class AudioEffectRecord : AudioEffect {
                 .init(format_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_format_60648488,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_format_60648488._native_ptr(),
+                    60648488)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -103,8 +114,13 @@ open class AudioEffectRecord : AudioEffect {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_format_3151724922,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_format_3151724922._native_ptr(),
+                    3151724922)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -119,8 +135,13 @@ open class AudioEffectRecord : AudioEffect {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_recording_2964110865,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_recording_2964110865._native_ptr(),
+                    2964110865)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

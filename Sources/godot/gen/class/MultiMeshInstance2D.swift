@@ -13,31 +13,28 @@ open class MultiMeshInstance2D : Node2D {
 
     public override class var __godot_name: StringName { __godot_name_MultiMeshInstance2D }
 
-    static var _method_set_multimesh_2246127404: GDExtensionMethodBindPtr! = nil
-    static var _method_get_multimesh_1385450523: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_4051416890: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_3635182373: GDExtensionMethodBindPtr! = nil
+    static var _method_set_multimesh_2246127404: StringName! = nil
+    static var _method_get_multimesh_1385450523: StringName! = nil
+    static var _method_set_texture_4051416890: StringName! = nil
+    static var _method_get_texture_3635182373: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_MultiMeshInstance2D == nil)
         __godot_name_MultiMeshInstance2D = StringName(from: "MultiMeshInstance2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_multimesh_2246127404_name = StringName(from: "set_multimesh")
-        self._method_set_multimesh_2246127404 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMeshInstance2D._native_ptr(), _method_set_multimesh_2246127404_name._native_ptr(), 2246127404)
-        assert(MultiMeshInstance2D._method_set_multimesh_2246127404 != nil)
-        let _method_get_multimesh_1385450523_name = StringName(from: "get_multimesh")
-        self._method_get_multimesh_1385450523 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMeshInstance2D._native_ptr(), _method_get_multimesh_1385450523_name._native_ptr(), 1385450523)
-        assert(MultiMeshInstance2D._method_get_multimesh_1385450523 != nil)
-        let _method_set_texture_4051416890_name = StringName(from: "set_texture")
-        self._method_set_texture_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMeshInstance2D._native_ptr(), _method_set_texture_4051416890_name._native_ptr(), 4051416890)
-        assert(MultiMeshInstance2D._method_set_texture_4051416890 != nil)
-        let _method_get_texture_3635182373_name = StringName(from: "get_texture")
-        self._method_get_texture_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMeshInstance2D._native_ptr(), _method_get_texture_3635182373_name._native_ptr(), 3635182373)
-        assert(MultiMeshInstance2D._method_get_texture_3635182373 != nil)
+        self._method_set_multimesh_2246127404 = StringName(from: "set_multimesh")
+        assert(self._method_set_multimesh_2246127404 != nil)
+        self._method_get_multimesh_1385450523 = StringName(from: "get_multimesh")
+        assert(self._method_get_multimesh_1385450523 != nil)
+        self._method_set_texture_4051416890 = StringName(from: "set_texture")
+        assert(self._method_set_texture_4051416890 != nil)
+        self._method_get_texture_3635182373 = StringName(from: "get_texture")
+        assert(self._method_get_texture_3635182373 != nil)
     }
 
     public func set_multimesh(multimesh: MultiMesh)  {
@@ -48,8 +45,13 @@ open class MultiMeshInstance2D : Node2D {
                 .init(multimesh_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_multimesh_2246127404,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_multimesh_2246127404._native_ptr(),
+                    2246127404)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -63,8 +65,13 @@ open class MultiMeshInstance2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_multimesh_1385450523,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_multimesh_1385450523._native_ptr(),
+                    1385450523)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -79,8 +86,13 @@ open class MultiMeshInstance2D : Node2D {
                 .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_4051416890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_4051416890._native_ptr(),
+                    4051416890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -94,8 +106,13 @@ open class MultiMeshInstance2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_3635182373,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_3635182373._native_ptr(),
+                    3635182373)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

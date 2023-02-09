@@ -116,7 +116,7 @@
       </PreActions>
       <PathRunnable
          runnableDebuggingMode = "0"
-         FilePath = "/Applications/Godot_mono.app/Contents/MacOS/Godot">
+         FilePath = "/Users/janis.kirsteins/Projects/godot/bin/godot">
       </PathRunnable>
       <CommandLineArguments>
          <CommandLineArgument

@@ -24,35 +24,31 @@ open class CameraServer : Object {
 
     public override class var __godot_name: StringName { __godot_name_CameraServer }
 
-    static var _method_get_feed_361927068: GDExtensionMethodBindPtr! = nil
-    static var _method_get_feed_count_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_feeds_2915620761: GDExtensionMethodBindPtr! = nil
-    static var _method_add_feed_3204782488: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_feed_3204782488: GDExtensionMethodBindPtr! = nil
+    static var _method_get_feed_361927068: StringName! = nil
+    static var _method_get_feed_count_2455072627: StringName! = nil
+    static var _method_feeds_2915620761: StringName! = nil
+    static var _method_add_feed_3204782488: StringName! = nil
+    static var _method_remove_feed_3204782488: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CameraServer == nil)
         __godot_name_CameraServer = StringName(from: "CameraServer")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_feed_361927068_name = StringName(from: "get_feed")
-        self._method_get_feed_361927068 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraServer._native_ptr(), _method_get_feed_361927068_name._native_ptr(), 361927068)
-        assert(CameraServer._method_get_feed_361927068 != nil)
-        let _method_get_feed_count_2455072627_name = StringName(from: "get_feed_count")
-        self._method_get_feed_count_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraServer._native_ptr(), _method_get_feed_count_2455072627_name._native_ptr(), 2455072627)
-        assert(CameraServer._method_get_feed_count_2455072627 != nil)
-        let _method_feeds_2915620761_name = StringName(from: "feeds")
-        self._method_feeds_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraServer._native_ptr(), _method_feeds_2915620761_name._native_ptr(), 2915620761)
-        assert(CameraServer._method_feeds_2915620761 != nil)
-        let _method_add_feed_3204782488_name = StringName(from: "add_feed")
-        self._method_add_feed_3204782488 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraServer._native_ptr(), _method_add_feed_3204782488_name._native_ptr(), 3204782488)
-        assert(CameraServer._method_add_feed_3204782488 != nil)
-        let _method_remove_feed_3204782488_name = StringName(from: "remove_feed")
-        self._method_remove_feed_3204782488 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraServer._native_ptr(), _method_remove_feed_3204782488_name._native_ptr(), 3204782488)
-        assert(CameraServer._method_remove_feed_3204782488 != nil)
+        self._method_get_feed_361927068 = StringName(from: "get_feed")
+        assert(self._method_get_feed_361927068 != nil)
+        self._method_get_feed_count_2455072627 = StringName(from: "get_feed_count")
+        assert(self._method_get_feed_count_2455072627 != nil)
+        self._method_feeds_2915620761 = StringName(from: "feeds")
+        assert(self._method_feeds_2915620761 != nil)
+        self._method_add_feed_3204782488 = StringName(from: "add_feed")
+        assert(self._method_add_feed_3204782488 != nil)
+        self._method_remove_feed_3204782488 = StringName(from: "remove_feed")
+        assert(self._method_remove_feed_3204782488 != nil)
     }
 
     public func get_feed(index: Int64) -> CameraFeed {
@@ -64,8 +60,13 @@ open class CameraServer : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_feed_361927068,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_feed_361927068._native_ptr(),
+                    361927068)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -82,8 +83,13 @@ open class CameraServer : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_feed_count_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_feed_count_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -98,8 +104,13 @@ open class CameraServer : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_feeds_2915620761,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_feeds_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -114,8 +125,13 @@ open class CameraServer : Object {
                 .init(feed_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_feed_3204782488,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_feed_3204782488._native_ptr(),
+                    3204782488)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -129,8 +145,13 @@ open class CameraServer : Object {
                 .init(feed_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_feed_3204782488,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_feed_3204782488._native_ptr(),
+                    3204782488)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

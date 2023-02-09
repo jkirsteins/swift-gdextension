@@ -11,31 +11,28 @@ open class RDShaderSource : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_RDShaderSource }
 
-    static var _method_set_stage_source_620821314: GDExtensionMethodBindPtr! = nil
-    static var _method_get_stage_source_3354920045: GDExtensionMethodBindPtr! = nil
-    static var _method_set_language_3422186742: GDExtensionMethodBindPtr! = nil
-    static var _method_get_language_1063538261: GDExtensionMethodBindPtr! = nil
+    static var _method_set_stage_source_620821314: StringName! = nil
+    static var _method_get_stage_source_3354920045: StringName! = nil
+    static var _method_set_language_3422186742: StringName! = nil
+    static var _method_get_language_1063538261: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_RDShaderSource == nil)
         __godot_name_RDShaderSource = StringName(from: "RDShaderSource")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_stage_source_620821314_name = StringName(from: "set_stage_source")
-        self._method_set_stage_source_620821314 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDShaderSource._native_ptr(), _method_set_stage_source_620821314_name._native_ptr(), 620821314)
-        assert(RDShaderSource._method_set_stage_source_620821314 != nil)
-        let _method_get_stage_source_3354920045_name = StringName(from: "get_stage_source")
-        self._method_get_stage_source_3354920045 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDShaderSource._native_ptr(), _method_get_stage_source_3354920045_name._native_ptr(), 3354920045)
-        assert(RDShaderSource._method_get_stage_source_3354920045 != nil)
-        let _method_set_language_3422186742_name = StringName(from: "set_language")
-        self._method_set_language_3422186742 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDShaderSource._native_ptr(), _method_set_language_3422186742_name._native_ptr(), 3422186742)
-        assert(RDShaderSource._method_set_language_3422186742 != nil)
-        let _method_get_language_1063538261_name = StringName(from: "get_language")
-        self._method_get_language_1063538261 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDShaderSource._native_ptr(), _method_get_language_1063538261_name._native_ptr(), 1063538261)
-        assert(RDShaderSource._method_get_language_1063538261 != nil)
+        self._method_set_stage_source_620821314 = StringName(from: "set_stage_source")
+        assert(self._method_set_stage_source_620821314 != nil)
+        self._method_get_stage_source_3354920045 = StringName(from: "get_stage_source")
+        assert(self._method_get_stage_source_3354920045 != nil)
+        self._method_set_language_3422186742 = StringName(from: "set_language")
+        assert(self._method_set_language_3422186742 != nil)
+        self._method_get_language_1063538261 = StringName(from: "get_language")
+        assert(self._method_get_language_1063538261 != nil)
     }
 
     public func set_stage_source(stage: RenderingDevice.ShaderStage, source: godot.String)  {
@@ -47,8 +44,13 @@ open class RDShaderSource : RefCounted {
                 .init(stage_native), .init(source_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_stage_source_620821314,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_stage_source_620821314._native_ptr(),
+                    620821314)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -64,8 +66,13 @@ open class RDShaderSource : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_stage_source_3354920045,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_stage_source_3354920045._native_ptr(),
+                    3354920045)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -81,8 +88,13 @@ open class RDShaderSource : RefCounted {
                 .init(language_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_language_3422186742,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_language_3422186742._native_ptr(),
+                    3422186742)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -97,8 +109,13 @@ open class RDShaderSource : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_language_1063538261,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_language_1063538261._native_ptr(),
+                    1063538261)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

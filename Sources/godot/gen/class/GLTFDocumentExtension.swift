@@ -11,22 +11,23 @@ open class GLTFDocumentExtension : Resource {
 
     public override class var __godot_name: StringName { __godot_name_GLTFDocumentExtension }
 
-    static var _method__import_preflight_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_supported_extensions_0: GDExtensionMethodBindPtr! = nil
-    static var _method__parse_node_extensions_0: GDExtensionMethodBindPtr! = nil
-    static var _method__generate_scene_node_0: GDExtensionMethodBindPtr! = nil
-    static var _method__import_post_parse_0: GDExtensionMethodBindPtr! = nil
-    static var _method__import_node_0: GDExtensionMethodBindPtr! = nil
-    static var _method__import_post_0: GDExtensionMethodBindPtr! = nil
-    static var _method__export_preflight_0: GDExtensionMethodBindPtr! = nil
-    static var _method__convert_scene_node_0: GDExtensionMethodBindPtr! = nil
-    static var _method__export_node_0: GDExtensionMethodBindPtr! = nil
-    static var _method__export_post_0: GDExtensionMethodBindPtr! = nil
+    static var _method__import_preflight_0: StringName! = nil
+    static var _method__get_supported_extensions_0: StringName! = nil
+    static var _method__parse_node_extensions_0: StringName! = nil
+    static var _method__generate_scene_node_0: StringName! = nil
+    static var _method__import_post_parse_0: StringName! = nil
+    static var _method__import_node_0: StringName! = nil
+    static var _method__import_post_0: StringName! = nil
+    static var _method__export_preflight_0: StringName! = nil
+    static var _method__convert_scene_node_0: StringName! = nil
+    static var _method__export_node_0: StringName! = nil
+    static var _method__export_post_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_GLTFDocumentExtension == nil)
         __godot_name_GLTFDocumentExtension = StringName(from: "GLTFDocumentExtension")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -44,12 +45,7 @@ open class GLTFDocumentExtension : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__import_preflight_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _get_supported_extensions() -> PackedStringArray {
@@ -60,12 +56,7 @@ open class GLTFDocumentExtension : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_supported_extensions_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _parse_node_extensions(state: GLTFState, gltf_node: GLTFNode, extensions: Dictionary) -> Error {
@@ -79,12 +70,7 @@ open class GLTFDocumentExtension : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__parse_node_extensions_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _generate_scene_node(state: GLTFState, gltf_node: GLTFNode, scene_parent: Node) -> Node3D {
@@ -98,12 +84,7 @@ open class GLTFDocumentExtension : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__generate_scene_node_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Node3D(godot: __resPtr.pointee)
     }
     public func _import_post_parse(state: GLTFState) -> Error {
@@ -115,12 +96,7 @@ open class GLTFDocumentExtension : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__import_post_parse_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _import_node(state: GLTFState, gltf_node: GLTFNode, json: Dictionary, node: Node) -> Error {
@@ -135,12 +111,7 @@ open class GLTFDocumentExtension : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__import_node_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _import_post(state: GLTFState, root: Node) -> Error {
@@ -153,12 +124,7 @@ open class GLTFDocumentExtension : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__import_post_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _export_preflight(state: GLTFState, root: Node) -> Error {
@@ -171,12 +137,7 @@ open class GLTFDocumentExtension : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__export_preflight_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _convert_scene_node(state: GLTFState, gltf_node: GLTFNode, scene_node: Node)  {
@@ -189,12 +150,7 @@ open class GLTFDocumentExtension : Resource {
                 .init(state_native), .init(gltf_node_native), .init(scene_node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__convert_scene_node_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _export_node(state: GLTFState, gltf_node: GLTFNode, json: Dictionary, node: Node) -> Error {
         let node_native = node._native_ptr()
@@ -208,12 +164,7 @@ open class GLTFDocumentExtension : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__export_node_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _export_post(state: GLTFState) -> Error {
@@ -225,12 +176,7 @@ open class GLTFDocumentExtension : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__export_post_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
 }

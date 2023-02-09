@@ -41,27 +41,25 @@ open class PCKPacker : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_PCKPacker }
 
-    static var _method_pck_start_3232891339: GDExtensionMethodBindPtr! = nil
-    static var _method_add_file_2215643711: GDExtensionMethodBindPtr! = nil
-    static var _method_flush_1633102583: GDExtensionMethodBindPtr! = nil
+    static var _method_pck_start_3232891339: StringName! = nil
+    static var _method_add_file_2215643711: StringName! = nil
+    static var _method_flush_1633102583: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PCKPacker == nil)
         __godot_name_PCKPacker = StringName(from: "PCKPacker")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_pck_start_3232891339_name = StringName(from: "pck_start")
-        self._method_pck_start_3232891339 = self.interface.pointee.classdb_get_method_bind(__godot_name_PCKPacker._native_ptr(), _method_pck_start_3232891339_name._native_ptr(), 3232891339)
-        assert(PCKPacker._method_pck_start_3232891339 != nil)
-        let _method_add_file_2215643711_name = StringName(from: "add_file")
-        self._method_add_file_2215643711 = self.interface.pointee.classdb_get_method_bind(__godot_name_PCKPacker._native_ptr(), _method_add_file_2215643711_name._native_ptr(), 2215643711)
-        assert(PCKPacker._method_add_file_2215643711 != nil)
-        let _method_flush_1633102583_name = StringName(from: "flush")
-        self._method_flush_1633102583 = self.interface.pointee.classdb_get_method_bind(__godot_name_PCKPacker._native_ptr(), _method_flush_1633102583_name._native_ptr(), 1633102583)
-        assert(PCKPacker._method_flush_1633102583 != nil)
+        self._method_pck_start_3232891339 = StringName(from: "pck_start")
+        assert(self._method_pck_start_3232891339 != nil)
+        self._method_add_file_2215643711 = StringName(from: "add_file")
+        assert(self._method_add_file_2215643711 != nil)
+        self._method_flush_1633102583 = StringName(from: "flush")
+        assert(self._method_flush_1633102583 != nil)
     }
 
     public func pck_start(pck_name: godot.String, alignment: Int64, key: godot.String, encrypt_directory: UInt8) -> Error {
@@ -76,8 +74,13 @@ open class PCKPacker : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_pck_start_3232891339,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_pck_start_3232891339._native_ptr(),
+                    3232891339)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -97,8 +100,13 @@ open class PCKPacker : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_file_2215643711,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_file_2215643711._native_ptr(),
+                    2215643711)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -115,8 +123,13 @@ open class PCKPacker : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_flush_1633102583,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_flush_1633102583._native_ptr(),
+                    1633102583)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -13,35 +13,31 @@ open class CryptoKey : Resource {
 
     public override class var __godot_name: StringName { __godot_name_CryptoKey }
 
-    static var _method_save_885841341: GDExtensionMethodBindPtr! = nil
-    static var _method_load_885841341: GDExtensionMethodBindPtr! = nil
-    static var _method_is_public_only_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_save_to_string_32795936: GDExtensionMethodBindPtr! = nil
-    static var _method_load_from_string_885841341: GDExtensionMethodBindPtr! = nil
+    static var _method_save_885841341: StringName! = nil
+    static var _method_load_885841341: StringName! = nil
+    static var _method_is_public_only_36873697: StringName! = nil
+    static var _method_save_to_string_32795936: StringName! = nil
+    static var _method_load_from_string_885841341: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CryptoKey == nil)
         __godot_name_CryptoKey = StringName(from: "CryptoKey")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_save_885841341_name = StringName(from: "save")
-        self._method_save_885841341 = self.interface.pointee.classdb_get_method_bind(__godot_name_CryptoKey._native_ptr(), _method_save_885841341_name._native_ptr(), 885841341)
-        assert(CryptoKey._method_save_885841341 != nil)
-        let _method_load_885841341_name = StringName(from: "load")
-        self._method_load_885841341 = self.interface.pointee.classdb_get_method_bind(__godot_name_CryptoKey._native_ptr(), _method_load_885841341_name._native_ptr(), 885841341)
-        assert(CryptoKey._method_load_885841341 != nil)
-        let _method_is_public_only_36873697_name = StringName(from: "is_public_only")
-        self._method_is_public_only_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CryptoKey._native_ptr(), _method_is_public_only_36873697_name._native_ptr(), 36873697)
-        assert(CryptoKey._method_is_public_only_36873697 != nil)
-        let _method_save_to_string_32795936_name = StringName(from: "save_to_string")
-        self._method_save_to_string_32795936 = self.interface.pointee.classdb_get_method_bind(__godot_name_CryptoKey._native_ptr(), _method_save_to_string_32795936_name._native_ptr(), 32795936)
-        assert(CryptoKey._method_save_to_string_32795936 != nil)
-        let _method_load_from_string_885841341_name = StringName(from: "load_from_string")
-        self._method_load_from_string_885841341 = self.interface.pointee.classdb_get_method_bind(__godot_name_CryptoKey._native_ptr(), _method_load_from_string_885841341_name._native_ptr(), 885841341)
-        assert(CryptoKey._method_load_from_string_885841341 != nil)
+        self._method_save_885841341 = StringName(from: "save")
+        assert(self._method_save_885841341 != nil)
+        self._method_load_885841341 = StringName(from: "load")
+        assert(self._method_load_885841341 != nil)
+        self._method_is_public_only_36873697 = StringName(from: "is_public_only")
+        assert(self._method_is_public_only_36873697 != nil)
+        self._method_save_to_string_32795936 = StringName(from: "save_to_string")
+        assert(self._method_save_to_string_32795936 != nil)
+        self._method_load_from_string_885841341 = StringName(from: "load_from_string")
+        assert(self._method_load_from_string_885841341 != nil)
     }
 
     public func save(path: godot.String, public_only: UInt8) -> Error {
@@ -54,8 +50,13 @@ open class CryptoKey : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_885841341,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_885841341._native_ptr(),
+                    885841341)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -73,8 +74,13 @@ open class CryptoKey : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_load_885841341,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_load_885841341._native_ptr(),
+                    885841341)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -91,8 +97,13 @@ open class CryptoKey : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_public_only_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_public_only_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -108,8 +119,13 @@ open class CryptoKey : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_to_string_32795936,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_to_string_32795936._native_ptr(),
+                    32795936)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -127,8 +143,13 @@ open class CryptoKey : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_load_from_string_885841341,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_load_from_string_885841341._native_ptr(),
+                    885841341)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

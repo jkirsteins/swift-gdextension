@@ -13,55 +13,47 @@ open class StyleBox : Resource {
 
     public override class var __godot_name: StringName { __godot_name_StyleBox }
 
-    static var _method__draw_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_draw_rect_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_minimum_size_0: GDExtensionMethodBindPtr! = nil
-    static var _method__test_mask_0: GDExtensionMethodBindPtr! = nil
-    static var _method_get_minimum_size_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_content_margin_4290182280: GDExtensionMethodBindPtr! = nil
-    static var _method_set_content_margin_all_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_content_margin_2869120046: GDExtensionMethodBindPtr! = nil
-    static var _method_get_margin_2869120046: GDExtensionMethodBindPtr! = nil
-    static var _method_get_offset_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_draw_2275962004: GDExtensionMethodBindPtr! = nil
-    static var _method_get_current_item_drawn_3213695180: GDExtensionMethodBindPtr! = nil
-    static var _method_test_mask_3735564539: GDExtensionMethodBindPtr! = nil
+    static var _method__draw_0: StringName! = nil
+    static var _method__get_draw_rect_0: StringName! = nil
+    static var _method__get_minimum_size_0: StringName! = nil
+    static var _method__test_mask_0: StringName! = nil
+    static var _method_get_minimum_size_3341600327: StringName! = nil
+    static var _method_set_content_margin_4290182280: StringName! = nil
+    static var _method_set_content_margin_all_373806689: StringName! = nil
+    static var _method_get_content_margin_2869120046: StringName! = nil
+    static var _method_get_margin_2869120046: StringName! = nil
+    static var _method_get_offset_3341600327: StringName! = nil
+    static var _method_draw_2275962004: StringName! = nil
+    static var _method_get_current_item_drawn_3213695180: StringName! = nil
+    static var _method_test_mask_3735564539: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_StyleBox == nil)
         __godot_name_StyleBox = StringName(from: "StyleBox")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_minimum_size_3341600327_name = StringName(from: "get_minimum_size")
-        self._method_get_minimum_size_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBox._native_ptr(), _method_get_minimum_size_3341600327_name._native_ptr(), 3341600327)
-        assert(StyleBox._method_get_minimum_size_3341600327 != nil)
-        let _method_set_content_margin_4290182280_name = StringName(from: "set_content_margin")
-        self._method_set_content_margin_4290182280 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBox._native_ptr(), _method_set_content_margin_4290182280_name._native_ptr(), 4290182280)
-        assert(StyleBox._method_set_content_margin_4290182280 != nil)
-        let _method_set_content_margin_all_373806689_name = StringName(from: "set_content_margin_all")
-        self._method_set_content_margin_all_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBox._native_ptr(), _method_set_content_margin_all_373806689_name._native_ptr(), 373806689)
-        assert(StyleBox._method_set_content_margin_all_373806689 != nil)
-        let _method_get_content_margin_2869120046_name = StringName(from: "get_content_margin")
-        self._method_get_content_margin_2869120046 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBox._native_ptr(), _method_get_content_margin_2869120046_name._native_ptr(), 2869120046)
-        assert(StyleBox._method_get_content_margin_2869120046 != nil)
-        let _method_get_margin_2869120046_name = StringName(from: "get_margin")
-        self._method_get_margin_2869120046 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBox._native_ptr(), _method_get_margin_2869120046_name._native_ptr(), 2869120046)
-        assert(StyleBox._method_get_margin_2869120046 != nil)
-        let _method_get_offset_3341600327_name = StringName(from: "get_offset")
-        self._method_get_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBox._native_ptr(), _method_get_offset_3341600327_name._native_ptr(), 3341600327)
-        assert(StyleBox._method_get_offset_3341600327 != nil)
-        let _method_draw_2275962004_name = StringName(from: "draw")
-        self._method_draw_2275962004 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBox._native_ptr(), _method_draw_2275962004_name._native_ptr(), 2275962004)
-        assert(StyleBox._method_draw_2275962004 != nil)
-        let _method_get_current_item_drawn_3213695180_name = StringName(from: "get_current_item_drawn")
-        self._method_get_current_item_drawn_3213695180 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBox._native_ptr(), _method_get_current_item_drawn_3213695180_name._native_ptr(), 3213695180)
-        assert(StyleBox._method_get_current_item_drawn_3213695180 != nil)
-        let _method_test_mask_3735564539_name = StringName(from: "test_mask")
-        self._method_test_mask_3735564539 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBox._native_ptr(), _method_test_mask_3735564539_name._native_ptr(), 3735564539)
-        assert(StyleBox._method_test_mask_3735564539 != nil)
+        self._method_get_minimum_size_3341600327 = StringName(from: "get_minimum_size")
+        assert(self._method_get_minimum_size_3341600327 != nil)
+        self._method_set_content_margin_4290182280 = StringName(from: "set_content_margin")
+        assert(self._method_set_content_margin_4290182280 != nil)
+        self._method_set_content_margin_all_373806689 = StringName(from: "set_content_margin_all")
+        assert(self._method_set_content_margin_all_373806689 != nil)
+        self._method_get_content_margin_2869120046 = StringName(from: "get_content_margin")
+        assert(self._method_get_content_margin_2869120046 != nil)
+        self._method_get_margin_2869120046 = StringName(from: "get_margin")
+        assert(self._method_get_margin_2869120046 != nil)
+        self._method_get_offset_3341600327 = StringName(from: "get_offset")
+        assert(self._method_get_offset_3341600327 != nil)
+        self._method_draw_2275962004 = StringName(from: "draw")
+        assert(self._method_draw_2275962004 != nil)
+        self._method_get_current_item_drawn_3213695180 = StringName(from: "get_current_item_drawn")
+        assert(self._method_get_current_item_drawn_3213695180 != nil)
+        self._method_test_mask_3735564539 = StringName(from: "test_mask")
+        assert(self._method_test_mask_3735564539 != nil)
     }
 
     public func _draw(to_canvas_item: RID, rect: Rect2)  {
@@ -73,12 +65,7 @@ open class StyleBox : Resource {
                 .init(to_canvas_item_native), .init(rect_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__draw_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _get_draw_rect(rect: Rect2) -> Rect2 {
         let rect_native = rect._native_ptr()
@@ -89,12 +76,7 @@ open class StyleBox : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_draw_rect_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Rect2(godot: __resPtr.pointee)
     }
     public func _get_minimum_size() -> Vector2 {
@@ -105,12 +87,7 @@ open class StyleBox : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_minimum_size_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Vector2(godot: __resPtr.pointee)
     }
     public func _test_mask(point: Vector2, rect: Rect2) -> UInt8 {
@@ -124,12 +101,7 @@ open class StyleBox : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__test_mask_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func get_minimum_size() -> Vector2 {
@@ -140,8 +112,13 @@ open class StyleBox : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_minimum_size_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_minimum_size_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -157,8 +134,13 @@ open class StyleBox : Resource {
                 .init(margin_native), .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_content_margin_4290182280,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_content_margin_4290182280._native_ptr(),
+                    4290182280)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -174,8 +156,13 @@ open class StyleBox : Resource {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_content_margin_all_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_content_margin_all_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -192,8 +179,13 @@ open class StyleBox : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_content_margin_2869120046,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_content_margin_2869120046._native_ptr(),
+                    2869120046)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -211,8 +203,13 @@ open class StyleBox : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_margin_2869120046,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_margin_2869120046._native_ptr(),
+                    2869120046)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -228,8 +225,13 @@ open class StyleBox : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_offset_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_offset_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -245,8 +247,13 @@ open class StyleBox : Resource {
                 .init(canvas_item_native), .init(rect_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_draw_2275962004,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_draw_2275962004._native_ptr(),
+                    2275962004)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -260,8 +267,13 @@ open class StyleBox : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_current_item_drawn_3213695180,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_current_item_drawn_3213695180._native_ptr(),
+                    3213695180)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -279,8 +291,13 @@ open class StyleBox : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_test_mask_3735564539,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_test_mask_3735564539._native_ptr(),
+                    3735564539)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -13,59 +13,49 @@ open class RemoteTransform2D : Node2D {
 
     public override class var __godot_name: StringName { __godot_name_RemoteTransform2D }
 
-    static var _method_set_remote_node_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_remote_node_4075236667: GDExtensionMethodBindPtr! = nil
-    static var _method_force_update_cache_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_global_coordinates_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_use_global_coordinates_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_update_position_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_update_position_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_update_rotation_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_update_rotation_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_update_scale_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_update_scale_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_remote_node_1348162250: StringName! = nil
+    static var _method_get_remote_node_4075236667: StringName! = nil
+    static var _method_force_update_cache_3218959716: StringName! = nil
+    static var _method_set_use_global_coordinates_2586408642: StringName! = nil
+    static var _method_get_use_global_coordinates_36873697: StringName! = nil
+    static var _method_set_update_position_2586408642: StringName! = nil
+    static var _method_get_update_position_36873697: StringName! = nil
+    static var _method_set_update_rotation_2586408642: StringName! = nil
+    static var _method_get_update_rotation_36873697: StringName! = nil
+    static var _method_set_update_scale_2586408642: StringName! = nil
+    static var _method_get_update_scale_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_RemoteTransform2D == nil)
         __godot_name_RemoteTransform2D = StringName(from: "RemoteTransform2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_remote_node_1348162250_name = StringName(from: "set_remote_node")
-        self._method_set_remote_node_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_RemoteTransform2D._native_ptr(), _method_set_remote_node_1348162250_name._native_ptr(), 1348162250)
-        assert(RemoteTransform2D._method_set_remote_node_1348162250 != nil)
-        let _method_get_remote_node_4075236667_name = StringName(from: "get_remote_node")
-        self._method_get_remote_node_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_RemoteTransform2D._native_ptr(), _method_get_remote_node_4075236667_name._native_ptr(), 4075236667)
-        assert(RemoteTransform2D._method_get_remote_node_4075236667 != nil)
-        let _method_force_update_cache_3218959716_name = StringName(from: "force_update_cache")
-        self._method_force_update_cache_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RemoteTransform2D._native_ptr(), _method_force_update_cache_3218959716_name._native_ptr(), 3218959716)
-        assert(RemoteTransform2D._method_force_update_cache_3218959716 != nil)
-        let _method_set_use_global_coordinates_2586408642_name = StringName(from: "set_use_global_coordinates")
-        self._method_set_use_global_coordinates_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RemoteTransform2D._native_ptr(), _method_set_use_global_coordinates_2586408642_name._native_ptr(), 2586408642)
-        assert(RemoteTransform2D._method_set_use_global_coordinates_2586408642 != nil)
-        let _method_get_use_global_coordinates_36873697_name = StringName(from: "get_use_global_coordinates")
-        self._method_get_use_global_coordinates_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RemoteTransform2D._native_ptr(), _method_get_use_global_coordinates_36873697_name._native_ptr(), 36873697)
-        assert(RemoteTransform2D._method_get_use_global_coordinates_36873697 != nil)
-        let _method_set_update_position_2586408642_name = StringName(from: "set_update_position")
-        self._method_set_update_position_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RemoteTransform2D._native_ptr(), _method_set_update_position_2586408642_name._native_ptr(), 2586408642)
-        assert(RemoteTransform2D._method_set_update_position_2586408642 != nil)
-        let _method_get_update_position_36873697_name = StringName(from: "get_update_position")
-        self._method_get_update_position_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RemoteTransform2D._native_ptr(), _method_get_update_position_36873697_name._native_ptr(), 36873697)
-        assert(RemoteTransform2D._method_get_update_position_36873697 != nil)
-        let _method_set_update_rotation_2586408642_name = StringName(from: "set_update_rotation")
-        self._method_set_update_rotation_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RemoteTransform2D._native_ptr(), _method_set_update_rotation_2586408642_name._native_ptr(), 2586408642)
-        assert(RemoteTransform2D._method_set_update_rotation_2586408642 != nil)
-        let _method_get_update_rotation_36873697_name = StringName(from: "get_update_rotation")
-        self._method_get_update_rotation_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RemoteTransform2D._native_ptr(), _method_get_update_rotation_36873697_name._native_ptr(), 36873697)
-        assert(RemoteTransform2D._method_get_update_rotation_36873697 != nil)
-        let _method_set_update_scale_2586408642_name = StringName(from: "set_update_scale")
-        self._method_set_update_scale_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RemoteTransform2D._native_ptr(), _method_set_update_scale_2586408642_name._native_ptr(), 2586408642)
-        assert(RemoteTransform2D._method_set_update_scale_2586408642 != nil)
-        let _method_get_update_scale_36873697_name = StringName(from: "get_update_scale")
-        self._method_get_update_scale_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RemoteTransform2D._native_ptr(), _method_get_update_scale_36873697_name._native_ptr(), 36873697)
-        assert(RemoteTransform2D._method_get_update_scale_36873697 != nil)
+        self._method_set_remote_node_1348162250 = StringName(from: "set_remote_node")
+        assert(self._method_set_remote_node_1348162250 != nil)
+        self._method_get_remote_node_4075236667 = StringName(from: "get_remote_node")
+        assert(self._method_get_remote_node_4075236667 != nil)
+        self._method_force_update_cache_3218959716 = StringName(from: "force_update_cache")
+        assert(self._method_force_update_cache_3218959716 != nil)
+        self._method_set_use_global_coordinates_2586408642 = StringName(from: "set_use_global_coordinates")
+        assert(self._method_set_use_global_coordinates_2586408642 != nil)
+        self._method_get_use_global_coordinates_36873697 = StringName(from: "get_use_global_coordinates")
+        assert(self._method_get_use_global_coordinates_36873697 != nil)
+        self._method_set_update_position_2586408642 = StringName(from: "set_update_position")
+        assert(self._method_set_update_position_2586408642 != nil)
+        self._method_get_update_position_36873697 = StringName(from: "get_update_position")
+        assert(self._method_get_update_position_36873697 != nil)
+        self._method_set_update_rotation_2586408642 = StringName(from: "set_update_rotation")
+        assert(self._method_set_update_rotation_2586408642 != nil)
+        self._method_get_update_rotation_36873697 = StringName(from: "get_update_rotation")
+        assert(self._method_get_update_rotation_36873697 != nil)
+        self._method_set_update_scale_2586408642 = StringName(from: "set_update_scale")
+        assert(self._method_set_update_scale_2586408642 != nil)
+        self._method_get_update_scale_36873697 = StringName(from: "get_update_scale")
+        assert(self._method_get_update_scale_36873697 != nil)
     }
 
     public func set_remote_node(path: NodePath)  {
@@ -76,8 +66,13 @@ open class RemoteTransform2D : Node2D {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_remote_node_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_remote_node_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -91,8 +86,13 @@ open class RemoteTransform2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_remote_node_4075236667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_remote_node_4075236667._native_ptr(),
+                    4075236667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -106,8 +106,13 @@ open class RemoteTransform2D : Node2D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_force_update_cache_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_force_update_cache_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -121,8 +126,13 @@ open class RemoteTransform2D : Node2D {
                 .init(use_global_coordinates_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_global_coordinates_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_global_coordinates_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -138,8 +148,13 @@ open class RemoteTransform2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_use_global_coordinates_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_use_global_coordinates_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -154,8 +169,13 @@ open class RemoteTransform2D : Node2D {
                 .init(update_remote_position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_update_position_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_update_position_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -171,8 +191,13 @@ open class RemoteTransform2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_update_position_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_update_position_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -187,8 +212,13 @@ open class RemoteTransform2D : Node2D {
                 .init(update_remote_rotation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_update_rotation_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_update_rotation_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -204,8 +234,13 @@ open class RemoteTransform2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_update_rotation_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_update_rotation_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -220,8 +255,13 @@ open class RemoteTransform2D : Node2D {
                 .init(update_remote_scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_update_scale_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_update_scale_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -237,8 +277,13 @@ open class RemoteTransform2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_update_scale_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_update_scale_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

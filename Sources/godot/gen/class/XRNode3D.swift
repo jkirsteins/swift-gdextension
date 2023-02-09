@@ -11,47 +11,40 @@ open class XRNode3D : Node3D {
 
     public override class var __godot_name: StringName { __godot_name_XRNode3D }
 
-    static var _method_set_tracker_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tracker_2002593661: GDExtensionMethodBindPtr! = nil
-    static var _method_set_pose_name_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pose_name_2002593661: GDExtensionMethodBindPtr! = nil
-    static var _method_get_is_active_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_has_tracking_data_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pose_2806551826: GDExtensionMethodBindPtr! = nil
-    static var _method_trigger_haptic_pulse_508576839: GDExtensionMethodBindPtr! = nil
+    static var _method_set_tracker_3304788590: StringName! = nil
+    static var _method_get_tracker_2002593661: StringName! = nil
+    static var _method_set_pose_name_3304788590: StringName! = nil
+    static var _method_get_pose_name_2002593661: StringName! = nil
+    static var _method_get_is_active_36873697: StringName! = nil
+    static var _method_get_has_tracking_data_36873697: StringName! = nil
+    static var _method_get_pose_2806551826: StringName! = nil
+    static var _method_trigger_haptic_pulse_508576839: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_XRNode3D == nil)
         __godot_name_XRNode3D = StringName(from: "XRNode3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_tracker_3304788590_name = StringName(from: "set_tracker")
-        self._method_set_tracker_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRNode3D._native_ptr(), _method_set_tracker_3304788590_name._native_ptr(), 3304788590)
-        assert(XRNode3D._method_set_tracker_3304788590 != nil)
-        let _method_get_tracker_2002593661_name = StringName(from: "get_tracker")
-        self._method_get_tracker_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRNode3D._native_ptr(), _method_get_tracker_2002593661_name._native_ptr(), 2002593661)
-        assert(XRNode3D._method_get_tracker_2002593661 != nil)
-        let _method_set_pose_name_3304788590_name = StringName(from: "set_pose_name")
-        self._method_set_pose_name_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRNode3D._native_ptr(), _method_set_pose_name_3304788590_name._native_ptr(), 3304788590)
-        assert(XRNode3D._method_set_pose_name_3304788590 != nil)
-        let _method_get_pose_name_2002593661_name = StringName(from: "get_pose_name")
-        self._method_get_pose_name_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRNode3D._native_ptr(), _method_get_pose_name_2002593661_name._native_ptr(), 2002593661)
-        assert(XRNode3D._method_get_pose_name_2002593661 != nil)
-        let _method_get_is_active_36873697_name = StringName(from: "get_is_active")
-        self._method_get_is_active_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRNode3D._native_ptr(), _method_get_is_active_36873697_name._native_ptr(), 36873697)
-        assert(XRNode3D._method_get_is_active_36873697 != nil)
-        let _method_get_has_tracking_data_36873697_name = StringName(from: "get_has_tracking_data")
-        self._method_get_has_tracking_data_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRNode3D._native_ptr(), _method_get_has_tracking_data_36873697_name._native_ptr(), 36873697)
-        assert(XRNode3D._method_get_has_tracking_data_36873697 != nil)
-        let _method_get_pose_2806551826_name = StringName(from: "get_pose")
-        self._method_get_pose_2806551826 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRNode3D._native_ptr(), _method_get_pose_2806551826_name._native_ptr(), 2806551826)
-        assert(XRNode3D._method_get_pose_2806551826 != nil)
-        let _method_trigger_haptic_pulse_508576839_name = StringName(from: "trigger_haptic_pulse")
-        self._method_trigger_haptic_pulse_508576839 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRNode3D._native_ptr(), _method_trigger_haptic_pulse_508576839_name._native_ptr(), 508576839)
-        assert(XRNode3D._method_trigger_haptic_pulse_508576839 != nil)
+        self._method_set_tracker_3304788590 = StringName(from: "set_tracker")
+        assert(self._method_set_tracker_3304788590 != nil)
+        self._method_get_tracker_2002593661 = StringName(from: "get_tracker")
+        assert(self._method_get_tracker_2002593661 != nil)
+        self._method_set_pose_name_3304788590 = StringName(from: "set_pose_name")
+        assert(self._method_set_pose_name_3304788590 != nil)
+        self._method_get_pose_name_2002593661 = StringName(from: "get_pose_name")
+        assert(self._method_get_pose_name_2002593661 != nil)
+        self._method_get_is_active_36873697 = StringName(from: "get_is_active")
+        assert(self._method_get_is_active_36873697 != nil)
+        self._method_get_has_tracking_data_36873697 = StringName(from: "get_has_tracking_data")
+        assert(self._method_get_has_tracking_data_36873697 != nil)
+        self._method_get_pose_2806551826 = StringName(from: "get_pose")
+        assert(self._method_get_pose_2806551826 != nil)
+        self._method_trigger_haptic_pulse_508576839 = StringName(from: "trigger_haptic_pulse")
+        assert(self._method_trigger_haptic_pulse_508576839 != nil)
     }
 
     public func set_tracker(tracker_name: StringName)  {
@@ -62,8 +55,13 @@ open class XRNode3D : Node3D {
                 .init(tracker_name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tracker_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tracker_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -77,8 +75,13 @@ open class XRNode3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tracker_2002593661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tracker_2002593661._native_ptr(),
+                    2002593661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -93,8 +96,13 @@ open class XRNode3D : Node3D {
                 .init(pose_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pose_name_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pose_name_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -108,8 +116,13 @@ open class XRNode3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pose_name_2002593661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pose_name_2002593661._native_ptr(),
+                    2002593661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -125,8 +138,13 @@ open class XRNode3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_is_active_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_is_active_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -142,8 +160,13 @@ open class XRNode3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_has_tracking_data_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_has_tracking_data_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -158,8 +181,13 @@ open class XRNode3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pose_2806551826,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pose_2806551826._native_ptr(),
+                    2806551826)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -178,8 +206,13 @@ open class XRNode3D : Node3D {
                 .init(action_name_native), .init(frequency_native), .init(amplitude_native), .init(duration_sec_native), .init(delay_sec_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_trigger_haptic_pulse_508576839,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_trigger_haptic_pulse_508576839._native_ptr(),
+                    508576839)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

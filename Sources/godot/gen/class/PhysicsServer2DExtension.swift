@@ -11,159 +11,158 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
 
     public override class var __godot_name: StringName { __godot_name_PhysicsServer2DExtension }
 
-    static var _method__world_boundary_shape_create_0: GDExtensionMethodBindPtr! = nil
-    static var _method__separation_ray_shape_create_0: GDExtensionMethodBindPtr! = nil
-    static var _method__segment_shape_create_0: GDExtensionMethodBindPtr! = nil
-    static var _method__circle_shape_create_0: GDExtensionMethodBindPtr! = nil
-    static var _method__rectangle_shape_create_0: GDExtensionMethodBindPtr! = nil
-    static var _method__capsule_shape_create_0: GDExtensionMethodBindPtr! = nil
-    static var _method__convex_polygon_shape_create_0: GDExtensionMethodBindPtr! = nil
-    static var _method__concave_polygon_shape_create_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shape_set_data_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shape_set_custom_solver_bias_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shape_get_type_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shape_get_data_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shape_get_custom_solver_bias_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shape_collide_0: GDExtensionMethodBindPtr! = nil
-    static var _method__space_create_0: GDExtensionMethodBindPtr! = nil
-    static var _method__space_set_active_0: GDExtensionMethodBindPtr! = nil
-    static var _method__space_is_active_0: GDExtensionMethodBindPtr! = nil
-    static var _method__space_set_param_0: GDExtensionMethodBindPtr! = nil
-    static var _method__space_get_param_0: GDExtensionMethodBindPtr! = nil
-    static var _method__space_get_direct_state_0: GDExtensionMethodBindPtr! = nil
-    static var _method__space_set_debug_contacts_0: GDExtensionMethodBindPtr! = nil
-    static var _method__space_get_contacts_0: GDExtensionMethodBindPtr! = nil
-    static var _method__space_get_contact_count_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_create_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_set_space_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_get_space_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_add_shape_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_set_shape_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_set_shape_transform_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_set_shape_disabled_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_get_shape_count_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_get_shape_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_get_shape_transform_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_remove_shape_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_clear_shapes_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_attach_object_instance_id_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_get_object_instance_id_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_attach_canvas_instance_id_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_get_canvas_instance_id_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_set_param_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_set_transform_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_get_param_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_get_transform_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_set_collision_layer_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_get_collision_layer_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_set_collision_mask_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_get_collision_mask_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_set_monitorable_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_set_pickable_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_set_monitor_callback_0: GDExtensionMethodBindPtr! = nil
-    static var _method__area_set_area_monitor_callback_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_create_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_space_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_space_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_mode_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_mode_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_add_shape_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_shape_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_shape_transform_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_shape_count_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_shape_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_shape_transform_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_shape_disabled_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_shape_as_one_way_collision_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_remove_shape_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_clear_shapes_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_attach_object_instance_id_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_object_instance_id_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_attach_canvas_instance_id_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_canvas_instance_id_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_continuous_collision_detection_mode_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_continuous_collision_detection_mode_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_collision_layer_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_collision_layer_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_collision_mask_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_collision_mask_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_collision_priority_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_collision_priority_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_param_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_param_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_reset_mass_properties_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_state_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_state_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_apply_central_impulse_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_apply_torque_impulse_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_apply_impulse_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_apply_central_force_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_apply_force_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_apply_torque_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_add_constant_central_force_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_add_constant_force_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_add_constant_torque_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_constant_force_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_constant_force_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_constant_torque_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_constant_torque_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_axis_velocity_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_add_collision_exception_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_remove_collision_exception_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_collision_exceptions_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_max_contacts_reported_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_max_contacts_reported_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_contacts_reported_depth_threshold_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_contacts_reported_depth_threshold_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_omit_force_integration_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_is_omitting_force_integration_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_state_sync_callback_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_force_integration_callback_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_collide_shape_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_set_pickable_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_get_direct_state_0: GDExtensionMethodBindPtr! = nil
-    static var _method__body_test_motion_0: GDExtensionMethodBindPtr! = nil
-    static var _method__joint_create_0: GDExtensionMethodBindPtr! = nil
-    static var _method__joint_clear_0: GDExtensionMethodBindPtr! = nil
-    static var _method__joint_set_param_0: GDExtensionMethodBindPtr! = nil
-    static var _method__joint_get_param_0: GDExtensionMethodBindPtr! = nil
-    static var _method__joint_disable_collisions_between_bodies_0: GDExtensionMethodBindPtr! = nil
-    static var _method__joint_is_disabled_collisions_between_bodies_0: GDExtensionMethodBindPtr! = nil
-    static var _method__joint_make_pin_0: GDExtensionMethodBindPtr! = nil
-    static var _method__joint_make_groove_0: GDExtensionMethodBindPtr! = nil
-    static var _method__joint_make_damped_spring_0: GDExtensionMethodBindPtr! = nil
-    static var _method__pin_joint_set_param_0: GDExtensionMethodBindPtr! = nil
-    static var _method__pin_joint_get_param_0: GDExtensionMethodBindPtr! = nil
-    static var _method__damped_spring_joint_set_param_0: GDExtensionMethodBindPtr! = nil
-    static var _method__damped_spring_joint_get_param_0: GDExtensionMethodBindPtr! = nil
-    static var _method__joint_get_type_0: GDExtensionMethodBindPtr! = nil
-    static var _method__free_rid_0: GDExtensionMethodBindPtr! = nil
-    static var _method__set_active_0: GDExtensionMethodBindPtr! = nil
-    static var _method__init_0: GDExtensionMethodBindPtr! = nil
-    static var _method__step_0: GDExtensionMethodBindPtr! = nil
-    static var _method__sync_0: GDExtensionMethodBindPtr! = nil
-    static var _method__flush_queries_0: GDExtensionMethodBindPtr! = nil
-    static var _method__end_sync_0: GDExtensionMethodBindPtr! = nil
-    static var _method__finish_0: GDExtensionMethodBindPtr! = nil
-    static var _method__is_flushing_queries_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_process_info_0: GDExtensionMethodBindPtr! = nil
-    static var _method_body_test_motion_is_excluding_body_4155700596: GDExtensionMethodBindPtr! = nil
-    static var _method_body_test_motion_is_excluding_object_1116898809: GDExtensionMethodBindPtr! = nil
+    static var _method__world_boundary_shape_create_0: StringName! = nil
+    static var _method__separation_ray_shape_create_0: StringName! = nil
+    static var _method__segment_shape_create_0: StringName! = nil
+    static var _method__circle_shape_create_0: StringName! = nil
+    static var _method__rectangle_shape_create_0: StringName! = nil
+    static var _method__capsule_shape_create_0: StringName! = nil
+    static var _method__convex_polygon_shape_create_0: StringName! = nil
+    static var _method__concave_polygon_shape_create_0: StringName! = nil
+    static var _method__shape_set_data_0: StringName! = nil
+    static var _method__shape_set_custom_solver_bias_0: StringName! = nil
+    static var _method__shape_get_type_0: StringName! = nil
+    static var _method__shape_get_data_0: StringName! = nil
+    static var _method__shape_get_custom_solver_bias_0: StringName! = nil
+    static var _method__shape_collide_0: StringName! = nil
+    static var _method__space_create_0: StringName! = nil
+    static var _method__space_set_active_0: StringName! = nil
+    static var _method__space_is_active_0: StringName! = nil
+    static var _method__space_set_param_0: StringName! = nil
+    static var _method__space_get_param_0: StringName! = nil
+    static var _method__space_get_direct_state_0: StringName! = nil
+    static var _method__space_set_debug_contacts_0: StringName! = nil
+    static var _method__space_get_contacts_0: StringName! = nil
+    static var _method__space_get_contact_count_0: StringName! = nil
+    static var _method__area_create_0: StringName! = nil
+    static var _method__area_set_space_0: StringName! = nil
+    static var _method__area_get_space_0: StringName! = nil
+    static var _method__area_add_shape_0: StringName! = nil
+    static var _method__area_set_shape_0: StringName! = nil
+    static var _method__area_set_shape_transform_0: StringName! = nil
+    static var _method__area_set_shape_disabled_0: StringName! = nil
+    static var _method__area_get_shape_count_0: StringName! = nil
+    static var _method__area_get_shape_0: StringName! = nil
+    static var _method__area_get_shape_transform_0: StringName! = nil
+    static var _method__area_remove_shape_0: StringName! = nil
+    static var _method__area_clear_shapes_0: StringName! = nil
+    static var _method__area_attach_object_instance_id_0: StringName! = nil
+    static var _method__area_get_object_instance_id_0: StringName! = nil
+    static var _method__area_attach_canvas_instance_id_0: StringName! = nil
+    static var _method__area_get_canvas_instance_id_0: StringName! = nil
+    static var _method__area_set_param_0: StringName! = nil
+    static var _method__area_set_transform_0: StringName! = nil
+    static var _method__area_get_param_0: StringName! = nil
+    static var _method__area_get_transform_0: StringName! = nil
+    static var _method__area_set_collision_layer_0: StringName! = nil
+    static var _method__area_get_collision_layer_0: StringName! = nil
+    static var _method__area_set_collision_mask_0: StringName! = nil
+    static var _method__area_get_collision_mask_0: StringName! = nil
+    static var _method__area_set_monitorable_0: StringName! = nil
+    static var _method__area_set_pickable_0: StringName! = nil
+    static var _method__area_set_monitor_callback_0: StringName! = nil
+    static var _method__area_set_area_monitor_callback_0: StringName! = nil
+    static var _method__body_create_0: StringName! = nil
+    static var _method__body_set_space_0: StringName! = nil
+    static var _method__body_get_space_0: StringName! = nil
+    static var _method__body_set_mode_0: StringName! = nil
+    static var _method__body_get_mode_0: StringName! = nil
+    static var _method__body_add_shape_0: StringName! = nil
+    static var _method__body_set_shape_0: StringName! = nil
+    static var _method__body_set_shape_transform_0: StringName! = nil
+    static var _method__body_get_shape_count_0: StringName! = nil
+    static var _method__body_get_shape_0: StringName! = nil
+    static var _method__body_get_shape_transform_0: StringName! = nil
+    static var _method__body_set_shape_disabled_0: StringName! = nil
+    static var _method__body_set_shape_as_one_way_collision_0: StringName! = nil
+    static var _method__body_remove_shape_0: StringName! = nil
+    static var _method__body_clear_shapes_0: StringName! = nil
+    static var _method__body_attach_object_instance_id_0: StringName! = nil
+    static var _method__body_get_object_instance_id_0: StringName! = nil
+    static var _method__body_attach_canvas_instance_id_0: StringName! = nil
+    static var _method__body_get_canvas_instance_id_0: StringName! = nil
+    static var _method__body_set_continuous_collision_detection_mode_0: StringName! = nil
+    static var _method__body_get_continuous_collision_detection_mode_0: StringName! = nil
+    static var _method__body_set_collision_layer_0: StringName! = nil
+    static var _method__body_get_collision_layer_0: StringName! = nil
+    static var _method__body_set_collision_mask_0: StringName! = nil
+    static var _method__body_get_collision_mask_0: StringName! = nil
+    static var _method__body_set_collision_priority_0: StringName! = nil
+    static var _method__body_get_collision_priority_0: StringName! = nil
+    static var _method__body_set_param_0: StringName! = nil
+    static var _method__body_get_param_0: StringName! = nil
+    static var _method__body_reset_mass_properties_0: StringName! = nil
+    static var _method__body_set_state_0: StringName! = nil
+    static var _method__body_get_state_0: StringName! = nil
+    static var _method__body_apply_central_impulse_0: StringName! = nil
+    static var _method__body_apply_torque_impulse_0: StringName! = nil
+    static var _method__body_apply_impulse_0: StringName! = nil
+    static var _method__body_apply_central_force_0: StringName! = nil
+    static var _method__body_apply_force_0: StringName! = nil
+    static var _method__body_apply_torque_0: StringName! = nil
+    static var _method__body_add_constant_central_force_0: StringName! = nil
+    static var _method__body_add_constant_force_0: StringName! = nil
+    static var _method__body_add_constant_torque_0: StringName! = nil
+    static var _method__body_set_constant_force_0: StringName! = nil
+    static var _method__body_get_constant_force_0: StringName! = nil
+    static var _method__body_set_constant_torque_0: StringName! = nil
+    static var _method__body_get_constant_torque_0: StringName! = nil
+    static var _method__body_set_axis_velocity_0: StringName! = nil
+    static var _method__body_add_collision_exception_0: StringName! = nil
+    static var _method__body_remove_collision_exception_0: StringName! = nil
+    static var _method__body_get_collision_exceptions_0: StringName! = nil
+    static var _method__body_set_max_contacts_reported_0: StringName! = nil
+    static var _method__body_get_max_contacts_reported_0: StringName! = nil
+    static var _method__body_set_contacts_reported_depth_threshold_0: StringName! = nil
+    static var _method__body_get_contacts_reported_depth_threshold_0: StringName! = nil
+    static var _method__body_set_omit_force_integration_0: StringName! = nil
+    static var _method__body_is_omitting_force_integration_0: StringName! = nil
+    static var _method__body_set_state_sync_callback_0: StringName! = nil
+    static var _method__body_set_force_integration_callback_0: StringName! = nil
+    static var _method__body_collide_shape_0: StringName! = nil
+    static var _method__body_set_pickable_0: StringName! = nil
+    static var _method__body_get_direct_state_0: StringName! = nil
+    static var _method__body_test_motion_0: StringName! = nil
+    static var _method__joint_create_0: StringName! = nil
+    static var _method__joint_clear_0: StringName! = nil
+    static var _method__joint_set_param_0: StringName! = nil
+    static var _method__joint_get_param_0: StringName! = nil
+    static var _method__joint_disable_collisions_between_bodies_0: StringName! = nil
+    static var _method__joint_is_disabled_collisions_between_bodies_0: StringName! = nil
+    static var _method__joint_make_pin_0: StringName! = nil
+    static var _method__joint_make_groove_0: StringName! = nil
+    static var _method__joint_make_damped_spring_0: StringName! = nil
+    static var _method__pin_joint_set_param_0: StringName! = nil
+    static var _method__pin_joint_get_param_0: StringName! = nil
+    static var _method__damped_spring_joint_set_param_0: StringName! = nil
+    static var _method__damped_spring_joint_get_param_0: StringName! = nil
+    static var _method__joint_get_type_0: StringName! = nil
+    static var _method__free_rid_0: StringName! = nil
+    static var _method__set_active_0: StringName! = nil
+    static var _method__init_0: StringName! = nil
+    static var _method__step_0: StringName! = nil
+    static var _method__sync_0: StringName! = nil
+    static var _method__flush_queries_0: StringName! = nil
+    static var _method__end_sync_0: StringName! = nil
+    static var _method__finish_0: StringName! = nil
+    static var _method__is_flushing_queries_0: StringName! = nil
+    static var _method__get_process_info_0: StringName! = nil
+    static var _method_body_test_motion_is_excluding_body_4155700596: StringName! = nil
+    static var _method_body_test_motion_is_excluding_object_1116898809: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PhysicsServer2DExtension == nil)
         __godot_name_PhysicsServer2DExtension = StringName(from: "PhysicsServer2DExtension")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_body_test_motion_is_excluding_body_4155700596_name = StringName(from: "body_test_motion_is_excluding_body")
-        self._method_body_test_motion_is_excluding_body_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2DExtension._native_ptr(), _method_body_test_motion_is_excluding_body_4155700596_name._native_ptr(), 4155700596)
-        assert(PhysicsServer2DExtension._method_body_test_motion_is_excluding_body_4155700596 != nil)
-        let _method_body_test_motion_is_excluding_object_1116898809_name = StringName(from: "body_test_motion_is_excluding_object")
-        self._method_body_test_motion_is_excluding_object_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsServer2DExtension._native_ptr(), _method_body_test_motion_is_excluding_object_1116898809_name._native_ptr(), 1116898809)
-        assert(PhysicsServer2DExtension._method_body_test_motion_is_excluding_object_1116898809 != nil)
+        self._method_body_test_motion_is_excluding_body_4155700596 = StringName(from: "body_test_motion_is_excluding_body")
+        assert(self._method_body_test_motion_is_excluding_body_4155700596 != nil)
+        self._method_body_test_motion_is_excluding_object_1116898809 = StringName(from: "body_test_motion_is_excluding_object")
+        assert(self._method_body_test_motion_is_excluding_object_1116898809 != nil)
     }
 
     public func _world_boundary_shape_create() -> RID {
@@ -174,12 +173,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__world_boundary_shape_create_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
     }
     public func _separation_ray_shape_create() -> RID {
@@ -190,12 +184,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__separation_ray_shape_create_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
     }
     public func _segment_shape_create() -> RID {
@@ -206,12 +195,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__segment_shape_create_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
     }
     public func _circle_shape_create() -> RID {
@@ -222,12 +206,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__circle_shape_create_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
     }
     public func _rectangle_shape_create() -> RID {
@@ -238,12 +217,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__rectangle_shape_create_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
     }
     public func _capsule_shape_create() -> RID {
@@ -254,12 +228,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__capsule_shape_create_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
     }
     public func _convex_polygon_shape_create() -> RID {
@@ -270,12 +239,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__convex_polygon_shape_create_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
     }
     public func _concave_polygon_shape_create() -> RID {
@@ -286,12 +250,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__concave_polygon_shape_create_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
     }
     public func _shape_set_data(shape: RID, data: Variant)  {
@@ -303,12 +262,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(shape_native), .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shape_set_data_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _shape_set_custom_solver_bias(shape: RID, bias: Float64)  {
         withUnsafePointer(to: bias) { bias_native in
@@ -319,12 +273,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(shape_native), .init(bias_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shape_set_custom_solver_bias_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _shape_get_type(shape: RID) -> PhysicsServer2D.ShapeType {
@@ -336,12 +285,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shape_get_type_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PhysicsServer2D.ShapeType(godot: __resPtr.pointee)
     }
     public func _shape_get_data(shape: RID) -> Variant {
@@ -353,12 +297,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shape_get_data_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Variant(godot: __resPtr.pointee)
     }
     public func _shape_get_custom_solver_bias(shape: RID) -> Float64 {
@@ -371,12 +310,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shape_get_custom_solver_bias_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func _shape_collide(shape_A: RID, xform_A: Transform2D, motion_A: Vector2, shape_B: RID, xform_B: Transform2D, motion_B: Vector2, results: UnsafeMutableRawPointer, result_max: Int64, result_count: UnsafeMutablePointer<Int32>) -> UInt8 {
@@ -397,12 +331,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shape_collide_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
         }
@@ -416,12 +345,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__space_create_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
     }
     public func _space_set_active(space: RID, active: UInt8)  {
@@ -433,12 +357,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(space_native), .init(active_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__space_set_active_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _space_is_active(space: RID) -> UInt8 {
@@ -451,12 +370,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__space_is_active_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _space_set_param(space: RID, param: PhysicsServer2D.SpaceParameter, value: Float64)  {
@@ -469,12 +383,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(space_native), .init(param_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__space_set_param_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -489,12 +398,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__space_get_param_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
         }
     }
@@ -507,12 +411,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__space_get_direct_state_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PhysicsDirectSpaceState2D(godot: __resPtr.pointee)
     }
     public func _space_set_debug_contacts(space: RID, max_contacts: Int64)  {
@@ -524,12 +423,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(space_native), .init(max_contacts_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__space_set_debug_contacts_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _space_get_contacts(space: RID) -> PackedVector2Array {
@@ -541,12 +435,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__space_get_contacts_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedVector2Array(godot: __resPtr.pointee)
     }
     public func _space_get_contact_count(space: RID) -> Int64 {
@@ -559,12 +448,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__space_get_contact_count_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _area_create() -> RID {
@@ -575,12 +459,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_create_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
     }
     public func _area_set_space(area: RID, space: RID)  {
@@ -592,12 +471,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native), .init(space_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_set_space_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _area_get_space(area: RID) -> RID {
         let area_native = area._native_ptr()
@@ -608,12 +482,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_get_space_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
     }
     public func _area_add_shape(area: RID, shape: RID, transform: Transform2D, disabled: UInt8)  {
@@ -627,12 +496,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native), .init(shape_native), .init(transform_native), .init(disabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_add_shape_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _area_set_shape(area: RID, shape_idx: Int64, shape: RID)  {
@@ -645,12 +509,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native), .init(shape_idx_native), .init(shape_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_set_shape_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _area_set_shape_transform(area: RID, shape_idx: Int64, transform: Transform2D)  {
@@ -663,12 +522,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native), .init(shape_idx_native), .init(transform_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_set_shape_transform_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _area_set_shape_disabled(area: RID, shape_idx: Int64, disabled: UInt8)  {
@@ -681,12 +535,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native), .init(shape_idx_native), .init(disabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_set_shape_disabled_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -700,12 +549,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_get_shape_count_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _area_get_shape(area: RID, shape_idx: Int64) -> RID {
@@ -718,12 +562,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_get_shape_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
         }
     }
@@ -737,12 +576,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_get_shape_transform_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Transform2D(godot: __resPtr.pointee)
         }
     }
@@ -755,12 +589,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native), .init(shape_idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_remove_shape_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _area_clear_shapes(area: RID)  {
@@ -771,12 +600,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_clear_shapes_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _area_attach_object_instance_id(area: RID, id: Int64)  {
         withUnsafePointer(to: id) { id_native in
@@ -787,12 +611,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native), .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_attach_object_instance_id_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _area_get_object_instance_id(area: RID) -> Int64 {
@@ -805,12 +624,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_get_object_instance_id_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _area_attach_canvas_instance_id(area: RID, id: Int64)  {
@@ -822,12 +636,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native), .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_attach_canvas_instance_id_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _area_get_canvas_instance_id(area: RID) -> Int64 {
@@ -840,12 +649,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_get_canvas_instance_id_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _area_set_param(area: RID, param: PhysicsServer2D.AreaParameter, value: Variant)  {
@@ -858,12 +662,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native), .init(param_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_set_param_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _area_set_transform(area: RID, transform: Transform2D)  {
@@ -875,12 +674,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native), .init(transform_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_set_transform_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _area_get_param(area: RID, param: PhysicsServer2D.AreaParameter) -> Variant {
         withUnsafePointer(to: param.rawValue) { param_native in
@@ -892,12 +686,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_get_param_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Variant(godot: __resPtr.pointee)
         }
     }
@@ -910,12 +699,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_get_transform_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Transform2D(godot: __resPtr.pointee)
     }
     public func _area_set_collision_layer(area: RID, layer: Int64)  {
@@ -927,12 +711,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native), .init(layer_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_set_collision_layer_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _area_get_collision_layer(area: RID) -> Int64 {
@@ -945,12 +724,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_get_collision_layer_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _area_set_collision_mask(area: RID, mask: Int64)  {
@@ -962,12 +736,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native), .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_set_collision_mask_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _area_get_collision_mask(area: RID) -> Int64 {
@@ -980,12 +749,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_get_collision_mask_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _area_set_monitorable(area: RID, monitorable: UInt8)  {
@@ -997,12 +761,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native), .init(monitorable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_set_monitorable_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _area_set_pickable(area: RID, pickable: UInt8)  {
@@ -1014,12 +773,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native), .init(pickable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_set_pickable_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _area_set_monitor_callback(area: RID, callback: Callable)  {
@@ -1031,12 +785,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native), .init(callback_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_set_monitor_callback_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _area_set_area_monitor_callback(area: RID, callback: Callable)  {
         let callback_native = callback._native_ptr()
@@ -1047,12 +796,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(area_native), .init(callback_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__area_set_area_monitor_callback_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _body_create() -> RID {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -1062,12 +806,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_create_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
     }
     public func _body_set_space(body: RID, space: RID)  {
@@ -1079,12 +818,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(space_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_space_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _body_get_space(body: RID) -> RID {
         let body_native = body._native_ptr()
@@ -1095,12 +829,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_space_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
     }
     public func _body_set_mode(body: RID, mode: PhysicsServer2D.BodyMode)  {
@@ -1112,12 +841,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_mode_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_get_mode(body: RID) -> PhysicsServer2D.BodyMode {
@@ -1129,12 +853,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_mode_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PhysicsServer2D.BodyMode(godot: __resPtr.pointee)
     }
     public func _body_add_shape(body: RID, shape: RID, transform: Transform2D, disabled: UInt8)  {
@@ -1148,12 +867,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(shape_native), .init(transform_native), .init(disabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_add_shape_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_set_shape(body: RID, shape_idx: Int64, shape: RID)  {
@@ -1166,12 +880,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(shape_idx_native), .init(shape_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_shape_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_set_shape_transform(body: RID, shape_idx: Int64, transform: Transform2D)  {
@@ -1184,12 +893,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(shape_idx_native), .init(transform_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_shape_transform_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_get_shape_count(body: RID) -> Int64 {
@@ -1202,12 +906,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_shape_count_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _body_get_shape(body: RID, shape_idx: Int64) -> RID {
@@ -1220,12 +919,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_shape_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
         }
     }
@@ -1239,12 +933,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_shape_transform_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Transform2D(godot: __resPtr.pointee)
         }
     }
@@ -1258,12 +947,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(shape_idx_native), .init(disabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_shape_disabled_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -1278,12 +962,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(shape_idx_native), .init(enable_native), .init(margin_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_shape_as_one_way_collision_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
         }
@@ -1297,12 +976,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(shape_idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_remove_shape_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_clear_shapes(body: RID)  {
@@ -1313,12 +987,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_clear_shapes_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _body_attach_object_instance_id(body: RID, id: Int64)  {
         withUnsafePointer(to: id) { id_native in
@@ -1329,12 +998,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_attach_object_instance_id_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_get_object_instance_id(body: RID) -> Int64 {
@@ -1347,12 +1011,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_object_instance_id_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _body_attach_canvas_instance_id(body: RID, id: Int64)  {
@@ -1364,12 +1023,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_attach_canvas_instance_id_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_get_canvas_instance_id(body: RID) -> Int64 {
@@ -1382,12 +1036,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_canvas_instance_id_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _body_set_continuous_collision_detection_mode(body: RID, mode: PhysicsServer2D.CCDMode)  {
@@ -1399,12 +1048,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_continuous_collision_detection_mode_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_get_continuous_collision_detection_mode(body: RID) -> PhysicsServer2D.CCDMode {
@@ -1416,12 +1060,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_continuous_collision_detection_mode_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PhysicsServer2D.CCDMode(godot: __resPtr.pointee)
     }
     public func _body_set_collision_layer(body: RID, layer: Int64)  {
@@ -1433,12 +1072,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(layer_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_collision_layer_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_get_collision_layer(body: RID) -> Int64 {
@@ -1451,12 +1085,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_collision_layer_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _body_set_collision_mask(body: RID, mask: Int64)  {
@@ -1468,12 +1097,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_collision_mask_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_get_collision_mask(body: RID) -> Int64 {
@@ -1486,12 +1110,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_collision_mask_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _body_set_collision_priority(body: RID, priority: Float64)  {
@@ -1503,12 +1122,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(priority_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_collision_priority_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_get_collision_priority(body: RID) -> Float64 {
@@ -1521,12 +1135,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_collision_priority_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func _body_set_param(body: RID, param: PhysicsServer2D.BodyParameter, value: Variant)  {
@@ -1539,12 +1148,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(param_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_param_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_get_param(body: RID, param: PhysicsServer2D.BodyParameter) -> Variant {
@@ -1557,12 +1161,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_param_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Variant(godot: __resPtr.pointee)
         }
     }
@@ -1574,12 +1173,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_reset_mass_properties_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _body_set_state(body: RID, state: PhysicsServer2D.BodyState, value: Variant)  {
         withUnsafePointer(to: state.rawValue) { state_native in
@@ -1591,12 +1185,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(state_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_state_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_get_state(body: RID, state: PhysicsServer2D.BodyState) -> Variant {
@@ -1609,12 +1198,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_state_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Variant(godot: __resPtr.pointee)
         }
     }
@@ -1627,12 +1211,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(impulse_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_apply_central_impulse_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _body_apply_torque_impulse(body: RID, impulse: Float64)  {
         withUnsafePointer(to: impulse) { impulse_native in
@@ -1643,12 +1222,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(impulse_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_apply_torque_impulse_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_apply_impulse(body: RID, impulse: Vector2, position: Vector2)  {
@@ -1661,12 +1235,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(impulse_native), .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_apply_impulse_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _body_apply_central_force(body: RID, force: Vector2)  {
         let force_native = force._native_ptr()
@@ -1677,12 +1246,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(force_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_apply_central_force_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _body_apply_force(body: RID, force: Vector2, position: Vector2)  {
         let position_native = position._native_ptr()
@@ -1694,12 +1258,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(force_native), .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_apply_force_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _body_apply_torque(body: RID, torque: Float64)  {
         withUnsafePointer(to: torque) { torque_native in
@@ -1710,12 +1269,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(torque_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_apply_torque_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_add_constant_central_force(body: RID, force: Vector2)  {
@@ -1727,12 +1281,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(force_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_add_constant_central_force_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _body_add_constant_force(body: RID, force: Vector2, position: Vector2)  {
         let position_native = position._native_ptr()
@@ -1744,12 +1293,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(force_native), .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_add_constant_force_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _body_add_constant_torque(body: RID, torque: Float64)  {
         withUnsafePointer(to: torque) { torque_native in
@@ -1760,12 +1304,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(torque_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_add_constant_torque_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_set_constant_force(body: RID, force: Vector2)  {
@@ -1777,12 +1316,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(force_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_constant_force_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _body_get_constant_force(body: RID) -> Vector2 {
         let body_native = body._native_ptr()
@@ -1793,12 +1327,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_constant_force_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Vector2(godot: __resPtr.pointee)
     }
     public func _body_set_constant_torque(body: RID, torque: Float64)  {
@@ -1810,12 +1339,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(torque_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_constant_torque_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_get_constant_torque(body: RID) -> Float64 {
@@ -1828,12 +1352,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_constant_torque_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func _body_set_axis_velocity(body: RID, axis_velocity: Vector2)  {
@@ -1845,12 +1364,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(axis_velocity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_axis_velocity_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _body_add_collision_exception(body: RID, excepted_body: RID)  {
         let excepted_body_native = excepted_body._native_ptr()
@@ -1861,12 +1375,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(excepted_body_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_add_collision_exception_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _body_remove_collision_exception(body: RID, excepted_body: RID)  {
         let excepted_body_native = excepted_body._native_ptr()
@@ -1877,12 +1386,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(excepted_body_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_remove_collision_exception_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _body_get_collision_exceptions(body: RID) -> [RID] {
         let body_native = body._native_ptr()
@@ -1893,12 +1397,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_collision_exceptions_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return [RID](godot: __resPtr.pointee)
     }
     public func _body_set_max_contacts_reported(body: RID, amount: Int64)  {
@@ -1910,12 +1409,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(amount_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_max_contacts_reported_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_get_max_contacts_reported(body: RID) -> Int64 {
@@ -1928,12 +1422,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_max_contacts_reported_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _body_set_contacts_reported_depth_threshold(body: RID, threshold: Float64)  {
@@ -1945,12 +1434,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(threshold_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_contacts_reported_depth_threshold_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_get_contacts_reported_depth_threshold(body: RID) -> Float64 {
@@ -1963,12 +1447,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_contacts_reported_depth_threshold_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func _body_set_omit_force_integration(body: RID, enable: UInt8)  {
@@ -1980,12 +1459,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_omit_force_integration_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_is_omitting_force_integration(body: RID) -> UInt8 {
@@ -1998,12 +1472,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_is_omitting_force_integration_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _body_set_state_sync_callback(body: RID, callable: Callable)  {
@@ -2015,12 +1484,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(callable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_state_sync_callback_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _body_set_force_integration_callback(body: RID, callable: Callable, userdata: Variant)  {
         let userdata_native = userdata._native_ptr()
@@ -2032,12 +1496,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(callable_native), .init(userdata_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_force_integration_callback_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _body_collide_shape(body: RID, body_shape: Int64, shape: RID, shape_xform: Transform2D, motion: Vector2, results: UnsafeMutableRawPointer, result_max: Int64, result_count: UnsafeMutablePointer<Int32>) -> UInt8 {
         withUnsafePointer(to: result_count) { result_count_native in
@@ -2056,12 +1515,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_collide_shape_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
         }
@@ -2077,12 +1531,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(body_native), .init(pickable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_set_pickable_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _body_get_direct_state(body: RID) -> PhysicsDirectBodyState2D {
@@ -2094,12 +1543,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_get_direct_state_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PhysicsDirectBodyState2D(godot: __resPtr.pointee)
     }
     public func _body_test_motion(body: RID, from: Transform2D, motion: Vector2, margin: Float64, collide_separation_ray: UInt8, recovery_as_collision: UInt8, result: UnsafePointer<PhysicsServer2DExtensionMotionResult>) -> UInt8 {
@@ -2118,12 +1562,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__body_test_motion_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
         }
@@ -2138,12 +1577,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__joint_create_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
     }
     public func _joint_clear(joint: RID)  {
@@ -2154,12 +1588,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(joint_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__joint_clear_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _joint_set_param(joint: RID, param: PhysicsServer2D.JointParam, value: Float64)  {
         withUnsafePointer(to: value) { value_native in
@@ -2171,12 +1600,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(joint_native), .init(param_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__joint_set_param_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -2191,12 +1615,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__joint_get_param_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
         }
     }
@@ -2209,12 +1628,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(joint_native), .init(disable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__joint_disable_collisions_between_bodies_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _joint_is_disabled_collisions_between_bodies(joint: RID) -> UInt8 {
@@ -2227,12 +1641,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__joint_is_disabled_collisions_between_bodies_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _joint_make_pin(joint: RID, anchor: Vector2, body_a: RID, body_b: RID)  {
@@ -2246,12 +1655,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(joint_native), .init(anchor_native), .init(body_a_native), .init(body_b_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__joint_make_pin_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _joint_make_groove(joint: RID, a_groove1: Vector2, a_groove2: Vector2, b_anchor: Vector2, body_a: RID, body_b: RID)  {
         let body_b_native = body_b._native_ptr()
@@ -2266,12 +1670,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(joint_native), .init(a_groove1_native), .init(a_groove2_native), .init(b_anchor_native), .init(body_a_native), .init(body_b_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__joint_make_groove_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _joint_make_damped_spring(joint: RID, anchor_a: Vector2, anchor_b: Vector2, body_a: RID, body_b: RID)  {
         let body_b_native = body_b._native_ptr()
@@ -2285,12 +1684,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(joint_native), .init(anchor_a_native), .init(anchor_b_native), .init(body_a_native), .init(body_b_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__joint_make_damped_spring_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _pin_joint_set_param(joint: RID, param: PhysicsServer2D.PinJointParam, value: Float64)  {
         withUnsafePointer(to: value) { value_native in
@@ -2302,12 +1696,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(joint_native), .init(param_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__pin_joint_set_param_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -2322,12 +1711,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__pin_joint_get_param_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
         }
     }
@@ -2341,12 +1725,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(joint_native), .init(param_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__damped_spring_joint_set_param_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -2361,12 +1740,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__damped_spring_joint_get_param_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
         }
     }
@@ -2379,12 +1753,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__joint_get_type_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PhysicsServer2D.JointType(godot: __resPtr.pointee)
     }
     public func _free_rid(rid: RID)  {
@@ -2395,12 +1764,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(rid_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__free_rid_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _set_active(active: UInt8)  {
         withUnsafePointer(to: active) { active_native in
@@ -2410,12 +1774,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(active_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__set_active_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _init()  {
@@ -2425,12 +1784,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__init_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _step(step: Float64)  {
         withUnsafePointer(to: step) { step_native in
@@ -2440,12 +1794,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 .init(step_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__step_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _sync()  {
@@ -2455,12 +1804,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__sync_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _flush_queries()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -2469,12 +1813,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__flush_queries_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _end_sync()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -2483,12 +1822,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__end_sync_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _finish()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -2497,12 +1831,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__finish_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _is_flushing_queries() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -2513,12 +1842,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__is_flushing_queries_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _get_process_info(process_info: PhysicsServer2D.ProcessInfo) -> Int64 {
@@ -2531,12 +1855,7 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_process_info_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
         }
     }
@@ -2550,8 +1869,13 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_body_test_motion_is_excluding_body_4155700596,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_body_test_motion_is_excluding_body_4155700596._native_ptr(),
+                    4155700596)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2568,8 +1892,13 @@ open class PhysicsServer2DExtension : PhysicsServer2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_body_test_motion_is_excluding_object_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_body_test_motion_is_excluding_object_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

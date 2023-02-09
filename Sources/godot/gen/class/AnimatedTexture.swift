@@ -17,71 +17,58 @@ open class AnimatedTexture : Texture2D {
 
     public override class var __godot_name: StringName { __godot_name_AnimatedTexture }
 
-    static var _method_set_frames_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_frames_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_current_frame_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_current_frame_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_pause_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pause_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_one_shot_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_one_shot_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_speed_scale_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_speed_scale_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_frame_texture_666127730: GDExtensionMethodBindPtr! = nil
-    static var _method_get_frame_texture_3536238170: GDExtensionMethodBindPtr! = nil
-    static var _method_set_frame_duration_1602489585: GDExtensionMethodBindPtr! = nil
-    static var _method_get_frame_duration_2339986948: GDExtensionMethodBindPtr! = nil
+    static var _method_set_frames_1286410249: StringName! = nil
+    static var _method_get_frames_3905245786: StringName! = nil
+    static var _method_set_current_frame_1286410249: StringName! = nil
+    static var _method_get_current_frame_3905245786: StringName! = nil
+    static var _method_set_pause_2586408642: StringName! = nil
+    static var _method_get_pause_36873697: StringName! = nil
+    static var _method_set_one_shot_2586408642: StringName! = nil
+    static var _method_get_one_shot_36873697: StringName! = nil
+    static var _method_set_speed_scale_373806689: StringName! = nil
+    static var _method_get_speed_scale_1740695150: StringName! = nil
+    static var _method_set_frame_texture_666127730: StringName! = nil
+    static var _method_get_frame_texture_3536238170: StringName! = nil
+    static var _method_set_frame_duration_1602489585: StringName! = nil
+    static var _method_get_frame_duration_2339986948: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AnimatedTexture == nil)
         __godot_name_AnimatedTexture = StringName(from: "AnimatedTexture")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_frames_1286410249_name = StringName(from: "set_frames")
-        self._method_set_frames_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedTexture._native_ptr(), _method_set_frames_1286410249_name._native_ptr(), 1286410249)
-        assert(AnimatedTexture._method_set_frames_1286410249 != nil)
-        let _method_get_frames_3905245786_name = StringName(from: "get_frames")
-        self._method_get_frames_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedTexture._native_ptr(), _method_get_frames_3905245786_name._native_ptr(), 3905245786)
-        assert(AnimatedTexture._method_get_frames_3905245786 != nil)
-        let _method_set_current_frame_1286410249_name = StringName(from: "set_current_frame")
-        self._method_set_current_frame_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedTexture._native_ptr(), _method_set_current_frame_1286410249_name._native_ptr(), 1286410249)
-        assert(AnimatedTexture._method_set_current_frame_1286410249 != nil)
-        let _method_get_current_frame_3905245786_name = StringName(from: "get_current_frame")
-        self._method_get_current_frame_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedTexture._native_ptr(), _method_get_current_frame_3905245786_name._native_ptr(), 3905245786)
-        assert(AnimatedTexture._method_get_current_frame_3905245786 != nil)
-        let _method_set_pause_2586408642_name = StringName(from: "set_pause")
-        self._method_set_pause_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedTexture._native_ptr(), _method_set_pause_2586408642_name._native_ptr(), 2586408642)
-        assert(AnimatedTexture._method_set_pause_2586408642 != nil)
-        let _method_get_pause_36873697_name = StringName(from: "get_pause")
-        self._method_get_pause_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedTexture._native_ptr(), _method_get_pause_36873697_name._native_ptr(), 36873697)
-        assert(AnimatedTexture._method_get_pause_36873697 != nil)
-        let _method_set_one_shot_2586408642_name = StringName(from: "set_one_shot")
-        self._method_set_one_shot_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedTexture._native_ptr(), _method_set_one_shot_2586408642_name._native_ptr(), 2586408642)
-        assert(AnimatedTexture._method_set_one_shot_2586408642 != nil)
-        let _method_get_one_shot_36873697_name = StringName(from: "get_one_shot")
-        self._method_get_one_shot_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedTexture._native_ptr(), _method_get_one_shot_36873697_name._native_ptr(), 36873697)
-        assert(AnimatedTexture._method_get_one_shot_36873697 != nil)
-        let _method_set_speed_scale_373806689_name = StringName(from: "set_speed_scale")
-        self._method_set_speed_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedTexture._native_ptr(), _method_set_speed_scale_373806689_name._native_ptr(), 373806689)
-        assert(AnimatedTexture._method_set_speed_scale_373806689 != nil)
-        let _method_get_speed_scale_1740695150_name = StringName(from: "get_speed_scale")
-        self._method_get_speed_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedTexture._native_ptr(), _method_get_speed_scale_1740695150_name._native_ptr(), 1740695150)
-        assert(AnimatedTexture._method_get_speed_scale_1740695150 != nil)
-        let _method_set_frame_texture_666127730_name = StringName(from: "set_frame_texture")
-        self._method_set_frame_texture_666127730 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedTexture._native_ptr(), _method_set_frame_texture_666127730_name._native_ptr(), 666127730)
-        assert(AnimatedTexture._method_set_frame_texture_666127730 != nil)
-        let _method_get_frame_texture_3536238170_name = StringName(from: "get_frame_texture")
-        self._method_get_frame_texture_3536238170 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedTexture._native_ptr(), _method_get_frame_texture_3536238170_name._native_ptr(), 3536238170)
-        assert(AnimatedTexture._method_get_frame_texture_3536238170 != nil)
-        let _method_set_frame_duration_1602489585_name = StringName(from: "set_frame_duration")
-        self._method_set_frame_duration_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedTexture._native_ptr(), _method_set_frame_duration_1602489585_name._native_ptr(), 1602489585)
-        assert(AnimatedTexture._method_set_frame_duration_1602489585 != nil)
-        let _method_get_frame_duration_2339986948_name = StringName(from: "get_frame_duration")
-        self._method_get_frame_duration_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedTexture._native_ptr(), _method_get_frame_duration_2339986948_name._native_ptr(), 2339986948)
-        assert(AnimatedTexture._method_get_frame_duration_2339986948 != nil)
+        self._method_set_frames_1286410249 = StringName(from: "set_frames")
+        assert(self._method_set_frames_1286410249 != nil)
+        self._method_get_frames_3905245786 = StringName(from: "get_frames")
+        assert(self._method_get_frames_3905245786 != nil)
+        self._method_set_current_frame_1286410249 = StringName(from: "set_current_frame")
+        assert(self._method_set_current_frame_1286410249 != nil)
+        self._method_get_current_frame_3905245786 = StringName(from: "get_current_frame")
+        assert(self._method_get_current_frame_3905245786 != nil)
+        self._method_set_pause_2586408642 = StringName(from: "set_pause")
+        assert(self._method_set_pause_2586408642 != nil)
+        self._method_get_pause_36873697 = StringName(from: "get_pause")
+        assert(self._method_get_pause_36873697 != nil)
+        self._method_set_one_shot_2586408642 = StringName(from: "set_one_shot")
+        assert(self._method_set_one_shot_2586408642 != nil)
+        self._method_get_one_shot_36873697 = StringName(from: "get_one_shot")
+        assert(self._method_get_one_shot_36873697 != nil)
+        self._method_set_speed_scale_373806689 = StringName(from: "set_speed_scale")
+        assert(self._method_set_speed_scale_373806689 != nil)
+        self._method_get_speed_scale_1740695150 = StringName(from: "get_speed_scale")
+        assert(self._method_get_speed_scale_1740695150 != nil)
+        self._method_set_frame_texture_666127730 = StringName(from: "set_frame_texture")
+        assert(self._method_set_frame_texture_666127730 != nil)
+        self._method_get_frame_texture_3536238170 = StringName(from: "get_frame_texture")
+        assert(self._method_get_frame_texture_3536238170 != nil)
+        self._method_set_frame_duration_1602489585 = StringName(from: "set_frame_duration")
+        assert(self._method_set_frame_duration_1602489585 != nil)
+        self._method_get_frame_duration_2339986948 = StringName(from: "get_frame_duration")
+        assert(self._method_get_frame_duration_2339986948 != nil)
     }
 
     public func set_frames(frames: Int64)  {
@@ -92,8 +79,13 @@ open class AnimatedTexture : Texture2D {
                 .init(frames_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_frames_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_frames_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -109,8 +101,13 @@ open class AnimatedTexture : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_frames_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_frames_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -125,8 +122,13 @@ open class AnimatedTexture : Texture2D {
                 .init(frame_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_current_frame_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_current_frame_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -142,8 +144,13 @@ open class AnimatedTexture : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_current_frame_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_current_frame_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -158,8 +165,13 @@ open class AnimatedTexture : Texture2D {
                 .init(pause_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pause_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pause_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -175,8 +187,13 @@ open class AnimatedTexture : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pause_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pause_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -191,8 +208,13 @@ open class AnimatedTexture : Texture2D {
                 .init(one_shot_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_one_shot_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_one_shot_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -208,8 +230,13 @@ open class AnimatedTexture : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_one_shot_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_one_shot_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -224,8 +251,13 @@ open class AnimatedTexture : Texture2D {
                 .init(scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_speed_scale_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_speed_scale_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -241,8 +273,13 @@ open class AnimatedTexture : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_speed_scale_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_speed_scale_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -258,8 +295,13 @@ open class AnimatedTexture : Texture2D {
                 .init(frame_native), .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_frame_texture_666127730,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_frame_texture_666127730._native_ptr(),
+                    666127730)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -275,8 +317,13 @@ open class AnimatedTexture : Texture2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_frame_texture_3536238170,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_frame_texture_3536238170._native_ptr(),
+                    3536238170)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -293,8 +340,13 @@ open class AnimatedTexture : Texture2D {
                 .init(frame_native), .init(duration_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_frame_duration_1602489585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_frame_duration_1602489585._native_ptr(),
+                    1602489585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -312,8 +364,13 @@ open class AnimatedTexture : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_frame_duration_2339986948,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_frame_duration_2339986948._native_ptr(),
+                    2339986948)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

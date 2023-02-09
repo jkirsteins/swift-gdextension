@@ -33,143 +33,112 @@ open class GeometryInstance3D : VisualInstance3D {
 
     public override class var __godot_name: StringName { __godot_name_GeometryInstance3D }
 
-    static var _method_set_material_override_2757459619: GDExtensionMethodBindPtr! = nil
-    static var _method_get_material_override_5934680: GDExtensionMethodBindPtr! = nil
-    static var _method_set_material_overlay_2757459619: GDExtensionMethodBindPtr! = nil
-    static var _method_get_material_overlay_5934680: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cast_shadows_setting_856677339: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cast_shadows_setting_3383019359: GDExtensionMethodBindPtr! = nil
-    static var _method_set_lod_bias_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_lod_bias_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_transparency_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_transparency_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_visibility_range_end_margin_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_visibility_range_end_margin_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_visibility_range_end_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_visibility_range_end_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_visibility_range_begin_margin_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_visibility_range_begin_margin_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_visibility_range_begin_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_visibility_range_begin_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_visibility_range_fade_mode_1440117808: GDExtensionMethodBindPtr! = nil
-    static var _method_get_visibility_range_fade_mode_2067221882: GDExtensionMethodBindPtr! = nil
-    static var _method_set_instance_shader_parameter_3776071444: GDExtensionMethodBindPtr! = nil
-    static var _method_get_instance_shader_parameter_2760726917: GDExtensionMethodBindPtr! = nil
-    static var _method_set_extra_cull_margin_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_extra_cull_margin_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_lightmap_scale_2462696582: GDExtensionMethodBindPtr! = nil
-    static var _method_get_lightmap_scale_798767852: GDExtensionMethodBindPtr! = nil
-    static var _method_set_gi_mode_2548557163: GDExtensionMethodBindPtr! = nil
-    static var _method_get_gi_mode_2188566509: GDExtensionMethodBindPtr! = nil
-    static var _method_set_ignore_occlusion_culling_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_ignoring_occlusion_culling_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_set_custom_aabb_259215842: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_aabb_1068685055: GDExtensionMethodBindPtr! = nil
+    static var _method_set_material_override_2757459619: StringName! = nil
+    static var _method_get_material_override_5934680: StringName! = nil
+    static var _method_set_material_overlay_2757459619: StringName! = nil
+    static var _method_get_material_overlay_5934680: StringName! = nil
+    static var _method_set_cast_shadows_setting_856677339: StringName! = nil
+    static var _method_get_cast_shadows_setting_3383019359: StringName! = nil
+    static var _method_set_lod_bias_373806689: StringName! = nil
+    static var _method_get_lod_bias_1740695150: StringName! = nil
+    static var _method_set_transparency_373806689: StringName! = nil
+    static var _method_get_transparency_1740695150: StringName! = nil
+    static var _method_set_visibility_range_end_margin_373806689: StringName! = nil
+    static var _method_get_visibility_range_end_margin_1740695150: StringName! = nil
+    static var _method_set_visibility_range_end_373806689: StringName! = nil
+    static var _method_get_visibility_range_end_1740695150: StringName! = nil
+    static var _method_set_visibility_range_begin_margin_373806689: StringName! = nil
+    static var _method_get_visibility_range_begin_margin_1740695150: StringName! = nil
+    static var _method_set_visibility_range_begin_373806689: StringName! = nil
+    static var _method_get_visibility_range_begin_1740695150: StringName! = nil
+    static var _method_set_visibility_range_fade_mode_1440117808: StringName! = nil
+    static var _method_get_visibility_range_fade_mode_2067221882: StringName! = nil
+    static var _method_set_instance_shader_parameter_3776071444: StringName! = nil
+    static var _method_get_instance_shader_parameter_2760726917: StringName! = nil
+    static var _method_set_extra_cull_margin_373806689: StringName! = nil
+    static var _method_get_extra_cull_margin_1740695150: StringName! = nil
+    static var _method_set_lightmap_scale_2462696582: StringName! = nil
+    static var _method_get_lightmap_scale_798767852: StringName! = nil
+    static var _method_set_gi_mode_2548557163: StringName! = nil
+    static var _method_get_gi_mode_2188566509: StringName! = nil
+    static var _method_set_ignore_occlusion_culling_2586408642: StringName! = nil
+    static var _method_is_ignoring_occlusion_culling_2240911060: StringName! = nil
+    static var _method_set_custom_aabb_259215842: StringName! = nil
+    static var _method_get_custom_aabb_1068685055: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_GeometryInstance3D == nil)
         __godot_name_GeometryInstance3D = StringName(from: "GeometryInstance3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_material_override_2757459619_name = StringName(from: "set_material_override")
-        self._method_set_material_override_2757459619 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_set_material_override_2757459619_name._native_ptr(), 2757459619)
-        assert(GeometryInstance3D._method_set_material_override_2757459619 != nil)
-        let _method_get_material_override_5934680_name = StringName(from: "get_material_override")
-        self._method_get_material_override_5934680 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_get_material_override_5934680_name._native_ptr(), 5934680)
-        assert(GeometryInstance3D._method_get_material_override_5934680 != nil)
-        let _method_set_material_overlay_2757459619_name = StringName(from: "set_material_overlay")
-        self._method_set_material_overlay_2757459619 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_set_material_overlay_2757459619_name._native_ptr(), 2757459619)
-        assert(GeometryInstance3D._method_set_material_overlay_2757459619 != nil)
-        let _method_get_material_overlay_5934680_name = StringName(from: "get_material_overlay")
-        self._method_get_material_overlay_5934680 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_get_material_overlay_5934680_name._native_ptr(), 5934680)
-        assert(GeometryInstance3D._method_get_material_overlay_5934680 != nil)
-        let _method_set_cast_shadows_setting_856677339_name = StringName(from: "set_cast_shadows_setting")
-        self._method_set_cast_shadows_setting_856677339 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_set_cast_shadows_setting_856677339_name._native_ptr(), 856677339)
-        assert(GeometryInstance3D._method_set_cast_shadows_setting_856677339 != nil)
-        let _method_get_cast_shadows_setting_3383019359_name = StringName(from: "get_cast_shadows_setting")
-        self._method_get_cast_shadows_setting_3383019359 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_get_cast_shadows_setting_3383019359_name._native_ptr(), 3383019359)
-        assert(GeometryInstance3D._method_get_cast_shadows_setting_3383019359 != nil)
-        let _method_set_lod_bias_373806689_name = StringName(from: "set_lod_bias")
-        self._method_set_lod_bias_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_set_lod_bias_373806689_name._native_ptr(), 373806689)
-        assert(GeometryInstance3D._method_set_lod_bias_373806689 != nil)
-        let _method_get_lod_bias_1740695150_name = StringName(from: "get_lod_bias")
-        self._method_get_lod_bias_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_get_lod_bias_1740695150_name._native_ptr(), 1740695150)
-        assert(GeometryInstance3D._method_get_lod_bias_1740695150 != nil)
-        let _method_set_transparency_373806689_name = StringName(from: "set_transparency")
-        self._method_set_transparency_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_set_transparency_373806689_name._native_ptr(), 373806689)
-        assert(GeometryInstance3D._method_set_transparency_373806689 != nil)
-        let _method_get_transparency_1740695150_name = StringName(from: "get_transparency")
-        self._method_get_transparency_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_get_transparency_1740695150_name._native_ptr(), 1740695150)
-        assert(GeometryInstance3D._method_get_transparency_1740695150 != nil)
-        let _method_set_visibility_range_end_margin_373806689_name = StringName(from: "set_visibility_range_end_margin")
-        self._method_set_visibility_range_end_margin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_set_visibility_range_end_margin_373806689_name._native_ptr(), 373806689)
-        assert(GeometryInstance3D._method_set_visibility_range_end_margin_373806689 != nil)
-        let _method_get_visibility_range_end_margin_1740695150_name = StringName(from: "get_visibility_range_end_margin")
-        self._method_get_visibility_range_end_margin_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_get_visibility_range_end_margin_1740695150_name._native_ptr(), 1740695150)
-        assert(GeometryInstance3D._method_get_visibility_range_end_margin_1740695150 != nil)
-        let _method_set_visibility_range_end_373806689_name = StringName(from: "set_visibility_range_end")
-        self._method_set_visibility_range_end_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_set_visibility_range_end_373806689_name._native_ptr(), 373806689)
-        assert(GeometryInstance3D._method_set_visibility_range_end_373806689 != nil)
-        let _method_get_visibility_range_end_1740695150_name = StringName(from: "get_visibility_range_end")
-        self._method_get_visibility_range_end_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_get_visibility_range_end_1740695150_name._native_ptr(), 1740695150)
-        assert(GeometryInstance3D._method_get_visibility_range_end_1740695150 != nil)
-        let _method_set_visibility_range_begin_margin_373806689_name = StringName(from: "set_visibility_range_begin_margin")
-        self._method_set_visibility_range_begin_margin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_set_visibility_range_begin_margin_373806689_name._native_ptr(), 373806689)
-        assert(GeometryInstance3D._method_set_visibility_range_begin_margin_373806689 != nil)
-        let _method_get_visibility_range_begin_margin_1740695150_name = StringName(from: "get_visibility_range_begin_margin")
-        self._method_get_visibility_range_begin_margin_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_get_visibility_range_begin_margin_1740695150_name._native_ptr(), 1740695150)
-        assert(GeometryInstance3D._method_get_visibility_range_begin_margin_1740695150 != nil)
-        let _method_set_visibility_range_begin_373806689_name = StringName(from: "set_visibility_range_begin")
-        self._method_set_visibility_range_begin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_set_visibility_range_begin_373806689_name._native_ptr(), 373806689)
-        assert(GeometryInstance3D._method_set_visibility_range_begin_373806689 != nil)
-        let _method_get_visibility_range_begin_1740695150_name = StringName(from: "get_visibility_range_begin")
-        self._method_get_visibility_range_begin_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_get_visibility_range_begin_1740695150_name._native_ptr(), 1740695150)
-        assert(GeometryInstance3D._method_get_visibility_range_begin_1740695150 != nil)
-        let _method_set_visibility_range_fade_mode_1440117808_name = StringName(from: "set_visibility_range_fade_mode")
-        self._method_set_visibility_range_fade_mode_1440117808 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_set_visibility_range_fade_mode_1440117808_name._native_ptr(), 1440117808)
-        assert(GeometryInstance3D._method_set_visibility_range_fade_mode_1440117808 != nil)
-        let _method_get_visibility_range_fade_mode_2067221882_name = StringName(from: "get_visibility_range_fade_mode")
-        self._method_get_visibility_range_fade_mode_2067221882 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_get_visibility_range_fade_mode_2067221882_name._native_ptr(), 2067221882)
-        assert(GeometryInstance3D._method_get_visibility_range_fade_mode_2067221882 != nil)
-        let _method_set_instance_shader_parameter_3776071444_name = StringName(from: "set_instance_shader_parameter")
-        self._method_set_instance_shader_parameter_3776071444 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_set_instance_shader_parameter_3776071444_name._native_ptr(), 3776071444)
-        assert(GeometryInstance3D._method_set_instance_shader_parameter_3776071444 != nil)
-        let _method_get_instance_shader_parameter_2760726917_name = StringName(from: "get_instance_shader_parameter")
-        self._method_get_instance_shader_parameter_2760726917 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_get_instance_shader_parameter_2760726917_name._native_ptr(), 2760726917)
-        assert(GeometryInstance3D._method_get_instance_shader_parameter_2760726917 != nil)
-        let _method_set_extra_cull_margin_373806689_name = StringName(from: "set_extra_cull_margin")
-        self._method_set_extra_cull_margin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_set_extra_cull_margin_373806689_name._native_ptr(), 373806689)
-        assert(GeometryInstance3D._method_set_extra_cull_margin_373806689 != nil)
-        let _method_get_extra_cull_margin_1740695150_name = StringName(from: "get_extra_cull_margin")
-        self._method_get_extra_cull_margin_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_get_extra_cull_margin_1740695150_name._native_ptr(), 1740695150)
-        assert(GeometryInstance3D._method_get_extra_cull_margin_1740695150 != nil)
-        let _method_set_lightmap_scale_2462696582_name = StringName(from: "set_lightmap_scale")
-        self._method_set_lightmap_scale_2462696582 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_set_lightmap_scale_2462696582_name._native_ptr(), 2462696582)
-        assert(GeometryInstance3D._method_set_lightmap_scale_2462696582 != nil)
-        let _method_get_lightmap_scale_798767852_name = StringName(from: "get_lightmap_scale")
-        self._method_get_lightmap_scale_798767852 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_get_lightmap_scale_798767852_name._native_ptr(), 798767852)
-        assert(GeometryInstance3D._method_get_lightmap_scale_798767852 != nil)
-        let _method_set_gi_mode_2548557163_name = StringName(from: "set_gi_mode")
-        self._method_set_gi_mode_2548557163 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_set_gi_mode_2548557163_name._native_ptr(), 2548557163)
-        assert(GeometryInstance3D._method_set_gi_mode_2548557163 != nil)
-        let _method_get_gi_mode_2188566509_name = StringName(from: "get_gi_mode")
-        self._method_get_gi_mode_2188566509 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_get_gi_mode_2188566509_name._native_ptr(), 2188566509)
-        assert(GeometryInstance3D._method_get_gi_mode_2188566509 != nil)
-        let _method_set_ignore_occlusion_culling_2586408642_name = StringName(from: "set_ignore_occlusion_culling")
-        self._method_set_ignore_occlusion_culling_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_set_ignore_occlusion_culling_2586408642_name._native_ptr(), 2586408642)
-        assert(GeometryInstance3D._method_set_ignore_occlusion_culling_2586408642 != nil)
-        let _method_is_ignoring_occlusion_culling_2240911060_name = StringName(from: "is_ignoring_occlusion_culling")
-        self._method_is_ignoring_occlusion_culling_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_is_ignoring_occlusion_culling_2240911060_name._native_ptr(), 2240911060)
-        assert(GeometryInstance3D._method_is_ignoring_occlusion_culling_2240911060 != nil)
-        let _method_set_custom_aabb_259215842_name = StringName(from: "set_custom_aabb")
-        self._method_set_custom_aabb_259215842 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_set_custom_aabb_259215842_name._native_ptr(), 259215842)
-        assert(GeometryInstance3D._method_set_custom_aabb_259215842 != nil)
-        let _method_get_custom_aabb_1068685055_name = StringName(from: "get_custom_aabb")
-        self._method_get_custom_aabb_1068685055 = self.interface.pointee.classdb_get_method_bind(__godot_name_GeometryInstance3D._native_ptr(), _method_get_custom_aabb_1068685055_name._native_ptr(), 1068685055)
-        assert(GeometryInstance3D._method_get_custom_aabb_1068685055 != nil)
+        self._method_set_material_override_2757459619 = StringName(from: "set_material_override")
+        assert(self._method_set_material_override_2757459619 != nil)
+        self._method_get_material_override_5934680 = StringName(from: "get_material_override")
+        assert(self._method_get_material_override_5934680 != nil)
+        self._method_set_material_overlay_2757459619 = StringName(from: "set_material_overlay")
+        assert(self._method_set_material_overlay_2757459619 != nil)
+        self._method_get_material_overlay_5934680 = StringName(from: "get_material_overlay")
+        assert(self._method_get_material_overlay_5934680 != nil)
+        self._method_set_cast_shadows_setting_856677339 = StringName(from: "set_cast_shadows_setting")
+        assert(self._method_set_cast_shadows_setting_856677339 != nil)
+        self._method_get_cast_shadows_setting_3383019359 = StringName(from: "get_cast_shadows_setting")
+        assert(self._method_get_cast_shadows_setting_3383019359 != nil)
+        self._method_set_lod_bias_373806689 = StringName(from: "set_lod_bias")
+        assert(self._method_set_lod_bias_373806689 != nil)
+        self._method_get_lod_bias_1740695150 = StringName(from: "get_lod_bias")
+        assert(self._method_get_lod_bias_1740695150 != nil)
+        self._method_set_transparency_373806689 = StringName(from: "set_transparency")
+        assert(self._method_set_transparency_373806689 != nil)
+        self._method_get_transparency_1740695150 = StringName(from: "get_transparency")
+        assert(self._method_get_transparency_1740695150 != nil)
+        self._method_set_visibility_range_end_margin_373806689 = StringName(from: "set_visibility_range_end_margin")
+        assert(self._method_set_visibility_range_end_margin_373806689 != nil)
+        self._method_get_visibility_range_end_margin_1740695150 = StringName(from: "get_visibility_range_end_margin")
+        assert(self._method_get_visibility_range_end_margin_1740695150 != nil)
+        self._method_set_visibility_range_end_373806689 = StringName(from: "set_visibility_range_end")
+        assert(self._method_set_visibility_range_end_373806689 != nil)
+        self._method_get_visibility_range_end_1740695150 = StringName(from: "get_visibility_range_end")
+        assert(self._method_get_visibility_range_end_1740695150 != nil)
+        self._method_set_visibility_range_begin_margin_373806689 = StringName(from: "set_visibility_range_begin_margin")
+        assert(self._method_set_visibility_range_begin_margin_373806689 != nil)
+        self._method_get_visibility_range_begin_margin_1740695150 = StringName(from: "get_visibility_range_begin_margin")
+        assert(self._method_get_visibility_range_begin_margin_1740695150 != nil)
+        self._method_set_visibility_range_begin_373806689 = StringName(from: "set_visibility_range_begin")
+        assert(self._method_set_visibility_range_begin_373806689 != nil)
+        self._method_get_visibility_range_begin_1740695150 = StringName(from: "get_visibility_range_begin")
+        assert(self._method_get_visibility_range_begin_1740695150 != nil)
+        self._method_set_visibility_range_fade_mode_1440117808 = StringName(from: "set_visibility_range_fade_mode")
+        assert(self._method_set_visibility_range_fade_mode_1440117808 != nil)
+        self._method_get_visibility_range_fade_mode_2067221882 = StringName(from: "get_visibility_range_fade_mode")
+        assert(self._method_get_visibility_range_fade_mode_2067221882 != nil)
+        self._method_set_instance_shader_parameter_3776071444 = StringName(from: "set_instance_shader_parameter")
+        assert(self._method_set_instance_shader_parameter_3776071444 != nil)
+        self._method_get_instance_shader_parameter_2760726917 = StringName(from: "get_instance_shader_parameter")
+        assert(self._method_get_instance_shader_parameter_2760726917 != nil)
+        self._method_set_extra_cull_margin_373806689 = StringName(from: "set_extra_cull_margin")
+        assert(self._method_set_extra_cull_margin_373806689 != nil)
+        self._method_get_extra_cull_margin_1740695150 = StringName(from: "get_extra_cull_margin")
+        assert(self._method_get_extra_cull_margin_1740695150 != nil)
+        self._method_set_lightmap_scale_2462696582 = StringName(from: "set_lightmap_scale")
+        assert(self._method_set_lightmap_scale_2462696582 != nil)
+        self._method_get_lightmap_scale_798767852 = StringName(from: "get_lightmap_scale")
+        assert(self._method_get_lightmap_scale_798767852 != nil)
+        self._method_set_gi_mode_2548557163 = StringName(from: "set_gi_mode")
+        assert(self._method_set_gi_mode_2548557163 != nil)
+        self._method_get_gi_mode_2188566509 = StringName(from: "get_gi_mode")
+        assert(self._method_get_gi_mode_2188566509 != nil)
+        self._method_set_ignore_occlusion_culling_2586408642 = StringName(from: "set_ignore_occlusion_culling")
+        assert(self._method_set_ignore_occlusion_culling_2586408642 != nil)
+        self._method_is_ignoring_occlusion_culling_2240911060 = StringName(from: "is_ignoring_occlusion_culling")
+        assert(self._method_is_ignoring_occlusion_culling_2240911060 != nil)
+        self._method_set_custom_aabb_259215842 = StringName(from: "set_custom_aabb")
+        assert(self._method_set_custom_aabb_259215842 != nil)
+        self._method_get_custom_aabb_1068685055 = StringName(from: "get_custom_aabb")
+        assert(self._method_get_custom_aabb_1068685055 != nil)
     }
 
     public func set_material_override(material: Material)  {
@@ -180,8 +149,13 @@ open class GeometryInstance3D : VisualInstance3D {
                 .init(material_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_material_override_2757459619,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_material_override_2757459619._native_ptr(),
+                    2757459619)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -195,8 +169,13 @@ open class GeometryInstance3D : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_material_override_5934680,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_material_override_5934680._native_ptr(),
+                    5934680)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -211,8 +190,13 @@ open class GeometryInstance3D : VisualInstance3D {
                 .init(material_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_material_overlay_2757459619,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_material_overlay_2757459619._native_ptr(),
+                    2757459619)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -226,8 +210,13 @@ open class GeometryInstance3D : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_material_overlay_5934680,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_material_overlay_5934680._native_ptr(),
+                    5934680)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -242,8 +231,13 @@ open class GeometryInstance3D : VisualInstance3D {
                 .init(shadow_casting_setting_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cast_shadows_setting_856677339,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cast_shadows_setting_856677339._native_ptr(),
+                    856677339)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -258,8 +252,13 @@ open class GeometryInstance3D : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cast_shadows_setting_3383019359,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cast_shadows_setting_3383019359._native_ptr(),
+                    3383019359)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -274,8 +273,13 @@ open class GeometryInstance3D : VisualInstance3D {
                 .init(bias_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_lod_bias_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_lod_bias_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -291,8 +295,13 @@ open class GeometryInstance3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_lod_bias_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_lod_bias_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -307,8 +316,13 @@ open class GeometryInstance3D : VisualInstance3D {
                 .init(transparency_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_transparency_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_transparency_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -324,8 +338,13 @@ open class GeometryInstance3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_transparency_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_transparency_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -340,8 +359,13 @@ open class GeometryInstance3D : VisualInstance3D {
                 .init(distance_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_visibility_range_end_margin_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_visibility_range_end_margin_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -357,8 +381,13 @@ open class GeometryInstance3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_visibility_range_end_margin_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_visibility_range_end_margin_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -373,8 +402,13 @@ open class GeometryInstance3D : VisualInstance3D {
                 .init(distance_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_visibility_range_end_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_visibility_range_end_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -390,8 +424,13 @@ open class GeometryInstance3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_visibility_range_end_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_visibility_range_end_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -406,8 +445,13 @@ open class GeometryInstance3D : VisualInstance3D {
                 .init(distance_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_visibility_range_begin_margin_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_visibility_range_begin_margin_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -423,8 +467,13 @@ open class GeometryInstance3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_visibility_range_begin_margin_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_visibility_range_begin_margin_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -439,8 +488,13 @@ open class GeometryInstance3D : VisualInstance3D {
                 .init(distance_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_visibility_range_begin_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_visibility_range_begin_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -456,8 +510,13 @@ open class GeometryInstance3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_visibility_range_begin_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_visibility_range_begin_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -472,8 +531,13 @@ open class GeometryInstance3D : VisualInstance3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_visibility_range_fade_mode_1440117808,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_visibility_range_fade_mode_1440117808._native_ptr(),
+                    1440117808)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -488,8 +552,13 @@ open class GeometryInstance3D : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_visibility_range_fade_mode_2067221882,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_visibility_range_fade_mode_2067221882._native_ptr(),
+                    2067221882)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -505,8 +574,13 @@ open class GeometryInstance3D : VisualInstance3D {
                 .init(name_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_instance_shader_parameter_3776071444,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_instance_shader_parameter_3776071444._native_ptr(),
+                    3776071444)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -521,8 +595,13 @@ open class GeometryInstance3D : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_instance_shader_parameter_2760726917,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_instance_shader_parameter_2760726917._native_ptr(),
+                    2760726917)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -537,8 +616,13 @@ open class GeometryInstance3D : VisualInstance3D {
                 .init(margin_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_extra_cull_margin_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_extra_cull_margin_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -554,8 +638,13 @@ open class GeometryInstance3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_extra_cull_margin_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_extra_cull_margin_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -570,8 +659,13 @@ open class GeometryInstance3D : VisualInstance3D {
                 .init(scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_lightmap_scale_2462696582,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_lightmap_scale_2462696582._native_ptr(),
+                    2462696582)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -586,8 +680,13 @@ open class GeometryInstance3D : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_lightmap_scale_798767852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_lightmap_scale_798767852._native_ptr(),
+                    798767852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -602,8 +701,13 @@ open class GeometryInstance3D : VisualInstance3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_gi_mode_2548557163,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_gi_mode_2548557163._native_ptr(),
+                    2548557163)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -618,8 +722,13 @@ open class GeometryInstance3D : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_gi_mode_2188566509,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_gi_mode_2188566509._native_ptr(),
+                    2188566509)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -634,8 +743,13 @@ open class GeometryInstance3D : VisualInstance3D {
                 .init(ignore_culling_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_ignore_occlusion_culling_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_ignore_occlusion_culling_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -651,8 +765,13 @@ open class GeometryInstance3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_ignoring_occlusion_culling_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_ignoring_occlusion_culling_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -667,8 +786,13 @@ open class GeometryInstance3D : VisualInstance3D {
                 .init(aabb_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_custom_aabb_259215842,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_custom_aabb_259215842._native_ptr(),
+                    259215842)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -682,8 +806,13 @@ open class GeometryInstance3D : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_aabb_1068685055,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_aabb_1068685055._native_ptr(),
+                    1068685055)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

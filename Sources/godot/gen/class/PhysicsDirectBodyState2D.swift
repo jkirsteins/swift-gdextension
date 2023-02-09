@@ -11,187 +11,145 @@ open class PhysicsDirectBodyState2D : Object {
 
     public override class var __godot_name: StringName { __godot_name_PhysicsDirectBodyState2D }
 
-    static var _method_get_total_gravity_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_get_total_linear_damp_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_total_angular_damp_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_center_of_mass_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_get_center_of_mass_local_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_get_inverse_mass_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_inverse_inertia_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_linear_velocity_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_linear_velocity_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_angular_velocity_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_angular_velocity_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_transform_2761652528: GDExtensionMethodBindPtr! = nil
-    static var _method_get_transform_3814499831: GDExtensionMethodBindPtr! = nil
-    static var _method_get_velocity_at_local_position_2656412154: GDExtensionMethodBindPtr! = nil
-    static var _method_apply_central_impulse_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_apply_torque_impulse_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_apply_impulse_496058220: GDExtensionMethodBindPtr! = nil
-    static var _method_apply_central_force_3862383994: GDExtensionMethodBindPtr! = nil
-    static var _method_apply_force_496058220: GDExtensionMethodBindPtr! = nil
-    static var _method_apply_torque_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_add_constant_central_force_3862383994: GDExtensionMethodBindPtr! = nil
-    static var _method_add_constant_force_496058220: GDExtensionMethodBindPtr! = nil
-    static var _method_add_constant_torque_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_set_constant_force_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_constant_force_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_constant_torque_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_constant_torque_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_sleep_state_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_sleeping_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_contact_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_contact_local_position_2299179447: GDExtensionMethodBindPtr! = nil
-    static var _method_get_contact_local_normal_2299179447: GDExtensionMethodBindPtr! = nil
-    static var _method_get_contact_local_shape_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_get_contact_collider_495598643: GDExtensionMethodBindPtr! = nil
-    static var _method_get_contact_collider_position_2299179447: GDExtensionMethodBindPtr! = nil
-    static var _method_get_contact_collider_id_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_get_contact_collider_object_3332903315: GDExtensionMethodBindPtr! = nil
-    static var _method_get_contact_collider_shape_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_get_contact_collider_velocity_at_position_2299179447: GDExtensionMethodBindPtr! = nil
-    static var _method_get_contact_impulse_2299179447: GDExtensionMethodBindPtr! = nil
-    static var _method_get_step_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_integrate_forces_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_space_state_2506717822: GDExtensionMethodBindPtr! = nil
+    static var _method_get_total_gravity_3341600327: StringName! = nil
+    static var _method_get_total_linear_damp_1740695150: StringName! = nil
+    static var _method_get_total_angular_damp_1740695150: StringName! = nil
+    static var _method_get_center_of_mass_3341600327: StringName! = nil
+    static var _method_get_center_of_mass_local_3341600327: StringName! = nil
+    static var _method_get_inverse_mass_1740695150: StringName! = nil
+    static var _method_get_inverse_inertia_1740695150: StringName! = nil
+    static var _method_set_linear_velocity_743155724: StringName! = nil
+    static var _method_get_linear_velocity_3341600327: StringName! = nil
+    static var _method_set_angular_velocity_373806689: StringName! = nil
+    static var _method_get_angular_velocity_1740695150: StringName! = nil
+    static var _method_set_transform_2761652528: StringName! = nil
+    static var _method_get_transform_3814499831: StringName! = nil
+    static var _method_get_velocity_at_local_position_2656412154: StringName! = nil
+    static var _method_apply_central_impulse_743155724: StringName! = nil
+    static var _method_apply_torque_impulse_373806689: StringName! = nil
+    static var _method_apply_impulse_496058220: StringName! = nil
+    static var _method_apply_central_force_3862383994: StringName! = nil
+    static var _method_apply_force_496058220: StringName! = nil
+    static var _method_apply_torque_373806689: StringName! = nil
+    static var _method_add_constant_central_force_3862383994: StringName! = nil
+    static var _method_add_constant_force_496058220: StringName! = nil
+    static var _method_add_constant_torque_373806689: StringName! = nil
+    static var _method_set_constant_force_743155724: StringName! = nil
+    static var _method_get_constant_force_3341600327: StringName! = nil
+    static var _method_set_constant_torque_373806689: StringName! = nil
+    static var _method_get_constant_torque_1740695150: StringName! = nil
+    static var _method_set_sleep_state_2586408642: StringName! = nil
+    static var _method_is_sleeping_36873697: StringName! = nil
+    static var _method_get_contact_count_3905245786: StringName! = nil
+    static var _method_get_contact_local_position_2299179447: StringName! = nil
+    static var _method_get_contact_local_normal_2299179447: StringName! = nil
+    static var _method_get_contact_local_shape_923996154: StringName! = nil
+    static var _method_get_contact_collider_495598643: StringName! = nil
+    static var _method_get_contact_collider_position_2299179447: StringName! = nil
+    static var _method_get_contact_collider_id_923996154: StringName! = nil
+    static var _method_get_contact_collider_object_3332903315: StringName! = nil
+    static var _method_get_contact_collider_shape_923996154: StringName! = nil
+    static var _method_get_contact_collider_velocity_at_position_2299179447: StringName! = nil
+    static var _method_get_contact_impulse_2299179447: StringName! = nil
+    static var _method_get_step_1740695150: StringName! = nil
+    static var _method_integrate_forces_3218959716: StringName! = nil
+    static var _method_get_space_state_2506717822: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PhysicsDirectBodyState2D == nil)
         __godot_name_PhysicsDirectBodyState2D = StringName(from: "PhysicsDirectBodyState2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_total_gravity_3341600327_name = StringName(from: "get_total_gravity")
-        self._method_get_total_gravity_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_total_gravity_3341600327_name._native_ptr(), 3341600327)
-        assert(PhysicsDirectBodyState2D._method_get_total_gravity_3341600327 != nil)
-        let _method_get_total_linear_damp_1740695150_name = StringName(from: "get_total_linear_damp")
-        self._method_get_total_linear_damp_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_total_linear_damp_1740695150_name._native_ptr(), 1740695150)
-        assert(PhysicsDirectBodyState2D._method_get_total_linear_damp_1740695150 != nil)
-        let _method_get_total_angular_damp_1740695150_name = StringName(from: "get_total_angular_damp")
-        self._method_get_total_angular_damp_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_total_angular_damp_1740695150_name._native_ptr(), 1740695150)
-        assert(PhysicsDirectBodyState2D._method_get_total_angular_damp_1740695150 != nil)
-        let _method_get_center_of_mass_3341600327_name = StringName(from: "get_center_of_mass")
-        self._method_get_center_of_mass_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_center_of_mass_3341600327_name._native_ptr(), 3341600327)
-        assert(PhysicsDirectBodyState2D._method_get_center_of_mass_3341600327 != nil)
-        let _method_get_center_of_mass_local_3341600327_name = StringName(from: "get_center_of_mass_local")
-        self._method_get_center_of_mass_local_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_center_of_mass_local_3341600327_name._native_ptr(), 3341600327)
-        assert(PhysicsDirectBodyState2D._method_get_center_of_mass_local_3341600327 != nil)
-        let _method_get_inverse_mass_1740695150_name = StringName(from: "get_inverse_mass")
-        self._method_get_inverse_mass_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_inverse_mass_1740695150_name._native_ptr(), 1740695150)
-        assert(PhysicsDirectBodyState2D._method_get_inverse_mass_1740695150 != nil)
-        let _method_get_inverse_inertia_1740695150_name = StringName(from: "get_inverse_inertia")
-        self._method_get_inverse_inertia_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_inverse_inertia_1740695150_name._native_ptr(), 1740695150)
-        assert(PhysicsDirectBodyState2D._method_get_inverse_inertia_1740695150 != nil)
-        let _method_set_linear_velocity_743155724_name = StringName(from: "set_linear_velocity")
-        self._method_set_linear_velocity_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_set_linear_velocity_743155724_name._native_ptr(), 743155724)
-        assert(PhysicsDirectBodyState2D._method_set_linear_velocity_743155724 != nil)
-        let _method_get_linear_velocity_3341600327_name = StringName(from: "get_linear_velocity")
-        self._method_get_linear_velocity_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_linear_velocity_3341600327_name._native_ptr(), 3341600327)
-        assert(PhysicsDirectBodyState2D._method_get_linear_velocity_3341600327 != nil)
-        let _method_set_angular_velocity_373806689_name = StringName(from: "set_angular_velocity")
-        self._method_set_angular_velocity_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_set_angular_velocity_373806689_name._native_ptr(), 373806689)
-        assert(PhysicsDirectBodyState2D._method_set_angular_velocity_373806689 != nil)
-        let _method_get_angular_velocity_1740695150_name = StringName(from: "get_angular_velocity")
-        self._method_get_angular_velocity_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_angular_velocity_1740695150_name._native_ptr(), 1740695150)
-        assert(PhysicsDirectBodyState2D._method_get_angular_velocity_1740695150 != nil)
-        let _method_set_transform_2761652528_name = StringName(from: "set_transform")
-        self._method_set_transform_2761652528 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_set_transform_2761652528_name._native_ptr(), 2761652528)
-        assert(PhysicsDirectBodyState2D._method_set_transform_2761652528 != nil)
-        let _method_get_transform_3814499831_name = StringName(from: "get_transform")
-        self._method_get_transform_3814499831 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_transform_3814499831_name._native_ptr(), 3814499831)
-        assert(PhysicsDirectBodyState2D._method_get_transform_3814499831 != nil)
-        let _method_get_velocity_at_local_position_2656412154_name = StringName(from: "get_velocity_at_local_position")
-        self._method_get_velocity_at_local_position_2656412154 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_velocity_at_local_position_2656412154_name._native_ptr(), 2656412154)
-        assert(PhysicsDirectBodyState2D._method_get_velocity_at_local_position_2656412154 != nil)
-        let _method_apply_central_impulse_743155724_name = StringName(from: "apply_central_impulse")
-        self._method_apply_central_impulse_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_apply_central_impulse_743155724_name._native_ptr(), 743155724)
-        assert(PhysicsDirectBodyState2D._method_apply_central_impulse_743155724 != nil)
-        let _method_apply_torque_impulse_373806689_name = StringName(from: "apply_torque_impulse")
-        self._method_apply_torque_impulse_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_apply_torque_impulse_373806689_name._native_ptr(), 373806689)
-        assert(PhysicsDirectBodyState2D._method_apply_torque_impulse_373806689 != nil)
-        let _method_apply_impulse_496058220_name = StringName(from: "apply_impulse")
-        self._method_apply_impulse_496058220 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_apply_impulse_496058220_name._native_ptr(), 496058220)
-        assert(PhysicsDirectBodyState2D._method_apply_impulse_496058220 != nil)
-        let _method_apply_central_force_3862383994_name = StringName(from: "apply_central_force")
-        self._method_apply_central_force_3862383994 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_apply_central_force_3862383994_name._native_ptr(), 3862383994)
-        assert(PhysicsDirectBodyState2D._method_apply_central_force_3862383994 != nil)
-        let _method_apply_force_496058220_name = StringName(from: "apply_force")
-        self._method_apply_force_496058220 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_apply_force_496058220_name._native_ptr(), 496058220)
-        assert(PhysicsDirectBodyState2D._method_apply_force_496058220 != nil)
-        let _method_apply_torque_373806689_name = StringName(from: "apply_torque")
-        self._method_apply_torque_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_apply_torque_373806689_name._native_ptr(), 373806689)
-        assert(PhysicsDirectBodyState2D._method_apply_torque_373806689 != nil)
-        let _method_add_constant_central_force_3862383994_name = StringName(from: "add_constant_central_force")
-        self._method_add_constant_central_force_3862383994 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_add_constant_central_force_3862383994_name._native_ptr(), 3862383994)
-        assert(PhysicsDirectBodyState2D._method_add_constant_central_force_3862383994 != nil)
-        let _method_add_constant_force_496058220_name = StringName(from: "add_constant_force")
-        self._method_add_constant_force_496058220 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_add_constant_force_496058220_name._native_ptr(), 496058220)
-        assert(PhysicsDirectBodyState2D._method_add_constant_force_496058220 != nil)
-        let _method_add_constant_torque_373806689_name = StringName(from: "add_constant_torque")
-        self._method_add_constant_torque_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_add_constant_torque_373806689_name._native_ptr(), 373806689)
-        assert(PhysicsDirectBodyState2D._method_add_constant_torque_373806689 != nil)
-        let _method_set_constant_force_743155724_name = StringName(from: "set_constant_force")
-        self._method_set_constant_force_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_set_constant_force_743155724_name._native_ptr(), 743155724)
-        assert(PhysicsDirectBodyState2D._method_set_constant_force_743155724 != nil)
-        let _method_get_constant_force_3341600327_name = StringName(from: "get_constant_force")
-        self._method_get_constant_force_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_constant_force_3341600327_name._native_ptr(), 3341600327)
-        assert(PhysicsDirectBodyState2D._method_get_constant_force_3341600327 != nil)
-        let _method_set_constant_torque_373806689_name = StringName(from: "set_constant_torque")
-        self._method_set_constant_torque_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_set_constant_torque_373806689_name._native_ptr(), 373806689)
-        assert(PhysicsDirectBodyState2D._method_set_constant_torque_373806689 != nil)
-        let _method_get_constant_torque_1740695150_name = StringName(from: "get_constant_torque")
-        self._method_get_constant_torque_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_constant_torque_1740695150_name._native_ptr(), 1740695150)
-        assert(PhysicsDirectBodyState2D._method_get_constant_torque_1740695150 != nil)
-        let _method_set_sleep_state_2586408642_name = StringName(from: "set_sleep_state")
-        self._method_set_sleep_state_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_set_sleep_state_2586408642_name._native_ptr(), 2586408642)
-        assert(PhysicsDirectBodyState2D._method_set_sleep_state_2586408642 != nil)
-        let _method_is_sleeping_36873697_name = StringName(from: "is_sleeping")
-        self._method_is_sleeping_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_is_sleeping_36873697_name._native_ptr(), 36873697)
-        assert(PhysicsDirectBodyState2D._method_is_sleeping_36873697 != nil)
-        let _method_get_contact_count_3905245786_name = StringName(from: "get_contact_count")
-        self._method_get_contact_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_contact_count_3905245786_name._native_ptr(), 3905245786)
-        assert(PhysicsDirectBodyState2D._method_get_contact_count_3905245786 != nil)
-        let _method_get_contact_local_position_2299179447_name = StringName(from: "get_contact_local_position")
-        self._method_get_contact_local_position_2299179447 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_contact_local_position_2299179447_name._native_ptr(), 2299179447)
-        assert(PhysicsDirectBodyState2D._method_get_contact_local_position_2299179447 != nil)
-        let _method_get_contact_local_normal_2299179447_name = StringName(from: "get_contact_local_normal")
-        self._method_get_contact_local_normal_2299179447 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_contact_local_normal_2299179447_name._native_ptr(), 2299179447)
-        assert(PhysicsDirectBodyState2D._method_get_contact_local_normal_2299179447 != nil)
-        let _method_get_contact_local_shape_923996154_name = StringName(from: "get_contact_local_shape")
-        self._method_get_contact_local_shape_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_contact_local_shape_923996154_name._native_ptr(), 923996154)
-        assert(PhysicsDirectBodyState2D._method_get_contact_local_shape_923996154 != nil)
-        let _method_get_contact_collider_495598643_name = StringName(from: "get_contact_collider")
-        self._method_get_contact_collider_495598643 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_contact_collider_495598643_name._native_ptr(), 495598643)
-        assert(PhysicsDirectBodyState2D._method_get_contact_collider_495598643 != nil)
-        let _method_get_contact_collider_position_2299179447_name = StringName(from: "get_contact_collider_position")
-        self._method_get_contact_collider_position_2299179447 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_contact_collider_position_2299179447_name._native_ptr(), 2299179447)
-        assert(PhysicsDirectBodyState2D._method_get_contact_collider_position_2299179447 != nil)
-        let _method_get_contact_collider_id_923996154_name = StringName(from: "get_contact_collider_id")
-        self._method_get_contact_collider_id_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_contact_collider_id_923996154_name._native_ptr(), 923996154)
-        assert(PhysicsDirectBodyState2D._method_get_contact_collider_id_923996154 != nil)
-        let _method_get_contact_collider_object_3332903315_name = StringName(from: "get_contact_collider_object")
-        self._method_get_contact_collider_object_3332903315 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_contact_collider_object_3332903315_name._native_ptr(), 3332903315)
-        assert(PhysicsDirectBodyState2D._method_get_contact_collider_object_3332903315 != nil)
-        let _method_get_contact_collider_shape_923996154_name = StringName(from: "get_contact_collider_shape")
-        self._method_get_contact_collider_shape_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_contact_collider_shape_923996154_name._native_ptr(), 923996154)
-        assert(PhysicsDirectBodyState2D._method_get_contact_collider_shape_923996154 != nil)
-        let _method_get_contact_collider_velocity_at_position_2299179447_name = StringName(from: "get_contact_collider_velocity_at_position")
-        self._method_get_contact_collider_velocity_at_position_2299179447 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_contact_collider_velocity_at_position_2299179447_name._native_ptr(), 2299179447)
-        assert(PhysicsDirectBodyState2D._method_get_contact_collider_velocity_at_position_2299179447 != nil)
-        let _method_get_contact_impulse_2299179447_name = StringName(from: "get_contact_impulse")
-        self._method_get_contact_impulse_2299179447 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_contact_impulse_2299179447_name._native_ptr(), 2299179447)
-        assert(PhysicsDirectBodyState2D._method_get_contact_impulse_2299179447 != nil)
-        let _method_get_step_1740695150_name = StringName(from: "get_step")
-        self._method_get_step_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_step_1740695150_name._native_ptr(), 1740695150)
-        assert(PhysicsDirectBodyState2D._method_get_step_1740695150 != nil)
-        let _method_integrate_forces_3218959716_name = StringName(from: "integrate_forces")
-        self._method_integrate_forces_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_integrate_forces_3218959716_name._native_ptr(), 3218959716)
-        assert(PhysicsDirectBodyState2D._method_integrate_forces_3218959716 != nil)
-        let _method_get_space_state_2506717822_name = StringName(from: "get_space_state")
-        self._method_get_space_state_2506717822 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectBodyState2D._native_ptr(), _method_get_space_state_2506717822_name._native_ptr(), 2506717822)
-        assert(PhysicsDirectBodyState2D._method_get_space_state_2506717822 != nil)
+        self._method_get_total_gravity_3341600327 = StringName(from: "get_total_gravity")
+        assert(self._method_get_total_gravity_3341600327 != nil)
+        self._method_get_total_linear_damp_1740695150 = StringName(from: "get_total_linear_damp")
+        assert(self._method_get_total_linear_damp_1740695150 != nil)
+        self._method_get_total_angular_damp_1740695150 = StringName(from: "get_total_angular_damp")
+        assert(self._method_get_total_angular_damp_1740695150 != nil)
+        self._method_get_center_of_mass_3341600327 = StringName(from: "get_center_of_mass")
+        assert(self._method_get_center_of_mass_3341600327 != nil)
+        self._method_get_center_of_mass_local_3341600327 = StringName(from: "get_center_of_mass_local")
+        assert(self._method_get_center_of_mass_local_3341600327 != nil)
+        self._method_get_inverse_mass_1740695150 = StringName(from: "get_inverse_mass")
+        assert(self._method_get_inverse_mass_1740695150 != nil)
+        self._method_get_inverse_inertia_1740695150 = StringName(from: "get_inverse_inertia")
+        assert(self._method_get_inverse_inertia_1740695150 != nil)
+        self._method_set_linear_velocity_743155724 = StringName(from: "set_linear_velocity")
+        assert(self._method_set_linear_velocity_743155724 != nil)
+        self._method_get_linear_velocity_3341600327 = StringName(from: "get_linear_velocity")
+        assert(self._method_get_linear_velocity_3341600327 != nil)
+        self._method_set_angular_velocity_373806689 = StringName(from: "set_angular_velocity")
+        assert(self._method_set_angular_velocity_373806689 != nil)
+        self._method_get_angular_velocity_1740695150 = StringName(from: "get_angular_velocity")
+        assert(self._method_get_angular_velocity_1740695150 != nil)
+        self._method_set_transform_2761652528 = StringName(from: "set_transform")
+        assert(self._method_set_transform_2761652528 != nil)
+        self._method_get_transform_3814499831 = StringName(from: "get_transform")
+        assert(self._method_get_transform_3814499831 != nil)
+        self._method_get_velocity_at_local_position_2656412154 = StringName(from: "get_velocity_at_local_position")
+        assert(self._method_get_velocity_at_local_position_2656412154 != nil)
+        self._method_apply_central_impulse_743155724 = StringName(from: "apply_central_impulse")
+        assert(self._method_apply_central_impulse_743155724 != nil)
+        self._method_apply_torque_impulse_373806689 = StringName(from: "apply_torque_impulse")
+        assert(self._method_apply_torque_impulse_373806689 != nil)
+        self._method_apply_impulse_496058220 = StringName(from: "apply_impulse")
+        assert(self._method_apply_impulse_496058220 != nil)
+        self._method_apply_central_force_3862383994 = StringName(from: "apply_central_force")
+        assert(self._method_apply_central_force_3862383994 != nil)
+        self._method_apply_force_496058220 = StringName(from: "apply_force")
+        assert(self._method_apply_force_496058220 != nil)
+        self._method_apply_torque_373806689 = StringName(from: "apply_torque")
+        assert(self._method_apply_torque_373806689 != nil)
+        self._method_add_constant_central_force_3862383994 = StringName(from: "add_constant_central_force")
+        assert(self._method_add_constant_central_force_3862383994 != nil)
+        self._method_add_constant_force_496058220 = StringName(from: "add_constant_force")
+        assert(self._method_add_constant_force_496058220 != nil)
+        self._method_add_constant_torque_373806689 = StringName(from: "add_constant_torque")
+        assert(self._method_add_constant_torque_373806689 != nil)
+        self._method_set_constant_force_743155724 = StringName(from: "set_constant_force")
+        assert(self._method_set_constant_force_743155724 != nil)
+        self._method_get_constant_force_3341600327 = StringName(from: "get_constant_force")
+        assert(self._method_get_constant_force_3341600327 != nil)
+        self._method_set_constant_torque_373806689 = StringName(from: "set_constant_torque")
+        assert(self._method_set_constant_torque_373806689 != nil)
+        self._method_get_constant_torque_1740695150 = StringName(from: "get_constant_torque")
+        assert(self._method_get_constant_torque_1740695150 != nil)
+        self._method_set_sleep_state_2586408642 = StringName(from: "set_sleep_state")
+        assert(self._method_set_sleep_state_2586408642 != nil)
+        self._method_is_sleeping_36873697 = StringName(from: "is_sleeping")
+        assert(self._method_is_sleeping_36873697 != nil)
+        self._method_get_contact_count_3905245786 = StringName(from: "get_contact_count")
+        assert(self._method_get_contact_count_3905245786 != nil)
+        self._method_get_contact_local_position_2299179447 = StringName(from: "get_contact_local_position")
+        assert(self._method_get_contact_local_position_2299179447 != nil)
+        self._method_get_contact_local_normal_2299179447 = StringName(from: "get_contact_local_normal")
+        assert(self._method_get_contact_local_normal_2299179447 != nil)
+        self._method_get_contact_local_shape_923996154 = StringName(from: "get_contact_local_shape")
+        assert(self._method_get_contact_local_shape_923996154 != nil)
+        self._method_get_contact_collider_495598643 = StringName(from: "get_contact_collider")
+        assert(self._method_get_contact_collider_495598643 != nil)
+        self._method_get_contact_collider_position_2299179447 = StringName(from: "get_contact_collider_position")
+        assert(self._method_get_contact_collider_position_2299179447 != nil)
+        self._method_get_contact_collider_id_923996154 = StringName(from: "get_contact_collider_id")
+        assert(self._method_get_contact_collider_id_923996154 != nil)
+        self._method_get_contact_collider_object_3332903315 = StringName(from: "get_contact_collider_object")
+        assert(self._method_get_contact_collider_object_3332903315 != nil)
+        self._method_get_contact_collider_shape_923996154 = StringName(from: "get_contact_collider_shape")
+        assert(self._method_get_contact_collider_shape_923996154 != nil)
+        self._method_get_contact_collider_velocity_at_position_2299179447 = StringName(from: "get_contact_collider_velocity_at_position")
+        assert(self._method_get_contact_collider_velocity_at_position_2299179447 != nil)
+        self._method_get_contact_impulse_2299179447 = StringName(from: "get_contact_impulse")
+        assert(self._method_get_contact_impulse_2299179447 != nil)
+        self._method_get_step_1740695150 = StringName(from: "get_step")
+        assert(self._method_get_step_1740695150 != nil)
+        self._method_integrate_forces_3218959716 = StringName(from: "integrate_forces")
+        assert(self._method_integrate_forces_3218959716 != nil)
+        self._method_get_space_state_2506717822 = StringName(from: "get_space_state")
+        assert(self._method_get_space_state_2506717822 != nil)
     }
 
     public func get_total_gravity() -> Vector2 {
@@ -202,8 +160,13 @@ open class PhysicsDirectBodyState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_total_gravity_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_total_gravity_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -219,8 +182,13 @@ open class PhysicsDirectBodyState2D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_total_linear_damp_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_total_linear_damp_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -236,8 +204,13 @@ open class PhysicsDirectBodyState2D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_total_angular_damp_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_total_angular_damp_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -252,8 +225,13 @@ open class PhysicsDirectBodyState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_center_of_mass_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_center_of_mass_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -268,8 +246,13 @@ open class PhysicsDirectBodyState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_center_of_mass_local_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_center_of_mass_local_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -285,8 +268,13 @@ open class PhysicsDirectBodyState2D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_inverse_mass_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_inverse_mass_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -302,8 +290,13 @@ open class PhysicsDirectBodyState2D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_inverse_inertia_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_inverse_inertia_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -318,8 +311,13 @@ open class PhysicsDirectBodyState2D : Object {
                 .init(velocity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_linear_velocity_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_linear_velocity_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -333,8 +331,13 @@ open class PhysicsDirectBodyState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_linear_velocity_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_linear_velocity_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -349,8 +352,13 @@ open class PhysicsDirectBodyState2D : Object {
                 .init(velocity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_angular_velocity_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_angular_velocity_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -366,8 +374,13 @@ open class PhysicsDirectBodyState2D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_angular_velocity_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_angular_velocity_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -382,8 +395,13 @@ open class PhysicsDirectBodyState2D : Object {
                 .init(transform_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_transform_2761652528,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_transform_2761652528._native_ptr(),
+                    2761652528)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -397,8 +415,13 @@ open class PhysicsDirectBodyState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_transform_3814499831,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_transform_3814499831._native_ptr(),
+                    3814499831)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -414,8 +437,13 @@ open class PhysicsDirectBodyState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_velocity_at_local_position_2656412154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_velocity_at_local_position_2656412154._native_ptr(),
+                    2656412154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -430,8 +458,13 @@ open class PhysicsDirectBodyState2D : Object {
                 .init(impulse_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_apply_central_impulse_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_apply_central_impulse_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -445,8 +478,13 @@ open class PhysicsDirectBodyState2D : Object {
                 .init(impulse_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_apply_torque_impulse_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_apply_torque_impulse_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -462,8 +500,13 @@ open class PhysicsDirectBodyState2D : Object {
                 .init(impulse_native), .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_apply_impulse_496058220,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_apply_impulse_496058220._native_ptr(),
+                    496058220)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -477,8 +520,13 @@ open class PhysicsDirectBodyState2D : Object {
                 .init(force_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_apply_central_force_3862383994,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_apply_central_force_3862383994._native_ptr(),
+                    3862383994)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -493,8 +541,13 @@ open class PhysicsDirectBodyState2D : Object {
                 .init(force_native), .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_apply_force_496058220,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_apply_force_496058220._native_ptr(),
+                    496058220)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -508,8 +561,13 @@ open class PhysicsDirectBodyState2D : Object {
                 .init(torque_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_apply_torque_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_apply_torque_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -524,8 +582,13 @@ open class PhysicsDirectBodyState2D : Object {
                 .init(force_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_constant_central_force_3862383994,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_constant_central_force_3862383994._native_ptr(),
+                    3862383994)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -540,8 +603,13 @@ open class PhysicsDirectBodyState2D : Object {
                 .init(force_native), .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_constant_force_496058220,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_constant_force_496058220._native_ptr(),
+                    496058220)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -555,8 +623,13 @@ open class PhysicsDirectBodyState2D : Object {
                 .init(torque_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_constant_torque_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_constant_torque_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -571,8 +644,13 @@ open class PhysicsDirectBodyState2D : Object {
                 .init(force_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_constant_force_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_constant_force_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -586,8 +664,13 @@ open class PhysicsDirectBodyState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_constant_force_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_constant_force_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -602,8 +685,13 @@ open class PhysicsDirectBodyState2D : Object {
                 .init(torque_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_constant_torque_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_constant_torque_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -619,8 +707,13 @@ open class PhysicsDirectBodyState2D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_constant_torque_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_constant_torque_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -635,8 +728,13 @@ open class PhysicsDirectBodyState2D : Object {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_sleep_state_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_sleep_state_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -652,8 +750,13 @@ open class PhysicsDirectBodyState2D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_sleeping_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_sleeping_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -669,8 +772,13 @@ open class PhysicsDirectBodyState2D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_contact_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_contact_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -686,8 +794,13 @@ open class PhysicsDirectBodyState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_contact_local_position_2299179447,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_contact_local_position_2299179447._native_ptr(),
+                    2299179447)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -704,8 +817,13 @@ open class PhysicsDirectBodyState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_contact_local_normal_2299179447,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_contact_local_normal_2299179447._native_ptr(),
+                    2299179447)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -723,8 +841,13 @@ open class PhysicsDirectBodyState2D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_contact_local_shape_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_contact_local_shape_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -741,8 +864,13 @@ open class PhysicsDirectBodyState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_contact_collider_495598643,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_contact_collider_495598643._native_ptr(),
+                    495598643)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -759,8 +887,13 @@ open class PhysicsDirectBodyState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_contact_collider_position_2299179447,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_contact_collider_position_2299179447._native_ptr(),
+                    2299179447)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -778,8 +911,13 @@ open class PhysicsDirectBodyState2D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_contact_collider_id_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_contact_collider_id_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -796,8 +934,13 @@ open class PhysicsDirectBodyState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_contact_collider_object_3332903315,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_contact_collider_object_3332903315._native_ptr(),
+                    3332903315)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -815,8 +958,13 @@ open class PhysicsDirectBodyState2D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_contact_collider_shape_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_contact_collider_shape_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -833,8 +981,13 @@ open class PhysicsDirectBodyState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_contact_collider_velocity_at_position_2299179447,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_contact_collider_velocity_at_position_2299179447._native_ptr(),
+                    2299179447)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -851,8 +1004,13 @@ open class PhysicsDirectBodyState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_contact_impulse_2299179447,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_contact_impulse_2299179447._native_ptr(),
+                    2299179447)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -869,8 +1027,13 @@ open class PhysicsDirectBodyState2D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_step_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_step_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -884,8 +1047,13 @@ open class PhysicsDirectBodyState2D : Object {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_integrate_forces_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_integrate_forces_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -899,8 +1067,13 @@ open class PhysicsDirectBodyState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_space_state_2506717822,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_space_state_2506717822._native_ptr(),
+                    2506717822)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

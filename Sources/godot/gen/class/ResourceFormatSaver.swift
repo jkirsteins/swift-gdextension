@@ -13,16 +13,17 @@ open class ResourceFormatSaver : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_ResourceFormatSaver }
 
-    static var _method__save_0: GDExtensionMethodBindPtr! = nil
-    static var _method__set_uid_0: GDExtensionMethodBindPtr! = nil
-    static var _method__recognize_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_recognized_extensions_0: GDExtensionMethodBindPtr! = nil
-    static var _method__recognize_path_0: GDExtensionMethodBindPtr! = nil
+    static var _method__save_0: StringName! = nil
+    static var _method__set_uid_0: StringName! = nil
+    static var _method__recognize_0: StringName! = nil
+    static var _method__get_recognized_extensions_0: StringName! = nil
+    static var _method__recognize_path_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ResourceFormatSaver == nil)
         __godot_name_ResourceFormatSaver = StringName(from: "ResourceFormatSaver")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -41,12 +42,7 @@ open class ResourceFormatSaver : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__save_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
         }
     }
@@ -60,12 +56,7 @@ open class ResourceFormatSaver : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__set_uid_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
         }
     }
@@ -79,12 +70,7 @@ open class ResourceFormatSaver : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__recognize_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _get_recognized_extensions(resource: Resource) -> PackedStringArray {
@@ -96,12 +82,7 @@ open class ResourceFormatSaver : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_recognized_extensions_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _recognize_path(resource: Resource, path: godot.String) -> UInt8 {
@@ -115,12 +96,7 @@ open class ResourceFormatSaver : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__recognize_path_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
 }

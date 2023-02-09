@@ -11,23 +11,22 @@ open class VisualShaderNodeTexture3D : VisualShaderNodeSample3D {
 
     public override class var __godot_name: StringName { __godot_name_VisualShaderNodeTexture3D }
 
-    static var _method_set_texture_1188404210: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_373985333: GDExtensionMethodBindPtr! = nil
+    static var _method_set_texture_1188404210: StringName! = nil
+    static var _method_get_texture_373985333: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShaderNodeTexture3D == nil)
         __godot_name_VisualShaderNodeTexture3D = StringName(from: "VisualShaderNodeTexture3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_texture_1188404210_name = StringName(from: "set_texture")
-        self._method_set_texture_1188404210 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTexture3D._native_ptr(), _method_set_texture_1188404210_name._native_ptr(), 1188404210)
-        assert(VisualShaderNodeTexture3D._method_set_texture_1188404210 != nil)
-        let _method_get_texture_373985333_name = StringName(from: "get_texture")
-        self._method_get_texture_373985333 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTexture3D._native_ptr(), _method_get_texture_373985333_name._native_ptr(), 373985333)
-        assert(VisualShaderNodeTexture3D._method_get_texture_373985333 != nil)
+        self._method_set_texture_1188404210 = StringName(from: "set_texture")
+        assert(self._method_set_texture_1188404210 != nil)
+        self._method_get_texture_373985333 = StringName(from: "get_texture")
+        assert(self._method_get_texture_373985333 != nil)
     }
 
     public func set_texture(value: Texture3D)  {
@@ -38,8 +37,13 @@ open class VisualShaderNodeTexture3D : VisualShaderNodeSample3D {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_1188404210,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_1188404210._native_ptr(),
+                    1188404210)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -53,8 +57,13 @@ open class VisualShaderNodeTexture3D : VisualShaderNodeSample3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_373985333,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_373985333._native_ptr(),
+                    373985333)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

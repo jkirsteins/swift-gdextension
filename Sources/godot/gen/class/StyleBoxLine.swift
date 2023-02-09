@@ -11,55 +11,46 @@ open class StyleBoxLine : StyleBox {
 
     public override class var __godot_name: StringName { __godot_name_StyleBoxLine }
 
-    static var _method_set_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_color_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_thickness_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_thickness_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_grow_begin_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_grow_begin_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_grow_end_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_grow_end_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_vertical_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_vertical_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_color_2920490490: StringName! = nil
+    static var _method_get_color_3444240500: StringName! = nil
+    static var _method_set_thickness_1286410249: StringName! = nil
+    static var _method_get_thickness_3905245786: StringName! = nil
+    static var _method_set_grow_begin_373806689: StringName! = nil
+    static var _method_get_grow_begin_1740695150: StringName! = nil
+    static var _method_set_grow_end_373806689: StringName! = nil
+    static var _method_get_grow_end_1740695150: StringName! = nil
+    static var _method_set_vertical_2586408642: StringName! = nil
+    static var _method_is_vertical_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_StyleBoxLine == nil)
         __godot_name_StyleBoxLine = StringName(from: "StyleBoxLine")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_color_2920490490_name = StringName(from: "set_color")
-        self._method_set_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxLine._native_ptr(), _method_set_color_2920490490_name._native_ptr(), 2920490490)
-        assert(StyleBoxLine._method_set_color_2920490490 != nil)
-        let _method_get_color_3444240500_name = StringName(from: "get_color")
-        self._method_get_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxLine._native_ptr(), _method_get_color_3444240500_name._native_ptr(), 3444240500)
-        assert(StyleBoxLine._method_get_color_3444240500 != nil)
-        let _method_set_thickness_1286410249_name = StringName(from: "set_thickness")
-        self._method_set_thickness_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxLine._native_ptr(), _method_set_thickness_1286410249_name._native_ptr(), 1286410249)
-        assert(StyleBoxLine._method_set_thickness_1286410249 != nil)
-        let _method_get_thickness_3905245786_name = StringName(from: "get_thickness")
-        self._method_get_thickness_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxLine._native_ptr(), _method_get_thickness_3905245786_name._native_ptr(), 3905245786)
-        assert(StyleBoxLine._method_get_thickness_3905245786 != nil)
-        let _method_set_grow_begin_373806689_name = StringName(from: "set_grow_begin")
-        self._method_set_grow_begin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxLine._native_ptr(), _method_set_grow_begin_373806689_name._native_ptr(), 373806689)
-        assert(StyleBoxLine._method_set_grow_begin_373806689 != nil)
-        let _method_get_grow_begin_1740695150_name = StringName(from: "get_grow_begin")
-        self._method_get_grow_begin_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxLine._native_ptr(), _method_get_grow_begin_1740695150_name._native_ptr(), 1740695150)
-        assert(StyleBoxLine._method_get_grow_begin_1740695150 != nil)
-        let _method_set_grow_end_373806689_name = StringName(from: "set_grow_end")
-        self._method_set_grow_end_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxLine._native_ptr(), _method_set_grow_end_373806689_name._native_ptr(), 373806689)
-        assert(StyleBoxLine._method_set_grow_end_373806689 != nil)
-        let _method_get_grow_end_1740695150_name = StringName(from: "get_grow_end")
-        self._method_get_grow_end_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxLine._native_ptr(), _method_get_grow_end_1740695150_name._native_ptr(), 1740695150)
-        assert(StyleBoxLine._method_get_grow_end_1740695150 != nil)
-        let _method_set_vertical_2586408642_name = StringName(from: "set_vertical")
-        self._method_set_vertical_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxLine._native_ptr(), _method_set_vertical_2586408642_name._native_ptr(), 2586408642)
-        assert(StyleBoxLine._method_set_vertical_2586408642 != nil)
-        let _method_is_vertical_36873697_name = StringName(from: "is_vertical")
-        self._method_is_vertical_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxLine._native_ptr(), _method_is_vertical_36873697_name._native_ptr(), 36873697)
-        assert(StyleBoxLine._method_is_vertical_36873697 != nil)
+        self._method_set_color_2920490490 = StringName(from: "set_color")
+        assert(self._method_set_color_2920490490 != nil)
+        self._method_get_color_3444240500 = StringName(from: "get_color")
+        assert(self._method_get_color_3444240500 != nil)
+        self._method_set_thickness_1286410249 = StringName(from: "set_thickness")
+        assert(self._method_set_thickness_1286410249 != nil)
+        self._method_get_thickness_3905245786 = StringName(from: "get_thickness")
+        assert(self._method_get_thickness_3905245786 != nil)
+        self._method_set_grow_begin_373806689 = StringName(from: "set_grow_begin")
+        assert(self._method_set_grow_begin_373806689 != nil)
+        self._method_get_grow_begin_1740695150 = StringName(from: "get_grow_begin")
+        assert(self._method_get_grow_begin_1740695150 != nil)
+        self._method_set_grow_end_373806689 = StringName(from: "set_grow_end")
+        assert(self._method_set_grow_end_373806689 != nil)
+        self._method_get_grow_end_1740695150 = StringName(from: "get_grow_end")
+        assert(self._method_get_grow_end_1740695150 != nil)
+        self._method_set_vertical_2586408642 = StringName(from: "set_vertical")
+        assert(self._method_set_vertical_2586408642 != nil)
+        self._method_is_vertical_36873697 = StringName(from: "is_vertical")
+        assert(self._method_is_vertical_36873697 != nil)
     }
 
     public func set_color(color: Color)  {
@@ -70,8 +61,13 @@ open class StyleBoxLine : StyleBox {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -85,8 +81,13 @@ open class StyleBoxLine : StyleBox {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_color_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_color_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -101,8 +102,13 @@ open class StyleBoxLine : StyleBox {
                 .init(thickness_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_thickness_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_thickness_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -118,8 +124,13 @@ open class StyleBoxLine : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_thickness_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_thickness_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -134,8 +145,13 @@ open class StyleBoxLine : StyleBox {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_grow_begin_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_grow_begin_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -151,8 +167,13 @@ open class StyleBoxLine : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_grow_begin_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_grow_begin_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -167,8 +188,13 @@ open class StyleBoxLine : StyleBox {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_grow_end_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_grow_end_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -184,8 +210,13 @@ open class StyleBoxLine : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_grow_end_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_grow_end_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -200,8 +231,13 @@ open class StyleBoxLine : StyleBox {
                 .init(vertical_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_vertical_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_vertical_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -217,8 +253,13 @@ open class StyleBoxLine : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_vertical_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_vertical_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -19,287 +19,220 @@ open class Node3D : Node {
 
     public override class var __godot_name: StringName { __godot_name_Node3D }
 
-    static var _method_set_transform_2952846383: GDExtensionMethodBindPtr! = nil
-    static var _method_get_transform_3229777777: GDExtensionMethodBindPtr! = nil
-    static var _method_set_position_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_position_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_rotation_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rotation_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_rotation_degrees_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rotation_degrees_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_rotation_order_1820889989: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rotation_order_916939469: GDExtensionMethodBindPtr! = nil
-    static var _method_set_rotation_edit_mode_141483330: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rotation_edit_mode_1572188370: GDExtensionMethodBindPtr! = nil
-    static var _method_set_scale_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_scale_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_quaternion_1727505552: GDExtensionMethodBindPtr! = nil
-    static var _method_get_quaternion_1222331677: GDExtensionMethodBindPtr! = nil
-    static var _method_set_basis_1055510324: GDExtensionMethodBindPtr! = nil
-    static var _method_get_basis_2716978435: GDExtensionMethodBindPtr! = nil
-    static var _method_set_global_transform_2952846383: GDExtensionMethodBindPtr! = nil
-    static var _method_get_global_transform_3229777777: GDExtensionMethodBindPtr! = nil
-    static var _method_set_global_position_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_global_position_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_global_rotation_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_global_rotation_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_global_rotation_degrees_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_global_rotation_degrees_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_get_parent_node_3d_151077316: GDExtensionMethodBindPtr! = nil
-    static var _method_set_ignore_transform_notification_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_as_top_level_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_set_as_top_level_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_disable_scale_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_scale_disabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_world_3d_317588385: GDExtensionMethodBindPtr! = nil
-    static var _method_force_update_transform_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_visibility_parent_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_visibility_parent_4075236667: GDExtensionMethodBindPtr! = nil
-    static var _method_update_gizmos_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_add_gizmo_1544533845: GDExtensionMethodBindPtr! = nil
-    static var _method_get_gizmos_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_gizmos_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_subgizmo_selection_3317607635: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_subgizmo_selection_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_visible_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_visible_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_is_visible_in_tree_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_show_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_hide_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_notify_local_transform_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_local_transform_notification_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_notify_transform_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_transform_notification_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_rotate_3436291937: GDExtensionMethodBindPtr! = nil
-    static var _method_global_rotate_3436291937: GDExtensionMethodBindPtr! = nil
-    static var _method_global_scale_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_global_translate_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_rotate_object_local_3436291937: GDExtensionMethodBindPtr! = nil
-    static var _method_scale_object_local_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_translate_object_local_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_rotate_x_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_rotate_y_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_rotate_z_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_translate_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_orthonormalize_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_identity_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_look_at_1002852006: GDExtensionMethodBindPtr! = nil
-    static var _method_look_at_from_position_735115603: GDExtensionMethodBindPtr! = nil
-    static var _method_to_local_192990374: GDExtensionMethodBindPtr! = nil
-    static var _method_to_global_192990374: GDExtensionMethodBindPtr! = nil
+    static var _method_set_transform_2952846383: StringName! = nil
+    static var _method_get_transform_3229777777: StringName! = nil
+    static var _method_set_position_3460891852: StringName! = nil
+    static var _method_get_position_3360562783: StringName! = nil
+    static var _method_set_rotation_3460891852: StringName! = nil
+    static var _method_get_rotation_3360562783: StringName! = nil
+    static var _method_set_rotation_degrees_3460891852: StringName! = nil
+    static var _method_get_rotation_degrees_3360562783: StringName! = nil
+    static var _method_set_rotation_order_1820889989: StringName! = nil
+    static var _method_get_rotation_order_916939469: StringName! = nil
+    static var _method_set_rotation_edit_mode_141483330: StringName! = nil
+    static var _method_get_rotation_edit_mode_1572188370: StringName! = nil
+    static var _method_set_scale_3460891852: StringName! = nil
+    static var _method_get_scale_3360562783: StringName! = nil
+    static var _method_set_quaternion_1727505552: StringName! = nil
+    static var _method_get_quaternion_1222331677: StringName! = nil
+    static var _method_set_basis_1055510324: StringName! = nil
+    static var _method_get_basis_2716978435: StringName! = nil
+    static var _method_set_global_transform_2952846383: StringName! = nil
+    static var _method_get_global_transform_3229777777: StringName! = nil
+    static var _method_set_global_position_3460891852: StringName! = nil
+    static var _method_get_global_position_3360562783: StringName! = nil
+    static var _method_set_global_rotation_3460891852: StringName! = nil
+    static var _method_get_global_rotation_3360562783: StringName! = nil
+    static var _method_set_global_rotation_degrees_3460891852: StringName! = nil
+    static var _method_get_global_rotation_degrees_3360562783: StringName! = nil
+    static var _method_get_parent_node_3d_151077316: StringName! = nil
+    static var _method_set_ignore_transform_notification_2586408642: StringName! = nil
+    static var _method_set_as_top_level_2586408642: StringName! = nil
+    static var _method_is_set_as_top_level_36873697: StringName! = nil
+    static var _method_set_disable_scale_2586408642: StringName! = nil
+    static var _method_is_scale_disabled_36873697: StringName! = nil
+    static var _method_get_world_3d_317588385: StringName! = nil
+    static var _method_force_update_transform_3218959716: StringName! = nil
+    static var _method_set_visibility_parent_1348162250: StringName! = nil
+    static var _method_get_visibility_parent_4075236667: StringName! = nil
+    static var _method_update_gizmos_3218959716: StringName! = nil
+    static var _method_add_gizmo_1544533845: StringName! = nil
+    static var _method_get_gizmos_3995934104: StringName! = nil
+    static var _method_clear_gizmos_3218959716: StringName! = nil
+    static var _method_set_subgizmo_selection_3317607635: StringName! = nil
+    static var _method_clear_subgizmo_selection_3218959716: StringName! = nil
+    static var _method_set_visible_2586408642: StringName! = nil
+    static var _method_is_visible_36873697: StringName! = nil
+    static var _method_is_visible_in_tree_36873697: StringName! = nil
+    static var _method_show_3218959716: StringName! = nil
+    static var _method_hide_3218959716: StringName! = nil
+    static var _method_set_notify_local_transform_2586408642: StringName! = nil
+    static var _method_is_local_transform_notification_enabled_36873697: StringName! = nil
+    static var _method_set_notify_transform_2586408642: StringName! = nil
+    static var _method_is_transform_notification_enabled_36873697: StringName! = nil
+    static var _method_rotate_3436291937: StringName! = nil
+    static var _method_global_rotate_3436291937: StringName! = nil
+    static var _method_global_scale_3460891852: StringName! = nil
+    static var _method_global_translate_3460891852: StringName! = nil
+    static var _method_rotate_object_local_3436291937: StringName! = nil
+    static var _method_scale_object_local_3460891852: StringName! = nil
+    static var _method_translate_object_local_3460891852: StringName! = nil
+    static var _method_rotate_x_373806689: StringName! = nil
+    static var _method_rotate_y_373806689: StringName! = nil
+    static var _method_rotate_z_373806689: StringName! = nil
+    static var _method_translate_3460891852: StringName! = nil
+    static var _method_orthonormalize_3218959716: StringName! = nil
+    static var _method_set_identity_3218959716: StringName! = nil
+    static var _method_look_at_1002852006: StringName! = nil
+    static var _method_look_at_from_position_735115603: StringName! = nil
+    static var _method_to_local_192990374: StringName! = nil
+    static var _method_to_global_192990374: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Node3D == nil)
         __godot_name_Node3D = StringName(from: "Node3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_transform_2952846383_name = StringName(from: "set_transform")
-        self._method_set_transform_2952846383 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_transform_2952846383_name._native_ptr(), 2952846383)
-        assert(Node3D._method_set_transform_2952846383 != nil)
-        let _method_get_transform_3229777777_name = StringName(from: "get_transform")
-        self._method_get_transform_3229777777 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_transform_3229777777_name._native_ptr(), 3229777777)
-        assert(Node3D._method_get_transform_3229777777 != nil)
-        let _method_set_position_3460891852_name = StringName(from: "set_position")
-        self._method_set_position_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_position_3460891852_name._native_ptr(), 3460891852)
-        assert(Node3D._method_set_position_3460891852 != nil)
-        let _method_get_position_3360562783_name = StringName(from: "get_position")
-        self._method_get_position_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_position_3360562783_name._native_ptr(), 3360562783)
-        assert(Node3D._method_get_position_3360562783 != nil)
-        let _method_set_rotation_3460891852_name = StringName(from: "set_rotation")
-        self._method_set_rotation_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_rotation_3460891852_name._native_ptr(), 3460891852)
-        assert(Node3D._method_set_rotation_3460891852 != nil)
-        let _method_get_rotation_3360562783_name = StringName(from: "get_rotation")
-        self._method_get_rotation_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_rotation_3360562783_name._native_ptr(), 3360562783)
-        assert(Node3D._method_get_rotation_3360562783 != nil)
-        let _method_set_rotation_degrees_3460891852_name = StringName(from: "set_rotation_degrees")
-        self._method_set_rotation_degrees_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_rotation_degrees_3460891852_name._native_ptr(), 3460891852)
-        assert(Node3D._method_set_rotation_degrees_3460891852 != nil)
-        let _method_get_rotation_degrees_3360562783_name = StringName(from: "get_rotation_degrees")
-        self._method_get_rotation_degrees_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_rotation_degrees_3360562783_name._native_ptr(), 3360562783)
-        assert(Node3D._method_get_rotation_degrees_3360562783 != nil)
-        let _method_set_rotation_order_1820889989_name = StringName(from: "set_rotation_order")
-        self._method_set_rotation_order_1820889989 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_rotation_order_1820889989_name._native_ptr(), 1820889989)
-        assert(Node3D._method_set_rotation_order_1820889989 != nil)
-        let _method_get_rotation_order_916939469_name = StringName(from: "get_rotation_order")
-        self._method_get_rotation_order_916939469 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_rotation_order_916939469_name._native_ptr(), 916939469)
-        assert(Node3D._method_get_rotation_order_916939469 != nil)
-        let _method_set_rotation_edit_mode_141483330_name = StringName(from: "set_rotation_edit_mode")
-        self._method_set_rotation_edit_mode_141483330 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_rotation_edit_mode_141483330_name._native_ptr(), 141483330)
-        assert(Node3D._method_set_rotation_edit_mode_141483330 != nil)
-        let _method_get_rotation_edit_mode_1572188370_name = StringName(from: "get_rotation_edit_mode")
-        self._method_get_rotation_edit_mode_1572188370 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_rotation_edit_mode_1572188370_name._native_ptr(), 1572188370)
-        assert(Node3D._method_get_rotation_edit_mode_1572188370 != nil)
-        let _method_set_scale_3460891852_name = StringName(from: "set_scale")
-        self._method_set_scale_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_scale_3460891852_name._native_ptr(), 3460891852)
-        assert(Node3D._method_set_scale_3460891852 != nil)
-        let _method_get_scale_3360562783_name = StringName(from: "get_scale")
-        self._method_get_scale_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_scale_3360562783_name._native_ptr(), 3360562783)
-        assert(Node3D._method_get_scale_3360562783 != nil)
-        let _method_set_quaternion_1727505552_name = StringName(from: "set_quaternion")
-        self._method_set_quaternion_1727505552 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_quaternion_1727505552_name._native_ptr(), 1727505552)
-        assert(Node3D._method_set_quaternion_1727505552 != nil)
-        let _method_get_quaternion_1222331677_name = StringName(from: "get_quaternion")
-        self._method_get_quaternion_1222331677 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_quaternion_1222331677_name._native_ptr(), 1222331677)
-        assert(Node3D._method_get_quaternion_1222331677 != nil)
-        let _method_set_basis_1055510324_name = StringName(from: "set_basis")
-        self._method_set_basis_1055510324 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_basis_1055510324_name._native_ptr(), 1055510324)
-        assert(Node3D._method_set_basis_1055510324 != nil)
-        let _method_get_basis_2716978435_name = StringName(from: "get_basis")
-        self._method_get_basis_2716978435 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_basis_2716978435_name._native_ptr(), 2716978435)
-        assert(Node3D._method_get_basis_2716978435 != nil)
-        let _method_set_global_transform_2952846383_name = StringName(from: "set_global_transform")
-        self._method_set_global_transform_2952846383 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_global_transform_2952846383_name._native_ptr(), 2952846383)
-        assert(Node3D._method_set_global_transform_2952846383 != nil)
-        let _method_get_global_transform_3229777777_name = StringName(from: "get_global_transform")
-        self._method_get_global_transform_3229777777 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_global_transform_3229777777_name._native_ptr(), 3229777777)
-        assert(Node3D._method_get_global_transform_3229777777 != nil)
-        let _method_set_global_position_3460891852_name = StringName(from: "set_global_position")
-        self._method_set_global_position_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_global_position_3460891852_name._native_ptr(), 3460891852)
-        assert(Node3D._method_set_global_position_3460891852 != nil)
-        let _method_get_global_position_3360562783_name = StringName(from: "get_global_position")
-        self._method_get_global_position_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_global_position_3360562783_name._native_ptr(), 3360562783)
-        assert(Node3D._method_get_global_position_3360562783 != nil)
-        let _method_set_global_rotation_3460891852_name = StringName(from: "set_global_rotation")
-        self._method_set_global_rotation_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_global_rotation_3460891852_name._native_ptr(), 3460891852)
-        assert(Node3D._method_set_global_rotation_3460891852 != nil)
-        let _method_get_global_rotation_3360562783_name = StringName(from: "get_global_rotation")
-        self._method_get_global_rotation_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_global_rotation_3360562783_name._native_ptr(), 3360562783)
-        assert(Node3D._method_get_global_rotation_3360562783 != nil)
-        let _method_set_global_rotation_degrees_3460891852_name = StringName(from: "set_global_rotation_degrees")
-        self._method_set_global_rotation_degrees_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_global_rotation_degrees_3460891852_name._native_ptr(), 3460891852)
-        assert(Node3D._method_set_global_rotation_degrees_3460891852 != nil)
-        let _method_get_global_rotation_degrees_3360562783_name = StringName(from: "get_global_rotation_degrees")
-        self._method_get_global_rotation_degrees_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_global_rotation_degrees_3360562783_name._native_ptr(), 3360562783)
-        assert(Node3D._method_get_global_rotation_degrees_3360562783 != nil)
-        let _method_get_parent_node_3d_151077316_name = StringName(from: "get_parent_node_3d")
-        self._method_get_parent_node_3d_151077316 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_parent_node_3d_151077316_name._native_ptr(), 151077316)
-        assert(Node3D._method_get_parent_node_3d_151077316 != nil)
-        let _method_set_ignore_transform_notification_2586408642_name = StringName(from: "set_ignore_transform_notification")
-        self._method_set_ignore_transform_notification_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_ignore_transform_notification_2586408642_name._native_ptr(), 2586408642)
-        assert(Node3D._method_set_ignore_transform_notification_2586408642 != nil)
-        let _method_set_as_top_level_2586408642_name = StringName(from: "set_as_top_level")
-        self._method_set_as_top_level_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_as_top_level_2586408642_name._native_ptr(), 2586408642)
-        assert(Node3D._method_set_as_top_level_2586408642 != nil)
-        let _method_is_set_as_top_level_36873697_name = StringName(from: "is_set_as_top_level")
-        self._method_is_set_as_top_level_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_is_set_as_top_level_36873697_name._native_ptr(), 36873697)
-        assert(Node3D._method_is_set_as_top_level_36873697 != nil)
-        let _method_set_disable_scale_2586408642_name = StringName(from: "set_disable_scale")
-        self._method_set_disable_scale_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_disable_scale_2586408642_name._native_ptr(), 2586408642)
-        assert(Node3D._method_set_disable_scale_2586408642 != nil)
-        let _method_is_scale_disabled_36873697_name = StringName(from: "is_scale_disabled")
-        self._method_is_scale_disabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_is_scale_disabled_36873697_name._native_ptr(), 36873697)
-        assert(Node3D._method_is_scale_disabled_36873697 != nil)
-        let _method_get_world_3d_317588385_name = StringName(from: "get_world_3d")
-        self._method_get_world_3d_317588385 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_world_3d_317588385_name._native_ptr(), 317588385)
-        assert(Node3D._method_get_world_3d_317588385 != nil)
-        let _method_force_update_transform_3218959716_name = StringName(from: "force_update_transform")
-        self._method_force_update_transform_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_force_update_transform_3218959716_name._native_ptr(), 3218959716)
-        assert(Node3D._method_force_update_transform_3218959716 != nil)
-        let _method_set_visibility_parent_1348162250_name = StringName(from: "set_visibility_parent")
-        self._method_set_visibility_parent_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_visibility_parent_1348162250_name._native_ptr(), 1348162250)
-        assert(Node3D._method_set_visibility_parent_1348162250 != nil)
-        let _method_get_visibility_parent_4075236667_name = StringName(from: "get_visibility_parent")
-        self._method_get_visibility_parent_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_visibility_parent_4075236667_name._native_ptr(), 4075236667)
-        assert(Node3D._method_get_visibility_parent_4075236667 != nil)
-        let _method_update_gizmos_3218959716_name = StringName(from: "update_gizmos")
-        self._method_update_gizmos_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_update_gizmos_3218959716_name._native_ptr(), 3218959716)
-        assert(Node3D._method_update_gizmos_3218959716 != nil)
-        let _method_add_gizmo_1544533845_name = StringName(from: "add_gizmo")
-        self._method_add_gizmo_1544533845 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_add_gizmo_1544533845_name._native_ptr(), 1544533845)
-        assert(Node3D._method_add_gizmo_1544533845 != nil)
-        let _method_get_gizmos_3995934104_name = StringName(from: "get_gizmos")
-        self._method_get_gizmos_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_get_gizmos_3995934104_name._native_ptr(), 3995934104)
-        assert(Node3D._method_get_gizmos_3995934104 != nil)
-        let _method_clear_gizmos_3218959716_name = StringName(from: "clear_gizmos")
-        self._method_clear_gizmos_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_clear_gizmos_3218959716_name._native_ptr(), 3218959716)
-        assert(Node3D._method_clear_gizmos_3218959716 != nil)
-        let _method_set_subgizmo_selection_3317607635_name = StringName(from: "set_subgizmo_selection")
-        self._method_set_subgizmo_selection_3317607635 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_subgizmo_selection_3317607635_name._native_ptr(), 3317607635)
-        assert(Node3D._method_set_subgizmo_selection_3317607635 != nil)
-        let _method_clear_subgizmo_selection_3218959716_name = StringName(from: "clear_subgizmo_selection")
-        self._method_clear_subgizmo_selection_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_clear_subgizmo_selection_3218959716_name._native_ptr(), 3218959716)
-        assert(Node3D._method_clear_subgizmo_selection_3218959716 != nil)
-        let _method_set_visible_2586408642_name = StringName(from: "set_visible")
-        self._method_set_visible_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_visible_2586408642_name._native_ptr(), 2586408642)
-        assert(Node3D._method_set_visible_2586408642 != nil)
-        let _method_is_visible_36873697_name = StringName(from: "is_visible")
-        self._method_is_visible_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_is_visible_36873697_name._native_ptr(), 36873697)
-        assert(Node3D._method_is_visible_36873697 != nil)
-        let _method_is_visible_in_tree_36873697_name = StringName(from: "is_visible_in_tree")
-        self._method_is_visible_in_tree_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_is_visible_in_tree_36873697_name._native_ptr(), 36873697)
-        assert(Node3D._method_is_visible_in_tree_36873697 != nil)
-        let _method_show_3218959716_name = StringName(from: "show")
-        self._method_show_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_show_3218959716_name._native_ptr(), 3218959716)
-        assert(Node3D._method_show_3218959716 != nil)
-        let _method_hide_3218959716_name = StringName(from: "hide")
-        self._method_hide_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_hide_3218959716_name._native_ptr(), 3218959716)
-        assert(Node3D._method_hide_3218959716 != nil)
-        let _method_set_notify_local_transform_2586408642_name = StringName(from: "set_notify_local_transform")
-        self._method_set_notify_local_transform_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_notify_local_transform_2586408642_name._native_ptr(), 2586408642)
-        assert(Node3D._method_set_notify_local_transform_2586408642 != nil)
-        let _method_is_local_transform_notification_enabled_36873697_name = StringName(from: "is_local_transform_notification_enabled")
-        self._method_is_local_transform_notification_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_is_local_transform_notification_enabled_36873697_name._native_ptr(), 36873697)
-        assert(Node3D._method_is_local_transform_notification_enabled_36873697 != nil)
-        let _method_set_notify_transform_2586408642_name = StringName(from: "set_notify_transform")
-        self._method_set_notify_transform_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_notify_transform_2586408642_name._native_ptr(), 2586408642)
-        assert(Node3D._method_set_notify_transform_2586408642 != nil)
-        let _method_is_transform_notification_enabled_36873697_name = StringName(from: "is_transform_notification_enabled")
-        self._method_is_transform_notification_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_is_transform_notification_enabled_36873697_name._native_ptr(), 36873697)
-        assert(Node3D._method_is_transform_notification_enabled_36873697 != nil)
-        let _method_rotate_3436291937_name = StringName(from: "rotate")
-        self._method_rotate_3436291937 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_rotate_3436291937_name._native_ptr(), 3436291937)
-        assert(Node3D._method_rotate_3436291937 != nil)
-        let _method_global_rotate_3436291937_name = StringName(from: "global_rotate")
-        self._method_global_rotate_3436291937 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_global_rotate_3436291937_name._native_ptr(), 3436291937)
-        assert(Node3D._method_global_rotate_3436291937 != nil)
-        let _method_global_scale_3460891852_name = StringName(from: "global_scale")
-        self._method_global_scale_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_global_scale_3460891852_name._native_ptr(), 3460891852)
-        assert(Node3D._method_global_scale_3460891852 != nil)
-        let _method_global_translate_3460891852_name = StringName(from: "global_translate")
-        self._method_global_translate_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_global_translate_3460891852_name._native_ptr(), 3460891852)
-        assert(Node3D._method_global_translate_3460891852 != nil)
-        let _method_rotate_object_local_3436291937_name = StringName(from: "rotate_object_local")
-        self._method_rotate_object_local_3436291937 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_rotate_object_local_3436291937_name._native_ptr(), 3436291937)
-        assert(Node3D._method_rotate_object_local_3436291937 != nil)
-        let _method_scale_object_local_3460891852_name = StringName(from: "scale_object_local")
-        self._method_scale_object_local_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_scale_object_local_3460891852_name._native_ptr(), 3460891852)
-        assert(Node3D._method_scale_object_local_3460891852 != nil)
-        let _method_translate_object_local_3460891852_name = StringName(from: "translate_object_local")
-        self._method_translate_object_local_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_translate_object_local_3460891852_name._native_ptr(), 3460891852)
-        assert(Node3D._method_translate_object_local_3460891852 != nil)
-        let _method_rotate_x_373806689_name = StringName(from: "rotate_x")
-        self._method_rotate_x_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_rotate_x_373806689_name._native_ptr(), 373806689)
-        assert(Node3D._method_rotate_x_373806689 != nil)
-        let _method_rotate_y_373806689_name = StringName(from: "rotate_y")
-        self._method_rotate_y_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_rotate_y_373806689_name._native_ptr(), 373806689)
-        assert(Node3D._method_rotate_y_373806689 != nil)
-        let _method_rotate_z_373806689_name = StringName(from: "rotate_z")
-        self._method_rotate_z_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_rotate_z_373806689_name._native_ptr(), 373806689)
-        assert(Node3D._method_rotate_z_373806689 != nil)
-        let _method_translate_3460891852_name = StringName(from: "translate")
-        self._method_translate_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_translate_3460891852_name._native_ptr(), 3460891852)
-        assert(Node3D._method_translate_3460891852 != nil)
-        let _method_orthonormalize_3218959716_name = StringName(from: "orthonormalize")
-        self._method_orthonormalize_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_orthonormalize_3218959716_name._native_ptr(), 3218959716)
-        assert(Node3D._method_orthonormalize_3218959716 != nil)
-        let _method_set_identity_3218959716_name = StringName(from: "set_identity")
-        self._method_set_identity_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_set_identity_3218959716_name._native_ptr(), 3218959716)
-        assert(Node3D._method_set_identity_3218959716 != nil)
-        let _method_look_at_1002852006_name = StringName(from: "look_at")
-        self._method_look_at_1002852006 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_look_at_1002852006_name._native_ptr(), 1002852006)
-        assert(Node3D._method_look_at_1002852006 != nil)
-        let _method_look_at_from_position_735115603_name = StringName(from: "look_at_from_position")
-        self._method_look_at_from_position_735115603 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_look_at_from_position_735115603_name._native_ptr(), 735115603)
-        assert(Node3D._method_look_at_from_position_735115603 != nil)
-        let _method_to_local_192990374_name = StringName(from: "to_local")
-        self._method_to_local_192990374 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_to_local_192990374_name._native_ptr(), 192990374)
-        assert(Node3D._method_to_local_192990374 != nil)
-        let _method_to_global_192990374_name = StringName(from: "to_global")
-        self._method_to_global_192990374 = self.interface.pointee.classdb_get_method_bind(__godot_name_Node3D._native_ptr(), _method_to_global_192990374_name._native_ptr(), 192990374)
-        assert(Node3D._method_to_global_192990374 != nil)
+        self._method_set_transform_2952846383 = StringName(from: "set_transform")
+        assert(self._method_set_transform_2952846383 != nil)
+        self._method_get_transform_3229777777 = StringName(from: "get_transform")
+        assert(self._method_get_transform_3229777777 != nil)
+        self._method_set_position_3460891852 = StringName(from: "set_position")
+        assert(self._method_set_position_3460891852 != nil)
+        self._method_get_position_3360562783 = StringName(from: "get_position")
+        assert(self._method_get_position_3360562783 != nil)
+        self._method_set_rotation_3460891852 = StringName(from: "set_rotation")
+        assert(self._method_set_rotation_3460891852 != nil)
+        self._method_get_rotation_3360562783 = StringName(from: "get_rotation")
+        assert(self._method_get_rotation_3360562783 != nil)
+        self._method_set_rotation_degrees_3460891852 = StringName(from: "set_rotation_degrees")
+        assert(self._method_set_rotation_degrees_3460891852 != nil)
+        self._method_get_rotation_degrees_3360562783 = StringName(from: "get_rotation_degrees")
+        assert(self._method_get_rotation_degrees_3360562783 != nil)
+        self._method_set_rotation_order_1820889989 = StringName(from: "set_rotation_order")
+        assert(self._method_set_rotation_order_1820889989 != nil)
+        self._method_get_rotation_order_916939469 = StringName(from: "get_rotation_order")
+        assert(self._method_get_rotation_order_916939469 != nil)
+        self._method_set_rotation_edit_mode_141483330 = StringName(from: "set_rotation_edit_mode")
+        assert(self._method_set_rotation_edit_mode_141483330 != nil)
+        self._method_get_rotation_edit_mode_1572188370 = StringName(from: "get_rotation_edit_mode")
+        assert(self._method_get_rotation_edit_mode_1572188370 != nil)
+        self._method_set_scale_3460891852 = StringName(from: "set_scale")
+        assert(self._method_set_scale_3460891852 != nil)
+        self._method_get_scale_3360562783 = StringName(from: "get_scale")
+        assert(self._method_get_scale_3360562783 != nil)
+        self._method_set_quaternion_1727505552 = StringName(from: "set_quaternion")
+        assert(self._method_set_quaternion_1727505552 != nil)
+        self._method_get_quaternion_1222331677 = StringName(from: "get_quaternion")
+        assert(self._method_get_quaternion_1222331677 != nil)
+        self._method_set_basis_1055510324 = StringName(from: "set_basis")
+        assert(self._method_set_basis_1055510324 != nil)
+        self._method_get_basis_2716978435 = StringName(from: "get_basis")
+        assert(self._method_get_basis_2716978435 != nil)
+        self._method_set_global_transform_2952846383 = StringName(from: "set_global_transform")
+        assert(self._method_set_global_transform_2952846383 != nil)
+        self._method_get_global_transform_3229777777 = StringName(from: "get_global_transform")
+        assert(self._method_get_global_transform_3229777777 != nil)
+        self._method_set_global_position_3460891852 = StringName(from: "set_global_position")
+        assert(self._method_set_global_position_3460891852 != nil)
+        self._method_get_global_position_3360562783 = StringName(from: "get_global_position")
+        assert(self._method_get_global_position_3360562783 != nil)
+        self._method_set_global_rotation_3460891852 = StringName(from: "set_global_rotation")
+        assert(self._method_set_global_rotation_3460891852 != nil)
+        self._method_get_global_rotation_3360562783 = StringName(from: "get_global_rotation")
+        assert(self._method_get_global_rotation_3360562783 != nil)
+        self._method_set_global_rotation_degrees_3460891852 = StringName(from: "set_global_rotation_degrees")
+        assert(self._method_set_global_rotation_degrees_3460891852 != nil)
+        self._method_get_global_rotation_degrees_3360562783 = StringName(from: "get_global_rotation_degrees")
+        assert(self._method_get_global_rotation_degrees_3360562783 != nil)
+        self._method_get_parent_node_3d_151077316 = StringName(from: "get_parent_node_3d")
+        assert(self._method_get_parent_node_3d_151077316 != nil)
+        self._method_set_ignore_transform_notification_2586408642 = StringName(from: "set_ignore_transform_notification")
+        assert(self._method_set_ignore_transform_notification_2586408642 != nil)
+        self._method_set_as_top_level_2586408642 = StringName(from: "set_as_top_level")
+        assert(self._method_set_as_top_level_2586408642 != nil)
+        self._method_is_set_as_top_level_36873697 = StringName(from: "is_set_as_top_level")
+        assert(self._method_is_set_as_top_level_36873697 != nil)
+        self._method_set_disable_scale_2586408642 = StringName(from: "set_disable_scale")
+        assert(self._method_set_disable_scale_2586408642 != nil)
+        self._method_is_scale_disabled_36873697 = StringName(from: "is_scale_disabled")
+        assert(self._method_is_scale_disabled_36873697 != nil)
+        self._method_get_world_3d_317588385 = StringName(from: "get_world_3d")
+        assert(self._method_get_world_3d_317588385 != nil)
+        self._method_force_update_transform_3218959716 = StringName(from: "force_update_transform")
+        assert(self._method_force_update_transform_3218959716 != nil)
+        self._method_set_visibility_parent_1348162250 = StringName(from: "set_visibility_parent")
+        assert(self._method_set_visibility_parent_1348162250 != nil)
+        self._method_get_visibility_parent_4075236667 = StringName(from: "get_visibility_parent")
+        assert(self._method_get_visibility_parent_4075236667 != nil)
+        self._method_update_gizmos_3218959716 = StringName(from: "update_gizmos")
+        assert(self._method_update_gizmos_3218959716 != nil)
+        self._method_add_gizmo_1544533845 = StringName(from: "add_gizmo")
+        assert(self._method_add_gizmo_1544533845 != nil)
+        self._method_get_gizmos_3995934104 = StringName(from: "get_gizmos")
+        assert(self._method_get_gizmos_3995934104 != nil)
+        self._method_clear_gizmos_3218959716 = StringName(from: "clear_gizmos")
+        assert(self._method_clear_gizmos_3218959716 != nil)
+        self._method_set_subgizmo_selection_3317607635 = StringName(from: "set_subgizmo_selection")
+        assert(self._method_set_subgizmo_selection_3317607635 != nil)
+        self._method_clear_subgizmo_selection_3218959716 = StringName(from: "clear_subgizmo_selection")
+        assert(self._method_clear_subgizmo_selection_3218959716 != nil)
+        self._method_set_visible_2586408642 = StringName(from: "set_visible")
+        assert(self._method_set_visible_2586408642 != nil)
+        self._method_is_visible_36873697 = StringName(from: "is_visible")
+        assert(self._method_is_visible_36873697 != nil)
+        self._method_is_visible_in_tree_36873697 = StringName(from: "is_visible_in_tree")
+        assert(self._method_is_visible_in_tree_36873697 != nil)
+        self._method_show_3218959716 = StringName(from: "show")
+        assert(self._method_show_3218959716 != nil)
+        self._method_hide_3218959716 = StringName(from: "hide")
+        assert(self._method_hide_3218959716 != nil)
+        self._method_set_notify_local_transform_2586408642 = StringName(from: "set_notify_local_transform")
+        assert(self._method_set_notify_local_transform_2586408642 != nil)
+        self._method_is_local_transform_notification_enabled_36873697 = StringName(from: "is_local_transform_notification_enabled")
+        assert(self._method_is_local_transform_notification_enabled_36873697 != nil)
+        self._method_set_notify_transform_2586408642 = StringName(from: "set_notify_transform")
+        assert(self._method_set_notify_transform_2586408642 != nil)
+        self._method_is_transform_notification_enabled_36873697 = StringName(from: "is_transform_notification_enabled")
+        assert(self._method_is_transform_notification_enabled_36873697 != nil)
+        self._method_rotate_3436291937 = StringName(from: "rotate")
+        assert(self._method_rotate_3436291937 != nil)
+        self._method_global_rotate_3436291937 = StringName(from: "global_rotate")
+        assert(self._method_global_rotate_3436291937 != nil)
+        self._method_global_scale_3460891852 = StringName(from: "global_scale")
+        assert(self._method_global_scale_3460891852 != nil)
+        self._method_global_translate_3460891852 = StringName(from: "global_translate")
+        assert(self._method_global_translate_3460891852 != nil)
+        self._method_rotate_object_local_3436291937 = StringName(from: "rotate_object_local")
+        assert(self._method_rotate_object_local_3436291937 != nil)
+        self._method_scale_object_local_3460891852 = StringName(from: "scale_object_local")
+        assert(self._method_scale_object_local_3460891852 != nil)
+        self._method_translate_object_local_3460891852 = StringName(from: "translate_object_local")
+        assert(self._method_translate_object_local_3460891852 != nil)
+        self._method_rotate_x_373806689 = StringName(from: "rotate_x")
+        assert(self._method_rotate_x_373806689 != nil)
+        self._method_rotate_y_373806689 = StringName(from: "rotate_y")
+        assert(self._method_rotate_y_373806689 != nil)
+        self._method_rotate_z_373806689 = StringName(from: "rotate_z")
+        assert(self._method_rotate_z_373806689 != nil)
+        self._method_translate_3460891852 = StringName(from: "translate")
+        assert(self._method_translate_3460891852 != nil)
+        self._method_orthonormalize_3218959716 = StringName(from: "orthonormalize")
+        assert(self._method_orthonormalize_3218959716 != nil)
+        self._method_set_identity_3218959716 = StringName(from: "set_identity")
+        assert(self._method_set_identity_3218959716 != nil)
+        self._method_look_at_1002852006 = StringName(from: "look_at")
+        assert(self._method_look_at_1002852006 != nil)
+        self._method_look_at_from_position_735115603 = StringName(from: "look_at_from_position")
+        assert(self._method_look_at_from_position_735115603 != nil)
+        self._method_to_local_192990374 = StringName(from: "to_local")
+        assert(self._method_to_local_192990374 != nil)
+        self._method_to_global_192990374 = StringName(from: "to_global")
+        assert(self._method_to_global_192990374 != nil)
     }
 
     public func set_transform(local: Transform3D)  {
@@ -310,8 +243,13 @@ open class Node3D : Node {
                 .init(local_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_transform_2952846383,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_transform_2952846383._native_ptr(),
+                    2952846383)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -325,8 +263,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_transform_3229777777,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_transform_3229777777._native_ptr(),
+                    3229777777)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -341,8 +284,13 @@ open class Node3D : Node {
                 .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_position_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_position_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -356,8 +304,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_position_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_position_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -372,8 +325,13 @@ open class Node3D : Node {
                 .init(euler_radians_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_rotation_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_rotation_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -387,8 +345,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rotation_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rotation_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -403,8 +366,13 @@ open class Node3D : Node {
                 .init(euler_degrees_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_rotation_degrees_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_rotation_degrees_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -418,8 +386,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rotation_degrees_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rotation_degrees_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -434,8 +407,13 @@ open class Node3D : Node {
                 .init(order_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_rotation_order_1820889989,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_rotation_order_1820889989._native_ptr(),
+                    1820889989)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -450,8 +428,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rotation_order_916939469,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rotation_order_916939469._native_ptr(),
+                    916939469)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -466,8 +449,13 @@ open class Node3D : Node {
                 .init(edit_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_rotation_edit_mode_141483330,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_rotation_edit_mode_141483330._native_ptr(),
+                    141483330)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -482,8 +470,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rotation_edit_mode_1572188370,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rotation_edit_mode_1572188370._native_ptr(),
+                    1572188370)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -498,8 +491,13 @@ open class Node3D : Node {
                 .init(scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_scale_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_scale_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -513,8 +511,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_scale_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_scale_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -529,8 +532,13 @@ open class Node3D : Node {
                 .init(quaternion_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_quaternion_1727505552,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_quaternion_1727505552._native_ptr(),
+                    1727505552)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -544,8 +552,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_quaternion_1222331677,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_quaternion_1222331677._native_ptr(),
+                    1222331677)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -560,8 +573,13 @@ open class Node3D : Node {
                 .init(basis_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_basis_1055510324,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_basis_1055510324._native_ptr(),
+                    1055510324)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -575,8 +593,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_basis_2716978435,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_basis_2716978435._native_ptr(),
+                    2716978435)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -591,8 +614,13 @@ open class Node3D : Node {
                 .init(global_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_global_transform_2952846383,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_global_transform_2952846383._native_ptr(),
+                    2952846383)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -606,8 +634,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_global_transform_3229777777,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_global_transform_3229777777._native_ptr(),
+                    3229777777)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -622,8 +655,13 @@ open class Node3D : Node {
                 .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_global_position_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_global_position_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -637,8 +675,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_global_position_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_global_position_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -653,8 +696,13 @@ open class Node3D : Node {
                 .init(euler_radians_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_global_rotation_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_global_rotation_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -668,8 +716,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_global_rotation_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_global_rotation_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -684,8 +737,13 @@ open class Node3D : Node {
                 .init(euler_degrees_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_global_rotation_degrees_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_global_rotation_degrees_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -699,8 +757,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_global_rotation_degrees_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_global_rotation_degrees_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -715,8 +778,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_parent_node_3d_151077316,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_parent_node_3d_151077316._native_ptr(),
+                    151077316)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -731,8 +799,13 @@ open class Node3D : Node {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_ignore_transform_notification_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_ignore_transform_notification_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -747,8 +820,13 @@ open class Node3D : Node {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_as_top_level_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_as_top_level_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -764,8 +842,13 @@ open class Node3D : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_set_as_top_level_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_set_as_top_level_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -780,8 +863,13 @@ open class Node3D : Node {
                 .init(disable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_disable_scale_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_disable_scale_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -797,8 +885,13 @@ open class Node3D : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_scale_disabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_scale_disabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -813,8 +906,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_world_3d_317588385,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_world_3d_317588385._native_ptr(),
+                    317588385)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -828,8 +926,13 @@ open class Node3D : Node {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_force_update_transform_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_force_update_transform_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -843,8 +946,13 @@ open class Node3D : Node {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_visibility_parent_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_visibility_parent_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -858,8 +966,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_visibility_parent_4075236667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_visibility_parent_4075236667._native_ptr(),
+                    4075236667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -873,8 +986,13 @@ open class Node3D : Node {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_update_gizmos_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_update_gizmos_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -888,8 +1006,13 @@ open class Node3D : Node {
                 .init(gizmo_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_gizmo_1544533845,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_gizmo_1544533845._native_ptr(),
+                    1544533845)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -903,8 +1026,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_gizmos_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_gizmos_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -918,8 +1046,13 @@ open class Node3D : Node {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_gizmos_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_gizmos_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -935,8 +1068,13 @@ open class Node3D : Node {
                 .init(gizmo_native), .init(id_native), .init(transform_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_subgizmo_selection_3317607635,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_subgizmo_selection_3317607635._native_ptr(),
+                    3317607635)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -950,8 +1088,13 @@ open class Node3D : Node {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_subgizmo_selection_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_subgizmo_selection_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -965,8 +1108,13 @@ open class Node3D : Node {
                 .init(visible_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_visible_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_visible_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -982,8 +1130,13 @@ open class Node3D : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_visible_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_visible_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -999,8 +1152,13 @@ open class Node3D : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_visible_in_tree_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_visible_in_tree_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1014,8 +1172,13 @@ open class Node3D : Node {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_show_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_show_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1028,8 +1191,13 @@ open class Node3D : Node {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_hide_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_hide_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1043,8 +1211,13 @@ open class Node3D : Node {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_notify_local_transform_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_notify_local_transform_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1060,8 +1233,13 @@ open class Node3D : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_local_transform_notification_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_local_transform_notification_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1076,8 +1254,13 @@ open class Node3D : Node {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_notify_transform_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_notify_transform_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1093,8 +1276,13 @@ open class Node3D : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_transform_notification_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_transform_notification_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1110,8 +1298,13 @@ open class Node3D : Node {
                 .init(axis_native), .init(angle_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_rotate_3436291937,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_rotate_3436291937._native_ptr(),
+                    3436291937)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1127,8 +1320,13 @@ open class Node3D : Node {
                 .init(axis_native), .init(angle_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_global_rotate_3436291937,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_global_rotate_3436291937._native_ptr(),
+                    3436291937)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1143,8 +1341,13 @@ open class Node3D : Node {
                 .init(scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_global_scale_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_global_scale_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1158,8 +1361,13 @@ open class Node3D : Node {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_global_translate_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_global_translate_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1174,8 +1382,13 @@ open class Node3D : Node {
                 .init(axis_native), .init(angle_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_rotate_object_local_3436291937,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_rotate_object_local_3436291937._native_ptr(),
+                    3436291937)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1190,8 +1403,13 @@ open class Node3D : Node {
                 .init(scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_scale_object_local_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_scale_object_local_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1205,8 +1423,13 @@ open class Node3D : Node {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_translate_object_local_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_translate_object_local_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1220,8 +1443,13 @@ open class Node3D : Node {
                 .init(angle_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_rotate_x_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_rotate_x_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1236,8 +1464,13 @@ open class Node3D : Node {
                 .init(angle_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_rotate_y_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_rotate_y_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1252,8 +1485,13 @@ open class Node3D : Node {
                 .init(angle_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_rotate_z_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_rotate_z_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1268,8 +1506,13 @@ open class Node3D : Node {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_translate_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_translate_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1282,8 +1525,13 @@ open class Node3D : Node {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_orthonormalize_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_orthonormalize_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1296,8 +1544,13 @@ open class Node3D : Node {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_identity_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_identity_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1312,8 +1565,13 @@ open class Node3D : Node {
                 .init(target_native), .init(up_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_look_at_1002852006,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_look_at_1002852006._native_ptr(),
+                    1002852006)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1329,8 +1587,13 @@ open class Node3D : Node {
                 .init(position_native), .init(target_native), .init(up_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_look_at_from_position_735115603,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_look_at_from_position_735115603._native_ptr(),
+                    735115603)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1345,8 +1608,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_to_local_192990374,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_to_local_192990374._native_ptr(),
+                    192990374)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1362,8 +1630,13 @@ open class Node3D : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_to_global_192990374,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_to_global_192990374._native_ptr(),
+                    192990374)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

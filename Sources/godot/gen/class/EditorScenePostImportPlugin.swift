@@ -20,35 +20,33 @@ open class EditorScenePostImportPlugin : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_EditorScenePostImportPlugin }
 
-    static var _method__get_internal_import_options_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_internal_option_visibility_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_internal_option_update_view_required_0: GDExtensionMethodBindPtr! = nil
-    static var _method__internal_process_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_import_options_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_option_visibility_0: GDExtensionMethodBindPtr! = nil
-    static var _method__pre_process_0: GDExtensionMethodBindPtr! = nil
-    static var _method__post_process_0: GDExtensionMethodBindPtr! = nil
-    static var _method_get_option_value_2760726917: GDExtensionMethodBindPtr! = nil
-    static var _method_add_import_option_402577236: GDExtensionMethodBindPtr! = nil
-    static var _method_add_import_option_advanced_3774155785: GDExtensionMethodBindPtr! = nil
+    static var _method__get_internal_import_options_0: StringName! = nil
+    static var _method__get_internal_option_visibility_0: StringName! = nil
+    static var _method__get_internal_option_update_view_required_0: StringName! = nil
+    static var _method__internal_process_0: StringName! = nil
+    static var _method__get_import_options_0: StringName! = nil
+    static var _method__get_option_visibility_0: StringName! = nil
+    static var _method__pre_process_0: StringName! = nil
+    static var _method__post_process_0: StringName! = nil
+    static var _method_get_option_value_2760726917: StringName! = nil
+    static var _method_add_import_option_402577236: StringName! = nil
+    static var _method_add_import_option_advanced_3774155785: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorScenePostImportPlugin == nil)
         __godot_name_EditorScenePostImportPlugin = StringName(from: "EditorScenePostImportPlugin")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_option_value_2760726917_name = StringName(from: "get_option_value")
-        self._method_get_option_value_2760726917 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorScenePostImportPlugin._native_ptr(), _method_get_option_value_2760726917_name._native_ptr(), 2760726917)
-        assert(EditorScenePostImportPlugin._method_get_option_value_2760726917 != nil)
-        let _method_add_import_option_402577236_name = StringName(from: "add_import_option")
-        self._method_add_import_option_402577236 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorScenePostImportPlugin._native_ptr(), _method_add_import_option_402577236_name._native_ptr(), 402577236)
-        assert(EditorScenePostImportPlugin._method_add_import_option_402577236 != nil)
-        let _method_add_import_option_advanced_3774155785_name = StringName(from: "add_import_option_advanced")
-        self._method_add_import_option_advanced_3774155785 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorScenePostImportPlugin._native_ptr(), _method_add_import_option_advanced_3774155785_name._native_ptr(), 3774155785)
-        assert(EditorScenePostImportPlugin._method_add_import_option_advanced_3774155785 != nil)
+        self._method_get_option_value_2760726917 = StringName(from: "get_option_value")
+        assert(self._method_get_option_value_2760726917 != nil)
+        self._method_add_import_option_402577236 = StringName(from: "add_import_option")
+        assert(self._method_add_import_option_402577236 != nil)
+        self._method_add_import_option_advanced_3774155785 = StringName(from: "add_import_option_advanced")
+        assert(self._method_add_import_option_advanced_3774155785 != nil)
     }
 
     public func _get_internal_import_options(category: Int64)  {
@@ -59,12 +57,7 @@ open class EditorScenePostImportPlugin : RefCounted {
                 .init(category_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_internal_import_options_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _get_internal_option_visibility(category: Int64, for_animation: UInt8, option: godot.String) -> Variant {
@@ -78,12 +71,7 @@ open class EditorScenePostImportPlugin : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_internal_option_visibility_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Variant(godot: __resPtr.pointee)
         }
         }
@@ -98,12 +86,7 @@ open class EditorScenePostImportPlugin : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_internal_option_update_view_required_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Variant(godot: __resPtr.pointee)
         }
     }
@@ -118,12 +101,7 @@ open class EditorScenePostImportPlugin : RefCounted {
                 .init(category_native), .init(base_node_native), .init(node_native), .init(resource_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__internal_process_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _get_import_options(path: godot.String)  {
@@ -134,12 +112,7 @@ open class EditorScenePostImportPlugin : RefCounted {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_import_options_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _get_option_visibility(path: godot.String, for_animation: UInt8, option: godot.String) -> Variant {
         withUnsafePointer(to: for_animation) { for_animation_native in
@@ -152,12 +125,7 @@ open class EditorScenePostImportPlugin : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_option_visibility_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Variant(godot: __resPtr.pointee)
         }
     }
@@ -169,12 +137,7 @@ open class EditorScenePostImportPlugin : RefCounted {
                 .init(scene_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__pre_process_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _post_process(scene: Node)  {
         let scene_native = scene._native_ptr()
@@ -184,12 +147,7 @@ open class EditorScenePostImportPlugin : RefCounted {
                 .init(scene_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__post_process_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func get_option_value(name: StringName) -> Variant {
         let name_native = name._native_ptr()
@@ -200,8 +158,13 @@ open class EditorScenePostImportPlugin : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_option_value_2760726917,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_option_value_2760726917._native_ptr(),
+                    2760726917)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -217,8 +180,13 @@ open class EditorScenePostImportPlugin : RefCounted {
                 .init(name_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_import_option_402577236,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_import_option_402577236._native_ptr(),
+                    402577236)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -237,8 +205,13 @@ open class EditorScenePostImportPlugin : RefCounted {
                 .init(type_native), .init(name_native), .init(default_value_native), .init(hint_native), .init(hint_string_native), .init(usage_flags_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_import_option_advanced_3774155785,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_import_option_advanced_3774155785._native_ptr(),
+                    3774155785)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

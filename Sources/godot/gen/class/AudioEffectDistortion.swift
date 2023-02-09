@@ -21,55 +21,46 @@ open class AudioEffectDistortion : AudioEffect {
 
     public override class var __godot_name: StringName { __godot_name_AudioEffectDistortion }
 
-    static var _method_set_mode_1314744793: GDExtensionMethodBindPtr! = nil
-    static var _method_get_mode_809118343: GDExtensionMethodBindPtr! = nil
-    static var _method_set_pre_gain_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pre_gain_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_keep_hf_hz_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_keep_hf_hz_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_drive_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_drive_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_post_gain_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_post_gain_1740695150: GDExtensionMethodBindPtr! = nil
+    static var _method_set_mode_1314744793: StringName! = nil
+    static var _method_get_mode_809118343: StringName! = nil
+    static var _method_set_pre_gain_373806689: StringName! = nil
+    static var _method_get_pre_gain_1740695150: StringName! = nil
+    static var _method_set_keep_hf_hz_373806689: StringName! = nil
+    static var _method_get_keep_hf_hz_1740695150: StringName! = nil
+    static var _method_set_drive_373806689: StringName! = nil
+    static var _method_get_drive_1740695150: StringName! = nil
+    static var _method_set_post_gain_373806689: StringName! = nil
+    static var _method_get_post_gain_1740695150: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AudioEffectDistortion == nil)
         __godot_name_AudioEffectDistortion = StringName(from: "AudioEffectDistortion")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_mode_1314744793_name = StringName(from: "set_mode")
-        self._method_set_mode_1314744793 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectDistortion._native_ptr(), _method_set_mode_1314744793_name._native_ptr(), 1314744793)
-        assert(AudioEffectDistortion._method_set_mode_1314744793 != nil)
-        let _method_get_mode_809118343_name = StringName(from: "get_mode")
-        self._method_get_mode_809118343 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectDistortion._native_ptr(), _method_get_mode_809118343_name._native_ptr(), 809118343)
-        assert(AudioEffectDistortion._method_get_mode_809118343 != nil)
-        let _method_set_pre_gain_373806689_name = StringName(from: "set_pre_gain")
-        self._method_set_pre_gain_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectDistortion._native_ptr(), _method_set_pre_gain_373806689_name._native_ptr(), 373806689)
-        assert(AudioEffectDistortion._method_set_pre_gain_373806689 != nil)
-        let _method_get_pre_gain_1740695150_name = StringName(from: "get_pre_gain")
-        self._method_get_pre_gain_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectDistortion._native_ptr(), _method_get_pre_gain_1740695150_name._native_ptr(), 1740695150)
-        assert(AudioEffectDistortion._method_get_pre_gain_1740695150 != nil)
-        let _method_set_keep_hf_hz_373806689_name = StringName(from: "set_keep_hf_hz")
-        self._method_set_keep_hf_hz_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectDistortion._native_ptr(), _method_set_keep_hf_hz_373806689_name._native_ptr(), 373806689)
-        assert(AudioEffectDistortion._method_set_keep_hf_hz_373806689 != nil)
-        let _method_get_keep_hf_hz_1740695150_name = StringName(from: "get_keep_hf_hz")
-        self._method_get_keep_hf_hz_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectDistortion._native_ptr(), _method_get_keep_hf_hz_1740695150_name._native_ptr(), 1740695150)
-        assert(AudioEffectDistortion._method_get_keep_hf_hz_1740695150 != nil)
-        let _method_set_drive_373806689_name = StringName(from: "set_drive")
-        self._method_set_drive_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectDistortion._native_ptr(), _method_set_drive_373806689_name._native_ptr(), 373806689)
-        assert(AudioEffectDistortion._method_set_drive_373806689 != nil)
-        let _method_get_drive_1740695150_name = StringName(from: "get_drive")
-        self._method_get_drive_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectDistortion._native_ptr(), _method_get_drive_1740695150_name._native_ptr(), 1740695150)
-        assert(AudioEffectDistortion._method_get_drive_1740695150 != nil)
-        let _method_set_post_gain_373806689_name = StringName(from: "set_post_gain")
-        self._method_set_post_gain_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectDistortion._native_ptr(), _method_set_post_gain_373806689_name._native_ptr(), 373806689)
-        assert(AudioEffectDistortion._method_set_post_gain_373806689 != nil)
-        let _method_get_post_gain_1740695150_name = StringName(from: "get_post_gain")
-        self._method_get_post_gain_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectDistortion._native_ptr(), _method_get_post_gain_1740695150_name._native_ptr(), 1740695150)
-        assert(AudioEffectDistortion._method_get_post_gain_1740695150 != nil)
+        self._method_set_mode_1314744793 = StringName(from: "set_mode")
+        assert(self._method_set_mode_1314744793 != nil)
+        self._method_get_mode_809118343 = StringName(from: "get_mode")
+        assert(self._method_get_mode_809118343 != nil)
+        self._method_set_pre_gain_373806689 = StringName(from: "set_pre_gain")
+        assert(self._method_set_pre_gain_373806689 != nil)
+        self._method_get_pre_gain_1740695150 = StringName(from: "get_pre_gain")
+        assert(self._method_get_pre_gain_1740695150 != nil)
+        self._method_set_keep_hf_hz_373806689 = StringName(from: "set_keep_hf_hz")
+        assert(self._method_set_keep_hf_hz_373806689 != nil)
+        self._method_get_keep_hf_hz_1740695150 = StringName(from: "get_keep_hf_hz")
+        assert(self._method_get_keep_hf_hz_1740695150 != nil)
+        self._method_set_drive_373806689 = StringName(from: "set_drive")
+        assert(self._method_set_drive_373806689 != nil)
+        self._method_get_drive_1740695150 = StringName(from: "get_drive")
+        assert(self._method_get_drive_1740695150 != nil)
+        self._method_set_post_gain_373806689 = StringName(from: "set_post_gain")
+        assert(self._method_set_post_gain_373806689 != nil)
+        self._method_get_post_gain_1740695150 = StringName(from: "get_post_gain")
+        assert(self._method_get_post_gain_1740695150 != nil)
     }
 
     public func set_mode(mode: AudioEffectDistortion.Mode)  {
@@ -80,8 +71,13 @@ open class AudioEffectDistortion : AudioEffect {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_mode_1314744793,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_mode_1314744793._native_ptr(),
+                    1314744793)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -96,8 +92,13 @@ open class AudioEffectDistortion : AudioEffect {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_mode_809118343,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_mode_809118343._native_ptr(),
+                    809118343)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -112,8 +113,13 @@ open class AudioEffectDistortion : AudioEffect {
                 .init(pre_gain_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pre_gain_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pre_gain_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -129,8 +135,13 @@ open class AudioEffectDistortion : AudioEffect {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pre_gain_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pre_gain_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -145,8 +156,13 @@ open class AudioEffectDistortion : AudioEffect {
                 .init(keep_hf_hz_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_keep_hf_hz_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_keep_hf_hz_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -162,8 +178,13 @@ open class AudioEffectDistortion : AudioEffect {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_keep_hf_hz_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_keep_hf_hz_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -178,8 +199,13 @@ open class AudioEffectDistortion : AudioEffect {
                 .init(drive_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_drive_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_drive_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -195,8 +221,13 @@ open class AudioEffectDistortion : AudioEffect {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_drive_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_drive_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -211,8 +242,13 @@ open class AudioEffectDistortion : AudioEffect {
                 .init(post_gain_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_post_gain_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_post_gain_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -228,8 +264,13 @@ open class AudioEffectDistortion : AudioEffect {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_post_gain_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_post_gain_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

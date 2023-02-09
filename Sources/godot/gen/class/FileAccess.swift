@@ -102,211 +102,163 @@ open class FileAccess : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_FileAccess }
 
-    static var _method_open_1247358404: GDExtensionMethodBindPtr! = nil
-    static var _method_open_encrypted_1482131466: GDExtensionMethodBindPtr! = nil
-    static var _method_open_encrypted_with_pass_790283377: GDExtensionMethodBindPtr! = nil
-    static var _method_open_compressed_2874458257: GDExtensionMethodBindPtr! = nil
-    static var _method_get_open_error_166280745: GDExtensionMethodBindPtr! = nil
-    static var _method_get_file_as_bytes_659035735: GDExtensionMethodBindPtr! = nil
-    static var _method_get_file_as_string_1703090593: GDExtensionMethodBindPtr! = nil
-    static var _method_flush_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_path_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_path_absolute_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_is_open_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_seek_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_seek_end_1995695955: GDExtensionMethodBindPtr! = nil
-    static var _method_get_position_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_length_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_eof_reached_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_8_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_16_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_32_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_64_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_float_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_double_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_real_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_buffer_4131300905: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_csv_line_2358116058: GDExtensionMethodBindPtr! = nil
-    static var _method_get_as_text_1162154673: GDExtensionMethodBindPtr! = nil
-    static var _method_get_md5_1703090593: GDExtensionMethodBindPtr! = nil
-    static var _method_get_sha256_1703090593: GDExtensionMethodBindPtr! = nil
-    static var _method_is_big_endian_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_big_endian_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_error_3185525595: GDExtensionMethodBindPtr! = nil
-    static var _method_get_var_189129690: GDExtensionMethodBindPtr! = nil
-    static var _method_store_8_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_store_16_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_store_32_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_store_64_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_store_float_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_store_double_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_store_real_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_store_buffer_2971499966: GDExtensionMethodBindPtr! = nil
-    static var _method_store_line_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_store_csv_line_2217842308: GDExtensionMethodBindPtr! = nil
-    static var _method_store_string_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_store_var_738511890: GDExtensionMethodBindPtr! = nil
-    static var _method_store_pascal_string_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pascal_string_2841200299: GDExtensionMethodBindPtr! = nil
-    static var _method_file_exists_2323990056: GDExtensionMethodBindPtr! = nil
-    static var _method_get_modified_time_1597066294: GDExtensionMethodBindPtr! = nil
+    static var _method_open_1247358404: StringName! = nil
+    static var _method_open_encrypted_1482131466: StringName! = nil
+    static var _method_open_encrypted_with_pass_790283377: StringName! = nil
+    static var _method_open_compressed_2874458257: StringName! = nil
+    static var _method_get_open_error_166280745: StringName! = nil
+    static var _method_get_file_as_bytes_659035735: StringName! = nil
+    static var _method_get_file_as_string_1703090593: StringName! = nil
+    static var _method_flush_3218959716: StringName! = nil
+    static var _method_get_path_201670096: StringName! = nil
+    static var _method_get_path_absolute_201670096: StringName! = nil
+    static var _method_is_open_36873697: StringName! = nil
+    static var _method_seek_1286410249: StringName! = nil
+    static var _method_seek_end_1995695955: StringName! = nil
+    static var _method_get_position_3905245786: StringName! = nil
+    static var _method_get_length_3905245786: StringName! = nil
+    static var _method_eof_reached_36873697: StringName! = nil
+    static var _method_get_8_3905245786: StringName! = nil
+    static var _method_get_16_3905245786: StringName! = nil
+    static var _method_get_32_3905245786: StringName! = nil
+    static var _method_get_64_3905245786: StringName! = nil
+    static var _method_get_float_1740695150: StringName! = nil
+    static var _method_get_double_1740695150: StringName! = nil
+    static var _method_get_real_1740695150: StringName! = nil
+    static var _method_get_buffer_4131300905: StringName! = nil
+    static var _method_get_line_201670096: StringName! = nil
+    static var _method_get_csv_line_2358116058: StringName! = nil
+    static var _method_get_as_text_1162154673: StringName! = nil
+    static var _method_get_md5_1703090593: StringName! = nil
+    static var _method_get_sha256_1703090593: StringName! = nil
+    static var _method_is_big_endian_36873697: StringName! = nil
+    static var _method_set_big_endian_2586408642: StringName! = nil
+    static var _method_get_error_3185525595: StringName! = nil
+    static var _method_get_var_189129690: StringName! = nil
+    static var _method_store_8_1286410249: StringName! = nil
+    static var _method_store_16_1286410249: StringName! = nil
+    static var _method_store_32_1286410249: StringName! = nil
+    static var _method_store_64_1286410249: StringName! = nil
+    static var _method_store_float_373806689: StringName! = nil
+    static var _method_store_double_373806689: StringName! = nil
+    static var _method_store_real_373806689: StringName! = nil
+    static var _method_store_buffer_2971499966: StringName! = nil
+    static var _method_store_line_83702148: StringName! = nil
+    static var _method_store_csv_line_2217842308: StringName! = nil
+    static var _method_store_string_83702148: StringName! = nil
+    static var _method_store_var_738511890: StringName! = nil
+    static var _method_store_pascal_string_83702148: StringName! = nil
+    static var _method_get_pascal_string_2841200299: StringName! = nil
+    static var _method_file_exists_2323990056: StringName! = nil
+    static var _method_get_modified_time_1597066294: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_FileAccess == nil)
         __godot_name_FileAccess = StringName(from: "FileAccess")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_open_1247358404_name = StringName(from: "open")
-        self._method_open_1247358404 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_open_1247358404_name._native_ptr(), 1247358404)
-        assert(FileAccess._method_open_1247358404 != nil)
-        let _method_open_encrypted_1482131466_name = StringName(from: "open_encrypted")
-        self._method_open_encrypted_1482131466 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_open_encrypted_1482131466_name._native_ptr(), 1482131466)
-        assert(FileAccess._method_open_encrypted_1482131466 != nil)
-        let _method_open_encrypted_with_pass_790283377_name = StringName(from: "open_encrypted_with_pass")
-        self._method_open_encrypted_with_pass_790283377 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_open_encrypted_with_pass_790283377_name._native_ptr(), 790283377)
-        assert(FileAccess._method_open_encrypted_with_pass_790283377 != nil)
-        let _method_open_compressed_2874458257_name = StringName(from: "open_compressed")
-        self._method_open_compressed_2874458257 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_open_compressed_2874458257_name._native_ptr(), 2874458257)
-        assert(FileAccess._method_open_compressed_2874458257 != nil)
-        let _method_get_open_error_166280745_name = StringName(from: "get_open_error")
-        self._method_get_open_error_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_open_error_166280745_name._native_ptr(), 166280745)
-        assert(FileAccess._method_get_open_error_166280745 != nil)
-        let _method_get_file_as_bytes_659035735_name = StringName(from: "get_file_as_bytes")
-        self._method_get_file_as_bytes_659035735 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_file_as_bytes_659035735_name._native_ptr(), 659035735)
-        assert(FileAccess._method_get_file_as_bytes_659035735 != nil)
-        let _method_get_file_as_string_1703090593_name = StringName(from: "get_file_as_string")
-        self._method_get_file_as_string_1703090593 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_file_as_string_1703090593_name._native_ptr(), 1703090593)
-        assert(FileAccess._method_get_file_as_string_1703090593 != nil)
-        let _method_flush_3218959716_name = StringName(from: "flush")
-        self._method_flush_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_flush_3218959716_name._native_ptr(), 3218959716)
-        assert(FileAccess._method_flush_3218959716 != nil)
-        let _method_get_path_201670096_name = StringName(from: "get_path")
-        self._method_get_path_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_path_201670096_name._native_ptr(), 201670096)
-        assert(FileAccess._method_get_path_201670096 != nil)
-        let _method_get_path_absolute_201670096_name = StringName(from: "get_path_absolute")
-        self._method_get_path_absolute_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_path_absolute_201670096_name._native_ptr(), 201670096)
-        assert(FileAccess._method_get_path_absolute_201670096 != nil)
-        let _method_is_open_36873697_name = StringName(from: "is_open")
-        self._method_is_open_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_is_open_36873697_name._native_ptr(), 36873697)
-        assert(FileAccess._method_is_open_36873697 != nil)
-        let _method_seek_1286410249_name = StringName(from: "seek")
-        self._method_seek_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_seek_1286410249_name._native_ptr(), 1286410249)
-        assert(FileAccess._method_seek_1286410249 != nil)
-        let _method_seek_end_1995695955_name = StringName(from: "seek_end")
-        self._method_seek_end_1995695955 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_seek_end_1995695955_name._native_ptr(), 1995695955)
-        assert(FileAccess._method_seek_end_1995695955 != nil)
-        let _method_get_position_3905245786_name = StringName(from: "get_position")
-        self._method_get_position_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_position_3905245786_name._native_ptr(), 3905245786)
-        assert(FileAccess._method_get_position_3905245786 != nil)
-        let _method_get_length_3905245786_name = StringName(from: "get_length")
-        self._method_get_length_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_length_3905245786_name._native_ptr(), 3905245786)
-        assert(FileAccess._method_get_length_3905245786 != nil)
-        let _method_eof_reached_36873697_name = StringName(from: "eof_reached")
-        self._method_eof_reached_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_eof_reached_36873697_name._native_ptr(), 36873697)
-        assert(FileAccess._method_eof_reached_36873697 != nil)
-        let _method_get_8_3905245786_name = StringName(from: "get_8")
-        self._method_get_8_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_8_3905245786_name._native_ptr(), 3905245786)
-        assert(FileAccess._method_get_8_3905245786 != nil)
-        let _method_get_16_3905245786_name = StringName(from: "get_16")
-        self._method_get_16_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_16_3905245786_name._native_ptr(), 3905245786)
-        assert(FileAccess._method_get_16_3905245786 != nil)
-        let _method_get_32_3905245786_name = StringName(from: "get_32")
-        self._method_get_32_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_32_3905245786_name._native_ptr(), 3905245786)
-        assert(FileAccess._method_get_32_3905245786 != nil)
-        let _method_get_64_3905245786_name = StringName(from: "get_64")
-        self._method_get_64_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_64_3905245786_name._native_ptr(), 3905245786)
-        assert(FileAccess._method_get_64_3905245786 != nil)
-        let _method_get_float_1740695150_name = StringName(from: "get_float")
-        self._method_get_float_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_float_1740695150_name._native_ptr(), 1740695150)
-        assert(FileAccess._method_get_float_1740695150 != nil)
-        let _method_get_double_1740695150_name = StringName(from: "get_double")
-        self._method_get_double_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_double_1740695150_name._native_ptr(), 1740695150)
-        assert(FileAccess._method_get_double_1740695150 != nil)
-        let _method_get_real_1740695150_name = StringName(from: "get_real")
-        self._method_get_real_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_real_1740695150_name._native_ptr(), 1740695150)
-        assert(FileAccess._method_get_real_1740695150 != nil)
-        let _method_get_buffer_4131300905_name = StringName(from: "get_buffer")
-        self._method_get_buffer_4131300905 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_buffer_4131300905_name._native_ptr(), 4131300905)
-        assert(FileAccess._method_get_buffer_4131300905 != nil)
-        let _method_get_line_201670096_name = StringName(from: "get_line")
-        self._method_get_line_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_line_201670096_name._native_ptr(), 201670096)
-        assert(FileAccess._method_get_line_201670096 != nil)
-        let _method_get_csv_line_2358116058_name = StringName(from: "get_csv_line")
-        self._method_get_csv_line_2358116058 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_csv_line_2358116058_name._native_ptr(), 2358116058)
-        assert(FileAccess._method_get_csv_line_2358116058 != nil)
-        let _method_get_as_text_1162154673_name = StringName(from: "get_as_text")
-        self._method_get_as_text_1162154673 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_as_text_1162154673_name._native_ptr(), 1162154673)
-        assert(FileAccess._method_get_as_text_1162154673 != nil)
-        let _method_get_md5_1703090593_name = StringName(from: "get_md5")
-        self._method_get_md5_1703090593 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_md5_1703090593_name._native_ptr(), 1703090593)
-        assert(FileAccess._method_get_md5_1703090593 != nil)
-        let _method_get_sha256_1703090593_name = StringName(from: "get_sha256")
-        self._method_get_sha256_1703090593 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_sha256_1703090593_name._native_ptr(), 1703090593)
-        assert(FileAccess._method_get_sha256_1703090593 != nil)
-        let _method_is_big_endian_36873697_name = StringName(from: "is_big_endian")
-        self._method_is_big_endian_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_is_big_endian_36873697_name._native_ptr(), 36873697)
-        assert(FileAccess._method_is_big_endian_36873697 != nil)
-        let _method_set_big_endian_2586408642_name = StringName(from: "set_big_endian")
-        self._method_set_big_endian_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_set_big_endian_2586408642_name._native_ptr(), 2586408642)
-        assert(FileAccess._method_set_big_endian_2586408642 != nil)
-        let _method_get_error_3185525595_name = StringName(from: "get_error")
-        self._method_get_error_3185525595 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_error_3185525595_name._native_ptr(), 3185525595)
-        assert(FileAccess._method_get_error_3185525595 != nil)
-        let _method_get_var_189129690_name = StringName(from: "get_var")
-        self._method_get_var_189129690 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_var_189129690_name._native_ptr(), 189129690)
-        assert(FileAccess._method_get_var_189129690 != nil)
-        let _method_store_8_1286410249_name = StringName(from: "store_8")
-        self._method_store_8_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_store_8_1286410249_name._native_ptr(), 1286410249)
-        assert(FileAccess._method_store_8_1286410249 != nil)
-        let _method_store_16_1286410249_name = StringName(from: "store_16")
-        self._method_store_16_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_store_16_1286410249_name._native_ptr(), 1286410249)
-        assert(FileAccess._method_store_16_1286410249 != nil)
-        let _method_store_32_1286410249_name = StringName(from: "store_32")
-        self._method_store_32_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_store_32_1286410249_name._native_ptr(), 1286410249)
-        assert(FileAccess._method_store_32_1286410249 != nil)
-        let _method_store_64_1286410249_name = StringName(from: "store_64")
-        self._method_store_64_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_store_64_1286410249_name._native_ptr(), 1286410249)
-        assert(FileAccess._method_store_64_1286410249 != nil)
-        let _method_store_float_373806689_name = StringName(from: "store_float")
-        self._method_store_float_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_store_float_373806689_name._native_ptr(), 373806689)
-        assert(FileAccess._method_store_float_373806689 != nil)
-        let _method_store_double_373806689_name = StringName(from: "store_double")
-        self._method_store_double_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_store_double_373806689_name._native_ptr(), 373806689)
-        assert(FileAccess._method_store_double_373806689 != nil)
-        let _method_store_real_373806689_name = StringName(from: "store_real")
-        self._method_store_real_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_store_real_373806689_name._native_ptr(), 373806689)
-        assert(FileAccess._method_store_real_373806689 != nil)
-        let _method_store_buffer_2971499966_name = StringName(from: "store_buffer")
-        self._method_store_buffer_2971499966 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_store_buffer_2971499966_name._native_ptr(), 2971499966)
-        assert(FileAccess._method_store_buffer_2971499966 != nil)
-        let _method_store_line_83702148_name = StringName(from: "store_line")
-        self._method_store_line_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_store_line_83702148_name._native_ptr(), 83702148)
-        assert(FileAccess._method_store_line_83702148 != nil)
-        let _method_store_csv_line_2217842308_name = StringName(from: "store_csv_line")
-        self._method_store_csv_line_2217842308 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_store_csv_line_2217842308_name._native_ptr(), 2217842308)
-        assert(FileAccess._method_store_csv_line_2217842308 != nil)
-        let _method_store_string_83702148_name = StringName(from: "store_string")
-        self._method_store_string_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_store_string_83702148_name._native_ptr(), 83702148)
-        assert(FileAccess._method_store_string_83702148 != nil)
-        let _method_store_var_738511890_name = StringName(from: "store_var")
-        self._method_store_var_738511890 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_store_var_738511890_name._native_ptr(), 738511890)
-        assert(FileAccess._method_store_var_738511890 != nil)
-        let _method_store_pascal_string_83702148_name = StringName(from: "store_pascal_string")
-        self._method_store_pascal_string_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_store_pascal_string_83702148_name._native_ptr(), 83702148)
-        assert(FileAccess._method_store_pascal_string_83702148 != nil)
-        let _method_get_pascal_string_2841200299_name = StringName(from: "get_pascal_string")
-        self._method_get_pascal_string_2841200299 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_pascal_string_2841200299_name._native_ptr(), 2841200299)
-        assert(FileAccess._method_get_pascal_string_2841200299 != nil)
-        let _method_file_exists_2323990056_name = StringName(from: "file_exists")
-        self._method_file_exists_2323990056 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_file_exists_2323990056_name._native_ptr(), 2323990056)
-        assert(FileAccess._method_file_exists_2323990056 != nil)
-        let _method_get_modified_time_1597066294_name = StringName(from: "get_modified_time")
-        self._method_get_modified_time_1597066294 = self.interface.pointee.classdb_get_method_bind(__godot_name_FileAccess._native_ptr(), _method_get_modified_time_1597066294_name._native_ptr(), 1597066294)
-        assert(FileAccess._method_get_modified_time_1597066294 != nil)
+        self._method_open_1247358404 = StringName(from: "open")
+        assert(self._method_open_1247358404 != nil)
+        self._method_open_encrypted_1482131466 = StringName(from: "open_encrypted")
+        assert(self._method_open_encrypted_1482131466 != nil)
+        self._method_open_encrypted_with_pass_790283377 = StringName(from: "open_encrypted_with_pass")
+        assert(self._method_open_encrypted_with_pass_790283377 != nil)
+        self._method_open_compressed_2874458257 = StringName(from: "open_compressed")
+        assert(self._method_open_compressed_2874458257 != nil)
+        self._method_get_open_error_166280745 = StringName(from: "get_open_error")
+        assert(self._method_get_open_error_166280745 != nil)
+        self._method_get_file_as_bytes_659035735 = StringName(from: "get_file_as_bytes")
+        assert(self._method_get_file_as_bytes_659035735 != nil)
+        self._method_get_file_as_string_1703090593 = StringName(from: "get_file_as_string")
+        assert(self._method_get_file_as_string_1703090593 != nil)
+        self._method_flush_3218959716 = StringName(from: "flush")
+        assert(self._method_flush_3218959716 != nil)
+        self._method_get_path_201670096 = StringName(from: "get_path")
+        assert(self._method_get_path_201670096 != nil)
+        self._method_get_path_absolute_201670096 = StringName(from: "get_path_absolute")
+        assert(self._method_get_path_absolute_201670096 != nil)
+        self._method_is_open_36873697 = StringName(from: "is_open")
+        assert(self._method_is_open_36873697 != nil)
+        self._method_seek_1286410249 = StringName(from: "seek")
+        assert(self._method_seek_1286410249 != nil)
+        self._method_seek_end_1995695955 = StringName(from: "seek_end")
+        assert(self._method_seek_end_1995695955 != nil)
+        self._method_get_position_3905245786 = StringName(from: "get_position")
+        assert(self._method_get_position_3905245786 != nil)
+        self._method_get_length_3905245786 = StringName(from: "get_length")
+        assert(self._method_get_length_3905245786 != nil)
+        self._method_eof_reached_36873697 = StringName(from: "eof_reached")
+        assert(self._method_eof_reached_36873697 != nil)
+        self._method_get_8_3905245786 = StringName(from: "get_8")
+        assert(self._method_get_8_3905245786 != nil)
+        self._method_get_16_3905245786 = StringName(from: "get_16")
+        assert(self._method_get_16_3905245786 != nil)
+        self._method_get_32_3905245786 = StringName(from: "get_32")
+        assert(self._method_get_32_3905245786 != nil)
+        self._method_get_64_3905245786 = StringName(from: "get_64")
+        assert(self._method_get_64_3905245786 != nil)
+        self._method_get_float_1740695150 = StringName(from: "get_float")
+        assert(self._method_get_float_1740695150 != nil)
+        self._method_get_double_1740695150 = StringName(from: "get_double")
+        assert(self._method_get_double_1740695150 != nil)
+        self._method_get_real_1740695150 = StringName(from: "get_real")
+        assert(self._method_get_real_1740695150 != nil)
+        self._method_get_buffer_4131300905 = StringName(from: "get_buffer")
+        assert(self._method_get_buffer_4131300905 != nil)
+        self._method_get_line_201670096 = StringName(from: "get_line")
+        assert(self._method_get_line_201670096 != nil)
+        self._method_get_csv_line_2358116058 = StringName(from: "get_csv_line")
+        assert(self._method_get_csv_line_2358116058 != nil)
+        self._method_get_as_text_1162154673 = StringName(from: "get_as_text")
+        assert(self._method_get_as_text_1162154673 != nil)
+        self._method_get_md5_1703090593 = StringName(from: "get_md5")
+        assert(self._method_get_md5_1703090593 != nil)
+        self._method_get_sha256_1703090593 = StringName(from: "get_sha256")
+        assert(self._method_get_sha256_1703090593 != nil)
+        self._method_is_big_endian_36873697 = StringName(from: "is_big_endian")
+        assert(self._method_is_big_endian_36873697 != nil)
+        self._method_set_big_endian_2586408642 = StringName(from: "set_big_endian")
+        assert(self._method_set_big_endian_2586408642 != nil)
+        self._method_get_error_3185525595 = StringName(from: "get_error")
+        assert(self._method_get_error_3185525595 != nil)
+        self._method_get_var_189129690 = StringName(from: "get_var")
+        assert(self._method_get_var_189129690 != nil)
+        self._method_store_8_1286410249 = StringName(from: "store_8")
+        assert(self._method_store_8_1286410249 != nil)
+        self._method_store_16_1286410249 = StringName(from: "store_16")
+        assert(self._method_store_16_1286410249 != nil)
+        self._method_store_32_1286410249 = StringName(from: "store_32")
+        assert(self._method_store_32_1286410249 != nil)
+        self._method_store_64_1286410249 = StringName(from: "store_64")
+        assert(self._method_store_64_1286410249 != nil)
+        self._method_store_float_373806689 = StringName(from: "store_float")
+        assert(self._method_store_float_373806689 != nil)
+        self._method_store_double_373806689 = StringName(from: "store_double")
+        assert(self._method_store_double_373806689 != nil)
+        self._method_store_real_373806689 = StringName(from: "store_real")
+        assert(self._method_store_real_373806689 != nil)
+        self._method_store_buffer_2971499966 = StringName(from: "store_buffer")
+        assert(self._method_store_buffer_2971499966 != nil)
+        self._method_store_line_83702148 = StringName(from: "store_line")
+        assert(self._method_store_line_83702148 != nil)
+        self._method_store_csv_line_2217842308 = StringName(from: "store_csv_line")
+        assert(self._method_store_csv_line_2217842308 != nil)
+        self._method_store_string_83702148 = StringName(from: "store_string")
+        assert(self._method_store_string_83702148 != nil)
+        self._method_store_var_738511890 = StringName(from: "store_var")
+        assert(self._method_store_var_738511890 != nil)
+        self._method_store_pascal_string_83702148 = StringName(from: "store_pascal_string")
+        assert(self._method_store_pascal_string_83702148 != nil)
+        self._method_get_pascal_string_2841200299 = StringName(from: "get_pascal_string")
+        assert(self._method_get_pascal_string_2841200299 != nil)
+        self._method_file_exists_2323990056 = StringName(from: "file_exists")
+        assert(self._method_file_exists_2323990056 != nil)
+        self._method_get_modified_time_1597066294 = StringName(from: "get_modified_time")
+        assert(self._method_get_modified_time_1597066294 != nil)
     }
 
     public func open(path: godot.String, flags: FileAccess.ModeFlags) -> FileAccess {
@@ -319,8 +271,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_open_1247358404,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_open_1247358404._native_ptr(),
+                    1247358404)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -339,8 +296,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_open_encrypted_1482131466,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_open_encrypted_1482131466._native_ptr(),
+                    1482131466)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -359,8 +321,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_open_encrypted_with_pass_790283377,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_open_encrypted_with_pass_790283377._native_ptr(),
+                    790283377)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -379,8 +346,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_open_compressed_2874458257,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_open_compressed_2874458257._native_ptr(),
+                    2874458257)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -397,8 +369,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_open_error_166280745,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_open_error_166280745._native_ptr(),
+                    166280745)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -414,8 +391,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_file_as_bytes_659035735,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_file_as_bytes_659035735._native_ptr(),
+                    659035735)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -431,8 +413,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_file_as_string_1703090593,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_file_as_string_1703090593._native_ptr(),
+                    1703090593)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -446,8 +433,13 @@ open class FileAccess : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_flush_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_flush_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -461,8 +453,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_path_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_path_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -477,8 +474,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_path_absolute_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_path_absolute_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -494,8 +496,13 @@ open class FileAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_open_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_open_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -510,8 +517,13 @@ open class FileAccess : RefCounted {
                 .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_seek_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_seek_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -526,8 +538,13 @@ open class FileAccess : RefCounted {
                 .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_seek_end_1995695955,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_seek_end_1995695955._native_ptr(),
+                    1995695955)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -543,8 +560,13 @@ open class FileAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_position_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_position_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -560,8 +582,13 @@ open class FileAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_length_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_length_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -577,8 +604,13 @@ open class FileAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_eof_reached_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_eof_reached_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -594,8 +626,13 @@ open class FileAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_8_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_8_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -611,8 +648,13 @@ open class FileAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_16_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_16_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -628,8 +670,13 @@ open class FileAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_32_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_32_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -645,8 +692,13 @@ open class FileAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_64_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_64_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -662,8 +714,13 @@ open class FileAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_float_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_float_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -679,8 +736,13 @@ open class FileAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_double_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_double_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -696,8 +758,13 @@ open class FileAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_real_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_real_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -713,8 +780,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_buffer_4131300905,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_buffer_4131300905._native_ptr(),
+                    4131300905)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -730,8 +802,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -747,8 +824,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_csv_line_2358116058,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_csv_line_2358116058._native_ptr(),
+                    2358116058)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -764,8 +846,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_as_text_1162154673,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_as_text_1162154673._native_ptr(),
+                    1162154673)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -782,8 +869,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_md5_1703090593,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_md5_1703090593._native_ptr(),
+                    1703090593)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -799,8 +891,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_sha256_1703090593,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_sha256_1703090593._native_ptr(),
+                    1703090593)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -816,8 +913,13 @@ open class FileAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_big_endian_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_big_endian_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -832,8 +934,13 @@ open class FileAccess : RefCounted {
                 .init(big_endian_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_big_endian_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_big_endian_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -848,8 +955,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_error_3185525595,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_error_3185525595._native_ptr(),
+                    3185525595)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -865,8 +977,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_var_189129690,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_var_189129690._native_ptr(),
+                    189129690)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -882,8 +999,13 @@ open class FileAccess : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_store_8_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_store_8_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -898,8 +1020,13 @@ open class FileAccess : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_store_16_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_store_16_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -914,8 +1041,13 @@ open class FileAccess : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_store_32_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_store_32_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -930,8 +1062,13 @@ open class FileAccess : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_store_64_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_store_64_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -946,8 +1083,13 @@ open class FileAccess : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_store_float_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_store_float_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -962,8 +1104,13 @@ open class FileAccess : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_store_double_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_store_double_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -978,8 +1125,13 @@ open class FileAccess : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_store_real_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_store_real_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -994,8 +1146,13 @@ open class FileAccess : RefCounted {
                 .init(buffer_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_store_buffer_2971499966,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_store_buffer_2971499966._native_ptr(),
+                    2971499966)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1009,8 +1166,13 @@ open class FileAccess : RefCounted {
                 .init(line_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_store_line_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_store_line_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1025,8 +1187,13 @@ open class FileAccess : RefCounted {
                 .init(values_native), .init(delim_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_store_csv_line_2217842308,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_store_csv_line_2217842308._native_ptr(),
+                    2217842308)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1040,8 +1207,13 @@ open class FileAccess : RefCounted {
                 .init(string_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_store_string_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_store_string_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1056,8 +1228,13 @@ open class FileAccess : RefCounted {
                 .init(value_native), .init(full_objects_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_store_var_738511890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_store_var_738511890._native_ptr(),
+                    738511890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1072,8 +1249,13 @@ open class FileAccess : RefCounted {
                 .init(string_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_store_pascal_string_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_store_pascal_string_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1087,8 +1269,13 @@ open class FileAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pascal_string_2841200299,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pascal_string_2841200299._native_ptr(),
+                    2841200299)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1105,8 +1292,13 @@ open class FileAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_file_exists_2323990056,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_file_exists_2323990056._native_ptr(),
+                    2323990056)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1123,8 +1315,13 @@ open class FileAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_modified_time_1597066294,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_modified_time_1597066294._native_ptr(),
+                    1597066294)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

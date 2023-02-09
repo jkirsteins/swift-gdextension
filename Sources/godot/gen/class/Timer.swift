@@ -16,71 +16,58 @@ open class Timer : Node {
 
     public override class var __godot_name: StringName { __godot_name_Timer }
 
-    static var _method_set_wait_time_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_wait_time_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_one_shot_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_one_shot_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_autostart_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_has_autostart_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_start_1392008558: GDExtensionMethodBindPtr! = nil
-    static var _method_stop_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_paused_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_paused_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_is_stopped_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_time_left_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_timer_process_callback_3469495063: GDExtensionMethodBindPtr! = nil
-    static var _method_get_timer_process_callback_2672570227: GDExtensionMethodBindPtr! = nil
+    static var _method_set_wait_time_373806689: StringName! = nil
+    static var _method_get_wait_time_1740695150: StringName! = nil
+    static var _method_set_one_shot_2586408642: StringName! = nil
+    static var _method_is_one_shot_36873697: StringName! = nil
+    static var _method_set_autostart_2586408642: StringName! = nil
+    static var _method_has_autostart_36873697: StringName! = nil
+    static var _method_start_1392008558: StringName! = nil
+    static var _method_stop_3218959716: StringName! = nil
+    static var _method_set_paused_2586408642: StringName! = nil
+    static var _method_is_paused_36873697: StringName! = nil
+    static var _method_is_stopped_36873697: StringName! = nil
+    static var _method_get_time_left_1740695150: StringName! = nil
+    static var _method_set_timer_process_callback_3469495063: StringName! = nil
+    static var _method_get_timer_process_callback_2672570227: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Timer == nil)
         __godot_name_Timer = StringName(from: "Timer")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_wait_time_373806689_name = StringName(from: "set_wait_time")
-        self._method_set_wait_time_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Timer._native_ptr(), _method_set_wait_time_373806689_name._native_ptr(), 373806689)
-        assert(Timer._method_set_wait_time_373806689 != nil)
-        let _method_get_wait_time_1740695150_name = StringName(from: "get_wait_time")
-        self._method_get_wait_time_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Timer._native_ptr(), _method_get_wait_time_1740695150_name._native_ptr(), 1740695150)
-        assert(Timer._method_get_wait_time_1740695150 != nil)
-        let _method_set_one_shot_2586408642_name = StringName(from: "set_one_shot")
-        self._method_set_one_shot_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Timer._native_ptr(), _method_set_one_shot_2586408642_name._native_ptr(), 2586408642)
-        assert(Timer._method_set_one_shot_2586408642 != nil)
-        let _method_is_one_shot_36873697_name = StringName(from: "is_one_shot")
-        self._method_is_one_shot_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Timer._native_ptr(), _method_is_one_shot_36873697_name._native_ptr(), 36873697)
-        assert(Timer._method_is_one_shot_36873697 != nil)
-        let _method_set_autostart_2586408642_name = StringName(from: "set_autostart")
-        self._method_set_autostart_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Timer._native_ptr(), _method_set_autostart_2586408642_name._native_ptr(), 2586408642)
-        assert(Timer._method_set_autostart_2586408642 != nil)
-        let _method_has_autostart_36873697_name = StringName(from: "has_autostart")
-        self._method_has_autostart_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Timer._native_ptr(), _method_has_autostart_36873697_name._native_ptr(), 36873697)
-        assert(Timer._method_has_autostart_36873697 != nil)
-        let _method_start_1392008558_name = StringName(from: "start")
-        self._method_start_1392008558 = self.interface.pointee.classdb_get_method_bind(__godot_name_Timer._native_ptr(), _method_start_1392008558_name._native_ptr(), 1392008558)
-        assert(Timer._method_start_1392008558 != nil)
-        let _method_stop_3218959716_name = StringName(from: "stop")
-        self._method_stop_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Timer._native_ptr(), _method_stop_3218959716_name._native_ptr(), 3218959716)
-        assert(Timer._method_stop_3218959716 != nil)
-        let _method_set_paused_2586408642_name = StringName(from: "set_paused")
-        self._method_set_paused_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Timer._native_ptr(), _method_set_paused_2586408642_name._native_ptr(), 2586408642)
-        assert(Timer._method_set_paused_2586408642 != nil)
-        let _method_is_paused_36873697_name = StringName(from: "is_paused")
-        self._method_is_paused_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Timer._native_ptr(), _method_is_paused_36873697_name._native_ptr(), 36873697)
-        assert(Timer._method_is_paused_36873697 != nil)
-        let _method_is_stopped_36873697_name = StringName(from: "is_stopped")
-        self._method_is_stopped_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Timer._native_ptr(), _method_is_stopped_36873697_name._native_ptr(), 36873697)
-        assert(Timer._method_is_stopped_36873697 != nil)
-        let _method_get_time_left_1740695150_name = StringName(from: "get_time_left")
-        self._method_get_time_left_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Timer._native_ptr(), _method_get_time_left_1740695150_name._native_ptr(), 1740695150)
-        assert(Timer._method_get_time_left_1740695150 != nil)
-        let _method_set_timer_process_callback_3469495063_name = StringName(from: "set_timer_process_callback")
-        self._method_set_timer_process_callback_3469495063 = self.interface.pointee.classdb_get_method_bind(__godot_name_Timer._native_ptr(), _method_set_timer_process_callback_3469495063_name._native_ptr(), 3469495063)
-        assert(Timer._method_set_timer_process_callback_3469495063 != nil)
-        let _method_get_timer_process_callback_2672570227_name = StringName(from: "get_timer_process_callback")
-        self._method_get_timer_process_callback_2672570227 = self.interface.pointee.classdb_get_method_bind(__godot_name_Timer._native_ptr(), _method_get_timer_process_callback_2672570227_name._native_ptr(), 2672570227)
-        assert(Timer._method_get_timer_process_callback_2672570227 != nil)
+        self._method_set_wait_time_373806689 = StringName(from: "set_wait_time")
+        assert(self._method_set_wait_time_373806689 != nil)
+        self._method_get_wait_time_1740695150 = StringName(from: "get_wait_time")
+        assert(self._method_get_wait_time_1740695150 != nil)
+        self._method_set_one_shot_2586408642 = StringName(from: "set_one_shot")
+        assert(self._method_set_one_shot_2586408642 != nil)
+        self._method_is_one_shot_36873697 = StringName(from: "is_one_shot")
+        assert(self._method_is_one_shot_36873697 != nil)
+        self._method_set_autostart_2586408642 = StringName(from: "set_autostart")
+        assert(self._method_set_autostart_2586408642 != nil)
+        self._method_has_autostart_36873697 = StringName(from: "has_autostart")
+        assert(self._method_has_autostart_36873697 != nil)
+        self._method_start_1392008558 = StringName(from: "start")
+        assert(self._method_start_1392008558 != nil)
+        self._method_stop_3218959716 = StringName(from: "stop")
+        assert(self._method_stop_3218959716 != nil)
+        self._method_set_paused_2586408642 = StringName(from: "set_paused")
+        assert(self._method_set_paused_2586408642 != nil)
+        self._method_is_paused_36873697 = StringName(from: "is_paused")
+        assert(self._method_is_paused_36873697 != nil)
+        self._method_is_stopped_36873697 = StringName(from: "is_stopped")
+        assert(self._method_is_stopped_36873697 != nil)
+        self._method_get_time_left_1740695150 = StringName(from: "get_time_left")
+        assert(self._method_get_time_left_1740695150 != nil)
+        self._method_set_timer_process_callback_3469495063 = StringName(from: "set_timer_process_callback")
+        assert(self._method_set_timer_process_callback_3469495063 != nil)
+        self._method_get_timer_process_callback_2672570227 = StringName(from: "get_timer_process_callback")
+        assert(self._method_get_timer_process_callback_2672570227 != nil)
     }
 
     public func set_wait_time(time_sec: Float64)  {
@@ -91,8 +78,13 @@ open class Timer : Node {
                 .init(time_sec_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_wait_time_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_wait_time_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -108,8 +100,13 @@ open class Timer : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_wait_time_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_wait_time_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -124,8 +121,13 @@ open class Timer : Node {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_one_shot_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_one_shot_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -141,8 +143,13 @@ open class Timer : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_one_shot_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_one_shot_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -157,8 +164,13 @@ open class Timer : Node {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_autostart_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_autostart_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -174,8 +186,13 @@ open class Timer : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_autostart_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_autostart_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -190,8 +207,13 @@ open class Timer : Node {
                 .init(time_sec_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_start_1392008558,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_start_1392008558._native_ptr(),
+                    1392008558)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -205,8 +227,13 @@ open class Timer : Node {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_stop_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_stop_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -220,8 +247,13 @@ open class Timer : Node {
                 .init(paused_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_paused_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_paused_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -237,8 +269,13 @@ open class Timer : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_paused_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_paused_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -254,8 +291,13 @@ open class Timer : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_stopped_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_stopped_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -271,8 +313,13 @@ open class Timer : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_time_left_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_time_left_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -287,8 +334,13 @@ open class Timer : Node {
                 .init(callback_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_timer_process_callback_3469495063,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_timer_process_callback_3469495063._native_ptr(),
+                    3469495063)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -303,8 +355,13 @@ open class Timer : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_timer_process_callback_2672570227,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_timer_process_callback_2672570227._native_ptr(),
+                    2672570227)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

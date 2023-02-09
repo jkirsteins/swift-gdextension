@@ -15,139 +15,109 @@ open class OptionButton : Button {
 
     public override class var __godot_name: StringName { __godot_name_OptionButton }
 
-    static var _method_add_item_3043792800: GDExtensionMethodBindPtr! = nil
-    static var _method_add_icon_item_3944051090: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_text_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_icon_666127730: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_disabled_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_id_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_metadata_2152698145: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_tooltip_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_text_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_icon_3536238170: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_id_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_index_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_metadata_4227898402: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_tooltip_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_is_item_disabled_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_is_item_separator_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_add_separator_3005725572: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_select_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selected_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selected_id_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selected_metadata_1214101251: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_item_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_popup_229722558: GDExtensionMethodBindPtr! = nil
-    static var _method_show_popup_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_count_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_has_selectable_items_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selectable_item_894402480: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fit_to_longest_item_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_fit_to_longest_item_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_add_item_3043792800: StringName! = nil
+    static var _method_add_icon_item_3944051090: StringName! = nil
+    static var _method_set_item_text_501894301: StringName! = nil
+    static var _method_set_item_icon_666127730: StringName! = nil
+    static var _method_set_item_disabled_300928843: StringName! = nil
+    static var _method_set_item_id_3937882851: StringName! = nil
+    static var _method_set_item_metadata_2152698145: StringName! = nil
+    static var _method_set_item_tooltip_501894301: StringName! = nil
+    static var _method_get_item_text_844755477: StringName! = nil
+    static var _method_get_item_icon_3536238170: StringName! = nil
+    static var _method_get_item_id_923996154: StringName! = nil
+    static var _method_get_item_index_923996154: StringName! = nil
+    static var _method_get_item_metadata_4227898402: StringName! = nil
+    static var _method_get_item_tooltip_844755477: StringName! = nil
+    static var _method_is_item_disabled_1116898809: StringName! = nil
+    static var _method_is_item_separator_1116898809: StringName! = nil
+    static var _method_add_separator_3005725572: StringName! = nil
+    static var _method_clear_3218959716: StringName! = nil
+    static var _method_select_1286410249: StringName! = nil
+    static var _method_get_selected_3905245786: StringName! = nil
+    static var _method_get_selected_id_3905245786: StringName! = nil
+    static var _method_get_selected_metadata_1214101251: StringName! = nil
+    static var _method_remove_item_1286410249: StringName! = nil
+    static var _method_get_popup_229722558: StringName! = nil
+    static var _method_show_popup_3218959716: StringName! = nil
+    static var _method_set_item_count_1286410249: StringName! = nil
+    static var _method_get_item_count_3905245786: StringName! = nil
+    static var _method_has_selectable_items_36873697: StringName! = nil
+    static var _method_get_selectable_item_894402480: StringName! = nil
+    static var _method_set_fit_to_longest_item_2586408642: StringName! = nil
+    static var _method_is_fit_to_longest_item_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_OptionButton == nil)
         __godot_name_OptionButton = StringName(from: "OptionButton")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_add_item_3043792800_name = StringName(from: "add_item")
-        self._method_add_item_3043792800 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_add_item_3043792800_name._native_ptr(), 3043792800)
-        assert(OptionButton._method_add_item_3043792800 != nil)
-        let _method_add_icon_item_3944051090_name = StringName(from: "add_icon_item")
-        self._method_add_icon_item_3944051090 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_add_icon_item_3944051090_name._native_ptr(), 3944051090)
-        assert(OptionButton._method_add_icon_item_3944051090 != nil)
-        let _method_set_item_text_501894301_name = StringName(from: "set_item_text")
-        self._method_set_item_text_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_set_item_text_501894301_name._native_ptr(), 501894301)
-        assert(OptionButton._method_set_item_text_501894301 != nil)
-        let _method_set_item_icon_666127730_name = StringName(from: "set_item_icon")
-        self._method_set_item_icon_666127730 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_set_item_icon_666127730_name._native_ptr(), 666127730)
-        assert(OptionButton._method_set_item_icon_666127730 != nil)
-        let _method_set_item_disabled_300928843_name = StringName(from: "set_item_disabled")
-        self._method_set_item_disabled_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_set_item_disabled_300928843_name._native_ptr(), 300928843)
-        assert(OptionButton._method_set_item_disabled_300928843 != nil)
-        let _method_set_item_id_3937882851_name = StringName(from: "set_item_id")
-        self._method_set_item_id_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_set_item_id_3937882851_name._native_ptr(), 3937882851)
-        assert(OptionButton._method_set_item_id_3937882851 != nil)
-        let _method_set_item_metadata_2152698145_name = StringName(from: "set_item_metadata")
-        self._method_set_item_metadata_2152698145 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_set_item_metadata_2152698145_name._native_ptr(), 2152698145)
-        assert(OptionButton._method_set_item_metadata_2152698145 != nil)
-        let _method_set_item_tooltip_501894301_name = StringName(from: "set_item_tooltip")
-        self._method_set_item_tooltip_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_set_item_tooltip_501894301_name._native_ptr(), 501894301)
-        assert(OptionButton._method_set_item_tooltip_501894301 != nil)
-        let _method_get_item_text_844755477_name = StringName(from: "get_item_text")
-        self._method_get_item_text_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_get_item_text_844755477_name._native_ptr(), 844755477)
-        assert(OptionButton._method_get_item_text_844755477 != nil)
-        let _method_get_item_icon_3536238170_name = StringName(from: "get_item_icon")
-        self._method_get_item_icon_3536238170 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_get_item_icon_3536238170_name._native_ptr(), 3536238170)
-        assert(OptionButton._method_get_item_icon_3536238170 != nil)
-        let _method_get_item_id_923996154_name = StringName(from: "get_item_id")
-        self._method_get_item_id_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_get_item_id_923996154_name._native_ptr(), 923996154)
-        assert(OptionButton._method_get_item_id_923996154 != nil)
-        let _method_get_item_index_923996154_name = StringName(from: "get_item_index")
-        self._method_get_item_index_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_get_item_index_923996154_name._native_ptr(), 923996154)
-        assert(OptionButton._method_get_item_index_923996154 != nil)
-        let _method_get_item_metadata_4227898402_name = StringName(from: "get_item_metadata")
-        self._method_get_item_metadata_4227898402 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_get_item_metadata_4227898402_name._native_ptr(), 4227898402)
-        assert(OptionButton._method_get_item_metadata_4227898402 != nil)
-        let _method_get_item_tooltip_844755477_name = StringName(from: "get_item_tooltip")
-        self._method_get_item_tooltip_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_get_item_tooltip_844755477_name._native_ptr(), 844755477)
-        assert(OptionButton._method_get_item_tooltip_844755477 != nil)
-        let _method_is_item_disabled_1116898809_name = StringName(from: "is_item_disabled")
-        self._method_is_item_disabled_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_is_item_disabled_1116898809_name._native_ptr(), 1116898809)
-        assert(OptionButton._method_is_item_disabled_1116898809 != nil)
-        let _method_is_item_separator_1116898809_name = StringName(from: "is_item_separator")
-        self._method_is_item_separator_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_is_item_separator_1116898809_name._native_ptr(), 1116898809)
-        assert(OptionButton._method_is_item_separator_1116898809 != nil)
-        let _method_add_separator_3005725572_name = StringName(from: "add_separator")
-        self._method_add_separator_3005725572 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_add_separator_3005725572_name._native_ptr(), 3005725572)
-        assert(OptionButton._method_add_separator_3005725572 != nil)
-        let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
-        assert(OptionButton._method_clear_3218959716 != nil)
-        let _method_select_1286410249_name = StringName(from: "select")
-        self._method_select_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_select_1286410249_name._native_ptr(), 1286410249)
-        assert(OptionButton._method_select_1286410249 != nil)
-        let _method_get_selected_3905245786_name = StringName(from: "get_selected")
-        self._method_get_selected_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_get_selected_3905245786_name._native_ptr(), 3905245786)
-        assert(OptionButton._method_get_selected_3905245786 != nil)
-        let _method_get_selected_id_3905245786_name = StringName(from: "get_selected_id")
-        self._method_get_selected_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_get_selected_id_3905245786_name._native_ptr(), 3905245786)
-        assert(OptionButton._method_get_selected_id_3905245786 != nil)
-        let _method_get_selected_metadata_1214101251_name = StringName(from: "get_selected_metadata")
-        self._method_get_selected_metadata_1214101251 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_get_selected_metadata_1214101251_name._native_ptr(), 1214101251)
-        assert(OptionButton._method_get_selected_metadata_1214101251 != nil)
-        let _method_remove_item_1286410249_name = StringName(from: "remove_item")
-        self._method_remove_item_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_remove_item_1286410249_name._native_ptr(), 1286410249)
-        assert(OptionButton._method_remove_item_1286410249 != nil)
-        let _method_get_popup_229722558_name = StringName(from: "get_popup")
-        self._method_get_popup_229722558 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_get_popup_229722558_name._native_ptr(), 229722558)
-        assert(OptionButton._method_get_popup_229722558 != nil)
-        let _method_show_popup_3218959716_name = StringName(from: "show_popup")
-        self._method_show_popup_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_show_popup_3218959716_name._native_ptr(), 3218959716)
-        assert(OptionButton._method_show_popup_3218959716 != nil)
-        let _method_set_item_count_1286410249_name = StringName(from: "set_item_count")
-        self._method_set_item_count_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_set_item_count_1286410249_name._native_ptr(), 1286410249)
-        assert(OptionButton._method_set_item_count_1286410249 != nil)
-        let _method_get_item_count_3905245786_name = StringName(from: "get_item_count")
-        self._method_get_item_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_get_item_count_3905245786_name._native_ptr(), 3905245786)
-        assert(OptionButton._method_get_item_count_3905245786 != nil)
-        let _method_has_selectable_items_36873697_name = StringName(from: "has_selectable_items")
-        self._method_has_selectable_items_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_has_selectable_items_36873697_name._native_ptr(), 36873697)
-        assert(OptionButton._method_has_selectable_items_36873697 != nil)
-        let _method_get_selectable_item_894402480_name = StringName(from: "get_selectable_item")
-        self._method_get_selectable_item_894402480 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_get_selectable_item_894402480_name._native_ptr(), 894402480)
-        assert(OptionButton._method_get_selectable_item_894402480 != nil)
-        let _method_set_fit_to_longest_item_2586408642_name = StringName(from: "set_fit_to_longest_item")
-        self._method_set_fit_to_longest_item_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_set_fit_to_longest_item_2586408642_name._native_ptr(), 2586408642)
-        assert(OptionButton._method_set_fit_to_longest_item_2586408642 != nil)
-        let _method_is_fit_to_longest_item_36873697_name = StringName(from: "is_fit_to_longest_item")
-        self._method_is_fit_to_longest_item_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptionButton._native_ptr(), _method_is_fit_to_longest_item_36873697_name._native_ptr(), 36873697)
-        assert(OptionButton._method_is_fit_to_longest_item_36873697 != nil)
+        self._method_add_item_3043792800 = StringName(from: "add_item")
+        assert(self._method_add_item_3043792800 != nil)
+        self._method_add_icon_item_3944051090 = StringName(from: "add_icon_item")
+        assert(self._method_add_icon_item_3944051090 != nil)
+        self._method_set_item_text_501894301 = StringName(from: "set_item_text")
+        assert(self._method_set_item_text_501894301 != nil)
+        self._method_set_item_icon_666127730 = StringName(from: "set_item_icon")
+        assert(self._method_set_item_icon_666127730 != nil)
+        self._method_set_item_disabled_300928843 = StringName(from: "set_item_disabled")
+        assert(self._method_set_item_disabled_300928843 != nil)
+        self._method_set_item_id_3937882851 = StringName(from: "set_item_id")
+        assert(self._method_set_item_id_3937882851 != nil)
+        self._method_set_item_metadata_2152698145 = StringName(from: "set_item_metadata")
+        assert(self._method_set_item_metadata_2152698145 != nil)
+        self._method_set_item_tooltip_501894301 = StringName(from: "set_item_tooltip")
+        assert(self._method_set_item_tooltip_501894301 != nil)
+        self._method_get_item_text_844755477 = StringName(from: "get_item_text")
+        assert(self._method_get_item_text_844755477 != nil)
+        self._method_get_item_icon_3536238170 = StringName(from: "get_item_icon")
+        assert(self._method_get_item_icon_3536238170 != nil)
+        self._method_get_item_id_923996154 = StringName(from: "get_item_id")
+        assert(self._method_get_item_id_923996154 != nil)
+        self._method_get_item_index_923996154 = StringName(from: "get_item_index")
+        assert(self._method_get_item_index_923996154 != nil)
+        self._method_get_item_metadata_4227898402 = StringName(from: "get_item_metadata")
+        assert(self._method_get_item_metadata_4227898402 != nil)
+        self._method_get_item_tooltip_844755477 = StringName(from: "get_item_tooltip")
+        assert(self._method_get_item_tooltip_844755477 != nil)
+        self._method_is_item_disabled_1116898809 = StringName(from: "is_item_disabled")
+        assert(self._method_is_item_disabled_1116898809 != nil)
+        self._method_is_item_separator_1116898809 = StringName(from: "is_item_separator")
+        assert(self._method_is_item_separator_1116898809 != nil)
+        self._method_add_separator_3005725572 = StringName(from: "add_separator")
+        assert(self._method_add_separator_3005725572 != nil)
+        self._method_clear_3218959716 = StringName(from: "clear")
+        assert(self._method_clear_3218959716 != nil)
+        self._method_select_1286410249 = StringName(from: "select")
+        assert(self._method_select_1286410249 != nil)
+        self._method_get_selected_3905245786 = StringName(from: "get_selected")
+        assert(self._method_get_selected_3905245786 != nil)
+        self._method_get_selected_id_3905245786 = StringName(from: "get_selected_id")
+        assert(self._method_get_selected_id_3905245786 != nil)
+        self._method_get_selected_metadata_1214101251 = StringName(from: "get_selected_metadata")
+        assert(self._method_get_selected_metadata_1214101251 != nil)
+        self._method_remove_item_1286410249 = StringName(from: "remove_item")
+        assert(self._method_remove_item_1286410249 != nil)
+        self._method_get_popup_229722558 = StringName(from: "get_popup")
+        assert(self._method_get_popup_229722558 != nil)
+        self._method_show_popup_3218959716 = StringName(from: "show_popup")
+        assert(self._method_show_popup_3218959716 != nil)
+        self._method_set_item_count_1286410249 = StringName(from: "set_item_count")
+        assert(self._method_set_item_count_1286410249 != nil)
+        self._method_get_item_count_3905245786 = StringName(from: "get_item_count")
+        assert(self._method_get_item_count_3905245786 != nil)
+        self._method_has_selectable_items_36873697 = StringName(from: "has_selectable_items")
+        assert(self._method_has_selectable_items_36873697 != nil)
+        self._method_get_selectable_item_894402480 = StringName(from: "get_selectable_item")
+        assert(self._method_get_selectable_item_894402480 != nil)
+        self._method_set_fit_to_longest_item_2586408642 = StringName(from: "set_fit_to_longest_item")
+        assert(self._method_set_fit_to_longest_item_2586408642 != nil)
+        self._method_is_fit_to_longest_item_36873697 = StringName(from: "is_fit_to_longest_item")
+        assert(self._method_is_fit_to_longest_item_36873697 != nil)
     }
 
     public func add_item(label: godot.String, id: Int64)  {
@@ -159,8 +129,13 @@ open class OptionButton : Button {
                 .init(label_native), .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_item_3043792800,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_item_3043792800._native_ptr(),
+                    3043792800)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -177,8 +152,13 @@ open class OptionButton : Button {
                 .init(texture_native), .init(label_native), .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_icon_item_3944051090,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_icon_item_3944051090._native_ptr(),
+                    3944051090)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -194,8 +174,13 @@ open class OptionButton : Button {
                 .init(idx_native), .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_text_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_text_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -211,8 +196,13 @@ open class OptionButton : Button {
                 .init(idx_native), .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_icon_666127730,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_icon_666127730._native_ptr(),
+                    666127730)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -228,8 +218,13 @@ open class OptionButton : Button {
                 .init(idx_native), .init(disabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_disabled_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_disabled_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -246,8 +241,13 @@ open class OptionButton : Button {
                 .init(idx_native), .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_id_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_id_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -264,8 +264,13 @@ open class OptionButton : Button {
                 .init(idx_native), .init(metadata_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_metadata_2152698145,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_metadata_2152698145._native_ptr(),
+                    2152698145)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -281,8 +286,13 @@ open class OptionButton : Button {
                 .init(idx_native), .init(tooltip_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_tooltip_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_tooltip_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -298,8 +308,13 @@ open class OptionButton : Button {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_text_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_text_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -316,8 +331,13 @@ open class OptionButton : Button {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_icon_3536238170,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_icon_3536238170._native_ptr(),
+                    3536238170)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -335,8 +355,13 @@ open class OptionButton : Button {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_id_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_id_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -354,8 +379,13 @@ open class OptionButton : Button {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_index_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_index_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -372,8 +402,13 @@ open class OptionButton : Button {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_metadata_4227898402,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_metadata_4227898402._native_ptr(),
+                    4227898402)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -390,8 +425,13 @@ open class OptionButton : Button {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_tooltip_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_tooltip_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -409,8 +449,13 @@ open class OptionButton : Button {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_item_disabled_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_item_disabled_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -428,8 +473,13 @@ open class OptionButton : Button {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_item_separator_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_item_separator_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -445,8 +495,13 @@ open class OptionButton : Button {
                 .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_separator_3005725572,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_separator_3005725572._native_ptr(),
+                    3005725572)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -459,8 +514,13 @@ open class OptionButton : Button {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -474,8 +534,13 @@ open class OptionButton : Button {
                 .init(idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_select_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_select_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -491,8 +556,13 @@ open class OptionButton : Button {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selected_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selected_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -508,8 +578,13 @@ open class OptionButton : Button {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selected_id_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selected_id_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -524,8 +599,13 @@ open class OptionButton : Button {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selected_metadata_1214101251,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selected_metadata_1214101251._native_ptr(),
+                    1214101251)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -540,8 +620,13 @@ open class OptionButton : Button {
                 .init(idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_item_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_item_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -556,8 +641,13 @@ open class OptionButton : Button {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_popup_229722558,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_popup_229722558._native_ptr(),
+                    229722558)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -571,8 +661,13 @@ open class OptionButton : Button {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_show_popup_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_show_popup_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -586,8 +681,13 @@ open class OptionButton : Button {
                 .init(count_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_count_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_count_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -603,8 +703,13 @@ open class OptionButton : Button {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -620,8 +725,13 @@ open class OptionButton : Button {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_selectable_items_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_selectable_items_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -638,8 +748,13 @@ open class OptionButton : Button {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selectable_item_894402480,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selectable_item_894402480._native_ptr(),
+                    894402480)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -655,8 +770,13 @@ open class OptionButton : Button {
                 .init(fit_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fit_to_longest_item_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fit_to_longest_item_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -672,8 +792,13 @@ open class OptionButton : Button {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_fit_to_longest_item_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_fit_to_longest_item_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

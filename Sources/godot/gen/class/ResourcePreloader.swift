@@ -13,39 +13,34 @@ open class ResourcePreloader : Node {
 
     public override class var __godot_name: StringName { __godot_name_ResourcePreloader }
 
-    static var _method_add_resource_1168801743: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_resource_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_rename_resource_3740211285: GDExtensionMethodBindPtr! = nil
-    static var _method_has_resource_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_get_resource_3742749261: GDExtensionMethodBindPtr! = nil
-    static var _method_get_resource_list_1139954409: GDExtensionMethodBindPtr! = nil
+    static var _method_add_resource_1168801743: StringName! = nil
+    static var _method_remove_resource_3304788590: StringName! = nil
+    static var _method_rename_resource_3740211285: StringName! = nil
+    static var _method_has_resource_2619796661: StringName! = nil
+    static var _method_get_resource_3742749261: StringName! = nil
+    static var _method_get_resource_list_1139954409: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ResourcePreloader == nil)
         __godot_name_ResourcePreloader = StringName(from: "ResourcePreloader")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_add_resource_1168801743_name = StringName(from: "add_resource")
-        self._method_add_resource_1168801743 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourcePreloader._native_ptr(), _method_add_resource_1168801743_name._native_ptr(), 1168801743)
-        assert(ResourcePreloader._method_add_resource_1168801743 != nil)
-        let _method_remove_resource_3304788590_name = StringName(from: "remove_resource")
-        self._method_remove_resource_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourcePreloader._native_ptr(), _method_remove_resource_3304788590_name._native_ptr(), 3304788590)
-        assert(ResourcePreloader._method_remove_resource_3304788590 != nil)
-        let _method_rename_resource_3740211285_name = StringName(from: "rename_resource")
-        self._method_rename_resource_3740211285 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourcePreloader._native_ptr(), _method_rename_resource_3740211285_name._native_ptr(), 3740211285)
-        assert(ResourcePreloader._method_rename_resource_3740211285 != nil)
-        let _method_has_resource_2619796661_name = StringName(from: "has_resource")
-        self._method_has_resource_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourcePreloader._native_ptr(), _method_has_resource_2619796661_name._native_ptr(), 2619796661)
-        assert(ResourcePreloader._method_has_resource_2619796661 != nil)
-        let _method_get_resource_3742749261_name = StringName(from: "get_resource")
-        self._method_get_resource_3742749261 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourcePreloader._native_ptr(), _method_get_resource_3742749261_name._native_ptr(), 3742749261)
-        assert(ResourcePreloader._method_get_resource_3742749261 != nil)
-        let _method_get_resource_list_1139954409_name = StringName(from: "get_resource_list")
-        self._method_get_resource_list_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourcePreloader._native_ptr(), _method_get_resource_list_1139954409_name._native_ptr(), 1139954409)
-        assert(ResourcePreloader._method_get_resource_list_1139954409 != nil)
+        self._method_add_resource_1168801743 = StringName(from: "add_resource")
+        assert(self._method_add_resource_1168801743 != nil)
+        self._method_remove_resource_3304788590 = StringName(from: "remove_resource")
+        assert(self._method_remove_resource_3304788590 != nil)
+        self._method_rename_resource_3740211285 = StringName(from: "rename_resource")
+        assert(self._method_rename_resource_3740211285 != nil)
+        self._method_has_resource_2619796661 = StringName(from: "has_resource")
+        assert(self._method_has_resource_2619796661 != nil)
+        self._method_get_resource_3742749261 = StringName(from: "get_resource")
+        assert(self._method_get_resource_3742749261 != nil)
+        self._method_get_resource_list_1139954409 = StringName(from: "get_resource_list")
+        assert(self._method_get_resource_list_1139954409 != nil)
     }
 
     public func add_resource(name: StringName, resource: Resource)  {
@@ -57,8 +52,13 @@ open class ResourcePreloader : Node {
                 .init(name_native), .init(resource_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_resource_1168801743,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_resource_1168801743._native_ptr(),
+                    1168801743)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -72,8 +72,13 @@ open class ResourcePreloader : Node {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_resource_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_resource_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -88,8 +93,13 @@ open class ResourcePreloader : Node {
                 .init(name_native), .init(newname_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_rename_resource_3740211285,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_rename_resource_3740211285._native_ptr(),
+                    3740211285)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -105,8 +115,13 @@ open class ResourcePreloader : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_resource_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_resource_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -122,8 +137,13 @@ open class ResourcePreloader : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_resource_3742749261,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_resource_3742749261._native_ptr(),
+                    3742749261)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -138,8 +158,13 @@ open class ResourcePreloader : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_resource_list_1139954409,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_resource_list_1139954409._native_ptr(),
+                    1139954409)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

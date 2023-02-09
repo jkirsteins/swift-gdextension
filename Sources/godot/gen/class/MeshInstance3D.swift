@@ -11,87 +11,70 @@ open class MeshInstance3D : GeometryInstance3D {
 
     public override class var __godot_name: StringName { __godot_name_MeshInstance3D }
 
-    static var _method_set_mesh_194775623: GDExtensionMethodBindPtr! = nil
-    static var _method_get_mesh_1808005922: GDExtensionMethodBindPtr! = nil
-    static var _method_set_skeleton_path_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_skeleton_path_277076166: GDExtensionMethodBindPtr! = nil
-    static var _method_set_skin_3971435618: GDExtensionMethodBindPtr! = nil
-    static var _method_get_skin_2074563878: GDExtensionMethodBindPtr! = nil
-    static var _method_get_surface_override_material_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_surface_override_material_3671737478: GDExtensionMethodBindPtr! = nil
-    static var _method_get_surface_override_material_2897466400: GDExtensionMethodBindPtr! = nil
-    static var _method_get_active_material_2897466400: GDExtensionMethodBindPtr! = nil
-    static var _method_create_trimesh_collision_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_create_convex_collision_2751962654: GDExtensionMethodBindPtr! = nil
-    static var _method_create_multiple_convex_collisions_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_blend_shape_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_find_blend_shape_by_name_4150868206: GDExtensionMethodBindPtr! = nil
-    static var _method_get_blend_shape_value_2339986948: GDExtensionMethodBindPtr! = nil
-    static var _method_set_blend_shape_value_1602489585: GDExtensionMethodBindPtr! = nil
-    static var _method_create_debug_tangents_3218959716: GDExtensionMethodBindPtr! = nil
+    static var _method_set_mesh_194775623: StringName! = nil
+    static var _method_get_mesh_1808005922: StringName! = nil
+    static var _method_set_skeleton_path_1348162250: StringName! = nil
+    static var _method_get_skeleton_path_277076166: StringName! = nil
+    static var _method_set_skin_3971435618: StringName! = nil
+    static var _method_get_skin_2074563878: StringName! = nil
+    static var _method_get_surface_override_material_count_3905245786: StringName! = nil
+    static var _method_set_surface_override_material_3671737478: StringName! = nil
+    static var _method_get_surface_override_material_2897466400: StringName! = nil
+    static var _method_get_active_material_2897466400: StringName! = nil
+    static var _method_create_trimesh_collision_3218959716: StringName! = nil
+    static var _method_create_convex_collision_2751962654: StringName! = nil
+    static var _method_create_multiple_convex_collisions_3218959716: StringName! = nil
+    static var _method_get_blend_shape_count_3905245786: StringName! = nil
+    static var _method_find_blend_shape_by_name_4150868206: StringName! = nil
+    static var _method_get_blend_shape_value_2339986948: StringName! = nil
+    static var _method_set_blend_shape_value_1602489585: StringName! = nil
+    static var _method_create_debug_tangents_3218959716: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_MeshInstance3D == nil)
         __godot_name_MeshInstance3D = StringName(from: "MeshInstance3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_mesh_194775623_name = StringName(from: "set_mesh")
-        self._method_set_mesh_194775623 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_set_mesh_194775623_name._native_ptr(), 194775623)
-        assert(MeshInstance3D._method_set_mesh_194775623 != nil)
-        let _method_get_mesh_1808005922_name = StringName(from: "get_mesh")
-        self._method_get_mesh_1808005922 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_get_mesh_1808005922_name._native_ptr(), 1808005922)
-        assert(MeshInstance3D._method_get_mesh_1808005922 != nil)
-        let _method_set_skeleton_path_1348162250_name = StringName(from: "set_skeleton_path")
-        self._method_set_skeleton_path_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_set_skeleton_path_1348162250_name._native_ptr(), 1348162250)
-        assert(MeshInstance3D._method_set_skeleton_path_1348162250 != nil)
-        let _method_get_skeleton_path_277076166_name = StringName(from: "get_skeleton_path")
-        self._method_get_skeleton_path_277076166 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_get_skeleton_path_277076166_name._native_ptr(), 277076166)
-        assert(MeshInstance3D._method_get_skeleton_path_277076166 != nil)
-        let _method_set_skin_3971435618_name = StringName(from: "set_skin")
-        self._method_set_skin_3971435618 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_set_skin_3971435618_name._native_ptr(), 3971435618)
-        assert(MeshInstance3D._method_set_skin_3971435618 != nil)
-        let _method_get_skin_2074563878_name = StringName(from: "get_skin")
-        self._method_get_skin_2074563878 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_get_skin_2074563878_name._native_ptr(), 2074563878)
-        assert(MeshInstance3D._method_get_skin_2074563878 != nil)
-        let _method_get_surface_override_material_count_3905245786_name = StringName(from: "get_surface_override_material_count")
-        self._method_get_surface_override_material_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_get_surface_override_material_count_3905245786_name._native_ptr(), 3905245786)
-        assert(MeshInstance3D._method_get_surface_override_material_count_3905245786 != nil)
-        let _method_set_surface_override_material_3671737478_name = StringName(from: "set_surface_override_material")
-        self._method_set_surface_override_material_3671737478 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_set_surface_override_material_3671737478_name._native_ptr(), 3671737478)
-        assert(MeshInstance3D._method_set_surface_override_material_3671737478 != nil)
-        let _method_get_surface_override_material_2897466400_name = StringName(from: "get_surface_override_material")
-        self._method_get_surface_override_material_2897466400 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_get_surface_override_material_2897466400_name._native_ptr(), 2897466400)
-        assert(MeshInstance3D._method_get_surface_override_material_2897466400 != nil)
-        let _method_get_active_material_2897466400_name = StringName(from: "get_active_material")
-        self._method_get_active_material_2897466400 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_get_active_material_2897466400_name._native_ptr(), 2897466400)
-        assert(MeshInstance3D._method_get_active_material_2897466400 != nil)
-        let _method_create_trimesh_collision_3218959716_name = StringName(from: "create_trimesh_collision")
-        self._method_create_trimesh_collision_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_create_trimesh_collision_3218959716_name._native_ptr(), 3218959716)
-        assert(MeshInstance3D._method_create_trimesh_collision_3218959716 != nil)
-        let _method_create_convex_collision_2751962654_name = StringName(from: "create_convex_collision")
-        self._method_create_convex_collision_2751962654 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_create_convex_collision_2751962654_name._native_ptr(), 2751962654)
-        assert(MeshInstance3D._method_create_convex_collision_2751962654 != nil)
-        let _method_create_multiple_convex_collisions_3218959716_name = StringName(from: "create_multiple_convex_collisions")
-        self._method_create_multiple_convex_collisions_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_create_multiple_convex_collisions_3218959716_name._native_ptr(), 3218959716)
-        assert(MeshInstance3D._method_create_multiple_convex_collisions_3218959716 != nil)
-        let _method_get_blend_shape_count_3905245786_name = StringName(from: "get_blend_shape_count")
-        self._method_get_blend_shape_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_get_blend_shape_count_3905245786_name._native_ptr(), 3905245786)
-        assert(MeshInstance3D._method_get_blend_shape_count_3905245786 != nil)
-        let _method_find_blend_shape_by_name_4150868206_name = StringName(from: "find_blend_shape_by_name")
-        self._method_find_blend_shape_by_name_4150868206 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_find_blend_shape_by_name_4150868206_name._native_ptr(), 4150868206)
-        assert(MeshInstance3D._method_find_blend_shape_by_name_4150868206 != nil)
-        let _method_get_blend_shape_value_2339986948_name = StringName(from: "get_blend_shape_value")
-        self._method_get_blend_shape_value_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_get_blend_shape_value_2339986948_name._native_ptr(), 2339986948)
-        assert(MeshInstance3D._method_get_blend_shape_value_2339986948 != nil)
-        let _method_set_blend_shape_value_1602489585_name = StringName(from: "set_blend_shape_value")
-        self._method_set_blend_shape_value_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_set_blend_shape_value_1602489585_name._native_ptr(), 1602489585)
-        assert(MeshInstance3D._method_set_blend_shape_value_1602489585 != nil)
-        let _method_create_debug_tangents_3218959716_name = StringName(from: "create_debug_tangents")
-        self._method_create_debug_tangents_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshInstance3D._native_ptr(), _method_create_debug_tangents_3218959716_name._native_ptr(), 3218959716)
-        assert(MeshInstance3D._method_create_debug_tangents_3218959716 != nil)
+        self._method_set_mesh_194775623 = StringName(from: "set_mesh")
+        assert(self._method_set_mesh_194775623 != nil)
+        self._method_get_mesh_1808005922 = StringName(from: "get_mesh")
+        assert(self._method_get_mesh_1808005922 != nil)
+        self._method_set_skeleton_path_1348162250 = StringName(from: "set_skeleton_path")
+        assert(self._method_set_skeleton_path_1348162250 != nil)
+        self._method_get_skeleton_path_277076166 = StringName(from: "get_skeleton_path")
+        assert(self._method_get_skeleton_path_277076166 != nil)
+        self._method_set_skin_3971435618 = StringName(from: "set_skin")
+        assert(self._method_set_skin_3971435618 != nil)
+        self._method_get_skin_2074563878 = StringName(from: "get_skin")
+        assert(self._method_get_skin_2074563878 != nil)
+        self._method_get_surface_override_material_count_3905245786 = StringName(from: "get_surface_override_material_count")
+        assert(self._method_get_surface_override_material_count_3905245786 != nil)
+        self._method_set_surface_override_material_3671737478 = StringName(from: "set_surface_override_material")
+        assert(self._method_set_surface_override_material_3671737478 != nil)
+        self._method_get_surface_override_material_2897466400 = StringName(from: "get_surface_override_material")
+        assert(self._method_get_surface_override_material_2897466400 != nil)
+        self._method_get_active_material_2897466400 = StringName(from: "get_active_material")
+        assert(self._method_get_active_material_2897466400 != nil)
+        self._method_create_trimesh_collision_3218959716 = StringName(from: "create_trimesh_collision")
+        assert(self._method_create_trimesh_collision_3218959716 != nil)
+        self._method_create_convex_collision_2751962654 = StringName(from: "create_convex_collision")
+        assert(self._method_create_convex_collision_2751962654 != nil)
+        self._method_create_multiple_convex_collisions_3218959716 = StringName(from: "create_multiple_convex_collisions")
+        assert(self._method_create_multiple_convex_collisions_3218959716 != nil)
+        self._method_get_blend_shape_count_3905245786 = StringName(from: "get_blend_shape_count")
+        assert(self._method_get_blend_shape_count_3905245786 != nil)
+        self._method_find_blend_shape_by_name_4150868206 = StringName(from: "find_blend_shape_by_name")
+        assert(self._method_find_blend_shape_by_name_4150868206 != nil)
+        self._method_get_blend_shape_value_2339986948 = StringName(from: "get_blend_shape_value")
+        assert(self._method_get_blend_shape_value_2339986948 != nil)
+        self._method_set_blend_shape_value_1602489585 = StringName(from: "set_blend_shape_value")
+        assert(self._method_set_blend_shape_value_1602489585 != nil)
+        self._method_create_debug_tangents_3218959716 = StringName(from: "create_debug_tangents")
+        assert(self._method_create_debug_tangents_3218959716 != nil)
     }
 
     public func set_mesh(mesh: Mesh)  {
@@ -102,8 +85,13 @@ open class MeshInstance3D : GeometryInstance3D {
                 .init(mesh_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_mesh_194775623,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_mesh_194775623._native_ptr(),
+                    194775623)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -117,8 +105,13 @@ open class MeshInstance3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_mesh_1808005922,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_mesh_1808005922._native_ptr(),
+                    1808005922)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -133,8 +126,13 @@ open class MeshInstance3D : GeometryInstance3D {
                 .init(skeleton_path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_skeleton_path_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_skeleton_path_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -148,8 +146,13 @@ open class MeshInstance3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_skeleton_path_277076166,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_skeleton_path_277076166._native_ptr(),
+                    277076166)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -164,8 +167,13 @@ open class MeshInstance3D : GeometryInstance3D {
                 .init(skin_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_skin_3971435618,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_skin_3971435618._native_ptr(),
+                    3971435618)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -179,8 +187,13 @@ open class MeshInstance3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_skin_2074563878,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_skin_2074563878._native_ptr(),
+                    2074563878)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -196,8 +209,13 @@ open class MeshInstance3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_surface_override_material_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_surface_override_material_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -213,8 +231,13 @@ open class MeshInstance3D : GeometryInstance3D {
                 .init(surface_native), .init(material_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_surface_override_material_3671737478,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_surface_override_material_3671737478._native_ptr(),
+                    3671737478)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -230,8 +253,13 @@ open class MeshInstance3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_surface_override_material_2897466400,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_surface_override_material_2897466400._native_ptr(),
+                    2897466400)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -248,8 +276,13 @@ open class MeshInstance3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_active_material_2897466400,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_active_material_2897466400._native_ptr(),
+                    2897466400)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -264,8 +297,13 @@ open class MeshInstance3D : GeometryInstance3D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_trimesh_collision_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_trimesh_collision_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -280,8 +318,13 @@ open class MeshInstance3D : GeometryInstance3D {
                 .init(clean_native), .init(simplify_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_convex_collision_2751962654,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_convex_collision_2751962654._native_ptr(),
+                    2751962654)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -296,8 +339,13 @@ open class MeshInstance3D : GeometryInstance3D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_multiple_convex_collisions_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_multiple_convex_collisions_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -312,8 +360,13 @@ open class MeshInstance3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_blend_shape_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_blend_shape_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -330,8 +383,13 @@ open class MeshInstance3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_find_blend_shape_by_name_4150868206,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_find_blend_shape_by_name_4150868206._native_ptr(),
+                    4150868206)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -348,8 +406,13 @@ open class MeshInstance3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_blend_shape_value_2339986948,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_blend_shape_value_2339986948._native_ptr(),
+                    2339986948)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -366,8 +429,13 @@ open class MeshInstance3D : GeometryInstance3D {
                 .init(blend_shape_idx_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_blend_shape_value_1602489585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_blend_shape_value_1602489585._native_ptr(),
+                    1602489585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -382,8 +450,13 @@ open class MeshInstance3D : GeometryInstance3D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_debug_tangents_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_debug_tangents_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

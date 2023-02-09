@@ -17,43 +17,37 @@ open class JSONRPC : Object {
 
     public override class var __godot_name: StringName { __godot_name_JSONRPC }
 
-    static var _method_set_scope_2572618360: GDExtensionMethodBindPtr! = nil
-    static var _method_process_action_2963479484: GDExtensionMethodBindPtr! = nil
-    static var _method_process_string_1703090593: GDExtensionMethodBindPtr! = nil
-    static var _method_make_request_3423508980: GDExtensionMethodBindPtr! = nil
-    static var _method_make_response_5053918: GDExtensionMethodBindPtr! = nil
-    static var _method_make_notification_2949127017: GDExtensionMethodBindPtr! = nil
-    static var _method_make_response_error_928596297: GDExtensionMethodBindPtr! = nil
+    static var _method_set_scope_2572618360: StringName! = nil
+    static var _method_process_action_2963479484: StringName! = nil
+    static var _method_process_string_1703090593: StringName! = nil
+    static var _method_make_request_3423508980: StringName! = nil
+    static var _method_make_response_5053918: StringName! = nil
+    static var _method_make_notification_2949127017: StringName! = nil
+    static var _method_make_response_error_928596297: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_JSONRPC == nil)
         __godot_name_JSONRPC = StringName(from: "JSONRPC")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_scope_2572618360_name = StringName(from: "set_scope")
-        self._method_set_scope_2572618360 = self.interface.pointee.classdb_get_method_bind(__godot_name_JSONRPC._native_ptr(), _method_set_scope_2572618360_name._native_ptr(), 2572618360)
-        assert(JSONRPC._method_set_scope_2572618360 != nil)
-        let _method_process_action_2963479484_name = StringName(from: "process_action")
-        self._method_process_action_2963479484 = self.interface.pointee.classdb_get_method_bind(__godot_name_JSONRPC._native_ptr(), _method_process_action_2963479484_name._native_ptr(), 2963479484)
-        assert(JSONRPC._method_process_action_2963479484 != nil)
-        let _method_process_string_1703090593_name = StringName(from: "process_string")
-        self._method_process_string_1703090593 = self.interface.pointee.classdb_get_method_bind(__godot_name_JSONRPC._native_ptr(), _method_process_string_1703090593_name._native_ptr(), 1703090593)
-        assert(JSONRPC._method_process_string_1703090593 != nil)
-        let _method_make_request_3423508980_name = StringName(from: "make_request")
-        self._method_make_request_3423508980 = self.interface.pointee.classdb_get_method_bind(__godot_name_JSONRPC._native_ptr(), _method_make_request_3423508980_name._native_ptr(), 3423508980)
-        assert(JSONRPC._method_make_request_3423508980 != nil)
-        let _method_make_response_5053918_name = StringName(from: "make_response")
-        self._method_make_response_5053918 = self.interface.pointee.classdb_get_method_bind(__godot_name_JSONRPC._native_ptr(), _method_make_response_5053918_name._native_ptr(), 5053918)
-        assert(JSONRPC._method_make_response_5053918 != nil)
-        let _method_make_notification_2949127017_name = StringName(from: "make_notification")
-        self._method_make_notification_2949127017 = self.interface.pointee.classdb_get_method_bind(__godot_name_JSONRPC._native_ptr(), _method_make_notification_2949127017_name._native_ptr(), 2949127017)
-        assert(JSONRPC._method_make_notification_2949127017 != nil)
-        let _method_make_response_error_928596297_name = StringName(from: "make_response_error")
-        self._method_make_response_error_928596297 = self.interface.pointee.classdb_get_method_bind(__godot_name_JSONRPC._native_ptr(), _method_make_response_error_928596297_name._native_ptr(), 928596297)
-        assert(JSONRPC._method_make_response_error_928596297 != nil)
+        self._method_set_scope_2572618360 = StringName(from: "set_scope")
+        assert(self._method_set_scope_2572618360 != nil)
+        self._method_process_action_2963479484 = StringName(from: "process_action")
+        assert(self._method_process_action_2963479484 != nil)
+        self._method_process_string_1703090593 = StringName(from: "process_string")
+        assert(self._method_process_string_1703090593 != nil)
+        self._method_make_request_3423508980 = StringName(from: "make_request")
+        assert(self._method_make_request_3423508980 != nil)
+        self._method_make_response_5053918 = StringName(from: "make_response")
+        assert(self._method_make_response_5053918 != nil)
+        self._method_make_notification_2949127017 = StringName(from: "make_notification")
+        assert(self._method_make_notification_2949127017 != nil)
+        self._method_make_response_error_928596297 = StringName(from: "make_response_error")
+        assert(self._method_make_response_error_928596297 != nil)
     }
 
     public func set_scope(scope: godot.String, target: Object)  {
@@ -65,8 +59,13 @@ open class JSONRPC : Object {
                 .init(scope_native), .init(target_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_scope_2572618360,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_scope_2572618360._native_ptr(),
+                    2572618360)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -82,8 +81,13 @@ open class JSONRPC : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_process_action_2963479484,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_process_action_2963479484._native_ptr(),
+                    2963479484)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -100,8 +104,13 @@ open class JSONRPC : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_process_string_1703090593,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_process_string_1703090593._native_ptr(),
+                    1703090593)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -119,8 +128,13 @@ open class JSONRPC : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_make_request_3423508980,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_make_request_3423508980._native_ptr(),
+                    3423508980)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -137,8 +151,13 @@ open class JSONRPC : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_make_response_5053918,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_make_response_5053918._native_ptr(),
+                    5053918)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -155,8 +174,13 @@ open class JSONRPC : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_make_notification_2949127017,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_make_notification_2949127017._native_ptr(),
+                    2949127017)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -174,8 +198,13 @@ open class JSONRPC : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_make_response_error_928596297,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_make_response_error_928596297._native_ptr(),
+                    928596297)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -11,87 +11,70 @@ open class LabelSettings : Resource {
 
     public override class var __godot_name: StringName { __godot_name_LabelSettings }
 
-    static var _method_set_line_spacing_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_spacing_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_font_1262170328: GDExtensionMethodBindPtr! = nil
-    static var _method_get_font_3229501585: GDExtensionMethodBindPtr! = nil
-    static var _method_set_font_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_font_size_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_font_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_font_color_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_outline_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_outline_size_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_outline_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_outline_color_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shadow_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_shadow_size_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shadow_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_shadow_color_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shadow_offset_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_shadow_offset_3341600327: GDExtensionMethodBindPtr! = nil
+    static var _method_set_line_spacing_373806689: StringName! = nil
+    static var _method_get_line_spacing_1740695150: StringName! = nil
+    static var _method_set_font_1262170328: StringName! = nil
+    static var _method_get_font_3229501585: StringName! = nil
+    static var _method_set_font_size_1286410249: StringName! = nil
+    static var _method_get_font_size_3905245786: StringName! = nil
+    static var _method_set_font_color_2920490490: StringName! = nil
+    static var _method_get_font_color_3444240500: StringName! = nil
+    static var _method_set_outline_size_1286410249: StringName! = nil
+    static var _method_get_outline_size_3905245786: StringName! = nil
+    static var _method_set_outline_color_2920490490: StringName! = nil
+    static var _method_get_outline_color_3444240500: StringName! = nil
+    static var _method_set_shadow_size_1286410249: StringName! = nil
+    static var _method_get_shadow_size_3905245786: StringName! = nil
+    static var _method_set_shadow_color_2920490490: StringName! = nil
+    static var _method_get_shadow_color_3444240500: StringName! = nil
+    static var _method_set_shadow_offset_743155724: StringName! = nil
+    static var _method_get_shadow_offset_3341600327: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_LabelSettings == nil)
         __godot_name_LabelSettings = StringName(from: "LabelSettings")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_line_spacing_373806689_name = StringName(from: "set_line_spacing")
-        self._method_set_line_spacing_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_set_line_spacing_373806689_name._native_ptr(), 373806689)
-        assert(LabelSettings._method_set_line_spacing_373806689 != nil)
-        let _method_get_line_spacing_1740695150_name = StringName(from: "get_line_spacing")
-        self._method_get_line_spacing_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_get_line_spacing_1740695150_name._native_ptr(), 1740695150)
-        assert(LabelSettings._method_get_line_spacing_1740695150 != nil)
-        let _method_set_font_1262170328_name = StringName(from: "set_font")
-        self._method_set_font_1262170328 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_set_font_1262170328_name._native_ptr(), 1262170328)
-        assert(LabelSettings._method_set_font_1262170328 != nil)
-        let _method_get_font_3229501585_name = StringName(from: "get_font")
-        self._method_get_font_3229501585 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_get_font_3229501585_name._native_ptr(), 3229501585)
-        assert(LabelSettings._method_get_font_3229501585 != nil)
-        let _method_set_font_size_1286410249_name = StringName(from: "set_font_size")
-        self._method_set_font_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_set_font_size_1286410249_name._native_ptr(), 1286410249)
-        assert(LabelSettings._method_set_font_size_1286410249 != nil)
-        let _method_get_font_size_3905245786_name = StringName(from: "get_font_size")
-        self._method_get_font_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_get_font_size_3905245786_name._native_ptr(), 3905245786)
-        assert(LabelSettings._method_get_font_size_3905245786 != nil)
-        let _method_set_font_color_2920490490_name = StringName(from: "set_font_color")
-        self._method_set_font_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_set_font_color_2920490490_name._native_ptr(), 2920490490)
-        assert(LabelSettings._method_set_font_color_2920490490 != nil)
-        let _method_get_font_color_3444240500_name = StringName(from: "get_font_color")
-        self._method_get_font_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_get_font_color_3444240500_name._native_ptr(), 3444240500)
-        assert(LabelSettings._method_get_font_color_3444240500 != nil)
-        let _method_set_outline_size_1286410249_name = StringName(from: "set_outline_size")
-        self._method_set_outline_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_set_outline_size_1286410249_name._native_ptr(), 1286410249)
-        assert(LabelSettings._method_set_outline_size_1286410249 != nil)
-        let _method_get_outline_size_3905245786_name = StringName(from: "get_outline_size")
-        self._method_get_outline_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_get_outline_size_3905245786_name._native_ptr(), 3905245786)
-        assert(LabelSettings._method_get_outline_size_3905245786 != nil)
-        let _method_set_outline_color_2920490490_name = StringName(from: "set_outline_color")
-        self._method_set_outline_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_set_outline_color_2920490490_name._native_ptr(), 2920490490)
-        assert(LabelSettings._method_set_outline_color_2920490490 != nil)
-        let _method_get_outline_color_3444240500_name = StringName(from: "get_outline_color")
-        self._method_get_outline_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_get_outline_color_3444240500_name._native_ptr(), 3444240500)
-        assert(LabelSettings._method_get_outline_color_3444240500 != nil)
-        let _method_set_shadow_size_1286410249_name = StringName(from: "set_shadow_size")
-        self._method_set_shadow_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_set_shadow_size_1286410249_name._native_ptr(), 1286410249)
-        assert(LabelSettings._method_set_shadow_size_1286410249 != nil)
-        let _method_get_shadow_size_3905245786_name = StringName(from: "get_shadow_size")
-        self._method_get_shadow_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_get_shadow_size_3905245786_name._native_ptr(), 3905245786)
-        assert(LabelSettings._method_get_shadow_size_3905245786 != nil)
-        let _method_set_shadow_color_2920490490_name = StringName(from: "set_shadow_color")
-        self._method_set_shadow_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_set_shadow_color_2920490490_name._native_ptr(), 2920490490)
-        assert(LabelSettings._method_set_shadow_color_2920490490 != nil)
-        let _method_get_shadow_color_3444240500_name = StringName(from: "get_shadow_color")
-        self._method_get_shadow_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_get_shadow_color_3444240500_name._native_ptr(), 3444240500)
-        assert(LabelSettings._method_get_shadow_color_3444240500 != nil)
-        let _method_set_shadow_offset_743155724_name = StringName(from: "set_shadow_offset")
-        self._method_set_shadow_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_set_shadow_offset_743155724_name._native_ptr(), 743155724)
-        assert(LabelSettings._method_set_shadow_offset_743155724 != nil)
-        let _method_get_shadow_offset_3341600327_name = StringName(from: "get_shadow_offset")
-        self._method_get_shadow_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_LabelSettings._native_ptr(), _method_get_shadow_offset_3341600327_name._native_ptr(), 3341600327)
-        assert(LabelSettings._method_get_shadow_offset_3341600327 != nil)
+        self._method_set_line_spacing_373806689 = StringName(from: "set_line_spacing")
+        assert(self._method_set_line_spacing_373806689 != nil)
+        self._method_get_line_spacing_1740695150 = StringName(from: "get_line_spacing")
+        assert(self._method_get_line_spacing_1740695150 != nil)
+        self._method_set_font_1262170328 = StringName(from: "set_font")
+        assert(self._method_set_font_1262170328 != nil)
+        self._method_get_font_3229501585 = StringName(from: "get_font")
+        assert(self._method_get_font_3229501585 != nil)
+        self._method_set_font_size_1286410249 = StringName(from: "set_font_size")
+        assert(self._method_set_font_size_1286410249 != nil)
+        self._method_get_font_size_3905245786 = StringName(from: "get_font_size")
+        assert(self._method_get_font_size_3905245786 != nil)
+        self._method_set_font_color_2920490490 = StringName(from: "set_font_color")
+        assert(self._method_set_font_color_2920490490 != nil)
+        self._method_get_font_color_3444240500 = StringName(from: "get_font_color")
+        assert(self._method_get_font_color_3444240500 != nil)
+        self._method_set_outline_size_1286410249 = StringName(from: "set_outline_size")
+        assert(self._method_set_outline_size_1286410249 != nil)
+        self._method_get_outline_size_3905245786 = StringName(from: "get_outline_size")
+        assert(self._method_get_outline_size_3905245786 != nil)
+        self._method_set_outline_color_2920490490 = StringName(from: "set_outline_color")
+        assert(self._method_set_outline_color_2920490490 != nil)
+        self._method_get_outline_color_3444240500 = StringName(from: "get_outline_color")
+        assert(self._method_get_outline_color_3444240500 != nil)
+        self._method_set_shadow_size_1286410249 = StringName(from: "set_shadow_size")
+        assert(self._method_set_shadow_size_1286410249 != nil)
+        self._method_get_shadow_size_3905245786 = StringName(from: "get_shadow_size")
+        assert(self._method_get_shadow_size_3905245786 != nil)
+        self._method_set_shadow_color_2920490490 = StringName(from: "set_shadow_color")
+        assert(self._method_set_shadow_color_2920490490 != nil)
+        self._method_get_shadow_color_3444240500 = StringName(from: "get_shadow_color")
+        assert(self._method_get_shadow_color_3444240500 != nil)
+        self._method_set_shadow_offset_743155724 = StringName(from: "set_shadow_offset")
+        assert(self._method_set_shadow_offset_743155724 != nil)
+        self._method_get_shadow_offset_3341600327 = StringName(from: "get_shadow_offset")
+        assert(self._method_get_shadow_offset_3341600327 != nil)
     }
 
     public func set_line_spacing(spacing: Float64)  {
@@ -102,8 +85,13 @@ open class LabelSettings : Resource {
                 .init(spacing_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_line_spacing_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_line_spacing_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -119,8 +107,13 @@ open class LabelSettings : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_spacing_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_spacing_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -135,8 +128,13 @@ open class LabelSettings : Resource {
                 .init(font_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_font_1262170328,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_font_1262170328._native_ptr(),
+                    1262170328)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -150,8 +148,13 @@ open class LabelSettings : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_font_3229501585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_font_3229501585._native_ptr(),
+                    3229501585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -166,8 +169,13 @@ open class LabelSettings : Resource {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_font_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_font_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -183,8 +191,13 @@ open class LabelSettings : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_font_size_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_font_size_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -199,8 +212,13 @@ open class LabelSettings : Resource {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_font_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_font_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -214,8 +232,13 @@ open class LabelSettings : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_font_color_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_font_color_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -230,8 +253,13 @@ open class LabelSettings : Resource {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_outline_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_outline_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -247,8 +275,13 @@ open class LabelSettings : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_outline_size_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_outline_size_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -263,8 +296,13 @@ open class LabelSettings : Resource {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_outline_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_outline_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -278,8 +316,13 @@ open class LabelSettings : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_outline_color_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_outline_color_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -294,8 +337,13 @@ open class LabelSettings : Resource {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shadow_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shadow_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -311,8 +359,13 @@ open class LabelSettings : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_shadow_size_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_shadow_size_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -327,8 +380,13 @@ open class LabelSettings : Resource {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shadow_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shadow_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -342,8 +400,13 @@ open class LabelSettings : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_shadow_color_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_shadow_color_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -358,8 +421,13 @@ open class LabelSettings : Resource {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shadow_offset_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shadow_offset_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -373,8 +441,13 @@ open class LabelSettings : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_shadow_offset_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_shadow_offset_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

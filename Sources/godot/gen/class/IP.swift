@@ -22,55 +22,46 @@ open class IP : Object {
 
     public override class var __godot_name: StringName { __godot_name_IP }
 
-    static var _method_resolve_hostname_396864159: GDExtensionMethodBindPtr! = nil
-    static var _method_resolve_hostname_addresses_3462780090: GDExtensionMethodBindPtr! = nil
-    static var _method_resolve_hostname_queue_item_3936392508: GDExtensionMethodBindPtr! = nil
-    static var _method_get_resolve_item_status_3812250196: GDExtensionMethodBindPtr! = nil
-    static var _method_get_resolve_item_address_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_resolve_item_addresses_663333327: GDExtensionMethodBindPtr! = nil
-    static var _method_erase_resolve_item_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_local_addresses_1139954409: GDExtensionMethodBindPtr! = nil
-    static var _method_get_local_interfaces_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_cache_3005725572: GDExtensionMethodBindPtr! = nil
+    static var _method_resolve_hostname_396864159: StringName! = nil
+    static var _method_resolve_hostname_addresses_3462780090: StringName! = nil
+    static var _method_resolve_hostname_queue_item_3936392508: StringName! = nil
+    static var _method_get_resolve_item_status_3812250196: StringName! = nil
+    static var _method_get_resolve_item_address_844755477: StringName! = nil
+    static var _method_get_resolve_item_addresses_663333327: StringName! = nil
+    static var _method_erase_resolve_item_1286410249: StringName! = nil
+    static var _method_get_local_addresses_1139954409: StringName! = nil
+    static var _method_get_local_interfaces_3995934104: StringName! = nil
+    static var _method_clear_cache_3005725572: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_IP == nil)
         __godot_name_IP = StringName(from: "IP")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_resolve_hostname_396864159_name = StringName(from: "resolve_hostname")
-        self._method_resolve_hostname_396864159 = self.interface.pointee.classdb_get_method_bind(__godot_name_IP._native_ptr(), _method_resolve_hostname_396864159_name._native_ptr(), 396864159)
-        assert(IP._method_resolve_hostname_396864159 != nil)
-        let _method_resolve_hostname_addresses_3462780090_name = StringName(from: "resolve_hostname_addresses")
-        self._method_resolve_hostname_addresses_3462780090 = self.interface.pointee.classdb_get_method_bind(__godot_name_IP._native_ptr(), _method_resolve_hostname_addresses_3462780090_name._native_ptr(), 3462780090)
-        assert(IP._method_resolve_hostname_addresses_3462780090 != nil)
-        let _method_resolve_hostname_queue_item_3936392508_name = StringName(from: "resolve_hostname_queue_item")
-        self._method_resolve_hostname_queue_item_3936392508 = self.interface.pointee.classdb_get_method_bind(__godot_name_IP._native_ptr(), _method_resolve_hostname_queue_item_3936392508_name._native_ptr(), 3936392508)
-        assert(IP._method_resolve_hostname_queue_item_3936392508 != nil)
-        let _method_get_resolve_item_status_3812250196_name = StringName(from: "get_resolve_item_status")
-        self._method_get_resolve_item_status_3812250196 = self.interface.pointee.classdb_get_method_bind(__godot_name_IP._native_ptr(), _method_get_resolve_item_status_3812250196_name._native_ptr(), 3812250196)
-        assert(IP._method_get_resolve_item_status_3812250196 != nil)
-        let _method_get_resolve_item_address_844755477_name = StringName(from: "get_resolve_item_address")
-        self._method_get_resolve_item_address_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_IP._native_ptr(), _method_get_resolve_item_address_844755477_name._native_ptr(), 844755477)
-        assert(IP._method_get_resolve_item_address_844755477 != nil)
-        let _method_get_resolve_item_addresses_663333327_name = StringName(from: "get_resolve_item_addresses")
-        self._method_get_resolve_item_addresses_663333327 = self.interface.pointee.classdb_get_method_bind(__godot_name_IP._native_ptr(), _method_get_resolve_item_addresses_663333327_name._native_ptr(), 663333327)
-        assert(IP._method_get_resolve_item_addresses_663333327 != nil)
-        let _method_erase_resolve_item_1286410249_name = StringName(from: "erase_resolve_item")
-        self._method_erase_resolve_item_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_IP._native_ptr(), _method_erase_resolve_item_1286410249_name._native_ptr(), 1286410249)
-        assert(IP._method_erase_resolve_item_1286410249 != nil)
-        let _method_get_local_addresses_1139954409_name = StringName(from: "get_local_addresses")
-        self._method_get_local_addresses_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_IP._native_ptr(), _method_get_local_addresses_1139954409_name._native_ptr(), 1139954409)
-        assert(IP._method_get_local_addresses_1139954409 != nil)
-        let _method_get_local_interfaces_3995934104_name = StringName(from: "get_local_interfaces")
-        self._method_get_local_interfaces_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_IP._native_ptr(), _method_get_local_interfaces_3995934104_name._native_ptr(), 3995934104)
-        assert(IP._method_get_local_interfaces_3995934104 != nil)
-        let _method_clear_cache_3005725572_name = StringName(from: "clear_cache")
-        self._method_clear_cache_3005725572 = self.interface.pointee.classdb_get_method_bind(__godot_name_IP._native_ptr(), _method_clear_cache_3005725572_name._native_ptr(), 3005725572)
-        assert(IP._method_clear_cache_3005725572 != nil)
+        self._method_resolve_hostname_396864159 = StringName(from: "resolve_hostname")
+        assert(self._method_resolve_hostname_396864159 != nil)
+        self._method_resolve_hostname_addresses_3462780090 = StringName(from: "resolve_hostname_addresses")
+        assert(self._method_resolve_hostname_addresses_3462780090 != nil)
+        self._method_resolve_hostname_queue_item_3936392508 = StringName(from: "resolve_hostname_queue_item")
+        assert(self._method_resolve_hostname_queue_item_3936392508 != nil)
+        self._method_get_resolve_item_status_3812250196 = StringName(from: "get_resolve_item_status")
+        assert(self._method_get_resolve_item_status_3812250196 != nil)
+        self._method_get_resolve_item_address_844755477 = StringName(from: "get_resolve_item_address")
+        assert(self._method_get_resolve_item_address_844755477 != nil)
+        self._method_get_resolve_item_addresses_663333327 = StringName(from: "get_resolve_item_addresses")
+        assert(self._method_get_resolve_item_addresses_663333327 != nil)
+        self._method_erase_resolve_item_1286410249 = StringName(from: "erase_resolve_item")
+        assert(self._method_erase_resolve_item_1286410249 != nil)
+        self._method_get_local_addresses_1139954409 = StringName(from: "get_local_addresses")
+        assert(self._method_get_local_addresses_1139954409 != nil)
+        self._method_get_local_interfaces_3995934104 = StringName(from: "get_local_interfaces")
+        assert(self._method_get_local_interfaces_3995934104 != nil)
+        self._method_clear_cache_3005725572 = StringName(from: "clear_cache")
+        assert(self._method_clear_cache_3005725572 != nil)
     }
 
     public func resolve_hostname(host: godot.String, ip_type: IP.`Typ`) -> godot.String {
@@ -83,8 +74,13 @@ open class IP : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_resolve_hostname_396864159,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_resolve_hostname_396864159._native_ptr(),
+                    396864159)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -102,8 +98,13 @@ open class IP : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_resolve_hostname_addresses_3462780090,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_resolve_hostname_addresses_3462780090._native_ptr(),
+                    3462780090)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -122,8 +123,13 @@ open class IP : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_resolve_hostname_queue_item_3936392508,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_resolve_hostname_queue_item_3936392508._native_ptr(),
+                    3936392508)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -140,8 +146,13 @@ open class IP : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_resolve_item_status_3812250196,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_resolve_item_status_3812250196._native_ptr(),
+                    3812250196)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -158,8 +169,13 @@ open class IP : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_resolve_item_address_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_resolve_item_address_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -176,8 +192,13 @@ open class IP : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_resolve_item_addresses_663333327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_resolve_item_addresses_663333327._native_ptr(),
+                    663333327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -193,8 +214,13 @@ open class IP : Object {
                 .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_erase_resolve_item_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_erase_resolve_item_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -209,8 +235,13 @@ open class IP : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_local_addresses_1139954409,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_local_addresses_1139954409._native_ptr(),
+                    1139954409)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -225,8 +256,13 @@ open class IP : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_local_interfaces_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_local_interfaces_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -241,8 +277,13 @@ open class IP : Object {
                 .init(hostname_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_cache_3005725572,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_cache_3005725572._native_ptr(),
+                    3005725572)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

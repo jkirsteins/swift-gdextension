@@ -11,43 +11,37 @@ open class ENetMultiplayerPeer : MultiplayerPeer {
 
     public override class var __godot_name: StringName { __godot_name_ENetMultiplayerPeer }
 
-    static var _method_create_server_1616151701: GDExtensionMethodBindPtr! = nil
-    static var _method_create_client_920217784: GDExtensionMethodBindPtr! = nil
-    static var _method_create_mesh_844576869: GDExtensionMethodBindPtr! = nil
-    static var _method_add_mesh_peer_1293458335: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bind_ip_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_host_4103238886: GDExtensionMethodBindPtr! = nil
-    static var _method_get_peer_3793311544: GDExtensionMethodBindPtr! = nil
+    static var _method_create_server_1616151701: StringName! = nil
+    static var _method_create_client_920217784: StringName! = nil
+    static var _method_create_mesh_844576869: StringName! = nil
+    static var _method_add_mesh_peer_1293458335: StringName! = nil
+    static var _method_set_bind_ip_83702148: StringName! = nil
+    static var _method_get_host_4103238886: StringName! = nil
+    static var _method_get_peer_3793311544: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ENetMultiplayerPeer == nil)
         __godot_name_ENetMultiplayerPeer = StringName(from: "ENetMultiplayerPeer")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_create_server_1616151701_name = StringName(from: "create_server")
-        self._method_create_server_1616151701 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetMultiplayerPeer._native_ptr(), _method_create_server_1616151701_name._native_ptr(), 1616151701)
-        assert(ENetMultiplayerPeer._method_create_server_1616151701 != nil)
-        let _method_create_client_920217784_name = StringName(from: "create_client")
-        self._method_create_client_920217784 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetMultiplayerPeer._native_ptr(), _method_create_client_920217784_name._native_ptr(), 920217784)
-        assert(ENetMultiplayerPeer._method_create_client_920217784 != nil)
-        let _method_create_mesh_844576869_name = StringName(from: "create_mesh")
-        self._method_create_mesh_844576869 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetMultiplayerPeer._native_ptr(), _method_create_mesh_844576869_name._native_ptr(), 844576869)
-        assert(ENetMultiplayerPeer._method_create_mesh_844576869 != nil)
-        let _method_add_mesh_peer_1293458335_name = StringName(from: "add_mesh_peer")
-        self._method_add_mesh_peer_1293458335 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetMultiplayerPeer._native_ptr(), _method_add_mesh_peer_1293458335_name._native_ptr(), 1293458335)
-        assert(ENetMultiplayerPeer._method_add_mesh_peer_1293458335 != nil)
-        let _method_set_bind_ip_83702148_name = StringName(from: "set_bind_ip")
-        self._method_set_bind_ip_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetMultiplayerPeer._native_ptr(), _method_set_bind_ip_83702148_name._native_ptr(), 83702148)
-        assert(ENetMultiplayerPeer._method_set_bind_ip_83702148 != nil)
-        let _method_get_host_4103238886_name = StringName(from: "get_host")
-        self._method_get_host_4103238886 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetMultiplayerPeer._native_ptr(), _method_get_host_4103238886_name._native_ptr(), 4103238886)
-        assert(ENetMultiplayerPeer._method_get_host_4103238886 != nil)
-        let _method_get_peer_3793311544_name = StringName(from: "get_peer")
-        self._method_get_peer_3793311544 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetMultiplayerPeer._native_ptr(), _method_get_peer_3793311544_name._native_ptr(), 3793311544)
-        assert(ENetMultiplayerPeer._method_get_peer_3793311544 != nil)
+        self._method_create_server_1616151701 = StringName(from: "create_server")
+        assert(self._method_create_server_1616151701 != nil)
+        self._method_create_client_920217784 = StringName(from: "create_client")
+        assert(self._method_create_client_920217784 != nil)
+        self._method_create_mesh_844576869 = StringName(from: "create_mesh")
+        assert(self._method_create_mesh_844576869 != nil)
+        self._method_add_mesh_peer_1293458335 = StringName(from: "add_mesh_peer")
+        assert(self._method_add_mesh_peer_1293458335 != nil)
+        self._method_set_bind_ip_83702148 = StringName(from: "set_bind_ip")
+        assert(self._method_set_bind_ip_83702148 != nil)
+        self._method_get_host_4103238886 = StringName(from: "get_host")
+        assert(self._method_get_host_4103238886 != nil)
+        self._method_get_peer_3793311544 = StringName(from: "get_peer")
+        assert(self._method_get_peer_3793311544 != nil)
     }
 
     public func create_server(port: Int64, max_clients: Int64, max_channels: Int64, in_bandwidth: Int64, out_bandwidth: Int64) -> Error {
@@ -63,8 +57,13 @@ open class ENetMultiplayerPeer : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_server_1616151701,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_server_1616151701._native_ptr(),
+                    1616151701)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -90,8 +89,13 @@ open class ENetMultiplayerPeer : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_client_920217784,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_client_920217784._native_ptr(),
+                    920217784)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -112,8 +116,13 @@ open class ENetMultiplayerPeer : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_mesh_844576869,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_mesh_844576869._native_ptr(),
+                    844576869)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -131,8 +140,13 @@ open class ENetMultiplayerPeer : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_mesh_peer_1293458335,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_mesh_peer_1293458335._native_ptr(),
+                    1293458335)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -148,8 +162,13 @@ open class ENetMultiplayerPeer : MultiplayerPeer {
                 .init(ip_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bind_ip_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bind_ip_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -163,8 +182,13 @@ open class ENetMultiplayerPeer : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_host_4103238886,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_host_4103238886._native_ptr(),
+                    4103238886)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -180,8 +204,13 @@ open class ENetMultiplayerPeer : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_peer_3793311544,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_peer_3793311544._native_ptr(),
+                    3793311544)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

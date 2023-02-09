@@ -45,63 +45,52 @@ open class FontVariation : Font {
 
     public override class var __godot_name: StringName { __godot_name_FontVariation }
 
-    static var _method_set_base_font_1262170328: GDExtensionMethodBindPtr! = nil
-    static var _method_get_base_font_3229501585: GDExtensionMethodBindPtr! = nil
-    static var _method_set_variation_opentype_4155329257: GDExtensionMethodBindPtr! = nil
-    static var _method_get_variation_opentype_3102165223: GDExtensionMethodBindPtr! = nil
-    static var _method_set_variation_embolden_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_variation_embolden_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_variation_face_index_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_variation_face_index_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_variation_transform_2761652528: GDExtensionMethodBindPtr! = nil
-    static var _method_get_variation_transform_3814499831: GDExtensionMethodBindPtr! = nil
-    static var _method_set_opentype_features_4155329257: GDExtensionMethodBindPtr! = nil
-    static var _method_set_spacing_3122339690: GDExtensionMethodBindPtr! = nil
+    static var _method_set_base_font_1262170328: StringName! = nil
+    static var _method_get_base_font_3229501585: StringName! = nil
+    static var _method_set_variation_opentype_4155329257: StringName! = nil
+    static var _method_get_variation_opentype_3102165223: StringName! = nil
+    static var _method_set_variation_embolden_373806689: StringName! = nil
+    static var _method_get_variation_embolden_1740695150: StringName! = nil
+    static var _method_set_variation_face_index_1286410249: StringName! = nil
+    static var _method_get_variation_face_index_3905245786: StringName! = nil
+    static var _method_set_variation_transform_2761652528: StringName! = nil
+    static var _method_get_variation_transform_3814499831: StringName! = nil
+    static var _method_set_opentype_features_4155329257: StringName! = nil
+    static var _method_set_spacing_3122339690: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_FontVariation == nil)
         __godot_name_FontVariation = StringName(from: "FontVariation")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_base_font_1262170328_name = StringName(from: "set_base_font")
-        self._method_set_base_font_1262170328 = self.interface.pointee.classdb_get_method_bind(__godot_name_FontVariation._native_ptr(), _method_set_base_font_1262170328_name._native_ptr(), 1262170328)
-        assert(FontVariation._method_set_base_font_1262170328 != nil)
-        let _method_get_base_font_3229501585_name = StringName(from: "get_base_font")
-        self._method_get_base_font_3229501585 = self.interface.pointee.classdb_get_method_bind(__godot_name_FontVariation._native_ptr(), _method_get_base_font_3229501585_name._native_ptr(), 3229501585)
-        assert(FontVariation._method_get_base_font_3229501585 != nil)
-        let _method_set_variation_opentype_4155329257_name = StringName(from: "set_variation_opentype")
-        self._method_set_variation_opentype_4155329257 = self.interface.pointee.classdb_get_method_bind(__godot_name_FontVariation._native_ptr(), _method_set_variation_opentype_4155329257_name._native_ptr(), 4155329257)
-        assert(FontVariation._method_set_variation_opentype_4155329257 != nil)
-        let _method_get_variation_opentype_3102165223_name = StringName(from: "get_variation_opentype")
-        self._method_get_variation_opentype_3102165223 = self.interface.pointee.classdb_get_method_bind(__godot_name_FontVariation._native_ptr(), _method_get_variation_opentype_3102165223_name._native_ptr(), 3102165223)
-        assert(FontVariation._method_get_variation_opentype_3102165223 != nil)
-        let _method_set_variation_embolden_373806689_name = StringName(from: "set_variation_embolden")
-        self._method_set_variation_embolden_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_FontVariation._native_ptr(), _method_set_variation_embolden_373806689_name._native_ptr(), 373806689)
-        assert(FontVariation._method_set_variation_embolden_373806689 != nil)
-        let _method_get_variation_embolden_1740695150_name = StringName(from: "get_variation_embolden")
-        self._method_get_variation_embolden_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_FontVariation._native_ptr(), _method_get_variation_embolden_1740695150_name._native_ptr(), 1740695150)
-        assert(FontVariation._method_get_variation_embolden_1740695150 != nil)
-        let _method_set_variation_face_index_1286410249_name = StringName(from: "set_variation_face_index")
-        self._method_set_variation_face_index_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_FontVariation._native_ptr(), _method_set_variation_face_index_1286410249_name._native_ptr(), 1286410249)
-        assert(FontVariation._method_set_variation_face_index_1286410249 != nil)
-        let _method_get_variation_face_index_3905245786_name = StringName(from: "get_variation_face_index")
-        self._method_get_variation_face_index_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_FontVariation._native_ptr(), _method_get_variation_face_index_3905245786_name._native_ptr(), 3905245786)
-        assert(FontVariation._method_get_variation_face_index_3905245786 != nil)
-        let _method_set_variation_transform_2761652528_name = StringName(from: "set_variation_transform")
-        self._method_set_variation_transform_2761652528 = self.interface.pointee.classdb_get_method_bind(__godot_name_FontVariation._native_ptr(), _method_set_variation_transform_2761652528_name._native_ptr(), 2761652528)
-        assert(FontVariation._method_set_variation_transform_2761652528 != nil)
-        let _method_get_variation_transform_3814499831_name = StringName(from: "get_variation_transform")
-        self._method_get_variation_transform_3814499831 = self.interface.pointee.classdb_get_method_bind(__godot_name_FontVariation._native_ptr(), _method_get_variation_transform_3814499831_name._native_ptr(), 3814499831)
-        assert(FontVariation._method_get_variation_transform_3814499831 != nil)
-        let _method_set_opentype_features_4155329257_name = StringName(from: "set_opentype_features")
-        self._method_set_opentype_features_4155329257 = self.interface.pointee.classdb_get_method_bind(__godot_name_FontVariation._native_ptr(), _method_set_opentype_features_4155329257_name._native_ptr(), 4155329257)
-        assert(FontVariation._method_set_opentype_features_4155329257 != nil)
-        let _method_set_spacing_3122339690_name = StringName(from: "set_spacing")
-        self._method_set_spacing_3122339690 = self.interface.pointee.classdb_get_method_bind(__godot_name_FontVariation._native_ptr(), _method_set_spacing_3122339690_name._native_ptr(), 3122339690)
-        assert(FontVariation._method_set_spacing_3122339690 != nil)
+        self._method_set_base_font_1262170328 = StringName(from: "set_base_font")
+        assert(self._method_set_base_font_1262170328 != nil)
+        self._method_get_base_font_3229501585 = StringName(from: "get_base_font")
+        assert(self._method_get_base_font_3229501585 != nil)
+        self._method_set_variation_opentype_4155329257 = StringName(from: "set_variation_opentype")
+        assert(self._method_set_variation_opentype_4155329257 != nil)
+        self._method_get_variation_opentype_3102165223 = StringName(from: "get_variation_opentype")
+        assert(self._method_get_variation_opentype_3102165223 != nil)
+        self._method_set_variation_embolden_373806689 = StringName(from: "set_variation_embolden")
+        assert(self._method_set_variation_embolden_373806689 != nil)
+        self._method_get_variation_embolden_1740695150 = StringName(from: "get_variation_embolden")
+        assert(self._method_get_variation_embolden_1740695150 != nil)
+        self._method_set_variation_face_index_1286410249 = StringName(from: "set_variation_face_index")
+        assert(self._method_set_variation_face_index_1286410249 != nil)
+        self._method_get_variation_face_index_3905245786 = StringName(from: "get_variation_face_index")
+        assert(self._method_get_variation_face_index_3905245786 != nil)
+        self._method_set_variation_transform_2761652528 = StringName(from: "set_variation_transform")
+        assert(self._method_set_variation_transform_2761652528 != nil)
+        self._method_get_variation_transform_3814499831 = StringName(from: "get_variation_transform")
+        assert(self._method_get_variation_transform_3814499831 != nil)
+        self._method_set_opentype_features_4155329257 = StringName(from: "set_opentype_features")
+        assert(self._method_set_opentype_features_4155329257 != nil)
+        self._method_set_spacing_3122339690 = StringName(from: "set_spacing")
+        assert(self._method_set_spacing_3122339690 != nil)
     }
 
     public func set_base_font(font: Font)  {
@@ -112,8 +101,13 @@ open class FontVariation : Font {
                 .init(font_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_base_font_1262170328,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_base_font_1262170328._native_ptr(),
+                    1262170328)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -127,8 +121,13 @@ open class FontVariation : Font {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_base_font_3229501585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_base_font_3229501585._native_ptr(),
+                    3229501585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -143,8 +142,13 @@ open class FontVariation : Font {
                 .init(coords_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_variation_opentype_4155329257,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_variation_opentype_4155329257._native_ptr(),
+                    4155329257)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -158,8 +162,13 @@ open class FontVariation : Font {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_variation_opentype_3102165223,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_variation_opentype_3102165223._native_ptr(),
+                    3102165223)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -174,8 +183,13 @@ open class FontVariation : Font {
                 .init(strength_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_variation_embolden_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_variation_embolden_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -191,8 +205,13 @@ open class FontVariation : Font {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_variation_embolden_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_variation_embolden_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -207,8 +226,13 @@ open class FontVariation : Font {
                 .init(face_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_variation_face_index_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_variation_face_index_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -224,8 +248,13 @@ open class FontVariation : Font {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_variation_face_index_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_variation_face_index_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -240,8 +269,13 @@ open class FontVariation : Font {
                 .init(transform_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_variation_transform_2761652528,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_variation_transform_2761652528._native_ptr(),
+                    2761652528)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -255,8 +289,13 @@ open class FontVariation : Font {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_variation_transform_3814499831,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_variation_transform_3814499831._native_ptr(),
+                    3814499831)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -271,8 +310,13 @@ open class FontVariation : Font {
                 .init(features_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_opentype_features_4155329257,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_opentype_features_4155329257._native_ptr(),
+                    4155329257)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -287,8 +331,13 @@ open class FontVariation : Font {
                 .init(spacing_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_spacing_3122339690,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_spacing_3122339690._native_ptr(),
+                    3122339690)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

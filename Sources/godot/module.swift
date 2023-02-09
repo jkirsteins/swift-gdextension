@@ -24,6 +24,7 @@ public class GodotInitializer {
         self.r_initialization = .init(r_initialization)
     }
     
+    var minimumInitializationLevel: GDExtensionInitializationLevel = GDEXTENSION_INITIALIZATION_SCENE
     var sceneInitializers: [InitializerType] = []
     var sceneTerminators: [DeinitializerType] = []
     var userData: OpaquePointer?
@@ -103,6 +104,11 @@ public class GodotInitializer {
         self.r_initialization.pointee.initialize = self.global_initialize
         self.r_initialization.pointee.deinitialize = self.global_deinitialize
         self.r_initialization.pointee.userdata = opaqueUserData
+        self.r_initialization.pointee.minimum_initialization_level = self.minimumInitializationLevel
+        
+        guard self.minimumInitializationLevel == GDEXTENSION_INITIALIZATION_SCENE else {
+            fatalError("TODO: If the minimum init level is not GDEXTENSION_INITIALIZATION_SCENE, class initialization will fail")
+        }
         
         return 1
     }

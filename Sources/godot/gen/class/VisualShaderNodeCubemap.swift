@@ -21,39 +21,34 @@ open class VisualShaderNodeCubemap : VisualShaderNode {
 
     public override class var __godot_name: StringName { __godot_name_VisualShaderNodeCubemap }
 
-    static var _method_set_source_1625400621: GDExtensionMethodBindPtr! = nil
-    static var _method_get_source_2222048781: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cube_map_2219800736: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cube_map_1772111058: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_type_1899718876: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_type_3356498888: GDExtensionMethodBindPtr! = nil
+    static var _method_set_source_1625400621: StringName! = nil
+    static var _method_get_source_2222048781: StringName! = nil
+    static var _method_set_cube_map_2219800736: StringName! = nil
+    static var _method_get_cube_map_1772111058: StringName! = nil
+    static var _method_set_texture_type_1899718876: StringName! = nil
+    static var _method_get_texture_type_3356498888: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShaderNodeCubemap == nil)
         __godot_name_VisualShaderNodeCubemap = StringName(from: "VisualShaderNodeCubemap")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_source_1625400621_name = StringName(from: "set_source")
-        self._method_set_source_1625400621 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeCubemap._native_ptr(), _method_set_source_1625400621_name._native_ptr(), 1625400621)
-        assert(VisualShaderNodeCubemap._method_set_source_1625400621 != nil)
-        let _method_get_source_2222048781_name = StringName(from: "get_source")
-        self._method_get_source_2222048781 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeCubemap._native_ptr(), _method_get_source_2222048781_name._native_ptr(), 2222048781)
-        assert(VisualShaderNodeCubemap._method_get_source_2222048781 != nil)
-        let _method_set_cube_map_2219800736_name = StringName(from: "set_cube_map")
-        self._method_set_cube_map_2219800736 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeCubemap._native_ptr(), _method_set_cube_map_2219800736_name._native_ptr(), 2219800736)
-        assert(VisualShaderNodeCubemap._method_set_cube_map_2219800736 != nil)
-        let _method_get_cube_map_1772111058_name = StringName(from: "get_cube_map")
-        self._method_get_cube_map_1772111058 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeCubemap._native_ptr(), _method_get_cube_map_1772111058_name._native_ptr(), 1772111058)
-        assert(VisualShaderNodeCubemap._method_get_cube_map_1772111058 != nil)
-        let _method_set_texture_type_1899718876_name = StringName(from: "set_texture_type")
-        self._method_set_texture_type_1899718876 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeCubemap._native_ptr(), _method_set_texture_type_1899718876_name._native_ptr(), 1899718876)
-        assert(VisualShaderNodeCubemap._method_set_texture_type_1899718876 != nil)
-        let _method_get_texture_type_3356498888_name = StringName(from: "get_texture_type")
-        self._method_get_texture_type_3356498888 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeCubemap._native_ptr(), _method_get_texture_type_3356498888_name._native_ptr(), 3356498888)
-        assert(VisualShaderNodeCubemap._method_get_texture_type_3356498888 != nil)
+        self._method_set_source_1625400621 = StringName(from: "set_source")
+        assert(self._method_set_source_1625400621 != nil)
+        self._method_get_source_2222048781 = StringName(from: "get_source")
+        assert(self._method_get_source_2222048781 != nil)
+        self._method_set_cube_map_2219800736 = StringName(from: "set_cube_map")
+        assert(self._method_set_cube_map_2219800736 != nil)
+        self._method_get_cube_map_1772111058 = StringName(from: "get_cube_map")
+        assert(self._method_get_cube_map_1772111058 != nil)
+        self._method_set_texture_type_1899718876 = StringName(from: "set_texture_type")
+        assert(self._method_set_texture_type_1899718876 != nil)
+        self._method_get_texture_type_3356498888 = StringName(from: "get_texture_type")
+        assert(self._method_get_texture_type_3356498888 != nil)
     }
 
     public func set_source(value: VisualShaderNodeCubemap.Source)  {
@@ -64,8 +59,13 @@ open class VisualShaderNodeCubemap : VisualShaderNode {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_source_1625400621,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_source_1625400621._native_ptr(),
+                    1625400621)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -80,8 +80,13 @@ open class VisualShaderNodeCubemap : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_source_2222048781,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_source_2222048781._native_ptr(),
+                    2222048781)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -96,8 +101,13 @@ open class VisualShaderNodeCubemap : VisualShaderNode {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cube_map_2219800736,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cube_map_2219800736._native_ptr(),
+                    2219800736)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -111,8 +121,13 @@ open class VisualShaderNodeCubemap : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cube_map_1772111058,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cube_map_1772111058._native_ptr(),
+                    1772111058)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -127,8 +142,13 @@ open class VisualShaderNodeCubemap : VisualShaderNode {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_type_1899718876,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_type_1899718876._native_ptr(),
+                    1899718876)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -143,8 +163,13 @@ open class VisualShaderNodeCubemap : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_type_3356498888,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_type_3356498888._native_ptr(),
+                    3356498888)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

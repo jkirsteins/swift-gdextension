@@ -19,22 +19,23 @@ open class ResourceFormatLoader : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_ResourceFormatLoader }
 
-    static var _method__get_recognized_extensions_0: GDExtensionMethodBindPtr! = nil
-    static var _method__recognize_path_0: GDExtensionMethodBindPtr! = nil
-    static var _method__handles_type_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_resource_type_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_resource_script_class_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_resource_uid_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_dependencies_0: GDExtensionMethodBindPtr! = nil
-    static var _method__rename_dependencies_0: GDExtensionMethodBindPtr! = nil
-    static var _method__exists_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_classes_used_0: GDExtensionMethodBindPtr! = nil
-    static var _method__load_0: GDExtensionMethodBindPtr! = nil
+    static var _method__get_recognized_extensions_0: StringName! = nil
+    static var _method__recognize_path_0: StringName! = nil
+    static var _method__handles_type_0: StringName! = nil
+    static var _method__get_resource_type_0: StringName! = nil
+    static var _method__get_resource_script_class_0: StringName! = nil
+    static var _method__get_resource_uid_0: StringName! = nil
+    static var _method__get_dependencies_0: StringName! = nil
+    static var _method__rename_dependencies_0: StringName! = nil
+    static var _method__exists_0: StringName! = nil
+    static var _method__get_classes_used_0: StringName! = nil
+    static var _method__load_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ResourceFormatLoader == nil)
         __godot_name_ResourceFormatLoader = StringName(from: "ResourceFormatLoader")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -50,12 +51,7 @@ open class ResourceFormatLoader : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_recognized_extensions_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _recognize_path(path: godot.String, `type`: StringName) -> UInt8 {
@@ -69,12 +65,7 @@ open class ResourceFormatLoader : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__recognize_path_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _handles_type(`type`: StringName) -> UInt8 {
@@ -87,12 +78,7 @@ open class ResourceFormatLoader : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__handles_type_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _get_resource_type(path: godot.String) -> godot.String {
@@ -104,12 +90,7 @@ open class ResourceFormatLoader : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_resource_type_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _get_resource_script_class(path: godot.String) -> godot.String {
@@ -121,12 +102,7 @@ open class ResourceFormatLoader : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_resource_script_class_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _get_resource_uid(path: godot.String) -> Int64 {
@@ -139,12 +115,7 @@ open class ResourceFormatLoader : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_resource_uid_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _get_dependencies(path: godot.String, add_types: UInt8) -> PackedStringArray {
@@ -157,12 +128,7 @@ open class ResourceFormatLoader : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_dependencies_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedStringArray(godot: __resPtr.pointee)
         }
     }
@@ -176,12 +142,7 @@ open class ResourceFormatLoader : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__rename_dependencies_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _exists(path: godot.String) -> UInt8 {
@@ -194,12 +155,7 @@ open class ResourceFormatLoader : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__exists_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _get_classes_used(path: godot.String) -> PackedStringArray {
@@ -211,12 +167,7 @@ open class ResourceFormatLoader : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_classes_used_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _load(path: godot.String, original_path: godot.String, use_sub_threads: UInt8, cache_mode: Int64) -> Variant {
@@ -231,12 +182,7 @@ open class ResourceFormatLoader : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__load_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Variant(godot: __resPtr.pointee)
         }
         }

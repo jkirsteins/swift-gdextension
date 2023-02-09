@@ -17,39 +17,34 @@ open class GDExtensionManager : Object {
 
     public override class var __godot_name: StringName { __godot_name_GDExtensionManager }
 
-    static var _method_load_extension_4024158731: GDExtensionMethodBindPtr! = nil
-    static var _method_reload_extension_4024158731: GDExtensionMethodBindPtr! = nil
-    static var _method_unload_extension_4024158731: GDExtensionMethodBindPtr! = nil
-    static var _method_is_extension_loaded_3927539163: GDExtensionMethodBindPtr! = nil
-    static var _method_get_loaded_extensions_1139954409: GDExtensionMethodBindPtr! = nil
-    static var _method_get_extension_49743343: GDExtensionMethodBindPtr! = nil
+    static var _method_load_extension_4024158731: StringName! = nil
+    static var _method_reload_extension_4024158731: StringName! = nil
+    static var _method_unload_extension_4024158731: StringName! = nil
+    static var _method_is_extension_loaded_3927539163: StringName! = nil
+    static var _method_get_loaded_extensions_1139954409: StringName! = nil
+    static var _method_get_extension_49743343: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_GDExtensionManager == nil)
         __godot_name_GDExtensionManager = StringName(from: "GDExtensionManager")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_load_extension_4024158731_name = StringName(from: "load_extension")
-        self._method_load_extension_4024158731 = self.interface.pointee.classdb_get_method_bind(__godot_name_GDExtensionManager._native_ptr(), _method_load_extension_4024158731_name._native_ptr(), 4024158731)
-        assert(GDExtensionManager._method_load_extension_4024158731 != nil)
-        let _method_reload_extension_4024158731_name = StringName(from: "reload_extension")
-        self._method_reload_extension_4024158731 = self.interface.pointee.classdb_get_method_bind(__godot_name_GDExtensionManager._native_ptr(), _method_reload_extension_4024158731_name._native_ptr(), 4024158731)
-        assert(GDExtensionManager._method_reload_extension_4024158731 != nil)
-        let _method_unload_extension_4024158731_name = StringName(from: "unload_extension")
-        self._method_unload_extension_4024158731 = self.interface.pointee.classdb_get_method_bind(__godot_name_GDExtensionManager._native_ptr(), _method_unload_extension_4024158731_name._native_ptr(), 4024158731)
-        assert(GDExtensionManager._method_unload_extension_4024158731 != nil)
-        let _method_is_extension_loaded_3927539163_name = StringName(from: "is_extension_loaded")
-        self._method_is_extension_loaded_3927539163 = self.interface.pointee.classdb_get_method_bind(__godot_name_GDExtensionManager._native_ptr(), _method_is_extension_loaded_3927539163_name._native_ptr(), 3927539163)
-        assert(GDExtensionManager._method_is_extension_loaded_3927539163 != nil)
-        let _method_get_loaded_extensions_1139954409_name = StringName(from: "get_loaded_extensions")
-        self._method_get_loaded_extensions_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_GDExtensionManager._native_ptr(), _method_get_loaded_extensions_1139954409_name._native_ptr(), 1139954409)
-        assert(GDExtensionManager._method_get_loaded_extensions_1139954409 != nil)
-        let _method_get_extension_49743343_name = StringName(from: "get_extension")
-        self._method_get_extension_49743343 = self.interface.pointee.classdb_get_method_bind(__godot_name_GDExtensionManager._native_ptr(), _method_get_extension_49743343_name._native_ptr(), 49743343)
-        assert(GDExtensionManager._method_get_extension_49743343 != nil)
+        self._method_load_extension_4024158731 = StringName(from: "load_extension")
+        assert(self._method_load_extension_4024158731 != nil)
+        self._method_reload_extension_4024158731 = StringName(from: "reload_extension")
+        assert(self._method_reload_extension_4024158731 != nil)
+        self._method_unload_extension_4024158731 = StringName(from: "unload_extension")
+        assert(self._method_unload_extension_4024158731 != nil)
+        self._method_is_extension_loaded_3927539163 = StringName(from: "is_extension_loaded")
+        assert(self._method_is_extension_loaded_3927539163 != nil)
+        self._method_get_loaded_extensions_1139954409 = StringName(from: "get_loaded_extensions")
+        assert(self._method_get_loaded_extensions_1139954409 != nil)
+        self._method_get_extension_49743343 = StringName(from: "get_extension")
+        assert(self._method_get_extension_49743343 != nil)
     }
 
     public func load_extension(path: godot.String) -> GDExtensionManager.LoadStatus {
@@ -61,8 +56,13 @@ open class GDExtensionManager : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_load_extension_4024158731,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_load_extension_4024158731._native_ptr(),
+                    4024158731)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -78,8 +78,13 @@ open class GDExtensionManager : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_reload_extension_4024158731,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_reload_extension_4024158731._native_ptr(),
+                    4024158731)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -95,8 +100,13 @@ open class GDExtensionManager : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_unload_extension_4024158731,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_unload_extension_4024158731._native_ptr(),
+                    4024158731)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -113,8 +123,13 @@ open class GDExtensionManager : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_extension_loaded_3927539163,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_extension_loaded_3927539163._native_ptr(),
+                    3927539163)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -129,8 +144,13 @@ open class GDExtensionManager : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_loaded_extensions_1139954409,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_loaded_extensions_1139954409._native_ptr(),
+                    1139954409)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -146,8 +166,13 @@ open class GDExtensionManager : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_extension_49743343,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_extension_49743343._native_ptr(),
+                    49743343)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

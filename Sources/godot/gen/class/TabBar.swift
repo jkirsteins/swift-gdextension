@@ -22,199 +22,154 @@ open class TabBar : Control {
 
     public override class var __godot_name: StringName { __godot_name_TabBar }
 
-    static var _method_set_tab_count_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tab_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_current_tab_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_current_tab_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_previous_tab_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tab_title_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tab_title_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tab_text_direction_1707680378: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tab_text_direction_4235602388: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tab_language_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tab_language_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tab_icon_666127730: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tab_icon_3536238170: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tab_button_icon_666127730: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tab_button_icon_3536238170: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tab_disabled_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_is_tab_disabled_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tab_hidden_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_is_tab_hidden_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_tab_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_add_tab_1465444425: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tab_idx_at_point_3820158470: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tab_alignment_2413632353: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tab_alignment_2178122193: GDExtensionMethodBindPtr! = nil
-    static var _method_set_clip_tabs_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_clip_tabs_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tab_offset_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_offset_buttons_visible_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_ensure_tab_visible_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tab_rect_3327874267: GDExtensionMethodBindPtr! = nil
-    static var _method_move_tab_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tab_close_display_policy_2212906737: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tab_close_display_policy_2956568028: GDExtensionMethodBindPtr! = nil
-    static var _method_set_max_tab_width_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_max_tab_width_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_scrolling_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_scrolling_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_drag_to_rearrange_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_drag_to_rearrange_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tabs_rearrange_group_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tabs_rearrange_group_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_scroll_to_selected_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_scroll_to_selected_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_select_with_rmb_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_select_with_rmb_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_tabs_3218959716: GDExtensionMethodBindPtr! = nil
+    static var _method_set_tab_count_1286410249: StringName! = nil
+    static var _method_get_tab_count_3905245786: StringName! = nil
+    static var _method_set_current_tab_1286410249: StringName! = nil
+    static var _method_get_current_tab_3905245786: StringName! = nil
+    static var _method_get_previous_tab_3905245786: StringName! = nil
+    static var _method_set_tab_title_501894301: StringName! = nil
+    static var _method_get_tab_title_844755477: StringName! = nil
+    static var _method_set_tab_text_direction_1707680378: StringName! = nil
+    static var _method_get_tab_text_direction_4235602388: StringName! = nil
+    static var _method_set_tab_language_501894301: StringName! = nil
+    static var _method_get_tab_language_844755477: StringName! = nil
+    static var _method_set_tab_icon_666127730: StringName! = nil
+    static var _method_get_tab_icon_3536238170: StringName! = nil
+    static var _method_set_tab_button_icon_666127730: StringName! = nil
+    static var _method_get_tab_button_icon_3536238170: StringName! = nil
+    static var _method_set_tab_disabled_300928843: StringName! = nil
+    static var _method_is_tab_disabled_1116898809: StringName! = nil
+    static var _method_set_tab_hidden_300928843: StringName! = nil
+    static var _method_is_tab_hidden_1116898809: StringName! = nil
+    static var _method_remove_tab_1286410249: StringName! = nil
+    static var _method_add_tab_1465444425: StringName! = nil
+    static var _method_get_tab_idx_at_point_3820158470: StringName! = nil
+    static var _method_set_tab_alignment_2413632353: StringName! = nil
+    static var _method_get_tab_alignment_2178122193: StringName! = nil
+    static var _method_set_clip_tabs_2586408642: StringName! = nil
+    static var _method_get_clip_tabs_36873697: StringName! = nil
+    static var _method_get_tab_offset_3905245786: StringName! = nil
+    static var _method_get_offset_buttons_visible_36873697: StringName! = nil
+    static var _method_ensure_tab_visible_1286410249: StringName! = nil
+    static var _method_get_tab_rect_3327874267: StringName! = nil
+    static var _method_move_tab_3937882851: StringName! = nil
+    static var _method_set_tab_close_display_policy_2212906737: StringName! = nil
+    static var _method_get_tab_close_display_policy_2956568028: StringName! = nil
+    static var _method_set_max_tab_width_1286410249: StringName! = nil
+    static var _method_get_max_tab_width_3905245786: StringName! = nil
+    static var _method_set_scrolling_enabled_2586408642: StringName! = nil
+    static var _method_get_scrolling_enabled_36873697: StringName! = nil
+    static var _method_set_drag_to_rearrange_enabled_2586408642: StringName! = nil
+    static var _method_get_drag_to_rearrange_enabled_36873697: StringName! = nil
+    static var _method_set_tabs_rearrange_group_1286410249: StringName! = nil
+    static var _method_get_tabs_rearrange_group_3905245786: StringName! = nil
+    static var _method_set_scroll_to_selected_2586408642: StringName! = nil
+    static var _method_get_scroll_to_selected_36873697: StringName! = nil
+    static var _method_set_select_with_rmb_2586408642: StringName! = nil
+    static var _method_get_select_with_rmb_36873697: StringName! = nil
+    static var _method_clear_tabs_3218959716: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_TabBar == nil)
         __godot_name_TabBar = StringName(from: "TabBar")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_tab_count_1286410249_name = StringName(from: "set_tab_count")
-        self._method_set_tab_count_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_tab_count_1286410249_name._native_ptr(), 1286410249)
-        assert(TabBar._method_set_tab_count_1286410249 != nil)
-        let _method_get_tab_count_3905245786_name = StringName(from: "get_tab_count")
-        self._method_get_tab_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_tab_count_3905245786_name._native_ptr(), 3905245786)
-        assert(TabBar._method_get_tab_count_3905245786 != nil)
-        let _method_set_current_tab_1286410249_name = StringName(from: "set_current_tab")
-        self._method_set_current_tab_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_current_tab_1286410249_name._native_ptr(), 1286410249)
-        assert(TabBar._method_set_current_tab_1286410249 != nil)
-        let _method_get_current_tab_3905245786_name = StringName(from: "get_current_tab")
-        self._method_get_current_tab_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_current_tab_3905245786_name._native_ptr(), 3905245786)
-        assert(TabBar._method_get_current_tab_3905245786 != nil)
-        let _method_get_previous_tab_3905245786_name = StringName(from: "get_previous_tab")
-        self._method_get_previous_tab_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_previous_tab_3905245786_name._native_ptr(), 3905245786)
-        assert(TabBar._method_get_previous_tab_3905245786 != nil)
-        let _method_set_tab_title_501894301_name = StringName(from: "set_tab_title")
-        self._method_set_tab_title_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_tab_title_501894301_name._native_ptr(), 501894301)
-        assert(TabBar._method_set_tab_title_501894301 != nil)
-        let _method_get_tab_title_844755477_name = StringName(from: "get_tab_title")
-        self._method_get_tab_title_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_tab_title_844755477_name._native_ptr(), 844755477)
-        assert(TabBar._method_get_tab_title_844755477 != nil)
-        let _method_set_tab_text_direction_1707680378_name = StringName(from: "set_tab_text_direction")
-        self._method_set_tab_text_direction_1707680378 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_tab_text_direction_1707680378_name._native_ptr(), 1707680378)
-        assert(TabBar._method_set_tab_text_direction_1707680378 != nil)
-        let _method_get_tab_text_direction_4235602388_name = StringName(from: "get_tab_text_direction")
-        self._method_get_tab_text_direction_4235602388 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_tab_text_direction_4235602388_name._native_ptr(), 4235602388)
-        assert(TabBar._method_get_tab_text_direction_4235602388 != nil)
-        let _method_set_tab_language_501894301_name = StringName(from: "set_tab_language")
-        self._method_set_tab_language_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_tab_language_501894301_name._native_ptr(), 501894301)
-        assert(TabBar._method_set_tab_language_501894301 != nil)
-        let _method_get_tab_language_844755477_name = StringName(from: "get_tab_language")
-        self._method_get_tab_language_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_tab_language_844755477_name._native_ptr(), 844755477)
-        assert(TabBar._method_get_tab_language_844755477 != nil)
-        let _method_set_tab_icon_666127730_name = StringName(from: "set_tab_icon")
-        self._method_set_tab_icon_666127730 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_tab_icon_666127730_name._native_ptr(), 666127730)
-        assert(TabBar._method_set_tab_icon_666127730 != nil)
-        let _method_get_tab_icon_3536238170_name = StringName(from: "get_tab_icon")
-        self._method_get_tab_icon_3536238170 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_tab_icon_3536238170_name._native_ptr(), 3536238170)
-        assert(TabBar._method_get_tab_icon_3536238170 != nil)
-        let _method_set_tab_button_icon_666127730_name = StringName(from: "set_tab_button_icon")
-        self._method_set_tab_button_icon_666127730 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_tab_button_icon_666127730_name._native_ptr(), 666127730)
-        assert(TabBar._method_set_tab_button_icon_666127730 != nil)
-        let _method_get_tab_button_icon_3536238170_name = StringName(from: "get_tab_button_icon")
-        self._method_get_tab_button_icon_3536238170 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_tab_button_icon_3536238170_name._native_ptr(), 3536238170)
-        assert(TabBar._method_get_tab_button_icon_3536238170 != nil)
-        let _method_set_tab_disabled_300928843_name = StringName(from: "set_tab_disabled")
-        self._method_set_tab_disabled_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_tab_disabled_300928843_name._native_ptr(), 300928843)
-        assert(TabBar._method_set_tab_disabled_300928843 != nil)
-        let _method_is_tab_disabled_1116898809_name = StringName(from: "is_tab_disabled")
-        self._method_is_tab_disabled_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_is_tab_disabled_1116898809_name._native_ptr(), 1116898809)
-        assert(TabBar._method_is_tab_disabled_1116898809 != nil)
-        let _method_set_tab_hidden_300928843_name = StringName(from: "set_tab_hidden")
-        self._method_set_tab_hidden_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_tab_hidden_300928843_name._native_ptr(), 300928843)
-        assert(TabBar._method_set_tab_hidden_300928843 != nil)
-        let _method_is_tab_hidden_1116898809_name = StringName(from: "is_tab_hidden")
-        self._method_is_tab_hidden_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_is_tab_hidden_1116898809_name._native_ptr(), 1116898809)
-        assert(TabBar._method_is_tab_hidden_1116898809 != nil)
-        let _method_remove_tab_1286410249_name = StringName(from: "remove_tab")
-        self._method_remove_tab_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_remove_tab_1286410249_name._native_ptr(), 1286410249)
-        assert(TabBar._method_remove_tab_1286410249 != nil)
-        let _method_add_tab_1465444425_name = StringName(from: "add_tab")
-        self._method_add_tab_1465444425 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_add_tab_1465444425_name._native_ptr(), 1465444425)
-        assert(TabBar._method_add_tab_1465444425 != nil)
-        let _method_get_tab_idx_at_point_3820158470_name = StringName(from: "get_tab_idx_at_point")
-        self._method_get_tab_idx_at_point_3820158470 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_tab_idx_at_point_3820158470_name._native_ptr(), 3820158470)
-        assert(TabBar._method_get_tab_idx_at_point_3820158470 != nil)
-        let _method_set_tab_alignment_2413632353_name = StringName(from: "set_tab_alignment")
-        self._method_set_tab_alignment_2413632353 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_tab_alignment_2413632353_name._native_ptr(), 2413632353)
-        assert(TabBar._method_set_tab_alignment_2413632353 != nil)
-        let _method_get_tab_alignment_2178122193_name = StringName(from: "get_tab_alignment")
-        self._method_get_tab_alignment_2178122193 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_tab_alignment_2178122193_name._native_ptr(), 2178122193)
-        assert(TabBar._method_get_tab_alignment_2178122193 != nil)
-        let _method_set_clip_tabs_2586408642_name = StringName(from: "set_clip_tabs")
-        self._method_set_clip_tabs_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_clip_tabs_2586408642_name._native_ptr(), 2586408642)
-        assert(TabBar._method_set_clip_tabs_2586408642 != nil)
-        let _method_get_clip_tabs_36873697_name = StringName(from: "get_clip_tabs")
-        self._method_get_clip_tabs_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_clip_tabs_36873697_name._native_ptr(), 36873697)
-        assert(TabBar._method_get_clip_tabs_36873697 != nil)
-        let _method_get_tab_offset_3905245786_name = StringName(from: "get_tab_offset")
-        self._method_get_tab_offset_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_tab_offset_3905245786_name._native_ptr(), 3905245786)
-        assert(TabBar._method_get_tab_offset_3905245786 != nil)
-        let _method_get_offset_buttons_visible_36873697_name = StringName(from: "get_offset_buttons_visible")
-        self._method_get_offset_buttons_visible_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_offset_buttons_visible_36873697_name._native_ptr(), 36873697)
-        assert(TabBar._method_get_offset_buttons_visible_36873697 != nil)
-        let _method_ensure_tab_visible_1286410249_name = StringName(from: "ensure_tab_visible")
-        self._method_ensure_tab_visible_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_ensure_tab_visible_1286410249_name._native_ptr(), 1286410249)
-        assert(TabBar._method_ensure_tab_visible_1286410249 != nil)
-        let _method_get_tab_rect_3327874267_name = StringName(from: "get_tab_rect")
-        self._method_get_tab_rect_3327874267 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_tab_rect_3327874267_name._native_ptr(), 3327874267)
-        assert(TabBar._method_get_tab_rect_3327874267 != nil)
-        let _method_move_tab_3937882851_name = StringName(from: "move_tab")
-        self._method_move_tab_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_move_tab_3937882851_name._native_ptr(), 3937882851)
-        assert(TabBar._method_move_tab_3937882851 != nil)
-        let _method_set_tab_close_display_policy_2212906737_name = StringName(from: "set_tab_close_display_policy")
-        self._method_set_tab_close_display_policy_2212906737 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_tab_close_display_policy_2212906737_name._native_ptr(), 2212906737)
-        assert(TabBar._method_set_tab_close_display_policy_2212906737 != nil)
-        let _method_get_tab_close_display_policy_2956568028_name = StringName(from: "get_tab_close_display_policy")
-        self._method_get_tab_close_display_policy_2956568028 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_tab_close_display_policy_2956568028_name._native_ptr(), 2956568028)
-        assert(TabBar._method_get_tab_close_display_policy_2956568028 != nil)
-        let _method_set_max_tab_width_1286410249_name = StringName(from: "set_max_tab_width")
-        self._method_set_max_tab_width_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_max_tab_width_1286410249_name._native_ptr(), 1286410249)
-        assert(TabBar._method_set_max_tab_width_1286410249 != nil)
-        let _method_get_max_tab_width_3905245786_name = StringName(from: "get_max_tab_width")
-        self._method_get_max_tab_width_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_max_tab_width_3905245786_name._native_ptr(), 3905245786)
-        assert(TabBar._method_get_max_tab_width_3905245786 != nil)
-        let _method_set_scrolling_enabled_2586408642_name = StringName(from: "set_scrolling_enabled")
-        self._method_set_scrolling_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_scrolling_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TabBar._method_set_scrolling_enabled_2586408642 != nil)
-        let _method_get_scrolling_enabled_36873697_name = StringName(from: "get_scrolling_enabled")
-        self._method_get_scrolling_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_scrolling_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TabBar._method_get_scrolling_enabled_36873697 != nil)
-        let _method_set_drag_to_rearrange_enabled_2586408642_name = StringName(from: "set_drag_to_rearrange_enabled")
-        self._method_set_drag_to_rearrange_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_drag_to_rearrange_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TabBar._method_set_drag_to_rearrange_enabled_2586408642 != nil)
-        let _method_get_drag_to_rearrange_enabled_36873697_name = StringName(from: "get_drag_to_rearrange_enabled")
-        self._method_get_drag_to_rearrange_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_drag_to_rearrange_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TabBar._method_get_drag_to_rearrange_enabled_36873697 != nil)
-        let _method_set_tabs_rearrange_group_1286410249_name = StringName(from: "set_tabs_rearrange_group")
-        self._method_set_tabs_rearrange_group_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_tabs_rearrange_group_1286410249_name._native_ptr(), 1286410249)
-        assert(TabBar._method_set_tabs_rearrange_group_1286410249 != nil)
-        let _method_get_tabs_rearrange_group_3905245786_name = StringName(from: "get_tabs_rearrange_group")
-        self._method_get_tabs_rearrange_group_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_tabs_rearrange_group_3905245786_name._native_ptr(), 3905245786)
-        assert(TabBar._method_get_tabs_rearrange_group_3905245786 != nil)
-        let _method_set_scroll_to_selected_2586408642_name = StringName(from: "set_scroll_to_selected")
-        self._method_set_scroll_to_selected_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_scroll_to_selected_2586408642_name._native_ptr(), 2586408642)
-        assert(TabBar._method_set_scroll_to_selected_2586408642 != nil)
-        let _method_get_scroll_to_selected_36873697_name = StringName(from: "get_scroll_to_selected")
-        self._method_get_scroll_to_selected_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_scroll_to_selected_36873697_name._native_ptr(), 36873697)
-        assert(TabBar._method_get_scroll_to_selected_36873697 != nil)
-        let _method_set_select_with_rmb_2586408642_name = StringName(from: "set_select_with_rmb")
-        self._method_set_select_with_rmb_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_set_select_with_rmb_2586408642_name._native_ptr(), 2586408642)
-        assert(TabBar._method_set_select_with_rmb_2586408642 != nil)
-        let _method_get_select_with_rmb_36873697_name = StringName(from: "get_select_with_rmb")
-        self._method_get_select_with_rmb_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_get_select_with_rmb_36873697_name._native_ptr(), 36873697)
-        assert(TabBar._method_get_select_with_rmb_36873697 != nil)
-        let _method_clear_tabs_3218959716_name = StringName(from: "clear_tabs")
-        self._method_clear_tabs_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TabBar._native_ptr(), _method_clear_tabs_3218959716_name._native_ptr(), 3218959716)
-        assert(TabBar._method_clear_tabs_3218959716 != nil)
+        self._method_set_tab_count_1286410249 = StringName(from: "set_tab_count")
+        assert(self._method_set_tab_count_1286410249 != nil)
+        self._method_get_tab_count_3905245786 = StringName(from: "get_tab_count")
+        assert(self._method_get_tab_count_3905245786 != nil)
+        self._method_set_current_tab_1286410249 = StringName(from: "set_current_tab")
+        assert(self._method_set_current_tab_1286410249 != nil)
+        self._method_get_current_tab_3905245786 = StringName(from: "get_current_tab")
+        assert(self._method_get_current_tab_3905245786 != nil)
+        self._method_get_previous_tab_3905245786 = StringName(from: "get_previous_tab")
+        assert(self._method_get_previous_tab_3905245786 != nil)
+        self._method_set_tab_title_501894301 = StringName(from: "set_tab_title")
+        assert(self._method_set_tab_title_501894301 != nil)
+        self._method_get_tab_title_844755477 = StringName(from: "get_tab_title")
+        assert(self._method_get_tab_title_844755477 != nil)
+        self._method_set_tab_text_direction_1707680378 = StringName(from: "set_tab_text_direction")
+        assert(self._method_set_tab_text_direction_1707680378 != nil)
+        self._method_get_tab_text_direction_4235602388 = StringName(from: "get_tab_text_direction")
+        assert(self._method_get_tab_text_direction_4235602388 != nil)
+        self._method_set_tab_language_501894301 = StringName(from: "set_tab_language")
+        assert(self._method_set_tab_language_501894301 != nil)
+        self._method_get_tab_language_844755477 = StringName(from: "get_tab_language")
+        assert(self._method_get_tab_language_844755477 != nil)
+        self._method_set_tab_icon_666127730 = StringName(from: "set_tab_icon")
+        assert(self._method_set_tab_icon_666127730 != nil)
+        self._method_get_tab_icon_3536238170 = StringName(from: "get_tab_icon")
+        assert(self._method_get_tab_icon_3536238170 != nil)
+        self._method_set_tab_button_icon_666127730 = StringName(from: "set_tab_button_icon")
+        assert(self._method_set_tab_button_icon_666127730 != nil)
+        self._method_get_tab_button_icon_3536238170 = StringName(from: "get_tab_button_icon")
+        assert(self._method_get_tab_button_icon_3536238170 != nil)
+        self._method_set_tab_disabled_300928843 = StringName(from: "set_tab_disabled")
+        assert(self._method_set_tab_disabled_300928843 != nil)
+        self._method_is_tab_disabled_1116898809 = StringName(from: "is_tab_disabled")
+        assert(self._method_is_tab_disabled_1116898809 != nil)
+        self._method_set_tab_hidden_300928843 = StringName(from: "set_tab_hidden")
+        assert(self._method_set_tab_hidden_300928843 != nil)
+        self._method_is_tab_hidden_1116898809 = StringName(from: "is_tab_hidden")
+        assert(self._method_is_tab_hidden_1116898809 != nil)
+        self._method_remove_tab_1286410249 = StringName(from: "remove_tab")
+        assert(self._method_remove_tab_1286410249 != nil)
+        self._method_add_tab_1465444425 = StringName(from: "add_tab")
+        assert(self._method_add_tab_1465444425 != nil)
+        self._method_get_tab_idx_at_point_3820158470 = StringName(from: "get_tab_idx_at_point")
+        assert(self._method_get_tab_idx_at_point_3820158470 != nil)
+        self._method_set_tab_alignment_2413632353 = StringName(from: "set_tab_alignment")
+        assert(self._method_set_tab_alignment_2413632353 != nil)
+        self._method_get_tab_alignment_2178122193 = StringName(from: "get_tab_alignment")
+        assert(self._method_get_tab_alignment_2178122193 != nil)
+        self._method_set_clip_tabs_2586408642 = StringName(from: "set_clip_tabs")
+        assert(self._method_set_clip_tabs_2586408642 != nil)
+        self._method_get_clip_tabs_36873697 = StringName(from: "get_clip_tabs")
+        assert(self._method_get_clip_tabs_36873697 != nil)
+        self._method_get_tab_offset_3905245786 = StringName(from: "get_tab_offset")
+        assert(self._method_get_tab_offset_3905245786 != nil)
+        self._method_get_offset_buttons_visible_36873697 = StringName(from: "get_offset_buttons_visible")
+        assert(self._method_get_offset_buttons_visible_36873697 != nil)
+        self._method_ensure_tab_visible_1286410249 = StringName(from: "ensure_tab_visible")
+        assert(self._method_ensure_tab_visible_1286410249 != nil)
+        self._method_get_tab_rect_3327874267 = StringName(from: "get_tab_rect")
+        assert(self._method_get_tab_rect_3327874267 != nil)
+        self._method_move_tab_3937882851 = StringName(from: "move_tab")
+        assert(self._method_move_tab_3937882851 != nil)
+        self._method_set_tab_close_display_policy_2212906737 = StringName(from: "set_tab_close_display_policy")
+        assert(self._method_set_tab_close_display_policy_2212906737 != nil)
+        self._method_get_tab_close_display_policy_2956568028 = StringName(from: "get_tab_close_display_policy")
+        assert(self._method_get_tab_close_display_policy_2956568028 != nil)
+        self._method_set_max_tab_width_1286410249 = StringName(from: "set_max_tab_width")
+        assert(self._method_set_max_tab_width_1286410249 != nil)
+        self._method_get_max_tab_width_3905245786 = StringName(from: "get_max_tab_width")
+        assert(self._method_get_max_tab_width_3905245786 != nil)
+        self._method_set_scrolling_enabled_2586408642 = StringName(from: "set_scrolling_enabled")
+        assert(self._method_set_scrolling_enabled_2586408642 != nil)
+        self._method_get_scrolling_enabled_36873697 = StringName(from: "get_scrolling_enabled")
+        assert(self._method_get_scrolling_enabled_36873697 != nil)
+        self._method_set_drag_to_rearrange_enabled_2586408642 = StringName(from: "set_drag_to_rearrange_enabled")
+        assert(self._method_set_drag_to_rearrange_enabled_2586408642 != nil)
+        self._method_get_drag_to_rearrange_enabled_36873697 = StringName(from: "get_drag_to_rearrange_enabled")
+        assert(self._method_get_drag_to_rearrange_enabled_36873697 != nil)
+        self._method_set_tabs_rearrange_group_1286410249 = StringName(from: "set_tabs_rearrange_group")
+        assert(self._method_set_tabs_rearrange_group_1286410249 != nil)
+        self._method_get_tabs_rearrange_group_3905245786 = StringName(from: "get_tabs_rearrange_group")
+        assert(self._method_get_tabs_rearrange_group_3905245786 != nil)
+        self._method_set_scroll_to_selected_2586408642 = StringName(from: "set_scroll_to_selected")
+        assert(self._method_set_scroll_to_selected_2586408642 != nil)
+        self._method_get_scroll_to_selected_36873697 = StringName(from: "get_scroll_to_selected")
+        assert(self._method_get_scroll_to_selected_36873697 != nil)
+        self._method_set_select_with_rmb_2586408642 = StringName(from: "set_select_with_rmb")
+        assert(self._method_set_select_with_rmb_2586408642 != nil)
+        self._method_get_select_with_rmb_36873697 = StringName(from: "get_select_with_rmb")
+        assert(self._method_get_select_with_rmb_36873697 != nil)
+        self._method_clear_tabs_3218959716 = StringName(from: "clear_tabs")
+        assert(self._method_clear_tabs_3218959716 != nil)
     }
 
     public func set_tab_count(count: Int64)  {
@@ -225,8 +180,13 @@ open class TabBar : Control {
                 .init(count_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tab_count_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tab_count_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -242,8 +202,13 @@ open class TabBar : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tab_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tab_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -258,8 +223,13 @@ open class TabBar : Control {
                 .init(tab_idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_current_tab_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_current_tab_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -275,8 +245,13 @@ open class TabBar : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_current_tab_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_current_tab_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -292,8 +267,13 @@ open class TabBar : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_previous_tab_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_previous_tab_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -309,8 +289,13 @@ open class TabBar : Control {
                 .init(tab_idx_native), .init(title_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tab_title_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tab_title_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -326,8 +311,13 @@ open class TabBar : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tab_title_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tab_title_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -344,8 +334,13 @@ open class TabBar : Control {
                 .init(tab_idx_native), .init(direction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tab_text_direction_1707680378,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tab_text_direction_1707680378._native_ptr(),
+                    1707680378)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -362,8 +357,13 @@ open class TabBar : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tab_text_direction_4235602388,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tab_text_direction_4235602388._native_ptr(),
+                    4235602388)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -380,8 +380,13 @@ open class TabBar : Control {
                 .init(tab_idx_native), .init(language_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tab_language_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tab_language_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -397,8 +402,13 @@ open class TabBar : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tab_language_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tab_language_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -415,8 +425,13 @@ open class TabBar : Control {
                 .init(tab_idx_native), .init(icon_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tab_icon_666127730,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tab_icon_666127730._native_ptr(),
+                    666127730)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -432,8 +447,13 @@ open class TabBar : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tab_icon_3536238170,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tab_icon_3536238170._native_ptr(),
+                    3536238170)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -450,8 +470,13 @@ open class TabBar : Control {
                 .init(tab_idx_native), .init(icon_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tab_button_icon_666127730,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tab_button_icon_666127730._native_ptr(),
+                    666127730)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -467,8 +492,13 @@ open class TabBar : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tab_button_icon_3536238170,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tab_button_icon_3536238170._native_ptr(),
+                    3536238170)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -485,8 +515,13 @@ open class TabBar : Control {
                 .init(tab_idx_native), .init(disabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tab_disabled_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tab_disabled_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -504,8 +539,13 @@ open class TabBar : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_tab_disabled_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_tab_disabled_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -522,8 +562,13 @@ open class TabBar : Control {
                 .init(tab_idx_native), .init(hidden_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tab_hidden_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tab_hidden_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -541,8 +586,13 @@ open class TabBar : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_tab_hidden_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_tab_hidden_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -558,8 +608,13 @@ open class TabBar : Control {
                 .init(tab_idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_tab_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_tab_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -575,8 +630,13 @@ open class TabBar : Control {
                 .init(title_native), .init(icon_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_tab_1465444425,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_tab_1465444425._native_ptr(),
+                    1465444425)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -592,8 +652,13 @@ open class TabBar : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tab_idx_at_point_3820158470,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tab_idx_at_point_3820158470._native_ptr(),
+                    3820158470)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -608,8 +673,13 @@ open class TabBar : Control {
                 .init(alignment_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tab_alignment_2413632353,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tab_alignment_2413632353._native_ptr(),
+                    2413632353)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -624,8 +694,13 @@ open class TabBar : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tab_alignment_2178122193,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tab_alignment_2178122193._native_ptr(),
+                    2178122193)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -640,8 +715,13 @@ open class TabBar : Control {
                 .init(clip_tabs_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_clip_tabs_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_clip_tabs_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -657,8 +737,13 @@ open class TabBar : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_clip_tabs_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_clip_tabs_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -674,8 +759,13 @@ open class TabBar : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tab_offset_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tab_offset_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -691,8 +781,13 @@ open class TabBar : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_offset_buttons_visible_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_offset_buttons_visible_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -707,8 +802,13 @@ open class TabBar : Control {
                 .init(idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_ensure_tab_visible_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_ensure_tab_visible_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -724,8 +824,13 @@ open class TabBar : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tab_rect_3327874267,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tab_rect_3327874267._native_ptr(),
+                    3327874267)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -742,8 +847,13 @@ open class TabBar : Control {
                 .init(from_native), .init(to_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_move_tab_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_move_tab_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -759,8 +869,13 @@ open class TabBar : Control {
                 .init(policy_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tab_close_display_policy_2212906737,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tab_close_display_policy_2212906737._native_ptr(),
+                    2212906737)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -775,8 +890,13 @@ open class TabBar : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tab_close_display_policy_2956568028,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tab_close_display_policy_2956568028._native_ptr(),
+                    2956568028)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -791,8 +911,13 @@ open class TabBar : Control {
                 .init(width_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_max_tab_width_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_max_tab_width_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -808,8 +933,13 @@ open class TabBar : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_max_tab_width_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_max_tab_width_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -824,8 +954,13 @@ open class TabBar : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_scrolling_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_scrolling_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -841,8 +976,13 @@ open class TabBar : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_scrolling_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_scrolling_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -857,8 +997,13 @@ open class TabBar : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_drag_to_rearrange_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_drag_to_rearrange_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -874,8 +1019,13 @@ open class TabBar : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_drag_to_rearrange_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_drag_to_rearrange_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -890,8 +1040,13 @@ open class TabBar : Control {
                 .init(group_id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tabs_rearrange_group_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tabs_rearrange_group_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -907,8 +1062,13 @@ open class TabBar : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tabs_rearrange_group_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tabs_rearrange_group_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -923,8 +1083,13 @@ open class TabBar : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_scroll_to_selected_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_scroll_to_selected_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -940,8 +1105,13 @@ open class TabBar : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_scroll_to_selected_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_scroll_to_selected_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -956,8 +1126,13 @@ open class TabBar : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_select_with_rmb_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_select_with_rmb_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -973,8 +1148,13 @@ open class TabBar : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_select_with_rmb_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_select_with_rmb_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -988,8 +1168,13 @@ open class TabBar : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_tabs_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_tabs_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

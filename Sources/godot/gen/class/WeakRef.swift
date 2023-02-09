@@ -11,19 +11,19 @@ open class WeakRef : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_WeakRef }
 
-    static var _method_get_ref_1214101251: GDExtensionMethodBindPtr! = nil
+    static var _method_get_ref_1214101251: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_WeakRef == nil)
         __godot_name_WeakRef = StringName(from: "WeakRef")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_ref_1214101251_name = StringName(from: "get_ref")
-        self._method_get_ref_1214101251 = self.interface.pointee.classdb_get_method_bind(__godot_name_WeakRef._native_ptr(), _method_get_ref_1214101251_name._native_ptr(), 1214101251)
-        assert(WeakRef._method_get_ref_1214101251 != nil)
+        self._method_get_ref_1214101251 = StringName(from: "get_ref")
+        assert(self._method_get_ref_1214101251 != nil)
     }
 
     public func get_ref() -> Variant {
@@ -34,8 +34,13 @@ open class WeakRef : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_ref_1214101251,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_ref_1214101251._native_ptr(),
+                    1214101251)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

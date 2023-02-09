@@ -21,23 +21,22 @@ open class VisualShaderNodeSwitch : VisualShaderNode {
 
     public override class var __godot_name: StringName { __godot_name_VisualShaderNodeSwitch }
 
-    static var _method_set_op_type_510471861: GDExtensionMethodBindPtr! = nil
-    static var _method_get_op_type_2517845071: GDExtensionMethodBindPtr! = nil
+    static var _method_set_op_type_510471861: StringName! = nil
+    static var _method_get_op_type_2517845071: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShaderNodeSwitch == nil)
         __godot_name_VisualShaderNodeSwitch = StringName(from: "VisualShaderNodeSwitch")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_op_type_510471861_name = StringName(from: "set_op_type")
-        self._method_set_op_type_510471861 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeSwitch._native_ptr(), _method_set_op_type_510471861_name._native_ptr(), 510471861)
-        assert(VisualShaderNodeSwitch._method_set_op_type_510471861 != nil)
-        let _method_get_op_type_2517845071_name = StringName(from: "get_op_type")
-        self._method_get_op_type_2517845071 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeSwitch._native_ptr(), _method_get_op_type_2517845071_name._native_ptr(), 2517845071)
-        assert(VisualShaderNodeSwitch._method_get_op_type_2517845071 != nil)
+        self._method_set_op_type_510471861 = StringName(from: "set_op_type")
+        assert(self._method_set_op_type_510471861 != nil)
+        self._method_get_op_type_2517845071 = StringName(from: "get_op_type")
+        assert(self._method_get_op_type_2517845071 != nil)
     }
 
     public func set_op_type(`type`: VisualShaderNodeSwitch.OpType)  {
@@ -48,8 +47,13 @@ open class VisualShaderNodeSwitch : VisualShaderNode {
                 .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_op_type_510471861,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_op_type_510471861._native_ptr(),
+                    510471861)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -64,8 +68,13 @@ open class VisualShaderNodeSwitch : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_op_type_2517845071,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_op_type_2517845071._native_ptr(),
+                    2517845071)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

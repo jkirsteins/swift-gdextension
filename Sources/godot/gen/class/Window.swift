@@ -54,427 +54,325 @@ open class Window : Viewport {
 
     public override class var __godot_name: StringName { __godot_name_Window }
 
-    static var _method_set_title_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_title_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_initial_position_4084468099: GDExtensionMethodBindPtr! = nil
-    static var _method_get_initial_position_4294066647: GDExtensionMethodBindPtr! = nil
-    static var _method_set_current_screen_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_current_screen_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_position_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_get_position_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_set_size_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_reset_size_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_position_with_decorations_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_with_decorations_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_set_max_size_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_get_max_size_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_set_min_size_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_get_min_size_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_set_mode_3095236531: GDExtensionMethodBindPtr! = nil
-    static var _method_get_mode_2566346114: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flag_3426449779: GDExtensionMethodBindPtr! = nil
-    static var _method_get_flag_3062752289: GDExtensionMethodBindPtr! = nil
-    static var _method_is_maximize_allowed_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_request_attention_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_move_to_foreground_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_visible_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_visible_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_hide_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_show_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_transient_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_transient_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_exclusive_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_exclusive_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_can_draw_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_has_focus_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_grab_focus_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_ime_active_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_ime_position_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_is_embedded_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_contents_minimum_size_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_content_scale_size_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_get_content_scale_size_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_set_content_scale_mode_2937716473: GDExtensionMethodBindPtr! = nil
-    static var _method_get_content_scale_mode_161585230: GDExtensionMethodBindPtr! = nil
-    static var _method_set_content_scale_aspect_2370399418: GDExtensionMethodBindPtr! = nil
-    static var _method_get_content_scale_aspect_4158790715: GDExtensionMethodBindPtr! = nil
-    static var _method_set_content_scale_factor_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_content_scale_factor_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_font_oversampling_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_using_font_oversampling_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_mouse_passthrough_polygon_1509147220: GDExtensionMethodBindPtr! = nil
-    static var _method_get_mouse_passthrough_polygon_2961356807: GDExtensionMethodBindPtr! = nil
-    static var _method_set_wrap_controls_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_wrapping_controls_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_child_controls_changed_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_theme_2326690814: GDExtensionMethodBindPtr! = nil
-    static var _method_get_theme_3846893731: GDExtensionMethodBindPtr! = nil
-    static var _method_set_theme_type_variation_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_get_theme_type_variation_2002593661: GDExtensionMethodBindPtr! = nil
-    static var _method_begin_bulk_theme_override_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_end_bulk_theme_override_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_add_theme_icon_override_1373065600: GDExtensionMethodBindPtr! = nil
-    static var _method_add_theme_stylebox_override_4188838905: GDExtensionMethodBindPtr! = nil
-    static var _method_add_theme_font_override_3518018674: GDExtensionMethodBindPtr! = nil
-    static var _method_add_theme_font_size_override_2415702435: GDExtensionMethodBindPtr! = nil
-    static var _method_add_theme_color_override_4260178595: GDExtensionMethodBindPtr! = nil
-    static var _method_add_theme_constant_override_2415702435: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_theme_icon_override_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_theme_stylebox_override_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_theme_font_override_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_theme_font_size_override_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_theme_color_override_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_theme_constant_override_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_get_theme_icon_2336455395: GDExtensionMethodBindPtr! = nil
-    static var _method_get_theme_stylebox_2759935355: GDExtensionMethodBindPtr! = nil
-    static var _method_get_theme_font_387378635: GDExtensionMethodBindPtr! = nil
-    static var _method_get_theme_font_size_229578101: GDExtensionMethodBindPtr! = nil
-    static var _method_get_theme_color_2377051548: GDExtensionMethodBindPtr! = nil
-    static var _method_get_theme_constant_229578101: GDExtensionMethodBindPtr! = nil
-    static var _method_has_theme_icon_override_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_has_theme_stylebox_override_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_has_theme_font_override_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_has_theme_font_size_override_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_has_theme_color_override_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_has_theme_constant_override_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_has_theme_icon_1187511791: GDExtensionMethodBindPtr! = nil
-    static var _method_has_theme_stylebox_1187511791: GDExtensionMethodBindPtr! = nil
-    static var _method_has_theme_font_1187511791: GDExtensionMethodBindPtr! = nil
-    static var _method_has_theme_font_size_1187511791: GDExtensionMethodBindPtr! = nil
-    static var _method_has_theme_color_1187511791: GDExtensionMethodBindPtr! = nil
-    static var _method_has_theme_constant_1187511791: GDExtensionMethodBindPtr! = nil
-    static var _method_get_theme_default_base_scale_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_theme_default_font_3229501585: GDExtensionMethodBindPtr! = nil
-    static var _method_get_theme_default_font_size_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_layout_direction_3094704184: GDExtensionMethodBindPtr! = nil
-    static var _method_get_layout_direction_3909617982: GDExtensionMethodBindPtr! = nil
-    static var _method_is_layout_rtl_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_auto_translate_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_auto_translating_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_popup_1680304321: GDExtensionMethodBindPtr! = nil
-    static var _method_popup_on_parent_1763793166: GDExtensionMethodBindPtr! = nil
-    static var _method_popup_centered_ratio_1912078273: GDExtensionMethodBindPtr! = nil
-    static var _method_popup_centered_3447975422: GDExtensionMethodBindPtr! = nil
-    static var _method_popup_centered_clamped_3728566557: GDExtensionMethodBindPtr! = nil
+    static var _method_set_title_83702148: StringName! = nil
+    static var _method_get_title_201670096: StringName! = nil
+    static var _method_set_initial_position_4084468099: StringName! = nil
+    static var _method_get_initial_position_4294066647: StringName! = nil
+    static var _method_set_current_screen_1286410249: StringName! = nil
+    static var _method_get_current_screen_3905245786: StringName! = nil
+    static var _method_set_position_1130785943: StringName! = nil
+    static var _method_get_position_3690982128: StringName! = nil
+    static var _method_set_size_1130785943: StringName! = nil
+    static var _method_get_size_3690982128: StringName! = nil
+    static var _method_reset_size_3218959716: StringName! = nil
+    static var _method_get_position_with_decorations_3690982128: StringName! = nil
+    static var _method_get_size_with_decorations_3690982128: StringName! = nil
+    static var _method_set_max_size_1130785943: StringName! = nil
+    static var _method_get_max_size_3690982128: StringName! = nil
+    static var _method_set_min_size_1130785943: StringName! = nil
+    static var _method_get_min_size_3690982128: StringName! = nil
+    static var _method_set_mode_3095236531: StringName! = nil
+    static var _method_get_mode_2566346114: StringName! = nil
+    static var _method_set_flag_3426449779: StringName! = nil
+    static var _method_get_flag_3062752289: StringName! = nil
+    static var _method_is_maximize_allowed_36873697: StringName! = nil
+    static var _method_request_attention_3218959716: StringName! = nil
+    static var _method_move_to_foreground_3218959716: StringName! = nil
+    static var _method_set_visible_2586408642: StringName! = nil
+    static var _method_is_visible_36873697: StringName! = nil
+    static var _method_hide_3218959716: StringName! = nil
+    static var _method_show_3218959716: StringName! = nil
+    static var _method_set_transient_2586408642: StringName! = nil
+    static var _method_is_transient_36873697: StringName! = nil
+    static var _method_set_exclusive_2586408642: StringName! = nil
+    static var _method_is_exclusive_36873697: StringName! = nil
+    static var _method_can_draw_36873697: StringName! = nil
+    static var _method_has_focus_36873697: StringName! = nil
+    static var _method_grab_focus_3218959716: StringName! = nil
+    static var _method_set_ime_active_2586408642: StringName! = nil
+    static var _method_set_ime_position_1130785943: StringName! = nil
+    static var _method_is_embedded_36873697: StringName! = nil
+    static var _method_get_contents_minimum_size_3341600327: StringName! = nil
+    static var _method_set_content_scale_size_1130785943: StringName! = nil
+    static var _method_get_content_scale_size_3690982128: StringName! = nil
+    static var _method_set_content_scale_mode_2937716473: StringName! = nil
+    static var _method_get_content_scale_mode_161585230: StringName! = nil
+    static var _method_set_content_scale_aspect_2370399418: StringName! = nil
+    static var _method_get_content_scale_aspect_4158790715: StringName! = nil
+    static var _method_set_content_scale_factor_373806689: StringName! = nil
+    static var _method_get_content_scale_factor_1740695150: StringName! = nil
+    static var _method_set_use_font_oversampling_2586408642: StringName! = nil
+    static var _method_is_using_font_oversampling_36873697: StringName! = nil
+    static var _method_set_mouse_passthrough_polygon_1509147220: StringName! = nil
+    static var _method_get_mouse_passthrough_polygon_2961356807: StringName! = nil
+    static var _method_set_wrap_controls_2586408642: StringName! = nil
+    static var _method_is_wrapping_controls_36873697: StringName! = nil
+    static var _method_child_controls_changed_3218959716: StringName! = nil
+    static var _method_set_theme_2326690814: StringName! = nil
+    static var _method_get_theme_3846893731: StringName! = nil
+    static var _method_set_theme_type_variation_3304788590: StringName! = nil
+    static var _method_get_theme_type_variation_2002593661: StringName! = nil
+    static var _method_begin_bulk_theme_override_3218959716: StringName! = nil
+    static var _method_end_bulk_theme_override_3218959716: StringName! = nil
+    static var _method_add_theme_icon_override_1373065600: StringName! = nil
+    static var _method_add_theme_stylebox_override_4188838905: StringName! = nil
+    static var _method_add_theme_font_override_3518018674: StringName! = nil
+    static var _method_add_theme_font_size_override_2415702435: StringName! = nil
+    static var _method_add_theme_color_override_4260178595: StringName! = nil
+    static var _method_add_theme_constant_override_2415702435: StringName! = nil
+    static var _method_remove_theme_icon_override_3304788590: StringName! = nil
+    static var _method_remove_theme_stylebox_override_3304788590: StringName! = nil
+    static var _method_remove_theme_font_override_3304788590: StringName! = nil
+    static var _method_remove_theme_font_size_override_3304788590: StringName! = nil
+    static var _method_remove_theme_color_override_3304788590: StringName! = nil
+    static var _method_remove_theme_constant_override_3304788590: StringName! = nil
+    static var _method_get_theme_icon_2336455395: StringName! = nil
+    static var _method_get_theme_stylebox_2759935355: StringName! = nil
+    static var _method_get_theme_font_387378635: StringName! = nil
+    static var _method_get_theme_font_size_229578101: StringName! = nil
+    static var _method_get_theme_color_2377051548: StringName! = nil
+    static var _method_get_theme_constant_229578101: StringName! = nil
+    static var _method_has_theme_icon_override_2619796661: StringName! = nil
+    static var _method_has_theme_stylebox_override_2619796661: StringName! = nil
+    static var _method_has_theme_font_override_2619796661: StringName! = nil
+    static var _method_has_theme_font_size_override_2619796661: StringName! = nil
+    static var _method_has_theme_color_override_2619796661: StringName! = nil
+    static var _method_has_theme_constant_override_2619796661: StringName! = nil
+    static var _method_has_theme_icon_1187511791: StringName! = nil
+    static var _method_has_theme_stylebox_1187511791: StringName! = nil
+    static var _method_has_theme_font_1187511791: StringName! = nil
+    static var _method_has_theme_font_size_1187511791: StringName! = nil
+    static var _method_has_theme_color_1187511791: StringName! = nil
+    static var _method_has_theme_constant_1187511791: StringName! = nil
+    static var _method_get_theme_default_base_scale_1740695150: StringName! = nil
+    static var _method_get_theme_default_font_3229501585: StringName! = nil
+    static var _method_get_theme_default_font_size_3905245786: StringName! = nil
+    static var _method_set_layout_direction_3094704184: StringName! = nil
+    static var _method_get_layout_direction_3909617982: StringName! = nil
+    static var _method_is_layout_rtl_36873697: StringName! = nil
+    static var _method_set_auto_translate_2586408642: StringName! = nil
+    static var _method_is_auto_translating_36873697: StringName! = nil
+    static var _method_popup_1680304321: StringName! = nil
+    static var _method_popup_on_parent_1763793166: StringName! = nil
+    static var _method_popup_centered_ratio_1912078273: StringName! = nil
+    static var _method_popup_centered_3447975422: StringName! = nil
+    static var _method_popup_centered_clamped_3728566557: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Window == nil)
         __godot_name_Window = StringName(from: "Window")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_title_83702148_name = StringName(from: "set_title")
-        self._method_set_title_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_title_83702148_name._native_ptr(), 83702148)
-        assert(Window._method_set_title_83702148 != nil)
-        let _method_get_title_201670096_name = StringName(from: "get_title")
-        self._method_get_title_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_title_201670096_name._native_ptr(), 201670096)
-        assert(Window._method_get_title_201670096 != nil)
-        let _method_set_initial_position_4084468099_name = StringName(from: "set_initial_position")
-        self._method_set_initial_position_4084468099 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_initial_position_4084468099_name._native_ptr(), 4084468099)
-        assert(Window._method_set_initial_position_4084468099 != nil)
-        let _method_get_initial_position_4294066647_name = StringName(from: "get_initial_position")
-        self._method_get_initial_position_4294066647 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_initial_position_4294066647_name._native_ptr(), 4294066647)
-        assert(Window._method_get_initial_position_4294066647 != nil)
-        let _method_set_current_screen_1286410249_name = StringName(from: "set_current_screen")
-        self._method_set_current_screen_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_current_screen_1286410249_name._native_ptr(), 1286410249)
-        assert(Window._method_set_current_screen_1286410249 != nil)
-        let _method_get_current_screen_3905245786_name = StringName(from: "get_current_screen")
-        self._method_get_current_screen_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_current_screen_3905245786_name._native_ptr(), 3905245786)
-        assert(Window._method_get_current_screen_3905245786 != nil)
-        let _method_set_position_1130785943_name = StringName(from: "set_position")
-        self._method_set_position_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_position_1130785943_name._native_ptr(), 1130785943)
-        assert(Window._method_set_position_1130785943 != nil)
-        let _method_get_position_3690982128_name = StringName(from: "get_position")
-        self._method_get_position_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_position_3690982128_name._native_ptr(), 3690982128)
-        assert(Window._method_get_position_3690982128 != nil)
-        let _method_set_size_1130785943_name = StringName(from: "set_size")
-        self._method_set_size_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_size_1130785943_name._native_ptr(), 1130785943)
-        assert(Window._method_set_size_1130785943 != nil)
-        let _method_get_size_3690982128_name = StringName(from: "get_size")
-        self._method_get_size_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_size_3690982128_name._native_ptr(), 3690982128)
-        assert(Window._method_get_size_3690982128 != nil)
-        let _method_reset_size_3218959716_name = StringName(from: "reset_size")
-        self._method_reset_size_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_reset_size_3218959716_name._native_ptr(), 3218959716)
-        assert(Window._method_reset_size_3218959716 != nil)
-        let _method_get_position_with_decorations_3690982128_name = StringName(from: "get_position_with_decorations")
-        self._method_get_position_with_decorations_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_position_with_decorations_3690982128_name._native_ptr(), 3690982128)
-        assert(Window._method_get_position_with_decorations_3690982128 != nil)
-        let _method_get_size_with_decorations_3690982128_name = StringName(from: "get_size_with_decorations")
-        self._method_get_size_with_decorations_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_size_with_decorations_3690982128_name._native_ptr(), 3690982128)
-        assert(Window._method_get_size_with_decorations_3690982128 != nil)
-        let _method_set_max_size_1130785943_name = StringName(from: "set_max_size")
-        self._method_set_max_size_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_max_size_1130785943_name._native_ptr(), 1130785943)
-        assert(Window._method_set_max_size_1130785943 != nil)
-        let _method_get_max_size_3690982128_name = StringName(from: "get_max_size")
-        self._method_get_max_size_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_max_size_3690982128_name._native_ptr(), 3690982128)
-        assert(Window._method_get_max_size_3690982128 != nil)
-        let _method_set_min_size_1130785943_name = StringName(from: "set_min_size")
-        self._method_set_min_size_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_min_size_1130785943_name._native_ptr(), 1130785943)
-        assert(Window._method_set_min_size_1130785943 != nil)
-        let _method_get_min_size_3690982128_name = StringName(from: "get_min_size")
-        self._method_get_min_size_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_min_size_3690982128_name._native_ptr(), 3690982128)
-        assert(Window._method_get_min_size_3690982128 != nil)
-        let _method_set_mode_3095236531_name = StringName(from: "set_mode")
-        self._method_set_mode_3095236531 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_mode_3095236531_name._native_ptr(), 3095236531)
-        assert(Window._method_set_mode_3095236531 != nil)
-        let _method_get_mode_2566346114_name = StringName(from: "get_mode")
-        self._method_get_mode_2566346114 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_mode_2566346114_name._native_ptr(), 2566346114)
-        assert(Window._method_get_mode_2566346114 != nil)
-        let _method_set_flag_3426449779_name = StringName(from: "set_flag")
-        self._method_set_flag_3426449779 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_flag_3426449779_name._native_ptr(), 3426449779)
-        assert(Window._method_set_flag_3426449779 != nil)
-        let _method_get_flag_3062752289_name = StringName(from: "get_flag")
-        self._method_get_flag_3062752289 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_flag_3062752289_name._native_ptr(), 3062752289)
-        assert(Window._method_get_flag_3062752289 != nil)
-        let _method_is_maximize_allowed_36873697_name = StringName(from: "is_maximize_allowed")
-        self._method_is_maximize_allowed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_is_maximize_allowed_36873697_name._native_ptr(), 36873697)
-        assert(Window._method_is_maximize_allowed_36873697 != nil)
-        let _method_request_attention_3218959716_name = StringName(from: "request_attention")
-        self._method_request_attention_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_request_attention_3218959716_name._native_ptr(), 3218959716)
-        assert(Window._method_request_attention_3218959716 != nil)
-        let _method_move_to_foreground_3218959716_name = StringName(from: "move_to_foreground")
-        self._method_move_to_foreground_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_move_to_foreground_3218959716_name._native_ptr(), 3218959716)
-        assert(Window._method_move_to_foreground_3218959716 != nil)
-        let _method_set_visible_2586408642_name = StringName(from: "set_visible")
-        self._method_set_visible_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_visible_2586408642_name._native_ptr(), 2586408642)
-        assert(Window._method_set_visible_2586408642 != nil)
-        let _method_is_visible_36873697_name = StringName(from: "is_visible")
-        self._method_is_visible_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_is_visible_36873697_name._native_ptr(), 36873697)
-        assert(Window._method_is_visible_36873697 != nil)
-        let _method_hide_3218959716_name = StringName(from: "hide")
-        self._method_hide_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_hide_3218959716_name._native_ptr(), 3218959716)
-        assert(Window._method_hide_3218959716 != nil)
-        let _method_show_3218959716_name = StringName(from: "show")
-        self._method_show_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_show_3218959716_name._native_ptr(), 3218959716)
-        assert(Window._method_show_3218959716 != nil)
-        let _method_set_transient_2586408642_name = StringName(from: "set_transient")
-        self._method_set_transient_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_transient_2586408642_name._native_ptr(), 2586408642)
-        assert(Window._method_set_transient_2586408642 != nil)
-        let _method_is_transient_36873697_name = StringName(from: "is_transient")
-        self._method_is_transient_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_is_transient_36873697_name._native_ptr(), 36873697)
-        assert(Window._method_is_transient_36873697 != nil)
-        let _method_set_exclusive_2586408642_name = StringName(from: "set_exclusive")
-        self._method_set_exclusive_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_exclusive_2586408642_name._native_ptr(), 2586408642)
-        assert(Window._method_set_exclusive_2586408642 != nil)
-        let _method_is_exclusive_36873697_name = StringName(from: "is_exclusive")
-        self._method_is_exclusive_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_is_exclusive_36873697_name._native_ptr(), 36873697)
-        assert(Window._method_is_exclusive_36873697 != nil)
-        let _method_can_draw_36873697_name = StringName(from: "can_draw")
-        self._method_can_draw_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_can_draw_36873697_name._native_ptr(), 36873697)
-        assert(Window._method_can_draw_36873697 != nil)
-        let _method_has_focus_36873697_name = StringName(from: "has_focus")
-        self._method_has_focus_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_has_focus_36873697_name._native_ptr(), 36873697)
-        assert(Window._method_has_focus_36873697 != nil)
-        let _method_grab_focus_3218959716_name = StringName(from: "grab_focus")
-        self._method_grab_focus_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_grab_focus_3218959716_name._native_ptr(), 3218959716)
-        assert(Window._method_grab_focus_3218959716 != nil)
-        let _method_set_ime_active_2586408642_name = StringName(from: "set_ime_active")
-        self._method_set_ime_active_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_ime_active_2586408642_name._native_ptr(), 2586408642)
-        assert(Window._method_set_ime_active_2586408642 != nil)
-        let _method_set_ime_position_1130785943_name = StringName(from: "set_ime_position")
-        self._method_set_ime_position_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_ime_position_1130785943_name._native_ptr(), 1130785943)
-        assert(Window._method_set_ime_position_1130785943 != nil)
-        let _method_is_embedded_36873697_name = StringName(from: "is_embedded")
-        self._method_is_embedded_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_is_embedded_36873697_name._native_ptr(), 36873697)
-        assert(Window._method_is_embedded_36873697 != nil)
-        let _method_get_contents_minimum_size_3341600327_name = StringName(from: "get_contents_minimum_size")
-        self._method_get_contents_minimum_size_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_contents_minimum_size_3341600327_name._native_ptr(), 3341600327)
-        assert(Window._method_get_contents_minimum_size_3341600327 != nil)
-        let _method_set_content_scale_size_1130785943_name = StringName(from: "set_content_scale_size")
-        self._method_set_content_scale_size_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_content_scale_size_1130785943_name._native_ptr(), 1130785943)
-        assert(Window._method_set_content_scale_size_1130785943 != nil)
-        let _method_get_content_scale_size_3690982128_name = StringName(from: "get_content_scale_size")
-        self._method_get_content_scale_size_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_content_scale_size_3690982128_name._native_ptr(), 3690982128)
-        assert(Window._method_get_content_scale_size_3690982128 != nil)
-        let _method_set_content_scale_mode_2937716473_name = StringName(from: "set_content_scale_mode")
-        self._method_set_content_scale_mode_2937716473 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_content_scale_mode_2937716473_name._native_ptr(), 2937716473)
-        assert(Window._method_set_content_scale_mode_2937716473 != nil)
-        let _method_get_content_scale_mode_161585230_name = StringName(from: "get_content_scale_mode")
-        self._method_get_content_scale_mode_161585230 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_content_scale_mode_161585230_name._native_ptr(), 161585230)
-        assert(Window._method_get_content_scale_mode_161585230 != nil)
-        let _method_set_content_scale_aspect_2370399418_name = StringName(from: "set_content_scale_aspect")
-        self._method_set_content_scale_aspect_2370399418 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_content_scale_aspect_2370399418_name._native_ptr(), 2370399418)
-        assert(Window._method_set_content_scale_aspect_2370399418 != nil)
-        let _method_get_content_scale_aspect_4158790715_name = StringName(from: "get_content_scale_aspect")
-        self._method_get_content_scale_aspect_4158790715 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_content_scale_aspect_4158790715_name._native_ptr(), 4158790715)
-        assert(Window._method_get_content_scale_aspect_4158790715 != nil)
-        let _method_set_content_scale_factor_373806689_name = StringName(from: "set_content_scale_factor")
-        self._method_set_content_scale_factor_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_content_scale_factor_373806689_name._native_ptr(), 373806689)
-        assert(Window._method_set_content_scale_factor_373806689 != nil)
-        let _method_get_content_scale_factor_1740695150_name = StringName(from: "get_content_scale_factor")
-        self._method_get_content_scale_factor_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_content_scale_factor_1740695150_name._native_ptr(), 1740695150)
-        assert(Window._method_get_content_scale_factor_1740695150 != nil)
-        let _method_set_use_font_oversampling_2586408642_name = StringName(from: "set_use_font_oversampling")
-        self._method_set_use_font_oversampling_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_use_font_oversampling_2586408642_name._native_ptr(), 2586408642)
-        assert(Window._method_set_use_font_oversampling_2586408642 != nil)
-        let _method_is_using_font_oversampling_36873697_name = StringName(from: "is_using_font_oversampling")
-        self._method_is_using_font_oversampling_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_is_using_font_oversampling_36873697_name._native_ptr(), 36873697)
-        assert(Window._method_is_using_font_oversampling_36873697 != nil)
-        let _method_set_mouse_passthrough_polygon_1509147220_name = StringName(from: "set_mouse_passthrough_polygon")
-        self._method_set_mouse_passthrough_polygon_1509147220 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_mouse_passthrough_polygon_1509147220_name._native_ptr(), 1509147220)
-        assert(Window._method_set_mouse_passthrough_polygon_1509147220 != nil)
-        let _method_get_mouse_passthrough_polygon_2961356807_name = StringName(from: "get_mouse_passthrough_polygon")
-        self._method_get_mouse_passthrough_polygon_2961356807 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_mouse_passthrough_polygon_2961356807_name._native_ptr(), 2961356807)
-        assert(Window._method_get_mouse_passthrough_polygon_2961356807 != nil)
-        let _method_set_wrap_controls_2586408642_name = StringName(from: "set_wrap_controls")
-        self._method_set_wrap_controls_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_wrap_controls_2586408642_name._native_ptr(), 2586408642)
-        assert(Window._method_set_wrap_controls_2586408642 != nil)
-        let _method_is_wrapping_controls_36873697_name = StringName(from: "is_wrapping_controls")
-        self._method_is_wrapping_controls_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_is_wrapping_controls_36873697_name._native_ptr(), 36873697)
-        assert(Window._method_is_wrapping_controls_36873697 != nil)
-        let _method_child_controls_changed_3218959716_name = StringName(from: "child_controls_changed")
-        self._method_child_controls_changed_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_child_controls_changed_3218959716_name._native_ptr(), 3218959716)
-        assert(Window._method_child_controls_changed_3218959716 != nil)
-        let _method_set_theme_2326690814_name = StringName(from: "set_theme")
-        self._method_set_theme_2326690814 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_theme_2326690814_name._native_ptr(), 2326690814)
-        assert(Window._method_set_theme_2326690814 != nil)
-        let _method_get_theme_3846893731_name = StringName(from: "get_theme")
-        self._method_get_theme_3846893731 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_theme_3846893731_name._native_ptr(), 3846893731)
-        assert(Window._method_get_theme_3846893731 != nil)
-        let _method_set_theme_type_variation_3304788590_name = StringName(from: "set_theme_type_variation")
-        self._method_set_theme_type_variation_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_theme_type_variation_3304788590_name._native_ptr(), 3304788590)
-        assert(Window._method_set_theme_type_variation_3304788590 != nil)
-        let _method_get_theme_type_variation_2002593661_name = StringName(from: "get_theme_type_variation")
-        self._method_get_theme_type_variation_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_theme_type_variation_2002593661_name._native_ptr(), 2002593661)
-        assert(Window._method_get_theme_type_variation_2002593661 != nil)
-        let _method_begin_bulk_theme_override_3218959716_name = StringName(from: "begin_bulk_theme_override")
-        self._method_begin_bulk_theme_override_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_begin_bulk_theme_override_3218959716_name._native_ptr(), 3218959716)
-        assert(Window._method_begin_bulk_theme_override_3218959716 != nil)
-        let _method_end_bulk_theme_override_3218959716_name = StringName(from: "end_bulk_theme_override")
-        self._method_end_bulk_theme_override_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_end_bulk_theme_override_3218959716_name._native_ptr(), 3218959716)
-        assert(Window._method_end_bulk_theme_override_3218959716 != nil)
-        let _method_add_theme_icon_override_1373065600_name = StringName(from: "add_theme_icon_override")
-        self._method_add_theme_icon_override_1373065600 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_add_theme_icon_override_1373065600_name._native_ptr(), 1373065600)
-        assert(Window._method_add_theme_icon_override_1373065600 != nil)
-        let _method_add_theme_stylebox_override_4188838905_name = StringName(from: "add_theme_stylebox_override")
-        self._method_add_theme_stylebox_override_4188838905 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_add_theme_stylebox_override_4188838905_name._native_ptr(), 4188838905)
-        assert(Window._method_add_theme_stylebox_override_4188838905 != nil)
-        let _method_add_theme_font_override_3518018674_name = StringName(from: "add_theme_font_override")
-        self._method_add_theme_font_override_3518018674 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_add_theme_font_override_3518018674_name._native_ptr(), 3518018674)
-        assert(Window._method_add_theme_font_override_3518018674 != nil)
-        let _method_add_theme_font_size_override_2415702435_name = StringName(from: "add_theme_font_size_override")
-        self._method_add_theme_font_size_override_2415702435 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_add_theme_font_size_override_2415702435_name._native_ptr(), 2415702435)
-        assert(Window._method_add_theme_font_size_override_2415702435 != nil)
-        let _method_add_theme_color_override_4260178595_name = StringName(from: "add_theme_color_override")
-        self._method_add_theme_color_override_4260178595 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_add_theme_color_override_4260178595_name._native_ptr(), 4260178595)
-        assert(Window._method_add_theme_color_override_4260178595 != nil)
-        let _method_add_theme_constant_override_2415702435_name = StringName(from: "add_theme_constant_override")
-        self._method_add_theme_constant_override_2415702435 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_add_theme_constant_override_2415702435_name._native_ptr(), 2415702435)
-        assert(Window._method_add_theme_constant_override_2415702435 != nil)
-        let _method_remove_theme_icon_override_3304788590_name = StringName(from: "remove_theme_icon_override")
-        self._method_remove_theme_icon_override_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_remove_theme_icon_override_3304788590_name._native_ptr(), 3304788590)
-        assert(Window._method_remove_theme_icon_override_3304788590 != nil)
-        let _method_remove_theme_stylebox_override_3304788590_name = StringName(from: "remove_theme_stylebox_override")
-        self._method_remove_theme_stylebox_override_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_remove_theme_stylebox_override_3304788590_name._native_ptr(), 3304788590)
-        assert(Window._method_remove_theme_stylebox_override_3304788590 != nil)
-        let _method_remove_theme_font_override_3304788590_name = StringName(from: "remove_theme_font_override")
-        self._method_remove_theme_font_override_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_remove_theme_font_override_3304788590_name._native_ptr(), 3304788590)
-        assert(Window._method_remove_theme_font_override_3304788590 != nil)
-        let _method_remove_theme_font_size_override_3304788590_name = StringName(from: "remove_theme_font_size_override")
-        self._method_remove_theme_font_size_override_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_remove_theme_font_size_override_3304788590_name._native_ptr(), 3304788590)
-        assert(Window._method_remove_theme_font_size_override_3304788590 != nil)
-        let _method_remove_theme_color_override_3304788590_name = StringName(from: "remove_theme_color_override")
-        self._method_remove_theme_color_override_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_remove_theme_color_override_3304788590_name._native_ptr(), 3304788590)
-        assert(Window._method_remove_theme_color_override_3304788590 != nil)
-        let _method_remove_theme_constant_override_3304788590_name = StringName(from: "remove_theme_constant_override")
-        self._method_remove_theme_constant_override_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_remove_theme_constant_override_3304788590_name._native_ptr(), 3304788590)
-        assert(Window._method_remove_theme_constant_override_3304788590 != nil)
-        let _method_get_theme_icon_2336455395_name = StringName(from: "get_theme_icon")
-        self._method_get_theme_icon_2336455395 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_theme_icon_2336455395_name._native_ptr(), 2336455395)
-        assert(Window._method_get_theme_icon_2336455395 != nil)
-        let _method_get_theme_stylebox_2759935355_name = StringName(from: "get_theme_stylebox")
-        self._method_get_theme_stylebox_2759935355 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_theme_stylebox_2759935355_name._native_ptr(), 2759935355)
-        assert(Window._method_get_theme_stylebox_2759935355 != nil)
-        let _method_get_theme_font_387378635_name = StringName(from: "get_theme_font")
-        self._method_get_theme_font_387378635 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_theme_font_387378635_name._native_ptr(), 387378635)
-        assert(Window._method_get_theme_font_387378635 != nil)
-        let _method_get_theme_font_size_229578101_name = StringName(from: "get_theme_font_size")
-        self._method_get_theme_font_size_229578101 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_theme_font_size_229578101_name._native_ptr(), 229578101)
-        assert(Window._method_get_theme_font_size_229578101 != nil)
-        let _method_get_theme_color_2377051548_name = StringName(from: "get_theme_color")
-        self._method_get_theme_color_2377051548 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_theme_color_2377051548_name._native_ptr(), 2377051548)
-        assert(Window._method_get_theme_color_2377051548 != nil)
-        let _method_get_theme_constant_229578101_name = StringName(from: "get_theme_constant")
-        self._method_get_theme_constant_229578101 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_theme_constant_229578101_name._native_ptr(), 229578101)
-        assert(Window._method_get_theme_constant_229578101 != nil)
-        let _method_has_theme_icon_override_2619796661_name = StringName(from: "has_theme_icon_override")
-        self._method_has_theme_icon_override_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_has_theme_icon_override_2619796661_name._native_ptr(), 2619796661)
-        assert(Window._method_has_theme_icon_override_2619796661 != nil)
-        let _method_has_theme_stylebox_override_2619796661_name = StringName(from: "has_theme_stylebox_override")
-        self._method_has_theme_stylebox_override_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_has_theme_stylebox_override_2619796661_name._native_ptr(), 2619796661)
-        assert(Window._method_has_theme_stylebox_override_2619796661 != nil)
-        let _method_has_theme_font_override_2619796661_name = StringName(from: "has_theme_font_override")
-        self._method_has_theme_font_override_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_has_theme_font_override_2619796661_name._native_ptr(), 2619796661)
-        assert(Window._method_has_theme_font_override_2619796661 != nil)
-        let _method_has_theme_font_size_override_2619796661_name = StringName(from: "has_theme_font_size_override")
-        self._method_has_theme_font_size_override_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_has_theme_font_size_override_2619796661_name._native_ptr(), 2619796661)
-        assert(Window._method_has_theme_font_size_override_2619796661 != nil)
-        let _method_has_theme_color_override_2619796661_name = StringName(from: "has_theme_color_override")
-        self._method_has_theme_color_override_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_has_theme_color_override_2619796661_name._native_ptr(), 2619796661)
-        assert(Window._method_has_theme_color_override_2619796661 != nil)
-        let _method_has_theme_constant_override_2619796661_name = StringName(from: "has_theme_constant_override")
-        self._method_has_theme_constant_override_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_has_theme_constant_override_2619796661_name._native_ptr(), 2619796661)
-        assert(Window._method_has_theme_constant_override_2619796661 != nil)
-        let _method_has_theme_icon_1187511791_name = StringName(from: "has_theme_icon")
-        self._method_has_theme_icon_1187511791 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_has_theme_icon_1187511791_name._native_ptr(), 1187511791)
-        assert(Window._method_has_theme_icon_1187511791 != nil)
-        let _method_has_theme_stylebox_1187511791_name = StringName(from: "has_theme_stylebox")
-        self._method_has_theme_stylebox_1187511791 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_has_theme_stylebox_1187511791_name._native_ptr(), 1187511791)
-        assert(Window._method_has_theme_stylebox_1187511791 != nil)
-        let _method_has_theme_font_1187511791_name = StringName(from: "has_theme_font")
-        self._method_has_theme_font_1187511791 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_has_theme_font_1187511791_name._native_ptr(), 1187511791)
-        assert(Window._method_has_theme_font_1187511791 != nil)
-        let _method_has_theme_font_size_1187511791_name = StringName(from: "has_theme_font_size")
-        self._method_has_theme_font_size_1187511791 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_has_theme_font_size_1187511791_name._native_ptr(), 1187511791)
-        assert(Window._method_has_theme_font_size_1187511791 != nil)
-        let _method_has_theme_color_1187511791_name = StringName(from: "has_theme_color")
-        self._method_has_theme_color_1187511791 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_has_theme_color_1187511791_name._native_ptr(), 1187511791)
-        assert(Window._method_has_theme_color_1187511791 != nil)
-        let _method_has_theme_constant_1187511791_name = StringName(from: "has_theme_constant")
-        self._method_has_theme_constant_1187511791 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_has_theme_constant_1187511791_name._native_ptr(), 1187511791)
-        assert(Window._method_has_theme_constant_1187511791 != nil)
-        let _method_get_theme_default_base_scale_1740695150_name = StringName(from: "get_theme_default_base_scale")
-        self._method_get_theme_default_base_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_theme_default_base_scale_1740695150_name._native_ptr(), 1740695150)
-        assert(Window._method_get_theme_default_base_scale_1740695150 != nil)
-        let _method_get_theme_default_font_3229501585_name = StringName(from: "get_theme_default_font")
-        self._method_get_theme_default_font_3229501585 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_theme_default_font_3229501585_name._native_ptr(), 3229501585)
-        assert(Window._method_get_theme_default_font_3229501585 != nil)
-        let _method_get_theme_default_font_size_3905245786_name = StringName(from: "get_theme_default_font_size")
-        self._method_get_theme_default_font_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_theme_default_font_size_3905245786_name._native_ptr(), 3905245786)
-        assert(Window._method_get_theme_default_font_size_3905245786 != nil)
-        let _method_set_layout_direction_3094704184_name = StringName(from: "set_layout_direction")
-        self._method_set_layout_direction_3094704184 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_layout_direction_3094704184_name._native_ptr(), 3094704184)
-        assert(Window._method_set_layout_direction_3094704184 != nil)
-        let _method_get_layout_direction_3909617982_name = StringName(from: "get_layout_direction")
-        self._method_get_layout_direction_3909617982 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_get_layout_direction_3909617982_name._native_ptr(), 3909617982)
-        assert(Window._method_get_layout_direction_3909617982 != nil)
-        let _method_is_layout_rtl_36873697_name = StringName(from: "is_layout_rtl")
-        self._method_is_layout_rtl_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_is_layout_rtl_36873697_name._native_ptr(), 36873697)
-        assert(Window._method_is_layout_rtl_36873697 != nil)
-        let _method_set_auto_translate_2586408642_name = StringName(from: "set_auto_translate")
-        self._method_set_auto_translate_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_set_auto_translate_2586408642_name._native_ptr(), 2586408642)
-        assert(Window._method_set_auto_translate_2586408642 != nil)
-        let _method_is_auto_translating_36873697_name = StringName(from: "is_auto_translating")
-        self._method_is_auto_translating_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_is_auto_translating_36873697_name._native_ptr(), 36873697)
-        assert(Window._method_is_auto_translating_36873697 != nil)
-        let _method_popup_1680304321_name = StringName(from: "popup")
-        self._method_popup_1680304321 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_popup_1680304321_name._native_ptr(), 1680304321)
-        assert(Window._method_popup_1680304321 != nil)
-        let _method_popup_on_parent_1763793166_name = StringName(from: "popup_on_parent")
-        self._method_popup_on_parent_1763793166 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_popup_on_parent_1763793166_name._native_ptr(), 1763793166)
-        assert(Window._method_popup_on_parent_1763793166 != nil)
-        let _method_popup_centered_ratio_1912078273_name = StringName(from: "popup_centered_ratio")
-        self._method_popup_centered_ratio_1912078273 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_popup_centered_ratio_1912078273_name._native_ptr(), 1912078273)
-        assert(Window._method_popup_centered_ratio_1912078273 != nil)
-        let _method_popup_centered_3447975422_name = StringName(from: "popup_centered")
-        self._method_popup_centered_3447975422 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_popup_centered_3447975422_name._native_ptr(), 3447975422)
-        assert(Window._method_popup_centered_3447975422 != nil)
-        let _method_popup_centered_clamped_3728566557_name = StringName(from: "popup_centered_clamped")
-        self._method_popup_centered_clamped_3728566557 = self.interface.pointee.classdb_get_method_bind(__godot_name_Window._native_ptr(), _method_popup_centered_clamped_3728566557_name._native_ptr(), 3728566557)
-        assert(Window._method_popup_centered_clamped_3728566557 != nil)
+        self._method_set_title_83702148 = StringName(from: "set_title")
+        assert(self._method_set_title_83702148 != nil)
+        self._method_get_title_201670096 = StringName(from: "get_title")
+        assert(self._method_get_title_201670096 != nil)
+        self._method_set_initial_position_4084468099 = StringName(from: "set_initial_position")
+        assert(self._method_set_initial_position_4084468099 != nil)
+        self._method_get_initial_position_4294066647 = StringName(from: "get_initial_position")
+        assert(self._method_get_initial_position_4294066647 != nil)
+        self._method_set_current_screen_1286410249 = StringName(from: "set_current_screen")
+        assert(self._method_set_current_screen_1286410249 != nil)
+        self._method_get_current_screen_3905245786 = StringName(from: "get_current_screen")
+        assert(self._method_get_current_screen_3905245786 != nil)
+        self._method_set_position_1130785943 = StringName(from: "set_position")
+        assert(self._method_set_position_1130785943 != nil)
+        self._method_get_position_3690982128 = StringName(from: "get_position")
+        assert(self._method_get_position_3690982128 != nil)
+        self._method_set_size_1130785943 = StringName(from: "set_size")
+        assert(self._method_set_size_1130785943 != nil)
+        self._method_get_size_3690982128 = StringName(from: "get_size")
+        assert(self._method_get_size_3690982128 != nil)
+        self._method_reset_size_3218959716 = StringName(from: "reset_size")
+        assert(self._method_reset_size_3218959716 != nil)
+        self._method_get_position_with_decorations_3690982128 = StringName(from: "get_position_with_decorations")
+        assert(self._method_get_position_with_decorations_3690982128 != nil)
+        self._method_get_size_with_decorations_3690982128 = StringName(from: "get_size_with_decorations")
+        assert(self._method_get_size_with_decorations_3690982128 != nil)
+        self._method_set_max_size_1130785943 = StringName(from: "set_max_size")
+        assert(self._method_set_max_size_1130785943 != nil)
+        self._method_get_max_size_3690982128 = StringName(from: "get_max_size")
+        assert(self._method_get_max_size_3690982128 != nil)
+        self._method_set_min_size_1130785943 = StringName(from: "set_min_size")
+        assert(self._method_set_min_size_1130785943 != nil)
+        self._method_get_min_size_3690982128 = StringName(from: "get_min_size")
+        assert(self._method_get_min_size_3690982128 != nil)
+        self._method_set_mode_3095236531 = StringName(from: "set_mode")
+        assert(self._method_set_mode_3095236531 != nil)
+        self._method_get_mode_2566346114 = StringName(from: "get_mode")
+        assert(self._method_get_mode_2566346114 != nil)
+        self._method_set_flag_3426449779 = StringName(from: "set_flag")
+        assert(self._method_set_flag_3426449779 != nil)
+        self._method_get_flag_3062752289 = StringName(from: "get_flag")
+        assert(self._method_get_flag_3062752289 != nil)
+        self._method_is_maximize_allowed_36873697 = StringName(from: "is_maximize_allowed")
+        assert(self._method_is_maximize_allowed_36873697 != nil)
+        self._method_request_attention_3218959716 = StringName(from: "request_attention")
+        assert(self._method_request_attention_3218959716 != nil)
+        self._method_move_to_foreground_3218959716 = StringName(from: "move_to_foreground")
+        assert(self._method_move_to_foreground_3218959716 != nil)
+        self._method_set_visible_2586408642 = StringName(from: "set_visible")
+        assert(self._method_set_visible_2586408642 != nil)
+        self._method_is_visible_36873697 = StringName(from: "is_visible")
+        assert(self._method_is_visible_36873697 != nil)
+        self._method_hide_3218959716 = StringName(from: "hide")
+        assert(self._method_hide_3218959716 != nil)
+        self._method_show_3218959716 = StringName(from: "show")
+        assert(self._method_show_3218959716 != nil)
+        self._method_set_transient_2586408642 = StringName(from: "set_transient")
+        assert(self._method_set_transient_2586408642 != nil)
+        self._method_is_transient_36873697 = StringName(from: "is_transient")
+        assert(self._method_is_transient_36873697 != nil)
+        self._method_set_exclusive_2586408642 = StringName(from: "set_exclusive")
+        assert(self._method_set_exclusive_2586408642 != nil)
+        self._method_is_exclusive_36873697 = StringName(from: "is_exclusive")
+        assert(self._method_is_exclusive_36873697 != nil)
+        self._method_can_draw_36873697 = StringName(from: "can_draw")
+        assert(self._method_can_draw_36873697 != nil)
+        self._method_has_focus_36873697 = StringName(from: "has_focus")
+        assert(self._method_has_focus_36873697 != nil)
+        self._method_grab_focus_3218959716 = StringName(from: "grab_focus")
+        assert(self._method_grab_focus_3218959716 != nil)
+        self._method_set_ime_active_2586408642 = StringName(from: "set_ime_active")
+        assert(self._method_set_ime_active_2586408642 != nil)
+        self._method_set_ime_position_1130785943 = StringName(from: "set_ime_position")
+        assert(self._method_set_ime_position_1130785943 != nil)
+        self._method_is_embedded_36873697 = StringName(from: "is_embedded")
+        assert(self._method_is_embedded_36873697 != nil)
+        self._method_get_contents_minimum_size_3341600327 = StringName(from: "get_contents_minimum_size")
+        assert(self._method_get_contents_minimum_size_3341600327 != nil)
+        self._method_set_content_scale_size_1130785943 = StringName(from: "set_content_scale_size")
+        assert(self._method_set_content_scale_size_1130785943 != nil)
+        self._method_get_content_scale_size_3690982128 = StringName(from: "get_content_scale_size")
+        assert(self._method_get_content_scale_size_3690982128 != nil)
+        self._method_set_content_scale_mode_2937716473 = StringName(from: "set_content_scale_mode")
+        assert(self._method_set_content_scale_mode_2937716473 != nil)
+        self._method_get_content_scale_mode_161585230 = StringName(from: "get_content_scale_mode")
+        assert(self._method_get_content_scale_mode_161585230 != nil)
+        self._method_set_content_scale_aspect_2370399418 = StringName(from: "set_content_scale_aspect")
+        assert(self._method_set_content_scale_aspect_2370399418 != nil)
+        self._method_get_content_scale_aspect_4158790715 = StringName(from: "get_content_scale_aspect")
+        assert(self._method_get_content_scale_aspect_4158790715 != nil)
+        self._method_set_content_scale_factor_373806689 = StringName(from: "set_content_scale_factor")
+        assert(self._method_set_content_scale_factor_373806689 != nil)
+        self._method_get_content_scale_factor_1740695150 = StringName(from: "get_content_scale_factor")
+        assert(self._method_get_content_scale_factor_1740695150 != nil)
+        self._method_set_use_font_oversampling_2586408642 = StringName(from: "set_use_font_oversampling")
+        assert(self._method_set_use_font_oversampling_2586408642 != nil)
+        self._method_is_using_font_oversampling_36873697 = StringName(from: "is_using_font_oversampling")
+        assert(self._method_is_using_font_oversampling_36873697 != nil)
+        self._method_set_mouse_passthrough_polygon_1509147220 = StringName(from: "set_mouse_passthrough_polygon")
+        assert(self._method_set_mouse_passthrough_polygon_1509147220 != nil)
+        self._method_get_mouse_passthrough_polygon_2961356807 = StringName(from: "get_mouse_passthrough_polygon")
+        assert(self._method_get_mouse_passthrough_polygon_2961356807 != nil)
+        self._method_set_wrap_controls_2586408642 = StringName(from: "set_wrap_controls")
+        assert(self._method_set_wrap_controls_2586408642 != nil)
+        self._method_is_wrapping_controls_36873697 = StringName(from: "is_wrapping_controls")
+        assert(self._method_is_wrapping_controls_36873697 != nil)
+        self._method_child_controls_changed_3218959716 = StringName(from: "child_controls_changed")
+        assert(self._method_child_controls_changed_3218959716 != nil)
+        self._method_set_theme_2326690814 = StringName(from: "set_theme")
+        assert(self._method_set_theme_2326690814 != nil)
+        self._method_get_theme_3846893731 = StringName(from: "get_theme")
+        assert(self._method_get_theme_3846893731 != nil)
+        self._method_set_theme_type_variation_3304788590 = StringName(from: "set_theme_type_variation")
+        assert(self._method_set_theme_type_variation_3304788590 != nil)
+        self._method_get_theme_type_variation_2002593661 = StringName(from: "get_theme_type_variation")
+        assert(self._method_get_theme_type_variation_2002593661 != nil)
+        self._method_begin_bulk_theme_override_3218959716 = StringName(from: "begin_bulk_theme_override")
+        assert(self._method_begin_bulk_theme_override_3218959716 != nil)
+        self._method_end_bulk_theme_override_3218959716 = StringName(from: "end_bulk_theme_override")
+        assert(self._method_end_bulk_theme_override_3218959716 != nil)
+        self._method_add_theme_icon_override_1373065600 = StringName(from: "add_theme_icon_override")
+        assert(self._method_add_theme_icon_override_1373065600 != nil)
+        self._method_add_theme_stylebox_override_4188838905 = StringName(from: "add_theme_stylebox_override")
+        assert(self._method_add_theme_stylebox_override_4188838905 != nil)
+        self._method_add_theme_font_override_3518018674 = StringName(from: "add_theme_font_override")
+        assert(self._method_add_theme_font_override_3518018674 != nil)
+        self._method_add_theme_font_size_override_2415702435 = StringName(from: "add_theme_font_size_override")
+        assert(self._method_add_theme_font_size_override_2415702435 != nil)
+        self._method_add_theme_color_override_4260178595 = StringName(from: "add_theme_color_override")
+        assert(self._method_add_theme_color_override_4260178595 != nil)
+        self._method_add_theme_constant_override_2415702435 = StringName(from: "add_theme_constant_override")
+        assert(self._method_add_theme_constant_override_2415702435 != nil)
+        self._method_remove_theme_icon_override_3304788590 = StringName(from: "remove_theme_icon_override")
+        assert(self._method_remove_theme_icon_override_3304788590 != nil)
+        self._method_remove_theme_stylebox_override_3304788590 = StringName(from: "remove_theme_stylebox_override")
+        assert(self._method_remove_theme_stylebox_override_3304788590 != nil)
+        self._method_remove_theme_font_override_3304788590 = StringName(from: "remove_theme_font_override")
+        assert(self._method_remove_theme_font_override_3304788590 != nil)
+        self._method_remove_theme_font_size_override_3304788590 = StringName(from: "remove_theme_font_size_override")
+        assert(self._method_remove_theme_font_size_override_3304788590 != nil)
+        self._method_remove_theme_color_override_3304788590 = StringName(from: "remove_theme_color_override")
+        assert(self._method_remove_theme_color_override_3304788590 != nil)
+        self._method_remove_theme_constant_override_3304788590 = StringName(from: "remove_theme_constant_override")
+        assert(self._method_remove_theme_constant_override_3304788590 != nil)
+        self._method_get_theme_icon_2336455395 = StringName(from: "get_theme_icon")
+        assert(self._method_get_theme_icon_2336455395 != nil)
+        self._method_get_theme_stylebox_2759935355 = StringName(from: "get_theme_stylebox")
+        assert(self._method_get_theme_stylebox_2759935355 != nil)
+        self._method_get_theme_font_387378635 = StringName(from: "get_theme_font")
+        assert(self._method_get_theme_font_387378635 != nil)
+        self._method_get_theme_font_size_229578101 = StringName(from: "get_theme_font_size")
+        assert(self._method_get_theme_font_size_229578101 != nil)
+        self._method_get_theme_color_2377051548 = StringName(from: "get_theme_color")
+        assert(self._method_get_theme_color_2377051548 != nil)
+        self._method_get_theme_constant_229578101 = StringName(from: "get_theme_constant")
+        assert(self._method_get_theme_constant_229578101 != nil)
+        self._method_has_theme_icon_override_2619796661 = StringName(from: "has_theme_icon_override")
+        assert(self._method_has_theme_icon_override_2619796661 != nil)
+        self._method_has_theme_stylebox_override_2619796661 = StringName(from: "has_theme_stylebox_override")
+        assert(self._method_has_theme_stylebox_override_2619796661 != nil)
+        self._method_has_theme_font_override_2619796661 = StringName(from: "has_theme_font_override")
+        assert(self._method_has_theme_font_override_2619796661 != nil)
+        self._method_has_theme_font_size_override_2619796661 = StringName(from: "has_theme_font_size_override")
+        assert(self._method_has_theme_font_size_override_2619796661 != nil)
+        self._method_has_theme_color_override_2619796661 = StringName(from: "has_theme_color_override")
+        assert(self._method_has_theme_color_override_2619796661 != nil)
+        self._method_has_theme_constant_override_2619796661 = StringName(from: "has_theme_constant_override")
+        assert(self._method_has_theme_constant_override_2619796661 != nil)
+        self._method_has_theme_icon_1187511791 = StringName(from: "has_theme_icon")
+        assert(self._method_has_theme_icon_1187511791 != nil)
+        self._method_has_theme_stylebox_1187511791 = StringName(from: "has_theme_stylebox")
+        assert(self._method_has_theme_stylebox_1187511791 != nil)
+        self._method_has_theme_font_1187511791 = StringName(from: "has_theme_font")
+        assert(self._method_has_theme_font_1187511791 != nil)
+        self._method_has_theme_font_size_1187511791 = StringName(from: "has_theme_font_size")
+        assert(self._method_has_theme_font_size_1187511791 != nil)
+        self._method_has_theme_color_1187511791 = StringName(from: "has_theme_color")
+        assert(self._method_has_theme_color_1187511791 != nil)
+        self._method_has_theme_constant_1187511791 = StringName(from: "has_theme_constant")
+        assert(self._method_has_theme_constant_1187511791 != nil)
+        self._method_get_theme_default_base_scale_1740695150 = StringName(from: "get_theme_default_base_scale")
+        assert(self._method_get_theme_default_base_scale_1740695150 != nil)
+        self._method_get_theme_default_font_3229501585 = StringName(from: "get_theme_default_font")
+        assert(self._method_get_theme_default_font_3229501585 != nil)
+        self._method_get_theme_default_font_size_3905245786 = StringName(from: "get_theme_default_font_size")
+        assert(self._method_get_theme_default_font_size_3905245786 != nil)
+        self._method_set_layout_direction_3094704184 = StringName(from: "set_layout_direction")
+        assert(self._method_set_layout_direction_3094704184 != nil)
+        self._method_get_layout_direction_3909617982 = StringName(from: "get_layout_direction")
+        assert(self._method_get_layout_direction_3909617982 != nil)
+        self._method_is_layout_rtl_36873697 = StringName(from: "is_layout_rtl")
+        assert(self._method_is_layout_rtl_36873697 != nil)
+        self._method_set_auto_translate_2586408642 = StringName(from: "set_auto_translate")
+        assert(self._method_set_auto_translate_2586408642 != nil)
+        self._method_is_auto_translating_36873697 = StringName(from: "is_auto_translating")
+        assert(self._method_is_auto_translating_36873697 != nil)
+        self._method_popup_1680304321 = StringName(from: "popup")
+        assert(self._method_popup_1680304321 != nil)
+        self._method_popup_on_parent_1763793166 = StringName(from: "popup_on_parent")
+        assert(self._method_popup_on_parent_1763793166 != nil)
+        self._method_popup_centered_ratio_1912078273 = StringName(from: "popup_centered_ratio")
+        assert(self._method_popup_centered_ratio_1912078273 != nil)
+        self._method_popup_centered_3447975422 = StringName(from: "popup_centered")
+        assert(self._method_popup_centered_3447975422 != nil)
+        self._method_popup_centered_clamped_3728566557 = StringName(from: "popup_centered_clamped")
+        assert(self._method_popup_centered_clamped_3728566557 != nil)
     }
 
     public func set_title(title: godot.String)  {
@@ -485,8 +383,13 @@ open class Window : Viewport {
                 .init(title_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_title_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_title_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -500,8 +403,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_title_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_title_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -516,8 +424,13 @@ open class Window : Viewport {
                 .init(initial_position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_initial_position_4084468099,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_initial_position_4084468099._native_ptr(),
+                    4084468099)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -532,8 +445,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_initial_position_4294066647,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_initial_position_4294066647._native_ptr(),
+                    4294066647)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -548,8 +466,13 @@ open class Window : Viewport {
                 .init(index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_current_screen_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_current_screen_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -565,8 +488,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_current_screen_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_current_screen_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -581,8 +509,13 @@ open class Window : Viewport {
                 .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_position_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_position_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -596,8 +529,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_position_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_position_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -612,8 +550,13 @@ open class Window : Viewport {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_size_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_size_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -627,8 +570,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -642,8 +590,13 @@ open class Window : Viewport {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_reset_size_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_reset_size_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -657,8 +610,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_position_with_decorations_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_position_with_decorations_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -673,8 +631,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_with_decorations_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_with_decorations_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -689,8 +652,13 @@ open class Window : Viewport {
                 .init(max_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_max_size_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_max_size_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -704,8 +672,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_max_size_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_max_size_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -720,8 +693,13 @@ open class Window : Viewport {
                 .init(min_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_min_size_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_min_size_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -735,8 +713,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_min_size_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_min_size_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -751,8 +734,13 @@ open class Window : Viewport {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_mode_3095236531,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_mode_3095236531._native_ptr(),
+                    3095236531)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -767,8 +755,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_mode_2566346114,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_mode_2566346114._native_ptr(),
+                    2566346114)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -784,8 +777,13 @@ open class Window : Viewport {
                 .init(flag_native), .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flag_3426449779,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flag_3426449779._native_ptr(),
+                    3426449779)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -803,8 +801,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_flag_3062752289,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_flag_3062752289._native_ptr(),
+                    3062752289)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -821,8 +824,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_maximize_allowed_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_maximize_allowed_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -836,8 +844,13 @@ open class Window : Viewport {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_request_attention_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_request_attention_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -850,8 +863,13 @@ open class Window : Viewport {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_move_to_foreground_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_move_to_foreground_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -865,8 +883,13 @@ open class Window : Viewport {
                 .init(visible_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_visible_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_visible_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -882,8 +905,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_visible_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_visible_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -897,8 +925,13 @@ open class Window : Viewport {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_hide_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_hide_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -911,8 +944,13 @@ open class Window : Viewport {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_show_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_show_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -926,8 +964,13 @@ open class Window : Viewport {
                 .init(transient_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_transient_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_transient_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -943,8 +986,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_transient_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_transient_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -959,8 +1007,13 @@ open class Window : Viewport {
                 .init(exclusive_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_exclusive_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_exclusive_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -976,8 +1029,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_exclusive_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_exclusive_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -993,8 +1051,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_can_draw_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_can_draw_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1010,8 +1073,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_focus_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_focus_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1025,8 +1093,13 @@ open class Window : Viewport {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_grab_focus_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_grab_focus_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1040,8 +1113,13 @@ open class Window : Viewport {
                 .init(active_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_ime_active_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_ime_active_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1056,8 +1134,13 @@ open class Window : Viewport {
                 .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_ime_position_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_ime_position_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1072,8 +1155,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_embedded_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_embedded_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1088,8 +1176,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_contents_minimum_size_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_contents_minimum_size_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1104,8 +1197,13 @@ open class Window : Viewport {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_content_scale_size_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_content_scale_size_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1119,8 +1217,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_content_scale_size_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_content_scale_size_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1135,8 +1238,13 @@ open class Window : Viewport {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_content_scale_mode_2937716473,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_content_scale_mode_2937716473._native_ptr(),
+                    2937716473)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1151,8 +1259,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_content_scale_mode_161585230,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_content_scale_mode_161585230._native_ptr(),
+                    161585230)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1167,8 +1280,13 @@ open class Window : Viewport {
                 .init(aspect_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_content_scale_aspect_2370399418,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_content_scale_aspect_2370399418._native_ptr(),
+                    2370399418)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1183,8 +1301,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_content_scale_aspect_4158790715,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_content_scale_aspect_4158790715._native_ptr(),
+                    4158790715)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1199,8 +1322,13 @@ open class Window : Viewport {
                 .init(factor_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_content_scale_factor_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_content_scale_factor_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1216,8 +1344,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_content_scale_factor_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_content_scale_factor_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1232,8 +1365,13 @@ open class Window : Viewport {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_font_oversampling_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_font_oversampling_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1249,8 +1387,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_using_font_oversampling_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_using_font_oversampling_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1265,8 +1408,13 @@ open class Window : Viewport {
                 .init(polygon_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_mouse_passthrough_polygon_1509147220,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_mouse_passthrough_polygon_1509147220._native_ptr(),
+                    1509147220)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1280,8 +1428,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_mouse_passthrough_polygon_2961356807,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_mouse_passthrough_polygon_2961356807._native_ptr(),
+                    2961356807)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1296,8 +1449,13 @@ open class Window : Viewport {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_wrap_controls_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_wrap_controls_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1313,8 +1471,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_wrapping_controls_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_wrapping_controls_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1328,8 +1491,13 @@ open class Window : Viewport {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_child_controls_changed_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_child_controls_changed_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1343,8 +1511,13 @@ open class Window : Viewport {
                 .init(theme_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_theme_2326690814,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_theme_2326690814._native_ptr(),
+                    2326690814)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1358,8 +1531,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_theme_3846893731,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_theme_3846893731._native_ptr(),
+                    3846893731)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1374,8 +1552,13 @@ open class Window : Viewport {
                 .init(theme_type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_theme_type_variation_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_theme_type_variation_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1389,8 +1572,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_theme_type_variation_2002593661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_theme_type_variation_2002593661._native_ptr(),
+                    2002593661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1404,8 +1592,13 @@ open class Window : Viewport {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_begin_bulk_theme_override_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_begin_bulk_theme_override_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1418,8 +1611,13 @@ open class Window : Viewport {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_end_bulk_theme_override_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_end_bulk_theme_override_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1434,8 +1632,13 @@ open class Window : Viewport {
                 .init(name_native), .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_theme_icon_override_1373065600,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_theme_icon_override_1373065600._native_ptr(),
+                    1373065600)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1450,8 +1653,13 @@ open class Window : Viewport {
                 .init(name_native), .init(stylebox_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_theme_stylebox_override_4188838905,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_theme_stylebox_override_4188838905._native_ptr(),
+                    4188838905)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1466,8 +1674,13 @@ open class Window : Viewport {
                 .init(name_native), .init(font_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_theme_font_override_3518018674,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_theme_font_override_3518018674._native_ptr(),
+                    3518018674)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1482,8 +1695,13 @@ open class Window : Viewport {
                 .init(name_native), .init(font_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_theme_font_size_override_2415702435,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_theme_font_size_override_2415702435._native_ptr(),
+                    2415702435)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1499,8 +1717,13 @@ open class Window : Viewport {
                 .init(name_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_theme_color_override_4260178595,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_theme_color_override_4260178595._native_ptr(),
+                    4260178595)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1515,8 +1738,13 @@ open class Window : Viewport {
                 .init(name_native), .init(constant_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_theme_constant_override_2415702435,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_theme_constant_override_2415702435._native_ptr(),
+                    2415702435)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1531,8 +1759,13 @@ open class Window : Viewport {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_theme_icon_override_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_theme_icon_override_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1546,8 +1779,13 @@ open class Window : Viewport {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_theme_stylebox_override_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_theme_stylebox_override_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1561,8 +1799,13 @@ open class Window : Viewport {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_theme_font_override_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_theme_font_override_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1576,8 +1819,13 @@ open class Window : Viewport {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_theme_font_size_override_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_theme_font_size_override_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1591,8 +1839,13 @@ open class Window : Viewport {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_theme_color_override_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_theme_color_override_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1606,8 +1859,13 @@ open class Window : Viewport {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_theme_constant_override_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_theme_constant_override_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1623,8 +1881,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_theme_icon_2336455395,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_theme_icon_2336455395._native_ptr(),
+                    2336455395)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1641,8 +1904,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_theme_stylebox_2759935355,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_theme_stylebox_2759935355._native_ptr(),
+                    2759935355)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1659,8 +1927,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_theme_font_387378635,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_theme_font_387378635._native_ptr(),
+                    387378635)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1678,8 +1951,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_theme_font_size_229578101,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_theme_font_size_229578101._native_ptr(),
+                    229578101)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1696,8 +1974,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_theme_color_2377051548,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_theme_color_2377051548._native_ptr(),
+                    2377051548)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1715,8 +1998,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_theme_constant_229578101,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_theme_constant_229578101._native_ptr(),
+                    229578101)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1733,8 +2021,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_theme_icon_override_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_theme_icon_override_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1751,8 +2044,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_theme_stylebox_override_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_theme_stylebox_override_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1769,8 +2067,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_theme_font_override_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_theme_font_override_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1787,8 +2090,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_theme_font_size_override_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_theme_font_size_override_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1805,8 +2113,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_theme_color_override_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_theme_color_override_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1823,8 +2136,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_theme_constant_override_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_theme_constant_override_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1842,8 +2160,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_theme_icon_1187511791,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_theme_icon_1187511791._native_ptr(),
+                    1187511791)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1861,8 +2184,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_theme_stylebox_1187511791,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_theme_stylebox_1187511791._native_ptr(),
+                    1187511791)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1880,8 +2208,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_theme_font_1187511791,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_theme_font_1187511791._native_ptr(),
+                    1187511791)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1899,8 +2232,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_theme_font_size_1187511791,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_theme_font_size_1187511791._native_ptr(),
+                    1187511791)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1918,8 +2256,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_theme_color_1187511791,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_theme_color_1187511791._native_ptr(),
+                    1187511791)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1937,8 +2280,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_theme_constant_1187511791,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_theme_constant_1187511791._native_ptr(),
+                    1187511791)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1954,8 +2302,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_theme_default_base_scale_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_theme_default_base_scale_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1970,8 +2323,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_theme_default_font_3229501585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_theme_default_font_3229501585._native_ptr(),
+                    3229501585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1987,8 +2345,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_theme_default_font_size_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_theme_default_font_size_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2003,8 +2366,13 @@ open class Window : Viewport {
                 .init(direction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_layout_direction_3094704184,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_layout_direction_3094704184._native_ptr(),
+                    3094704184)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2019,8 +2387,13 @@ open class Window : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_layout_direction_3909617982,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_layout_direction_3909617982._native_ptr(),
+                    3909617982)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2036,8 +2409,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_layout_rtl_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_layout_rtl_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2052,8 +2430,13 @@ open class Window : Viewport {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_auto_translate_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_auto_translate_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2069,8 +2452,13 @@ open class Window : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_auto_translating_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_auto_translating_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2085,8 +2473,13 @@ open class Window : Viewport {
                 .init(rect_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_popup_1680304321,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_popup_1680304321._native_ptr(),
+                    1680304321)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2100,8 +2493,13 @@ open class Window : Viewport {
                 .init(parent_rect_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_popup_on_parent_1763793166,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_popup_on_parent_1763793166._native_ptr(),
+                    1763793166)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2115,8 +2513,13 @@ open class Window : Viewport {
                 .init(ratio_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_popup_centered_ratio_1912078273,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_popup_centered_ratio_1912078273._native_ptr(),
+                    1912078273)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2131,8 +2534,13 @@ open class Window : Viewport {
                 .init(minsize_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_popup_centered_3447975422,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_popup_centered_3447975422._native_ptr(),
+                    3447975422)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2147,8 +2555,13 @@ open class Window : Viewport {
                 .init(minsize_native), .init(fallback_ratio_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_popup_centered_clamped_3728566557,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_popup_centered_clamped_3728566557._native_ptr(),
+                    3728566557)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

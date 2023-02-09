@@ -11,199 +11,154 @@ open class TileData : Object {
 
     public override class var __godot_name: StringName { __godot_name_TileData }
 
-    static var _method_set_flip_h_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_flip_h_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flip_v_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_flip_v_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_transpose_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_transpose_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_material_2757459619: GDExtensionMethodBindPtr! = nil
-    static var _method_get_material_5934680: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_origin_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_origin_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_set_modulate_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_modulate_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_z_index_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_z_index_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_y_sort_origin_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_y_sort_origin_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_occluder_914399637: GDExtensionMethodBindPtr! = nil
-    static var _method_get_occluder_2458574231: GDExtensionMethodBindPtr! = nil
-    static var _method_set_constant_linear_velocity_163021252: GDExtensionMethodBindPtr! = nil
-    static var _method_get_constant_linear_velocity_2299179447: GDExtensionMethodBindPtr! = nil
-    static var _method_set_constant_angular_velocity_1602489585: GDExtensionMethodBindPtr! = nil
-    static var _method_get_constant_angular_velocity_2339986948: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_polygons_count_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_polygons_count_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_add_collision_polygon_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_collision_polygon_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_polygon_points_3230546541: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_polygon_points_103942801: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_polygon_one_way_1383440665: GDExtensionMethodBindPtr! = nil
-    static var _method_is_collision_polygon_one_way_2522259332: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_polygon_one_way_margin_3506521499: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_polygon_one_way_margin_3085491603: GDExtensionMethodBindPtr! = nil
-    static var _method_set_terrain_set_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_terrain_set_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_terrain_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_terrain_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_terrain_peering_bit_1084452308: GDExtensionMethodBindPtr! = nil
-    static var _method_get_terrain_peering_bit_3831796792: GDExtensionMethodBindPtr! = nil
-    static var _method_set_navigation_polygon_2224691167: GDExtensionMethodBindPtr! = nil
-    static var _method_get_navigation_polygon_3991786031: GDExtensionMethodBindPtr! = nil
-    static var _method_set_probability_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_probability_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_custom_data_402577236: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_data_1868160156: GDExtensionMethodBindPtr! = nil
-    static var _method_set_custom_data_by_layer_id_2152698145: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_data_by_layer_id_4227898402: GDExtensionMethodBindPtr! = nil
+    static var _method_set_flip_h_2586408642: StringName! = nil
+    static var _method_get_flip_h_36873697: StringName! = nil
+    static var _method_set_flip_v_2586408642: StringName! = nil
+    static var _method_get_flip_v_36873697: StringName! = nil
+    static var _method_set_transpose_2586408642: StringName! = nil
+    static var _method_get_transpose_36873697: StringName! = nil
+    static var _method_set_material_2757459619: StringName! = nil
+    static var _method_get_material_5934680: StringName! = nil
+    static var _method_set_texture_origin_1130785943: StringName! = nil
+    static var _method_get_texture_origin_3690982128: StringName! = nil
+    static var _method_set_modulate_2920490490: StringName! = nil
+    static var _method_get_modulate_3444240500: StringName! = nil
+    static var _method_set_z_index_1286410249: StringName! = nil
+    static var _method_get_z_index_3905245786: StringName! = nil
+    static var _method_set_y_sort_origin_1286410249: StringName! = nil
+    static var _method_get_y_sort_origin_3905245786: StringName! = nil
+    static var _method_set_occluder_914399637: StringName! = nil
+    static var _method_get_occluder_2458574231: StringName! = nil
+    static var _method_set_constant_linear_velocity_163021252: StringName! = nil
+    static var _method_get_constant_linear_velocity_2299179447: StringName! = nil
+    static var _method_set_constant_angular_velocity_1602489585: StringName! = nil
+    static var _method_get_constant_angular_velocity_2339986948: StringName! = nil
+    static var _method_set_collision_polygons_count_3937882851: StringName! = nil
+    static var _method_get_collision_polygons_count_923996154: StringName! = nil
+    static var _method_add_collision_polygon_1286410249: StringName! = nil
+    static var _method_remove_collision_polygon_3937882851: StringName! = nil
+    static var _method_set_collision_polygon_points_3230546541: StringName! = nil
+    static var _method_get_collision_polygon_points_103942801: StringName! = nil
+    static var _method_set_collision_polygon_one_way_1383440665: StringName! = nil
+    static var _method_is_collision_polygon_one_way_2522259332: StringName! = nil
+    static var _method_set_collision_polygon_one_way_margin_3506521499: StringName! = nil
+    static var _method_get_collision_polygon_one_way_margin_3085491603: StringName! = nil
+    static var _method_set_terrain_set_1286410249: StringName! = nil
+    static var _method_get_terrain_set_3905245786: StringName! = nil
+    static var _method_set_terrain_1286410249: StringName! = nil
+    static var _method_get_terrain_3905245786: StringName! = nil
+    static var _method_set_terrain_peering_bit_1084452308: StringName! = nil
+    static var _method_get_terrain_peering_bit_3831796792: StringName! = nil
+    static var _method_set_navigation_polygon_2224691167: StringName! = nil
+    static var _method_get_navigation_polygon_3991786031: StringName! = nil
+    static var _method_set_probability_373806689: StringName! = nil
+    static var _method_get_probability_1740695150: StringName! = nil
+    static var _method_set_custom_data_402577236: StringName! = nil
+    static var _method_get_custom_data_1868160156: StringName! = nil
+    static var _method_set_custom_data_by_layer_id_2152698145: StringName! = nil
+    static var _method_get_custom_data_by_layer_id_4227898402: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_TileData == nil)
         __godot_name_TileData = StringName(from: "TileData")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_flip_h_2586408642_name = StringName(from: "set_flip_h")
-        self._method_set_flip_h_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_flip_h_2586408642_name._native_ptr(), 2586408642)
-        assert(TileData._method_set_flip_h_2586408642 != nil)
-        let _method_get_flip_h_36873697_name = StringName(from: "get_flip_h")
-        self._method_get_flip_h_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_flip_h_36873697_name._native_ptr(), 36873697)
-        assert(TileData._method_get_flip_h_36873697 != nil)
-        let _method_set_flip_v_2586408642_name = StringName(from: "set_flip_v")
-        self._method_set_flip_v_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_flip_v_2586408642_name._native_ptr(), 2586408642)
-        assert(TileData._method_set_flip_v_2586408642 != nil)
-        let _method_get_flip_v_36873697_name = StringName(from: "get_flip_v")
-        self._method_get_flip_v_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_flip_v_36873697_name._native_ptr(), 36873697)
-        assert(TileData._method_get_flip_v_36873697 != nil)
-        let _method_set_transpose_2586408642_name = StringName(from: "set_transpose")
-        self._method_set_transpose_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_transpose_2586408642_name._native_ptr(), 2586408642)
-        assert(TileData._method_set_transpose_2586408642 != nil)
-        let _method_get_transpose_36873697_name = StringName(from: "get_transpose")
-        self._method_get_transpose_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_transpose_36873697_name._native_ptr(), 36873697)
-        assert(TileData._method_get_transpose_36873697 != nil)
-        let _method_set_material_2757459619_name = StringName(from: "set_material")
-        self._method_set_material_2757459619 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_material_2757459619_name._native_ptr(), 2757459619)
-        assert(TileData._method_set_material_2757459619 != nil)
-        let _method_get_material_5934680_name = StringName(from: "get_material")
-        self._method_get_material_5934680 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_material_5934680_name._native_ptr(), 5934680)
-        assert(TileData._method_get_material_5934680 != nil)
-        let _method_set_texture_origin_1130785943_name = StringName(from: "set_texture_origin")
-        self._method_set_texture_origin_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_texture_origin_1130785943_name._native_ptr(), 1130785943)
-        assert(TileData._method_set_texture_origin_1130785943 != nil)
-        let _method_get_texture_origin_3690982128_name = StringName(from: "get_texture_origin")
-        self._method_get_texture_origin_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_texture_origin_3690982128_name._native_ptr(), 3690982128)
-        assert(TileData._method_get_texture_origin_3690982128 != nil)
-        let _method_set_modulate_2920490490_name = StringName(from: "set_modulate")
-        self._method_set_modulate_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_modulate_2920490490_name._native_ptr(), 2920490490)
-        assert(TileData._method_set_modulate_2920490490 != nil)
-        let _method_get_modulate_3444240500_name = StringName(from: "get_modulate")
-        self._method_get_modulate_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_modulate_3444240500_name._native_ptr(), 3444240500)
-        assert(TileData._method_get_modulate_3444240500 != nil)
-        let _method_set_z_index_1286410249_name = StringName(from: "set_z_index")
-        self._method_set_z_index_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_z_index_1286410249_name._native_ptr(), 1286410249)
-        assert(TileData._method_set_z_index_1286410249 != nil)
-        let _method_get_z_index_3905245786_name = StringName(from: "get_z_index")
-        self._method_get_z_index_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_z_index_3905245786_name._native_ptr(), 3905245786)
-        assert(TileData._method_get_z_index_3905245786 != nil)
-        let _method_set_y_sort_origin_1286410249_name = StringName(from: "set_y_sort_origin")
-        self._method_set_y_sort_origin_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_y_sort_origin_1286410249_name._native_ptr(), 1286410249)
-        assert(TileData._method_set_y_sort_origin_1286410249 != nil)
-        let _method_get_y_sort_origin_3905245786_name = StringName(from: "get_y_sort_origin")
-        self._method_get_y_sort_origin_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_y_sort_origin_3905245786_name._native_ptr(), 3905245786)
-        assert(TileData._method_get_y_sort_origin_3905245786 != nil)
-        let _method_set_occluder_914399637_name = StringName(from: "set_occluder")
-        self._method_set_occluder_914399637 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_occluder_914399637_name._native_ptr(), 914399637)
-        assert(TileData._method_set_occluder_914399637 != nil)
-        let _method_get_occluder_2458574231_name = StringName(from: "get_occluder")
-        self._method_get_occluder_2458574231 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_occluder_2458574231_name._native_ptr(), 2458574231)
-        assert(TileData._method_get_occluder_2458574231 != nil)
-        let _method_set_constant_linear_velocity_163021252_name = StringName(from: "set_constant_linear_velocity")
-        self._method_set_constant_linear_velocity_163021252 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_constant_linear_velocity_163021252_name._native_ptr(), 163021252)
-        assert(TileData._method_set_constant_linear_velocity_163021252 != nil)
-        let _method_get_constant_linear_velocity_2299179447_name = StringName(from: "get_constant_linear_velocity")
-        self._method_get_constant_linear_velocity_2299179447 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_constant_linear_velocity_2299179447_name._native_ptr(), 2299179447)
-        assert(TileData._method_get_constant_linear_velocity_2299179447 != nil)
-        let _method_set_constant_angular_velocity_1602489585_name = StringName(from: "set_constant_angular_velocity")
-        self._method_set_constant_angular_velocity_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_constant_angular_velocity_1602489585_name._native_ptr(), 1602489585)
-        assert(TileData._method_set_constant_angular_velocity_1602489585 != nil)
-        let _method_get_constant_angular_velocity_2339986948_name = StringName(from: "get_constant_angular_velocity")
-        self._method_get_constant_angular_velocity_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_constant_angular_velocity_2339986948_name._native_ptr(), 2339986948)
-        assert(TileData._method_get_constant_angular_velocity_2339986948 != nil)
-        let _method_set_collision_polygons_count_3937882851_name = StringName(from: "set_collision_polygons_count")
-        self._method_set_collision_polygons_count_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_collision_polygons_count_3937882851_name._native_ptr(), 3937882851)
-        assert(TileData._method_set_collision_polygons_count_3937882851 != nil)
-        let _method_get_collision_polygons_count_923996154_name = StringName(from: "get_collision_polygons_count")
-        self._method_get_collision_polygons_count_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_collision_polygons_count_923996154_name._native_ptr(), 923996154)
-        assert(TileData._method_get_collision_polygons_count_923996154 != nil)
-        let _method_add_collision_polygon_1286410249_name = StringName(from: "add_collision_polygon")
-        self._method_add_collision_polygon_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_add_collision_polygon_1286410249_name._native_ptr(), 1286410249)
-        assert(TileData._method_add_collision_polygon_1286410249 != nil)
-        let _method_remove_collision_polygon_3937882851_name = StringName(from: "remove_collision_polygon")
-        self._method_remove_collision_polygon_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_remove_collision_polygon_3937882851_name._native_ptr(), 3937882851)
-        assert(TileData._method_remove_collision_polygon_3937882851 != nil)
-        let _method_set_collision_polygon_points_3230546541_name = StringName(from: "set_collision_polygon_points")
-        self._method_set_collision_polygon_points_3230546541 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_collision_polygon_points_3230546541_name._native_ptr(), 3230546541)
-        assert(TileData._method_set_collision_polygon_points_3230546541 != nil)
-        let _method_get_collision_polygon_points_103942801_name = StringName(from: "get_collision_polygon_points")
-        self._method_get_collision_polygon_points_103942801 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_collision_polygon_points_103942801_name._native_ptr(), 103942801)
-        assert(TileData._method_get_collision_polygon_points_103942801 != nil)
-        let _method_set_collision_polygon_one_way_1383440665_name = StringName(from: "set_collision_polygon_one_way")
-        self._method_set_collision_polygon_one_way_1383440665 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_collision_polygon_one_way_1383440665_name._native_ptr(), 1383440665)
-        assert(TileData._method_set_collision_polygon_one_way_1383440665 != nil)
-        let _method_is_collision_polygon_one_way_2522259332_name = StringName(from: "is_collision_polygon_one_way")
-        self._method_is_collision_polygon_one_way_2522259332 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_is_collision_polygon_one_way_2522259332_name._native_ptr(), 2522259332)
-        assert(TileData._method_is_collision_polygon_one_way_2522259332 != nil)
-        let _method_set_collision_polygon_one_way_margin_3506521499_name = StringName(from: "set_collision_polygon_one_way_margin")
-        self._method_set_collision_polygon_one_way_margin_3506521499 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_collision_polygon_one_way_margin_3506521499_name._native_ptr(), 3506521499)
-        assert(TileData._method_set_collision_polygon_one_way_margin_3506521499 != nil)
-        let _method_get_collision_polygon_one_way_margin_3085491603_name = StringName(from: "get_collision_polygon_one_way_margin")
-        self._method_get_collision_polygon_one_way_margin_3085491603 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_collision_polygon_one_way_margin_3085491603_name._native_ptr(), 3085491603)
-        assert(TileData._method_get_collision_polygon_one_way_margin_3085491603 != nil)
-        let _method_set_terrain_set_1286410249_name = StringName(from: "set_terrain_set")
-        self._method_set_terrain_set_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_terrain_set_1286410249_name._native_ptr(), 1286410249)
-        assert(TileData._method_set_terrain_set_1286410249 != nil)
-        let _method_get_terrain_set_3905245786_name = StringName(from: "get_terrain_set")
-        self._method_get_terrain_set_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_terrain_set_3905245786_name._native_ptr(), 3905245786)
-        assert(TileData._method_get_terrain_set_3905245786 != nil)
-        let _method_set_terrain_1286410249_name = StringName(from: "set_terrain")
-        self._method_set_terrain_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_terrain_1286410249_name._native_ptr(), 1286410249)
-        assert(TileData._method_set_terrain_1286410249 != nil)
-        let _method_get_terrain_3905245786_name = StringName(from: "get_terrain")
-        self._method_get_terrain_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_terrain_3905245786_name._native_ptr(), 3905245786)
-        assert(TileData._method_get_terrain_3905245786 != nil)
-        let _method_set_terrain_peering_bit_1084452308_name = StringName(from: "set_terrain_peering_bit")
-        self._method_set_terrain_peering_bit_1084452308 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_terrain_peering_bit_1084452308_name._native_ptr(), 1084452308)
-        assert(TileData._method_set_terrain_peering_bit_1084452308 != nil)
-        let _method_get_terrain_peering_bit_3831796792_name = StringName(from: "get_terrain_peering_bit")
-        self._method_get_terrain_peering_bit_3831796792 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_terrain_peering_bit_3831796792_name._native_ptr(), 3831796792)
-        assert(TileData._method_get_terrain_peering_bit_3831796792 != nil)
-        let _method_set_navigation_polygon_2224691167_name = StringName(from: "set_navigation_polygon")
-        self._method_set_navigation_polygon_2224691167 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_navigation_polygon_2224691167_name._native_ptr(), 2224691167)
-        assert(TileData._method_set_navigation_polygon_2224691167 != nil)
-        let _method_get_navigation_polygon_3991786031_name = StringName(from: "get_navigation_polygon")
-        self._method_get_navigation_polygon_3991786031 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_navigation_polygon_3991786031_name._native_ptr(), 3991786031)
-        assert(TileData._method_get_navigation_polygon_3991786031 != nil)
-        let _method_set_probability_373806689_name = StringName(from: "set_probability")
-        self._method_set_probability_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_probability_373806689_name._native_ptr(), 373806689)
-        assert(TileData._method_set_probability_373806689 != nil)
-        let _method_get_probability_1740695150_name = StringName(from: "get_probability")
-        self._method_get_probability_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_probability_1740695150_name._native_ptr(), 1740695150)
-        assert(TileData._method_get_probability_1740695150 != nil)
-        let _method_set_custom_data_402577236_name = StringName(from: "set_custom_data")
-        self._method_set_custom_data_402577236 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_custom_data_402577236_name._native_ptr(), 402577236)
-        assert(TileData._method_set_custom_data_402577236 != nil)
-        let _method_get_custom_data_1868160156_name = StringName(from: "get_custom_data")
-        self._method_get_custom_data_1868160156 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_custom_data_1868160156_name._native_ptr(), 1868160156)
-        assert(TileData._method_get_custom_data_1868160156 != nil)
-        let _method_set_custom_data_by_layer_id_2152698145_name = StringName(from: "set_custom_data_by_layer_id")
-        self._method_set_custom_data_by_layer_id_2152698145 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_set_custom_data_by_layer_id_2152698145_name._native_ptr(), 2152698145)
-        assert(TileData._method_set_custom_data_by_layer_id_2152698145 != nil)
-        let _method_get_custom_data_by_layer_id_4227898402_name = StringName(from: "get_custom_data_by_layer_id")
-        self._method_get_custom_data_by_layer_id_4227898402 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileData._native_ptr(), _method_get_custom_data_by_layer_id_4227898402_name._native_ptr(), 4227898402)
-        assert(TileData._method_get_custom_data_by_layer_id_4227898402 != nil)
+        self._method_set_flip_h_2586408642 = StringName(from: "set_flip_h")
+        assert(self._method_set_flip_h_2586408642 != nil)
+        self._method_get_flip_h_36873697 = StringName(from: "get_flip_h")
+        assert(self._method_get_flip_h_36873697 != nil)
+        self._method_set_flip_v_2586408642 = StringName(from: "set_flip_v")
+        assert(self._method_set_flip_v_2586408642 != nil)
+        self._method_get_flip_v_36873697 = StringName(from: "get_flip_v")
+        assert(self._method_get_flip_v_36873697 != nil)
+        self._method_set_transpose_2586408642 = StringName(from: "set_transpose")
+        assert(self._method_set_transpose_2586408642 != nil)
+        self._method_get_transpose_36873697 = StringName(from: "get_transpose")
+        assert(self._method_get_transpose_36873697 != nil)
+        self._method_set_material_2757459619 = StringName(from: "set_material")
+        assert(self._method_set_material_2757459619 != nil)
+        self._method_get_material_5934680 = StringName(from: "get_material")
+        assert(self._method_get_material_5934680 != nil)
+        self._method_set_texture_origin_1130785943 = StringName(from: "set_texture_origin")
+        assert(self._method_set_texture_origin_1130785943 != nil)
+        self._method_get_texture_origin_3690982128 = StringName(from: "get_texture_origin")
+        assert(self._method_get_texture_origin_3690982128 != nil)
+        self._method_set_modulate_2920490490 = StringName(from: "set_modulate")
+        assert(self._method_set_modulate_2920490490 != nil)
+        self._method_get_modulate_3444240500 = StringName(from: "get_modulate")
+        assert(self._method_get_modulate_3444240500 != nil)
+        self._method_set_z_index_1286410249 = StringName(from: "set_z_index")
+        assert(self._method_set_z_index_1286410249 != nil)
+        self._method_get_z_index_3905245786 = StringName(from: "get_z_index")
+        assert(self._method_get_z_index_3905245786 != nil)
+        self._method_set_y_sort_origin_1286410249 = StringName(from: "set_y_sort_origin")
+        assert(self._method_set_y_sort_origin_1286410249 != nil)
+        self._method_get_y_sort_origin_3905245786 = StringName(from: "get_y_sort_origin")
+        assert(self._method_get_y_sort_origin_3905245786 != nil)
+        self._method_set_occluder_914399637 = StringName(from: "set_occluder")
+        assert(self._method_set_occluder_914399637 != nil)
+        self._method_get_occluder_2458574231 = StringName(from: "get_occluder")
+        assert(self._method_get_occluder_2458574231 != nil)
+        self._method_set_constant_linear_velocity_163021252 = StringName(from: "set_constant_linear_velocity")
+        assert(self._method_set_constant_linear_velocity_163021252 != nil)
+        self._method_get_constant_linear_velocity_2299179447 = StringName(from: "get_constant_linear_velocity")
+        assert(self._method_get_constant_linear_velocity_2299179447 != nil)
+        self._method_set_constant_angular_velocity_1602489585 = StringName(from: "set_constant_angular_velocity")
+        assert(self._method_set_constant_angular_velocity_1602489585 != nil)
+        self._method_get_constant_angular_velocity_2339986948 = StringName(from: "get_constant_angular_velocity")
+        assert(self._method_get_constant_angular_velocity_2339986948 != nil)
+        self._method_set_collision_polygons_count_3937882851 = StringName(from: "set_collision_polygons_count")
+        assert(self._method_set_collision_polygons_count_3937882851 != nil)
+        self._method_get_collision_polygons_count_923996154 = StringName(from: "get_collision_polygons_count")
+        assert(self._method_get_collision_polygons_count_923996154 != nil)
+        self._method_add_collision_polygon_1286410249 = StringName(from: "add_collision_polygon")
+        assert(self._method_add_collision_polygon_1286410249 != nil)
+        self._method_remove_collision_polygon_3937882851 = StringName(from: "remove_collision_polygon")
+        assert(self._method_remove_collision_polygon_3937882851 != nil)
+        self._method_set_collision_polygon_points_3230546541 = StringName(from: "set_collision_polygon_points")
+        assert(self._method_set_collision_polygon_points_3230546541 != nil)
+        self._method_get_collision_polygon_points_103942801 = StringName(from: "get_collision_polygon_points")
+        assert(self._method_get_collision_polygon_points_103942801 != nil)
+        self._method_set_collision_polygon_one_way_1383440665 = StringName(from: "set_collision_polygon_one_way")
+        assert(self._method_set_collision_polygon_one_way_1383440665 != nil)
+        self._method_is_collision_polygon_one_way_2522259332 = StringName(from: "is_collision_polygon_one_way")
+        assert(self._method_is_collision_polygon_one_way_2522259332 != nil)
+        self._method_set_collision_polygon_one_way_margin_3506521499 = StringName(from: "set_collision_polygon_one_way_margin")
+        assert(self._method_set_collision_polygon_one_way_margin_3506521499 != nil)
+        self._method_get_collision_polygon_one_way_margin_3085491603 = StringName(from: "get_collision_polygon_one_way_margin")
+        assert(self._method_get_collision_polygon_one_way_margin_3085491603 != nil)
+        self._method_set_terrain_set_1286410249 = StringName(from: "set_terrain_set")
+        assert(self._method_set_terrain_set_1286410249 != nil)
+        self._method_get_terrain_set_3905245786 = StringName(from: "get_terrain_set")
+        assert(self._method_get_terrain_set_3905245786 != nil)
+        self._method_set_terrain_1286410249 = StringName(from: "set_terrain")
+        assert(self._method_set_terrain_1286410249 != nil)
+        self._method_get_terrain_3905245786 = StringName(from: "get_terrain")
+        assert(self._method_get_terrain_3905245786 != nil)
+        self._method_set_terrain_peering_bit_1084452308 = StringName(from: "set_terrain_peering_bit")
+        assert(self._method_set_terrain_peering_bit_1084452308 != nil)
+        self._method_get_terrain_peering_bit_3831796792 = StringName(from: "get_terrain_peering_bit")
+        assert(self._method_get_terrain_peering_bit_3831796792 != nil)
+        self._method_set_navigation_polygon_2224691167 = StringName(from: "set_navigation_polygon")
+        assert(self._method_set_navigation_polygon_2224691167 != nil)
+        self._method_get_navigation_polygon_3991786031 = StringName(from: "get_navigation_polygon")
+        assert(self._method_get_navigation_polygon_3991786031 != nil)
+        self._method_set_probability_373806689 = StringName(from: "set_probability")
+        assert(self._method_set_probability_373806689 != nil)
+        self._method_get_probability_1740695150 = StringName(from: "get_probability")
+        assert(self._method_get_probability_1740695150 != nil)
+        self._method_set_custom_data_402577236 = StringName(from: "set_custom_data")
+        assert(self._method_set_custom_data_402577236 != nil)
+        self._method_get_custom_data_1868160156 = StringName(from: "get_custom_data")
+        assert(self._method_get_custom_data_1868160156 != nil)
+        self._method_set_custom_data_by_layer_id_2152698145 = StringName(from: "set_custom_data_by_layer_id")
+        assert(self._method_set_custom_data_by_layer_id_2152698145 != nil)
+        self._method_get_custom_data_by_layer_id_4227898402 = StringName(from: "get_custom_data_by_layer_id")
+        assert(self._method_get_custom_data_by_layer_id_4227898402 != nil)
     }
 
     public func set_flip_h(flip_h: UInt8)  {
@@ -214,8 +169,13 @@ open class TileData : Object {
                 .init(flip_h_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flip_h_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flip_h_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -231,8 +191,13 @@ open class TileData : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_flip_h_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_flip_h_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -247,8 +212,13 @@ open class TileData : Object {
                 .init(flip_v_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flip_v_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flip_v_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -264,8 +234,13 @@ open class TileData : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_flip_v_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_flip_v_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -280,8 +255,13 @@ open class TileData : Object {
                 .init(transpose_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_transpose_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_transpose_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -297,8 +277,13 @@ open class TileData : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_transpose_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_transpose_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -313,8 +298,13 @@ open class TileData : Object {
                 .init(material_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_material_2757459619,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_material_2757459619._native_ptr(),
+                    2757459619)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -328,8 +318,13 @@ open class TileData : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_material_5934680,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_material_5934680._native_ptr(),
+                    5934680)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -344,8 +339,13 @@ open class TileData : Object {
                 .init(texture_origin_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_origin_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_origin_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -359,8 +359,13 @@ open class TileData : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_origin_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_origin_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -375,8 +380,13 @@ open class TileData : Object {
                 .init(modulate_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_modulate_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_modulate_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -390,8 +400,13 @@ open class TileData : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_modulate_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_modulate_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -406,8 +421,13 @@ open class TileData : Object {
                 .init(z_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_z_index_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_z_index_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -423,8 +443,13 @@ open class TileData : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_z_index_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_z_index_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -439,8 +464,13 @@ open class TileData : Object {
                 .init(y_sort_origin_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_y_sort_origin_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_y_sort_origin_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -456,8 +486,13 @@ open class TileData : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_y_sort_origin_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_y_sort_origin_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -473,8 +508,13 @@ open class TileData : Object {
                 .init(layer_id_native), .init(occluder_polygon_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_occluder_914399637,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_occluder_914399637._native_ptr(),
+                    914399637)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -490,8 +530,13 @@ open class TileData : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_occluder_2458574231,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_occluder_2458574231._native_ptr(),
+                    2458574231)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -508,8 +553,13 @@ open class TileData : Object {
                 .init(layer_id_native), .init(velocity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_constant_linear_velocity_163021252,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_constant_linear_velocity_163021252._native_ptr(),
+                    163021252)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -525,8 +575,13 @@ open class TileData : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_constant_linear_velocity_2299179447,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_constant_linear_velocity_2299179447._native_ptr(),
+                    2299179447)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -543,8 +598,13 @@ open class TileData : Object {
                 .init(layer_id_native), .init(velocity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_constant_angular_velocity_1602489585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_constant_angular_velocity_1602489585._native_ptr(),
+                    1602489585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -562,8 +622,13 @@ open class TileData : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_constant_angular_velocity_2339986948,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_constant_angular_velocity_2339986948._native_ptr(),
+                    2339986948)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -580,8 +645,13 @@ open class TileData : Object {
                 .init(layer_id_native), .init(polygons_count_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_polygons_count_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_polygons_count_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -599,8 +669,13 @@ open class TileData : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_polygons_count_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_polygons_count_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -616,8 +691,13 @@ open class TileData : Object {
                 .init(layer_id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_collision_polygon_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_collision_polygon_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -633,8 +713,13 @@ open class TileData : Object {
                 .init(layer_id_native), .init(polygon_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_collision_polygon_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_collision_polygon_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -652,8 +737,13 @@ open class TileData : Object {
                 .init(layer_id_native), .init(polygon_index_native), .init(polygon_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_polygon_points_3230546541,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_polygon_points_3230546541._native_ptr(),
+                    3230546541)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -671,8 +761,13 @@ open class TileData : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_polygon_points_103942801,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_polygon_points_103942801._native_ptr(),
+                    103942801)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -691,8 +786,13 @@ open class TileData : Object {
                 .init(layer_id_native), .init(polygon_index_native), .init(one_way_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_polygon_one_way_1383440665,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_polygon_one_way_1383440665._native_ptr(),
+                    1383440665)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -712,8 +812,13 @@ open class TileData : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_collision_polygon_one_way_2522259332,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_collision_polygon_one_way_2522259332._native_ptr(),
+                    2522259332)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -732,8 +837,13 @@ open class TileData : Object {
                 .init(layer_id_native), .init(polygon_index_native), .init(one_way_margin_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_polygon_one_way_margin_3506521499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_polygon_one_way_margin_3506521499._native_ptr(),
+                    3506521499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -753,8 +863,13 @@ open class TileData : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_polygon_one_way_margin_3085491603,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_polygon_one_way_margin_3085491603._native_ptr(),
+                    3085491603)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -771,8 +886,13 @@ open class TileData : Object {
                 .init(terrain_set_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_terrain_set_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_terrain_set_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -788,8 +908,13 @@ open class TileData : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_terrain_set_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_terrain_set_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -804,8 +929,13 @@ open class TileData : Object {
                 .init(terrain_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_terrain_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_terrain_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -821,8 +951,13 @@ open class TileData : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_terrain_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_terrain_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -838,8 +973,13 @@ open class TileData : Object {
                 .init(peering_bit_native), .init(terrain_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_terrain_peering_bit_1084452308,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_terrain_peering_bit_1084452308._native_ptr(),
+                    1084452308)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -857,8 +997,13 @@ open class TileData : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_terrain_peering_bit_3831796792,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_terrain_peering_bit_3831796792._native_ptr(),
+                    3831796792)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -875,8 +1020,13 @@ open class TileData : Object {
                 .init(layer_id_native), .init(navigation_polygon_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_navigation_polygon_2224691167,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_navigation_polygon_2224691167._native_ptr(),
+                    2224691167)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -892,8 +1042,13 @@ open class TileData : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_navigation_polygon_3991786031,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_navigation_polygon_3991786031._native_ptr(),
+                    3991786031)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -909,8 +1064,13 @@ open class TileData : Object {
                 .init(probability_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_probability_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_probability_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -926,8 +1086,13 @@ open class TileData : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_probability_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_probability_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -943,8 +1108,13 @@ open class TileData : Object {
                 .init(layer_name_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_custom_data_402577236,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_custom_data_402577236._native_ptr(),
+                    402577236)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -959,8 +1129,13 @@ open class TileData : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_data_1868160156,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_data_1868160156._native_ptr(),
+                    1868160156)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -976,8 +1151,13 @@ open class TileData : Object {
                 .init(layer_id_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_custom_data_by_layer_id_2152698145,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_custom_data_by_layer_id_2152698145._native_ptr(),
+                    2152698145)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -993,8 +1173,13 @@ open class TileData : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_data_by_layer_id_4227898402,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_data_by_layer_id_4227898402._native_ptr(),
+                    4227898402)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

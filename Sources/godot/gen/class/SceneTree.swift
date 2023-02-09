@@ -20,179 +20,139 @@ open class SceneTree : MainLoop {
 
     public override class var __godot_name: StringName { __godot_name_SceneTree }
 
-    static var _method_get_root_1757182445: GDExtensionMethodBindPtr! = nil
-    static var _method_has_group_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_is_auto_accept_quit_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_auto_accept_quit_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_quit_on_go_back_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_quit_on_go_back_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_debug_collisions_hint_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_debugging_collisions_hint_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_debug_paths_hint_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_debugging_paths_hint_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_debug_navigation_hint_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_debugging_navigation_hint_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_edited_scene_root_1078189570: GDExtensionMethodBindPtr! = nil
-    static var _method_get_edited_scene_root_3160264692: GDExtensionMethodBindPtr! = nil
-    static var _method_set_pause_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_paused_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_create_timer_1780978058: GDExtensionMethodBindPtr! = nil
-    static var _method_create_tween_3426978995: GDExtensionMethodBindPtr! = nil
-    static var _method_get_processed_tweens_2915620761: GDExtensionMethodBindPtr! = nil
-    static var _method_get_node_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_frame_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_quit_1995695955: GDExtensionMethodBindPtr! = nil
-    static var _method_queue_delete_3975164845: GDExtensionMethodBindPtr! = nil
-    static var _method_call_group_flags_1527739229: GDExtensionMethodBindPtr! = nil
-    static var _method_notify_group_flags_1245489420: GDExtensionMethodBindPtr! = nil
-    static var _method_set_group_flags_3497599527: GDExtensionMethodBindPtr! = nil
-    static var _method_call_group_1257962832: GDExtensionMethodBindPtr! = nil
-    static var _method_notify_group_2415702435: GDExtensionMethodBindPtr! = nil
-    static var _method_set_group_1279312029: GDExtensionMethodBindPtr! = nil
-    static var _method_get_nodes_in_group_689397652: GDExtensionMethodBindPtr! = nil
-    static var _method_get_first_node_in_group_4071044623: GDExtensionMethodBindPtr! = nil
-    static var _method_set_current_scene_1078189570: GDExtensionMethodBindPtr! = nil
-    static var _method_get_current_scene_3160264692: GDExtensionMethodBindPtr! = nil
-    static var _method_change_scene_to_file_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_change_scene_to_packed_107349098: GDExtensionMethodBindPtr! = nil
-    static var _method_reload_current_scene_166280745: GDExtensionMethodBindPtr! = nil
-    static var _method_unload_current_scene_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_multiplayer_2385607013: GDExtensionMethodBindPtr! = nil
-    static var _method_get_multiplayer_3453401404: GDExtensionMethodBindPtr! = nil
-    static var _method_set_multiplayer_poll_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_multiplayer_poll_enabled_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_get_root_1757182445: StringName! = nil
+    static var _method_has_group_2619796661: StringName! = nil
+    static var _method_is_auto_accept_quit_36873697: StringName! = nil
+    static var _method_set_auto_accept_quit_2586408642: StringName! = nil
+    static var _method_is_quit_on_go_back_36873697: StringName! = nil
+    static var _method_set_quit_on_go_back_2586408642: StringName! = nil
+    static var _method_set_debug_collisions_hint_2586408642: StringName! = nil
+    static var _method_is_debugging_collisions_hint_36873697: StringName! = nil
+    static var _method_set_debug_paths_hint_2586408642: StringName! = nil
+    static var _method_is_debugging_paths_hint_36873697: StringName! = nil
+    static var _method_set_debug_navigation_hint_2586408642: StringName! = nil
+    static var _method_is_debugging_navigation_hint_36873697: StringName! = nil
+    static var _method_set_edited_scene_root_1078189570: StringName! = nil
+    static var _method_get_edited_scene_root_3160264692: StringName! = nil
+    static var _method_set_pause_2586408642: StringName! = nil
+    static var _method_is_paused_36873697: StringName! = nil
+    static var _method_create_timer_1780978058: StringName! = nil
+    static var _method_create_tween_3426978995: StringName! = nil
+    static var _method_get_processed_tweens_2915620761: StringName! = nil
+    static var _method_get_node_count_3905245786: StringName! = nil
+    static var _method_get_frame_3905245786: StringName! = nil
+    static var _method_quit_1995695955: StringName! = nil
+    static var _method_queue_delete_3975164845: StringName! = nil
+    static var _method_call_group_flags_1527739229: StringName! = nil
+    static var _method_notify_group_flags_1245489420: StringName! = nil
+    static var _method_set_group_flags_3497599527: StringName! = nil
+    static var _method_call_group_1257962832: StringName! = nil
+    static var _method_notify_group_2415702435: StringName! = nil
+    static var _method_set_group_1279312029: StringName! = nil
+    static var _method_get_nodes_in_group_689397652: StringName! = nil
+    static var _method_get_first_node_in_group_4071044623: StringName! = nil
+    static var _method_set_current_scene_1078189570: StringName! = nil
+    static var _method_get_current_scene_3160264692: StringName! = nil
+    static var _method_change_scene_to_file_166001499: StringName! = nil
+    static var _method_change_scene_to_packed_107349098: StringName! = nil
+    static var _method_reload_current_scene_166280745: StringName! = nil
+    static var _method_unload_current_scene_3218959716: StringName! = nil
+    static var _method_set_multiplayer_2385607013: StringName! = nil
+    static var _method_get_multiplayer_3453401404: StringName! = nil
+    static var _method_set_multiplayer_poll_enabled_2586408642: StringName! = nil
+    static var _method_is_multiplayer_poll_enabled_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_SceneTree == nil)
         __godot_name_SceneTree = StringName(from: "SceneTree")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_root_1757182445_name = StringName(from: "get_root")
-        self._method_get_root_1757182445 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_get_root_1757182445_name._native_ptr(), 1757182445)
-        assert(SceneTree._method_get_root_1757182445 != nil)
-        let _method_has_group_2619796661_name = StringName(from: "has_group")
-        self._method_has_group_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_has_group_2619796661_name._native_ptr(), 2619796661)
-        assert(SceneTree._method_has_group_2619796661 != nil)
-        let _method_is_auto_accept_quit_36873697_name = StringName(from: "is_auto_accept_quit")
-        self._method_is_auto_accept_quit_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_is_auto_accept_quit_36873697_name._native_ptr(), 36873697)
-        assert(SceneTree._method_is_auto_accept_quit_36873697 != nil)
-        let _method_set_auto_accept_quit_2586408642_name = StringName(from: "set_auto_accept_quit")
-        self._method_set_auto_accept_quit_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_set_auto_accept_quit_2586408642_name._native_ptr(), 2586408642)
-        assert(SceneTree._method_set_auto_accept_quit_2586408642 != nil)
-        let _method_is_quit_on_go_back_36873697_name = StringName(from: "is_quit_on_go_back")
-        self._method_is_quit_on_go_back_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_is_quit_on_go_back_36873697_name._native_ptr(), 36873697)
-        assert(SceneTree._method_is_quit_on_go_back_36873697 != nil)
-        let _method_set_quit_on_go_back_2586408642_name = StringName(from: "set_quit_on_go_back")
-        self._method_set_quit_on_go_back_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_set_quit_on_go_back_2586408642_name._native_ptr(), 2586408642)
-        assert(SceneTree._method_set_quit_on_go_back_2586408642 != nil)
-        let _method_set_debug_collisions_hint_2586408642_name = StringName(from: "set_debug_collisions_hint")
-        self._method_set_debug_collisions_hint_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_set_debug_collisions_hint_2586408642_name._native_ptr(), 2586408642)
-        assert(SceneTree._method_set_debug_collisions_hint_2586408642 != nil)
-        let _method_is_debugging_collisions_hint_36873697_name = StringName(from: "is_debugging_collisions_hint")
-        self._method_is_debugging_collisions_hint_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_is_debugging_collisions_hint_36873697_name._native_ptr(), 36873697)
-        assert(SceneTree._method_is_debugging_collisions_hint_36873697 != nil)
-        let _method_set_debug_paths_hint_2586408642_name = StringName(from: "set_debug_paths_hint")
-        self._method_set_debug_paths_hint_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_set_debug_paths_hint_2586408642_name._native_ptr(), 2586408642)
-        assert(SceneTree._method_set_debug_paths_hint_2586408642 != nil)
-        let _method_is_debugging_paths_hint_36873697_name = StringName(from: "is_debugging_paths_hint")
-        self._method_is_debugging_paths_hint_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_is_debugging_paths_hint_36873697_name._native_ptr(), 36873697)
-        assert(SceneTree._method_is_debugging_paths_hint_36873697 != nil)
-        let _method_set_debug_navigation_hint_2586408642_name = StringName(from: "set_debug_navigation_hint")
-        self._method_set_debug_navigation_hint_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_set_debug_navigation_hint_2586408642_name._native_ptr(), 2586408642)
-        assert(SceneTree._method_set_debug_navigation_hint_2586408642 != nil)
-        let _method_is_debugging_navigation_hint_36873697_name = StringName(from: "is_debugging_navigation_hint")
-        self._method_is_debugging_navigation_hint_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_is_debugging_navigation_hint_36873697_name._native_ptr(), 36873697)
-        assert(SceneTree._method_is_debugging_navigation_hint_36873697 != nil)
-        let _method_set_edited_scene_root_1078189570_name = StringName(from: "set_edited_scene_root")
-        self._method_set_edited_scene_root_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_set_edited_scene_root_1078189570_name._native_ptr(), 1078189570)
-        assert(SceneTree._method_set_edited_scene_root_1078189570 != nil)
-        let _method_get_edited_scene_root_3160264692_name = StringName(from: "get_edited_scene_root")
-        self._method_get_edited_scene_root_3160264692 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_get_edited_scene_root_3160264692_name._native_ptr(), 3160264692)
-        assert(SceneTree._method_get_edited_scene_root_3160264692 != nil)
-        let _method_set_pause_2586408642_name = StringName(from: "set_pause")
-        self._method_set_pause_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_set_pause_2586408642_name._native_ptr(), 2586408642)
-        assert(SceneTree._method_set_pause_2586408642 != nil)
-        let _method_is_paused_36873697_name = StringName(from: "is_paused")
-        self._method_is_paused_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_is_paused_36873697_name._native_ptr(), 36873697)
-        assert(SceneTree._method_is_paused_36873697 != nil)
-        let _method_create_timer_1780978058_name = StringName(from: "create_timer")
-        self._method_create_timer_1780978058 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_create_timer_1780978058_name._native_ptr(), 1780978058)
-        assert(SceneTree._method_create_timer_1780978058 != nil)
-        let _method_create_tween_3426978995_name = StringName(from: "create_tween")
-        self._method_create_tween_3426978995 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_create_tween_3426978995_name._native_ptr(), 3426978995)
-        assert(SceneTree._method_create_tween_3426978995 != nil)
-        let _method_get_processed_tweens_2915620761_name = StringName(from: "get_processed_tweens")
-        self._method_get_processed_tweens_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_get_processed_tweens_2915620761_name._native_ptr(), 2915620761)
-        assert(SceneTree._method_get_processed_tweens_2915620761 != nil)
-        let _method_get_node_count_3905245786_name = StringName(from: "get_node_count")
-        self._method_get_node_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_get_node_count_3905245786_name._native_ptr(), 3905245786)
-        assert(SceneTree._method_get_node_count_3905245786 != nil)
-        let _method_get_frame_3905245786_name = StringName(from: "get_frame")
-        self._method_get_frame_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_get_frame_3905245786_name._native_ptr(), 3905245786)
-        assert(SceneTree._method_get_frame_3905245786 != nil)
-        let _method_quit_1995695955_name = StringName(from: "quit")
-        self._method_quit_1995695955 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_quit_1995695955_name._native_ptr(), 1995695955)
-        assert(SceneTree._method_quit_1995695955 != nil)
-        let _method_queue_delete_3975164845_name = StringName(from: "queue_delete")
-        self._method_queue_delete_3975164845 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_queue_delete_3975164845_name._native_ptr(), 3975164845)
-        assert(SceneTree._method_queue_delete_3975164845 != nil)
-        let _method_call_group_flags_1527739229_name = StringName(from: "call_group_flags")
-        self._method_call_group_flags_1527739229 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_call_group_flags_1527739229_name._native_ptr(), 1527739229)
-        assert(SceneTree._method_call_group_flags_1527739229 != nil)
-        let _method_notify_group_flags_1245489420_name = StringName(from: "notify_group_flags")
-        self._method_notify_group_flags_1245489420 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_notify_group_flags_1245489420_name._native_ptr(), 1245489420)
-        assert(SceneTree._method_notify_group_flags_1245489420 != nil)
-        let _method_set_group_flags_3497599527_name = StringName(from: "set_group_flags")
-        self._method_set_group_flags_3497599527 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_set_group_flags_3497599527_name._native_ptr(), 3497599527)
-        assert(SceneTree._method_set_group_flags_3497599527 != nil)
-        let _method_call_group_1257962832_name = StringName(from: "call_group")
-        self._method_call_group_1257962832 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_call_group_1257962832_name._native_ptr(), 1257962832)
-        assert(SceneTree._method_call_group_1257962832 != nil)
-        let _method_notify_group_2415702435_name = StringName(from: "notify_group")
-        self._method_notify_group_2415702435 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_notify_group_2415702435_name._native_ptr(), 2415702435)
-        assert(SceneTree._method_notify_group_2415702435 != nil)
-        let _method_set_group_1279312029_name = StringName(from: "set_group")
-        self._method_set_group_1279312029 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_set_group_1279312029_name._native_ptr(), 1279312029)
-        assert(SceneTree._method_set_group_1279312029 != nil)
-        let _method_get_nodes_in_group_689397652_name = StringName(from: "get_nodes_in_group")
-        self._method_get_nodes_in_group_689397652 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_get_nodes_in_group_689397652_name._native_ptr(), 689397652)
-        assert(SceneTree._method_get_nodes_in_group_689397652 != nil)
-        let _method_get_first_node_in_group_4071044623_name = StringName(from: "get_first_node_in_group")
-        self._method_get_first_node_in_group_4071044623 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_get_first_node_in_group_4071044623_name._native_ptr(), 4071044623)
-        assert(SceneTree._method_get_first_node_in_group_4071044623 != nil)
-        let _method_set_current_scene_1078189570_name = StringName(from: "set_current_scene")
-        self._method_set_current_scene_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_set_current_scene_1078189570_name._native_ptr(), 1078189570)
-        assert(SceneTree._method_set_current_scene_1078189570 != nil)
-        let _method_get_current_scene_3160264692_name = StringName(from: "get_current_scene")
-        self._method_get_current_scene_3160264692 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_get_current_scene_3160264692_name._native_ptr(), 3160264692)
-        assert(SceneTree._method_get_current_scene_3160264692 != nil)
-        let _method_change_scene_to_file_166001499_name = StringName(from: "change_scene_to_file")
-        self._method_change_scene_to_file_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_change_scene_to_file_166001499_name._native_ptr(), 166001499)
-        assert(SceneTree._method_change_scene_to_file_166001499 != nil)
-        let _method_change_scene_to_packed_107349098_name = StringName(from: "change_scene_to_packed")
-        self._method_change_scene_to_packed_107349098 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_change_scene_to_packed_107349098_name._native_ptr(), 107349098)
-        assert(SceneTree._method_change_scene_to_packed_107349098 != nil)
-        let _method_reload_current_scene_166280745_name = StringName(from: "reload_current_scene")
-        self._method_reload_current_scene_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_reload_current_scene_166280745_name._native_ptr(), 166280745)
-        assert(SceneTree._method_reload_current_scene_166280745 != nil)
-        let _method_unload_current_scene_3218959716_name = StringName(from: "unload_current_scene")
-        self._method_unload_current_scene_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_unload_current_scene_3218959716_name._native_ptr(), 3218959716)
-        assert(SceneTree._method_unload_current_scene_3218959716 != nil)
-        let _method_set_multiplayer_2385607013_name = StringName(from: "set_multiplayer")
-        self._method_set_multiplayer_2385607013 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_set_multiplayer_2385607013_name._native_ptr(), 2385607013)
-        assert(SceneTree._method_set_multiplayer_2385607013 != nil)
-        let _method_get_multiplayer_3453401404_name = StringName(from: "get_multiplayer")
-        self._method_get_multiplayer_3453401404 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_get_multiplayer_3453401404_name._native_ptr(), 3453401404)
-        assert(SceneTree._method_get_multiplayer_3453401404 != nil)
-        let _method_set_multiplayer_poll_enabled_2586408642_name = StringName(from: "set_multiplayer_poll_enabled")
-        self._method_set_multiplayer_poll_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_set_multiplayer_poll_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(SceneTree._method_set_multiplayer_poll_enabled_2586408642 != nil)
-        let _method_is_multiplayer_poll_enabled_36873697_name = StringName(from: "is_multiplayer_poll_enabled")
-        self._method_is_multiplayer_poll_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneTree._native_ptr(), _method_is_multiplayer_poll_enabled_36873697_name._native_ptr(), 36873697)
-        assert(SceneTree._method_is_multiplayer_poll_enabled_36873697 != nil)
+        self._method_get_root_1757182445 = StringName(from: "get_root")
+        assert(self._method_get_root_1757182445 != nil)
+        self._method_has_group_2619796661 = StringName(from: "has_group")
+        assert(self._method_has_group_2619796661 != nil)
+        self._method_is_auto_accept_quit_36873697 = StringName(from: "is_auto_accept_quit")
+        assert(self._method_is_auto_accept_quit_36873697 != nil)
+        self._method_set_auto_accept_quit_2586408642 = StringName(from: "set_auto_accept_quit")
+        assert(self._method_set_auto_accept_quit_2586408642 != nil)
+        self._method_is_quit_on_go_back_36873697 = StringName(from: "is_quit_on_go_back")
+        assert(self._method_is_quit_on_go_back_36873697 != nil)
+        self._method_set_quit_on_go_back_2586408642 = StringName(from: "set_quit_on_go_back")
+        assert(self._method_set_quit_on_go_back_2586408642 != nil)
+        self._method_set_debug_collisions_hint_2586408642 = StringName(from: "set_debug_collisions_hint")
+        assert(self._method_set_debug_collisions_hint_2586408642 != nil)
+        self._method_is_debugging_collisions_hint_36873697 = StringName(from: "is_debugging_collisions_hint")
+        assert(self._method_is_debugging_collisions_hint_36873697 != nil)
+        self._method_set_debug_paths_hint_2586408642 = StringName(from: "set_debug_paths_hint")
+        assert(self._method_set_debug_paths_hint_2586408642 != nil)
+        self._method_is_debugging_paths_hint_36873697 = StringName(from: "is_debugging_paths_hint")
+        assert(self._method_is_debugging_paths_hint_36873697 != nil)
+        self._method_set_debug_navigation_hint_2586408642 = StringName(from: "set_debug_navigation_hint")
+        assert(self._method_set_debug_navigation_hint_2586408642 != nil)
+        self._method_is_debugging_navigation_hint_36873697 = StringName(from: "is_debugging_navigation_hint")
+        assert(self._method_is_debugging_navigation_hint_36873697 != nil)
+        self._method_set_edited_scene_root_1078189570 = StringName(from: "set_edited_scene_root")
+        assert(self._method_set_edited_scene_root_1078189570 != nil)
+        self._method_get_edited_scene_root_3160264692 = StringName(from: "get_edited_scene_root")
+        assert(self._method_get_edited_scene_root_3160264692 != nil)
+        self._method_set_pause_2586408642 = StringName(from: "set_pause")
+        assert(self._method_set_pause_2586408642 != nil)
+        self._method_is_paused_36873697 = StringName(from: "is_paused")
+        assert(self._method_is_paused_36873697 != nil)
+        self._method_create_timer_1780978058 = StringName(from: "create_timer")
+        assert(self._method_create_timer_1780978058 != nil)
+        self._method_create_tween_3426978995 = StringName(from: "create_tween")
+        assert(self._method_create_tween_3426978995 != nil)
+        self._method_get_processed_tweens_2915620761 = StringName(from: "get_processed_tweens")
+        assert(self._method_get_processed_tweens_2915620761 != nil)
+        self._method_get_node_count_3905245786 = StringName(from: "get_node_count")
+        assert(self._method_get_node_count_3905245786 != nil)
+        self._method_get_frame_3905245786 = StringName(from: "get_frame")
+        assert(self._method_get_frame_3905245786 != nil)
+        self._method_quit_1995695955 = StringName(from: "quit")
+        assert(self._method_quit_1995695955 != nil)
+        self._method_queue_delete_3975164845 = StringName(from: "queue_delete")
+        assert(self._method_queue_delete_3975164845 != nil)
+        self._method_call_group_flags_1527739229 = StringName(from: "call_group_flags")
+        assert(self._method_call_group_flags_1527739229 != nil)
+        self._method_notify_group_flags_1245489420 = StringName(from: "notify_group_flags")
+        assert(self._method_notify_group_flags_1245489420 != nil)
+        self._method_set_group_flags_3497599527 = StringName(from: "set_group_flags")
+        assert(self._method_set_group_flags_3497599527 != nil)
+        self._method_call_group_1257962832 = StringName(from: "call_group")
+        assert(self._method_call_group_1257962832 != nil)
+        self._method_notify_group_2415702435 = StringName(from: "notify_group")
+        assert(self._method_notify_group_2415702435 != nil)
+        self._method_set_group_1279312029 = StringName(from: "set_group")
+        assert(self._method_set_group_1279312029 != nil)
+        self._method_get_nodes_in_group_689397652 = StringName(from: "get_nodes_in_group")
+        assert(self._method_get_nodes_in_group_689397652 != nil)
+        self._method_get_first_node_in_group_4071044623 = StringName(from: "get_first_node_in_group")
+        assert(self._method_get_first_node_in_group_4071044623 != nil)
+        self._method_set_current_scene_1078189570 = StringName(from: "set_current_scene")
+        assert(self._method_set_current_scene_1078189570 != nil)
+        self._method_get_current_scene_3160264692 = StringName(from: "get_current_scene")
+        assert(self._method_get_current_scene_3160264692 != nil)
+        self._method_change_scene_to_file_166001499 = StringName(from: "change_scene_to_file")
+        assert(self._method_change_scene_to_file_166001499 != nil)
+        self._method_change_scene_to_packed_107349098 = StringName(from: "change_scene_to_packed")
+        assert(self._method_change_scene_to_packed_107349098 != nil)
+        self._method_reload_current_scene_166280745 = StringName(from: "reload_current_scene")
+        assert(self._method_reload_current_scene_166280745 != nil)
+        self._method_unload_current_scene_3218959716 = StringName(from: "unload_current_scene")
+        assert(self._method_unload_current_scene_3218959716 != nil)
+        self._method_set_multiplayer_2385607013 = StringName(from: "set_multiplayer")
+        assert(self._method_set_multiplayer_2385607013 != nil)
+        self._method_get_multiplayer_3453401404 = StringName(from: "get_multiplayer")
+        assert(self._method_get_multiplayer_3453401404 != nil)
+        self._method_set_multiplayer_poll_enabled_2586408642 = StringName(from: "set_multiplayer_poll_enabled")
+        assert(self._method_set_multiplayer_poll_enabled_2586408642 != nil)
+        self._method_is_multiplayer_poll_enabled_36873697 = StringName(from: "is_multiplayer_poll_enabled")
+        assert(self._method_is_multiplayer_poll_enabled_36873697 != nil)
     }
 
     public func get_root() -> Window {
@@ -203,8 +163,13 @@ open class SceneTree : MainLoop {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_root_1757182445,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_root_1757182445._native_ptr(),
+                    1757182445)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -221,8 +186,13 @@ open class SceneTree : MainLoop {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_group_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_group_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -238,8 +208,13 @@ open class SceneTree : MainLoop {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_auto_accept_quit_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_auto_accept_quit_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -254,8 +229,13 @@ open class SceneTree : MainLoop {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_auto_accept_quit_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_auto_accept_quit_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -271,8 +251,13 @@ open class SceneTree : MainLoop {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_quit_on_go_back_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_quit_on_go_back_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -287,8 +272,13 @@ open class SceneTree : MainLoop {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_quit_on_go_back_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_quit_on_go_back_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -303,8 +293,13 @@ open class SceneTree : MainLoop {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_debug_collisions_hint_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_debug_collisions_hint_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -320,8 +315,13 @@ open class SceneTree : MainLoop {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_debugging_collisions_hint_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_debugging_collisions_hint_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -336,8 +336,13 @@ open class SceneTree : MainLoop {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_debug_paths_hint_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_debug_paths_hint_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -353,8 +358,13 @@ open class SceneTree : MainLoop {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_debugging_paths_hint_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_debugging_paths_hint_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -369,8 +379,13 @@ open class SceneTree : MainLoop {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_debug_navigation_hint_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_debug_navigation_hint_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -386,8 +401,13 @@ open class SceneTree : MainLoop {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_debugging_navigation_hint_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_debugging_navigation_hint_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -402,8 +422,13 @@ open class SceneTree : MainLoop {
                 .init(scene_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_edited_scene_root_1078189570,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_edited_scene_root_1078189570._native_ptr(),
+                    1078189570)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -417,8 +442,13 @@ open class SceneTree : MainLoop {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_edited_scene_root_3160264692,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_edited_scene_root_3160264692._native_ptr(),
+                    3160264692)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -433,8 +463,13 @@ open class SceneTree : MainLoop {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pause_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pause_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -450,8 +485,13 @@ open class SceneTree : MainLoop {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_paused_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_paused_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -470,8 +510,13 @@ open class SceneTree : MainLoop {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_timer_1780978058,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_timer_1780978058._native_ptr(),
+                    1780978058)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -490,8 +535,13 @@ open class SceneTree : MainLoop {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_tween_3426978995,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_tween_3426978995._native_ptr(),
+                    3426978995)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -506,8 +556,13 @@ open class SceneTree : MainLoop {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_processed_tweens_2915620761,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_processed_tweens_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -523,8 +578,13 @@ open class SceneTree : MainLoop {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_node_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_node_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -540,8 +600,13 @@ open class SceneTree : MainLoop {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_frame_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_frame_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -556,8 +621,13 @@ open class SceneTree : MainLoop {
                 .init(exit_code_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_quit_1995695955,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_quit_1995695955._native_ptr(),
+                    1995695955)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -572,8 +642,13 @@ open class SceneTree : MainLoop {
                 .init(obj_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_queue_delete_3975164845,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_queue_delete_3975164845._native_ptr(),
+                    3975164845)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -589,8 +664,13 @@ open class SceneTree : MainLoop {
                 .init(flags_native), .init(group_native), .init(method_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_call_group_flags_1527739229,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_call_group_flags_1527739229._native_ptr(),
+                    1527739229)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -607,8 +687,13 @@ open class SceneTree : MainLoop {
                 .init(call_flags_native), .init(group_native), .init(notification_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_notify_group_flags_1245489420,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_notify_group_flags_1245489420._native_ptr(),
+                    1245489420)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -627,8 +712,13 @@ open class SceneTree : MainLoop {
                 .init(call_flags_native), .init(group_native), .init(property_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_group_flags_3497599527,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_group_flags_3497599527._native_ptr(),
+                    3497599527)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -644,8 +734,13 @@ open class SceneTree : MainLoop {
                 .init(group_native), .init(method_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_call_group_1257962832,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_call_group_1257962832._native_ptr(),
+                    1257962832)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -660,8 +755,13 @@ open class SceneTree : MainLoop {
                 .init(group_native), .init(notification_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_notify_group_2415702435,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_notify_group_2415702435._native_ptr(),
+                    2415702435)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -678,8 +778,13 @@ open class SceneTree : MainLoop {
                 .init(group_native), .init(property_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_group_1279312029,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_group_1279312029._native_ptr(),
+                    1279312029)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -694,8 +799,13 @@ open class SceneTree : MainLoop {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_nodes_in_group_689397652,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_nodes_in_group_689397652._native_ptr(),
+                    689397652)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -711,8 +821,13 @@ open class SceneTree : MainLoop {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_first_node_in_group_4071044623,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_first_node_in_group_4071044623._native_ptr(),
+                    4071044623)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -727,8 +842,13 @@ open class SceneTree : MainLoop {
                 .init(child_node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_current_scene_1078189570,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_current_scene_1078189570._native_ptr(),
+                    1078189570)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -742,8 +862,13 @@ open class SceneTree : MainLoop {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_current_scene_3160264692,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_current_scene_3160264692._native_ptr(),
+                    3160264692)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -759,8 +884,13 @@ open class SceneTree : MainLoop {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_change_scene_to_file_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_change_scene_to_file_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -776,8 +906,13 @@ open class SceneTree : MainLoop {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_change_scene_to_packed_107349098,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_change_scene_to_packed_107349098._native_ptr(),
+                    107349098)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -792,8 +927,13 @@ open class SceneTree : MainLoop {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_reload_current_scene_166280745,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_reload_current_scene_166280745._native_ptr(),
+                    166280745)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -807,8 +947,13 @@ open class SceneTree : MainLoop {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_unload_current_scene_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_unload_current_scene_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -823,8 +968,13 @@ open class SceneTree : MainLoop {
                 .init(multiplayer_native), .init(root_path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_multiplayer_2385607013,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_multiplayer_2385607013._native_ptr(),
+                    2385607013)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -839,8 +989,13 @@ open class SceneTree : MainLoop {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_multiplayer_3453401404,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_multiplayer_3453401404._native_ptr(),
+                    3453401404)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -855,8 +1010,13 @@ open class SceneTree : MainLoop {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_multiplayer_poll_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_multiplayer_poll_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -872,8 +1032,13 @@ open class SceneTree : MainLoop {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_multiplayer_poll_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_multiplayer_poll_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

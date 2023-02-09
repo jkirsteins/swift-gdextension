@@ -25,127 +25,100 @@ open class ColorPicker : VBoxContainer {
 
     public override class var __godot_name: StringName { __godot_name_ColorPicker }
 
-    static var _method_set_pick_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pick_color_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_deferred_mode_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_deferred_mode_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_color_mode_1579114136: GDExtensionMethodBindPtr! = nil
-    static var _method_get_color_mode_392907674: GDExtensionMethodBindPtr! = nil
-    static var _method_set_edit_alpha_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_editing_alpha_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_can_add_swatches_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_are_swatches_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_presets_visible_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_are_presets_visible_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_modes_visible_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_are_modes_visible_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_sampler_visible_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_sampler_visible_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_sliders_visible_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_are_sliders_visible_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_hex_visible_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_hex_visible_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_add_preset_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_erase_preset_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_presets_1392750486: GDExtensionMethodBindPtr! = nil
-    static var _method_add_recent_preset_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_erase_recent_preset_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_recent_presets_1392750486: GDExtensionMethodBindPtr! = nil
-    static var _method_set_picker_shape_3981373861: GDExtensionMethodBindPtr! = nil
-    static var _method_get_picker_shape_1143229889: GDExtensionMethodBindPtr! = nil
+    static var _method_set_pick_color_2920490490: StringName! = nil
+    static var _method_get_pick_color_3444240500: StringName! = nil
+    static var _method_set_deferred_mode_2586408642: StringName! = nil
+    static var _method_is_deferred_mode_36873697: StringName! = nil
+    static var _method_set_color_mode_1579114136: StringName! = nil
+    static var _method_get_color_mode_392907674: StringName! = nil
+    static var _method_set_edit_alpha_2586408642: StringName! = nil
+    static var _method_is_editing_alpha_36873697: StringName! = nil
+    static var _method_set_can_add_swatches_2586408642: StringName! = nil
+    static var _method_are_swatches_enabled_36873697: StringName! = nil
+    static var _method_set_presets_visible_2586408642: StringName! = nil
+    static var _method_are_presets_visible_36873697: StringName! = nil
+    static var _method_set_modes_visible_2586408642: StringName! = nil
+    static var _method_are_modes_visible_36873697: StringName! = nil
+    static var _method_set_sampler_visible_2586408642: StringName! = nil
+    static var _method_is_sampler_visible_36873697: StringName! = nil
+    static var _method_set_sliders_visible_2586408642: StringName! = nil
+    static var _method_are_sliders_visible_36873697: StringName! = nil
+    static var _method_set_hex_visible_2586408642: StringName! = nil
+    static var _method_is_hex_visible_36873697: StringName! = nil
+    static var _method_add_preset_2920490490: StringName! = nil
+    static var _method_erase_preset_2920490490: StringName! = nil
+    static var _method_get_presets_1392750486: StringName! = nil
+    static var _method_add_recent_preset_2920490490: StringName! = nil
+    static var _method_erase_recent_preset_2920490490: StringName! = nil
+    static var _method_get_recent_presets_1392750486: StringName! = nil
+    static var _method_set_picker_shape_3981373861: StringName! = nil
+    static var _method_get_picker_shape_1143229889: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ColorPicker == nil)
         __godot_name_ColorPicker = StringName(from: "ColorPicker")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_pick_color_2920490490_name = StringName(from: "set_pick_color")
-        self._method_set_pick_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_set_pick_color_2920490490_name._native_ptr(), 2920490490)
-        assert(ColorPicker._method_set_pick_color_2920490490 != nil)
-        let _method_get_pick_color_3444240500_name = StringName(from: "get_pick_color")
-        self._method_get_pick_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_get_pick_color_3444240500_name._native_ptr(), 3444240500)
-        assert(ColorPicker._method_get_pick_color_3444240500 != nil)
-        let _method_set_deferred_mode_2586408642_name = StringName(from: "set_deferred_mode")
-        self._method_set_deferred_mode_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_set_deferred_mode_2586408642_name._native_ptr(), 2586408642)
-        assert(ColorPicker._method_set_deferred_mode_2586408642 != nil)
-        let _method_is_deferred_mode_36873697_name = StringName(from: "is_deferred_mode")
-        self._method_is_deferred_mode_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_is_deferred_mode_36873697_name._native_ptr(), 36873697)
-        assert(ColorPicker._method_is_deferred_mode_36873697 != nil)
-        let _method_set_color_mode_1579114136_name = StringName(from: "set_color_mode")
-        self._method_set_color_mode_1579114136 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_set_color_mode_1579114136_name._native_ptr(), 1579114136)
-        assert(ColorPicker._method_set_color_mode_1579114136 != nil)
-        let _method_get_color_mode_392907674_name = StringName(from: "get_color_mode")
-        self._method_get_color_mode_392907674 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_get_color_mode_392907674_name._native_ptr(), 392907674)
-        assert(ColorPicker._method_get_color_mode_392907674 != nil)
-        let _method_set_edit_alpha_2586408642_name = StringName(from: "set_edit_alpha")
-        self._method_set_edit_alpha_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_set_edit_alpha_2586408642_name._native_ptr(), 2586408642)
-        assert(ColorPicker._method_set_edit_alpha_2586408642 != nil)
-        let _method_is_editing_alpha_36873697_name = StringName(from: "is_editing_alpha")
-        self._method_is_editing_alpha_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_is_editing_alpha_36873697_name._native_ptr(), 36873697)
-        assert(ColorPicker._method_is_editing_alpha_36873697 != nil)
-        let _method_set_can_add_swatches_2586408642_name = StringName(from: "set_can_add_swatches")
-        self._method_set_can_add_swatches_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_set_can_add_swatches_2586408642_name._native_ptr(), 2586408642)
-        assert(ColorPicker._method_set_can_add_swatches_2586408642 != nil)
-        let _method_are_swatches_enabled_36873697_name = StringName(from: "are_swatches_enabled")
-        self._method_are_swatches_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_are_swatches_enabled_36873697_name._native_ptr(), 36873697)
-        assert(ColorPicker._method_are_swatches_enabled_36873697 != nil)
-        let _method_set_presets_visible_2586408642_name = StringName(from: "set_presets_visible")
-        self._method_set_presets_visible_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_set_presets_visible_2586408642_name._native_ptr(), 2586408642)
-        assert(ColorPicker._method_set_presets_visible_2586408642 != nil)
-        let _method_are_presets_visible_36873697_name = StringName(from: "are_presets_visible")
-        self._method_are_presets_visible_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_are_presets_visible_36873697_name._native_ptr(), 36873697)
-        assert(ColorPicker._method_are_presets_visible_36873697 != nil)
-        let _method_set_modes_visible_2586408642_name = StringName(from: "set_modes_visible")
-        self._method_set_modes_visible_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_set_modes_visible_2586408642_name._native_ptr(), 2586408642)
-        assert(ColorPicker._method_set_modes_visible_2586408642 != nil)
-        let _method_are_modes_visible_36873697_name = StringName(from: "are_modes_visible")
-        self._method_are_modes_visible_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_are_modes_visible_36873697_name._native_ptr(), 36873697)
-        assert(ColorPicker._method_are_modes_visible_36873697 != nil)
-        let _method_set_sampler_visible_2586408642_name = StringName(from: "set_sampler_visible")
-        self._method_set_sampler_visible_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_set_sampler_visible_2586408642_name._native_ptr(), 2586408642)
-        assert(ColorPicker._method_set_sampler_visible_2586408642 != nil)
-        let _method_is_sampler_visible_36873697_name = StringName(from: "is_sampler_visible")
-        self._method_is_sampler_visible_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_is_sampler_visible_36873697_name._native_ptr(), 36873697)
-        assert(ColorPicker._method_is_sampler_visible_36873697 != nil)
-        let _method_set_sliders_visible_2586408642_name = StringName(from: "set_sliders_visible")
-        self._method_set_sliders_visible_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_set_sliders_visible_2586408642_name._native_ptr(), 2586408642)
-        assert(ColorPicker._method_set_sliders_visible_2586408642 != nil)
-        let _method_are_sliders_visible_36873697_name = StringName(from: "are_sliders_visible")
-        self._method_are_sliders_visible_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_are_sliders_visible_36873697_name._native_ptr(), 36873697)
-        assert(ColorPicker._method_are_sliders_visible_36873697 != nil)
-        let _method_set_hex_visible_2586408642_name = StringName(from: "set_hex_visible")
-        self._method_set_hex_visible_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_set_hex_visible_2586408642_name._native_ptr(), 2586408642)
-        assert(ColorPicker._method_set_hex_visible_2586408642 != nil)
-        let _method_is_hex_visible_36873697_name = StringName(from: "is_hex_visible")
-        self._method_is_hex_visible_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_is_hex_visible_36873697_name._native_ptr(), 36873697)
-        assert(ColorPicker._method_is_hex_visible_36873697 != nil)
-        let _method_add_preset_2920490490_name = StringName(from: "add_preset")
-        self._method_add_preset_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_add_preset_2920490490_name._native_ptr(), 2920490490)
-        assert(ColorPicker._method_add_preset_2920490490 != nil)
-        let _method_erase_preset_2920490490_name = StringName(from: "erase_preset")
-        self._method_erase_preset_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_erase_preset_2920490490_name._native_ptr(), 2920490490)
-        assert(ColorPicker._method_erase_preset_2920490490 != nil)
-        let _method_get_presets_1392750486_name = StringName(from: "get_presets")
-        self._method_get_presets_1392750486 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_get_presets_1392750486_name._native_ptr(), 1392750486)
-        assert(ColorPicker._method_get_presets_1392750486 != nil)
-        let _method_add_recent_preset_2920490490_name = StringName(from: "add_recent_preset")
-        self._method_add_recent_preset_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_add_recent_preset_2920490490_name._native_ptr(), 2920490490)
-        assert(ColorPicker._method_add_recent_preset_2920490490 != nil)
-        let _method_erase_recent_preset_2920490490_name = StringName(from: "erase_recent_preset")
-        self._method_erase_recent_preset_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_erase_recent_preset_2920490490_name._native_ptr(), 2920490490)
-        assert(ColorPicker._method_erase_recent_preset_2920490490 != nil)
-        let _method_get_recent_presets_1392750486_name = StringName(from: "get_recent_presets")
-        self._method_get_recent_presets_1392750486 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_get_recent_presets_1392750486_name._native_ptr(), 1392750486)
-        assert(ColorPicker._method_get_recent_presets_1392750486 != nil)
-        let _method_set_picker_shape_3981373861_name = StringName(from: "set_picker_shape")
-        self._method_set_picker_shape_3981373861 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_set_picker_shape_3981373861_name._native_ptr(), 3981373861)
-        assert(ColorPicker._method_set_picker_shape_3981373861 != nil)
-        let _method_get_picker_shape_1143229889_name = StringName(from: "get_picker_shape")
-        self._method_get_picker_shape_1143229889 = self.interface.pointee.classdb_get_method_bind(__godot_name_ColorPicker._native_ptr(), _method_get_picker_shape_1143229889_name._native_ptr(), 1143229889)
-        assert(ColorPicker._method_get_picker_shape_1143229889 != nil)
+        self._method_set_pick_color_2920490490 = StringName(from: "set_pick_color")
+        assert(self._method_set_pick_color_2920490490 != nil)
+        self._method_get_pick_color_3444240500 = StringName(from: "get_pick_color")
+        assert(self._method_get_pick_color_3444240500 != nil)
+        self._method_set_deferred_mode_2586408642 = StringName(from: "set_deferred_mode")
+        assert(self._method_set_deferred_mode_2586408642 != nil)
+        self._method_is_deferred_mode_36873697 = StringName(from: "is_deferred_mode")
+        assert(self._method_is_deferred_mode_36873697 != nil)
+        self._method_set_color_mode_1579114136 = StringName(from: "set_color_mode")
+        assert(self._method_set_color_mode_1579114136 != nil)
+        self._method_get_color_mode_392907674 = StringName(from: "get_color_mode")
+        assert(self._method_get_color_mode_392907674 != nil)
+        self._method_set_edit_alpha_2586408642 = StringName(from: "set_edit_alpha")
+        assert(self._method_set_edit_alpha_2586408642 != nil)
+        self._method_is_editing_alpha_36873697 = StringName(from: "is_editing_alpha")
+        assert(self._method_is_editing_alpha_36873697 != nil)
+        self._method_set_can_add_swatches_2586408642 = StringName(from: "set_can_add_swatches")
+        assert(self._method_set_can_add_swatches_2586408642 != nil)
+        self._method_are_swatches_enabled_36873697 = StringName(from: "are_swatches_enabled")
+        assert(self._method_are_swatches_enabled_36873697 != nil)
+        self._method_set_presets_visible_2586408642 = StringName(from: "set_presets_visible")
+        assert(self._method_set_presets_visible_2586408642 != nil)
+        self._method_are_presets_visible_36873697 = StringName(from: "are_presets_visible")
+        assert(self._method_are_presets_visible_36873697 != nil)
+        self._method_set_modes_visible_2586408642 = StringName(from: "set_modes_visible")
+        assert(self._method_set_modes_visible_2586408642 != nil)
+        self._method_are_modes_visible_36873697 = StringName(from: "are_modes_visible")
+        assert(self._method_are_modes_visible_36873697 != nil)
+        self._method_set_sampler_visible_2586408642 = StringName(from: "set_sampler_visible")
+        assert(self._method_set_sampler_visible_2586408642 != nil)
+        self._method_is_sampler_visible_36873697 = StringName(from: "is_sampler_visible")
+        assert(self._method_is_sampler_visible_36873697 != nil)
+        self._method_set_sliders_visible_2586408642 = StringName(from: "set_sliders_visible")
+        assert(self._method_set_sliders_visible_2586408642 != nil)
+        self._method_are_sliders_visible_36873697 = StringName(from: "are_sliders_visible")
+        assert(self._method_are_sliders_visible_36873697 != nil)
+        self._method_set_hex_visible_2586408642 = StringName(from: "set_hex_visible")
+        assert(self._method_set_hex_visible_2586408642 != nil)
+        self._method_is_hex_visible_36873697 = StringName(from: "is_hex_visible")
+        assert(self._method_is_hex_visible_36873697 != nil)
+        self._method_add_preset_2920490490 = StringName(from: "add_preset")
+        assert(self._method_add_preset_2920490490 != nil)
+        self._method_erase_preset_2920490490 = StringName(from: "erase_preset")
+        assert(self._method_erase_preset_2920490490 != nil)
+        self._method_get_presets_1392750486 = StringName(from: "get_presets")
+        assert(self._method_get_presets_1392750486 != nil)
+        self._method_add_recent_preset_2920490490 = StringName(from: "add_recent_preset")
+        assert(self._method_add_recent_preset_2920490490 != nil)
+        self._method_erase_recent_preset_2920490490 = StringName(from: "erase_recent_preset")
+        assert(self._method_erase_recent_preset_2920490490 != nil)
+        self._method_get_recent_presets_1392750486 = StringName(from: "get_recent_presets")
+        assert(self._method_get_recent_presets_1392750486 != nil)
+        self._method_set_picker_shape_3981373861 = StringName(from: "set_picker_shape")
+        assert(self._method_set_picker_shape_3981373861 != nil)
+        self._method_get_picker_shape_1143229889 = StringName(from: "get_picker_shape")
+        assert(self._method_get_picker_shape_1143229889 != nil)
     }
 
     public func set_pick_color(color: Color)  {
@@ -156,8 +129,13 @@ open class ColorPicker : VBoxContainer {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pick_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pick_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -171,8 +149,13 @@ open class ColorPicker : VBoxContainer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pick_color_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pick_color_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -187,8 +170,13 @@ open class ColorPicker : VBoxContainer {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_deferred_mode_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_deferred_mode_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -204,8 +192,13 @@ open class ColorPicker : VBoxContainer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_deferred_mode_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_deferred_mode_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -220,8 +213,13 @@ open class ColorPicker : VBoxContainer {
                 .init(color_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_color_mode_1579114136,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_color_mode_1579114136._native_ptr(),
+                    1579114136)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -236,8 +234,13 @@ open class ColorPicker : VBoxContainer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_color_mode_392907674,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_color_mode_392907674._native_ptr(),
+                    392907674)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -252,8 +255,13 @@ open class ColorPicker : VBoxContainer {
                 .init(show_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_edit_alpha_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_edit_alpha_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -269,8 +277,13 @@ open class ColorPicker : VBoxContainer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_editing_alpha_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_editing_alpha_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -285,8 +298,13 @@ open class ColorPicker : VBoxContainer {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_can_add_swatches_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_can_add_swatches_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -302,8 +320,13 @@ open class ColorPicker : VBoxContainer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_are_swatches_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_are_swatches_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -318,8 +341,13 @@ open class ColorPicker : VBoxContainer {
                 .init(visible_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_presets_visible_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_presets_visible_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -335,8 +363,13 @@ open class ColorPicker : VBoxContainer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_are_presets_visible_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_are_presets_visible_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -351,8 +384,13 @@ open class ColorPicker : VBoxContainer {
                 .init(visible_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_modes_visible_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_modes_visible_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -368,8 +406,13 @@ open class ColorPicker : VBoxContainer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_are_modes_visible_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_are_modes_visible_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -384,8 +427,13 @@ open class ColorPicker : VBoxContainer {
                 .init(visible_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_sampler_visible_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_sampler_visible_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -401,8 +449,13 @@ open class ColorPicker : VBoxContainer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_sampler_visible_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_sampler_visible_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -417,8 +470,13 @@ open class ColorPicker : VBoxContainer {
                 .init(visible_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_sliders_visible_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_sliders_visible_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -434,8 +492,13 @@ open class ColorPicker : VBoxContainer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_are_sliders_visible_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_are_sliders_visible_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -450,8 +513,13 @@ open class ColorPicker : VBoxContainer {
                 .init(visible_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_hex_visible_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_hex_visible_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -467,8 +535,13 @@ open class ColorPicker : VBoxContainer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_hex_visible_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_hex_visible_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -483,8 +556,13 @@ open class ColorPicker : VBoxContainer {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_preset_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_preset_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -498,8 +576,13 @@ open class ColorPicker : VBoxContainer {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_erase_preset_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_erase_preset_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -513,8 +596,13 @@ open class ColorPicker : VBoxContainer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_presets_1392750486,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_presets_1392750486._native_ptr(),
+                    1392750486)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -529,8 +617,13 @@ open class ColorPicker : VBoxContainer {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_recent_preset_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_recent_preset_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -544,8 +637,13 @@ open class ColorPicker : VBoxContainer {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_erase_recent_preset_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_erase_recent_preset_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -559,8 +657,13 @@ open class ColorPicker : VBoxContainer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_recent_presets_1392750486,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_recent_presets_1392750486._native_ptr(),
+                    1392750486)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -575,8 +678,13 @@ open class ColorPicker : VBoxContainer {
                 .init(shape_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_picker_shape_3981373861,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_picker_shape_3981373861._native_ptr(),
+                    3981373861)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -591,8 +699,13 @@ open class ColorPicker : VBoxContainer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_picker_shape_1143229889,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_picker_shape_1143229889._native_ptr(),
+                    1143229889)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

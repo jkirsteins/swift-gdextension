@@ -17,55 +17,46 @@ open class PlaneMesh : PrimitiveMesh {
 
     public override class var __godot_name: StringName { __godot_name_PlaneMesh }
 
-    static var _method_set_size_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_subdivide_width_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_subdivide_width_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_subdivide_depth_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_subdivide_depth_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_center_offset_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_center_offset_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_orientation_2751399687: GDExtensionMethodBindPtr! = nil
-    static var _method_get_orientation_3227599250: GDExtensionMethodBindPtr! = nil
+    static var _method_set_size_743155724: StringName! = nil
+    static var _method_get_size_3341600327: StringName! = nil
+    static var _method_set_subdivide_width_1286410249: StringName! = nil
+    static var _method_get_subdivide_width_3905245786: StringName! = nil
+    static var _method_set_subdivide_depth_1286410249: StringName! = nil
+    static var _method_get_subdivide_depth_3905245786: StringName! = nil
+    static var _method_set_center_offset_3460891852: StringName! = nil
+    static var _method_get_center_offset_3360562783: StringName! = nil
+    static var _method_set_orientation_2751399687: StringName! = nil
+    static var _method_get_orientation_3227599250: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PlaneMesh == nil)
         __godot_name_PlaneMesh = StringName(from: "PlaneMesh")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_size_743155724_name = StringName(from: "set_size")
-        self._method_set_size_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_PlaneMesh._native_ptr(), _method_set_size_743155724_name._native_ptr(), 743155724)
-        assert(PlaneMesh._method_set_size_743155724 != nil)
-        let _method_get_size_3341600327_name = StringName(from: "get_size")
-        self._method_get_size_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_PlaneMesh._native_ptr(), _method_get_size_3341600327_name._native_ptr(), 3341600327)
-        assert(PlaneMesh._method_get_size_3341600327 != nil)
-        let _method_set_subdivide_width_1286410249_name = StringName(from: "set_subdivide_width")
-        self._method_set_subdivide_width_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_PlaneMesh._native_ptr(), _method_set_subdivide_width_1286410249_name._native_ptr(), 1286410249)
-        assert(PlaneMesh._method_set_subdivide_width_1286410249 != nil)
-        let _method_get_subdivide_width_3905245786_name = StringName(from: "get_subdivide_width")
-        self._method_get_subdivide_width_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_PlaneMesh._native_ptr(), _method_get_subdivide_width_3905245786_name._native_ptr(), 3905245786)
-        assert(PlaneMesh._method_get_subdivide_width_3905245786 != nil)
-        let _method_set_subdivide_depth_1286410249_name = StringName(from: "set_subdivide_depth")
-        self._method_set_subdivide_depth_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_PlaneMesh._native_ptr(), _method_set_subdivide_depth_1286410249_name._native_ptr(), 1286410249)
-        assert(PlaneMesh._method_set_subdivide_depth_1286410249 != nil)
-        let _method_get_subdivide_depth_3905245786_name = StringName(from: "get_subdivide_depth")
-        self._method_get_subdivide_depth_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_PlaneMesh._native_ptr(), _method_get_subdivide_depth_3905245786_name._native_ptr(), 3905245786)
-        assert(PlaneMesh._method_get_subdivide_depth_3905245786 != nil)
-        let _method_set_center_offset_3460891852_name = StringName(from: "set_center_offset")
-        self._method_set_center_offset_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_PlaneMesh._native_ptr(), _method_set_center_offset_3460891852_name._native_ptr(), 3460891852)
-        assert(PlaneMesh._method_set_center_offset_3460891852 != nil)
-        let _method_get_center_offset_3360562783_name = StringName(from: "get_center_offset")
-        self._method_get_center_offset_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_PlaneMesh._native_ptr(), _method_get_center_offset_3360562783_name._native_ptr(), 3360562783)
-        assert(PlaneMesh._method_get_center_offset_3360562783 != nil)
-        let _method_set_orientation_2751399687_name = StringName(from: "set_orientation")
-        self._method_set_orientation_2751399687 = self.interface.pointee.classdb_get_method_bind(__godot_name_PlaneMesh._native_ptr(), _method_set_orientation_2751399687_name._native_ptr(), 2751399687)
-        assert(PlaneMesh._method_set_orientation_2751399687 != nil)
-        let _method_get_orientation_3227599250_name = StringName(from: "get_orientation")
-        self._method_get_orientation_3227599250 = self.interface.pointee.classdb_get_method_bind(__godot_name_PlaneMesh._native_ptr(), _method_get_orientation_3227599250_name._native_ptr(), 3227599250)
-        assert(PlaneMesh._method_get_orientation_3227599250 != nil)
+        self._method_set_size_743155724 = StringName(from: "set_size")
+        assert(self._method_set_size_743155724 != nil)
+        self._method_get_size_3341600327 = StringName(from: "get_size")
+        assert(self._method_get_size_3341600327 != nil)
+        self._method_set_subdivide_width_1286410249 = StringName(from: "set_subdivide_width")
+        assert(self._method_set_subdivide_width_1286410249 != nil)
+        self._method_get_subdivide_width_3905245786 = StringName(from: "get_subdivide_width")
+        assert(self._method_get_subdivide_width_3905245786 != nil)
+        self._method_set_subdivide_depth_1286410249 = StringName(from: "set_subdivide_depth")
+        assert(self._method_set_subdivide_depth_1286410249 != nil)
+        self._method_get_subdivide_depth_3905245786 = StringName(from: "get_subdivide_depth")
+        assert(self._method_get_subdivide_depth_3905245786 != nil)
+        self._method_set_center_offset_3460891852 = StringName(from: "set_center_offset")
+        assert(self._method_set_center_offset_3460891852 != nil)
+        self._method_get_center_offset_3360562783 = StringName(from: "get_center_offset")
+        assert(self._method_get_center_offset_3360562783 != nil)
+        self._method_set_orientation_2751399687 = StringName(from: "set_orientation")
+        assert(self._method_set_orientation_2751399687 != nil)
+        self._method_get_orientation_3227599250 = StringName(from: "get_orientation")
+        assert(self._method_get_orientation_3227599250 != nil)
     }
 
     public func set_size(size: Vector2)  {
@@ -76,8 +67,13 @@ open class PlaneMesh : PrimitiveMesh {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_size_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_size_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -91,8 +87,13 @@ open class PlaneMesh : PrimitiveMesh {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -107,8 +108,13 @@ open class PlaneMesh : PrimitiveMesh {
                 .init(subdivide_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_subdivide_width_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_subdivide_width_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -124,8 +130,13 @@ open class PlaneMesh : PrimitiveMesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_subdivide_width_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_subdivide_width_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -140,8 +151,13 @@ open class PlaneMesh : PrimitiveMesh {
                 .init(subdivide_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_subdivide_depth_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_subdivide_depth_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -157,8 +173,13 @@ open class PlaneMesh : PrimitiveMesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_subdivide_depth_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_subdivide_depth_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -173,8 +194,13 @@ open class PlaneMesh : PrimitiveMesh {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_center_offset_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_center_offset_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -188,8 +214,13 @@ open class PlaneMesh : PrimitiveMesh {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_center_offset_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_center_offset_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -204,8 +235,13 @@ open class PlaneMesh : PrimitiveMesh {
                 .init(orientation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_orientation_2751399687,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_orientation_2751399687._native_ptr(),
+                    2751399687)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -220,8 +256,13 @@ open class PlaneMesh : PrimitiveMesh {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_orientation_3227599250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_orientation_3227599250._native_ptr(),
+                    3227599250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

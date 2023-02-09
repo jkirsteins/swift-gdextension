@@ -27,55 +27,46 @@ open class TextureRect : Control {
 
     public override class var __godot_name: StringName { __godot_name_TextureRect }
 
-    static var _method_set_texture_4051416890: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_3635182373: GDExtensionMethodBindPtr! = nil
-    static var _method_set_expand_mode_1870766882: GDExtensionMethodBindPtr! = nil
-    static var _method_get_expand_mode_3863824733: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flip_h_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_flipped_h_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flip_v_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_flipped_v_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_stretch_mode_58788729: GDExtensionMethodBindPtr! = nil
-    static var _method_get_stretch_mode_346396079: GDExtensionMethodBindPtr! = nil
+    static var _method_set_texture_4051416890: StringName! = nil
+    static var _method_get_texture_3635182373: StringName! = nil
+    static var _method_set_expand_mode_1870766882: StringName! = nil
+    static var _method_get_expand_mode_3863824733: StringName! = nil
+    static var _method_set_flip_h_2586408642: StringName! = nil
+    static var _method_is_flipped_h_36873697: StringName! = nil
+    static var _method_set_flip_v_2586408642: StringName! = nil
+    static var _method_is_flipped_v_36873697: StringName! = nil
+    static var _method_set_stretch_mode_58788729: StringName! = nil
+    static var _method_get_stretch_mode_346396079: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_TextureRect == nil)
         __godot_name_TextureRect = StringName(from: "TextureRect")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_texture_4051416890_name = StringName(from: "set_texture")
-        self._method_set_texture_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureRect._native_ptr(), _method_set_texture_4051416890_name._native_ptr(), 4051416890)
-        assert(TextureRect._method_set_texture_4051416890 != nil)
-        let _method_get_texture_3635182373_name = StringName(from: "get_texture")
-        self._method_get_texture_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureRect._native_ptr(), _method_get_texture_3635182373_name._native_ptr(), 3635182373)
-        assert(TextureRect._method_get_texture_3635182373 != nil)
-        let _method_set_expand_mode_1870766882_name = StringName(from: "set_expand_mode")
-        self._method_set_expand_mode_1870766882 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureRect._native_ptr(), _method_set_expand_mode_1870766882_name._native_ptr(), 1870766882)
-        assert(TextureRect._method_set_expand_mode_1870766882 != nil)
-        let _method_get_expand_mode_3863824733_name = StringName(from: "get_expand_mode")
-        self._method_get_expand_mode_3863824733 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureRect._native_ptr(), _method_get_expand_mode_3863824733_name._native_ptr(), 3863824733)
-        assert(TextureRect._method_get_expand_mode_3863824733 != nil)
-        let _method_set_flip_h_2586408642_name = StringName(from: "set_flip_h")
-        self._method_set_flip_h_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureRect._native_ptr(), _method_set_flip_h_2586408642_name._native_ptr(), 2586408642)
-        assert(TextureRect._method_set_flip_h_2586408642 != nil)
-        let _method_is_flipped_h_36873697_name = StringName(from: "is_flipped_h")
-        self._method_is_flipped_h_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureRect._native_ptr(), _method_is_flipped_h_36873697_name._native_ptr(), 36873697)
-        assert(TextureRect._method_is_flipped_h_36873697 != nil)
-        let _method_set_flip_v_2586408642_name = StringName(from: "set_flip_v")
-        self._method_set_flip_v_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureRect._native_ptr(), _method_set_flip_v_2586408642_name._native_ptr(), 2586408642)
-        assert(TextureRect._method_set_flip_v_2586408642 != nil)
-        let _method_is_flipped_v_36873697_name = StringName(from: "is_flipped_v")
-        self._method_is_flipped_v_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureRect._native_ptr(), _method_is_flipped_v_36873697_name._native_ptr(), 36873697)
-        assert(TextureRect._method_is_flipped_v_36873697 != nil)
-        let _method_set_stretch_mode_58788729_name = StringName(from: "set_stretch_mode")
-        self._method_set_stretch_mode_58788729 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureRect._native_ptr(), _method_set_stretch_mode_58788729_name._native_ptr(), 58788729)
-        assert(TextureRect._method_set_stretch_mode_58788729 != nil)
-        let _method_get_stretch_mode_346396079_name = StringName(from: "get_stretch_mode")
-        self._method_get_stretch_mode_346396079 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextureRect._native_ptr(), _method_get_stretch_mode_346396079_name._native_ptr(), 346396079)
-        assert(TextureRect._method_get_stretch_mode_346396079 != nil)
+        self._method_set_texture_4051416890 = StringName(from: "set_texture")
+        assert(self._method_set_texture_4051416890 != nil)
+        self._method_get_texture_3635182373 = StringName(from: "get_texture")
+        assert(self._method_get_texture_3635182373 != nil)
+        self._method_set_expand_mode_1870766882 = StringName(from: "set_expand_mode")
+        assert(self._method_set_expand_mode_1870766882 != nil)
+        self._method_get_expand_mode_3863824733 = StringName(from: "get_expand_mode")
+        assert(self._method_get_expand_mode_3863824733 != nil)
+        self._method_set_flip_h_2586408642 = StringName(from: "set_flip_h")
+        assert(self._method_set_flip_h_2586408642 != nil)
+        self._method_is_flipped_h_36873697 = StringName(from: "is_flipped_h")
+        assert(self._method_is_flipped_h_36873697 != nil)
+        self._method_set_flip_v_2586408642 = StringName(from: "set_flip_v")
+        assert(self._method_set_flip_v_2586408642 != nil)
+        self._method_is_flipped_v_36873697 = StringName(from: "is_flipped_v")
+        assert(self._method_is_flipped_v_36873697 != nil)
+        self._method_set_stretch_mode_58788729 = StringName(from: "set_stretch_mode")
+        assert(self._method_set_stretch_mode_58788729 != nil)
+        self._method_get_stretch_mode_346396079 = StringName(from: "get_stretch_mode")
+        assert(self._method_get_stretch_mode_346396079 != nil)
     }
 
     public func set_texture(texture: Texture2D)  {
@@ -86,8 +77,13 @@ open class TextureRect : Control {
                 .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_4051416890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_4051416890._native_ptr(),
+                    4051416890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -101,8 +97,13 @@ open class TextureRect : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_3635182373,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_3635182373._native_ptr(),
+                    3635182373)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -117,8 +118,13 @@ open class TextureRect : Control {
                 .init(expand_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_expand_mode_1870766882,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_expand_mode_1870766882._native_ptr(),
+                    1870766882)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -133,8 +139,13 @@ open class TextureRect : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_expand_mode_3863824733,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_expand_mode_3863824733._native_ptr(),
+                    3863824733)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -149,8 +160,13 @@ open class TextureRect : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flip_h_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flip_h_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -166,8 +182,13 @@ open class TextureRect : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_flipped_h_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_flipped_h_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -182,8 +203,13 @@ open class TextureRect : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flip_v_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flip_v_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -199,8 +225,13 @@ open class TextureRect : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_flipped_v_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_flipped_v_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -215,8 +246,13 @@ open class TextureRect : Control {
                 .init(stretch_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_stretch_mode_58788729,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_stretch_mode_58788729._native_ptr(),
+                    58788729)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -231,8 +267,13 @@ open class TextureRect : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_stretch_mode_346396079,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_stretch_mode_346396079._native_ptr(),
+                    346396079)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

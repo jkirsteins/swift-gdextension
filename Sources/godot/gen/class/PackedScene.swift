@@ -142,31 +142,28 @@ open class PackedScene : Resource {
 
     public override class var __godot_name: StringName { __godot_name_PackedScene }
 
-    static var _method_pack_2584678054: GDExtensionMethodBindPtr! = nil
-    static var _method_instantiate_2628778455: GDExtensionMethodBindPtr! = nil
-    static var _method_can_instantiate_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_state_3479783971: GDExtensionMethodBindPtr! = nil
+    static var _method_pack_2584678054: StringName! = nil
+    static var _method_instantiate_2628778455: StringName! = nil
+    static var _method_can_instantiate_36873697: StringName! = nil
+    static var _method_get_state_3479783971: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PackedScene == nil)
         __godot_name_PackedScene = StringName(from: "PackedScene")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_pack_2584678054_name = StringName(from: "pack")
-        self._method_pack_2584678054 = self.interface.pointee.classdb_get_method_bind(__godot_name_PackedScene._native_ptr(), _method_pack_2584678054_name._native_ptr(), 2584678054)
-        assert(PackedScene._method_pack_2584678054 != nil)
-        let _method_instantiate_2628778455_name = StringName(from: "instantiate")
-        self._method_instantiate_2628778455 = self.interface.pointee.classdb_get_method_bind(__godot_name_PackedScene._native_ptr(), _method_instantiate_2628778455_name._native_ptr(), 2628778455)
-        assert(PackedScene._method_instantiate_2628778455 != nil)
-        let _method_can_instantiate_36873697_name = StringName(from: "can_instantiate")
-        self._method_can_instantiate_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PackedScene._native_ptr(), _method_can_instantiate_36873697_name._native_ptr(), 36873697)
-        assert(PackedScene._method_can_instantiate_36873697 != nil)
-        let _method_get_state_3479783971_name = StringName(from: "get_state")
-        self._method_get_state_3479783971 = self.interface.pointee.classdb_get_method_bind(__godot_name_PackedScene._native_ptr(), _method_get_state_3479783971_name._native_ptr(), 3479783971)
-        assert(PackedScene._method_get_state_3479783971 != nil)
+        self._method_pack_2584678054 = StringName(from: "pack")
+        assert(self._method_pack_2584678054 != nil)
+        self._method_instantiate_2628778455 = StringName(from: "instantiate")
+        assert(self._method_instantiate_2628778455 != nil)
+        self._method_can_instantiate_36873697 = StringName(from: "can_instantiate")
+        assert(self._method_can_instantiate_36873697 != nil)
+        self._method_get_state_3479783971 = StringName(from: "get_state")
+        assert(self._method_get_state_3479783971 != nil)
     }
 
     public func pack(path: Node) -> Error {
@@ -178,8 +175,13 @@ open class PackedScene : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_pack_2584678054,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_pack_2584678054._native_ptr(),
+                    2584678054)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -195,8 +197,13 @@ open class PackedScene : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_instantiate_2628778455,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_instantiate_2628778455._native_ptr(),
+                    2628778455)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -213,8 +220,13 @@ open class PackedScene : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_can_instantiate_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_can_instantiate_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -229,8 +241,13 @@ open class PackedScene : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_state_3479783971,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_state_3479783971._native_ptr(),
+                    3479783971)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

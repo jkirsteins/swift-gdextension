@@ -21,31 +21,28 @@ open class PacketPeerDTLS : PacketPeer {
 
     public override class var __godot_name: StringName { __godot_name_PacketPeerDTLS }
 
-    static var _method_poll_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_connect_to_peer_1801538152: GDExtensionMethodBindPtr! = nil
-    static var _method_get_status_3248654679: GDExtensionMethodBindPtr! = nil
-    static var _method_disconnect_from_peer_3218959716: GDExtensionMethodBindPtr! = nil
+    static var _method_poll_3218959716: StringName! = nil
+    static var _method_connect_to_peer_1801538152: StringName! = nil
+    static var _method_get_status_3248654679: StringName! = nil
+    static var _method_disconnect_from_peer_3218959716: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PacketPeerDTLS == nil)
         __godot_name_PacketPeerDTLS = StringName(from: "PacketPeerDTLS")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_poll_3218959716_name = StringName(from: "poll")
-        self._method_poll_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_PacketPeerDTLS._native_ptr(), _method_poll_3218959716_name._native_ptr(), 3218959716)
-        assert(PacketPeerDTLS._method_poll_3218959716 != nil)
-        let _method_connect_to_peer_1801538152_name = StringName(from: "connect_to_peer")
-        self._method_connect_to_peer_1801538152 = self.interface.pointee.classdb_get_method_bind(__godot_name_PacketPeerDTLS._native_ptr(), _method_connect_to_peer_1801538152_name._native_ptr(), 1801538152)
-        assert(PacketPeerDTLS._method_connect_to_peer_1801538152 != nil)
-        let _method_get_status_3248654679_name = StringName(from: "get_status")
-        self._method_get_status_3248654679 = self.interface.pointee.classdb_get_method_bind(__godot_name_PacketPeerDTLS._native_ptr(), _method_get_status_3248654679_name._native_ptr(), 3248654679)
-        assert(PacketPeerDTLS._method_get_status_3248654679 != nil)
-        let _method_disconnect_from_peer_3218959716_name = StringName(from: "disconnect_from_peer")
-        self._method_disconnect_from_peer_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_PacketPeerDTLS._native_ptr(), _method_disconnect_from_peer_3218959716_name._native_ptr(), 3218959716)
-        assert(PacketPeerDTLS._method_disconnect_from_peer_3218959716 != nil)
+        self._method_poll_3218959716 = StringName(from: "poll")
+        assert(self._method_poll_3218959716 != nil)
+        self._method_connect_to_peer_1801538152 = StringName(from: "connect_to_peer")
+        assert(self._method_connect_to_peer_1801538152 != nil)
+        self._method_get_status_3248654679 = StringName(from: "get_status")
+        assert(self._method_get_status_3248654679 != nil)
+        self._method_disconnect_from_peer_3218959716 = StringName(from: "disconnect_from_peer")
+        assert(self._method_disconnect_from_peer_3218959716 != nil)
     }
 
     public func poll()  {
@@ -55,8 +52,13 @@ open class PacketPeerDTLS : PacketPeer {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_poll_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_poll_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -73,8 +75,13 @@ open class PacketPeerDTLS : PacketPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_connect_to_peer_1801538152,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_connect_to_peer_1801538152._native_ptr(),
+                    1801538152)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -89,8 +96,13 @@ open class PacketPeerDTLS : PacketPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_status_3248654679,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_status_3248654679._native_ptr(),
+                    3248654679)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -104,8 +116,13 @@ open class PacketPeerDTLS : PacketPeer {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_disconnect_from_peer_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_disconnect_from_peer_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

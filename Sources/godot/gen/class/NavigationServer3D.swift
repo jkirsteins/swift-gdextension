@@ -35,311 +35,238 @@ open class NavigationServer3D : Object {
 
     public override class var __godot_name: StringName { __godot_name_NavigationServer3D }
 
-    static var _method_get_maps_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_map_create_529393457: GDExtensionMethodBindPtr! = nil
-    static var _method_map_set_active_1265174801: GDExtensionMethodBindPtr! = nil
-    static var _method_map_is_active_4155700596: GDExtensionMethodBindPtr! = nil
-    static var _method_map_set_up_3227306858: GDExtensionMethodBindPtr! = nil
-    static var _method_map_get_up_531438156: GDExtensionMethodBindPtr! = nil
-    static var _method_map_set_cell_size_1794382983: GDExtensionMethodBindPtr! = nil
-    static var _method_map_get_cell_size_866169185: GDExtensionMethodBindPtr! = nil
-    static var _method_map_set_edge_connection_margin_1794382983: GDExtensionMethodBindPtr! = nil
-    static var _method_map_get_edge_connection_margin_866169185: GDExtensionMethodBindPtr! = nil
-    static var _method_map_set_link_connection_radius_1794382983: GDExtensionMethodBindPtr! = nil
-    static var _method_map_get_link_connection_radius_866169185: GDExtensionMethodBindPtr! = nil
-    static var _method_map_get_path_2121045993: GDExtensionMethodBindPtr! = nil
-    static var _method_map_get_closest_point_to_segment_3830095642: GDExtensionMethodBindPtr! = nil
-    static var _method_map_get_closest_point_2056183332: GDExtensionMethodBindPtr! = nil
-    static var _method_map_get_closest_point_normal_2056183332: GDExtensionMethodBindPtr! = nil
-    static var _method_map_get_closest_point_owner_553364610: GDExtensionMethodBindPtr! = nil
-    static var _method_map_get_links_2684255073: GDExtensionMethodBindPtr! = nil
-    static var _method_map_get_regions_2684255073: GDExtensionMethodBindPtr! = nil
-    static var _method_map_get_agents_2684255073: GDExtensionMethodBindPtr! = nil
-    static var _method_map_force_update_2722037293: GDExtensionMethodBindPtr! = nil
-    static var _method_query_path_3415008901: GDExtensionMethodBindPtr! = nil
-    static var _method_region_create_529393457: GDExtensionMethodBindPtr! = nil
-    static var _method_region_set_enter_cost_1794382983: GDExtensionMethodBindPtr! = nil
-    static var _method_region_get_enter_cost_866169185: GDExtensionMethodBindPtr! = nil
-    static var _method_region_set_travel_cost_1794382983: GDExtensionMethodBindPtr! = nil
-    static var _method_region_get_travel_cost_866169185: GDExtensionMethodBindPtr! = nil
-    static var _method_region_set_owner_id_3411492887: GDExtensionMethodBindPtr! = nil
-    static var _method_region_get_owner_id_2198884583: GDExtensionMethodBindPtr! = nil
-    static var _method_region_owns_point_2360011153: GDExtensionMethodBindPtr! = nil
-    static var _method_region_set_map_395945892: GDExtensionMethodBindPtr! = nil
-    static var _method_region_get_map_3814569979: GDExtensionMethodBindPtr! = nil
-    static var _method_region_set_navigation_layers_3411492887: GDExtensionMethodBindPtr! = nil
-    static var _method_region_get_navigation_layers_2198884583: GDExtensionMethodBindPtr! = nil
-    static var _method_region_set_transform_3935195649: GDExtensionMethodBindPtr! = nil
-    static var _method_region_set_navigation_mesh_2764952978: GDExtensionMethodBindPtr! = nil
-    static var _method_region_bake_navigation_mesh_1401173477: GDExtensionMethodBindPtr! = nil
-    static var _method_region_get_connections_count_2198884583: GDExtensionMethodBindPtr! = nil
-    static var _method_region_get_connection_pathway_start_3440143363: GDExtensionMethodBindPtr! = nil
-    static var _method_region_get_connection_pathway_end_3440143363: GDExtensionMethodBindPtr! = nil
-    static var _method_link_create_529393457: GDExtensionMethodBindPtr! = nil
-    static var _method_link_set_map_395945892: GDExtensionMethodBindPtr! = nil
-    static var _method_link_get_map_3814569979: GDExtensionMethodBindPtr! = nil
-    static var _method_link_set_bidirectional_1265174801: GDExtensionMethodBindPtr! = nil
-    static var _method_link_is_bidirectional_4155700596: GDExtensionMethodBindPtr! = nil
-    static var _method_link_set_navigation_layers_3411492887: GDExtensionMethodBindPtr! = nil
-    static var _method_link_get_navigation_layers_2198884583: GDExtensionMethodBindPtr! = nil
-    static var _method_link_set_start_position_3227306858: GDExtensionMethodBindPtr! = nil
-    static var _method_link_get_start_position_531438156: GDExtensionMethodBindPtr! = nil
-    static var _method_link_set_end_position_3227306858: GDExtensionMethodBindPtr! = nil
-    static var _method_link_get_end_position_531438156: GDExtensionMethodBindPtr! = nil
-    static var _method_link_set_enter_cost_1794382983: GDExtensionMethodBindPtr! = nil
-    static var _method_link_get_enter_cost_866169185: GDExtensionMethodBindPtr! = nil
-    static var _method_link_set_travel_cost_1794382983: GDExtensionMethodBindPtr! = nil
-    static var _method_link_get_travel_cost_866169185: GDExtensionMethodBindPtr! = nil
-    static var _method_link_set_owner_id_3411492887: GDExtensionMethodBindPtr! = nil
-    static var _method_link_get_owner_id_2198884583: GDExtensionMethodBindPtr! = nil
-    static var _method_agent_create_529393457: GDExtensionMethodBindPtr! = nil
-    static var _method_agent_set_map_395945892: GDExtensionMethodBindPtr! = nil
-    static var _method_agent_get_map_3814569979: GDExtensionMethodBindPtr! = nil
-    static var _method_agent_set_neighbor_distance_1794382983: GDExtensionMethodBindPtr! = nil
-    static var _method_agent_set_max_neighbors_3411492887: GDExtensionMethodBindPtr! = nil
-    static var _method_agent_set_time_horizon_1794382983: GDExtensionMethodBindPtr! = nil
-    static var _method_agent_set_radius_1794382983: GDExtensionMethodBindPtr! = nil
-    static var _method_agent_set_max_speed_1794382983: GDExtensionMethodBindPtr! = nil
-    static var _method_agent_set_velocity_3227306858: GDExtensionMethodBindPtr! = nil
-    static var _method_agent_set_target_velocity_3227306858: GDExtensionMethodBindPtr! = nil
-    static var _method_agent_set_position_3227306858: GDExtensionMethodBindPtr! = nil
-    static var _method_agent_is_map_changed_4155700596: GDExtensionMethodBindPtr! = nil
-    static var _method_agent_set_callback_3379118538: GDExtensionMethodBindPtr! = nil
-    static var _method_free_rid_2722037293: GDExtensionMethodBindPtr! = nil
-    static var _method_set_active_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_process_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_process_info_1938440894: GDExtensionMethodBindPtr! = nil
+    static var _method_get_maps_3995934104: StringName! = nil
+    static var _method_map_create_529393457: StringName! = nil
+    static var _method_map_set_active_1265174801: StringName! = nil
+    static var _method_map_is_active_4155700596: StringName! = nil
+    static var _method_map_set_up_3227306858: StringName! = nil
+    static var _method_map_get_up_531438156: StringName! = nil
+    static var _method_map_set_cell_size_1794382983: StringName! = nil
+    static var _method_map_get_cell_size_866169185: StringName! = nil
+    static var _method_map_set_edge_connection_margin_1794382983: StringName! = nil
+    static var _method_map_get_edge_connection_margin_866169185: StringName! = nil
+    static var _method_map_set_link_connection_radius_1794382983: StringName! = nil
+    static var _method_map_get_link_connection_radius_866169185: StringName! = nil
+    static var _method_map_get_path_2121045993: StringName! = nil
+    static var _method_map_get_closest_point_to_segment_3830095642: StringName! = nil
+    static var _method_map_get_closest_point_2056183332: StringName! = nil
+    static var _method_map_get_closest_point_normal_2056183332: StringName! = nil
+    static var _method_map_get_closest_point_owner_553364610: StringName! = nil
+    static var _method_map_get_links_2684255073: StringName! = nil
+    static var _method_map_get_regions_2684255073: StringName! = nil
+    static var _method_map_get_agents_2684255073: StringName! = nil
+    static var _method_map_force_update_2722037293: StringName! = nil
+    static var _method_query_path_3415008901: StringName! = nil
+    static var _method_region_create_529393457: StringName! = nil
+    static var _method_region_set_enter_cost_1794382983: StringName! = nil
+    static var _method_region_get_enter_cost_866169185: StringName! = nil
+    static var _method_region_set_travel_cost_1794382983: StringName! = nil
+    static var _method_region_get_travel_cost_866169185: StringName! = nil
+    static var _method_region_set_owner_id_3411492887: StringName! = nil
+    static var _method_region_get_owner_id_2198884583: StringName! = nil
+    static var _method_region_owns_point_2360011153: StringName! = nil
+    static var _method_region_set_map_395945892: StringName! = nil
+    static var _method_region_get_map_3814569979: StringName! = nil
+    static var _method_region_set_navigation_layers_3411492887: StringName! = nil
+    static var _method_region_get_navigation_layers_2198884583: StringName! = nil
+    static var _method_region_set_transform_3935195649: StringName! = nil
+    static var _method_region_set_navigation_mesh_2764952978: StringName! = nil
+    static var _method_region_bake_navigation_mesh_1401173477: StringName! = nil
+    static var _method_region_get_connections_count_2198884583: StringName! = nil
+    static var _method_region_get_connection_pathway_start_3440143363: StringName! = nil
+    static var _method_region_get_connection_pathway_end_3440143363: StringName! = nil
+    static var _method_link_create_529393457: StringName! = nil
+    static var _method_link_set_map_395945892: StringName! = nil
+    static var _method_link_get_map_3814569979: StringName! = nil
+    static var _method_link_set_bidirectional_1265174801: StringName! = nil
+    static var _method_link_is_bidirectional_4155700596: StringName! = nil
+    static var _method_link_set_navigation_layers_3411492887: StringName! = nil
+    static var _method_link_get_navigation_layers_2198884583: StringName! = nil
+    static var _method_link_set_start_position_3227306858: StringName! = nil
+    static var _method_link_get_start_position_531438156: StringName! = nil
+    static var _method_link_set_end_position_3227306858: StringName! = nil
+    static var _method_link_get_end_position_531438156: StringName! = nil
+    static var _method_link_set_enter_cost_1794382983: StringName! = nil
+    static var _method_link_get_enter_cost_866169185: StringName! = nil
+    static var _method_link_set_travel_cost_1794382983: StringName! = nil
+    static var _method_link_get_travel_cost_866169185: StringName! = nil
+    static var _method_link_set_owner_id_3411492887: StringName! = nil
+    static var _method_link_get_owner_id_2198884583: StringName! = nil
+    static var _method_agent_create_529393457: StringName! = nil
+    static var _method_agent_set_map_395945892: StringName! = nil
+    static var _method_agent_get_map_3814569979: StringName! = nil
+    static var _method_agent_set_neighbor_distance_1794382983: StringName! = nil
+    static var _method_agent_set_max_neighbors_3411492887: StringName! = nil
+    static var _method_agent_set_time_horizon_1794382983: StringName! = nil
+    static var _method_agent_set_radius_1794382983: StringName! = nil
+    static var _method_agent_set_max_speed_1794382983: StringName! = nil
+    static var _method_agent_set_velocity_3227306858: StringName! = nil
+    static var _method_agent_set_target_velocity_3227306858: StringName! = nil
+    static var _method_agent_set_position_3227306858: StringName! = nil
+    static var _method_agent_is_map_changed_4155700596: StringName! = nil
+    static var _method_agent_set_callback_3379118538: StringName! = nil
+    static var _method_free_rid_2722037293: StringName! = nil
+    static var _method_set_active_2586408642: StringName! = nil
+    static var _method_process_373806689: StringName! = nil
+    static var _method_get_process_info_1938440894: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_NavigationServer3D == nil)
         __godot_name_NavigationServer3D = StringName(from: "NavigationServer3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_maps_3995934104_name = StringName(from: "get_maps")
-        self._method_get_maps_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_get_maps_3995934104_name._native_ptr(), 3995934104)
-        assert(NavigationServer3D._method_get_maps_3995934104 != nil)
-        let _method_map_create_529393457_name = StringName(from: "map_create")
-        self._method_map_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_create_529393457_name._native_ptr(), 529393457)
-        assert(NavigationServer3D._method_map_create_529393457 != nil)
-        let _method_map_set_active_1265174801_name = StringName(from: "map_set_active")
-        self._method_map_set_active_1265174801 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_set_active_1265174801_name._native_ptr(), 1265174801)
-        assert(NavigationServer3D._method_map_set_active_1265174801 != nil)
-        let _method_map_is_active_4155700596_name = StringName(from: "map_is_active")
-        self._method_map_is_active_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_is_active_4155700596_name._native_ptr(), 4155700596)
-        assert(NavigationServer3D._method_map_is_active_4155700596 != nil)
-        let _method_map_set_up_3227306858_name = StringName(from: "map_set_up")
-        self._method_map_set_up_3227306858 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_set_up_3227306858_name._native_ptr(), 3227306858)
-        assert(NavigationServer3D._method_map_set_up_3227306858 != nil)
-        let _method_map_get_up_531438156_name = StringName(from: "map_get_up")
-        self._method_map_get_up_531438156 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_get_up_531438156_name._native_ptr(), 531438156)
-        assert(NavigationServer3D._method_map_get_up_531438156 != nil)
-        let _method_map_set_cell_size_1794382983_name = StringName(from: "map_set_cell_size")
-        self._method_map_set_cell_size_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_set_cell_size_1794382983_name._native_ptr(), 1794382983)
-        assert(NavigationServer3D._method_map_set_cell_size_1794382983 != nil)
-        let _method_map_get_cell_size_866169185_name = StringName(from: "map_get_cell_size")
-        self._method_map_get_cell_size_866169185 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_get_cell_size_866169185_name._native_ptr(), 866169185)
-        assert(NavigationServer3D._method_map_get_cell_size_866169185 != nil)
-        let _method_map_set_edge_connection_margin_1794382983_name = StringName(from: "map_set_edge_connection_margin")
-        self._method_map_set_edge_connection_margin_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_set_edge_connection_margin_1794382983_name._native_ptr(), 1794382983)
-        assert(NavigationServer3D._method_map_set_edge_connection_margin_1794382983 != nil)
-        let _method_map_get_edge_connection_margin_866169185_name = StringName(from: "map_get_edge_connection_margin")
-        self._method_map_get_edge_connection_margin_866169185 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_get_edge_connection_margin_866169185_name._native_ptr(), 866169185)
-        assert(NavigationServer3D._method_map_get_edge_connection_margin_866169185 != nil)
-        let _method_map_set_link_connection_radius_1794382983_name = StringName(from: "map_set_link_connection_radius")
-        self._method_map_set_link_connection_radius_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_set_link_connection_radius_1794382983_name._native_ptr(), 1794382983)
-        assert(NavigationServer3D._method_map_set_link_connection_radius_1794382983 != nil)
-        let _method_map_get_link_connection_radius_866169185_name = StringName(from: "map_get_link_connection_radius")
-        self._method_map_get_link_connection_radius_866169185 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_get_link_connection_radius_866169185_name._native_ptr(), 866169185)
-        assert(NavigationServer3D._method_map_get_link_connection_radius_866169185 != nil)
-        let _method_map_get_path_2121045993_name = StringName(from: "map_get_path")
-        self._method_map_get_path_2121045993 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_get_path_2121045993_name._native_ptr(), 2121045993)
-        assert(NavigationServer3D._method_map_get_path_2121045993 != nil)
-        let _method_map_get_closest_point_to_segment_3830095642_name = StringName(from: "map_get_closest_point_to_segment")
-        self._method_map_get_closest_point_to_segment_3830095642 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_get_closest_point_to_segment_3830095642_name._native_ptr(), 3830095642)
-        assert(NavigationServer3D._method_map_get_closest_point_to_segment_3830095642 != nil)
-        let _method_map_get_closest_point_2056183332_name = StringName(from: "map_get_closest_point")
-        self._method_map_get_closest_point_2056183332 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_get_closest_point_2056183332_name._native_ptr(), 2056183332)
-        assert(NavigationServer3D._method_map_get_closest_point_2056183332 != nil)
-        let _method_map_get_closest_point_normal_2056183332_name = StringName(from: "map_get_closest_point_normal")
-        self._method_map_get_closest_point_normal_2056183332 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_get_closest_point_normal_2056183332_name._native_ptr(), 2056183332)
-        assert(NavigationServer3D._method_map_get_closest_point_normal_2056183332 != nil)
-        let _method_map_get_closest_point_owner_553364610_name = StringName(from: "map_get_closest_point_owner")
-        self._method_map_get_closest_point_owner_553364610 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_get_closest_point_owner_553364610_name._native_ptr(), 553364610)
-        assert(NavigationServer3D._method_map_get_closest_point_owner_553364610 != nil)
-        let _method_map_get_links_2684255073_name = StringName(from: "map_get_links")
-        self._method_map_get_links_2684255073 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_get_links_2684255073_name._native_ptr(), 2684255073)
-        assert(NavigationServer3D._method_map_get_links_2684255073 != nil)
-        let _method_map_get_regions_2684255073_name = StringName(from: "map_get_regions")
-        self._method_map_get_regions_2684255073 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_get_regions_2684255073_name._native_ptr(), 2684255073)
-        assert(NavigationServer3D._method_map_get_regions_2684255073 != nil)
-        let _method_map_get_agents_2684255073_name = StringName(from: "map_get_agents")
-        self._method_map_get_agents_2684255073 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_get_agents_2684255073_name._native_ptr(), 2684255073)
-        assert(NavigationServer3D._method_map_get_agents_2684255073 != nil)
-        let _method_map_force_update_2722037293_name = StringName(from: "map_force_update")
-        self._method_map_force_update_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_map_force_update_2722037293_name._native_ptr(), 2722037293)
-        assert(NavigationServer3D._method_map_force_update_2722037293 != nil)
-        let _method_query_path_3415008901_name = StringName(from: "query_path")
-        self._method_query_path_3415008901 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_query_path_3415008901_name._native_ptr(), 3415008901)
-        assert(NavigationServer3D._method_query_path_3415008901 != nil)
-        let _method_region_create_529393457_name = StringName(from: "region_create")
-        self._method_region_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_create_529393457_name._native_ptr(), 529393457)
-        assert(NavigationServer3D._method_region_create_529393457 != nil)
-        let _method_region_set_enter_cost_1794382983_name = StringName(from: "region_set_enter_cost")
-        self._method_region_set_enter_cost_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_set_enter_cost_1794382983_name._native_ptr(), 1794382983)
-        assert(NavigationServer3D._method_region_set_enter_cost_1794382983 != nil)
-        let _method_region_get_enter_cost_866169185_name = StringName(from: "region_get_enter_cost")
-        self._method_region_get_enter_cost_866169185 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_get_enter_cost_866169185_name._native_ptr(), 866169185)
-        assert(NavigationServer3D._method_region_get_enter_cost_866169185 != nil)
-        let _method_region_set_travel_cost_1794382983_name = StringName(from: "region_set_travel_cost")
-        self._method_region_set_travel_cost_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_set_travel_cost_1794382983_name._native_ptr(), 1794382983)
-        assert(NavigationServer3D._method_region_set_travel_cost_1794382983 != nil)
-        let _method_region_get_travel_cost_866169185_name = StringName(from: "region_get_travel_cost")
-        self._method_region_get_travel_cost_866169185 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_get_travel_cost_866169185_name._native_ptr(), 866169185)
-        assert(NavigationServer3D._method_region_get_travel_cost_866169185 != nil)
-        let _method_region_set_owner_id_3411492887_name = StringName(from: "region_set_owner_id")
-        self._method_region_set_owner_id_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_set_owner_id_3411492887_name._native_ptr(), 3411492887)
-        assert(NavigationServer3D._method_region_set_owner_id_3411492887 != nil)
-        let _method_region_get_owner_id_2198884583_name = StringName(from: "region_get_owner_id")
-        self._method_region_get_owner_id_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_get_owner_id_2198884583_name._native_ptr(), 2198884583)
-        assert(NavigationServer3D._method_region_get_owner_id_2198884583 != nil)
-        let _method_region_owns_point_2360011153_name = StringName(from: "region_owns_point")
-        self._method_region_owns_point_2360011153 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_owns_point_2360011153_name._native_ptr(), 2360011153)
-        assert(NavigationServer3D._method_region_owns_point_2360011153 != nil)
-        let _method_region_set_map_395945892_name = StringName(from: "region_set_map")
-        self._method_region_set_map_395945892 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_set_map_395945892_name._native_ptr(), 395945892)
-        assert(NavigationServer3D._method_region_set_map_395945892 != nil)
-        let _method_region_get_map_3814569979_name = StringName(from: "region_get_map")
-        self._method_region_get_map_3814569979 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_get_map_3814569979_name._native_ptr(), 3814569979)
-        assert(NavigationServer3D._method_region_get_map_3814569979 != nil)
-        let _method_region_set_navigation_layers_3411492887_name = StringName(from: "region_set_navigation_layers")
-        self._method_region_set_navigation_layers_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_set_navigation_layers_3411492887_name._native_ptr(), 3411492887)
-        assert(NavigationServer3D._method_region_set_navigation_layers_3411492887 != nil)
-        let _method_region_get_navigation_layers_2198884583_name = StringName(from: "region_get_navigation_layers")
-        self._method_region_get_navigation_layers_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_get_navigation_layers_2198884583_name._native_ptr(), 2198884583)
-        assert(NavigationServer3D._method_region_get_navigation_layers_2198884583 != nil)
-        let _method_region_set_transform_3935195649_name = StringName(from: "region_set_transform")
-        self._method_region_set_transform_3935195649 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_set_transform_3935195649_name._native_ptr(), 3935195649)
-        assert(NavigationServer3D._method_region_set_transform_3935195649 != nil)
-        let _method_region_set_navigation_mesh_2764952978_name = StringName(from: "region_set_navigation_mesh")
-        self._method_region_set_navigation_mesh_2764952978 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_set_navigation_mesh_2764952978_name._native_ptr(), 2764952978)
-        assert(NavigationServer3D._method_region_set_navigation_mesh_2764952978 != nil)
-        let _method_region_bake_navigation_mesh_1401173477_name = StringName(from: "region_bake_navigation_mesh")
-        self._method_region_bake_navigation_mesh_1401173477 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_bake_navigation_mesh_1401173477_name._native_ptr(), 1401173477)
-        assert(NavigationServer3D._method_region_bake_navigation_mesh_1401173477 != nil)
-        let _method_region_get_connections_count_2198884583_name = StringName(from: "region_get_connections_count")
-        self._method_region_get_connections_count_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_get_connections_count_2198884583_name._native_ptr(), 2198884583)
-        assert(NavigationServer3D._method_region_get_connections_count_2198884583 != nil)
-        let _method_region_get_connection_pathway_start_3440143363_name = StringName(from: "region_get_connection_pathway_start")
-        self._method_region_get_connection_pathway_start_3440143363 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_get_connection_pathway_start_3440143363_name._native_ptr(), 3440143363)
-        assert(NavigationServer3D._method_region_get_connection_pathway_start_3440143363 != nil)
-        let _method_region_get_connection_pathway_end_3440143363_name = StringName(from: "region_get_connection_pathway_end")
-        self._method_region_get_connection_pathway_end_3440143363 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_region_get_connection_pathway_end_3440143363_name._native_ptr(), 3440143363)
-        assert(NavigationServer3D._method_region_get_connection_pathway_end_3440143363 != nil)
-        let _method_link_create_529393457_name = StringName(from: "link_create")
-        self._method_link_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_create_529393457_name._native_ptr(), 529393457)
-        assert(NavigationServer3D._method_link_create_529393457 != nil)
-        let _method_link_set_map_395945892_name = StringName(from: "link_set_map")
-        self._method_link_set_map_395945892 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_set_map_395945892_name._native_ptr(), 395945892)
-        assert(NavigationServer3D._method_link_set_map_395945892 != nil)
-        let _method_link_get_map_3814569979_name = StringName(from: "link_get_map")
-        self._method_link_get_map_3814569979 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_get_map_3814569979_name._native_ptr(), 3814569979)
-        assert(NavigationServer3D._method_link_get_map_3814569979 != nil)
-        let _method_link_set_bidirectional_1265174801_name = StringName(from: "link_set_bidirectional")
-        self._method_link_set_bidirectional_1265174801 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_set_bidirectional_1265174801_name._native_ptr(), 1265174801)
-        assert(NavigationServer3D._method_link_set_bidirectional_1265174801 != nil)
-        let _method_link_is_bidirectional_4155700596_name = StringName(from: "link_is_bidirectional")
-        self._method_link_is_bidirectional_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_is_bidirectional_4155700596_name._native_ptr(), 4155700596)
-        assert(NavigationServer3D._method_link_is_bidirectional_4155700596 != nil)
-        let _method_link_set_navigation_layers_3411492887_name = StringName(from: "link_set_navigation_layers")
-        self._method_link_set_navigation_layers_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_set_navigation_layers_3411492887_name._native_ptr(), 3411492887)
-        assert(NavigationServer3D._method_link_set_navigation_layers_3411492887 != nil)
-        let _method_link_get_navigation_layers_2198884583_name = StringName(from: "link_get_navigation_layers")
-        self._method_link_get_navigation_layers_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_get_navigation_layers_2198884583_name._native_ptr(), 2198884583)
-        assert(NavigationServer3D._method_link_get_navigation_layers_2198884583 != nil)
-        let _method_link_set_start_position_3227306858_name = StringName(from: "link_set_start_position")
-        self._method_link_set_start_position_3227306858 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_set_start_position_3227306858_name._native_ptr(), 3227306858)
-        assert(NavigationServer3D._method_link_set_start_position_3227306858 != nil)
-        let _method_link_get_start_position_531438156_name = StringName(from: "link_get_start_position")
-        self._method_link_get_start_position_531438156 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_get_start_position_531438156_name._native_ptr(), 531438156)
-        assert(NavigationServer3D._method_link_get_start_position_531438156 != nil)
-        let _method_link_set_end_position_3227306858_name = StringName(from: "link_set_end_position")
-        self._method_link_set_end_position_3227306858 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_set_end_position_3227306858_name._native_ptr(), 3227306858)
-        assert(NavigationServer3D._method_link_set_end_position_3227306858 != nil)
-        let _method_link_get_end_position_531438156_name = StringName(from: "link_get_end_position")
-        self._method_link_get_end_position_531438156 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_get_end_position_531438156_name._native_ptr(), 531438156)
-        assert(NavigationServer3D._method_link_get_end_position_531438156 != nil)
-        let _method_link_set_enter_cost_1794382983_name = StringName(from: "link_set_enter_cost")
-        self._method_link_set_enter_cost_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_set_enter_cost_1794382983_name._native_ptr(), 1794382983)
-        assert(NavigationServer3D._method_link_set_enter_cost_1794382983 != nil)
-        let _method_link_get_enter_cost_866169185_name = StringName(from: "link_get_enter_cost")
-        self._method_link_get_enter_cost_866169185 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_get_enter_cost_866169185_name._native_ptr(), 866169185)
-        assert(NavigationServer3D._method_link_get_enter_cost_866169185 != nil)
-        let _method_link_set_travel_cost_1794382983_name = StringName(from: "link_set_travel_cost")
-        self._method_link_set_travel_cost_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_set_travel_cost_1794382983_name._native_ptr(), 1794382983)
-        assert(NavigationServer3D._method_link_set_travel_cost_1794382983 != nil)
-        let _method_link_get_travel_cost_866169185_name = StringName(from: "link_get_travel_cost")
-        self._method_link_get_travel_cost_866169185 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_get_travel_cost_866169185_name._native_ptr(), 866169185)
-        assert(NavigationServer3D._method_link_get_travel_cost_866169185 != nil)
-        let _method_link_set_owner_id_3411492887_name = StringName(from: "link_set_owner_id")
-        self._method_link_set_owner_id_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_set_owner_id_3411492887_name._native_ptr(), 3411492887)
-        assert(NavigationServer3D._method_link_set_owner_id_3411492887 != nil)
-        let _method_link_get_owner_id_2198884583_name = StringName(from: "link_get_owner_id")
-        self._method_link_get_owner_id_2198884583 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_link_get_owner_id_2198884583_name._native_ptr(), 2198884583)
-        assert(NavigationServer3D._method_link_get_owner_id_2198884583 != nil)
-        let _method_agent_create_529393457_name = StringName(from: "agent_create")
-        self._method_agent_create_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_agent_create_529393457_name._native_ptr(), 529393457)
-        assert(NavigationServer3D._method_agent_create_529393457 != nil)
-        let _method_agent_set_map_395945892_name = StringName(from: "agent_set_map")
-        self._method_agent_set_map_395945892 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_agent_set_map_395945892_name._native_ptr(), 395945892)
-        assert(NavigationServer3D._method_agent_set_map_395945892 != nil)
-        let _method_agent_get_map_3814569979_name = StringName(from: "agent_get_map")
-        self._method_agent_get_map_3814569979 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_agent_get_map_3814569979_name._native_ptr(), 3814569979)
-        assert(NavigationServer3D._method_agent_get_map_3814569979 != nil)
-        let _method_agent_set_neighbor_distance_1794382983_name = StringName(from: "agent_set_neighbor_distance")
-        self._method_agent_set_neighbor_distance_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_agent_set_neighbor_distance_1794382983_name._native_ptr(), 1794382983)
-        assert(NavigationServer3D._method_agent_set_neighbor_distance_1794382983 != nil)
-        let _method_agent_set_max_neighbors_3411492887_name = StringName(from: "agent_set_max_neighbors")
-        self._method_agent_set_max_neighbors_3411492887 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_agent_set_max_neighbors_3411492887_name._native_ptr(), 3411492887)
-        assert(NavigationServer3D._method_agent_set_max_neighbors_3411492887 != nil)
-        let _method_agent_set_time_horizon_1794382983_name = StringName(from: "agent_set_time_horizon")
-        self._method_agent_set_time_horizon_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_agent_set_time_horizon_1794382983_name._native_ptr(), 1794382983)
-        assert(NavigationServer3D._method_agent_set_time_horizon_1794382983 != nil)
-        let _method_agent_set_radius_1794382983_name = StringName(from: "agent_set_radius")
-        self._method_agent_set_radius_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_agent_set_radius_1794382983_name._native_ptr(), 1794382983)
-        assert(NavigationServer3D._method_agent_set_radius_1794382983 != nil)
-        let _method_agent_set_max_speed_1794382983_name = StringName(from: "agent_set_max_speed")
-        self._method_agent_set_max_speed_1794382983 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_agent_set_max_speed_1794382983_name._native_ptr(), 1794382983)
-        assert(NavigationServer3D._method_agent_set_max_speed_1794382983 != nil)
-        let _method_agent_set_velocity_3227306858_name = StringName(from: "agent_set_velocity")
-        self._method_agent_set_velocity_3227306858 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_agent_set_velocity_3227306858_name._native_ptr(), 3227306858)
-        assert(NavigationServer3D._method_agent_set_velocity_3227306858 != nil)
-        let _method_agent_set_target_velocity_3227306858_name = StringName(from: "agent_set_target_velocity")
-        self._method_agent_set_target_velocity_3227306858 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_agent_set_target_velocity_3227306858_name._native_ptr(), 3227306858)
-        assert(NavigationServer3D._method_agent_set_target_velocity_3227306858 != nil)
-        let _method_agent_set_position_3227306858_name = StringName(from: "agent_set_position")
-        self._method_agent_set_position_3227306858 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_agent_set_position_3227306858_name._native_ptr(), 3227306858)
-        assert(NavigationServer3D._method_agent_set_position_3227306858 != nil)
-        let _method_agent_is_map_changed_4155700596_name = StringName(from: "agent_is_map_changed")
-        self._method_agent_is_map_changed_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_agent_is_map_changed_4155700596_name._native_ptr(), 4155700596)
-        assert(NavigationServer3D._method_agent_is_map_changed_4155700596 != nil)
-        let _method_agent_set_callback_3379118538_name = StringName(from: "agent_set_callback")
-        self._method_agent_set_callback_3379118538 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_agent_set_callback_3379118538_name._native_ptr(), 3379118538)
-        assert(NavigationServer3D._method_agent_set_callback_3379118538 != nil)
-        let _method_free_rid_2722037293_name = StringName(from: "free_rid")
-        self._method_free_rid_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_free_rid_2722037293_name._native_ptr(), 2722037293)
-        assert(NavigationServer3D._method_free_rid_2722037293 != nil)
-        let _method_set_active_2586408642_name = StringName(from: "set_active")
-        self._method_set_active_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_set_active_2586408642_name._native_ptr(), 2586408642)
-        assert(NavigationServer3D._method_set_active_2586408642 != nil)
-        let _method_process_373806689_name = StringName(from: "process")
-        self._method_process_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_process_373806689_name._native_ptr(), 373806689)
-        assert(NavigationServer3D._method_process_373806689 != nil)
-        let _method_get_process_info_1938440894_name = StringName(from: "get_process_info")
-        self._method_get_process_info_1938440894 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationServer3D._native_ptr(), _method_get_process_info_1938440894_name._native_ptr(), 1938440894)
-        assert(NavigationServer3D._method_get_process_info_1938440894 != nil)
+        self._method_get_maps_3995934104 = StringName(from: "get_maps")
+        assert(self._method_get_maps_3995934104 != nil)
+        self._method_map_create_529393457 = StringName(from: "map_create")
+        assert(self._method_map_create_529393457 != nil)
+        self._method_map_set_active_1265174801 = StringName(from: "map_set_active")
+        assert(self._method_map_set_active_1265174801 != nil)
+        self._method_map_is_active_4155700596 = StringName(from: "map_is_active")
+        assert(self._method_map_is_active_4155700596 != nil)
+        self._method_map_set_up_3227306858 = StringName(from: "map_set_up")
+        assert(self._method_map_set_up_3227306858 != nil)
+        self._method_map_get_up_531438156 = StringName(from: "map_get_up")
+        assert(self._method_map_get_up_531438156 != nil)
+        self._method_map_set_cell_size_1794382983 = StringName(from: "map_set_cell_size")
+        assert(self._method_map_set_cell_size_1794382983 != nil)
+        self._method_map_get_cell_size_866169185 = StringName(from: "map_get_cell_size")
+        assert(self._method_map_get_cell_size_866169185 != nil)
+        self._method_map_set_edge_connection_margin_1794382983 = StringName(from: "map_set_edge_connection_margin")
+        assert(self._method_map_set_edge_connection_margin_1794382983 != nil)
+        self._method_map_get_edge_connection_margin_866169185 = StringName(from: "map_get_edge_connection_margin")
+        assert(self._method_map_get_edge_connection_margin_866169185 != nil)
+        self._method_map_set_link_connection_radius_1794382983 = StringName(from: "map_set_link_connection_radius")
+        assert(self._method_map_set_link_connection_radius_1794382983 != nil)
+        self._method_map_get_link_connection_radius_866169185 = StringName(from: "map_get_link_connection_radius")
+        assert(self._method_map_get_link_connection_radius_866169185 != nil)
+        self._method_map_get_path_2121045993 = StringName(from: "map_get_path")
+        assert(self._method_map_get_path_2121045993 != nil)
+        self._method_map_get_closest_point_to_segment_3830095642 = StringName(from: "map_get_closest_point_to_segment")
+        assert(self._method_map_get_closest_point_to_segment_3830095642 != nil)
+        self._method_map_get_closest_point_2056183332 = StringName(from: "map_get_closest_point")
+        assert(self._method_map_get_closest_point_2056183332 != nil)
+        self._method_map_get_closest_point_normal_2056183332 = StringName(from: "map_get_closest_point_normal")
+        assert(self._method_map_get_closest_point_normal_2056183332 != nil)
+        self._method_map_get_closest_point_owner_553364610 = StringName(from: "map_get_closest_point_owner")
+        assert(self._method_map_get_closest_point_owner_553364610 != nil)
+        self._method_map_get_links_2684255073 = StringName(from: "map_get_links")
+        assert(self._method_map_get_links_2684255073 != nil)
+        self._method_map_get_regions_2684255073 = StringName(from: "map_get_regions")
+        assert(self._method_map_get_regions_2684255073 != nil)
+        self._method_map_get_agents_2684255073 = StringName(from: "map_get_agents")
+        assert(self._method_map_get_agents_2684255073 != nil)
+        self._method_map_force_update_2722037293 = StringName(from: "map_force_update")
+        assert(self._method_map_force_update_2722037293 != nil)
+        self._method_query_path_3415008901 = StringName(from: "query_path")
+        assert(self._method_query_path_3415008901 != nil)
+        self._method_region_create_529393457 = StringName(from: "region_create")
+        assert(self._method_region_create_529393457 != nil)
+        self._method_region_set_enter_cost_1794382983 = StringName(from: "region_set_enter_cost")
+        assert(self._method_region_set_enter_cost_1794382983 != nil)
+        self._method_region_get_enter_cost_866169185 = StringName(from: "region_get_enter_cost")
+        assert(self._method_region_get_enter_cost_866169185 != nil)
+        self._method_region_set_travel_cost_1794382983 = StringName(from: "region_set_travel_cost")
+        assert(self._method_region_set_travel_cost_1794382983 != nil)
+        self._method_region_get_travel_cost_866169185 = StringName(from: "region_get_travel_cost")
+        assert(self._method_region_get_travel_cost_866169185 != nil)
+        self._method_region_set_owner_id_3411492887 = StringName(from: "region_set_owner_id")
+        assert(self._method_region_set_owner_id_3411492887 != nil)
+        self._method_region_get_owner_id_2198884583 = StringName(from: "region_get_owner_id")
+        assert(self._method_region_get_owner_id_2198884583 != nil)
+        self._method_region_owns_point_2360011153 = StringName(from: "region_owns_point")
+        assert(self._method_region_owns_point_2360011153 != nil)
+        self._method_region_set_map_395945892 = StringName(from: "region_set_map")
+        assert(self._method_region_set_map_395945892 != nil)
+        self._method_region_get_map_3814569979 = StringName(from: "region_get_map")
+        assert(self._method_region_get_map_3814569979 != nil)
+        self._method_region_set_navigation_layers_3411492887 = StringName(from: "region_set_navigation_layers")
+        assert(self._method_region_set_navigation_layers_3411492887 != nil)
+        self._method_region_get_navigation_layers_2198884583 = StringName(from: "region_get_navigation_layers")
+        assert(self._method_region_get_navigation_layers_2198884583 != nil)
+        self._method_region_set_transform_3935195649 = StringName(from: "region_set_transform")
+        assert(self._method_region_set_transform_3935195649 != nil)
+        self._method_region_set_navigation_mesh_2764952978 = StringName(from: "region_set_navigation_mesh")
+        assert(self._method_region_set_navigation_mesh_2764952978 != nil)
+        self._method_region_bake_navigation_mesh_1401173477 = StringName(from: "region_bake_navigation_mesh")
+        assert(self._method_region_bake_navigation_mesh_1401173477 != nil)
+        self._method_region_get_connections_count_2198884583 = StringName(from: "region_get_connections_count")
+        assert(self._method_region_get_connections_count_2198884583 != nil)
+        self._method_region_get_connection_pathway_start_3440143363 = StringName(from: "region_get_connection_pathway_start")
+        assert(self._method_region_get_connection_pathway_start_3440143363 != nil)
+        self._method_region_get_connection_pathway_end_3440143363 = StringName(from: "region_get_connection_pathway_end")
+        assert(self._method_region_get_connection_pathway_end_3440143363 != nil)
+        self._method_link_create_529393457 = StringName(from: "link_create")
+        assert(self._method_link_create_529393457 != nil)
+        self._method_link_set_map_395945892 = StringName(from: "link_set_map")
+        assert(self._method_link_set_map_395945892 != nil)
+        self._method_link_get_map_3814569979 = StringName(from: "link_get_map")
+        assert(self._method_link_get_map_3814569979 != nil)
+        self._method_link_set_bidirectional_1265174801 = StringName(from: "link_set_bidirectional")
+        assert(self._method_link_set_bidirectional_1265174801 != nil)
+        self._method_link_is_bidirectional_4155700596 = StringName(from: "link_is_bidirectional")
+        assert(self._method_link_is_bidirectional_4155700596 != nil)
+        self._method_link_set_navigation_layers_3411492887 = StringName(from: "link_set_navigation_layers")
+        assert(self._method_link_set_navigation_layers_3411492887 != nil)
+        self._method_link_get_navigation_layers_2198884583 = StringName(from: "link_get_navigation_layers")
+        assert(self._method_link_get_navigation_layers_2198884583 != nil)
+        self._method_link_set_start_position_3227306858 = StringName(from: "link_set_start_position")
+        assert(self._method_link_set_start_position_3227306858 != nil)
+        self._method_link_get_start_position_531438156 = StringName(from: "link_get_start_position")
+        assert(self._method_link_get_start_position_531438156 != nil)
+        self._method_link_set_end_position_3227306858 = StringName(from: "link_set_end_position")
+        assert(self._method_link_set_end_position_3227306858 != nil)
+        self._method_link_get_end_position_531438156 = StringName(from: "link_get_end_position")
+        assert(self._method_link_get_end_position_531438156 != nil)
+        self._method_link_set_enter_cost_1794382983 = StringName(from: "link_set_enter_cost")
+        assert(self._method_link_set_enter_cost_1794382983 != nil)
+        self._method_link_get_enter_cost_866169185 = StringName(from: "link_get_enter_cost")
+        assert(self._method_link_get_enter_cost_866169185 != nil)
+        self._method_link_set_travel_cost_1794382983 = StringName(from: "link_set_travel_cost")
+        assert(self._method_link_set_travel_cost_1794382983 != nil)
+        self._method_link_get_travel_cost_866169185 = StringName(from: "link_get_travel_cost")
+        assert(self._method_link_get_travel_cost_866169185 != nil)
+        self._method_link_set_owner_id_3411492887 = StringName(from: "link_set_owner_id")
+        assert(self._method_link_set_owner_id_3411492887 != nil)
+        self._method_link_get_owner_id_2198884583 = StringName(from: "link_get_owner_id")
+        assert(self._method_link_get_owner_id_2198884583 != nil)
+        self._method_agent_create_529393457 = StringName(from: "agent_create")
+        assert(self._method_agent_create_529393457 != nil)
+        self._method_agent_set_map_395945892 = StringName(from: "agent_set_map")
+        assert(self._method_agent_set_map_395945892 != nil)
+        self._method_agent_get_map_3814569979 = StringName(from: "agent_get_map")
+        assert(self._method_agent_get_map_3814569979 != nil)
+        self._method_agent_set_neighbor_distance_1794382983 = StringName(from: "agent_set_neighbor_distance")
+        assert(self._method_agent_set_neighbor_distance_1794382983 != nil)
+        self._method_agent_set_max_neighbors_3411492887 = StringName(from: "agent_set_max_neighbors")
+        assert(self._method_agent_set_max_neighbors_3411492887 != nil)
+        self._method_agent_set_time_horizon_1794382983 = StringName(from: "agent_set_time_horizon")
+        assert(self._method_agent_set_time_horizon_1794382983 != nil)
+        self._method_agent_set_radius_1794382983 = StringName(from: "agent_set_radius")
+        assert(self._method_agent_set_radius_1794382983 != nil)
+        self._method_agent_set_max_speed_1794382983 = StringName(from: "agent_set_max_speed")
+        assert(self._method_agent_set_max_speed_1794382983 != nil)
+        self._method_agent_set_velocity_3227306858 = StringName(from: "agent_set_velocity")
+        assert(self._method_agent_set_velocity_3227306858 != nil)
+        self._method_agent_set_target_velocity_3227306858 = StringName(from: "agent_set_target_velocity")
+        assert(self._method_agent_set_target_velocity_3227306858 != nil)
+        self._method_agent_set_position_3227306858 = StringName(from: "agent_set_position")
+        assert(self._method_agent_set_position_3227306858 != nil)
+        self._method_agent_is_map_changed_4155700596 = StringName(from: "agent_is_map_changed")
+        assert(self._method_agent_is_map_changed_4155700596 != nil)
+        self._method_agent_set_callback_3379118538 = StringName(from: "agent_set_callback")
+        assert(self._method_agent_set_callback_3379118538 != nil)
+        self._method_free_rid_2722037293 = StringName(from: "free_rid")
+        assert(self._method_free_rid_2722037293 != nil)
+        self._method_set_active_2586408642 = StringName(from: "set_active")
+        assert(self._method_set_active_2586408642 != nil)
+        self._method_process_373806689 = StringName(from: "process")
+        assert(self._method_process_373806689 != nil)
+        self._method_get_process_info_1938440894 = StringName(from: "get_process_info")
+        assert(self._method_get_process_info_1938440894 != nil)
     }
 
     public func get_maps() -> [RID] {
@@ -350,8 +277,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_maps_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_maps_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -366,8 +298,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_create_529393457,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_create_529393457._native_ptr(),
+                    529393457)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -383,8 +320,13 @@ open class NavigationServer3D : Object {
                 .init(map_native), .init(active_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_set_active_1265174801,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_set_active_1265174801._native_ptr(),
+                    1265174801)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -401,8 +343,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_is_active_4155700596,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_is_active_4155700596._native_ptr(),
+                    4155700596)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -418,8 +365,13 @@ open class NavigationServer3D : Object {
                 .init(map_native), .init(up_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_set_up_3227306858,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_set_up_3227306858._native_ptr(),
+                    3227306858)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -434,8 +386,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_get_up_531438156,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_get_up_531438156._native_ptr(),
+                    531438156)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -451,8 +408,13 @@ open class NavigationServer3D : Object {
                 .init(map_native), .init(cell_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_set_cell_size_1794382983,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_set_cell_size_1794382983._native_ptr(),
+                    1794382983)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -469,8 +431,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_get_cell_size_866169185,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_get_cell_size_866169185._native_ptr(),
+                    866169185)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -486,8 +453,13 @@ open class NavigationServer3D : Object {
                 .init(map_native), .init(margin_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_set_edge_connection_margin_1794382983,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_set_edge_connection_margin_1794382983._native_ptr(),
+                    1794382983)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -504,8 +476,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_get_edge_connection_margin_866169185,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_get_edge_connection_margin_866169185._native_ptr(),
+                    866169185)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -521,8 +498,13 @@ open class NavigationServer3D : Object {
                 .init(map_native), .init(radius_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_set_link_connection_radius_1794382983,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_set_link_connection_radius_1794382983._native_ptr(),
+                    1794382983)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -539,8 +521,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_get_link_connection_radius_866169185,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_get_link_connection_radius_866169185._native_ptr(),
+                    866169185)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -560,8 +547,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_get_path_2121045993,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_get_path_2121045993._native_ptr(),
+                    2121045993)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -582,8 +574,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_get_closest_point_to_segment_3830095642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_get_closest_point_to_segment_3830095642._native_ptr(),
+                    3830095642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -601,8 +598,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_get_closest_point_2056183332,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_get_closest_point_2056183332._native_ptr(),
+                    2056183332)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -619,8 +621,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_get_closest_point_normal_2056183332,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_get_closest_point_normal_2056183332._native_ptr(),
+                    2056183332)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -637,8 +644,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_get_closest_point_owner_553364610,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_get_closest_point_owner_553364610._native_ptr(),
+                    553364610)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -654,8 +666,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_get_links_2684255073,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_get_links_2684255073._native_ptr(),
+                    2684255073)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -671,8 +688,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_get_regions_2684255073,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_get_regions_2684255073._native_ptr(),
+                    2684255073)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -688,8 +710,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_get_agents_2684255073,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_get_agents_2684255073._native_ptr(),
+                    2684255073)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -704,8 +731,13 @@ open class NavigationServer3D : Object {
                 .init(map_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_force_update_2722037293,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_force_update_2722037293._native_ptr(),
+                    2722037293)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -720,8 +752,13 @@ open class NavigationServer3D : Object {
                 .init(parameters_native), .init(result_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_query_path_3415008901,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_query_path_3415008901._native_ptr(),
+                    3415008901)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -735,8 +772,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_create_529393457,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_create_529393457._native_ptr(),
+                    529393457)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -752,8 +794,13 @@ open class NavigationServer3D : Object {
                 .init(region_native), .init(enter_cost_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_set_enter_cost_1794382983,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_set_enter_cost_1794382983._native_ptr(),
+                    1794382983)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -770,8 +817,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_get_enter_cost_866169185,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_get_enter_cost_866169185._native_ptr(),
+                    866169185)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -787,8 +839,13 @@ open class NavigationServer3D : Object {
                 .init(region_native), .init(travel_cost_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_set_travel_cost_1794382983,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_set_travel_cost_1794382983._native_ptr(),
+                    1794382983)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -805,8 +862,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_get_travel_cost_866169185,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_get_travel_cost_866169185._native_ptr(),
+                    866169185)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -822,8 +884,13 @@ open class NavigationServer3D : Object {
                 .init(region_native), .init(owner_id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_set_owner_id_3411492887,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_set_owner_id_3411492887._native_ptr(),
+                    3411492887)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -840,8 +907,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_get_owner_id_2198884583,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_get_owner_id_2198884583._native_ptr(),
+                    2198884583)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -859,8 +931,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_owns_point_2360011153,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_owns_point_2360011153._native_ptr(),
+                    2360011153)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -876,8 +953,13 @@ open class NavigationServer3D : Object {
                 .init(region_native), .init(map_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_set_map_395945892,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_set_map_395945892._native_ptr(),
+                    395945892)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -892,8 +974,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_get_map_3814569979,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_get_map_3814569979._native_ptr(),
+                    3814569979)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -909,8 +996,13 @@ open class NavigationServer3D : Object {
                 .init(region_native), .init(navigation_layers_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_set_navigation_layers_3411492887,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_set_navigation_layers_3411492887._native_ptr(),
+                    3411492887)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -927,8 +1019,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_get_navigation_layers_2198884583,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_get_navigation_layers_2198884583._native_ptr(),
+                    2198884583)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -944,8 +1041,13 @@ open class NavigationServer3D : Object {
                 .init(region_native), .init(transform_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_set_transform_3935195649,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_set_transform_3935195649._native_ptr(),
+                    3935195649)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -960,8 +1062,13 @@ open class NavigationServer3D : Object {
                 .init(region_native), .init(navigation_mesh_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_set_navigation_mesh_2764952978,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_set_navigation_mesh_2764952978._native_ptr(),
+                    2764952978)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -976,8 +1083,13 @@ open class NavigationServer3D : Object {
                 .init(navigation_mesh_native), .init(root_node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_bake_navigation_mesh_1401173477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_bake_navigation_mesh_1401173477._native_ptr(),
+                    1401173477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -993,8 +1105,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_get_connections_count_2198884583,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_get_connections_count_2198884583._native_ptr(),
+                    2198884583)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1011,8 +1128,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_get_connection_pathway_start_3440143363,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_get_connection_pathway_start_3440143363._native_ptr(),
+                    3440143363)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1030,8 +1152,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_region_get_connection_pathway_end_3440143363,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_region_get_connection_pathway_end_3440143363._native_ptr(),
+                    3440143363)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1047,8 +1174,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_create_529393457,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_create_529393457._native_ptr(),
+                    529393457)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1064,8 +1196,13 @@ open class NavigationServer3D : Object {
                 .init(link_native), .init(map_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_set_map_395945892,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_set_map_395945892._native_ptr(),
+                    395945892)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1080,8 +1217,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_get_map_3814569979,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_get_map_3814569979._native_ptr(),
+                    3814569979)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1097,8 +1239,13 @@ open class NavigationServer3D : Object {
                 .init(link_native), .init(bidirectional_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_set_bidirectional_1265174801,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_set_bidirectional_1265174801._native_ptr(),
+                    1265174801)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1115,8 +1262,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_is_bidirectional_4155700596,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_is_bidirectional_4155700596._native_ptr(),
+                    4155700596)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1132,8 +1284,13 @@ open class NavigationServer3D : Object {
                 .init(link_native), .init(navigation_layers_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_set_navigation_layers_3411492887,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_set_navigation_layers_3411492887._native_ptr(),
+                    3411492887)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1150,8 +1307,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_get_navigation_layers_2198884583,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_get_navigation_layers_2198884583._native_ptr(),
+                    2198884583)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1167,8 +1329,13 @@ open class NavigationServer3D : Object {
                 .init(link_native), .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_set_start_position_3227306858,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_set_start_position_3227306858._native_ptr(),
+                    3227306858)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1183,8 +1350,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_get_start_position_531438156,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_get_start_position_531438156._native_ptr(),
+                    531438156)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1200,8 +1372,13 @@ open class NavigationServer3D : Object {
                 .init(link_native), .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_set_end_position_3227306858,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_set_end_position_3227306858._native_ptr(),
+                    3227306858)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1216,8 +1393,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_get_end_position_531438156,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_get_end_position_531438156._native_ptr(),
+                    531438156)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1233,8 +1415,13 @@ open class NavigationServer3D : Object {
                 .init(link_native), .init(enter_cost_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_set_enter_cost_1794382983,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_set_enter_cost_1794382983._native_ptr(),
+                    1794382983)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1251,8 +1438,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_get_enter_cost_866169185,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_get_enter_cost_866169185._native_ptr(),
+                    866169185)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1268,8 +1460,13 @@ open class NavigationServer3D : Object {
                 .init(link_native), .init(travel_cost_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_set_travel_cost_1794382983,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_set_travel_cost_1794382983._native_ptr(),
+                    1794382983)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1286,8 +1483,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_get_travel_cost_866169185,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_get_travel_cost_866169185._native_ptr(),
+                    866169185)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1303,8 +1505,13 @@ open class NavigationServer3D : Object {
                 .init(link_native), .init(owner_id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_set_owner_id_3411492887,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_set_owner_id_3411492887._native_ptr(),
+                    3411492887)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1321,8 +1528,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_link_get_owner_id_2198884583,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_link_get_owner_id_2198884583._native_ptr(),
+                    2198884583)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1337,8 +1549,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_agent_create_529393457,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_agent_create_529393457._native_ptr(),
+                    529393457)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1354,8 +1571,13 @@ open class NavigationServer3D : Object {
                 .init(agent_native), .init(map_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_agent_set_map_395945892,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_agent_set_map_395945892._native_ptr(),
+                    395945892)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1370,8 +1592,13 @@ open class NavigationServer3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_agent_get_map_3814569979,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_agent_get_map_3814569979._native_ptr(),
+                    3814569979)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1387,8 +1614,13 @@ open class NavigationServer3D : Object {
                 .init(agent_native), .init(distance_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_agent_set_neighbor_distance_1794382983,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_agent_set_neighbor_distance_1794382983._native_ptr(),
+                    1794382983)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1404,8 +1636,13 @@ open class NavigationServer3D : Object {
                 .init(agent_native), .init(count_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_agent_set_max_neighbors_3411492887,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_agent_set_max_neighbors_3411492887._native_ptr(),
+                    3411492887)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1421,8 +1658,13 @@ open class NavigationServer3D : Object {
                 .init(agent_native), .init(time_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_agent_set_time_horizon_1794382983,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_agent_set_time_horizon_1794382983._native_ptr(),
+                    1794382983)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1438,8 +1680,13 @@ open class NavigationServer3D : Object {
                 .init(agent_native), .init(radius_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_agent_set_radius_1794382983,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_agent_set_radius_1794382983._native_ptr(),
+                    1794382983)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1455,8 +1702,13 @@ open class NavigationServer3D : Object {
                 .init(agent_native), .init(max_speed_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_agent_set_max_speed_1794382983,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_agent_set_max_speed_1794382983._native_ptr(),
+                    1794382983)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1472,8 +1724,13 @@ open class NavigationServer3D : Object {
                 .init(agent_native), .init(velocity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_agent_set_velocity_3227306858,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_agent_set_velocity_3227306858._native_ptr(),
+                    3227306858)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1488,8 +1745,13 @@ open class NavigationServer3D : Object {
                 .init(agent_native), .init(target_velocity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_agent_set_target_velocity_3227306858,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_agent_set_target_velocity_3227306858._native_ptr(),
+                    3227306858)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1504,8 +1766,13 @@ open class NavigationServer3D : Object {
                 .init(agent_native), .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_agent_set_position_3227306858,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_agent_set_position_3227306858._native_ptr(),
+                    3227306858)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1521,8 +1788,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_agent_is_map_changed_4155700596,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_agent_is_map_changed_4155700596._native_ptr(),
+                    4155700596)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1538,8 +1810,13 @@ open class NavigationServer3D : Object {
                 .init(agent_native), .init(callback_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_agent_set_callback_3379118538,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_agent_set_callback_3379118538._native_ptr(),
+                    3379118538)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1553,8 +1830,13 @@ open class NavigationServer3D : Object {
                 .init(rid_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_free_rid_2722037293,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_free_rid_2722037293._native_ptr(),
+                    2722037293)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1568,8 +1850,13 @@ open class NavigationServer3D : Object {
                 .init(active_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_active_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_active_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1584,8 +1871,13 @@ open class NavigationServer3D : Object {
                 .init(delta_time_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_process_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_process_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1602,8 +1894,13 @@ open class NavigationServer3D : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_process_info_1938440894,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_process_info_1938440894._native_ptr(),
+                    1938440894)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

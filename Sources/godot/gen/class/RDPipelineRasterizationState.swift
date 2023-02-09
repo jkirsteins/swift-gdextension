@@ -11,103 +11,82 @@ open class RDPipelineRasterizationState : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_RDPipelineRasterizationState }
 
-    static var _method_set_enable_depth_clamp_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_enable_depth_clamp_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_discard_primitives_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_discard_primitives_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_wireframe_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_wireframe_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cull_mode_2662586502: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cull_mode_2192484313: GDExtensionMethodBindPtr! = nil
-    static var _method_set_front_face_2637251213: GDExtensionMethodBindPtr! = nil
-    static var _method_get_front_face_708793786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_depth_bias_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_depth_bias_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_depth_bias_constant_factor_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_depth_bias_constant_factor_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_depth_bias_clamp_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_depth_bias_clamp_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_depth_bias_slope_factor_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_depth_bias_slope_factor_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_line_width_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_width_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_patch_control_points_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_patch_control_points_3905245786: GDExtensionMethodBindPtr! = nil
+    static var _method_set_enable_depth_clamp_2586408642: StringName! = nil
+    static var _method_get_enable_depth_clamp_36873697: StringName! = nil
+    static var _method_set_discard_primitives_2586408642: StringName! = nil
+    static var _method_get_discard_primitives_36873697: StringName! = nil
+    static var _method_set_wireframe_2586408642: StringName! = nil
+    static var _method_get_wireframe_36873697: StringName! = nil
+    static var _method_set_cull_mode_2662586502: StringName! = nil
+    static var _method_get_cull_mode_2192484313: StringName! = nil
+    static var _method_set_front_face_2637251213: StringName! = nil
+    static var _method_get_front_face_708793786: StringName! = nil
+    static var _method_set_depth_bias_enabled_2586408642: StringName! = nil
+    static var _method_get_depth_bias_enabled_36873697: StringName! = nil
+    static var _method_set_depth_bias_constant_factor_373806689: StringName! = nil
+    static var _method_get_depth_bias_constant_factor_1740695150: StringName! = nil
+    static var _method_set_depth_bias_clamp_373806689: StringName! = nil
+    static var _method_get_depth_bias_clamp_1740695150: StringName! = nil
+    static var _method_set_depth_bias_slope_factor_373806689: StringName! = nil
+    static var _method_get_depth_bias_slope_factor_1740695150: StringName! = nil
+    static var _method_set_line_width_373806689: StringName! = nil
+    static var _method_get_line_width_1740695150: StringName! = nil
+    static var _method_set_patch_control_points_1286410249: StringName! = nil
+    static var _method_get_patch_control_points_3905245786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_RDPipelineRasterizationState == nil)
         __godot_name_RDPipelineRasterizationState = StringName(from: "RDPipelineRasterizationState")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_enable_depth_clamp_2586408642_name = StringName(from: "set_enable_depth_clamp")
-        self._method_set_enable_depth_clamp_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_set_enable_depth_clamp_2586408642_name._native_ptr(), 2586408642)
-        assert(RDPipelineRasterizationState._method_set_enable_depth_clamp_2586408642 != nil)
-        let _method_get_enable_depth_clamp_36873697_name = StringName(from: "get_enable_depth_clamp")
-        self._method_get_enable_depth_clamp_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_get_enable_depth_clamp_36873697_name._native_ptr(), 36873697)
-        assert(RDPipelineRasterizationState._method_get_enable_depth_clamp_36873697 != nil)
-        let _method_set_discard_primitives_2586408642_name = StringName(from: "set_discard_primitives")
-        self._method_set_discard_primitives_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_set_discard_primitives_2586408642_name._native_ptr(), 2586408642)
-        assert(RDPipelineRasterizationState._method_set_discard_primitives_2586408642 != nil)
-        let _method_get_discard_primitives_36873697_name = StringName(from: "get_discard_primitives")
-        self._method_get_discard_primitives_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_get_discard_primitives_36873697_name._native_ptr(), 36873697)
-        assert(RDPipelineRasterizationState._method_get_discard_primitives_36873697 != nil)
-        let _method_set_wireframe_2586408642_name = StringName(from: "set_wireframe")
-        self._method_set_wireframe_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_set_wireframe_2586408642_name._native_ptr(), 2586408642)
-        assert(RDPipelineRasterizationState._method_set_wireframe_2586408642 != nil)
-        let _method_get_wireframe_36873697_name = StringName(from: "get_wireframe")
-        self._method_get_wireframe_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_get_wireframe_36873697_name._native_ptr(), 36873697)
-        assert(RDPipelineRasterizationState._method_get_wireframe_36873697 != nil)
-        let _method_set_cull_mode_2662586502_name = StringName(from: "set_cull_mode")
-        self._method_set_cull_mode_2662586502 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_set_cull_mode_2662586502_name._native_ptr(), 2662586502)
-        assert(RDPipelineRasterizationState._method_set_cull_mode_2662586502 != nil)
-        let _method_get_cull_mode_2192484313_name = StringName(from: "get_cull_mode")
-        self._method_get_cull_mode_2192484313 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_get_cull_mode_2192484313_name._native_ptr(), 2192484313)
-        assert(RDPipelineRasterizationState._method_get_cull_mode_2192484313 != nil)
-        let _method_set_front_face_2637251213_name = StringName(from: "set_front_face")
-        self._method_set_front_face_2637251213 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_set_front_face_2637251213_name._native_ptr(), 2637251213)
-        assert(RDPipelineRasterizationState._method_set_front_face_2637251213 != nil)
-        let _method_get_front_face_708793786_name = StringName(from: "get_front_face")
-        self._method_get_front_face_708793786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_get_front_face_708793786_name._native_ptr(), 708793786)
-        assert(RDPipelineRasterizationState._method_get_front_face_708793786 != nil)
-        let _method_set_depth_bias_enabled_2586408642_name = StringName(from: "set_depth_bias_enabled")
-        self._method_set_depth_bias_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_set_depth_bias_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(RDPipelineRasterizationState._method_set_depth_bias_enabled_2586408642 != nil)
-        let _method_get_depth_bias_enabled_36873697_name = StringName(from: "get_depth_bias_enabled")
-        self._method_get_depth_bias_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_get_depth_bias_enabled_36873697_name._native_ptr(), 36873697)
-        assert(RDPipelineRasterizationState._method_get_depth_bias_enabled_36873697 != nil)
-        let _method_set_depth_bias_constant_factor_373806689_name = StringName(from: "set_depth_bias_constant_factor")
-        self._method_set_depth_bias_constant_factor_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_set_depth_bias_constant_factor_373806689_name._native_ptr(), 373806689)
-        assert(RDPipelineRasterizationState._method_set_depth_bias_constant_factor_373806689 != nil)
-        let _method_get_depth_bias_constant_factor_1740695150_name = StringName(from: "get_depth_bias_constant_factor")
-        self._method_get_depth_bias_constant_factor_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_get_depth_bias_constant_factor_1740695150_name._native_ptr(), 1740695150)
-        assert(RDPipelineRasterizationState._method_get_depth_bias_constant_factor_1740695150 != nil)
-        let _method_set_depth_bias_clamp_373806689_name = StringName(from: "set_depth_bias_clamp")
-        self._method_set_depth_bias_clamp_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_set_depth_bias_clamp_373806689_name._native_ptr(), 373806689)
-        assert(RDPipelineRasterizationState._method_set_depth_bias_clamp_373806689 != nil)
-        let _method_get_depth_bias_clamp_1740695150_name = StringName(from: "get_depth_bias_clamp")
-        self._method_get_depth_bias_clamp_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_get_depth_bias_clamp_1740695150_name._native_ptr(), 1740695150)
-        assert(RDPipelineRasterizationState._method_get_depth_bias_clamp_1740695150 != nil)
-        let _method_set_depth_bias_slope_factor_373806689_name = StringName(from: "set_depth_bias_slope_factor")
-        self._method_set_depth_bias_slope_factor_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_set_depth_bias_slope_factor_373806689_name._native_ptr(), 373806689)
-        assert(RDPipelineRasterizationState._method_set_depth_bias_slope_factor_373806689 != nil)
-        let _method_get_depth_bias_slope_factor_1740695150_name = StringName(from: "get_depth_bias_slope_factor")
-        self._method_get_depth_bias_slope_factor_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_get_depth_bias_slope_factor_1740695150_name._native_ptr(), 1740695150)
-        assert(RDPipelineRasterizationState._method_get_depth_bias_slope_factor_1740695150 != nil)
-        let _method_set_line_width_373806689_name = StringName(from: "set_line_width")
-        self._method_set_line_width_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_set_line_width_373806689_name._native_ptr(), 373806689)
-        assert(RDPipelineRasterizationState._method_set_line_width_373806689 != nil)
-        let _method_get_line_width_1740695150_name = StringName(from: "get_line_width")
-        self._method_get_line_width_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_get_line_width_1740695150_name._native_ptr(), 1740695150)
-        assert(RDPipelineRasterizationState._method_get_line_width_1740695150 != nil)
-        let _method_set_patch_control_points_1286410249_name = StringName(from: "set_patch_control_points")
-        self._method_set_patch_control_points_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_set_patch_control_points_1286410249_name._native_ptr(), 1286410249)
-        assert(RDPipelineRasterizationState._method_set_patch_control_points_1286410249 != nil)
-        let _method_get_patch_control_points_3905245786_name = StringName(from: "get_patch_control_points")
-        self._method_get_patch_control_points_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineRasterizationState._native_ptr(), _method_get_patch_control_points_3905245786_name._native_ptr(), 3905245786)
-        assert(RDPipelineRasterizationState._method_get_patch_control_points_3905245786 != nil)
+        self._method_set_enable_depth_clamp_2586408642 = StringName(from: "set_enable_depth_clamp")
+        assert(self._method_set_enable_depth_clamp_2586408642 != nil)
+        self._method_get_enable_depth_clamp_36873697 = StringName(from: "get_enable_depth_clamp")
+        assert(self._method_get_enable_depth_clamp_36873697 != nil)
+        self._method_set_discard_primitives_2586408642 = StringName(from: "set_discard_primitives")
+        assert(self._method_set_discard_primitives_2586408642 != nil)
+        self._method_get_discard_primitives_36873697 = StringName(from: "get_discard_primitives")
+        assert(self._method_get_discard_primitives_36873697 != nil)
+        self._method_set_wireframe_2586408642 = StringName(from: "set_wireframe")
+        assert(self._method_set_wireframe_2586408642 != nil)
+        self._method_get_wireframe_36873697 = StringName(from: "get_wireframe")
+        assert(self._method_get_wireframe_36873697 != nil)
+        self._method_set_cull_mode_2662586502 = StringName(from: "set_cull_mode")
+        assert(self._method_set_cull_mode_2662586502 != nil)
+        self._method_get_cull_mode_2192484313 = StringName(from: "get_cull_mode")
+        assert(self._method_get_cull_mode_2192484313 != nil)
+        self._method_set_front_face_2637251213 = StringName(from: "set_front_face")
+        assert(self._method_set_front_face_2637251213 != nil)
+        self._method_get_front_face_708793786 = StringName(from: "get_front_face")
+        assert(self._method_get_front_face_708793786 != nil)
+        self._method_set_depth_bias_enabled_2586408642 = StringName(from: "set_depth_bias_enabled")
+        assert(self._method_set_depth_bias_enabled_2586408642 != nil)
+        self._method_get_depth_bias_enabled_36873697 = StringName(from: "get_depth_bias_enabled")
+        assert(self._method_get_depth_bias_enabled_36873697 != nil)
+        self._method_set_depth_bias_constant_factor_373806689 = StringName(from: "set_depth_bias_constant_factor")
+        assert(self._method_set_depth_bias_constant_factor_373806689 != nil)
+        self._method_get_depth_bias_constant_factor_1740695150 = StringName(from: "get_depth_bias_constant_factor")
+        assert(self._method_get_depth_bias_constant_factor_1740695150 != nil)
+        self._method_set_depth_bias_clamp_373806689 = StringName(from: "set_depth_bias_clamp")
+        assert(self._method_set_depth_bias_clamp_373806689 != nil)
+        self._method_get_depth_bias_clamp_1740695150 = StringName(from: "get_depth_bias_clamp")
+        assert(self._method_get_depth_bias_clamp_1740695150 != nil)
+        self._method_set_depth_bias_slope_factor_373806689 = StringName(from: "set_depth_bias_slope_factor")
+        assert(self._method_set_depth_bias_slope_factor_373806689 != nil)
+        self._method_get_depth_bias_slope_factor_1740695150 = StringName(from: "get_depth_bias_slope_factor")
+        assert(self._method_get_depth_bias_slope_factor_1740695150 != nil)
+        self._method_set_line_width_373806689 = StringName(from: "set_line_width")
+        assert(self._method_set_line_width_373806689 != nil)
+        self._method_get_line_width_1740695150 = StringName(from: "get_line_width")
+        assert(self._method_get_line_width_1740695150 != nil)
+        self._method_set_patch_control_points_1286410249 = StringName(from: "set_patch_control_points")
+        assert(self._method_set_patch_control_points_1286410249 != nil)
+        self._method_get_patch_control_points_3905245786 = StringName(from: "get_patch_control_points")
+        assert(self._method_get_patch_control_points_3905245786 != nil)
     }
 
     public func set_enable_depth_clamp(p_member: UInt8)  {
@@ -118,8 +97,13 @@ open class RDPipelineRasterizationState : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_enable_depth_clamp_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_enable_depth_clamp_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -135,8 +119,13 @@ open class RDPipelineRasterizationState : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_enable_depth_clamp_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_enable_depth_clamp_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -151,8 +140,13 @@ open class RDPipelineRasterizationState : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_discard_primitives_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_discard_primitives_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -168,8 +162,13 @@ open class RDPipelineRasterizationState : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_discard_primitives_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_discard_primitives_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -184,8 +183,13 @@ open class RDPipelineRasterizationState : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_wireframe_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_wireframe_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -201,8 +205,13 @@ open class RDPipelineRasterizationState : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_wireframe_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_wireframe_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -217,8 +226,13 @@ open class RDPipelineRasterizationState : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cull_mode_2662586502,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cull_mode_2662586502._native_ptr(),
+                    2662586502)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -233,8 +247,13 @@ open class RDPipelineRasterizationState : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cull_mode_2192484313,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cull_mode_2192484313._native_ptr(),
+                    2192484313)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -249,8 +268,13 @@ open class RDPipelineRasterizationState : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_front_face_2637251213,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_front_face_2637251213._native_ptr(),
+                    2637251213)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -265,8 +289,13 @@ open class RDPipelineRasterizationState : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_front_face_708793786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_front_face_708793786._native_ptr(),
+                    708793786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -281,8 +310,13 @@ open class RDPipelineRasterizationState : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_depth_bias_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_depth_bias_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -298,8 +332,13 @@ open class RDPipelineRasterizationState : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_depth_bias_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_depth_bias_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -314,8 +353,13 @@ open class RDPipelineRasterizationState : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_depth_bias_constant_factor_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_depth_bias_constant_factor_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -331,8 +375,13 @@ open class RDPipelineRasterizationState : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_depth_bias_constant_factor_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_depth_bias_constant_factor_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -347,8 +396,13 @@ open class RDPipelineRasterizationState : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_depth_bias_clamp_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_depth_bias_clamp_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -364,8 +418,13 @@ open class RDPipelineRasterizationState : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_depth_bias_clamp_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_depth_bias_clamp_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -380,8 +439,13 @@ open class RDPipelineRasterizationState : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_depth_bias_slope_factor_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_depth_bias_slope_factor_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -397,8 +461,13 @@ open class RDPipelineRasterizationState : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_depth_bias_slope_factor_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_depth_bias_slope_factor_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -413,8 +482,13 @@ open class RDPipelineRasterizationState : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_line_width_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_line_width_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -430,8 +504,13 @@ open class RDPipelineRasterizationState : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_width_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_width_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -446,8 +525,13 @@ open class RDPipelineRasterizationState : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_patch_control_points_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_patch_control_points_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -463,8 +547,13 @@ open class RDPipelineRasterizationState : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_patch_control_points_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_patch_control_points_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

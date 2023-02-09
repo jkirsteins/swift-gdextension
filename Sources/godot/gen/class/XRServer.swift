@@ -24,83 +24,67 @@ open class XRServer : Object {
 
     public override class var __godot_name: StringName { __godot_name_XRServer }
 
-    static var _method_get_world_scale_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_world_scale_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_reference_frame_3229777777: GDExtensionMethodBindPtr! = nil
-    static var _method_center_on_hmd_1450904707: GDExtensionMethodBindPtr! = nil
-    static var _method_get_hmd_transform_4183770049: GDExtensionMethodBindPtr! = nil
-    static var _method_add_interface_1898711491: GDExtensionMethodBindPtr! = nil
-    static var _method_get_interface_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_interface_1898711491: GDExtensionMethodBindPtr! = nil
-    static var _method_get_interface_4237347919: GDExtensionMethodBindPtr! = nil
-    static var _method_get_interfaces_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_find_interface_1395192955: GDExtensionMethodBindPtr! = nil
-    static var _method_add_tracker_2692800323: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_tracker_2692800323: GDExtensionMethodBindPtr! = nil
-    static var _method_get_trackers_3554694381: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tracker_2742084544: GDExtensionMethodBindPtr! = nil
-    static var _method_get_primary_interface_2143545064: GDExtensionMethodBindPtr! = nil
-    static var _method_set_primary_interface_1898711491: GDExtensionMethodBindPtr! = nil
+    static var _method_get_world_scale_1740695150: StringName! = nil
+    static var _method_set_world_scale_373806689: StringName! = nil
+    static var _method_get_reference_frame_3229777777: StringName! = nil
+    static var _method_center_on_hmd_1450904707: StringName! = nil
+    static var _method_get_hmd_transform_4183770049: StringName! = nil
+    static var _method_add_interface_1898711491: StringName! = nil
+    static var _method_get_interface_count_3905245786: StringName! = nil
+    static var _method_remove_interface_1898711491: StringName! = nil
+    static var _method_get_interface_4237347919: StringName! = nil
+    static var _method_get_interfaces_3995934104: StringName! = nil
+    static var _method_find_interface_1395192955: StringName! = nil
+    static var _method_add_tracker_2692800323: StringName! = nil
+    static var _method_remove_tracker_2692800323: StringName! = nil
+    static var _method_get_trackers_3554694381: StringName! = nil
+    static var _method_get_tracker_2742084544: StringName! = nil
+    static var _method_get_primary_interface_2143545064: StringName! = nil
+    static var _method_set_primary_interface_1898711491: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_XRServer == nil)
         __godot_name_XRServer = StringName(from: "XRServer")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_world_scale_1740695150_name = StringName(from: "get_world_scale")
-        self._method_get_world_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_get_world_scale_1740695150_name._native_ptr(), 1740695150)
-        assert(XRServer._method_get_world_scale_1740695150 != nil)
-        let _method_set_world_scale_373806689_name = StringName(from: "set_world_scale")
-        self._method_set_world_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_set_world_scale_373806689_name._native_ptr(), 373806689)
-        assert(XRServer._method_set_world_scale_373806689 != nil)
-        let _method_get_reference_frame_3229777777_name = StringName(from: "get_reference_frame")
-        self._method_get_reference_frame_3229777777 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_get_reference_frame_3229777777_name._native_ptr(), 3229777777)
-        assert(XRServer._method_get_reference_frame_3229777777 != nil)
-        let _method_center_on_hmd_1450904707_name = StringName(from: "center_on_hmd")
-        self._method_center_on_hmd_1450904707 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_center_on_hmd_1450904707_name._native_ptr(), 1450904707)
-        assert(XRServer._method_center_on_hmd_1450904707 != nil)
-        let _method_get_hmd_transform_4183770049_name = StringName(from: "get_hmd_transform")
-        self._method_get_hmd_transform_4183770049 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_get_hmd_transform_4183770049_name._native_ptr(), 4183770049)
-        assert(XRServer._method_get_hmd_transform_4183770049 != nil)
-        let _method_add_interface_1898711491_name = StringName(from: "add_interface")
-        self._method_add_interface_1898711491 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_add_interface_1898711491_name._native_ptr(), 1898711491)
-        assert(XRServer._method_add_interface_1898711491 != nil)
-        let _method_get_interface_count_3905245786_name = StringName(from: "get_interface_count")
-        self._method_get_interface_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_get_interface_count_3905245786_name._native_ptr(), 3905245786)
-        assert(XRServer._method_get_interface_count_3905245786 != nil)
-        let _method_remove_interface_1898711491_name = StringName(from: "remove_interface")
-        self._method_remove_interface_1898711491 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_remove_interface_1898711491_name._native_ptr(), 1898711491)
-        assert(XRServer._method_remove_interface_1898711491 != nil)
-        let _method_get_interface_4237347919_name = StringName(from: "get_interface")
-        self._method_get_interface_4237347919 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_get_interface_4237347919_name._native_ptr(), 4237347919)
-        assert(XRServer._method_get_interface_4237347919 != nil)
-        let _method_get_interfaces_3995934104_name = StringName(from: "get_interfaces")
-        self._method_get_interfaces_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_get_interfaces_3995934104_name._native_ptr(), 3995934104)
-        assert(XRServer._method_get_interfaces_3995934104 != nil)
-        let _method_find_interface_1395192955_name = StringName(from: "find_interface")
-        self._method_find_interface_1395192955 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_find_interface_1395192955_name._native_ptr(), 1395192955)
-        assert(XRServer._method_find_interface_1395192955 != nil)
-        let _method_add_tracker_2692800323_name = StringName(from: "add_tracker")
-        self._method_add_tracker_2692800323 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_add_tracker_2692800323_name._native_ptr(), 2692800323)
-        assert(XRServer._method_add_tracker_2692800323 != nil)
-        let _method_remove_tracker_2692800323_name = StringName(from: "remove_tracker")
-        self._method_remove_tracker_2692800323 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_remove_tracker_2692800323_name._native_ptr(), 2692800323)
-        assert(XRServer._method_remove_tracker_2692800323 != nil)
-        let _method_get_trackers_3554694381_name = StringName(from: "get_trackers")
-        self._method_get_trackers_3554694381 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_get_trackers_3554694381_name._native_ptr(), 3554694381)
-        assert(XRServer._method_get_trackers_3554694381 != nil)
-        let _method_get_tracker_2742084544_name = StringName(from: "get_tracker")
-        self._method_get_tracker_2742084544 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_get_tracker_2742084544_name._native_ptr(), 2742084544)
-        assert(XRServer._method_get_tracker_2742084544 != nil)
-        let _method_get_primary_interface_2143545064_name = StringName(from: "get_primary_interface")
-        self._method_get_primary_interface_2143545064 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_get_primary_interface_2143545064_name._native_ptr(), 2143545064)
-        assert(XRServer._method_get_primary_interface_2143545064 != nil)
-        let _method_set_primary_interface_1898711491_name = StringName(from: "set_primary_interface")
-        self._method_set_primary_interface_1898711491 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRServer._native_ptr(), _method_set_primary_interface_1898711491_name._native_ptr(), 1898711491)
-        assert(XRServer._method_set_primary_interface_1898711491 != nil)
+        self._method_get_world_scale_1740695150 = StringName(from: "get_world_scale")
+        assert(self._method_get_world_scale_1740695150 != nil)
+        self._method_set_world_scale_373806689 = StringName(from: "set_world_scale")
+        assert(self._method_set_world_scale_373806689 != nil)
+        self._method_get_reference_frame_3229777777 = StringName(from: "get_reference_frame")
+        assert(self._method_get_reference_frame_3229777777 != nil)
+        self._method_center_on_hmd_1450904707 = StringName(from: "center_on_hmd")
+        assert(self._method_center_on_hmd_1450904707 != nil)
+        self._method_get_hmd_transform_4183770049 = StringName(from: "get_hmd_transform")
+        assert(self._method_get_hmd_transform_4183770049 != nil)
+        self._method_add_interface_1898711491 = StringName(from: "add_interface")
+        assert(self._method_add_interface_1898711491 != nil)
+        self._method_get_interface_count_3905245786 = StringName(from: "get_interface_count")
+        assert(self._method_get_interface_count_3905245786 != nil)
+        self._method_remove_interface_1898711491 = StringName(from: "remove_interface")
+        assert(self._method_remove_interface_1898711491 != nil)
+        self._method_get_interface_4237347919 = StringName(from: "get_interface")
+        assert(self._method_get_interface_4237347919 != nil)
+        self._method_get_interfaces_3995934104 = StringName(from: "get_interfaces")
+        assert(self._method_get_interfaces_3995934104 != nil)
+        self._method_find_interface_1395192955 = StringName(from: "find_interface")
+        assert(self._method_find_interface_1395192955 != nil)
+        self._method_add_tracker_2692800323 = StringName(from: "add_tracker")
+        assert(self._method_add_tracker_2692800323 != nil)
+        self._method_remove_tracker_2692800323 = StringName(from: "remove_tracker")
+        assert(self._method_remove_tracker_2692800323 != nil)
+        self._method_get_trackers_3554694381 = StringName(from: "get_trackers")
+        assert(self._method_get_trackers_3554694381 != nil)
+        self._method_get_tracker_2742084544 = StringName(from: "get_tracker")
+        assert(self._method_get_tracker_2742084544 != nil)
+        self._method_get_primary_interface_2143545064 = StringName(from: "get_primary_interface")
+        assert(self._method_get_primary_interface_2143545064 != nil)
+        self._method_set_primary_interface_1898711491 = StringName(from: "set_primary_interface")
+        assert(self._method_set_primary_interface_1898711491 != nil)
     }
 
     public func get_world_scale() -> Float64 {
@@ -112,8 +96,13 @@ open class XRServer : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_world_scale_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_world_scale_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -128,8 +117,13 @@ open class XRServer : Object {
                 .init(scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_world_scale_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_world_scale_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -144,8 +138,13 @@ open class XRServer : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_reference_frame_3229777777,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_reference_frame_3229777777._native_ptr(),
+                    3229777777)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -161,8 +160,13 @@ open class XRServer : Object {
                 .init(rotation_mode_native), .init(keep_height_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_center_on_hmd_1450904707,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_center_on_hmd_1450904707._native_ptr(),
+                    1450904707)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -178,8 +182,13 @@ open class XRServer : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_hmd_transform_4183770049,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_hmd_transform_4183770049._native_ptr(),
+                    4183770049)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -194,8 +203,13 @@ open class XRServer : Object {
                 .init(interface_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_interface_1898711491,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_interface_1898711491._native_ptr(),
+                    1898711491)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -210,8 +224,13 @@ open class XRServer : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_interface_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_interface_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -226,8 +245,13 @@ open class XRServer : Object {
                 .init(interface_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_interface_1898711491,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_interface_1898711491._native_ptr(),
+                    1898711491)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -242,8 +266,13 @@ open class XRServer : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_interface_4237347919,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_interface_4237347919._native_ptr(),
+                    4237347919)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -259,8 +288,13 @@ open class XRServer : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_interfaces_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_interfaces_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -276,8 +310,13 @@ open class XRServer : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_find_interface_1395192955,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_find_interface_1395192955._native_ptr(),
+                    1395192955)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -292,8 +331,13 @@ open class XRServer : Object {
                 .init(tracker_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_tracker_2692800323,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_tracker_2692800323._native_ptr(),
+                    2692800323)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -307,8 +351,13 @@ open class XRServer : Object {
                 .init(tracker_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_tracker_2692800323,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_tracker_2692800323._native_ptr(),
+                    2692800323)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -323,8 +372,13 @@ open class XRServer : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_trackers_3554694381,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_trackers_3554694381._native_ptr(),
+                    3554694381)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -341,8 +395,13 @@ open class XRServer : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tracker_2742084544,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tracker_2742084544._native_ptr(),
+                    2742084544)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -357,8 +416,13 @@ open class XRServer : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_primary_interface_2143545064,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_primary_interface_2143545064._native_ptr(),
+                    2143545064)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -373,8 +437,13 @@ open class XRServer : Object {
                 .init(interface_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_primary_interface_1898711491,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_primary_interface_1898711491._native_ptr(),
+                    1898711491)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

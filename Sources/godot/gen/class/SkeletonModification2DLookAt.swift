@@ -11,79 +11,64 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
 
     public override class var __godot_name: StringName { __godot_name_SkeletonModification2DLookAt }
 
-    static var _method_set_bone2d_node_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone2d_node_4075236667: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bone_index_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone_index_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_target_node_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_target_node_4075236667: GDExtensionMethodBindPtr! = nil
-    static var _method_set_additional_rotation_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_additional_rotation_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_enable_constraint_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_enable_constraint_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_constraint_angle_min_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_constraint_angle_min_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_constraint_angle_max_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_constraint_angle_max_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_constraint_angle_invert_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_constraint_angle_invert_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_bone2d_node_1348162250: StringName! = nil
+    static var _method_get_bone2d_node_4075236667: StringName! = nil
+    static var _method_set_bone_index_1286410249: StringName! = nil
+    static var _method_get_bone_index_3905245786: StringName! = nil
+    static var _method_set_target_node_1348162250: StringName! = nil
+    static var _method_get_target_node_4075236667: StringName! = nil
+    static var _method_set_additional_rotation_373806689: StringName! = nil
+    static var _method_get_additional_rotation_1740695150: StringName! = nil
+    static var _method_set_enable_constraint_2586408642: StringName! = nil
+    static var _method_get_enable_constraint_36873697: StringName! = nil
+    static var _method_set_constraint_angle_min_373806689: StringName! = nil
+    static var _method_get_constraint_angle_min_1740695150: StringName! = nil
+    static var _method_set_constraint_angle_max_373806689: StringName! = nil
+    static var _method_get_constraint_angle_max_1740695150: StringName! = nil
+    static var _method_set_constraint_angle_invert_2586408642: StringName! = nil
+    static var _method_get_constraint_angle_invert_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_SkeletonModification2DLookAt == nil)
         __godot_name_SkeletonModification2DLookAt = StringName(from: "SkeletonModification2DLookAt")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_bone2d_node_1348162250_name = StringName(from: "set_bone2d_node")
-        self._method_set_bone2d_node_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DLookAt._native_ptr(), _method_set_bone2d_node_1348162250_name._native_ptr(), 1348162250)
-        assert(SkeletonModification2DLookAt._method_set_bone2d_node_1348162250 != nil)
-        let _method_get_bone2d_node_4075236667_name = StringName(from: "get_bone2d_node")
-        self._method_get_bone2d_node_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DLookAt._native_ptr(), _method_get_bone2d_node_4075236667_name._native_ptr(), 4075236667)
-        assert(SkeletonModification2DLookAt._method_get_bone2d_node_4075236667 != nil)
-        let _method_set_bone_index_1286410249_name = StringName(from: "set_bone_index")
-        self._method_set_bone_index_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DLookAt._native_ptr(), _method_set_bone_index_1286410249_name._native_ptr(), 1286410249)
-        assert(SkeletonModification2DLookAt._method_set_bone_index_1286410249 != nil)
-        let _method_get_bone_index_3905245786_name = StringName(from: "get_bone_index")
-        self._method_get_bone_index_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DLookAt._native_ptr(), _method_get_bone_index_3905245786_name._native_ptr(), 3905245786)
-        assert(SkeletonModification2DLookAt._method_get_bone_index_3905245786 != nil)
-        let _method_set_target_node_1348162250_name = StringName(from: "set_target_node")
-        self._method_set_target_node_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DLookAt._native_ptr(), _method_set_target_node_1348162250_name._native_ptr(), 1348162250)
-        assert(SkeletonModification2DLookAt._method_set_target_node_1348162250 != nil)
-        let _method_get_target_node_4075236667_name = StringName(from: "get_target_node")
-        self._method_get_target_node_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DLookAt._native_ptr(), _method_get_target_node_4075236667_name._native_ptr(), 4075236667)
-        assert(SkeletonModification2DLookAt._method_get_target_node_4075236667 != nil)
-        let _method_set_additional_rotation_373806689_name = StringName(from: "set_additional_rotation")
-        self._method_set_additional_rotation_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DLookAt._native_ptr(), _method_set_additional_rotation_373806689_name._native_ptr(), 373806689)
-        assert(SkeletonModification2DLookAt._method_set_additional_rotation_373806689 != nil)
-        let _method_get_additional_rotation_1740695150_name = StringName(from: "get_additional_rotation")
-        self._method_get_additional_rotation_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DLookAt._native_ptr(), _method_get_additional_rotation_1740695150_name._native_ptr(), 1740695150)
-        assert(SkeletonModification2DLookAt._method_get_additional_rotation_1740695150 != nil)
-        let _method_set_enable_constraint_2586408642_name = StringName(from: "set_enable_constraint")
-        self._method_set_enable_constraint_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DLookAt._native_ptr(), _method_set_enable_constraint_2586408642_name._native_ptr(), 2586408642)
-        assert(SkeletonModification2DLookAt._method_set_enable_constraint_2586408642 != nil)
-        let _method_get_enable_constraint_36873697_name = StringName(from: "get_enable_constraint")
-        self._method_get_enable_constraint_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DLookAt._native_ptr(), _method_get_enable_constraint_36873697_name._native_ptr(), 36873697)
-        assert(SkeletonModification2DLookAt._method_get_enable_constraint_36873697 != nil)
-        let _method_set_constraint_angle_min_373806689_name = StringName(from: "set_constraint_angle_min")
-        self._method_set_constraint_angle_min_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DLookAt._native_ptr(), _method_set_constraint_angle_min_373806689_name._native_ptr(), 373806689)
-        assert(SkeletonModification2DLookAt._method_set_constraint_angle_min_373806689 != nil)
-        let _method_get_constraint_angle_min_1740695150_name = StringName(from: "get_constraint_angle_min")
-        self._method_get_constraint_angle_min_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DLookAt._native_ptr(), _method_get_constraint_angle_min_1740695150_name._native_ptr(), 1740695150)
-        assert(SkeletonModification2DLookAt._method_get_constraint_angle_min_1740695150 != nil)
-        let _method_set_constraint_angle_max_373806689_name = StringName(from: "set_constraint_angle_max")
-        self._method_set_constraint_angle_max_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DLookAt._native_ptr(), _method_set_constraint_angle_max_373806689_name._native_ptr(), 373806689)
-        assert(SkeletonModification2DLookAt._method_set_constraint_angle_max_373806689 != nil)
-        let _method_get_constraint_angle_max_1740695150_name = StringName(from: "get_constraint_angle_max")
-        self._method_get_constraint_angle_max_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DLookAt._native_ptr(), _method_get_constraint_angle_max_1740695150_name._native_ptr(), 1740695150)
-        assert(SkeletonModification2DLookAt._method_get_constraint_angle_max_1740695150 != nil)
-        let _method_set_constraint_angle_invert_2586408642_name = StringName(from: "set_constraint_angle_invert")
-        self._method_set_constraint_angle_invert_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DLookAt._native_ptr(), _method_set_constraint_angle_invert_2586408642_name._native_ptr(), 2586408642)
-        assert(SkeletonModification2DLookAt._method_set_constraint_angle_invert_2586408642 != nil)
-        let _method_get_constraint_angle_invert_36873697_name = StringName(from: "get_constraint_angle_invert")
-        self._method_get_constraint_angle_invert_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DLookAt._native_ptr(), _method_get_constraint_angle_invert_36873697_name._native_ptr(), 36873697)
-        assert(SkeletonModification2DLookAt._method_get_constraint_angle_invert_36873697 != nil)
+        self._method_set_bone2d_node_1348162250 = StringName(from: "set_bone2d_node")
+        assert(self._method_set_bone2d_node_1348162250 != nil)
+        self._method_get_bone2d_node_4075236667 = StringName(from: "get_bone2d_node")
+        assert(self._method_get_bone2d_node_4075236667 != nil)
+        self._method_set_bone_index_1286410249 = StringName(from: "set_bone_index")
+        assert(self._method_set_bone_index_1286410249 != nil)
+        self._method_get_bone_index_3905245786 = StringName(from: "get_bone_index")
+        assert(self._method_get_bone_index_3905245786 != nil)
+        self._method_set_target_node_1348162250 = StringName(from: "set_target_node")
+        assert(self._method_set_target_node_1348162250 != nil)
+        self._method_get_target_node_4075236667 = StringName(from: "get_target_node")
+        assert(self._method_get_target_node_4075236667 != nil)
+        self._method_set_additional_rotation_373806689 = StringName(from: "set_additional_rotation")
+        assert(self._method_set_additional_rotation_373806689 != nil)
+        self._method_get_additional_rotation_1740695150 = StringName(from: "get_additional_rotation")
+        assert(self._method_get_additional_rotation_1740695150 != nil)
+        self._method_set_enable_constraint_2586408642 = StringName(from: "set_enable_constraint")
+        assert(self._method_set_enable_constraint_2586408642 != nil)
+        self._method_get_enable_constraint_36873697 = StringName(from: "get_enable_constraint")
+        assert(self._method_get_enable_constraint_36873697 != nil)
+        self._method_set_constraint_angle_min_373806689 = StringName(from: "set_constraint_angle_min")
+        assert(self._method_set_constraint_angle_min_373806689 != nil)
+        self._method_get_constraint_angle_min_1740695150 = StringName(from: "get_constraint_angle_min")
+        assert(self._method_get_constraint_angle_min_1740695150 != nil)
+        self._method_set_constraint_angle_max_373806689 = StringName(from: "set_constraint_angle_max")
+        assert(self._method_set_constraint_angle_max_373806689 != nil)
+        self._method_get_constraint_angle_max_1740695150 = StringName(from: "get_constraint_angle_max")
+        assert(self._method_get_constraint_angle_max_1740695150 != nil)
+        self._method_set_constraint_angle_invert_2586408642 = StringName(from: "set_constraint_angle_invert")
+        assert(self._method_set_constraint_angle_invert_2586408642 != nil)
+        self._method_get_constraint_angle_invert_36873697 = StringName(from: "get_constraint_angle_invert")
+        assert(self._method_get_constraint_angle_invert_36873697 != nil)
     }
 
     public func set_bone2d_node(bone2d_nodepath: NodePath)  {
@@ -94,8 +79,13 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
                 .init(bone2d_nodepath_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bone2d_node_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bone2d_node_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -109,8 +99,13 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone2d_node_4075236667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone2d_node_4075236667._native_ptr(),
+                    4075236667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -125,8 +120,13 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
                 .init(bone_idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bone_index_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bone_index_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -142,8 +142,13 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_index_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_index_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -158,8 +163,13 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
                 .init(target_nodepath_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_target_node_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_target_node_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -173,8 +183,13 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_target_node_4075236667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_target_node_4075236667._native_ptr(),
+                    4075236667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -189,8 +204,13 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
                 .init(rotation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_additional_rotation_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_additional_rotation_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -206,8 +226,13 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_additional_rotation_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_additional_rotation_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -222,8 +247,13 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
                 .init(enable_constraint_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_enable_constraint_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_enable_constraint_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -239,8 +269,13 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_enable_constraint_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_enable_constraint_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -255,8 +290,13 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
                 .init(angle_min_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_constraint_angle_min_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_constraint_angle_min_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -272,8 +312,13 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_constraint_angle_min_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_constraint_angle_min_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -288,8 +333,13 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
                 .init(angle_max_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_constraint_angle_max_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_constraint_angle_max_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -305,8 +355,13 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_constraint_angle_max_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_constraint_angle_max_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -321,8 +376,13 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
                 .init(invert_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_constraint_angle_invert_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_constraint_angle_invert_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -338,8 +398,13 @@ open class SkeletonModification2DLookAt : SkeletonModification2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_constraint_angle_invert_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_constraint_angle_invert_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -39,131 +39,103 @@ open class Light3D : VisualInstance3D {
 
     public override class var __godot_name: StringName { __godot_name_Light3D }
 
-    static var _method_set_editor_only_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_editor_only_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_param_1722734213: GDExtensionMethodBindPtr! = nil
-    static var _method_get_param_1844084987: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shadow_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_has_shadow_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_negative_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_negative_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cull_mask_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cull_mask_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_enable_distance_fade_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_distance_fade_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_distance_fade_begin_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_distance_fade_begin_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_distance_fade_shadow_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_distance_fade_shadow_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_distance_fade_length_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_distance_fade_length_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_color_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shadow_reverse_cull_face_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_shadow_reverse_cull_face_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bake_mode_37739303: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bake_mode_371737608: GDExtensionMethodBindPtr! = nil
-    static var _method_set_projector_4051416890: GDExtensionMethodBindPtr! = nil
-    static var _method_get_projector_3635182373: GDExtensionMethodBindPtr! = nil
-    static var _method_set_temperature_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_temperature_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_correlated_color_3444240500: GDExtensionMethodBindPtr! = nil
+    static var _method_set_editor_only_2586408642: StringName! = nil
+    static var _method_is_editor_only_36873697: StringName! = nil
+    static var _method_set_param_1722734213: StringName! = nil
+    static var _method_get_param_1844084987: StringName! = nil
+    static var _method_set_shadow_2586408642: StringName! = nil
+    static var _method_has_shadow_36873697: StringName! = nil
+    static var _method_set_negative_2586408642: StringName! = nil
+    static var _method_is_negative_36873697: StringName! = nil
+    static var _method_set_cull_mask_1286410249: StringName! = nil
+    static var _method_get_cull_mask_3905245786: StringName! = nil
+    static var _method_set_enable_distance_fade_2586408642: StringName! = nil
+    static var _method_is_distance_fade_enabled_36873697: StringName! = nil
+    static var _method_set_distance_fade_begin_373806689: StringName! = nil
+    static var _method_get_distance_fade_begin_1740695150: StringName! = nil
+    static var _method_set_distance_fade_shadow_373806689: StringName! = nil
+    static var _method_get_distance_fade_shadow_1740695150: StringName! = nil
+    static var _method_set_distance_fade_length_373806689: StringName! = nil
+    static var _method_get_distance_fade_length_1740695150: StringName! = nil
+    static var _method_set_color_2920490490: StringName! = nil
+    static var _method_get_color_3444240500: StringName! = nil
+    static var _method_set_shadow_reverse_cull_face_2586408642: StringName! = nil
+    static var _method_get_shadow_reverse_cull_face_36873697: StringName! = nil
+    static var _method_set_bake_mode_37739303: StringName! = nil
+    static var _method_get_bake_mode_371737608: StringName! = nil
+    static var _method_set_projector_4051416890: StringName! = nil
+    static var _method_get_projector_3635182373: StringName! = nil
+    static var _method_set_temperature_373806689: StringName! = nil
+    static var _method_get_temperature_1740695150: StringName! = nil
+    static var _method_get_correlated_color_3444240500: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Light3D == nil)
         __godot_name_Light3D = StringName(from: "Light3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_editor_only_2586408642_name = StringName(from: "set_editor_only")
-        self._method_set_editor_only_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_set_editor_only_2586408642_name._native_ptr(), 2586408642)
-        assert(Light3D._method_set_editor_only_2586408642 != nil)
-        let _method_is_editor_only_36873697_name = StringName(from: "is_editor_only")
-        self._method_is_editor_only_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_is_editor_only_36873697_name._native_ptr(), 36873697)
-        assert(Light3D._method_is_editor_only_36873697 != nil)
-        let _method_set_param_1722734213_name = StringName(from: "set_param")
-        self._method_set_param_1722734213 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_set_param_1722734213_name._native_ptr(), 1722734213)
-        assert(Light3D._method_set_param_1722734213 != nil)
-        let _method_get_param_1844084987_name = StringName(from: "get_param")
-        self._method_get_param_1844084987 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_get_param_1844084987_name._native_ptr(), 1844084987)
-        assert(Light3D._method_get_param_1844084987 != nil)
-        let _method_set_shadow_2586408642_name = StringName(from: "set_shadow")
-        self._method_set_shadow_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_set_shadow_2586408642_name._native_ptr(), 2586408642)
-        assert(Light3D._method_set_shadow_2586408642 != nil)
-        let _method_has_shadow_36873697_name = StringName(from: "has_shadow")
-        self._method_has_shadow_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_has_shadow_36873697_name._native_ptr(), 36873697)
-        assert(Light3D._method_has_shadow_36873697 != nil)
-        let _method_set_negative_2586408642_name = StringName(from: "set_negative")
-        self._method_set_negative_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_set_negative_2586408642_name._native_ptr(), 2586408642)
-        assert(Light3D._method_set_negative_2586408642 != nil)
-        let _method_is_negative_36873697_name = StringName(from: "is_negative")
-        self._method_is_negative_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_is_negative_36873697_name._native_ptr(), 36873697)
-        assert(Light3D._method_is_negative_36873697 != nil)
-        let _method_set_cull_mask_1286410249_name = StringName(from: "set_cull_mask")
-        self._method_set_cull_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_set_cull_mask_1286410249_name._native_ptr(), 1286410249)
-        assert(Light3D._method_set_cull_mask_1286410249 != nil)
-        let _method_get_cull_mask_3905245786_name = StringName(from: "get_cull_mask")
-        self._method_get_cull_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_get_cull_mask_3905245786_name._native_ptr(), 3905245786)
-        assert(Light3D._method_get_cull_mask_3905245786 != nil)
-        let _method_set_enable_distance_fade_2586408642_name = StringName(from: "set_enable_distance_fade")
-        self._method_set_enable_distance_fade_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_set_enable_distance_fade_2586408642_name._native_ptr(), 2586408642)
-        assert(Light3D._method_set_enable_distance_fade_2586408642 != nil)
-        let _method_is_distance_fade_enabled_36873697_name = StringName(from: "is_distance_fade_enabled")
-        self._method_is_distance_fade_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_is_distance_fade_enabled_36873697_name._native_ptr(), 36873697)
-        assert(Light3D._method_is_distance_fade_enabled_36873697 != nil)
-        let _method_set_distance_fade_begin_373806689_name = StringName(from: "set_distance_fade_begin")
-        self._method_set_distance_fade_begin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_set_distance_fade_begin_373806689_name._native_ptr(), 373806689)
-        assert(Light3D._method_set_distance_fade_begin_373806689 != nil)
-        let _method_get_distance_fade_begin_1740695150_name = StringName(from: "get_distance_fade_begin")
-        self._method_get_distance_fade_begin_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_get_distance_fade_begin_1740695150_name._native_ptr(), 1740695150)
-        assert(Light3D._method_get_distance_fade_begin_1740695150 != nil)
-        let _method_set_distance_fade_shadow_373806689_name = StringName(from: "set_distance_fade_shadow")
-        self._method_set_distance_fade_shadow_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_set_distance_fade_shadow_373806689_name._native_ptr(), 373806689)
-        assert(Light3D._method_set_distance_fade_shadow_373806689 != nil)
-        let _method_get_distance_fade_shadow_1740695150_name = StringName(from: "get_distance_fade_shadow")
-        self._method_get_distance_fade_shadow_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_get_distance_fade_shadow_1740695150_name._native_ptr(), 1740695150)
-        assert(Light3D._method_get_distance_fade_shadow_1740695150 != nil)
-        let _method_set_distance_fade_length_373806689_name = StringName(from: "set_distance_fade_length")
-        self._method_set_distance_fade_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_set_distance_fade_length_373806689_name._native_ptr(), 373806689)
-        assert(Light3D._method_set_distance_fade_length_373806689 != nil)
-        let _method_get_distance_fade_length_1740695150_name = StringName(from: "get_distance_fade_length")
-        self._method_get_distance_fade_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_get_distance_fade_length_1740695150_name._native_ptr(), 1740695150)
-        assert(Light3D._method_get_distance_fade_length_1740695150 != nil)
-        let _method_set_color_2920490490_name = StringName(from: "set_color")
-        self._method_set_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_set_color_2920490490_name._native_ptr(), 2920490490)
-        assert(Light3D._method_set_color_2920490490 != nil)
-        let _method_get_color_3444240500_name = StringName(from: "get_color")
-        self._method_get_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_get_color_3444240500_name._native_ptr(), 3444240500)
-        assert(Light3D._method_get_color_3444240500 != nil)
-        let _method_set_shadow_reverse_cull_face_2586408642_name = StringName(from: "set_shadow_reverse_cull_face")
-        self._method_set_shadow_reverse_cull_face_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_set_shadow_reverse_cull_face_2586408642_name._native_ptr(), 2586408642)
-        assert(Light3D._method_set_shadow_reverse_cull_face_2586408642 != nil)
-        let _method_get_shadow_reverse_cull_face_36873697_name = StringName(from: "get_shadow_reverse_cull_face")
-        self._method_get_shadow_reverse_cull_face_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_get_shadow_reverse_cull_face_36873697_name._native_ptr(), 36873697)
-        assert(Light3D._method_get_shadow_reverse_cull_face_36873697 != nil)
-        let _method_set_bake_mode_37739303_name = StringName(from: "set_bake_mode")
-        self._method_set_bake_mode_37739303 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_set_bake_mode_37739303_name._native_ptr(), 37739303)
-        assert(Light3D._method_set_bake_mode_37739303 != nil)
-        let _method_get_bake_mode_371737608_name = StringName(from: "get_bake_mode")
-        self._method_get_bake_mode_371737608 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_get_bake_mode_371737608_name._native_ptr(), 371737608)
-        assert(Light3D._method_get_bake_mode_371737608 != nil)
-        let _method_set_projector_4051416890_name = StringName(from: "set_projector")
-        self._method_set_projector_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_set_projector_4051416890_name._native_ptr(), 4051416890)
-        assert(Light3D._method_set_projector_4051416890 != nil)
-        let _method_get_projector_3635182373_name = StringName(from: "get_projector")
-        self._method_get_projector_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_get_projector_3635182373_name._native_ptr(), 3635182373)
-        assert(Light3D._method_get_projector_3635182373 != nil)
-        let _method_set_temperature_373806689_name = StringName(from: "set_temperature")
-        self._method_set_temperature_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_set_temperature_373806689_name._native_ptr(), 373806689)
-        assert(Light3D._method_set_temperature_373806689 != nil)
-        let _method_get_temperature_1740695150_name = StringName(from: "get_temperature")
-        self._method_get_temperature_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_get_temperature_1740695150_name._native_ptr(), 1740695150)
-        assert(Light3D._method_get_temperature_1740695150 != nil)
-        let _method_get_correlated_color_3444240500_name = StringName(from: "get_correlated_color")
-        self._method_get_correlated_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_Light3D._native_ptr(), _method_get_correlated_color_3444240500_name._native_ptr(), 3444240500)
-        assert(Light3D._method_get_correlated_color_3444240500 != nil)
+        self._method_set_editor_only_2586408642 = StringName(from: "set_editor_only")
+        assert(self._method_set_editor_only_2586408642 != nil)
+        self._method_is_editor_only_36873697 = StringName(from: "is_editor_only")
+        assert(self._method_is_editor_only_36873697 != nil)
+        self._method_set_param_1722734213 = StringName(from: "set_param")
+        assert(self._method_set_param_1722734213 != nil)
+        self._method_get_param_1844084987 = StringName(from: "get_param")
+        assert(self._method_get_param_1844084987 != nil)
+        self._method_set_shadow_2586408642 = StringName(from: "set_shadow")
+        assert(self._method_set_shadow_2586408642 != nil)
+        self._method_has_shadow_36873697 = StringName(from: "has_shadow")
+        assert(self._method_has_shadow_36873697 != nil)
+        self._method_set_negative_2586408642 = StringName(from: "set_negative")
+        assert(self._method_set_negative_2586408642 != nil)
+        self._method_is_negative_36873697 = StringName(from: "is_negative")
+        assert(self._method_is_negative_36873697 != nil)
+        self._method_set_cull_mask_1286410249 = StringName(from: "set_cull_mask")
+        assert(self._method_set_cull_mask_1286410249 != nil)
+        self._method_get_cull_mask_3905245786 = StringName(from: "get_cull_mask")
+        assert(self._method_get_cull_mask_3905245786 != nil)
+        self._method_set_enable_distance_fade_2586408642 = StringName(from: "set_enable_distance_fade")
+        assert(self._method_set_enable_distance_fade_2586408642 != nil)
+        self._method_is_distance_fade_enabled_36873697 = StringName(from: "is_distance_fade_enabled")
+        assert(self._method_is_distance_fade_enabled_36873697 != nil)
+        self._method_set_distance_fade_begin_373806689 = StringName(from: "set_distance_fade_begin")
+        assert(self._method_set_distance_fade_begin_373806689 != nil)
+        self._method_get_distance_fade_begin_1740695150 = StringName(from: "get_distance_fade_begin")
+        assert(self._method_get_distance_fade_begin_1740695150 != nil)
+        self._method_set_distance_fade_shadow_373806689 = StringName(from: "set_distance_fade_shadow")
+        assert(self._method_set_distance_fade_shadow_373806689 != nil)
+        self._method_get_distance_fade_shadow_1740695150 = StringName(from: "get_distance_fade_shadow")
+        assert(self._method_get_distance_fade_shadow_1740695150 != nil)
+        self._method_set_distance_fade_length_373806689 = StringName(from: "set_distance_fade_length")
+        assert(self._method_set_distance_fade_length_373806689 != nil)
+        self._method_get_distance_fade_length_1740695150 = StringName(from: "get_distance_fade_length")
+        assert(self._method_get_distance_fade_length_1740695150 != nil)
+        self._method_set_color_2920490490 = StringName(from: "set_color")
+        assert(self._method_set_color_2920490490 != nil)
+        self._method_get_color_3444240500 = StringName(from: "get_color")
+        assert(self._method_get_color_3444240500 != nil)
+        self._method_set_shadow_reverse_cull_face_2586408642 = StringName(from: "set_shadow_reverse_cull_face")
+        assert(self._method_set_shadow_reverse_cull_face_2586408642 != nil)
+        self._method_get_shadow_reverse_cull_face_36873697 = StringName(from: "get_shadow_reverse_cull_face")
+        assert(self._method_get_shadow_reverse_cull_face_36873697 != nil)
+        self._method_set_bake_mode_37739303 = StringName(from: "set_bake_mode")
+        assert(self._method_set_bake_mode_37739303 != nil)
+        self._method_get_bake_mode_371737608 = StringName(from: "get_bake_mode")
+        assert(self._method_get_bake_mode_371737608 != nil)
+        self._method_set_projector_4051416890 = StringName(from: "set_projector")
+        assert(self._method_set_projector_4051416890 != nil)
+        self._method_get_projector_3635182373 = StringName(from: "get_projector")
+        assert(self._method_get_projector_3635182373 != nil)
+        self._method_set_temperature_373806689 = StringName(from: "set_temperature")
+        assert(self._method_set_temperature_373806689 != nil)
+        self._method_get_temperature_1740695150 = StringName(from: "get_temperature")
+        assert(self._method_get_temperature_1740695150 != nil)
+        self._method_get_correlated_color_3444240500 = StringName(from: "get_correlated_color")
+        assert(self._method_get_correlated_color_3444240500 != nil)
     }
 
     public func set_editor_only(editor_only: UInt8)  {
@@ -174,8 +146,13 @@ open class Light3D : VisualInstance3D {
                 .init(editor_only_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_editor_only_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_editor_only_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -191,8 +168,13 @@ open class Light3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_editor_only_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_editor_only_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -208,8 +190,13 @@ open class Light3D : VisualInstance3D {
                 .init(param_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_param_1722734213,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_param_1722734213._native_ptr(),
+                    1722734213)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -227,8 +214,13 @@ open class Light3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_param_1844084987,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_param_1844084987._native_ptr(),
+                    1844084987)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -244,8 +236,13 @@ open class Light3D : VisualInstance3D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shadow_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shadow_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -261,8 +258,13 @@ open class Light3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_shadow_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_shadow_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -277,8 +279,13 @@ open class Light3D : VisualInstance3D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_negative_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_negative_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -294,8 +301,13 @@ open class Light3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_negative_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_negative_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -310,8 +322,13 @@ open class Light3D : VisualInstance3D {
                 .init(cull_mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cull_mask_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cull_mask_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -327,8 +344,13 @@ open class Light3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cull_mask_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cull_mask_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -343,8 +365,13 @@ open class Light3D : VisualInstance3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_enable_distance_fade_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_enable_distance_fade_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -360,8 +387,13 @@ open class Light3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_distance_fade_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_distance_fade_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -376,8 +408,13 @@ open class Light3D : VisualInstance3D {
                 .init(distance_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_distance_fade_begin_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_distance_fade_begin_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -393,8 +430,13 @@ open class Light3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_distance_fade_begin_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_distance_fade_begin_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -409,8 +451,13 @@ open class Light3D : VisualInstance3D {
                 .init(distance_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_distance_fade_shadow_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_distance_fade_shadow_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -426,8 +473,13 @@ open class Light3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_distance_fade_shadow_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_distance_fade_shadow_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -442,8 +494,13 @@ open class Light3D : VisualInstance3D {
                 .init(distance_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_distance_fade_length_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_distance_fade_length_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -459,8 +516,13 @@ open class Light3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_distance_fade_length_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_distance_fade_length_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -475,8 +537,13 @@ open class Light3D : VisualInstance3D {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -490,8 +557,13 @@ open class Light3D : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_color_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_color_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -506,8 +578,13 @@ open class Light3D : VisualInstance3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shadow_reverse_cull_face_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shadow_reverse_cull_face_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -523,8 +600,13 @@ open class Light3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_shadow_reverse_cull_face_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_shadow_reverse_cull_face_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -539,8 +621,13 @@ open class Light3D : VisualInstance3D {
                 .init(bake_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bake_mode_37739303,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bake_mode_37739303._native_ptr(),
+                    37739303)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -555,8 +642,13 @@ open class Light3D : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bake_mode_371737608,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bake_mode_371737608._native_ptr(),
+                    371737608)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -571,8 +663,13 @@ open class Light3D : VisualInstance3D {
                 .init(projector_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_projector_4051416890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_projector_4051416890._native_ptr(),
+                    4051416890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -586,8 +683,13 @@ open class Light3D : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_projector_3635182373,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_projector_3635182373._native_ptr(),
+                    3635182373)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -602,8 +704,13 @@ open class Light3D : VisualInstance3D {
                 .init(temperature_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_temperature_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_temperature_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -619,8 +726,13 @@ open class Light3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_temperature_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_temperature_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -635,8 +747,13 @@ open class Light3D : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_correlated_color_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_correlated_color_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

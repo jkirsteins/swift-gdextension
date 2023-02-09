@@ -92,291 +92,223 @@ open class Animation : Resource {
 
     public override class var __godot_name: StringName { __godot_name_Animation }
 
-    static var _method_add_track_2393815928: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_track_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_track_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_track_get_type_3445944217: GDExtensionMethodBindPtr! = nil
-    static var _method_track_get_path_408788394: GDExtensionMethodBindPtr! = nil
-    static var _method_track_set_path_2761262315: GDExtensionMethodBindPtr! = nil
-    static var _method_find_track_245376003: GDExtensionMethodBindPtr! = nil
-    static var _method_track_move_up_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_track_move_down_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_track_move_to_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_track_swap_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_track_set_imported_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_track_is_imported_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_track_set_enabled_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_track_is_enabled_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_position_track_insert_key_2540608232: GDExtensionMethodBindPtr! = nil
-    static var _method_rotation_track_insert_key_4165004800: GDExtensionMethodBindPtr! = nil
-    static var _method_scale_track_insert_key_2540608232: GDExtensionMethodBindPtr! = nil
-    static var _method_blend_shape_track_insert_key_1534913637: GDExtensionMethodBindPtr! = nil
-    static var _method_track_insert_key_1985425300: GDExtensionMethodBindPtr! = nil
-    static var _method_track_remove_key_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_track_remove_key_at_time_1602489585: GDExtensionMethodBindPtr! = nil
-    static var _method_track_set_key_value_2060538656: GDExtensionMethodBindPtr! = nil
-    static var _method_track_set_key_transition_3506521499: GDExtensionMethodBindPtr! = nil
-    static var _method_track_set_key_time_3506521499: GDExtensionMethodBindPtr! = nil
-    static var _method_track_get_key_transition_3085491603: GDExtensionMethodBindPtr! = nil
-    static var _method_track_get_key_count_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_track_get_key_value_678354945: GDExtensionMethodBindPtr! = nil
-    static var _method_track_get_key_time_3085491603: GDExtensionMethodBindPtr! = nil
-    static var _method_track_find_key_3898229885: GDExtensionMethodBindPtr! = nil
-    static var _method_track_set_interpolation_type_4112932513: GDExtensionMethodBindPtr! = nil
-    static var _method_track_get_interpolation_type_1530756894: GDExtensionMethodBindPtr! = nil
-    static var _method_track_set_interpolation_loop_wrap_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_track_get_interpolation_loop_wrap_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_track_is_compressed_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_value_track_set_update_mode_2854058312: GDExtensionMethodBindPtr! = nil
-    static var _method_value_track_get_update_mode_1440326473: GDExtensionMethodBindPtr! = nil
-    static var _method_value_track_interpolate_491147702: GDExtensionMethodBindPtr! = nil
-    static var _method_method_track_get_name_351665558: GDExtensionMethodBindPtr! = nil
-    static var _method_method_track_get_params_2345056839: GDExtensionMethodBindPtr! = nil
-    static var _method_bezier_track_insert_key_1057544502: GDExtensionMethodBindPtr! = nil
-    static var _method_bezier_track_set_key_value_3506521499: GDExtensionMethodBindPtr! = nil
-    static var _method_bezier_track_set_key_in_handle_1028302688: GDExtensionMethodBindPtr! = nil
-    static var _method_bezier_track_set_key_out_handle_1028302688: GDExtensionMethodBindPtr! = nil
-    static var _method_bezier_track_get_key_value_3085491603: GDExtensionMethodBindPtr! = nil
-    static var _method_bezier_track_get_key_in_handle_3016396712: GDExtensionMethodBindPtr! = nil
-    static var _method_bezier_track_get_key_out_handle_3016396712: GDExtensionMethodBindPtr! = nil
-    static var _method_bezier_track_interpolate_1900462983: GDExtensionMethodBindPtr! = nil
-    static var _method_audio_track_insert_key_3489962123: GDExtensionMethodBindPtr! = nil
-    static var _method_audio_track_set_key_stream_3886397084: GDExtensionMethodBindPtr! = nil
-    static var _method_audio_track_set_key_start_offset_3506521499: GDExtensionMethodBindPtr! = nil
-    static var _method_audio_track_set_key_end_offset_3506521499: GDExtensionMethodBindPtr! = nil
-    static var _method_audio_track_get_key_stream_635277205: GDExtensionMethodBindPtr! = nil
-    static var _method_audio_track_get_key_start_offset_3085491603: GDExtensionMethodBindPtr! = nil
-    static var _method_audio_track_get_key_end_offset_3085491603: GDExtensionMethodBindPtr! = nil
-    static var _method_audio_track_set_use_blend_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_audio_track_is_use_blend_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_animation_track_insert_key_158676774: GDExtensionMethodBindPtr! = nil
-    static var _method_animation_track_set_key_animation_117615382: GDExtensionMethodBindPtr! = nil
-    static var _method_animation_track_get_key_animation_351665558: GDExtensionMethodBindPtr! = nil
-    static var _method_set_length_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_length_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_loop_mode_3155355575: GDExtensionMethodBindPtr! = nil
-    static var _method_get_loop_mode_1988889481: GDExtensionMethodBindPtr! = nil
-    static var _method_set_step_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_step_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_copy_track_148001024: GDExtensionMethodBindPtr! = nil
-    static var _method_compress_1804059263: GDExtensionMethodBindPtr! = nil
+    static var _method_add_track_2393815928: StringName! = nil
+    static var _method_remove_track_1286410249: StringName! = nil
+    static var _method_get_track_count_3905245786: StringName! = nil
+    static var _method_track_get_type_3445944217: StringName! = nil
+    static var _method_track_get_path_408788394: StringName! = nil
+    static var _method_track_set_path_2761262315: StringName! = nil
+    static var _method_find_track_245376003: StringName! = nil
+    static var _method_track_move_up_1286410249: StringName! = nil
+    static var _method_track_move_down_1286410249: StringName! = nil
+    static var _method_track_move_to_3937882851: StringName! = nil
+    static var _method_track_swap_3937882851: StringName! = nil
+    static var _method_track_set_imported_300928843: StringName! = nil
+    static var _method_track_is_imported_1116898809: StringName! = nil
+    static var _method_track_set_enabled_300928843: StringName! = nil
+    static var _method_track_is_enabled_1116898809: StringName! = nil
+    static var _method_position_track_insert_key_2540608232: StringName! = nil
+    static var _method_rotation_track_insert_key_4165004800: StringName! = nil
+    static var _method_scale_track_insert_key_2540608232: StringName! = nil
+    static var _method_blend_shape_track_insert_key_1534913637: StringName! = nil
+    static var _method_track_insert_key_1985425300: StringName! = nil
+    static var _method_track_remove_key_3937882851: StringName! = nil
+    static var _method_track_remove_key_at_time_1602489585: StringName! = nil
+    static var _method_track_set_key_value_2060538656: StringName! = nil
+    static var _method_track_set_key_transition_3506521499: StringName! = nil
+    static var _method_track_set_key_time_3506521499: StringName! = nil
+    static var _method_track_get_key_transition_3085491603: StringName! = nil
+    static var _method_track_get_key_count_923996154: StringName! = nil
+    static var _method_track_get_key_value_678354945: StringName! = nil
+    static var _method_track_get_key_time_3085491603: StringName! = nil
+    static var _method_track_find_key_3898229885: StringName! = nil
+    static var _method_track_set_interpolation_type_4112932513: StringName! = nil
+    static var _method_track_get_interpolation_type_1530756894: StringName! = nil
+    static var _method_track_set_interpolation_loop_wrap_300928843: StringName! = nil
+    static var _method_track_get_interpolation_loop_wrap_1116898809: StringName! = nil
+    static var _method_track_is_compressed_1116898809: StringName! = nil
+    static var _method_value_track_set_update_mode_2854058312: StringName! = nil
+    static var _method_value_track_get_update_mode_1440326473: StringName! = nil
+    static var _method_value_track_interpolate_491147702: StringName! = nil
+    static var _method_method_track_get_name_351665558: StringName! = nil
+    static var _method_method_track_get_params_2345056839: StringName! = nil
+    static var _method_bezier_track_insert_key_1057544502: StringName! = nil
+    static var _method_bezier_track_set_key_value_3506521499: StringName! = nil
+    static var _method_bezier_track_set_key_in_handle_1028302688: StringName! = nil
+    static var _method_bezier_track_set_key_out_handle_1028302688: StringName! = nil
+    static var _method_bezier_track_get_key_value_3085491603: StringName! = nil
+    static var _method_bezier_track_get_key_in_handle_3016396712: StringName! = nil
+    static var _method_bezier_track_get_key_out_handle_3016396712: StringName! = nil
+    static var _method_bezier_track_interpolate_1900462983: StringName! = nil
+    static var _method_audio_track_insert_key_3489962123: StringName! = nil
+    static var _method_audio_track_set_key_stream_3886397084: StringName! = nil
+    static var _method_audio_track_set_key_start_offset_3506521499: StringName! = nil
+    static var _method_audio_track_set_key_end_offset_3506521499: StringName! = nil
+    static var _method_audio_track_get_key_stream_635277205: StringName! = nil
+    static var _method_audio_track_get_key_start_offset_3085491603: StringName! = nil
+    static var _method_audio_track_get_key_end_offset_3085491603: StringName! = nil
+    static var _method_audio_track_set_use_blend_300928843: StringName! = nil
+    static var _method_audio_track_is_use_blend_1116898809: StringName! = nil
+    static var _method_animation_track_insert_key_158676774: StringName! = nil
+    static var _method_animation_track_set_key_animation_117615382: StringName! = nil
+    static var _method_animation_track_get_key_animation_351665558: StringName! = nil
+    static var _method_set_length_373806689: StringName! = nil
+    static var _method_get_length_1740695150: StringName! = nil
+    static var _method_set_loop_mode_3155355575: StringName! = nil
+    static var _method_get_loop_mode_1988889481: StringName! = nil
+    static var _method_set_step_373806689: StringName! = nil
+    static var _method_get_step_1740695150: StringName! = nil
+    static var _method_clear_3218959716: StringName! = nil
+    static var _method_copy_track_148001024: StringName! = nil
+    static var _method_compress_1804059263: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Animation == nil)
         __godot_name_Animation = StringName(from: "Animation")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_add_track_2393815928_name = StringName(from: "add_track")
-        self._method_add_track_2393815928 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_add_track_2393815928_name._native_ptr(), 2393815928)
-        assert(Animation._method_add_track_2393815928 != nil)
-        let _method_remove_track_1286410249_name = StringName(from: "remove_track")
-        self._method_remove_track_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_remove_track_1286410249_name._native_ptr(), 1286410249)
-        assert(Animation._method_remove_track_1286410249 != nil)
-        let _method_get_track_count_3905245786_name = StringName(from: "get_track_count")
-        self._method_get_track_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_get_track_count_3905245786_name._native_ptr(), 3905245786)
-        assert(Animation._method_get_track_count_3905245786 != nil)
-        let _method_track_get_type_3445944217_name = StringName(from: "track_get_type")
-        self._method_track_get_type_3445944217 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_get_type_3445944217_name._native_ptr(), 3445944217)
-        assert(Animation._method_track_get_type_3445944217 != nil)
-        let _method_track_get_path_408788394_name = StringName(from: "track_get_path")
-        self._method_track_get_path_408788394 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_get_path_408788394_name._native_ptr(), 408788394)
-        assert(Animation._method_track_get_path_408788394 != nil)
-        let _method_track_set_path_2761262315_name = StringName(from: "track_set_path")
-        self._method_track_set_path_2761262315 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_set_path_2761262315_name._native_ptr(), 2761262315)
-        assert(Animation._method_track_set_path_2761262315 != nil)
-        let _method_find_track_245376003_name = StringName(from: "find_track")
-        self._method_find_track_245376003 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_find_track_245376003_name._native_ptr(), 245376003)
-        assert(Animation._method_find_track_245376003 != nil)
-        let _method_track_move_up_1286410249_name = StringName(from: "track_move_up")
-        self._method_track_move_up_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_move_up_1286410249_name._native_ptr(), 1286410249)
-        assert(Animation._method_track_move_up_1286410249 != nil)
-        let _method_track_move_down_1286410249_name = StringName(from: "track_move_down")
-        self._method_track_move_down_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_move_down_1286410249_name._native_ptr(), 1286410249)
-        assert(Animation._method_track_move_down_1286410249 != nil)
-        let _method_track_move_to_3937882851_name = StringName(from: "track_move_to")
-        self._method_track_move_to_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_move_to_3937882851_name._native_ptr(), 3937882851)
-        assert(Animation._method_track_move_to_3937882851 != nil)
-        let _method_track_swap_3937882851_name = StringName(from: "track_swap")
-        self._method_track_swap_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_swap_3937882851_name._native_ptr(), 3937882851)
-        assert(Animation._method_track_swap_3937882851 != nil)
-        let _method_track_set_imported_300928843_name = StringName(from: "track_set_imported")
-        self._method_track_set_imported_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_set_imported_300928843_name._native_ptr(), 300928843)
-        assert(Animation._method_track_set_imported_300928843 != nil)
-        let _method_track_is_imported_1116898809_name = StringName(from: "track_is_imported")
-        self._method_track_is_imported_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_is_imported_1116898809_name._native_ptr(), 1116898809)
-        assert(Animation._method_track_is_imported_1116898809 != nil)
-        let _method_track_set_enabled_300928843_name = StringName(from: "track_set_enabled")
-        self._method_track_set_enabled_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_set_enabled_300928843_name._native_ptr(), 300928843)
-        assert(Animation._method_track_set_enabled_300928843 != nil)
-        let _method_track_is_enabled_1116898809_name = StringName(from: "track_is_enabled")
-        self._method_track_is_enabled_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_is_enabled_1116898809_name._native_ptr(), 1116898809)
-        assert(Animation._method_track_is_enabled_1116898809 != nil)
-        let _method_position_track_insert_key_2540608232_name = StringName(from: "position_track_insert_key")
-        self._method_position_track_insert_key_2540608232 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_position_track_insert_key_2540608232_name._native_ptr(), 2540608232)
-        assert(Animation._method_position_track_insert_key_2540608232 != nil)
-        let _method_rotation_track_insert_key_4165004800_name = StringName(from: "rotation_track_insert_key")
-        self._method_rotation_track_insert_key_4165004800 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_rotation_track_insert_key_4165004800_name._native_ptr(), 4165004800)
-        assert(Animation._method_rotation_track_insert_key_4165004800 != nil)
-        let _method_scale_track_insert_key_2540608232_name = StringName(from: "scale_track_insert_key")
-        self._method_scale_track_insert_key_2540608232 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_scale_track_insert_key_2540608232_name._native_ptr(), 2540608232)
-        assert(Animation._method_scale_track_insert_key_2540608232 != nil)
-        let _method_blend_shape_track_insert_key_1534913637_name = StringName(from: "blend_shape_track_insert_key")
-        self._method_blend_shape_track_insert_key_1534913637 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_blend_shape_track_insert_key_1534913637_name._native_ptr(), 1534913637)
-        assert(Animation._method_blend_shape_track_insert_key_1534913637 != nil)
-        let _method_track_insert_key_1985425300_name = StringName(from: "track_insert_key")
-        self._method_track_insert_key_1985425300 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_insert_key_1985425300_name._native_ptr(), 1985425300)
-        assert(Animation._method_track_insert_key_1985425300 != nil)
-        let _method_track_remove_key_3937882851_name = StringName(from: "track_remove_key")
-        self._method_track_remove_key_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_remove_key_3937882851_name._native_ptr(), 3937882851)
-        assert(Animation._method_track_remove_key_3937882851 != nil)
-        let _method_track_remove_key_at_time_1602489585_name = StringName(from: "track_remove_key_at_time")
-        self._method_track_remove_key_at_time_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_remove_key_at_time_1602489585_name._native_ptr(), 1602489585)
-        assert(Animation._method_track_remove_key_at_time_1602489585 != nil)
-        let _method_track_set_key_value_2060538656_name = StringName(from: "track_set_key_value")
-        self._method_track_set_key_value_2060538656 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_set_key_value_2060538656_name._native_ptr(), 2060538656)
-        assert(Animation._method_track_set_key_value_2060538656 != nil)
-        let _method_track_set_key_transition_3506521499_name = StringName(from: "track_set_key_transition")
-        self._method_track_set_key_transition_3506521499 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_set_key_transition_3506521499_name._native_ptr(), 3506521499)
-        assert(Animation._method_track_set_key_transition_3506521499 != nil)
-        let _method_track_set_key_time_3506521499_name = StringName(from: "track_set_key_time")
-        self._method_track_set_key_time_3506521499 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_set_key_time_3506521499_name._native_ptr(), 3506521499)
-        assert(Animation._method_track_set_key_time_3506521499 != nil)
-        let _method_track_get_key_transition_3085491603_name = StringName(from: "track_get_key_transition")
-        self._method_track_get_key_transition_3085491603 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_get_key_transition_3085491603_name._native_ptr(), 3085491603)
-        assert(Animation._method_track_get_key_transition_3085491603 != nil)
-        let _method_track_get_key_count_923996154_name = StringName(from: "track_get_key_count")
-        self._method_track_get_key_count_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_get_key_count_923996154_name._native_ptr(), 923996154)
-        assert(Animation._method_track_get_key_count_923996154 != nil)
-        let _method_track_get_key_value_678354945_name = StringName(from: "track_get_key_value")
-        self._method_track_get_key_value_678354945 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_get_key_value_678354945_name._native_ptr(), 678354945)
-        assert(Animation._method_track_get_key_value_678354945 != nil)
-        let _method_track_get_key_time_3085491603_name = StringName(from: "track_get_key_time")
-        self._method_track_get_key_time_3085491603 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_get_key_time_3085491603_name._native_ptr(), 3085491603)
-        assert(Animation._method_track_get_key_time_3085491603 != nil)
-        let _method_track_find_key_3898229885_name = StringName(from: "track_find_key")
-        self._method_track_find_key_3898229885 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_find_key_3898229885_name._native_ptr(), 3898229885)
-        assert(Animation._method_track_find_key_3898229885 != nil)
-        let _method_track_set_interpolation_type_4112932513_name = StringName(from: "track_set_interpolation_type")
-        self._method_track_set_interpolation_type_4112932513 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_set_interpolation_type_4112932513_name._native_ptr(), 4112932513)
-        assert(Animation._method_track_set_interpolation_type_4112932513 != nil)
-        let _method_track_get_interpolation_type_1530756894_name = StringName(from: "track_get_interpolation_type")
-        self._method_track_get_interpolation_type_1530756894 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_get_interpolation_type_1530756894_name._native_ptr(), 1530756894)
-        assert(Animation._method_track_get_interpolation_type_1530756894 != nil)
-        let _method_track_set_interpolation_loop_wrap_300928843_name = StringName(from: "track_set_interpolation_loop_wrap")
-        self._method_track_set_interpolation_loop_wrap_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_set_interpolation_loop_wrap_300928843_name._native_ptr(), 300928843)
-        assert(Animation._method_track_set_interpolation_loop_wrap_300928843 != nil)
-        let _method_track_get_interpolation_loop_wrap_1116898809_name = StringName(from: "track_get_interpolation_loop_wrap")
-        self._method_track_get_interpolation_loop_wrap_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_get_interpolation_loop_wrap_1116898809_name._native_ptr(), 1116898809)
-        assert(Animation._method_track_get_interpolation_loop_wrap_1116898809 != nil)
-        let _method_track_is_compressed_1116898809_name = StringName(from: "track_is_compressed")
-        self._method_track_is_compressed_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_track_is_compressed_1116898809_name._native_ptr(), 1116898809)
-        assert(Animation._method_track_is_compressed_1116898809 != nil)
-        let _method_value_track_set_update_mode_2854058312_name = StringName(from: "value_track_set_update_mode")
-        self._method_value_track_set_update_mode_2854058312 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_value_track_set_update_mode_2854058312_name._native_ptr(), 2854058312)
-        assert(Animation._method_value_track_set_update_mode_2854058312 != nil)
-        let _method_value_track_get_update_mode_1440326473_name = StringName(from: "value_track_get_update_mode")
-        self._method_value_track_get_update_mode_1440326473 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_value_track_get_update_mode_1440326473_name._native_ptr(), 1440326473)
-        assert(Animation._method_value_track_get_update_mode_1440326473 != nil)
-        let _method_value_track_interpolate_491147702_name = StringName(from: "value_track_interpolate")
-        self._method_value_track_interpolate_491147702 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_value_track_interpolate_491147702_name._native_ptr(), 491147702)
-        assert(Animation._method_value_track_interpolate_491147702 != nil)
-        let _method_method_track_get_name_351665558_name = StringName(from: "method_track_get_name")
-        self._method_method_track_get_name_351665558 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_method_track_get_name_351665558_name._native_ptr(), 351665558)
-        assert(Animation._method_method_track_get_name_351665558 != nil)
-        let _method_method_track_get_params_2345056839_name = StringName(from: "method_track_get_params")
-        self._method_method_track_get_params_2345056839 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_method_track_get_params_2345056839_name._native_ptr(), 2345056839)
-        assert(Animation._method_method_track_get_params_2345056839 != nil)
-        let _method_bezier_track_insert_key_1057544502_name = StringName(from: "bezier_track_insert_key")
-        self._method_bezier_track_insert_key_1057544502 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_bezier_track_insert_key_1057544502_name._native_ptr(), 1057544502)
-        assert(Animation._method_bezier_track_insert_key_1057544502 != nil)
-        let _method_bezier_track_set_key_value_3506521499_name = StringName(from: "bezier_track_set_key_value")
-        self._method_bezier_track_set_key_value_3506521499 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_bezier_track_set_key_value_3506521499_name._native_ptr(), 3506521499)
-        assert(Animation._method_bezier_track_set_key_value_3506521499 != nil)
-        let _method_bezier_track_set_key_in_handle_1028302688_name = StringName(from: "bezier_track_set_key_in_handle")
-        self._method_bezier_track_set_key_in_handle_1028302688 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_bezier_track_set_key_in_handle_1028302688_name._native_ptr(), 1028302688)
-        assert(Animation._method_bezier_track_set_key_in_handle_1028302688 != nil)
-        let _method_bezier_track_set_key_out_handle_1028302688_name = StringName(from: "bezier_track_set_key_out_handle")
-        self._method_bezier_track_set_key_out_handle_1028302688 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_bezier_track_set_key_out_handle_1028302688_name._native_ptr(), 1028302688)
-        assert(Animation._method_bezier_track_set_key_out_handle_1028302688 != nil)
-        let _method_bezier_track_get_key_value_3085491603_name = StringName(from: "bezier_track_get_key_value")
-        self._method_bezier_track_get_key_value_3085491603 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_bezier_track_get_key_value_3085491603_name._native_ptr(), 3085491603)
-        assert(Animation._method_bezier_track_get_key_value_3085491603 != nil)
-        let _method_bezier_track_get_key_in_handle_3016396712_name = StringName(from: "bezier_track_get_key_in_handle")
-        self._method_bezier_track_get_key_in_handle_3016396712 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_bezier_track_get_key_in_handle_3016396712_name._native_ptr(), 3016396712)
-        assert(Animation._method_bezier_track_get_key_in_handle_3016396712 != nil)
-        let _method_bezier_track_get_key_out_handle_3016396712_name = StringName(from: "bezier_track_get_key_out_handle")
-        self._method_bezier_track_get_key_out_handle_3016396712 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_bezier_track_get_key_out_handle_3016396712_name._native_ptr(), 3016396712)
-        assert(Animation._method_bezier_track_get_key_out_handle_3016396712 != nil)
-        let _method_bezier_track_interpolate_1900462983_name = StringName(from: "bezier_track_interpolate")
-        self._method_bezier_track_interpolate_1900462983 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_bezier_track_interpolate_1900462983_name._native_ptr(), 1900462983)
-        assert(Animation._method_bezier_track_interpolate_1900462983 != nil)
-        let _method_audio_track_insert_key_3489962123_name = StringName(from: "audio_track_insert_key")
-        self._method_audio_track_insert_key_3489962123 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_audio_track_insert_key_3489962123_name._native_ptr(), 3489962123)
-        assert(Animation._method_audio_track_insert_key_3489962123 != nil)
-        let _method_audio_track_set_key_stream_3886397084_name = StringName(from: "audio_track_set_key_stream")
-        self._method_audio_track_set_key_stream_3886397084 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_audio_track_set_key_stream_3886397084_name._native_ptr(), 3886397084)
-        assert(Animation._method_audio_track_set_key_stream_3886397084 != nil)
-        let _method_audio_track_set_key_start_offset_3506521499_name = StringName(from: "audio_track_set_key_start_offset")
-        self._method_audio_track_set_key_start_offset_3506521499 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_audio_track_set_key_start_offset_3506521499_name._native_ptr(), 3506521499)
-        assert(Animation._method_audio_track_set_key_start_offset_3506521499 != nil)
-        let _method_audio_track_set_key_end_offset_3506521499_name = StringName(from: "audio_track_set_key_end_offset")
-        self._method_audio_track_set_key_end_offset_3506521499 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_audio_track_set_key_end_offset_3506521499_name._native_ptr(), 3506521499)
-        assert(Animation._method_audio_track_set_key_end_offset_3506521499 != nil)
-        let _method_audio_track_get_key_stream_635277205_name = StringName(from: "audio_track_get_key_stream")
-        self._method_audio_track_get_key_stream_635277205 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_audio_track_get_key_stream_635277205_name._native_ptr(), 635277205)
-        assert(Animation._method_audio_track_get_key_stream_635277205 != nil)
-        let _method_audio_track_get_key_start_offset_3085491603_name = StringName(from: "audio_track_get_key_start_offset")
-        self._method_audio_track_get_key_start_offset_3085491603 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_audio_track_get_key_start_offset_3085491603_name._native_ptr(), 3085491603)
-        assert(Animation._method_audio_track_get_key_start_offset_3085491603 != nil)
-        let _method_audio_track_get_key_end_offset_3085491603_name = StringName(from: "audio_track_get_key_end_offset")
-        self._method_audio_track_get_key_end_offset_3085491603 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_audio_track_get_key_end_offset_3085491603_name._native_ptr(), 3085491603)
-        assert(Animation._method_audio_track_get_key_end_offset_3085491603 != nil)
-        let _method_audio_track_set_use_blend_300928843_name = StringName(from: "audio_track_set_use_blend")
-        self._method_audio_track_set_use_blend_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_audio_track_set_use_blend_300928843_name._native_ptr(), 300928843)
-        assert(Animation._method_audio_track_set_use_blend_300928843 != nil)
-        let _method_audio_track_is_use_blend_1116898809_name = StringName(from: "audio_track_is_use_blend")
-        self._method_audio_track_is_use_blend_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_audio_track_is_use_blend_1116898809_name._native_ptr(), 1116898809)
-        assert(Animation._method_audio_track_is_use_blend_1116898809 != nil)
-        let _method_animation_track_insert_key_158676774_name = StringName(from: "animation_track_insert_key")
-        self._method_animation_track_insert_key_158676774 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_animation_track_insert_key_158676774_name._native_ptr(), 158676774)
-        assert(Animation._method_animation_track_insert_key_158676774 != nil)
-        let _method_animation_track_set_key_animation_117615382_name = StringName(from: "animation_track_set_key_animation")
-        self._method_animation_track_set_key_animation_117615382 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_animation_track_set_key_animation_117615382_name._native_ptr(), 117615382)
-        assert(Animation._method_animation_track_set_key_animation_117615382 != nil)
-        let _method_animation_track_get_key_animation_351665558_name = StringName(from: "animation_track_get_key_animation")
-        self._method_animation_track_get_key_animation_351665558 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_animation_track_get_key_animation_351665558_name._native_ptr(), 351665558)
-        assert(Animation._method_animation_track_get_key_animation_351665558 != nil)
-        let _method_set_length_373806689_name = StringName(from: "set_length")
-        self._method_set_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_set_length_373806689_name._native_ptr(), 373806689)
-        assert(Animation._method_set_length_373806689 != nil)
-        let _method_get_length_1740695150_name = StringName(from: "get_length")
-        self._method_get_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_get_length_1740695150_name._native_ptr(), 1740695150)
-        assert(Animation._method_get_length_1740695150 != nil)
-        let _method_set_loop_mode_3155355575_name = StringName(from: "set_loop_mode")
-        self._method_set_loop_mode_3155355575 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_set_loop_mode_3155355575_name._native_ptr(), 3155355575)
-        assert(Animation._method_set_loop_mode_3155355575 != nil)
-        let _method_get_loop_mode_1988889481_name = StringName(from: "get_loop_mode")
-        self._method_get_loop_mode_1988889481 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_get_loop_mode_1988889481_name._native_ptr(), 1988889481)
-        assert(Animation._method_get_loop_mode_1988889481 != nil)
-        let _method_set_step_373806689_name = StringName(from: "set_step")
-        self._method_set_step_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_set_step_373806689_name._native_ptr(), 373806689)
-        assert(Animation._method_set_step_373806689 != nil)
-        let _method_get_step_1740695150_name = StringName(from: "get_step")
-        self._method_get_step_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_get_step_1740695150_name._native_ptr(), 1740695150)
-        assert(Animation._method_get_step_1740695150 != nil)
-        let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
-        assert(Animation._method_clear_3218959716 != nil)
-        let _method_copy_track_148001024_name = StringName(from: "copy_track")
-        self._method_copy_track_148001024 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_copy_track_148001024_name._native_ptr(), 148001024)
-        assert(Animation._method_copy_track_148001024 != nil)
-        let _method_compress_1804059263_name = StringName(from: "compress")
-        self._method_compress_1804059263 = self.interface.pointee.classdb_get_method_bind(__godot_name_Animation._native_ptr(), _method_compress_1804059263_name._native_ptr(), 1804059263)
-        assert(Animation._method_compress_1804059263 != nil)
+        self._method_add_track_2393815928 = StringName(from: "add_track")
+        assert(self._method_add_track_2393815928 != nil)
+        self._method_remove_track_1286410249 = StringName(from: "remove_track")
+        assert(self._method_remove_track_1286410249 != nil)
+        self._method_get_track_count_3905245786 = StringName(from: "get_track_count")
+        assert(self._method_get_track_count_3905245786 != nil)
+        self._method_track_get_type_3445944217 = StringName(from: "track_get_type")
+        assert(self._method_track_get_type_3445944217 != nil)
+        self._method_track_get_path_408788394 = StringName(from: "track_get_path")
+        assert(self._method_track_get_path_408788394 != nil)
+        self._method_track_set_path_2761262315 = StringName(from: "track_set_path")
+        assert(self._method_track_set_path_2761262315 != nil)
+        self._method_find_track_245376003 = StringName(from: "find_track")
+        assert(self._method_find_track_245376003 != nil)
+        self._method_track_move_up_1286410249 = StringName(from: "track_move_up")
+        assert(self._method_track_move_up_1286410249 != nil)
+        self._method_track_move_down_1286410249 = StringName(from: "track_move_down")
+        assert(self._method_track_move_down_1286410249 != nil)
+        self._method_track_move_to_3937882851 = StringName(from: "track_move_to")
+        assert(self._method_track_move_to_3937882851 != nil)
+        self._method_track_swap_3937882851 = StringName(from: "track_swap")
+        assert(self._method_track_swap_3937882851 != nil)
+        self._method_track_set_imported_300928843 = StringName(from: "track_set_imported")
+        assert(self._method_track_set_imported_300928843 != nil)
+        self._method_track_is_imported_1116898809 = StringName(from: "track_is_imported")
+        assert(self._method_track_is_imported_1116898809 != nil)
+        self._method_track_set_enabled_300928843 = StringName(from: "track_set_enabled")
+        assert(self._method_track_set_enabled_300928843 != nil)
+        self._method_track_is_enabled_1116898809 = StringName(from: "track_is_enabled")
+        assert(self._method_track_is_enabled_1116898809 != nil)
+        self._method_position_track_insert_key_2540608232 = StringName(from: "position_track_insert_key")
+        assert(self._method_position_track_insert_key_2540608232 != nil)
+        self._method_rotation_track_insert_key_4165004800 = StringName(from: "rotation_track_insert_key")
+        assert(self._method_rotation_track_insert_key_4165004800 != nil)
+        self._method_scale_track_insert_key_2540608232 = StringName(from: "scale_track_insert_key")
+        assert(self._method_scale_track_insert_key_2540608232 != nil)
+        self._method_blend_shape_track_insert_key_1534913637 = StringName(from: "blend_shape_track_insert_key")
+        assert(self._method_blend_shape_track_insert_key_1534913637 != nil)
+        self._method_track_insert_key_1985425300 = StringName(from: "track_insert_key")
+        assert(self._method_track_insert_key_1985425300 != nil)
+        self._method_track_remove_key_3937882851 = StringName(from: "track_remove_key")
+        assert(self._method_track_remove_key_3937882851 != nil)
+        self._method_track_remove_key_at_time_1602489585 = StringName(from: "track_remove_key_at_time")
+        assert(self._method_track_remove_key_at_time_1602489585 != nil)
+        self._method_track_set_key_value_2060538656 = StringName(from: "track_set_key_value")
+        assert(self._method_track_set_key_value_2060538656 != nil)
+        self._method_track_set_key_transition_3506521499 = StringName(from: "track_set_key_transition")
+        assert(self._method_track_set_key_transition_3506521499 != nil)
+        self._method_track_set_key_time_3506521499 = StringName(from: "track_set_key_time")
+        assert(self._method_track_set_key_time_3506521499 != nil)
+        self._method_track_get_key_transition_3085491603 = StringName(from: "track_get_key_transition")
+        assert(self._method_track_get_key_transition_3085491603 != nil)
+        self._method_track_get_key_count_923996154 = StringName(from: "track_get_key_count")
+        assert(self._method_track_get_key_count_923996154 != nil)
+        self._method_track_get_key_value_678354945 = StringName(from: "track_get_key_value")
+        assert(self._method_track_get_key_value_678354945 != nil)
+        self._method_track_get_key_time_3085491603 = StringName(from: "track_get_key_time")
+        assert(self._method_track_get_key_time_3085491603 != nil)
+        self._method_track_find_key_3898229885 = StringName(from: "track_find_key")
+        assert(self._method_track_find_key_3898229885 != nil)
+        self._method_track_set_interpolation_type_4112932513 = StringName(from: "track_set_interpolation_type")
+        assert(self._method_track_set_interpolation_type_4112932513 != nil)
+        self._method_track_get_interpolation_type_1530756894 = StringName(from: "track_get_interpolation_type")
+        assert(self._method_track_get_interpolation_type_1530756894 != nil)
+        self._method_track_set_interpolation_loop_wrap_300928843 = StringName(from: "track_set_interpolation_loop_wrap")
+        assert(self._method_track_set_interpolation_loop_wrap_300928843 != nil)
+        self._method_track_get_interpolation_loop_wrap_1116898809 = StringName(from: "track_get_interpolation_loop_wrap")
+        assert(self._method_track_get_interpolation_loop_wrap_1116898809 != nil)
+        self._method_track_is_compressed_1116898809 = StringName(from: "track_is_compressed")
+        assert(self._method_track_is_compressed_1116898809 != nil)
+        self._method_value_track_set_update_mode_2854058312 = StringName(from: "value_track_set_update_mode")
+        assert(self._method_value_track_set_update_mode_2854058312 != nil)
+        self._method_value_track_get_update_mode_1440326473 = StringName(from: "value_track_get_update_mode")
+        assert(self._method_value_track_get_update_mode_1440326473 != nil)
+        self._method_value_track_interpolate_491147702 = StringName(from: "value_track_interpolate")
+        assert(self._method_value_track_interpolate_491147702 != nil)
+        self._method_method_track_get_name_351665558 = StringName(from: "method_track_get_name")
+        assert(self._method_method_track_get_name_351665558 != nil)
+        self._method_method_track_get_params_2345056839 = StringName(from: "method_track_get_params")
+        assert(self._method_method_track_get_params_2345056839 != nil)
+        self._method_bezier_track_insert_key_1057544502 = StringName(from: "bezier_track_insert_key")
+        assert(self._method_bezier_track_insert_key_1057544502 != nil)
+        self._method_bezier_track_set_key_value_3506521499 = StringName(from: "bezier_track_set_key_value")
+        assert(self._method_bezier_track_set_key_value_3506521499 != nil)
+        self._method_bezier_track_set_key_in_handle_1028302688 = StringName(from: "bezier_track_set_key_in_handle")
+        assert(self._method_bezier_track_set_key_in_handle_1028302688 != nil)
+        self._method_bezier_track_set_key_out_handle_1028302688 = StringName(from: "bezier_track_set_key_out_handle")
+        assert(self._method_bezier_track_set_key_out_handle_1028302688 != nil)
+        self._method_bezier_track_get_key_value_3085491603 = StringName(from: "bezier_track_get_key_value")
+        assert(self._method_bezier_track_get_key_value_3085491603 != nil)
+        self._method_bezier_track_get_key_in_handle_3016396712 = StringName(from: "bezier_track_get_key_in_handle")
+        assert(self._method_bezier_track_get_key_in_handle_3016396712 != nil)
+        self._method_bezier_track_get_key_out_handle_3016396712 = StringName(from: "bezier_track_get_key_out_handle")
+        assert(self._method_bezier_track_get_key_out_handle_3016396712 != nil)
+        self._method_bezier_track_interpolate_1900462983 = StringName(from: "bezier_track_interpolate")
+        assert(self._method_bezier_track_interpolate_1900462983 != nil)
+        self._method_audio_track_insert_key_3489962123 = StringName(from: "audio_track_insert_key")
+        assert(self._method_audio_track_insert_key_3489962123 != nil)
+        self._method_audio_track_set_key_stream_3886397084 = StringName(from: "audio_track_set_key_stream")
+        assert(self._method_audio_track_set_key_stream_3886397084 != nil)
+        self._method_audio_track_set_key_start_offset_3506521499 = StringName(from: "audio_track_set_key_start_offset")
+        assert(self._method_audio_track_set_key_start_offset_3506521499 != nil)
+        self._method_audio_track_set_key_end_offset_3506521499 = StringName(from: "audio_track_set_key_end_offset")
+        assert(self._method_audio_track_set_key_end_offset_3506521499 != nil)
+        self._method_audio_track_get_key_stream_635277205 = StringName(from: "audio_track_get_key_stream")
+        assert(self._method_audio_track_get_key_stream_635277205 != nil)
+        self._method_audio_track_get_key_start_offset_3085491603 = StringName(from: "audio_track_get_key_start_offset")
+        assert(self._method_audio_track_get_key_start_offset_3085491603 != nil)
+        self._method_audio_track_get_key_end_offset_3085491603 = StringName(from: "audio_track_get_key_end_offset")
+        assert(self._method_audio_track_get_key_end_offset_3085491603 != nil)
+        self._method_audio_track_set_use_blend_300928843 = StringName(from: "audio_track_set_use_blend")
+        assert(self._method_audio_track_set_use_blend_300928843 != nil)
+        self._method_audio_track_is_use_blend_1116898809 = StringName(from: "audio_track_is_use_blend")
+        assert(self._method_audio_track_is_use_blend_1116898809 != nil)
+        self._method_animation_track_insert_key_158676774 = StringName(from: "animation_track_insert_key")
+        assert(self._method_animation_track_insert_key_158676774 != nil)
+        self._method_animation_track_set_key_animation_117615382 = StringName(from: "animation_track_set_key_animation")
+        assert(self._method_animation_track_set_key_animation_117615382 != nil)
+        self._method_animation_track_get_key_animation_351665558 = StringName(from: "animation_track_get_key_animation")
+        assert(self._method_animation_track_get_key_animation_351665558 != nil)
+        self._method_set_length_373806689 = StringName(from: "set_length")
+        assert(self._method_set_length_373806689 != nil)
+        self._method_get_length_1740695150 = StringName(from: "get_length")
+        assert(self._method_get_length_1740695150 != nil)
+        self._method_set_loop_mode_3155355575 = StringName(from: "set_loop_mode")
+        assert(self._method_set_loop_mode_3155355575 != nil)
+        self._method_get_loop_mode_1988889481 = StringName(from: "get_loop_mode")
+        assert(self._method_get_loop_mode_1988889481 != nil)
+        self._method_set_step_373806689 = StringName(from: "set_step")
+        assert(self._method_set_step_373806689 != nil)
+        self._method_get_step_1740695150 = StringName(from: "get_step")
+        assert(self._method_get_step_1740695150 != nil)
+        self._method_clear_3218959716 = StringName(from: "clear")
+        assert(self._method_clear_3218959716 != nil)
+        self._method_copy_track_148001024 = StringName(from: "copy_track")
+        assert(self._method_copy_track_148001024 != nil)
+        self._method_compress_1804059263 = StringName(from: "compress")
+        assert(self._method_compress_1804059263 != nil)
     }
 
     public func add_track(`type`: Animation.TrackType, at_position: Int64) -> Int64 {
@@ -390,8 +322,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_track_2393815928,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_track_2393815928._native_ptr(),
+                    2393815928)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -408,8 +345,13 @@ open class Animation : Resource {
                 .init(track_idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_track_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_track_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -425,8 +367,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_track_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_track_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -442,8 +389,13 @@ open class Animation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_get_type_3445944217,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_get_type_3445944217._native_ptr(),
+                    3445944217)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -460,8 +412,13 @@ open class Animation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_get_path_408788394,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_get_path_408788394._native_ptr(),
+                    408788394)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -478,8 +435,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_set_path_2761262315,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_set_path_2761262315._native_ptr(),
+                    2761262315)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -497,8 +459,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_find_track_245376003,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_find_track_245376003._native_ptr(),
+                    245376003)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -514,8 +481,13 @@ open class Animation : Resource {
                 .init(track_idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_move_up_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_move_up_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -530,8 +502,13 @@ open class Animation : Resource {
                 .init(track_idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_move_down_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_move_down_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -547,8 +524,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(to_idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_move_to_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_move_to_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -565,8 +547,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(with_idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_swap_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_swap_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -583,8 +570,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(imported_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_set_imported_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_set_imported_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -602,8 +594,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_is_imported_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_is_imported_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -620,8 +617,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_set_enabled_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_set_enabled_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -639,8 +641,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_is_enabled_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_is_enabled_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -660,8 +667,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_position_track_insert_key_2540608232,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_position_track_insert_key_2540608232._native_ptr(),
+                    2540608232)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -682,8 +694,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_rotation_track_insert_key_4165004800,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_rotation_track_insert_key_4165004800._native_ptr(),
+                    4165004800)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -704,8 +721,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_scale_track_insert_key_2540608232,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_scale_track_insert_key_2540608232._native_ptr(),
+                    2540608232)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -726,8 +748,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_blend_shape_track_insert_key_1534913637,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_blend_shape_track_insert_key_1534913637._native_ptr(),
+                    1534913637)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -750,8 +777,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_insert_key_1985425300,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_insert_key_1985425300._native_ptr(),
+                    1985425300)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -770,8 +802,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(key_idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_remove_key_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_remove_key_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -788,8 +825,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(time_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_remove_key_at_time_1602489585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_remove_key_at_time_1602489585._native_ptr(),
+                    1602489585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -807,8 +849,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(key_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_set_key_value_2060538656,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_set_key_value_2060538656._native_ptr(),
+                    2060538656)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -826,8 +873,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(key_idx_native), .init(transition_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_set_key_transition_3506521499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_set_key_transition_3506521499._native_ptr(),
+                    3506521499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -846,8 +898,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(key_idx_native), .init(time_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_set_key_time_3506521499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_set_key_time_3506521499._native_ptr(),
+                    3506521499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -867,8 +924,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_get_key_transition_3085491603,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_get_key_transition_3085491603._native_ptr(),
+                    3085491603)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -887,8 +949,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_get_key_count_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_get_key_count_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -906,8 +973,13 @@ open class Animation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_get_key_value_678354945,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_get_key_value_678354945._native_ptr(),
+                    678354945)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -927,8 +999,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_get_key_time_3085491603,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_get_key_time_3085491603._native_ptr(),
+                    3085491603)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -949,8 +1026,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_find_key_3898229885,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_find_key_3898229885._native_ptr(),
+                    3898229885)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -969,8 +1051,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(interpolation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_set_interpolation_type_4112932513,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_set_interpolation_type_4112932513._native_ptr(),
+                    4112932513)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -987,8 +1074,13 @@ open class Animation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_get_interpolation_type_1530756894,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_get_interpolation_type_1530756894._native_ptr(),
+                    1530756894)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1005,8 +1097,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(interpolation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_set_interpolation_loop_wrap_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_set_interpolation_loop_wrap_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1024,8 +1121,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_get_interpolation_loop_wrap_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_get_interpolation_loop_wrap_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1043,8 +1145,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_track_is_compressed_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_track_is_compressed_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1061,8 +1168,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_value_track_set_update_mode_2854058312,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_value_track_set_update_mode_2854058312._native_ptr(),
+                    2854058312)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1079,8 +1191,13 @@ open class Animation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_value_track_get_update_mode_1440326473,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_value_track_get_update_mode_1440326473._native_ptr(),
+                    1440326473)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1098,8 +1215,13 @@ open class Animation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_value_track_interpolate_491147702,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_value_track_interpolate_491147702._native_ptr(),
+                    491147702)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1118,8 +1240,13 @@ open class Animation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_method_track_get_name_351665558,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_method_track_get_name_351665558._native_ptr(),
+                    351665558)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1138,8 +1265,13 @@ open class Animation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_method_track_get_params_2345056839,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_method_track_get_params_2345056839._native_ptr(),
+                    2345056839)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1162,8 +1294,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_bezier_track_insert_key_1057544502,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_bezier_track_insert_key_1057544502._native_ptr(),
+                    1057544502)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1183,8 +1320,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(key_idx_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_bezier_track_set_key_value_3506521499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_bezier_track_set_key_value_3506521499._native_ptr(),
+                    3506521499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1204,8 +1346,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(key_idx_native), .init(in_handle_native), .init(balanced_value_time_ratio_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_bezier_track_set_key_in_handle_1028302688,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_bezier_track_set_key_in_handle_1028302688._native_ptr(),
+                    1028302688)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1225,8 +1372,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(key_idx_native), .init(out_handle_native), .init(balanced_value_time_ratio_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_bezier_track_set_key_out_handle_1028302688,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_bezier_track_set_key_out_handle_1028302688._native_ptr(),
+                    1028302688)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1246,8 +1398,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_bezier_track_get_key_value_3085491603,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_bezier_track_get_key_value_3085491603._native_ptr(),
+                    3085491603)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1266,8 +1423,13 @@ open class Animation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_bezier_track_get_key_in_handle_3016396712,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_bezier_track_get_key_in_handle_3016396712._native_ptr(),
+                    3016396712)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1286,8 +1448,13 @@ open class Animation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_bezier_track_get_key_out_handle_3016396712,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_bezier_track_get_key_out_handle_3016396712._native_ptr(),
+                    3016396712)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1307,8 +1474,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_bezier_track_interpolate_1900462983,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_bezier_track_interpolate_1900462983._native_ptr(),
+                    1900462983)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1331,8 +1503,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_audio_track_insert_key_3489962123,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_audio_track_insert_key_3489962123._native_ptr(),
+                    3489962123)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1353,8 +1530,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(key_idx_native), .init(stream_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_audio_track_set_key_stream_3886397084,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_audio_track_set_key_stream_3886397084._native_ptr(),
+                    3886397084)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1372,8 +1554,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(key_idx_native), .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_audio_track_set_key_start_offset_3506521499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_audio_track_set_key_start_offset_3506521499._native_ptr(),
+                    3506521499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1392,8 +1579,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(key_idx_native), .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_audio_track_set_key_end_offset_3506521499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_audio_track_set_key_end_offset_3506521499._native_ptr(),
+                    3506521499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1412,8 +1604,13 @@ open class Animation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_audio_track_get_key_stream_635277205,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_audio_track_get_key_stream_635277205._native_ptr(),
+                    635277205)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1433,8 +1630,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_audio_track_get_key_start_offset_3085491603,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_audio_track_get_key_start_offset_3085491603._native_ptr(),
+                    3085491603)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1454,8 +1656,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_audio_track_get_key_end_offset_3085491603,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_audio_track_get_key_end_offset_3085491603._native_ptr(),
+                    3085491603)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1473,8 +1680,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_audio_track_set_use_blend_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_audio_track_set_use_blend_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1492,8 +1704,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_audio_track_is_use_blend_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_audio_track_is_use_blend_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1513,8 +1730,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_animation_track_insert_key_158676774,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_animation_track_insert_key_158676774._native_ptr(),
+                    158676774)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1533,8 +1755,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(key_idx_native), .init(animation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_animation_track_set_key_animation_117615382,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_animation_track_set_key_animation_117615382._native_ptr(),
+                    117615382)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1552,8 +1779,13 @@ open class Animation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_animation_track_get_key_animation_351665558,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_animation_track_get_key_animation_351665558._native_ptr(),
+                    351665558)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1570,8 +1802,13 @@ open class Animation : Resource {
                 .init(time_sec_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_length_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_length_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1587,8 +1824,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_length_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_length_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1603,8 +1845,13 @@ open class Animation : Resource {
                 .init(loop_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_loop_mode_3155355575,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_loop_mode_3155355575._native_ptr(),
+                    3155355575)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1619,8 +1866,13 @@ open class Animation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_loop_mode_1988889481,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_loop_mode_1988889481._native_ptr(),
+                    1988889481)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1635,8 +1887,13 @@ open class Animation : Resource {
                 .init(size_sec_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_step_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_step_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1652,8 +1909,13 @@ open class Animation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_step_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_step_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1667,8 +1929,13 @@ open class Animation : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1683,8 +1950,13 @@ open class Animation : Resource {
                 .init(track_idx_native), .init(to_animation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_copy_track_148001024,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_copy_track_148001024._native_ptr(),
+                    148001024)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1701,8 +1973,13 @@ open class Animation : Resource {
                 .init(page_size_native), .init(fps_native), .init(split_tolerance_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_compress_1804059263,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_compress_1804059263._native_ptr(),
+                    1804059263)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

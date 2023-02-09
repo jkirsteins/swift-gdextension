@@ -13,23 +13,22 @@ open class PolygonOccluder3D : Occluder3D {
 
     public override class var __godot_name: StringName { __godot_name_PolygonOccluder3D }
 
-    static var _method_set_polygon_1509147220: GDExtensionMethodBindPtr! = nil
-    static var _method_get_polygon_2961356807: GDExtensionMethodBindPtr! = nil
+    static var _method_set_polygon_1509147220: StringName! = nil
+    static var _method_get_polygon_2961356807: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PolygonOccluder3D == nil)
         __godot_name_PolygonOccluder3D = StringName(from: "PolygonOccluder3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_polygon_1509147220_name = StringName(from: "set_polygon")
-        self._method_set_polygon_1509147220 = self.interface.pointee.classdb_get_method_bind(__godot_name_PolygonOccluder3D._native_ptr(), _method_set_polygon_1509147220_name._native_ptr(), 1509147220)
-        assert(PolygonOccluder3D._method_set_polygon_1509147220 != nil)
-        let _method_get_polygon_2961356807_name = StringName(from: "get_polygon")
-        self._method_get_polygon_2961356807 = self.interface.pointee.classdb_get_method_bind(__godot_name_PolygonOccluder3D._native_ptr(), _method_get_polygon_2961356807_name._native_ptr(), 2961356807)
-        assert(PolygonOccluder3D._method_get_polygon_2961356807 != nil)
+        self._method_set_polygon_1509147220 = StringName(from: "set_polygon")
+        assert(self._method_set_polygon_1509147220 != nil)
+        self._method_get_polygon_2961356807 = StringName(from: "get_polygon")
+        assert(self._method_get_polygon_2961356807 != nil)
     }
 
     public func set_polygon(polygon: PackedVector2Array)  {
@@ -40,8 +39,13 @@ open class PolygonOccluder3D : Occluder3D {
                 .init(polygon_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_polygon_1509147220,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_polygon_1509147220._native_ptr(),
+                    1509147220)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -55,8 +59,13 @@ open class PolygonOccluder3D : Occluder3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_polygon_2961356807,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_polygon_2961356807._native_ptr(),
+                    2961356807)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

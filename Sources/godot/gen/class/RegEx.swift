@@ -11,55 +11,46 @@ open class RegEx : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_RegEx }
 
-    static var _method_create_from_string_2150300909: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_compile_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_search_4087180739: GDExtensionMethodBindPtr! = nil
-    static var _method_search_all_3354100289: GDExtensionMethodBindPtr! = nil
-    static var _method_sub_758293621: GDExtensionMethodBindPtr! = nil
-    static var _method_is_valid_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pattern_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_group_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_names_1139954409: GDExtensionMethodBindPtr! = nil
+    static var _method_create_from_string_2150300909: StringName! = nil
+    static var _method_clear_3218959716: StringName! = nil
+    static var _method_compile_166001499: StringName! = nil
+    static var _method_search_4087180739: StringName! = nil
+    static var _method_search_all_3354100289: StringName! = nil
+    static var _method_sub_758293621: StringName! = nil
+    static var _method_is_valid_36873697: StringName! = nil
+    static var _method_get_pattern_201670096: StringName! = nil
+    static var _method_get_group_count_3905245786: StringName! = nil
+    static var _method_get_names_1139954409: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_RegEx == nil)
         __godot_name_RegEx = StringName(from: "RegEx")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_create_from_string_2150300909_name = StringName(from: "create_from_string")
-        self._method_create_from_string_2150300909 = self.interface.pointee.classdb_get_method_bind(__godot_name_RegEx._native_ptr(), _method_create_from_string_2150300909_name._native_ptr(), 2150300909)
-        assert(RegEx._method_create_from_string_2150300909 != nil)
-        let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RegEx._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
-        assert(RegEx._method_clear_3218959716 != nil)
-        let _method_compile_166001499_name = StringName(from: "compile")
-        self._method_compile_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_RegEx._native_ptr(), _method_compile_166001499_name._native_ptr(), 166001499)
-        assert(RegEx._method_compile_166001499 != nil)
-        let _method_search_4087180739_name = StringName(from: "search")
-        self._method_search_4087180739 = self.interface.pointee.classdb_get_method_bind(__godot_name_RegEx._native_ptr(), _method_search_4087180739_name._native_ptr(), 4087180739)
-        assert(RegEx._method_search_4087180739 != nil)
-        let _method_search_all_3354100289_name = StringName(from: "search_all")
-        self._method_search_all_3354100289 = self.interface.pointee.classdb_get_method_bind(__godot_name_RegEx._native_ptr(), _method_search_all_3354100289_name._native_ptr(), 3354100289)
-        assert(RegEx._method_search_all_3354100289 != nil)
-        let _method_sub_758293621_name = StringName(from: "sub")
-        self._method_sub_758293621 = self.interface.pointee.classdb_get_method_bind(__godot_name_RegEx._native_ptr(), _method_sub_758293621_name._native_ptr(), 758293621)
-        assert(RegEx._method_sub_758293621 != nil)
-        let _method_is_valid_36873697_name = StringName(from: "is_valid")
-        self._method_is_valid_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RegEx._native_ptr(), _method_is_valid_36873697_name._native_ptr(), 36873697)
-        assert(RegEx._method_is_valid_36873697 != nil)
-        let _method_get_pattern_201670096_name = StringName(from: "get_pattern")
-        self._method_get_pattern_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_RegEx._native_ptr(), _method_get_pattern_201670096_name._native_ptr(), 201670096)
-        assert(RegEx._method_get_pattern_201670096 != nil)
-        let _method_get_group_count_3905245786_name = StringName(from: "get_group_count")
-        self._method_get_group_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RegEx._native_ptr(), _method_get_group_count_3905245786_name._native_ptr(), 3905245786)
-        assert(RegEx._method_get_group_count_3905245786 != nil)
-        let _method_get_names_1139954409_name = StringName(from: "get_names")
-        self._method_get_names_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_RegEx._native_ptr(), _method_get_names_1139954409_name._native_ptr(), 1139954409)
-        assert(RegEx._method_get_names_1139954409 != nil)
+        self._method_create_from_string_2150300909 = StringName(from: "create_from_string")
+        assert(self._method_create_from_string_2150300909 != nil)
+        self._method_clear_3218959716 = StringName(from: "clear")
+        assert(self._method_clear_3218959716 != nil)
+        self._method_compile_166001499 = StringName(from: "compile")
+        assert(self._method_compile_166001499 != nil)
+        self._method_search_4087180739 = StringName(from: "search")
+        assert(self._method_search_4087180739 != nil)
+        self._method_search_all_3354100289 = StringName(from: "search_all")
+        assert(self._method_search_all_3354100289 != nil)
+        self._method_sub_758293621 = StringName(from: "sub")
+        assert(self._method_sub_758293621 != nil)
+        self._method_is_valid_36873697 = StringName(from: "is_valid")
+        assert(self._method_is_valid_36873697 != nil)
+        self._method_get_pattern_201670096 = StringName(from: "get_pattern")
+        assert(self._method_get_pattern_201670096 != nil)
+        self._method_get_group_count_3905245786 = StringName(from: "get_group_count")
+        assert(self._method_get_group_count_3905245786 != nil)
+        self._method_get_names_1139954409 = StringName(from: "get_names")
+        assert(self._method_get_names_1139954409 != nil)
     }
 
     public func create_from_string(pattern: godot.String) -> RegEx {
@@ -71,8 +62,13 @@ open class RegEx : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_from_string_2150300909,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_from_string_2150300909._native_ptr(),
+                    2150300909)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -86,8 +82,13 @@ open class RegEx : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -102,8 +103,13 @@ open class RegEx : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_compile_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_compile_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -121,8 +127,13 @@ open class RegEx : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_search_4087180739,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_search_4087180739._native_ptr(),
+                    4087180739)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -142,8 +153,13 @@ open class RegEx : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_search_all_3354100289,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_search_all_3354100289._native_ptr(),
+                    3354100289)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -165,8 +181,13 @@ open class RegEx : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_sub_758293621,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_sub_758293621._native_ptr(),
+                    758293621)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -185,8 +206,13 @@ open class RegEx : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_valid_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_valid_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -201,8 +227,13 @@ open class RegEx : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pattern_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pattern_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -218,8 +249,13 @@ open class RegEx : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_group_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_group_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -234,8 +270,13 @@ open class RegEx : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_names_1139954409,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_names_1139954409._native_ptr(),
+                    1139954409)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

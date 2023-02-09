@@ -11,39 +11,34 @@ open class RDAttachmentFormat : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_RDAttachmentFormat }
 
-    static var _method_set_format_565531219: GDExtensionMethodBindPtr! = nil
-    static var _method_get_format_2235804183: GDExtensionMethodBindPtr! = nil
-    static var _method_set_samples_3774171498: GDExtensionMethodBindPtr! = nil
-    static var _method_get_samples_407791724: GDExtensionMethodBindPtr! = nil
-    static var _method_set_usage_flags_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_usage_flags_3905245786: GDExtensionMethodBindPtr! = nil
+    static var _method_set_format_565531219: StringName! = nil
+    static var _method_get_format_2235804183: StringName! = nil
+    static var _method_set_samples_3774171498: StringName! = nil
+    static var _method_get_samples_407791724: StringName! = nil
+    static var _method_set_usage_flags_1286410249: StringName! = nil
+    static var _method_get_usage_flags_3905245786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_RDAttachmentFormat == nil)
         __godot_name_RDAttachmentFormat = StringName(from: "RDAttachmentFormat")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_format_565531219_name = StringName(from: "set_format")
-        self._method_set_format_565531219 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDAttachmentFormat._native_ptr(), _method_set_format_565531219_name._native_ptr(), 565531219)
-        assert(RDAttachmentFormat._method_set_format_565531219 != nil)
-        let _method_get_format_2235804183_name = StringName(from: "get_format")
-        self._method_get_format_2235804183 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDAttachmentFormat._native_ptr(), _method_get_format_2235804183_name._native_ptr(), 2235804183)
-        assert(RDAttachmentFormat._method_get_format_2235804183 != nil)
-        let _method_set_samples_3774171498_name = StringName(from: "set_samples")
-        self._method_set_samples_3774171498 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDAttachmentFormat._native_ptr(), _method_set_samples_3774171498_name._native_ptr(), 3774171498)
-        assert(RDAttachmentFormat._method_set_samples_3774171498 != nil)
-        let _method_get_samples_407791724_name = StringName(from: "get_samples")
-        self._method_get_samples_407791724 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDAttachmentFormat._native_ptr(), _method_get_samples_407791724_name._native_ptr(), 407791724)
-        assert(RDAttachmentFormat._method_get_samples_407791724 != nil)
-        let _method_set_usage_flags_1286410249_name = StringName(from: "set_usage_flags")
-        self._method_set_usage_flags_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDAttachmentFormat._native_ptr(), _method_set_usage_flags_1286410249_name._native_ptr(), 1286410249)
-        assert(RDAttachmentFormat._method_set_usage_flags_1286410249 != nil)
-        let _method_get_usage_flags_3905245786_name = StringName(from: "get_usage_flags")
-        self._method_get_usage_flags_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDAttachmentFormat._native_ptr(), _method_get_usage_flags_3905245786_name._native_ptr(), 3905245786)
-        assert(RDAttachmentFormat._method_get_usage_flags_3905245786 != nil)
+        self._method_set_format_565531219 = StringName(from: "set_format")
+        assert(self._method_set_format_565531219 != nil)
+        self._method_get_format_2235804183 = StringName(from: "get_format")
+        assert(self._method_get_format_2235804183 != nil)
+        self._method_set_samples_3774171498 = StringName(from: "set_samples")
+        assert(self._method_set_samples_3774171498 != nil)
+        self._method_get_samples_407791724 = StringName(from: "get_samples")
+        assert(self._method_get_samples_407791724 != nil)
+        self._method_set_usage_flags_1286410249 = StringName(from: "set_usage_flags")
+        assert(self._method_set_usage_flags_1286410249 != nil)
+        self._method_get_usage_flags_3905245786 = StringName(from: "get_usage_flags")
+        assert(self._method_get_usage_flags_3905245786 != nil)
     }
 
     public func set_format(p_member: RenderingDevice.DataFormat)  {
@@ -54,8 +49,13 @@ open class RDAttachmentFormat : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_format_565531219,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_format_565531219._native_ptr(),
+                    565531219)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -70,8 +70,13 @@ open class RDAttachmentFormat : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_format_2235804183,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_format_2235804183._native_ptr(),
+                    2235804183)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -86,8 +91,13 @@ open class RDAttachmentFormat : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_samples_3774171498,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_samples_3774171498._native_ptr(),
+                    3774171498)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -102,8 +112,13 @@ open class RDAttachmentFormat : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_samples_407791724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_samples_407791724._native_ptr(),
+                    407791724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -118,8 +133,13 @@ open class RDAttachmentFormat : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_usage_flags_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_usage_flags_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -135,8 +155,13 @@ open class RDAttachmentFormat : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_usage_flags_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_usage_flags_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

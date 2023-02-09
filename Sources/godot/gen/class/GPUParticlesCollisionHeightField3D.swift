@@ -31,47 +31,40 @@ open class GPUParticlesCollisionHeightField3D : GPUParticlesCollision3D {
 
     public override class var __godot_name: StringName { __godot_name_GPUParticlesCollisionHeightField3D }
 
-    static var _method_set_size_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_resolution_1009996517: GDExtensionMethodBindPtr! = nil
-    static var _method_get_resolution_1156065644: GDExtensionMethodBindPtr! = nil
-    static var _method_set_update_mode_673680859: GDExtensionMethodBindPtr! = nil
-    static var _method_get_update_mode_1998141380: GDExtensionMethodBindPtr! = nil
-    static var _method_set_follow_camera_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_follow_camera_enabled_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_size_3460891852: StringName! = nil
+    static var _method_get_size_3360562783: StringName! = nil
+    static var _method_set_resolution_1009996517: StringName! = nil
+    static var _method_get_resolution_1156065644: StringName! = nil
+    static var _method_set_update_mode_673680859: StringName! = nil
+    static var _method_get_update_mode_1998141380: StringName! = nil
+    static var _method_set_follow_camera_enabled_2586408642: StringName! = nil
+    static var _method_is_follow_camera_enabled_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_GPUParticlesCollisionHeightField3D == nil)
         __godot_name_GPUParticlesCollisionHeightField3D = StringName(from: "GPUParticlesCollisionHeightField3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_size_3460891852_name = StringName(from: "set_size")
-        self._method_set_size_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionHeightField3D._native_ptr(), _method_set_size_3460891852_name._native_ptr(), 3460891852)
-        assert(GPUParticlesCollisionHeightField3D._method_set_size_3460891852 != nil)
-        let _method_get_size_3360562783_name = StringName(from: "get_size")
-        self._method_get_size_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionHeightField3D._native_ptr(), _method_get_size_3360562783_name._native_ptr(), 3360562783)
-        assert(GPUParticlesCollisionHeightField3D._method_get_size_3360562783 != nil)
-        let _method_set_resolution_1009996517_name = StringName(from: "set_resolution")
-        self._method_set_resolution_1009996517 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionHeightField3D._native_ptr(), _method_set_resolution_1009996517_name._native_ptr(), 1009996517)
-        assert(GPUParticlesCollisionHeightField3D._method_set_resolution_1009996517 != nil)
-        let _method_get_resolution_1156065644_name = StringName(from: "get_resolution")
-        self._method_get_resolution_1156065644 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionHeightField3D._native_ptr(), _method_get_resolution_1156065644_name._native_ptr(), 1156065644)
-        assert(GPUParticlesCollisionHeightField3D._method_get_resolution_1156065644 != nil)
-        let _method_set_update_mode_673680859_name = StringName(from: "set_update_mode")
-        self._method_set_update_mode_673680859 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionHeightField3D._native_ptr(), _method_set_update_mode_673680859_name._native_ptr(), 673680859)
-        assert(GPUParticlesCollisionHeightField3D._method_set_update_mode_673680859 != nil)
-        let _method_get_update_mode_1998141380_name = StringName(from: "get_update_mode")
-        self._method_get_update_mode_1998141380 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionHeightField3D._native_ptr(), _method_get_update_mode_1998141380_name._native_ptr(), 1998141380)
-        assert(GPUParticlesCollisionHeightField3D._method_get_update_mode_1998141380 != nil)
-        let _method_set_follow_camera_enabled_2586408642_name = StringName(from: "set_follow_camera_enabled")
-        self._method_set_follow_camera_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionHeightField3D._native_ptr(), _method_set_follow_camera_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(GPUParticlesCollisionHeightField3D._method_set_follow_camera_enabled_2586408642 != nil)
-        let _method_is_follow_camera_enabled_36873697_name = StringName(from: "is_follow_camera_enabled")
-        self._method_is_follow_camera_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionHeightField3D._native_ptr(), _method_is_follow_camera_enabled_36873697_name._native_ptr(), 36873697)
-        assert(GPUParticlesCollisionHeightField3D._method_is_follow_camera_enabled_36873697 != nil)
+        self._method_set_size_3460891852 = StringName(from: "set_size")
+        assert(self._method_set_size_3460891852 != nil)
+        self._method_get_size_3360562783 = StringName(from: "get_size")
+        assert(self._method_get_size_3360562783 != nil)
+        self._method_set_resolution_1009996517 = StringName(from: "set_resolution")
+        assert(self._method_set_resolution_1009996517 != nil)
+        self._method_get_resolution_1156065644 = StringName(from: "get_resolution")
+        assert(self._method_get_resolution_1156065644 != nil)
+        self._method_set_update_mode_673680859 = StringName(from: "set_update_mode")
+        assert(self._method_set_update_mode_673680859 != nil)
+        self._method_get_update_mode_1998141380 = StringName(from: "get_update_mode")
+        assert(self._method_get_update_mode_1998141380 != nil)
+        self._method_set_follow_camera_enabled_2586408642 = StringName(from: "set_follow_camera_enabled")
+        assert(self._method_set_follow_camera_enabled_2586408642 != nil)
+        self._method_is_follow_camera_enabled_36873697 = StringName(from: "is_follow_camera_enabled")
+        assert(self._method_is_follow_camera_enabled_36873697 != nil)
     }
 
     public func set_size(size: Vector3)  {
@@ -82,8 +75,13 @@ open class GPUParticlesCollisionHeightField3D : GPUParticlesCollision3D {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_size_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_size_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -97,8 +95,13 @@ open class GPUParticlesCollisionHeightField3D : GPUParticlesCollision3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -113,8 +116,13 @@ open class GPUParticlesCollisionHeightField3D : GPUParticlesCollision3D {
                 .init(resolution_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_resolution_1009996517,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_resolution_1009996517._native_ptr(),
+                    1009996517)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -129,8 +137,13 @@ open class GPUParticlesCollisionHeightField3D : GPUParticlesCollision3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_resolution_1156065644,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_resolution_1156065644._native_ptr(),
+                    1156065644)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -145,8 +158,13 @@ open class GPUParticlesCollisionHeightField3D : GPUParticlesCollision3D {
                 .init(update_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_update_mode_673680859,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_update_mode_673680859._native_ptr(),
+                    673680859)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -161,8 +179,13 @@ open class GPUParticlesCollisionHeightField3D : GPUParticlesCollision3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_update_mode_1998141380,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_update_mode_1998141380._native_ptr(),
+                    1998141380)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -177,8 +200,13 @@ open class GPUParticlesCollisionHeightField3D : GPUParticlesCollision3D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_follow_camera_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_follow_camera_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -194,8 +222,13 @@ open class GPUParticlesCollisionHeightField3D : GPUParticlesCollision3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_follow_camera_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_follow_camera_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

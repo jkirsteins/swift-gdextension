@@ -19,83 +19,67 @@ open class PathFollow3D : Node3D {
 
     public override class var __godot_name: StringName { __godot_name_PathFollow3D }
 
-    static var _method_set_progress_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_progress_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_h_offset_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_h_offset_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_v_offset_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_v_offset_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_progress_ratio_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_progress_ratio_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_rotation_mode_1640311967: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rotation_mode_3814010545: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cubic_interpolation_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cubic_interpolation_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_loop_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_has_loop_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tilt_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_tilt_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_correct_posture_2686588690: GDExtensionMethodBindPtr! = nil
+    static var _method_set_progress_373806689: StringName! = nil
+    static var _method_get_progress_1740695150: StringName! = nil
+    static var _method_set_h_offset_373806689: StringName! = nil
+    static var _method_get_h_offset_1740695150: StringName! = nil
+    static var _method_set_v_offset_373806689: StringName! = nil
+    static var _method_get_v_offset_1740695150: StringName! = nil
+    static var _method_set_progress_ratio_373806689: StringName! = nil
+    static var _method_get_progress_ratio_1740695150: StringName! = nil
+    static var _method_set_rotation_mode_1640311967: StringName! = nil
+    static var _method_get_rotation_mode_3814010545: StringName! = nil
+    static var _method_set_cubic_interpolation_2586408642: StringName! = nil
+    static var _method_get_cubic_interpolation_36873697: StringName! = nil
+    static var _method_set_loop_2586408642: StringName! = nil
+    static var _method_has_loop_36873697: StringName! = nil
+    static var _method_set_tilt_enabled_2586408642: StringName! = nil
+    static var _method_is_tilt_enabled_36873697: StringName! = nil
+    static var _method_correct_posture_2686588690: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PathFollow3D == nil)
         __godot_name_PathFollow3D = StringName(from: "PathFollow3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_progress_373806689_name = StringName(from: "set_progress")
-        self._method_set_progress_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_set_progress_373806689_name._native_ptr(), 373806689)
-        assert(PathFollow3D._method_set_progress_373806689 != nil)
-        let _method_get_progress_1740695150_name = StringName(from: "get_progress")
-        self._method_get_progress_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_get_progress_1740695150_name._native_ptr(), 1740695150)
-        assert(PathFollow3D._method_get_progress_1740695150 != nil)
-        let _method_set_h_offset_373806689_name = StringName(from: "set_h_offset")
-        self._method_set_h_offset_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_set_h_offset_373806689_name._native_ptr(), 373806689)
-        assert(PathFollow3D._method_set_h_offset_373806689 != nil)
-        let _method_get_h_offset_1740695150_name = StringName(from: "get_h_offset")
-        self._method_get_h_offset_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_get_h_offset_1740695150_name._native_ptr(), 1740695150)
-        assert(PathFollow3D._method_get_h_offset_1740695150 != nil)
-        let _method_set_v_offset_373806689_name = StringName(from: "set_v_offset")
-        self._method_set_v_offset_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_set_v_offset_373806689_name._native_ptr(), 373806689)
-        assert(PathFollow3D._method_set_v_offset_373806689 != nil)
-        let _method_get_v_offset_1740695150_name = StringName(from: "get_v_offset")
-        self._method_get_v_offset_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_get_v_offset_1740695150_name._native_ptr(), 1740695150)
-        assert(PathFollow3D._method_get_v_offset_1740695150 != nil)
-        let _method_set_progress_ratio_373806689_name = StringName(from: "set_progress_ratio")
-        self._method_set_progress_ratio_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_set_progress_ratio_373806689_name._native_ptr(), 373806689)
-        assert(PathFollow3D._method_set_progress_ratio_373806689 != nil)
-        let _method_get_progress_ratio_1740695150_name = StringName(from: "get_progress_ratio")
-        self._method_get_progress_ratio_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_get_progress_ratio_1740695150_name._native_ptr(), 1740695150)
-        assert(PathFollow3D._method_get_progress_ratio_1740695150 != nil)
-        let _method_set_rotation_mode_1640311967_name = StringName(from: "set_rotation_mode")
-        self._method_set_rotation_mode_1640311967 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_set_rotation_mode_1640311967_name._native_ptr(), 1640311967)
-        assert(PathFollow3D._method_set_rotation_mode_1640311967 != nil)
-        let _method_get_rotation_mode_3814010545_name = StringName(from: "get_rotation_mode")
-        self._method_get_rotation_mode_3814010545 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_get_rotation_mode_3814010545_name._native_ptr(), 3814010545)
-        assert(PathFollow3D._method_get_rotation_mode_3814010545 != nil)
-        let _method_set_cubic_interpolation_2586408642_name = StringName(from: "set_cubic_interpolation")
-        self._method_set_cubic_interpolation_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_set_cubic_interpolation_2586408642_name._native_ptr(), 2586408642)
-        assert(PathFollow3D._method_set_cubic_interpolation_2586408642 != nil)
-        let _method_get_cubic_interpolation_36873697_name = StringName(from: "get_cubic_interpolation")
-        self._method_get_cubic_interpolation_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_get_cubic_interpolation_36873697_name._native_ptr(), 36873697)
-        assert(PathFollow3D._method_get_cubic_interpolation_36873697 != nil)
-        let _method_set_loop_2586408642_name = StringName(from: "set_loop")
-        self._method_set_loop_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_set_loop_2586408642_name._native_ptr(), 2586408642)
-        assert(PathFollow3D._method_set_loop_2586408642 != nil)
-        let _method_has_loop_36873697_name = StringName(from: "has_loop")
-        self._method_has_loop_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_has_loop_36873697_name._native_ptr(), 36873697)
-        assert(PathFollow3D._method_has_loop_36873697 != nil)
-        let _method_set_tilt_enabled_2586408642_name = StringName(from: "set_tilt_enabled")
-        self._method_set_tilt_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_set_tilt_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(PathFollow3D._method_set_tilt_enabled_2586408642 != nil)
-        let _method_is_tilt_enabled_36873697_name = StringName(from: "is_tilt_enabled")
-        self._method_is_tilt_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_is_tilt_enabled_36873697_name._native_ptr(), 36873697)
-        assert(PathFollow3D._method_is_tilt_enabled_36873697 != nil)
-        let _method_correct_posture_2686588690_name = StringName(from: "correct_posture")
-        self._method_correct_posture_2686588690 = self.interface.pointee.classdb_get_method_bind(__godot_name_PathFollow3D._native_ptr(), _method_correct_posture_2686588690_name._native_ptr(), 2686588690)
-        assert(PathFollow3D._method_correct_posture_2686588690 != nil)
+        self._method_set_progress_373806689 = StringName(from: "set_progress")
+        assert(self._method_set_progress_373806689 != nil)
+        self._method_get_progress_1740695150 = StringName(from: "get_progress")
+        assert(self._method_get_progress_1740695150 != nil)
+        self._method_set_h_offset_373806689 = StringName(from: "set_h_offset")
+        assert(self._method_set_h_offset_373806689 != nil)
+        self._method_get_h_offset_1740695150 = StringName(from: "get_h_offset")
+        assert(self._method_get_h_offset_1740695150 != nil)
+        self._method_set_v_offset_373806689 = StringName(from: "set_v_offset")
+        assert(self._method_set_v_offset_373806689 != nil)
+        self._method_get_v_offset_1740695150 = StringName(from: "get_v_offset")
+        assert(self._method_get_v_offset_1740695150 != nil)
+        self._method_set_progress_ratio_373806689 = StringName(from: "set_progress_ratio")
+        assert(self._method_set_progress_ratio_373806689 != nil)
+        self._method_get_progress_ratio_1740695150 = StringName(from: "get_progress_ratio")
+        assert(self._method_get_progress_ratio_1740695150 != nil)
+        self._method_set_rotation_mode_1640311967 = StringName(from: "set_rotation_mode")
+        assert(self._method_set_rotation_mode_1640311967 != nil)
+        self._method_get_rotation_mode_3814010545 = StringName(from: "get_rotation_mode")
+        assert(self._method_get_rotation_mode_3814010545 != nil)
+        self._method_set_cubic_interpolation_2586408642 = StringName(from: "set_cubic_interpolation")
+        assert(self._method_set_cubic_interpolation_2586408642 != nil)
+        self._method_get_cubic_interpolation_36873697 = StringName(from: "get_cubic_interpolation")
+        assert(self._method_get_cubic_interpolation_36873697 != nil)
+        self._method_set_loop_2586408642 = StringName(from: "set_loop")
+        assert(self._method_set_loop_2586408642 != nil)
+        self._method_has_loop_36873697 = StringName(from: "has_loop")
+        assert(self._method_has_loop_36873697 != nil)
+        self._method_set_tilt_enabled_2586408642 = StringName(from: "set_tilt_enabled")
+        assert(self._method_set_tilt_enabled_2586408642 != nil)
+        self._method_is_tilt_enabled_36873697 = StringName(from: "is_tilt_enabled")
+        assert(self._method_is_tilt_enabled_36873697 != nil)
+        self._method_correct_posture_2686588690 = StringName(from: "correct_posture")
+        assert(self._method_correct_posture_2686588690 != nil)
     }
 
     public func set_progress(progress: Float64)  {
@@ -106,8 +90,13 @@ open class PathFollow3D : Node3D {
                 .init(progress_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_progress_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_progress_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -123,8 +112,13 @@ open class PathFollow3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_progress_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_progress_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -139,8 +133,13 @@ open class PathFollow3D : Node3D {
                 .init(h_offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_h_offset_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_h_offset_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -156,8 +155,13 @@ open class PathFollow3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_h_offset_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_h_offset_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -172,8 +176,13 @@ open class PathFollow3D : Node3D {
                 .init(v_offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_v_offset_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_v_offset_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -189,8 +198,13 @@ open class PathFollow3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_v_offset_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_v_offset_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -205,8 +219,13 @@ open class PathFollow3D : Node3D {
                 .init(ratio_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_progress_ratio_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_progress_ratio_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -222,8 +241,13 @@ open class PathFollow3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_progress_ratio_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_progress_ratio_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -238,8 +262,13 @@ open class PathFollow3D : Node3D {
                 .init(rotation_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_rotation_mode_1640311967,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_rotation_mode_1640311967._native_ptr(),
+                    1640311967)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -254,8 +283,13 @@ open class PathFollow3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rotation_mode_3814010545,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rotation_mode_3814010545._native_ptr(),
+                    3814010545)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -270,8 +304,13 @@ open class PathFollow3D : Node3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cubic_interpolation_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cubic_interpolation_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -287,8 +326,13 @@ open class PathFollow3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cubic_interpolation_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cubic_interpolation_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -303,8 +347,13 @@ open class PathFollow3D : Node3D {
                 .init(loop_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_loop_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_loop_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -320,8 +369,13 @@ open class PathFollow3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_loop_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_loop_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -336,8 +390,13 @@ open class PathFollow3D : Node3D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tilt_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tilt_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -353,8 +412,13 @@ open class PathFollow3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_tilt_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_tilt_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -371,8 +435,13 @@ open class PathFollow3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_correct_posture_2686588690,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_correct_posture_2686588690._native_ptr(),
+                    2686588690)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -13,43 +13,37 @@ open class InputEventScreenTouch : InputEventFromWindow {
 
     public override class var __godot_name: StringName { __godot_name_InputEventScreenTouch }
 
-    static var _method_set_index_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_index_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_position_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_position_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_pressed_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_double_tap_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_double_tap_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_index_1286410249: StringName! = nil
+    static var _method_get_index_3905245786: StringName! = nil
+    static var _method_set_position_743155724: StringName! = nil
+    static var _method_get_position_3341600327: StringName! = nil
+    static var _method_set_pressed_2586408642: StringName! = nil
+    static var _method_set_double_tap_2586408642: StringName! = nil
+    static var _method_is_double_tap_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_InputEventScreenTouch == nil)
         __godot_name_InputEventScreenTouch = StringName(from: "InputEventScreenTouch")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_index_1286410249_name = StringName(from: "set_index")
-        self._method_set_index_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventScreenTouch._native_ptr(), _method_set_index_1286410249_name._native_ptr(), 1286410249)
-        assert(InputEventScreenTouch._method_set_index_1286410249 != nil)
-        let _method_get_index_3905245786_name = StringName(from: "get_index")
-        self._method_get_index_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventScreenTouch._native_ptr(), _method_get_index_3905245786_name._native_ptr(), 3905245786)
-        assert(InputEventScreenTouch._method_get_index_3905245786 != nil)
-        let _method_set_position_743155724_name = StringName(from: "set_position")
-        self._method_set_position_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventScreenTouch._native_ptr(), _method_set_position_743155724_name._native_ptr(), 743155724)
-        assert(InputEventScreenTouch._method_set_position_743155724 != nil)
-        let _method_get_position_3341600327_name = StringName(from: "get_position")
-        self._method_get_position_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventScreenTouch._native_ptr(), _method_get_position_3341600327_name._native_ptr(), 3341600327)
-        assert(InputEventScreenTouch._method_get_position_3341600327 != nil)
-        let _method_set_pressed_2586408642_name = StringName(from: "set_pressed")
-        self._method_set_pressed_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventScreenTouch._native_ptr(), _method_set_pressed_2586408642_name._native_ptr(), 2586408642)
-        assert(InputEventScreenTouch._method_set_pressed_2586408642 != nil)
-        let _method_set_double_tap_2586408642_name = StringName(from: "set_double_tap")
-        self._method_set_double_tap_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventScreenTouch._native_ptr(), _method_set_double_tap_2586408642_name._native_ptr(), 2586408642)
-        assert(InputEventScreenTouch._method_set_double_tap_2586408642 != nil)
-        let _method_is_double_tap_36873697_name = StringName(from: "is_double_tap")
-        self._method_is_double_tap_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventScreenTouch._native_ptr(), _method_is_double_tap_36873697_name._native_ptr(), 36873697)
-        assert(InputEventScreenTouch._method_is_double_tap_36873697 != nil)
+        self._method_set_index_1286410249 = StringName(from: "set_index")
+        assert(self._method_set_index_1286410249 != nil)
+        self._method_get_index_3905245786 = StringName(from: "get_index")
+        assert(self._method_get_index_3905245786 != nil)
+        self._method_set_position_743155724 = StringName(from: "set_position")
+        assert(self._method_set_position_743155724 != nil)
+        self._method_get_position_3341600327 = StringName(from: "get_position")
+        assert(self._method_get_position_3341600327 != nil)
+        self._method_set_pressed_2586408642 = StringName(from: "set_pressed")
+        assert(self._method_set_pressed_2586408642 != nil)
+        self._method_set_double_tap_2586408642 = StringName(from: "set_double_tap")
+        assert(self._method_set_double_tap_2586408642 != nil)
+        self._method_is_double_tap_36873697 = StringName(from: "is_double_tap")
+        assert(self._method_is_double_tap_36873697 != nil)
     }
 
     public func set_index(index: Int64)  {
@@ -60,8 +54,13 @@ open class InputEventScreenTouch : InputEventFromWindow {
                 .init(index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_index_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_index_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -77,8 +76,13 @@ open class InputEventScreenTouch : InputEventFromWindow {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_index_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_index_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -93,8 +97,13 @@ open class InputEventScreenTouch : InputEventFromWindow {
                 .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_position_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_position_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -108,8 +117,13 @@ open class InputEventScreenTouch : InputEventFromWindow {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_position_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_position_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -124,8 +138,13 @@ open class InputEventScreenTouch : InputEventFromWindow {
                 .init(pressed_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pressed_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pressed_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -140,8 +159,13 @@ open class InputEventScreenTouch : InputEventFromWindow {
                 .init(double_tap_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_double_tap_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_double_tap_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -157,8 +181,13 @@ open class InputEventScreenTouch : InputEventFromWindow {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_double_tap_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_double_tap_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

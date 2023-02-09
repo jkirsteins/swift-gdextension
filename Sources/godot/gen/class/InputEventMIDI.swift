@@ -113,79 +113,64 @@ open class InputEventMIDI : InputEvent {
 
     public override class var __godot_name: StringName { __godot_name_InputEventMIDI }
 
-    static var _method_set_channel_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_channel_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_message_1064271510: GDExtensionMethodBindPtr! = nil
-    static var _method_get_message_1936512097: GDExtensionMethodBindPtr! = nil
-    static var _method_set_pitch_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pitch_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_velocity_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_velocity_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_instrument_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_instrument_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_pressure_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pressure_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_controller_number_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_controller_number_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_controller_value_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_controller_value_3905245786: GDExtensionMethodBindPtr! = nil
+    static var _method_set_channel_1286410249: StringName! = nil
+    static var _method_get_channel_3905245786: StringName! = nil
+    static var _method_set_message_1064271510: StringName! = nil
+    static var _method_get_message_1936512097: StringName! = nil
+    static var _method_set_pitch_1286410249: StringName! = nil
+    static var _method_get_pitch_3905245786: StringName! = nil
+    static var _method_set_velocity_1286410249: StringName! = nil
+    static var _method_get_velocity_3905245786: StringName! = nil
+    static var _method_set_instrument_1286410249: StringName! = nil
+    static var _method_get_instrument_3905245786: StringName! = nil
+    static var _method_set_pressure_1286410249: StringName! = nil
+    static var _method_get_pressure_3905245786: StringName! = nil
+    static var _method_set_controller_number_1286410249: StringName! = nil
+    static var _method_get_controller_number_3905245786: StringName! = nil
+    static var _method_set_controller_value_1286410249: StringName! = nil
+    static var _method_get_controller_value_3905245786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_InputEventMIDI == nil)
         __godot_name_InputEventMIDI = StringName(from: "InputEventMIDI")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_channel_1286410249_name = StringName(from: "set_channel")
-        self._method_set_channel_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_set_channel_1286410249_name._native_ptr(), 1286410249)
-        assert(InputEventMIDI._method_set_channel_1286410249 != nil)
-        let _method_get_channel_3905245786_name = StringName(from: "get_channel")
-        self._method_get_channel_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_get_channel_3905245786_name._native_ptr(), 3905245786)
-        assert(InputEventMIDI._method_get_channel_3905245786 != nil)
-        let _method_set_message_1064271510_name = StringName(from: "set_message")
-        self._method_set_message_1064271510 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_set_message_1064271510_name._native_ptr(), 1064271510)
-        assert(InputEventMIDI._method_set_message_1064271510 != nil)
-        let _method_get_message_1936512097_name = StringName(from: "get_message")
-        self._method_get_message_1936512097 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_get_message_1936512097_name._native_ptr(), 1936512097)
-        assert(InputEventMIDI._method_get_message_1936512097 != nil)
-        let _method_set_pitch_1286410249_name = StringName(from: "set_pitch")
-        self._method_set_pitch_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_set_pitch_1286410249_name._native_ptr(), 1286410249)
-        assert(InputEventMIDI._method_set_pitch_1286410249 != nil)
-        let _method_get_pitch_3905245786_name = StringName(from: "get_pitch")
-        self._method_get_pitch_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_get_pitch_3905245786_name._native_ptr(), 3905245786)
-        assert(InputEventMIDI._method_get_pitch_3905245786 != nil)
-        let _method_set_velocity_1286410249_name = StringName(from: "set_velocity")
-        self._method_set_velocity_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_set_velocity_1286410249_name._native_ptr(), 1286410249)
-        assert(InputEventMIDI._method_set_velocity_1286410249 != nil)
-        let _method_get_velocity_3905245786_name = StringName(from: "get_velocity")
-        self._method_get_velocity_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_get_velocity_3905245786_name._native_ptr(), 3905245786)
-        assert(InputEventMIDI._method_get_velocity_3905245786 != nil)
-        let _method_set_instrument_1286410249_name = StringName(from: "set_instrument")
-        self._method_set_instrument_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_set_instrument_1286410249_name._native_ptr(), 1286410249)
-        assert(InputEventMIDI._method_set_instrument_1286410249 != nil)
-        let _method_get_instrument_3905245786_name = StringName(from: "get_instrument")
-        self._method_get_instrument_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_get_instrument_3905245786_name._native_ptr(), 3905245786)
-        assert(InputEventMIDI._method_get_instrument_3905245786 != nil)
-        let _method_set_pressure_1286410249_name = StringName(from: "set_pressure")
-        self._method_set_pressure_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_set_pressure_1286410249_name._native_ptr(), 1286410249)
-        assert(InputEventMIDI._method_set_pressure_1286410249 != nil)
-        let _method_get_pressure_3905245786_name = StringName(from: "get_pressure")
-        self._method_get_pressure_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_get_pressure_3905245786_name._native_ptr(), 3905245786)
-        assert(InputEventMIDI._method_get_pressure_3905245786 != nil)
-        let _method_set_controller_number_1286410249_name = StringName(from: "set_controller_number")
-        self._method_set_controller_number_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_set_controller_number_1286410249_name._native_ptr(), 1286410249)
-        assert(InputEventMIDI._method_set_controller_number_1286410249 != nil)
-        let _method_get_controller_number_3905245786_name = StringName(from: "get_controller_number")
-        self._method_get_controller_number_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_get_controller_number_3905245786_name._native_ptr(), 3905245786)
-        assert(InputEventMIDI._method_get_controller_number_3905245786 != nil)
-        let _method_set_controller_value_1286410249_name = StringName(from: "set_controller_value")
-        self._method_set_controller_value_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_set_controller_value_1286410249_name._native_ptr(), 1286410249)
-        assert(InputEventMIDI._method_set_controller_value_1286410249 != nil)
-        let _method_get_controller_value_3905245786_name = StringName(from: "get_controller_value")
-        self._method_get_controller_value_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventMIDI._native_ptr(), _method_get_controller_value_3905245786_name._native_ptr(), 3905245786)
-        assert(InputEventMIDI._method_get_controller_value_3905245786 != nil)
+        self._method_set_channel_1286410249 = StringName(from: "set_channel")
+        assert(self._method_set_channel_1286410249 != nil)
+        self._method_get_channel_3905245786 = StringName(from: "get_channel")
+        assert(self._method_get_channel_3905245786 != nil)
+        self._method_set_message_1064271510 = StringName(from: "set_message")
+        assert(self._method_set_message_1064271510 != nil)
+        self._method_get_message_1936512097 = StringName(from: "get_message")
+        assert(self._method_get_message_1936512097 != nil)
+        self._method_set_pitch_1286410249 = StringName(from: "set_pitch")
+        assert(self._method_set_pitch_1286410249 != nil)
+        self._method_get_pitch_3905245786 = StringName(from: "get_pitch")
+        assert(self._method_get_pitch_3905245786 != nil)
+        self._method_set_velocity_1286410249 = StringName(from: "set_velocity")
+        assert(self._method_set_velocity_1286410249 != nil)
+        self._method_get_velocity_3905245786 = StringName(from: "get_velocity")
+        assert(self._method_get_velocity_3905245786 != nil)
+        self._method_set_instrument_1286410249 = StringName(from: "set_instrument")
+        assert(self._method_set_instrument_1286410249 != nil)
+        self._method_get_instrument_3905245786 = StringName(from: "get_instrument")
+        assert(self._method_get_instrument_3905245786 != nil)
+        self._method_set_pressure_1286410249 = StringName(from: "set_pressure")
+        assert(self._method_set_pressure_1286410249 != nil)
+        self._method_get_pressure_3905245786 = StringName(from: "get_pressure")
+        assert(self._method_get_pressure_3905245786 != nil)
+        self._method_set_controller_number_1286410249 = StringName(from: "set_controller_number")
+        assert(self._method_set_controller_number_1286410249 != nil)
+        self._method_get_controller_number_3905245786 = StringName(from: "get_controller_number")
+        assert(self._method_get_controller_number_3905245786 != nil)
+        self._method_set_controller_value_1286410249 = StringName(from: "set_controller_value")
+        assert(self._method_set_controller_value_1286410249 != nil)
+        self._method_get_controller_value_3905245786 = StringName(from: "get_controller_value")
+        assert(self._method_get_controller_value_3905245786 != nil)
     }
 
     public func set_channel(channel: Int64)  {
@@ -196,8 +181,13 @@ open class InputEventMIDI : InputEvent {
                 .init(channel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_channel_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_channel_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -213,8 +203,13 @@ open class InputEventMIDI : InputEvent {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_channel_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_channel_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -229,8 +224,13 @@ open class InputEventMIDI : InputEvent {
                 .init(message_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_message_1064271510,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_message_1064271510._native_ptr(),
+                    1064271510)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -245,8 +245,13 @@ open class InputEventMIDI : InputEvent {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_message_1936512097,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_message_1936512097._native_ptr(),
+                    1936512097)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -261,8 +266,13 @@ open class InputEventMIDI : InputEvent {
                 .init(pitch_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pitch_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pitch_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -278,8 +288,13 @@ open class InputEventMIDI : InputEvent {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pitch_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pitch_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -294,8 +309,13 @@ open class InputEventMIDI : InputEvent {
                 .init(velocity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_velocity_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_velocity_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -311,8 +331,13 @@ open class InputEventMIDI : InputEvent {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_velocity_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_velocity_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -327,8 +352,13 @@ open class InputEventMIDI : InputEvent {
                 .init(instrument_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_instrument_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_instrument_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -344,8 +374,13 @@ open class InputEventMIDI : InputEvent {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_instrument_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_instrument_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -360,8 +395,13 @@ open class InputEventMIDI : InputEvent {
                 .init(pressure_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pressure_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pressure_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -377,8 +417,13 @@ open class InputEventMIDI : InputEvent {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pressure_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pressure_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -393,8 +438,13 @@ open class InputEventMIDI : InputEvent {
                 .init(controller_number_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_controller_number_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_controller_number_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -410,8 +460,13 @@ open class InputEventMIDI : InputEvent {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_controller_number_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_controller_number_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -426,8 +481,13 @@ open class InputEventMIDI : InputEvent {
                 .init(controller_value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_controller_value_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_controller_value_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -443,8 +503,13 @@ open class InputEventMIDI : InputEvent {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_controller_value_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_controller_value_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

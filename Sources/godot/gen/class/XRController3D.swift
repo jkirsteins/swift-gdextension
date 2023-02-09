@@ -17,35 +17,31 @@ open class XRController3D : XRNode3D {
 
     public override class var __godot_name: StringName { __godot_name_XRController3D }
 
-    static var _method_is_button_pressed_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_get_input_2760726917: GDExtensionMethodBindPtr! = nil
-    static var _method_get_float_2349060816: GDExtensionMethodBindPtr! = nil
-    static var _method_get_vector2_3100822709: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tracker_hand_4181770860: GDExtensionMethodBindPtr! = nil
+    static var _method_is_button_pressed_2619796661: StringName! = nil
+    static var _method_get_input_2760726917: StringName! = nil
+    static var _method_get_float_2349060816: StringName! = nil
+    static var _method_get_vector2_3100822709: StringName! = nil
+    static var _method_get_tracker_hand_4181770860: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_XRController3D == nil)
         __godot_name_XRController3D = StringName(from: "XRController3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_is_button_pressed_2619796661_name = StringName(from: "is_button_pressed")
-        self._method_is_button_pressed_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRController3D._native_ptr(), _method_is_button_pressed_2619796661_name._native_ptr(), 2619796661)
-        assert(XRController3D._method_is_button_pressed_2619796661 != nil)
-        let _method_get_input_2760726917_name = StringName(from: "get_input")
-        self._method_get_input_2760726917 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRController3D._native_ptr(), _method_get_input_2760726917_name._native_ptr(), 2760726917)
-        assert(XRController3D._method_get_input_2760726917 != nil)
-        let _method_get_float_2349060816_name = StringName(from: "get_float")
-        self._method_get_float_2349060816 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRController3D._native_ptr(), _method_get_float_2349060816_name._native_ptr(), 2349060816)
-        assert(XRController3D._method_get_float_2349060816 != nil)
-        let _method_get_vector2_3100822709_name = StringName(from: "get_vector2")
-        self._method_get_vector2_3100822709 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRController3D._native_ptr(), _method_get_vector2_3100822709_name._native_ptr(), 3100822709)
-        assert(XRController3D._method_get_vector2_3100822709 != nil)
-        let _method_get_tracker_hand_4181770860_name = StringName(from: "get_tracker_hand")
-        self._method_get_tracker_hand_4181770860 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRController3D._native_ptr(), _method_get_tracker_hand_4181770860_name._native_ptr(), 4181770860)
-        assert(XRController3D._method_get_tracker_hand_4181770860 != nil)
+        self._method_is_button_pressed_2619796661 = StringName(from: "is_button_pressed")
+        assert(self._method_is_button_pressed_2619796661 != nil)
+        self._method_get_input_2760726917 = StringName(from: "get_input")
+        assert(self._method_get_input_2760726917 != nil)
+        self._method_get_float_2349060816 = StringName(from: "get_float")
+        assert(self._method_get_float_2349060816 != nil)
+        self._method_get_vector2_3100822709 = StringName(from: "get_vector2")
+        assert(self._method_get_vector2_3100822709 != nil)
+        self._method_get_tracker_hand_4181770860 = StringName(from: "get_tracker_hand")
+        assert(self._method_get_tracker_hand_4181770860 != nil)
     }
 
     public func is_button_pressed(name: StringName) -> UInt8 {
@@ -58,8 +54,13 @@ open class XRController3D : XRNode3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_button_pressed_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_button_pressed_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -75,8 +76,13 @@ open class XRController3D : XRNode3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_input_2760726917,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_input_2760726917._native_ptr(),
+                    2760726917)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -93,8 +99,13 @@ open class XRController3D : XRNode3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_float_2349060816,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_float_2349060816._native_ptr(),
+                    2349060816)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -110,8 +121,13 @@ open class XRController3D : XRNode3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_vector2_3100822709,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_vector2_3100822709._native_ptr(),
+                    3100822709)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -126,8 +142,13 @@ open class XRController3D : XRNode3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tracker_hand_4181770860,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tracker_hand_4181770860._native_ptr(),
+                    4181770860)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

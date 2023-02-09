@@ -26,31 +26,28 @@ open class HingeJoint3D : Joint3D {
 
     public override class var __godot_name: StringName { __godot_name_HingeJoint3D }
 
-    static var _method_set_param_3082977519: GDExtensionMethodBindPtr! = nil
-    static var _method_get_param_4066002676: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flag_1083494620: GDExtensionMethodBindPtr! = nil
-    static var _method_get_flag_2841369610: GDExtensionMethodBindPtr! = nil
+    static var _method_set_param_3082977519: StringName! = nil
+    static var _method_get_param_4066002676: StringName! = nil
+    static var _method_set_flag_1083494620: StringName! = nil
+    static var _method_get_flag_2841369610: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_HingeJoint3D == nil)
         __godot_name_HingeJoint3D = StringName(from: "HingeJoint3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_param_3082977519_name = StringName(from: "set_param")
-        self._method_set_param_3082977519 = self.interface.pointee.classdb_get_method_bind(__godot_name_HingeJoint3D._native_ptr(), _method_set_param_3082977519_name._native_ptr(), 3082977519)
-        assert(HingeJoint3D._method_set_param_3082977519 != nil)
-        let _method_get_param_4066002676_name = StringName(from: "get_param")
-        self._method_get_param_4066002676 = self.interface.pointee.classdb_get_method_bind(__godot_name_HingeJoint3D._native_ptr(), _method_get_param_4066002676_name._native_ptr(), 4066002676)
-        assert(HingeJoint3D._method_get_param_4066002676 != nil)
-        let _method_set_flag_1083494620_name = StringName(from: "set_flag")
-        self._method_set_flag_1083494620 = self.interface.pointee.classdb_get_method_bind(__godot_name_HingeJoint3D._native_ptr(), _method_set_flag_1083494620_name._native_ptr(), 1083494620)
-        assert(HingeJoint3D._method_set_flag_1083494620 != nil)
-        let _method_get_flag_2841369610_name = StringName(from: "get_flag")
-        self._method_get_flag_2841369610 = self.interface.pointee.classdb_get_method_bind(__godot_name_HingeJoint3D._native_ptr(), _method_get_flag_2841369610_name._native_ptr(), 2841369610)
-        assert(HingeJoint3D._method_get_flag_2841369610 != nil)
+        self._method_set_param_3082977519 = StringName(from: "set_param")
+        assert(self._method_set_param_3082977519 != nil)
+        self._method_get_param_4066002676 = StringName(from: "get_param")
+        assert(self._method_get_param_4066002676 != nil)
+        self._method_set_flag_1083494620 = StringName(from: "set_flag")
+        assert(self._method_set_flag_1083494620 != nil)
+        self._method_get_flag_2841369610 = StringName(from: "get_flag")
+        assert(self._method_get_flag_2841369610 != nil)
     }
 
     public func set_param(param: HingeJoint3D.Param, value: Float64)  {
@@ -62,8 +59,13 @@ open class HingeJoint3D : Joint3D {
                 .init(param_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_param_3082977519,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_param_3082977519._native_ptr(),
+                    3082977519)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -81,8 +83,13 @@ open class HingeJoint3D : Joint3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_param_4066002676,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_param_4066002676._native_ptr(),
+                    4066002676)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -99,8 +106,13 @@ open class HingeJoint3D : Joint3D {
                 .init(flag_native), .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flag_1083494620,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flag_1083494620._native_ptr(),
+                    1083494620)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -118,8 +130,13 @@ open class HingeJoint3D : Joint3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_flag_2841369610,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_flag_2841369610._native_ptr(),
+                    2841369610)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -11,95 +11,76 @@ open class RDTextureFormat : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_RDTextureFormat }
 
-    static var _method_set_format_565531219: GDExtensionMethodBindPtr! = nil
-    static var _method_get_format_2235804183: GDExtensionMethodBindPtr! = nil
-    static var _method_set_width_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_width_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_height_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_height_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_depth_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_depth_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_array_layers_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_array_layers_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_mipmaps_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_mipmaps_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_type_652343381: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_type_4036357416: GDExtensionMethodBindPtr! = nil
-    static var _method_set_samples_3774171498: GDExtensionMethodBindPtr! = nil
-    static var _method_get_samples_407791724: GDExtensionMethodBindPtr! = nil
-    static var _method_set_usage_bits_245642367: GDExtensionMethodBindPtr! = nil
-    static var _method_get_usage_bits_1313398998: GDExtensionMethodBindPtr! = nil
-    static var _method_add_shareable_format_565531219: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_shareable_format_565531219: GDExtensionMethodBindPtr! = nil
+    static var _method_set_format_565531219: StringName! = nil
+    static var _method_get_format_2235804183: StringName! = nil
+    static var _method_set_width_1286410249: StringName! = nil
+    static var _method_get_width_3905245786: StringName! = nil
+    static var _method_set_height_1286410249: StringName! = nil
+    static var _method_get_height_3905245786: StringName! = nil
+    static var _method_set_depth_1286410249: StringName! = nil
+    static var _method_get_depth_3905245786: StringName! = nil
+    static var _method_set_array_layers_1286410249: StringName! = nil
+    static var _method_get_array_layers_3905245786: StringName! = nil
+    static var _method_set_mipmaps_1286410249: StringName! = nil
+    static var _method_get_mipmaps_3905245786: StringName! = nil
+    static var _method_set_texture_type_652343381: StringName! = nil
+    static var _method_get_texture_type_4036357416: StringName! = nil
+    static var _method_set_samples_3774171498: StringName! = nil
+    static var _method_get_samples_407791724: StringName! = nil
+    static var _method_set_usage_bits_245642367: StringName! = nil
+    static var _method_get_usage_bits_1313398998: StringName! = nil
+    static var _method_add_shareable_format_565531219: StringName! = nil
+    static var _method_remove_shareable_format_565531219: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_RDTextureFormat == nil)
         __godot_name_RDTextureFormat = StringName(from: "RDTextureFormat")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_format_565531219_name = StringName(from: "set_format")
-        self._method_set_format_565531219 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_set_format_565531219_name._native_ptr(), 565531219)
-        assert(RDTextureFormat._method_set_format_565531219 != nil)
-        let _method_get_format_2235804183_name = StringName(from: "get_format")
-        self._method_get_format_2235804183 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_get_format_2235804183_name._native_ptr(), 2235804183)
-        assert(RDTextureFormat._method_get_format_2235804183 != nil)
-        let _method_set_width_1286410249_name = StringName(from: "set_width")
-        self._method_set_width_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_set_width_1286410249_name._native_ptr(), 1286410249)
-        assert(RDTextureFormat._method_set_width_1286410249 != nil)
-        let _method_get_width_3905245786_name = StringName(from: "get_width")
-        self._method_get_width_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_get_width_3905245786_name._native_ptr(), 3905245786)
-        assert(RDTextureFormat._method_get_width_3905245786 != nil)
-        let _method_set_height_1286410249_name = StringName(from: "set_height")
-        self._method_set_height_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_set_height_1286410249_name._native_ptr(), 1286410249)
-        assert(RDTextureFormat._method_set_height_1286410249 != nil)
-        let _method_get_height_3905245786_name = StringName(from: "get_height")
-        self._method_get_height_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_get_height_3905245786_name._native_ptr(), 3905245786)
-        assert(RDTextureFormat._method_get_height_3905245786 != nil)
-        let _method_set_depth_1286410249_name = StringName(from: "set_depth")
-        self._method_set_depth_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_set_depth_1286410249_name._native_ptr(), 1286410249)
-        assert(RDTextureFormat._method_set_depth_1286410249 != nil)
-        let _method_get_depth_3905245786_name = StringName(from: "get_depth")
-        self._method_get_depth_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_get_depth_3905245786_name._native_ptr(), 3905245786)
-        assert(RDTextureFormat._method_get_depth_3905245786 != nil)
-        let _method_set_array_layers_1286410249_name = StringName(from: "set_array_layers")
-        self._method_set_array_layers_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_set_array_layers_1286410249_name._native_ptr(), 1286410249)
-        assert(RDTextureFormat._method_set_array_layers_1286410249 != nil)
-        let _method_get_array_layers_3905245786_name = StringName(from: "get_array_layers")
-        self._method_get_array_layers_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_get_array_layers_3905245786_name._native_ptr(), 3905245786)
-        assert(RDTextureFormat._method_get_array_layers_3905245786 != nil)
-        let _method_set_mipmaps_1286410249_name = StringName(from: "set_mipmaps")
-        self._method_set_mipmaps_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_set_mipmaps_1286410249_name._native_ptr(), 1286410249)
-        assert(RDTextureFormat._method_set_mipmaps_1286410249 != nil)
-        let _method_get_mipmaps_3905245786_name = StringName(from: "get_mipmaps")
-        self._method_get_mipmaps_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_get_mipmaps_3905245786_name._native_ptr(), 3905245786)
-        assert(RDTextureFormat._method_get_mipmaps_3905245786 != nil)
-        let _method_set_texture_type_652343381_name = StringName(from: "set_texture_type")
-        self._method_set_texture_type_652343381 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_set_texture_type_652343381_name._native_ptr(), 652343381)
-        assert(RDTextureFormat._method_set_texture_type_652343381 != nil)
-        let _method_get_texture_type_4036357416_name = StringName(from: "get_texture_type")
-        self._method_get_texture_type_4036357416 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_get_texture_type_4036357416_name._native_ptr(), 4036357416)
-        assert(RDTextureFormat._method_get_texture_type_4036357416 != nil)
-        let _method_set_samples_3774171498_name = StringName(from: "set_samples")
-        self._method_set_samples_3774171498 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_set_samples_3774171498_name._native_ptr(), 3774171498)
-        assert(RDTextureFormat._method_set_samples_3774171498 != nil)
-        let _method_get_samples_407791724_name = StringName(from: "get_samples")
-        self._method_get_samples_407791724 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_get_samples_407791724_name._native_ptr(), 407791724)
-        assert(RDTextureFormat._method_get_samples_407791724 != nil)
-        let _method_set_usage_bits_245642367_name = StringName(from: "set_usage_bits")
-        self._method_set_usage_bits_245642367 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_set_usage_bits_245642367_name._native_ptr(), 245642367)
-        assert(RDTextureFormat._method_set_usage_bits_245642367 != nil)
-        let _method_get_usage_bits_1313398998_name = StringName(from: "get_usage_bits")
-        self._method_get_usage_bits_1313398998 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_get_usage_bits_1313398998_name._native_ptr(), 1313398998)
-        assert(RDTextureFormat._method_get_usage_bits_1313398998 != nil)
-        let _method_add_shareable_format_565531219_name = StringName(from: "add_shareable_format")
-        self._method_add_shareable_format_565531219 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_add_shareable_format_565531219_name._native_ptr(), 565531219)
-        assert(RDTextureFormat._method_add_shareable_format_565531219 != nil)
-        let _method_remove_shareable_format_565531219_name = StringName(from: "remove_shareable_format")
-        self._method_remove_shareable_format_565531219 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureFormat._native_ptr(), _method_remove_shareable_format_565531219_name._native_ptr(), 565531219)
-        assert(RDTextureFormat._method_remove_shareable_format_565531219 != nil)
+        self._method_set_format_565531219 = StringName(from: "set_format")
+        assert(self._method_set_format_565531219 != nil)
+        self._method_get_format_2235804183 = StringName(from: "get_format")
+        assert(self._method_get_format_2235804183 != nil)
+        self._method_set_width_1286410249 = StringName(from: "set_width")
+        assert(self._method_set_width_1286410249 != nil)
+        self._method_get_width_3905245786 = StringName(from: "get_width")
+        assert(self._method_get_width_3905245786 != nil)
+        self._method_set_height_1286410249 = StringName(from: "set_height")
+        assert(self._method_set_height_1286410249 != nil)
+        self._method_get_height_3905245786 = StringName(from: "get_height")
+        assert(self._method_get_height_3905245786 != nil)
+        self._method_set_depth_1286410249 = StringName(from: "set_depth")
+        assert(self._method_set_depth_1286410249 != nil)
+        self._method_get_depth_3905245786 = StringName(from: "get_depth")
+        assert(self._method_get_depth_3905245786 != nil)
+        self._method_set_array_layers_1286410249 = StringName(from: "set_array_layers")
+        assert(self._method_set_array_layers_1286410249 != nil)
+        self._method_get_array_layers_3905245786 = StringName(from: "get_array_layers")
+        assert(self._method_get_array_layers_3905245786 != nil)
+        self._method_set_mipmaps_1286410249 = StringName(from: "set_mipmaps")
+        assert(self._method_set_mipmaps_1286410249 != nil)
+        self._method_get_mipmaps_3905245786 = StringName(from: "get_mipmaps")
+        assert(self._method_get_mipmaps_3905245786 != nil)
+        self._method_set_texture_type_652343381 = StringName(from: "set_texture_type")
+        assert(self._method_set_texture_type_652343381 != nil)
+        self._method_get_texture_type_4036357416 = StringName(from: "get_texture_type")
+        assert(self._method_get_texture_type_4036357416 != nil)
+        self._method_set_samples_3774171498 = StringName(from: "set_samples")
+        assert(self._method_set_samples_3774171498 != nil)
+        self._method_get_samples_407791724 = StringName(from: "get_samples")
+        assert(self._method_get_samples_407791724 != nil)
+        self._method_set_usage_bits_245642367 = StringName(from: "set_usage_bits")
+        assert(self._method_set_usage_bits_245642367 != nil)
+        self._method_get_usage_bits_1313398998 = StringName(from: "get_usage_bits")
+        assert(self._method_get_usage_bits_1313398998 != nil)
+        self._method_add_shareable_format_565531219 = StringName(from: "add_shareable_format")
+        assert(self._method_add_shareable_format_565531219 != nil)
+        self._method_remove_shareable_format_565531219 = StringName(from: "remove_shareable_format")
+        assert(self._method_remove_shareable_format_565531219 != nil)
     }
 
     public func set_format(p_member: RenderingDevice.DataFormat)  {
@@ -110,8 +91,13 @@ open class RDTextureFormat : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_format_565531219,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_format_565531219._native_ptr(),
+                    565531219)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -126,8 +112,13 @@ open class RDTextureFormat : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_format_2235804183,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_format_2235804183._native_ptr(),
+                    2235804183)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -142,8 +133,13 @@ open class RDTextureFormat : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_width_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_width_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -159,8 +155,13 @@ open class RDTextureFormat : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_width_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_width_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -175,8 +176,13 @@ open class RDTextureFormat : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_height_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_height_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -192,8 +198,13 @@ open class RDTextureFormat : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_height_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_height_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -208,8 +219,13 @@ open class RDTextureFormat : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_depth_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_depth_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -225,8 +241,13 @@ open class RDTextureFormat : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_depth_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_depth_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -241,8 +262,13 @@ open class RDTextureFormat : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_array_layers_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_array_layers_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -258,8 +284,13 @@ open class RDTextureFormat : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_array_layers_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_array_layers_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -274,8 +305,13 @@ open class RDTextureFormat : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_mipmaps_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_mipmaps_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -291,8 +327,13 @@ open class RDTextureFormat : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_mipmaps_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_mipmaps_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -307,8 +348,13 @@ open class RDTextureFormat : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_type_652343381,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_type_652343381._native_ptr(),
+                    652343381)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -323,8 +369,13 @@ open class RDTextureFormat : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_type_4036357416,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_type_4036357416._native_ptr(),
+                    4036357416)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -339,8 +390,13 @@ open class RDTextureFormat : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_samples_3774171498,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_samples_3774171498._native_ptr(),
+                    3774171498)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -355,8 +411,13 @@ open class RDTextureFormat : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_samples_407791724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_samples_407791724._native_ptr(),
+                    407791724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -371,8 +432,13 @@ open class RDTextureFormat : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_usage_bits_245642367,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_usage_bits_245642367._native_ptr(),
+                    245642367)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -387,8 +453,13 @@ open class RDTextureFormat : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_usage_bits_1313398998,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_usage_bits_1313398998._native_ptr(),
+                    1313398998)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -403,8 +474,13 @@ open class RDTextureFormat : RefCounted {
                 .init(format_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_shareable_format_565531219,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_shareable_format_565531219._native_ptr(),
+                    565531219)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -419,8 +495,13 @@ open class RDTextureFormat : RefCounted {
                 .init(format_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_shareable_format_565531219,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_shareable_format_565531219._native_ptr(),
+                    565531219)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

@@ -11,19 +11,20 @@ open class AudioStreamPlayback : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_AudioStreamPlayback }
 
-    static var _method__start_0: GDExtensionMethodBindPtr! = nil
-    static var _method__stop_0: GDExtensionMethodBindPtr! = nil
-    static var _method__is_playing_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_loop_count_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_playback_position_0: GDExtensionMethodBindPtr! = nil
-    static var _method__seek_0: GDExtensionMethodBindPtr! = nil
-    static var _method__mix_0: GDExtensionMethodBindPtr! = nil
-    static var _method__tag_used_streams_0: GDExtensionMethodBindPtr! = nil
+    static var _method__start_0: StringName! = nil
+    static var _method__stop_0: StringName! = nil
+    static var _method__is_playing_0: StringName! = nil
+    static var _method__get_loop_count_0: StringName! = nil
+    static var _method__get_playback_position_0: StringName! = nil
+    static var _method__seek_0: StringName! = nil
+    static var _method__mix_0: StringName! = nil
+    static var _method__tag_used_streams_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AudioStreamPlayback == nil)
         __godot_name_AudioStreamPlayback = StringName(from: "AudioStreamPlayback")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -39,12 +40,7 @@ open class AudioStreamPlayback : RefCounted {
                 .init(from_pos_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__start_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _stop()  {
@@ -54,12 +50,7 @@ open class AudioStreamPlayback : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__stop_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _is_playing() -> UInt8 {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -70,12 +61,7 @@ open class AudioStreamPlayback : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__is_playing_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _get_loop_count() -> Int64 {
@@ -87,12 +73,7 @@ open class AudioStreamPlayback : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_loop_count_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _get_playback_position() -> Float64 {
@@ -104,12 +85,7 @@ open class AudioStreamPlayback : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_playback_position_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func _seek(position: Float64)  {
@@ -120,12 +96,7 @@ open class AudioStreamPlayback : RefCounted {
                 .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__seek_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _mix(buffer: UnsafeMutablePointer<AudioFrame>, rate_scale: Float64, frames: Int64) -> Int64 {
@@ -140,12 +111,7 @@ open class AudioStreamPlayback : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__mix_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
         }
         }
@@ -158,11 +124,6 @@ open class AudioStreamPlayback : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__tag_used_streams_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
 }

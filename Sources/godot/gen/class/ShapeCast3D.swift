@@ -17,167 +17,130 @@ open class ShapeCast3D : Node3D {
 
     public override class var __godot_name: StringName { __godot_name_ShapeCast3D }
 
-    static var _method_resource_changed_968641751: GDExtensionMethodBindPtr! = nil
-    static var _method_set_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shape_1549710052: GDExtensionMethodBindPtr! = nil
-    static var _method_get_shape_3214262478: GDExtensionMethodBindPtr! = nil
-    static var _method_set_target_position_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_target_position_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_margin_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_margin_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_max_results_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_max_results_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_is_colliding_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_force_shapecast_update_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collider_3332903315: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collider_rid_495598643: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collider_shape_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_point_711720468: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_normal_711720468: GDExtensionMethodBindPtr! = nil
-    static var _method_get_closest_collision_safe_fraction_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_closest_collision_unsafe_fraction_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_add_exception_rid_2722037293: GDExtensionMethodBindPtr! = nil
-    static var _method_add_exception_3975164845: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_exception_rid_2722037293: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_exception_3975164845: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_exceptions_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_mask_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_mask_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_mask_value_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_mask_value_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_set_exclude_parent_body_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_exclude_parent_body_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collide_with_areas_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_collide_with_areas_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collide_with_bodies_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_collide_with_bodies_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_debug_shape_custom_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_debug_shape_custom_color_3444240500: GDExtensionMethodBindPtr! = nil
+    static var _method_resource_changed_968641751: StringName! = nil
+    static var _method_set_enabled_2586408642: StringName! = nil
+    static var _method_is_enabled_36873697: StringName! = nil
+    static var _method_set_shape_1549710052: StringName! = nil
+    static var _method_get_shape_3214262478: StringName! = nil
+    static var _method_set_target_position_3460891852: StringName! = nil
+    static var _method_get_target_position_3360562783: StringName! = nil
+    static var _method_set_margin_373806689: StringName! = nil
+    static var _method_get_margin_1740695150: StringName! = nil
+    static var _method_set_max_results_1286410249: StringName! = nil
+    static var _method_get_max_results_3905245786: StringName! = nil
+    static var _method_is_colliding_36873697: StringName! = nil
+    static var _method_get_collision_count_3905245786: StringName! = nil
+    static var _method_force_shapecast_update_3218959716: StringName! = nil
+    static var _method_get_collider_3332903315: StringName! = nil
+    static var _method_get_collider_rid_495598643: StringName! = nil
+    static var _method_get_collider_shape_923996154: StringName! = nil
+    static var _method_get_collision_point_711720468: StringName! = nil
+    static var _method_get_collision_normal_711720468: StringName! = nil
+    static var _method_get_closest_collision_safe_fraction_1740695150: StringName! = nil
+    static var _method_get_closest_collision_unsafe_fraction_1740695150: StringName! = nil
+    static var _method_add_exception_rid_2722037293: StringName! = nil
+    static var _method_add_exception_3975164845: StringName! = nil
+    static var _method_remove_exception_rid_2722037293: StringName! = nil
+    static var _method_remove_exception_3975164845: StringName! = nil
+    static var _method_clear_exceptions_3218959716: StringName! = nil
+    static var _method_set_collision_mask_1286410249: StringName! = nil
+    static var _method_get_collision_mask_3905245786: StringName! = nil
+    static var _method_set_collision_mask_value_300928843: StringName! = nil
+    static var _method_get_collision_mask_value_1116898809: StringName! = nil
+    static var _method_set_exclude_parent_body_2586408642: StringName! = nil
+    static var _method_get_exclude_parent_body_36873697: StringName! = nil
+    static var _method_set_collide_with_areas_2586408642: StringName! = nil
+    static var _method_is_collide_with_areas_enabled_36873697: StringName! = nil
+    static var _method_set_collide_with_bodies_2586408642: StringName! = nil
+    static var _method_is_collide_with_bodies_enabled_36873697: StringName! = nil
+    static var _method_set_debug_shape_custom_color_2920490490: StringName! = nil
+    static var _method_get_debug_shape_custom_color_3444240500: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ShapeCast3D == nil)
         __godot_name_ShapeCast3D = StringName(from: "ShapeCast3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_resource_changed_968641751_name = StringName(from: "resource_changed")
-        self._method_resource_changed_968641751 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_resource_changed_968641751_name._native_ptr(), 968641751)
-        assert(ShapeCast3D._method_resource_changed_968641751 != nil)
-        let _method_set_enabled_2586408642_name = StringName(from: "set_enabled")
-        self._method_set_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_set_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(ShapeCast3D._method_set_enabled_2586408642 != nil)
-        let _method_is_enabled_36873697_name = StringName(from: "is_enabled")
-        self._method_is_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_is_enabled_36873697_name._native_ptr(), 36873697)
-        assert(ShapeCast3D._method_is_enabled_36873697 != nil)
-        let _method_set_shape_1549710052_name = StringName(from: "set_shape")
-        self._method_set_shape_1549710052 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_set_shape_1549710052_name._native_ptr(), 1549710052)
-        assert(ShapeCast3D._method_set_shape_1549710052 != nil)
-        let _method_get_shape_3214262478_name = StringName(from: "get_shape")
-        self._method_get_shape_3214262478 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_get_shape_3214262478_name._native_ptr(), 3214262478)
-        assert(ShapeCast3D._method_get_shape_3214262478 != nil)
-        let _method_set_target_position_3460891852_name = StringName(from: "set_target_position")
-        self._method_set_target_position_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_set_target_position_3460891852_name._native_ptr(), 3460891852)
-        assert(ShapeCast3D._method_set_target_position_3460891852 != nil)
-        let _method_get_target_position_3360562783_name = StringName(from: "get_target_position")
-        self._method_get_target_position_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_get_target_position_3360562783_name._native_ptr(), 3360562783)
-        assert(ShapeCast3D._method_get_target_position_3360562783 != nil)
-        let _method_set_margin_373806689_name = StringName(from: "set_margin")
-        self._method_set_margin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_set_margin_373806689_name._native_ptr(), 373806689)
-        assert(ShapeCast3D._method_set_margin_373806689 != nil)
-        let _method_get_margin_1740695150_name = StringName(from: "get_margin")
-        self._method_get_margin_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_get_margin_1740695150_name._native_ptr(), 1740695150)
-        assert(ShapeCast3D._method_get_margin_1740695150 != nil)
-        let _method_set_max_results_1286410249_name = StringName(from: "set_max_results")
-        self._method_set_max_results_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_set_max_results_1286410249_name._native_ptr(), 1286410249)
-        assert(ShapeCast3D._method_set_max_results_1286410249 != nil)
-        let _method_get_max_results_3905245786_name = StringName(from: "get_max_results")
-        self._method_get_max_results_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_get_max_results_3905245786_name._native_ptr(), 3905245786)
-        assert(ShapeCast3D._method_get_max_results_3905245786 != nil)
-        let _method_is_colliding_36873697_name = StringName(from: "is_colliding")
-        self._method_is_colliding_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_is_colliding_36873697_name._native_ptr(), 36873697)
-        assert(ShapeCast3D._method_is_colliding_36873697 != nil)
-        let _method_get_collision_count_3905245786_name = StringName(from: "get_collision_count")
-        self._method_get_collision_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_get_collision_count_3905245786_name._native_ptr(), 3905245786)
-        assert(ShapeCast3D._method_get_collision_count_3905245786 != nil)
-        let _method_force_shapecast_update_3218959716_name = StringName(from: "force_shapecast_update")
-        self._method_force_shapecast_update_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_force_shapecast_update_3218959716_name._native_ptr(), 3218959716)
-        assert(ShapeCast3D._method_force_shapecast_update_3218959716 != nil)
-        let _method_get_collider_3332903315_name = StringName(from: "get_collider")
-        self._method_get_collider_3332903315 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_get_collider_3332903315_name._native_ptr(), 3332903315)
-        assert(ShapeCast3D._method_get_collider_3332903315 != nil)
-        let _method_get_collider_rid_495598643_name = StringName(from: "get_collider_rid")
-        self._method_get_collider_rid_495598643 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_get_collider_rid_495598643_name._native_ptr(), 495598643)
-        assert(ShapeCast3D._method_get_collider_rid_495598643 != nil)
-        let _method_get_collider_shape_923996154_name = StringName(from: "get_collider_shape")
-        self._method_get_collider_shape_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_get_collider_shape_923996154_name._native_ptr(), 923996154)
-        assert(ShapeCast3D._method_get_collider_shape_923996154 != nil)
-        let _method_get_collision_point_711720468_name = StringName(from: "get_collision_point")
-        self._method_get_collision_point_711720468 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_get_collision_point_711720468_name._native_ptr(), 711720468)
-        assert(ShapeCast3D._method_get_collision_point_711720468 != nil)
-        let _method_get_collision_normal_711720468_name = StringName(from: "get_collision_normal")
-        self._method_get_collision_normal_711720468 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_get_collision_normal_711720468_name._native_ptr(), 711720468)
-        assert(ShapeCast3D._method_get_collision_normal_711720468 != nil)
-        let _method_get_closest_collision_safe_fraction_1740695150_name = StringName(from: "get_closest_collision_safe_fraction")
-        self._method_get_closest_collision_safe_fraction_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_get_closest_collision_safe_fraction_1740695150_name._native_ptr(), 1740695150)
-        assert(ShapeCast3D._method_get_closest_collision_safe_fraction_1740695150 != nil)
-        let _method_get_closest_collision_unsafe_fraction_1740695150_name = StringName(from: "get_closest_collision_unsafe_fraction")
-        self._method_get_closest_collision_unsafe_fraction_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_get_closest_collision_unsafe_fraction_1740695150_name._native_ptr(), 1740695150)
-        assert(ShapeCast3D._method_get_closest_collision_unsafe_fraction_1740695150 != nil)
-        let _method_add_exception_rid_2722037293_name = StringName(from: "add_exception_rid")
-        self._method_add_exception_rid_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_add_exception_rid_2722037293_name._native_ptr(), 2722037293)
-        assert(ShapeCast3D._method_add_exception_rid_2722037293 != nil)
-        let _method_add_exception_3975164845_name = StringName(from: "add_exception")
-        self._method_add_exception_3975164845 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_add_exception_3975164845_name._native_ptr(), 3975164845)
-        assert(ShapeCast3D._method_add_exception_3975164845 != nil)
-        let _method_remove_exception_rid_2722037293_name = StringName(from: "remove_exception_rid")
-        self._method_remove_exception_rid_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_remove_exception_rid_2722037293_name._native_ptr(), 2722037293)
-        assert(ShapeCast3D._method_remove_exception_rid_2722037293 != nil)
-        let _method_remove_exception_3975164845_name = StringName(from: "remove_exception")
-        self._method_remove_exception_3975164845 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_remove_exception_3975164845_name._native_ptr(), 3975164845)
-        assert(ShapeCast3D._method_remove_exception_3975164845 != nil)
-        let _method_clear_exceptions_3218959716_name = StringName(from: "clear_exceptions")
-        self._method_clear_exceptions_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_clear_exceptions_3218959716_name._native_ptr(), 3218959716)
-        assert(ShapeCast3D._method_clear_exceptions_3218959716 != nil)
-        let _method_set_collision_mask_1286410249_name = StringName(from: "set_collision_mask")
-        self._method_set_collision_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_set_collision_mask_1286410249_name._native_ptr(), 1286410249)
-        assert(ShapeCast3D._method_set_collision_mask_1286410249 != nil)
-        let _method_get_collision_mask_3905245786_name = StringName(from: "get_collision_mask")
-        self._method_get_collision_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_get_collision_mask_3905245786_name._native_ptr(), 3905245786)
-        assert(ShapeCast3D._method_get_collision_mask_3905245786 != nil)
-        let _method_set_collision_mask_value_300928843_name = StringName(from: "set_collision_mask_value")
-        self._method_set_collision_mask_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_set_collision_mask_value_300928843_name._native_ptr(), 300928843)
-        assert(ShapeCast3D._method_set_collision_mask_value_300928843 != nil)
-        let _method_get_collision_mask_value_1116898809_name = StringName(from: "get_collision_mask_value")
-        self._method_get_collision_mask_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_get_collision_mask_value_1116898809_name._native_ptr(), 1116898809)
-        assert(ShapeCast3D._method_get_collision_mask_value_1116898809 != nil)
-        let _method_set_exclude_parent_body_2586408642_name = StringName(from: "set_exclude_parent_body")
-        self._method_set_exclude_parent_body_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_set_exclude_parent_body_2586408642_name._native_ptr(), 2586408642)
-        assert(ShapeCast3D._method_set_exclude_parent_body_2586408642 != nil)
-        let _method_get_exclude_parent_body_36873697_name = StringName(from: "get_exclude_parent_body")
-        self._method_get_exclude_parent_body_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_get_exclude_parent_body_36873697_name._native_ptr(), 36873697)
-        assert(ShapeCast3D._method_get_exclude_parent_body_36873697 != nil)
-        let _method_set_collide_with_areas_2586408642_name = StringName(from: "set_collide_with_areas")
-        self._method_set_collide_with_areas_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_set_collide_with_areas_2586408642_name._native_ptr(), 2586408642)
-        assert(ShapeCast3D._method_set_collide_with_areas_2586408642 != nil)
-        let _method_is_collide_with_areas_enabled_36873697_name = StringName(from: "is_collide_with_areas_enabled")
-        self._method_is_collide_with_areas_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_is_collide_with_areas_enabled_36873697_name._native_ptr(), 36873697)
-        assert(ShapeCast3D._method_is_collide_with_areas_enabled_36873697 != nil)
-        let _method_set_collide_with_bodies_2586408642_name = StringName(from: "set_collide_with_bodies")
-        self._method_set_collide_with_bodies_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_set_collide_with_bodies_2586408642_name._native_ptr(), 2586408642)
-        assert(ShapeCast3D._method_set_collide_with_bodies_2586408642 != nil)
-        let _method_is_collide_with_bodies_enabled_36873697_name = StringName(from: "is_collide_with_bodies_enabled")
-        self._method_is_collide_with_bodies_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_is_collide_with_bodies_enabled_36873697_name._native_ptr(), 36873697)
-        assert(ShapeCast3D._method_is_collide_with_bodies_enabled_36873697 != nil)
-        let _method_set_debug_shape_custom_color_2920490490_name = StringName(from: "set_debug_shape_custom_color")
-        self._method_set_debug_shape_custom_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_set_debug_shape_custom_color_2920490490_name._native_ptr(), 2920490490)
-        assert(ShapeCast3D._method_set_debug_shape_custom_color_2920490490 != nil)
-        let _method_get_debug_shape_custom_color_3444240500_name = StringName(from: "get_debug_shape_custom_color")
-        self._method_get_debug_shape_custom_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_ShapeCast3D._native_ptr(), _method_get_debug_shape_custom_color_3444240500_name._native_ptr(), 3444240500)
-        assert(ShapeCast3D._method_get_debug_shape_custom_color_3444240500 != nil)
+        self._method_resource_changed_968641751 = StringName(from: "resource_changed")
+        assert(self._method_resource_changed_968641751 != nil)
+        self._method_set_enabled_2586408642 = StringName(from: "set_enabled")
+        assert(self._method_set_enabled_2586408642 != nil)
+        self._method_is_enabled_36873697 = StringName(from: "is_enabled")
+        assert(self._method_is_enabled_36873697 != nil)
+        self._method_set_shape_1549710052 = StringName(from: "set_shape")
+        assert(self._method_set_shape_1549710052 != nil)
+        self._method_get_shape_3214262478 = StringName(from: "get_shape")
+        assert(self._method_get_shape_3214262478 != nil)
+        self._method_set_target_position_3460891852 = StringName(from: "set_target_position")
+        assert(self._method_set_target_position_3460891852 != nil)
+        self._method_get_target_position_3360562783 = StringName(from: "get_target_position")
+        assert(self._method_get_target_position_3360562783 != nil)
+        self._method_set_margin_373806689 = StringName(from: "set_margin")
+        assert(self._method_set_margin_373806689 != nil)
+        self._method_get_margin_1740695150 = StringName(from: "get_margin")
+        assert(self._method_get_margin_1740695150 != nil)
+        self._method_set_max_results_1286410249 = StringName(from: "set_max_results")
+        assert(self._method_set_max_results_1286410249 != nil)
+        self._method_get_max_results_3905245786 = StringName(from: "get_max_results")
+        assert(self._method_get_max_results_3905245786 != nil)
+        self._method_is_colliding_36873697 = StringName(from: "is_colliding")
+        assert(self._method_is_colliding_36873697 != nil)
+        self._method_get_collision_count_3905245786 = StringName(from: "get_collision_count")
+        assert(self._method_get_collision_count_3905245786 != nil)
+        self._method_force_shapecast_update_3218959716 = StringName(from: "force_shapecast_update")
+        assert(self._method_force_shapecast_update_3218959716 != nil)
+        self._method_get_collider_3332903315 = StringName(from: "get_collider")
+        assert(self._method_get_collider_3332903315 != nil)
+        self._method_get_collider_rid_495598643 = StringName(from: "get_collider_rid")
+        assert(self._method_get_collider_rid_495598643 != nil)
+        self._method_get_collider_shape_923996154 = StringName(from: "get_collider_shape")
+        assert(self._method_get_collider_shape_923996154 != nil)
+        self._method_get_collision_point_711720468 = StringName(from: "get_collision_point")
+        assert(self._method_get_collision_point_711720468 != nil)
+        self._method_get_collision_normal_711720468 = StringName(from: "get_collision_normal")
+        assert(self._method_get_collision_normal_711720468 != nil)
+        self._method_get_closest_collision_safe_fraction_1740695150 = StringName(from: "get_closest_collision_safe_fraction")
+        assert(self._method_get_closest_collision_safe_fraction_1740695150 != nil)
+        self._method_get_closest_collision_unsafe_fraction_1740695150 = StringName(from: "get_closest_collision_unsafe_fraction")
+        assert(self._method_get_closest_collision_unsafe_fraction_1740695150 != nil)
+        self._method_add_exception_rid_2722037293 = StringName(from: "add_exception_rid")
+        assert(self._method_add_exception_rid_2722037293 != nil)
+        self._method_add_exception_3975164845 = StringName(from: "add_exception")
+        assert(self._method_add_exception_3975164845 != nil)
+        self._method_remove_exception_rid_2722037293 = StringName(from: "remove_exception_rid")
+        assert(self._method_remove_exception_rid_2722037293 != nil)
+        self._method_remove_exception_3975164845 = StringName(from: "remove_exception")
+        assert(self._method_remove_exception_3975164845 != nil)
+        self._method_clear_exceptions_3218959716 = StringName(from: "clear_exceptions")
+        assert(self._method_clear_exceptions_3218959716 != nil)
+        self._method_set_collision_mask_1286410249 = StringName(from: "set_collision_mask")
+        assert(self._method_set_collision_mask_1286410249 != nil)
+        self._method_get_collision_mask_3905245786 = StringName(from: "get_collision_mask")
+        assert(self._method_get_collision_mask_3905245786 != nil)
+        self._method_set_collision_mask_value_300928843 = StringName(from: "set_collision_mask_value")
+        assert(self._method_set_collision_mask_value_300928843 != nil)
+        self._method_get_collision_mask_value_1116898809 = StringName(from: "get_collision_mask_value")
+        assert(self._method_get_collision_mask_value_1116898809 != nil)
+        self._method_set_exclude_parent_body_2586408642 = StringName(from: "set_exclude_parent_body")
+        assert(self._method_set_exclude_parent_body_2586408642 != nil)
+        self._method_get_exclude_parent_body_36873697 = StringName(from: "get_exclude_parent_body")
+        assert(self._method_get_exclude_parent_body_36873697 != nil)
+        self._method_set_collide_with_areas_2586408642 = StringName(from: "set_collide_with_areas")
+        assert(self._method_set_collide_with_areas_2586408642 != nil)
+        self._method_is_collide_with_areas_enabled_36873697 = StringName(from: "is_collide_with_areas_enabled")
+        assert(self._method_is_collide_with_areas_enabled_36873697 != nil)
+        self._method_set_collide_with_bodies_2586408642 = StringName(from: "set_collide_with_bodies")
+        assert(self._method_set_collide_with_bodies_2586408642 != nil)
+        self._method_is_collide_with_bodies_enabled_36873697 = StringName(from: "is_collide_with_bodies_enabled")
+        assert(self._method_is_collide_with_bodies_enabled_36873697 != nil)
+        self._method_set_debug_shape_custom_color_2920490490 = StringName(from: "set_debug_shape_custom_color")
+        assert(self._method_set_debug_shape_custom_color_2920490490 != nil)
+        self._method_get_debug_shape_custom_color_3444240500 = StringName(from: "get_debug_shape_custom_color")
+        assert(self._method_get_debug_shape_custom_color_3444240500 != nil)
     }
 
     public func resource_changed(resource: Resource)  {
@@ -188,8 +151,13 @@ open class ShapeCast3D : Node3D {
                 .init(resource_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_resource_changed_968641751,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_resource_changed_968641751._native_ptr(),
+                    968641751)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -203,8 +171,13 @@ open class ShapeCast3D : Node3D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -220,8 +193,13 @@ open class ShapeCast3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -236,8 +214,13 @@ open class ShapeCast3D : Node3D {
                 .init(shape_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shape_1549710052,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shape_1549710052._native_ptr(),
+                    1549710052)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -251,8 +234,13 @@ open class ShapeCast3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_shape_3214262478,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_shape_3214262478._native_ptr(),
+                    3214262478)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -267,8 +255,13 @@ open class ShapeCast3D : Node3D {
                 .init(local_point_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_target_position_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_target_position_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -282,8 +275,13 @@ open class ShapeCast3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_target_position_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_target_position_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -298,8 +296,13 @@ open class ShapeCast3D : Node3D {
                 .init(margin_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_margin_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_margin_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -315,8 +318,13 @@ open class ShapeCast3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_margin_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_margin_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -331,8 +339,13 @@ open class ShapeCast3D : Node3D {
                 .init(max_results_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_max_results_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_max_results_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -348,8 +361,13 @@ open class ShapeCast3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_max_results_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_max_results_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -365,8 +383,13 @@ open class ShapeCast3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_colliding_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_colliding_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -382,8 +405,13 @@ open class ShapeCast3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -397,8 +425,13 @@ open class ShapeCast3D : Node3D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_force_shapecast_update_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_force_shapecast_update_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -413,8 +446,13 @@ open class ShapeCast3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collider_3332903315,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collider_3332903315._native_ptr(),
+                    3332903315)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -431,8 +469,13 @@ open class ShapeCast3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collider_rid_495598643,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collider_rid_495598643._native_ptr(),
+                    495598643)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -450,8 +493,13 @@ open class ShapeCast3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collider_shape_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collider_shape_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -468,8 +516,13 @@ open class ShapeCast3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_point_711720468,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_point_711720468._native_ptr(),
+                    711720468)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -486,8 +539,13 @@ open class ShapeCast3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_normal_711720468,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_normal_711720468._native_ptr(),
+                    711720468)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -504,8 +562,13 @@ open class ShapeCast3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_closest_collision_safe_fraction_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_closest_collision_safe_fraction_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -521,8 +584,13 @@ open class ShapeCast3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_closest_collision_unsafe_fraction_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_closest_collision_unsafe_fraction_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -537,8 +605,13 @@ open class ShapeCast3D : Node3D {
                 .init(rid_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_exception_rid_2722037293,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_exception_rid_2722037293._native_ptr(),
+                    2722037293)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -552,8 +625,13 @@ open class ShapeCast3D : Node3D {
                 .init(node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_exception_3975164845,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_exception_3975164845._native_ptr(),
+                    3975164845)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -567,8 +645,13 @@ open class ShapeCast3D : Node3D {
                 .init(rid_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_exception_rid_2722037293,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_exception_rid_2722037293._native_ptr(),
+                    2722037293)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -582,8 +665,13 @@ open class ShapeCast3D : Node3D {
                 .init(node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_exception_3975164845,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_exception_3975164845._native_ptr(),
+                    3975164845)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -596,8 +684,13 @@ open class ShapeCast3D : Node3D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_exceptions_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_exceptions_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -611,8 +704,13 @@ open class ShapeCast3D : Node3D {
                 .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_mask_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_mask_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -628,8 +726,13 @@ open class ShapeCast3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_mask_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_mask_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -645,8 +748,13 @@ open class ShapeCast3D : Node3D {
                 .init(layer_number_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_mask_value_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_mask_value_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -664,8 +772,13 @@ open class ShapeCast3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_mask_value_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_mask_value_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -681,8 +794,13 @@ open class ShapeCast3D : Node3D {
                 .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_exclude_parent_body_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_exclude_parent_body_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -698,8 +816,13 @@ open class ShapeCast3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_exclude_parent_body_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_exclude_parent_body_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -714,8 +837,13 @@ open class ShapeCast3D : Node3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collide_with_areas_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collide_with_areas_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -731,8 +859,13 @@ open class ShapeCast3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_collide_with_areas_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_collide_with_areas_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -747,8 +880,13 @@ open class ShapeCast3D : Node3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collide_with_bodies_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collide_with_bodies_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -764,8 +902,13 @@ open class ShapeCast3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_collide_with_bodies_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_collide_with_bodies_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -780,8 +923,13 @@ open class ShapeCast3D : Node3D {
                 .init(debug_shape_custom_color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_debug_shape_custom_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_debug_shape_custom_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -795,8 +943,13 @@ open class ShapeCast3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_debug_shape_custom_color_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_debug_shape_custom_color_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

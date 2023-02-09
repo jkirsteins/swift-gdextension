@@ -11,39 +11,34 @@ open class MeshTexture : Texture2D {
 
     public override class var __godot_name: StringName { __godot_name_MeshTexture }
 
-    static var _method_set_mesh_194775623: GDExtensionMethodBindPtr! = nil
-    static var _method_get_mesh_1808005922: GDExtensionMethodBindPtr! = nil
-    static var _method_set_image_size_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_image_size_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_base_texture_4051416890: GDExtensionMethodBindPtr! = nil
-    static var _method_get_base_texture_3635182373: GDExtensionMethodBindPtr! = nil
+    static var _method_set_mesh_194775623: StringName! = nil
+    static var _method_get_mesh_1808005922: StringName! = nil
+    static var _method_set_image_size_743155724: StringName! = nil
+    static var _method_get_image_size_3341600327: StringName! = nil
+    static var _method_set_base_texture_4051416890: StringName! = nil
+    static var _method_get_base_texture_3635182373: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_MeshTexture == nil)
         __godot_name_MeshTexture = StringName(from: "MeshTexture")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_mesh_194775623_name = StringName(from: "set_mesh")
-        self._method_set_mesh_194775623 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshTexture._native_ptr(), _method_set_mesh_194775623_name._native_ptr(), 194775623)
-        assert(MeshTexture._method_set_mesh_194775623 != nil)
-        let _method_get_mesh_1808005922_name = StringName(from: "get_mesh")
-        self._method_get_mesh_1808005922 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshTexture._native_ptr(), _method_get_mesh_1808005922_name._native_ptr(), 1808005922)
-        assert(MeshTexture._method_get_mesh_1808005922 != nil)
-        let _method_set_image_size_743155724_name = StringName(from: "set_image_size")
-        self._method_set_image_size_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshTexture._native_ptr(), _method_set_image_size_743155724_name._native_ptr(), 743155724)
-        assert(MeshTexture._method_set_image_size_743155724 != nil)
-        let _method_get_image_size_3341600327_name = StringName(from: "get_image_size")
-        self._method_get_image_size_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshTexture._native_ptr(), _method_get_image_size_3341600327_name._native_ptr(), 3341600327)
-        assert(MeshTexture._method_get_image_size_3341600327 != nil)
-        let _method_set_base_texture_4051416890_name = StringName(from: "set_base_texture")
-        self._method_set_base_texture_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshTexture._native_ptr(), _method_set_base_texture_4051416890_name._native_ptr(), 4051416890)
-        assert(MeshTexture._method_set_base_texture_4051416890 != nil)
-        let _method_get_base_texture_3635182373_name = StringName(from: "get_base_texture")
-        self._method_get_base_texture_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshTexture._native_ptr(), _method_get_base_texture_3635182373_name._native_ptr(), 3635182373)
-        assert(MeshTexture._method_get_base_texture_3635182373 != nil)
+        self._method_set_mesh_194775623 = StringName(from: "set_mesh")
+        assert(self._method_set_mesh_194775623 != nil)
+        self._method_get_mesh_1808005922 = StringName(from: "get_mesh")
+        assert(self._method_get_mesh_1808005922 != nil)
+        self._method_set_image_size_743155724 = StringName(from: "set_image_size")
+        assert(self._method_set_image_size_743155724 != nil)
+        self._method_get_image_size_3341600327 = StringName(from: "get_image_size")
+        assert(self._method_get_image_size_3341600327 != nil)
+        self._method_set_base_texture_4051416890 = StringName(from: "set_base_texture")
+        assert(self._method_set_base_texture_4051416890 != nil)
+        self._method_get_base_texture_3635182373 = StringName(from: "get_base_texture")
+        assert(self._method_get_base_texture_3635182373 != nil)
     }
 
     public func set_mesh(mesh: Mesh)  {
@@ -54,8 +49,13 @@ open class MeshTexture : Texture2D {
                 .init(mesh_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_mesh_194775623,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_mesh_194775623._native_ptr(),
+                    194775623)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -69,8 +69,13 @@ open class MeshTexture : Texture2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_mesh_1808005922,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_mesh_1808005922._native_ptr(),
+                    1808005922)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -85,8 +90,13 @@ open class MeshTexture : Texture2D {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_image_size_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_image_size_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -100,8 +110,13 @@ open class MeshTexture : Texture2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_image_size_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_image_size_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -116,8 +131,13 @@ open class MeshTexture : Texture2D {
                 .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_base_texture_4051416890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_base_texture_4051416890._native_ptr(),
+                    4051416890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -131,8 +151,13 @@ open class MeshTexture : Texture2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_base_texture_3635182373,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_base_texture_3635182373._native_ptr(),
+                    3635182373)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

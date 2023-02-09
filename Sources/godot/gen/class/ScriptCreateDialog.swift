@@ -47,19 +47,19 @@ open class ScriptCreateDialog : ConfirmationDialog {
 
     public override class var __godot_name: StringName { __godot_name_ScriptCreateDialog }
 
-    static var _method_config_4210001628: GDExtensionMethodBindPtr! = nil
+    static var _method_config_4210001628: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_ScriptCreateDialog == nil)
         __godot_name_ScriptCreateDialog = StringName(from: "ScriptCreateDialog")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_config_4210001628_name = StringName(from: "config")
-        self._method_config_4210001628 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScriptCreateDialog._native_ptr(), _method_config_4210001628_name._native_ptr(), 4210001628)
-        assert(ScriptCreateDialog._method_config_4210001628 != nil)
+        self._method_config_4210001628 = StringName(from: "config")
+        assert(self._method_config_4210001628 != nil)
     }
 
     public func config(inherits: godot.String, path: godot.String, built_in_enabled: UInt8, load_enabled: UInt8)  {
@@ -73,8 +73,13 @@ open class ScriptCreateDialog : ConfirmationDialog {
                 .init(inherits_native), .init(path_native), .init(built_in_enabled_native), .init(load_enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_config_4210001628,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_config_4210001628._native_ptr(),
+                    4210001628)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

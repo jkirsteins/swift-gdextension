@@ -15,49 +15,43 @@ open class Texture3D : Texture {
 
     public override class var __godot_name: StringName { __godot_name_Texture3D }
 
-    static var _method__get_format_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_width_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_height_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_depth_0: GDExtensionMethodBindPtr! = nil
-    static var _method__has_mipmaps_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_data_0: GDExtensionMethodBindPtr! = nil
-    static var _method_get_format_3847873762: GDExtensionMethodBindPtr! = nil
-    static var _method_get_width_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_height_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_depth_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_has_mipmaps_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_data_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_create_placeholder_121922552: GDExtensionMethodBindPtr! = nil
+    static var _method__get_format_0: StringName! = nil
+    static var _method__get_width_0: StringName! = nil
+    static var _method__get_height_0: StringName! = nil
+    static var _method__get_depth_0: StringName! = nil
+    static var _method__has_mipmaps_0: StringName! = nil
+    static var _method__get_data_0: StringName! = nil
+    static var _method_get_format_3847873762: StringName! = nil
+    static var _method_get_width_3905245786: StringName! = nil
+    static var _method_get_height_3905245786: StringName! = nil
+    static var _method_get_depth_3905245786: StringName! = nil
+    static var _method_has_mipmaps_36873697: StringName! = nil
+    static var _method_get_data_3995934104: StringName! = nil
+    static var _method_create_placeholder_121922552: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Texture3D == nil)
         __godot_name_Texture3D = StringName(from: "Texture3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_format_3847873762_name = StringName(from: "get_format")
-        self._method_get_format_3847873762 = self.interface.pointee.classdb_get_method_bind(__godot_name_Texture3D._native_ptr(), _method_get_format_3847873762_name._native_ptr(), 3847873762)
-        assert(Texture3D._method_get_format_3847873762 != nil)
-        let _method_get_width_3905245786_name = StringName(from: "get_width")
-        self._method_get_width_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Texture3D._native_ptr(), _method_get_width_3905245786_name._native_ptr(), 3905245786)
-        assert(Texture3D._method_get_width_3905245786 != nil)
-        let _method_get_height_3905245786_name = StringName(from: "get_height")
-        self._method_get_height_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Texture3D._native_ptr(), _method_get_height_3905245786_name._native_ptr(), 3905245786)
-        assert(Texture3D._method_get_height_3905245786 != nil)
-        let _method_get_depth_3905245786_name = StringName(from: "get_depth")
-        self._method_get_depth_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Texture3D._native_ptr(), _method_get_depth_3905245786_name._native_ptr(), 3905245786)
-        assert(Texture3D._method_get_depth_3905245786 != nil)
-        let _method_has_mipmaps_36873697_name = StringName(from: "has_mipmaps")
-        self._method_has_mipmaps_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Texture3D._native_ptr(), _method_has_mipmaps_36873697_name._native_ptr(), 36873697)
-        assert(Texture3D._method_has_mipmaps_36873697 != nil)
-        let _method_get_data_3995934104_name = StringName(from: "get_data")
-        self._method_get_data_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_Texture3D._native_ptr(), _method_get_data_3995934104_name._native_ptr(), 3995934104)
-        assert(Texture3D._method_get_data_3995934104 != nil)
-        let _method_create_placeholder_121922552_name = StringName(from: "create_placeholder")
-        self._method_create_placeholder_121922552 = self.interface.pointee.classdb_get_method_bind(__godot_name_Texture3D._native_ptr(), _method_create_placeholder_121922552_name._native_ptr(), 121922552)
-        assert(Texture3D._method_create_placeholder_121922552 != nil)
+        self._method_get_format_3847873762 = StringName(from: "get_format")
+        assert(self._method_get_format_3847873762 != nil)
+        self._method_get_width_3905245786 = StringName(from: "get_width")
+        assert(self._method_get_width_3905245786 != nil)
+        self._method_get_height_3905245786 = StringName(from: "get_height")
+        assert(self._method_get_height_3905245786 != nil)
+        self._method_get_depth_3905245786 = StringName(from: "get_depth")
+        assert(self._method_get_depth_3905245786 != nil)
+        self._method_has_mipmaps_36873697 = StringName(from: "has_mipmaps")
+        assert(self._method_has_mipmaps_36873697 != nil)
+        self._method_get_data_3995934104 = StringName(from: "get_data")
+        assert(self._method_get_data_3995934104 != nil)
+        self._method_create_placeholder_121922552 = StringName(from: "create_placeholder")
+        assert(self._method_create_placeholder_121922552 != nil)
     }
 
     public func _get_format() -> Image.Format {
@@ -68,12 +62,7 @@ open class Texture3D : Texture {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_format_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Image.Format(godot: __resPtr.pointee)
     }
     public func _get_width() -> Int64 {
@@ -85,12 +74,7 @@ open class Texture3D : Texture {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_width_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _get_height() -> Int64 {
@@ -102,12 +86,7 @@ open class Texture3D : Texture {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_height_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _get_depth() -> Int64 {
@@ -119,12 +98,7 @@ open class Texture3D : Texture {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_depth_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _has_mipmaps() -> UInt8 {
@@ -136,12 +110,7 @@ open class Texture3D : Texture {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__has_mipmaps_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _get_data() -> [Image] {
@@ -152,12 +121,7 @@ open class Texture3D : Texture {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_data_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return [Image](godot: __resPtr.pointee)
     }
     public func get_format() -> Image.Format {
@@ -168,8 +132,13 @@ open class Texture3D : Texture {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_format_3847873762,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_format_3847873762._native_ptr(),
+                    3847873762)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -185,8 +154,13 @@ open class Texture3D : Texture {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_width_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_width_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -202,8 +176,13 @@ open class Texture3D : Texture {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_height_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_height_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -219,8 +198,13 @@ open class Texture3D : Texture {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_depth_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_depth_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -236,8 +220,13 @@ open class Texture3D : Texture {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_mipmaps_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_mipmaps_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -252,8 +241,13 @@ open class Texture3D : Texture {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_data_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_data_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -268,8 +262,13 @@ open class Texture3D : Texture {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_placeholder_121922552,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_placeholder_121922552._native_ptr(),
+                    121922552)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -121,147 +121,115 @@ open class DirAccess : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_DirAccess }
 
-    static var _method_open_1923528528: GDExtensionMethodBindPtr! = nil
-    static var _method_get_open_error_166280745: GDExtensionMethodBindPtr! = nil
-    static var _method_list_dir_begin_2018049411: GDExtensionMethodBindPtr! = nil
-    static var _method_get_next_2841200299: GDExtensionMethodBindPtr! = nil
-    static var _method_current_is_dir_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_list_dir_end_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_files_2981934095: GDExtensionMethodBindPtr! = nil
-    static var _method_get_files_at_3538744774: GDExtensionMethodBindPtr! = nil
-    static var _method_get_directories_2981934095: GDExtensionMethodBindPtr! = nil
-    static var _method_get_directories_at_3538744774: GDExtensionMethodBindPtr! = nil
-    static var _method_get_drive_count_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_drive_name_990163283: GDExtensionMethodBindPtr! = nil
-    static var _method_get_current_drive_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_change_dir_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_get_current_dir_1287308131: GDExtensionMethodBindPtr! = nil
-    static var _method_make_dir_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_make_dir_absolute_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_make_dir_recursive_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_make_dir_recursive_absolute_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_file_exists_2323990056: GDExtensionMethodBindPtr! = nil
-    static var _method_dir_exists_2323990056: GDExtensionMethodBindPtr! = nil
-    static var _method_dir_exists_absolute_2323990056: GDExtensionMethodBindPtr! = nil
-    static var _method_get_space_left_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_copy_198434953: GDExtensionMethodBindPtr! = nil
-    static var _method_copy_absolute_198434953: GDExtensionMethodBindPtr! = nil
-    static var _method_rename_852856452: GDExtensionMethodBindPtr! = nil
-    static var _method_rename_absolute_852856452: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_absolute_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_set_include_navigational_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_include_navigational_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_include_hidden_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_include_hidden_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_open_1923528528: StringName! = nil
+    static var _method_get_open_error_166280745: StringName! = nil
+    static var _method_list_dir_begin_2018049411: StringName! = nil
+    static var _method_get_next_2841200299: StringName! = nil
+    static var _method_current_is_dir_36873697: StringName! = nil
+    static var _method_list_dir_end_3218959716: StringName! = nil
+    static var _method_get_files_2981934095: StringName! = nil
+    static var _method_get_files_at_3538744774: StringName! = nil
+    static var _method_get_directories_2981934095: StringName! = nil
+    static var _method_get_directories_at_3538744774: StringName! = nil
+    static var _method_get_drive_count_2455072627: StringName! = nil
+    static var _method_get_drive_name_990163283: StringName! = nil
+    static var _method_get_current_drive_2455072627: StringName! = nil
+    static var _method_change_dir_166001499: StringName! = nil
+    static var _method_get_current_dir_1287308131: StringName! = nil
+    static var _method_make_dir_166001499: StringName! = nil
+    static var _method_make_dir_absolute_166001499: StringName! = nil
+    static var _method_make_dir_recursive_166001499: StringName! = nil
+    static var _method_make_dir_recursive_absolute_166001499: StringName! = nil
+    static var _method_file_exists_2323990056: StringName! = nil
+    static var _method_dir_exists_2323990056: StringName! = nil
+    static var _method_dir_exists_absolute_2323990056: StringName! = nil
+    static var _method_get_space_left_2455072627: StringName! = nil
+    static var _method_copy_198434953: StringName! = nil
+    static var _method_copy_absolute_198434953: StringName! = nil
+    static var _method_rename_852856452: StringName! = nil
+    static var _method_rename_absolute_852856452: StringName! = nil
+    static var _method_remove_166001499: StringName! = nil
+    static var _method_remove_absolute_166001499: StringName! = nil
+    static var _method_set_include_navigational_2586408642: StringName! = nil
+    static var _method_get_include_navigational_36873697: StringName! = nil
+    static var _method_set_include_hidden_2586408642: StringName! = nil
+    static var _method_get_include_hidden_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_DirAccess == nil)
         __godot_name_DirAccess = StringName(from: "DirAccess")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_open_1923528528_name = StringName(from: "open")
-        self._method_open_1923528528 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_open_1923528528_name._native_ptr(), 1923528528)
-        assert(DirAccess._method_open_1923528528 != nil)
-        let _method_get_open_error_166280745_name = StringName(from: "get_open_error")
-        self._method_get_open_error_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_get_open_error_166280745_name._native_ptr(), 166280745)
-        assert(DirAccess._method_get_open_error_166280745 != nil)
-        let _method_list_dir_begin_2018049411_name = StringName(from: "list_dir_begin")
-        self._method_list_dir_begin_2018049411 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_list_dir_begin_2018049411_name._native_ptr(), 2018049411)
-        assert(DirAccess._method_list_dir_begin_2018049411 != nil)
-        let _method_get_next_2841200299_name = StringName(from: "get_next")
-        self._method_get_next_2841200299 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_get_next_2841200299_name._native_ptr(), 2841200299)
-        assert(DirAccess._method_get_next_2841200299 != nil)
-        let _method_current_is_dir_36873697_name = StringName(from: "current_is_dir")
-        self._method_current_is_dir_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_current_is_dir_36873697_name._native_ptr(), 36873697)
-        assert(DirAccess._method_current_is_dir_36873697 != nil)
-        let _method_list_dir_end_3218959716_name = StringName(from: "list_dir_end")
-        self._method_list_dir_end_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_list_dir_end_3218959716_name._native_ptr(), 3218959716)
-        assert(DirAccess._method_list_dir_end_3218959716 != nil)
-        let _method_get_files_2981934095_name = StringName(from: "get_files")
-        self._method_get_files_2981934095 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_get_files_2981934095_name._native_ptr(), 2981934095)
-        assert(DirAccess._method_get_files_2981934095 != nil)
-        let _method_get_files_at_3538744774_name = StringName(from: "get_files_at")
-        self._method_get_files_at_3538744774 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_get_files_at_3538744774_name._native_ptr(), 3538744774)
-        assert(DirAccess._method_get_files_at_3538744774 != nil)
-        let _method_get_directories_2981934095_name = StringName(from: "get_directories")
-        self._method_get_directories_2981934095 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_get_directories_2981934095_name._native_ptr(), 2981934095)
-        assert(DirAccess._method_get_directories_2981934095 != nil)
-        let _method_get_directories_at_3538744774_name = StringName(from: "get_directories_at")
-        self._method_get_directories_at_3538744774 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_get_directories_at_3538744774_name._native_ptr(), 3538744774)
-        assert(DirAccess._method_get_directories_at_3538744774 != nil)
-        let _method_get_drive_count_2455072627_name = StringName(from: "get_drive_count")
-        self._method_get_drive_count_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_get_drive_count_2455072627_name._native_ptr(), 2455072627)
-        assert(DirAccess._method_get_drive_count_2455072627 != nil)
-        let _method_get_drive_name_990163283_name = StringName(from: "get_drive_name")
-        self._method_get_drive_name_990163283 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_get_drive_name_990163283_name._native_ptr(), 990163283)
-        assert(DirAccess._method_get_drive_name_990163283 != nil)
-        let _method_get_current_drive_2455072627_name = StringName(from: "get_current_drive")
-        self._method_get_current_drive_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_get_current_drive_2455072627_name._native_ptr(), 2455072627)
-        assert(DirAccess._method_get_current_drive_2455072627 != nil)
-        let _method_change_dir_166001499_name = StringName(from: "change_dir")
-        self._method_change_dir_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_change_dir_166001499_name._native_ptr(), 166001499)
-        assert(DirAccess._method_change_dir_166001499 != nil)
-        let _method_get_current_dir_1287308131_name = StringName(from: "get_current_dir")
-        self._method_get_current_dir_1287308131 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_get_current_dir_1287308131_name._native_ptr(), 1287308131)
-        assert(DirAccess._method_get_current_dir_1287308131 != nil)
-        let _method_make_dir_166001499_name = StringName(from: "make_dir")
-        self._method_make_dir_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_make_dir_166001499_name._native_ptr(), 166001499)
-        assert(DirAccess._method_make_dir_166001499 != nil)
-        let _method_make_dir_absolute_166001499_name = StringName(from: "make_dir_absolute")
-        self._method_make_dir_absolute_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_make_dir_absolute_166001499_name._native_ptr(), 166001499)
-        assert(DirAccess._method_make_dir_absolute_166001499 != nil)
-        let _method_make_dir_recursive_166001499_name = StringName(from: "make_dir_recursive")
-        self._method_make_dir_recursive_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_make_dir_recursive_166001499_name._native_ptr(), 166001499)
-        assert(DirAccess._method_make_dir_recursive_166001499 != nil)
-        let _method_make_dir_recursive_absolute_166001499_name = StringName(from: "make_dir_recursive_absolute")
-        self._method_make_dir_recursive_absolute_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_make_dir_recursive_absolute_166001499_name._native_ptr(), 166001499)
-        assert(DirAccess._method_make_dir_recursive_absolute_166001499 != nil)
-        let _method_file_exists_2323990056_name = StringName(from: "file_exists")
-        self._method_file_exists_2323990056 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_file_exists_2323990056_name._native_ptr(), 2323990056)
-        assert(DirAccess._method_file_exists_2323990056 != nil)
-        let _method_dir_exists_2323990056_name = StringName(from: "dir_exists")
-        self._method_dir_exists_2323990056 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_dir_exists_2323990056_name._native_ptr(), 2323990056)
-        assert(DirAccess._method_dir_exists_2323990056 != nil)
-        let _method_dir_exists_absolute_2323990056_name = StringName(from: "dir_exists_absolute")
-        self._method_dir_exists_absolute_2323990056 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_dir_exists_absolute_2323990056_name._native_ptr(), 2323990056)
-        assert(DirAccess._method_dir_exists_absolute_2323990056 != nil)
-        let _method_get_space_left_2455072627_name = StringName(from: "get_space_left")
-        self._method_get_space_left_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_get_space_left_2455072627_name._native_ptr(), 2455072627)
-        assert(DirAccess._method_get_space_left_2455072627 != nil)
-        let _method_copy_198434953_name = StringName(from: "copy")
-        self._method_copy_198434953 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_copy_198434953_name._native_ptr(), 198434953)
-        assert(DirAccess._method_copy_198434953 != nil)
-        let _method_copy_absolute_198434953_name = StringName(from: "copy_absolute")
-        self._method_copy_absolute_198434953 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_copy_absolute_198434953_name._native_ptr(), 198434953)
-        assert(DirAccess._method_copy_absolute_198434953 != nil)
-        let _method_rename_852856452_name = StringName(from: "rename")
-        self._method_rename_852856452 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_rename_852856452_name._native_ptr(), 852856452)
-        assert(DirAccess._method_rename_852856452 != nil)
-        let _method_rename_absolute_852856452_name = StringName(from: "rename_absolute")
-        self._method_rename_absolute_852856452 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_rename_absolute_852856452_name._native_ptr(), 852856452)
-        assert(DirAccess._method_rename_absolute_852856452 != nil)
-        let _method_remove_166001499_name = StringName(from: "remove")
-        self._method_remove_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_remove_166001499_name._native_ptr(), 166001499)
-        assert(DirAccess._method_remove_166001499 != nil)
-        let _method_remove_absolute_166001499_name = StringName(from: "remove_absolute")
-        self._method_remove_absolute_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_remove_absolute_166001499_name._native_ptr(), 166001499)
-        assert(DirAccess._method_remove_absolute_166001499 != nil)
-        let _method_set_include_navigational_2586408642_name = StringName(from: "set_include_navigational")
-        self._method_set_include_navigational_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_set_include_navigational_2586408642_name._native_ptr(), 2586408642)
-        assert(DirAccess._method_set_include_navigational_2586408642 != nil)
-        let _method_get_include_navigational_36873697_name = StringName(from: "get_include_navigational")
-        self._method_get_include_navigational_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_get_include_navigational_36873697_name._native_ptr(), 36873697)
-        assert(DirAccess._method_get_include_navigational_36873697 != nil)
-        let _method_set_include_hidden_2586408642_name = StringName(from: "set_include_hidden")
-        self._method_set_include_hidden_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_set_include_hidden_2586408642_name._native_ptr(), 2586408642)
-        assert(DirAccess._method_set_include_hidden_2586408642 != nil)
-        let _method_get_include_hidden_36873697_name = StringName(from: "get_include_hidden")
-        self._method_get_include_hidden_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirAccess._native_ptr(), _method_get_include_hidden_36873697_name._native_ptr(), 36873697)
-        assert(DirAccess._method_get_include_hidden_36873697 != nil)
+        self._method_open_1923528528 = StringName(from: "open")
+        assert(self._method_open_1923528528 != nil)
+        self._method_get_open_error_166280745 = StringName(from: "get_open_error")
+        assert(self._method_get_open_error_166280745 != nil)
+        self._method_list_dir_begin_2018049411 = StringName(from: "list_dir_begin")
+        assert(self._method_list_dir_begin_2018049411 != nil)
+        self._method_get_next_2841200299 = StringName(from: "get_next")
+        assert(self._method_get_next_2841200299 != nil)
+        self._method_current_is_dir_36873697 = StringName(from: "current_is_dir")
+        assert(self._method_current_is_dir_36873697 != nil)
+        self._method_list_dir_end_3218959716 = StringName(from: "list_dir_end")
+        assert(self._method_list_dir_end_3218959716 != nil)
+        self._method_get_files_2981934095 = StringName(from: "get_files")
+        assert(self._method_get_files_2981934095 != nil)
+        self._method_get_files_at_3538744774 = StringName(from: "get_files_at")
+        assert(self._method_get_files_at_3538744774 != nil)
+        self._method_get_directories_2981934095 = StringName(from: "get_directories")
+        assert(self._method_get_directories_2981934095 != nil)
+        self._method_get_directories_at_3538744774 = StringName(from: "get_directories_at")
+        assert(self._method_get_directories_at_3538744774 != nil)
+        self._method_get_drive_count_2455072627 = StringName(from: "get_drive_count")
+        assert(self._method_get_drive_count_2455072627 != nil)
+        self._method_get_drive_name_990163283 = StringName(from: "get_drive_name")
+        assert(self._method_get_drive_name_990163283 != nil)
+        self._method_get_current_drive_2455072627 = StringName(from: "get_current_drive")
+        assert(self._method_get_current_drive_2455072627 != nil)
+        self._method_change_dir_166001499 = StringName(from: "change_dir")
+        assert(self._method_change_dir_166001499 != nil)
+        self._method_get_current_dir_1287308131 = StringName(from: "get_current_dir")
+        assert(self._method_get_current_dir_1287308131 != nil)
+        self._method_make_dir_166001499 = StringName(from: "make_dir")
+        assert(self._method_make_dir_166001499 != nil)
+        self._method_make_dir_absolute_166001499 = StringName(from: "make_dir_absolute")
+        assert(self._method_make_dir_absolute_166001499 != nil)
+        self._method_make_dir_recursive_166001499 = StringName(from: "make_dir_recursive")
+        assert(self._method_make_dir_recursive_166001499 != nil)
+        self._method_make_dir_recursive_absolute_166001499 = StringName(from: "make_dir_recursive_absolute")
+        assert(self._method_make_dir_recursive_absolute_166001499 != nil)
+        self._method_file_exists_2323990056 = StringName(from: "file_exists")
+        assert(self._method_file_exists_2323990056 != nil)
+        self._method_dir_exists_2323990056 = StringName(from: "dir_exists")
+        assert(self._method_dir_exists_2323990056 != nil)
+        self._method_dir_exists_absolute_2323990056 = StringName(from: "dir_exists_absolute")
+        assert(self._method_dir_exists_absolute_2323990056 != nil)
+        self._method_get_space_left_2455072627 = StringName(from: "get_space_left")
+        assert(self._method_get_space_left_2455072627 != nil)
+        self._method_copy_198434953 = StringName(from: "copy")
+        assert(self._method_copy_198434953 != nil)
+        self._method_copy_absolute_198434953 = StringName(from: "copy_absolute")
+        assert(self._method_copy_absolute_198434953 != nil)
+        self._method_rename_852856452 = StringName(from: "rename")
+        assert(self._method_rename_852856452 != nil)
+        self._method_rename_absolute_852856452 = StringName(from: "rename_absolute")
+        assert(self._method_rename_absolute_852856452 != nil)
+        self._method_remove_166001499 = StringName(from: "remove")
+        assert(self._method_remove_166001499 != nil)
+        self._method_remove_absolute_166001499 = StringName(from: "remove_absolute")
+        assert(self._method_remove_absolute_166001499 != nil)
+        self._method_set_include_navigational_2586408642 = StringName(from: "set_include_navigational")
+        assert(self._method_set_include_navigational_2586408642 != nil)
+        self._method_get_include_navigational_36873697 = StringName(from: "get_include_navigational")
+        assert(self._method_get_include_navigational_36873697 != nil)
+        self._method_set_include_hidden_2586408642 = StringName(from: "set_include_hidden")
+        assert(self._method_set_include_hidden_2586408642 != nil)
+        self._method_get_include_hidden_36873697 = StringName(from: "get_include_hidden")
+        assert(self._method_get_include_hidden_36873697 != nil)
     }
 
     public func open(path: godot.String) -> DirAccess {
@@ -273,8 +241,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_open_1923528528,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_open_1923528528._native_ptr(),
+                    1923528528)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -289,8 +262,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_open_error_166280745,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_open_error_166280745._native_ptr(),
+                    166280745)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -305,8 +283,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_list_dir_begin_2018049411,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_list_dir_begin_2018049411._native_ptr(),
+                    2018049411)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -321,8 +304,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_next_2841200299,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_next_2841200299._native_ptr(),
+                    2841200299)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -338,8 +326,13 @@ open class DirAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_current_is_dir_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_current_is_dir_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -353,8 +346,13 @@ open class DirAccess : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_list_dir_end_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_list_dir_end_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -368,8 +366,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_files_2981934095,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_files_2981934095._native_ptr(),
+                    2981934095)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -385,8 +388,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_files_at_3538744774,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_files_at_3538744774._native_ptr(),
+                    3538744774)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -401,8 +409,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_directories_2981934095,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_directories_2981934095._native_ptr(),
+                    2981934095)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -418,8 +431,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_directories_at_3538744774,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_directories_at_3538744774._native_ptr(),
+                    3538744774)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -435,8 +453,13 @@ open class DirAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_drive_count_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_drive_count_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -452,8 +475,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_drive_name_990163283,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_drive_name_990163283._native_ptr(),
+                    990163283)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -470,8 +498,13 @@ open class DirAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_current_drive_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_current_drive_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -487,8 +520,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_change_dir_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_change_dir_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -504,8 +542,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_current_dir_1287308131,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_current_dir_1287308131._native_ptr(),
+                    1287308131)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -522,8 +565,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_make_dir_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_make_dir_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -539,8 +587,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_make_dir_absolute_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_make_dir_absolute_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -556,8 +609,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_make_dir_recursive_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_make_dir_recursive_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -573,8 +631,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_make_dir_recursive_absolute_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_make_dir_recursive_absolute_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -591,8 +654,13 @@ open class DirAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_file_exists_2323990056,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_file_exists_2323990056._native_ptr(),
+                    2323990056)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -609,8 +677,13 @@ open class DirAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_dir_exists_2323990056,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_dir_exists_2323990056._native_ptr(),
+                    2323990056)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -627,8 +700,13 @@ open class DirAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_dir_exists_absolute_2323990056,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_dir_exists_absolute_2323990056._native_ptr(),
+                    2323990056)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -644,8 +722,13 @@ open class DirAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_space_left_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_space_left_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -663,8 +746,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_copy_198434953,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_copy_198434953._native_ptr(),
+                    198434953)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -683,8 +771,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_copy_absolute_198434953,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_copy_absolute_198434953._native_ptr(),
+                    198434953)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -702,8 +795,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_rename_852856452,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_rename_852856452._native_ptr(),
+                    852856452)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -720,8 +818,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_rename_absolute_852856452,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_rename_absolute_852856452._native_ptr(),
+                    852856452)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -737,8 +840,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -754,8 +862,13 @@ open class DirAccess : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_absolute_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_absolute_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -770,8 +883,13 @@ open class DirAccess : RefCounted {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_include_navigational_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_include_navigational_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -787,8 +905,13 @@ open class DirAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_include_navigational_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_include_navigational_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -803,8 +926,13 @@ open class DirAccess : RefCounted {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_include_hidden_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_include_hidden_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -820,8 +948,13 @@ open class DirAccess : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_include_hidden_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_include_hidden_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

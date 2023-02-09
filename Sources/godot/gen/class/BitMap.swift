@@ -11,67 +11,55 @@ open class BitMap : Resource {
 
     public override class var __godot_name: StringName { __godot_name_BitMap }
 
-    static var _method_create_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_create_from_image_alpha_505265891: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bitv_4153096796: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bit_1383440665: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bitv_3900751641: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bit_2522259332: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bit_rect_472162941: GDExtensionMethodBindPtr! = nil
-    static var _method_get_true_bit_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_resize_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_grow_mask_3317281434: GDExtensionMethodBindPtr! = nil
-    static var _method_convert_to_image_4190603485: GDExtensionMethodBindPtr! = nil
-    static var _method_opaque_to_polygons_876132484: GDExtensionMethodBindPtr! = nil
+    static var _method_create_1130785943: StringName! = nil
+    static var _method_create_from_image_alpha_505265891: StringName! = nil
+    static var _method_set_bitv_4153096796: StringName! = nil
+    static var _method_set_bit_1383440665: StringName! = nil
+    static var _method_get_bitv_3900751641: StringName! = nil
+    static var _method_get_bit_2522259332: StringName! = nil
+    static var _method_set_bit_rect_472162941: StringName! = nil
+    static var _method_get_true_bit_count_3905245786: StringName! = nil
+    static var _method_get_size_3690982128: StringName! = nil
+    static var _method_resize_1130785943: StringName! = nil
+    static var _method_grow_mask_3317281434: StringName! = nil
+    static var _method_convert_to_image_4190603485: StringName! = nil
+    static var _method_opaque_to_polygons_876132484: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_BitMap == nil)
         __godot_name_BitMap = StringName(from: "BitMap")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_create_1130785943_name = StringName(from: "create")
-        self._method_create_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_BitMap._native_ptr(), _method_create_1130785943_name._native_ptr(), 1130785943)
-        assert(BitMap._method_create_1130785943 != nil)
-        let _method_create_from_image_alpha_505265891_name = StringName(from: "create_from_image_alpha")
-        self._method_create_from_image_alpha_505265891 = self.interface.pointee.classdb_get_method_bind(__godot_name_BitMap._native_ptr(), _method_create_from_image_alpha_505265891_name._native_ptr(), 505265891)
-        assert(BitMap._method_create_from_image_alpha_505265891 != nil)
-        let _method_set_bitv_4153096796_name = StringName(from: "set_bitv")
-        self._method_set_bitv_4153096796 = self.interface.pointee.classdb_get_method_bind(__godot_name_BitMap._native_ptr(), _method_set_bitv_4153096796_name._native_ptr(), 4153096796)
-        assert(BitMap._method_set_bitv_4153096796 != nil)
-        let _method_set_bit_1383440665_name = StringName(from: "set_bit")
-        self._method_set_bit_1383440665 = self.interface.pointee.classdb_get_method_bind(__godot_name_BitMap._native_ptr(), _method_set_bit_1383440665_name._native_ptr(), 1383440665)
-        assert(BitMap._method_set_bit_1383440665 != nil)
-        let _method_get_bitv_3900751641_name = StringName(from: "get_bitv")
-        self._method_get_bitv_3900751641 = self.interface.pointee.classdb_get_method_bind(__godot_name_BitMap._native_ptr(), _method_get_bitv_3900751641_name._native_ptr(), 3900751641)
-        assert(BitMap._method_get_bitv_3900751641 != nil)
-        let _method_get_bit_2522259332_name = StringName(from: "get_bit")
-        self._method_get_bit_2522259332 = self.interface.pointee.classdb_get_method_bind(__godot_name_BitMap._native_ptr(), _method_get_bit_2522259332_name._native_ptr(), 2522259332)
-        assert(BitMap._method_get_bit_2522259332 != nil)
-        let _method_set_bit_rect_472162941_name = StringName(from: "set_bit_rect")
-        self._method_set_bit_rect_472162941 = self.interface.pointee.classdb_get_method_bind(__godot_name_BitMap._native_ptr(), _method_set_bit_rect_472162941_name._native_ptr(), 472162941)
-        assert(BitMap._method_set_bit_rect_472162941 != nil)
-        let _method_get_true_bit_count_3905245786_name = StringName(from: "get_true_bit_count")
-        self._method_get_true_bit_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_BitMap._native_ptr(), _method_get_true_bit_count_3905245786_name._native_ptr(), 3905245786)
-        assert(BitMap._method_get_true_bit_count_3905245786 != nil)
-        let _method_get_size_3690982128_name = StringName(from: "get_size")
-        self._method_get_size_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_BitMap._native_ptr(), _method_get_size_3690982128_name._native_ptr(), 3690982128)
-        assert(BitMap._method_get_size_3690982128 != nil)
-        let _method_resize_1130785943_name = StringName(from: "resize")
-        self._method_resize_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_BitMap._native_ptr(), _method_resize_1130785943_name._native_ptr(), 1130785943)
-        assert(BitMap._method_resize_1130785943 != nil)
-        let _method_grow_mask_3317281434_name = StringName(from: "grow_mask")
-        self._method_grow_mask_3317281434 = self.interface.pointee.classdb_get_method_bind(__godot_name_BitMap._native_ptr(), _method_grow_mask_3317281434_name._native_ptr(), 3317281434)
-        assert(BitMap._method_grow_mask_3317281434 != nil)
-        let _method_convert_to_image_4190603485_name = StringName(from: "convert_to_image")
-        self._method_convert_to_image_4190603485 = self.interface.pointee.classdb_get_method_bind(__godot_name_BitMap._native_ptr(), _method_convert_to_image_4190603485_name._native_ptr(), 4190603485)
-        assert(BitMap._method_convert_to_image_4190603485 != nil)
-        let _method_opaque_to_polygons_876132484_name = StringName(from: "opaque_to_polygons")
-        self._method_opaque_to_polygons_876132484 = self.interface.pointee.classdb_get_method_bind(__godot_name_BitMap._native_ptr(), _method_opaque_to_polygons_876132484_name._native_ptr(), 876132484)
-        assert(BitMap._method_opaque_to_polygons_876132484 != nil)
+        self._method_create_1130785943 = StringName(from: "create")
+        assert(self._method_create_1130785943 != nil)
+        self._method_create_from_image_alpha_505265891 = StringName(from: "create_from_image_alpha")
+        assert(self._method_create_from_image_alpha_505265891 != nil)
+        self._method_set_bitv_4153096796 = StringName(from: "set_bitv")
+        assert(self._method_set_bitv_4153096796 != nil)
+        self._method_set_bit_1383440665 = StringName(from: "set_bit")
+        assert(self._method_set_bit_1383440665 != nil)
+        self._method_get_bitv_3900751641 = StringName(from: "get_bitv")
+        assert(self._method_get_bitv_3900751641 != nil)
+        self._method_get_bit_2522259332 = StringName(from: "get_bit")
+        assert(self._method_get_bit_2522259332 != nil)
+        self._method_set_bit_rect_472162941 = StringName(from: "set_bit_rect")
+        assert(self._method_set_bit_rect_472162941 != nil)
+        self._method_get_true_bit_count_3905245786 = StringName(from: "get_true_bit_count")
+        assert(self._method_get_true_bit_count_3905245786 != nil)
+        self._method_get_size_3690982128 = StringName(from: "get_size")
+        assert(self._method_get_size_3690982128 != nil)
+        self._method_resize_1130785943 = StringName(from: "resize")
+        assert(self._method_resize_1130785943 != nil)
+        self._method_grow_mask_3317281434 = StringName(from: "grow_mask")
+        assert(self._method_grow_mask_3317281434 != nil)
+        self._method_convert_to_image_4190603485 = StringName(from: "convert_to_image")
+        assert(self._method_convert_to_image_4190603485 != nil)
+        self._method_opaque_to_polygons_876132484 = StringName(from: "opaque_to_polygons")
+        assert(self._method_opaque_to_polygons_876132484 != nil)
     }
 
     public func create(size: Vector2i)  {
@@ -82,8 +70,13 @@ open class BitMap : Resource {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -98,8 +91,13 @@ open class BitMap : Resource {
                 .init(image_native), .init(threshold_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_from_image_alpha_505265891,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_from_image_alpha_505265891._native_ptr(),
+                    505265891)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -115,8 +113,13 @@ open class BitMap : Resource {
                 .init(position_native), .init(bit_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bitv_4153096796,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bitv_4153096796._native_ptr(),
+                    4153096796)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -133,8 +136,13 @@ open class BitMap : Resource {
                 .init(x_native), .init(y_native), .init(bit_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bit_1383440665,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bit_1383440665._native_ptr(),
+                    1383440665)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -153,8 +161,13 @@ open class BitMap : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bitv_3900751641,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bitv_3900751641._native_ptr(),
+                    3900751641)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -172,8 +185,13 @@ open class BitMap : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bit_2522259332,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bit_2522259332._native_ptr(),
+                    2522259332)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -191,8 +209,13 @@ open class BitMap : Resource {
                 .init(rect_native), .init(bit_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bit_rect_472162941,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bit_rect_472162941._native_ptr(),
+                    472162941)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -208,8 +231,13 @@ open class BitMap : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_true_bit_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_true_bit_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -224,8 +252,13 @@ open class BitMap : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -240,8 +273,13 @@ open class BitMap : Resource {
                 .init(new_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_resize_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_resize_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -256,8 +294,13 @@ open class BitMap : Resource {
                 .init(pixels_native), .init(rect_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_grow_mask_3317281434,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_grow_mask_3317281434._native_ptr(),
+                    3317281434)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -272,8 +315,13 @@ open class BitMap : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_convert_to_image_4190603485,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_convert_to_image_4190603485._native_ptr(),
+                    4190603485)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -290,8 +338,13 @@ open class BitMap : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_opaque_to_polygons_876132484,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_opaque_to_polygons_876132484._native_ptr(),
+                    876132484)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -11,47 +11,40 @@ open class Shape2D : Resource {
 
     public override class var __godot_name: StringName { __godot_name_Shape2D }
 
-    static var _method_set_custom_solver_bias_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_solver_bias_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_collide_3709843132: GDExtensionMethodBindPtr! = nil
-    static var _method_collide_with_motion_2869556801: GDExtensionMethodBindPtr! = nil
-    static var _method_collide_and_get_contacts_3056932662: GDExtensionMethodBindPtr! = nil
-    static var _method_collide_with_motion_and_get_contacts_3620351573: GDExtensionMethodBindPtr! = nil
-    static var _method_draw_2948539648: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rect_1639390495: GDExtensionMethodBindPtr! = nil
+    static var _method_set_custom_solver_bias_373806689: StringName! = nil
+    static var _method_get_custom_solver_bias_1740695150: StringName! = nil
+    static var _method_collide_3709843132: StringName! = nil
+    static var _method_collide_with_motion_2869556801: StringName! = nil
+    static var _method_collide_and_get_contacts_3056932662: StringName! = nil
+    static var _method_collide_with_motion_and_get_contacts_3620351573: StringName! = nil
+    static var _method_draw_2948539648: StringName! = nil
+    static var _method_get_rect_1639390495: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Shape2D == nil)
         __godot_name_Shape2D = StringName(from: "Shape2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_custom_solver_bias_373806689_name = StringName(from: "set_custom_solver_bias")
-        self._method_set_custom_solver_bias_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shape2D._native_ptr(), _method_set_custom_solver_bias_373806689_name._native_ptr(), 373806689)
-        assert(Shape2D._method_set_custom_solver_bias_373806689 != nil)
-        let _method_get_custom_solver_bias_1740695150_name = StringName(from: "get_custom_solver_bias")
-        self._method_get_custom_solver_bias_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shape2D._native_ptr(), _method_get_custom_solver_bias_1740695150_name._native_ptr(), 1740695150)
-        assert(Shape2D._method_get_custom_solver_bias_1740695150 != nil)
-        let _method_collide_3709843132_name = StringName(from: "collide")
-        self._method_collide_3709843132 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shape2D._native_ptr(), _method_collide_3709843132_name._native_ptr(), 3709843132)
-        assert(Shape2D._method_collide_3709843132 != nil)
-        let _method_collide_with_motion_2869556801_name = StringName(from: "collide_with_motion")
-        self._method_collide_with_motion_2869556801 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shape2D._native_ptr(), _method_collide_with_motion_2869556801_name._native_ptr(), 2869556801)
-        assert(Shape2D._method_collide_with_motion_2869556801 != nil)
-        let _method_collide_and_get_contacts_3056932662_name = StringName(from: "collide_and_get_contacts")
-        self._method_collide_and_get_contacts_3056932662 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shape2D._native_ptr(), _method_collide_and_get_contacts_3056932662_name._native_ptr(), 3056932662)
-        assert(Shape2D._method_collide_and_get_contacts_3056932662 != nil)
-        let _method_collide_with_motion_and_get_contacts_3620351573_name = StringName(from: "collide_with_motion_and_get_contacts")
-        self._method_collide_with_motion_and_get_contacts_3620351573 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shape2D._native_ptr(), _method_collide_with_motion_and_get_contacts_3620351573_name._native_ptr(), 3620351573)
-        assert(Shape2D._method_collide_with_motion_and_get_contacts_3620351573 != nil)
-        let _method_draw_2948539648_name = StringName(from: "draw")
-        self._method_draw_2948539648 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shape2D._native_ptr(), _method_draw_2948539648_name._native_ptr(), 2948539648)
-        assert(Shape2D._method_draw_2948539648 != nil)
-        let _method_get_rect_1639390495_name = StringName(from: "get_rect")
-        self._method_get_rect_1639390495 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shape2D._native_ptr(), _method_get_rect_1639390495_name._native_ptr(), 1639390495)
-        assert(Shape2D._method_get_rect_1639390495 != nil)
+        self._method_set_custom_solver_bias_373806689 = StringName(from: "set_custom_solver_bias")
+        assert(self._method_set_custom_solver_bias_373806689 != nil)
+        self._method_get_custom_solver_bias_1740695150 = StringName(from: "get_custom_solver_bias")
+        assert(self._method_get_custom_solver_bias_1740695150 != nil)
+        self._method_collide_3709843132 = StringName(from: "collide")
+        assert(self._method_collide_3709843132 != nil)
+        self._method_collide_with_motion_2869556801 = StringName(from: "collide_with_motion")
+        assert(self._method_collide_with_motion_2869556801 != nil)
+        self._method_collide_and_get_contacts_3056932662 = StringName(from: "collide_and_get_contacts")
+        assert(self._method_collide_and_get_contacts_3056932662 != nil)
+        self._method_collide_with_motion_and_get_contacts_3620351573 = StringName(from: "collide_with_motion_and_get_contacts")
+        assert(self._method_collide_with_motion_and_get_contacts_3620351573 != nil)
+        self._method_draw_2948539648 = StringName(from: "draw")
+        assert(self._method_draw_2948539648 != nil)
+        self._method_get_rect_1639390495 = StringName(from: "get_rect")
+        assert(self._method_get_rect_1639390495 != nil)
     }
 
     public func set_custom_solver_bias(bias: Float64)  {
@@ -62,8 +55,13 @@ open class Shape2D : Resource {
                 .init(bias_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_custom_solver_bias_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_custom_solver_bias_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -79,8 +77,13 @@ open class Shape2D : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_solver_bias_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_solver_bias_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -99,8 +102,13 @@ open class Shape2D : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_collide_3709843132,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_collide_3709843132._native_ptr(),
+                    3709843132)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -121,8 +129,13 @@ open class Shape2D : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_collide_with_motion_2869556801,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_collide_with_motion_2869556801._native_ptr(),
+                    2869556801)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -140,8 +153,13 @@ open class Shape2D : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_collide_and_get_contacts_3056932662,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_collide_and_get_contacts_3056932662._native_ptr(),
+                    3056932662)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -161,8 +179,13 @@ open class Shape2D : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_collide_with_motion_and_get_contacts_3620351573,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_collide_with_motion_and_get_contacts_3620351573._native_ptr(),
+                    3620351573)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -178,8 +201,13 @@ open class Shape2D : Resource {
                 .init(canvas_item_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_draw_2948539648,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_draw_2948539648._native_ptr(),
+                    2948539648)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -193,8 +221,13 @@ open class Shape2D : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rect_1639390495,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rect_1639390495._native_ptr(),
+                    1639390495)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

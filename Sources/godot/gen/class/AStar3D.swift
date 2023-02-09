@@ -68,109 +68,87 @@ open class AStar3D : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_AStar3D }
 
-    static var _method__estimate_cost_0: GDExtensionMethodBindPtr! = nil
-    static var _method__compute_cost_0: GDExtensionMethodBindPtr! = nil
-    static var _method_get_available_point_id_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_add_point_2920922839: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_position_711720468: GDExtensionMethodBindPtr! = nil
-    static var _method_set_point_position_1530502735: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_weight_scale_2339986948: GDExtensionMethodBindPtr! = nil
-    static var _method_set_point_weight_scale_1602489585: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_point_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_has_point_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_connections_2865087369: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_ids_3851388692: GDExtensionMethodBindPtr! = nil
-    static var _method_set_point_disabled_4023243586: GDExtensionMethodBindPtr! = nil
-    static var _method_is_point_disabled_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_connect_points_3785370599: GDExtensionMethodBindPtr! = nil
-    static var _method_disconnect_points_3785370599: GDExtensionMethodBindPtr! = nil
-    static var _method_are_points_connected_4063588998: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_capacity_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_reserve_space_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_closest_point_3241074317: GDExtensionMethodBindPtr! = nil
-    static var _method_get_closest_position_in_segment_192990374: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_path_880819742: GDExtensionMethodBindPtr! = nil
-    static var _method_get_id_path_3404614526: GDExtensionMethodBindPtr! = nil
+    static var _method__estimate_cost_0: StringName! = nil
+    static var _method__compute_cost_0: StringName! = nil
+    static var _method_get_available_point_id_3905245786: StringName! = nil
+    static var _method_add_point_2920922839: StringName! = nil
+    static var _method_get_point_position_711720468: StringName! = nil
+    static var _method_set_point_position_1530502735: StringName! = nil
+    static var _method_get_point_weight_scale_2339986948: StringName! = nil
+    static var _method_set_point_weight_scale_1602489585: StringName! = nil
+    static var _method_remove_point_1286410249: StringName! = nil
+    static var _method_has_point_1116898809: StringName! = nil
+    static var _method_get_point_connections_2865087369: StringName! = nil
+    static var _method_get_point_ids_3851388692: StringName! = nil
+    static var _method_set_point_disabled_4023243586: StringName! = nil
+    static var _method_is_point_disabled_1116898809: StringName! = nil
+    static var _method_connect_points_3785370599: StringName! = nil
+    static var _method_disconnect_points_3785370599: StringName! = nil
+    static var _method_are_points_connected_4063588998: StringName! = nil
+    static var _method_get_point_count_3905245786: StringName! = nil
+    static var _method_get_point_capacity_3905245786: StringName! = nil
+    static var _method_reserve_space_1286410249: StringName! = nil
+    static var _method_clear_3218959716: StringName! = nil
+    static var _method_get_closest_point_3241074317: StringName! = nil
+    static var _method_get_closest_position_in_segment_192990374: StringName! = nil
+    static var _method_get_point_path_880819742: StringName! = nil
+    static var _method_get_id_path_3404614526: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AStar3D == nil)
         __godot_name_AStar3D = StringName(from: "AStar3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_available_point_id_3905245786_name = StringName(from: "get_available_point_id")
-        self._method_get_available_point_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_get_available_point_id_3905245786_name._native_ptr(), 3905245786)
-        assert(AStar3D._method_get_available_point_id_3905245786 != nil)
-        let _method_add_point_2920922839_name = StringName(from: "add_point")
-        self._method_add_point_2920922839 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_add_point_2920922839_name._native_ptr(), 2920922839)
-        assert(AStar3D._method_add_point_2920922839 != nil)
-        let _method_get_point_position_711720468_name = StringName(from: "get_point_position")
-        self._method_get_point_position_711720468 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_get_point_position_711720468_name._native_ptr(), 711720468)
-        assert(AStar3D._method_get_point_position_711720468 != nil)
-        let _method_set_point_position_1530502735_name = StringName(from: "set_point_position")
-        self._method_set_point_position_1530502735 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_set_point_position_1530502735_name._native_ptr(), 1530502735)
-        assert(AStar3D._method_set_point_position_1530502735 != nil)
-        let _method_get_point_weight_scale_2339986948_name = StringName(from: "get_point_weight_scale")
-        self._method_get_point_weight_scale_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_get_point_weight_scale_2339986948_name._native_ptr(), 2339986948)
-        assert(AStar3D._method_get_point_weight_scale_2339986948 != nil)
-        let _method_set_point_weight_scale_1602489585_name = StringName(from: "set_point_weight_scale")
-        self._method_set_point_weight_scale_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_set_point_weight_scale_1602489585_name._native_ptr(), 1602489585)
-        assert(AStar3D._method_set_point_weight_scale_1602489585 != nil)
-        let _method_remove_point_1286410249_name = StringName(from: "remove_point")
-        self._method_remove_point_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_remove_point_1286410249_name._native_ptr(), 1286410249)
-        assert(AStar3D._method_remove_point_1286410249 != nil)
-        let _method_has_point_1116898809_name = StringName(from: "has_point")
-        self._method_has_point_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_has_point_1116898809_name._native_ptr(), 1116898809)
-        assert(AStar3D._method_has_point_1116898809 != nil)
-        let _method_get_point_connections_2865087369_name = StringName(from: "get_point_connections")
-        self._method_get_point_connections_2865087369 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_get_point_connections_2865087369_name._native_ptr(), 2865087369)
-        assert(AStar3D._method_get_point_connections_2865087369 != nil)
-        let _method_get_point_ids_3851388692_name = StringName(from: "get_point_ids")
-        self._method_get_point_ids_3851388692 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_get_point_ids_3851388692_name._native_ptr(), 3851388692)
-        assert(AStar3D._method_get_point_ids_3851388692 != nil)
-        let _method_set_point_disabled_4023243586_name = StringName(from: "set_point_disabled")
-        self._method_set_point_disabled_4023243586 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_set_point_disabled_4023243586_name._native_ptr(), 4023243586)
-        assert(AStar3D._method_set_point_disabled_4023243586 != nil)
-        let _method_is_point_disabled_1116898809_name = StringName(from: "is_point_disabled")
-        self._method_is_point_disabled_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_is_point_disabled_1116898809_name._native_ptr(), 1116898809)
-        assert(AStar3D._method_is_point_disabled_1116898809 != nil)
-        let _method_connect_points_3785370599_name = StringName(from: "connect_points")
-        self._method_connect_points_3785370599 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_connect_points_3785370599_name._native_ptr(), 3785370599)
-        assert(AStar3D._method_connect_points_3785370599 != nil)
-        let _method_disconnect_points_3785370599_name = StringName(from: "disconnect_points")
-        self._method_disconnect_points_3785370599 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_disconnect_points_3785370599_name._native_ptr(), 3785370599)
-        assert(AStar3D._method_disconnect_points_3785370599 != nil)
-        let _method_are_points_connected_4063588998_name = StringName(from: "are_points_connected")
-        self._method_are_points_connected_4063588998 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_are_points_connected_4063588998_name._native_ptr(), 4063588998)
-        assert(AStar3D._method_are_points_connected_4063588998 != nil)
-        let _method_get_point_count_3905245786_name = StringName(from: "get_point_count")
-        self._method_get_point_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_get_point_count_3905245786_name._native_ptr(), 3905245786)
-        assert(AStar3D._method_get_point_count_3905245786 != nil)
-        let _method_get_point_capacity_3905245786_name = StringName(from: "get_point_capacity")
-        self._method_get_point_capacity_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_get_point_capacity_3905245786_name._native_ptr(), 3905245786)
-        assert(AStar3D._method_get_point_capacity_3905245786 != nil)
-        let _method_reserve_space_1286410249_name = StringName(from: "reserve_space")
-        self._method_reserve_space_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_reserve_space_1286410249_name._native_ptr(), 1286410249)
-        assert(AStar3D._method_reserve_space_1286410249 != nil)
-        let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
-        assert(AStar3D._method_clear_3218959716 != nil)
-        let _method_get_closest_point_3241074317_name = StringName(from: "get_closest_point")
-        self._method_get_closest_point_3241074317 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_get_closest_point_3241074317_name._native_ptr(), 3241074317)
-        assert(AStar3D._method_get_closest_point_3241074317 != nil)
-        let _method_get_closest_position_in_segment_192990374_name = StringName(from: "get_closest_position_in_segment")
-        self._method_get_closest_position_in_segment_192990374 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_get_closest_position_in_segment_192990374_name._native_ptr(), 192990374)
-        assert(AStar3D._method_get_closest_position_in_segment_192990374 != nil)
-        let _method_get_point_path_880819742_name = StringName(from: "get_point_path")
-        self._method_get_point_path_880819742 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_get_point_path_880819742_name._native_ptr(), 880819742)
-        assert(AStar3D._method_get_point_path_880819742 != nil)
-        let _method_get_id_path_3404614526_name = StringName(from: "get_id_path")
-        self._method_get_id_path_3404614526 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStar3D._native_ptr(), _method_get_id_path_3404614526_name._native_ptr(), 3404614526)
-        assert(AStar3D._method_get_id_path_3404614526 != nil)
+        self._method_get_available_point_id_3905245786 = StringName(from: "get_available_point_id")
+        assert(self._method_get_available_point_id_3905245786 != nil)
+        self._method_add_point_2920922839 = StringName(from: "add_point")
+        assert(self._method_add_point_2920922839 != nil)
+        self._method_get_point_position_711720468 = StringName(from: "get_point_position")
+        assert(self._method_get_point_position_711720468 != nil)
+        self._method_set_point_position_1530502735 = StringName(from: "set_point_position")
+        assert(self._method_set_point_position_1530502735 != nil)
+        self._method_get_point_weight_scale_2339986948 = StringName(from: "get_point_weight_scale")
+        assert(self._method_get_point_weight_scale_2339986948 != nil)
+        self._method_set_point_weight_scale_1602489585 = StringName(from: "set_point_weight_scale")
+        assert(self._method_set_point_weight_scale_1602489585 != nil)
+        self._method_remove_point_1286410249 = StringName(from: "remove_point")
+        assert(self._method_remove_point_1286410249 != nil)
+        self._method_has_point_1116898809 = StringName(from: "has_point")
+        assert(self._method_has_point_1116898809 != nil)
+        self._method_get_point_connections_2865087369 = StringName(from: "get_point_connections")
+        assert(self._method_get_point_connections_2865087369 != nil)
+        self._method_get_point_ids_3851388692 = StringName(from: "get_point_ids")
+        assert(self._method_get_point_ids_3851388692 != nil)
+        self._method_set_point_disabled_4023243586 = StringName(from: "set_point_disabled")
+        assert(self._method_set_point_disabled_4023243586 != nil)
+        self._method_is_point_disabled_1116898809 = StringName(from: "is_point_disabled")
+        assert(self._method_is_point_disabled_1116898809 != nil)
+        self._method_connect_points_3785370599 = StringName(from: "connect_points")
+        assert(self._method_connect_points_3785370599 != nil)
+        self._method_disconnect_points_3785370599 = StringName(from: "disconnect_points")
+        assert(self._method_disconnect_points_3785370599 != nil)
+        self._method_are_points_connected_4063588998 = StringName(from: "are_points_connected")
+        assert(self._method_are_points_connected_4063588998 != nil)
+        self._method_get_point_count_3905245786 = StringName(from: "get_point_count")
+        assert(self._method_get_point_count_3905245786 != nil)
+        self._method_get_point_capacity_3905245786 = StringName(from: "get_point_capacity")
+        assert(self._method_get_point_capacity_3905245786 != nil)
+        self._method_reserve_space_1286410249 = StringName(from: "reserve_space")
+        assert(self._method_reserve_space_1286410249 != nil)
+        self._method_clear_3218959716 = StringName(from: "clear")
+        assert(self._method_clear_3218959716 != nil)
+        self._method_get_closest_point_3241074317 = StringName(from: "get_closest_point")
+        assert(self._method_get_closest_point_3241074317 != nil)
+        self._method_get_closest_position_in_segment_192990374 = StringName(from: "get_closest_position_in_segment")
+        assert(self._method_get_closest_position_in_segment_192990374 != nil)
+        self._method_get_point_path_880819742 = StringName(from: "get_point_path")
+        assert(self._method_get_point_path_880819742 != nil)
+        self._method_get_id_path_3404614526 = StringName(from: "get_id_path")
+        assert(self._method_get_id_path_3404614526 != nil)
     }
 
     public func _estimate_cost(from_id: Int64, to_id: Int64) -> Float64 {
@@ -184,12 +162,7 @@ open class AStar3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__estimate_cost_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
         }
         }
@@ -205,12 +178,7 @@ open class AStar3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__compute_cost_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
         }
         }
@@ -224,8 +192,13 @@ open class AStar3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_available_point_id_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_available_point_id_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -242,8 +215,13 @@ open class AStar3D : RefCounted {
                 .init(id_native), .init(position_native), .init(weight_scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_point_2920922839,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_point_2920922839._native_ptr(),
+                    2920922839)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -260,8 +238,13 @@ open class AStar3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_position_711720468,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_position_711720468._native_ptr(),
+                    711720468)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -278,8 +261,13 @@ open class AStar3D : RefCounted {
                 .init(id_native), .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_point_position_1530502735,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_point_position_1530502735._native_ptr(),
+                    1530502735)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -296,8 +284,13 @@ open class AStar3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_weight_scale_2339986948,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_weight_scale_2339986948._native_ptr(),
+                    2339986948)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -314,8 +307,13 @@ open class AStar3D : RefCounted {
                 .init(id_native), .init(weight_scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_point_weight_scale_1602489585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_point_weight_scale_1602489585._native_ptr(),
+                    1602489585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -331,8 +329,13 @@ open class AStar3D : RefCounted {
                 .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_point_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_point_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -349,8 +352,13 @@ open class AStar3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_point_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_point_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -367,8 +375,13 @@ open class AStar3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_connections_2865087369,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_connections_2865087369._native_ptr(),
+                    2865087369)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -384,8 +397,13 @@ open class AStar3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_ids_3851388692,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_ids_3851388692._native_ptr(),
+                    3851388692)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -401,8 +419,13 @@ open class AStar3D : RefCounted {
                 .init(id_native), .init(disabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_point_disabled_4023243586,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_point_disabled_4023243586._native_ptr(),
+                    4023243586)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -420,8 +443,13 @@ open class AStar3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_point_disabled_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_point_disabled_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -439,8 +467,13 @@ open class AStar3D : RefCounted {
                 .init(id_native), .init(to_id_native), .init(bidirectional_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_connect_points_3785370599,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_connect_points_3785370599._native_ptr(),
+                    3785370599)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -459,8 +492,13 @@ open class AStar3D : RefCounted {
                 .init(id_native), .init(to_id_native), .init(bidirectional_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_disconnect_points_3785370599,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_disconnect_points_3785370599._native_ptr(),
+                    3785370599)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -481,8 +519,13 @@ open class AStar3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_are_points_connected_4063588998,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_are_points_connected_4063588998._native_ptr(),
+                    4063588998)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -501,8 +544,13 @@ open class AStar3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -518,8 +566,13 @@ open class AStar3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_capacity_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_capacity_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -534,8 +587,13 @@ open class AStar3D : RefCounted {
                 .init(num_nodes_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_reserve_space_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_reserve_space_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -549,8 +607,13 @@ open class AStar3D : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -567,8 +630,13 @@ open class AStar3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_closest_point_3241074317,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_closest_point_3241074317._native_ptr(),
+                    3241074317)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -585,8 +653,13 @@ open class AStar3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_closest_position_in_segment_192990374,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_closest_position_in_segment_192990374._native_ptr(),
+                    192990374)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -603,8 +676,13 @@ open class AStar3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_path_880819742,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_path_880819742._native_ptr(),
+                    880819742)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -623,8 +701,13 @@ open class AStar3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_id_path_3404614526,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_id_path_3404614526._native_ptr(),
+                    3404614526)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

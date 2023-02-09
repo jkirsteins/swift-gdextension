@@ -111,27 +111,25 @@ open class HashingContext : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_HashingContext }
 
-    static var _method_start_3940338335: GDExtensionMethodBindPtr! = nil
-    static var _method_update_680677267: GDExtensionMethodBindPtr! = nil
-    static var _method_finish_2115431945: GDExtensionMethodBindPtr! = nil
+    static var _method_start_3940338335: StringName! = nil
+    static var _method_update_680677267: StringName! = nil
+    static var _method_finish_2115431945: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_HashingContext == nil)
         __godot_name_HashingContext = StringName(from: "HashingContext")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_start_3940338335_name = StringName(from: "start")
-        self._method_start_3940338335 = self.interface.pointee.classdb_get_method_bind(__godot_name_HashingContext._native_ptr(), _method_start_3940338335_name._native_ptr(), 3940338335)
-        assert(HashingContext._method_start_3940338335 != nil)
-        let _method_update_680677267_name = StringName(from: "update")
-        self._method_update_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_HashingContext._native_ptr(), _method_update_680677267_name._native_ptr(), 680677267)
-        assert(HashingContext._method_update_680677267 != nil)
-        let _method_finish_2115431945_name = StringName(from: "finish")
-        self._method_finish_2115431945 = self.interface.pointee.classdb_get_method_bind(__godot_name_HashingContext._native_ptr(), _method_finish_2115431945_name._native_ptr(), 2115431945)
-        assert(HashingContext._method_finish_2115431945 != nil)
+        self._method_start_3940338335 = StringName(from: "start")
+        assert(self._method_start_3940338335 != nil)
+        self._method_update_680677267 = StringName(from: "update")
+        assert(self._method_update_680677267 != nil)
+        self._method_finish_2115431945 = StringName(from: "finish")
+        assert(self._method_finish_2115431945 != nil)
     }
 
     public func start(`type`: HashingContext.HashType) -> Error {
@@ -143,8 +141,13 @@ open class HashingContext : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_start_3940338335,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_start_3940338335._native_ptr(),
+                    3940338335)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -161,8 +164,13 @@ open class HashingContext : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_update_680677267,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_update_680677267._native_ptr(),
+                    680677267)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -177,8 +185,13 @@ open class HashingContext : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_finish_2115431945,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_finish_2115431945._native_ptr(),
+                    2115431945)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

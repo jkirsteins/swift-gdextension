@@ -17,35 +17,31 @@ open class Thread : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_Thread }
 
-    static var _method_start_2779832528: GDExtensionMethodBindPtr! = nil
-    static var _method_get_id_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_is_started_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_is_alive_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_wait_to_finish_1460262497: GDExtensionMethodBindPtr! = nil
+    static var _method_start_2779832528: StringName! = nil
+    static var _method_get_id_201670096: StringName! = nil
+    static var _method_is_started_36873697: StringName! = nil
+    static var _method_is_alive_36873697: StringName! = nil
+    static var _method_wait_to_finish_1460262497: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Thread == nil)
         __godot_name_Thread = StringName(from: "Thread")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_start_2779832528_name = StringName(from: "start")
-        self._method_start_2779832528 = self.interface.pointee.classdb_get_method_bind(__godot_name_Thread._native_ptr(), _method_start_2779832528_name._native_ptr(), 2779832528)
-        assert(Thread._method_start_2779832528 != nil)
-        let _method_get_id_201670096_name = StringName(from: "get_id")
-        self._method_get_id_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_Thread._native_ptr(), _method_get_id_201670096_name._native_ptr(), 201670096)
-        assert(Thread._method_get_id_201670096 != nil)
-        let _method_is_started_36873697_name = StringName(from: "is_started")
-        self._method_is_started_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Thread._native_ptr(), _method_is_started_36873697_name._native_ptr(), 36873697)
-        assert(Thread._method_is_started_36873697 != nil)
-        let _method_is_alive_36873697_name = StringName(from: "is_alive")
-        self._method_is_alive_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Thread._native_ptr(), _method_is_alive_36873697_name._native_ptr(), 36873697)
-        assert(Thread._method_is_alive_36873697 != nil)
-        let _method_wait_to_finish_1460262497_name = StringName(from: "wait_to_finish")
-        self._method_wait_to_finish_1460262497 = self.interface.pointee.classdb_get_method_bind(__godot_name_Thread._native_ptr(), _method_wait_to_finish_1460262497_name._native_ptr(), 1460262497)
-        assert(Thread._method_wait_to_finish_1460262497 != nil)
+        self._method_start_2779832528 = StringName(from: "start")
+        assert(self._method_start_2779832528 != nil)
+        self._method_get_id_201670096 = StringName(from: "get_id")
+        assert(self._method_get_id_201670096 != nil)
+        self._method_is_started_36873697 = StringName(from: "is_started")
+        assert(self._method_is_started_36873697 != nil)
+        self._method_is_alive_36873697 = StringName(from: "is_alive")
+        assert(self._method_is_alive_36873697 != nil)
+        self._method_wait_to_finish_1460262497 = StringName(from: "wait_to_finish")
+        assert(self._method_wait_to_finish_1460262497 != nil)
     }
 
     public func start(callable: Callable, priority: Thread.Priority) -> Error {
@@ -58,8 +54,13 @@ open class Thread : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_start_2779832528,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_start_2779832528._native_ptr(),
+                    2779832528)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -75,8 +76,13 @@ open class Thread : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_id_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_id_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -92,8 +98,13 @@ open class Thread : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_started_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_started_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -109,8 +120,13 @@ open class Thread : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_alive_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_alive_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -125,8 +141,13 @@ open class Thread : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_wait_to_finish_1460262497,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_wait_to_finish_1460262497._native_ptr(),
+                    1460262497)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

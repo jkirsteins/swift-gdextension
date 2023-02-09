@@ -21,219 +21,169 @@ open class GraphNode : Container {
 
     public override class var __godot_name: StringName { __godot_name_GraphNode }
 
-    static var _method_set_title_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_title_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_text_direction_119160795: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_direction_797257663: GDExtensionMethodBindPtr! = nil
-    static var _method_set_language_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_language_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_slot_902131739: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_slot_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_all_slots_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_slot_enabled_left_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_is_slot_enabled_left_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_set_slot_type_left_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_get_slot_type_left_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_set_slot_color_left_2878471219: GDExtensionMethodBindPtr! = nil
-    static var _method_get_slot_color_left_3457211756: GDExtensionMethodBindPtr! = nil
-    static var _method_set_slot_enabled_right_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_is_slot_enabled_right_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_set_slot_type_right_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_get_slot_type_right_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_set_slot_color_right_2878471219: GDExtensionMethodBindPtr! = nil
-    static var _method_get_slot_color_right_3457211756: GDExtensionMethodBindPtr! = nil
-    static var _method_is_slot_draw_stylebox_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_set_slot_draw_stylebox_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_set_position_offset_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_position_offset_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_comment_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_comment_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_resizable_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_resizable_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_draggable_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_draggable_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_set_selectable_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_selectable_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_set_selected_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_selected_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_input_count_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_input_height_3744713108: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_input_position_3114997196: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_input_type_3744713108: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_input_color_2624840992: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_input_slot_3744713108: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_output_count_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_output_height_3744713108: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_output_position_3114997196: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_output_type_3744713108: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_output_color_2624840992: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_output_slot_3744713108: GDExtensionMethodBindPtr! = nil
-    static var _method_set_show_close_button_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_close_button_visible_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_overlay_3144190109: GDExtensionMethodBindPtr! = nil
-    static var _method_get_overlay_2854257040: GDExtensionMethodBindPtr! = nil
+    static var _method_set_title_83702148: StringName! = nil
+    static var _method_get_title_201670096: StringName! = nil
+    static var _method_set_text_direction_119160795: StringName! = nil
+    static var _method_get_text_direction_797257663: StringName! = nil
+    static var _method_set_language_83702148: StringName! = nil
+    static var _method_get_language_201670096: StringName! = nil
+    static var _method_set_slot_902131739: StringName! = nil
+    static var _method_clear_slot_1286410249: StringName! = nil
+    static var _method_clear_all_slots_3218959716: StringName! = nil
+    static var _method_set_slot_enabled_left_300928843: StringName! = nil
+    static var _method_is_slot_enabled_left_1116898809: StringName! = nil
+    static var _method_set_slot_type_left_3937882851: StringName! = nil
+    static var _method_get_slot_type_left_923996154: StringName! = nil
+    static var _method_set_slot_color_left_2878471219: StringName! = nil
+    static var _method_get_slot_color_left_3457211756: StringName! = nil
+    static var _method_set_slot_enabled_right_300928843: StringName! = nil
+    static var _method_is_slot_enabled_right_1116898809: StringName! = nil
+    static var _method_set_slot_type_right_3937882851: StringName! = nil
+    static var _method_get_slot_type_right_923996154: StringName! = nil
+    static var _method_set_slot_color_right_2878471219: StringName! = nil
+    static var _method_get_slot_color_right_3457211756: StringName! = nil
+    static var _method_is_slot_draw_stylebox_1116898809: StringName! = nil
+    static var _method_set_slot_draw_stylebox_300928843: StringName! = nil
+    static var _method_set_position_offset_743155724: StringName! = nil
+    static var _method_get_position_offset_3341600327: StringName! = nil
+    static var _method_set_comment_2586408642: StringName! = nil
+    static var _method_is_comment_36873697: StringName! = nil
+    static var _method_set_resizable_2586408642: StringName! = nil
+    static var _method_is_resizable_36873697: StringName! = nil
+    static var _method_set_draggable_2586408642: StringName! = nil
+    static var _method_is_draggable_2240911060: StringName! = nil
+    static var _method_set_selectable_2586408642: StringName! = nil
+    static var _method_is_selectable_2240911060: StringName! = nil
+    static var _method_set_selected_2586408642: StringName! = nil
+    static var _method_is_selected_2240911060: StringName! = nil
+    static var _method_get_connection_input_count_2455072627: StringName! = nil
+    static var _method_get_connection_input_height_3744713108: StringName! = nil
+    static var _method_get_connection_input_position_3114997196: StringName! = nil
+    static var _method_get_connection_input_type_3744713108: StringName! = nil
+    static var _method_get_connection_input_color_2624840992: StringName! = nil
+    static var _method_get_connection_input_slot_3744713108: StringName! = nil
+    static var _method_get_connection_output_count_2455072627: StringName! = nil
+    static var _method_get_connection_output_height_3744713108: StringName! = nil
+    static var _method_get_connection_output_position_3114997196: StringName! = nil
+    static var _method_get_connection_output_type_3744713108: StringName! = nil
+    static var _method_get_connection_output_color_2624840992: StringName! = nil
+    static var _method_get_connection_output_slot_3744713108: StringName! = nil
+    static var _method_set_show_close_button_2586408642: StringName! = nil
+    static var _method_is_close_button_visible_36873697: StringName! = nil
+    static var _method_set_overlay_3144190109: StringName! = nil
+    static var _method_get_overlay_2854257040: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_GraphNode == nil)
         __godot_name_GraphNode = StringName(from: "GraphNode")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_title_83702148_name = StringName(from: "set_title")
-        self._method_set_title_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_title_83702148_name._native_ptr(), 83702148)
-        assert(GraphNode._method_set_title_83702148 != nil)
-        let _method_get_title_201670096_name = StringName(from: "get_title")
-        self._method_get_title_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_title_201670096_name._native_ptr(), 201670096)
-        assert(GraphNode._method_get_title_201670096 != nil)
-        let _method_set_text_direction_119160795_name = StringName(from: "set_text_direction")
-        self._method_set_text_direction_119160795 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_text_direction_119160795_name._native_ptr(), 119160795)
-        assert(GraphNode._method_set_text_direction_119160795 != nil)
-        let _method_get_text_direction_797257663_name = StringName(from: "get_text_direction")
-        self._method_get_text_direction_797257663 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_text_direction_797257663_name._native_ptr(), 797257663)
-        assert(GraphNode._method_get_text_direction_797257663 != nil)
-        let _method_set_language_83702148_name = StringName(from: "set_language")
-        self._method_set_language_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_language_83702148_name._native_ptr(), 83702148)
-        assert(GraphNode._method_set_language_83702148 != nil)
-        let _method_get_language_201670096_name = StringName(from: "get_language")
-        self._method_get_language_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_language_201670096_name._native_ptr(), 201670096)
-        assert(GraphNode._method_get_language_201670096 != nil)
-        let _method_set_slot_902131739_name = StringName(from: "set_slot")
-        self._method_set_slot_902131739 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_slot_902131739_name._native_ptr(), 902131739)
-        assert(GraphNode._method_set_slot_902131739 != nil)
-        let _method_clear_slot_1286410249_name = StringName(from: "clear_slot")
-        self._method_clear_slot_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_clear_slot_1286410249_name._native_ptr(), 1286410249)
-        assert(GraphNode._method_clear_slot_1286410249 != nil)
-        let _method_clear_all_slots_3218959716_name = StringName(from: "clear_all_slots")
-        self._method_clear_all_slots_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_clear_all_slots_3218959716_name._native_ptr(), 3218959716)
-        assert(GraphNode._method_clear_all_slots_3218959716 != nil)
-        let _method_set_slot_enabled_left_300928843_name = StringName(from: "set_slot_enabled_left")
-        self._method_set_slot_enabled_left_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_slot_enabled_left_300928843_name._native_ptr(), 300928843)
-        assert(GraphNode._method_set_slot_enabled_left_300928843 != nil)
-        let _method_is_slot_enabled_left_1116898809_name = StringName(from: "is_slot_enabled_left")
-        self._method_is_slot_enabled_left_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_is_slot_enabled_left_1116898809_name._native_ptr(), 1116898809)
-        assert(GraphNode._method_is_slot_enabled_left_1116898809 != nil)
-        let _method_set_slot_type_left_3937882851_name = StringName(from: "set_slot_type_left")
-        self._method_set_slot_type_left_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_slot_type_left_3937882851_name._native_ptr(), 3937882851)
-        assert(GraphNode._method_set_slot_type_left_3937882851 != nil)
-        let _method_get_slot_type_left_923996154_name = StringName(from: "get_slot_type_left")
-        self._method_get_slot_type_left_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_slot_type_left_923996154_name._native_ptr(), 923996154)
-        assert(GraphNode._method_get_slot_type_left_923996154 != nil)
-        let _method_set_slot_color_left_2878471219_name = StringName(from: "set_slot_color_left")
-        self._method_set_slot_color_left_2878471219 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_slot_color_left_2878471219_name._native_ptr(), 2878471219)
-        assert(GraphNode._method_set_slot_color_left_2878471219 != nil)
-        let _method_get_slot_color_left_3457211756_name = StringName(from: "get_slot_color_left")
-        self._method_get_slot_color_left_3457211756 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_slot_color_left_3457211756_name._native_ptr(), 3457211756)
-        assert(GraphNode._method_get_slot_color_left_3457211756 != nil)
-        let _method_set_slot_enabled_right_300928843_name = StringName(from: "set_slot_enabled_right")
-        self._method_set_slot_enabled_right_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_slot_enabled_right_300928843_name._native_ptr(), 300928843)
-        assert(GraphNode._method_set_slot_enabled_right_300928843 != nil)
-        let _method_is_slot_enabled_right_1116898809_name = StringName(from: "is_slot_enabled_right")
-        self._method_is_slot_enabled_right_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_is_slot_enabled_right_1116898809_name._native_ptr(), 1116898809)
-        assert(GraphNode._method_is_slot_enabled_right_1116898809 != nil)
-        let _method_set_slot_type_right_3937882851_name = StringName(from: "set_slot_type_right")
-        self._method_set_slot_type_right_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_slot_type_right_3937882851_name._native_ptr(), 3937882851)
-        assert(GraphNode._method_set_slot_type_right_3937882851 != nil)
-        let _method_get_slot_type_right_923996154_name = StringName(from: "get_slot_type_right")
-        self._method_get_slot_type_right_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_slot_type_right_923996154_name._native_ptr(), 923996154)
-        assert(GraphNode._method_get_slot_type_right_923996154 != nil)
-        let _method_set_slot_color_right_2878471219_name = StringName(from: "set_slot_color_right")
-        self._method_set_slot_color_right_2878471219 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_slot_color_right_2878471219_name._native_ptr(), 2878471219)
-        assert(GraphNode._method_set_slot_color_right_2878471219 != nil)
-        let _method_get_slot_color_right_3457211756_name = StringName(from: "get_slot_color_right")
-        self._method_get_slot_color_right_3457211756 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_slot_color_right_3457211756_name._native_ptr(), 3457211756)
-        assert(GraphNode._method_get_slot_color_right_3457211756 != nil)
-        let _method_is_slot_draw_stylebox_1116898809_name = StringName(from: "is_slot_draw_stylebox")
-        self._method_is_slot_draw_stylebox_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_is_slot_draw_stylebox_1116898809_name._native_ptr(), 1116898809)
-        assert(GraphNode._method_is_slot_draw_stylebox_1116898809 != nil)
-        let _method_set_slot_draw_stylebox_300928843_name = StringName(from: "set_slot_draw_stylebox")
-        self._method_set_slot_draw_stylebox_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_slot_draw_stylebox_300928843_name._native_ptr(), 300928843)
-        assert(GraphNode._method_set_slot_draw_stylebox_300928843 != nil)
-        let _method_set_position_offset_743155724_name = StringName(from: "set_position_offset")
-        self._method_set_position_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_position_offset_743155724_name._native_ptr(), 743155724)
-        assert(GraphNode._method_set_position_offset_743155724 != nil)
-        let _method_get_position_offset_3341600327_name = StringName(from: "get_position_offset")
-        self._method_get_position_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_position_offset_3341600327_name._native_ptr(), 3341600327)
-        assert(GraphNode._method_get_position_offset_3341600327 != nil)
-        let _method_set_comment_2586408642_name = StringName(from: "set_comment")
-        self._method_set_comment_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_comment_2586408642_name._native_ptr(), 2586408642)
-        assert(GraphNode._method_set_comment_2586408642 != nil)
-        let _method_is_comment_36873697_name = StringName(from: "is_comment")
-        self._method_is_comment_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_is_comment_36873697_name._native_ptr(), 36873697)
-        assert(GraphNode._method_is_comment_36873697 != nil)
-        let _method_set_resizable_2586408642_name = StringName(from: "set_resizable")
-        self._method_set_resizable_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_resizable_2586408642_name._native_ptr(), 2586408642)
-        assert(GraphNode._method_set_resizable_2586408642 != nil)
-        let _method_is_resizable_36873697_name = StringName(from: "is_resizable")
-        self._method_is_resizable_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_is_resizable_36873697_name._native_ptr(), 36873697)
-        assert(GraphNode._method_is_resizable_36873697 != nil)
-        let _method_set_draggable_2586408642_name = StringName(from: "set_draggable")
-        self._method_set_draggable_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_draggable_2586408642_name._native_ptr(), 2586408642)
-        assert(GraphNode._method_set_draggable_2586408642 != nil)
-        let _method_is_draggable_2240911060_name = StringName(from: "is_draggable")
-        self._method_is_draggable_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_is_draggable_2240911060_name._native_ptr(), 2240911060)
-        assert(GraphNode._method_is_draggable_2240911060 != nil)
-        let _method_set_selectable_2586408642_name = StringName(from: "set_selectable")
-        self._method_set_selectable_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_selectable_2586408642_name._native_ptr(), 2586408642)
-        assert(GraphNode._method_set_selectable_2586408642 != nil)
-        let _method_is_selectable_2240911060_name = StringName(from: "is_selectable")
-        self._method_is_selectable_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_is_selectable_2240911060_name._native_ptr(), 2240911060)
-        assert(GraphNode._method_is_selectable_2240911060 != nil)
-        let _method_set_selected_2586408642_name = StringName(from: "set_selected")
-        self._method_set_selected_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_selected_2586408642_name._native_ptr(), 2586408642)
-        assert(GraphNode._method_set_selected_2586408642 != nil)
-        let _method_is_selected_2240911060_name = StringName(from: "is_selected")
-        self._method_is_selected_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_is_selected_2240911060_name._native_ptr(), 2240911060)
-        assert(GraphNode._method_is_selected_2240911060 != nil)
-        let _method_get_connection_input_count_2455072627_name = StringName(from: "get_connection_input_count")
-        self._method_get_connection_input_count_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_connection_input_count_2455072627_name._native_ptr(), 2455072627)
-        assert(GraphNode._method_get_connection_input_count_2455072627 != nil)
-        let _method_get_connection_input_height_3744713108_name = StringName(from: "get_connection_input_height")
-        self._method_get_connection_input_height_3744713108 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_connection_input_height_3744713108_name._native_ptr(), 3744713108)
-        assert(GraphNode._method_get_connection_input_height_3744713108 != nil)
-        let _method_get_connection_input_position_3114997196_name = StringName(from: "get_connection_input_position")
-        self._method_get_connection_input_position_3114997196 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_connection_input_position_3114997196_name._native_ptr(), 3114997196)
-        assert(GraphNode._method_get_connection_input_position_3114997196 != nil)
-        let _method_get_connection_input_type_3744713108_name = StringName(from: "get_connection_input_type")
-        self._method_get_connection_input_type_3744713108 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_connection_input_type_3744713108_name._native_ptr(), 3744713108)
-        assert(GraphNode._method_get_connection_input_type_3744713108 != nil)
-        let _method_get_connection_input_color_2624840992_name = StringName(from: "get_connection_input_color")
-        self._method_get_connection_input_color_2624840992 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_connection_input_color_2624840992_name._native_ptr(), 2624840992)
-        assert(GraphNode._method_get_connection_input_color_2624840992 != nil)
-        let _method_get_connection_input_slot_3744713108_name = StringName(from: "get_connection_input_slot")
-        self._method_get_connection_input_slot_3744713108 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_connection_input_slot_3744713108_name._native_ptr(), 3744713108)
-        assert(GraphNode._method_get_connection_input_slot_3744713108 != nil)
-        let _method_get_connection_output_count_2455072627_name = StringName(from: "get_connection_output_count")
-        self._method_get_connection_output_count_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_connection_output_count_2455072627_name._native_ptr(), 2455072627)
-        assert(GraphNode._method_get_connection_output_count_2455072627 != nil)
-        let _method_get_connection_output_height_3744713108_name = StringName(from: "get_connection_output_height")
-        self._method_get_connection_output_height_3744713108 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_connection_output_height_3744713108_name._native_ptr(), 3744713108)
-        assert(GraphNode._method_get_connection_output_height_3744713108 != nil)
-        let _method_get_connection_output_position_3114997196_name = StringName(from: "get_connection_output_position")
-        self._method_get_connection_output_position_3114997196 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_connection_output_position_3114997196_name._native_ptr(), 3114997196)
-        assert(GraphNode._method_get_connection_output_position_3114997196 != nil)
-        let _method_get_connection_output_type_3744713108_name = StringName(from: "get_connection_output_type")
-        self._method_get_connection_output_type_3744713108 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_connection_output_type_3744713108_name._native_ptr(), 3744713108)
-        assert(GraphNode._method_get_connection_output_type_3744713108 != nil)
-        let _method_get_connection_output_color_2624840992_name = StringName(from: "get_connection_output_color")
-        self._method_get_connection_output_color_2624840992 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_connection_output_color_2624840992_name._native_ptr(), 2624840992)
-        assert(GraphNode._method_get_connection_output_color_2624840992 != nil)
-        let _method_get_connection_output_slot_3744713108_name = StringName(from: "get_connection_output_slot")
-        self._method_get_connection_output_slot_3744713108 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_connection_output_slot_3744713108_name._native_ptr(), 3744713108)
-        assert(GraphNode._method_get_connection_output_slot_3744713108 != nil)
-        let _method_set_show_close_button_2586408642_name = StringName(from: "set_show_close_button")
-        self._method_set_show_close_button_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_show_close_button_2586408642_name._native_ptr(), 2586408642)
-        assert(GraphNode._method_set_show_close_button_2586408642 != nil)
-        let _method_is_close_button_visible_36873697_name = StringName(from: "is_close_button_visible")
-        self._method_is_close_button_visible_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_is_close_button_visible_36873697_name._native_ptr(), 36873697)
-        assert(GraphNode._method_is_close_button_visible_36873697 != nil)
-        let _method_set_overlay_3144190109_name = StringName(from: "set_overlay")
-        self._method_set_overlay_3144190109 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_set_overlay_3144190109_name._native_ptr(), 3144190109)
-        assert(GraphNode._method_set_overlay_3144190109 != nil)
-        let _method_get_overlay_2854257040_name = StringName(from: "get_overlay")
-        self._method_get_overlay_2854257040 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphNode._native_ptr(), _method_get_overlay_2854257040_name._native_ptr(), 2854257040)
-        assert(GraphNode._method_get_overlay_2854257040 != nil)
+        self._method_set_title_83702148 = StringName(from: "set_title")
+        assert(self._method_set_title_83702148 != nil)
+        self._method_get_title_201670096 = StringName(from: "get_title")
+        assert(self._method_get_title_201670096 != nil)
+        self._method_set_text_direction_119160795 = StringName(from: "set_text_direction")
+        assert(self._method_set_text_direction_119160795 != nil)
+        self._method_get_text_direction_797257663 = StringName(from: "get_text_direction")
+        assert(self._method_get_text_direction_797257663 != nil)
+        self._method_set_language_83702148 = StringName(from: "set_language")
+        assert(self._method_set_language_83702148 != nil)
+        self._method_get_language_201670096 = StringName(from: "get_language")
+        assert(self._method_get_language_201670096 != nil)
+        self._method_set_slot_902131739 = StringName(from: "set_slot")
+        assert(self._method_set_slot_902131739 != nil)
+        self._method_clear_slot_1286410249 = StringName(from: "clear_slot")
+        assert(self._method_clear_slot_1286410249 != nil)
+        self._method_clear_all_slots_3218959716 = StringName(from: "clear_all_slots")
+        assert(self._method_clear_all_slots_3218959716 != nil)
+        self._method_set_slot_enabled_left_300928843 = StringName(from: "set_slot_enabled_left")
+        assert(self._method_set_slot_enabled_left_300928843 != nil)
+        self._method_is_slot_enabled_left_1116898809 = StringName(from: "is_slot_enabled_left")
+        assert(self._method_is_slot_enabled_left_1116898809 != nil)
+        self._method_set_slot_type_left_3937882851 = StringName(from: "set_slot_type_left")
+        assert(self._method_set_slot_type_left_3937882851 != nil)
+        self._method_get_slot_type_left_923996154 = StringName(from: "get_slot_type_left")
+        assert(self._method_get_slot_type_left_923996154 != nil)
+        self._method_set_slot_color_left_2878471219 = StringName(from: "set_slot_color_left")
+        assert(self._method_set_slot_color_left_2878471219 != nil)
+        self._method_get_slot_color_left_3457211756 = StringName(from: "get_slot_color_left")
+        assert(self._method_get_slot_color_left_3457211756 != nil)
+        self._method_set_slot_enabled_right_300928843 = StringName(from: "set_slot_enabled_right")
+        assert(self._method_set_slot_enabled_right_300928843 != nil)
+        self._method_is_slot_enabled_right_1116898809 = StringName(from: "is_slot_enabled_right")
+        assert(self._method_is_slot_enabled_right_1116898809 != nil)
+        self._method_set_slot_type_right_3937882851 = StringName(from: "set_slot_type_right")
+        assert(self._method_set_slot_type_right_3937882851 != nil)
+        self._method_get_slot_type_right_923996154 = StringName(from: "get_slot_type_right")
+        assert(self._method_get_slot_type_right_923996154 != nil)
+        self._method_set_slot_color_right_2878471219 = StringName(from: "set_slot_color_right")
+        assert(self._method_set_slot_color_right_2878471219 != nil)
+        self._method_get_slot_color_right_3457211756 = StringName(from: "get_slot_color_right")
+        assert(self._method_get_slot_color_right_3457211756 != nil)
+        self._method_is_slot_draw_stylebox_1116898809 = StringName(from: "is_slot_draw_stylebox")
+        assert(self._method_is_slot_draw_stylebox_1116898809 != nil)
+        self._method_set_slot_draw_stylebox_300928843 = StringName(from: "set_slot_draw_stylebox")
+        assert(self._method_set_slot_draw_stylebox_300928843 != nil)
+        self._method_set_position_offset_743155724 = StringName(from: "set_position_offset")
+        assert(self._method_set_position_offset_743155724 != nil)
+        self._method_get_position_offset_3341600327 = StringName(from: "get_position_offset")
+        assert(self._method_get_position_offset_3341600327 != nil)
+        self._method_set_comment_2586408642 = StringName(from: "set_comment")
+        assert(self._method_set_comment_2586408642 != nil)
+        self._method_is_comment_36873697 = StringName(from: "is_comment")
+        assert(self._method_is_comment_36873697 != nil)
+        self._method_set_resizable_2586408642 = StringName(from: "set_resizable")
+        assert(self._method_set_resizable_2586408642 != nil)
+        self._method_is_resizable_36873697 = StringName(from: "is_resizable")
+        assert(self._method_is_resizable_36873697 != nil)
+        self._method_set_draggable_2586408642 = StringName(from: "set_draggable")
+        assert(self._method_set_draggable_2586408642 != nil)
+        self._method_is_draggable_2240911060 = StringName(from: "is_draggable")
+        assert(self._method_is_draggable_2240911060 != nil)
+        self._method_set_selectable_2586408642 = StringName(from: "set_selectable")
+        assert(self._method_set_selectable_2586408642 != nil)
+        self._method_is_selectable_2240911060 = StringName(from: "is_selectable")
+        assert(self._method_is_selectable_2240911060 != nil)
+        self._method_set_selected_2586408642 = StringName(from: "set_selected")
+        assert(self._method_set_selected_2586408642 != nil)
+        self._method_is_selected_2240911060 = StringName(from: "is_selected")
+        assert(self._method_is_selected_2240911060 != nil)
+        self._method_get_connection_input_count_2455072627 = StringName(from: "get_connection_input_count")
+        assert(self._method_get_connection_input_count_2455072627 != nil)
+        self._method_get_connection_input_height_3744713108 = StringName(from: "get_connection_input_height")
+        assert(self._method_get_connection_input_height_3744713108 != nil)
+        self._method_get_connection_input_position_3114997196 = StringName(from: "get_connection_input_position")
+        assert(self._method_get_connection_input_position_3114997196 != nil)
+        self._method_get_connection_input_type_3744713108 = StringName(from: "get_connection_input_type")
+        assert(self._method_get_connection_input_type_3744713108 != nil)
+        self._method_get_connection_input_color_2624840992 = StringName(from: "get_connection_input_color")
+        assert(self._method_get_connection_input_color_2624840992 != nil)
+        self._method_get_connection_input_slot_3744713108 = StringName(from: "get_connection_input_slot")
+        assert(self._method_get_connection_input_slot_3744713108 != nil)
+        self._method_get_connection_output_count_2455072627 = StringName(from: "get_connection_output_count")
+        assert(self._method_get_connection_output_count_2455072627 != nil)
+        self._method_get_connection_output_height_3744713108 = StringName(from: "get_connection_output_height")
+        assert(self._method_get_connection_output_height_3744713108 != nil)
+        self._method_get_connection_output_position_3114997196 = StringName(from: "get_connection_output_position")
+        assert(self._method_get_connection_output_position_3114997196 != nil)
+        self._method_get_connection_output_type_3744713108 = StringName(from: "get_connection_output_type")
+        assert(self._method_get_connection_output_type_3744713108 != nil)
+        self._method_get_connection_output_color_2624840992 = StringName(from: "get_connection_output_color")
+        assert(self._method_get_connection_output_color_2624840992 != nil)
+        self._method_get_connection_output_slot_3744713108 = StringName(from: "get_connection_output_slot")
+        assert(self._method_get_connection_output_slot_3744713108 != nil)
+        self._method_set_show_close_button_2586408642 = StringName(from: "set_show_close_button")
+        assert(self._method_set_show_close_button_2586408642 != nil)
+        self._method_is_close_button_visible_36873697 = StringName(from: "is_close_button_visible")
+        assert(self._method_is_close_button_visible_36873697 != nil)
+        self._method_set_overlay_3144190109 = StringName(from: "set_overlay")
+        assert(self._method_set_overlay_3144190109 != nil)
+        self._method_get_overlay_2854257040 = StringName(from: "get_overlay")
+        assert(self._method_get_overlay_2854257040 != nil)
     }
 
     public func set_title(title: godot.String)  {
@@ -244,8 +194,13 @@ open class GraphNode : Container {
                 .init(title_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_title_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_title_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -259,8 +214,13 @@ open class GraphNode : Container {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_title_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_title_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -275,8 +235,13 @@ open class GraphNode : Container {
                 .init(direction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_text_direction_119160795,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_text_direction_119160795._native_ptr(),
+                    119160795)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -291,8 +256,13 @@ open class GraphNode : Container {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_direction_797257663,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_direction_797257663._native_ptr(),
+                    797257663)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -307,8 +277,13 @@ open class GraphNode : Container {
                 .init(language_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_language_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_language_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -322,8 +297,13 @@ open class GraphNode : Container {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_language_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_language_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -347,8 +327,13 @@ open class GraphNode : Container {
                 .init(slot_index_native), .init(enable_left_port_native), .init(type_left_native), .init(color_left_native), .init(enable_right_port_native), .init(type_right_native), .init(color_right_native), .init(custom_icon_left_native), .init(custom_icon_right_native), .init(draw_stylebox_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_slot_902131739,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_slot_902131739._native_ptr(),
+                    902131739)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -368,8 +353,13 @@ open class GraphNode : Container {
                 .init(slot_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_slot_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_slot_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -383,8 +373,13 @@ open class GraphNode : Container {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_all_slots_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_all_slots_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -399,8 +394,13 @@ open class GraphNode : Container {
                 .init(slot_index_native), .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_slot_enabled_left_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_slot_enabled_left_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -418,8 +418,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_slot_enabled_left_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_slot_enabled_left_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -436,8 +441,13 @@ open class GraphNode : Container {
                 .init(slot_index_native), .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_slot_type_left_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_slot_type_left_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -455,8 +465,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_slot_type_left_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_slot_type_left_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -473,8 +488,13 @@ open class GraphNode : Container {
                 .init(slot_index_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_slot_color_left_2878471219,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_slot_color_left_2878471219._native_ptr(),
+                    2878471219)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -490,8 +510,13 @@ open class GraphNode : Container {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_slot_color_left_3457211756,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_slot_color_left_3457211756._native_ptr(),
+                    3457211756)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -508,8 +533,13 @@ open class GraphNode : Container {
                 .init(slot_index_native), .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_slot_enabled_right_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_slot_enabled_right_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -527,8 +557,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_slot_enabled_right_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_slot_enabled_right_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -545,8 +580,13 @@ open class GraphNode : Container {
                 .init(slot_index_native), .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_slot_type_right_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_slot_type_right_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -564,8 +604,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_slot_type_right_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_slot_type_right_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -582,8 +627,13 @@ open class GraphNode : Container {
                 .init(slot_index_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_slot_color_right_2878471219,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_slot_color_right_2878471219._native_ptr(),
+                    2878471219)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -599,8 +649,13 @@ open class GraphNode : Container {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_slot_color_right_3457211756,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_slot_color_right_3457211756._native_ptr(),
+                    3457211756)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -618,8 +673,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_slot_draw_stylebox_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_slot_draw_stylebox_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -636,8 +696,13 @@ open class GraphNode : Container {
                 .init(slot_index_native), .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_slot_draw_stylebox_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_slot_draw_stylebox_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -653,8 +718,13 @@ open class GraphNode : Container {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_position_offset_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_position_offset_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -668,8 +738,13 @@ open class GraphNode : Container {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_position_offset_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_position_offset_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -684,8 +759,13 @@ open class GraphNode : Container {
                 .init(comment_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_comment_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_comment_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -701,8 +781,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_comment_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_comment_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -717,8 +802,13 @@ open class GraphNode : Container {
                 .init(resizable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_resizable_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_resizable_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -734,8 +824,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_resizable_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_resizable_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -750,8 +845,13 @@ open class GraphNode : Container {
                 .init(draggable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_draggable_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_draggable_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -767,8 +867,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_draggable_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_draggable_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -783,8 +888,13 @@ open class GraphNode : Container {
                 .init(selectable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_selectable_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_selectable_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -800,8 +910,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_selectable_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_selectable_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -816,8 +931,13 @@ open class GraphNode : Container {
                 .init(selected_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_selected_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_selected_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -833,8 +953,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_selected_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_selected_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -850,8 +975,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_input_count_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_input_count_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -868,8 +998,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_input_height_3744713108,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_input_height_3744713108._native_ptr(),
+                    3744713108)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -886,8 +1021,13 @@ open class GraphNode : Container {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_input_position_3114997196,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_input_position_3114997196._native_ptr(),
+                    3114997196)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -905,8 +1045,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_input_type_3744713108,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_input_type_3744713108._native_ptr(),
+                    3744713108)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -923,8 +1068,13 @@ open class GraphNode : Container {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_input_color_2624840992,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_input_color_2624840992._native_ptr(),
+                    2624840992)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -942,8 +1092,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_input_slot_3744713108,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_input_slot_3744713108._native_ptr(),
+                    3744713108)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -960,8 +1115,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_output_count_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_output_count_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -978,8 +1138,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_output_height_3744713108,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_output_height_3744713108._native_ptr(),
+                    3744713108)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -996,8 +1161,13 @@ open class GraphNode : Container {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_output_position_3114997196,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_output_position_3114997196._native_ptr(),
+                    3114997196)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1015,8 +1185,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_output_type_3744713108,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_output_type_3744713108._native_ptr(),
+                    3744713108)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1033,8 +1208,13 @@ open class GraphNode : Container {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_output_color_2624840992,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_output_color_2624840992._native_ptr(),
+                    2624840992)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1052,8 +1232,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_output_slot_3744713108,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_output_slot_3744713108._native_ptr(),
+                    3744713108)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1069,8 +1254,13 @@ open class GraphNode : Container {
                 .init(show_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_show_close_button_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_show_close_button_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1086,8 +1276,13 @@ open class GraphNode : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_close_button_visible_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_close_button_visible_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1102,8 +1297,13 @@ open class GraphNode : Container {
                 .init(overlay_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_overlay_3144190109,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_overlay_3144190109._native_ptr(),
+                    3144190109)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1118,8 +1318,13 @@ open class GraphNode : Container {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_overlay_2854257040,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_overlay_2854257040._native_ptr(),
+                    2854257040)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

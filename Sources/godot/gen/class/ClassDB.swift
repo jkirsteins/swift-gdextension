@@ -11,107 +11,85 @@ open class ClassDB : Object {
 
     public override class var __godot_name: StringName { __godot_name_ClassDB }
 
-    static var _method_get_class_list_1139954409: GDExtensionMethodBindPtr! = nil
-    static var _method_get_inheriters_from_class_1761182771: GDExtensionMethodBindPtr! = nil
-    static var _method_get_parent_class_1965194235: GDExtensionMethodBindPtr! = nil
-    static var _method_class_exists_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_is_parent_class_471820014: GDExtensionMethodBindPtr! = nil
-    static var _method_can_instantiate_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_instantiate_2760726917: GDExtensionMethodBindPtr! = nil
-    static var _method_class_has_signal_471820014: GDExtensionMethodBindPtr! = nil
-    static var _method_class_get_signal_3061114238: GDExtensionMethodBindPtr! = nil
-    static var _method_class_get_signal_list_3504980660: GDExtensionMethodBindPtr! = nil
-    static var _method_class_get_property_list_3504980660: GDExtensionMethodBindPtr! = nil
-    static var _method_class_get_property_2498641674: GDExtensionMethodBindPtr! = nil
-    static var _method_class_set_property_1690314931: GDExtensionMethodBindPtr! = nil
-    static var _method_class_has_method_3860701026: GDExtensionMethodBindPtr! = nil
-    static var _method_class_get_method_list_3504980660: GDExtensionMethodBindPtr! = nil
-    static var _method_class_get_integer_constant_list_3031669221: GDExtensionMethodBindPtr! = nil
-    static var _method_class_has_integer_constant_471820014: GDExtensionMethodBindPtr! = nil
-    static var _method_class_get_integer_constant_2419549490: GDExtensionMethodBindPtr! = nil
-    static var _method_class_has_enum_3860701026: GDExtensionMethodBindPtr! = nil
-    static var _method_class_get_enum_list_3031669221: GDExtensionMethodBindPtr! = nil
-    static var _method_class_get_enum_constants_661528303: GDExtensionMethodBindPtr! = nil
-    static var _method_class_get_integer_constant_enum_2457504236: GDExtensionMethodBindPtr! = nil
-    static var _method_is_class_enabled_2619796661: GDExtensionMethodBindPtr! = nil
+    static var _method_get_class_list_1139954409: StringName! = nil
+    static var _method_get_inheriters_from_class_1761182771: StringName! = nil
+    static var _method_get_parent_class_1965194235: StringName! = nil
+    static var _method_class_exists_2619796661: StringName! = nil
+    static var _method_is_parent_class_471820014: StringName! = nil
+    static var _method_can_instantiate_2619796661: StringName! = nil
+    static var _method_instantiate_2760726917: StringName! = nil
+    static var _method_class_has_signal_471820014: StringName! = nil
+    static var _method_class_get_signal_3061114238: StringName! = nil
+    static var _method_class_get_signal_list_3504980660: StringName! = nil
+    static var _method_class_get_property_list_3504980660: StringName! = nil
+    static var _method_class_get_property_2498641674: StringName! = nil
+    static var _method_class_set_property_1690314931: StringName! = nil
+    static var _method_class_has_method_3860701026: StringName! = nil
+    static var _method_class_get_method_list_3504980660: StringName! = nil
+    static var _method_class_get_integer_constant_list_3031669221: StringName! = nil
+    static var _method_class_has_integer_constant_471820014: StringName! = nil
+    static var _method_class_get_integer_constant_2419549490: StringName! = nil
+    static var _method_class_has_enum_3860701026: StringName! = nil
+    static var _method_class_get_enum_list_3031669221: StringName! = nil
+    static var _method_class_get_enum_constants_661528303: StringName! = nil
+    static var _method_class_get_integer_constant_enum_2457504236: StringName! = nil
+    static var _method_is_class_enabled_2619796661: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ClassDB == nil)
         __godot_name_ClassDB = StringName(from: "ClassDB")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_class_list_1139954409_name = StringName(from: "get_class_list")
-        self._method_get_class_list_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_get_class_list_1139954409_name._native_ptr(), 1139954409)
-        assert(ClassDB._method_get_class_list_1139954409 != nil)
-        let _method_get_inheriters_from_class_1761182771_name = StringName(from: "get_inheriters_from_class")
-        self._method_get_inheriters_from_class_1761182771 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_get_inheriters_from_class_1761182771_name._native_ptr(), 1761182771)
-        assert(ClassDB._method_get_inheriters_from_class_1761182771 != nil)
-        let _method_get_parent_class_1965194235_name = StringName(from: "get_parent_class")
-        self._method_get_parent_class_1965194235 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_get_parent_class_1965194235_name._native_ptr(), 1965194235)
-        assert(ClassDB._method_get_parent_class_1965194235 != nil)
-        let _method_class_exists_2619796661_name = StringName(from: "class_exists")
-        self._method_class_exists_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_class_exists_2619796661_name._native_ptr(), 2619796661)
-        assert(ClassDB._method_class_exists_2619796661 != nil)
-        let _method_is_parent_class_471820014_name = StringName(from: "is_parent_class")
-        self._method_is_parent_class_471820014 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_is_parent_class_471820014_name._native_ptr(), 471820014)
-        assert(ClassDB._method_is_parent_class_471820014 != nil)
-        let _method_can_instantiate_2619796661_name = StringName(from: "can_instantiate")
-        self._method_can_instantiate_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_can_instantiate_2619796661_name._native_ptr(), 2619796661)
-        assert(ClassDB._method_can_instantiate_2619796661 != nil)
-        let _method_instantiate_2760726917_name = StringName(from: "instantiate")
-        self._method_instantiate_2760726917 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_instantiate_2760726917_name._native_ptr(), 2760726917)
-        assert(ClassDB._method_instantiate_2760726917 != nil)
-        let _method_class_has_signal_471820014_name = StringName(from: "class_has_signal")
-        self._method_class_has_signal_471820014 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_class_has_signal_471820014_name._native_ptr(), 471820014)
-        assert(ClassDB._method_class_has_signal_471820014 != nil)
-        let _method_class_get_signal_3061114238_name = StringName(from: "class_get_signal")
-        self._method_class_get_signal_3061114238 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_class_get_signal_3061114238_name._native_ptr(), 3061114238)
-        assert(ClassDB._method_class_get_signal_3061114238 != nil)
-        let _method_class_get_signal_list_3504980660_name = StringName(from: "class_get_signal_list")
-        self._method_class_get_signal_list_3504980660 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_class_get_signal_list_3504980660_name._native_ptr(), 3504980660)
-        assert(ClassDB._method_class_get_signal_list_3504980660 != nil)
-        let _method_class_get_property_list_3504980660_name = StringName(from: "class_get_property_list")
-        self._method_class_get_property_list_3504980660 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_class_get_property_list_3504980660_name._native_ptr(), 3504980660)
-        assert(ClassDB._method_class_get_property_list_3504980660 != nil)
-        let _method_class_get_property_2498641674_name = StringName(from: "class_get_property")
-        self._method_class_get_property_2498641674 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_class_get_property_2498641674_name._native_ptr(), 2498641674)
-        assert(ClassDB._method_class_get_property_2498641674 != nil)
-        let _method_class_set_property_1690314931_name = StringName(from: "class_set_property")
-        self._method_class_set_property_1690314931 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_class_set_property_1690314931_name._native_ptr(), 1690314931)
-        assert(ClassDB._method_class_set_property_1690314931 != nil)
-        let _method_class_has_method_3860701026_name = StringName(from: "class_has_method")
-        self._method_class_has_method_3860701026 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_class_has_method_3860701026_name._native_ptr(), 3860701026)
-        assert(ClassDB._method_class_has_method_3860701026 != nil)
-        let _method_class_get_method_list_3504980660_name = StringName(from: "class_get_method_list")
-        self._method_class_get_method_list_3504980660 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_class_get_method_list_3504980660_name._native_ptr(), 3504980660)
-        assert(ClassDB._method_class_get_method_list_3504980660 != nil)
-        let _method_class_get_integer_constant_list_3031669221_name = StringName(from: "class_get_integer_constant_list")
-        self._method_class_get_integer_constant_list_3031669221 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_class_get_integer_constant_list_3031669221_name._native_ptr(), 3031669221)
-        assert(ClassDB._method_class_get_integer_constant_list_3031669221 != nil)
-        let _method_class_has_integer_constant_471820014_name = StringName(from: "class_has_integer_constant")
-        self._method_class_has_integer_constant_471820014 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_class_has_integer_constant_471820014_name._native_ptr(), 471820014)
-        assert(ClassDB._method_class_has_integer_constant_471820014 != nil)
-        let _method_class_get_integer_constant_2419549490_name = StringName(from: "class_get_integer_constant")
-        self._method_class_get_integer_constant_2419549490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_class_get_integer_constant_2419549490_name._native_ptr(), 2419549490)
-        assert(ClassDB._method_class_get_integer_constant_2419549490 != nil)
-        let _method_class_has_enum_3860701026_name = StringName(from: "class_has_enum")
-        self._method_class_has_enum_3860701026 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_class_has_enum_3860701026_name._native_ptr(), 3860701026)
-        assert(ClassDB._method_class_has_enum_3860701026 != nil)
-        let _method_class_get_enum_list_3031669221_name = StringName(from: "class_get_enum_list")
-        self._method_class_get_enum_list_3031669221 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_class_get_enum_list_3031669221_name._native_ptr(), 3031669221)
-        assert(ClassDB._method_class_get_enum_list_3031669221 != nil)
-        let _method_class_get_enum_constants_661528303_name = StringName(from: "class_get_enum_constants")
-        self._method_class_get_enum_constants_661528303 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_class_get_enum_constants_661528303_name._native_ptr(), 661528303)
-        assert(ClassDB._method_class_get_enum_constants_661528303 != nil)
-        let _method_class_get_integer_constant_enum_2457504236_name = StringName(from: "class_get_integer_constant_enum")
-        self._method_class_get_integer_constant_enum_2457504236 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_class_get_integer_constant_enum_2457504236_name._native_ptr(), 2457504236)
-        assert(ClassDB._method_class_get_integer_constant_enum_2457504236 != nil)
-        let _method_is_class_enabled_2619796661_name = StringName(from: "is_class_enabled")
-        self._method_is_class_enabled_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_ClassDB._native_ptr(), _method_is_class_enabled_2619796661_name._native_ptr(), 2619796661)
-        assert(ClassDB._method_is_class_enabled_2619796661 != nil)
+        self._method_get_class_list_1139954409 = StringName(from: "get_class_list")
+        assert(self._method_get_class_list_1139954409 != nil)
+        self._method_get_inheriters_from_class_1761182771 = StringName(from: "get_inheriters_from_class")
+        assert(self._method_get_inheriters_from_class_1761182771 != nil)
+        self._method_get_parent_class_1965194235 = StringName(from: "get_parent_class")
+        assert(self._method_get_parent_class_1965194235 != nil)
+        self._method_class_exists_2619796661 = StringName(from: "class_exists")
+        assert(self._method_class_exists_2619796661 != nil)
+        self._method_is_parent_class_471820014 = StringName(from: "is_parent_class")
+        assert(self._method_is_parent_class_471820014 != nil)
+        self._method_can_instantiate_2619796661 = StringName(from: "can_instantiate")
+        assert(self._method_can_instantiate_2619796661 != nil)
+        self._method_instantiate_2760726917 = StringName(from: "instantiate")
+        assert(self._method_instantiate_2760726917 != nil)
+        self._method_class_has_signal_471820014 = StringName(from: "class_has_signal")
+        assert(self._method_class_has_signal_471820014 != nil)
+        self._method_class_get_signal_3061114238 = StringName(from: "class_get_signal")
+        assert(self._method_class_get_signal_3061114238 != nil)
+        self._method_class_get_signal_list_3504980660 = StringName(from: "class_get_signal_list")
+        assert(self._method_class_get_signal_list_3504980660 != nil)
+        self._method_class_get_property_list_3504980660 = StringName(from: "class_get_property_list")
+        assert(self._method_class_get_property_list_3504980660 != nil)
+        self._method_class_get_property_2498641674 = StringName(from: "class_get_property")
+        assert(self._method_class_get_property_2498641674 != nil)
+        self._method_class_set_property_1690314931 = StringName(from: "class_set_property")
+        assert(self._method_class_set_property_1690314931 != nil)
+        self._method_class_has_method_3860701026 = StringName(from: "class_has_method")
+        assert(self._method_class_has_method_3860701026 != nil)
+        self._method_class_get_method_list_3504980660 = StringName(from: "class_get_method_list")
+        assert(self._method_class_get_method_list_3504980660 != nil)
+        self._method_class_get_integer_constant_list_3031669221 = StringName(from: "class_get_integer_constant_list")
+        assert(self._method_class_get_integer_constant_list_3031669221 != nil)
+        self._method_class_has_integer_constant_471820014 = StringName(from: "class_has_integer_constant")
+        assert(self._method_class_has_integer_constant_471820014 != nil)
+        self._method_class_get_integer_constant_2419549490 = StringName(from: "class_get_integer_constant")
+        assert(self._method_class_get_integer_constant_2419549490 != nil)
+        self._method_class_has_enum_3860701026 = StringName(from: "class_has_enum")
+        assert(self._method_class_has_enum_3860701026 != nil)
+        self._method_class_get_enum_list_3031669221 = StringName(from: "class_get_enum_list")
+        assert(self._method_class_get_enum_list_3031669221 != nil)
+        self._method_class_get_enum_constants_661528303 = StringName(from: "class_get_enum_constants")
+        assert(self._method_class_get_enum_constants_661528303 != nil)
+        self._method_class_get_integer_constant_enum_2457504236 = StringName(from: "class_get_integer_constant_enum")
+        assert(self._method_class_get_integer_constant_enum_2457504236 != nil)
+        self._method_is_class_enabled_2619796661 = StringName(from: "is_class_enabled")
+        assert(self._method_is_class_enabled_2619796661 != nil)
     }
 
     public func get_class_list() -> PackedStringArray {
@@ -122,8 +100,13 @@ open class ClassDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_class_list_1139954409,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_class_list_1139954409._native_ptr(),
+                    1139954409)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -139,8 +122,13 @@ open class ClassDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_inheriters_from_class_1761182771,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_inheriters_from_class_1761182771._native_ptr(),
+                    1761182771)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -156,8 +144,13 @@ open class ClassDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_parent_class_1965194235,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_parent_class_1965194235._native_ptr(),
+                    1965194235)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -174,8 +167,13 @@ open class ClassDB : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_class_exists_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_class_exists_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -193,8 +191,13 @@ open class ClassDB : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_parent_class_471820014,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_parent_class_471820014._native_ptr(),
+                    471820014)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -211,8 +214,13 @@ open class ClassDB : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_can_instantiate_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_can_instantiate_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -228,8 +236,13 @@ open class ClassDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_instantiate_2760726917,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_instantiate_2760726917._native_ptr(),
+                    2760726917)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -247,8 +260,13 @@ open class ClassDB : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_class_has_signal_471820014,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_class_has_signal_471820014._native_ptr(),
+                    471820014)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -265,8 +283,13 @@ open class ClassDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_class_get_signal_3061114238,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_class_get_signal_3061114238._native_ptr(),
+                    3061114238)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -283,8 +306,13 @@ open class ClassDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_class_get_signal_list_3504980660,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_class_get_signal_list_3504980660._native_ptr(),
+                    3504980660)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -302,8 +330,13 @@ open class ClassDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_class_get_property_list_3504980660,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_class_get_property_list_3504980660._native_ptr(),
+                    3504980660)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -321,8 +354,13 @@ open class ClassDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_class_get_property_2498641674,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_class_get_property_2498641674._native_ptr(),
+                    2498641674)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -340,8 +378,13 @@ open class ClassDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_class_set_property_1690314931,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_class_set_property_1690314931._native_ptr(),
+                    1690314931)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -360,8 +403,13 @@ open class ClassDB : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_class_has_method_3860701026,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_class_has_method_3860701026._native_ptr(),
+                    3860701026)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -379,8 +427,13 @@ open class ClassDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_class_get_method_list_3504980660,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_class_get_method_list_3504980660._native_ptr(),
+                    3504980660)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -398,8 +451,13 @@ open class ClassDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_class_get_integer_constant_list_3031669221,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_class_get_integer_constant_list_3031669221._native_ptr(),
+                    3031669221)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -418,8 +476,13 @@ open class ClassDB : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_class_has_integer_constant_471820014,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_class_has_integer_constant_471820014._native_ptr(),
+                    471820014)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -437,8 +500,13 @@ open class ClassDB : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_class_get_integer_constant_2419549490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_class_get_integer_constant_2419549490._native_ptr(),
+                    2419549490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -457,8 +525,13 @@ open class ClassDB : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_class_has_enum_3860701026,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_class_has_enum_3860701026._native_ptr(),
+                    3860701026)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -476,8 +549,13 @@ open class ClassDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_class_get_enum_list_3031669221,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_class_get_enum_list_3031669221._native_ptr(),
+                    3031669221)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -496,8 +574,13 @@ open class ClassDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_class_get_enum_constants_661528303,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_class_get_enum_constants_661528303._native_ptr(),
+                    661528303)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -516,8 +599,13 @@ open class ClassDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_class_get_integer_constant_enum_2457504236,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_class_get_integer_constant_enum_2457504236._native_ptr(),
+                    2457504236)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -535,8 +623,13 @@ open class ClassDB : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_class_enabled_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_class_enabled_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

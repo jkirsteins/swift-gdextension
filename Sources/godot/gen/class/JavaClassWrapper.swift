@@ -11,19 +11,19 @@ open class JavaClassWrapper : Object {
 
     public override class var __godot_name: StringName { __godot_name_JavaClassWrapper }
 
-    static var _method_wrap_1124367868: GDExtensionMethodBindPtr! = nil
+    static var _method_wrap_1124367868: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_JavaClassWrapper == nil)
         __godot_name_JavaClassWrapper = StringName(from: "JavaClassWrapper")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_wrap_1124367868_name = StringName(from: "wrap")
-        self._method_wrap_1124367868 = self.interface.pointee.classdb_get_method_bind(__godot_name_JavaClassWrapper._native_ptr(), _method_wrap_1124367868_name._native_ptr(), 1124367868)
-        assert(JavaClassWrapper._method_wrap_1124367868 != nil)
+        self._method_wrap_1124367868 = StringName(from: "wrap")
+        assert(self._method_wrap_1124367868 != nil)
     }
 
     public func wrap(name: godot.String) -> JavaClass {
@@ -35,8 +35,13 @@ open class JavaClassWrapper : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_wrap_1124367868,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_wrap_1124367868._native_ptr(),
+                    1124367868)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

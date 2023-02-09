@@ -44,63 +44,52 @@ open class Generic6DOFJoint3D : Joint3D {
 
     public override class var __godot_name: StringName { __godot_name_Generic6DOFJoint3D }
 
-    static var _method_set_param_x_2018184242: GDExtensionMethodBindPtr! = nil
-    static var _method_get_param_x_2599835054: GDExtensionMethodBindPtr! = nil
-    static var _method_set_param_y_2018184242: GDExtensionMethodBindPtr! = nil
-    static var _method_get_param_y_2599835054: GDExtensionMethodBindPtr! = nil
-    static var _method_set_param_z_2018184242: GDExtensionMethodBindPtr! = nil
-    static var _method_get_param_z_2599835054: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flag_x_2451594564: GDExtensionMethodBindPtr! = nil
-    static var _method_get_flag_x_2122427807: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flag_y_2451594564: GDExtensionMethodBindPtr! = nil
-    static var _method_get_flag_y_2122427807: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flag_z_2451594564: GDExtensionMethodBindPtr! = nil
-    static var _method_get_flag_z_2122427807: GDExtensionMethodBindPtr! = nil
+    static var _method_set_param_x_2018184242: StringName! = nil
+    static var _method_get_param_x_2599835054: StringName! = nil
+    static var _method_set_param_y_2018184242: StringName! = nil
+    static var _method_get_param_y_2599835054: StringName! = nil
+    static var _method_set_param_z_2018184242: StringName! = nil
+    static var _method_get_param_z_2599835054: StringName! = nil
+    static var _method_set_flag_x_2451594564: StringName! = nil
+    static var _method_get_flag_x_2122427807: StringName! = nil
+    static var _method_set_flag_y_2451594564: StringName! = nil
+    static var _method_get_flag_y_2122427807: StringName! = nil
+    static var _method_set_flag_z_2451594564: StringName! = nil
+    static var _method_get_flag_z_2122427807: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Generic6DOFJoint3D == nil)
         __godot_name_Generic6DOFJoint3D = StringName(from: "Generic6DOFJoint3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_param_x_2018184242_name = StringName(from: "set_param_x")
-        self._method_set_param_x_2018184242 = self.interface.pointee.classdb_get_method_bind(__godot_name_Generic6DOFJoint3D._native_ptr(), _method_set_param_x_2018184242_name._native_ptr(), 2018184242)
-        assert(Generic6DOFJoint3D._method_set_param_x_2018184242 != nil)
-        let _method_get_param_x_2599835054_name = StringName(from: "get_param_x")
-        self._method_get_param_x_2599835054 = self.interface.pointee.classdb_get_method_bind(__godot_name_Generic6DOFJoint3D._native_ptr(), _method_get_param_x_2599835054_name._native_ptr(), 2599835054)
-        assert(Generic6DOFJoint3D._method_get_param_x_2599835054 != nil)
-        let _method_set_param_y_2018184242_name = StringName(from: "set_param_y")
-        self._method_set_param_y_2018184242 = self.interface.pointee.classdb_get_method_bind(__godot_name_Generic6DOFJoint3D._native_ptr(), _method_set_param_y_2018184242_name._native_ptr(), 2018184242)
-        assert(Generic6DOFJoint3D._method_set_param_y_2018184242 != nil)
-        let _method_get_param_y_2599835054_name = StringName(from: "get_param_y")
-        self._method_get_param_y_2599835054 = self.interface.pointee.classdb_get_method_bind(__godot_name_Generic6DOFJoint3D._native_ptr(), _method_get_param_y_2599835054_name._native_ptr(), 2599835054)
-        assert(Generic6DOFJoint3D._method_get_param_y_2599835054 != nil)
-        let _method_set_param_z_2018184242_name = StringName(from: "set_param_z")
-        self._method_set_param_z_2018184242 = self.interface.pointee.classdb_get_method_bind(__godot_name_Generic6DOFJoint3D._native_ptr(), _method_set_param_z_2018184242_name._native_ptr(), 2018184242)
-        assert(Generic6DOFJoint3D._method_set_param_z_2018184242 != nil)
-        let _method_get_param_z_2599835054_name = StringName(from: "get_param_z")
-        self._method_get_param_z_2599835054 = self.interface.pointee.classdb_get_method_bind(__godot_name_Generic6DOFJoint3D._native_ptr(), _method_get_param_z_2599835054_name._native_ptr(), 2599835054)
-        assert(Generic6DOFJoint3D._method_get_param_z_2599835054 != nil)
-        let _method_set_flag_x_2451594564_name = StringName(from: "set_flag_x")
-        self._method_set_flag_x_2451594564 = self.interface.pointee.classdb_get_method_bind(__godot_name_Generic6DOFJoint3D._native_ptr(), _method_set_flag_x_2451594564_name._native_ptr(), 2451594564)
-        assert(Generic6DOFJoint3D._method_set_flag_x_2451594564 != nil)
-        let _method_get_flag_x_2122427807_name = StringName(from: "get_flag_x")
-        self._method_get_flag_x_2122427807 = self.interface.pointee.classdb_get_method_bind(__godot_name_Generic6DOFJoint3D._native_ptr(), _method_get_flag_x_2122427807_name._native_ptr(), 2122427807)
-        assert(Generic6DOFJoint3D._method_get_flag_x_2122427807 != nil)
-        let _method_set_flag_y_2451594564_name = StringName(from: "set_flag_y")
-        self._method_set_flag_y_2451594564 = self.interface.pointee.classdb_get_method_bind(__godot_name_Generic6DOFJoint3D._native_ptr(), _method_set_flag_y_2451594564_name._native_ptr(), 2451594564)
-        assert(Generic6DOFJoint3D._method_set_flag_y_2451594564 != nil)
-        let _method_get_flag_y_2122427807_name = StringName(from: "get_flag_y")
-        self._method_get_flag_y_2122427807 = self.interface.pointee.classdb_get_method_bind(__godot_name_Generic6DOFJoint3D._native_ptr(), _method_get_flag_y_2122427807_name._native_ptr(), 2122427807)
-        assert(Generic6DOFJoint3D._method_get_flag_y_2122427807 != nil)
-        let _method_set_flag_z_2451594564_name = StringName(from: "set_flag_z")
-        self._method_set_flag_z_2451594564 = self.interface.pointee.classdb_get_method_bind(__godot_name_Generic6DOFJoint3D._native_ptr(), _method_set_flag_z_2451594564_name._native_ptr(), 2451594564)
-        assert(Generic6DOFJoint3D._method_set_flag_z_2451594564 != nil)
-        let _method_get_flag_z_2122427807_name = StringName(from: "get_flag_z")
-        self._method_get_flag_z_2122427807 = self.interface.pointee.classdb_get_method_bind(__godot_name_Generic6DOFJoint3D._native_ptr(), _method_get_flag_z_2122427807_name._native_ptr(), 2122427807)
-        assert(Generic6DOFJoint3D._method_get_flag_z_2122427807 != nil)
+        self._method_set_param_x_2018184242 = StringName(from: "set_param_x")
+        assert(self._method_set_param_x_2018184242 != nil)
+        self._method_get_param_x_2599835054 = StringName(from: "get_param_x")
+        assert(self._method_get_param_x_2599835054 != nil)
+        self._method_set_param_y_2018184242 = StringName(from: "set_param_y")
+        assert(self._method_set_param_y_2018184242 != nil)
+        self._method_get_param_y_2599835054 = StringName(from: "get_param_y")
+        assert(self._method_get_param_y_2599835054 != nil)
+        self._method_set_param_z_2018184242 = StringName(from: "set_param_z")
+        assert(self._method_set_param_z_2018184242 != nil)
+        self._method_get_param_z_2599835054 = StringName(from: "get_param_z")
+        assert(self._method_get_param_z_2599835054 != nil)
+        self._method_set_flag_x_2451594564 = StringName(from: "set_flag_x")
+        assert(self._method_set_flag_x_2451594564 != nil)
+        self._method_get_flag_x_2122427807 = StringName(from: "get_flag_x")
+        assert(self._method_get_flag_x_2122427807 != nil)
+        self._method_set_flag_y_2451594564 = StringName(from: "set_flag_y")
+        assert(self._method_set_flag_y_2451594564 != nil)
+        self._method_get_flag_y_2122427807 = StringName(from: "get_flag_y")
+        assert(self._method_get_flag_y_2122427807 != nil)
+        self._method_set_flag_z_2451594564 = StringName(from: "set_flag_z")
+        assert(self._method_set_flag_z_2451594564 != nil)
+        self._method_get_flag_z_2122427807 = StringName(from: "get_flag_z")
+        assert(self._method_get_flag_z_2122427807 != nil)
     }
 
     public func set_param_x(param: Generic6DOFJoint3D.Param, value: Float64)  {
@@ -112,8 +101,13 @@ open class Generic6DOFJoint3D : Joint3D {
                 .init(param_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_param_x_2018184242,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_param_x_2018184242._native_ptr(),
+                    2018184242)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -131,8 +125,13 @@ open class Generic6DOFJoint3D : Joint3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_param_x_2599835054,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_param_x_2599835054._native_ptr(),
+                    2599835054)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -149,8 +148,13 @@ open class Generic6DOFJoint3D : Joint3D {
                 .init(param_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_param_y_2018184242,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_param_y_2018184242._native_ptr(),
+                    2018184242)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -168,8 +172,13 @@ open class Generic6DOFJoint3D : Joint3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_param_y_2599835054,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_param_y_2599835054._native_ptr(),
+                    2599835054)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -186,8 +195,13 @@ open class Generic6DOFJoint3D : Joint3D {
                 .init(param_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_param_z_2018184242,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_param_z_2018184242._native_ptr(),
+                    2018184242)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -205,8 +219,13 @@ open class Generic6DOFJoint3D : Joint3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_param_z_2599835054,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_param_z_2599835054._native_ptr(),
+                    2599835054)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -223,8 +242,13 @@ open class Generic6DOFJoint3D : Joint3D {
                 .init(flag_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flag_x_2451594564,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flag_x_2451594564._native_ptr(),
+                    2451594564)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -242,8 +266,13 @@ open class Generic6DOFJoint3D : Joint3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_flag_x_2122427807,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_flag_x_2122427807._native_ptr(),
+                    2122427807)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -260,8 +289,13 @@ open class Generic6DOFJoint3D : Joint3D {
                 .init(flag_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flag_y_2451594564,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flag_y_2451594564._native_ptr(),
+                    2451594564)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -279,8 +313,13 @@ open class Generic6DOFJoint3D : Joint3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_flag_y_2122427807,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_flag_y_2122427807._native_ptr(),
+                    2122427807)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -297,8 +336,13 @@ open class Generic6DOFJoint3D : Joint3D {
                 .init(flag_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flag_z_2451594564,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flag_z_2451594564._native_ptr(),
+                    2451594564)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -316,8 +360,13 @@ open class Generic6DOFJoint3D : Joint3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_flag_z_2122427807,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_flag_z_2122427807._native_ptr(),
+                    2122427807)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

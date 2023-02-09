@@ -13,51 +13,43 @@ open class EditorFileSystem : Node {
 
     public override class var __godot_name: StringName { __godot_name_EditorFileSystem }
 
-    static var _method_get_filesystem_842323275: GDExtensionMethodBindPtr! = nil
-    static var _method_is_scanning_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_scanning_progress_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_scan_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_scan_sources_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_update_file_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_filesystem_path_3188521125: GDExtensionMethodBindPtr! = nil
-    static var _method_get_file_type_3135753539: GDExtensionMethodBindPtr! = nil
-    static var _method_reimport_files_4015028928: GDExtensionMethodBindPtr! = nil
+    static var _method_get_filesystem_842323275: StringName! = nil
+    static var _method_is_scanning_36873697: StringName! = nil
+    static var _method_get_scanning_progress_1740695150: StringName! = nil
+    static var _method_scan_3218959716: StringName! = nil
+    static var _method_scan_sources_3218959716: StringName! = nil
+    static var _method_update_file_83702148: StringName! = nil
+    static var _method_get_filesystem_path_3188521125: StringName! = nil
+    static var _method_get_file_type_3135753539: StringName! = nil
+    static var _method_reimport_files_4015028928: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorFileSystem == nil)
         __godot_name_EditorFileSystem = StringName(from: "EditorFileSystem")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_filesystem_842323275_name = StringName(from: "get_filesystem")
-        self._method_get_filesystem_842323275 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileSystem._native_ptr(), _method_get_filesystem_842323275_name._native_ptr(), 842323275)
-        assert(EditorFileSystem._method_get_filesystem_842323275 != nil)
-        let _method_is_scanning_36873697_name = StringName(from: "is_scanning")
-        self._method_is_scanning_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileSystem._native_ptr(), _method_is_scanning_36873697_name._native_ptr(), 36873697)
-        assert(EditorFileSystem._method_is_scanning_36873697 != nil)
-        let _method_get_scanning_progress_1740695150_name = StringName(from: "get_scanning_progress")
-        self._method_get_scanning_progress_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileSystem._native_ptr(), _method_get_scanning_progress_1740695150_name._native_ptr(), 1740695150)
-        assert(EditorFileSystem._method_get_scanning_progress_1740695150 != nil)
-        let _method_scan_3218959716_name = StringName(from: "scan")
-        self._method_scan_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileSystem._native_ptr(), _method_scan_3218959716_name._native_ptr(), 3218959716)
-        assert(EditorFileSystem._method_scan_3218959716 != nil)
-        let _method_scan_sources_3218959716_name = StringName(from: "scan_sources")
-        self._method_scan_sources_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileSystem._native_ptr(), _method_scan_sources_3218959716_name._native_ptr(), 3218959716)
-        assert(EditorFileSystem._method_scan_sources_3218959716 != nil)
-        let _method_update_file_83702148_name = StringName(from: "update_file")
-        self._method_update_file_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileSystem._native_ptr(), _method_update_file_83702148_name._native_ptr(), 83702148)
-        assert(EditorFileSystem._method_update_file_83702148 != nil)
-        let _method_get_filesystem_path_3188521125_name = StringName(from: "get_filesystem_path")
-        self._method_get_filesystem_path_3188521125 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileSystem._native_ptr(), _method_get_filesystem_path_3188521125_name._native_ptr(), 3188521125)
-        assert(EditorFileSystem._method_get_filesystem_path_3188521125 != nil)
-        let _method_get_file_type_3135753539_name = StringName(from: "get_file_type")
-        self._method_get_file_type_3135753539 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileSystem._native_ptr(), _method_get_file_type_3135753539_name._native_ptr(), 3135753539)
-        assert(EditorFileSystem._method_get_file_type_3135753539 != nil)
-        let _method_reimport_files_4015028928_name = StringName(from: "reimport_files")
-        self._method_reimport_files_4015028928 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileSystem._native_ptr(), _method_reimport_files_4015028928_name._native_ptr(), 4015028928)
-        assert(EditorFileSystem._method_reimport_files_4015028928 != nil)
+        self._method_get_filesystem_842323275 = StringName(from: "get_filesystem")
+        assert(self._method_get_filesystem_842323275 != nil)
+        self._method_is_scanning_36873697 = StringName(from: "is_scanning")
+        assert(self._method_is_scanning_36873697 != nil)
+        self._method_get_scanning_progress_1740695150 = StringName(from: "get_scanning_progress")
+        assert(self._method_get_scanning_progress_1740695150 != nil)
+        self._method_scan_3218959716 = StringName(from: "scan")
+        assert(self._method_scan_3218959716 != nil)
+        self._method_scan_sources_3218959716 = StringName(from: "scan_sources")
+        assert(self._method_scan_sources_3218959716 != nil)
+        self._method_update_file_83702148 = StringName(from: "update_file")
+        assert(self._method_update_file_83702148 != nil)
+        self._method_get_filesystem_path_3188521125 = StringName(from: "get_filesystem_path")
+        assert(self._method_get_filesystem_path_3188521125 != nil)
+        self._method_get_file_type_3135753539 = StringName(from: "get_file_type")
+        assert(self._method_get_file_type_3135753539 != nil)
+        self._method_reimport_files_4015028928 = StringName(from: "reimport_files")
+        assert(self._method_reimport_files_4015028928 != nil)
     }
 
     public func get_filesystem() -> EditorFileSystemDirectory {
@@ -68,8 +60,13 @@ open class EditorFileSystem : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_filesystem_842323275,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_filesystem_842323275._native_ptr(),
+                    842323275)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -85,8 +82,13 @@ open class EditorFileSystem : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_scanning_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_scanning_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -102,8 +104,13 @@ open class EditorFileSystem : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_scanning_progress_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_scanning_progress_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -117,8 +124,13 @@ open class EditorFileSystem : Node {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_scan_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_scan_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -131,8 +143,13 @@ open class EditorFileSystem : Node {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_scan_sources_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_scan_sources_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -146,8 +163,13 @@ open class EditorFileSystem : Node {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_update_file_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_update_file_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -162,8 +184,13 @@ open class EditorFileSystem : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_filesystem_path_3188521125,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_filesystem_path_3188521125._native_ptr(),
+                    3188521125)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -179,8 +206,13 @@ open class EditorFileSystem : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_file_type_3135753539,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_file_type_3135753539._native_ptr(),
+                    3135753539)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -195,8 +227,13 @@ open class EditorFileSystem : Node {
                 .init(files_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_reimport_files_4015028928,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_reimport_files_4015028928._native_ptr(),
+                    4015028928)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

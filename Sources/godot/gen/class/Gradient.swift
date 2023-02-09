@@ -17,75 +17,61 @@ open class Gradient : Resource {
 
     public override class var __godot_name: StringName { __godot_name_Gradient }
 
-    static var _method_add_point_3629403827: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_point_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_offset_1602489585: GDExtensionMethodBindPtr! = nil
-    static var _method_get_offset_4025615559: GDExtensionMethodBindPtr! = nil
-    static var _method_reverse_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_color_2878471219: GDExtensionMethodBindPtr! = nil
-    static var _method_get_color_2624840992: GDExtensionMethodBindPtr! = nil
-    static var _method_sample_1250405064: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_offsets_2899603908: GDExtensionMethodBindPtr! = nil
-    static var _method_get_offsets_675695659: GDExtensionMethodBindPtr! = nil
-    static var _method_set_colors_3546319833: GDExtensionMethodBindPtr! = nil
-    static var _method_get_colors_1392750486: GDExtensionMethodBindPtr! = nil
-    static var _method_set_interpolation_mode_1971444490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_interpolation_mode_3674172981: GDExtensionMethodBindPtr! = nil
+    static var _method_add_point_3629403827: StringName! = nil
+    static var _method_remove_point_1286410249: StringName! = nil
+    static var _method_set_offset_1602489585: StringName! = nil
+    static var _method_get_offset_4025615559: StringName! = nil
+    static var _method_reverse_3218959716: StringName! = nil
+    static var _method_set_color_2878471219: StringName! = nil
+    static var _method_get_color_2624840992: StringName! = nil
+    static var _method_sample_1250405064: StringName! = nil
+    static var _method_get_point_count_3905245786: StringName! = nil
+    static var _method_set_offsets_2899603908: StringName! = nil
+    static var _method_get_offsets_675695659: StringName! = nil
+    static var _method_set_colors_3546319833: StringName! = nil
+    static var _method_get_colors_1392750486: StringName! = nil
+    static var _method_set_interpolation_mode_1971444490: StringName! = nil
+    static var _method_get_interpolation_mode_3674172981: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Gradient == nil)
         __godot_name_Gradient = StringName(from: "Gradient")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_add_point_3629403827_name = StringName(from: "add_point")
-        self._method_add_point_3629403827 = self.interface.pointee.classdb_get_method_bind(__godot_name_Gradient._native_ptr(), _method_add_point_3629403827_name._native_ptr(), 3629403827)
-        assert(Gradient._method_add_point_3629403827 != nil)
-        let _method_remove_point_1286410249_name = StringName(from: "remove_point")
-        self._method_remove_point_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Gradient._native_ptr(), _method_remove_point_1286410249_name._native_ptr(), 1286410249)
-        assert(Gradient._method_remove_point_1286410249 != nil)
-        let _method_set_offset_1602489585_name = StringName(from: "set_offset")
-        self._method_set_offset_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_Gradient._native_ptr(), _method_set_offset_1602489585_name._native_ptr(), 1602489585)
-        assert(Gradient._method_set_offset_1602489585 != nil)
-        let _method_get_offset_4025615559_name = StringName(from: "get_offset")
-        self._method_get_offset_4025615559 = self.interface.pointee.classdb_get_method_bind(__godot_name_Gradient._native_ptr(), _method_get_offset_4025615559_name._native_ptr(), 4025615559)
-        assert(Gradient._method_get_offset_4025615559 != nil)
-        let _method_reverse_3218959716_name = StringName(from: "reverse")
-        self._method_reverse_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Gradient._native_ptr(), _method_reverse_3218959716_name._native_ptr(), 3218959716)
-        assert(Gradient._method_reverse_3218959716 != nil)
-        let _method_set_color_2878471219_name = StringName(from: "set_color")
-        self._method_set_color_2878471219 = self.interface.pointee.classdb_get_method_bind(__godot_name_Gradient._native_ptr(), _method_set_color_2878471219_name._native_ptr(), 2878471219)
-        assert(Gradient._method_set_color_2878471219 != nil)
-        let _method_get_color_2624840992_name = StringName(from: "get_color")
-        self._method_get_color_2624840992 = self.interface.pointee.classdb_get_method_bind(__godot_name_Gradient._native_ptr(), _method_get_color_2624840992_name._native_ptr(), 2624840992)
-        assert(Gradient._method_get_color_2624840992 != nil)
-        let _method_sample_1250405064_name = StringName(from: "sample")
-        self._method_sample_1250405064 = self.interface.pointee.classdb_get_method_bind(__godot_name_Gradient._native_ptr(), _method_sample_1250405064_name._native_ptr(), 1250405064)
-        assert(Gradient._method_sample_1250405064 != nil)
-        let _method_get_point_count_3905245786_name = StringName(from: "get_point_count")
-        self._method_get_point_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Gradient._native_ptr(), _method_get_point_count_3905245786_name._native_ptr(), 3905245786)
-        assert(Gradient._method_get_point_count_3905245786 != nil)
-        let _method_set_offsets_2899603908_name = StringName(from: "set_offsets")
-        self._method_set_offsets_2899603908 = self.interface.pointee.classdb_get_method_bind(__godot_name_Gradient._native_ptr(), _method_set_offsets_2899603908_name._native_ptr(), 2899603908)
-        assert(Gradient._method_set_offsets_2899603908 != nil)
-        let _method_get_offsets_675695659_name = StringName(from: "get_offsets")
-        self._method_get_offsets_675695659 = self.interface.pointee.classdb_get_method_bind(__godot_name_Gradient._native_ptr(), _method_get_offsets_675695659_name._native_ptr(), 675695659)
-        assert(Gradient._method_get_offsets_675695659 != nil)
-        let _method_set_colors_3546319833_name = StringName(from: "set_colors")
-        self._method_set_colors_3546319833 = self.interface.pointee.classdb_get_method_bind(__godot_name_Gradient._native_ptr(), _method_set_colors_3546319833_name._native_ptr(), 3546319833)
-        assert(Gradient._method_set_colors_3546319833 != nil)
-        let _method_get_colors_1392750486_name = StringName(from: "get_colors")
-        self._method_get_colors_1392750486 = self.interface.pointee.classdb_get_method_bind(__godot_name_Gradient._native_ptr(), _method_get_colors_1392750486_name._native_ptr(), 1392750486)
-        assert(Gradient._method_get_colors_1392750486 != nil)
-        let _method_set_interpolation_mode_1971444490_name = StringName(from: "set_interpolation_mode")
-        self._method_set_interpolation_mode_1971444490 = self.interface.pointee.classdb_get_method_bind(__godot_name_Gradient._native_ptr(), _method_set_interpolation_mode_1971444490_name._native_ptr(), 1971444490)
-        assert(Gradient._method_set_interpolation_mode_1971444490 != nil)
-        let _method_get_interpolation_mode_3674172981_name = StringName(from: "get_interpolation_mode")
-        self._method_get_interpolation_mode_3674172981 = self.interface.pointee.classdb_get_method_bind(__godot_name_Gradient._native_ptr(), _method_get_interpolation_mode_3674172981_name._native_ptr(), 3674172981)
-        assert(Gradient._method_get_interpolation_mode_3674172981 != nil)
+        self._method_add_point_3629403827 = StringName(from: "add_point")
+        assert(self._method_add_point_3629403827 != nil)
+        self._method_remove_point_1286410249 = StringName(from: "remove_point")
+        assert(self._method_remove_point_1286410249 != nil)
+        self._method_set_offset_1602489585 = StringName(from: "set_offset")
+        assert(self._method_set_offset_1602489585 != nil)
+        self._method_get_offset_4025615559 = StringName(from: "get_offset")
+        assert(self._method_get_offset_4025615559 != nil)
+        self._method_reverse_3218959716 = StringName(from: "reverse")
+        assert(self._method_reverse_3218959716 != nil)
+        self._method_set_color_2878471219 = StringName(from: "set_color")
+        assert(self._method_set_color_2878471219 != nil)
+        self._method_get_color_2624840992 = StringName(from: "get_color")
+        assert(self._method_get_color_2624840992 != nil)
+        self._method_sample_1250405064 = StringName(from: "sample")
+        assert(self._method_sample_1250405064 != nil)
+        self._method_get_point_count_3905245786 = StringName(from: "get_point_count")
+        assert(self._method_get_point_count_3905245786 != nil)
+        self._method_set_offsets_2899603908 = StringName(from: "set_offsets")
+        assert(self._method_set_offsets_2899603908 != nil)
+        self._method_get_offsets_675695659 = StringName(from: "get_offsets")
+        assert(self._method_get_offsets_675695659 != nil)
+        self._method_set_colors_3546319833 = StringName(from: "set_colors")
+        assert(self._method_set_colors_3546319833 != nil)
+        self._method_get_colors_1392750486 = StringName(from: "get_colors")
+        assert(self._method_get_colors_1392750486 != nil)
+        self._method_set_interpolation_mode_1971444490 = StringName(from: "set_interpolation_mode")
+        assert(self._method_set_interpolation_mode_1971444490 != nil)
+        self._method_get_interpolation_mode_3674172981 = StringName(from: "get_interpolation_mode")
+        assert(self._method_get_interpolation_mode_3674172981 != nil)
     }
 
     public func add_point(offset: Float64, color: Color)  {
@@ -97,8 +83,13 @@ open class Gradient : Resource {
                 .init(offset_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_point_3629403827,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_point_3629403827._native_ptr(),
+                    3629403827)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -113,8 +104,13 @@ open class Gradient : Resource {
                 .init(point_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_point_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_point_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -130,8 +126,13 @@ open class Gradient : Resource {
                 .init(point_native), .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_offset_1602489585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_offset_1602489585._native_ptr(),
+                    1602489585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -149,8 +150,13 @@ open class Gradient : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_offset_4025615559,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_offset_4025615559._native_ptr(),
+                    4025615559)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -165,8 +171,13 @@ open class Gradient : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_reverse_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_reverse_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -181,8 +192,13 @@ open class Gradient : Resource {
                 .init(point_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_color_2878471219,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_color_2878471219._native_ptr(),
+                    2878471219)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -198,8 +214,13 @@ open class Gradient : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_color_2624840992,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_color_2624840992._native_ptr(),
+                    2624840992)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -216,8 +237,13 @@ open class Gradient : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_sample_1250405064,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_sample_1250405064._native_ptr(),
+                    1250405064)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -234,8 +260,13 @@ open class Gradient : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -250,8 +281,13 @@ open class Gradient : Resource {
                 .init(offsets_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_offsets_2899603908,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_offsets_2899603908._native_ptr(),
+                    2899603908)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -265,8 +301,13 @@ open class Gradient : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_offsets_675695659,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_offsets_675695659._native_ptr(),
+                    675695659)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -281,8 +322,13 @@ open class Gradient : Resource {
                 .init(colors_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_colors_3546319833,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_colors_3546319833._native_ptr(),
+                    3546319833)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -296,8 +342,13 @@ open class Gradient : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_colors_1392750486,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_colors_1392750486._native_ptr(),
+                    1392750486)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -312,8 +363,13 @@ open class Gradient : Resource {
                 .init(interpolation_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_interpolation_mode_1971444490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_interpolation_mode_1971444490._native_ptr(),
+                    1971444490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -328,8 +384,13 @@ open class Gradient : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_interpolation_mode_3674172981,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_interpolation_mode_3674172981._native_ptr(),
+                    3674172981)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

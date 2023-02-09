@@ -11,63 +11,52 @@ open class ParallaxBackground : CanvasLayer {
 
     public override class var __godot_name: StringName { __godot_name_ParallaxBackground }
 
-    static var _method_set_scroll_offset_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_scroll_offset_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_scroll_base_offset_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_scroll_base_offset_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_scroll_base_scale_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_scroll_base_scale_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_limit_begin_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_limit_begin_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_limit_end_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_limit_end_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_ignore_camera_zoom_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_ignore_camera_zoom_2240911060: GDExtensionMethodBindPtr! = nil
+    static var _method_set_scroll_offset_743155724: StringName! = nil
+    static var _method_get_scroll_offset_3341600327: StringName! = nil
+    static var _method_set_scroll_base_offset_743155724: StringName! = nil
+    static var _method_get_scroll_base_offset_3341600327: StringName! = nil
+    static var _method_set_scroll_base_scale_743155724: StringName! = nil
+    static var _method_get_scroll_base_scale_3341600327: StringName! = nil
+    static var _method_set_limit_begin_743155724: StringName! = nil
+    static var _method_get_limit_begin_3341600327: StringName! = nil
+    static var _method_set_limit_end_743155724: StringName! = nil
+    static var _method_get_limit_end_3341600327: StringName! = nil
+    static var _method_set_ignore_camera_zoom_2586408642: StringName! = nil
+    static var _method_is_ignore_camera_zoom_2240911060: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ParallaxBackground == nil)
         __godot_name_ParallaxBackground = StringName(from: "ParallaxBackground")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_scroll_offset_743155724_name = StringName(from: "set_scroll_offset")
-        self._method_set_scroll_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxBackground._native_ptr(), _method_set_scroll_offset_743155724_name._native_ptr(), 743155724)
-        assert(ParallaxBackground._method_set_scroll_offset_743155724 != nil)
-        let _method_get_scroll_offset_3341600327_name = StringName(from: "get_scroll_offset")
-        self._method_get_scroll_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxBackground._native_ptr(), _method_get_scroll_offset_3341600327_name._native_ptr(), 3341600327)
-        assert(ParallaxBackground._method_get_scroll_offset_3341600327 != nil)
-        let _method_set_scroll_base_offset_743155724_name = StringName(from: "set_scroll_base_offset")
-        self._method_set_scroll_base_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxBackground._native_ptr(), _method_set_scroll_base_offset_743155724_name._native_ptr(), 743155724)
-        assert(ParallaxBackground._method_set_scroll_base_offset_743155724 != nil)
-        let _method_get_scroll_base_offset_3341600327_name = StringName(from: "get_scroll_base_offset")
-        self._method_get_scroll_base_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxBackground._native_ptr(), _method_get_scroll_base_offset_3341600327_name._native_ptr(), 3341600327)
-        assert(ParallaxBackground._method_get_scroll_base_offset_3341600327 != nil)
-        let _method_set_scroll_base_scale_743155724_name = StringName(from: "set_scroll_base_scale")
-        self._method_set_scroll_base_scale_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxBackground._native_ptr(), _method_set_scroll_base_scale_743155724_name._native_ptr(), 743155724)
-        assert(ParallaxBackground._method_set_scroll_base_scale_743155724 != nil)
-        let _method_get_scroll_base_scale_3341600327_name = StringName(from: "get_scroll_base_scale")
-        self._method_get_scroll_base_scale_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxBackground._native_ptr(), _method_get_scroll_base_scale_3341600327_name._native_ptr(), 3341600327)
-        assert(ParallaxBackground._method_get_scroll_base_scale_3341600327 != nil)
-        let _method_set_limit_begin_743155724_name = StringName(from: "set_limit_begin")
-        self._method_set_limit_begin_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxBackground._native_ptr(), _method_set_limit_begin_743155724_name._native_ptr(), 743155724)
-        assert(ParallaxBackground._method_set_limit_begin_743155724 != nil)
-        let _method_get_limit_begin_3341600327_name = StringName(from: "get_limit_begin")
-        self._method_get_limit_begin_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxBackground._native_ptr(), _method_get_limit_begin_3341600327_name._native_ptr(), 3341600327)
-        assert(ParallaxBackground._method_get_limit_begin_3341600327 != nil)
-        let _method_set_limit_end_743155724_name = StringName(from: "set_limit_end")
-        self._method_set_limit_end_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxBackground._native_ptr(), _method_set_limit_end_743155724_name._native_ptr(), 743155724)
-        assert(ParallaxBackground._method_set_limit_end_743155724 != nil)
-        let _method_get_limit_end_3341600327_name = StringName(from: "get_limit_end")
-        self._method_get_limit_end_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxBackground._native_ptr(), _method_get_limit_end_3341600327_name._native_ptr(), 3341600327)
-        assert(ParallaxBackground._method_get_limit_end_3341600327 != nil)
-        let _method_set_ignore_camera_zoom_2586408642_name = StringName(from: "set_ignore_camera_zoom")
-        self._method_set_ignore_camera_zoom_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxBackground._native_ptr(), _method_set_ignore_camera_zoom_2586408642_name._native_ptr(), 2586408642)
-        assert(ParallaxBackground._method_set_ignore_camera_zoom_2586408642 != nil)
-        let _method_is_ignore_camera_zoom_2240911060_name = StringName(from: "is_ignore_camera_zoom")
-        self._method_is_ignore_camera_zoom_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_ParallaxBackground._native_ptr(), _method_is_ignore_camera_zoom_2240911060_name._native_ptr(), 2240911060)
-        assert(ParallaxBackground._method_is_ignore_camera_zoom_2240911060 != nil)
+        self._method_set_scroll_offset_743155724 = StringName(from: "set_scroll_offset")
+        assert(self._method_set_scroll_offset_743155724 != nil)
+        self._method_get_scroll_offset_3341600327 = StringName(from: "get_scroll_offset")
+        assert(self._method_get_scroll_offset_3341600327 != nil)
+        self._method_set_scroll_base_offset_743155724 = StringName(from: "set_scroll_base_offset")
+        assert(self._method_set_scroll_base_offset_743155724 != nil)
+        self._method_get_scroll_base_offset_3341600327 = StringName(from: "get_scroll_base_offset")
+        assert(self._method_get_scroll_base_offset_3341600327 != nil)
+        self._method_set_scroll_base_scale_743155724 = StringName(from: "set_scroll_base_scale")
+        assert(self._method_set_scroll_base_scale_743155724 != nil)
+        self._method_get_scroll_base_scale_3341600327 = StringName(from: "get_scroll_base_scale")
+        assert(self._method_get_scroll_base_scale_3341600327 != nil)
+        self._method_set_limit_begin_743155724 = StringName(from: "set_limit_begin")
+        assert(self._method_set_limit_begin_743155724 != nil)
+        self._method_get_limit_begin_3341600327 = StringName(from: "get_limit_begin")
+        assert(self._method_get_limit_begin_3341600327 != nil)
+        self._method_set_limit_end_743155724 = StringName(from: "set_limit_end")
+        assert(self._method_set_limit_end_743155724 != nil)
+        self._method_get_limit_end_3341600327 = StringName(from: "get_limit_end")
+        assert(self._method_get_limit_end_3341600327 != nil)
+        self._method_set_ignore_camera_zoom_2586408642 = StringName(from: "set_ignore_camera_zoom")
+        assert(self._method_set_ignore_camera_zoom_2586408642 != nil)
+        self._method_is_ignore_camera_zoom_2240911060 = StringName(from: "is_ignore_camera_zoom")
+        assert(self._method_is_ignore_camera_zoom_2240911060 != nil)
     }
 
     public func set_scroll_offset(offset: Vector2)  {
@@ -78,8 +67,13 @@ open class ParallaxBackground : CanvasLayer {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_scroll_offset_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_scroll_offset_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -93,8 +87,13 @@ open class ParallaxBackground : CanvasLayer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_scroll_offset_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_scroll_offset_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -109,8 +108,13 @@ open class ParallaxBackground : CanvasLayer {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_scroll_base_offset_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_scroll_base_offset_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -124,8 +128,13 @@ open class ParallaxBackground : CanvasLayer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_scroll_base_offset_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_scroll_base_offset_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -140,8 +149,13 @@ open class ParallaxBackground : CanvasLayer {
                 .init(scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_scroll_base_scale_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_scroll_base_scale_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -155,8 +169,13 @@ open class ParallaxBackground : CanvasLayer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_scroll_base_scale_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_scroll_base_scale_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -171,8 +190,13 @@ open class ParallaxBackground : CanvasLayer {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_limit_begin_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_limit_begin_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -186,8 +210,13 @@ open class ParallaxBackground : CanvasLayer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_limit_begin_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_limit_begin_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -202,8 +231,13 @@ open class ParallaxBackground : CanvasLayer {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_limit_end_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_limit_end_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -217,8 +251,13 @@ open class ParallaxBackground : CanvasLayer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_limit_end_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_limit_end_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -233,8 +272,13 @@ open class ParallaxBackground : CanvasLayer {
                 .init(ignore_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_ignore_camera_zoom_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_ignore_camera_zoom_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -250,8 +294,13 @@ open class ParallaxBackground : CanvasLayer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_ignore_camera_zoom_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_ignore_camera_zoom_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

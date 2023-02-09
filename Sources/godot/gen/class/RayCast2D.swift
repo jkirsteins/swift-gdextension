@@ -19,127 +19,100 @@ open class RayCast2D : Node2D {
 
     public override class var __godot_name: StringName { __godot_name_RayCast2D }
 
-    static var _method_set_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_target_position_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_target_position_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_is_colliding_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_force_raycast_update_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collider_1981248198: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collider_rid_2944877500: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collider_shape_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_point_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_normal_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_add_exception_rid_2722037293: GDExtensionMethodBindPtr! = nil
-    static var _method_add_exception_3090941106: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_exception_rid_2722037293: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_exception_3090941106: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_exceptions_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_mask_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_mask_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_mask_value_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_mask_value_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_set_exclude_parent_body_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_exclude_parent_body_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collide_with_areas_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_collide_with_areas_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collide_with_bodies_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_collide_with_bodies_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_hit_from_inside_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_hit_from_inside_enabled_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_enabled_2586408642: StringName! = nil
+    static var _method_is_enabled_36873697: StringName! = nil
+    static var _method_set_target_position_743155724: StringName! = nil
+    static var _method_get_target_position_3341600327: StringName! = nil
+    static var _method_is_colliding_36873697: StringName! = nil
+    static var _method_force_raycast_update_3218959716: StringName! = nil
+    static var _method_get_collider_1981248198: StringName! = nil
+    static var _method_get_collider_rid_2944877500: StringName! = nil
+    static var _method_get_collider_shape_3905245786: StringName! = nil
+    static var _method_get_collision_point_3341600327: StringName! = nil
+    static var _method_get_collision_normal_3341600327: StringName! = nil
+    static var _method_add_exception_rid_2722037293: StringName! = nil
+    static var _method_add_exception_3090941106: StringName! = nil
+    static var _method_remove_exception_rid_2722037293: StringName! = nil
+    static var _method_remove_exception_3090941106: StringName! = nil
+    static var _method_clear_exceptions_3218959716: StringName! = nil
+    static var _method_set_collision_mask_1286410249: StringName! = nil
+    static var _method_get_collision_mask_3905245786: StringName! = nil
+    static var _method_set_collision_mask_value_300928843: StringName! = nil
+    static var _method_get_collision_mask_value_1116898809: StringName! = nil
+    static var _method_set_exclude_parent_body_2586408642: StringName! = nil
+    static var _method_get_exclude_parent_body_36873697: StringName! = nil
+    static var _method_set_collide_with_areas_2586408642: StringName! = nil
+    static var _method_is_collide_with_areas_enabled_36873697: StringName! = nil
+    static var _method_set_collide_with_bodies_2586408642: StringName! = nil
+    static var _method_is_collide_with_bodies_enabled_36873697: StringName! = nil
+    static var _method_set_hit_from_inside_2586408642: StringName! = nil
+    static var _method_is_hit_from_inside_enabled_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_RayCast2D == nil)
         __godot_name_RayCast2D = StringName(from: "RayCast2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_enabled_2586408642_name = StringName(from: "set_enabled")
-        self._method_set_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_set_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(RayCast2D._method_set_enabled_2586408642 != nil)
-        let _method_is_enabled_36873697_name = StringName(from: "is_enabled")
-        self._method_is_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_is_enabled_36873697_name._native_ptr(), 36873697)
-        assert(RayCast2D._method_is_enabled_36873697 != nil)
-        let _method_set_target_position_743155724_name = StringName(from: "set_target_position")
-        self._method_set_target_position_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_set_target_position_743155724_name._native_ptr(), 743155724)
-        assert(RayCast2D._method_set_target_position_743155724 != nil)
-        let _method_get_target_position_3341600327_name = StringName(from: "get_target_position")
-        self._method_get_target_position_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_get_target_position_3341600327_name._native_ptr(), 3341600327)
-        assert(RayCast2D._method_get_target_position_3341600327 != nil)
-        let _method_is_colliding_36873697_name = StringName(from: "is_colliding")
-        self._method_is_colliding_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_is_colliding_36873697_name._native_ptr(), 36873697)
-        assert(RayCast2D._method_is_colliding_36873697 != nil)
-        let _method_force_raycast_update_3218959716_name = StringName(from: "force_raycast_update")
-        self._method_force_raycast_update_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_force_raycast_update_3218959716_name._native_ptr(), 3218959716)
-        assert(RayCast2D._method_force_raycast_update_3218959716 != nil)
-        let _method_get_collider_1981248198_name = StringName(from: "get_collider")
-        self._method_get_collider_1981248198 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_get_collider_1981248198_name._native_ptr(), 1981248198)
-        assert(RayCast2D._method_get_collider_1981248198 != nil)
-        let _method_get_collider_rid_2944877500_name = StringName(from: "get_collider_rid")
-        self._method_get_collider_rid_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_get_collider_rid_2944877500_name._native_ptr(), 2944877500)
-        assert(RayCast2D._method_get_collider_rid_2944877500 != nil)
-        let _method_get_collider_shape_3905245786_name = StringName(from: "get_collider_shape")
-        self._method_get_collider_shape_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_get_collider_shape_3905245786_name._native_ptr(), 3905245786)
-        assert(RayCast2D._method_get_collider_shape_3905245786 != nil)
-        let _method_get_collision_point_3341600327_name = StringName(from: "get_collision_point")
-        self._method_get_collision_point_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_get_collision_point_3341600327_name._native_ptr(), 3341600327)
-        assert(RayCast2D._method_get_collision_point_3341600327 != nil)
-        let _method_get_collision_normal_3341600327_name = StringName(from: "get_collision_normal")
-        self._method_get_collision_normal_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_get_collision_normal_3341600327_name._native_ptr(), 3341600327)
-        assert(RayCast2D._method_get_collision_normal_3341600327 != nil)
-        let _method_add_exception_rid_2722037293_name = StringName(from: "add_exception_rid")
-        self._method_add_exception_rid_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_add_exception_rid_2722037293_name._native_ptr(), 2722037293)
-        assert(RayCast2D._method_add_exception_rid_2722037293 != nil)
-        let _method_add_exception_3090941106_name = StringName(from: "add_exception")
-        self._method_add_exception_3090941106 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_add_exception_3090941106_name._native_ptr(), 3090941106)
-        assert(RayCast2D._method_add_exception_3090941106 != nil)
-        let _method_remove_exception_rid_2722037293_name = StringName(from: "remove_exception_rid")
-        self._method_remove_exception_rid_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_remove_exception_rid_2722037293_name._native_ptr(), 2722037293)
-        assert(RayCast2D._method_remove_exception_rid_2722037293 != nil)
-        let _method_remove_exception_3090941106_name = StringName(from: "remove_exception")
-        self._method_remove_exception_3090941106 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_remove_exception_3090941106_name._native_ptr(), 3090941106)
-        assert(RayCast2D._method_remove_exception_3090941106 != nil)
-        let _method_clear_exceptions_3218959716_name = StringName(from: "clear_exceptions")
-        self._method_clear_exceptions_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_clear_exceptions_3218959716_name._native_ptr(), 3218959716)
-        assert(RayCast2D._method_clear_exceptions_3218959716 != nil)
-        let _method_set_collision_mask_1286410249_name = StringName(from: "set_collision_mask")
-        self._method_set_collision_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_set_collision_mask_1286410249_name._native_ptr(), 1286410249)
-        assert(RayCast2D._method_set_collision_mask_1286410249 != nil)
-        let _method_get_collision_mask_3905245786_name = StringName(from: "get_collision_mask")
-        self._method_get_collision_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_get_collision_mask_3905245786_name._native_ptr(), 3905245786)
-        assert(RayCast2D._method_get_collision_mask_3905245786 != nil)
-        let _method_set_collision_mask_value_300928843_name = StringName(from: "set_collision_mask_value")
-        self._method_set_collision_mask_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_set_collision_mask_value_300928843_name._native_ptr(), 300928843)
-        assert(RayCast2D._method_set_collision_mask_value_300928843 != nil)
-        let _method_get_collision_mask_value_1116898809_name = StringName(from: "get_collision_mask_value")
-        self._method_get_collision_mask_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_get_collision_mask_value_1116898809_name._native_ptr(), 1116898809)
-        assert(RayCast2D._method_get_collision_mask_value_1116898809 != nil)
-        let _method_set_exclude_parent_body_2586408642_name = StringName(from: "set_exclude_parent_body")
-        self._method_set_exclude_parent_body_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_set_exclude_parent_body_2586408642_name._native_ptr(), 2586408642)
-        assert(RayCast2D._method_set_exclude_parent_body_2586408642 != nil)
-        let _method_get_exclude_parent_body_36873697_name = StringName(from: "get_exclude_parent_body")
-        self._method_get_exclude_parent_body_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_get_exclude_parent_body_36873697_name._native_ptr(), 36873697)
-        assert(RayCast2D._method_get_exclude_parent_body_36873697 != nil)
-        let _method_set_collide_with_areas_2586408642_name = StringName(from: "set_collide_with_areas")
-        self._method_set_collide_with_areas_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_set_collide_with_areas_2586408642_name._native_ptr(), 2586408642)
-        assert(RayCast2D._method_set_collide_with_areas_2586408642 != nil)
-        let _method_is_collide_with_areas_enabled_36873697_name = StringName(from: "is_collide_with_areas_enabled")
-        self._method_is_collide_with_areas_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_is_collide_with_areas_enabled_36873697_name._native_ptr(), 36873697)
-        assert(RayCast2D._method_is_collide_with_areas_enabled_36873697 != nil)
-        let _method_set_collide_with_bodies_2586408642_name = StringName(from: "set_collide_with_bodies")
-        self._method_set_collide_with_bodies_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_set_collide_with_bodies_2586408642_name._native_ptr(), 2586408642)
-        assert(RayCast2D._method_set_collide_with_bodies_2586408642 != nil)
-        let _method_is_collide_with_bodies_enabled_36873697_name = StringName(from: "is_collide_with_bodies_enabled")
-        self._method_is_collide_with_bodies_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_is_collide_with_bodies_enabled_36873697_name._native_ptr(), 36873697)
-        assert(RayCast2D._method_is_collide_with_bodies_enabled_36873697 != nil)
-        let _method_set_hit_from_inside_2586408642_name = StringName(from: "set_hit_from_inside")
-        self._method_set_hit_from_inside_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_set_hit_from_inside_2586408642_name._native_ptr(), 2586408642)
-        assert(RayCast2D._method_set_hit_from_inside_2586408642 != nil)
-        let _method_is_hit_from_inside_enabled_36873697_name = StringName(from: "is_hit_from_inside_enabled")
-        self._method_is_hit_from_inside_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_RayCast2D._native_ptr(), _method_is_hit_from_inside_enabled_36873697_name._native_ptr(), 36873697)
-        assert(RayCast2D._method_is_hit_from_inside_enabled_36873697 != nil)
+        self._method_set_enabled_2586408642 = StringName(from: "set_enabled")
+        assert(self._method_set_enabled_2586408642 != nil)
+        self._method_is_enabled_36873697 = StringName(from: "is_enabled")
+        assert(self._method_is_enabled_36873697 != nil)
+        self._method_set_target_position_743155724 = StringName(from: "set_target_position")
+        assert(self._method_set_target_position_743155724 != nil)
+        self._method_get_target_position_3341600327 = StringName(from: "get_target_position")
+        assert(self._method_get_target_position_3341600327 != nil)
+        self._method_is_colliding_36873697 = StringName(from: "is_colliding")
+        assert(self._method_is_colliding_36873697 != nil)
+        self._method_force_raycast_update_3218959716 = StringName(from: "force_raycast_update")
+        assert(self._method_force_raycast_update_3218959716 != nil)
+        self._method_get_collider_1981248198 = StringName(from: "get_collider")
+        assert(self._method_get_collider_1981248198 != nil)
+        self._method_get_collider_rid_2944877500 = StringName(from: "get_collider_rid")
+        assert(self._method_get_collider_rid_2944877500 != nil)
+        self._method_get_collider_shape_3905245786 = StringName(from: "get_collider_shape")
+        assert(self._method_get_collider_shape_3905245786 != nil)
+        self._method_get_collision_point_3341600327 = StringName(from: "get_collision_point")
+        assert(self._method_get_collision_point_3341600327 != nil)
+        self._method_get_collision_normal_3341600327 = StringName(from: "get_collision_normal")
+        assert(self._method_get_collision_normal_3341600327 != nil)
+        self._method_add_exception_rid_2722037293 = StringName(from: "add_exception_rid")
+        assert(self._method_add_exception_rid_2722037293 != nil)
+        self._method_add_exception_3090941106 = StringName(from: "add_exception")
+        assert(self._method_add_exception_3090941106 != nil)
+        self._method_remove_exception_rid_2722037293 = StringName(from: "remove_exception_rid")
+        assert(self._method_remove_exception_rid_2722037293 != nil)
+        self._method_remove_exception_3090941106 = StringName(from: "remove_exception")
+        assert(self._method_remove_exception_3090941106 != nil)
+        self._method_clear_exceptions_3218959716 = StringName(from: "clear_exceptions")
+        assert(self._method_clear_exceptions_3218959716 != nil)
+        self._method_set_collision_mask_1286410249 = StringName(from: "set_collision_mask")
+        assert(self._method_set_collision_mask_1286410249 != nil)
+        self._method_get_collision_mask_3905245786 = StringName(from: "get_collision_mask")
+        assert(self._method_get_collision_mask_3905245786 != nil)
+        self._method_set_collision_mask_value_300928843 = StringName(from: "set_collision_mask_value")
+        assert(self._method_set_collision_mask_value_300928843 != nil)
+        self._method_get_collision_mask_value_1116898809 = StringName(from: "get_collision_mask_value")
+        assert(self._method_get_collision_mask_value_1116898809 != nil)
+        self._method_set_exclude_parent_body_2586408642 = StringName(from: "set_exclude_parent_body")
+        assert(self._method_set_exclude_parent_body_2586408642 != nil)
+        self._method_get_exclude_parent_body_36873697 = StringName(from: "get_exclude_parent_body")
+        assert(self._method_get_exclude_parent_body_36873697 != nil)
+        self._method_set_collide_with_areas_2586408642 = StringName(from: "set_collide_with_areas")
+        assert(self._method_set_collide_with_areas_2586408642 != nil)
+        self._method_is_collide_with_areas_enabled_36873697 = StringName(from: "is_collide_with_areas_enabled")
+        assert(self._method_is_collide_with_areas_enabled_36873697 != nil)
+        self._method_set_collide_with_bodies_2586408642 = StringName(from: "set_collide_with_bodies")
+        assert(self._method_set_collide_with_bodies_2586408642 != nil)
+        self._method_is_collide_with_bodies_enabled_36873697 = StringName(from: "is_collide_with_bodies_enabled")
+        assert(self._method_is_collide_with_bodies_enabled_36873697 != nil)
+        self._method_set_hit_from_inside_2586408642 = StringName(from: "set_hit_from_inside")
+        assert(self._method_set_hit_from_inside_2586408642 != nil)
+        self._method_is_hit_from_inside_enabled_36873697 = StringName(from: "is_hit_from_inside_enabled")
+        assert(self._method_is_hit_from_inside_enabled_36873697 != nil)
     }
 
     public func set_enabled(enabled: UInt8)  {
@@ -150,8 +123,13 @@ open class RayCast2D : Node2D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -167,8 +145,13 @@ open class RayCast2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -183,8 +166,13 @@ open class RayCast2D : Node2D {
                 .init(local_point_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_target_position_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_target_position_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -198,8 +186,13 @@ open class RayCast2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_target_position_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_target_position_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -215,8 +208,13 @@ open class RayCast2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_colliding_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_colliding_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -230,8 +228,13 @@ open class RayCast2D : Node2D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_force_raycast_update_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_force_raycast_update_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -245,8 +248,13 @@ open class RayCast2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collider_1981248198,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collider_1981248198._native_ptr(),
+                    1981248198)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -261,8 +269,13 @@ open class RayCast2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collider_rid_2944877500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collider_rid_2944877500._native_ptr(),
+                    2944877500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -278,8 +291,13 @@ open class RayCast2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collider_shape_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collider_shape_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -294,8 +312,13 @@ open class RayCast2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_point_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_point_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -310,8 +333,13 @@ open class RayCast2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_normal_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_normal_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -326,8 +354,13 @@ open class RayCast2D : Node2D {
                 .init(rid_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_exception_rid_2722037293,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_exception_rid_2722037293._native_ptr(),
+                    2722037293)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -341,8 +374,13 @@ open class RayCast2D : Node2D {
                 .init(node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_exception_3090941106,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_exception_3090941106._native_ptr(),
+                    3090941106)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -356,8 +394,13 @@ open class RayCast2D : Node2D {
                 .init(rid_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_exception_rid_2722037293,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_exception_rid_2722037293._native_ptr(),
+                    2722037293)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -371,8 +414,13 @@ open class RayCast2D : Node2D {
                 .init(node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_exception_3090941106,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_exception_3090941106._native_ptr(),
+                    3090941106)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -385,8 +433,13 @@ open class RayCast2D : Node2D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_exceptions_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_exceptions_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -400,8 +453,13 @@ open class RayCast2D : Node2D {
                 .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_mask_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_mask_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -417,8 +475,13 @@ open class RayCast2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_mask_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_mask_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -434,8 +497,13 @@ open class RayCast2D : Node2D {
                 .init(layer_number_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_mask_value_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_mask_value_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -453,8 +521,13 @@ open class RayCast2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_mask_value_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_mask_value_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -470,8 +543,13 @@ open class RayCast2D : Node2D {
                 .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_exclude_parent_body_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_exclude_parent_body_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -487,8 +565,13 @@ open class RayCast2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_exclude_parent_body_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_exclude_parent_body_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -503,8 +586,13 @@ open class RayCast2D : Node2D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collide_with_areas_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collide_with_areas_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -520,8 +608,13 @@ open class RayCast2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_collide_with_areas_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_collide_with_areas_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -536,8 +629,13 @@ open class RayCast2D : Node2D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collide_with_bodies_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collide_with_bodies_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -553,8 +651,13 @@ open class RayCast2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_collide_with_bodies_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_collide_with_bodies_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -569,8 +672,13 @@ open class RayCast2D : Node2D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_hit_from_inside_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_hit_from_inside_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -586,8 +694,13 @@ open class RayCast2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_hit_from_inside_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_hit_from_inside_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

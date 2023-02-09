@@ -15,47 +15,40 @@ open class AtlasTexture : Texture2D {
 
     public override class var __godot_name: StringName { __godot_name_AtlasTexture }
 
-    static var _method_set_atlas_4051416890: GDExtensionMethodBindPtr! = nil
-    static var _method_get_atlas_3635182373: GDExtensionMethodBindPtr! = nil
-    static var _method_set_region_2046264180: GDExtensionMethodBindPtr! = nil
-    static var _method_get_region_1639390495: GDExtensionMethodBindPtr! = nil
-    static var _method_set_margin_2046264180: GDExtensionMethodBindPtr! = nil
-    static var _method_get_margin_1639390495: GDExtensionMethodBindPtr! = nil
-    static var _method_set_filter_clip_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_has_filter_clip_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_atlas_4051416890: StringName! = nil
+    static var _method_get_atlas_3635182373: StringName! = nil
+    static var _method_set_region_2046264180: StringName! = nil
+    static var _method_get_region_1639390495: StringName! = nil
+    static var _method_set_margin_2046264180: StringName! = nil
+    static var _method_get_margin_1639390495: StringName! = nil
+    static var _method_set_filter_clip_2586408642: StringName! = nil
+    static var _method_has_filter_clip_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AtlasTexture == nil)
         __godot_name_AtlasTexture = StringName(from: "AtlasTexture")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_atlas_4051416890_name = StringName(from: "set_atlas")
-        self._method_set_atlas_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_AtlasTexture._native_ptr(), _method_set_atlas_4051416890_name._native_ptr(), 4051416890)
-        assert(AtlasTexture._method_set_atlas_4051416890 != nil)
-        let _method_get_atlas_3635182373_name = StringName(from: "get_atlas")
-        self._method_get_atlas_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_AtlasTexture._native_ptr(), _method_get_atlas_3635182373_name._native_ptr(), 3635182373)
-        assert(AtlasTexture._method_get_atlas_3635182373 != nil)
-        let _method_set_region_2046264180_name = StringName(from: "set_region")
-        self._method_set_region_2046264180 = self.interface.pointee.classdb_get_method_bind(__godot_name_AtlasTexture._native_ptr(), _method_set_region_2046264180_name._native_ptr(), 2046264180)
-        assert(AtlasTexture._method_set_region_2046264180 != nil)
-        let _method_get_region_1639390495_name = StringName(from: "get_region")
-        self._method_get_region_1639390495 = self.interface.pointee.classdb_get_method_bind(__godot_name_AtlasTexture._native_ptr(), _method_get_region_1639390495_name._native_ptr(), 1639390495)
-        assert(AtlasTexture._method_get_region_1639390495 != nil)
-        let _method_set_margin_2046264180_name = StringName(from: "set_margin")
-        self._method_set_margin_2046264180 = self.interface.pointee.classdb_get_method_bind(__godot_name_AtlasTexture._native_ptr(), _method_set_margin_2046264180_name._native_ptr(), 2046264180)
-        assert(AtlasTexture._method_set_margin_2046264180 != nil)
-        let _method_get_margin_1639390495_name = StringName(from: "get_margin")
-        self._method_get_margin_1639390495 = self.interface.pointee.classdb_get_method_bind(__godot_name_AtlasTexture._native_ptr(), _method_get_margin_1639390495_name._native_ptr(), 1639390495)
-        assert(AtlasTexture._method_get_margin_1639390495 != nil)
-        let _method_set_filter_clip_2586408642_name = StringName(from: "set_filter_clip")
-        self._method_set_filter_clip_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AtlasTexture._native_ptr(), _method_set_filter_clip_2586408642_name._native_ptr(), 2586408642)
-        assert(AtlasTexture._method_set_filter_clip_2586408642 != nil)
-        let _method_has_filter_clip_36873697_name = StringName(from: "has_filter_clip")
-        self._method_has_filter_clip_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AtlasTexture._native_ptr(), _method_has_filter_clip_36873697_name._native_ptr(), 36873697)
-        assert(AtlasTexture._method_has_filter_clip_36873697 != nil)
+        self._method_set_atlas_4051416890 = StringName(from: "set_atlas")
+        assert(self._method_set_atlas_4051416890 != nil)
+        self._method_get_atlas_3635182373 = StringName(from: "get_atlas")
+        assert(self._method_get_atlas_3635182373 != nil)
+        self._method_set_region_2046264180 = StringName(from: "set_region")
+        assert(self._method_set_region_2046264180 != nil)
+        self._method_get_region_1639390495 = StringName(from: "get_region")
+        assert(self._method_get_region_1639390495 != nil)
+        self._method_set_margin_2046264180 = StringName(from: "set_margin")
+        assert(self._method_set_margin_2046264180 != nil)
+        self._method_get_margin_1639390495 = StringName(from: "get_margin")
+        assert(self._method_get_margin_1639390495 != nil)
+        self._method_set_filter_clip_2586408642 = StringName(from: "set_filter_clip")
+        assert(self._method_set_filter_clip_2586408642 != nil)
+        self._method_has_filter_clip_36873697 = StringName(from: "has_filter_clip")
+        assert(self._method_has_filter_clip_36873697 != nil)
     }
 
     public func set_atlas(atlas: Texture2D)  {
@@ -66,8 +59,13 @@ open class AtlasTexture : Texture2D {
                 .init(atlas_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_atlas_4051416890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_atlas_4051416890._native_ptr(),
+                    4051416890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -81,8 +79,13 @@ open class AtlasTexture : Texture2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_atlas_3635182373,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_atlas_3635182373._native_ptr(),
+                    3635182373)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -97,8 +100,13 @@ open class AtlasTexture : Texture2D {
                 .init(region_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_region_2046264180,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_region_2046264180._native_ptr(),
+                    2046264180)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -112,8 +120,13 @@ open class AtlasTexture : Texture2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_region_1639390495,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_region_1639390495._native_ptr(),
+                    1639390495)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -128,8 +141,13 @@ open class AtlasTexture : Texture2D {
                 .init(margin_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_margin_2046264180,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_margin_2046264180._native_ptr(),
+                    2046264180)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -143,8 +161,13 @@ open class AtlasTexture : Texture2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_margin_1639390495,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_margin_1639390495._native_ptr(),
+                    1639390495)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -159,8 +182,13 @@ open class AtlasTexture : Texture2D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_filter_clip_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_filter_clip_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -176,8 +204,13 @@ open class AtlasTexture : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_filter_clip_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_filter_clip_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

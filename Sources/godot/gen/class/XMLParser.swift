@@ -19,83 +19,67 @@ open class XMLParser : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_XMLParser }
 
-    static var _method_read_166280745: GDExtensionMethodBindPtr! = nil
-    static var _method_get_node_type_2984359541: GDExtensionMethodBindPtr! = nil
-    static var _method_get_node_name_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_node_data_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_node_offset_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_attribute_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_attribute_name_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_attribute_value_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_has_attribute_3927539163: GDExtensionMethodBindPtr! = nil
-    static var _method_get_named_attribute_value_3135753539: GDExtensionMethodBindPtr! = nil
-    static var _method_get_named_attribute_value_safe_3135753539: GDExtensionMethodBindPtr! = nil
-    static var _method_is_empty_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_current_line_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_skip_section_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_seek_844576869: GDExtensionMethodBindPtr! = nil
-    static var _method_open_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_open_buffer_680677267: GDExtensionMethodBindPtr! = nil
+    static var _method_read_166280745: StringName! = nil
+    static var _method_get_node_type_2984359541: StringName! = nil
+    static var _method_get_node_name_201670096: StringName! = nil
+    static var _method_get_node_data_201670096: StringName! = nil
+    static var _method_get_node_offset_3905245786: StringName! = nil
+    static var _method_get_attribute_count_3905245786: StringName! = nil
+    static var _method_get_attribute_name_844755477: StringName! = nil
+    static var _method_get_attribute_value_844755477: StringName! = nil
+    static var _method_has_attribute_3927539163: StringName! = nil
+    static var _method_get_named_attribute_value_3135753539: StringName! = nil
+    static var _method_get_named_attribute_value_safe_3135753539: StringName! = nil
+    static var _method_is_empty_36873697: StringName! = nil
+    static var _method_get_current_line_3905245786: StringName! = nil
+    static var _method_skip_section_3218959716: StringName! = nil
+    static var _method_seek_844576869: StringName! = nil
+    static var _method_open_166001499: StringName! = nil
+    static var _method_open_buffer_680677267: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_XMLParser == nil)
         __godot_name_XMLParser = StringName(from: "XMLParser")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_read_166280745_name = StringName(from: "read")
-        self._method_read_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_read_166280745_name._native_ptr(), 166280745)
-        assert(XMLParser._method_read_166280745 != nil)
-        let _method_get_node_type_2984359541_name = StringName(from: "get_node_type")
-        self._method_get_node_type_2984359541 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_get_node_type_2984359541_name._native_ptr(), 2984359541)
-        assert(XMLParser._method_get_node_type_2984359541 != nil)
-        let _method_get_node_name_201670096_name = StringName(from: "get_node_name")
-        self._method_get_node_name_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_get_node_name_201670096_name._native_ptr(), 201670096)
-        assert(XMLParser._method_get_node_name_201670096 != nil)
-        let _method_get_node_data_201670096_name = StringName(from: "get_node_data")
-        self._method_get_node_data_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_get_node_data_201670096_name._native_ptr(), 201670096)
-        assert(XMLParser._method_get_node_data_201670096 != nil)
-        let _method_get_node_offset_3905245786_name = StringName(from: "get_node_offset")
-        self._method_get_node_offset_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_get_node_offset_3905245786_name._native_ptr(), 3905245786)
-        assert(XMLParser._method_get_node_offset_3905245786 != nil)
-        let _method_get_attribute_count_3905245786_name = StringName(from: "get_attribute_count")
-        self._method_get_attribute_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_get_attribute_count_3905245786_name._native_ptr(), 3905245786)
-        assert(XMLParser._method_get_attribute_count_3905245786 != nil)
-        let _method_get_attribute_name_844755477_name = StringName(from: "get_attribute_name")
-        self._method_get_attribute_name_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_get_attribute_name_844755477_name._native_ptr(), 844755477)
-        assert(XMLParser._method_get_attribute_name_844755477 != nil)
-        let _method_get_attribute_value_844755477_name = StringName(from: "get_attribute_value")
-        self._method_get_attribute_value_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_get_attribute_value_844755477_name._native_ptr(), 844755477)
-        assert(XMLParser._method_get_attribute_value_844755477 != nil)
-        let _method_has_attribute_3927539163_name = StringName(from: "has_attribute")
-        self._method_has_attribute_3927539163 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_has_attribute_3927539163_name._native_ptr(), 3927539163)
-        assert(XMLParser._method_has_attribute_3927539163 != nil)
-        let _method_get_named_attribute_value_3135753539_name = StringName(from: "get_named_attribute_value")
-        self._method_get_named_attribute_value_3135753539 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_get_named_attribute_value_3135753539_name._native_ptr(), 3135753539)
-        assert(XMLParser._method_get_named_attribute_value_3135753539 != nil)
-        let _method_get_named_attribute_value_safe_3135753539_name = StringName(from: "get_named_attribute_value_safe")
-        self._method_get_named_attribute_value_safe_3135753539 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_get_named_attribute_value_safe_3135753539_name._native_ptr(), 3135753539)
-        assert(XMLParser._method_get_named_attribute_value_safe_3135753539 != nil)
-        let _method_is_empty_36873697_name = StringName(from: "is_empty")
-        self._method_is_empty_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_is_empty_36873697_name._native_ptr(), 36873697)
-        assert(XMLParser._method_is_empty_36873697 != nil)
-        let _method_get_current_line_3905245786_name = StringName(from: "get_current_line")
-        self._method_get_current_line_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_get_current_line_3905245786_name._native_ptr(), 3905245786)
-        assert(XMLParser._method_get_current_line_3905245786 != nil)
-        let _method_skip_section_3218959716_name = StringName(from: "skip_section")
-        self._method_skip_section_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_skip_section_3218959716_name._native_ptr(), 3218959716)
-        assert(XMLParser._method_skip_section_3218959716 != nil)
-        let _method_seek_844576869_name = StringName(from: "seek")
-        self._method_seek_844576869 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_seek_844576869_name._native_ptr(), 844576869)
-        assert(XMLParser._method_seek_844576869 != nil)
-        let _method_open_166001499_name = StringName(from: "open")
-        self._method_open_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_open_166001499_name._native_ptr(), 166001499)
-        assert(XMLParser._method_open_166001499 != nil)
-        let _method_open_buffer_680677267_name = StringName(from: "open_buffer")
-        self._method_open_buffer_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_XMLParser._native_ptr(), _method_open_buffer_680677267_name._native_ptr(), 680677267)
-        assert(XMLParser._method_open_buffer_680677267 != nil)
+        self._method_read_166280745 = StringName(from: "read")
+        assert(self._method_read_166280745 != nil)
+        self._method_get_node_type_2984359541 = StringName(from: "get_node_type")
+        assert(self._method_get_node_type_2984359541 != nil)
+        self._method_get_node_name_201670096 = StringName(from: "get_node_name")
+        assert(self._method_get_node_name_201670096 != nil)
+        self._method_get_node_data_201670096 = StringName(from: "get_node_data")
+        assert(self._method_get_node_data_201670096 != nil)
+        self._method_get_node_offset_3905245786 = StringName(from: "get_node_offset")
+        assert(self._method_get_node_offset_3905245786 != nil)
+        self._method_get_attribute_count_3905245786 = StringName(from: "get_attribute_count")
+        assert(self._method_get_attribute_count_3905245786 != nil)
+        self._method_get_attribute_name_844755477 = StringName(from: "get_attribute_name")
+        assert(self._method_get_attribute_name_844755477 != nil)
+        self._method_get_attribute_value_844755477 = StringName(from: "get_attribute_value")
+        assert(self._method_get_attribute_value_844755477 != nil)
+        self._method_has_attribute_3927539163 = StringName(from: "has_attribute")
+        assert(self._method_has_attribute_3927539163 != nil)
+        self._method_get_named_attribute_value_3135753539 = StringName(from: "get_named_attribute_value")
+        assert(self._method_get_named_attribute_value_3135753539 != nil)
+        self._method_get_named_attribute_value_safe_3135753539 = StringName(from: "get_named_attribute_value_safe")
+        assert(self._method_get_named_attribute_value_safe_3135753539 != nil)
+        self._method_is_empty_36873697 = StringName(from: "is_empty")
+        assert(self._method_is_empty_36873697 != nil)
+        self._method_get_current_line_3905245786 = StringName(from: "get_current_line")
+        assert(self._method_get_current_line_3905245786 != nil)
+        self._method_skip_section_3218959716 = StringName(from: "skip_section")
+        assert(self._method_skip_section_3218959716 != nil)
+        self._method_seek_844576869 = StringName(from: "seek")
+        assert(self._method_seek_844576869 != nil)
+        self._method_open_166001499 = StringName(from: "open")
+        assert(self._method_open_166001499 != nil)
+        self._method_open_buffer_680677267 = StringName(from: "open_buffer")
+        assert(self._method_open_buffer_680677267 != nil)
     }
 
     public func read() -> Error {
@@ -106,8 +90,13 @@ open class XMLParser : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_read_166280745,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_read_166280745._native_ptr(),
+                    166280745)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -122,8 +111,13 @@ open class XMLParser : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_node_type_2984359541,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_node_type_2984359541._native_ptr(),
+                    2984359541)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -138,8 +132,13 @@ open class XMLParser : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_node_name_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_node_name_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -154,8 +153,13 @@ open class XMLParser : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_node_data_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_node_data_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -171,8 +175,13 @@ open class XMLParser : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_node_offset_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_node_offset_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -188,8 +197,13 @@ open class XMLParser : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_attribute_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_attribute_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -205,8 +219,13 @@ open class XMLParser : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_attribute_name_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_attribute_name_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -223,8 +242,13 @@ open class XMLParser : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_attribute_value_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_attribute_value_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -242,8 +266,13 @@ open class XMLParser : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_attribute_3927539163,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_attribute_3927539163._native_ptr(),
+                    3927539163)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -259,8 +288,13 @@ open class XMLParser : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_named_attribute_value_3135753539,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_named_attribute_value_3135753539._native_ptr(),
+                    3135753539)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -276,8 +310,13 @@ open class XMLParser : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_named_attribute_value_safe_3135753539,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_named_attribute_value_safe_3135753539._native_ptr(),
+                    3135753539)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -293,8 +332,13 @@ open class XMLParser : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_empty_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_empty_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -310,8 +354,13 @@ open class XMLParser : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_current_line_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_current_line_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -325,8 +374,13 @@ open class XMLParser : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_skip_section_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_skip_section_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -341,8 +395,13 @@ open class XMLParser : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_seek_844576869,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_seek_844576869._native_ptr(),
+                    844576869)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -359,8 +418,13 @@ open class XMLParser : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_open_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_open_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -376,8 +440,13 @@ open class XMLParser : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_open_buffer_680677267,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_open_buffer_680677267._native_ptr(),
+                    680677267)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -13,47 +13,40 @@ open class Skeleton2D : Node2D {
 
     public override class var __godot_name: StringName { __godot_name_Skeleton2D }
 
-    static var _method_get_bone_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone_2556267111: GDExtensionMethodBindPtr! = nil
-    static var _method_get_skeleton_2944877500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_modification_stack_3907307132: GDExtensionMethodBindPtr! = nil
-    static var _method_get_modification_stack_2107508396: GDExtensionMethodBindPtr! = nil
-    static var _method_execute_modifications_1005356550: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bone_local_pose_override_555457532: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone_local_pose_override_2995540667: GDExtensionMethodBindPtr! = nil
+    static var _method_get_bone_count_3905245786: StringName! = nil
+    static var _method_get_bone_2556267111: StringName! = nil
+    static var _method_get_skeleton_2944877500: StringName! = nil
+    static var _method_set_modification_stack_3907307132: StringName! = nil
+    static var _method_get_modification_stack_2107508396: StringName! = nil
+    static var _method_execute_modifications_1005356550: StringName! = nil
+    static var _method_set_bone_local_pose_override_555457532: StringName! = nil
+    static var _method_get_bone_local_pose_override_2995540667: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Skeleton2D == nil)
         __godot_name_Skeleton2D = StringName(from: "Skeleton2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_bone_count_3905245786_name = StringName(from: "get_bone_count")
-        self._method_get_bone_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Skeleton2D._native_ptr(), _method_get_bone_count_3905245786_name._native_ptr(), 3905245786)
-        assert(Skeleton2D._method_get_bone_count_3905245786 != nil)
-        let _method_get_bone_2556267111_name = StringName(from: "get_bone")
-        self._method_get_bone_2556267111 = self.interface.pointee.classdb_get_method_bind(__godot_name_Skeleton2D._native_ptr(), _method_get_bone_2556267111_name._native_ptr(), 2556267111)
-        assert(Skeleton2D._method_get_bone_2556267111 != nil)
-        let _method_get_skeleton_2944877500_name = StringName(from: "get_skeleton")
-        self._method_get_skeleton_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name_Skeleton2D._native_ptr(), _method_get_skeleton_2944877500_name._native_ptr(), 2944877500)
-        assert(Skeleton2D._method_get_skeleton_2944877500 != nil)
-        let _method_set_modification_stack_3907307132_name = StringName(from: "set_modification_stack")
-        self._method_set_modification_stack_3907307132 = self.interface.pointee.classdb_get_method_bind(__godot_name_Skeleton2D._native_ptr(), _method_set_modification_stack_3907307132_name._native_ptr(), 3907307132)
-        assert(Skeleton2D._method_set_modification_stack_3907307132 != nil)
-        let _method_get_modification_stack_2107508396_name = StringName(from: "get_modification_stack")
-        self._method_get_modification_stack_2107508396 = self.interface.pointee.classdb_get_method_bind(__godot_name_Skeleton2D._native_ptr(), _method_get_modification_stack_2107508396_name._native_ptr(), 2107508396)
-        assert(Skeleton2D._method_get_modification_stack_2107508396 != nil)
-        let _method_execute_modifications_1005356550_name = StringName(from: "execute_modifications")
-        self._method_execute_modifications_1005356550 = self.interface.pointee.classdb_get_method_bind(__godot_name_Skeleton2D._native_ptr(), _method_execute_modifications_1005356550_name._native_ptr(), 1005356550)
-        assert(Skeleton2D._method_execute_modifications_1005356550 != nil)
-        let _method_set_bone_local_pose_override_555457532_name = StringName(from: "set_bone_local_pose_override")
-        self._method_set_bone_local_pose_override_555457532 = self.interface.pointee.classdb_get_method_bind(__godot_name_Skeleton2D._native_ptr(), _method_set_bone_local_pose_override_555457532_name._native_ptr(), 555457532)
-        assert(Skeleton2D._method_set_bone_local_pose_override_555457532 != nil)
-        let _method_get_bone_local_pose_override_2995540667_name = StringName(from: "get_bone_local_pose_override")
-        self._method_get_bone_local_pose_override_2995540667 = self.interface.pointee.classdb_get_method_bind(__godot_name_Skeleton2D._native_ptr(), _method_get_bone_local_pose_override_2995540667_name._native_ptr(), 2995540667)
-        assert(Skeleton2D._method_get_bone_local_pose_override_2995540667 != nil)
+        self._method_get_bone_count_3905245786 = StringName(from: "get_bone_count")
+        assert(self._method_get_bone_count_3905245786 != nil)
+        self._method_get_bone_2556267111 = StringName(from: "get_bone")
+        assert(self._method_get_bone_2556267111 != nil)
+        self._method_get_skeleton_2944877500 = StringName(from: "get_skeleton")
+        assert(self._method_get_skeleton_2944877500 != nil)
+        self._method_set_modification_stack_3907307132 = StringName(from: "set_modification_stack")
+        assert(self._method_set_modification_stack_3907307132 != nil)
+        self._method_get_modification_stack_2107508396 = StringName(from: "get_modification_stack")
+        assert(self._method_get_modification_stack_2107508396 != nil)
+        self._method_execute_modifications_1005356550 = StringName(from: "execute_modifications")
+        assert(self._method_execute_modifications_1005356550 != nil)
+        self._method_set_bone_local_pose_override_555457532 = StringName(from: "set_bone_local_pose_override")
+        assert(self._method_set_bone_local_pose_override_555457532 != nil)
+        self._method_get_bone_local_pose_override_2995540667 = StringName(from: "get_bone_local_pose_override")
+        assert(self._method_get_bone_local_pose_override_2995540667 != nil)
     }
 
     public func get_bone_count() -> Int64 {
@@ -65,8 +58,13 @@ open class Skeleton2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -82,8 +80,13 @@ open class Skeleton2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_2556267111,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_2556267111._native_ptr(),
+                    2556267111)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -99,8 +102,13 @@ open class Skeleton2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_skeleton_2944877500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_skeleton_2944877500._native_ptr(),
+                    2944877500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -115,8 +123,13 @@ open class Skeleton2D : Node2D {
                 .init(modification_stack_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_modification_stack_3907307132,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_modification_stack_3907307132._native_ptr(),
+                    3907307132)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -130,8 +143,13 @@ open class Skeleton2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_modification_stack_2107508396,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_modification_stack_2107508396._native_ptr(),
+                    2107508396)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -147,8 +165,13 @@ open class Skeleton2D : Node2D {
                 .init(delta_native), .init(execution_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_execute_modifications_1005356550,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_execute_modifications_1005356550._native_ptr(),
+                    1005356550)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -167,8 +190,13 @@ open class Skeleton2D : Node2D {
                 .init(bone_idx_native), .init(override_pose_native), .init(strength_native), .init(persistent_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bone_local_pose_override_555457532,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bone_local_pose_override_555457532._native_ptr(),
+                    555457532)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -186,8 +214,13 @@ open class Skeleton2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_local_pose_override_2995540667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_local_pose_override_2995540667._native_ptr(),
+                    2995540667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

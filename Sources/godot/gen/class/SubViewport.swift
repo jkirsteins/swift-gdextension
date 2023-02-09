@@ -22,55 +22,46 @@ open class SubViewport : Viewport {
 
     public override class var __godot_name: StringName { __godot_name_SubViewport }
 
-    static var _method_set_size_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_set_size_2d_override_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_2d_override_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_set_size_2d_override_stretch_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_size_2d_override_stretch_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_update_mode_1295690030: GDExtensionMethodBindPtr! = nil
-    static var _method_get_update_mode_2980171553: GDExtensionMethodBindPtr! = nil
-    static var _method_set_clear_mode_2834454712: GDExtensionMethodBindPtr! = nil
-    static var _method_get_clear_mode_331324495: GDExtensionMethodBindPtr! = nil
+    static var _method_set_size_1130785943: StringName! = nil
+    static var _method_get_size_3690982128: StringName! = nil
+    static var _method_set_size_2d_override_1130785943: StringName! = nil
+    static var _method_get_size_2d_override_3690982128: StringName! = nil
+    static var _method_set_size_2d_override_stretch_2586408642: StringName! = nil
+    static var _method_is_size_2d_override_stretch_enabled_36873697: StringName! = nil
+    static var _method_set_update_mode_1295690030: StringName! = nil
+    static var _method_get_update_mode_2980171553: StringName! = nil
+    static var _method_set_clear_mode_2834454712: StringName! = nil
+    static var _method_get_clear_mode_331324495: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_SubViewport == nil)
         __godot_name_SubViewport = StringName(from: "SubViewport")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_size_1130785943_name = StringName(from: "set_size")
-        self._method_set_size_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_SubViewport._native_ptr(), _method_set_size_1130785943_name._native_ptr(), 1130785943)
-        assert(SubViewport._method_set_size_1130785943 != nil)
-        let _method_get_size_3690982128_name = StringName(from: "get_size")
-        self._method_get_size_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_SubViewport._native_ptr(), _method_get_size_3690982128_name._native_ptr(), 3690982128)
-        assert(SubViewport._method_get_size_3690982128 != nil)
-        let _method_set_size_2d_override_1130785943_name = StringName(from: "set_size_2d_override")
-        self._method_set_size_2d_override_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_SubViewport._native_ptr(), _method_set_size_2d_override_1130785943_name._native_ptr(), 1130785943)
-        assert(SubViewport._method_set_size_2d_override_1130785943 != nil)
-        let _method_get_size_2d_override_3690982128_name = StringName(from: "get_size_2d_override")
-        self._method_get_size_2d_override_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_SubViewport._native_ptr(), _method_get_size_2d_override_3690982128_name._native_ptr(), 3690982128)
-        assert(SubViewport._method_get_size_2d_override_3690982128 != nil)
-        let _method_set_size_2d_override_stretch_2586408642_name = StringName(from: "set_size_2d_override_stretch")
-        self._method_set_size_2d_override_stretch_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SubViewport._native_ptr(), _method_set_size_2d_override_stretch_2586408642_name._native_ptr(), 2586408642)
-        assert(SubViewport._method_set_size_2d_override_stretch_2586408642 != nil)
-        let _method_is_size_2d_override_stretch_enabled_36873697_name = StringName(from: "is_size_2d_override_stretch_enabled")
-        self._method_is_size_2d_override_stretch_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SubViewport._native_ptr(), _method_is_size_2d_override_stretch_enabled_36873697_name._native_ptr(), 36873697)
-        assert(SubViewport._method_is_size_2d_override_stretch_enabled_36873697 != nil)
-        let _method_set_update_mode_1295690030_name = StringName(from: "set_update_mode")
-        self._method_set_update_mode_1295690030 = self.interface.pointee.classdb_get_method_bind(__godot_name_SubViewport._native_ptr(), _method_set_update_mode_1295690030_name._native_ptr(), 1295690030)
-        assert(SubViewport._method_set_update_mode_1295690030 != nil)
-        let _method_get_update_mode_2980171553_name = StringName(from: "get_update_mode")
-        self._method_get_update_mode_2980171553 = self.interface.pointee.classdb_get_method_bind(__godot_name_SubViewport._native_ptr(), _method_get_update_mode_2980171553_name._native_ptr(), 2980171553)
-        assert(SubViewport._method_get_update_mode_2980171553 != nil)
-        let _method_set_clear_mode_2834454712_name = StringName(from: "set_clear_mode")
-        self._method_set_clear_mode_2834454712 = self.interface.pointee.classdb_get_method_bind(__godot_name_SubViewport._native_ptr(), _method_set_clear_mode_2834454712_name._native_ptr(), 2834454712)
-        assert(SubViewport._method_set_clear_mode_2834454712 != nil)
-        let _method_get_clear_mode_331324495_name = StringName(from: "get_clear_mode")
-        self._method_get_clear_mode_331324495 = self.interface.pointee.classdb_get_method_bind(__godot_name_SubViewport._native_ptr(), _method_get_clear_mode_331324495_name._native_ptr(), 331324495)
-        assert(SubViewport._method_get_clear_mode_331324495 != nil)
+        self._method_set_size_1130785943 = StringName(from: "set_size")
+        assert(self._method_set_size_1130785943 != nil)
+        self._method_get_size_3690982128 = StringName(from: "get_size")
+        assert(self._method_get_size_3690982128 != nil)
+        self._method_set_size_2d_override_1130785943 = StringName(from: "set_size_2d_override")
+        assert(self._method_set_size_2d_override_1130785943 != nil)
+        self._method_get_size_2d_override_3690982128 = StringName(from: "get_size_2d_override")
+        assert(self._method_get_size_2d_override_3690982128 != nil)
+        self._method_set_size_2d_override_stretch_2586408642 = StringName(from: "set_size_2d_override_stretch")
+        assert(self._method_set_size_2d_override_stretch_2586408642 != nil)
+        self._method_is_size_2d_override_stretch_enabled_36873697 = StringName(from: "is_size_2d_override_stretch_enabled")
+        assert(self._method_is_size_2d_override_stretch_enabled_36873697 != nil)
+        self._method_set_update_mode_1295690030 = StringName(from: "set_update_mode")
+        assert(self._method_set_update_mode_1295690030 != nil)
+        self._method_get_update_mode_2980171553 = StringName(from: "get_update_mode")
+        assert(self._method_get_update_mode_2980171553 != nil)
+        self._method_set_clear_mode_2834454712 = StringName(from: "set_clear_mode")
+        assert(self._method_set_clear_mode_2834454712 != nil)
+        self._method_get_clear_mode_331324495 = StringName(from: "get_clear_mode")
+        assert(self._method_get_clear_mode_331324495 != nil)
     }
 
     public func set_size(size: Vector2i)  {
@@ -81,8 +72,13 @@ open class SubViewport : Viewport {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_size_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_size_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -96,8 +92,13 @@ open class SubViewport : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -112,8 +113,13 @@ open class SubViewport : Viewport {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_size_2d_override_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_size_2d_override_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -127,8 +133,13 @@ open class SubViewport : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_2d_override_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_2d_override_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -143,8 +154,13 @@ open class SubViewport : Viewport {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_size_2d_override_stretch_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_size_2d_override_stretch_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -160,8 +176,13 @@ open class SubViewport : Viewport {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_size_2d_override_stretch_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_size_2d_override_stretch_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -176,8 +197,13 @@ open class SubViewport : Viewport {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_update_mode_1295690030,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_update_mode_1295690030._native_ptr(),
+                    1295690030)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -192,8 +218,13 @@ open class SubViewport : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_update_mode_2980171553,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_update_mode_2980171553._native_ptr(),
+                    2980171553)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -208,8 +239,13 @@ open class SubViewport : Viewport {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_clear_mode_2834454712,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_clear_mode_2834454712._native_ptr(),
+                    2834454712)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -224,8 +260,13 @@ open class SubViewport : Viewport {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_clear_mode_331324495,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_clear_mode_331324495._native_ptr(),
+                    331324495)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

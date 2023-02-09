@@ -17,35 +17,31 @@ open class FlowContainer : Container {
 
     public override class var __godot_name: StringName { __godot_name_FlowContainer }
 
-    static var _method_get_line_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alignment_575250951: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alignment_3749743559: GDExtensionMethodBindPtr! = nil
-    static var _method_set_vertical_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_vertical_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_get_line_count_3905245786: StringName! = nil
+    static var _method_set_alignment_575250951: StringName! = nil
+    static var _method_get_alignment_3749743559: StringName! = nil
+    static var _method_set_vertical_2586408642: StringName! = nil
+    static var _method_is_vertical_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_FlowContainer == nil)
         __godot_name_FlowContainer = StringName(from: "FlowContainer")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_line_count_3905245786_name = StringName(from: "get_line_count")
-        self._method_get_line_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_FlowContainer._native_ptr(), _method_get_line_count_3905245786_name._native_ptr(), 3905245786)
-        assert(FlowContainer._method_get_line_count_3905245786 != nil)
-        let _method_set_alignment_575250951_name = StringName(from: "set_alignment")
-        self._method_set_alignment_575250951 = self.interface.pointee.classdb_get_method_bind(__godot_name_FlowContainer._native_ptr(), _method_set_alignment_575250951_name._native_ptr(), 575250951)
-        assert(FlowContainer._method_set_alignment_575250951 != nil)
-        let _method_get_alignment_3749743559_name = StringName(from: "get_alignment")
-        self._method_get_alignment_3749743559 = self.interface.pointee.classdb_get_method_bind(__godot_name_FlowContainer._native_ptr(), _method_get_alignment_3749743559_name._native_ptr(), 3749743559)
-        assert(FlowContainer._method_get_alignment_3749743559 != nil)
-        let _method_set_vertical_2586408642_name = StringName(from: "set_vertical")
-        self._method_set_vertical_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_FlowContainer._native_ptr(), _method_set_vertical_2586408642_name._native_ptr(), 2586408642)
-        assert(FlowContainer._method_set_vertical_2586408642 != nil)
-        let _method_is_vertical_36873697_name = StringName(from: "is_vertical")
-        self._method_is_vertical_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_FlowContainer._native_ptr(), _method_is_vertical_36873697_name._native_ptr(), 36873697)
-        assert(FlowContainer._method_is_vertical_36873697 != nil)
+        self._method_get_line_count_3905245786 = StringName(from: "get_line_count")
+        assert(self._method_get_line_count_3905245786 != nil)
+        self._method_set_alignment_575250951 = StringName(from: "set_alignment")
+        assert(self._method_set_alignment_575250951 != nil)
+        self._method_get_alignment_3749743559 = StringName(from: "get_alignment")
+        assert(self._method_get_alignment_3749743559 != nil)
+        self._method_set_vertical_2586408642 = StringName(from: "set_vertical")
+        assert(self._method_set_vertical_2586408642 != nil)
+        self._method_is_vertical_36873697 = StringName(from: "is_vertical")
+        assert(self._method_is_vertical_36873697 != nil)
     }
 
     public func get_line_count() -> Int64 {
@@ -57,8 +53,13 @@ open class FlowContainer : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -73,8 +74,13 @@ open class FlowContainer : Container {
                 .init(alignment_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alignment_575250951,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alignment_575250951._native_ptr(),
+                    575250951)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -89,8 +95,13 @@ open class FlowContainer : Container {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alignment_3749743559,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alignment_3749743559._native_ptr(),
+                    3749743559)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -105,8 +116,13 @@ open class FlowContainer : Container {
                 .init(vertical_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_vertical_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_vertical_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -122,8 +138,13 @@ open class FlowContainer : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_vertical_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_vertical_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

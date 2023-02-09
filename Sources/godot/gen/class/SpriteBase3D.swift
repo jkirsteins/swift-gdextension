@@ -24,151 +24,118 @@ open class SpriteBase3D : GeometryInstance3D {
 
     public override class var __godot_name: StringName { __godot_name_SpriteBase3D }
 
-    static var _method_set_centered_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_centered_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_offset_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_offset_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flip_h_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_flipped_h_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flip_v_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_flipped_v_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_modulate_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_modulate_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_render_priority_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_render_priority_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_pixel_size_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pixel_size_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_axis_1144690656: GDExtensionMethodBindPtr! = nil
-    static var _method_get_axis_3050976882: GDExtensionMethodBindPtr! = nil
-    static var _method_set_draw_flag_1135633219: GDExtensionMethodBindPtr! = nil
-    static var _method_get_draw_flag_1733036628: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alpha_cut_mode_227561226: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alpha_cut_mode_336003791: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alpha_scissor_threshold_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alpha_scissor_threshold_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alpha_hash_scale_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alpha_hash_scale_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alpha_antialiasing_3212649852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alpha_antialiasing_2889939400: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alpha_antialiasing_edge_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alpha_antialiasing_edge_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_billboard_mode_4202036497: GDExtensionMethodBindPtr! = nil
-    static var _method_get_billboard_mode_1283840139: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_filter_22904437: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_filter_3289213076: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_rect_1639390495: GDExtensionMethodBindPtr! = nil
-    static var _method_generate_triangle_mesh_3476533166: GDExtensionMethodBindPtr! = nil
+    static var _method_set_centered_2586408642: StringName! = nil
+    static var _method_is_centered_36873697: StringName! = nil
+    static var _method_set_offset_743155724: StringName! = nil
+    static var _method_get_offset_3341600327: StringName! = nil
+    static var _method_set_flip_h_2586408642: StringName! = nil
+    static var _method_is_flipped_h_36873697: StringName! = nil
+    static var _method_set_flip_v_2586408642: StringName! = nil
+    static var _method_is_flipped_v_36873697: StringName! = nil
+    static var _method_set_modulate_2920490490: StringName! = nil
+    static var _method_get_modulate_3444240500: StringName! = nil
+    static var _method_set_render_priority_1286410249: StringName! = nil
+    static var _method_get_render_priority_3905245786: StringName! = nil
+    static var _method_set_pixel_size_373806689: StringName! = nil
+    static var _method_get_pixel_size_1740695150: StringName! = nil
+    static var _method_set_axis_1144690656: StringName! = nil
+    static var _method_get_axis_3050976882: StringName! = nil
+    static var _method_set_draw_flag_1135633219: StringName! = nil
+    static var _method_get_draw_flag_1733036628: StringName! = nil
+    static var _method_set_alpha_cut_mode_227561226: StringName! = nil
+    static var _method_get_alpha_cut_mode_336003791: StringName! = nil
+    static var _method_set_alpha_scissor_threshold_373806689: StringName! = nil
+    static var _method_get_alpha_scissor_threshold_1740695150: StringName! = nil
+    static var _method_set_alpha_hash_scale_373806689: StringName! = nil
+    static var _method_get_alpha_hash_scale_1740695150: StringName! = nil
+    static var _method_set_alpha_antialiasing_3212649852: StringName! = nil
+    static var _method_get_alpha_antialiasing_2889939400: StringName! = nil
+    static var _method_set_alpha_antialiasing_edge_373806689: StringName! = nil
+    static var _method_get_alpha_antialiasing_edge_1740695150: StringName! = nil
+    static var _method_set_billboard_mode_4202036497: StringName! = nil
+    static var _method_get_billboard_mode_1283840139: StringName! = nil
+    static var _method_set_texture_filter_22904437: StringName! = nil
+    static var _method_get_texture_filter_3289213076: StringName! = nil
+    static var _method_get_item_rect_1639390495: StringName! = nil
+    static var _method_generate_triangle_mesh_3476533166: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_SpriteBase3D == nil)
         __godot_name_SpriteBase3D = StringName(from: "SpriteBase3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_centered_2586408642_name = StringName(from: "set_centered")
-        self._method_set_centered_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_set_centered_2586408642_name._native_ptr(), 2586408642)
-        assert(SpriteBase3D._method_set_centered_2586408642 != nil)
-        let _method_is_centered_36873697_name = StringName(from: "is_centered")
-        self._method_is_centered_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_is_centered_36873697_name._native_ptr(), 36873697)
-        assert(SpriteBase3D._method_is_centered_36873697 != nil)
-        let _method_set_offset_743155724_name = StringName(from: "set_offset")
-        self._method_set_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_set_offset_743155724_name._native_ptr(), 743155724)
-        assert(SpriteBase3D._method_set_offset_743155724 != nil)
-        let _method_get_offset_3341600327_name = StringName(from: "get_offset")
-        self._method_get_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_get_offset_3341600327_name._native_ptr(), 3341600327)
-        assert(SpriteBase3D._method_get_offset_3341600327 != nil)
-        let _method_set_flip_h_2586408642_name = StringName(from: "set_flip_h")
-        self._method_set_flip_h_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_set_flip_h_2586408642_name._native_ptr(), 2586408642)
-        assert(SpriteBase3D._method_set_flip_h_2586408642 != nil)
-        let _method_is_flipped_h_36873697_name = StringName(from: "is_flipped_h")
-        self._method_is_flipped_h_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_is_flipped_h_36873697_name._native_ptr(), 36873697)
-        assert(SpriteBase3D._method_is_flipped_h_36873697 != nil)
-        let _method_set_flip_v_2586408642_name = StringName(from: "set_flip_v")
-        self._method_set_flip_v_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_set_flip_v_2586408642_name._native_ptr(), 2586408642)
-        assert(SpriteBase3D._method_set_flip_v_2586408642 != nil)
-        let _method_is_flipped_v_36873697_name = StringName(from: "is_flipped_v")
-        self._method_is_flipped_v_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_is_flipped_v_36873697_name._native_ptr(), 36873697)
-        assert(SpriteBase3D._method_is_flipped_v_36873697 != nil)
-        let _method_set_modulate_2920490490_name = StringName(from: "set_modulate")
-        self._method_set_modulate_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_set_modulate_2920490490_name._native_ptr(), 2920490490)
-        assert(SpriteBase3D._method_set_modulate_2920490490 != nil)
-        let _method_get_modulate_3444240500_name = StringName(from: "get_modulate")
-        self._method_get_modulate_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_get_modulate_3444240500_name._native_ptr(), 3444240500)
-        assert(SpriteBase3D._method_get_modulate_3444240500 != nil)
-        let _method_set_render_priority_1286410249_name = StringName(from: "set_render_priority")
-        self._method_set_render_priority_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_set_render_priority_1286410249_name._native_ptr(), 1286410249)
-        assert(SpriteBase3D._method_set_render_priority_1286410249 != nil)
-        let _method_get_render_priority_3905245786_name = StringName(from: "get_render_priority")
-        self._method_get_render_priority_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_get_render_priority_3905245786_name._native_ptr(), 3905245786)
-        assert(SpriteBase3D._method_get_render_priority_3905245786 != nil)
-        let _method_set_pixel_size_373806689_name = StringName(from: "set_pixel_size")
-        self._method_set_pixel_size_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_set_pixel_size_373806689_name._native_ptr(), 373806689)
-        assert(SpriteBase3D._method_set_pixel_size_373806689 != nil)
-        let _method_get_pixel_size_1740695150_name = StringName(from: "get_pixel_size")
-        self._method_get_pixel_size_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_get_pixel_size_1740695150_name._native_ptr(), 1740695150)
-        assert(SpriteBase3D._method_get_pixel_size_1740695150 != nil)
-        let _method_set_axis_1144690656_name = StringName(from: "set_axis")
-        self._method_set_axis_1144690656 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_set_axis_1144690656_name._native_ptr(), 1144690656)
-        assert(SpriteBase3D._method_set_axis_1144690656 != nil)
-        let _method_get_axis_3050976882_name = StringName(from: "get_axis")
-        self._method_get_axis_3050976882 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_get_axis_3050976882_name._native_ptr(), 3050976882)
-        assert(SpriteBase3D._method_get_axis_3050976882 != nil)
-        let _method_set_draw_flag_1135633219_name = StringName(from: "set_draw_flag")
-        self._method_set_draw_flag_1135633219 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_set_draw_flag_1135633219_name._native_ptr(), 1135633219)
-        assert(SpriteBase3D._method_set_draw_flag_1135633219 != nil)
-        let _method_get_draw_flag_1733036628_name = StringName(from: "get_draw_flag")
-        self._method_get_draw_flag_1733036628 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_get_draw_flag_1733036628_name._native_ptr(), 1733036628)
-        assert(SpriteBase3D._method_get_draw_flag_1733036628 != nil)
-        let _method_set_alpha_cut_mode_227561226_name = StringName(from: "set_alpha_cut_mode")
-        self._method_set_alpha_cut_mode_227561226 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_set_alpha_cut_mode_227561226_name._native_ptr(), 227561226)
-        assert(SpriteBase3D._method_set_alpha_cut_mode_227561226 != nil)
-        let _method_get_alpha_cut_mode_336003791_name = StringName(from: "get_alpha_cut_mode")
-        self._method_get_alpha_cut_mode_336003791 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_get_alpha_cut_mode_336003791_name._native_ptr(), 336003791)
-        assert(SpriteBase3D._method_get_alpha_cut_mode_336003791 != nil)
-        let _method_set_alpha_scissor_threshold_373806689_name = StringName(from: "set_alpha_scissor_threshold")
-        self._method_set_alpha_scissor_threshold_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_set_alpha_scissor_threshold_373806689_name._native_ptr(), 373806689)
-        assert(SpriteBase3D._method_set_alpha_scissor_threshold_373806689 != nil)
-        let _method_get_alpha_scissor_threshold_1740695150_name = StringName(from: "get_alpha_scissor_threshold")
-        self._method_get_alpha_scissor_threshold_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_get_alpha_scissor_threshold_1740695150_name._native_ptr(), 1740695150)
-        assert(SpriteBase3D._method_get_alpha_scissor_threshold_1740695150 != nil)
-        let _method_set_alpha_hash_scale_373806689_name = StringName(from: "set_alpha_hash_scale")
-        self._method_set_alpha_hash_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_set_alpha_hash_scale_373806689_name._native_ptr(), 373806689)
-        assert(SpriteBase3D._method_set_alpha_hash_scale_373806689 != nil)
-        let _method_get_alpha_hash_scale_1740695150_name = StringName(from: "get_alpha_hash_scale")
-        self._method_get_alpha_hash_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_get_alpha_hash_scale_1740695150_name._native_ptr(), 1740695150)
-        assert(SpriteBase3D._method_get_alpha_hash_scale_1740695150 != nil)
-        let _method_set_alpha_antialiasing_3212649852_name = StringName(from: "set_alpha_antialiasing")
-        self._method_set_alpha_antialiasing_3212649852 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_set_alpha_antialiasing_3212649852_name._native_ptr(), 3212649852)
-        assert(SpriteBase3D._method_set_alpha_antialiasing_3212649852 != nil)
-        let _method_get_alpha_antialiasing_2889939400_name = StringName(from: "get_alpha_antialiasing")
-        self._method_get_alpha_antialiasing_2889939400 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_get_alpha_antialiasing_2889939400_name._native_ptr(), 2889939400)
-        assert(SpriteBase3D._method_get_alpha_antialiasing_2889939400 != nil)
-        let _method_set_alpha_antialiasing_edge_373806689_name = StringName(from: "set_alpha_antialiasing_edge")
-        self._method_set_alpha_antialiasing_edge_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_set_alpha_antialiasing_edge_373806689_name._native_ptr(), 373806689)
-        assert(SpriteBase3D._method_set_alpha_antialiasing_edge_373806689 != nil)
-        let _method_get_alpha_antialiasing_edge_1740695150_name = StringName(from: "get_alpha_antialiasing_edge")
-        self._method_get_alpha_antialiasing_edge_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_get_alpha_antialiasing_edge_1740695150_name._native_ptr(), 1740695150)
-        assert(SpriteBase3D._method_get_alpha_antialiasing_edge_1740695150 != nil)
-        let _method_set_billboard_mode_4202036497_name = StringName(from: "set_billboard_mode")
-        self._method_set_billboard_mode_4202036497 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_set_billboard_mode_4202036497_name._native_ptr(), 4202036497)
-        assert(SpriteBase3D._method_set_billboard_mode_4202036497 != nil)
-        let _method_get_billboard_mode_1283840139_name = StringName(from: "get_billboard_mode")
-        self._method_get_billboard_mode_1283840139 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_get_billboard_mode_1283840139_name._native_ptr(), 1283840139)
-        assert(SpriteBase3D._method_get_billboard_mode_1283840139 != nil)
-        let _method_set_texture_filter_22904437_name = StringName(from: "set_texture_filter")
-        self._method_set_texture_filter_22904437 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_set_texture_filter_22904437_name._native_ptr(), 22904437)
-        assert(SpriteBase3D._method_set_texture_filter_22904437 != nil)
-        let _method_get_texture_filter_3289213076_name = StringName(from: "get_texture_filter")
-        self._method_get_texture_filter_3289213076 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_get_texture_filter_3289213076_name._native_ptr(), 3289213076)
-        assert(SpriteBase3D._method_get_texture_filter_3289213076 != nil)
-        let _method_get_item_rect_1639390495_name = StringName(from: "get_item_rect")
-        self._method_get_item_rect_1639390495 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_get_item_rect_1639390495_name._native_ptr(), 1639390495)
-        assert(SpriteBase3D._method_get_item_rect_1639390495 != nil)
-        let _method_generate_triangle_mesh_3476533166_name = StringName(from: "generate_triangle_mesh")
-        self._method_generate_triangle_mesh_3476533166 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpriteBase3D._native_ptr(), _method_generate_triangle_mesh_3476533166_name._native_ptr(), 3476533166)
-        assert(SpriteBase3D._method_generate_triangle_mesh_3476533166 != nil)
+        self._method_set_centered_2586408642 = StringName(from: "set_centered")
+        assert(self._method_set_centered_2586408642 != nil)
+        self._method_is_centered_36873697 = StringName(from: "is_centered")
+        assert(self._method_is_centered_36873697 != nil)
+        self._method_set_offset_743155724 = StringName(from: "set_offset")
+        assert(self._method_set_offset_743155724 != nil)
+        self._method_get_offset_3341600327 = StringName(from: "get_offset")
+        assert(self._method_get_offset_3341600327 != nil)
+        self._method_set_flip_h_2586408642 = StringName(from: "set_flip_h")
+        assert(self._method_set_flip_h_2586408642 != nil)
+        self._method_is_flipped_h_36873697 = StringName(from: "is_flipped_h")
+        assert(self._method_is_flipped_h_36873697 != nil)
+        self._method_set_flip_v_2586408642 = StringName(from: "set_flip_v")
+        assert(self._method_set_flip_v_2586408642 != nil)
+        self._method_is_flipped_v_36873697 = StringName(from: "is_flipped_v")
+        assert(self._method_is_flipped_v_36873697 != nil)
+        self._method_set_modulate_2920490490 = StringName(from: "set_modulate")
+        assert(self._method_set_modulate_2920490490 != nil)
+        self._method_get_modulate_3444240500 = StringName(from: "get_modulate")
+        assert(self._method_get_modulate_3444240500 != nil)
+        self._method_set_render_priority_1286410249 = StringName(from: "set_render_priority")
+        assert(self._method_set_render_priority_1286410249 != nil)
+        self._method_get_render_priority_3905245786 = StringName(from: "get_render_priority")
+        assert(self._method_get_render_priority_3905245786 != nil)
+        self._method_set_pixel_size_373806689 = StringName(from: "set_pixel_size")
+        assert(self._method_set_pixel_size_373806689 != nil)
+        self._method_get_pixel_size_1740695150 = StringName(from: "get_pixel_size")
+        assert(self._method_get_pixel_size_1740695150 != nil)
+        self._method_set_axis_1144690656 = StringName(from: "set_axis")
+        assert(self._method_set_axis_1144690656 != nil)
+        self._method_get_axis_3050976882 = StringName(from: "get_axis")
+        assert(self._method_get_axis_3050976882 != nil)
+        self._method_set_draw_flag_1135633219 = StringName(from: "set_draw_flag")
+        assert(self._method_set_draw_flag_1135633219 != nil)
+        self._method_get_draw_flag_1733036628 = StringName(from: "get_draw_flag")
+        assert(self._method_get_draw_flag_1733036628 != nil)
+        self._method_set_alpha_cut_mode_227561226 = StringName(from: "set_alpha_cut_mode")
+        assert(self._method_set_alpha_cut_mode_227561226 != nil)
+        self._method_get_alpha_cut_mode_336003791 = StringName(from: "get_alpha_cut_mode")
+        assert(self._method_get_alpha_cut_mode_336003791 != nil)
+        self._method_set_alpha_scissor_threshold_373806689 = StringName(from: "set_alpha_scissor_threshold")
+        assert(self._method_set_alpha_scissor_threshold_373806689 != nil)
+        self._method_get_alpha_scissor_threshold_1740695150 = StringName(from: "get_alpha_scissor_threshold")
+        assert(self._method_get_alpha_scissor_threshold_1740695150 != nil)
+        self._method_set_alpha_hash_scale_373806689 = StringName(from: "set_alpha_hash_scale")
+        assert(self._method_set_alpha_hash_scale_373806689 != nil)
+        self._method_get_alpha_hash_scale_1740695150 = StringName(from: "get_alpha_hash_scale")
+        assert(self._method_get_alpha_hash_scale_1740695150 != nil)
+        self._method_set_alpha_antialiasing_3212649852 = StringName(from: "set_alpha_antialiasing")
+        assert(self._method_set_alpha_antialiasing_3212649852 != nil)
+        self._method_get_alpha_antialiasing_2889939400 = StringName(from: "get_alpha_antialiasing")
+        assert(self._method_get_alpha_antialiasing_2889939400 != nil)
+        self._method_set_alpha_antialiasing_edge_373806689 = StringName(from: "set_alpha_antialiasing_edge")
+        assert(self._method_set_alpha_antialiasing_edge_373806689 != nil)
+        self._method_get_alpha_antialiasing_edge_1740695150 = StringName(from: "get_alpha_antialiasing_edge")
+        assert(self._method_get_alpha_antialiasing_edge_1740695150 != nil)
+        self._method_set_billboard_mode_4202036497 = StringName(from: "set_billboard_mode")
+        assert(self._method_set_billboard_mode_4202036497 != nil)
+        self._method_get_billboard_mode_1283840139 = StringName(from: "get_billboard_mode")
+        assert(self._method_get_billboard_mode_1283840139 != nil)
+        self._method_set_texture_filter_22904437 = StringName(from: "set_texture_filter")
+        assert(self._method_set_texture_filter_22904437 != nil)
+        self._method_get_texture_filter_3289213076 = StringName(from: "get_texture_filter")
+        assert(self._method_get_texture_filter_3289213076 != nil)
+        self._method_get_item_rect_1639390495 = StringName(from: "get_item_rect")
+        assert(self._method_get_item_rect_1639390495 != nil)
+        self._method_generate_triangle_mesh_3476533166 = StringName(from: "generate_triangle_mesh")
+        assert(self._method_generate_triangle_mesh_3476533166 != nil)
     }
 
     public func set_centered(centered: UInt8)  {
@@ -179,8 +146,13 @@ open class SpriteBase3D : GeometryInstance3D {
                 .init(centered_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_centered_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_centered_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -196,8 +168,13 @@ open class SpriteBase3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_centered_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_centered_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -212,8 +189,13 @@ open class SpriteBase3D : GeometryInstance3D {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_offset_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_offset_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -227,8 +209,13 @@ open class SpriteBase3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_offset_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_offset_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -243,8 +230,13 @@ open class SpriteBase3D : GeometryInstance3D {
                 .init(flip_h_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flip_h_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flip_h_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -260,8 +252,13 @@ open class SpriteBase3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_flipped_h_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_flipped_h_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -276,8 +273,13 @@ open class SpriteBase3D : GeometryInstance3D {
                 .init(flip_v_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flip_v_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flip_v_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -293,8 +295,13 @@ open class SpriteBase3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_flipped_v_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_flipped_v_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -309,8 +316,13 @@ open class SpriteBase3D : GeometryInstance3D {
                 .init(modulate_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_modulate_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_modulate_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -324,8 +336,13 @@ open class SpriteBase3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_modulate_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_modulate_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -340,8 +357,13 @@ open class SpriteBase3D : GeometryInstance3D {
                 .init(priority_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_render_priority_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_render_priority_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -357,8 +379,13 @@ open class SpriteBase3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_render_priority_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_render_priority_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -373,8 +400,13 @@ open class SpriteBase3D : GeometryInstance3D {
                 .init(pixel_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pixel_size_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pixel_size_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -390,8 +422,13 @@ open class SpriteBase3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pixel_size_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pixel_size_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -406,8 +443,13 @@ open class SpriteBase3D : GeometryInstance3D {
                 .init(axis_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_axis_1144690656,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_axis_1144690656._native_ptr(),
+                    1144690656)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -422,8 +464,13 @@ open class SpriteBase3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_axis_3050976882,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_axis_3050976882._native_ptr(),
+                    3050976882)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -439,8 +486,13 @@ open class SpriteBase3D : GeometryInstance3D {
                 .init(flag_native), .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_draw_flag_1135633219,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_draw_flag_1135633219._native_ptr(),
+                    1135633219)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -458,8 +510,13 @@ open class SpriteBase3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_draw_flag_1733036628,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_draw_flag_1733036628._native_ptr(),
+                    1733036628)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -475,8 +532,13 @@ open class SpriteBase3D : GeometryInstance3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alpha_cut_mode_227561226,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alpha_cut_mode_227561226._native_ptr(),
+                    227561226)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -491,8 +553,13 @@ open class SpriteBase3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alpha_cut_mode_336003791,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alpha_cut_mode_336003791._native_ptr(),
+                    336003791)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -507,8 +574,13 @@ open class SpriteBase3D : GeometryInstance3D {
                 .init(threshold_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alpha_scissor_threshold_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alpha_scissor_threshold_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -524,8 +596,13 @@ open class SpriteBase3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alpha_scissor_threshold_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alpha_scissor_threshold_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -540,8 +617,13 @@ open class SpriteBase3D : GeometryInstance3D {
                 .init(threshold_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alpha_hash_scale_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alpha_hash_scale_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -557,8 +639,13 @@ open class SpriteBase3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alpha_hash_scale_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alpha_hash_scale_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -573,8 +660,13 @@ open class SpriteBase3D : GeometryInstance3D {
                 .init(alpha_aa_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alpha_antialiasing_3212649852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alpha_antialiasing_3212649852._native_ptr(),
+                    3212649852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -589,8 +681,13 @@ open class SpriteBase3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alpha_antialiasing_2889939400,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alpha_antialiasing_2889939400._native_ptr(),
+                    2889939400)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -605,8 +702,13 @@ open class SpriteBase3D : GeometryInstance3D {
                 .init(edge_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alpha_antialiasing_edge_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alpha_antialiasing_edge_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -622,8 +724,13 @@ open class SpriteBase3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alpha_antialiasing_edge_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alpha_antialiasing_edge_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -638,8 +745,13 @@ open class SpriteBase3D : GeometryInstance3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_billboard_mode_4202036497,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_billboard_mode_4202036497._native_ptr(),
+                    4202036497)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -654,8 +766,13 @@ open class SpriteBase3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_billboard_mode_1283840139,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_billboard_mode_1283840139._native_ptr(),
+                    1283840139)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -670,8 +787,13 @@ open class SpriteBase3D : GeometryInstance3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_filter_22904437,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_filter_22904437._native_ptr(),
+                    22904437)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -686,8 +808,13 @@ open class SpriteBase3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_filter_3289213076,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_filter_3289213076._native_ptr(),
+                    3289213076)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -702,8 +829,13 @@ open class SpriteBase3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_rect_1639390495,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_rect_1639390495._native_ptr(),
+                    1639390495)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -718,8 +850,13 @@ open class SpriteBase3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_generate_triangle_mesh_3476533166,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_generate_triangle_mesh_3476533166._native_ptr(),
+                    3476533166)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

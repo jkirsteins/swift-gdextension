@@ -19,39 +19,34 @@ open class StreamPeerTLS : StreamPeer {
 
     public override class var __godot_name: StringName { __godot_name_StreamPeerTLS }
 
-    static var _method_poll_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_accept_stream_4292689651: GDExtensionMethodBindPtr! = nil
-    static var _method_connect_to_stream_1325480781: GDExtensionMethodBindPtr! = nil
-    static var _method_get_status_1128380576: GDExtensionMethodBindPtr! = nil
-    static var _method_get_stream_2741655269: GDExtensionMethodBindPtr! = nil
-    static var _method_disconnect_from_stream_3218959716: GDExtensionMethodBindPtr! = nil
+    static var _method_poll_3218959716: StringName! = nil
+    static var _method_accept_stream_4292689651: StringName! = nil
+    static var _method_connect_to_stream_1325480781: StringName! = nil
+    static var _method_get_status_1128380576: StringName! = nil
+    static var _method_get_stream_2741655269: StringName! = nil
+    static var _method_disconnect_from_stream_3218959716: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_StreamPeerTLS == nil)
         __godot_name_StreamPeerTLS = StringName(from: "StreamPeerTLS")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_poll_3218959716_name = StringName(from: "poll")
-        self._method_poll_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeerTLS._native_ptr(), _method_poll_3218959716_name._native_ptr(), 3218959716)
-        assert(StreamPeerTLS._method_poll_3218959716 != nil)
-        let _method_accept_stream_4292689651_name = StringName(from: "accept_stream")
-        self._method_accept_stream_4292689651 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeerTLS._native_ptr(), _method_accept_stream_4292689651_name._native_ptr(), 4292689651)
-        assert(StreamPeerTLS._method_accept_stream_4292689651 != nil)
-        let _method_connect_to_stream_1325480781_name = StringName(from: "connect_to_stream")
-        self._method_connect_to_stream_1325480781 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeerTLS._native_ptr(), _method_connect_to_stream_1325480781_name._native_ptr(), 1325480781)
-        assert(StreamPeerTLS._method_connect_to_stream_1325480781 != nil)
-        let _method_get_status_1128380576_name = StringName(from: "get_status")
-        self._method_get_status_1128380576 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeerTLS._native_ptr(), _method_get_status_1128380576_name._native_ptr(), 1128380576)
-        assert(StreamPeerTLS._method_get_status_1128380576 != nil)
-        let _method_get_stream_2741655269_name = StringName(from: "get_stream")
-        self._method_get_stream_2741655269 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeerTLS._native_ptr(), _method_get_stream_2741655269_name._native_ptr(), 2741655269)
-        assert(StreamPeerTLS._method_get_stream_2741655269 != nil)
-        let _method_disconnect_from_stream_3218959716_name = StringName(from: "disconnect_from_stream")
-        self._method_disconnect_from_stream_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeerTLS._native_ptr(), _method_disconnect_from_stream_3218959716_name._native_ptr(), 3218959716)
-        assert(StreamPeerTLS._method_disconnect_from_stream_3218959716 != nil)
+        self._method_poll_3218959716 = StringName(from: "poll")
+        assert(self._method_poll_3218959716 != nil)
+        self._method_accept_stream_4292689651 = StringName(from: "accept_stream")
+        assert(self._method_accept_stream_4292689651 != nil)
+        self._method_connect_to_stream_1325480781 = StringName(from: "connect_to_stream")
+        assert(self._method_connect_to_stream_1325480781 != nil)
+        self._method_get_status_1128380576 = StringName(from: "get_status")
+        assert(self._method_get_status_1128380576 != nil)
+        self._method_get_stream_2741655269 = StringName(from: "get_stream")
+        assert(self._method_get_stream_2741655269 != nil)
+        self._method_disconnect_from_stream_3218959716 = StringName(from: "disconnect_from_stream")
+        assert(self._method_disconnect_from_stream_3218959716 != nil)
     }
 
     public func poll()  {
@@ -61,8 +56,13 @@ open class StreamPeerTLS : StreamPeer {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_poll_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_poll_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -78,8 +78,13 @@ open class StreamPeerTLS : StreamPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_accept_stream_4292689651,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_accept_stream_4292689651._native_ptr(),
+                    4292689651)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -97,8 +102,13 @@ open class StreamPeerTLS : StreamPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_connect_to_stream_1325480781,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_connect_to_stream_1325480781._native_ptr(),
+                    1325480781)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -113,8 +123,13 @@ open class StreamPeerTLS : StreamPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_status_1128380576,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_status_1128380576._native_ptr(),
+                    1128380576)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -129,8 +144,13 @@ open class StreamPeerTLS : StreamPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_stream_2741655269,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_stream_2741655269._native_ptr(),
+                    2741655269)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -144,8 +164,13 @@ open class StreamPeerTLS : StreamPeer {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_disconnect_from_stream_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_disconnect_from_stream_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

@@ -11,87 +11,70 @@ open class SceneMultiplayer : MultiplayerAPI {
 
     public override class var __godot_name: StringName { __godot_name_SceneMultiplayer }
 
-    static var _method_set_root_path_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_root_path_4075236667: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_disconnect_peer_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_authenticating_peers_969006518: GDExtensionMethodBindPtr! = nil
-    static var _method_send_auth_506032537: GDExtensionMethodBindPtr! = nil
-    static var _method_complete_auth_844576869: GDExtensionMethodBindPtr! = nil
-    static var _method_set_auth_callback_1611583062: GDExtensionMethodBindPtr! = nil
-    static var _method_get_auth_callback_1307783378: GDExtensionMethodBindPtr! = nil
-    static var _method_set_auth_timeout_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_auth_timeout_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_refuse_new_connections_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_refusing_new_connections_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_allow_object_decoding_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_object_decoding_allowed_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_server_relay_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_server_relay_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_send_bytes_2742700601: GDExtensionMethodBindPtr! = nil
+    static var _method_set_root_path_1348162250: StringName! = nil
+    static var _method_get_root_path_4075236667: StringName! = nil
+    static var _method_clear_3218959716: StringName! = nil
+    static var _method_disconnect_peer_1286410249: StringName! = nil
+    static var _method_get_authenticating_peers_969006518: StringName! = nil
+    static var _method_send_auth_506032537: StringName! = nil
+    static var _method_complete_auth_844576869: StringName! = nil
+    static var _method_set_auth_callback_1611583062: StringName! = nil
+    static var _method_get_auth_callback_1307783378: StringName! = nil
+    static var _method_set_auth_timeout_373806689: StringName! = nil
+    static var _method_get_auth_timeout_1740695150: StringName! = nil
+    static var _method_set_refuse_new_connections_2586408642: StringName! = nil
+    static var _method_is_refusing_new_connections_36873697: StringName! = nil
+    static var _method_set_allow_object_decoding_2586408642: StringName! = nil
+    static var _method_is_object_decoding_allowed_36873697: StringName! = nil
+    static var _method_set_server_relay_enabled_2586408642: StringName! = nil
+    static var _method_is_server_relay_enabled_36873697: StringName! = nil
+    static var _method_send_bytes_2742700601: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_SceneMultiplayer == nil)
         __godot_name_SceneMultiplayer = StringName(from: "SceneMultiplayer")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_root_path_1348162250_name = StringName(from: "set_root_path")
-        self._method_set_root_path_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_set_root_path_1348162250_name._native_ptr(), 1348162250)
-        assert(SceneMultiplayer._method_set_root_path_1348162250 != nil)
-        let _method_get_root_path_4075236667_name = StringName(from: "get_root_path")
-        self._method_get_root_path_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_get_root_path_4075236667_name._native_ptr(), 4075236667)
-        assert(SceneMultiplayer._method_get_root_path_4075236667 != nil)
-        let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
-        assert(SceneMultiplayer._method_clear_3218959716 != nil)
-        let _method_disconnect_peer_1286410249_name = StringName(from: "disconnect_peer")
-        self._method_disconnect_peer_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_disconnect_peer_1286410249_name._native_ptr(), 1286410249)
-        assert(SceneMultiplayer._method_disconnect_peer_1286410249 != nil)
-        let _method_get_authenticating_peers_969006518_name = StringName(from: "get_authenticating_peers")
-        self._method_get_authenticating_peers_969006518 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_get_authenticating_peers_969006518_name._native_ptr(), 969006518)
-        assert(SceneMultiplayer._method_get_authenticating_peers_969006518 != nil)
-        let _method_send_auth_506032537_name = StringName(from: "send_auth")
-        self._method_send_auth_506032537 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_send_auth_506032537_name._native_ptr(), 506032537)
-        assert(SceneMultiplayer._method_send_auth_506032537 != nil)
-        let _method_complete_auth_844576869_name = StringName(from: "complete_auth")
-        self._method_complete_auth_844576869 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_complete_auth_844576869_name._native_ptr(), 844576869)
-        assert(SceneMultiplayer._method_complete_auth_844576869 != nil)
-        let _method_set_auth_callback_1611583062_name = StringName(from: "set_auth_callback")
-        self._method_set_auth_callback_1611583062 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_set_auth_callback_1611583062_name._native_ptr(), 1611583062)
-        assert(SceneMultiplayer._method_set_auth_callback_1611583062 != nil)
-        let _method_get_auth_callback_1307783378_name = StringName(from: "get_auth_callback")
-        self._method_get_auth_callback_1307783378 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_get_auth_callback_1307783378_name._native_ptr(), 1307783378)
-        assert(SceneMultiplayer._method_get_auth_callback_1307783378 != nil)
-        let _method_set_auth_timeout_373806689_name = StringName(from: "set_auth_timeout")
-        self._method_set_auth_timeout_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_set_auth_timeout_373806689_name._native_ptr(), 373806689)
-        assert(SceneMultiplayer._method_set_auth_timeout_373806689 != nil)
-        let _method_get_auth_timeout_1740695150_name = StringName(from: "get_auth_timeout")
-        self._method_get_auth_timeout_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_get_auth_timeout_1740695150_name._native_ptr(), 1740695150)
-        assert(SceneMultiplayer._method_get_auth_timeout_1740695150 != nil)
-        let _method_set_refuse_new_connections_2586408642_name = StringName(from: "set_refuse_new_connections")
-        self._method_set_refuse_new_connections_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_set_refuse_new_connections_2586408642_name._native_ptr(), 2586408642)
-        assert(SceneMultiplayer._method_set_refuse_new_connections_2586408642 != nil)
-        let _method_is_refusing_new_connections_36873697_name = StringName(from: "is_refusing_new_connections")
-        self._method_is_refusing_new_connections_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_is_refusing_new_connections_36873697_name._native_ptr(), 36873697)
-        assert(SceneMultiplayer._method_is_refusing_new_connections_36873697 != nil)
-        let _method_set_allow_object_decoding_2586408642_name = StringName(from: "set_allow_object_decoding")
-        self._method_set_allow_object_decoding_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_set_allow_object_decoding_2586408642_name._native_ptr(), 2586408642)
-        assert(SceneMultiplayer._method_set_allow_object_decoding_2586408642 != nil)
-        let _method_is_object_decoding_allowed_36873697_name = StringName(from: "is_object_decoding_allowed")
-        self._method_is_object_decoding_allowed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_is_object_decoding_allowed_36873697_name._native_ptr(), 36873697)
-        assert(SceneMultiplayer._method_is_object_decoding_allowed_36873697 != nil)
-        let _method_set_server_relay_enabled_2586408642_name = StringName(from: "set_server_relay_enabled")
-        self._method_set_server_relay_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_set_server_relay_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(SceneMultiplayer._method_set_server_relay_enabled_2586408642 != nil)
-        let _method_is_server_relay_enabled_36873697_name = StringName(from: "is_server_relay_enabled")
-        self._method_is_server_relay_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_is_server_relay_enabled_36873697_name._native_ptr(), 36873697)
-        assert(SceneMultiplayer._method_is_server_relay_enabled_36873697 != nil)
-        let _method_send_bytes_2742700601_name = StringName(from: "send_bytes")
-        self._method_send_bytes_2742700601 = self.interface.pointee.classdb_get_method_bind(__godot_name_SceneMultiplayer._native_ptr(), _method_send_bytes_2742700601_name._native_ptr(), 2742700601)
-        assert(SceneMultiplayer._method_send_bytes_2742700601 != nil)
+        self._method_set_root_path_1348162250 = StringName(from: "set_root_path")
+        assert(self._method_set_root_path_1348162250 != nil)
+        self._method_get_root_path_4075236667 = StringName(from: "get_root_path")
+        assert(self._method_get_root_path_4075236667 != nil)
+        self._method_clear_3218959716 = StringName(from: "clear")
+        assert(self._method_clear_3218959716 != nil)
+        self._method_disconnect_peer_1286410249 = StringName(from: "disconnect_peer")
+        assert(self._method_disconnect_peer_1286410249 != nil)
+        self._method_get_authenticating_peers_969006518 = StringName(from: "get_authenticating_peers")
+        assert(self._method_get_authenticating_peers_969006518 != nil)
+        self._method_send_auth_506032537 = StringName(from: "send_auth")
+        assert(self._method_send_auth_506032537 != nil)
+        self._method_complete_auth_844576869 = StringName(from: "complete_auth")
+        assert(self._method_complete_auth_844576869 != nil)
+        self._method_set_auth_callback_1611583062 = StringName(from: "set_auth_callback")
+        assert(self._method_set_auth_callback_1611583062 != nil)
+        self._method_get_auth_callback_1307783378 = StringName(from: "get_auth_callback")
+        assert(self._method_get_auth_callback_1307783378 != nil)
+        self._method_set_auth_timeout_373806689 = StringName(from: "set_auth_timeout")
+        assert(self._method_set_auth_timeout_373806689 != nil)
+        self._method_get_auth_timeout_1740695150 = StringName(from: "get_auth_timeout")
+        assert(self._method_get_auth_timeout_1740695150 != nil)
+        self._method_set_refuse_new_connections_2586408642 = StringName(from: "set_refuse_new_connections")
+        assert(self._method_set_refuse_new_connections_2586408642 != nil)
+        self._method_is_refusing_new_connections_36873697 = StringName(from: "is_refusing_new_connections")
+        assert(self._method_is_refusing_new_connections_36873697 != nil)
+        self._method_set_allow_object_decoding_2586408642 = StringName(from: "set_allow_object_decoding")
+        assert(self._method_set_allow_object_decoding_2586408642 != nil)
+        self._method_is_object_decoding_allowed_36873697 = StringName(from: "is_object_decoding_allowed")
+        assert(self._method_is_object_decoding_allowed_36873697 != nil)
+        self._method_set_server_relay_enabled_2586408642 = StringName(from: "set_server_relay_enabled")
+        assert(self._method_set_server_relay_enabled_2586408642 != nil)
+        self._method_is_server_relay_enabled_36873697 = StringName(from: "is_server_relay_enabled")
+        assert(self._method_is_server_relay_enabled_36873697 != nil)
+        self._method_send_bytes_2742700601 = StringName(from: "send_bytes")
+        assert(self._method_send_bytes_2742700601 != nil)
     }
 
     public func set_root_path(path: NodePath)  {
@@ -102,8 +85,13 @@ open class SceneMultiplayer : MultiplayerAPI {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_root_path_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_root_path_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -117,8 +105,13 @@ open class SceneMultiplayer : MultiplayerAPI {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_root_path_4075236667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_root_path_4075236667._native_ptr(),
+                    4075236667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -132,8 +125,13 @@ open class SceneMultiplayer : MultiplayerAPI {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -147,8 +145,13 @@ open class SceneMultiplayer : MultiplayerAPI {
                 .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_disconnect_peer_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_disconnect_peer_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -163,8 +166,13 @@ open class SceneMultiplayer : MultiplayerAPI {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_authenticating_peers_969006518,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_authenticating_peers_969006518._native_ptr(),
+                    969006518)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -181,8 +189,13 @@ open class SceneMultiplayer : MultiplayerAPI {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_send_auth_506032537,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_send_auth_506032537._native_ptr(),
+                    506032537)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -199,8 +212,13 @@ open class SceneMultiplayer : MultiplayerAPI {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_complete_auth_844576869,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_complete_auth_844576869._native_ptr(),
+                    844576869)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -216,8 +234,13 @@ open class SceneMultiplayer : MultiplayerAPI {
                 .init(callback_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_auth_callback_1611583062,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_auth_callback_1611583062._native_ptr(),
+                    1611583062)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -231,8 +254,13 @@ open class SceneMultiplayer : MultiplayerAPI {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_auth_callback_1307783378,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_auth_callback_1307783378._native_ptr(),
+                    1307783378)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -247,8 +275,13 @@ open class SceneMultiplayer : MultiplayerAPI {
                 .init(timeout_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_auth_timeout_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_auth_timeout_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -264,8 +297,13 @@ open class SceneMultiplayer : MultiplayerAPI {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_auth_timeout_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_auth_timeout_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -280,8 +318,13 @@ open class SceneMultiplayer : MultiplayerAPI {
                 .init(refuse_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_refuse_new_connections_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_refuse_new_connections_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -297,8 +340,13 @@ open class SceneMultiplayer : MultiplayerAPI {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_refusing_new_connections_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_refusing_new_connections_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -313,8 +361,13 @@ open class SceneMultiplayer : MultiplayerAPI {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_allow_object_decoding_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_allow_object_decoding_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -330,8 +383,13 @@ open class SceneMultiplayer : MultiplayerAPI {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_object_decoding_allowed_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_object_decoding_allowed_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -346,8 +404,13 @@ open class SceneMultiplayer : MultiplayerAPI {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_server_relay_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_server_relay_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -363,8 +426,13 @@ open class SceneMultiplayer : MultiplayerAPI {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_server_relay_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_server_relay_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -383,8 +451,13 @@ open class SceneMultiplayer : MultiplayerAPI {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_send_bytes_2742700601,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_send_bytes_2742700601._native_ptr(),
+                    2742700601)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

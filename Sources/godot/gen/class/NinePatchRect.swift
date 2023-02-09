@@ -15,63 +15,52 @@ open class NinePatchRect : Control {
 
     public override class var __godot_name: StringName { __godot_name_NinePatchRect }
 
-    static var _method_set_texture_4051416890: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_3635182373: GDExtensionMethodBindPtr! = nil
-    static var _method_set_patch_margin_437707142: GDExtensionMethodBindPtr! = nil
-    static var _method_get_patch_margin_1983885014: GDExtensionMethodBindPtr! = nil
-    static var _method_set_region_rect_2046264180: GDExtensionMethodBindPtr! = nil
-    static var _method_get_region_rect_1639390495: GDExtensionMethodBindPtr! = nil
-    static var _method_set_draw_center_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_draw_center_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_h_axis_stretch_mode_3219608417: GDExtensionMethodBindPtr! = nil
-    static var _method_get_h_axis_stretch_mode_3317113799: GDExtensionMethodBindPtr! = nil
-    static var _method_set_v_axis_stretch_mode_3219608417: GDExtensionMethodBindPtr! = nil
-    static var _method_get_v_axis_stretch_mode_3317113799: GDExtensionMethodBindPtr! = nil
+    static var _method_set_texture_4051416890: StringName! = nil
+    static var _method_get_texture_3635182373: StringName! = nil
+    static var _method_set_patch_margin_437707142: StringName! = nil
+    static var _method_get_patch_margin_1983885014: StringName! = nil
+    static var _method_set_region_rect_2046264180: StringName! = nil
+    static var _method_get_region_rect_1639390495: StringName! = nil
+    static var _method_set_draw_center_2586408642: StringName! = nil
+    static var _method_is_draw_center_enabled_36873697: StringName! = nil
+    static var _method_set_h_axis_stretch_mode_3219608417: StringName! = nil
+    static var _method_get_h_axis_stretch_mode_3317113799: StringName! = nil
+    static var _method_set_v_axis_stretch_mode_3219608417: StringName! = nil
+    static var _method_get_v_axis_stretch_mode_3317113799: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_NinePatchRect == nil)
         __godot_name_NinePatchRect = StringName(from: "NinePatchRect")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_texture_4051416890_name = StringName(from: "set_texture")
-        self._method_set_texture_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_NinePatchRect._native_ptr(), _method_set_texture_4051416890_name._native_ptr(), 4051416890)
-        assert(NinePatchRect._method_set_texture_4051416890 != nil)
-        let _method_get_texture_3635182373_name = StringName(from: "get_texture")
-        self._method_get_texture_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_NinePatchRect._native_ptr(), _method_get_texture_3635182373_name._native_ptr(), 3635182373)
-        assert(NinePatchRect._method_get_texture_3635182373 != nil)
-        let _method_set_patch_margin_437707142_name = StringName(from: "set_patch_margin")
-        self._method_set_patch_margin_437707142 = self.interface.pointee.classdb_get_method_bind(__godot_name_NinePatchRect._native_ptr(), _method_set_patch_margin_437707142_name._native_ptr(), 437707142)
-        assert(NinePatchRect._method_set_patch_margin_437707142 != nil)
-        let _method_get_patch_margin_1983885014_name = StringName(from: "get_patch_margin")
-        self._method_get_patch_margin_1983885014 = self.interface.pointee.classdb_get_method_bind(__godot_name_NinePatchRect._native_ptr(), _method_get_patch_margin_1983885014_name._native_ptr(), 1983885014)
-        assert(NinePatchRect._method_get_patch_margin_1983885014 != nil)
-        let _method_set_region_rect_2046264180_name = StringName(from: "set_region_rect")
-        self._method_set_region_rect_2046264180 = self.interface.pointee.classdb_get_method_bind(__godot_name_NinePatchRect._native_ptr(), _method_set_region_rect_2046264180_name._native_ptr(), 2046264180)
-        assert(NinePatchRect._method_set_region_rect_2046264180 != nil)
-        let _method_get_region_rect_1639390495_name = StringName(from: "get_region_rect")
-        self._method_get_region_rect_1639390495 = self.interface.pointee.classdb_get_method_bind(__godot_name_NinePatchRect._native_ptr(), _method_get_region_rect_1639390495_name._native_ptr(), 1639390495)
-        assert(NinePatchRect._method_get_region_rect_1639390495 != nil)
-        let _method_set_draw_center_2586408642_name = StringName(from: "set_draw_center")
-        self._method_set_draw_center_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_NinePatchRect._native_ptr(), _method_set_draw_center_2586408642_name._native_ptr(), 2586408642)
-        assert(NinePatchRect._method_set_draw_center_2586408642 != nil)
-        let _method_is_draw_center_enabled_36873697_name = StringName(from: "is_draw_center_enabled")
-        self._method_is_draw_center_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_NinePatchRect._native_ptr(), _method_is_draw_center_enabled_36873697_name._native_ptr(), 36873697)
-        assert(NinePatchRect._method_is_draw_center_enabled_36873697 != nil)
-        let _method_set_h_axis_stretch_mode_3219608417_name = StringName(from: "set_h_axis_stretch_mode")
-        self._method_set_h_axis_stretch_mode_3219608417 = self.interface.pointee.classdb_get_method_bind(__godot_name_NinePatchRect._native_ptr(), _method_set_h_axis_stretch_mode_3219608417_name._native_ptr(), 3219608417)
-        assert(NinePatchRect._method_set_h_axis_stretch_mode_3219608417 != nil)
-        let _method_get_h_axis_stretch_mode_3317113799_name = StringName(from: "get_h_axis_stretch_mode")
-        self._method_get_h_axis_stretch_mode_3317113799 = self.interface.pointee.classdb_get_method_bind(__godot_name_NinePatchRect._native_ptr(), _method_get_h_axis_stretch_mode_3317113799_name._native_ptr(), 3317113799)
-        assert(NinePatchRect._method_get_h_axis_stretch_mode_3317113799 != nil)
-        let _method_set_v_axis_stretch_mode_3219608417_name = StringName(from: "set_v_axis_stretch_mode")
-        self._method_set_v_axis_stretch_mode_3219608417 = self.interface.pointee.classdb_get_method_bind(__godot_name_NinePatchRect._native_ptr(), _method_set_v_axis_stretch_mode_3219608417_name._native_ptr(), 3219608417)
-        assert(NinePatchRect._method_set_v_axis_stretch_mode_3219608417 != nil)
-        let _method_get_v_axis_stretch_mode_3317113799_name = StringName(from: "get_v_axis_stretch_mode")
-        self._method_get_v_axis_stretch_mode_3317113799 = self.interface.pointee.classdb_get_method_bind(__godot_name_NinePatchRect._native_ptr(), _method_get_v_axis_stretch_mode_3317113799_name._native_ptr(), 3317113799)
-        assert(NinePatchRect._method_get_v_axis_stretch_mode_3317113799 != nil)
+        self._method_set_texture_4051416890 = StringName(from: "set_texture")
+        assert(self._method_set_texture_4051416890 != nil)
+        self._method_get_texture_3635182373 = StringName(from: "get_texture")
+        assert(self._method_get_texture_3635182373 != nil)
+        self._method_set_patch_margin_437707142 = StringName(from: "set_patch_margin")
+        assert(self._method_set_patch_margin_437707142 != nil)
+        self._method_get_patch_margin_1983885014 = StringName(from: "get_patch_margin")
+        assert(self._method_get_patch_margin_1983885014 != nil)
+        self._method_set_region_rect_2046264180 = StringName(from: "set_region_rect")
+        assert(self._method_set_region_rect_2046264180 != nil)
+        self._method_get_region_rect_1639390495 = StringName(from: "get_region_rect")
+        assert(self._method_get_region_rect_1639390495 != nil)
+        self._method_set_draw_center_2586408642 = StringName(from: "set_draw_center")
+        assert(self._method_set_draw_center_2586408642 != nil)
+        self._method_is_draw_center_enabled_36873697 = StringName(from: "is_draw_center_enabled")
+        assert(self._method_is_draw_center_enabled_36873697 != nil)
+        self._method_set_h_axis_stretch_mode_3219608417 = StringName(from: "set_h_axis_stretch_mode")
+        assert(self._method_set_h_axis_stretch_mode_3219608417 != nil)
+        self._method_get_h_axis_stretch_mode_3317113799 = StringName(from: "get_h_axis_stretch_mode")
+        assert(self._method_get_h_axis_stretch_mode_3317113799 != nil)
+        self._method_set_v_axis_stretch_mode_3219608417 = StringName(from: "set_v_axis_stretch_mode")
+        assert(self._method_set_v_axis_stretch_mode_3219608417 != nil)
+        self._method_get_v_axis_stretch_mode_3317113799 = StringName(from: "get_v_axis_stretch_mode")
+        assert(self._method_get_v_axis_stretch_mode_3317113799 != nil)
     }
 
     public func set_texture(texture: Texture2D)  {
@@ -82,8 +71,13 @@ open class NinePatchRect : Control {
                 .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_4051416890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_4051416890._native_ptr(),
+                    4051416890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -97,8 +91,13 @@ open class NinePatchRect : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_3635182373,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_3635182373._native_ptr(),
+                    3635182373)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -114,8 +113,13 @@ open class NinePatchRect : Control {
                 .init(margin_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_patch_margin_437707142,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_patch_margin_437707142._native_ptr(),
+                    437707142)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -133,8 +137,13 @@ open class NinePatchRect : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_patch_margin_1983885014,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_patch_margin_1983885014._native_ptr(),
+                    1983885014)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -150,8 +159,13 @@ open class NinePatchRect : Control {
                 .init(rect_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_region_rect_2046264180,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_region_rect_2046264180._native_ptr(),
+                    2046264180)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -165,8 +179,13 @@ open class NinePatchRect : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_region_rect_1639390495,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_region_rect_1639390495._native_ptr(),
+                    1639390495)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -181,8 +200,13 @@ open class NinePatchRect : Control {
                 .init(draw_center_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_draw_center_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_draw_center_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -198,8 +222,13 @@ open class NinePatchRect : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_draw_center_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_draw_center_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -214,8 +243,13 @@ open class NinePatchRect : Control {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_h_axis_stretch_mode_3219608417,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_h_axis_stretch_mode_3219608417._native_ptr(),
+                    3219608417)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -230,8 +264,13 @@ open class NinePatchRect : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_h_axis_stretch_mode_3317113799,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_h_axis_stretch_mode_3317113799._native_ptr(),
+                    3317113799)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -246,8 +285,13 @@ open class NinePatchRect : Control {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_v_axis_stretch_mode_3219608417,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_v_axis_stretch_mode_3219608417._native_ptr(),
+                    3219608417)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -262,8 +306,13 @@ open class NinePatchRect : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_v_axis_stretch_mode_3317113799,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_v_axis_stretch_mode_3317113799._native_ptr(),
+                    3317113799)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

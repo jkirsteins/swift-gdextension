@@ -11,57 +11,48 @@ open class Translation : Resource {
 
     public override class var __godot_name: StringName { __godot_name_Translation }
 
-    static var _method__get_plural_message_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_message_0: GDExtensionMethodBindPtr! = nil
-    static var _method_set_locale_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_locale_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_add_message_971803314: GDExtensionMethodBindPtr! = nil
-    static var _method_add_plural_message_360316719: GDExtensionMethodBindPtr! = nil
-    static var _method_get_message_58037827: GDExtensionMethodBindPtr! = nil
-    static var _method_get_plural_message_1333931916: GDExtensionMethodBindPtr! = nil
-    static var _method_erase_message_3919944288: GDExtensionMethodBindPtr! = nil
-    static var _method_get_message_list_1139954409: GDExtensionMethodBindPtr! = nil
-    static var _method_get_translated_message_list_1139954409: GDExtensionMethodBindPtr! = nil
-    static var _method_get_message_count_3905245786: GDExtensionMethodBindPtr! = nil
+    static var _method__get_plural_message_0: StringName! = nil
+    static var _method__get_message_0: StringName! = nil
+    static var _method_set_locale_83702148: StringName! = nil
+    static var _method_get_locale_201670096: StringName! = nil
+    static var _method_add_message_971803314: StringName! = nil
+    static var _method_add_plural_message_360316719: StringName! = nil
+    static var _method_get_message_58037827: StringName! = nil
+    static var _method_get_plural_message_1333931916: StringName! = nil
+    static var _method_erase_message_3919944288: StringName! = nil
+    static var _method_get_message_list_1139954409: StringName! = nil
+    static var _method_get_translated_message_list_1139954409: StringName! = nil
+    static var _method_get_message_count_3905245786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Translation == nil)
         __godot_name_Translation = StringName(from: "Translation")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_locale_83702148_name = StringName(from: "set_locale")
-        self._method_set_locale_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_Translation._native_ptr(), _method_set_locale_83702148_name._native_ptr(), 83702148)
-        assert(Translation._method_set_locale_83702148 != nil)
-        let _method_get_locale_201670096_name = StringName(from: "get_locale")
-        self._method_get_locale_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_Translation._native_ptr(), _method_get_locale_201670096_name._native_ptr(), 201670096)
-        assert(Translation._method_get_locale_201670096 != nil)
-        let _method_add_message_971803314_name = StringName(from: "add_message")
-        self._method_add_message_971803314 = self.interface.pointee.classdb_get_method_bind(__godot_name_Translation._native_ptr(), _method_add_message_971803314_name._native_ptr(), 971803314)
-        assert(Translation._method_add_message_971803314 != nil)
-        let _method_add_plural_message_360316719_name = StringName(from: "add_plural_message")
-        self._method_add_plural_message_360316719 = self.interface.pointee.classdb_get_method_bind(__godot_name_Translation._native_ptr(), _method_add_plural_message_360316719_name._native_ptr(), 360316719)
-        assert(Translation._method_add_plural_message_360316719 != nil)
-        let _method_get_message_58037827_name = StringName(from: "get_message")
-        self._method_get_message_58037827 = self.interface.pointee.classdb_get_method_bind(__godot_name_Translation._native_ptr(), _method_get_message_58037827_name._native_ptr(), 58037827)
-        assert(Translation._method_get_message_58037827 != nil)
-        let _method_get_plural_message_1333931916_name = StringName(from: "get_plural_message")
-        self._method_get_plural_message_1333931916 = self.interface.pointee.classdb_get_method_bind(__godot_name_Translation._native_ptr(), _method_get_plural_message_1333931916_name._native_ptr(), 1333931916)
-        assert(Translation._method_get_plural_message_1333931916 != nil)
-        let _method_erase_message_3919944288_name = StringName(from: "erase_message")
-        self._method_erase_message_3919944288 = self.interface.pointee.classdb_get_method_bind(__godot_name_Translation._native_ptr(), _method_erase_message_3919944288_name._native_ptr(), 3919944288)
-        assert(Translation._method_erase_message_3919944288 != nil)
-        let _method_get_message_list_1139954409_name = StringName(from: "get_message_list")
-        self._method_get_message_list_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_Translation._native_ptr(), _method_get_message_list_1139954409_name._native_ptr(), 1139954409)
-        assert(Translation._method_get_message_list_1139954409 != nil)
-        let _method_get_translated_message_list_1139954409_name = StringName(from: "get_translated_message_list")
-        self._method_get_translated_message_list_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_Translation._native_ptr(), _method_get_translated_message_list_1139954409_name._native_ptr(), 1139954409)
-        assert(Translation._method_get_translated_message_list_1139954409 != nil)
-        let _method_get_message_count_3905245786_name = StringName(from: "get_message_count")
-        self._method_get_message_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Translation._native_ptr(), _method_get_message_count_3905245786_name._native_ptr(), 3905245786)
-        assert(Translation._method_get_message_count_3905245786 != nil)
+        self._method_set_locale_83702148 = StringName(from: "set_locale")
+        assert(self._method_set_locale_83702148 != nil)
+        self._method_get_locale_201670096 = StringName(from: "get_locale")
+        assert(self._method_get_locale_201670096 != nil)
+        self._method_add_message_971803314 = StringName(from: "add_message")
+        assert(self._method_add_message_971803314 != nil)
+        self._method_add_plural_message_360316719 = StringName(from: "add_plural_message")
+        assert(self._method_add_plural_message_360316719 != nil)
+        self._method_get_message_58037827 = StringName(from: "get_message")
+        assert(self._method_get_message_58037827 != nil)
+        self._method_get_plural_message_1333931916 = StringName(from: "get_plural_message")
+        assert(self._method_get_plural_message_1333931916 != nil)
+        self._method_erase_message_3919944288 = StringName(from: "erase_message")
+        assert(self._method_erase_message_3919944288 != nil)
+        self._method_get_message_list_1139954409 = StringName(from: "get_message_list")
+        assert(self._method_get_message_list_1139954409 != nil)
+        self._method_get_translated_message_list_1139954409 = StringName(from: "get_translated_message_list")
+        assert(self._method_get_translated_message_list_1139954409 != nil)
+        self._method_get_message_count_3905245786 = StringName(from: "get_message_count")
+        assert(self._method_get_message_count_3905245786 != nil)
     }
 
     public func _get_plural_message(src_message: StringName, src_plural_message: StringName, n: Int64, context: StringName) -> StringName {
@@ -76,12 +67,7 @@ open class Translation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_plural_message_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return StringName(godot: __resPtr.pointee)
         }
     }
@@ -95,12 +81,7 @@ open class Translation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_message_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return StringName(godot: __resPtr.pointee)
     }
     public func set_locale(locale: godot.String)  {
@@ -111,8 +92,13 @@ open class Translation : Resource {
                 .init(locale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_locale_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_locale_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -126,8 +112,13 @@ open class Translation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_locale_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_locale_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -144,8 +135,13 @@ open class Translation : Resource {
                 .init(src_message_native), .init(xlated_message_native), .init(context_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_message_971803314,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_message_971803314._native_ptr(),
+                    971803314)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -161,8 +157,13 @@ open class Translation : Resource {
                 .init(src_message_native), .init(xlated_messages_native), .init(context_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_plural_message_360316719,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_plural_message_360316719._native_ptr(),
+                    360316719)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -178,8 +179,13 @@ open class Translation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_message_58037827,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_message_58037827._native_ptr(),
+                    58037827)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -198,8 +204,13 @@ open class Translation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_plural_message_1333931916,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_plural_message_1333931916._native_ptr(),
+                    1333931916)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -216,8 +227,13 @@ open class Translation : Resource {
                 .init(src_message_native), .init(context_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_erase_message_3919944288,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_erase_message_3919944288._native_ptr(),
+                    3919944288)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -231,8 +247,13 @@ open class Translation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_message_list_1139954409,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_message_list_1139954409._native_ptr(),
+                    1139954409)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -247,8 +268,13 @@ open class Translation : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_translated_message_list_1139954409,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_translated_message_list_1139954409._native_ptr(),
+                    1139954409)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -264,8 +290,13 @@ open class Translation : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_message_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_message_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

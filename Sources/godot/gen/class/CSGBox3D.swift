@@ -11,31 +11,28 @@ open class CSGBox3D : CSGPrimitive3D {
 
     public override class var __godot_name: StringName { __godot_name_CSGBox3D }
 
-    static var _method_set_size_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_material_2757459619: GDExtensionMethodBindPtr! = nil
-    static var _method_get_material_5934680: GDExtensionMethodBindPtr! = nil
+    static var _method_set_size_3460891852: StringName! = nil
+    static var _method_get_size_3360562783: StringName! = nil
+    static var _method_set_material_2757459619: StringName! = nil
+    static var _method_get_material_5934680: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CSGBox3D == nil)
         __godot_name_CSGBox3D = StringName(from: "CSGBox3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_size_3460891852_name = StringName(from: "set_size")
-        self._method_set_size_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGBox3D._native_ptr(), _method_set_size_3460891852_name._native_ptr(), 3460891852)
-        assert(CSGBox3D._method_set_size_3460891852 != nil)
-        let _method_get_size_3360562783_name = StringName(from: "get_size")
-        self._method_get_size_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGBox3D._native_ptr(), _method_get_size_3360562783_name._native_ptr(), 3360562783)
-        assert(CSGBox3D._method_get_size_3360562783 != nil)
-        let _method_set_material_2757459619_name = StringName(from: "set_material")
-        self._method_set_material_2757459619 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGBox3D._native_ptr(), _method_set_material_2757459619_name._native_ptr(), 2757459619)
-        assert(CSGBox3D._method_set_material_2757459619 != nil)
-        let _method_get_material_5934680_name = StringName(from: "get_material")
-        self._method_get_material_5934680 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGBox3D._native_ptr(), _method_get_material_5934680_name._native_ptr(), 5934680)
-        assert(CSGBox3D._method_get_material_5934680 != nil)
+        self._method_set_size_3460891852 = StringName(from: "set_size")
+        assert(self._method_set_size_3460891852 != nil)
+        self._method_get_size_3360562783 = StringName(from: "get_size")
+        assert(self._method_get_size_3360562783 != nil)
+        self._method_set_material_2757459619 = StringName(from: "set_material")
+        assert(self._method_set_material_2757459619 != nil)
+        self._method_get_material_5934680 = StringName(from: "get_material")
+        assert(self._method_get_material_5934680 != nil)
     }
 
     public func set_size(size: Vector3)  {
@@ -46,8 +43,13 @@ open class CSGBox3D : CSGPrimitive3D {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_size_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_size_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -61,8 +63,13 @@ open class CSGBox3D : CSGPrimitive3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -77,8 +84,13 @@ open class CSGBox3D : CSGPrimitive3D {
                 .init(material_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_material_2757459619,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_material_2757459619._native_ptr(),
+                    2757459619)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -92,8 +104,13 @@ open class CSGBox3D : CSGPrimitive3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_material_5934680,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_material_5934680._native_ptr(),
+                    5934680)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

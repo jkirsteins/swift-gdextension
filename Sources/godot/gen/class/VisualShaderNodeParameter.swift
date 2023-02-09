@@ -16,31 +16,28 @@ open class VisualShaderNodeParameter : VisualShaderNode {
 
     public override class var __godot_name: StringName { __godot_name_VisualShaderNodeParameter }
 
-    static var _method_set_parameter_name_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_parameter_name_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_qualifier_1276489447: GDExtensionMethodBindPtr! = nil
-    static var _method_get_qualifier_3558406205: GDExtensionMethodBindPtr! = nil
+    static var _method_set_parameter_name_83702148: StringName! = nil
+    static var _method_get_parameter_name_201670096: StringName! = nil
+    static var _method_set_qualifier_1276489447: StringName! = nil
+    static var _method_get_qualifier_3558406205: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShaderNodeParameter == nil)
         __godot_name_VisualShaderNodeParameter = StringName(from: "VisualShaderNodeParameter")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_parameter_name_83702148_name = StringName(from: "set_parameter_name")
-        self._method_set_parameter_name_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParameter._native_ptr(), _method_set_parameter_name_83702148_name._native_ptr(), 83702148)
-        assert(VisualShaderNodeParameter._method_set_parameter_name_83702148 != nil)
-        let _method_get_parameter_name_201670096_name = StringName(from: "get_parameter_name")
-        self._method_get_parameter_name_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParameter._native_ptr(), _method_get_parameter_name_201670096_name._native_ptr(), 201670096)
-        assert(VisualShaderNodeParameter._method_get_parameter_name_201670096 != nil)
-        let _method_set_qualifier_1276489447_name = StringName(from: "set_qualifier")
-        self._method_set_qualifier_1276489447 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParameter._native_ptr(), _method_set_qualifier_1276489447_name._native_ptr(), 1276489447)
-        assert(VisualShaderNodeParameter._method_set_qualifier_1276489447 != nil)
-        let _method_get_qualifier_3558406205_name = StringName(from: "get_qualifier")
-        self._method_get_qualifier_3558406205 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParameter._native_ptr(), _method_get_qualifier_3558406205_name._native_ptr(), 3558406205)
-        assert(VisualShaderNodeParameter._method_get_qualifier_3558406205 != nil)
+        self._method_set_parameter_name_83702148 = StringName(from: "set_parameter_name")
+        assert(self._method_set_parameter_name_83702148 != nil)
+        self._method_get_parameter_name_201670096 = StringName(from: "get_parameter_name")
+        assert(self._method_get_parameter_name_201670096 != nil)
+        self._method_set_qualifier_1276489447 = StringName(from: "set_qualifier")
+        assert(self._method_set_qualifier_1276489447 != nil)
+        self._method_get_qualifier_3558406205 = StringName(from: "get_qualifier")
+        assert(self._method_get_qualifier_3558406205 != nil)
     }
 
     public func set_parameter_name(name: godot.String)  {
@@ -51,8 +48,13 @@ open class VisualShaderNodeParameter : VisualShaderNode {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_parameter_name_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_parameter_name_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -66,8 +68,13 @@ open class VisualShaderNodeParameter : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_parameter_name_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_parameter_name_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -82,8 +89,13 @@ open class VisualShaderNodeParameter : VisualShaderNode {
                 .init(qualifier_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_qualifier_1276489447,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_qualifier_1276489447._native_ptr(),
+                    1276489447)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -98,8 +110,13 @@ open class VisualShaderNodeParameter : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_qualifier_3558406205,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_qualifier_3558406205._native_ptr(),
+                    3558406205)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

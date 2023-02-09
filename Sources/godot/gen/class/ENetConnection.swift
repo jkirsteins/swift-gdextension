@@ -30,83 +30,67 @@ open class ENetConnection : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_ENetConnection }
 
-    static var _method_create_host_bound_866250949: GDExtensionMethodBindPtr! = nil
-    static var _method_create_host_117198950: GDExtensionMethodBindPtr! = nil
-    static var _method_destroy_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_connect_to_host_385984708: GDExtensionMethodBindPtr! = nil
-    static var _method_service_2402345344: GDExtensionMethodBindPtr! = nil
-    static var _method_flush_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_bandwidth_limit_2302169788: GDExtensionMethodBindPtr! = nil
-    static var _method_channel_limit_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_broadcast_2772371345: GDExtensionMethodBindPtr! = nil
-    static var _method_compress_2660215187: GDExtensionMethodBindPtr! = nil
-    static var _method_dtls_server_setup_1262296096: GDExtensionMethodBindPtr! = nil
-    static var _method_dtls_client_setup_3097527179: GDExtensionMethodBindPtr! = nil
-    static var _method_refuse_new_connections_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_pop_statistic_2166904170: GDExtensionMethodBindPtr! = nil
-    static var _method_get_max_channels_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_local_port_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_peers_2915620761: GDExtensionMethodBindPtr! = nil
+    static var _method_create_host_bound_866250949: StringName! = nil
+    static var _method_create_host_117198950: StringName! = nil
+    static var _method_destroy_3218959716: StringName! = nil
+    static var _method_connect_to_host_385984708: StringName! = nil
+    static var _method_service_2402345344: StringName! = nil
+    static var _method_flush_3218959716: StringName! = nil
+    static var _method_bandwidth_limit_2302169788: StringName! = nil
+    static var _method_channel_limit_1286410249: StringName! = nil
+    static var _method_broadcast_2772371345: StringName! = nil
+    static var _method_compress_2660215187: StringName! = nil
+    static var _method_dtls_server_setup_1262296096: StringName! = nil
+    static var _method_dtls_client_setup_3097527179: StringName! = nil
+    static var _method_refuse_new_connections_2586408642: StringName! = nil
+    static var _method_pop_statistic_2166904170: StringName! = nil
+    static var _method_get_max_channels_3905245786: StringName! = nil
+    static var _method_get_local_port_3905245786: StringName! = nil
+    static var _method_get_peers_2915620761: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ENetConnection == nil)
         __godot_name_ENetConnection = StringName(from: "ENetConnection")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_create_host_bound_866250949_name = StringName(from: "create_host_bound")
-        self._method_create_host_bound_866250949 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_create_host_bound_866250949_name._native_ptr(), 866250949)
-        assert(ENetConnection._method_create_host_bound_866250949 != nil)
-        let _method_create_host_117198950_name = StringName(from: "create_host")
-        self._method_create_host_117198950 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_create_host_117198950_name._native_ptr(), 117198950)
-        assert(ENetConnection._method_create_host_117198950 != nil)
-        let _method_destroy_3218959716_name = StringName(from: "destroy")
-        self._method_destroy_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_destroy_3218959716_name._native_ptr(), 3218959716)
-        assert(ENetConnection._method_destroy_3218959716 != nil)
-        let _method_connect_to_host_385984708_name = StringName(from: "connect_to_host")
-        self._method_connect_to_host_385984708 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_connect_to_host_385984708_name._native_ptr(), 385984708)
-        assert(ENetConnection._method_connect_to_host_385984708 != nil)
-        let _method_service_2402345344_name = StringName(from: "service")
-        self._method_service_2402345344 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_service_2402345344_name._native_ptr(), 2402345344)
-        assert(ENetConnection._method_service_2402345344 != nil)
-        let _method_flush_3218959716_name = StringName(from: "flush")
-        self._method_flush_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_flush_3218959716_name._native_ptr(), 3218959716)
-        assert(ENetConnection._method_flush_3218959716 != nil)
-        let _method_bandwidth_limit_2302169788_name = StringName(from: "bandwidth_limit")
-        self._method_bandwidth_limit_2302169788 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_bandwidth_limit_2302169788_name._native_ptr(), 2302169788)
-        assert(ENetConnection._method_bandwidth_limit_2302169788 != nil)
-        let _method_channel_limit_1286410249_name = StringName(from: "channel_limit")
-        self._method_channel_limit_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_channel_limit_1286410249_name._native_ptr(), 1286410249)
-        assert(ENetConnection._method_channel_limit_1286410249 != nil)
-        let _method_broadcast_2772371345_name = StringName(from: "broadcast")
-        self._method_broadcast_2772371345 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_broadcast_2772371345_name._native_ptr(), 2772371345)
-        assert(ENetConnection._method_broadcast_2772371345 != nil)
-        let _method_compress_2660215187_name = StringName(from: "compress")
-        self._method_compress_2660215187 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_compress_2660215187_name._native_ptr(), 2660215187)
-        assert(ENetConnection._method_compress_2660215187 != nil)
-        let _method_dtls_server_setup_1262296096_name = StringName(from: "dtls_server_setup")
-        self._method_dtls_server_setup_1262296096 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_dtls_server_setup_1262296096_name._native_ptr(), 1262296096)
-        assert(ENetConnection._method_dtls_server_setup_1262296096 != nil)
-        let _method_dtls_client_setup_3097527179_name = StringName(from: "dtls_client_setup")
-        self._method_dtls_client_setup_3097527179 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_dtls_client_setup_3097527179_name._native_ptr(), 3097527179)
-        assert(ENetConnection._method_dtls_client_setup_3097527179 != nil)
-        let _method_refuse_new_connections_2586408642_name = StringName(from: "refuse_new_connections")
-        self._method_refuse_new_connections_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_refuse_new_connections_2586408642_name._native_ptr(), 2586408642)
-        assert(ENetConnection._method_refuse_new_connections_2586408642 != nil)
-        let _method_pop_statistic_2166904170_name = StringName(from: "pop_statistic")
-        self._method_pop_statistic_2166904170 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_pop_statistic_2166904170_name._native_ptr(), 2166904170)
-        assert(ENetConnection._method_pop_statistic_2166904170 != nil)
-        let _method_get_max_channels_3905245786_name = StringName(from: "get_max_channels")
-        self._method_get_max_channels_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_get_max_channels_3905245786_name._native_ptr(), 3905245786)
-        assert(ENetConnection._method_get_max_channels_3905245786 != nil)
-        let _method_get_local_port_3905245786_name = StringName(from: "get_local_port")
-        self._method_get_local_port_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_get_local_port_3905245786_name._native_ptr(), 3905245786)
-        assert(ENetConnection._method_get_local_port_3905245786 != nil)
-        let _method_get_peers_2915620761_name = StringName(from: "get_peers")
-        self._method_get_peers_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetConnection._native_ptr(), _method_get_peers_2915620761_name._native_ptr(), 2915620761)
-        assert(ENetConnection._method_get_peers_2915620761 != nil)
+        self._method_create_host_bound_866250949 = StringName(from: "create_host_bound")
+        assert(self._method_create_host_bound_866250949 != nil)
+        self._method_create_host_117198950 = StringName(from: "create_host")
+        assert(self._method_create_host_117198950 != nil)
+        self._method_destroy_3218959716 = StringName(from: "destroy")
+        assert(self._method_destroy_3218959716 != nil)
+        self._method_connect_to_host_385984708 = StringName(from: "connect_to_host")
+        assert(self._method_connect_to_host_385984708 != nil)
+        self._method_service_2402345344 = StringName(from: "service")
+        assert(self._method_service_2402345344 != nil)
+        self._method_flush_3218959716 = StringName(from: "flush")
+        assert(self._method_flush_3218959716 != nil)
+        self._method_bandwidth_limit_2302169788 = StringName(from: "bandwidth_limit")
+        assert(self._method_bandwidth_limit_2302169788 != nil)
+        self._method_channel_limit_1286410249 = StringName(from: "channel_limit")
+        assert(self._method_channel_limit_1286410249 != nil)
+        self._method_broadcast_2772371345 = StringName(from: "broadcast")
+        assert(self._method_broadcast_2772371345 != nil)
+        self._method_compress_2660215187 = StringName(from: "compress")
+        assert(self._method_compress_2660215187 != nil)
+        self._method_dtls_server_setup_1262296096 = StringName(from: "dtls_server_setup")
+        assert(self._method_dtls_server_setup_1262296096 != nil)
+        self._method_dtls_client_setup_3097527179 = StringName(from: "dtls_client_setup")
+        assert(self._method_dtls_client_setup_3097527179 != nil)
+        self._method_refuse_new_connections_2586408642 = StringName(from: "refuse_new_connections")
+        assert(self._method_refuse_new_connections_2586408642 != nil)
+        self._method_pop_statistic_2166904170 = StringName(from: "pop_statistic")
+        assert(self._method_pop_statistic_2166904170 != nil)
+        self._method_get_max_channels_3905245786 = StringName(from: "get_max_channels")
+        assert(self._method_get_max_channels_3905245786 != nil)
+        self._method_get_local_port_3905245786 = StringName(from: "get_local_port")
+        assert(self._method_get_local_port_3905245786 != nil)
+        self._method_get_peers_2915620761 = StringName(from: "get_peers")
+        assert(self._method_get_peers_2915620761 != nil)
     }
 
     public func create_host_bound(bind_address: godot.String, bind_port: Int64, max_peers: Int64, max_channels: Int64, in_bandwidth: Int64, out_bandwidth: Int64) -> Error {
@@ -123,8 +107,13 @@ open class ENetConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_host_bound_866250949,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_host_bound_866250949._native_ptr(),
+                    866250949)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -148,8 +137,13 @@ open class ENetConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_host_117198950,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_host_117198950._native_ptr(),
+                    117198950)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -167,8 +161,13 @@ open class ENetConnection : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_destroy_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_destroy_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -186,8 +185,13 @@ open class ENetConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_connect_to_host_385984708,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_connect_to_host_385984708._native_ptr(),
+                    385984708)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -206,8 +210,13 @@ open class ENetConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_service_2402345344,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_service_2402345344._native_ptr(),
+                    2402345344)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -222,8 +231,13 @@ open class ENetConnection : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_flush_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_flush_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -238,8 +252,13 @@ open class ENetConnection : RefCounted {
                 .init(in_bandwidth_native), .init(out_bandwidth_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_bandwidth_limit_2302169788,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_bandwidth_limit_2302169788._native_ptr(),
+                    2302169788)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -255,8 +274,13 @@ open class ENetConnection : RefCounted {
                 .init(limit_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_channel_limit_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_channel_limit_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -273,8 +297,13 @@ open class ENetConnection : RefCounted {
                 .init(channel_native), .init(packet_native), .init(flags_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_broadcast_2772371345,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_broadcast_2772371345._native_ptr(),
+                    2772371345)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -290,8 +319,13 @@ open class ENetConnection : RefCounted {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_compress_2660215187,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_compress_2660215187._native_ptr(),
+                    2660215187)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -307,8 +341,13 @@ open class ENetConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_dtls_server_setup_1262296096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_dtls_server_setup_1262296096._native_ptr(),
+                    1262296096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -325,8 +364,13 @@ open class ENetConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_dtls_client_setup_3097527179,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_dtls_client_setup_3097527179._native_ptr(),
+                    3097527179)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -341,8 +385,13 @@ open class ENetConnection : RefCounted {
                 .init(refuse_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_refuse_new_connections_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_refuse_new_connections_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -359,8 +408,13 @@ open class ENetConnection : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_pop_statistic_2166904170,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_pop_statistic_2166904170._native_ptr(),
+                    2166904170)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -377,8 +431,13 @@ open class ENetConnection : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_max_channels_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_max_channels_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -394,8 +453,13 @@ open class ENetConnection : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_local_port_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_local_port_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -410,8 +474,13 @@ open class ENetConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_peers_2915620761,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_peers_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

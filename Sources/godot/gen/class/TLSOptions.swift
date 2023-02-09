@@ -36,27 +36,25 @@ open class TLSOptions : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_TLSOptions }
 
-    static var _method_client_3565000357: GDExtensionMethodBindPtr! = nil
-    static var _method_client_unsafe_2090251749: GDExtensionMethodBindPtr! = nil
-    static var _method_server_36969539: GDExtensionMethodBindPtr! = nil
+    static var _method_client_3565000357: StringName! = nil
+    static var _method_client_unsafe_2090251749: StringName! = nil
+    static var _method_server_36969539: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_TLSOptions == nil)
         __godot_name_TLSOptions = StringName(from: "TLSOptions")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_client_3565000357_name = StringName(from: "client")
-        self._method_client_3565000357 = self.interface.pointee.classdb_get_method_bind(__godot_name_TLSOptions._native_ptr(), _method_client_3565000357_name._native_ptr(), 3565000357)
-        assert(TLSOptions._method_client_3565000357 != nil)
-        let _method_client_unsafe_2090251749_name = StringName(from: "client_unsafe")
-        self._method_client_unsafe_2090251749 = self.interface.pointee.classdb_get_method_bind(__godot_name_TLSOptions._native_ptr(), _method_client_unsafe_2090251749_name._native_ptr(), 2090251749)
-        assert(TLSOptions._method_client_unsafe_2090251749 != nil)
-        let _method_server_36969539_name = StringName(from: "server")
-        self._method_server_36969539 = self.interface.pointee.classdb_get_method_bind(__godot_name_TLSOptions._native_ptr(), _method_server_36969539_name._native_ptr(), 36969539)
-        assert(TLSOptions._method_server_36969539 != nil)
+        self._method_client_3565000357 = StringName(from: "client")
+        assert(self._method_client_3565000357 != nil)
+        self._method_client_unsafe_2090251749 = StringName(from: "client_unsafe")
+        assert(self._method_client_unsafe_2090251749 != nil)
+        self._method_server_36969539 = StringName(from: "server")
+        assert(self._method_server_36969539 != nil)
     }
 
     public func client(trusted_chain: X509Certificate, common_name_override: godot.String) -> TLSOptions {
@@ -69,8 +67,13 @@ open class TLSOptions : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_client_3565000357,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_client_3565000357._native_ptr(),
+                    3565000357)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -86,8 +89,13 @@ open class TLSOptions : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_client_unsafe_2090251749,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_client_unsafe_2090251749._native_ptr(),
+                    2090251749)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -104,8 +112,13 @@ open class TLSOptions : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_server_36969539,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_server_36969539._native_ptr(),
+                    36969539)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

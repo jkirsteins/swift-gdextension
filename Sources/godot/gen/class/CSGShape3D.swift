@@ -15,95 +15,76 @@ open class CSGShape3D : GeometryInstance3D {
 
     public override class var __godot_name: StringName { __godot_name_CSGShape3D }
 
-    static var _method_is_root_shape_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_operation_811425055: GDExtensionMethodBindPtr! = nil
-    static var _method_get_operation_2662425879: GDExtensionMethodBindPtr! = nil
-    static var _method_set_snap_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_snap_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_collision_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_using_collision_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_layer_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_layer_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_mask_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_mask_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_mask_value_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_mask_value_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_layer_value_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_layer_value_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_priority_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_priority_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_calculate_tangents_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_calculating_tangents_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_meshes_3995934104: GDExtensionMethodBindPtr! = nil
+    static var _method_is_root_shape_36873697: StringName! = nil
+    static var _method_set_operation_811425055: StringName! = nil
+    static var _method_get_operation_2662425879: StringName! = nil
+    static var _method_set_snap_373806689: StringName! = nil
+    static var _method_get_snap_1740695150: StringName! = nil
+    static var _method_set_use_collision_2586408642: StringName! = nil
+    static var _method_is_using_collision_36873697: StringName! = nil
+    static var _method_set_collision_layer_1286410249: StringName! = nil
+    static var _method_get_collision_layer_3905245786: StringName! = nil
+    static var _method_set_collision_mask_1286410249: StringName! = nil
+    static var _method_get_collision_mask_3905245786: StringName! = nil
+    static var _method_set_collision_mask_value_300928843: StringName! = nil
+    static var _method_get_collision_mask_value_1116898809: StringName! = nil
+    static var _method_set_collision_layer_value_300928843: StringName! = nil
+    static var _method_get_collision_layer_value_1116898809: StringName! = nil
+    static var _method_set_collision_priority_373806689: StringName! = nil
+    static var _method_get_collision_priority_1740695150: StringName! = nil
+    static var _method_set_calculate_tangents_2586408642: StringName! = nil
+    static var _method_is_calculating_tangents_36873697: StringName! = nil
+    static var _method_get_meshes_3995934104: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CSGShape3D == nil)
         __godot_name_CSGShape3D = StringName(from: "CSGShape3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_is_root_shape_36873697_name = StringName(from: "is_root_shape")
-        self._method_is_root_shape_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_is_root_shape_36873697_name._native_ptr(), 36873697)
-        assert(CSGShape3D._method_is_root_shape_36873697 != nil)
-        let _method_set_operation_811425055_name = StringName(from: "set_operation")
-        self._method_set_operation_811425055 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_set_operation_811425055_name._native_ptr(), 811425055)
-        assert(CSGShape3D._method_set_operation_811425055 != nil)
-        let _method_get_operation_2662425879_name = StringName(from: "get_operation")
-        self._method_get_operation_2662425879 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_get_operation_2662425879_name._native_ptr(), 2662425879)
-        assert(CSGShape3D._method_get_operation_2662425879 != nil)
-        let _method_set_snap_373806689_name = StringName(from: "set_snap")
-        self._method_set_snap_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_set_snap_373806689_name._native_ptr(), 373806689)
-        assert(CSGShape3D._method_set_snap_373806689 != nil)
-        let _method_get_snap_1740695150_name = StringName(from: "get_snap")
-        self._method_get_snap_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_get_snap_1740695150_name._native_ptr(), 1740695150)
-        assert(CSGShape3D._method_get_snap_1740695150 != nil)
-        let _method_set_use_collision_2586408642_name = StringName(from: "set_use_collision")
-        self._method_set_use_collision_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_set_use_collision_2586408642_name._native_ptr(), 2586408642)
-        assert(CSGShape3D._method_set_use_collision_2586408642 != nil)
-        let _method_is_using_collision_36873697_name = StringName(from: "is_using_collision")
-        self._method_is_using_collision_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_is_using_collision_36873697_name._native_ptr(), 36873697)
-        assert(CSGShape3D._method_is_using_collision_36873697 != nil)
-        let _method_set_collision_layer_1286410249_name = StringName(from: "set_collision_layer")
-        self._method_set_collision_layer_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_set_collision_layer_1286410249_name._native_ptr(), 1286410249)
-        assert(CSGShape3D._method_set_collision_layer_1286410249 != nil)
-        let _method_get_collision_layer_3905245786_name = StringName(from: "get_collision_layer")
-        self._method_get_collision_layer_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_get_collision_layer_3905245786_name._native_ptr(), 3905245786)
-        assert(CSGShape3D._method_get_collision_layer_3905245786 != nil)
-        let _method_set_collision_mask_1286410249_name = StringName(from: "set_collision_mask")
-        self._method_set_collision_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_set_collision_mask_1286410249_name._native_ptr(), 1286410249)
-        assert(CSGShape3D._method_set_collision_mask_1286410249 != nil)
-        let _method_get_collision_mask_3905245786_name = StringName(from: "get_collision_mask")
-        self._method_get_collision_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_get_collision_mask_3905245786_name._native_ptr(), 3905245786)
-        assert(CSGShape3D._method_get_collision_mask_3905245786 != nil)
-        let _method_set_collision_mask_value_300928843_name = StringName(from: "set_collision_mask_value")
-        self._method_set_collision_mask_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_set_collision_mask_value_300928843_name._native_ptr(), 300928843)
-        assert(CSGShape3D._method_set_collision_mask_value_300928843 != nil)
-        let _method_get_collision_mask_value_1116898809_name = StringName(from: "get_collision_mask_value")
-        self._method_get_collision_mask_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_get_collision_mask_value_1116898809_name._native_ptr(), 1116898809)
-        assert(CSGShape3D._method_get_collision_mask_value_1116898809 != nil)
-        let _method_set_collision_layer_value_300928843_name = StringName(from: "set_collision_layer_value")
-        self._method_set_collision_layer_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_set_collision_layer_value_300928843_name._native_ptr(), 300928843)
-        assert(CSGShape3D._method_set_collision_layer_value_300928843 != nil)
-        let _method_get_collision_layer_value_1116898809_name = StringName(from: "get_collision_layer_value")
-        self._method_get_collision_layer_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_get_collision_layer_value_1116898809_name._native_ptr(), 1116898809)
-        assert(CSGShape3D._method_get_collision_layer_value_1116898809 != nil)
-        let _method_set_collision_priority_373806689_name = StringName(from: "set_collision_priority")
-        self._method_set_collision_priority_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_set_collision_priority_373806689_name._native_ptr(), 373806689)
-        assert(CSGShape3D._method_set_collision_priority_373806689 != nil)
-        let _method_get_collision_priority_1740695150_name = StringName(from: "get_collision_priority")
-        self._method_get_collision_priority_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_get_collision_priority_1740695150_name._native_ptr(), 1740695150)
-        assert(CSGShape3D._method_get_collision_priority_1740695150 != nil)
-        let _method_set_calculate_tangents_2586408642_name = StringName(from: "set_calculate_tangents")
-        self._method_set_calculate_tangents_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_set_calculate_tangents_2586408642_name._native_ptr(), 2586408642)
-        assert(CSGShape3D._method_set_calculate_tangents_2586408642 != nil)
-        let _method_is_calculating_tangents_36873697_name = StringName(from: "is_calculating_tangents")
-        self._method_is_calculating_tangents_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_is_calculating_tangents_36873697_name._native_ptr(), 36873697)
-        assert(CSGShape3D._method_is_calculating_tangents_36873697 != nil)
-        let _method_get_meshes_3995934104_name = StringName(from: "get_meshes")
-        self._method_get_meshes_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_CSGShape3D._native_ptr(), _method_get_meshes_3995934104_name._native_ptr(), 3995934104)
-        assert(CSGShape3D._method_get_meshes_3995934104 != nil)
+        self._method_is_root_shape_36873697 = StringName(from: "is_root_shape")
+        assert(self._method_is_root_shape_36873697 != nil)
+        self._method_set_operation_811425055 = StringName(from: "set_operation")
+        assert(self._method_set_operation_811425055 != nil)
+        self._method_get_operation_2662425879 = StringName(from: "get_operation")
+        assert(self._method_get_operation_2662425879 != nil)
+        self._method_set_snap_373806689 = StringName(from: "set_snap")
+        assert(self._method_set_snap_373806689 != nil)
+        self._method_get_snap_1740695150 = StringName(from: "get_snap")
+        assert(self._method_get_snap_1740695150 != nil)
+        self._method_set_use_collision_2586408642 = StringName(from: "set_use_collision")
+        assert(self._method_set_use_collision_2586408642 != nil)
+        self._method_is_using_collision_36873697 = StringName(from: "is_using_collision")
+        assert(self._method_is_using_collision_36873697 != nil)
+        self._method_set_collision_layer_1286410249 = StringName(from: "set_collision_layer")
+        assert(self._method_set_collision_layer_1286410249 != nil)
+        self._method_get_collision_layer_3905245786 = StringName(from: "get_collision_layer")
+        assert(self._method_get_collision_layer_3905245786 != nil)
+        self._method_set_collision_mask_1286410249 = StringName(from: "set_collision_mask")
+        assert(self._method_set_collision_mask_1286410249 != nil)
+        self._method_get_collision_mask_3905245786 = StringName(from: "get_collision_mask")
+        assert(self._method_get_collision_mask_3905245786 != nil)
+        self._method_set_collision_mask_value_300928843 = StringName(from: "set_collision_mask_value")
+        assert(self._method_set_collision_mask_value_300928843 != nil)
+        self._method_get_collision_mask_value_1116898809 = StringName(from: "get_collision_mask_value")
+        assert(self._method_get_collision_mask_value_1116898809 != nil)
+        self._method_set_collision_layer_value_300928843 = StringName(from: "set_collision_layer_value")
+        assert(self._method_set_collision_layer_value_300928843 != nil)
+        self._method_get_collision_layer_value_1116898809 = StringName(from: "get_collision_layer_value")
+        assert(self._method_get_collision_layer_value_1116898809 != nil)
+        self._method_set_collision_priority_373806689 = StringName(from: "set_collision_priority")
+        assert(self._method_set_collision_priority_373806689 != nil)
+        self._method_get_collision_priority_1740695150 = StringName(from: "get_collision_priority")
+        assert(self._method_get_collision_priority_1740695150 != nil)
+        self._method_set_calculate_tangents_2586408642 = StringName(from: "set_calculate_tangents")
+        assert(self._method_set_calculate_tangents_2586408642 != nil)
+        self._method_is_calculating_tangents_36873697 = StringName(from: "is_calculating_tangents")
+        assert(self._method_is_calculating_tangents_36873697 != nil)
+        self._method_get_meshes_3995934104 = StringName(from: "get_meshes")
+        assert(self._method_get_meshes_3995934104 != nil)
     }
 
     public func is_root_shape() -> UInt8 {
@@ -115,8 +96,13 @@ open class CSGShape3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_root_shape_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_root_shape_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -131,8 +117,13 @@ open class CSGShape3D : GeometryInstance3D {
                 .init(operation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_operation_811425055,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_operation_811425055._native_ptr(),
+                    811425055)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -147,8 +138,13 @@ open class CSGShape3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_operation_2662425879,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_operation_2662425879._native_ptr(),
+                    2662425879)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -163,8 +159,13 @@ open class CSGShape3D : GeometryInstance3D {
                 .init(snap_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_snap_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_snap_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -180,8 +181,13 @@ open class CSGShape3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_snap_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_snap_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -196,8 +202,13 @@ open class CSGShape3D : GeometryInstance3D {
                 .init(operation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_collision_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_collision_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -213,8 +224,13 @@ open class CSGShape3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_using_collision_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_using_collision_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -229,8 +245,13 @@ open class CSGShape3D : GeometryInstance3D {
                 .init(layer_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_layer_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_layer_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -246,8 +267,13 @@ open class CSGShape3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_layer_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_layer_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -262,8 +288,13 @@ open class CSGShape3D : GeometryInstance3D {
                 .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_mask_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_mask_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -279,8 +310,13 @@ open class CSGShape3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_mask_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_mask_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -296,8 +332,13 @@ open class CSGShape3D : GeometryInstance3D {
                 .init(layer_number_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_mask_value_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_mask_value_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -315,8 +356,13 @@ open class CSGShape3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_mask_value_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_mask_value_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -333,8 +379,13 @@ open class CSGShape3D : GeometryInstance3D {
                 .init(layer_number_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_layer_value_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_layer_value_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -352,8 +403,13 @@ open class CSGShape3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_layer_value_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_layer_value_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -369,8 +425,13 @@ open class CSGShape3D : GeometryInstance3D {
                 .init(priority_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_priority_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_priority_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -386,8 +447,13 @@ open class CSGShape3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_priority_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_priority_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -402,8 +468,13 @@ open class CSGShape3D : GeometryInstance3D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_calculate_tangents_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_calculate_tangents_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -419,8 +490,13 @@ open class CSGShape3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_calculating_tangents_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_calculating_tangents_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -435,8 +511,13 @@ open class CSGShape3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_meshes_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_meshes_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

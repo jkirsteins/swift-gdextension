@@ -13,143 +13,112 @@ open class VehicleWheel3D : Node3D {
 
     public override class var __godot_name: StringName { __godot_name_VehicleWheel3D }
 
-    static var _method_set_radius_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_radius_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_suspension_rest_length_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_suspension_rest_length_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_suspension_travel_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_suspension_travel_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_suspension_stiffness_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_suspension_stiffness_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_suspension_max_force_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_suspension_max_force_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_damping_compression_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_damping_compression_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_damping_relaxation_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_damping_relaxation_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_as_traction_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_used_as_traction_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_as_steering_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_used_as_steering_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_friction_slip_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_friction_slip_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_is_in_contact_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_contact_body_151077316: GDExtensionMethodBindPtr! = nil
-    static var _method_set_roll_influence_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_roll_influence_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_skidinfo_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rpm_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_engine_force_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_engine_force_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_brake_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_brake_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_steering_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_steering_1740695150: GDExtensionMethodBindPtr! = nil
+    static var _method_set_radius_373806689: StringName! = nil
+    static var _method_get_radius_1740695150: StringName! = nil
+    static var _method_set_suspension_rest_length_373806689: StringName! = nil
+    static var _method_get_suspension_rest_length_1740695150: StringName! = nil
+    static var _method_set_suspension_travel_373806689: StringName! = nil
+    static var _method_get_suspension_travel_1740695150: StringName! = nil
+    static var _method_set_suspension_stiffness_373806689: StringName! = nil
+    static var _method_get_suspension_stiffness_1740695150: StringName! = nil
+    static var _method_set_suspension_max_force_373806689: StringName! = nil
+    static var _method_get_suspension_max_force_1740695150: StringName! = nil
+    static var _method_set_damping_compression_373806689: StringName! = nil
+    static var _method_get_damping_compression_1740695150: StringName! = nil
+    static var _method_set_damping_relaxation_373806689: StringName! = nil
+    static var _method_get_damping_relaxation_1740695150: StringName! = nil
+    static var _method_set_use_as_traction_2586408642: StringName! = nil
+    static var _method_is_used_as_traction_36873697: StringName! = nil
+    static var _method_set_use_as_steering_2586408642: StringName! = nil
+    static var _method_is_used_as_steering_36873697: StringName! = nil
+    static var _method_set_friction_slip_373806689: StringName! = nil
+    static var _method_get_friction_slip_1740695150: StringName! = nil
+    static var _method_is_in_contact_36873697: StringName! = nil
+    static var _method_get_contact_body_151077316: StringName! = nil
+    static var _method_set_roll_influence_373806689: StringName! = nil
+    static var _method_get_roll_influence_1740695150: StringName! = nil
+    static var _method_get_skidinfo_1740695150: StringName! = nil
+    static var _method_get_rpm_1740695150: StringName! = nil
+    static var _method_set_engine_force_373806689: StringName! = nil
+    static var _method_get_engine_force_1740695150: StringName! = nil
+    static var _method_set_brake_373806689: StringName! = nil
+    static var _method_get_brake_1740695150: StringName! = nil
+    static var _method_set_steering_373806689: StringName! = nil
+    static var _method_get_steering_1740695150: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VehicleWheel3D == nil)
         __godot_name_VehicleWheel3D = StringName(from: "VehicleWheel3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_radius_373806689_name = StringName(from: "set_radius")
-        self._method_set_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_set_radius_373806689_name._native_ptr(), 373806689)
-        assert(VehicleWheel3D._method_set_radius_373806689 != nil)
-        let _method_get_radius_1740695150_name = StringName(from: "get_radius")
-        self._method_get_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_get_radius_1740695150_name._native_ptr(), 1740695150)
-        assert(VehicleWheel3D._method_get_radius_1740695150 != nil)
-        let _method_set_suspension_rest_length_373806689_name = StringName(from: "set_suspension_rest_length")
-        self._method_set_suspension_rest_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_set_suspension_rest_length_373806689_name._native_ptr(), 373806689)
-        assert(VehicleWheel3D._method_set_suspension_rest_length_373806689 != nil)
-        let _method_get_suspension_rest_length_1740695150_name = StringName(from: "get_suspension_rest_length")
-        self._method_get_suspension_rest_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_get_suspension_rest_length_1740695150_name._native_ptr(), 1740695150)
-        assert(VehicleWheel3D._method_get_suspension_rest_length_1740695150 != nil)
-        let _method_set_suspension_travel_373806689_name = StringName(from: "set_suspension_travel")
-        self._method_set_suspension_travel_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_set_suspension_travel_373806689_name._native_ptr(), 373806689)
-        assert(VehicleWheel3D._method_set_suspension_travel_373806689 != nil)
-        let _method_get_suspension_travel_1740695150_name = StringName(from: "get_suspension_travel")
-        self._method_get_suspension_travel_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_get_suspension_travel_1740695150_name._native_ptr(), 1740695150)
-        assert(VehicleWheel3D._method_get_suspension_travel_1740695150 != nil)
-        let _method_set_suspension_stiffness_373806689_name = StringName(from: "set_suspension_stiffness")
-        self._method_set_suspension_stiffness_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_set_suspension_stiffness_373806689_name._native_ptr(), 373806689)
-        assert(VehicleWheel3D._method_set_suspension_stiffness_373806689 != nil)
-        let _method_get_suspension_stiffness_1740695150_name = StringName(from: "get_suspension_stiffness")
-        self._method_get_suspension_stiffness_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_get_suspension_stiffness_1740695150_name._native_ptr(), 1740695150)
-        assert(VehicleWheel3D._method_get_suspension_stiffness_1740695150 != nil)
-        let _method_set_suspension_max_force_373806689_name = StringName(from: "set_suspension_max_force")
-        self._method_set_suspension_max_force_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_set_suspension_max_force_373806689_name._native_ptr(), 373806689)
-        assert(VehicleWheel3D._method_set_suspension_max_force_373806689 != nil)
-        let _method_get_suspension_max_force_1740695150_name = StringName(from: "get_suspension_max_force")
-        self._method_get_suspension_max_force_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_get_suspension_max_force_1740695150_name._native_ptr(), 1740695150)
-        assert(VehicleWheel3D._method_get_suspension_max_force_1740695150 != nil)
-        let _method_set_damping_compression_373806689_name = StringName(from: "set_damping_compression")
-        self._method_set_damping_compression_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_set_damping_compression_373806689_name._native_ptr(), 373806689)
-        assert(VehicleWheel3D._method_set_damping_compression_373806689 != nil)
-        let _method_get_damping_compression_1740695150_name = StringName(from: "get_damping_compression")
-        self._method_get_damping_compression_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_get_damping_compression_1740695150_name._native_ptr(), 1740695150)
-        assert(VehicleWheel3D._method_get_damping_compression_1740695150 != nil)
-        let _method_set_damping_relaxation_373806689_name = StringName(from: "set_damping_relaxation")
-        self._method_set_damping_relaxation_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_set_damping_relaxation_373806689_name._native_ptr(), 373806689)
-        assert(VehicleWheel3D._method_set_damping_relaxation_373806689 != nil)
-        let _method_get_damping_relaxation_1740695150_name = StringName(from: "get_damping_relaxation")
-        self._method_get_damping_relaxation_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_get_damping_relaxation_1740695150_name._native_ptr(), 1740695150)
-        assert(VehicleWheel3D._method_get_damping_relaxation_1740695150 != nil)
-        let _method_set_use_as_traction_2586408642_name = StringName(from: "set_use_as_traction")
-        self._method_set_use_as_traction_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_set_use_as_traction_2586408642_name._native_ptr(), 2586408642)
-        assert(VehicleWheel3D._method_set_use_as_traction_2586408642 != nil)
-        let _method_is_used_as_traction_36873697_name = StringName(from: "is_used_as_traction")
-        self._method_is_used_as_traction_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_is_used_as_traction_36873697_name._native_ptr(), 36873697)
-        assert(VehicleWheel3D._method_is_used_as_traction_36873697 != nil)
-        let _method_set_use_as_steering_2586408642_name = StringName(from: "set_use_as_steering")
-        self._method_set_use_as_steering_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_set_use_as_steering_2586408642_name._native_ptr(), 2586408642)
-        assert(VehicleWheel3D._method_set_use_as_steering_2586408642 != nil)
-        let _method_is_used_as_steering_36873697_name = StringName(from: "is_used_as_steering")
-        self._method_is_used_as_steering_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_is_used_as_steering_36873697_name._native_ptr(), 36873697)
-        assert(VehicleWheel3D._method_is_used_as_steering_36873697 != nil)
-        let _method_set_friction_slip_373806689_name = StringName(from: "set_friction_slip")
-        self._method_set_friction_slip_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_set_friction_slip_373806689_name._native_ptr(), 373806689)
-        assert(VehicleWheel3D._method_set_friction_slip_373806689 != nil)
-        let _method_get_friction_slip_1740695150_name = StringName(from: "get_friction_slip")
-        self._method_get_friction_slip_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_get_friction_slip_1740695150_name._native_ptr(), 1740695150)
-        assert(VehicleWheel3D._method_get_friction_slip_1740695150 != nil)
-        let _method_is_in_contact_36873697_name = StringName(from: "is_in_contact")
-        self._method_is_in_contact_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_is_in_contact_36873697_name._native_ptr(), 36873697)
-        assert(VehicleWheel3D._method_is_in_contact_36873697 != nil)
-        let _method_get_contact_body_151077316_name = StringName(from: "get_contact_body")
-        self._method_get_contact_body_151077316 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_get_contact_body_151077316_name._native_ptr(), 151077316)
-        assert(VehicleWheel3D._method_get_contact_body_151077316 != nil)
-        let _method_set_roll_influence_373806689_name = StringName(from: "set_roll_influence")
-        self._method_set_roll_influence_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_set_roll_influence_373806689_name._native_ptr(), 373806689)
-        assert(VehicleWheel3D._method_set_roll_influence_373806689 != nil)
-        let _method_get_roll_influence_1740695150_name = StringName(from: "get_roll_influence")
-        self._method_get_roll_influence_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_get_roll_influence_1740695150_name._native_ptr(), 1740695150)
-        assert(VehicleWheel3D._method_get_roll_influence_1740695150 != nil)
-        let _method_get_skidinfo_1740695150_name = StringName(from: "get_skidinfo")
-        self._method_get_skidinfo_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_get_skidinfo_1740695150_name._native_ptr(), 1740695150)
-        assert(VehicleWheel3D._method_get_skidinfo_1740695150 != nil)
-        let _method_get_rpm_1740695150_name = StringName(from: "get_rpm")
-        self._method_get_rpm_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_get_rpm_1740695150_name._native_ptr(), 1740695150)
-        assert(VehicleWheel3D._method_get_rpm_1740695150 != nil)
-        let _method_set_engine_force_373806689_name = StringName(from: "set_engine_force")
-        self._method_set_engine_force_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_set_engine_force_373806689_name._native_ptr(), 373806689)
-        assert(VehicleWheel3D._method_set_engine_force_373806689 != nil)
-        let _method_get_engine_force_1740695150_name = StringName(from: "get_engine_force")
-        self._method_get_engine_force_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_get_engine_force_1740695150_name._native_ptr(), 1740695150)
-        assert(VehicleWheel3D._method_get_engine_force_1740695150 != nil)
-        let _method_set_brake_373806689_name = StringName(from: "set_brake")
-        self._method_set_brake_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_set_brake_373806689_name._native_ptr(), 373806689)
-        assert(VehicleWheel3D._method_set_brake_373806689 != nil)
-        let _method_get_brake_1740695150_name = StringName(from: "get_brake")
-        self._method_get_brake_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_get_brake_1740695150_name._native_ptr(), 1740695150)
-        assert(VehicleWheel3D._method_get_brake_1740695150 != nil)
-        let _method_set_steering_373806689_name = StringName(from: "set_steering")
-        self._method_set_steering_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_set_steering_373806689_name._native_ptr(), 373806689)
-        assert(VehicleWheel3D._method_set_steering_373806689 != nil)
-        let _method_get_steering_1740695150_name = StringName(from: "get_steering")
-        self._method_get_steering_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VehicleWheel3D._native_ptr(), _method_get_steering_1740695150_name._native_ptr(), 1740695150)
-        assert(VehicleWheel3D._method_get_steering_1740695150 != nil)
+        self._method_set_radius_373806689 = StringName(from: "set_radius")
+        assert(self._method_set_radius_373806689 != nil)
+        self._method_get_radius_1740695150 = StringName(from: "get_radius")
+        assert(self._method_get_radius_1740695150 != nil)
+        self._method_set_suspension_rest_length_373806689 = StringName(from: "set_suspension_rest_length")
+        assert(self._method_set_suspension_rest_length_373806689 != nil)
+        self._method_get_suspension_rest_length_1740695150 = StringName(from: "get_suspension_rest_length")
+        assert(self._method_get_suspension_rest_length_1740695150 != nil)
+        self._method_set_suspension_travel_373806689 = StringName(from: "set_suspension_travel")
+        assert(self._method_set_suspension_travel_373806689 != nil)
+        self._method_get_suspension_travel_1740695150 = StringName(from: "get_suspension_travel")
+        assert(self._method_get_suspension_travel_1740695150 != nil)
+        self._method_set_suspension_stiffness_373806689 = StringName(from: "set_suspension_stiffness")
+        assert(self._method_set_suspension_stiffness_373806689 != nil)
+        self._method_get_suspension_stiffness_1740695150 = StringName(from: "get_suspension_stiffness")
+        assert(self._method_get_suspension_stiffness_1740695150 != nil)
+        self._method_set_suspension_max_force_373806689 = StringName(from: "set_suspension_max_force")
+        assert(self._method_set_suspension_max_force_373806689 != nil)
+        self._method_get_suspension_max_force_1740695150 = StringName(from: "get_suspension_max_force")
+        assert(self._method_get_suspension_max_force_1740695150 != nil)
+        self._method_set_damping_compression_373806689 = StringName(from: "set_damping_compression")
+        assert(self._method_set_damping_compression_373806689 != nil)
+        self._method_get_damping_compression_1740695150 = StringName(from: "get_damping_compression")
+        assert(self._method_get_damping_compression_1740695150 != nil)
+        self._method_set_damping_relaxation_373806689 = StringName(from: "set_damping_relaxation")
+        assert(self._method_set_damping_relaxation_373806689 != nil)
+        self._method_get_damping_relaxation_1740695150 = StringName(from: "get_damping_relaxation")
+        assert(self._method_get_damping_relaxation_1740695150 != nil)
+        self._method_set_use_as_traction_2586408642 = StringName(from: "set_use_as_traction")
+        assert(self._method_set_use_as_traction_2586408642 != nil)
+        self._method_is_used_as_traction_36873697 = StringName(from: "is_used_as_traction")
+        assert(self._method_is_used_as_traction_36873697 != nil)
+        self._method_set_use_as_steering_2586408642 = StringName(from: "set_use_as_steering")
+        assert(self._method_set_use_as_steering_2586408642 != nil)
+        self._method_is_used_as_steering_36873697 = StringName(from: "is_used_as_steering")
+        assert(self._method_is_used_as_steering_36873697 != nil)
+        self._method_set_friction_slip_373806689 = StringName(from: "set_friction_slip")
+        assert(self._method_set_friction_slip_373806689 != nil)
+        self._method_get_friction_slip_1740695150 = StringName(from: "get_friction_slip")
+        assert(self._method_get_friction_slip_1740695150 != nil)
+        self._method_is_in_contact_36873697 = StringName(from: "is_in_contact")
+        assert(self._method_is_in_contact_36873697 != nil)
+        self._method_get_contact_body_151077316 = StringName(from: "get_contact_body")
+        assert(self._method_get_contact_body_151077316 != nil)
+        self._method_set_roll_influence_373806689 = StringName(from: "set_roll_influence")
+        assert(self._method_set_roll_influence_373806689 != nil)
+        self._method_get_roll_influence_1740695150 = StringName(from: "get_roll_influence")
+        assert(self._method_get_roll_influence_1740695150 != nil)
+        self._method_get_skidinfo_1740695150 = StringName(from: "get_skidinfo")
+        assert(self._method_get_skidinfo_1740695150 != nil)
+        self._method_get_rpm_1740695150 = StringName(from: "get_rpm")
+        assert(self._method_get_rpm_1740695150 != nil)
+        self._method_set_engine_force_373806689 = StringName(from: "set_engine_force")
+        assert(self._method_set_engine_force_373806689 != nil)
+        self._method_get_engine_force_1740695150 = StringName(from: "get_engine_force")
+        assert(self._method_get_engine_force_1740695150 != nil)
+        self._method_set_brake_373806689 = StringName(from: "set_brake")
+        assert(self._method_set_brake_373806689 != nil)
+        self._method_get_brake_1740695150 = StringName(from: "get_brake")
+        assert(self._method_get_brake_1740695150 != nil)
+        self._method_set_steering_373806689 = StringName(from: "set_steering")
+        assert(self._method_set_steering_373806689 != nil)
+        self._method_get_steering_1740695150 = StringName(from: "get_steering")
+        assert(self._method_get_steering_1740695150 != nil)
     }
 
     public func set_radius(length: Float64)  {
@@ -160,8 +129,13 @@ open class VehicleWheel3D : Node3D {
                 .init(length_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_radius_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_radius_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -177,8 +151,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_radius_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_radius_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -193,8 +172,13 @@ open class VehicleWheel3D : Node3D {
                 .init(length_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_suspension_rest_length_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_suspension_rest_length_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -210,8 +194,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_suspension_rest_length_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_suspension_rest_length_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -226,8 +215,13 @@ open class VehicleWheel3D : Node3D {
                 .init(length_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_suspension_travel_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_suspension_travel_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -243,8 +237,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_suspension_travel_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_suspension_travel_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -259,8 +258,13 @@ open class VehicleWheel3D : Node3D {
                 .init(length_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_suspension_stiffness_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_suspension_stiffness_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -276,8 +280,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_suspension_stiffness_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_suspension_stiffness_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -292,8 +301,13 @@ open class VehicleWheel3D : Node3D {
                 .init(length_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_suspension_max_force_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_suspension_max_force_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -309,8 +323,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_suspension_max_force_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_suspension_max_force_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -325,8 +344,13 @@ open class VehicleWheel3D : Node3D {
                 .init(length_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_damping_compression_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_damping_compression_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -342,8 +366,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_damping_compression_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_damping_compression_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -358,8 +387,13 @@ open class VehicleWheel3D : Node3D {
                 .init(length_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_damping_relaxation_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_damping_relaxation_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -375,8 +409,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_damping_relaxation_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_damping_relaxation_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -391,8 +430,13 @@ open class VehicleWheel3D : Node3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_as_traction_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_as_traction_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -408,8 +452,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_used_as_traction_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_used_as_traction_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -424,8 +473,13 @@ open class VehicleWheel3D : Node3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_as_steering_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_as_steering_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -441,8 +495,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_used_as_steering_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_used_as_steering_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -457,8 +516,13 @@ open class VehicleWheel3D : Node3D {
                 .init(length_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_friction_slip_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_friction_slip_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -474,8 +538,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_friction_slip_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_friction_slip_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -491,8 +560,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_in_contact_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_in_contact_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -507,8 +581,13 @@ open class VehicleWheel3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_contact_body_151077316,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_contact_body_151077316._native_ptr(),
+                    151077316)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -523,8 +602,13 @@ open class VehicleWheel3D : Node3D {
                 .init(roll_influence_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_roll_influence_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_roll_influence_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -540,8 +624,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_roll_influence_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_roll_influence_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -557,8 +646,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_skidinfo_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_skidinfo_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -574,8 +668,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rpm_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rpm_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -590,8 +689,13 @@ open class VehicleWheel3D : Node3D {
                 .init(engine_force_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_engine_force_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_engine_force_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -607,8 +711,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_engine_force_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_engine_force_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -623,8 +732,13 @@ open class VehicleWheel3D : Node3D {
                 .init(brake_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_brake_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_brake_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -640,8 +754,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_brake_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_brake_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -656,8 +775,13 @@ open class VehicleWheel3D : Node3D {
                 .init(steering_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_steering_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_steering_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -673,8 +797,13 @@ open class VehicleWheel3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_steering_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_steering_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

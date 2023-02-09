@@ -13,59 +13,49 @@ open class BoneAttachment3D : Node3D {
 
     public override class var __godot_name: StringName { __godot_name_BoneAttachment3D }
 
-    static var _method_set_bone_name_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone_name_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bone_idx_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone_idx_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_on_bone_pose_update_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_override_pose_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_override_pose_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_external_skeleton_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_use_external_skeleton_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_external_skeleton_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_external_skeleton_4075236667: GDExtensionMethodBindPtr! = nil
+    static var _method_set_bone_name_83702148: StringName! = nil
+    static var _method_get_bone_name_201670096: StringName! = nil
+    static var _method_set_bone_idx_1286410249: StringName! = nil
+    static var _method_get_bone_idx_3905245786: StringName! = nil
+    static var _method_on_bone_pose_update_1286410249: StringName! = nil
+    static var _method_set_override_pose_2586408642: StringName! = nil
+    static var _method_get_override_pose_36873697: StringName! = nil
+    static var _method_set_use_external_skeleton_2586408642: StringName! = nil
+    static var _method_get_use_external_skeleton_36873697: StringName! = nil
+    static var _method_set_external_skeleton_1348162250: StringName! = nil
+    static var _method_get_external_skeleton_4075236667: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_BoneAttachment3D == nil)
         __godot_name_BoneAttachment3D = StringName(from: "BoneAttachment3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_bone_name_83702148_name = StringName(from: "set_bone_name")
-        self._method_set_bone_name_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_BoneAttachment3D._native_ptr(), _method_set_bone_name_83702148_name._native_ptr(), 83702148)
-        assert(BoneAttachment3D._method_set_bone_name_83702148 != nil)
-        let _method_get_bone_name_201670096_name = StringName(from: "get_bone_name")
-        self._method_get_bone_name_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_BoneAttachment3D._native_ptr(), _method_get_bone_name_201670096_name._native_ptr(), 201670096)
-        assert(BoneAttachment3D._method_get_bone_name_201670096 != nil)
-        let _method_set_bone_idx_1286410249_name = StringName(from: "set_bone_idx")
-        self._method_set_bone_idx_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_BoneAttachment3D._native_ptr(), _method_set_bone_idx_1286410249_name._native_ptr(), 1286410249)
-        assert(BoneAttachment3D._method_set_bone_idx_1286410249 != nil)
-        let _method_get_bone_idx_3905245786_name = StringName(from: "get_bone_idx")
-        self._method_get_bone_idx_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_BoneAttachment3D._native_ptr(), _method_get_bone_idx_3905245786_name._native_ptr(), 3905245786)
-        assert(BoneAttachment3D._method_get_bone_idx_3905245786 != nil)
-        let _method_on_bone_pose_update_1286410249_name = StringName(from: "on_bone_pose_update")
-        self._method_on_bone_pose_update_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_BoneAttachment3D._native_ptr(), _method_on_bone_pose_update_1286410249_name._native_ptr(), 1286410249)
-        assert(BoneAttachment3D._method_on_bone_pose_update_1286410249 != nil)
-        let _method_set_override_pose_2586408642_name = StringName(from: "set_override_pose")
-        self._method_set_override_pose_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_BoneAttachment3D._native_ptr(), _method_set_override_pose_2586408642_name._native_ptr(), 2586408642)
-        assert(BoneAttachment3D._method_set_override_pose_2586408642 != nil)
-        let _method_get_override_pose_36873697_name = StringName(from: "get_override_pose")
-        self._method_get_override_pose_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_BoneAttachment3D._native_ptr(), _method_get_override_pose_36873697_name._native_ptr(), 36873697)
-        assert(BoneAttachment3D._method_get_override_pose_36873697 != nil)
-        let _method_set_use_external_skeleton_2586408642_name = StringName(from: "set_use_external_skeleton")
-        self._method_set_use_external_skeleton_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_BoneAttachment3D._native_ptr(), _method_set_use_external_skeleton_2586408642_name._native_ptr(), 2586408642)
-        assert(BoneAttachment3D._method_set_use_external_skeleton_2586408642 != nil)
-        let _method_get_use_external_skeleton_36873697_name = StringName(from: "get_use_external_skeleton")
-        self._method_get_use_external_skeleton_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_BoneAttachment3D._native_ptr(), _method_get_use_external_skeleton_36873697_name._native_ptr(), 36873697)
-        assert(BoneAttachment3D._method_get_use_external_skeleton_36873697 != nil)
-        let _method_set_external_skeleton_1348162250_name = StringName(from: "set_external_skeleton")
-        self._method_set_external_skeleton_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_BoneAttachment3D._native_ptr(), _method_set_external_skeleton_1348162250_name._native_ptr(), 1348162250)
-        assert(BoneAttachment3D._method_set_external_skeleton_1348162250 != nil)
-        let _method_get_external_skeleton_4075236667_name = StringName(from: "get_external_skeleton")
-        self._method_get_external_skeleton_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_BoneAttachment3D._native_ptr(), _method_get_external_skeleton_4075236667_name._native_ptr(), 4075236667)
-        assert(BoneAttachment3D._method_get_external_skeleton_4075236667 != nil)
+        self._method_set_bone_name_83702148 = StringName(from: "set_bone_name")
+        assert(self._method_set_bone_name_83702148 != nil)
+        self._method_get_bone_name_201670096 = StringName(from: "get_bone_name")
+        assert(self._method_get_bone_name_201670096 != nil)
+        self._method_set_bone_idx_1286410249 = StringName(from: "set_bone_idx")
+        assert(self._method_set_bone_idx_1286410249 != nil)
+        self._method_get_bone_idx_3905245786 = StringName(from: "get_bone_idx")
+        assert(self._method_get_bone_idx_3905245786 != nil)
+        self._method_on_bone_pose_update_1286410249 = StringName(from: "on_bone_pose_update")
+        assert(self._method_on_bone_pose_update_1286410249 != nil)
+        self._method_set_override_pose_2586408642 = StringName(from: "set_override_pose")
+        assert(self._method_set_override_pose_2586408642 != nil)
+        self._method_get_override_pose_36873697 = StringName(from: "get_override_pose")
+        assert(self._method_get_override_pose_36873697 != nil)
+        self._method_set_use_external_skeleton_2586408642 = StringName(from: "set_use_external_skeleton")
+        assert(self._method_set_use_external_skeleton_2586408642 != nil)
+        self._method_get_use_external_skeleton_36873697 = StringName(from: "get_use_external_skeleton")
+        assert(self._method_get_use_external_skeleton_36873697 != nil)
+        self._method_set_external_skeleton_1348162250 = StringName(from: "set_external_skeleton")
+        assert(self._method_set_external_skeleton_1348162250 != nil)
+        self._method_get_external_skeleton_4075236667 = StringName(from: "get_external_skeleton")
+        assert(self._method_get_external_skeleton_4075236667 != nil)
     }
 
     public func set_bone_name(bone_name: godot.String)  {
@@ -76,8 +66,13 @@ open class BoneAttachment3D : Node3D {
                 .init(bone_name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bone_name_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bone_name_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -91,8 +86,13 @@ open class BoneAttachment3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_name_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_name_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -107,8 +107,13 @@ open class BoneAttachment3D : Node3D {
                 .init(bone_idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bone_idx_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bone_idx_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -124,8 +129,13 @@ open class BoneAttachment3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_idx_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_idx_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -140,8 +150,13 @@ open class BoneAttachment3D : Node3D {
                 .init(bone_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_on_bone_pose_update_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_on_bone_pose_update_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -156,8 +171,13 @@ open class BoneAttachment3D : Node3D {
                 .init(override_pose_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_override_pose_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_override_pose_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -173,8 +193,13 @@ open class BoneAttachment3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_override_pose_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_override_pose_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -189,8 +214,13 @@ open class BoneAttachment3D : Node3D {
                 .init(use_external_skeleton_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_external_skeleton_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_external_skeleton_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -206,8 +236,13 @@ open class BoneAttachment3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_use_external_skeleton_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_use_external_skeleton_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -222,8 +257,13 @@ open class BoneAttachment3D : Node3D {
                 .init(external_skeleton_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_external_skeleton_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_external_skeleton_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -237,8 +277,13 @@ open class BoneAttachment3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_external_skeleton_4075236667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_external_skeleton_4075236667._native_ptr(),
+                    4075236667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

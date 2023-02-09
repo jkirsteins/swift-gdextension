@@ -17,123 +17,97 @@ open class SkeletonProfile : Resource {
 
     public override class var __godot_name: StringName { __godot_name_SkeletonProfile }
 
-    static var _method_set_root_bone_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_get_root_bone_2737447660: GDExtensionMethodBindPtr! = nil
-    static var _method_set_scale_base_bone_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_get_scale_base_bone_2737447660: GDExtensionMethodBindPtr! = nil
-    static var _method_set_group_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_group_size_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_group_name_659327637: GDExtensionMethodBindPtr! = nil
-    static var _method_set_group_name_3780747571: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_3536238170: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_666127730: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bone_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone_size_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_find_bone_2458036349: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone_name_659327637: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bone_name_3780747571: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone_parent_659327637: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bone_parent_3780747571: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tail_direction_2675997574: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tail_direction_1231951015: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone_tail_659327637: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bone_tail_3780747571: GDExtensionMethodBindPtr! = nil
-    static var _method_get_reference_pose_1965739696: GDExtensionMethodBindPtr! = nil
-    static var _method_set_reference_pose_3616898986: GDExtensionMethodBindPtr! = nil
-    static var _method_get_handle_offset_2299179447: GDExtensionMethodBindPtr! = nil
-    static var _method_set_handle_offset_163021252: GDExtensionMethodBindPtr! = nil
-    static var _method_get_group_659327637: GDExtensionMethodBindPtr! = nil
-    static var _method_set_group_3780747571: GDExtensionMethodBindPtr! = nil
+    static var _method_set_root_bone_3304788590: StringName! = nil
+    static var _method_get_root_bone_2737447660: StringName! = nil
+    static var _method_set_scale_base_bone_3304788590: StringName! = nil
+    static var _method_get_scale_base_bone_2737447660: StringName! = nil
+    static var _method_set_group_size_1286410249: StringName! = nil
+    static var _method_get_group_size_2455072627: StringName! = nil
+    static var _method_get_group_name_659327637: StringName! = nil
+    static var _method_set_group_name_3780747571: StringName! = nil
+    static var _method_get_texture_3536238170: StringName! = nil
+    static var _method_set_texture_666127730: StringName! = nil
+    static var _method_set_bone_size_1286410249: StringName! = nil
+    static var _method_get_bone_size_2455072627: StringName! = nil
+    static var _method_find_bone_2458036349: StringName! = nil
+    static var _method_get_bone_name_659327637: StringName! = nil
+    static var _method_set_bone_name_3780747571: StringName! = nil
+    static var _method_get_bone_parent_659327637: StringName! = nil
+    static var _method_set_bone_parent_3780747571: StringName! = nil
+    static var _method_get_tail_direction_2675997574: StringName! = nil
+    static var _method_set_tail_direction_1231951015: StringName! = nil
+    static var _method_get_bone_tail_659327637: StringName! = nil
+    static var _method_set_bone_tail_3780747571: StringName! = nil
+    static var _method_get_reference_pose_1965739696: StringName! = nil
+    static var _method_set_reference_pose_3616898986: StringName! = nil
+    static var _method_get_handle_offset_2299179447: StringName! = nil
+    static var _method_set_handle_offset_163021252: StringName! = nil
+    static var _method_get_group_659327637: StringName! = nil
+    static var _method_set_group_3780747571: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_SkeletonProfile == nil)
         __godot_name_SkeletonProfile = StringName(from: "SkeletonProfile")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_root_bone_3304788590_name = StringName(from: "set_root_bone")
-        self._method_set_root_bone_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_set_root_bone_3304788590_name._native_ptr(), 3304788590)
-        assert(SkeletonProfile._method_set_root_bone_3304788590 != nil)
-        let _method_get_root_bone_2737447660_name = StringName(from: "get_root_bone")
-        self._method_get_root_bone_2737447660 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_get_root_bone_2737447660_name._native_ptr(), 2737447660)
-        assert(SkeletonProfile._method_get_root_bone_2737447660 != nil)
-        let _method_set_scale_base_bone_3304788590_name = StringName(from: "set_scale_base_bone")
-        self._method_set_scale_base_bone_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_set_scale_base_bone_3304788590_name._native_ptr(), 3304788590)
-        assert(SkeletonProfile._method_set_scale_base_bone_3304788590 != nil)
-        let _method_get_scale_base_bone_2737447660_name = StringName(from: "get_scale_base_bone")
-        self._method_get_scale_base_bone_2737447660 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_get_scale_base_bone_2737447660_name._native_ptr(), 2737447660)
-        assert(SkeletonProfile._method_get_scale_base_bone_2737447660 != nil)
-        let _method_set_group_size_1286410249_name = StringName(from: "set_group_size")
-        self._method_set_group_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_set_group_size_1286410249_name._native_ptr(), 1286410249)
-        assert(SkeletonProfile._method_set_group_size_1286410249 != nil)
-        let _method_get_group_size_2455072627_name = StringName(from: "get_group_size")
-        self._method_get_group_size_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_get_group_size_2455072627_name._native_ptr(), 2455072627)
-        assert(SkeletonProfile._method_get_group_size_2455072627 != nil)
-        let _method_get_group_name_659327637_name = StringName(from: "get_group_name")
-        self._method_get_group_name_659327637 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_get_group_name_659327637_name._native_ptr(), 659327637)
-        assert(SkeletonProfile._method_get_group_name_659327637 != nil)
-        let _method_set_group_name_3780747571_name = StringName(from: "set_group_name")
-        self._method_set_group_name_3780747571 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_set_group_name_3780747571_name._native_ptr(), 3780747571)
-        assert(SkeletonProfile._method_set_group_name_3780747571 != nil)
-        let _method_get_texture_3536238170_name = StringName(from: "get_texture")
-        self._method_get_texture_3536238170 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_get_texture_3536238170_name._native_ptr(), 3536238170)
-        assert(SkeletonProfile._method_get_texture_3536238170 != nil)
-        let _method_set_texture_666127730_name = StringName(from: "set_texture")
-        self._method_set_texture_666127730 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_set_texture_666127730_name._native_ptr(), 666127730)
-        assert(SkeletonProfile._method_set_texture_666127730 != nil)
-        let _method_set_bone_size_1286410249_name = StringName(from: "set_bone_size")
-        self._method_set_bone_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_set_bone_size_1286410249_name._native_ptr(), 1286410249)
-        assert(SkeletonProfile._method_set_bone_size_1286410249 != nil)
-        let _method_get_bone_size_2455072627_name = StringName(from: "get_bone_size")
-        self._method_get_bone_size_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_get_bone_size_2455072627_name._native_ptr(), 2455072627)
-        assert(SkeletonProfile._method_get_bone_size_2455072627 != nil)
-        let _method_find_bone_2458036349_name = StringName(from: "find_bone")
-        self._method_find_bone_2458036349 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_find_bone_2458036349_name._native_ptr(), 2458036349)
-        assert(SkeletonProfile._method_find_bone_2458036349 != nil)
-        let _method_get_bone_name_659327637_name = StringName(from: "get_bone_name")
-        self._method_get_bone_name_659327637 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_get_bone_name_659327637_name._native_ptr(), 659327637)
-        assert(SkeletonProfile._method_get_bone_name_659327637 != nil)
-        let _method_set_bone_name_3780747571_name = StringName(from: "set_bone_name")
-        self._method_set_bone_name_3780747571 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_set_bone_name_3780747571_name._native_ptr(), 3780747571)
-        assert(SkeletonProfile._method_set_bone_name_3780747571 != nil)
-        let _method_get_bone_parent_659327637_name = StringName(from: "get_bone_parent")
-        self._method_get_bone_parent_659327637 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_get_bone_parent_659327637_name._native_ptr(), 659327637)
-        assert(SkeletonProfile._method_get_bone_parent_659327637 != nil)
-        let _method_set_bone_parent_3780747571_name = StringName(from: "set_bone_parent")
-        self._method_set_bone_parent_3780747571 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_set_bone_parent_3780747571_name._native_ptr(), 3780747571)
-        assert(SkeletonProfile._method_set_bone_parent_3780747571 != nil)
-        let _method_get_tail_direction_2675997574_name = StringName(from: "get_tail_direction")
-        self._method_get_tail_direction_2675997574 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_get_tail_direction_2675997574_name._native_ptr(), 2675997574)
-        assert(SkeletonProfile._method_get_tail_direction_2675997574 != nil)
-        let _method_set_tail_direction_1231951015_name = StringName(from: "set_tail_direction")
-        self._method_set_tail_direction_1231951015 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_set_tail_direction_1231951015_name._native_ptr(), 1231951015)
-        assert(SkeletonProfile._method_set_tail_direction_1231951015 != nil)
-        let _method_get_bone_tail_659327637_name = StringName(from: "get_bone_tail")
-        self._method_get_bone_tail_659327637 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_get_bone_tail_659327637_name._native_ptr(), 659327637)
-        assert(SkeletonProfile._method_get_bone_tail_659327637 != nil)
-        let _method_set_bone_tail_3780747571_name = StringName(from: "set_bone_tail")
-        self._method_set_bone_tail_3780747571 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_set_bone_tail_3780747571_name._native_ptr(), 3780747571)
-        assert(SkeletonProfile._method_set_bone_tail_3780747571 != nil)
-        let _method_get_reference_pose_1965739696_name = StringName(from: "get_reference_pose")
-        self._method_get_reference_pose_1965739696 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_get_reference_pose_1965739696_name._native_ptr(), 1965739696)
-        assert(SkeletonProfile._method_get_reference_pose_1965739696 != nil)
-        let _method_set_reference_pose_3616898986_name = StringName(from: "set_reference_pose")
-        self._method_set_reference_pose_3616898986 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_set_reference_pose_3616898986_name._native_ptr(), 3616898986)
-        assert(SkeletonProfile._method_set_reference_pose_3616898986 != nil)
-        let _method_get_handle_offset_2299179447_name = StringName(from: "get_handle_offset")
-        self._method_get_handle_offset_2299179447 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_get_handle_offset_2299179447_name._native_ptr(), 2299179447)
-        assert(SkeletonProfile._method_get_handle_offset_2299179447 != nil)
-        let _method_set_handle_offset_163021252_name = StringName(from: "set_handle_offset")
-        self._method_set_handle_offset_163021252 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_set_handle_offset_163021252_name._native_ptr(), 163021252)
-        assert(SkeletonProfile._method_set_handle_offset_163021252 != nil)
-        let _method_get_group_659327637_name = StringName(from: "get_group")
-        self._method_get_group_659327637 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_get_group_659327637_name._native_ptr(), 659327637)
-        assert(SkeletonProfile._method_get_group_659327637 != nil)
-        let _method_set_group_3780747571_name = StringName(from: "set_group")
-        self._method_set_group_3780747571 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonProfile._native_ptr(), _method_set_group_3780747571_name._native_ptr(), 3780747571)
-        assert(SkeletonProfile._method_set_group_3780747571 != nil)
+        self._method_set_root_bone_3304788590 = StringName(from: "set_root_bone")
+        assert(self._method_set_root_bone_3304788590 != nil)
+        self._method_get_root_bone_2737447660 = StringName(from: "get_root_bone")
+        assert(self._method_get_root_bone_2737447660 != nil)
+        self._method_set_scale_base_bone_3304788590 = StringName(from: "set_scale_base_bone")
+        assert(self._method_set_scale_base_bone_3304788590 != nil)
+        self._method_get_scale_base_bone_2737447660 = StringName(from: "get_scale_base_bone")
+        assert(self._method_get_scale_base_bone_2737447660 != nil)
+        self._method_set_group_size_1286410249 = StringName(from: "set_group_size")
+        assert(self._method_set_group_size_1286410249 != nil)
+        self._method_get_group_size_2455072627 = StringName(from: "get_group_size")
+        assert(self._method_get_group_size_2455072627 != nil)
+        self._method_get_group_name_659327637 = StringName(from: "get_group_name")
+        assert(self._method_get_group_name_659327637 != nil)
+        self._method_set_group_name_3780747571 = StringName(from: "set_group_name")
+        assert(self._method_set_group_name_3780747571 != nil)
+        self._method_get_texture_3536238170 = StringName(from: "get_texture")
+        assert(self._method_get_texture_3536238170 != nil)
+        self._method_set_texture_666127730 = StringName(from: "set_texture")
+        assert(self._method_set_texture_666127730 != nil)
+        self._method_set_bone_size_1286410249 = StringName(from: "set_bone_size")
+        assert(self._method_set_bone_size_1286410249 != nil)
+        self._method_get_bone_size_2455072627 = StringName(from: "get_bone_size")
+        assert(self._method_get_bone_size_2455072627 != nil)
+        self._method_find_bone_2458036349 = StringName(from: "find_bone")
+        assert(self._method_find_bone_2458036349 != nil)
+        self._method_get_bone_name_659327637 = StringName(from: "get_bone_name")
+        assert(self._method_get_bone_name_659327637 != nil)
+        self._method_set_bone_name_3780747571 = StringName(from: "set_bone_name")
+        assert(self._method_set_bone_name_3780747571 != nil)
+        self._method_get_bone_parent_659327637 = StringName(from: "get_bone_parent")
+        assert(self._method_get_bone_parent_659327637 != nil)
+        self._method_set_bone_parent_3780747571 = StringName(from: "set_bone_parent")
+        assert(self._method_set_bone_parent_3780747571 != nil)
+        self._method_get_tail_direction_2675997574 = StringName(from: "get_tail_direction")
+        assert(self._method_get_tail_direction_2675997574 != nil)
+        self._method_set_tail_direction_1231951015 = StringName(from: "set_tail_direction")
+        assert(self._method_set_tail_direction_1231951015 != nil)
+        self._method_get_bone_tail_659327637 = StringName(from: "get_bone_tail")
+        assert(self._method_get_bone_tail_659327637 != nil)
+        self._method_set_bone_tail_3780747571 = StringName(from: "set_bone_tail")
+        assert(self._method_set_bone_tail_3780747571 != nil)
+        self._method_get_reference_pose_1965739696 = StringName(from: "get_reference_pose")
+        assert(self._method_get_reference_pose_1965739696 != nil)
+        self._method_set_reference_pose_3616898986 = StringName(from: "set_reference_pose")
+        assert(self._method_set_reference_pose_3616898986 != nil)
+        self._method_get_handle_offset_2299179447 = StringName(from: "get_handle_offset")
+        assert(self._method_get_handle_offset_2299179447 != nil)
+        self._method_set_handle_offset_163021252 = StringName(from: "set_handle_offset")
+        assert(self._method_set_handle_offset_163021252 != nil)
+        self._method_get_group_659327637 = StringName(from: "get_group")
+        assert(self._method_get_group_659327637 != nil)
+        self._method_set_group_3780747571 = StringName(from: "set_group")
+        assert(self._method_set_group_3780747571 != nil)
     }
 
     public func set_root_bone(bone_name: StringName)  {
@@ -144,8 +118,13 @@ open class SkeletonProfile : Resource {
                 .init(bone_name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_root_bone_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_root_bone_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -159,8 +138,13 @@ open class SkeletonProfile : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_root_bone_2737447660,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_root_bone_2737447660._native_ptr(),
+                    2737447660)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -175,8 +159,13 @@ open class SkeletonProfile : Resource {
                 .init(bone_name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_scale_base_bone_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_scale_base_bone_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -190,8 +179,13 @@ open class SkeletonProfile : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_scale_base_bone_2737447660,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_scale_base_bone_2737447660._native_ptr(),
+                    2737447660)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -206,8 +200,13 @@ open class SkeletonProfile : Resource {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_group_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_group_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -223,8 +222,13 @@ open class SkeletonProfile : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_group_size_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_group_size_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -240,8 +244,13 @@ open class SkeletonProfile : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_group_name_659327637,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_group_name_659327637._native_ptr(),
+                    659327637)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -258,8 +267,13 @@ open class SkeletonProfile : Resource {
                 .init(group_idx_native), .init(group_name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_group_name_3780747571,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_group_name_3780747571._native_ptr(),
+                    3780747571)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -275,8 +289,13 @@ open class SkeletonProfile : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_3536238170,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_3536238170._native_ptr(),
+                    3536238170)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -293,8 +312,13 @@ open class SkeletonProfile : Resource {
                 .init(group_idx_native), .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_666127730,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_666127730._native_ptr(),
+                    666127730)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -309,8 +333,13 @@ open class SkeletonProfile : Resource {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bone_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bone_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -326,8 +355,13 @@ open class SkeletonProfile : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_size_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_size_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -344,8 +378,13 @@ open class SkeletonProfile : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_find_bone_2458036349,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_find_bone_2458036349._native_ptr(),
+                    2458036349)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -361,8 +400,13 @@ open class SkeletonProfile : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_name_659327637,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_name_659327637._native_ptr(),
+                    659327637)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -379,8 +423,13 @@ open class SkeletonProfile : Resource {
                 .init(bone_idx_native), .init(bone_name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bone_name_3780747571,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bone_name_3780747571._native_ptr(),
+                    3780747571)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -396,8 +445,13 @@ open class SkeletonProfile : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_parent_659327637,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_parent_659327637._native_ptr(),
+                    659327637)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -414,8 +468,13 @@ open class SkeletonProfile : Resource {
                 .init(bone_idx_native), .init(bone_parent_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bone_parent_3780747571,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bone_parent_3780747571._native_ptr(),
+                    3780747571)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -431,8 +490,13 @@ open class SkeletonProfile : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tail_direction_2675997574,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tail_direction_2675997574._native_ptr(),
+                    2675997574)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -449,8 +513,13 @@ open class SkeletonProfile : Resource {
                 .init(bone_idx_native), .init(tail_direction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tail_direction_1231951015,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tail_direction_1231951015._native_ptr(),
+                    1231951015)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -467,8 +536,13 @@ open class SkeletonProfile : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_tail_659327637,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_tail_659327637._native_ptr(),
+                    659327637)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -485,8 +559,13 @@ open class SkeletonProfile : Resource {
                 .init(bone_idx_native), .init(bone_tail_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bone_tail_3780747571,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bone_tail_3780747571._native_ptr(),
+                    3780747571)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -502,8 +581,13 @@ open class SkeletonProfile : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_reference_pose_1965739696,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_reference_pose_1965739696._native_ptr(),
+                    1965739696)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -520,8 +604,13 @@ open class SkeletonProfile : Resource {
                 .init(bone_idx_native), .init(bone_name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_reference_pose_3616898986,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_reference_pose_3616898986._native_ptr(),
+                    3616898986)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -537,8 +626,13 @@ open class SkeletonProfile : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_handle_offset_2299179447,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_handle_offset_2299179447._native_ptr(),
+                    2299179447)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -555,8 +649,13 @@ open class SkeletonProfile : Resource {
                 .init(bone_idx_native), .init(handle_offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_handle_offset_163021252,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_handle_offset_163021252._native_ptr(),
+                    163021252)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -572,8 +671,13 @@ open class SkeletonProfile : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_group_659327637,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_group_659327637._native_ptr(),
+                    659327637)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -590,8 +694,13 @@ open class SkeletonProfile : Resource {
                 .init(bone_idx_native), .init(group_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_group_3780747571,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_group_3780747571._native_ptr(),
+                    3780747571)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

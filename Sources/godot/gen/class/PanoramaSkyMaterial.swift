@@ -15,31 +15,28 @@ open class PanoramaSkyMaterial : Material {
 
     public override class var __godot_name: StringName { __godot_name_PanoramaSkyMaterial }
 
-    static var _method_set_panorama_4051416890: GDExtensionMethodBindPtr! = nil
-    static var _method_get_panorama_3635182373: GDExtensionMethodBindPtr! = nil
-    static var _method_set_filtering_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_filtering_enabled_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_panorama_4051416890: StringName! = nil
+    static var _method_get_panorama_3635182373: StringName! = nil
+    static var _method_set_filtering_enabled_2586408642: StringName! = nil
+    static var _method_is_filtering_enabled_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PanoramaSkyMaterial == nil)
         __godot_name_PanoramaSkyMaterial = StringName(from: "PanoramaSkyMaterial")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_panorama_4051416890_name = StringName(from: "set_panorama")
-        self._method_set_panorama_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_PanoramaSkyMaterial._native_ptr(), _method_set_panorama_4051416890_name._native_ptr(), 4051416890)
-        assert(PanoramaSkyMaterial._method_set_panorama_4051416890 != nil)
-        let _method_get_panorama_3635182373_name = StringName(from: "get_panorama")
-        self._method_get_panorama_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_PanoramaSkyMaterial._native_ptr(), _method_get_panorama_3635182373_name._native_ptr(), 3635182373)
-        assert(PanoramaSkyMaterial._method_get_panorama_3635182373 != nil)
-        let _method_set_filtering_enabled_2586408642_name = StringName(from: "set_filtering_enabled")
-        self._method_set_filtering_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PanoramaSkyMaterial._native_ptr(), _method_set_filtering_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(PanoramaSkyMaterial._method_set_filtering_enabled_2586408642 != nil)
-        let _method_is_filtering_enabled_36873697_name = StringName(from: "is_filtering_enabled")
-        self._method_is_filtering_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PanoramaSkyMaterial._native_ptr(), _method_is_filtering_enabled_36873697_name._native_ptr(), 36873697)
-        assert(PanoramaSkyMaterial._method_is_filtering_enabled_36873697 != nil)
+        self._method_set_panorama_4051416890 = StringName(from: "set_panorama")
+        assert(self._method_set_panorama_4051416890 != nil)
+        self._method_get_panorama_3635182373 = StringName(from: "get_panorama")
+        assert(self._method_get_panorama_3635182373 != nil)
+        self._method_set_filtering_enabled_2586408642 = StringName(from: "set_filtering_enabled")
+        assert(self._method_set_filtering_enabled_2586408642 != nil)
+        self._method_is_filtering_enabled_36873697 = StringName(from: "is_filtering_enabled")
+        assert(self._method_is_filtering_enabled_36873697 != nil)
     }
 
     public func set_panorama(texture: Texture2D)  {
@@ -50,8 +47,13 @@ open class PanoramaSkyMaterial : Material {
                 .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_panorama_4051416890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_panorama_4051416890._native_ptr(),
+                    4051416890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -65,8 +67,13 @@ open class PanoramaSkyMaterial : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_panorama_3635182373,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_panorama_3635182373._native_ptr(),
+                    3635182373)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -81,8 +88,13 @@ open class PanoramaSkyMaterial : Material {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_filtering_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_filtering_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -98,8 +110,13 @@ open class PanoramaSkyMaterial : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_filtering_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_filtering_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

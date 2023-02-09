@@ -11,47 +11,40 @@ open class GLTFDocument : Resource {
 
     public override class var __godot_name: StringName { __godot_name_GLTFDocument }
 
-    static var _method_append_from_file_1862991421: GDExtensionMethodBindPtr! = nil
-    static var _method_append_from_buffer_2818062664: GDExtensionMethodBindPtr! = nil
-    static var _method_append_from_scene_374125375: GDExtensionMethodBindPtr! = nil
-    static var _method_generate_scene_2770277081: GDExtensionMethodBindPtr! = nil
-    static var _method_generate_buffer_741783455: GDExtensionMethodBindPtr! = nil
-    static var _method_write_to_filesystem_1784551478: GDExtensionMethodBindPtr! = nil
-    static var _method_register_gltf_document_extension_3752678331: GDExtensionMethodBindPtr! = nil
-    static var _method_unregister_gltf_document_extension_2684415758: GDExtensionMethodBindPtr! = nil
+    static var _method_append_from_file_1862991421: StringName! = nil
+    static var _method_append_from_buffer_2818062664: StringName! = nil
+    static var _method_append_from_scene_374125375: StringName! = nil
+    static var _method_generate_scene_2770277081: StringName! = nil
+    static var _method_generate_buffer_741783455: StringName! = nil
+    static var _method_write_to_filesystem_1784551478: StringName! = nil
+    static var _method_register_gltf_document_extension_3752678331: StringName! = nil
+    static var _method_unregister_gltf_document_extension_2684415758: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_GLTFDocument == nil)
         __godot_name_GLTFDocument = StringName(from: "GLTFDocument")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_append_from_file_1862991421_name = StringName(from: "append_from_file")
-        self._method_append_from_file_1862991421 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFDocument._native_ptr(), _method_append_from_file_1862991421_name._native_ptr(), 1862991421)
-        assert(GLTFDocument._method_append_from_file_1862991421 != nil)
-        let _method_append_from_buffer_2818062664_name = StringName(from: "append_from_buffer")
-        self._method_append_from_buffer_2818062664 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFDocument._native_ptr(), _method_append_from_buffer_2818062664_name._native_ptr(), 2818062664)
-        assert(GLTFDocument._method_append_from_buffer_2818062664 != nil)
-        let _method_append_from_scene_374125375_name = StringName(from: "append_from_scene")
-        self._method_append_from_scene_374125375 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFDocument._native_ptr(), _method_append_from_scene_374125375_name._native_ptr(), 374125375)
-        assert(GLTFDocument._method_append_from_scene_374125375 != nil)
-        let _method_generate_scene_2770277081_name = StringName(from: "generate_scene")
-        self._method_generate_scene_2770277081 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFDocument._native_ptr(), _method_generate_scene_2770277081_name._native_ptr(), 2770277081)
-        assert(GLTFDocument._method_generate_scene_2770277081 != nil)
-        let _method_generate_buffer_741783455_name = StringName(from: "generate_buffer")
-        self._method_generate_buffer_741783455 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFDocument._native_ptr(), _method_generate_buffer_741783455_name._native_ptr(), 741783455)
-        assert(GLTFDocument._method_generate_buffer_741783455 != nil)
-        let _method_write_to_filesystem_1784551478_name = StringName(from: "write_to_filesystem")
-        self._method_write_to_filesystem_1784551478 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFDocument._native_ptr(), _method_write_to_filesystem_1784551478_name._native_ptr(), 1784551478)
-        assert(GLTFDocument._method_write_to_filesystem_1784551478 != nil)
-        let _method_register_gltf_document_extension_3752678331_name = StringName(from: "register_gltf_document_extension")
-        self._method_register_gltf_document_extension_3752678331 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFDocument._native_ptr(), _method_register_gltf_document_extension_3752678331_name._native_ptr(), 3752678331)
-        assert(GLTFDocument._method_register_gltf_document_extension_3752678331 != nil)
-        let _method_unregister_gltf_document_extension_2684415758_name = StringName(from: "unregister_gltf_document_extension")
-        self._method_unregister_gltf_document_extension_2684415758 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFDocument._native_ptr(), _method_unregister_gltf_document_extension_2684415758_name._native_ptr(), 2684415758)
-        assert(GLTFDocument._method_unregister_gltf_document_extension_2684415758 != nil)
+        self._method_append_from_file_1862991421 = StringName(from: "append_from_file")
+        assert(self._method_append_from_file_1862991421 != nil)
+        self._method_append_from_buffer_2818062664 = StringName(from: "append_from_buffer")
+        assert(self._method_append_from_buffer_2818062664 != nil)
+        self._method_append_from_scene_374125375 = StringName(from: "append_from_scene")
+        assert(self._method_append_from_scene_374125375 != nil)
+        self._method_generate_scene_2770277081 = StringName(from: "generate_scene")
+        assert(self._method_generate_scene_2770277081 != nil)
+        self._method_generate_buffer_741783455 = StringName(from: "generate_buffer")
+        assert(self._method_generate_buffer_741783455 != nil)
+        self._method_write_to_filesystem_1784551478 = StringName(from: "write_to_filesystem")
+        assert(self._method_write_to_filesystem_1784551478 != nil)
+        self._method_register_gltf_document_extension_3752678331 = StringName(from: "register_gltf_document_extension")
+        assert(self._method_register_gltf_document_extension_3752678331 != nil)
+        self._method_unregister_gltf_document_extension_2684415758 = StringName(from: "unregister_gltf_document_extension")
+        assert(self._method_unregister_gltf_document_extension_2684415758 != nil)
     }
 
     public func append_from_file(path: godot.String, state: GLTFState, flags: Int64, base_path: godot.String) -> Error {
@@ -66,8 +59,13 @@ open class GLTFDocument : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_append_from_file_1862991421,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_append_from_file_1862991421._native_ptr(),
+                    1862991421)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -87,8 +85,13 @@ open class GLTFDocument : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_append_from_buffer_2818062664,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_append_from_buffer_2818062664._native_ptr(),
+                    2818062664)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -107,8 +110,13 @@ open class GLTFDocument : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_append_from_scene_374125375,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_append_from_scene_374125375._native_ptr(),
+                    374125375)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -128,8 +136,13 @@ open class GLTFDocument : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_generate_scene_2770277081,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_generate_scene_2770277081._native_ptr(),
+                    2770277081)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -148,8 +161,13 @@ open class GLTFDocument : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_generate_buffer_741783455,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_generate_buffer_741783455._native_ptr(),
+                    741783455)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -166,8 +184,13 @@ open class GLTFDocument : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_write_to_filesystem_1784551478,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_write_to_filesystem_1784551478._native_ptr(),
+                    1784551478)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -183,8 +206,13 @@ open class GLTFDocument : Resource {
                 .init(extension_native), .init(first_priority_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_register_gltf_document_extension_3752678331,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_register_gltf_document_extension_3752678331._native_ptr(),
+                    3752678331)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -199,8 +227,13 @@ open class GLTFDocument : Resource {
                 .init(extension_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_unregister_gltf_document_extension_2684415758,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_unregister_gltf_document_extension_2684415758._native_ptr(),
+                    2684415758)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

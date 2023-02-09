@@ -13,63 +13,52 @@ open class ThemeDB : Object {
 
     public override class var __godot_name: StringName { __godot_name_ThemeDB }
 
-    static var _method_get_default_theme_754276358: GDExtensionMethodBindPtr! = nil
-    static var _method_get_project_theme_754276358: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fallback_base_scale_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fallback_base_scale_191475506: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fallback_font_1262170328: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fallback_font_3656929885: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fallback_font_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fallback_font_size_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fallback_icon_4051416890: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fallback_icon_255860311: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fallback_stylebox_2797200388: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fallback_stylebox_496040854: GDExtensionMethodBindPtr! = nil
+    static var _method_get_default_theme_754276358: StringName! = nil
+    static var _method_get_project_theme_754276358: StringName! = nil
+    static var _method_set_fallback_base_scale_373806689: StringName! = nil
+    static var _method_get_fallback_base_scale_191475506: StringName! = nil
+    static var _method_set_fallback_font_1262170328: StringName! = nil
+    static var _method_get_fallback_font_3656929885: StringName! = nil
+    static var _method_set_fallback_font_size_1286410249: StringName! = nil
+    static var _method_get_fallback_font_size_2455072627: StringName! = nil
+    static var _method_set_fallback_icon_4051416890: StringName! = nil
+    static var _method_get_fallback_icon_255860311: StringName! = nil
+    static var _method_set_fallback_stylebox_2797200388: StringName! = nil
+    static var _method_get_fallback_stylebox_496040854: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ThemeDB == nil)
         __godot_name_ThemeDB = StringName(from: "ThemeDB")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_default_theme_754276358_name = StringName(from: "get_default_theme")
-        self._method_get_default_theme_754276358 = self.interface.pointee.classdb_get_method_bind(__godot_name_ThemeDB._native_ptr(), _method_get_default_theme_754276358_name._native_ptr(), 754276358)
-        assert(ThemeDB._method_get_default_theme_754276358 != nil)
-        let _method_get_project_theme_754276358_name = StringName(from: "get_project_theme")
-        self._method_get_project_theme_754276358 = self.interface.pointee.classdb_get_method_bind(__godot_name_ThemeDB._native_ptr(), _method_get_project_theme_754276358_name._native_ptr(), 754276358)
-        assert(ThemeDB._method_get_project_theme_754276358 != nil)
-        let _method_set_fallback_base_scale_373806689_name = StringName(from: "set_fallback_base_scale")
-        self._method_set_fallback_base_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_ThemeDB._native_ptr(), _method_set_fallback_base_scale_373806689_name._native_ptr(), 373806689)
-        assert(ThemeDB._method_set_fallback_base_scale_373806689 != nil)
-        let _method_get_fallback_base_scale_191475506_name = StringName(from: "get_fallback_base_scale")
-        self._method_get_fallback_base_scale_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_ThemeDB._native_ptr(), _method_get_fallback_base_scale_191475506_name._native_ptr(), 191475506)
-        assert(ThemeDB._method_get_fallback_base_scale_191475506 != nil)
-        let _method_set_fallback_font_1262170328_name = StringName(from: "set_fallback_font")
-        self._method_set_fallback_font_1262170328 = self.interface.pointee.classdb_get_method_bind(__godot_name_ThemeDB._native_ptr(), _method_set_fallback_font_1262170328_name._native_ptr(), 1262170328)
-        assert(ThemeDB._method_set_fallback_font_1262170328 != nil)
-        let _method_get_fallback_font_3656929885_name = StringName(from: "get_fallback_font")
-        self._method_get_fallback_font_3656929885 = self.interface.pointee.classdb_get_method_bind(__godot_name_ThemeDB._native_ptr(), _method_get_fallback_font_3656929885_name._native_ptr(), 3656929885)
-        assert(ThemeDB._method_get_fallback_font_3656929885 != nil)
-        let _method_set_fallback_font_size_1286410249_name = StringName(from: "set_fallback_font_size")
-        self._method_set_fallback_font_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_ThemeDB._native_ptr(), _method_set_fallback_font_size_1286410249_name._native_ptr(), 1286410249)
-        assert(ThemeDB._method_set_fallback_font_size_1286410249 != nil)
-        let _method_get_fallback_font_size_2455072627_name = StringName(from: "get_fallback_font_size")
-        self._method_get_fallback_font_size_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_ThemeDB._native_ptr(), _method_get_fallback_font_size_2455072627_name._native_ptr(), 2455072627)
-        assert(ThemeDB._method_get_fallback_font_size_2455072627 != nil)
-        let _method_set_fallback_icon_4051416890_name = StringName(from: "set_fallback_icon")
-        self._method_set_fallback_icon_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_ThemeDB._native_ptr(), _method_set_fallback_icon_4051416890_name._native_ptr(), 4051416890)
-        assert(ThemeDB._method_set_fallback_icon_4051416890 != nil)
-        let _method_get_fallback_icon_255860311_name = StringName(from: "get_fallback_icon")
-        self._method_get_fallback_icon_255860311 = self.interface.pointee.classdb_get_method_bind(__godot_name_ThemeDB._native_ptr(), _method_get_fallback_icon_255860311_name._native_ptr(), 255860311)
-        assert(ThemeDB._method_get_fallback_icon_255860311 != nil)
-        let _method_set_fallback_stylebox_2797200388_name = StringName(from: "set_fallback_stylebox")
-        self._method_set_fallback_stylebox_2797200388 = self.interface.pointee.classdb_get_method_bind(__godot_name_ThemeDB._native_ptr(), _method_set_fallback_stylebox_2797200388_name._native_ptr(), 2797200388)
-        assert(ThemeDB._method_set_fallback_stylebox_2797200388 != nil)
-        let _method_get_fallback_stylebox_496040854_name = StringName(from: "get_fallback_stylebox")
-        self._method_get_fallback_stylebox_496040854 = self.interface.pointee.classdb_get_method_bind(__godot_name_ThemeDB._native_ptr(), _method_get_fallback_stylebox_496040854_name._native_ptr(), 496040854)
-        assert(ThemeDB._method_get_fallback_stylebox_496040854 != nil)
+        self._method_get_default_theme_754276358 = StringName(from: "get_default_theme")
+        assert(self._method_get_default_theme_754276358 != nil)
+        self._method_get_project_theme_754276358 = StringName(from: "get_project_theme")
+        assert(self._method_get_project_theme_754276358 != nil)
+        self._method_set_fallback_base_scale_373806689 = StringName(from: "set_fallback_base_scale")
+        assert(self._method_set_fallback_base_scale_373806689 != nil)
+        self._method_get_fallback_base_scale_191475506 = StringName(from: "get_fallback_base_scale")
+        assert(self._method_get_fallback_base_scale_191475506 != nil)
+        self._method_set_fallback_font_1262170328 = StringName(from: "set_fallback_font")
+        assert(self._method_set_fallback_font_1262170328 != nil)
+        self._method_get_fallback_font_3656929885 = StringName(from: "get_fallback_font")
+        assert(self._method_get_fallback_font_3656929885 != nil)
+        self._method_set_fallback_font_size_1286410249 = StringName(from: "set_fallback_font_size")
+        assert(self._method_set_fallback_font_size_1286410249 != nil)
+        self._method_get_fallback_font_size_2455072627 = StringName(from: "get_fallback_font_size")
+        assert(self._method_get_fallback_font_size_2455072627 != nil)
+        self._method_set_fallback_icon_4051416890 = StringName(from: "set_fallback_icon")
+        assert(self._method_set_fallback_icon_4051416890 != nil)
+        self._method_get_fallback_icon_255860311 = StringName(from: "get_fallback_icon")
+        assert(self._method_get_fallback_icon_255860311 != nil)
+        self._method_set_fallback_stylebox_2797200388 = StringName(from: "set_fallback_stylebox")
+        assert(self._method_set_fallback_stylebox_2797200388 != nil)
+        self._method_get_fallback_stylebox_496040854 = StringName(from: "get_fallback_stylebox")
+        assert(self._method_get_fallback_stylebox_496040854 != nil)
     }
 
     public func get_default_theme() -> Theme {
@@ -80,8 +69,13 @@ open class ThemeDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_default_theme_754276358,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_default_theme_754276358._native_ptr(),
+                    754276358)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -96,8 +90,13 @@ open class ThemeDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_project_theme_754276358,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_project_theme_754276358._native_ptr(),
+                    754276358)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -112,8 +111,13 @@ open class ThemeDB : Object {
                 .init(base_scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fallback_base_scale_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fallback_base_scale_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -129,8 +133,13 @@ open class ThemeDB : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fallback_base_scale_191475506,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fallback_base_scale_191475506._native_ptr(),
+                    191475506)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -145,8 +154,13 @@ open class ThemeDB : Object {
                 .init(font_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fallback_font_1262170328,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fallback_font_1262170328._native_ptr(),
+                    1262170328)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -160,8 +174,13 @@ open class ThemeDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fallback_font_3656929885,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fallback_font_3656929885._native_ptr(),
+                    3656929885)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -176,8 +195,13 @@ open class ThemeDB : Object {
                 .init(font_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fallback_font_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fallback_font_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -193,8 +217,13 @@ open class ThemeDB : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fallback_font_size_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fallback_font_size_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -209,8 +238,13 @@ open class ThemeDB : Object {
                 .init(icon_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fallback_icon_4051416890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fallback_icon_4051416890._native_ptr(),
+                    4051416890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -224,8 +258,13 @@ open class ThemeDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fallback_icon_255860311,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fallback_icon_255860311._native_ptr(),
+                    255860311)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -240,8 +279,13 @@ open class ThemeDB : Object {
                 .init(stylebox_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fallback_stylebox_2797200388,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fallback_stylebox_2797200388._native_ptr(),
+                    2797200388)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -255,8 +299,13 @@ open class ThemeDB : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fallback_stylebox_496040854,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fallback_stylebox_496040854._native_ptr(),
+                    496040854)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

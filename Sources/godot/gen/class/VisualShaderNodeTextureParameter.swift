@@ -46,55 +46,46 @@ open class VisualShaderNodeTextureParameter : VisualShaderNodeParameter {
 
     public override class var __godot_name: StringName { __godot_name_VisualShaderNodeTextureParameter }
 
-    static var _method_set_texture_type_2227296876: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_type_367922070: GDExtensionMethodBindPtr! = nil
-    static var _method_set_color_default_4217624432: GDExtensionMethodBindPtr! = nil
-    static var _method_get_color_default_3837060134: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_filter_2147684752: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_filter_4184490817: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_repeat_2036143070: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_repeat_1690132794: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_source_1212687372: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_source_2039092262: GDExtensionMethodBindPtr! = nil
+    static var _method_set_texture_type_2227296876: StringName! = nil
+    static var _method_get_texture_type_367922070: StringName! = nil
+    static var _method_set_color_default_4217624432: StringName! = nil
+    static var _method_get_color_default_3837060134: StringName! = nil
+    static var _method_set_texture_filter_2147684752: StringName! = nil
+    static var _method_get_texture_filter_4184490817: StringName! = nil
+    static var _method_set_texture_repeat_2036143070: StringName! = nil
+    static var _method_get_texture_repeat_1690132794: StringName! = nil
+    static var _method_set_texture_source_1212687372: StringName! = nil
+    static var _method_get_texture_source_2039092262: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShaderNodeTextureParameter == nil)
         __godot_name_VisualShaderNodeTextureParameter = StringName(from: "VisualShaderNodeTextureParameter")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_texture_type_2227296876_name = StringName(from: "set_texture_type")
-        self._method_set_texture_type_2227296876 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTextureParameter._native_ptr(), _method_set_texture_type_2227296876_name._native_ptr(), 2227296876)
-        assert(VisualShaderNodeTextureParameter._method_set_texture_type_2227296876 != nil)
-        let _method_get_texture_type_367922070_name = StringName(from: "get_texture_type")
-        self._method_get_texture_type_367922070 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTextureParameter._native_ptr(), _method_get_texture_type_367922070_name._native_ptr(), 367922070)
-        assert(VisualShaderNodeTextureParameter._method_get_texture_type_367922070 != nil)
-        let _method_set_color_default_4217624432_name = StringName(from: "set_color_default")
-        self._method_set_color_default_4217624432 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTextureParameter._native_ptr(), _method_set_color_default_4217624432_name._native_ptr(), 4217624432)
-        assert(VisualShaderNodeTextureParameter._method_set_color_default_4217624432 != nil)
-        let _method_get_color_default_3837060134_name = StringName(from: "get_color_default")
-        self._method_get_color_default_3837060134 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTextureParameter._native_ptr(), _method_get_color_default_3837060134_name._native_ptr(), 3837060134)
-        assert(VisualShaderNodeTextureParameter._method_get_color_default_3837060134 != nil)
-        let _method_set_texture_filter_2147684752_name = StringName(from: "set_texture_filter")
-        self._method_set_texture_filter_2147684752 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTextureParameter._native_ptr(), _method_set_texture_filter_2147684752_name._native_ptr(), 2147684752)
-        assert(VisualShaderNodeTextureParameter._method_set_texture_filter_2147684752 != nil)
-        let _method_get_texture_filter_4184490817_name = StringName(from: "get_texture_filter")
-        self._method_get_texture_filter_4184490817 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTextureParameter._native_ptr(), _method_get_texture_filter_4184490817_name._native_ptr(), 4184490817)
-        assert(VisualShaderNodeTextureParameter._method_get_texture_filter_4184490817 != nil)
-        let _method_set_texture_repeat_2036143070_name = StringName(from: "set_texture_repeat")
-        self._method_set_texture_repeat_2036143070 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTextureParameter._native_ptr(), _method_set_texture_repeat_2036143070_name._native_ptr(), 2036143070)
-        assert(VisualShaderNodeTextureParameter._method_set_texture_repeat_2036143070 != nil)
-        let _method_get_texture_repeat_1690132794_name = StringName(from: "get_texture_repeat")
-        self._method_get_texture_repeat_1690132794 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTextureParameter._native_ptr(), _method_get_texture_repeat_1690132794_name._native_ptr(), 1690132794)
-        assert(VisualShaderNodeTextureParameter._method_get_texture_repeat_1690132794 != nil)
-        let _method_set_texture_source_1212687372_name = StringName(from: "set_texture_source")
-        self._method_set_texture_source_1212687372 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTextureParameter._native_ptr(), _method_set_texture_source_1212687372_name._native_ptr(), 1212687372)
-        assert(VisualShaderNodeTextureParameter._method_set_texture_source_1212687372 != nil)
-        let _method_get_texture_source_2039092262_name = StringName(from: "get_texture_source")
-        self._method_get_texture_source_2039092262 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTextureParameter._native_ptr(), _method_get_texture_source_2039092262_name._native_ptr(), 2039092262)
-        assert(VisualShaderNodeTextureParameter._method_get_texture_source_2039092262 != nil)
+        self._method_set_texture_type_2227296876 = StringName(from: "set_texture_type")
+        assert(self._method_set_texture_type_2227296876 != nil)
+        self._method_get_texture_type_367922070 = StringName(from: "get_texture_type")
+        assert(self._method_get_texture_type_367922070 != nil)
+        self._method_set_color_default_4217624432 = StringName(from: "set_color_default")
+        assert(self._method_set_color_default_4217624432 != nil)
+        self._method_get_color_default_3837060134 = StringName(from: "get_color_default")
+        assert(self._method_get_color_default_3837060134 != nil)
+        self._method_set_texture_filter_2147684752 = StringName(from: "set_texture_filter")
+        assert(self._method_set_texture_filter_2147684752 != nil)
+        self._method_get_texture_filter_4184490817 = StringName(from: "get_texture_filter")
+        assert(self._method_get_texture_filter_4184490817 != nil)
+        self._method_set_texture_repeat_2036143070 = StringName(from: "set_texture_repeat")
+        assert(self._method_set_texture_repeat_2036143070 != nil)
+        self._method_get_texture_repeat_1690132794 = StringName(from: "get_texture_repeat")
+        assert(self._method_get_texture_repeat_1690132794 != nil)
+        self._method_set_texture_source_1212687372 = StringName(from: "set_texture_source")
+        assert(self._method_set_texture_source_1212687372 != nil)
+        self._method_get_texture_source_2039092262 = StringName(from: "get_texture_source")
+        assert(self._method_get_texture_source_2039092262 != nil)
     }
 
     public func set_texture_type(`type`: VisualShaderNodeTextureParameter.TextureType)  {
@@ -105,8 +96,13 @@ open class VisualShaderNodeTextureParameter : VisualShaderNodeParameter {
                 .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_type_2227296876,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_type_2227296876._native_ptr(),
+                    2227296876)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -121,8 +117,13 @@ open class VisualShaderNodeTextureParameter : VisualShaderNodeParameter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_type_367922070,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_type_367922070._native_ptr(),
+                    367922070)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -137,8 +138,13 @@ open class VisualShaderNodeTextureParameter : VisualShaderNodeParameter {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_color_default_4217624432,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_color_default_4217624432._native_ptr(),
+                    4217624432)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -153,8 +159,13 @@ open class VisualShaderNodeTextureParameter : VisualShaderNodeParameter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_color_default_3837060134,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_color_default_3837060134._native_ptr(),
+                    3837060134)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -169,8 +180,13 @@ open class VisualShaderNodeTextureParameter : VisualShaderNodeParameter {
                 .init(filter_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_filter_2147684752,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_filter_2147684752._native_ptr(),
+                    2147684752)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -185,8 +201,13 @@ open class VisualShaderNodeTextureParameter : VisualShaderNodeParameter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_filter_4184490817,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_filter_4184490817._native_ptr(),
+                    4184490817)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -201,8 +222,13 @@ open class VisualShaderNodeTextureParameter : VisualShaderNodeParameter {
                 .init(repeat_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_repeat_2036143070,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_repeat_2036143070._native_ptr(),
+                    2036143070)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -217,8 +243,13 @@ open class VisualShaderNodeTextureParameter : VisualShaderNodeParameter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_repeat_1690132794,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_repeat_1690132794._native_ptr(),
+                    1690132794)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -233,8 +264,13 @@ open class VisualShaderNodeTextureParameter : VisualShaderNodeParameter {
                 .init(source_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_source_1212687372,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_source_1212687372._native_ptr(),
+                    1212687372)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -249,8 +285,13 @@ open class VisualShaderNodeTextureParameter : VisualShaderNodeParameter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_source_2039092262,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_source_2039092262._native_ptr(),
+                    2039092262)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

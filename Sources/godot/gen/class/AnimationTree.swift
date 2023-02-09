@@ -17,92 +17,71 @@ open class AnimationTree : Node {
 
     public override class var __godot_name: StringName { __godot_name_AnimationTree }
 
-    static var _method__post_process_key_value_0: GDExtensionMethodBindPtr! = nil
-    static var _method_set_active_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_active_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tree_root_712869711: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tree_root_1462070895: GDExtensionMethodBindPtr! = nil
-    static var _method_set_process_callback_1723352826: GDExtensionMethodBindPtr! = nil
-    static var _method_get_process_callback_891317132: GDExtensionMethodBindPtr! = nil
-    static var _method_set_animation_player_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_animation_player_4075236667: GDExtensionMethodBindPtr! = nil
-    static var _method_set_advance_expression_base_node_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_advance_expression_base_node_4075236667: GDExtensionMethodBindPtr! = nil
-    static var _method_set_root_motion_track_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_root_motion_track_4075236667: GDExtensionMethodBindPtr! = nil
-    static var _method_set_audio_max_polyphony_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_audio_max_polyphony_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_root_motion_position_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_get_root_motion_rotation_1222331677: GDExtensionMethodBindPtr! = nil
-    static var _method_get_root_motion_scale_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_rename_parameter_3186203200: GDExtensionMethodBindPtr! = nil
-    static var _method_advance_373806689: GDExtensionMethodBindPtr! = nil
+    static var _method__post_process_key_value_0: StringName! = nil
+    static var _method_set_active_2586408642: StringName! = nil
+    static var _method_is_active_36873697: StringName! = nil
+    static var _method_set_tree_root_712869711: StringName! = nil
+    static var _method_get_tree_root_1462070895: StringName! = nil
+    static var _method_set_process_callback_1723352826: StringName! = nil
+    static var _method_get_process_callback_891317132: StringName! = nil
+    static var _method_set_animation_player_1348162250: StringName! = nil
+    static var _method_get_animation_player_4075236667: StringName! = nil
+    static var _method_set_advance_expression_base_node_1348162250: StringName! = nil
+    static var _method_get_advance_expression_base_node_4075236667: StringName! = nil
+    static var _method_set_root_motion_track_1348162250: StringName! = nil
+    static var _method_get_root_motion_track_4075236667: StringName! = nil
+    static var _method_set_audio_max_polyphony_1286410249: StringName! = nil
+    static var _method_get_audio_max_polyphony_3905245786: StringName! = nil
+    static var _method_get_root_motion_position_3360562783: StringName! = nil
+    static var _method_get_root_motion_rotation_1222331677: StringName! = nil
+    static var _method_get_root_motion_scale_3360562783: StringName! = nil
+    static var _method_advance_373806689: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AnimationTree == nil)
         __godot_name_AnimationTree = StringName(from: "AnimationTree")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_active_2586408642_name = StringName(from: "set_active")
-        self._method_set_active_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_set_active_2586408642_name._native_ptr(), 2586408642)
-        assert(AnimationTree._method_set_active_2586408642 != nil)
-        let _method_is_active_36873697_name = StringName(from: "is_active")
-        self._method_is_active_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_is_active_36873697_name._native_ptr(), 36873697)
-        assert(AnimationTree._method_is_active_36873697 != nil)
-        let _method_set_tree_root_712869711_name = StringName(from: "set_tree_root")
-        self._method_set_tree_root_712869711 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_set_tree_root_712869711_name._native_ptr(), 712869711)
-        assert(AnimationTree._method_set_tree_root_712869711 != nil)
-        let _method_get_tree_root_1462070895_name = StringName(from: "get_tree_root")
-        self._method_get_tree_root_1462070895 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_get_tree_root_1462070895_name._native_ptr(), 1462070895)
-        assert(AnimationTree._method_get_tree_root_1462070895 != nil)
-        let _method_set_process_callback_1723352826_name = StringName(from: "set_process_callback")
-        self._method_set_process_callback_1723352826 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_set_process_callback_1723352826_name._native_ptr(), 1723352826)
-        assert(AnimationTree._method_set_process_callback_1723352826 != nil)
-        let _method_get_process_callback_891317132_name = StringName(from: "get_process_callback")
-        self._method_get_process_callback_891317132 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_get_process_callback_891317132_name._native_ptr(), 891317132)
-        assert(AnimationTree._method_get_process_callback_891317132 != nil)
-        let _method_set_animation_player_1348162250_name = StringName(from: "set_animation_player")
-        self._method_set_animation_player_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_set_animation_player_1348162250_name._native_ptr(), 1348162250)
-        assert(AnimationTree._method_set_animation_player_1348162250 != nil)
-        let _method_get_animation_player_4075236667_name = StringName(from: "get_animation_player")
-        self._method_get_animation_player_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_get_animation_player_4075236667_name._native_ptr(), 4075236667)
-        assert(AnimationTree._method_get_animation_player_4075236667 != nil)
-        let _method_set_advance_expression_base_node_1348162250_name = StringName(from: "set_advance_expression_base_node")
-        self._method_set_advance_expression_base_node_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_set_advance_expression_base_node_1348162250_name._native_ptr(), 1348162250)
-        assert(AnimationTree._method_set_advance_expression_base_node_1348162250 != nil)
-        let _method_get_advance_expression_base_node_4075236667_name = StringName(from: "get_advance_expression_base_node")
-        self._method_get_advance_expression_base_node_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_get_advance_expression_base_node_4075236667_name._native_ptr(), 4075236667)
-        assert(AnimationTree._method_get_advance_expression_base_node_4075236667 != nil)
-        let _method_set_root_motion_track_1348162250_name = StringName(from: "set_root_motion_track")
-        self._method_set_root_motion_track_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_set_root_motion_track_1348162250_name._native_ptr(), 1348162250)
-        assert(AnimationTree._method_set_root_motion_track_1348162250 != nil)
-        let _method_get_root_motion_track_4075236667_name = StringName(from: "get_root_motion_track")
-        self._method_get_root_motion_track_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_get_root_motion_track_4075236667_name._native_ptr(), 4075236667)
-        assert(AnimationTree._method_get_root_motion_track_4075236667 != nil)
-        let _method_set_audio_max_polyphony_1286410249_name = StringName(from: "set_audio_max_polyphony")
-        self._method_set_audio_max_polyphony_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_set_audio_max_polyphony_1286410249_name._native_ptr(), 1286410249)
-        assert(AnimationTree._method_set_audio_max_polyphony_1286410249 != nil)
-        let _method_get_audio_max_polyphony_3905245786_name = StringName(from: "get_audio_max_polyphony")
-        self._method_get_audio_max_polyphony_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_get_audio_max_polyphony_3905245786_name._native_ptr(), 3905245786)
-        assert(AnimationTree._method_get_audio_max_polyphony_3905245786 != nil)
-        let _method_get_root_motion_position_3360562783_name = StringName(from: "get_root_motion_position")
-        self._method_get_root_motion_position_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_get_root_motion_position_3360562783_name._native_ptr(), 3360562783)
-        assert(AnimationTree._method_get_root_motion_position_3360562783 != nil)
-        let _method_get_root_motion_rotation_1222331677_name = StringName(from: "get_root_motion_rotation")
-        self._method_get_root_motion_rotation_1222331677 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_get_root_motion_rotation_1222331677_name._native_ptr(), 1222331677)
-        assert(AnimationTree._method_get_root_motion_rotation_1222331677 != nil)
-        let _method_get_root_motion_scale_3360562783_name = StringName(from: "get_root_motion_scale")
-        self._method_get_root_motion_scale_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_get_root_motion_scale_3360562783_name._native_ptr(), 3360562783)
-        assert(AnimationTree._method_get_root_motion_scale_3360562783 != nil)
-        let _method_rename_parameter_3186203200_name = StringName(from: "rename_parameter")
-        self._method_rename_parameter_3186203200 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_rename_parameter_3186203200_name._native_ptr(), 3186203200)
-        assert(AnimationTree._method_rename_parameter_3186203200 != nil)
-        let _method_advance_373806689_name = StringName(from: "advance")
-        self._method_advance_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationTree._native_ptr(), _method_advance_373806689_name._native_ptr(), 373806689)
-        assert(AnimationTree._method_advance_373806689 != nil)
+        self._method_set_active_2586408642 = StringName(from: "set_active")
+        assert(self._method_set_active_2586408642 != nil)
+        self._method_is_active_36873697 = StringName(from: "is_active")
+        assert(self._method_is_active_36873697 != nil)
+        self._method_set_tree_root_712869711 = StringName(from: "set_tree_root")
+        assert(self._method_set_tree_root_712869711 != nil)
+        self._method_get_tree_root_1462070895 = StringName(from: "get_tree_root")
+        assert(self._method_get_tree_root_1462070895 != nil)
+        self._method_set_process_callback_1723352826 = StringName(from: "set_process_callback")
+        assert(self._method_set_process_callback_1723352826 != nil)
+        self._method_get_process_callback_891317132 = StringName(from: "get_process_callback")
+        assert(self._method_get_process_callback_891317132 != nil)
+        self._method_set_animation_player_1348162250 = StringName(from: "set_animation_player")
+        assert(self._method_set_animation_player_1348162250 != nil)
+        self._method_get_animation_player_4075236667 = StringName(from: "get_animation_player")
+        assert(self._method_get_animation_player_4075236667 != nil)
+        self._method_set_advance_expression_base_node_1348162250 = StringName(from: "set_advance_expression_base_node")
+        assert(self._method_set_advance_expression_base_node_1348162250 != nil)
+        self._method_get_advance_expression_base_node_4075236667 = StringName(from: "get_advance_expression_base_node")
+        assert(self._method_get_advance_expression_base_node_4075236667 != nil)
+        self._method_set_root_motion_track_1348162250 = StringName(from: "set_root_motion_track")
+        assert(self._method_set_root_motion_track_1348162250 != nil)
+        self._method_get_root_motion_track_4075236667 = StringName(from: "get_root_motion_track")
+        assert(self._method_get_root_motion_track_4075236667 != nil)
+        self._method_set_audio_max_polyphony_1286410249 = StringName(from: "set_audio_max_polyphony")
+        assert(self._method_set_audio_max_polyphony_1286410249 != nil)
+        self._method_get_audio_max_polyphony_3905245786 = StringName(from: "get_audio_max_polyphony")
+        assert(self._method_get_audio_max_polyphony_3905245786 != nil)
+        self._method_get_root_motion_position_3360562783 = StringName(from: "get_root_motion_position")
+        assert(self._method_get_root_motion_position_3360562783 != nil)
+        self._method_get_root_motion_rotation_1222331677 = StringName(from: "get_root_motion_rotation")
+        assert(self._method_get_root_motion_rotation_1222331677 != nil)
+        self._method_get_root_motion_scale_3360562783 = StringName(from: "get_root_motion_scale")
+        assert(self._method_get_root_motion_scale_3360562783 != nil)
+        self._method_advance_373806689 = StringName(from: "advance")
+        assert(self._method_advance_373806689 != nil)
     }
 
     public func _post_process_key_value(animation: Animation, track: Int64, value: Variant, object: Object, object_idx: Int64) -> Variant {
@@ -118,12 +97,7 @@ open class AnimationTree : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__post_process_key_value_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Variant(godot: __resPtr.pointee)
         }
         }
@@ -136,8 +110,13 @@ open class AnimationTree : Node {
                 .init(active_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_active_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_active_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -153,8 +132,13 @@ open class AnimationTree : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_active_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_active_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -169,8 +153,13 @@ open class AnimationTree : Node {
                 .init(root_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tree_root_712869711,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tree_root_712869711._native_ptr(),
+                    712869711)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -184,8 +173,13 @@ open class AnimationTree : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tree_root_1462070895,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tree_root_1462070895._native_ptr(),
+                    1462070895)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -200,8 +194,13 @@ open class AnimationTree : Node {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_process_callback_1723352826,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_process_callback_1723352826._native_ptr(),
+                    1723352826)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -216,8 +215,13 @@ open class AnimationTree : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_process_callback_891317132,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_process_callback_891317132._native_ptr(),
+                    891317132)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -232,8 +236,13 @@ open class AnimationTree : Node {
                 .init(root_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_animation_player_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_animation_player_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -247,8 +256,13 @@ open class AnimationTree : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_animation_player_4075236667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_animation_player_4075236667._native_ptr(),
+                    4075236667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -263,8 +277,13 @@ open class AnimationTree : Node {
                 .init(node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_advance_expression_base_node_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_advance_expression_base_node_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -278,8 +297,13 @@ open class AnimationTree : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_advance_expression_base_node_4075236667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_advance_expression_base_node_4075236667._native_ptr(),
+                    4075236667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -294,8 +318,13 @@ open class AnimationTree : Node {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_root_motion_track_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_root_motion_track_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -309,8 +338,13 @@ open class AnimationTree : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_root_motion_track_4075236667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_root_motion_track_4075236667._native_ptr(),
+                    4075236667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -325,8 +359,13 @@ open class AnimationTree : Node {
                 .init(max_polyphony_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_audio_max_polyphony_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_audio_max_polyphony_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -342,8 +381,13 @@ open class AnimationTree : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_audio_max_polyphony_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_audio_max_polyphony_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -358,8 +402,13 @@ open class AnimationTree : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_root_motion_position_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_root_motion_position_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -374,8 +423,13 @@ open class AnimationTree : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_root_motion_rotation_1222331677,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_root_motion_rotation_1222331677._native_ptr(),
+                    1222331677)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -390,29 +444,18 @@ open class AnimationTree : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_root_motion_scale_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_root_motion_scale_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
                 )
             return Vector3(godot: __resPtr.pointee)
-    }
-    public func rename_parameter(old_name: godot.String, new_name: godot.String)  {
-        let new_name_native = new_name._native_ptr()
-        let old_name_native = old_name._native_ptr()
-        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 2)
-            defer { args.deallocate() }
-            _ = args.initialize(from: [
-                .init(old_name_native), .init(new_name_native)
-            ])
-            // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_rename_parameter_3186203200,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
     }
     public func advance(delta: Float64)  {
         withUnsafePointer(to: delta) { delta_native in
@@ -422,8 +465,13 @@ open class AnimationTree : Node {
                 .init(delta_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_advance_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_advance_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

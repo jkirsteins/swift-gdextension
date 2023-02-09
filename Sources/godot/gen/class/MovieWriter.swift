@@ -23,25 +23,25 @@ open class MovieWriter : Object {
 
     public override class var __godot_name: StringName { __godot_name_MovieWriter }
 
-    static var _method__get_audio_mix_rate_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_audio_speaker_mode_0: GDExtensionMethodBindPtr! = nil
-    static var _method__handles_file_0: GDExtensionMethodBindPtr! = nil
-    static var _method__write_begin_0: GDExtensionMethodBindPtr! = nil
-    static var _method__write_frame_0: GDExtensionMethodBindPtr! = nil
-    static var _method__write_end_0: GDExtensionMethodBindPtr! = nil
-    static var _method_add_writer_4023702871: GDExtensionMethodBindPtr! = nil
+    static var _method__get_audio_mix_rate_0: StringName! = nil
+    static var _method__get_audio_speaker_mode_0: StringName! = nil
+    static var _method__handles_file_0: StringName! = nil
+    static var _method__write_begin_0: StringName! = nil
+    static var _method__write_frame_0: StringName! = nil
+    static var _method__write_end_0: StringName! = nil
+    static var _method_add_writer_4023702871: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_MovieWriter == nil)
         __godot_name_MovieWriter = StringName(from: "MovieWriter")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_add_writer_4023702871_name = StringName(from: "add_writer")
-        self._method_add_writer_4023702871 = self.interface.pointee.classdb_get_method_bind(__godot_name_MovieWriter._native_ptr(), _method_add_writer_4023702871_name._native_ptr(), 4023702871)
-        assert(MovieWriter._method_add_writer_4023702871 != nil)
+        self._method_add_writer_4023702871 = StringName(from: "add_writer")
+        assert(self._method_add_writer_4023702871 != nil)
     }
 
     public func _get_audio_mix_rate() -> Int64 {
@@ -53,12 +53,7 @@ open class MovieWriter : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_audio_mix_rate_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _get_audio_speaker_mode() -> AudioServer.SpeakerMode {
@@ -69,12 +64,7 @@ open class MovieWriter : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_audio_speaker_mode_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return AudioServer.SpeakerMode(godot: __resPtr.pointee)
     }
     public func _handles_file(path: godot.String) -> UInt8 {
@@ -87,12 +77,7 @@ open class MovieWriter : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__handles_file_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _write_begin(movie_size: Vector2i, fps: Int64, base_path: godot.String) -> Error {
@@ -106,12 +91,7 @@ open class MovieWriter : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__write_begin_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
         }
     }
@@ -125,12 +105,7 @@ open class MovieWriter : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__write_frame_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
         }
     }
@@ -141,12 +116,7 @@ open class MovieWriter : Object {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__write_end_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func add_writer(writer: MovieWriter)  {
         let writer_native = writer._native_ptr()
@@ -156,8 +126,13 @@ open class MovieWriter : Object {
                 .init(writer_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_writer_4023702871,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_writer_4023702871._native_ptr(),
+                    4023702871)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

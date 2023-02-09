@@ -32,114 +32,102 @@ open class XRInterface : RefCounted {
         case XR_PLAY_AREA_ROOMSCALE = 3
         case XR_PLAY_AREA_STAGE = 4
     }
+    public enum EnvironmentBlendMode : Int32 {
+        case XR_ENV_BLEND_MODE_OPAQUE = 0
+        case XR_ENV_BLEND_MODE_ADDITIVE = 1
+        case XR_ENV_BLEND_MODE_ALPHA_BLEND = 2
+    }
 
     public override class var __godot_name: StringName { __godot_name_XRInterface }
 
-    static var _method_get_name_2002593661: GDExtensionMethodBindPtr! = nil
-    static var _method_get_capabilities_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_is_primary_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_set_primary_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_initialized_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_initialize_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_uninitialize_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tracking_status_167423259: GDExtensionMethodBindPtr! = nil
-    static var _method_get_render_target_size_1497962370: GDExtensionMethodBindPtr! = nil
-    static var _method_get_view_count_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_trigger_haptic_pulse_3752640163: GDExtensionMethodBindPtr! = nil
-    static var _method_supports_play_area_mode_3429955281: GDExtensionMethodBindPtr! = nil
-    static var _method_get_play_area_mode_1615132885: GDExtensionMethodBindPtr! = nil
-    static var _method_set_play_area_mode_3429955281: GDExtensionMethodBindPtr! = nil
-    static var _method_get_play_area_497664490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_anchor_detection_is_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_anchor_detection_is_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_camera_feed_id_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_is_passthrough_supported_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_is_passthrough_enabled_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_start_passthrough_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_stop_passthrough_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_transform_for_view_518934792: GDExtensionMethodBindPtr! = nil
-    static var _method_get_projection_for_view_3766090294: GDExtensionMethodBindPtr! = nil
+    static var _method_get_name_2002593661: StringName! = nil
+    static var _method_get_capabilities_3905245786: StringName! = nil
+    static var _method_is_primary_2240911060: StringName! = nil
+    static var _method_set_primary_2586408642: StringName! = nil
+    static var _method_is_initialized_36873697: StringName! = nil
+    static var _method_initialize_2240911060: StringName! = nil
+    static var _method_uninitialize_3218959716: StringName! = nil
+    static var _method_get_tracking_status_167423259: StringName! = nil
+    static var _method_get_render_target_size_1497962370: StringName! = nil
+    static var _method_get_view_count_2455072627: StringName! = nil
+    static var _method_trigger_haptic_pulse_3752640163: StringName! = nil
+    static var _method_supports_play_area_mode_3429955281: StringName! = nil
+    static var _method_get_play_area_mode_1615132885: StringName! = nil
+    static var _method_set_play_area_mode_3429955281: StringName! = nil
+    static var _method_get_play_area_497664490: StringName! = nil
+    static var _method_get_anchor_detection_is_enabled_36873697: StringName! = nil
+    static var _method_set_anchor_detection_is_enabled_2586408642: StringName! = nil
+    static var _method_get_camera_feed_id_2455072627: StringName! = nil
+    static var _method_is_passthrough_supported_2240911060: StringName! = nil
+    static var _method_is_passthrough_enabled_2240911060: StringName! = nil
+    static var _method_start_passthrough_2240911060: StringName! = nil
+    static var _method_stop_passthrough_3218959716: StringName! = nil
+    static var _method_get_transform_for_view_518934792: StringName! = nil
+    static var _method_get_projection_for_view_3766090294: StringName! = nil
+    static var _method_get_supported_environment_blend_modes_2915620761: StringName! = nil
+    static var _method_set_environment_blend_mode_551152418: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_XRInterface == nil)
         __godot_name_XRInterface = StringName(from: "XRInterface")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_name_2002593661_name = StringName(from: "get_name")
-        self._method_get_name_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_get_name_2002593661_name._native_ptr(), 2002593661)
-        assert(XRInterface._method_get_name_2002593661 != nil)
-        let _method_get_capabilities_3905245786_name = StringName(from: "get_capabilities")
-        self._method_get_capabilities_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_get_capabilities_3905245786_name._native_ptr(), 3905245786)
-        assert(XRInterface._method_get_capabilities_3905245786 != nil)
-        let _method_is_primary_2240911060_name = StringName(from: "is_primary")
-        self._method_is_primary_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_is_primary_2240911060_name._native_ptr(), 2240911060)
-        assert(XRInterface._method_is_primary_2240911060 != nil)
-        let _method_set_primary_2586408642_name = StringName(from: "set_primary")
-        self._method_set_primary_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_set_primary_2586408642_name._native_ptr(), 2586408642)
-        assert(XRInterface._method_set_primary_2586408642 != nil)
-        let _method_is_initialized_36873697_name = StringName(from: "is_initialized")
-        self._method_is_initialized_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_is_initialized_36873697_name._native_ptr(), 36873697)
-        assert(XRInterface._method_is_initialized_36873697 != nil)
-        let _method_initialize_2240911060_name = StringName(from: "initialize")
-        self._method_initialize_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_initialize_2240911060_name._native_ptr(), 2240911060)
-        assert(XRInterface._method_initialize_2240911060 != nil)
-        let _method_uninitialize_3218959716_name = StringName(from: "uninitialize")
-        self._method_uninitialize_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_uninitialize_3218959716_name._native_ptr(), 3218959716)
-        assert(XRInterface._method_uninitialize_3218959716 != nil)
-        let _method_get_tracking_status_167423259_name = StringName(from: "get_tracking_status")
-        self._method_get_tracking_status_167423259 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_get_tracking_status_167423259_name._native_ptr(), 167423259)
-        assert(XRInterface._method_get_tracking_status_167423259 != nil)
-        let _method_get_render_target_size_1497962370_name = StringName(from: "get_render_target_size")
-        self._method_get_render_target_size_1497962370 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_get_render_target_size_1497962370_name._native_ptr(), 1497962370)
-        assert(XRInterface._method_get_render_target_size_1497962370 != nil)
-        let _method_get_view_count_2455072627_name = StringName(from: "get_view_count")
-        self._method_get_view_count_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_get_view_count_2455072627_name._native_ptr(), 2455072627)
-        assert(XRInterface._method_get_view_count_2455072627 != nil)
-        let _method_trigger_haptic_pulse_3752640163_name = StringName(from: "trigger_haptic_pulse")
-        self._method_trigger_haptic_pulse_3752640163 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_trigger_haptic_pulse_3752640163_name._native_ptr(), 3752640163)
-        assert(XRInterface._method_trigger_haptic_pulse_3752640163 != nil)
-        let _method_supports_play_area_mode_3429955281_name = StringName(from: "supports_play_area_mode")
-        self._method_supports_play_area_mode_3429955281 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_supports_play_area_mode_3429955281_name._native_ptr(), 3429955281)
-        assert(XRInterface._method_supports_play_area_mode_3429955281 != nil)
-        let _method_get_play_area_mode_1615132885_name = StringName(from: "get_play_area_mode")
-        self._method_get_play_area_mode_1615132885 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_get_play_area_mode_1615132885_name._native_ptr(), 1615132885)
-        assert(XRInterface._method_get_play_area_mode_1615132885 != nil)
-        let _method_set_play_area_mode_3429955281_name = StringName(from: "set_play_area_mode")
-        self._method_set_play_area_mode_3429955281 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_set_play_area_mode_3429955281_name._native_ptr(), 3429955281)
-        assert(XRInterface._method_set_play_area_mode_3429955281 != nil)
-        let _method_get_play_area_497664490_name = StringName(from: "get_play_area")
-        self._method_get_play_area_497664490 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_get_play_area_497664490_name._native_ptr(), 497664490)
-        assert(XRInterface._method_get_play_area_497664490 != nil)
-        let _method_get_anchor_detection_is_enabled_36873697_name = StringName(from: "get_anchor_detection_is_enabled")
-        self._method_get_anchor_detection_is_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_get_anchor_detection_is_enabled_36873697_name._native_ptr(), 36873697)
-        assert(XRInterface._method_get_anchor_detection_is_enabled_36873697 != nil)
-        let _method_set_anchor_detection_is_enabled_2586408642_name = StringName(from: "set_anchor_detection_is_enabled")
-        self._method_set_anchor_detection_is_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_set_anchor_detection_is_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(XRInterface._method_set_anchor_detection_is_enabled_2586408642 != nil)
-        let _method_get_camera_feed_id_2455072627_name = StringName(from: "get_camera_feed_id")
-        self._method_get_camera_feed_id_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_get_camera_feed_id_2455072627_name._native_ptr(), 2455072627)
-        assert(XRInterface._method_get_camera_feed_id_2455072627 != nil)
-        let _method_is_passthrough_supported_2240911060_name = StringName(from: "is_passthrough_supported")
-        self._method_is_passthrough_supported_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_is_passthrough_supported_2240911060_name._native_ptr(), 2240911060)
-        assert(XRInterface._method_is_passthrough_supported_2240911060 != nil)
-        let _method_is_passthrough_enabled_2240911060_name = StringName(from: "is_passthrough_enabled")
-        self._method_is_passthrough_enabled_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_is_passthrough_enabled_2240911060_name._native_ptr(), 2240911060)
-        assert(XRInterface._method_is_passthrough_enabled_2240911060 != nil)
-        let _method_start_passthrough_2240911060_name = StringName(from: "start_passthrough")
-        self._method_start_passthrough_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_start_passthrough_2240911060_name._native_ptr(), 2240911060)
-        assert(XRInterface._method_start_passthrough_2240911060 != nil)
-        let _method_stop_passthrough_3218959716_name = StringName(from: "stop_passthrough")
-        self._method_stop_passthrough_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_stop_passthrough_3218959716_name._native_ptr(), 3218959716)
-        assert(XRInterface._method_stop_passthrough_3218959716 != nil)
-        let _method_get_transform_for_view_518934792_name = StringName(from: "get_transform_for_view")
-        self._method_get_transform_for_view_518934792 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_get_transform_for_view_518934792_name._native_ptr(), 518934792)
-        assert(XRInterface._method_get_transform_for_view_518934792 != nil)
-        let _method_get_projection_for_view_3766090294_name = StringName(from: "get_projection_for_view")
-        self._method_get_projection_for_view_3766090294 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRInterface._native_ptr(), _method_get_projection_for_view_3766090294_name._native_ptr(), 3766090294)
-        assert(XRInterface._method_get_projection_for_view_3766090294 != nil)
+        self._method_get_name_2002593661 = StringName(from: "get_name")
+        assert(self._method_get_name_2002593661 != nil)
+        self._method_get_capabilities_3905245786 = StringName(from: "get_capabilities")
+        assert(self._method_get_capabilities_3905245786 != nil)
+        self._method_is_primary_2240911060 = StringName(from: "is_primary")
+        assert(self._method_is_primary_2240911060 != nil)
+        self._method_set_primary_2586408642 = StringName(from: "set_primary")
+        assert(self._method_set_primary_2586408642 != nil)
+        self._method_is_initialized_36873697 = StringName(from: "is_initialized")
+        assert(self._method_is_initialized_36873697 != nil)
+        self._method_initialize_2240911060 = StringName(from: "initialize")
+        assert(self._method_initialize_2240911060 != nil)
+        self._method_uninitialize_3218959716 = StringName(from: "uninitialize")
+        assert(self._method_uninitialize_3218959716 != nil)
+        self._method_get_tracking_status_167423259 = StringName(from: "get_tracking_status")
+        assert(self._method_get_tracking_status_167423259 != nil)
+        self._method_get_render_target_size_1497962370 = StringName(from: "get_render_target_size")
+        assert(self._method_get_render_target_size_1497962370 != nil)
+        self._method_get_view_count_2455072627 = StringName(from: "get_view_count")
+        assert(self._method_get_view_count_2455072627 != nil)
+        self._method_trigger_haptic_pulse_3752640163 = StringName(from: "trigger_haptic_pulse")
+        assert(self._method_trigger_haptic_pulse_3752640163 != nil)
+        self._method_supports_play_area_mode_3429955281 = StringName(from: "supports_play_area_mode")
+        assert(self._method_supports_play_area_mode_3429955281 != nil)
+        self._method_get_play_area_mode_1615132885 = StringName(from: "get_play_area_mode")
+        assert(self._method_get_play_area_mode_1615132885 != nil)
+        self._method_set_play_area_mode_3429955281 = StringName(from: "set_play_area_mode")
+        assert(self._method_set_play_area_mode_3429955281 != nil)
+        self._method_get_play_area_497664490 = StringName(from: "get_play_area")
+        assert(self._method_get_play_area_497664490 != nil)
+        self._method_get_anchor_detection_is_enabled_36873697 = StringName(from: "get_anchor_detection_is_enabled")
+        assert(self._method_get_anchor_detection_is_enabled_36873697 != nil)
+        self._method_set_anchor_detection_is_enabled_2586408642 = StringName(from: "set_anchor_detection_is_enabled")
+        assert(self._method_set_anchor_detection_is_enabled_2586408642 != nil)
+        self._method_get_camera_feed_id_2455072627 = StringName(from: "get_camera_feed_id")
+        assert(self._method_get_camera_feed_id_2455072627 != nil)
+        self._method_is_passthrough_supported_2240911060 = StringName(from: "is_passthrough_supported")
+        assert(self._method_is_passthrough_supported_2240911060 != nil)
+        self._method_is_passthrough_enabled_2240911060 = StringName(from: "is_passthrough_enabled")
+        assert(self._method_is_passthrough_enabled_2240911060 != nil)
+        self._method_start_passthrough_2240911060 = StringName(from: "start_passthrough")
+        assert(self._method_start_passthrough_2240911060 != nil)
+        self._method_stop_passthrough_3218959716 = StringName(from: "stop_passthrough")
+        assert(self._method_stop_passthrough_3218959716 != nil)
+        self._method_get_transform_for_view_518934792 = StringName(from: "get_transform_for_view")
+        assert(self._method_get_transform_for_view_518934792 != nil)
+        self._method_get_projection_for_view_3766090294 = StringName(from: "get_projection_for_view")
+        assert(self._method_get_projection_for_view_3766090294 != nil)
+        self._method_get_supported_environment_blend_modes_2915620761 = StringName(from: "get_supported_environment_blend_modes")
+        assert(self._method_get_supported_environment_blend_modes_2915620761 != nil)
+        self._method_set_environment_blend_mode_551152418 = StringName(from: "set_environment_blend_mode")
+        assert(self._method_set_environment_blend_mode_551152418 != nil)
     }
 
     public func get_name() -> StringName {
@@ -150,8 +138,13 @@ open class XRInterface : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_name_2002593661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_name_2002593661._native_ptr(),
+                    2002593661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -167,8 +160,13 @@ open class XRInterface : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_capabilities_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_capabilities_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -184,8 +182,13 @@ open class XRInterface : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_primary_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_primary_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -200,8 +203,13 @@ open class XRInterface : RefCounted {
                 .init(primary_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_primary_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_primary_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -217,8 +225,13 @@ open class XRInterface : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_initialized_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_initialized_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -234,8 +247,13 @@ open class XRInterface : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_initialize_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_initialize_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -249,8 +267,13 @@ open class XRInterface : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_uninitialize_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_uninitialize_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -264,8 +287,13 @@ open class XRInterface : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tracking_status_167423259,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tracking_status_167423259._native_ptr(),
+                    167423259)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -280,8 +308,13 @@ open class XRInterface : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_render_target_size_1497962370,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_render_target_size_1497962370._native_ptr(),
+                    1497962370)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -297,8 +330,13 @@ open class XRInterface : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_view_count_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_view_count_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -318,8 +356,13 @@ open class XRInterface : RefCounted {
                 .init(action_name_native), .init(tracker_name_native), .init(frequency_native), .init(amplitude_native), .init(duration_sec_native), .init(delay_sec_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_trigger_haptic_pulse_3752640163,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_trigger_haptic_pulse_3752640163._native_ptr(),
+                    3752640163)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -339,8 +382,13 @@ open class XRInterface : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_supports_play_area_mode_3429955281,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_supports_play_area_mode_3429955281._native_ptr(),
+                    3429955281)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -356,8 +404,13 @@ open class XRInterface : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_play_area_mode_1615132885,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_play_area_mode_1615132885._native_ptr(),
+                    1615132885)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -374,8 +427,13 @@ open class XRInterface : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_play_area_mode_3429955281,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_play_area_mode_3429955281._native_ptr(),
+                    3429955281)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -391,8 +449,13 @@ open class XRInterface : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_play_area_497664490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_play_area_497664490._native_ptr(),
+                    497664490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -408,8 +471,13 @@ open class XRInterface : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_anchor_detection_is_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_anchor_detection_is_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -424,8 +492,13 @@ open class XRInterface : RefCounted {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_anchor_detection_is_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_anchor_detection_is_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -441,8 +514,13 @@ open class XRInterface : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_camera_feed_id_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_camera_feed_id_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -458,8 +536,13 @@ open class XRInterface : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_passthrough_supported_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_passthrough_supported_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -475,8 +558,13 @@ open class XRInterface : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_passthrough_enabled_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_passthrough_enabled_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -492,8 +580,13 @@ open class XRInterface : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_start_passthrough_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_start_passthrough_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -507,8 +600,13 @@ open class XRInterface : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_stop_passthrough_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_stop_passthrough_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -524,8 +622,13 @@ open class XRInterface : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_transform_for_view_518934792,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_transform_for_view_518934792._native_ptr(),
+                    518934792)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -545,8 +648,13 @@ open class XRInterface : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_projection_for_view_3766090294,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_projection_for_view_3766090294._native_ptr(),
+                    3766090294)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -555,6 +663,51 @@ open class XRInterface : RefCounted {
         }
         }
         }
+        }
+    }
+    public func get_supported_environment_blend_modes() -> Array {
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_supported_environment_blend_modes_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return Array(godot: __resPtr.pointee)
+    }
+    public func set_environment_blend_mode(mode: XRInterface.EnvironmentBlendMode) -> UInt8 {
+        withUnsafePointer(to: mode.rawValue) { mode_native in
+        let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 1)
+            defer { args.deallocate() }
+            _ = args.initialize(from: [
+                .init(mode_native)
+            ])
+            // call here
+            let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
+            defer { __resPtr.deallocate() }
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_environment_blend_mode_551152418._native_ptr(),
+                    551152418)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
+                    self._native_ptr(),
+                    args.baseAddress!,
+                    __resPtr
+                )
+            return UInt8(godot: __resPtr.pointee)
         }
     }
 }

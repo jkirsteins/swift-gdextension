@@ -167,83 +167,67 @@ open class ConfigFile : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_ConfigFile }
 
-    static var _method_set_value_2504492430: GDExtensionMethodBindPtr! = nil
-    static var _method_get_value_89809366: GDExtensionMethodBindPtr! = nil
-    static var _method_has_section_3927539163: GDExtensionMethodBindPtr! = nil
-    static var _method_has_section_key_820780508: GDExtensionMethodBindPtr! = nil
-    static var _method_get_sections_1139954409: GDExtensionMethodBindPtr! = nil
-    static var _method_get_section_keys_4291131558: GDExtensionMethodBindPtr! = nil
-    static var _method_erase_section_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_erase_section_key_3186203200: GDExtensionMethodBindPtr! = nil
-    static var _method_load_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_parse_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_save_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_encode_to_text_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_load_encrypted_887037711: GDExtensionMethodBindPtr! = nil
-    static var _method_load_encrypted_pass_852856452: GDExtensionMethodBindPtr! = nil
-    static var _method_save_encrypted_887037711: GDExtensionMethodBindPtr! = nil
-    static var _method_save_encrypted_pass_852856452: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_3218959716: GDExtensionMethodBindPtr! = nil
+    static var _method_set_value_2504492430: StringName! = nil
+    static var _method_get_value_89809366: StringName! = nil
+    static var _method_has_section_3927539163: StringName! = nil
+    static var _method_has_section_key_820780508: StringName! = nil
+    static var _method_get_sections_1139954409: StringName! = nil
+    static var _method_get_section_keys_4291131558: StringName! = nil
+    static var _method_erase_section_83702148: StringName! = nil
+    static var _method_erase_section_key_3186203200: StringName! = nil
+    static var _method_load_166001499: StringName! = nil
+    static var _method_parse_166001499: StringName! = nil
+    static var _method_save_166001499: StringName! = nil
+    static var _method_encode_to_text_201670096: StringName! = nil
+    static var _method_load_encrypted_887037711: StringName! = nil
+    static var _method_load_encrypted_pass_852856452: StringName! = nil
+    static var _method_save_encrypted_887037711: StringName! = nil
+    static var _method_save_encrypted_pass_852856452: StringName! = nil
+    static var _method_clear_3218959716: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ConfigFile == nil)
         __godot_name_ConfigFile = StringName(from: "ConfigFile")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_value_2504492430_name = StringName(from: "set_value")
-        self._method_set_value_2504492430 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_set_value_2504492430_name._native_ptr(), 2504492430)
-        assert(ConfigFile._method_set_value_2504492430 != nil)
-        let _method_get_value_89809366_name = StringName(from: "get_value")
-        self._method_get_value_89809366 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_get_value_89809366_name._native_ptr(), 89809366)
-        assert(ConfigFile._method_get_value_89809366 != nil)
-        let _method_has_section_3927539163_name = StringName(from: "has_section")
-        self._method_has_section_3927539163 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_has_section_3927539163_name._native_ptr(), 3927539163)
-        assert(ConfigFile._method_has_section_3927539163 != nil)
-        let _method_has_section_key_820780508_name = StringName(from: "has_section_key")
-        self._method_has_section_key_820780508 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_has_section_key_820780508_name._native_ptr(), 820780508)
-        assert(ConfigFile._method_has_section_key_820780508 != nil)
-        let _method_get_sections_1139954409_name = StringName(from: "get_sections")
-        self._method_get_sections_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_get_sections_1139954409_name._native_ptr(), 1139954409)
-        assert(ConfigFile._method_get_sections_1139954409 != nil)
-        let _method_get_section_keys_4291131558_name = StringName(from: "get_section_keys")
-        self._method_get_section_keys_4291131558 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_get_section_keys_4291131558_name._native_ptr(), 4291131558)
-        assert(ConfigFile._method_get_section_keys_4291131558 != nil)
-        let _method_erase_section_83702148_name = StringName(from: "erase_section")
-        self._method_erase_section_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_erase_section_83702148_name._native_ptr(), 83702148)
-        assert(ConfigFile._method_erase_section_83702148 != nil)
-        let _method_erase_section_key_3186203200_name = StringName(from: "erase_section_key")
-        self._method_erase_section_key_3186203200 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_erase_section_key_3186203200_name._native_ptr(), 3186203200)
-        assert(ConfigFile._method_erase_section_key_3186203200 != nil)
-        let _method_load_166001499_name = StringName(from: "load")
-        self._method_load_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_load_166001499_name._native_ptr(), 166001499)
-        assert(ConfigFile._method_load_166001499 != nil)
-        let _method_parse_166001499_name = StringName(from: "parse")
-        self._method_parse_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_parse_166001499_name._native_ptr(), 166001499)
-        assert(ConfigFile._method_parse_166001499 != nil)
-        let _method_save_166001499_name = StringName(from: "save")
-        self._method_save_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_save_166001499_name._native_ptr(), 166001499)
-        assert(ConfigFile._method_save_166001499 != nil)
-        let _method_encode_to_text_201670096_name = StringName(from: "encode_to_text")
-        self._method_encode_to_text_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_encode_to_text_201670096_name._native_ptr(), 201670096)
-        assert(ConfigFile._method_encode_to_text_201670096 != nil)
-        let _method_load_encrypted_887037711_name = StringName(from: "load_encrypted")
-        self._method_load_encrypted_887037711 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_load_encrypted_887037711_name._native_ptr(), 887037711)
-        assert(ConfigFile._method_load_encrypted_887037711 != nil)
-        let _method_load_encrypted_pass_852856452_name = StringName(from: "load_encrypted_pass")
-        self._method_load_encrypted_pass_852856452 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_load_encrypted_pass_852856452_name._native_ptr(), 852856452)
-        assert(ConfigFile._method_load_encrypted_pass_852856452 != nil)
-        let _method_save_encrypted_887037711_name = StringName(from: "save_encrypted")
-        self._method_save_encrypted_887037711 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_save_encrypted_887037711_name._native_ptr(), 887037711)
-        assert(ConfigFile._method_save_encrypted_887037711 != nil)
-        let _method_save_encrypted_pass_852856452_name = StringName(from: "save_encrypted_pass")
-        self._method_save_encrypted_pass_852856452 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_save_encrypted_pass_852856452_name._native_ptr(), 852856452)
-        assert(ConfigFile._method_save_encrypted_pass_852856452 != nil)
-        let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_ConfigFile._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
-        assert(ConfigFile._method_clear_3218959716 != nil)
+        self._method_set_value_2504492430 = StringName(from: "set_value")
+        assert(self._method_set_value_2504492430 != nil)
+        self._method_get_value_89809366 = StringName(from: "get_value")
+        assert(self._method_get_value_89809366 != nil)
+        self._method_has_section_3927539163 = StringName(from: "has_section")
+        assert(self._method_has_section_3927539163 != nil)
+        self._method_has_section_key_820780508 = StringName(from: "has_section_key")
+        assert(self._method_has_section_key_820780508 != nil)
+        self._method_get_sections_1139954409 = StringName(from: "get_sections")
+        assert(self._method_get_sections_1139954409 != nil)
+        self._method_get_section_keys_4291131558 = StringName(from: "get_section_keys")
+        assert(self._method_get_section_keys_4291131558 != nil)
+        self._method_erase_section_83702148 = StringName(from: "erase_section")
+        assert(self._method_erase_section_83702148 != nil)
+        self._method_erase_section_key_3186203200 = StringName(from: "erase_section_key")
+        assert(self._method_erase_section_key_3186203200 != nil)
+        self._method_load_166001499 = StringName(from: "load")
+        assert(self._method_load_166001499 != nil)
+        self._method_parse_166001499 = StringName(from: "parse")
+        assert(self._method_parse_166001499 != nil)
+        self._method_save_166001499 = StringName(from: "save")
+        assert(self._method_save_166001499 != nil)
+        self._method_encode_to_text_201670096 = StringName(from: "encode_to_text")
+        assert(self._method_encode_to_text_201670096 != nil)
+        self._method_load_encrypted_887037711 = StringName(from: "load_encrypted")
+        assert(self._method_load_encrypted_887037711 != nil)
+        self._method_load_encrypted_pass_852856452 = StringName(from: "load_encrypted_pass")
+        assert(self._method_load_encrypted_pass_852856452 != nil)
+        self._method_save_encrypted_887037711 = StringName(from: "save_encrypted")
+        assert(self._method_save_encrypted_887037711 != nil)
+        self._method_save_encrypted_pass_852856452 = StringName(from: "save_encrypted_pass")
+        assert(self._method_save_encrypted_pass_852856452 != nil)
+        self._method_clear_3218959716 = StringName(from: "clear")
+        assert(self._method_clear_3218959716 != nil)
     }
 
     public func set_value(section: godot.String, key: godot.String, value: Variant)  {
@@ -256,8 +240,13 @@ open class ConfigFile : RefCounted {
                 .init(section_native), .init(key_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_value_2504492430,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_value_2504492430._native_ptr(),
+                    2504492430)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -274,8 +263,13 @@ open class ConfigFile : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_value_89809366,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_value_89809366._native_ptr(),
+                    89809366)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -292,8 +286,13 @@ open class ConfigFile : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_section_3927539163,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_section_3927539163._native_ptr(),
+                    3927539163)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -311,8 +310,13 @@ open class ConfigFile : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_section_key_820780508,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_section_key_820780508._native_ptr(),
+                    820780508)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -327,8 +331,13 @@ open class ConfigFile : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_sections_1139954409,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_sections_1139954409._native_ptr(),
+                    1139954409)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -344,8 +353,13 @@ open class ConfigFile : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_section_keys_4291131558,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_section_keys_4291131558._native_ptr(),
+                    4291131558)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -360,8 +374,13 @@ open class ConfigFile : RefCounted {
                 .init(section_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_erase_section_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_erase_section_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -376,8 +395,13 @@ open class ConfigFile : RefCounted {
                 .init(section_native), .init(key_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_erase_section_key_3186203200,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_erase_section_key_3186203200._native_ptr(),
+                    3186203200)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -392,8 +416,13 @@ open class ConfigFile : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_load_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_load_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -409,8 +438,13 @@ open class ConfigFile : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_parse_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_parse_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -426,8 +460,13 @@ open class ConfigFile : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -442,8 +481,13 @@ open class ConfigFile : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_encode_to_text_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_encode_to_text_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -460,8 +504,13 @@ open class ConfigFile : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_load_encrypted_887037711,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_load_encrypted_887037711._native_ptr(),
+                    887037711)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -478,8 +527,13 @@ open class ConfigFile : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_load_encrypted_pass_852856452,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_load_encrypted_pass_852856452._native_ptr(),
+                    852856452)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -496,8 +550,13 @@ open class ConfigFile : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_encrypted_887037711,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_encrypted_887037711._native_ptr(),
+                    887037711)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -514,8 +573,13 @@ open class ConfigFile : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_encrypted_pass_852856452,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_encrypted_pass_852856452._native_ptr(),
+                    852856452)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -529,8 +593,13 @@ open class ConfigFile : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

@@ -13,39 +13,34 @@ open class CameraTexture : Texture2D {
 
     public override class var __godot_name: StringName { __godot_name_CameraTexture }
 
-    static var _method_set_camera_feed_id_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_camera_feed_id_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_which_feed_1595299230: GDExtensionMethodBindPtr! = nil
-    static var _method_get_which_feed_91039457: GDExtensionMethodBindPtr! = nil
-    static var _method_set_camera_active_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_camera_active_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_camera_feed_id_1286410249: StringName! = nil
+    static var _method_get_camera_feed_id_3905245786: StringName! = nil
+    static var _method_set_which_feed_1595299230: StringName! = nil
+    static var _method_get_which_feed_91039457: StringName! = nil
+    static var _method_set_camera_active_2586408642: StringName! = nil
+    static var _method_get_camera_active_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CameraTexture == nil)
         __godot_name_CameraTexture = StringName(from: "CameraTexture")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_camera_feed_id_1286410249_name = StringName(from: "set_camera_feed_id")
-        self._method_set_camera_feed_id_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraTexture._native_ptr(), _method_set_camera_feed_id_1286410249_name._native_ptr(), 1286410249)
-        assert(CameraTexture._method_set_camera_feed_id_1286410249 != nil)
-        let _method_get_camera_feed_id_3905245786_name = StringName(from: "get_camera_feed_id")
-        self._method_get_camera_feed_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraTexture._native_ptr(), _method_get_camera_feed_id_3905245786_name._native_ptr(), 3905245786)
-        assert(CameraTexture._method_get_camera_feed_id_3905245786 != nil)
-        let _method_set_which_feed_1595299230_name = StringName(from: "set_which_feed")
-        self._method_set_which_feed_1595299230 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraTexture._native_ptr(), _method_set_which_feed_1595299230_name._native_ptr(), 1595299230)
-        assert(CameraTexture._method_set_which_feed_1595299230 != nil)
-        let _method_get_which_feed_91039457_name = StringName(from: "get_which_feed")
-        self._method_get_which_feed_91039457 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraTexture._native_ptr(), _method_get_which_feed_91039457_name._native_ptr(), 91039457)
-        assert(CameraTexture._method_get_which_feed_91039457 != nil)
-        let _method_set_camera_active_2586408642_name = StringName(from: "set_camera_active")
-        self._method_set_camera_active_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraTexture._native_ptr(), _method_set_camera_active_2586408642_name._native_ptr(), 2586408642)
-        assert(CameraTexture._method_set_camera_active_2586408642 != nil)
-        let _method_get_camera_active_36873697_name = StringName(from: "get_camera_active")
-        self._method_get_camera_active_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraTexture._native_ptr(), _method_get_camera_active_36873697_name._native_ptr(), 36873697)
-        assert(CameraTexture._method_get_camera_active_36873697 != nil)
+        self._method_set_camera_feed_id_1286410249 = StringName(from: "set_camera_feed_id")
+        assert(self._method_set_camera_feed_id_1286410249 != nil)
+        self._method_get_camera_feed_id_3905245786 = StringName(from: "get_camera_feed_id")
+        assert(self._method_get_camera_feed_id_3905245786 != nil)
+        self._method_set_which_feed_1595299230 = StringName(from: "set_which_feed")
+        assert(self._method_set_which_feed_1595299230 != nil)
+        self._method_get_which_feed_91039457 = StringName(from: "get_which_feed")
+        assert(self._method_get_which_feed_91039457 != nil)
+        self._method_set_camera_active_2586408642 = StringName(from: "set_camera_active")
+        assert(self._method_set_camera_active_2586408642 != nil)
+        self._method_get_camera_active_36873697 = StringName(from: "get_camera_active")
+        assert(self._method_get_camera_active_36873697 != nil)
     }
 
     public func set_camera_feed_id(feed_id: Int64)  {
@@ -56,8 +51,13 @@ open class CameraTexture : Texture2D {
                 .init(feed_id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_camera_feed_id_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_camera_feed_id_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -73,8 +73,13 @@ open class CameraTexture : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_camera_feed_id_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_camera_feed_id_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -89,8 +94,13 @@ open class CameraTexture : Texture2D {
                 .init(which_feed_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_which_feed_1595299230,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_which_feed_1595299230._native_ptr(),
+                    1595299230)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -105,8 +115,13 @@ open class CameraTexture : Texture2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_which_feed_91039457,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_which_feed_91039457._native_ptr(),
+                    91039457)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -121,8 +136,13 @@ open class CameraTexture : Texture2D {
                 .init(active_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_camera_active_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_camera_active_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -138,8 +158,13 @@ open class CameraTexture : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_camera_active_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_camera_active_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

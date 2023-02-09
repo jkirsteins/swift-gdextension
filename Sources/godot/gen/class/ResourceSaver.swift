@@ -26,31 +26,28 @@ open class ResourceSaver : Object {
 
     public override class var __godot_name: StringName { __godot_name_ResourceSaver }
 
-    static var _method_save_2303056517: GDExtensionMethodBindPtr! = nil
-    static var _method_get_recognized_extensions_4223597960: GDExtensionMethodBindPtr! = nil
-    static var _method_add_resource_format_saver_362894272: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_resource_format_saver_3373026878: GDExtensionMethodBindPtr! = nil
+    static var _method_save_2303056517: StringName! = nil
+    static var _method_get_recognized_extensions_4223597960: StringName! = nil
+    static var _method_add_resource_format_saver_362894272: StringName! = nil
+    static var _method_remove_resource_format_saver_3373026878: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ResourceSaver == nil)
         __godot_name_ResourceSaver = StringName(from: "ResourceSaver")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_save_2303056517_name = StringName(from: "save")
-        self._method_save_2303056517 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceSaver._native_ptr(), _method_save_2303056517_name._native_ptr(), 2303056517)
-        assert(ResourceSaver._method_save_2303056517 != nil)
-        let _method_get_recognized_extensions_4223597960_name = StringName(from: "get_recognized_extensions")
-        self._method_get_recognized_extensions_4223597960 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceSaver._native_ptr(), _method_get_recognized_extensions_4223597960_name._native_ptr(), 4223597960)
-        assert(ResourceSaver._method_get_recognized_extensions_4223597960 != nil)
-        let _method_add_resource_format_saver_362894272_name = StringName(from: "add_resource_format_saver")
-        self._method_add_resource_format_saver_362894272 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceSaver._native_ptr(), _method_add_resource_format_saver_362894272_name._native_ptr(), 362894272)
-        assert(ResourceSaver._method_add_resource_format_saver_362894272 != nil)
-        let _method_remove_resource_format_saver_3373026878_name = StringName(from: "remove_resource_format_saver")
-        self._method_remove_resource_format_saver_3373026878 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceSaver._native_ptr(), _method_remove_resource_format_saver_3373026878_name._native_ptr(), 3373026878)
-        assert(ResourceSaver._method_remove_resource_format_saver_3373026878 != nil)
+        self._method_save_2303056517 = StringName(from: "save")
+        assert(self._method_save_2303056517 != nil)
+        self._method_get_recognized_extensions_4223597960 = StringName(from: "get_recognized_extensions")
+        assert(self._method_get_recognized_extensions_4223597960 != nil)
+        self._method_add_resource_format_saver_362894272 = StringName(from: "add_resource_format_saver")
+        assert(self._method_add_resource_format_saver_362894272 != nil)
+        self._method_remove_resource_format_saver_3373026878 = StringName(from: "remove_resource_format_saver")
+        assert(self._method_remove_resource_format_saver_3373026878 != nil)
     }
 
     public func save(resource: Resource, path: godot.String, flags: ResourceSaver.SaverFlags) -> Error {
@@ -64,8 +61,13 @@ open class ResourceSaver : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_2303056517,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_2303056517._native_ptr(),
+                    2303056517)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -82,8 +84,13 @@ open class ResourceSaver : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_recognized_extensions_4223597960,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_recognized_extensions_4223597960._native_ptr(),
+                    4223597960)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -99,8 +106,13 @@ open class ResourceSaver : Object {
                 .init(format_saver_native), .init(at_front_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_resource_format_saver_362894272,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_resource_format_saver_362894272._native_ptr(),
+                    362894272)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -115,8 +127,13 @@ open class ResourceSaver : Object {
                 .init(format_saver_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_resource_format_saver_3373026878,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_resource_format_saver_3373026878._native_ptr(),
+                    3373026878)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

@@ -15,79 +15,64 @@ open class InputEventKey : InputEventWithModifiers {
 
     public override class var __godot_name: StringName { __godot_name_InputEventKey }
 
-    static var _method_set_pressed_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_keycode_888074362: GDExtensionMethodBindPtr! = nil
-    static var _method_get_keycode_1585896689: GDExtensionMethodBindPtr! = nil
-    static var _method_set_physical_keycode_888074362: GDExtensionMethodBindPtr! = nil
-    static var _method_get_physical_keycode_1585896689: GDExtensionMethodBindPtr! = nil
-    static var _method_set_key_label_888074362: GDExtensionMethodBindPtr! = nil
-    static var _method_get_key_label_1585896689: GDExtensionMethodBindPtr! = nil
-    static var _method_set_unicode_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_unicode_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_echo_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_keycode_with_modifiers_1585896689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_physical_keycode_with_modifiers_1585896689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_key_label_with_modifiers_1585896689: GDExtensionMethodBindPtr! = nil
-    static var _method_as_text_keycode_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_as_text_physical_keycode_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_as_text_key_label_201670096: GDExtensionMethodBindPtr! = nil
+    static var _method_set_pressed_2586408642: StringName! = nil
+    static var _method_set_keycode_888074362: StringName! = nil
+    static var _method_get_keycode_1585896689: StringName! = nil
+    static var _method_set_physical_keycode_888074362: StringName! = nil
+    static var _method_get_physical_keycode_1585896689: StringName! = nil
+    static var _method_set_key_label_888074362: StringName! = nil
+    static var _method_get_key_label_1585896689: StringName! = nil
+    static var _method_set_unicode_1286410249: StringName! = nil
+    static var _method_get_unicode_3905245786: StringName! = nil
+    static var _method_set_echo_2586408642: StringName! = nil
+    static var _method_get_keycode_with_modifiers_1585896689: StringName! = nil
+    static var _method_get_physical_keycode_with_modifiers_1585896689: StringName! = nil
+    static var _method_get_key_label_with_modifiers_1585896689: StringName! = nil
+    static var _method_as_text_keycode_201670096: StringName! = nil
+    static var _method_as_text_physical_keycode_201670096: StringName! = nil
+    static var _method_as_text_key_label_201670096: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_InputEventKey == nil)
         __godot_name_InputEventKey = StringName(from: "InputEventKey")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_pressed_2586408642_name = StringName(from: "set_pressed")
-        self._method_set_pressed_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventKey._native_ptr(), _method_set_pressed_2586408642_name._native_ptr(), 2586408642)
-        assert(InputEventKey._method_set_pressed_2586408642 != nil)
-        let _method_set_keycode_888074362_name = StringName(from: "set_keycode")
-        self._method_set_keycode_888074362 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventKey._native_ptr(), _method_set_keycode_888074362_name._native_ptr(), 888074362)
-        assert(InputEventKey._method_set_keycode_888074362 != nil)
-        let _method_get_keycode_1585896689_name = StringName(from: "get_keycode")
-        self._method_get_keycode_1585896689 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventKey._native_ptr(), _method_get_keycode_1585896689_name._native_ptr(), 1585896689)
-        assert(InputEventKey._method_get_keycode_1585896689 != nil)
-        let _method_set_physical_keycode_888074362_name = StringName(from: "set_physical_keycode")
-        self._method_set_physical_keycode_888074362 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventKey._native_ptr(), _method_set_physical_keycode_888074362_name._native_ptr(), 888074362)
-        assert(InputEventKey._method_set_physical_keycode_888074362 != nil)
-        let _method_get_physical_keycode_1585896689_name = StringName(from: "get_physical_keycode")
-        self._method_get_physical_keycode_1585896689 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventKey._native_ptr(), _method_get_physical_keycode_1585896689_name._native_ptr(), 1585896689)
-        assert(InputEventKey._method_get_physical_keycode_1585896689 != nil)
-        let _method_set_key_label_888074362_name = StringName(from: "set_key_label")
-        self._method_set_key_label_888074362 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventKey._native_ptr(), _method_set_key_label_888074362_name._native_ptr(), 888074362)
-        assert(InputEventKey._method_set_key_label_888074362 != nil)
-        let _method_get_key_label_1585896689_name = StringName(from: "get_key_label")
-        self._method_get_key_label_1585896689 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventKey._native_ptr(), _method_get_key_label_1585896689_name._native_ptr(), 1585896689)
-        assert(InputEventKey._method_get_key_label_1585896689 != nil)
-        let _method_set_unicode_1286410249_name = StringName(from: "set_unicode")
-        self._method_set_unicode_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventKey._native_ptr(), _method_set_unicode_1286410249_name._native_ptr(), 1286410249)
-        assert(InputEventKey._method_set_unicode_1286410249 != nil)
-        let _method_get_unicode_3905245786_name = StringName(from: "get_unicode")
-        self._method_get_unicode_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventKey._native_ptr(), _method_get_unicode_3905245786_name._native_ptr(), 3905245786)
-        assert(InputEventKey._method_get_unicode_3905245786 != nil)
-        let _method_set_echo_2586408642_name = StringName(from: "set_echo")
-        self._method_set_echo_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventKey._native_ptr(), _method_set_echo_2586408642_name._native_ptr(), 2586408642)
-        assert(InputEventKey._method_set_echo_2586408642 != nil)
-        let _method_get_keycode_with_modifiers_1585896689_name = StringName(from: "get_keycode_with_modifiers")
-        self._method_get_keycode_with_modifiers_1585896689 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventKey._native_ptr(), _method_get_keycode_with_modifiers_1585896689_name._native_ptr(), 1585896689)
-        assert(InputEventKey._method_get_keycode_with_modifiers_1585896689 != nil)
-        let _method_get_physical_keycode_with_modifiers_1585896689_name = StringName(from: "get_physical_keycode_with_modifiers")
-        self._method_get_physical_keycode_with_modifiers_1585896689 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventKey._native_ptr(), _method_get_physical_keycode_with_modifiers_1585896689_name._native_ptr(), 1585896689)
-        assert(InputEventKey._method_get_physical_keycode_with_modifiers_1585896689 != nil)
-        let _method_get_key_label_with_modifiers_1585896689_name = StringName(from: "get_key_label_with_modifiers")
-        self._method_get_key_label_with_modifiers_1585896689 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventKey._native_ptr(), _method_get_key_label_with_modifiers_1585896689_name._native_ptr(), 1585896689)
-        assert(InputEventKey._method_get_key_label_with_modifiers_1585896689 != nil)
-        let _method_as_text_keycode_201670096_name = StringName(from: "as_text_keycode")
-        self._method_as_text_keycode_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventKey._native_ptr(), _method_as_text_keycode_201670096_name._native_ptr(), 201670096)
-        assert(InputEventKey._method_as_text_keycode_201670096 != nil)
-        let _method_as_text_physical_keycode_201670096_name = StringName(from: "as_text_physical_keycode")
-        self._method_as_text_physical_keycode_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventKey._native_ptr(), _method_as_text_physical_keycode_201670096_name._native_ptr(), 201670096)
-        assert(InputEventKey._method_as_text_physical_keycode_201670096 != nil)
-        let _method_as_text_key_label_201670096_name = StringName(from: "as_text_key_label")
-        self._method_as_text_key_label_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEventKey._native_ptr(), _method_as_text_key_label_201670096_name._native_ptr(), 201670096)
-        assert(InputEventKey._method_as_text_key_label_201670096 != nil)
+        self._method_set_pressed_2586408642 = StringName(from: "set_pressed")
+        assert(self._method_set_pressed_2586408642 != nil)
+        self._method_set_keycode_888074362 = StringName(from: "set_keycode")
+        assert(self._method_set_keycode_888074362 != nil)
+        self._method_get_keycode_1585896689 = StringName(from: "get_keycode")
+        assert(self._method_get_keycode_1585896689 != nil)
+        self._method_set_physical_keycode_888074362 = StringName(from: "set_physical_keycode")
+        assert(self._method_set_physical_keycode_888074362 != nil)
+        self._method_get_physical_keycode_1585896689 = StringName(from: "get_physical_keycode")
+        assert(self._method_get_physical_keycode_1585896689 != nil)
+        self._method_set_key_label_888074362 = StringName(from: "set_key_label")
+        assert(self._method_set_key_label_888074362 != nil)
+        self._method_get_key_label_1585896689 = StringName(from: "get_key_label")
+        assert(self._method_get_key_label_1585896689 != nil)
+        self._method_set_unicode_1286410249 = StringName(from: "set_unicode")
+        assert(self._method_set_unicode_1286410249 != nil)
+        self._method_get_unicode_3905245786 = StringName(from: "get_unicode")
+        assert(self._method_get_unicode_3905245786 != nil)
+        self._method_set_echo_2586408642 = StringName(from: "set_echo")
+        assert(self._method_set_echo_2586408642 != nil)
+        self._method_get_keycode_with_modifiers_1585896689 = StringName(from: "get_keycode_with_modifiers")
+        assert(self._method_get_keycode_with_modifiers_1585896689 != nil)
+        self._method_get_physical_keycode_with_modifiers_1585896689 = StringName(from: "get_physical_keycode_with_modifiers")
+        assert(self._method_get_physical_keycode_with_modifiers_1585896689 != nil)
+        self._method_get_key_label_with_modifiers_1585896689 = StringName(from: "get_key_label_with_modifiers")
+        assert(self._method_get_key_label_with_modifiers_1585896689 != nil)
+        self._method_as_text_keycode_201670096 = StringName(from: "as_text_keycode")
+        assert(self._method_as_text_keycode_201670096 != nil)
+        self._method_as_text_physical_keycode_201670096 = StringName(from: "as_text_physical_keycode")
+        assert(self._method_as_text_physical_keycode_201670096 != nil)
+        self._method_as_text_key_label_201670096 = StringName(from: "as_text_key_label")
+        assert(self._method_as_text_key_label_201670096 != nil)
     }
 
     public func set_pressed(pressed: UInt8)  {
@@ -98,8 +83,13 @@ open class InputEventKey : InputEventWithModifiers {
                 .init(pressed_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pressed_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pressed_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -114,8 +104,13 @@ open class InputEventKey : InputEventWithModifiers {
                 .init(keycode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_keycode_888074362,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_keycode_888074362._native_ptr(),
+                    888074362)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -130,8 +125,13 @@ open class InputEventKey : InputEventWithModifiers {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_keycode_1585896689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_keycode_1585896689._native_ptr(),
+                    1585896689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -146,8 +146,13 @@ open class InputEventKey : InputEventWithModifiers {
                 .init(physical_keycode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_physical_keycode_888074362,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_physical_keycode_888074362._native_ptr(),
+                    888074362)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -162,8 +167,13 @@ open class InputEventKey : InputEventWithModifiers {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_physical_keycode_1585896689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_physical_keycode_1585896689._native_ptr(),
+                    1585896689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -178,8 +188,13 @@ open class InputEventKey : InputEventWithModifiers {
                 .init(key_label_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_key_label_888074362,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_key_label_888074362._native_ptr(),
+                    888074362)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -194,8 +209,13 @@ open class InputEventKey : InputEventWithModifiers {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_key_label_1585896689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_key_label_1585896689._native_ptr(),
+                    1585896689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -210,8 +230,13 @@ open class InputEventKey : InputEventWithModifiers {
                 .init(unicode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_unicode_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_unicode_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -227,8 +252,13 @@ open class InputEventKey : InputEventWithModifiers {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_unicode_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_unicode_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -243,8 +273,13 @@ open class InputEventKey : InputEventWithModifiers {
                 .init(echo_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_echo_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_echo_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -259,8 +294,13 @@ open class InputEventKey : InputEventWithModifiers {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_keycode_with_modifiers_1585896689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_keycode_with_modifiers_1585896689._native_ptr(),
+                    1585896689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -275,8 +315,13 @@ open class InputEventKey : InputEventWithModifiers {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_physical_keycode_with_modifiers_1585896689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_physical_keycode_with_modifiers_1585896689._native_ptr(),
+                    1585896689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -291,8 +336,13 @@ open class InputEventKey : InputEventWithModifiers {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_key_label_with_modifiers_1585896689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_key_label_with_modifiers_1585896689._native_ptr(),
+                    1585896689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -307,8 +357,13 @@ open class InputEventKey : InputEventWithModifiers {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_as_text_keycode_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_as_text_keycode_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -323,8 +378,13 @@ open class InputEventKey : InputEventWithModifiers {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_as_text_physical_keycode_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_as_text_physical_keycode_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -339,8 +399,13 @@ open class InputEventKey : InputEventWithModifiers {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_as_text_key_label_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_as_text_key_label_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

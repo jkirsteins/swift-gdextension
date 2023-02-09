@@ -11,31 +11,28 @@ open class RDPipelineSpecializationConstant : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_RDPipelineSpecializationConstant }
 
-    static var _method_set_value_1114965689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_value_1214101251: GDExtensionMethodBindPtr! = nil
-    static var _method_set_constant_id_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_constant_id_3905245786: GDExtensionMethodBindPtr! = nil
+    static var _method_set_value_1114965689: StringName! = nil
+    static var _method_get_value_1214101251: StringName! = nil
+    static var _method_set_constant_id_1286410249: StringName! = nil
+    static var _method_get_constant_id_3905245786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_RDPipelineSpecializationConstant == nil)
         __godot_name_RDPipelineSpecializationConstant = StringName(from: "RDPipelineSpecializationConstant")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_value_1114965689_name = StringName(from: "set_value")
-        self._method_set_value_1114965689 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineSpecializationConstant._native_ptr(), _method_set_value_1114965689_name._native_ptr(), 1114965689)
-        assert(RDPipelineSpecializationConstant._method_set_value_1114965689 != nil)
-        let _method_get_value_1214101251_name = StringName(from: "get_value")
-        self._method_get_value_1214101251 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineSpecializationConstant._native_ptr(), _method_get_value_1214101251_name._native_ptr(), 1214101251)
-        assert(RDPipelineSpecializationConstant._method_get_value_1214101251 != nil)
-        let _method_set_constant_id_1286410249_name = StringName(from: "set_constant_id")
-        self._method_set_constant_id_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineSpecializationConstant._native_ptr(), _method_set_constant_id_1286410249_name._native_ptr(), 1286410249)
-        assert(RDPipelineSpecializationConstant._method_set_constant_id_1286410249 != nil)
-        let _method_get_constant_id_3905245786_name = StringName(from: "get_constant_id")
-        self._method_get_constant_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDPipelineSpecializationConstant._native_ptr(), _method_get_constant_id_3905245786_name._native_ptr(), 3905245786)
-        assert(RDPipelineSpecializationConstant._method_get_constant_id_3905245786 != nil)
+        self._method_set_value_1114965689 = StringName(from: "set_value")
+        assert(self._method_set_value_1114965689 != nil)
+        self._method_get_value_1214101251 = StringName(from: "get_value")
+        assert(self._method_get_value_1214101251 != nil)
+        self._method_set_constant_id_1286410249 = StringName(from: "set_constant_id")
+        assert(self._method_set_constant_id_1286410249 != nil)
+        self._method_get_constant_id_3905245786 = StringName(from: "get_constant_id")
+        assert(self._method_get_constant_id_3905245786 != nil)
     }
 
     public func set_value(value: Variant)  {
@@ -46,8 +43,13 @@ open class RDPipelineSpecializationConstant : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_value_1114965689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_value_1114965689._native_ptr(),
+                    1114965689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -61,8 +63,13 @@ open class RDPipelineSpecializationConstant : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_value_1214101251,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_value_1214101251._native_ptr(),
+                    1214101251)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -77,8 +84,13 @@ open class RDPipelineSpecializationConstant : RefCounted {
                 .init(constant_id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_constant_id_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_constant_id_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -94,8 +106,13 @@ open class RDPipelineSpecializationConstant : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_constant_id_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_constant_id_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

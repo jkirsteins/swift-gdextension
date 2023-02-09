@@ -23,70 +23,63 @@ open class EditorVCSInterface : Object {
 
     public override class var __godot_name: StringName { __godot_name_EditorVCSInterface }
 
-    static var _method__initialize_0: GDExtensionMethodBindPtr! = nil
-    static var _method__set_credentials_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_modified_files_data_0: GDExtensionMethodBindPtr! = nil
-    static var _method__stage_file_0: GDExtensionMethodBindPtr! = nil
-    static var _method__unstage_file_0: GDExtensionMethodBindPtr! = nil
-    static var _method__discard_file_0: GDExtensionMethodBindPtr! = nil
-    static var _method__commit_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_diff_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shut_down_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_vcs_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_previous_commits_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_branch_list_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_remotes_0: GDExtensionMethodBindPtr! = nil
-    static var _method__create_branch_0: GDExtensionMethodBindPtr! = nil
-    static var _method__remove_branch_0: GDExtensionMethodBindPtr! = nil
-    static var _method__create_remote_0: GDExtensionMethodBindPtr! = nil
-    static var _method__remove_remote_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_current_branch_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__checkout_branch_0: GDExtensionMethodBindPtr! = nil
-    static var _method__pull_0: GDExtensionMethodBindPtr! = nil
-    static var _method__push_0: GDExtensionMethodBindPtr! = nil
-    static var _method__fetch_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_line_diff_0: GDExtensionMethodBindPtr! = nil
-    static var _method_create_diff_line_2901184053: GDExtensionMethodBindPtr! = nil
-    static var _method_create_diff_hunk_3784842090: GDExtensionMethodBindPtr! = nil
-    static var _method_create_diff_file_2723227684: GDExtensionMethodBindPtr! = nil
-    static var _method_create_commit_1075983584: GDExtensionMethodBindPtr! = nil
-    static var _method_create_status_file_1083471673: GDExtensionMethodBindPtr! = nil
-    static var _method_add_diff_hunks_into_diff_file_4015243225: GDExtensionMethodBindPtr! = nil
-    static var _method_add_line_diffs_into_diff_hunk_4015243225: GDExtensionMethodBindPtr! = nil
-    static var _method_popup_error_83702148: GDExtensionMethodBindPtr! = nil
+    static var _method__initialize_0: StringName! = nil
+    static var _method__set_credentials_0: StringName! = nil
+    static var _method__get_modified_files_data_0: StringName! = nil
+    static var _method__stage_file_0: StringName! = nil
+    static var _method__unstage_file_0: StringName! = nil
+    static var _method__discard_file_0: StringName! = nil
+    static var _method__commit_0: StringName! = nil
+    static var _method__get_diff_0: StringName! = nil
+    static var _method__shut_down_0: StringName! = nil
+    static var _method__get_vcs_name_0: StringName! = nil
+    static var _method__get_previous_commits_0: StringName! = nil
+    static var _method__get_branch_list_0: StringName! = nil
+    static var _method__get_remotes_0: StringName! = nil
+    static var _method__create_branch_0: StringName! = nil
+    static var _method__remove_branch_0: StringName! = nil
+    static var _method__create_remote_0: StringName! = nil
+    static var _method__remove_remote_0: StringName! = nil
+    static var _method__get_current_branch_name_0: StringName! = nil
+    static var _method__checkout_branch_0: StringName! = nil
+    static var _method__pull_0: StringName! = nil
+    static var _method__push_0: StringName! = nil
+    static var _method__fetch_0: StringName! = nil
+    static var _method__get_line_diff_0: StringName! = nil
+    static var _method_create_diff_line_2901184053: StringName! = nil
+    static var _method_create_diff_hunk_3784842090: StringName! = nil
+    static var _method_create_diff_file_2723227684: StringName! = nil
+    static var _method_create_commit_1075983584: StringName! = nil
+    static var _method_create_status_file_1083471673: StringName! = nil
+    static var _method_add_diff_hunks_into_diff_file_4015243225: StringName! = nil
+    static var _method_add_line_diffs_into_diff_hunk_4015243225: StringName! = nil
+    static var _method_popup_error_83702148: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorVCSInterface == nil)
         __godot_name_EditorVCSInterface = StringName(from: "EditorVCSInterface")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_create_diff_line_2901184053_name = StringName(from: "create_diff_line")
-        self._method_create_diff_line_2901184053 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorVCSInterface._native_ptr(), _method_create_diff_line_2901184053_name._native_ptr(), 2901184053)
-        assert(EditorVCSInterface._method_create_diff_line_2901184053 != nil)
-        let _method_create_diff_hunk_3784842090_name = StringName(from: "create_diff_hunk")
-        self._method_create_diff_hunk_3784842090 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorVCSInterface._native_ptr(), _method_create_diff_hunk_3784842090_name._native_ptr(), 3784842090)
-        assert(EditorVCSInterface._method_create_diff_hunk_3784842090 != nil)
-        let _method_create_diff_file_2723227684_name = StringName(from: "create_diff_file")
-        self._method_create_diff_file_2723227684 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorVCSInterface._native_ptr(), _method_create_diff_file_2723227684_name._native_ptr(), 2723227684)
-        assert(EditorVCSInterface._method_create_diff_file_2723227684 != nil)
-        let _method_create_commit_1075983584_name = StringName(from: "create_commit")
-        self._method_create_commit_1075983584 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorVCSInterface._native_ptr(), _method_create_commit_1075983584_name._native_ptr(), 1075983584)
-        assert(EditorVCSInterface._method_create_commit_1075983584 != nil)
-        let _method_create_status_file_1083471673_name = StringName(from: "create_status_file")
-        self._method_create_status_file_1083471673 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorVCSInterface._native_ptr(), _method_create_status_file_1083471673_name._native_ptr(), 1083471673)
-        assert(EditorVCSInterface._method_create_status_file_1083471673 != nil)
-        let _method_add_diff_hunks_into_diff_file_4015243225_name = StringName(from: "add_diff_hunks_into_diff_file")
-        self._method_add_diff_hunks_into_diff_file_4015243225 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorVCSInterface._native_ptr(), _method_add_diff_hunks_into_diff_file_4015243225_name._native_ptr(), 4015243225)
-        assert(EditorVCSInterface._method_add_diff_hunks_into_diff_file_4015243225 != nil)
-        let _method_add_line_diffs_into_diff_hunk_4015243225_name = StringName(from: "add_line_diffs_into_diff_hunk")
-        self._method_add_line_diffs_into_diff_hunk_4015243225 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorVCSInterface._native_ptr(), _method_add_line_diffs_into_diff_hunk_4015243225_name._native_ptr(), 4015243225)
-        assert(EditorVCSInterface._method_add_line_diffs_into_diff_hunk_4015243225 != nil)
-        let _method_popup_error_83702148_name = StringName(from: "popup_error")
-        self._method_popup_error_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorVCSInterface._native_ptr(), _method_popup_error_83702148_name._native_ptr(), 83702148)
-        assert(EditorVCSInterface._method_popup_error_83702148 != nil)
+        self._method_create_diff_line_2901184053 = StringName(from: "create_diff_line")
+        assert(self._method_create_diff_line_2901184053 != nil)
+        self._method_create_diff_hunk_3784842090 = StringName(from: "create_diff_hunk")
+        assert(self._method_create_diff_hunk_3784842090 != nil)
+        self._method_create_diff_file_2723227684 = StringName(from: "create_diff_file")
+        assert(self._method_create_diff_file_2723227684 != nil)
+        self._method_create_commit_1075983584 = StringName(from: "create_commit")
+        assert(self._method_create_commit_1075983584 != nil)
+        self._method_create_status_file_1083471673 = StringName(from: "create_status_file")
+        assert(self._method_create_status_file_1083471673 != nil)
+        self._method_add_diff_hunks_into_diff_file_4015243225 = StringName(from: "add_diff_hunks_into_diff_file")
+        assert(self._method_add_diff_hunks_into_diff_file_4015243225 != nil)
+        self._method_add_line_diffs_into_diff_hunk_4015243225 = StringName(from: "add_line_diffs_into_diff_hunk")
+        assert(self._method_add_line_diffs_into_diff_hunk_4015243225 != nil)
+        self._method_popup_error_83702148 = StringName(from: "popup_error")
+        assert(self._method_popup_error_83702148 != nil)
     }
 
     public func _initialize(project_path: godot.String) -> UInt8 {
@@ -99,12 +92,7 @@ open class EditorVCSInterface : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__initialize_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _set_credentials(username: godot.String, password: godot.String, ssh_public_key_path: godot.String, ssh_private_key_path: godot.String, ssh_passphrase: godot.String)  {
@@ -119,12 +107,7 @@ open class EditorVCSInterface : Object {
                 .init(username_native), .init(password_native), .init(ssh_public_key_path_native), .init(ssh_private_key_path_native), .init(ssh_passphrase_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__set_credentials_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _get_modified_files_data() -> [Dictionary] {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -134,12 +117,7 @@ open class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_modified_files_data_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return [Dictionary](godot: __resPtr.pointee)
     }
     public func _stage_file(file_path: godot.String)  {
@@ -150,12 +128,7 @@ open class EditorVCSInterface : Object {
                 .init(file_path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__stage_file_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _unstage_file(file_path: godot.String)  {
         let file_path_native = file_path._native_ptr()
@@ -165,12 +138,7 @@ open class EditorVCSInterface : Object {
                 .init(file_path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__unstage_file_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _discard_file(file_path: godot.String)  {
         let file_path_native = file_path._native_ptr()
@@ -180,12 +148,7 @@ open class EditorVCSInterface : Object {
                 .init(file_path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__discard_file_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _commit(msg: godot.String)  {
         let msg_native = msg._native_ptr()
@@ -195,12 +158,7 @@ open class EditorVCSInterface : Object {
                 .init(msg_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__commit_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _get_diff(identifier: godot.String, area: Int64) -> [Dictionary] {
         withUnsafePointer(to: area) { area_native in
@@ -212,12 +170,7 @@ open class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_diff_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return [Dictionary](godot: __resPtr.pointee)
         }
     }
@@ -230,12 +183,7 @@ open class EditorVCSInterface : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shut_down_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _get_vcs_name() -> godot.String {
@@ -246,12 +194,7 @@ open class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_vcs_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _get_previous_commits(max_commits: Int64) -> [Dictionary] {
@@ -263,12 +206,7 @@ open class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_previous_commits_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return [Dictionary](godot: __resPtr.pointee)
         }
     }
@@ -280,12 +218,7 @@ open class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_branch_list_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return [godot.String](godot: __resPtr.pointee)
     }
     public func _get_remotes() -> [godot.String] {
@@ -296,12 +229,7 @@ open class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_remotes_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return [godot.String](godot: __resPtr.pointee)
     }
     public func _create_branch(branch_name: godot.String)  {
@@ -312,12 +240,7 @@ open class EditorVCSInterface : Object {
                 .init(branch_name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__create_branch_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _remove_branch(branch_name: godot.String)  {
         let branch_name_native = branch_name._native_ptr()
@@ -327,12 +250,7 @@ open class EditorVCSInterface : Object {
                 .init(branch_name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__remove_branch_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _create_remote(remote_name: godot.String, remote_url: godot.String)  {
         let remote_url_native = remote_url._native_ptr()
@@ -343,12 +261,7 @@ open class EditorVCSInterface : Object {
                 .init(remote_name_native), .init(remote_url_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__create_remote_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _remove_remote(remote_name: godot.String)  {
         let remote_name_native = remote_name._native_ptr()
@@ -358,12 +271,7 @@ open class EditorVCSInterface : Object {
                 .init(remote_name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__remove_remote_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _get_current_branch_name() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -373,12 +281,7 @@ open class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_current_branch_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _checkout_branch(branch_name: godot.String) -> UInt8 {
@@ -391,12 +294,7 @@ open class EditorVCSInterface : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__checkout_branch_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _pull(remote: godot.String)  {
@@ -407,12 +305,7 @@ open class EditorVCSInterface : Object {
                 .init(remote_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__pull_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _push(remote: godot.String, force: UInt8)  {
         withUnsafePointer(to: force) { force_native in
@@ -423,12 +316,7 @@ open class EditorVCSInterface : Object {
                 .init(remote_native), .init(force_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__push_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _fetch(remote: godot.String)  {
@@ -439,12 +327,7 @@ open class EditorVCSInterface : Object {
                 .init(remote_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__fetch_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _get_line_diff(file_path: godot.String, text: godot.String) -> [Dictionary] {
         let text_native = text._native_ptr()
@@ -456,12 +339,7 @@ open class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_line_diff_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return [Dictionary](godot: __resPtr.pointee)
     }
     public func create_diff_line(new_line_no: Int64, old_line_no: Int64, content: godot.String, status: godot.String) -> Dictionary {
@@ -476,8 +354,13 @@ open class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_diff_line_2901184053,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_diff_line_2901184053._native_ptr(),
+                    2901184053)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -498,8 +381,13 @@ open class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_diff_hunk_3784842090,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_diff_hunk_3784842090._native_ptr(),
+                    3784842090)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -520,8 +408,13 @@ open class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_diff_file_2723227684,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_diff_file_2723227684._native_ptr(),
+                    2723227684)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -541,8 +434,13 @@ open class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_commit_1075983584,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_commit_1075983584._native_ptr(),
+                    1075983584)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -562,8 +460,13 @@ open class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_status_file_1083471673,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_status_file_1083471673._native_ptr(),
+                    1083471673)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -582,8 +485,13 @@ open class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_diff_hunks_into_diff_file_4015243225,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_diff_hunks_into_diff_file_4015243225._native_ptr(),
+                    4015243225)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -600,8 +508,13 @@ open class EditorVCSInterface : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_line_diffs_into_diff_hunk_4015243225,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_line_diffs_into_diff_hunk_4015243225._native_ptr(),
+                    4015243225)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -616,8 +529,13 @@ open class EditorVCSInterface : Object {
                 .init(msg_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_popup_error_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_popup_error_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

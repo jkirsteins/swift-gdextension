@@ -13,27 +13,25 @@ open class VisibleOnScreenNotifier2D : Node2D {
 
     public override class var __godot_name: StringName { __godot_name_VisibleOnScreenNotifier2D }
 
-    static var _method_set_rect_2046264180: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rect_1639390495: GDExtensionMethodBindPtr! = nil
-    static var _method_is_on_screen_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_rect_2046264180: StringName! = nil
+    static var _method_get_rect_1639390495: StringName! = nil
+    static var _method_is_on_screen_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisibleOnScreenNotifier2D == nil)
         __godot_name_VisibleOnScreenNotifier2D = StringName(from: "VisibleOnScreenNotifier2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_rect_2046264180_name = StringName(from: "set_rect")
-        self._method_set_rect_2046264180 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisibleOnScreenNotifier2D._native_ptr(), _method_set_rect_2046264180_name._native_ptr(), 2046264180)
-        assert(VisibleOnScreenNotifier2D._method_set_rect_2046264180 != nil)
-        let _method_get_rect_1639390495_name = StringName(from: "get_rect")
-        self._method_get_rect_1639390495 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisibleOnScreenNotifier2D._native_ptr(), _method_get_rect_1639390495_name._native_ptr(), 1639390495)
-        assert(VisibleOnScreenNotifier2D._method_get_rect_1639390495 != nil)
-        let _method_is_on_screen_36873697_name = StringName(from: "is_on_screen")
-        self._method_is_on_screen_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisibleOnScreenNotifier2D._native_ptr(), _method_is_on_screen_36873697_name._native_ptr(), 36873697)
-        assert(VisibleOnScreenNotifier2D._method_is_on_screen_36873697 != nil)
+        self._method_set_rect_2046264180 = StringName(from: "set_rect")
+        assert(self._method_set_rect_2046264180 != nil)
+        self._method_get_rect_1639390495 = StringName(from: "get_rect")
+        assert(self._method_get_rect_1639390495 != nil)
+        self._method_is_on_screen_36873697 = StringName(from: "is_on_screen")
+        assert(self._method_is_on_screen_36873697 != nil)
     }
 
     public func set_rect(rect: Rect2)  {
@@ -44,8 +42,13 @@ open class VisibleOnScreenNotifier2D : Node2D {
                 .init(rect_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_rect_2046264180,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_rect_2046264180._native_ptr(),
+                    2046264180)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -59,8 +62,13 @@ open class VisibleOnScreenNotifier2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rect_1639390495,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rect_1639390495._native_ptr(),
+                    1639390495)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -76,8 +84,13 @@ open class VisibleOnScreenNotifier2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_on_screen_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_on_screen_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

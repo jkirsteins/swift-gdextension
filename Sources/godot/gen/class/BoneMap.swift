@@ -13,35 +13,31 @@ open class BoneMap : Resource {
 
     public override class var __godot_name: StringName { __godot_name_BoneMap }
 
-    static var _method_get_profile_4291782652: GDExtensionMethodBindPtr! = nil
-    static var _method_set_profile_3870374136: GDExtensionMethodBindPtr! = nil
-    static var _method_get_skeleton_bone_name_1965194235: GDExtensionMethodBindPtr! = nil
-    static var _method_set_skeleton_bone_name_3740211285: GDExtensionMethodBindPtr! = nil
-    static var _method_find_profile_bone_name_1965194235: GDExtensionMethodBindPtr! = nil
+    static var _method_get_profile_4291782652: StringName! = nil
+    static var _method_set_profile_3870374136: StringName! = nil
+    static var _method_get_skeleton_bone_name_1965194235: StringName! = nil
+    static var _method_set_skeleton_bone_name_3740211285: StringName! = nil
+    static var _method_find_profile_bone_name_1965194235: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_BoneMap == nil)
         __godot_name_BoneMap = StringName(from: "BoneMap")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_profile_4291782652_name = StringName(from: "get_profile")
-        self._method_get_profile_4291782652 = self.interface.pointee.classdb_get_method_bind(__godot_name_BoneMap._native_ptr(), _method_get_profile_4291782652_name._native_ptr(), 4291782652)
-        assert(BoneMap._method_get_profile_4291782652 != nil)
-        let _method_set_profile_3870374136_name = StringName(from: "set_profile")
-        self._method_set_profile_3870374136 = self.interface.pointee.classdb_get_method_bind(__godot_name_BoneMap._native_ptr(), _method_set_profile_3870374136_name._native_ptr(), 3870374136)
-        assert(BoneMap._method_set_profile_3870374136 != nil)
-        let _method_get_skeleton_bone_name_1965194235_name = StringName(from: "get_skeleton_bone_name")
-        self._method_get_skeleton_bone_name_1965194235 = self.interface.pointee.classdb_get_method_bind(__godot_name_BoneMap._native_ptr(), _method_get_skeleton_bone_name_1965194235_name._native_ptr(), 1965194235)
-        assert(BoneMap._method_get_skeleton_bone_name_1965194235 != nil)
-        let _method_set_skeleton_bone_name_3740211285_name = StringName(from: "set_skeleton_bone_name")
-        self._method_set_skeleton_bone_name_3740211285 = self.interface.pointee.classdb_get_method_bind(__godot_name_BoneMap._native_ptr(), _method_set_skeleton_bone_name_3740211285_name._native_ptr(), 3740211285)
-        assert(BoneMap._method_set_skeleton_bone_name_3740211285 != nil)
-        let _method_find_profile_bone_name_1965194235_name = StringName(from: "find_profile_bone_name")
-        self._method_find_profile_bone_name_1965194235 = self.interface.pointee.classdb_get_method_bind(__godot_name_BoneMap._native_ptr(), _method_find_profile_bone_name_1965194235_name._native_ptr(), 1965194235)
-        assert(BoneMap._method_find_profile_bone_name_1965194235 != nil)
+        self._method_get_profile_4291782652 = StringName(from: "get_profile")
+        assert(self._method_get_profile_4291782652 != nil)
+        self._method_set_profile_3870374136 = StringName(from: "set_profile")
+        assert(self._method_set_profile_3870374136 != nil)
+        self._method_get_skeleton_bone_name_1965194235 = StringName(from: "get_skeleton_bone_name")
+        assert(self._method_get_skeleton_bone_name_1965194235 != nil)
+        self._method_set_skeleton_bone_name_3740211285 = StringName(from: "set_skeleton_bone_name")
+        assert(self._method_set_skeleton_bone_name_3740211285 != nil)
+        self._method_find_profile_bone_name_1965194235 = StringName(from: "find_profile_bone_name")
+        assert(self._method_find_profile_bone_name_1965194235 != nil)
     }
 
     public func get_profile() -> SkeletonProfile {
@@ -52,8 +48,13 @@ open class BoneMap : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_profile_4291782652,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_profile_4291782652._native_ptr(),
+                    4291782652)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -68,8 +69,13 @@ open class BoneMap : Resource {
                 .init(profile_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_profile_3870374136,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_profile_3870374136._native_ptr(),
+                    3870374136)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -84,8 +90,13 @@ open class BoneMap : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_skeleton_bone_name_1965194235,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_skeleton_bone_name_1965194235._native_ptr(),
+                    1965194235)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -101,8 +112,13 @@ open class BoneMap : Resource {
                 .init(profile_bone_name_native), .init(skeleton_bone_name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_skeleton_bone_name_3740211285,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_skeleton_bone_name_3740211285._native_ptr(),
+                    3740211285)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -117,8 +133,13 @@ open class BoneMap : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_find_profile_bone_name_1965194235,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_find_profile_bone_name_1965194235._native_ptr(),
+                    1965194235)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

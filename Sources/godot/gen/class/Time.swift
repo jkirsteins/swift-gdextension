@@ -41,99 +41,79 @@ open class Time : Object {
 
     public override class var __godot_name: StringName { __godot_name_Time }
 
-    static var _method_get_datetime_dict_from_unix_time_3485342025: GDExtensionMethodBindPtr! = nil
-    static var _method_get_date_dict_from_unix_time_3485342025: GDExtensionMethodBindPtr! = nil
-    static var _method_get_time_dict_from_unix_time_3485342025: GDExtensionMethodBindPtr! = nil
-    static var _method_get_datetime_string_from_unix_time_2311239925: GDExtensionMethodBindPtr! = nil
-    static var _method_get_date_string_from_unix_time_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_time_string_from_unix_time_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_datetime_dict_from_datetime_string_3253569256: GDExtensionMethodBindPtr! = nil
-    static var _method_get_datetime_string_from_datetime_dict_1898123706: GDExtensionMethodBindPtr! = nil
-    static var _method_get_unix_time_from_datetime_dict_3021115443: GDExtensionMethodBindPtr! = nil
-    static var _method_get_unix_time_from_datetime_string_1321353865: GDExtensionMethodBindPtr! = nil
-    static var _method_get_offset_string_from_offset_minutes_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_datetime_dict_from_system_205769976: GDExtensionMethodBindPtr! = nil
-    static var _method_get_date_dict_from_system_205769976: GDExtensionMethodBindPtr! = nil
-    static var _method_get_time_dict_from_system_205769976: GDExtensionMethodBindPtr! = nil
-    static var _method_get_datetime_string_from_system_1136425492: GDExtensionMethodBindPtr! = nil
-    static var _method_get_date_string_from_system_1162154673: GDExtensionMethodBindPtr! = nil
-    static var _method_get_time_string_from_system_1162154673: GDExtensionMethodBindPtr! = nil
-    static var _method_get_time_zone_from_system_3102165223: GDExtensionMethodBindPtr! = nil
-    static var _method_get_unix_time_from_system_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_ticks_msec_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_ticks_usec_3905245786: GDExtensionMethodBindPtr! = nil
+    static var _method_get_datetime_dict_from_unix_time_3485342025: StringName! = nil
+    static var _method_get_date_dict_from_unix_time_3485342025: StringName! = nil
+    static var _method_get_time_dict_from_unix_time_3485342025: StringName! = nil
+    static var _method_get_datetime_string_from_unix_time_2311239925: StringName! = nil
+    static var _method_get_date_string_from_unix_time_844755477: StringName! = nil
+    static var _method_get_time_string_from_unix_time_844755477: StringName! = nil
+    static var _method_get_datetime_dict_from_datetime_string_3253569256: StringName! = nil
+    static var _method_get_datetime_string_from_datetime_dict_1898123706: StringName! = nil
+    static var _method_get_unix_time_from_datetime_dict_3021115443: StringName! = nil
+    static var _method_get_unix_time_from_datetime_string_1321353865: StringName! = nil
+    static var _method_get_offset_string_from_offset_minutes_844755477: StringName! = nil
+    static var _method_get_datetime_dict_from_system_205769976: StringName! = nil
+    static var _method_get_date_dict_from_system_205769976: StringName! = nil
+    static var _method_get_time_dict_from_system_205769976: StringName! = nil
+    static var _method_get_datetime_string_from_system_1136425492: StringName! = nil
+    static var _method_get_date_string_from_system_1162154673: StringName! = nil
+    static var _method_get_time_string_from_system_1162154673: StringName! = nil
+    static var _method_get_time_zone_from_system_3102165223: StringName! = nil
+    static var _method_get_unix_time_from_system_1740695150: StringName! = nil
+    static var _method_get_ticks_msec_3905245786: StringName! = nil
+    static var _method_get_ticks_usec_3905245786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Time == nil)
         __godot_name_Time = StringName(from: "Time")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_datetime_dict_from_unix_time_3485342025_name = StringName(from: "get_datetime_dict_from_unix_time")
-        self._method_get_datetime_dict_from_unix_time_3485342025 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_datetime_dict_from_unix_time_3485342025_name._native_ptr(), 3485342025)
-        assert(Time._method_get_datetime_dict_from_unix_time_3485342025 != nil)
-        let _method_get_date_dict_from_unix_time_3485342025_name = StringName(from: "get_date_dict_from_unix_time")
-        self._method_get_date_dict_from_unix_time_3485342025 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_date_dict_from_unix_time_3485342025_name._native_ptr(), 3485342025)
-        assert(Time._method_get_date_dict_from_unix_time_3485342025 != nil)
-        let _method_get_time_dict_from_unix_time_3485342025_name = StringName(from: "get_time_dict_from_unix_time")
-        self._method_get_time_dict_from_unix_time_3485342025 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_time_dict_from_unix_time_3485342025_name._native_ptr(), 3485342025)
-        assert(Time._method_get_time_dict_from_unix_time_3485342025 != nil)
-        let _method_get_datetime_string_from_unix_time_2311239925_name = StringName(from: "get_datetime_string_from_unix_time")
-        self._method_get_datetime_string_from_unix_time_2311239925 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_datetime_string_from_unix_time_2311239925_name._native_ptr(), 2311239925)
-        assert(Time._method_get_datetime_string_from_unix_time_2311239925 != nil)
-        let _method_get_date_string_from_unix_time_844755477_name = StringName(from: "get_date_string_from_unix_time")
-        self._method_get_date_string_from_unix_time_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_date_string_from_unix_time_844755477_name._native_ptr(), 844755477)
-        assert(Time._method_get_date_string_from_unix_time_844755477 != nil)
-        let _method_get_time_string_from_unix_time_844755477_name = StringName(from: "get_time_string_from_unix_time")
-        self._method_get_time_string_from_unix_time_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_time_string_from_unix_time_844755477_name._native_ptr(), 844755477)
-        assert(Time._method_get_time_string_from_unix_time_844755477 != nil)
-        let _method_get_datetime_dict_from_datetime_string_3253569256_name = StringName(from: "get_datetime_dict_from_datetime_string")
-        self._method_get_datetime_dict_from_datetime_string_3253569256 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_datetime_dict_from_datetime_string_3253569256_name._native_ptr(), 3253569256)
-        assert(Time._method_get_datetime_dict_from_datetime_string_3253569256 != nil)
-        let _method_get_datetime_string_from_datetime_dict_1898123706_name = StringName(from: "get_datetime_string_from_datetime_dict")
-        self._method_get_datetime_string_from_datetime_dict_1898123706 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_datetime_string_from_datetime_dict_1898123706_name._native_ptr(), 1898123706)
-        assert(Time._method_get_datetime_string_from_datetime_dict_1898123706 != nil)
-        let _method_get_unix_time_from_datetime_dict_3021115443_name = StringName(from: "get_unix_time_from_datetime_dict")
-        self._method_get_unix_time_from_datetime_dict_3021115443 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_unix_time_from_datetime_dict_3021115443_name._native_ptr(), 3021115443)
-        assert(Time._method_get_unix_time_from_datetime_dict_3021115443 != nil)
-        let _method_get_unix_time_from_datetime_string_1321353865_name = StringName(from: "get_unix_time_from_datetime_string")
-        self._method_get_unix_time_from_datetime_string_1321353865 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_unix_time_from_datetime_string_1321353865_name._native_ptr(), 1321353865)
-        assert(Time._method_get_unix_time_from_datetime_string_1321353865 != nil)
-        let _method_get_offset_string_from_offset_minutes_844755477_name = StringName(from: "get_offset_string_from_offset_minutes")
-        self._method_get_offset_string_from_offset_minutes_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_offset_string_from_offset_minutes_844755477_name._native_ptr(), 844755477)
-        assert(Time._method_get_offset_string_from_offset_minutes_844755477 != nil)
-        let _method_get_datetime_dict_from_system_205769976_name = StringName(from: "get_datetime_dict_from_system")
-        self._method_get_datetime_dict_from_system_205769976 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_datetime_dict_from_system_205769976_name._native_ptr(), 205769976)
-        assert(Time._method_get_datetime_dict_from_system_205769976 != nil)
-        let _method_get_date_dict_from_system_205769976_name = StringName(from: "get_date_dict_from_system")
-        self._method_get_date_dict_from_system_205769976 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_date_dict_from_system_205769976_name._native_ptr(), 205769976)
-        assert(Time._method_get_date_dict_from_system_205769976 != nil)
-        let _method_get_time_dict_from_system_205769976_name = StringName(from: "get_time_dict_from_system")
-        self._method_get_time_dict_from_system_205769976 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_time_dict_from_system_205769976_name._native_ptr(), 205769976)
-        assert(Time._method_get_time_dict_from_system_205769976 != nil)
-        let _method_get_datetime_string_from_system_1136425492_name = StringName(from: "get_datetime_string_from_system")
-        self._method_get_datetime_string_from_system_1136425492 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_datetime_string_from_system_1136425492_name._native_ptr(), 1136425492)
-        assert(Time._method_get_datetime_string_from_system_1136425492 != nil)
-        let _method_get_date_string_from_system_1162154673_name = StringName(from: "get_date_string_from_system")
-        self._method_get_date_string_from_system_1162154673 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_date_string_from_system_1162154673_name._native_ptr(), 1162154673)
-        assert(Time._method_get_date_string_from_system_1162154673 != nil)
-        let _method_get_time_string_from_system_1162154673_name = StringName(from: "get_time_string_from_system")
-        self._method_get_time_string_from_system_1162154673 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_time_string_from_system_1162154673_name._native_ptr(), 1162154673)
-        assert(Time._method_get_time_string_from_system_1162154673 != nil)
-        let _method_get_time_zone_from_system_3102165223_name = StringName(from: "get_time_zone_from_system")
-        self._method_get_time_zone_from_system_3102165223 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_time_zone_from_system_3102165223_name._native_ptr(), 3102165223)
-        assert(Time._method_get_time_zone_from_system_3102165223 != nil)
-        let _method_get_unix_time_from_system_1740695150_name = StringName(from: "get_unix_time_from_system")
-        self._method_get_unix_time_from_system_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_unix_time_from_system_1740695150_name._native_ptr(), 1740695150)
-        assert(Time._method_get_unix_time_from_system_1740695150 != nil)
-        let _method_get_ticks_msec_3905245786_name = StringName(from: "get_ticks_msec")
-        self._method_get_ticks_msec_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_ticks_msec_3905245786_name._native_ptr(), 3905245786)
-        assert(Time._method_get_ticks_msec_3905245786 != nil)
-        let _method_get_ticks_usec_3905245786_name = StringName(from: "get_ticks_usec")
-        self._method_get_ticks_usec_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Time._native_ptr(), _method_get_ticks_usec_3905245786_name._native_ptr(), 3905245786)
-        assert(Time._method_get_ticks_usec_3905245786 != nil)
+        self._method_get_datetime_dict_from_unix_time_3485342025 = StringName(from: "get_datetime_dict_from_unix_time")
+        assert(self._method_get_datetime_dict_from_unix_time_3485342025 != nil)
+        self._method_get_date_dict_from_unix_time_3485342025 = StringName(from: "get_date_dict_from_unix_time")
+        assert(self._method_get_date_dict_from_unix_time_3485342025 != nil)
+        self._method_get_time_dict_from_unix_time_3485342025 = StringName(from: "get_time_dict_from_unix_time")
+        assert(self._method_get_time_dict_from_unix_time_3485342025 != nil)
+        self._method_get_datetime_string_from_unix_time_2311239925 = StringName(from: "get_datetime_string_from_unix_time")
+        assert(self._method_get_datetime_string_from_unix_time_2311239925 != nil)
+        self._method_get_date_string_from_unix_time_844755477 = StringName(from: "get_date_string_from_unix_time")
+        assert(self._method_get_date_string_from_unix_time_844755477 != nil)
+        self._method_get_time_string_from_unix_time_844755477 = StringName(from: "get_time_string_from_unix_time")
+        assert(self._method_get_time_string_from_unix_time_844755477 != nil)
+        self._method_get_datetime_dict_from_datetime_string_3253569256 = StringName(from: "get_datetime_dict_from_datetime_string")
+        assert(self._method_get_datetime_dict_from_datetime_string_3253569256 != nil)
+        self._method_get_datetime_string_from_datetime_dict_1898123706 = StringName(from: "get_datetime_string_from_datetime_dict")
+        assert(self._method_get_datetime_string_from_datetime_dict_1898123706 != nil)
+        self._method_get_unix_time_from_datetime_dict_3021115443 = StringName(from: "get_unix_time_from_datetime_dict")
+        assert(self._method_get_unix_time_from_datetime_dict_3021115443 != nil)
+        self._method_get_unix_time_from_datetime_string_1321353865 = StringName(from: "get_unix_time_from_datetime_string")
+        assert(self._method_get_unix_time_from_datetime_string_1321353865 != nil)
+        self._method_get_offset_string_from_offset_minutes_844755477 = StringName(from: "get_offset_string_from_offset_minutes")
+        assert(self._method_get_offset_string_from_offset_minutes_844755477 != nil)
+        self._method_get_datetime_dict_from_system_205769976 = StringName(from: "get_datetime_dict_from_system")
+        assert(self._method_get_datetime_dict_from_system_205769976 != nil)
+        self._method_get_date_dict_from_system_205769976 = StringName(from: "get_date_dict_from_system")
+        assert(self._method_get_date_dict_from_system_205769976 != nil)
+        self._method_get_time_dict_from_system_205769976 = StringName(from: "get_time_dict_from_system")
+        assert(self._method_get_time_dict_from_system_205769976 != nil)
+        self._method_get_datetime_string_from_system_1136425492 = StringName(from: "get_datetime_string_from_system")
+        assert(self._method_get_datetime_string_from_system_1136425492 != nil)
+        self._method_get_date_string_from_system_1162154673 = StringName(from: "get_date_string_from_system")
+        assert(self._method_get_date_string_from_system_1162154673 != nil)
+        self._method_get_time_string_from_system_1162154673 = StringName(from: "get_time_string_from_system")
+        assert(self._method_get_time_string_from_system_1162154673 != nil)
+        self._method_get_time_zone_from_system_3102165223 = StringName(from: "get_time_zone_from_system")
+        assert(self._method_get_time_zone_from_system_3102165223 != nil)
+        self._method_get_unix_time_from_system_1740695150 = StringName(from: "get_unix_time_from_system")
+        assert(self._method_get_unix_time_from_system_1740695150 != nil)
+        self._method_get_ticks_msec_3905245786 = StringName(from: "get_ticks_msec")
+        assert(self._method_get_ticks_msec_3905245786 != nil)
+        self._method_get_ticks_usec_3905245786 = StringName(from: "get_ticks_usec")
+        assert(self._method_get_ticks_usec_3905245786 != nil)
     }
 
     public func get_datetime_dict_from_unix_time(unix_time_val: Int64) -> Dictionary {
@@ -145,8 +125,13 @@ open class Time : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_datetime_dict_from_unix_time_3485342025,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_datetime_dict_from_unix_time_3485342025._native_ptr(),
+                    3485342025)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -163,8 +148,13 @@ open class Time : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_date_dict_from_unix_time_3485342025,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_date_dict_from_unix_time_3485342025._native_ptr(),
+                    3485342025)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -181,8 +171,13 @@ open class Time : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_time_dict_from_unix_time_3485342025,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_time_dict_from_unix_time_3485342025._native_ptr(),
+                    3485342025)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -200,8 +195,13 @@ open class Time : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_datetime_string_from_unix_time_2311239925,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_datetime_string_from_unix_time_2311239925._native_ptr(),
+                    2311239925)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -219,8 +219,13 @@ open class Time : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_date_string_from_unix_time_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_date_string_from_unix_time_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -237,8 +242,13 @@ open class Time : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_time_string_from_unix_time_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_time_string_from_unix_time_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -256,8 +266,13 @@ open class Time : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_datetime_dict_from_datetime_string_3253569256,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_datetime_dict_from_datetime_string_3253569256._native_ptr(),
+                    3253569256)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -275,8 +290,13 @@ open class Time : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_datetime_string_from_datetime_dict_1898123706,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_datetime_string_from_datetime_dict_1898123706._native_ptr(),
+                    1898123706)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -294,8 +314,13 @@ open class Time : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_unix_time_from_datetime_dict_3021115443,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_unix_time_from_datetime_dict_3021115443._native_ptr(),
+                    3021115443)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -312,8 +337,13 @@ open class Time : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_unix_time_from_datetime_string_1321353865,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_unix_time_from_datetime_string_1321353865._native_ptr(),
+                    1321353865)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -329,8 +359,13 @@ open class Time : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_offset_string_from_offset_minutes_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_offset_string_from_offset_minutes_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -347,8 +382,13 @@ open class Time : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_datetime_dict_from_system_205769976,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_datetime_dict_from_system_205769976._native_ptr(),
+                    205769976)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -365,8 +405,13 @@ open class Time : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_date_dict_from_system_205769976,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_date_dict_from_system_205769976._native_ptr(),
+                    205769976)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -383,8 +428,13 @@ open class Time : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_time_dict_from_system_205769976,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_time_dict_from_system_205769976._native_ptr(),
+                    205769976)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -402,8 +452,13 @@ open class Time : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_datetime_string_from_system_1136425492,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_datetime_string_from_system_1136425492._native_ptr(),
+                    1136425492)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -421,8 +476,13 @@ open class Time : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_date_string_from_system_1162154673,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_date_string_from_system_1162154673._native_ptr(),
+                    1162154673)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -439,8 +499,13 @@ open class Time : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_time_string_from_system_1162154673,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_time_string_from_system_1162154673._native_ptr(),
+                    1162154673)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -456,8 +521,13 @@ open class Time : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_time_zone_from_system_3102165223,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_time_zone_from_system_3102165223._native_ptr(),
+                    3102165223)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -473,8 +543,13 @@ open class Time : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_unix_time_from_system_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_unix_time_from_system_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -490,8 +565,13 @@ open class Time : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_ticks_msec_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_ticks_msec_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -507,8 +587,13 @@ open class Time : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_ticks_usec_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_ticks_usec_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

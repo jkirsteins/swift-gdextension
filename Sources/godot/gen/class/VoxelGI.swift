@@ -23,55 +23,46 @@ open class VoxelGI : VisualInstance3D {
 
     public override class var __godot_name: StringName { __godot_name_VoxelGI }
 
-    static var _method_set_probe_data_1637849675: GDExtensionMethodBindPtr! = nil
-    static var _method_get_probe_data_1730645405: GDExtensionMethodBindPtr! = nil
-    static var _method_set_subdiv_2240898472: GDExtensionMethodBindPtr! = nil
-    static var _method_get_subdiv_4261647950: GDExtensionMethodBindPtr! = nil
-    static var _method_set_size_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_camera_attributes_2817810567: GDExtensionMethodBindPtr! = nil
-    static var _method_get_camera_attributes_3921283215: GDExtensionMethodBindPtr! = nil
-    static var _method_bake_2781551026: GDExtensionMethodBindPtr! = nil
-    static var _method_debug_bake_3218959716: GDExtensionMethodBindPtr! = nil
+    static var _method_set_probe_data_1637849675: StringName! = nil
+    static var _method_get_probe_data_1730645405: StringName! = nil
+    static var _method_set_subdiv_2240898472: StringName! = nil
+    static var _method_get_subdiv_4261647950: StringName! = nil
+    static var _method_set_size_3460891852: StringName! = nil
+    static var _method_get_size_3360562783: StringName! = nil
+    static var _method_set_camera_attributes_2817810567: StringName! = nil
+    static var _method_get_camera_attributes_3921283215: StringName! = nil
+    static var _method_bake_2781551026: StringName! = nil
+    static var _method_debug_bake_3218959716: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VoxelGI == nil)
         __godot_name_VoxelGI = StringName(from: "VoxelGI")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_probe_data_1637849675_name = StringName(from: "set_probe_data")
-        self._method_set_probe_data_1637849675 = self.interface.pointee.classdb_get_method_bind(__godot_name_VoxelGI._native_ptr(), _method_set_probe_data_1637849675_name._native_ptr(), 1637849675)
-        assert(VoxelGI._method_set_probe_data_1637849675 != nil)
-        let _method_get_probe_data_1730645405_name = StringName(from: "get_probe_data")
-        self._method_get_probe_data_1730645405 = self.interface.pointee.classdb_get_method_bind(__godot_name_VoxelGI._native_ptr(), _method_get_probe_data_1730645405_name._native_ptr(), 1730645405)
-        assert(VoxelGI._method_get_probe_data_1730645405 != nil)
-        let _method_set_subdiv_2240898472_name = StringName(from: "set_subdiv")
-        self._method_set_subdiv_2240898472 = self.interface.pointee.classdb_get_method_bind(__godot_name_VoxelGI._native_ptr(), _method_set_subdiv_2240898472_name._native_ptr(), 2240898472)
-        assert(VoxelGI._method_set_subdiv_2240898472 != nil)
-        let _method_get_subdiv_4261647950_name = StringName(from: "get_subdiv")
-        self._method_get_subdiv_4261647950 = self.interface.pointee.classdb_get_method_bind(__godot_name_VoxelGI._native_ptr(), _method_get_subdiv_4261647950_name._native_ptr(), 4261647950)
-        assert(VoxelGI._method_get_subdiv_4261647950 != nil)
-        let _method_set_size_3460891852_name = StringName(from: "set_size")
-        self._method_set_size_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_VoxelGI._native_ptr(), _method_set_size_3460891852_name._native_ptr(), 3460891852)
-        assert(VoxelGI._method_set_size_3460891852 != nil)
-        let _method_get_size_3360562783_name = StringName(from: "get_size")
-        self._method_get_size_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_VoxelGI._native_ptr(), _method_get_size_3360562783_name._native_ptr(), 3360562783)
-        assert(VoxelGI._method_get_size_3360562783 != nil)
-        let _method_set_camera_attributes_2817810567_name = StringName(from: "set_camera_attributes")
-        self._method_set_camera_attributes_2817810567 = self.interface.pointee.classdb_get_method_bind(__godot_name_VoxelGI._native_ptr(), _method_set_camera_attributes_2817810567_name._native_ptr(), 2817810567)
-        assert(VoxelGI._method_set_camera_attributes_2817810567 != nil)
-        let _method_get_camera_attributes_3921283215_name = StringName(from: "get_camera_attributes")
-        self._method_get_camera_attributes_3921283215 = self.interface.pointee.classdb_get_method_bind(__godot_name_VoxelGI._native_ptr(), _method_get_camera_attributes_3921283215_name._native_ptr(), 3921283215)
-        assert(VoxelGI._method_get_camera_attributes_3921283215 != nil)
-        let _method_bake_2781551026_name = StringName(from: "bake")
-        self._method_bake_2781551026 = self.interface.pointee.classdb_get_method_bind(__godot_name_VoxelGI._native_ptr(), _method_bake_2781551026_name._native_ptr(), 2781551026)
-        assert(VoxelGI._method_bake_2781551026 != nil)
-        let _method_debug_bake_3218959716_name = StringName(from: "debug_bake")
-        self._method_debug_bake_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_VoxelGI._native_ptr(), _method_debug_bake_3218959716_name._native_ptr(), 3218959716)
-        assert(VoxelGI._method_debug_bake_3218959716 != nil)
+        self._method_set_probe_data_1637849675 = StringName(from: "set_probe_data")
+        assert(self._method_set_probe_data_1637849675 != nil)
+        self._method_get_probe_data_1730645405 = StringName(from: "get_probe_data")
+        assert(self._method_get_probe_data_1730645405 != nil)
+        self._method_set_subdiv_2240898472 = StringName(from: "set_subdiv")
+        assert(self._method_set_subdiv_2240898472 != nil)
+        self._method_get_subdiv_4261647950 = StringName(from: "get_subdiv")
+        assert(self._method_get_subdiv_4261647950 != nil)
+        self._method_set_size_3460891852 = StringName(from: "set_size")
+        assert(self._method_set_size_3460891852 != nil)
+        self._method_get_size_3360562783 = StringName(from: "get_size")
+        assert(self._method_get_size_3360562783 != nil)
+        self._method_set_camera_attributes_2817810567 = StringName(from: "set_camera_attributes")
+        assert(self._method_set_camera_attributes_2817810567 != nil)
+        self._method_get_camera_attributes_3921283215 = StringName(from: "get_camera_attributes")
+        assert(self._method_get_camera_attributes_3921283215 != nil)
+        self._method_bake_2781551026 = StringName(from: "bake")
+        assert(self._method_bake_2781551026 != nil)
+        self._method_debug_bake_3218959716 = StringName(from: "debug_bake")
+        assert(self._method_debug_bake_3218959716 != nil)
     }
 
     public func set_probe_data(data: VoxelGIData)  {
@@ -82,8 +73,13 @@ open class VoxelGI : VisualInstance3D {
                 .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_probe_data_1637849675,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_probe_data_1637849675._native_ptr(),
+                    1637849675)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -97,8 +93,13 @@ open class VoxelGI : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_probe_data_1730645405,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_probe_data_1730645405._native_ptr(),
+                    1730645405)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -113,8 +114,13 @@ open class VoxelGI : VisualInstance3D {
                 .init(subdiv_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_subdiv_2240898472,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_subdiv_2240898472._native_ptr(),
+                    2240898472)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -129,8 +135,13 @@ open class VoxelGI : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_subdiv_4261647950,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_subdiv_4261647950._native_ptr(),
+                    4261647950)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -145,8 +156,13 @@ open class VoxelGI : VisualInstance3D {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_size_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_size_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -160,8 +176,13 @@ open class VoxelGI : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -176,8 +197,13 @@ open class VoxelGI : VisualInstance3D {
                 .init(camera_attributes_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_camera_attributes_2817810567,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_camera_attributes_2817810567._native_ptr(),
+                    2817810567)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -191,8 +217,13 @@ open class VoxelGI : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_camera_attributes_3921283215,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_camera_attributes_3921283215._native_ptr(),
+                    3921283215)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -208,8 +239,13 @@ open class VoxelGI : VisualInstance3D {
                 .init(from_node_native), .init(create_visual_debug_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_bake_2781551026,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_bake_2781551026._native_ptr(),
+                    2781551026)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -223,8 +259,13 @@ open class VoxelGI : VisualInstance3D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_debug_bake_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_debug_bake_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

@@ -11,47 +11,40 @@ open class PolygonPathFinder : Resource {
 
     public override class var __godot_name: StringName { __godot_name_PolygonPathFinder }
 
-    static var _method_setup_3251786936: GDExtensionMethodBindPtr! = nil
-    static var _method_find_path_1562168077: GDExtensionMethodBindPtr! = nil
-    static var _method_get_intersections_3932192302: GDExtensionMethodBindPtr! = nil
-    static var _method_get_closest_point_2656412154: GDExtensionMethodBindPtr! = nil
-    static var _method_is_point_inside_556197845: GDExtensionMethodBindPtr! = nil
-    static var _method_set_point_penalty_1602489585: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_penalty_2339986948: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bounds_1639390495: GDExtensionMethodBindPtr! = nil
+    static var _method_setup_3251786936: StringName! = nil
+    static var _method_find_path_1562168077: StringName! = nil
+    static var _method_get_intersections_3932192302: StringName! = nil
+    static var _method_get_closest_point_2656412154: StringName! = nil
+    static var _method_is_point_inside_556197845: StringName! = nil
+    static var _method_set_point_penalty_1602489585: StringName! = nil
+    static var _method_get_point_penalty_2339986948: StringName! = nil
+    static var _method_get_bounds_1639390495: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PolygonPathFinder == nil)
         __godot_name_PolygonPathFinder = StringName(from: "PolygonPathFinder")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_setup_3251786936_name = StringName(from: "setup")
-        self._method_setup_3251786936 = self.interface.pointee.classdb_get_method_bind(__godot_name_PolygonPathFinder._native_ptr(), _method_setup_3251786936_name._native_ptr(), 3251786936)
-        assert(PolygonPathFinder._method_setup_3251786936 != nil)
-        let _method_find_path_1562168077_name = StringName(from: "find_path")
-        self._method_find_path_1562168077 = self.interface.pointee.classdb_get_method_bind(__godot_name_PolygonPathFinder._native_ptr(), _method_find_path_1562168077_name._native_ptr(), 1562168077)
-        assert(PolygonPathFinder._method_find_path_1562168077 != nil)
-        let _method_get_intersections_3932192302_name = StringName(from: "get_intersections")
-        self._method_get_intersections_3932192302 = self.interface.pointee.classdb_get_method_bind(__godot_name_PolygonPathFinder._native_ptr(), _method_get_intersections_3932192302_name._native_ptr(), 3932192302)
-        assert(PolygonPathFinder._method_get_intersections_3932192302 != nil)
-        let _method_get_closest_point_2656412154_name = StringName(from: "get_closest_point")
-        self._method_get_closest_point_2656412154 = self.interface.pointee.classdb_get_method_bind(__godot_name_PolygonPathFinder._native_ptr(), _method_get_closest_point_2656412154_name._native_ptr(), 2656412154)
-        assert(PolygonPathFinder._method_get_closest_point_2656412154 != nil)
-        let _method_is_point_inside_556197845_name = StringName(from: "is_point_inside")
-        self._method_is_point_inside_556197845 = self.interface.pointee.classdb_get_method_bind(__godot_name_PolygonPathFinder._native_ptr(), _method_is_point_inside_556197845_name._native_ptr(), 556197845)
-        assert(PolygonPathFinder._method_is_point_inside_556197845 != nil)
-        let _method_set_point_penalty_1602489585_name = StringName(from: "set_point_penalty")
-        self._method_set_point_penalty_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_PolygonPathFinder._native_ptr(), _method_set_point_penalty_1602489585_name._native_ptr(), 1602489585)
-        assert(PolygonPathFinder._method_set_point_penalty_1602489585 != nil)
-        let _method_get_point_penalty_2339986948_name = StringName(from: "get_point_penalty")
-        self._method_get_point_penalty_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_PolygonPathFinder._native_ptr(), _method_get_point_penalty_2339986948_name._native_ptr(), 2339986948)
-        assert(PolygonPathFinder._method_get_point_penalty_2339986948 != nil)
-        let _method_get_bounds_1639390495_name = StringName(from: "get_bounds")
-        self._method_get_bounds_1639390495 = self.interface.pointee.classdb_get_method_bind(__godot_name_PolygonPathFinder._native_ptr(), _method_get_bounds_1639390495_name._native_ptr(), 1639390495)
-        assert(PolygonPathFinder._method_get_bounds_1639390495 != nil)
+        self._method_setup_3251786936 = StringName(from: "setup")
+        assert(self._method_setup_3251786936 != nil)
+        self._method_find_path_1562168077 = StringName(from: "find_path")
+        assert(self._method_find_path_1562168077 != nil)
+        self._method_get_intersections_3932192302 = StringName(from: "get_intersections")
+        assert(self._method_get_intersections_3932192302 != nil)
+        self._method_get_closest_point_2656412154 = StringName(from: "get_closest_point")
+        assert(self._method_get_closest_point_2656412154 != nil)
+        self._method_is_point_inside_556197845 = StringName(from: "is_point_inside")
+        assert(self._method_is_point_inside_556197845 != nil)
+        self._method_set_point_penalty_1602489585 = StringName(from: "set_point_penalty")
+        assert(self._method_set_point_penalty_1602489585 != nil)
+        self._method_get_point_penalty_2339986948 = StringName(from: "get_point_penalty")
+        assert(self._method_get_point_penalty_2339986948 != nil)
+        self._method_get_bounds_1639390495 = StringName(from: "get_bounds")
+        assert(self._method_get_bounds_1639390495 != nil)
     }
 
     public func setup(points: PackedVector2Array, connections: PackedInt32Array)  {
@@ -63,8 +56,13 @@ open class PolygonPathFinder : Resource {
                 .init(points_native), .init(connections_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_setup_3251786936,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_setup_3251786936._native_ptr(),
+                    3251786936)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -80,8 +78,13 @@ open class PolygonPathFinder : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_find_path_1562168077,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_find_path_1562168077._native_ptr(),
+                    1562168077)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -98,8 +101,13 @@ open class PolygonPathFinder : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_intersections_3932192302,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_intersections_3932192302._native_ptr(),
+                    3932192302)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -115,8 +123,13 @@ open class PolygonPathFinder : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_closest_point_2656412154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_closest_point_2656412154._native_ptr(),
+                    2656412154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -133,8 +146,13 @@ open class PolygonPathFinder : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_point_inside_556197845,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_point_inside_556197845._native_ptr(),
+                    556197845)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -150,8 +168,13 @@ open class PolygonPathFinder : Resource {
                 .init(idx_native), .init(penalty_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_point_penalty_1602489585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_point_penalty_1602489585._native_ptr(),
+                    1602489585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -169,8 +192,13 @@ open class PolygonPathFinder : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_penalty_2339986948,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_penalty_2339986948._native_ptr(),
+                    2339986948)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -186,8 +214,13 @@ open class PolygonPathFinder : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bounds_1639390495,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bounds_1639390495._native_ptr(),
+                    1639390495)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

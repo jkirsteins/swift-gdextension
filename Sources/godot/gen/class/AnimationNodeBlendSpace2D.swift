@@ -19,123 +19,97 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
 
     public override class var __godot_name: StringName { __godot_name_AnimationNodeBlendSpace2D }
 
-    static var _method_add_blend_point_1533588937: GDExtensionMethodBindPtr! = nil
-    static var _method_set_blend_point_position_163021252: GDExtensionMethodBindPtr! = nil
-    static var _method_get_blend_point_position_2299179447: GDExtensionMethodBindPtr! = nil
-    static var _method_set_blend_point_node_4240341528: GDExtensionMethodBindPtr! = nil
-    static var _method_get_blend_point_node_665599029: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_blend_point_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_blend_point_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_add_triangle_642454959: GDExtensionMethodBindPtr! = nil
-    static var _method_get_triangle_point_50157827: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_triangle_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_triangle_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_min_space_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_min_space_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_max_space_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_max_space_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_snap_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_snap_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_x_label_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_x_label_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_y_label_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_y_label_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_auto_triangles_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_auto_triangles_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_blend_mode_81193520: GDExtensionMethodBindPtr! = nil
-    static var _method_get_blend_mode_1398433632: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_sync_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_using_sync_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_add_blend_point_1533588937: StringName! = nil
+    static var _method_set_blend_point_position_163021252: StringName! = nil
+    static var _method_get_blend_point_position_2299179447: StringName! = nil
+    static var _method_set_blend_point_node_4240341528: StringName! = nil
+    static var _method_get_blend_point_node_665599029: StringName! = nil
+    static var _method_remove_blend_point_1286410249: StringName! = nil
+    static var _method_get_blend_point_count_3905245786: StringName! = nil
+    static var _method_add_triangle_642454959: StringName! = nil
+    static var _method_get_triangle_point_50157827: StringName! = nil
+    static var _method_remove_triangle_1286410249: StringName! = nil
+    static var _method_get_triangle_count_3905245786: StringName! = nil
+    static var _method_set_min_space_743155724: StringName! = nil
+    static var _method_get_min_space_3341600327: StringName! = nil
+    static var _method_set_max_space_743155724: StringName! = nil
+    static var _method_get_max_space_3341600327: StringName! = nil
+    static var _method_set_snap_743155724: StringName! = nil
+    static var _method_get_snap_3341600327: StringName! = nil
+    static var _method_set_x_label_83702148: StringName! = nil
+    static var _method_get_x_label_201670096: StringName! = nil
+    static var _method_set_y_label_83702148: StringName! = nil
+    static var _method_get_y_label_201670096: StringName! = nil
+    static var _method_set_auto_triangles_2586408642: StringName! = nil
+    static var _method_get_auto_triangles_36873697: StringName! = nil
+    static var _method_set_blend_mode_81193520: StringName! = nil
+    static var _method_get_blend_mode_1398433632: StringName! = nil
+    static var _method_set_use_sync_2586408642: StringName! = nil
+    static var _method_is_using_sync_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AnimationNodeBlendSpace2D == nil)
         __godot_name_AnimationNodeBlendSpace2D = StringName(from: "AnimationNodeBlendSpace2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_add_blend_point_1533588937_name = StringName(from: "add_blend_point")
-        self._method_add_blend_point_1533588937 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_add_blend_point_1533588937_name._native_ptr(), 1533588937)
-        assert(AnimationNodeBlendSpace2D._method_add_blend_point_1533588937 != nil)
-        let _method_set_blend_point_position_163021252_name = StringName(from: "set_blend_point_position")
-        self._method_set_blend_point_position_163021252 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_set_blend_point_position_163021252_name._native_ptr(), 163021252)
-        assert(AnimationNodeBlendSpace2D._method_set_blend_point_position_163021252 != nil)
-        let _method_get_blend_point_position_2299179447_name = StringName(from: "get_blend_point_position")
-        self._method_get_blend_point_position_2299179447 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_get_blend_point_position_2299179447_name._native_ptr(), 2299179447)
-        assert(AnimationNodeBlendSpace2D._method_get_blend_point_position_2299179447 != nil)
-        let _method_set_blend_point_node_4240341528_name = StringName(from: "set_blend_point_node")
-        self._method_set_blend_point_node_4240341528 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_set_blend_point_node_4240341528_name._native_ptr(), 4240341528)
-        assert(AnimationNodeBlendSpace2D._method_set_blend_point_node_4240341528 != nil)
-        let _method_get_blend_point_node_665599029_name = StringName(from: "get_blend_point_node")
-        self._method_get_blend_point_node_665599029 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_get_blend_point_node_665599029_name._native_ptr(), 665599029)
-        assert(AnimationNodeBlendSpace2D._method_get_blend_point_node_665599029 != nil)
-        let _method_remove_blend_point_1286410249_name = StringName(from: "remove_blend_point")
-        self._method_remove_blend_point_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_remove_blend_point_1286410249_name._native_ptr(), 1286410249)
-        assert(AnimationNodeBlendSpace2D._method_remove_blend_point_1286410249 != nil)
-        let _method_get_blend_point_count_3905245786_name = StringName(from: "get_blend_point_count")
-        self._method_get_blend_point_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_get_blend_point_count_3905245786_name._native_ptr(), 3905245786)
-        assert(AnimationNodeBlendSpace2D._method_get_blend_point_count_3905245786 != nil)
-        let _method_add_triangle_642454959_name = StringName(from: "add_triangle")
-        self._method_add_triangle_642454959 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_add_triangle_642454959_name._native_ptr(), 642454959)
-        assert(AnimationNodeBlendSpace2D._method_add_triangle_642454959 != nil)
-        let _method_get_triangle_point_50157827_name = StringName(from: "get_triangle_point")
-        self._method_get_triangle_point_50157827 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_get_triangle_point_50157827_name._native_ptr(), 50157827)
-        assert(AnimationNodeBlendSpace2D._method_get_triangle_point_50157827 != nil)
-        let _method_remove_triangle_1286410249_name = StringName(from: "remove_triangle")
-        self._method_remove_triangle_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_remove_triangle_1286410249_name._native_ptr(), 1286410249)
-        assert(AnimationNodeBlendSpace2D._method_remove_triangle_1286410249 != nil)
-        let _method_get_triangle_count_3905245786_name = StringName(from: "get_triangle_count")
-        self._method_get_triangle_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_get_triangle_count_3905245786_name._native_ptr(), 3905245786)
-        assert(AnimationNodeBlendSpace2D._method_get_triangle_count_3905245786 != nil)
-        let _method_set_min_space_743155724_name = StringName(from: "set_min_space")
-        self._method_set_min_space_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_set_min_space_743155724_name._native_ptr(), 743155724)
-        assert(AnimationNodeBlendSpace2D._method_set_min_space_743155724 != nil)
-        let _method_get_min_space_3341600327_name = StringName(from: "get_min_space")
-        self._method_get_min_space_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_get_min_space_3341600327_name._native_ptr(), 3341600327)
-        assert(AnimationNodeBlendSpace2D._method_get_min_space_3341600327 != nil)
-        let _method_set_max_space_743155724_name = StringName(from: "set_max_space")
-        self._method_set_max_space_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_set_max_space_743155724_name._native_ptr(), 743155724)
-        assert(AnimationNodeBlendSpace2D._method_set_max_space_743155724 != nil)
-        let _method_get_max_space_3341600327_name = StringName(from: "get_max_space")
-        self._method_get_max_space_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_get_max_space_3341600327_name._native_ptr(), 3341600327)
-        assert(AnimationNodeBlendSpace2D._method_get_max_space_3341600327 != nil)
-        let _method_set_snap_743155724_name = StringName(from: "set_snap")
-        self._method_set_snap_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_set_snap_743155724_name._native_ptr(), 743155724)
-        assert(AnimationNodeBlendSpace2D._method_set_snap_743155724 != nil)
-        let _method_get_snap_3341600327_name = StringName(from: "get_snap")
-        self._method_get_snap_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_get_snap_3341600327_name._native_ptr(), 3341600327)
-        assert(AnimationNodeBlendSpace2D._method_get_snap_3341600327 != nil)
-        let _method_set_x_label_83702148_name = StringName(from: "set_x_label")
-        self._method_set_x_label_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_set_x_label_83702148_name._native_ptr(), 83702148)
-        assert(AnimationNodeBlendSpace2D._method_set_x_label_83702148 != nil)
-        let _method_get_x_label_201670096_name = StringName(from: "get_x_label")
-        self._method_get_x_label_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_get_x_label_201670096_name._native_ptr(), 201670096)
-        assert(AnimationNodeBlendSpace2D._method_get_x_label_201670096 != nil)
-        let _method_set_y_label_83702148_name = StringName(from: "set_y_label")
-        self._method_set_y_label_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_set_y_label_83702148_name._native_ptr(), 83702148)
-        assert(AnimationNodeBlendSpace2D._method_set_y_label_83702148 != nil)
-        let _method_get_y_label_201670096_name = StringName(from: "get_y_label")
-        self._method_get_y_label_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_get_y_label_201670096_name._native_ptr(), 201670096)
-        assert(AnimationNodeBlendSpace2D._method_get_y_label_201670096 != nil)
-        let _method_set_auto_triangles_2586408642_name = StringName(from: "set_auto_triangles")
-        self._method_set_auto_triangles_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_set_auto_triangles_2586408642_name._native_ptr(), 2586408642)
-        assert(AnimationNodeBlendSpace2D._method_set_auto_triangles_2586408642 != nil)
-        let _method_get_auto_triangles_36873697_name = StringName(from: "get_auto_triangles")
-        self._method_get_auto_triangles_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_get_auto_triangles_36873697_name._native_ptr(), 36873697)
-        assert(AnimationNodeBlendSpace2D._method_get_auto_triangles_36873697 != nil)
-        let _method_set_blend_mode_81193520_name = StringName(from: "set_blend_mode")
-        self._method_set_blend_mode_81193520 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_set_blend_mode_81193520_name._native_ptr(), 81193520)
-        assert(AnimationNodeBlendSpace2D._method_set_blend_mode_81193520 != nil)
-        let _method_get_blend_mode_1398433632_name = StringName(from: "get_blend_mode")
-        self._method_get_blend_mode_1398433632 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_get_blend_mode_1398433632_name._native_ptr(), 1398433632)
-        assert(AnimationNodeBlendSpace2D._method_get_blend_mode_1398433632 != nil)
-        let _method_set_use_sync_2586408642_name = StringName(from: "set_use_sync")
-        self._method_set_use_sync_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_set_use_sync_2586408642_name._native_ptr(), 2586408642)
-        assert(AnimationNodeBlendSpace2D._method_set_use_sync_2586408642 != nil)
-        let _method_is_using_sync_36873697_name = StringName(from: "is_using_sync")
-        self._method_is_using_sync_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendSpace2D._native_ptr(), _method_is_using_sync_36873697_name._native_ptr(), 36873697)
-        assert(AnimationNodeBlendSpace2D._method_is_using_sync_36873697 != nil)
+        self._method_add_blend_point_1533588937 = StringName(from: "add_blend_point")
+        assert(self._method_add_blend_point_1533588937 != nil)
+        self._method_set_blend_point_position_163021252 = StringName(from: "set_blend_point_position")
+        assert(self._method_set_blend_point_position_163021252 != nil)
+        self._method_get_blend_point_position_2299179447 = StringName(from: "get_blend_point_position")
+        assert(self._method_get_blend_point_position_2299179447 != nil)
+        self._method_set_blend_point_node_4240341528 = StringName(from: "set_blend_point_node")
+        assert(self._method_set_blend_point_node_4240341528 != nil)
+        self._method_get_blend_point_node_665599029 = StringName(from: "get_blend_point_node")
+        assert(self._method_get_blend_point_node_665599029 != nil)
+        self._method_remove_blend_point_1286410249 = StringName(from: "remove_blend_point")
+        assert(self._method_remove_blend_point_1286410249 != nil)
+        self._method_get_blend_point_count_3905245786 = StringName(from: "get_blend_point_count")
+        assert(self._method_get_blend_point_count_3905245786 != nil)
+        self._method_add_triangle_642454959 = StringName(from: "add_triangle")
+        assert(self._method_add_triangle_642454959 != nil)
+        self._method_get_triangle_point_50157827 = StringName(from: "get_triangle_point")
+        assert(self._method_get_triangle_point_50157827 != nil)
+        self._method_remove_triangle_1286410249 = StringName(from: "remove_triangle")
+        assert(self._method_remove_triangle_1286410249 != nil)
+        self._method_get_triangle_count_3905245786 = StringName(from: "get_triangle_count")
+        assert(self._method_get_triangle_count_3905245786 != nil)
+        self._method_set_min_space_743155724 = StringName(from: "set_min_space")
+        assert(self._method_set_min_space_743155724 != nil)
+        self._method_get_min_space_3341600327 = StringName(from: "get_min_space")
+        assert(self._method_get_min_space_3341600327 != nil)
+        self._method_set_max_space_743155724 = StringName(from: "set_max_space")
+        assert(self._method_set_max_space_743155724 != nil)
+        self._method_get_max_space_3341600327 = StringName(from: "get_max_space")
+        assert(self._method_get_max_space_3341600327 != nil)
+        self._method_set_snap_743155724 = StringName(from: "set_snap")
+        assert(self._method_set_snap_743155724 != nil)
+        self._method_get_snap_3341600327 = StringName(from: "get_snap")
+        assert(self._method_get_snap_3341600327 != nil)
+        self._method_set_x_label_83702148 = StringName(from: "set_x_label")
+        assert(self._method_set_x_label_83702148 != nil)
+        self._method_get_x_label_201670096 = StringName(from: "get_x_label")
+        assert(self._method_get_x_label_201670096 != nil)
+        self._method_set_y_label_83702148 = StringName(from: "set_y_label")
+        assert(self._method_set_y_label_83702148 != nil)
+        self._method_get_y_label_201670096 = StringName(from: "get_y_label")
+        assert(self._method_get_y_label_201670096 != nil)
+        self._method_set_auto_triangles_2586408642 = StringName(from: "set_auto_triangles")
+        assert(self._method_set_auto_triangles_2586408642 != nil)
+        self._method_get_auto_triangles_36873697 = StringName(from: "get_auto_triangles")
+        assert(self._method_get_auto_triangles_36873697 != nil)
+        self._method_set_blend_mode_81193520 = StringName(from: "set_blend_mode")
+        assert(self._method_set_blend_mode_81193520 != nil)
+        self._method_get_blend_mode_1398433632 = StringName(from: "get_blend_mode")
+        assert(self._method_get_blend_mode_1398433632 != nil)
+        self._method_set_use_sync_2586408642 = StringName(from: "set_use_sync")
+        assert(self._method_set_use_sync_2586408642 != nil)
+        self._method_is_using_sync_36873697 = StringName(from: "is_using_sync")
+        assert(self._method_is_using_sync_36873697 != nil)
     }
 
     public func add_blend_point(node: AnimationRootNode, pos: Vector2, at_index: Int64)  {
@@ -148,8 +122,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
                 .init(node_native), .init(pos_native), .init(at_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_blend_point_1533588937,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_blend_point_1533588937._native_ptr(),
+                    1533588937)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -165,8 +144,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
                 .init(point_native), .init(pos_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_blend_point_position_163021252,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_blend_point_position_163021252._native_ptr(),
+                    163021252)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -182,8 +166,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_blend_point_position_2299179447,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_blend_point_position_2299179447._native_ptr(),
+                    2299179447)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -200,8 +189,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
                 .init(point_native), .init(node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_blend_point_node_4240341528,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_blend_point_node_4240341528._native_ptr(),
+                    4240341528)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -217,8 +211,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_blend_point_node_665599029,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_blend_point_node_665599029._native_ptr(),
+                    665599029)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -234,8 +233,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
                 .init(point_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_blend_point_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_blend_point_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -251,8 +255,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_blend_point_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_blend_point_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -270,8 +279,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
                 .init(x_native), .init(y_native), .init(z_native), .init(at_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_triangle_642454959,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_triangle_642454959._native_ptr(),
+                    642454959)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -292,8 +306,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_triangle_point_50157827,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_triangle_point_50157827._native_ptr(),
+                    50157827)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -310,8 +329,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
                 .init(triangle_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_triangle_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_triangle_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -327,8 +351,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_triangle_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_triangle_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -343,8 +372,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
                 .init(min_space_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_min_space_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_min_space_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -358,8 +392,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_min_space_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_min_space_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -374,8 +413,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
                 .init(max_space_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_max_space_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_max_space_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -389,8 +433,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_max_space_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_max_space_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -405,8 +454,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
                 .init(snap_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_snap_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_snap_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -420,8 +474,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_snap_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_snap_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -436,8 +495,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
                 .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_x_label_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_x_label_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -451,8 +515,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_x_label_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_x_label_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -467,8 +536,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
                 .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_y_label_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_y_label_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -482,8 +556,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_y_label_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_y_label_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -498,8 +577,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_auto_triangles_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_auto_triangles_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -515,8 +599,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_auto_triangles_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_auto_triangles_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -531,8 +620,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_blend_mode_81193520,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_blend_mode_81193520._native_ptr(),
+                    81193520)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -547,8 +641,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_blend_mode_1398433632,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_blend_mode_1398433632._native_ptr(),
+                    1398433632)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -563,8 +662,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_sync_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_sync_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -580,8 +684,13 @@ open class AnimationNodeBlendSpace2D : AnimationRootNode {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_using_sync_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_using_sync_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

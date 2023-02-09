@@ -11,23 +11,22 @@ open class VisualShaderNodeVec4Constant : VisualShaderNodeConstant {
 
     public override class var __godot_name: StringName { __godot_name_VisualShaderNodeVec4Constant }
 
-    static var _method_set_constant_1727505552: GDExtensionMethodBindPtr! = nil
-    static var _method_get_constant_1222331677: GDExtensionMethodBindPtr! = nil
+    static var _method_set_constant_1727505552: StringName! = nil
+    static var _method_get_constant_1222331677: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShaderNodeVec4Constant == nil)
         __godot_name_VisualShaderNodeVec4Constant = StringName(from: "VisualShaderNodeVec4Constant")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_constant_1727505552_name = StringName(from: "set_constant")
-        self._method_set_constant_1727505552 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeVec4Constant._native_ptr(), _method_set_constant_1727505552_name._native_ptr(), 1727505552)
-        assert(VisualShaderNodeVec4Constant._method_set_constant_1727505552 != nil)
-        let _method_get_constant_1222331677_name = StringName(from: "get_constant")
-        self._method_get_constant_1222331677 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeVec4Constant._native_ptr(), _method_get_constant_1222331677_name._native_ptr(), 1222331677)
-        assert(VisualShaderNodeVec4Constant._method_get_constant_1222331677 != nil)
+        self._method_set_constant_1727505552 = StringName(from: "set_constant")
+        assert(self._method_set_constant_1727505552 != nil)
+        self._method_get_constant_1222331677 = StringName(from: "get_constant")
+        assert(self._method_get_constant_1222331677 != nil)
     }
 
     public func set_constant(constant: Quaternion)  {
@@ -38,8 +37,13 @@ open class VisualShaderNodeVec4Constant : VisualShaderNodeConstant {
                 .init(constant_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_constant_1727505552,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_constant_1727505552._native_ptr(),
+                    1727505552)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -53,8 +57,13 @@ open class VisualShaderNodeVec4Constant : VisualShaderNodeConstant {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_constant_1222331677,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_constant_1222331677._native_ptr(),
+                    1222331677)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

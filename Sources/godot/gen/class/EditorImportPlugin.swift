@@ -211,23 +211,24 @@ open class EditorImportPlugin : ResourceImporter {
 
     public override class var __godot_name: StringName { __godot_name_EditorImportPlugin }
 
-    static var _method__get_importer_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_visible_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_preset_count_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_preset_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_recognized_extensions_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_import_options_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_save_extension_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_resource_type_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_priority_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_import_order_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_option_visibility_0: GDExtensionMethodBindPtr! = nil
-    static var _method__import_0: GDExtensionMethodBindPtr! = nil
+    static var _method__get_importer_name_0: StringName! = nil
+    static var _method__get_visible_name_0: StringName! = nil
+    static var _method__get_preset_count_0: StringName! = nil
+    static var _method__get_preset_name_0: StringName! = nil
+    static var _method__get_recognized_extensions_0: StringName! = nil
+    static var _method__get_import_options_0: StringName! = nil
+    static var _method__get_save_extension_0: StringName! = nil
+    static var _method__get_resource_type_0: StringName! = nil
+    static var _method__get_priority_0: StringName! = nil
+    static var _method__get_import_order_0: StringName! = nil
+    static var _method__get_option_visibility_0: StringName! = nil
+    static var _method__import_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorImportPlugin == nil)
         __godot_name_EditorImportPlugin = StringName(from: "EditorImportPlugin")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -243,12 +244,7 @@ open class EditorImportPlugin : ResourceImporter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_importer_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _get_visible_name() -> godot.String {
@@ -259,12 +255,7 @@ open class EditorImportPlugin : ResourceImporter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_visible_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _get_preset_count() -> Int64 {
@@ -276,12 +267,7 @@ open class EditorImportPlugin : ResourceImporter {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_preset_count_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _get_preset_name(preset_index: Int64) -> godot.String {
@@ -293,12 +279,7 @@ open class EditorImportPlugin : ResourceImporter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_preset_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
         }
     }
@@ -310,12 +291,7 @@ open class EditorImportPlugin : ResourceImporter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_recognized_extensions_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _get_import_options(path: godot.String, preset_index: Int64) -> [Dictionary] {
@@ -328,12 +304,7 @@ open class EditorImportPlugin : ResourceImporter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_import_options_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return [Dictionary](godot: __resPtr.pointee)
         }
     }
@@ -345,12 +316,7 @@ open class EditorImportPlugin : ResourceImporter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_save_extension_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _get_resource_type() -> godot.String {
@@ -361,12 +327,7 @@ open class EditorImportPlugin : ResourceImporter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_resource_type_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _get_priority() -> Float64 {
@@ -378,12 +339,7 @@ open class EditorImportPlugin : ResourceImporter {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_priority_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func _get_import_order() -> Int64 {
@@ -395,12 +351,7 @@ open class EditorImportPlugin : ResourceImporter {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_import_order_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _get_option_visibility(path: godot.String, option_name: StringName, options: Dictionary) -> UInt8 {
@@ -415,12 +366,7 @@ open class EditorImportPlugin : ResourceImporter {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_option_visibility_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _import(source_file: godot.String, save_path: godot.String, options: Dictionary, platform_variants: [godot.String], gen_files: [godot.String]) -> Error {
@@ -436,12 +382,7 @@ open class EditorImportPlugin : ResourceImporter {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__import_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
 }

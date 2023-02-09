@@ -15,47 +15,40 @@ open class ResourceUID : Object {
 
     public override class var __godot_name: StringName { __godot_name_ResourceUID }
 
-    static var _method_id_to_text_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_text_to_id_1321353865: GDExtensionMethodBindPtr! = nil
-    static var _method_create_id_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_has_id_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_add_id_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_set_id_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_get_id_path_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_id_1286410249: GDExtensionMethodBindPtr! = nil
+    static var _method_id_to_text_844755477: StringName! = nil
+    static var _method_text_to_id_1321353865: StringName! = nil
+    static var _method_create_id_2455072627: StringName! = nil
+    static var _method_has_id_1116898809: StringName! = nil
+    static var _method_add_id_501894301: StringName! = nil
+    static var _method_set_id_501894301: StringName! = nil
+    static var _method_get_id_path_844755477: StringName! = nil
+    static var _method_remove_id_1286410249: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ResourceUID == nil)
         __godot_name_ResourceUID = StringName(from: "ResourceUID")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_id_to_text_844755477_name = StringName(from: "id_to_text")
-        self._method_id_to_text_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceUID._native_ptr(), _method_id_to_text_844755477_name._native_ptr(), 844755477)
-        assert(ResourceUID._method_id_to_text_844755477 != nil)
-        let _method_text_to_id_1321353865_name = StringName(from: "text_to_id")
-        self._method_text_to_id_1321353865 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceUID._native_ptr(), _method_text_to_id_1321353865_name._native_ptr(), 1321353865)
-        assert(ResourceUID._method_text_to_id_1321353865 != nil)
-        let _method_create_id_2455072627_name = StringName(from: "create_id")
-        self._method_create_id_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceUID._native_ptr(), _method_create_id_2455072627_name._native_ptr(), 2455072627)
-        assert(ResourceUID._method_create_id_2455072627 != nil)
-        let _method_has_id_1116898809_name = StringName(from: "has_id")
-        self._method_has_id_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceUID._native_ptr(), _method_has_id_1116898809_name._native_ptr(), 1116898809)
-        assert(ResourceUID._method_has_id_1116898809 != nil)
-        let _method_add_id_501894301_name = StringName(from: "add_id")
-        self._method_add_id_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceUID._native_ptr(), _method_add_id_501894301_name._native_ptr(), 501894301)
-        assert(ResourceUID._method_add_id_501894301 != nil)
-        let _method_set_id_501894301_name = StringName(from: "set_id")
-        self._method_set_id_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceUID._native_ptr(), _method_set_id_501894301_name._native_ptr(), 501894301)
-        assert(ResourceUID._method_set_id_501894301 != nil)
-        let _method_get_id_path_844755477_name = StringName(from: "get_id_path")
-        self._method_get_id_path_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceUID._native_ptr(), _method_get_id_path_844755477_name._native_ptr(), 844755477)
-        assert(ResourceUID._method_get_id_path_844755477 != nil)
-        let _method_remove_id_1286410249_name = StringName(from: "remove_id")
-        self._method_remove_id_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_ResourceUID._native_ptr(), _method_remove_id_1286410249_name._native_ptr(), 1286410249)
-        assert(ResourceUID._method_remove_id_1286410249 != nil)
+        self._method_id_to_text_844755477 = StringName(from: "id_to_text")
+        assert(self._method_id_to_text_844755477 != nil)
+        self._method_text_to_id_1321353865 = StringName(from: "text_to_id")
+        assert(self._method_text_to_id_1321353865 != nil)
+        self._method_create_id_2455072627 = StringName(from: "create_id")
+        assert(self._method_create_id_2455072627 != nil)
+        self._method_has_id_1116898809 = StringName(from: "has_id")
+        assert(self._method_has_id_1116898809 != nil)
+        self._method_add_id_501894301 = StringName(from: "add_id")
+        assert(self._method_add_id_501894301 != nil)
+        self._method_set_id_501894301 = StringName(from: "set_id")
+        assert(self._method_set_id_501894301 != nil)
+        self._method_get_id_path_844755477 = StringName(from: "get_id_path")
+        assert(self._method_get_id_path_844755477 != nil)
+        self._method_remove_id_1286410249 = StringName(from: "remove_id")
+        assert(self._method_remove_id_1286410249 != nil)
     }
 
     public func id_to_text(id: Int64) -> godot.String {
@@ -67,8 +60,13 @@ open class ResourceUID : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_id_to_text_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_id_to_text_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -86,8 +84,13 @@ open class ResourceUID : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_text_to_id_1321353865,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_text_to_id_1321353865._native_ptr(),
+                    1321353865)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -103,8 +106,13 @@ open class ResourceUID : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_id_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_id_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -121,8 +129,13 @@ open class ResourceUID : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_id_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_id_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -139,8 +152,13 @@ open class ResourceUID : Object {
                 .init(id_native), .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_id_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_id_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -156,8 +174,13 @@ open class ResourceUID : Object {
                 .init(id_native), .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_id_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_id_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -173,8 +196,13 @@ open class ResourceUID : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_id_path_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_id_path_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -190,8 +218,13 @@ open class ResourceUID : Object {
                 .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_id_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_id_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

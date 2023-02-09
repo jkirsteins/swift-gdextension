@@ -20,75 +20,61 @@ open class ScrollContainer : Container {
 
     public override class var __godot_name: StringName { __godot_name_ScrollContainer }
 
-    static var _method_set_h_scroll_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_h_scroll_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_v_scroll_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_v_scroll_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_horizontal_scroll_mode_2750506364: GDExtensionMethodBindPtr! = nil
-    static var _method_get_horizontal_scroll_mode_3987985145: GDExtensionMethodBindPtr! = nil
-    static var _method_set_vertical_scroll_mode_2750506364: GDExtensionMethodBindPtr! = nil
-    static var _method_get_vertical_scroll_mode_3987985145: GDExtensionMethodBindPtr! = nil
-    static var _method_set_deadzone_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_deadzone_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_follow_focus_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_following_focus_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_h_scroll_bar_4004517983: GDExtensionMethodBindPtr! = nil
-    static var _method_get_v_scroll_bar_2630340773: GDExtensionMethodBindPtr! = nil
-    static var _method_ensure_control_visible_1496901182: GDExtensionMethodBindPtr! = nil
+    static var _method_set_h_scroll_1286410249: StringName! = nil
+    static var _method_get_h_scroll_3905245786: StringName! = nil
+    static var _method_set_v_scroll_1286410249: StringName! = nil
+    static var _method_get_v_scroll_3905245786: StringName! = nil
+    static var _method_set_horizontal_scroll_mode_2750506364: StringName! = nil
+    static var _method_get_horizontal_scroll_mode_3987985145: StringName! = nil
+    static var _method_set_vertical_scroll_mode_2750506364: StringName! = nil
+    static var _method_get_vertical_scroll_mode_3987985145: StringName! = nil
+    static var _method_set_deadzone_1286410249: StringName! = nil
+    static var _method_get_deadzone_3905245786: StringName! = nil
+    static var _method_set_follow_focus_2586408642: StringName! = nil
+    static var _method_is_following_focus_36873697: StringName! = nil
+    static var _method_get_h_scroll_bar_4004517983: StringName! = nil
+    static var _method_get_v_scroll_bar_2630340773: StringName! = nil
+    static var _method_ensure_control_visible_1496901182: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ScrollContainer == nil)
         __godot_name_ScrollContainer = StringName(from: "ScrollContainer")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_h_scroll_1286410249_name = StringName(from: "set_h_scroll")
-        self._method_set_h_scroll_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollContainer._native_ptr(), _method_set_h_scroll_1286410249_name._native_ptr(), 1286410249)
-        assert(ScrollContainer._method_set_h_scroll_1286410249 != nil)
-        let _method_get_h_scroll_3905245786_name = StringName(from: "get_h_scroll")
-        self._method_get_h_scroll_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollContainer._native_ptr(), _method_get_h_scroll_3905245786_name._native_ptr(), 3905245786)
-        assert(ScrollContainer._method_get_h_scroll_3905245786 != nil)
-        let _method_set_v_scroll_1286410249_name = StringName(from: "set_v_scroll")
-        self._method_set_v_scroll_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollContainer._native_ptr(), _method_set_v_scroll_1286410249_name._native_ptr(), 1286410249)
-        assert(ScrollContainer._method_set_v_scroll_1286410249 != nil)
-        let _method_get_v_scroll_3905245786_name = StringName(from: "get_v_scroll")
-        self._method_get_v_scroll_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollContainer._native_ptr(), _method_get_v_scroll_3905245786_name._native_ptr(), 3905245786)
-        assert(ScrollContainer._method_get_v_scroll_3905245786 != nil)
-        let _method_set_horizontal_scroll_mode_2750506364_name = StringName(from: "set_horizontal_scroll_mode")
-        self._method_set_horizontal_scroll_mode_2750506364 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollContainer._native_ptr(), _method_set_horizontal_scroll_mode_2750506364_name._native_ptr(), 2750506364)
-        assert(ScrollContainer._method_set_horizontal_scroll_mode_2750506364 != nil)
-        let _method_get_horizontal_scroll_mode_3987985145_name = StringName(from: "get_horizontal_scroll_mode")
-        self._method_get_horizontal_scroll_mode_3987985145 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollContainer._native_ptr(), _method_get_horizontal_scroll_mode_3987985145_name._native_ptr(), 3987985145)
-        assert(ScrollContainer._method_get_horizontal_scroll_mode_3987985145 != nil)
-        let _method_set_vertical_scroll_mode_2750506364_name = StringName(from: "set_vertical_scroll_mode")
-        self._method_set_vertical_scroll_mode_2750506364 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollContainer._native_ptr(), _method_set_vertical_scroll_mode_2750506364_name._native_ptr(), 2750506364)
-        assert(ScrollContainer._method_set_vertical_scroll_mode_2750506364 != nil)
-        let _method_get_vertical_scroll_mode_3987985145_name = StringName(from: "get_vertical_scroll_mode")
-        self._method_get_vertical_scroll_mode_3987985145 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollContainer._native_ptr(), _method_get_vertical_scroll_mode_3987985145_name._native_ptr(), 3987985145)
-        assert(ScrollContainer._method_get_vertical_scroll_mode_3987985145 != nil)
-        let _method_set_deadzone_1286410249_name = StringName(from: "set_deadzone")
-        self._method_set_deadzone_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollContainer._native_ptr(), _method_set_deadzone_1286410249_name._native_ptr(), 1286410249)
-        assert(ScrollContainer._method_set_deadzone_1286410249 != nil)
-        let _method_get_deadzone_3905245786_name = StringName(from: "get_deadzone")
-        self._method_get_deadzone_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollContainer._native_ptr(), _method_get_deadzone_3905245786_name._native_ptr(), 3905245786)
-        assert(ScrollContainer._method_get_deadzone_3905245786 != nil)
-        let _method_set_follow_focus_2586408642_name = StringName(from: "set_follow_focus")
-        self._method_set_follow_focus_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollContainer._native_ptr(), _method_set_follow_focus_2586408642_name._native_ptr(), 2586408642)
-        assert(ScrollContainer._method_set_follow_focus_2586408642 != nil)
-        let _method_is_following_focus_36873697_name = StringName(from: "is_following_focus")
-        self._method_is_following_focus_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollContainer._native_ptr(), _method_is_following_focus_36873697_name._native_ptr(), 36873697)
-        assert(ScrollContainer._method_is_following_focus_36873697 != nil)
-        let _method_get_h_scroll_bar_4004517983_name = StringName(from: "get_h_scroll_bar")
-        self._method_get_h_scroll_bar_4004517983 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollContainer._native_ptr(), _method_get_h_scroll_bar_4004517983_name._native_ptr(), 4004517983)
-        assert(ScrollContainer._method_get_h_scroll_bar_4004517983 != nil)
-        let _method_get_v_scroll_bar_2630340773_name = StringName(from: "get_v_scroll_bar")
-        self._method_get_v_scroll_bar_2630340773 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollContainer._native_ptr(), _method_get_v_scroll_bar_2630340773_name._native_ptr(), 2630340773)
-        assert(ScrollContainer._method_get_v_scroll_bar_2630340773 != nil)
-        let _method_ensure_control_visible_1496901182_name = StringName(from: "ensure_control_visible")
-        self._method_ensure_control_visible_1496901182 = self.interface.pointee.classdb_get_method_bind(__godot_name_ScrollContainer._native_ptr(), _method_ensure_control_visible_1496901182_name._native_ptr(), 1496901182)
-        assert(ScrollContainer._method_ensure_control_visible_1496901182 != nil)
+        self._method_set_h_scroll_1286410249 = StringName(from: "set_h_scroll")
+        assert(self._method_set_h_scroll_1286410249 != nil)
+        self._method_get_h_scroll_3905245786 = StringName(from: "get_h_scroll")
+        assert(self._method_get_h_scroll_3905245786 != nil)
+        self._method_set_v_scroll_1286410249 = StringName(from: "set_v_scroll")
+        assert(self._method_set_v_scroll_1286410249 != nil)
+        self._method_get_v_scroll_3905245786 = StringName(from: "get_v_scroll")
+        assert(self._method_get_v_scroll_3905245786 != nil)
+        self._method_set_horizontal_scroll_mode_2750506364 = StringName(from: "set_horizontal_scroll_mode")
+        assert(self._method_set_horizontal_scroll_mode_2750506364 != nil)
+        self._method_get_horizontal_scroll_mode_3987985145 = StringName(from: "get_horizontal_scroll_mode")
+        assert(self._method_get_horizontal_scroll_mode_3987985145 != nil)
+        self._method_set_vertical_scroll_mode_2750506364 = StringName(from: "set_vertical_scroll_mode")
+        assert(self._method_set_vertical_scroll_mode_2750506364 != nil)
+        self._method_get_vertical_scroll_mode_3987985145 = StringName(from: "get_vertical_scroll_mode")
+        assert(self._method_get_vertical_scroll_mode_3987985145 != nil)
+        self._method_set_deadzone_1286410249 = StringName(from: "set_deadzone")
+        assert(self._method_set_deadzone_1286410249 != nil)
+        self._method_get_deadzone_3905245786 = StringName(from: "get_deadzone")
+        assert(self._method_get_deadzone_3905245786 != nil)
+        self._method_set_follow_focus_2586408642 = StringName(from: "set_follow_focus")
+        assert(self._method_set_follow_focus_2586408642 != nil)
+        self._method_is_following_focus_36873697 = StringName(from: "is_following_focus")
+        assert(self._method_is_following_focus_36873697 != nil)
+        self._method_get_h_scroll_bar_4004517983 = StringName(from: "get_h_scroll_bar")
+        assert(self._method_get_h_scroll_bar_4004517983 != nil)
+        self._method_get_v_scroll_bar_2630340773 = StringName(from: "get_v_scroll_bar")
+        assert(self._method_get_v_scroll_bar_2630340773 != nil)
+        self._method_ensure_control_visible_1496901182 = StringName(from: "ensure_control_visible")
+        assert(self._method_ensure_control_visible_1496901182 != nil)
     }
 
     public func set_h_scroll(value: Int64)  {
@@ -99,8 +85,13 @@ open class ScrollContainer : Container {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_h_scroll_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_h_scroll_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -116,8 +107,13 @@ open class ScrollContainer : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_h_scroll_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_h_scroll_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -132,8 +128,13 @@ open class ScrollContainer : Container {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_v_scroll_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_v_scroll_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -149,8 +150,13 @@ open class ScrollContainer : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_v_scroll_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_v_scroll_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -165,8 +171,13 @@ open class ScrollContainer : Container {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_horizontal_scroll_mode_2750506364,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_horizontal_scroll_mode_2750506364._native_ptr(),
+                    2750506364)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -181,8 +192,13 @@ open class ScrollContainer : Container {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_horizontal_scroll_mode_3987985145,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_horizontal_scroll_mode_3987985145._native_ptr(),
+                    3987985145)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -197,8 +213,13 @@ open class ScrollContainer : Container {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_vertical_scroll_mode_2750506364,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_vertical_scroll_mode_2750506364._native_ptr(),
+                    2750506364)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -213,8 +234,13 @@ open class ScrollContainer : Container {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_vertical_scroll_mode_3987985145,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_vertical_scroll_mode_3987985145._native_ptr(),
+                    3987985145)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -229,8 +255,13 @@ open class ScrollContainer : Container {
                 .init(deadzone_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_deadzone_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_deadzone_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -246,8 +277,13 @@ open class ScrollContainer : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_deadzone_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_deadzone_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -262,8 +298,13 @@ open class ScrollContainer : Container {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_follow_focus_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_follow_focus_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -279,8 +320,13 @@ open class ScrollContainer : Container {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_following_focus_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_following_focus_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -295,8 +341,13 @@ open class ScrollContainer : Container {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_h_scroll_bar_4004517983,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_h_scroll_bar_4004517983._native_ptr(),
+                    4004517983)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -311,8 +362,13 @@ open class ScrollContainer : Container {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_v_scroll_bar_2630340773,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_v_scroll_bar_2630340773._native_ptr(),
+                    2630340773)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -327,8 +383,13 @@ open class ScrollContainer : Container {
                 .init(control_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_ensure_control_visible_1496901182,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_ensure_control_visible_1496901182._native_ptr(),
+                    1496901182)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

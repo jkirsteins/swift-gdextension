@@ -11,35 +11,31 @@ open class RDShaderFile : Resource {
 
     public override class var __godot_name: StringName { __godot_name_RDShaderFile }
 
-    static var _method_set_bytecode_1558064255: GDExtensionMethodBindPtr! = nil
-    static var _method_get_spirv_3340165340: GDExtensionMethodBindPtr! = nil
-    static var _method_get_version_list_1139954409: GDExtensionMethodBindPtr! = nil
-    static var _method_set_base_error_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_base_error_201670096: GDExtensionMethodBindPtr! = nil
+    static var _method_set_bytecode_1558064255: StringName! = nil
+    static var _method_get_spirv_3340165340: StringName! = nil
+    static var _method_get_version_list_1139954409: StringName! = nil
+    static var _method_set_base_error_83702148: StringName! = nil
+    static var _method_get_base_error_201670096: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_RDShaderFile == nil)
         __godot_name_RDShaderFile = StringName(from: "RDShaderFile")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_bytecode_1558064255_name = StringName(from: "set_bytecode")
-        self._method_set_bytecode_1558064255 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDShaderFile._native_ptr(), _method_set_bytecode_1558064255_name._native_ptr(), 1558064255)
-        assert(RDShaderFile._method_set_bytecode_1558064255 != nil)
-        let _method_get_spirv_3340165340_name = StringName(from: "get_spirv")
-        self._method_get_spirv_3340165340 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDShaderFile._native_ptr(), _method_get_spirv_3340165340_name._native_ptr(), 3340165340)
-        assert(RDShaderFile._method_get_spirv_3340165340 != nil)
-        let _method_get_version_list_1139954409_name = StringName(from: "get_version_list")
-        self._method_get_version_list_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDShaderFile._native_ptr(), _method_get_version_list_1139954409_name._native_ptr(), 1139954409)
-        assert(RDShaderFile._method_get_version_list_1139954409 != nil)
-        let _method_set_base_error_83702148_name = StringName(from: "set_base_error")
-        self._method_set_base_error_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDShaderFile._native_ptr(), _method_set_base_error_83702148_name._native_ptr(), 83702148)
-        assert(RDShaderFile._method_set_base_error_83702148 != nil)
-        let _method_get_base_error_201670096_name = StringName(from: "get_base_error")
-        self._method_get_base_error_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDShaderFile._native_ptr(), _method_get_base_error_201670096_name._native_ptr(), 201670096)
-        assert(RDShaderFile._method_get_base_error_201670096 != nil)
+        self._method_set_bytecode_1558064255 = StringName(from: "set_bytecode")
+        assert(self._method_set_bytecode_1558064255 != nil)
+        self._method_get_spirv_3340165340 = StringName(from: "get_spirv")
+        assert(self._method_get_spirv_3340165340 != nil)
+        self._method_get_version_list_1139954409 = StringName(from: "get_version_list")
+        assert(self._method_get_version_list_1139954409 != nil)
+        self._method_set_base_error_83702148 = StringName(from: "set_base_error")
+        assert(self._method_set_base_error_83702148 != nil)
+        self._method_get_base_error_201670096 = StringName(from: "get_base_error")
+        assert(self._method_get_base_error_201670096 != nil)
     }
 
     public func set_bytecode(bytecode: RDShaderSPIRV, version: StringName)  {
@@ -51,8 +47,13 @@ open class RDShaderFile : Resource {
                 .init(bytecode_native), .init(version_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bytecode_1558064255,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bytecode_1558064255._native_ptr(),
+                    1558064255)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -67,8 +68,13 @@ open class RDShaderFile : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_spirv_3340165340,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_spirv_3340165340._native_ptr(),
+                    3340165340)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -83,8 +89,13 @@ open class RDShaderFile : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_version_list_1139954409,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_version_list_1139954409._native_ptr(),
+                    1139954409)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -99,8 +110,13 @@ open class RDShaderFile : Resource {
                 .init(error_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_base_error_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_base_error_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -114,8 +130,13 @@ open class RDShaderFile : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_base_error_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_base_error_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

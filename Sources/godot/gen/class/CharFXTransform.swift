@@ -11,111 +11,88 @@ open class CharFXTransform : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_CharFXTransform }
 
-    static var _method_get_range_2741790807: GDExtensionMethodBindPtr! = nil
-    static var _method_set_range_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_get_elapsed_time_191475506: GDExtensionMethodBindPtr! = nil
-    static var _method_set_elapsed_time_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_is_visible_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_set_visibility_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_outline_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_set_outline_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_offset_1497962370: GDExtensionMethodBindPtr! = nil
-    static var _method_set_offset_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_color_3200896285: GDExtensionMethodBindPtr! = nil
-    static var _method_set_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_environment_2382534195: GDExtensionMethodBindPtr! = nil
-    static var _method_set_environment_4155329257: GDExtensionMethodBindPtr! = nil
-    static var _method_get_glyph_index_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_glyph_index_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_relative_index_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_relative_index_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_glyph_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_glyph_count_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_glyph_flags_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_glyph_flags_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_font_2944877500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_font_2722037293: GDExtensionMethodBindPtr! = nil
+    static var _method_get_range_2741790807: StringName! = nil
+    static var _method_set_range_1130785943: StringName! = nil
+    static var _method_get_elapsed_time_191475506: StringName! = nil
+    static var _method_set_elapsed_time_373806689: StringName! = nil
+    static var _method_is_visible_2240911060: StringName! = nil
+    static var _method_set_visibility_2586408642: StringName! = nil
+    static var _method_is_outline_2240911060: StringName! = nil
+    static var _method_set_outline_2586408642: StringName! = nil
+    static var _method_get_offset_1497962370: StringName! = nil
+    static var _method_set_offset_743155724: StringName! = nil
+    static var _method_get_color_3200896285: StringName! = nil
+    static var _method_set_color_2920490490: StringName! = nil
+    static var _method_get_environment_2382534195: StringName! = nil
+    static var _method_set_environment_4155329257: StringName! = nil
+    static var _method_get_glyph_index_3905245786: StringName! = nil
+    static var _method_set_glyph_index_1286410249: StringName! = nil
+    static var _method_get_relative_index_3905245786: StringName! = nil
+    static var _method_set_relative_index_1286410249: StringName! = nil
+    static var _method_get_glyph_count_3905245786: StringName! = nil
+    static var _method_set_glyph_count_1286410249: StringName! = nil
+    static var _method_get_glyph_flags_3905245786: StringName! = nil
+    static var _method_set_glyph_flags_1286410249: StringName! = nil
+    static var _method_get_font_2944877500: StringName! = nil
+    static var _method_set_font_2722037293: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CharFXTransform == nil)
         __godot_name_CharFXTransform = StringName(from: "CharFXTransform")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_range_2741790807_name = StringName(from: "get_range")
-        self._method_get_range_2741790807 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_get_range_2741790807_name._native_ptr(), 2741790807)
-        assert(CharFXTransform._method_get_range_2741790807 != nil)
-        let _method_set_range_1130785943_name = StringName(from: "set_range")
-        self._method_set_range_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_set_range_1130785943_name._native_ptr(), 1130785943)
-        assert(CharFXTransform._method_set_range_1130785943 != nil)
-        let _method_get_elapsed_time_191475506_name = StringName(from: "get_elapsed_time")
-        self._method_get_elapsed_time_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_get_elapsed_time_191475506_name._native_ptr(), 191475506)
-        assert(CharFXTransform._method_get_elapsed_time_191475506 != nil)
-        let _method_set_elapsed_time_373806689_name = StringName(from: "set_elapsed_time")
-        self._method_set_elapsed_time_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_set_elapsed_time_373806689_name._native_ptr(), 373806689)
-        assert(CharFXTransform._method_set_elapsed_time_373806689 != nil)
-        let _method_is_visible_2240911060_name = StringName(from: "is_visible")
-        self._method_is_visible_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_is_visible_2240911060_name._native_ptr(), 2240911060)
-        assert(CharFXTransform._method_is_visible_2240911060 != nil)
-        let _method_set_visibility_2586408642_name = StringName(from: "set_visibility")
-        self._method_set_visibility_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_set_visibility_2586408642_name._native_ptr(), 2586408642)
-        assert(CharFXTransform._method_set_visibility_2586408642 != nil)
-        let _method_is_outline_2240911060_name = StringName(from: "is_outline")
-        self._method_is_outline_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_is_outline_2240911060_name._native_ptr(), 2240911060)
-        assert(CharFXTransform._method_is_outline_2240911060 != nil)
-        let _method_set_outline_2586408642_name = StringName(from: "set_outline")
-        self._method_set_outline_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_set_outline_2586408642_name._native_ptr(), 2586408642)
-        assert(CharFXTransform._method_set_outline_2586408642 != nil)
-        let _method_get_offset_1497962370_name = StringName(from: "get_offset")
-        self._method_get_offset_1497962370 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_get_offset_1497962370_name._native_ptr(), 1497962370)
-        assert(CharFXTransform._method_get_offset_1497962370 != nil)
-        let _method_set_offset_743155724_name = StringName(from: "set_offset")
-        self._method_set_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_set_offset_743155724_name._native_ptr(), 743155724)
-        assert(CharFXTransform._method_set_offset_743155724 != nil)
-        let _method_get_color_3200896285_name = StringName(from: "get_color")
-        self._method_get_color_3200896285 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_get_color_3200896285_name._native_ptr(), 3200896285)
-        assert(CharFXTransform._method_get_color_3200896285 != nil)
-        let _method_set_color_2920490490_name = StringName(from: "set_color")
-        self._method_set_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_set_color_2920490490_name._native_ptr(), 2920490490)
-        assert(CharFXTransform._method_set_color_2920490490 != nil)
-        let _method_get_environment_2382534195_name = StringName(from: "get_environment")
-        self._method_get_environment_2382534195 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_get_environment_2382534195_name._native_ptr(), 2382534195)
-        assert(CharFXTransform._method_get_environment_2382534195 != nil)
-        let _method_set_environment_4155329257_name = StringName(from: "set_environment")
-        self._method_set_environment_4155329257 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_set_environment_4155329257_name._native_ptr(), 4155329257)
-        assert(CharFXTransform._method_set_environment_4155329257 != nil)
-        let _method_get_glyph_index_3905245786_name = StringName(from: "get_glyph_index")
-        self._method_get_glyph_index_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_get_glyph_index_3905245786_name._native_ptr(), 3905245786)
-        assert(CharFXTransform._method_get_glyph_index_3905245786 != nil)
-        let _method_set_glyph_index_1286410249_name = StringName(from: "set_glyph_index")
-        self._method_set_glyph_index_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_set_glyph_index_1286410249_name._native_ptr(), 1286410249)
-        assert(CharFXTransform._method_set_glyph_index_1286410249 != nil)
-        let _method_get_relative_index_3905245786_name = StringName(from: "get_relative_index")
-        self._method_get_relative_index_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_get_relative_index_3905245786_name._native_ptr(), 3905245786)
-        assert(CharFXTransform._method_get_relative_index_3905245786 != nil)
-        let _method_set_relative_index_1286410249_name = StringName(from: "set_relative_index")
-        self._method_set_relative_index_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_set_relative_index_1286410249_name._native_ptr(), 1286410249)
-        assert(CharFXTransform._method_set_relative_index_1286410249 != nil)
-        let _method_get_glyph_count_3905245786_name = StringName(from: "get_glyph_count")
-        self._method_get_glyph_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_get_glyph_count_3905245786_name._native_ptr(), 3905245786)
-        assert(CharFXTransform._method_get_glyph_count_3905245786 != nil)
-        let _method_set_glyph_count_1286410249_name = StringName(from: "set_glyph_count")
-        self._method_set_glyph_count_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_set_glyph_count_1286410249_name._native_ptr(), 1286410249)
-        assert(CharFXTransform._method_set_glyph_count_1286410249 != nil)
-        let _method_get_glyph_flags_3905245786_name = StringName(from: "get_glyph_flags")
-        self._method_get_glyph_flags_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_get_glyph_flags_3905245786_name._native_ptr(), 3905245786)
-        assert(CharFXTransform._method_get_glyph_flags_3905245786 != nil)
-        let _method_set_glyph_flags_1286410249_name = StringName(from: "set_glyph_flags")
-        self._method_set_glyph_flags_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_set_glyph_flags_1286410249_name._native_ptr(), 1286410249)
-        assert(CharFXTransform._method_set_glyph_flags_1286410249 != nil)
-        let _method_get_font_2944877500_name = StringName(from: "get_font")
-        self._method_get_font_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_get_font_2944877500_name._native_ptr(), 2944877500)
-        assert(CharFXTransform._method_get_font_2944877500 != nil)
-        let _method_set_font_2722037293_name = StringName(from: "set_font")
-        self._method_set_font_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharFXTransform._native_ptr(), _method_set_font_2722037293_name._native_ptr(), 2722037293)
-        assert(CharFXTransform._method_set_font_2722037293 != nil)
+        self._method_get_range_2741790807 = StringName(from: "get_range")
+        assert(self._method_get_range_2741790807 != nil)
+        self._method_set_range_1130785943 = StringName(from: "set_range")
+        assert(self._method_set_range_1130785943 != nil)
+        self._method_get_elapsed_time_191475506 = StringName(from: "get_elapsed_time")
+        assert(self._method_get_elapsed_time_191475506 != nil)
+        self._method_set_elapsed_time_373806689 = StringName(from: "set_elapsed_time")
+        assert(self._method_set_elapsed_time_373806689 != nil)
+        self._method_is_visible_2240911060 = StringName(from: "is_visible")
+        assert(self._method_is_visible_2240911060 != nil)
+        self._method_set_visibility_2586408642 = StringName(from: "set_visibility")
+        assert(self._method_set_visibility_2586408642 != nil)
+        self._method_is_outline_2240911060 = StringName(from: "is_outline")
+        assert(self._method_is_outline_2240911060 != nil)
+        self._method_set_outline_2586408642 = StringName(from: "set_outline")
+        assert(self._method_set_outline_2586408642 != nil)
+        self._method_get_offset_1497962370 = StringName(from: "get_offset")
+        assert(self._method_get_offset_1497962370 != nil)
+        self._method_set_offset_743155724 = StringName(from: "set_offset")
+        assert(self._method_set_offset_743155724 != nil)
+        self._method_get_color_3200896285 = StringName(from: "get_color")
+        assert(self._method_get_color_3200896285 != nil)
+        self._method_set_color_2920490490 = StringName(from: "set_color")
+        assert(self._method_set_color_2920490490 != nil)
+        self._method_get_environment_2382534195 = StringName(from: "get_environment")
+        assert(self._method_get_environment_2382534195 != nil)
+        self._method_set_environment_4155329257 = StringName(from: "set_environment")
+        assert(self._method_set_environment_4155329257 != nil)
+        self._method_get_glyph_index_3905245786 = StringName(from: "get_glyph_index")
+        assert(self._method_get_glyph_index_3905245786 != nil)
+        self._method_set_glyph_index_1286410249 = StringName(from: "set_glyph_index")
+        assert(self._method_set_glyph_index_1286410249 != nil)
+        self._method_get_relative_index_3905245786 = StringName(from: "get_relative_index")
+        assert(self._method_get_relative_index_3905245786 != nil)
+        self._method_set_relative_index_1286410249 = StringName(from: "set_relative_index")
+        assert(self._method_set_relative_index_1286410249 != nil)
+        self._method_get_glyph_count_3905245786 = StringName(from: "get_glyph_count")
+        assert(self._method_get_glyph_count_3905245786 != nil)
+        self._method_set_glyph_count_1286410249 = StringName(from: "set_glyph_count")
+        assert(self._method_set_glyph_count_1286410249 != nil)
+        self._method_get_glyph_flags_3905245786 = StringName(from: "get_glyph_flags")
+        assert(self._method_get_glyph_flags_3905245786 != nil)
+        self._method_set_glyph_flags_1286410249 = StringName(from: "set_glyph_flags")
+        assert(self._method_set_glyph_flags_1286410249 != nil)
+        self._method_get_font_2944877500 = StringName(from: "get_font")
+        assert(self._method_get_font_2944877500 != nil)
+        self._method_set_font_2722037293 = StringName(from: "set_font")
+        assert(self._method_set_font_2722037293 != nil)
     }
 
     public func get_range() -> Vector2i {
@@ -126,8 +103,13 @@ open class CharFXTransform : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_range_2741790807,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_range_2741790807._native_ptr(),
+                    2741790807)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -142,8 +124,13 @@ open class CharFXTransform : RefCounted {
                 .init(range_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_range_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_range_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -158,8 +145,13 @@ open class CharFXTransform : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_elapsed_time_191475506,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_elapsed_time_191475506._native_ptr(),
+                    191475506)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -174,8 +166,13 @@ open class CharFXTransform : RefCounted {
                 .init(time_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_elapsed_time_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_elapsed_time_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -191,8 +188,13 @@ open class CharFXTransform : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_visible_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_visible_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -207,8 +209,13 @@ open class CharFXTransform : RefCounted {
                 .init(visibility_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_visibility_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_visibility_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -224,8 +231,13 @@ open class CharFXTransform : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_outline_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_outline_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -240,8 +252,13 @@ open class CharFXTransform : RefCounted {
                 .init(outline_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_outline_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_outline_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -256,8 +273,13 @@ open class CharFXTransform : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_offset_1497962370,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_offset_1497962370._native_ptr(),
+                    1497962370)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -272,8 +294,13 @@ open class CharFXTransform : RefCounted {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_offset_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_offset_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -287,8 +314,13 @@ open class CharFXTransform : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_color_3200896285,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_color_3200896285._native_ptr(),
+                    3200896285)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -303,8 +335,13 @@ open class CharFXTransform : RefCounted {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -318,8 +355,13 @@ open class CharFXTransform : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_environment_2382534195,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_environment_2382534195._native_ptr(),
+                    2382534195)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -334,8 +376,13 @@ open class CharFXTransform : RefCounted {
                 .init(environment_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_environment_4155329257,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_environment_4155329257._native_ptr(),
+                    4155329257)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -350,8 +397,13 @@ open class CharFXTransform : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_glyph_index_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_glyph_index_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -366,8 +418,13 @@ open class CharFXTransform : RefCounted {
                 .init(glyph_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_glyph_index_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_glyph_index_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -383,8 +440,13 @@ open class CharFXTransform : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_relative_index_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_relative_index_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -399,8 +461,13 @@ open class CharFXTransform : RefCounted {
                 .init(relative_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_relative_index_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_relative_index_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -416,8 +483,13 @@ open class CharFXTransform : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_glyph_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_glyph_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -432,8 +504,13 @@ open class CharFXTransform : RefCounted {
                 .init(glyph_count_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_glyph_count_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_glyph_count_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -449,8 +526,13 @@ open class CharFXTransform : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_glyph_flags_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_glyph_flags_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -465,8 +547,13 @@ open class CharFXTransform : RefCounted {
                 .init(glyph_flags_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_glyph_flags_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_glyph_flags_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -481,8 +568,13 @@ open class CharFXTransform : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_font_2944877500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_font_2944877500._native_ptr(),
+                    2944877500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -497,8 +589,13 @@ open class CharFXTransform : RefCounted {
                 .init(font_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_font_2722037293,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_font_2722037293._native_ptr(),
+                    2722037293)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

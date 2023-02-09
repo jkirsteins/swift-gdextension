@@ -13,35 +13,31 @@ open class EditorResourcePreview : Node {
 
     public override class var __godot_name: StringName { __godot_name_EditorResourcePreview }
 
-    static var _method_queue_resource_preview_233177534: GDExtensionMethodBindPtr! = nil
-    static var _method_queue_edited_resource_preview_1608376650: GDExtensionMethodBindPtr! = nil
-    static var _method_add_preview_generator_332288124: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_preview_generator_332288124: GDExtensionMethodBindPtr! = nil
-    static var _method_check_for_invalidation_83702148: GDExtensionMethodBindPtr! = nil
+    static var _method_queue_resource_preview_233177534: StringName! = nil
+    static var _method_queue_edited_resource_preview_1608376650: StringName! = nil
+    static var _method_add_preview_generator_332288124: StringName! = nil
+    static var _method_remove_preview_generator_332288124: StringName! = nil
+    static var _method_check_for_invalidation_83702148: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorResourcePreview == nil)
         __godot_name_EditorResourcePreview = StringName(from: "EditorResourcePreview")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_queue_resource_preview_233177534_name = StringName(from: "queue_resource_preview")
-        self._method_queue_resource_preview_233177534 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorResourcePreview._native_ptr(), _method_queue_resource_preview_233177534_name._native_ptr(), 233177534)
-        assert(EditorResourcePreview._method_queue_resource_preview_233177534 != nil)
-        let _method_queue_edited_resource_preview_1608376650_name = StringName(from: "queue_edited_resource_preview")
-        self._method_queue_edited_resource_preview_1608376650 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorResourcePreview._native_ptr(), _method_queue_edited_resource_preview_1608376650_name._native_ptr(), 1608376650)
-        assert(EditorResourcePreview._method_queue_edited_resource_preview_1608376650 != nil)
-        let _method_add_preview_generator_332288124_name = StringName(from: "add_preview_generator")
-        self._method_add_preview_generator_332288124 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorResourcePreview._native_ptr(), _method_add_preview_generator_332288124_name._native_ptr(), 332288124)
-        assert(EditorResourcePreview._method_add_preview_generator_332288124 != nil)
-        let _method_remove_preview_generator_332288124_name = StringName(from: "remove_preview_generator")
-        self._method_remove_preview_generator_332288124 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorResourcePreview._native_ptr(), _method_remove_preview_generator_332288124_name._native_ptr(), 332288124)
-        assert(EditorResourcePreview._method_remove_preview_generator_332288124 != nil)
-        let _method_check_for_invalidation_83702148_name = StringName(from: "check_for_invalidation")
-        self._method_check_for_invalidation_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorResourcePreview._native_ptr(), _method_check_for_invalidation_83702148_name._native_ptr(), 83702148)
-        assert(EditorResourcePreview._method_check_for_invalidation_83702148 != nil)
+        self._method_queue_resource_preview_233177534 = StringName(from: "queue_resource_preview")
+        assert(self._method_queue_resource_preview_233177534 != nil)
+        self._method_queue_edited_resource_preview_1608376650 = StringName(from: "queue_edited_resource_preview")
+        assert(self._method_queue_edited_resource_preview_1608376650 != nil)
+        self._method_add_preview_generator_332288124 = StringName(from: "add_preview_generator")
+        assert(self._method_add_preview_generator_332288124 != nil)
+        self._method_remove_preview_generator_332288124 = StringName(from: "remove_preview_generator")
+        assert(self._method_remove_preview_generator_332288124 != nil)
+        self._method_check_for_invalidation_83702148 = StringName(from: "check_for_invalidation")
+        assert(self._method_check_for_invalidation_83702148 != nil)
     }
 
     public func queue_resource_preview(path: godot.String, receiver: Object, receiver_func: StringName, userdata: Variant)  {
@@ -55,8 +51,13 @@ open class EditorResourcePreview : Node {
                 .init(path_native), .init(receiver_native), .init(receiver_func_native), .init(userdata_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_queue_resource_preview_233177534,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_queue_resource_preview_233177534._native_ptr(),
+                    233177534)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -73,8 +74,13 @@ open class EditorResourcePreview : Node {
                 .init(resource_native), .init(receiver_native), .init(receiver_func_native), .init(userdata_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_queue_edited_resource_preview_1608376650,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_queue_edited_resource_preview_1608376650._native_ptr(),
+                    1608376650)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -88,8 +94,13 @@ open class EditorResourcePreview : Node {
                 .init(generator_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_preview_generator_332288124,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_preview_generator_332288124._native_ptr(),
+                    332288124)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -103,8 +114,13 @@ open class EditorResourcePreview : Node {
                 .init(generator_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_preview_generator_332288124,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_preview_generator_332288124._native_ptr(),
+                    332288124)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -118,8 +134,13 @@ open class EditorResourcePreview : Node {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_check_for_invalidation_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_check_for_invalidation_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

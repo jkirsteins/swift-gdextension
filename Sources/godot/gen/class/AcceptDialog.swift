@@ -11,79 +11,64 @@ open class AcceptDialog : Window {
 
     public override class var __godot_name: StringName { __godot_name_AcceptDialog }
 
-    static var _method_get_ok_button_1856205918: GDExtensionMethodBindPtr! = nil
-    static var _method_get_label_566733104: GDExtensionMethodBindPtr! = nil
-    static var _method_set_hide_on_ok_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_hide_on_ok_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_close_on_escape_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_close_on_escape_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_add_button_4158837846: GDExtensionMethodBindPtr! = nil
-    static var _method_add_cancel_button_242045556: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_button_1496901182: GDExtensionMethodBindPtr! = nil
-    static var _method_register_text_enter_1496901182: GDExtensionMethodBindPtr! = nil
-    static var _method_set_text_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_autowrap_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_has_autowrap_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_set_ok_button_text_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_ok_button_text_201670096: GDExtensionMethodBindPtr! = nil
+    static var _method_get_ok_button_1856205918: StringName! = nil
+    static var _method_get_label_566733104: StringName! = nil
+    static var _method_set_hide_on_ok_2586408642: StringName! = nil
+    static var _method_get_hide_on_ok_36873697: StringName! = nil
+    static var _method_set_close_on_escape_2586408642: StringName! = nil
+    static var _method_get_close_on_escape_36873697: StringName! = nil
+    static var _method_add_button_4158837846: StringName! = nil
+    static var _method_add_cancel_button_242045556: StringName! = nil
+    static var _method_remove_button_1496901182: StringName! = nil
+    static var _method_register_text_enter_1496901182: StringName! = nil
+    static var _method_set_text_83702148: StringName! = nil
+    static var _method_get_text_201670096: StringName! = nil
+    static var _method_set_autowrap_2586408642: StringName! = nil
+    static var _method_has_autowrap_2240911060: StringName! = nil
+    static var _method_set_ok_button_text_83702148: StringName! = nil
+    static var _method_get_ok_button_text_201670096: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AcceptDialog == nil)
         __godot_name_AcceptDialog = StringName(from: "AcceptDialog")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_ok_button_1856205918_name = StringName(from: "get_ok_button")
-        self._method_get_ok_button_1856205918 = self.interface.pointee.classdb_get_method_bind(__godot_name_AcceptDialog._native_ptr(), _method_get_ok_button_1856205918_name._native_ptr(), 1856205918)
-        assert(AcceptDialog._method_get_ok_button_1856205918 != nil)
-        let _method_get_label_566733104_name = StringName(from: "get_label")
-        self._method_get_label_566733104 = self.interface.pointee.classdb_get_method_bind(__godot_name_AcceptDialog._native_ptr(), _method_get_label_566733104_name._native_ptr(), 566733104)
-        assert(AcceptDialog._method_get_label_566733104 != nil)
-        let _method_set_hide_on_ok_2586408642_name = StringName(from: "set_hide_on_ok")
-        self._method_set_hide_on_ok_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AcceptDialog._native_ptr(), _method_set_hide_on_ok_2586408642_name._native_ptr(), 2586408642)
-        assert(AcceptDialog._method_set_hide_on_ok_2586408642 != nil)
-        let _method_get_hide_on_ok_36873697_name = StringName(from: "get_hide_on_ok")
-        self._method_get_hide_on_ok_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AcceptDialog._native_ptr(), _method_get_hide_on_ok_36873697_name._native_ptr(), 36873697)
-        assert(AcceptDialog._method_get_hide_on_ok_36873697 != nil)
-        let _method_set_close_on_escape_2586408642_name = StringName(from: "set_close_on_escape")
-        self._method_set_close_on_escape_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AcceptDialog._native_ptr(), _method_set_close_on_escape_2586408642_name._native_ptr(), 2586408642)
-        assert(AcceptDialog._method_set_close_on_escape_2586408642 != nil)
-        let _method_get_close_on_escape_36873697_name = StringName(from: "get_close_on_escape")
-        self._method_get_close_on_escape_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AcceptDialog._native_ptr(), _method_get_close_on_escape_36873697_name._native_ptr(), 36873697)
-        assert(AcceptDialog._method_get_close_on_escape_36873697 != nil)
-        let _method_add_button_4158837846_name = StringName(from: "add_button")
-        self._method_add_button_4158837846 = self.interface.pointee.classdb_get_method_bind(__godot_name_AcceptDialog._native_ptr(), _method_add_button_4158837846_name._native_ptr(), 4158837846)
-        assert(AcceptDialog._method_add_button_4158837846 != nil)
-        let _method_add_cancel_button_242045556_name = StringName(from: "add_cancel_button")
-        self._method_add_cancel_button_242045556 = self.interface.pointee.classdb_get_method_bind(__godot_name_AcceptDialog._native_ptr(), _method_add_cancel_button_242045556_name._native_ptr(), 242045556)
-        assert(AcceptDialog._method_add_cancel_button_242045556 != nil)
-        let _method_remove_button_1496901182_name = StringName(from: "remove_button")
-        self._method_remove_button_1496901182 = self.interface.pointee.classdb_get_method_bind(__godot_name_AcceptDialog._native_ptr(), _method_remove_button_1496901182_name._native_ptr(), 1496901182)
-        assert(AcceptDialog._method_remove_button_1496901182 != nil)
-        let _method_register_text_enter_1496901182_name = StringName(from: "register_text_enter")
-        self._method_register_text_enter_1496901182 = self.interface.pointee.classdb_get_method_bind(__godot_name_AcceptDialog._native_ptr(), _method_register_text_enter_1496901182_name._native_ptr(), 1496901182)
-        assert(AcceptDialog._method_register_text_enter_1496901182 != nil)
-        let _method_set_text_83702148_name = StringName(from: "set_text")
-        self._method_set_text_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_AcceptDialog._native_ptr(), _method_set_text_83702148_name._native_ptr(), 83702148)
-        assert(AcceptDialog._method_set_text_83702148 != nil)
-        let _method_get_text_201670096_name = StringName(from: "get_text")
-        self._method_get_text_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_AcceptDialog._native_ptr(), _method_get_text_201670096_name._native_ptr(), 201670096)
-        assert(AcceptDialog._method_get_text_201670096 != nil)
-        let _method_set_autowrap_2586408642_name = StringName(from: "set_autowrap")
-        self._method_set_autowrap_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AcceptDialog._native_ptr(), _method_set_autowrap_2586408642_name._native_ptr(), 2586408642)
-        assert(AcceptDialog._method_set_autowrap_2586408642 != nil)
-        let _method_has_autowrap_2240911060_name = StringName(from: "has_autowrap")
-        self._method_has_autowrap_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_AcceptDialog._native_ptr(), _method_has_autowrap_2240911060_name._native_ptr(), 2240911060)
-        assert(AcceptDialog._method_has_autowrap_2240911060 != nil)
-        let _method_set_ok_button_text_83702148_name = StringName(from: "set_ok_button_text")
-        self._method_set_ok_button_text_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_AcceptDialog._native_ptr(), _method_set_ok_button_text_83702148_name._native_ptr(), 83702148)
-        assert(AcceptDialog._method_set_ok_button_text_83702148 != nil)
-        let _method_get_ok_button_text_201670096_name = StringName(from: "get_ok_button_text")
-        self._method_get_ok_button_text_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_AcceptDialog._native_ptr(), _method_get_ok_button_text_201670096_name._native_ptr(), 201670096)
-        assert(AcceptDialog._method_get_ok_button_text_201670096 != nil)
+        self._method_get_ok_button_1856205918 = StringName(from: "get_ok_button")
+        assert(self._method_get_ok_button_1856205918 != nil)
+        self._method_get_label_566733104 = StringName(from: "get_label")
+        assert(self._method_get_label_566733104 != nil)
+        self._method_set_hide_on_ok_2586408642 = StringName(from: "set_hide_on_ok")
+        assert(self._method_set_hide_on_ok_2586408642 != nil)
+        self._method_get_hide_on_ok_36873697 = StringName(from: "get_hide_on_ok")
+        assert(self._method_get_hide_on_ok_36873697 != nil)
+        self._method_set_close_on_escape_2586408642 = StringName(from: "set_close_on_escape")
+        assert(self._method_set_close_on_escape_2586408642 != nil)
+        self._method_get_close_on_escape_36873697 = StringName(from: "get_close_on_escape")
+        assert(self._method_get_close_on_escape_36873697 != nil)
+        self._method_add_button_4158837846 = StringName(from: "add_button")
+        assert(self._method_add_button_4158837846 != nil)
+        self._method_add_cancel_button_242045556 = StringName(from: "add_cancel_button")
+        assert(self._method_add_cancel_button_242045556 != nil)
+        self._method_remove_button_1496901182 = StringName(from: "remove_button")
+        assert(self._method_remove_button_1496901182 != nil)
+        self._method_register_text_enter_1496901182 = StringName(from: "register_text_enter")
+        assert(self._method_register_text_enter_1496901182 != nil)
+        self._method_set_text_83702148 = StringName(from: "set_text")
+        assert(self._method_set_text_83702148 != nil)
+        self._method_get_text_201670096 = StringName(from: "get_text")
+        assert(self._method_get_text_201670096 != nil)
+        self._method_set_autowrap_2586408642 = StringName(from: "set_autowrap")
+        assert(self._method_set_autowrap_2586408642 != nil)
+        self._method_has_autowrap_2240911060 = StringName(from: "has_autowrap")
+        assert(self._method_has_autowrap_2240911060 != nil)
+        self._method_set_ok_button_text_83702148 = StringName(from: "set_ok_button_text")
+        assert(self._method_set_ok_button_text_83702148 != nil)
+        self._method_get_ok_button_text_201670096 = StringName(from: "get_ok_button_text")
+        assert(self._method_get_ok_button_text_201670096 != nil)
     }
 
     public func get_ok_button() -> Button {
@@ -94,8 +79,13 @@ open class AcceptDialog : Window {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_ok_button_1856205918,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_ok_button_1856205918._native_ptr(),
+                    1856205918)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -110,8 +100,13 @@ open class AcceptDialog : Window {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_label_566733104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_label_566733104._native_ptr(),
+                    566733104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -126,8 +121,13 @@ open class AcceptDialog : Window {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_hide_on_ok_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_hide_on_ok_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -143,8 +143,13 @@ open class AcceptDialog : Window {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_hide_on_ok_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_hide_on_ok_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -159,8 +164,13 @@ open class AcceptDialog : Window {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_close_on_escape_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_close_on_escape_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -176,8 +186,13 @@ open class AcceptDialog : Window {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_close_on_escape_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_close_on_escape_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -195,8 +210,13 @@ open class AcceptDialog : Window {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_button_4158837846,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_button_4158837846._native_ptr(),
+                    4158837846)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -213,8 +233,13 @@ open class AcceptDialog : Window {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_cancel_button_242045556,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_cancel_button_242045556._native_ptr(),
+                    242045556)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -229,8 +254,13 @@ open class AcceptDialog : Window {
                 .init(button_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_button_1496901182,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_button_1496901182._native_ptr(),
+                    1496901182)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -244,8 +274,13 @@ open class AcceptDialog : Window {
                 .init(line_edit_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_register_text_enter_1496901182,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_register_text_enter_1496901182._native_ptr(),
+                    1496901182)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -259,8 +294,13 @@ open class AcceptDialog : Window {
                 .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_text_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_text_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -274,8 +314,13 @@ open class AcceptDialog : Window {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -290,8 +335,13 @@ open class AcceptDialog : Window {
                 .init(autowrap_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_autowrap_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_autowrap_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -307,8 +357,13 @@ open class AcceptDialog : Window {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_autowrap_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_autowrap_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -323,8 +378,13 @@ open class AcceptDialog : Window {
                 .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_ok_button_text_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_ok_button_text_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -338,8 +398,13 @@ open class AcceptDialog : Window {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_ok_button_text_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_ok_button_text_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

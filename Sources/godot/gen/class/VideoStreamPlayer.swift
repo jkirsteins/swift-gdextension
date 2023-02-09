@@ -17,115 +17,91 @@ open class VideoStreamPlayer : Control {
 
     public override class var __godot_name: StringName { __godot_name_VideoStreamPlayer }
 
-    static var _method_set_stream_2317102564: GDExtensionMethodBindPtr! = nil
-    static var _method_get_stream_438621487: GDExtensionMethodBindPtr! = nil
-    static var _method_play_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_stop_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_is_playing_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_paused_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_paused_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_volume_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_volume_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_volume_db_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_volume_db_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_audio_track_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_audio_track_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_stream_name_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_stream_position_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_stream_position_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_autoplay_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_has_autoplay_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_expand_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_has_expand_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_buffering_msec_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_buffering_msec_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bus_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bus_2002593661: GDExtensionMethodBindPtr! = nil
-    static var _method_get_video_texture_3635182373: GDExtensionMethodBindPtr! = nil
+    static var _method_set_stream_2317102564: StringName! = nil
+    static var _method_get_stream_438621487: StringName! = nil
+    static var _method_play_3218959716: StringName! = nil
+    static var _method_stop_3218959716: StringName! = nil
+    static var _method_is_playing_36873697: StringName! = nil
+    static var _method_set_paused_2586408642: StringName! = nil
+    static var _method_is_paused_36873697: StringName! = nil
+    static var _method_set_volume_373806689: StringName! = nil
+    static var _method_get_volume_1740695150: StringName! = nil
+    static var _method_set_volume_db_373806689: StringName! = nil
+    static var _method_get_volume_db_1740695150: StringName! = nil
+    static var _method_set_audio_track_1286410249: StringName! = nil
+    static var _method_get_audio_track_3905245786: StringName! = nil
+    static var _method_get_stream_name_201670096: StringName! = nil
+    static var _method_set_stream_position_373806689: StringName! = nil
+    static var _method_get_stream_position_1740695150: StringName! = nil
+    static var _method_set_autoplay_2586408642: StringName! = nil
+    static var _method_has_autoplay_36873697: StringName! = nil
+    static var _method_set_expand_2586408642: StringName! = nil
+    static var _method_has_expand_36873697: StringName! = nil
+    static var _method_set_buffering_msec_1286410249: StringName! = nil
+    static var _method_get_buffering_msec_3905245786: StringName! = nil
+    static var _method_set_bus_3304788590: StringName! = nil
+    static var _method_get_bus_2002593661: StringName! = nil
+    static var _method_get_video_texture_3635182373: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VideoStreamPlayer == nil)
         __godot_name_VideoStreamPlayer = StringName(from: "VideoStreamPlayer")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_stream_2317102564_name = StringName(from: "set_stream")
-        self._method_set_stream_2317102564 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_set_stream_2317102564_name._native_ptr(), 2317102564)
-        assert(VideoStreamPlayer._method_set_stream_2317102564 != nil)
-        let _method_get_stream_438621487_name = StringName(from: "get_stream")
-        self._method_get_stream_438621487 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_get_stream_438621487_name._native_ptr(), 438621487)
-        assert(VideoStreamPlayer._method_get_stream_438621487 != nil)
-        let _method_play_3218959716_name = StringName(from: "play")
-        self._method_play_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_play_3218959716_name._native_ptr(), 3218959716)
-        assert(VideoStreamPlayer._method_play_3218959716 != nil)
-        let _method_stop_3218959716_name = StringName(from: "stop")
-        self._method_stop_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_stop_3218959716_name._native_ptr(), 3218959716)
-        assert(VideoStreamPlayer._method_stop_3218959716 != nil)
-        let _method_is_playing_36873697_name = StringName(from: "is_playing")
-        self._method_is_playing_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_is_playing_36873697_name._native_ptr(), 36873697)
-        assert(VideoStreamPlayer._method_is_playing_36873697 != nil)
-        let _method_set_paused_2586408642_name = StringName(from: "set_paused")
-        self._method_set_paused_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_set_paused_2586408642_name._native_ptr(), 2586408642)
-        assert(VideoStreamPlayer._method_set_paused_2586408642 != nil)
-        let _method_is_paused_36873697_name = StringName(from: "is_paused")
-        self._method_is_paused_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_is_paused_36873697_name._native_ptr(), 36873697)
-        assert(VideoStreamPlayer._method_is_paused_36873697 != nil)
-        let _method_set_volume_373806689_name = StringName(from: "set_volume")
-        self._method_set_volume_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_set_volume_373806689_name._native_ptr(), 373806689)
-        assert(VideoStreamPlayer._method_set_volume_373806689 != nil)
-        let _method_get_volume_1740695150_name = StringName(from: "get_volume")
-        self._method_get_volume_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_get_volume_1740695150_name._native_ptr(), 1740695150)
-        assert(VideoStreamPlayer._method_get_volume_1740695150 != nil)
-        let _method_set_volume_db_373806689_name = StringName(from: "set_volume_db")
-        self._method_set_volume_db_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_set_volume_db_373806689_name._native_ptr(), 373806689)
-        assert(VideoStreamPlayer._method_set_volume_db_373806689 != nil)
-        let _method_get_volume_db_1740695150_name = StringName(from: "get_volume_db")
-        self._method_get_volume_db_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_get_volume_db_1740695150_name._native_ptr(), 1740695150)
-        assert(VideoStreamPlayer._method_get_volume_db_1740695150 != nil)
-        let _method_set_audio_track_1286410249_name = StringName(from: "set_audio_track")
-        self._method_set_audio_track_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_set_audio_track_1286410249_name._native_ptr(), 1286410249)
-        assert(VideoStreamPlayer._method_set_audio_track_1286410249 != nil)
-        let _method_get_audio_track_3905245786_name = StringName(from: "get_audio_track")
-        self._method_get_audio_track_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_get_audio_track_3905245786_name._native_ptr(), 3905245786)
-        assert(VideoStreamPlayer._method_get_audio_track_3905245786 != nil)
-        let _method_get_stream_name_201670096_name = StringName(from: "get_stream_name")
-        self._method_get_stream_name_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_get_stream_name_201670096_name._native_ptr(), 201670096)
-        assert(VideoStreamPlayer._method_get_stream_name_201670096 != nil)
-        let _method_set_stream_position_373806689_name = StringName(from: "set_stream_position")
-        self._method_set_stream_position_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_set_stream_position_373806689_name._native_ptr(), 373806689)
-        assert(VideoStreamPlayer._method_set_stream_position_373806689 != nil)
-        let _method_get_stream_position_1740695150_name = StringName(from: "get_stream_position")
-        self._method_get_stream_position_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_get_stream_position_1740695150_name._native_ptr(), 1740695150)
-        assert(VideoStreamPlayer._method_get_stream_position_1740695150 != nil)
-        let _method_set_autoplay_2586408642_name = StringName(from: "set_autoplay")
-        self._method_set_autoplay_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_set_autoplay_2586408642_name._native_ptr(), 2586408642)
-        assert(VideoStreamPlayer._method_set_autoplay_2586408642 != nil)
-        let _method_has_autoplay_36873697_name = StringName(from: "has_autoplay")
-        self._method_has_autoplay_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_has_autoplay_36873697_name._native_ptr(), 36873697)
-        assert(VideoStreamPlayer._method_has_autoplay_36873697 != nil)
-        let _method_set_expand_2586408642_name = StringName(from: "set_expand")
-        self._method_set_expand_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_set_expand_2586408642_name._native_ptr(), 2586408642)
-        assert(VideoStreamPlayer._method_set_expand_2586408642 != nil)
-        let _method_has_expand_36873697_name = StringName(from: "has_expand")
-        self._method_has_expand_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_has_expand_36873697_name._native_ptr(), 36873697)
-        assert(VideoStreamPlayer._method_has_expand_36873697 != nil)
-        let _method_set_buffering_msec_1286410249_name = StringName(from: "set_buffering_msec")
-        self._method_set_buffering_msec_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_set_buffering_msec_1286410249_name._native_ptr(), 1286410249)
-        assert(VideoStreamPlayer._method_set_buffering_msec_1286410249 != nil)
-        let _method_get_buffering_msec_3905245786_name = StringName(from: "get_buffering_msec")
-        self._method_get_buffering_msec_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_get_buffering_msec_3905245786_name._native_ptr(), 3905245786)
-        assert(VideoStreamPlayer._method_get_buffering_msec_3905245786 != nil)
-        let _method_set_bus_3304788590_name = StringName(from: "set_bus")
-        self._method_set_bus_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_set_bus_3304788590_name._native_ptr(), 3304788590)
-        assert(VideoStreamPlayer._method_set_bus_3304788590 != nil)
-        let _method_get_bus_2002593661_name = StringName(from: "get_bus")
-        self._method_get_bus_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_get_bus_2002593661_name._native_ptr(), 2002593661)
-        assert(VideoStreamPlayer._method_get_bus_2002593661 != nil)
-        let _method_get_video_texture_3635182373_name = StringName(from: "get_video_texture")
-        self._method_get_video_texture_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_VideoStreamPlayer._native_ptr(), _method_get_video_texture_3635182373_name._native_ptr(), 3635182373)
-        assert(VideoStreamPlayer._method_get_video_texture_3635182373 != nil)
+        self._method_set_stream_2317102564 = StringName(from: "set_stream")
+        assert(self._method_set_stream_2317102564 != nil)
+        self._method_get_stream_438621487 = StringName(from: "get_stream")
+        assert(self._method_get_stream_438621487 != nil)
+        self._method_play_3218959716 = StringName(from: "play")
+        assert(self._method_play_3218959716 != nil)
+        self._method_stop_3218959716 = StringName(from: "stop")
+        assert(self._method_stop_3218959716 != nil)
+        self._method_is_playing_36873697 = StringName(from: "is_playing")
+        assert(self._method_is_playing_36873697 != nil)
+        self._method_set_paused_2586408642 = StringName(from: "set_paused")
+        assert(self._method_set_paused_2586408642 != nil)
+        self._method_is_paused_36873697 = StringName(from: "is_paused")
+        assert(self._method_is_paused_36873697 != nil)
+        self._method_set_volume_373806689 = StringName(from: "set_volume")
+        assert(self._method_set_volume_373806689 != nil)
+        self._method_get_volume_1740695150 = StringName(from: "get_volume")
+        assert(self._method_get_volume_1740695150 != nil)
+        self._method_set_volume_db_373806689 = StringName(from: "set_volume_db")
+        assert(self._method_set_volume_db_373806689 != nil)
+        self._method_get_volume_db_1740695150 = StringName(from: "get_volume_db")
+        assert(self._method_get_volume_db_1740695150 != nil)
+        self._method_set_audio_track_1286410249 = StringName(from: "set_audio_track")
+        assert(self._method_set_audio_track_1286410249 != nil)
+        self._method_get_audio_track_3905245786 = StringName(from: "get_audio_track")
+        assert(self._method_get_audio_track_3905245786 != nil)
+        self._method_get_stream_name_201670096 = StringName(from: "get_stream_name")
+        assert(self._method_get_stream_name_201670096 != nil)
+        self._method_set_stream_position_373806689 = StringName(from: "set_stream_position")
+        assert(self._method_set_stream_position_373806689 != nil)
+        self._method_get_stream_position_1740695150 = StringName(from: "get_stream_position")
+        assert(self._method_get_stream_position_1740695150 != nil)
+        self._method_set_autoplay_2586408642 = StringName(from: "set_autoplay")
+        assert(self._method_set_autoplay_2586408642 != nil)
+        self._method_has_autoplay_36873697 = StringName(from: "has_autoplay")
+        assert(self._method_has_autoplay_36873697 != nil)
+        self._method_set_expand_2586408642 = StringName(from: "set_expand")
+        assert(self._method_set_expand_2586408642 != nil)
+        self._method_has_expand_36873697 = StringName(from: "has_expand")
+        assert(self._method_has_expand_36873697 != nil)
+        self._method_set_buffering_msec_1286410249 = StringName(from: "set_buffering_msec")
+        assert(self._method_set_buffering_msec_1286410249 != nil)
+        self._method_get_buffering_msec_3905245786 = StringName(from: "get_buffering_msec")
+        assert(self._method_get_buffering_msec_3905245786 != nil)
+        self._method_set_bus_3304788590 = StringName(from: "set_bus")
+        assert(self._method_set_bus_3304788590 != nil)
+        self._method_get_bus_2002593661 = StringName(from: "get_bus")
+        assert(self._method_get_bus_2002593661 != nil)
+        self._method_get_video_texture_3635182373 = StringName(from: "get_video_texture")
+        assert(self._method_get_video_texture_3635182373 != nil)
     }
 
     public func set_stream(stream: VideoStream)  {
@@ -136,8 +112,13 @@ open class VideoStreamPlayer : Control {
                 .init(stream_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_stream_2317102564,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_stream_2317102564._native_ptr(),
+                    2317102564)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -151,8 +132,13 @@ open class VideoStreamPlayer : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_stream_438621487,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_stream_438621487._native_ptr(),
+                    438621487)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -166,8 +152,13 @@ open class VideoStreamPlayer : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_play_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_play_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -180,8 +171,13 @@ open class VideoStreamPlayer : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_stop_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_stop_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -196,8 +192,13 @@ open class VideoStreamPlayer : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_playing_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_playing_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -212,8 +213,13 @@ open class VideoStreamPlayer : Control {
                 .init(paused_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_paused_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_paused_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -229,8 +235,13 @@ open class VideoStreamPlayer : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_paused_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_paused_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -245,8 +256,13 @@ open class VideoStreamPlayer : Control {
                 .init(volume_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_volume_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_volume_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -262,8 +278,13 @@ open class VideoStreamPlayer : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_volume_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_volume_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -278,8 +299,13 @@ open class VideoStreamPlayer : Control {
                 .init(db_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_volume_db_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_volume_db_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -295,8 +321,13 @@ open class VideoStreamPlayer : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_volume_db_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_volume_db_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -311,8 +342,13 @@ open class VideoStreamPlayer : Control {
                 .init(track_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_audio_track_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_audio_track_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -328,8 +364,13 @@ open class VideoStreamPlayer : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_audio_track_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_audio_track_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -344,8 +385,13 @@ open class VideoStreamPlayer : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_stream_name_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_stream_name_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -360,8 +406,13 @@ open class VideoStreamPlayer : Control {
                 .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_stream_position_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_stream_position_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -377,8 +428,13 @@ open class VideoStreamPlayer : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_stream_position_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_stream_position_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -393,8 +449,13 @@ open class VideoStreamPlayer : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_autoplay_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_autoplay_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -410,8 +471,13 @@ open class VideoStreamPlayer : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_autoplay_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_autoplay_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -426,8 +492,13 @@ open class VideoStreamPlayer : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_expand_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_expand_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -443,8 +514,13 @@ open class VideoStreamPlayer : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_expand_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_expand_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -459,8 +535,13 @@ open class VideoStreamPlayer : Control {
                 .init(msec_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_buffering_msec_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_buffering_msec_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -476,8 +557,13 @@ open class VideoStreamPlayer : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_buffering_msec_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_buffering_msec_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -492,8 +578,13 @@ open class VideoStreamPlayer : Control {
                 .init(bus_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bus_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bus_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -507,8 +598,13 @@ open class VideoStreamPlayer : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bus_2002593661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bus_2002593661._native_ptr(),
+                    2002593661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -523,8 +619,13 @@ open class VideoStreamPlayer : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_video_texture_3635182373,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_video_texture_3635182373._native_ptr(),
+                    3635182373)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -31,8 +31,9 @@ open class AudioEffectEQ6 : AudioEffectEQ {
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AudioEffectEQ6 == nil)
         __godot_name_AudioEffectEQ6 = StringName(from: "AudioEffectEQ6")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library

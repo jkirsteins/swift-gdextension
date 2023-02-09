@@ -13,27 +13,25 @@ open class ArrayOccluder3D : Occluder3D {
 
     public override class var __godot_name: StringName { __godot_name_ArrayOccluder3D }
 
-    static var _method_set_arrays_3233972621: GDExtensionMethodBindPtr! = nil
-    static var _method_set_vertices_334873810: GDExtensionMethodBindPtr! = nil
-    static var _method_set_indices_3614634198: GDExtensionMethodBindPtr! = nil
+    static var _method_set_arrays_3233972621: StringName! = nil
+    static var _method_set_vertices_334873810: StringName! = nil
+    static var _method_set_indices_3614634198: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ArrayOccluder3D == nil)
         __godot_name_ArrayOccluder3D = StringName(from: "ArrayOccluder3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_arrays_3233972621_name = StringName(from: "set_arrays")
-        self._method_set_arrays_3233972621 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayOccluder3D._native_ptr(), _method_set_arrays_3233972621_name._native_ptr(), 3233972621)
-        assert(ArrayOccluder3D._method_set_arrays_3233972621 != nil)
-        let _method_set_vertices_334873810_name = StringName(from: "set_vertices")
-        self._method_set_vertices_334873810 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayOccluder3D._native_ptr(), _method_set_vertices_334873810_name._native_ptr(), 334873810)
-        assert(ArrayOccluder3D._method_set_vertices_334873810 != nil)
-        let _method_set_indices_3614634198_name = StringName(from: "set_indices")
-        self._method_set_indices_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayOccluder3D._native_ptr(), _method_set_indices_3614634198_name._native_ptr(), 3614634198)
-        assert(ArrayOccluder3D._method_set_indices_3614634198 != nil)
+        self._method_set_arrays_3233972621 = StringName(from: "set_arrays")
+        assert(self._method_set_arrays_3233972621 != nil)
+        self._method_set_vertices_334873810 = StringName(from: "set_vertices")
+        assert(self._method_set_vertices_334873810 != nil)
+        self._method_set_indices_3614634198 = StringName(from: "set_indices")
+        assert(self._method_set_indices_3614634198 != nil)
     }
 
     public func set_arrays(vertices: PackedVector3Array, indices: PackedInt32Array)  {
@@ -45,8 +43,13 @@ open class ArrayOccluder3D : Occluder3D {
                 .init(vertices_native), .init(indices_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_arrays_3233972621,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_arrays_3233972621._native_ptr(),
+                    3233972621)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -60,8 +63,13 @@ open class ArrayOccluder3D : Occluder3D {
                 .init(vertices_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_vertices_334873810,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_vertices_334873810._native_ptr(),
+                    334873810)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -75,8 +83,13 @@ open class ArrayOccluder3D : Occluder3D {
                 .init(indices_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_indices_3614634198,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_indices_3614634198._native_ptr(),
+                    3614634198)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

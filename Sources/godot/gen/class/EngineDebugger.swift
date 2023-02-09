@@ -11,59 +11,49 @@ open class EngineDebugger : Object {
 
     public override class var __godot_name: StringName { __godot_name_EngineDebugger }
 
-    static var _method_is_active_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_register_profiler_3651669560: GDExtensionMethodBindPtr! = nil
-    static var _method_unregister_profiler_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_is_profiling_2041966384: GDExtensionMethodBindPtr! = nil
-    static var _method_has_profiler_2041966384: GDExtensionMethodBindPtr! = nil
-    static var _method_profiler_add_frame_data_1895267858: GDExtensionMethodBindPtr! = nil
-    static var _method_profiler_enable_438160728: GDExtensionMethodBindPtr! = nil
-    static var _method_register_message_capture_1874754934: GDExtensionMethodBindPtr! = nil
-    static var _method_unregister_message_capture_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_has_capture_2041966384: GDExtensionMethodBindPtr! = nil
-    static var _method_send_message_1209351045: GDExtensionMethodBindPtr! = nil
+    static var _method_is_active_2240911060: StringName! = nil
+    static var _method_register_profiler_3651669560: StringName! = nil
+    static var _method_unregister_profiler_3304788590: StringName! = nil
+    static var _method_is_profiling_2041966384: StringName! = nil
+    static var _method_has_profiler_2041966384: StringName! = nil
+    static var _method_profiler_add_frame_data_1895267858: StringName! = nil
+    static var _method_profiler_enable_438160728: StringName! = nil
+    static var _method_register_message_capture_1874754934: StringName! = nil
+    static var _method_unregister_message_capture_3304788590: StringName! = nil
+    static var _method_has_capture_2041966384: StringName! = nil
+    static var _method_send_message_1209351045: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_EngineDebugger == nil)
         __godot_name_EngineDebugger = StringName(from: "EngineDebugger")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_is_active_2240911060_name = StringName(from: "is_active")
-        self._method_is_active_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_EngineDebugger._native_ptr(), _method_is_active_2240911060_name._native_ptr(), 2240911060)
-        assert(EngineDebugger._method_is_active_2240911060 != nil)
-        let _method_register_profiler_3651669560_name = StringName(from: "register_profiler")
-        self._method_register_profiler_3651669560 = self.interface.pointee.classdb_get_method_bind(__godot_name_EngineDebugger._native_ptr(), _method_register_profiler_3651669560_name._native_ptr(), 3651669560)
-        assert(EngineDebugger._method_register_profiler_3651669560 != nil)
-        let _method_unregister_profiler_3304788590_name = StringName(from: "unregister_profiler")
-        self._method_unregister_profiler_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_EngineDebugger._native_ptr(), _method_unregister_profiler_3304788590_name._native_ptr(), 3304788590)
-        assert(EngineDebugger._method_unregister_profiler_3304788590 != nil)
-        let _method_is_profiling_2041966384_name = StringName(from: "is_profiling")
-        self._method_is_profiling_2041966384 = self.interface.pointee.classdb_get_method_bind(__godot_name_EngineDebugger._native_ptr(), _method_is_profiling_2041966384_name._native_ptr(), 2041966384)
-        assert(EngineDebugger._method_is_profiling_2041966384 != nil)
-        let _method_has_profiler_2041966384_name = StringName(from: "has_profiler")
-        self._method_has_profiler_2041966384 = self.interface.pointee.classdb_get_method_bind(__godot_name_EngineDebugger._native_ptr(), _method_has_profiler_2041966384_name._native_ptr(), 2041966384)
-        assert(EngineDebugger._method_has_profiler_2041966384 != nil)
-        let _method_profiler_add_frame_data_1895267858_name = StringName(from: "profiler_add_frame_data")
-        self._method_profiler_add_frame_data_1895267858 = self.interface.pointee.classdb_get_method_bind(__godot_name_EngineDebugger._native_ptr(), _method_profiler_add_frame_data_1895267858_name._native_ptr(), 1895267858)
-        assert(EngineDebugger._method_profiler_add_frame_data_1895267858 != nil)
-        let _method_profiler_enable_438160728_name = StringName(from: "profiler_enable")
-        self._method_profiler_enable_438160728 = self.interface.pointee.classdb_get_method_bind(__godot_name_EngineDebugger._native_ptr(), _method_profiler_enable_438160728_name._native_ptr(), 438160728)
-        assert(EngineDebugger._method_profiler_enable_438160728 != nil)
-        let _method_register_message_capture_1874754934_name = StringName(from: "register_message_capture")
-        self._method_register_message_capture_1874754934 = self.interface.pointee.classdb_get_method_bind(__godot_name_EngineDebugger._native_ptr(), _method_register_message_capture_1874754934_name._native_ptr(), 1874754934)
-        assert(EngineDebugger._method_register_message_capture_1874754934 != nil)
-        let _method_unregister_message_capture_3304788590_name = StringName(from: "unregister_message_capture")
-        self._method_unregister_message_capture_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_EngineDebugger._native_ptr(), _method_unregister_message_capture_3304788590_name._native_ptr(), 3304788590)
-        assert(EngineDebugger._method_unregister_message_capture_3304788590 != nil)
-        let _method_has_capture_2041966384_name = StringName(from: "has_capture")
-        self._method_has_capture_2041966384 = self.interface.pointee.classdb_get_method_bind(__godot_name_EngineDebugger._native_ptr(), _method_has_capture_2041966384_name._native_ptr(), 2041966384)
-        assert(EngineDebugger._method_has_capture_2041966384 != nil)
-        let _method_send_message_1209351045_name = StringName(from: "send_message")
-        self._method_send_message_1209351045 = self.interface.pointee.classdb_get_method_bind(__godot_name_EngineDebugger._native_ptr(), _method_send_message_1209351045_name._native_ptr(), 1209351045)
-        assert(EngineDebugger._method_send_message_1209351045 != nil)
+        self._method_is_active_2240911060 = StringName(from: "is_active")
+        assert(self._method_is_active_2240911060 != nil)
+        self._method_register_profiler_3651669560 = StringName(from: "register_profiler")
+        assert(self._method_register_profiler_3651669560 != nil)
+        self._method_unregister_profiler_3304788590 = StringName(from: "unregister_profiler")
+        assert(self._method_unregister_profiler_3304788590 != nil)
+        self._method_is_profiling_2041966384 = StringName(from: "is_profiling")
+        assert(self._method_is_profiling_2041966384 != nil)
+        self._method_has_profiler_2041966384 = StringName(from: "has_profiler")
+        assert(self._method_has_profiler_2041966384 != nil)
+        self._method_profiler_add_frame_data_1895267858 = StringName(from: "profiler_add_frame_data")
+        assert(self._method_profiler_add_frame_data_1895267858 != nil)
+        self._method_profiler_enable_438160728 = StringName(from: "profiler_enable")
+        assert(self._method_profiler_enable_438160728 != nil)
+        self._method_register_message_capture_1874754934 = StringName(from: "register_message_capture")
+        assert(self._method_register_message_capture_1874754934 != nil)
+        self._method_unregister_message_capture_3304788590 = StringName(from: "unregister_message_capture")
+        assert(self._method_unregister_message_capture_3304788590 != nil)
+        self._method_has_capture_2041966384 = StringName(from: "has_capture")
+        assert(self._method_has_capture_2041966384 != nil)
+        self._method_send_message_1209351045 = StringName(from: "send_message")
+        assert(self._method_send_message_1209351045 != nil)
     }
 
     public func is_active() -> UInt8 {
@@ -75,8 +65,13 @@ open class EngineDebugger : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_active_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_active_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -92,8 +87,13 @@ open class EngineDebugger : Object {
                 .init(name_native), .init(profiler_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_register_profiler_3651669560,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_register_profiler_3651669560._native_ptr(),
+                    3651669560)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -107,8 +107,13 @@ open class EngineDebugger : Object {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_unregister_profiler_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_unregister_profiler_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -124,8 +129,13 @@ open class EngineDebugger : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_profiling_2041966384,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_profiling_2041966384._native_ptr(),
+                    2041966384)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -142,8 +152,13 @@ open class EngineDebugger : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_profiler_2041966384,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_profiler_2041966384._native_ptr(),
+                    2041966384)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -159,8 +174,13 @@ open class EngineDebugger : Object {
                 .init(name_native), .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_profiler_add_frame_data_1895267858,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_profiler_add_frame_data_1895267858._native_ptr(),
+                    1895267858)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -176,8 +196,13 @@ open class EngineDebugger : Object {
                 .init(name_native), .init(enable_native), .init(arguments_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_profiler_enable_438160728,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_profiler_enable_438160728._native_ptr(),
+                    438160728)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -193,8 +218,13 @@ open class EngineDebugger : Object {
                 .init(name_native), .init(callable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_register_message_capture_1874754934,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_register_message_capture_1874754934._native_ptr(),
+                    1874754934)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -208,8 +238,13 @@ open class EngineDebugger : Object {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_unregister_message_capture_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_unregister_message_capture_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -225,8 +260,13 @@ open class EngineDebugger : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_capture_2041966384,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_capture_2041966384._native_ptr(),
+                    2041966384)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -242,8 +282,13 @@ open class EngineDebugger : Object {
                 .init(message_native), .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_send_message_1209351045,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_send_message_1209351045._native_ptr(),
+                    1209351045)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

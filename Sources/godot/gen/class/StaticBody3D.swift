@@ -21,39 +21,34 @@ open class StaticBody3D : PhysicsBody3D {
 
     public override class var __godot_name: StringName { __godot_name_StaticBody3D }
 
-    static var _method_set_constant_linear_velocity_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_set_constant_angular_velocity_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_constant_linear_velocity_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_get_constant_angular_velocity_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_physics_material_override_1784508650: GDExtensionMethodBindPtr! = nil
-    static var _method_get_physics_material_override_2521850424: GDExtensionMethodBindPtr! = nil
+    static var _method_set_constant_linear_velocity_3460891852: StringName! = nil
+    static var _method_set_constant_angular_velocity_3460891852: StringName! = nil
+    static var _method_get_constant_linear_velocity_3360562783: StringName! = nil
+    static var _method_get_constant_angular_velocity_3360562783: StringName! = nil
+    static var _method_set_physics_material_override_1784508650: StringName! = nil
+    static var _method_get_physics_material_override_2521850424: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_StaticBody3D == nil)
         __godot_name_StaticBody3D = StringName(from: "StaticBody3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_constant_linear_velocity_3460891852_name = StringName(from: "set_constant_linear_velocity")
-        self._method_set_constant_linear_velocity_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_StaticBody3D._native_ptr(), _method_set_constant_linear_velocity_3460891852_name._native_ptr(), 3460891852)
-        assert(StaticBody3D._method_set_constant_linear_velocity_3460891852 != nil)
-        let _method_set_constant_angular_velocity_3460891852_name = StringName(from: "set_constant_angular_velocity")
-        self._method_set_constant_angular_velocity_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_StaticBody3D._native_ptr(), _method_set_constant_angular_velocity_3460891852_name._native_ptr(), 3460891852)
-        assert(StaticBody3D._method_set_constant_angular_velocity_3460891852 != nil)
-        let _method_get_constant_linear_velocity_3360562783_name = StringName(from: "get_constant_linear_velocity")
-        self._method_get_constant_linear_velocity_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_StaticBody3D._native_ptr(), _method_get_constant_linear_velocity_3360562783_name._native_ptr(), 3360562783)
-        assert(StaticBody3D._method_get_constant_linear_velocity_3360562783 != nil)
-        let _method_get_constant_angular_velocity_3360562783_name = StringName(from: "get_constant_angular_velocity")
-        self._method_get_constant_angular_velocity_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_StaticBody3D._native_ptr(), _method_get_constant_angular_velocity_3360562783_name._native_ptr(), 3360562783)
-        assert(StaticBody3D._method_get_constant_angular_velocity_3360562783 != nil)
-        let _method_set_physics_material_override_1784508650_name = StringName(from: "set_physics_material_override")
-        self._method_set_physics_material_override_1784508650 = self.interface.pointee.classdb_get_method_bind(__godot_name_StaticBody3D._native_ptr(), _method_set_physics_material_override_1784508650_name._native_ptr(), 1784508650)
-        assert(StaticBody3D._method_set_physics_material_override_1784508650 != nil)
-        let _method_get_physics_material_override_2521850424_name = StringName(from: "get_physics_material_override")
-        self._method_get_physics_material_override_2521850424 = self.interface.pointee.classdb_get_method_bind(__godot_name_StaticBody3D._native_ptr(), _method_get_physics_material_override_2521850424_name._native_ptr(), 2521850424)
-        assert(StaticBody3D._method_get_physics_material_override_2521850424 != nil)
+        self._method_set_constant_linear_velocity_3460891852 = StringName(from: "set_constant_linear_velocity")
+        assert(self._method_set_constant_linear_velocity_3460891852 != nil)
+        self._method_set_constant_angular_velocity_3460891852 = StringName(from: "set_constant_angular_velocity")
+        assert(self._method_set_constant_angular_velocity_3460891852 != nil)
+        self._method_get_constant_linear_velocity_3360562783 = StringName(from: "get_constant_linear_velocity")
+        assert(self._method_get_constant_linear_velocity_3360562783 != nil)
+        self._method_get_constant_angular_velocity_3360562783 = StringName(from: "get_constant_angular_velocity")
+        assert(self._method_get_constant_angular_velocity_3360562783 != nil)
+        self._method_set_physics_material_override_1784508650 = StringName(from: "set_physics_material_override")
+        assert(self._method_set_physics_material_override_1784508650 != nil)
+        self._method_get_physics_material_override_2521850424 = StringName(from: "get_physics_material_override")
+        assert(self._method_get_physics_material_override_2521850424 != nil)
     }
 
     public func set_constant_linear_velocity(vel: Vector3)  {
@@ -64,8 +59,13 @@ open class StaticBody3D : PhysicsBody3D {
                 .init(vel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_constant_linear_velocity_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_constant_linear_velocity_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -79,8 +79,13 @@ open class StaticBody3D : PhysicsBody3D {
                 .init(vel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_constant_angular_velocity_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_constant_angular_velocity_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -94,8 +99,13 @@ open class StaticBody3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_constant_linear_velocity_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_constant_linear_velocity_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -110,8 +120,13 @@ open class StaticBody3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_constant_angular_velocity_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_constant_angular_velocity_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -126,8 +141,13 @@ open class StaticBody3D : PhysicsBody3D {
                 .init(physics_material_override_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_physics_material_override_1784508650,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_physics_material_override_1784508650._native_ptr(),
+                    1784508650)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -141,8 +161,13 @@ open class StaticBody3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_physics_material_override_2521850424,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_physics_material_override_2521850424._native_ptr(),
+                    2521850424)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

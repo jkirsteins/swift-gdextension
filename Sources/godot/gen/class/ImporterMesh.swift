@@ -13,107 +13,85 @@ open class ImporterMesh : Resource {
 
     public override class var __godot_name: StringName { __godot_name_ImporterMesh }
 
-    static var _method_add_blend_shape_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_blend_shape_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_blend_shape_name_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_set_blend_shape_mode_227983991: GDExtensionMethodBindPtr! = nil
-    static var _method_get_blend_shape_mode_836485024: GDExtensionMethodBindPtr! = nil
-    static var _method_add_surface_4122361985: GDExtensionMethodBindPtr! = nil
-    static var _method_get_surface_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_surface_primitive_type_3552571330: GDExtensionMethodBindPtr! = nil
-    static var _method_get_surface_name_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_surface_arrays_663333327: GDExtensionMethodBindPtr! = nil
-    static var _method_get_surface_blend_shape_arrays_2345056839: GDExtensionMethodBindPtr! = nil
-    static var _method_get_surface_lod_count_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_get_surface_lod_size_3085491603: GDExtensionMethodBindPtr! = nil
-    static var _method_get_surface_lod_indices_1265128013: GDExtensionMethodBindPtr! = nil
-    static var _method_get_surface_material_2897466400: GDExtensionMethodBindPtr! = nil
-    static var _method_get_surface_format_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_set_surface_name_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_set_surface_material_3671737478: GDExtensionMethodBindPtr! = nil
-    static var _method_generate_lods_2491878677: GDExtensionMethodBindPtr! = nil
-    static var _method_get_mesh_1457573577: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_lightmap_size_hint_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_get_lightmap_size_hint_3690982128: GDExtensionMethodBindPtr! = nil
+    static var _method_add_blend_shape_83702148: StringName! = nil
+    static var _method_get_blend_shape_count_3905245786: StringName! = nil
+    static var _method_get_blend_shape_name_844755477: StringName! = nil
+    static var _method_set_blend_shape_mode_227983991: StringName! = nil
+    static var _method_get_blend_shape_mode_836485024: StringName! = nil
+    static var _method_add_surface_4122361985: StringName! = nil
+    static var _method_get_surface_count_3905245786: StringName! = nil
+    static var _method_get_surface_primitive_type_3552571330: StringName! = nil
+    static var _method_get_surface_name_844755477: StringName! = nil
+    static var _method_get_surface_arrays_663333327: StringName! = nil
+    static var _method_get_surface_blend_shape_arrays_2345056839: StringName! = nil
+    static var _method_get_surface_lod_count_923996154: StringName! = nil
+    static var _method_get_surface_lod_size_3085491603: StringName! = nil
+    static var _method_get_surface_lod_indices_1265128013: StringName! = nil
+    static var _method_get_surface_material_2897466400: StringName! = nil
+    static var _method_get_surface_format_923996154: StringName! = nil
+    static var _method_set_surface_name_501894301: StringName! = nil
+    static var _method_set_surface_material_3671737478: StringName! = nil
+    static var _method_generate_lods_2491878677: StringName! = nil
+    static var _method_get_mesh_1457573577: StringName! = nil
+    static var _method_clear_3218959716: StringName! = nil
+    static var _method_set_lightmap_size_hint_1130785943: StringName! = nil
+    static var _method_get_lightmap_size_hint_3690982128: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ImporterMesh == nil)
         __godot_name_ImporterMesh = StringName(from: "ImporterMesh")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_add_blend_shape_83702148_name = StringName(from: "add_blend_shape")
-        self._method_add_blend_shape_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_add_blend_shape_83702148_name._native_ptr(), 83702148)
-        assert(ImporterMesh._method_add_blend_shape_83702148 != nil)
-        let _method_get_blend_shape_count_3905245786_name = StringName(from: "get_blend_shape_count")
-        self._method_get_blend_shape_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_get_blend_shape_count_3905245786_name._native_ptr(), 3905245786)
-        assert(ImporterMesh._method_get_blend_shape_count_3905245786 != nil)
-        let _method_get_blend_shape_name_844755477_name = StringName(from: "get_blend_shape_name")
-        self._method_get_blend_shape_name_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_get_blend_shape_name_844755477_name._native_ptr(), 844755477)
-        assert(ImporterMesh._method_get_blend_shape_name_844755477 != nil)
-        let _method_set_blend_shape_mode_227983991_name = StringName(from: "set_blend_shape_mode")
-        self._method_set_blend_shape_mode_227983991 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_set_blend_shape_mode_227983991_name._native_ptr(), 227983991)
-        assert(ImporterMesh._method_set_blend_shape_mode_227983991 != nil)
-        let _method_get_blend_shape_mode_836485024_name = StringName(from: "get_blend_shape_mode")
-        self._method_get_blend_shape_mode_836485024 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_get_blend_shape_mode_836485024_name._native_ptr(), 836485024)
-        assert(ImporterMesh._method_get_blend_shape_mode_836485024 != nil)
-        let _method_add_surface_4122361985_name = StringName(from: "add_surface")
-        self._method_add_surface_4122361985 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_add_surface_4122361985_name._native_ptr(), 4122361985)
-        assert(ImporterMesh._method_add_surface_4122361985 != nil)
-        let _method_get_surface_count_3905245786_name = StringName(from: "get_surface_count")
-        self._method_get_surface_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_get_surface_count_3905245786_name._native_ptr(), 3905245786)
-        assert(ImporterMesh._method_get_surface_count_3905245786 != nil)
-        let _method_get_surface_primitive_type_3552571330_name = StringName(from: "get_surface_primitive_type")
-        self._method_get_surface_primitive_type_3552571330 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_get_surface_primitive_type_3552571330_name._native_ptr(), 3552571330)
-        assert(ImporterMesh._method_get_surface_primitive_type_3552571330 != nil)
-        let _method_get_surface_name_844755477_name = StringName(from: "get_surface_name")
-        self._method_get_surface_name_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_get_surface_name_844755477_name._native_ptr(), 844755477)
-        assert(ImporterMesh._method_get_surface_name_844755477 != nil)
-        let _method_get_surface_arrays_663333327_name = StringName(from: "get_surface_arrays")
-        self._method_get_surface_arrays_663333327 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_get_surface_arrays_663333327_name._native_ptr(), 663333327)
-        assert(ImporterMesh._method_get_surface_arrays_663333327 != nil)
-        let _method_get_surface_blend_shape_arrays_2345056839_name = StringName(from: "get_surface_blend_shape_arrays")
-        self._method_get_surface_blend_shape_arrays_2345056839 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_get_surface_blend_shape_arrays_2345056839_name._native_ptr(), 2345056839)
-        assert(ImporterMesh._method_get_surface_blend_shape_arrays_2345056839 != nil)
-        let _method_get_surface_lod_count_923996154_name = StringName(from: "get_surface_lod_count")
-        self._method_get_surface_lod_count_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_get_surface_lod_count_923996154_name._native_ptr(), 923996154)
-        assert(ImporterMesh._method_get_surface_lod_count_923996154 != nil)
-        let _method_get_surface_lod_size_3085491603_name = StringName(from: "get_surface_lod_size")
-        self._method_get_surface_lod_size_3085491603 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_get_surface_lod_size_3085491603_name._native_ptr(), 3085491603)
-        assert(ImporterMesh._method_get_surface_lod_size_3085491603 != nil)
-        let _method_get_surface_lod_indices_1265128013_name = StringName(from: "get_surface_lod_indices")
-        self._method_get_surface_lod_indices_1265128013 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_get_surface_lod_indices_1265128013_name._native_ptr(), 1265128013)
-        assert(ImporterMesh._method_get_surface_lod_indices_1265128013 != nil)
-        let _method_get_surface_material_2897466400_name = StringName(from: "get_surface_material")
-        self._method_get_surface_material_2897466400 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_get_surface_material_2897466400_name._native_ptr(), 2897466400)
-        assert(ImporterMesh._method_get_surface_material_2897466400 != nil)
-        let _method_get_surface_format_923996154_name = StringName(from: "get_surface_format")
-        self._method_get_surface_format_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_get_surface_format_923996154_name._native_ptr(), 923996154)
-        assert(ImporterMesh._method_get_surface_format_923996154 != nil)
-        let _method_set_surface_name_501894301_name = StringName(from: "set_surface_name")
-        self._method_set_surface_name_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_set_surface_name_501894301_name._native_ptr(), 501894301)
-        assert(ImporterMesh._method_set_surface_name_501894301 != nil)
-        let _method_set_surface_material_3671737478_name = StringName(from: "set_surface_material")
-        self._method_set_surface_material_3671737478 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_set_surface_material_3671737478_name._native_ptr(), 3671737478)
-        assert(ImporterMesh._method_set_surface_material_3671737478 != nil)
-        let _method_generate_lods_2491878677_name = StringName(from: "generate_lods")
-        self._method_generate_lods_2491878677 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_generate_lods_2491878677_name._native_ptr(), 2491878677)
-        assert(ImporterMesh._method_generate_lods_2491878677 != nil)
-        let _method_get_mesh_1457573577_name = StringName(from: "get_mesh")
-        self._method_get_mesh_1457573577 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_get_mesh_1457573577_name._native_ptr(), 1457573577)
-        assert(ImporterMesh._method_get_mesh_1457573577 != nil)
-        let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
-        assert(ImporterMesh._method_clear_3218959716 != nil)
-        let _method_set_lightmap_size_hint_1130785943_name = StringName(from: "set_lightmap_size_hint")
-        self._method_set_lightmap_size_hint_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_set_lightmap_size_hint_1130785943_name._native_ptr(), 1130785943)
-        assert(ImporterMesh._method_set_lightmap_size_hint_1130785943 != nil)
-        let _method_get_lightmap_size_hint_3690982128_name = StringName(from: "get_lightmap_size_hint")
-        self._method_get_lightmap_size_hint_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImporterMesh._native_ptr(), _method_get_lightmap_size_hint_3690982128_name._native_ptr(), 3690982128)
-        assert(ImporterMesh._method_get_lightmap_size_hint_3690982128 != nil)
+        self._method_add_blend_shape_83702148 = StringName(from: "add_blend_shape")
+        assert(self._method_add_blend_shape_83702148 != nil)
+        self._method_get_blend_shape_count_3905245786 = StringName(from: "get_blend_shape_count")
+        assert(self._method_get_blend_shape_count_3905245786 != nil)
+        self._method_get_blend_shape_name_844755477 = StringName(from: "get_blend_shape_name")
+        assert(self._method_get_blend_shape_name_844755477 != nil)
+        self._method_set_blend_shape_mode_227983991 = StringName(from: "set_blend_shape_mode")
+        assert(self._method_set_blend_shape_mode_227983991 != nil)
+        self._method_get_blend_shape_mode_836485024 = StringName(from: "get_blend_shape_mode")
+        assert(self._method_get_blend_shape_mode_836485024 != nil)
+        self._method_add_surface_4122361985 = StringName(from: "add_surface")
+        assert(self._method_add_surface_4122361985 != nil)
+        self._method_get_surface_count_3905245786 = StringName(from: "get_surface_count")
+        assert(self._method_get_surface_count_3905245786 != nil)
+        self._method_get_surface_primitive_type_3552571330 = StringName(from: "get_surface_primitive_type")
+        assert(self._method_get_surface_primitive_type_3552571330 != nil)
+        self._method_get_surface_name_844755477 = StringName(from: "get_surface_name")
+        assert(self._method_get_surface_name_844755477 != nil)
+        self._method_get_surface_arrays_663333327 = StringName(from: "get_surface_arrays")
+        assert(self._method_get_surface_arrays_663333327 != nil)
+        self._method_get_surface_blend_shape_arrays_2345056839 = StringName(from: "get_surface_blend_shape_arrays")
+        assert(self._method_get_surface_blend_shape_arrays_2345056839 != nil)
+        self._method_get_surface_lod_count_923996154 = StringName(from: "get_surface_lod_count")
+        assert(self._method_get_surface_lod_count_923996154 != nil)
+        self._method_get_surface_lod_size_3085491603 = StringName(from: "get_surface_lod_size")
+        assert(self._method_get_surface_lod_size_3085491603 != nil)
+        self._method_get_surface_lod_indices_1265128013 = StringName(from: "get_surface_lod_indices")
+        assert(self._method_get_surface_lod_indices_1265128013 != nil)
+        self._method_get_surface_material_2897466400 = StringName(from: "get_surface_material")
+        assert(self._method_get_surface_material_2897466400 != nil)
+        self._method_get_surface_format_923996154 = StringName(from: "get_surface_format")
+        assert(self._method_get_surface_format_923996154 != nil)
+        self._method_set_surface_name_501894301 = StringName(from: "set_surface_name")
+        assert(self._method_set_surface_name_501894301 != nil)
+        self._method_set_surface_material_3671737478 = StringName(from: "set_surface_material")
+        assert(self._method_set_surface_material_3671737478 != nil)
+        self._method_generate_lods_2491878677 = StringName(from: "generate_lods")
+        assert(self._method_generate_lods_2491878677 != nil)
+        self._method_get_mesh_1457573577 = StringName(from: "get_mesh")
+        assert(self._method_get_mesh_1457573577 != nil)
+        self._method_clear_3218959716 = StringName(from: "clear")
+        assert(self._method_clear_3218959716 != nil)
+        self._method_set_lightmap_size_hint_1130785943 = StringName(from: "set_lightmap_size_hint")
+        assert(self._method_set_lightmap_size_hint_1130785943 != nil)
+        self._method_get_lightmap_size_hint_3690982128 = StringName(from: "get_lightmap_size_hint")
+        assert(self._method_get_lightmap_size_hint_3690982128 != nil)
     }
 
     public func add_blend_shape(name: godot.String)  {
@@ -124,8 +102,13 @@ open class ImporterMesh : Resource {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_blend_shape_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_blend_shape_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -140,8 +123,13 @@ open class ImporterMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_blend_shape_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_blend_shape_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -157,8 +145,13 @@ open class ImporterMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_blend_shape_name_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_blend_shape_name_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -174,8 +167,13 @@ open class ImporterMesh : Resource {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_blend_shape_mode_227983991,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_blend_shape_mode_227983991._native_ptr(),
+                    227983991)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -190,8 +188,13 @@ open class ImporterMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_blend_shape_mode_836485024,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_blend_shape_mode_836485024._native_ptr(),
+                    836485024)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -212,8 +215,13 @@ open class ImporterMesh : Resource {
                 .init(primitive_native), .init(arrays_native), .init(blend_shapes_native), .init(lods_native), .init(material_native), .init(name_native), .init(flags_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_surface_4122361985,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_surface_4122361985._native_ptr(),
+                    4122361985)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -230,8 +238,13 @@ open class ImporterMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_surface_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_surface_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -247,8 +260,13 @@ open class ImporterMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_surface_primitive_type_3552571330,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_surface_primitive_type_3552571330._native_ptr(),
+                    3552571330)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -265,8 +283,13 @@ open class ImporterMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_surface_name_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_surface_name_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -283,8 +306,13 @@ open class ImporterMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_surface_arrays_663333327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_surface_arrays_663333327._native_ptr(),
+                    663333327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -302,8 +330,13 @@ open class ImporterMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_surface_blend_shape_arrays_2345056839,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_surface_blend_shape_arrays_2345056839._native_ptr(),
+                    2345056839)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -322,8 +355,13 @@ open class ImporterMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_surface_lod_count_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_surface_lod_count_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -342,8 +380,13 @@ open class ImporterMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_surface_lod_size_3085491603,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_surface_lod_size_3085491603._native_ptr(),
+                    3085491603)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -362,8 +405,13 @@ open class ImporterMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_surface_lod_indices_1265128013,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_surface_lod_indices_1265128013._native_ptr(),
+                    1265128013)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -381,8 +429,13 @@ open class ImporterMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_surface_material_2897466400,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_surface_material_2897466400._native_ptr(),
+                    2897466400)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -400,8 +453,13 @@ open class ImporterMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_surface_format_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_surface_format_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -418,8 +476,13 @@ open class ImporterMesh : Resource {
                 .init(surface_idx_native), .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_surface_name_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_surface_name_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -435,8 +498,13 @@ open class ImporterMesh : Resource {
                 .init(surface_idx_native), .init(material_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_surface_material_3671737478,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_surface_material_3671737478._native_ptr(),
+                    3671737478)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -453,8 +521,13 @@ open class ImporterMesh : Resource {
                 .init(normal_merge_angle_native), .init(normal_split_angle_native), .init(bone_transform_array_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_generate_lods_2491878677,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_generate_lods_2491878677._native_ptr(),
+                    2491878677)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -471,8 +544,13 @@ open class ImporterMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_mesh_1457573577,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_mesh_1457573577._native_ptr(),
+                    1457573577)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -486,8 +564,13 @@ open class ImporterMesh : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -501,8 +584,13 @@ open class ImporterMesh : Resource {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_lightmap_size_hint_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_lightmap_size_hint_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -516,8 +604,13 @@ open class ImporterMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_lightmap_size_hint_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_lightmap_size_hint_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

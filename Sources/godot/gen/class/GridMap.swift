@@ -11,203 +11,157 @@ open class GridMap : Node3D {
 
     public override class var __godot_name: StringName { __godot_name_GridMap }
 
-    static var _method_set_collision_layer_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_layer_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_mask_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_mask_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_mask_value_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_mask_value_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_layer_value_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_layer_value_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_priority_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_priority_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_physics_material_1784508650: GDExtensionMethodBindPtr! = nil
-    static var _method_get_physics_material_2521850424: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bake_navigation_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_baking_navigation_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_set_navigation_map_2722037293: GDExtensionMethodBindPtr! = nil
-    static var _method_get_navigation_map_2944877500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_mesh_library_1488083439: GDExtensionMethodBindPtr! = nil
-    static var _method_get_mesh_library_3350993772: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cell_size_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cell_size_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cell_scale_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cell_scale_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_octant_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_octant_size_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cell_item_4177201334: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cell_item_3724960147: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cell_item_orientation_3724960147: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cell_item_basis_3493604918: GDExtensionMethodBindPtr! = nil
-    static var _method_get_basis_with_orthogonal_index_2816196998: GDExtensionMethodBindPtr! = nil
-    static var _method_get_orthogonal_index_from_basis_4210359952: GDExtensionMethodBindPtr! = nil
-    static var _method_local_to_map_1257687843: GDExtensionMethodBindPtr! = nil
-    static var _method_map_to_local_1088329196: GDExtensionMethodBindPtr! = nil
-    static var _method_resource_changed_968641751: GDExtensionMethodBindPtr! = nil
-    static var _method_set_center_x_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_center_x_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_center_y_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_center_y_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_center_z_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_center_z_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_used_cells_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_get_used_cells_by_item_663333327: GDExtensionMethodBindPtr! = nil
-    static var _method_get_meshes_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bake_meshes_2915620761: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bake_mesh_instance_937000113: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_baked_meshes_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_make_baked_meshes_1135556294: GDExtensionMethodBindPtr! = nil
+    static var _method_set_collision_layer_1286410249: StringName! = nil
+    static var _method_get_collision_layer_3905245786: StringName! = nil
+    static var _method_set_collision_mask_1286410249: StringName! = nil
+    static var _method_get_collision_mask_3905245786: StringName! = nil
+    static var _method_set_collision_mask_value_300928843: StringName! = nil
+    static var _method_get_collision_mask_value_1116898809: StringName! = nil
+    static var _method_set_collision_layer_value_300928843: StringName! = nil
+    static var _method_get_collision_layer_value_1116898809: StringName! = nil
+    static var _method_set_collision_priority_373806689: StringName! = nil
+    static var _method_get_collision_priority_1740695150: StringName! = nil
+    static var _method_set_physics_material_1784508650: StringName! = nil
+    static var _method_get_physics_material_2521850424: StringName! = nil
+    static var _method_set_bake_navigation_2586408642: StringName! = nil
+    static var _method_is_baking_navigation_2240911060: StringName! = nil
+    static var _method_set_navigation_map_2722037293: StringName! = nil
+    static var _method_get_navigation_map_2944877500: StringName! = nil
+    static var _method_set_mesh_library_1488083439: StringName! = nil
+    static var _method_get_mesh_library_3350993772: StringName! = nil
+    static var _method_set_cell_size_3460891852: StringName! = nil
+    static var _method_get_cell_size_3360562783: StringName! = nil
+    static var _method_set_cell_scale_373806689: StringName! = nil
+    static var _method_get_cell_scale_1740695150: StringName! = nil
+    static var _method_set_octant_size_1286410249: StringName! = nil
+    static var _method_get_octant_size_3905245786: StringName! = nil
+    static var _method_set_cell_item_4177201334: StringName! = nil
+    static var _method_get_cell_item_3724960147: StringName! = nil
+    static var _method_get_cell_item_orientation_3724960147: StringName! = nil
+    static var _method_get_cell_item_basis_3493604918: StringName! = nil
+    static var _method_get_basis_with_orthogonal_index_2816196998: StringName! = nil
+    static var _method_get_orthogonal_index_from_basis_4210359952: StringName! = nil
+    static var _method_local_to_map_1257687843: StringName! = nil
+    static var _method_map_to_local_1088329196: StringName! = nil
+    static var _method_resource_changed_968641751: StringName! = nil
+    static var _method_set_center_x_2586408642: StringName! = nil
+    static var _method_get_center_x_36873697: StringName! = nil
+    static var _method_set_center_y_2586408642: StringName! = nil
+    static var _method_get_center_y_36873697: StringName! = nil
+    static var _method_set_center_z_2586408642: StringName! = nil
+    static var _method_get_center_z_36873697: StringName! = nil
+    static var _method_clear_3218959716: StringName! = nil
+    static var _method_get_used_cells_3995934104: StringName! = nil
+    static var _method_get_used_cells_by_item_663333327: StringName! = nil
+    static var _method_get_meshes_3995934104: StringName! = nil
+    static var _method_get_bake_meshes_2915620761: StringName! = nil
+    static var _method_get_bake_mesh_instance_937000113: StringName! = nil
+    static var _method_clear_baked_meshes_3218959716: StringName! = nil
+    static var _method_make_baked_meshes_1135556294: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_GridMap == nil)
         __godot_name_GridMap = StringName(from: "GridMap")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_collision_layer_1286410249_name = StringName(from: "set_collision_layer")
-        self._method_set_collision_layer_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_set_collision_layer_1286410249_name._native_ptr(), 1286410249)
-        assert(GridMap._method_set_collision_layer_1286410249 != nil)
-        let _method_get_collision_layer_3905245786_name = StringName(from: "get_collision_layer")
-        self._method_get_collision_layer_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_collision_layer_3905245786_name._native_ptr(), 3905245786)
-        assert(GridMap._method_get_collision_layer_3905245786 != nil)
-        let _method_set_collision_mask_1286410249_name = StringName(from: "set_collision_mask")
-        self._method_set_collision_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_set_collision_mask_1286410249_name._native_ptr(), 1286410249)
-        assert(GridMap._method_set_collision_mask_1286410249 != nil)
-        let _method_get_collision_mask_3905245786_name = StringName(from: "get_collision_mask")
-        self._method_get_collision_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_collision_mask_3905245786_name._native_ptr(), 3905245786)
-        assert(GridMap._method_get_collision_mask_3905245786 != nil)
-        let _method_set_collision_mask_value_300928843_name = StringName(from: "set_collision_mask_value")
-        self._method_set_collision_mask_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_set_collision_mask_value_300928843_name._native_ptr(), 300928843)
-        assert(GridMap._method_set_collision_mask_value_300928843 != nil)
-        let _method_get_collision_mask_value_1116898809_name = StringName(from: "get_collision_mask_value")
-        self._method_get_collision_mask_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_collision_mask_value_1116898809_name._native_ptr(), 1116898809)
-        assert(GridMap._method_get_collision_mask_value_1116898809 != nil)
-        let _method_set_collision_layer_value_300928843_name = StringName(from: "set_collision_layer_value")
-        self._method_set_collision_layer_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_set_collision_layer_value_300928843_name._native_ptr(), 300928843)
-        assert(GridMap._method_set_collision_layer_value_300928843 != nil)
-        let _method_get_collision_layer_value_1116898809_name = StringName(from: "get_collision_layer_value")
-        self._method_get_collision_layer_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_collision_layer_value_1116898809_name._native_ptr(), 1116898809)
-        assert(GridMap._method_get_collision_layer_value_1116898809 != nil)
-        let _method_set_collision_priority_373806689_name = StringName(from: "set_collision_priority")
-        self._method_set_collision_priority_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_set_collision_priority_373806689_name._native_ptr(), 373806689)
-        assert(GridMap._method_set_collision_priority_373806689 != nil)
-        let _method_get_collision_priority_1740695150_name = StringName(from: "get_collision_priority")
-        self._method_get_collision_priority_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_collision_priority_1740695150_name._native_ptr(), 1740695150)
-        assert(GridMap._method_get_collision_priority_1740695150 != nil)
-        let _method_set_physics_material_1784508650_name = StringName(from: "set_physics_material")
-        self._method_set_physics_material_1784508650 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_set_physics_material_1784508650_name._native_ptr(), 1784508650)
-        assert(GridMap._method_set_physics_material_1784508650 != nil)
-        let _method_get_physics_material_2521850424_name = StringName(from: "get_physics_material")
-        self._method_get_physics_material_2521850424 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_physics_material_2521850424_name._native_ptr(), 2521850424)
-        assert(GridMap._method_get_physics_material_2521850424 != nil)
-        let _method_set_bake_navigation_2586408642_name = StringName(from: "set_bake_navigation")
-        self._method_set_bake_navigation_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_set_bake_navigation_2586408642_name._native_ptr(), 2586408642)
-        assert(GridMap._method_set_bake_navigation_2586408642 != nil)
-        let _method_is_baking_navigation_2240911060_name = StringName(from: "is_baking_navigation")
-        self._method_is_baking_navigation_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_is_baking_navigation_2240911060_name._native_ptr(), 2240911060)
-        assert(GridMap._method_is_baking_navigation_2240911060 != nil)
-        let _method_set_navigation_map_2722037293_name = StringName(from: "set_navigation_map")
-        self._method_set_navigation_map_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_set_navigation_map_2722037293_name._native_ptr(), 2722037293)
-        assert(GridMap._method_set_navigation_map_2722037293 != nil)
-        let _method_get_navigation_map_2944877500_name = StringName(from: "get_navigation_map")
-        self._method_get_navigation_map_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_navigation_map_2944877500_name._native_ptr(), 2944877500)
-        assert(GridMap._method_get_navigation_map_2944877500 != nil)
-        let _method_set_mesh_library_1488083439_name = StringName(from: "set_mesh_library")
-        self._method_set_mesh_library_1488083439 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_set_mesh_library_1488083439_name._native_ptr(), 1488083439)
-        assert(GridMap._method_set_mesh_library_1488083439 != nil)
-        let _method_get_mesh_library_3350993772_name = StringName(from: "get_mesh_library")
-        self._method_get_mesh_library_3350993772 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_mesh_library_3350993772_name._native_ptr(), 3350993772)
-        assert(GridMap._method_get_mesh_library_3350993772 != nil)
-        let _method_set_cell_size_3460891852_name = StringName(from: "set_cell_size")
-        self._method_set_cell_size_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_set_cell_size_3460891852_name._native_ptr(), 3460891852)
-        assert(GridMap._method_set_cell_size_3460891852 != nil)
-        let _method_get_cell_size_3360562783_name = StringName(from: "get_cell_size")
-        self._method_get_cell_size_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_cell_size_3360562783_name._native_ptr(), 3360562783)
-        assert(GridMap._method_get_cell_size_3360562783 != nil)
-        let _method_set_cell_scale_373806689_name = StringName(from: "set_cell_scale")
-        self._method_set_cell_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_set_cell_scale_373806689_name._native_ptr(), 373806689)
-        assert(GridMap._method_set_cell_scale_373806689 != nil)
-        let _method_get_cell_scale_1740695150_name = StringName(from: "get_cell_scale")
-        self._method_get_cell_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_cell_scale_1740695150_name._native_ptr(), 1740695150)
-        assert(GridMap._method_get_cell_scale_1740695150 != nil)
-        let _method_set_octant_size_1286410249_name = StringName(from: "set_octant_size")
-        self._method_set_octant_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_set_octant_size_1286410249_name._native_ptr(), 1286410249)
-        assert(GridMap._method_set_octant_size_1286410249 != nil)
-        let _method_get_octant_size_3905245786_name = StringName(from: "get_octant_size")
-        self._method_get_octant_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_octant_size_3905245786_name._native_ptr(), 3905245786)
-        assert(GridMap._method_get_octant_size_3905245786 != nil)
-        let _method_set_cell_item_4177201334_name = StringName(from: "set_cell_item")
-        self._method_set_cell_item_4177201334 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_set_cell_item_4177201334_name._native_ptr(), 4177201334)
-        assert(GridMap._method_set_cell_item_4177201334 != nil)
-        let _method_get_cell_item_3724960147_name = StringName(from: "get_cell_item")
-        self._method_get_cell_item_3724960147 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_cell_item_3724960147_name._native_ptr(), 3724960147)
-        assert(GridMap._method_get_cell_item_3724960147 != nil)
-        let _method_get_cell_item_orientation_3724960147_name = StringName(from: "get_cell_item_orientation")
-        self._method_get_cell_item_orientation_3724960147 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_cell_item_orientation_3724960147_name._native_ptr(), 3724960147)
-        assert(GridMap._method_get_cell_item_orientation_3724960147 != nil)
-        let _method_get_cell_item_basis_3493604918_name = StringName(from: "get_cell_item_basis")
-        self._method_get_cell_item_basis_3493604918 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_cell_item_basis_3493604918_name._native_ptr(), 3493604918)
-        assert(GridMap._method_get_cell_item_basis_3493604918 != nil)
-        let _method_get_basis_with_orthogonal_index_2816196998_name = StringName(from: "get_basis_with_orthogonal_index")
-        self._method_get_basis_with_orthogonal_index_2816196998 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_basis_with_orthogonal_index_2816196998_name._native_ptr(), 2816196998)
-        assert(GridMap._method_get_basis_with_orthogonal_index_2816196998 != nil)
-        let _method_get_orthogonal_index_from_basis_4210359952_name = StringName(from: "get_orthogonal_index_from_basis")
-        self._method_get_orthogonal_index_from_basis_4210359952 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_orthogonal_index_from_basis_4210359952_name._native_ptr(), 4210359952)
-        assert(GridMap._method_get_orthogonal_index_from_basis_4210359952 != nil)
-        let _method_local_to_map_1257687843_name = StringName(from: "local_to_map")
-        self._method_local_to_map_1257687843 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_local_to_map_1257687843_name._native_ptr(), 1257687843)
-        assert(GridMap._method_local_to_map_1257687843 != nil)
-        let _method_map_to_local_1088329196_name = StringName(from: "map_to_local")
-        self._method_map_to_local_1088329196 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_map_to_local_1088329196_name._native_ptr(), 1088329196)
-        assert(GridMap._method_map_to_local_1088329196 != nil)
-        let _method_resource_changed_968641751_name = StringName(from: "resource_changed")
-        self._method_resource_changed_968641751 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_resource_changed_968641751_name._native_ptr(), 968641751)
-        assert(GridMap._method_resource_changed_968641751 != nil)
-        let _method_set_center_x_2586408642_name = StringName(from: "set_center_x")
-        self._method_set_center_x_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_set_center_x_2586408642_name._native_ptr(), 2586408642)
-        assert(GridMap._method_set_center_x_2586408642 != nil)
-        let _method_get_center_x_36873697_name = StringName(from: "get_center_x")
-        self._method_get_center_x_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_center_x_36873697_name._native_ptr(), 36873697)
-        assert(GridMap._method_get_center_x_36873697 != nil)
-        let _method_set_center_y_2586408642_name = StringName(from: "set_center_y")
-        self._method_set_center_y_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_set_center_y_2586408642_name._native_ptr(), 2586408642)
-        assert(GridMap._method_set_center_y_2586408642 != nil)
-        let _method_get_center_y_36873697_name = StringName(from: "get_center_y")
-        self._method_get_center_y_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_center_y_36873697_name._native_ptr(), 36873697)
-        assert(GridMap._method_get_center_y_36873697 != nil)
-        let _method_set_center_z_2586408642_name = StringName(from: "set_center_z")
-        self._method_set_center_z_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_set_center_z_2586408642_name._native_ptr(), 2586408642)
-        assert(GridMap._method_set_center_z_2586408642 != nil)
-        let _method_get_center_z_36873697_name = StringName(from: "get_center_z")
-        self._method_get_center_z_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_center_z_36873697_name._native_ptr(), 36873697)
-        assert(GridMap._method_get_center_z_36873697 != nil)
-        let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
-        assert(GridMap._method_clear_3218959716 != nil)
-        let _method_get_used_cells_3995934104_name = StringName(from: "get_used_cells")
-        self._method_get_used_cells_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_used_cells_3995934104_name._native_ptr(), 3995934104)
-        assert(GridMap._method_get_used_cells_3995934104 != nil)
-        let _method_get_used_cells_by_item_663333327_name = StringName(from: "get_used_cells_by_item")
-        self._method_get_used_cells_by_item_663333327 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_used_cells_by_item_663333327_name._native_ptr(), 663333327)
-        assert(GridMap._method_get_used_cells_by_item_663333327 != nil)
-        let _method_get_meshes_3995934104_name = StringName(from: "get_meshes")
-        self._method_get_meshes_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_meshes_3995934104_name._native_ptr(), 3995934104)
-        assert(GridMap._method_get_meshes_3995934104 != nil)
-        let _method_get_bake_meshes_2915620761_name = StringName(from: "get_bake_meshes")
-        self._method_get_bake_meshes_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_bake_meshes_2915620761_name._native_ptr(), 2915620761)
-        assert(GridMap._method_get_bake_meshes_2915620761 != nil)
-        let _method_get_bake_mesh_instance_937000113_name = StringName(from: "get_bake_mesh_instance")
-        self._method_get_bake_mesh_instance_937000113 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_get_bake_mesh_instance_937000113_name._native_ptr(), 937000113)
-        assert(GridMap._method_get_bake_mesh_instance_937000113 != nil)
-        let _method_clear_baked_meshes_3218959716_name = StringName(from: "clear_baked_meshes")
-        self._method_clear_baked_meshes_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_clear_baked_meshes_3218959716_name._native_ptr(), 3218959716)
-        assert(GridMap._method_clear_baked_meshes_3218959716 != nil)
-        let _method_make_baked_meshes_1135556294_name = StringName(from: "make_baked_meshes")
-        self._method_make_baked_meshes_1135556294 = self.interface.pointee.classdb_get_method_bind(__godot_name_GridMap._native_ptr(), _method_make_baked_meshes_1135556294_name._native_ptr(), 1135556294)
-        assert(GridMap._method_make_baked_meshes_1135556294 != nil)
+        self._method_set_collision_layer_1286410249 = StringName(from: "set_collision_layer")
+        assert(self._method_set_collision_layer_1286410249 != nil)
+        self._method_get_collision_layer_3905245786 = StringName(from: "get_collision_layer")
+        assert(self._method_get_collision_layer_3905245786 != nil)
+        self._method_set_collision_mask_1286410249 = StringName(from: "set_collision_mask")
+        assert(self._method_set_collision_mask_1286410249 != nil)
+        self._method_get_collision_mask_3905245786 = StringName(from: "get_collision_mask")
+        assert(self._method_get_collision_mask_3905245786 != nil)
+        self._method_set_collision_mask_value_300928843 = StringName(from: "set_collision_mask_value")
+        assert(self._method_set_collision_mask_value_300928843 != nil)
+        self._method_get_collision_mask_value_1116898809 = StringName(from: "get_collision_mask_value")
+        assert(self._method_get_collision_mask_value_1116898809 != nil)
+        self._method_set_collision_layer_value_300928843 = StringName(from: "set_collision_layer_value")
+        assert(self._method_set_collision_layer_value_300928843 != nil)
+        self._method_get_collision_layer_value_1116898809 = StringName(from: "get_collision_layer_value")
+        assert(self._method_get_collision_layer_value_1116898809 != nil)
+        self._method_set_collision_priority_373806689 = StringName(from: "set_collision_priority")
+        assert(self._method_set_collision_priority_373806689 != nil)
+        self._method_get_collision_priority_1740695150 = StringName(from: "get_collision_priority")
+        assert(self._method_get_collision_priority_1740695150 != nil)
+        self._method_set_physics_material_1784508650 = StringName(from: "set_physics_material")
+        assert(self._method_set_physics_material_1784508650 != nil)
+        self._method_get_physics_material_2521850424 = StringName(from: "get_physics_material")
+        assert(self._method_get_physics_material_2521850424 != nil)
+        self._method_set_bake_navigation_2586408642 = StringName(from: "set_bake_navigation")
+        assert(self._method_set_bake_navigation_2586408642 != nil)
+        self._method_is_baking_navigation_2240911060 = StringName(from: "is_baking_navigation")
+        assert(self._method_is_baking_navigation_2240911060 != nil)
+        self._method_set_navigation_map_2722037293 = StringName(from: "set_navigation_map")
+        assert(self._method_set_navigation_map_2722037293 != nil)
+        self._method_get_navigation_map_2944877500 = StringName(from: "get_navigation_map")
+        assert(self._method_get_navigation_map_2944877500 != nil)
+        self._method_set_mesh_library_1488083439 = StringName(from: "set_mesh_library")
+        assert(self._method_set_mesh_library_1488083439 != nil)
+        self._method_get_mesh_library_3350993772 = StringName(from: "get_mesh_library")
+        assert(self._method_get_mesh_library_3350993772 != nil)
+        self._method_set_cell_size_3460891852 = StringName(from: "set_cell_size")
+        assert(self._method_set_cell_size_3460891852 != nil)
+        self._method_get_cell_size_3360562783 = StringName(from: "get_cell_size")
+        assert(self._method_get_cell_size_3360562783 != nil)
+        self._method_set_cell_scale_373806689 = StringName(from: "set_cell_scale")
+        assert(self._method_set_cell_scale_373806689 != nil)
+        self._method_get_cell_scale_1740695150 = StringName(from: "get_cell_scale")
+        assert(self._method_get_cell_scale_1740695150 != nil)
+        self._method_set_octant_size_1286410249 = StringName(from: "set_octant_size")
+        assert(self._method_set_octant_size_1286410249 != nil)
+        self._method_get_octant_size_3905245786 = StringName(from: "get_octant_size")
+        assert(self._method_get_octant_size_3905245786 != nil)
+        self._method_set_cell_item_4177201334 = StringName(from: "set_cell_item")
+        assert(self._method_set_cell_item_4177201334 != nil)
+        self._method_get_cell_item_3724960147 = StringName(from: "get_cell_item")
+        assert(self._method_get_cell_item_3724960147 != nil)
+        self._method_get_cell_item_orientation_3724960147 = StringName(from: "get_cell_item_orientation")
+        assert(self._method_get_cell_item_orientation_3724960147 != nil)
+        self._method_get_cell_item_basis_3493604918 = StringName(from: "get_cell_item_basis")
+        assert(self._method_get_cell_item_basis_3493604918 != nil)
+        self._method_get_basis_with_orthogonal_index_2816196998 = StringName(from: "get_basis_with_orthogonal_index")
+        assert(self._method_get_basis_with_orthogonal_index_2816196998 != nil)
+        self._method_get_orthogonal_index_from_basis_4210359952 = StringName(from: "get_orthogonal_index_from_basis")
+        assert(self._method_get_orthogonal_index_from_basis_4210359952 != nil)
+        self._method_local_to_map_1257687843 = StringName(from: "local_to_map")
+        assert(self._method_local_to_map_1257687843 != nil)
+        self._method_map_to_local_1088329196 = StringName(from: "map_to_local")
+        assert(self._method_map_to_local_1088329196 != nil)
+        self._method_resource_changed_968641751 = StringName(from: "resource_changed")
+        assert(self._method_resource_changed_968641751 != nil)
+        self._method_set_center_x_2586408642 = StringName(from: "set_center_x")
+        assert(self._method_set_center_x_2586408642 != nil)
+        self._method_get_center_x_36873697 = StringName(from: "get_center_x")
+        assert(self._method_get_center_x_36873697 != nil)
+        self._method_set_center_y_2586408642 = StringName(from: "set_center_y")
+        assert(self._method_set_center_y_2586408642 != nil)
+        self._method_get_center_y_36873697 = StringName(from: "get_center_y")
+        assert(self._method_get_center_y_36873697 != nil)
+        self._method_set_center_z_2586408642 = StringName(from: "set_center_z")
+        assert(self._method_set_center_z_2586408642 != nil)
+        self._method_get_center_z_36873697 = StringName(from: "get_center_z")
+        assert(self._method_get_center_z_36873697 != nil)
+        self._method_clear_3218959716 = StringName(from: "clear")
+        assert(self._method_clear_3218959716 != nil)
+        self._method_get_used_cells_3995934104 = StringName(from: "get_used_cells")
+        assert(self._method_get_used_cells_3995934104 != nil)
+        self._method_get_used_cells_by_item_663333327 = StringName(from: "get_used_cells_by_item")
+        assert(self._method_get_used_cells_by_item_663333327 != nil)
+        self._method_get_meshes_3995934104 = StringName(from: "get_meshes")
+        assert(self._method_get_meshes_3995934104 != nil)
+        self._method_get_bake_meshes_2915620761 = StringName(from: "get_bake_meshes")
+        assert(self._method_get_bake_meshes_2915620761 != nil)
+        self._method_get_bake_mesh_instance_937000113 = StringName(from: "get_bake_mesh_instance")
+        assert(self._method_get_bake_mesh_instance_937000113 != nil)
+        self._method_clear_baked_meshes_3218959716 = StringName(from: "clear_baked_meshes")
+        assert(self._method_clear_baked_meshes_3218959716 != nil)
+        self._method_make_baked_meshes_1135556294 = StringName(from: "make_baked_meshes")
+        assert(self._method_make_baked_meshes_1135556294 != nil)
     }
 
     public func set_collision_layer(layer: Int64)  {
@@ -218,8 +172,13 @@ open class GridMap : Node3D {
                 .init(layer_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_layer_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_layer_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -235,8 +194,13 @@ open class GridMap : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_layer_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_layer_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -251,8 +215,13 @@ open class GridMap : Node3D {
                 .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_mask_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_mask_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -268,8 +237,13 @@ open class GridMap : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_mask_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_mask_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -285,8 +259,13 @@ open class GridMap : Node3D {
                 .init(layer_number_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_mask_value_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_mask_value_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -304,8 +283,13 @@ open class GridMap : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_mask_value_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_mask_value_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -322,8 +306,13 @@ open class GridMap : Node3D {
                 .init(layer_number_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_layer_value_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_layer_value_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -341,8 +330,13 @@ open class GridMap : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_layer_value_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_layer_value_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -358,8 +352,13 @@ open class GridMap : Node3D {
                 .init(priority_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_priority_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_priority_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -375,8 +374,13 @@ open class GridMap : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_priority_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_priority_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -391,8 +395,13 @@ open class GridMap : Node3D {
                 .init(material_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_physics_material_1784508650,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_physics_material_1784508650._native_ptr(),
+                    1784508650)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -406,8 +415,13 @@ open class GridMap : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_physics_material_2521850424,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_physics_material_2521850424._native_ptr(),
+                    2521850424)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -422,8 +436,13 @@ open class GridMap : Node3D {
                 .init(bake_navigation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bake_navigation_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bake_navigation_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -439,8 +458,13 @@ open class GridMap : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_baking_navigation_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_baking_navigation_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -455,8 +479,13 @@ open class GridMap : Node3D {
                 .init(navigation_map_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_navigation_map_2722037293,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_navigation_map_2722037293._native_ptr(),
+                    2722037293)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -470,8 +499,13 @@ open class GridMap : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_navigation_map_2944877500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_navigation_map_2944877500._native_ptr(),
+                    2944877500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -486,8 +520,13 @@ open class GridMap : Node3D {
                 .init(mesh_library_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_mesh_library_1488083439,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_mesh_library_1488083439._native_ptr(),
+                    1488083439)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -501,8 +540,13 @@ open class GridMap : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_mesh_library_3350993772,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_mesh_library_3350993772._native_ptr(),
+                    3350993772)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -517,8 +561,13 @@ open class GridMap : Node3D {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cell_size_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cell_size_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -532,8 +581,13 @@ open class GridMap : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cell_size_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cell_size_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -548,8 +602,13 @@ open class GridMap : Node3D {
                 .init(scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cell_scale_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cell_scale_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -565,8 +624,13 @@ open class GridMap : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cell_scale_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cell_scale_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -581,8 +645,13 @@ open class GridMap : Node3D {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_octant_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_octant_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -598,8 +667,13 @@ open class GridMap : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_octant_size_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_octant_size_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -616,8 +690,13 @@ open class GridMap : Node3D {
                 .init(position_native), .init(item_native), .init(orientation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cell_item_4177201334,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cell_item_4177201334._native_ptr(),
+                    4177201334)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -635,8 +714,13 @@ open class GridMap : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cell_item_3724960147,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cell_item_3724960147._native_ptr(),
+                    3724960147)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -653,8 +737,13 @@ open class GridMap : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cell_item_orientation_3724960147,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cell_item_orientation_3724960147._native_ptr(),
+                    3724960147)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -670,8 +759,13 @@ open class GridMap : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cell_item_basis_3493604918,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cell_item_basis_3493604918._native_ptr(),
+                    3493604918)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -687,8 +781,13 @@ open class GridMap : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_basis_with_orthogonal_index_2816196998,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_basis_with_orthogonal_index_2816196998._native_ptr(),
+                    2816196998)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -706,8 +805,13 @@ open class GridMap : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_orthogonal_index_from_basis_4210359952,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_orthogonal_index_from_basis_4210359952._native_ptr(),
+                    4210359952)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -723,8 +827,13 @@ open class GridMap : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_local_to_map_1257687843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_local_to_map_1257687843._native_ptr(),
+                    1257687843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -740,8 +849,13 @@ open class GridMap : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_to_local_1088329196,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_to_local_1088329196._native_ptr(),
+                    1088329196)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -756,8 +870,13 @@ open class GridMap : Node3D {
                 .init(resource_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_resource_changed_968641751,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_resource_changed_968641751._native_ptr(),
+                    968641751)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -771,8 +890,13 @@ open class GridMap : Node3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_center_x_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_center_x_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -788,8 +912,13 @@ open class GridMap : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_center_x_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_center_x_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -804,8 +933,13 @@ open class GridMap : Node3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_center_y_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_center_y_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -821,8 +955,13 @@ open class GridMap : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_center_y_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_center_y_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -837,8 +976,13 @@ open class GridMap : Node3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_center_z_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_center_z_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -854,8 +998,13 @@ open class GridMap : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_center_z_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_center_z_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -869,8 +1018,13 @@ open class GridMap : Node3D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -884,8 +1038,13 @@ open class GridMap : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_used_cells_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_used_cells_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -901,8 +1060,13 @@ open class GridMap : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_used_cells_by_item_663333327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_used_cells_by_item_663333327._native_ptr(),
+                    663333327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -918,8 +1082,13 @@ open class GridMap : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_meshes_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_meshes_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -934,8 +1103,13 @@ open class GridMap : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bake_meshes_2915620761,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bake_meshes_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -951,8 +1125,13 @@ open class GridMap : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bake_mesh_instance_937000113,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bake_mesh_instance_937000113._native_ptr(),
+                    937000113)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -967,8 +1146,13 @@ open class GridMap : Node3D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_baked_meshes_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_baked_meshes_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -983,8 +1167,13 @@ open class GridMap : Node3D {
                 .init(gen_lightmap_uv_native), .init(lightmap_uv_texel_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_make_baked_meshes_1135556294,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_make_baked_meshes_1135556294._native_ptr(),
+                    1135556294)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

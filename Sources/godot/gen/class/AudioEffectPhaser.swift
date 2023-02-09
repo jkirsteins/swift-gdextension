@@ -13,55 +13,46 @@ open class AudioEffectPhaser : AudioEffect {
 
     public override class var __godot_name: StringName { __godot_name_AudioEffectPhaser }
 
-    static var _method_set_range_min_hz_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_range_min_hz_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_range_max_hz_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_range_max_hz_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_rate_hz_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rate_hz_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_feedback_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_feedback_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_depth_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_depth_1740695150: GDExtensionMethodBindPtr! = nil
+    static var _method_set_range_min_hz_373806689: StringName! = nil
+    static var _method_get_range_min_hz_1740695150: StringName! = nil
+    static var _method_set_range_max_hz_373806689: StringName! = nil
+    static var _method_get_range_max_hz_1740695150: StringName! = nil
+    static var _method_set_rate_hz_373806689: StringName! = nil
+    static var _method_get_rate_hz_1740695150: StringName! = nil
+    static var _method_set_feedback_373806689: StringName! = nil
+    static var _method_get_feedback_1740695150: StringName! = nil
+    static var _method_set_depth_373806689: StringName! = nil
+    static var _method_get_depth_1740695150: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AudioEffectPhaser == nil)
         __godot_name_AudioEffectPhaser = StringName(from: "AudioEffectPhaser")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_range_min_hz_373806689_name = StringName(from: "set_range_min_hz")
-        self._method_set_range_min_hz_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectPhaser._native_ptr(), _method_set_range_min_hz_373806689_name._native_ptr(), 373806689)
-        assert(AudioEffectPhaser._method_set_range_min_hz_373806689 != nil)
-        let _method_get_range_min_hz_1740695150_name = StringName(from: "get_range_min_hz")
-        self._method_get_range_min_hz_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectPhaser._native_ptr(), _method_get_range_min_hz_1740695150_name._native_ptr(), 1740695150)
-        assert(AudioEffectPhaser._method_get_range_min_hz_1740695150 != nil)
-        let _method_set_range_max_hz_373806689_name = StringName(from: "set_range_max_hz")
-        self._method_set_range_max_hz_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectPhaser._native_ptr(), _method_set_range_max_hz_373806689_name._native_ptr(), 373806689)
-        assert(AudioEffectPhaser._method_set_range_max_hz_373806689 != nil)
-        let _method_get_range_max_hz_1740695150_name = StringName(from: "get_range_max_hz")
-        self._method_get_range_max_hz_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectPhaser._native_ptr(), _method_get_range_max_hz_1740695150_name._native_ptr(), 1740695150)
-        assert(AudioEffectPhaser._method_get_range_max_hz_1740695150 != nil)
-        let _method_set_rate_hz_373806689_name = StringName(from: "set_rate_hz")
-        self._method_set_rate_hz_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectPhaser._native_ptr(), _method_set_rate_hz_373806689_name._native_ptr(), 373806689)
-        assert(AudioEffectPhaser._method_set_rate_hz_373806689 != nil)
-        let _method_get_rate_hz_1740695150_name = StringName(from: "get_rate_hz")
-        self._method_get_rate_hz_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectPhaser._native_ptr(), _method_get_rate_hz_1740695150_name._native_ptr(), 1740695150)
-        assert(AudioEffectPhaser._method_get_rate_hz_1740695150 != nil)
-        let _method_set_feedback_373806689_name = StringName(from: "set_feedback")
-        self._method_set_feedback_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectPhaser._native_ptr(), _method_set_feedback_373806689_name._native_ptr(), 373806689)
-        assert(AudioEffectPhaser._method_set_feedback_373806689 != nil)
-        let _method_get_feedback_1740695150_name = StringName(from: "get_feedback")
-        self._method_get_feedback_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectPhaser._native_ptr(), _method_get_feedback_1740695150_name._native_ptr(), 1740695150)
-        assert(AudioEffectPhaser._method_get_feedback_1740695150 != nil)
-        let _method_set_depth_373806689_name = StringName(from: "set_depth")
-        self._method_set_depth_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectPhaser._native_ptr(), _method_set_depth_373806689_name._native_ptr(), 373806689)
-        assert(AudioEffectPhaser._method_set_depth_373806689 != nil)
-        let _method_get_depth_1740695150_name = StringName(from: "get_depth")
-        self._method_get_depth_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectPhaser._native_ptr(), _method_get_depth_1740695150_name._native_ptr(), 1740695150)
-        assert(AudioEffectPhaser._method_get_depth_1740695150 != nil)
+        self._method_set_range_min_hz_373806689 = StringName(from: "set_range_min_hz")
+        assert(self._method_set_range_min_hz_373806689 != nil)
+        self._method_get_range_min_hz_1740695150 = StringName(from: "get_range_min_hz")
+        assert(self._method_get_range_min_hz_1740695150 != nil)
+        self._method_set_range_max_hz_373806689 = StringName(from: "set_range_max_hz")
+        assert(self._method_set_range_max_hz_373806689 != nil)
+        self._method_get_range_max_hz_1740695150 = StringName(from: "get_range_max_hz")
+        assert(self._method_get_range_max_hz_1740695150 != nil)
+        self._method_set_rate_hz_373806689 = StringName(from: "set_rate_hz")
+        assert(self._method_set_rate_hz_373806689 != nil)
+        self._method_get_rate_hz_1740695150 = StringName(from: "get_rate_hz")
+        assert(self._method_get_rate_hz_1740695150 != nil)
+        self._method_set_feedback_373806689 = StringName(from: "set_feedback")
+        assert(self._method_set_feedback_373806689 != nil)
+        self._method_get_feedback_1740695150 = StringName(from: "get_feedback")
+        assert(self._method_get_feedback_1740695150 != nil)
+        self._method_set_depth_373806689 = StringName(from: "set_depth")
+        assert(self._method_set_depth_373806689 != nil)
+        self._method_get_depth_1740695150 = StringName(from: "get_depth")
+        assert(self._method_get_depth_1740695150 != nil)
     }
 
     public func set_range_min_hz(hz: Float64)  {
@@ -72,8 +63,13 @@ open class AudioEffectPhaser : AudioEffect {
                 .init(hz_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_range_min_hz_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_range_min_hz_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -89,8 +85,13 @@ open class AudioEffectPhaser : AudioEffect {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_range_min_hz_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_range_min_hz_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -105,8 +106,13 @@ open class AudioEffectPhaser : AudioEffect {
                 .init(hz_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_range_max_hz_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_range_max_hz_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -122,8 +128,13 @@ open class AudioEffectPhaser : AudioEffect {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_range_max_hz_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_range_max_hz_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -138,8 +149,13 @@ open class AudioEffectPhaser : AudioEffect {
                 .init(hz_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_rate_hz_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_rate_hz_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -155,8 +171,13 @@ open class AudioEffectPhaser : AudioEffect {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rate_hz_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rate_hz_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -171,8 +192,13 @@ open class AudioEffectPhaser : AudioEffect {
                 .init(fbk_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_feedback_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_feedback_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -188,8 +214,13 @@ open class AudioEffectPhaser : AudioEffect {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_feedback_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_feedback_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -204,8 +235,13 @@ open class AudioEffectPhaser : AudioEffect {
                 .init(depth_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_depth_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_depth_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -221,8 +257,13 @@ open class AudioEffectPhaser : AudioEffect {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_depth_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_depth_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

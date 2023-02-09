@@ -22,164 +22,128 @@ open class PhysicalBone3D : PhysicsBody3D {
 
     public override class var __godot_name: StringName { __godot_name_PhysicalBone3D }
 
-    static var _method__integrate_forces_0: GDExtensionMethodBindPtr! = nil
-    static var _method_apply_central_impulse_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_apply_impulse_1002852006: GDExtensionMethodBindPtr! = nil
-    static var _method_set_joint_type_2289552604: GDExtensionMethodBindPtr! = nil
-    static var _method_get_joint_type_931347320: GDExtensionMethodBindPtr! = nil
-    static var _method_set_joint_offset_2952846383: GDExtensionMethodBindPtr! = nil
-    static var _method_get_joint_offset_3229777777: GDExtensionMethodBindPtr! = nil
-    static var _method_set_joint_rotation_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_joint_rotation_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_body_offset_2952846383: GDExtensionMethodBindPtr! = nil
-    static var _method_get_body_offset_3229777777: GDExtensionMethodBindPtr! = nil
-    static var _method_get_simulate_physics_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_is_simulating_physics_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone_id_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_mass_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_mass_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_friction_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_friction_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bounce_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bounce_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_gravity_scale_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_gravity_scale_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_linear_damp_mode_1244972221: GDExtensionMethodBindPtr! = nil
-    static var _method_get_linear_damp_mode_205884699: GDExtensionMethodBindPtr! = nil
-    static var _method_set_angular_damp_mode_1244972221: GDExtensionMethodBindPtr! = nil
-    static var _method_get_angular_damp_mode_205884699: GDExtensionMethodBindPtr! = nil
-    static var _method_set_linear_damp_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_linear_damp_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_angular_damp_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_angular_damp_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_linear_velocity_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_linear_velocity_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_angular_velocity_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_angular_velocity_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_custom_integrator_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_using_custom_integrator_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_set_can_sleep_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_able_to_sleep_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method__integrate_forces_0: StringName! = nil
+    static var _method_apply_central_impulse_3460891852: StringName! = nil
+    static var _method_apply_impulse_1002852006: StringName! = nil
+    static var _method_set_joint_type_2289552604: StringName! = nil
+    static var _method_get_joint_type_931347320: StringName! = nil
+    static var _method_set_joint_offset_2952846383: StringName! = nil
+    static var _method_get_joint_offset_3229777777: StringName! = nil
+    static var _method_set_joint_rotation_3460891852: StringName! = nil
+    static var _method_get_joint_rotation_3360562783: StringName! = nil
+    static var _method_set_body_offset_2952846383: StringName! = nil
+    static var _method_get_body_offset_3229777777: StringName! = nil
+    static var _method_get_simulate_physics_2240911060: StringName! = nil
+    static var _method_is_simulating_physics_2240911060: StringName! = nil
+    static var _method_get_bone_id_3905245786: StringName! = nil
+    static var _method_set_mass_373806689: StringName! = nil
+    static var _method_get_mass_1740695150: StringName! = nil
+    static var _method_set_friction_373806689: StringName! = nil
+    static var _method_get_friction_1740695150: StringName! = nil
+    static var _method_set_bounce_373806689: StringName! = nil
+    static var _method_get_bounce_1740695150: StringName! = nil
+    static var _method_set_gravity_scale_373806689: StringName! = nil
+    static var _method_get_gravity_scale_1740695150: StringName! = nil
+    static var _method_set_linear_damp_mode_1244972221: StringName! = nil
+    static var _method_get_linear_damp_mode_205884699: StringName! = nil
+    static var _method_set_angular_damp_mode_1244972221: StringName! = nil
+    static var _method_get_angular_damp_mode_205884699: StringName! = nil
+    static var _method_set_linear_damp_373806689: StringName! = nil
+    static var _method_get_linear_damp_1740695150: StringName! = nil
+    static var _method_set_angular_damp_373806689: StringName! = nil
+    static var _method_get_angular_damp_1740695150: StringName! = nil
+    static var _method_set_linear_velocity_3460891852: StringName! = nil
+    static var _method_get_linear_velocity_3360562783: StringName! = nil
+    static var _method_set_angular_velocity_3460891852: StringName! = nil
+    static var _method_get_angular_velocity_3360562783: StringName! = nil
+    static var _method_set_use_custom_integrator_2586408642: StringName! = nil
+    static var _method_is_using_custom_integrator_2240911060: StringName! = nil
+    static var _method_set_can_sleep_2586408642: StringName! = nil
+    static var _method_is_able_to_sleep_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PhysicalBone3D == nil)
         __godot_name_PhysicalBone3D = StringName(from: "PhysicalBone3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_apply_central_impulse_3460891852_name = StringName(from: "apply_central_impulse")
-        self._method_apply_central_impulse_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_apply_central_impulse_3460891852_name._native_ptr(), 3460891852)
-        assert(PhysicalBone3D._method_apply_central_impulse_3460891852 != nil)
-        let _method_apply_impulse_1002852006_name = StringName(from: "apply_impulse")
-        self._method_apply_impulse_1002852006 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_apply_impulse_1002852006_name._native_ptr(), 1002852006)
-        assert(PhysicalBone3D._method_apply_impulse_1002852006 != nil)
-        let _method_set_joint_type_2289552604_name = StringName(from: "set_joint_type")
-        self._method_set_joint_type_2289552604 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_set_joint_type_2289552604_name._native_ptr(), 2289552604)
-        assert(PhysicalBone3D._method_set_joint_type_2289552604 != nil)
-        let _method_get_joint_type_931347320_name = StringName(from: "get_joint_type")
-        self._method_get_joint_type_931347320 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_get_joint_type_931347320_name._native_ptr(), 931347320)
-        assert(PhysicalBone3D._method_get_joint_type_931347320 != nil)
-        let _method_set_joint_offset_2952846383_name = StringName(from: "set_joint_offset")
-        self._method_set_joint_offset_2952846383 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_set_joint_offset_2952846383_name._native_ptr(), 2952846383)
-        assert(PhysicalBone3D._method_set_joint_offset_2952846383 != nil)
-        let _method_get_joint_offset_3229777777_name = StringName(from: "get_joint_offset")
-        self._method_get_joint_offset_3229777777 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_get_joint_offset_3229777777_name._native_ptr(), 3229777777)
-        assert(PhysicalBone3D._method_get_joint_offset_3229777777 != nil)
-        let _method_set_joint_rotation_3460891852_name = StringName(from: "set_joint_rotation")
-        self._method_set_joint_rotation_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_set_joint_rotation_3460891852_name._native_ptr(), 3460891852)
-        assert(PhysicalBone3D._method_set_joint_rotation_3460891852 != nil)
-        let _method_get_joint_rotation_3360562783_name = StringName(from: "get_joint_rotation")
-        self._method_get_joint_rotation_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_get_joint_rotation_3360562783_name._native_ptr(), 3360562783)
-        assert(PhysicalBone3D._method_get_joint_rotation_3360562783 != nil)
-        let _method_set_body_offset_2952846383_name = StringName(from: "set_body_offset")
-        self._method_set_body_offset_2952846383 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_set_body_offset_2952846383_name._native_ptr(), 2952846383)
-        assert(PhysicalBone3D._method_set_body_offset_2952846383 != nil)
-        let _method_get_body_offset_3229777777_name = StringName(from: "get_body_offset")
-        self._method_get_body_offset_3229777777 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_get_body_offset_3229777777_name._native_ptr(), 3229777777)
-        assert(PhysicalBone3D._method_get_body_offset_3229777777 != nil)
-        let _method_get_simulate_physics_2240911060_name = StringName(from: "get_simulate_physics")
-        self._method_get_simulate_physics_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_get_simulate_physics_2240911060_name._native_ptr(), 2240911060)
-        assert(PhysicalBone3D._method_get_simulate_physics_2240911060 != nil)
-        let _method_is_simulating_physics_2240911060_name = StringName(from: "is_simulating_physics")
-        self._method_is_simulating_physics_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_is_simulating_physics_2240911060_name._native_ptr(), 2240911060)
-        assert(PhysicalBone3D._method_is_simulating_physics_2240911060 != nil)
-        let _method_get_bone_id_3905245786_name = StringName(from: "get_bone_id")
-        self._method_get_bone_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_get_bone_id_3905245786_name._native_ptr(), 3905245786)
-        assert(PhysicalBone3D._method_get_bone_id_3905245786 != nil)
-        let _method_set_mass_373806689_name = StringName(from: "set_mass")
-        self._method_set_mass_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_set_mass_373806689_name._native_ptr(), 373806689)
-        assert(PhysicalBone3D._method_set_mass_373806689 != nil)
-        let _method_get_mass_1740695150_name = StringName(from: "get_mass")
-        self._method_get_mass_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_get_mass_1740695150_name._native_ptr(), 1740695150)
-        assert(PhysicalBone3D._method_get_mass_1740695150 != nil)
-        let _method_set_friction_373806689_name = StringName(from: "set_friction")
-        self._method_set_friction_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_set_friction_373806689_name._native_ptr(), 373806689)
-        assert(PhysicalBone3D._method_set_friction_373806689 != nil)
-        let _method_get_friction_1740695150_name = StringName(from: "get_friction")
-        self._method_get_friction_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_get_friction_1740695150_name._native_ptr(), 1740695150)
-        assert(PhysicalBone3D._method_get_friction_1740695150 != nil)
-        let _method_set_bounce_373806689_name = StringName(from: "set_bounce")
-        self._method_set_bounce_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_set_bounce_373806689_name._native_ptr(), 373806689)
-        assert(PhysicalBone3D._method_set_bounce_373806689 != nil)
-        let _method_get_bounce_1740695150_name = StringName(from: "get_bounce")
-        self._method_get_bounce_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_get_bounce_1740695150_name._native_ptr(), 1740695150)
-        assert(PhysicalBone3D._method_get_bounce_1740695150 != nil)
-        let _method_set_gravity_scale_373806689_name = StringName(from: "set_gravity_scale")
-        self._method_set_gravity_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_set_gravity_scale_373806689_name._native_ptr(), 373806689)
-        assert(PhysicalBone3D._method_set_gravity_scale_373806689 != nil)
-        let _method_get_gravity_scale_1740695150_name = StringName(from: "get_gravity_scale")
-        self._method_get_gravity_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_get_gravity_scale_1740695150_name._native_ptr(), 1740695150)
-        assert(PhysicalBone3D._method_get_gravity_scale_1740695150 != nil)
-        let _method_set_linear_damp_mode_1244972221_name = StringName(from: "set_linear_damp_mode")
-        self._method_set_linear_damp_mode_1244972221 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_set_linear_damp_mode_1244972221_name._native_ptr(), 1244972221)
-        assert(PhysicalBone3D._method_set_linear_damp_mode_1244972221 != nil)
-        let _method_get_linear_damp_mode_205884699_name = StringName(from: "get_linear_damp_mode")
-        self._method_get_linear_damp_mode_205884699 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_get_linear_damp_mode_205884699_name._native_ptr(), 205884699)
-        assert(PhysicalBone3D._method_get_linear_damp_mode_205884699 != nil)
-        let _method_set_angular_damp_mode_1244972221_name = StringName(from: "set_angular_damp_mode")
-        self._method_set_angular_damp_mode_1244972221 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_set_angular_damp_mode_1244972221_name._native_ptr(), 1244972221)
-        assert(PhysicalBone3D._method_set_angular_damp_mode_1244972221 != nil)
-        let _method_get_angular_damp_mode_205884699_name = StringName(from: "get_angular_damp_mode")
-        self._method_get_angular_damp_mode_205884699 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_get_angular_damp_mode_205884699_name._native_ptr(), 205884699)
-        assert(PhysicalBone3D._method_get_angular_damp_mode_205884699 != nil)
-        let _method_set_linear_damp_373806689_name = StringName(from: "set_linear_damp")
-        self._method_set_linear_damp_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_set_linear_damp_373806689_name._native_ptr(), 373806689)
-        assert(PhysicalBone3D._method_set_linear_damp_373806689 != nil)
-        let _method_get_linear_damp_1740695150_name = StringName(from: "get_linear_damp")
-        self._method_get_linear_damp_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_get_linear_damp_1740695150_name._native_ptr(), 1740695150)
-        assert(PhysicalBone3D._method_get_linear_damp_1740695150 != nil)
-        let _method_set_angular_damp_373806689_name = StringName(from: "set_angular_damp")
-        self._method_set_angular_damp_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_set_angular_damp_373806689_name._native_ptr(), 373806689)
-        assert(PhysicalBone3D._method_set_angular_damp_373806689 != nil)
-        let _method_get_angular_damp_1740695150_name = StringName(from: "get_angular_damp")
-        self._method_get_angular_damp_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_get_angular_damp_1740695150_name._native_ptr(), 1740695150)
-        assert(PhysicalBone3D._method_get_angular_damp_1740695150 != nil)
-        let _method_set_linear_velocity_3460891852_name = StringName(from: "set_linear_velocity")
-        self._method_set_linear_velocity_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_set_linear_velocity_3460891852_name._native_ptr(), 3460891852)
-        assert(PhysicalBone3D._method_set_linear_velocity_3460891852 != nil)
-        let _method_get_linear_velocity_3360562783_name = StringName(from: "get_linear_velocity")
-        self._method_get_linear_velocity_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_get_linear_velocity_3360562783_name._native_ptr(), 3360562783)
-        assert(PhysicalBone3D._method_get_linear_velocity_3360562783 != nil)
-        let _method_set_angular_velocity_3460891852_name = StringName(from: "set_angular_velocity")
-        self._method_set_angular_velocity_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_set_angular_velocity_3460891852_name._native_ptr(), 3460891852)
-        assert(PhysicalBone3D._method_set_angular_velocity_3460891852 != nil)
-        let _method_get_angular_velocity_3360562783_name = StringName(from: "get_angular_velocity")
-        self._method_get_angular_velocity_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_get_angular_velocity_3360562783_name._native_ptr(), 3360562783)
-        assert(PhysicalBone3D._method_get_angular_velocity_3360562783 != nil)
-        let _method_set_use_custom_integrator_2586408642_name = StringName(from: "set_use_custom_integrator")
-        self._method_set_use_custom_integrator_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_set_use_custom_integrator_2586408642_name._native_ptr(), 2586408642)
-        assert(PhysicalBone3D._method_set_use_custom_integrator_2586408642 != nil)
-        let _method_is_using_custom_integrator_2240911060_name = StringName(from: "is_using_custom_integrator")
-        self._method_is_using_custom_integrator_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_is_using_custom_integrator_2240911060_name._native_ptr(), 2240911060)
-        assert(PhysicalBone3D._method_is_using_custom_integrator_2240911060 != nil)
-        let _method_set_can_sleep_2586408642_name = StringName(from: "set_can_sleep")
-        self._method_set_can_sleep_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_set_can_sleep_2586408642_name._native_ptr(), 2586408642)
-        assert(PhysicalBone3D._method_set_can_sleep_2586408642 != nil)
-        let _method_is_able_to_sleep_36873697_name = StringName(from: "is_able_to_sleep")
-        self._method_is_able_to_sleep_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone3D._native_ptr(), _method_is_able_to_sleep_36873697_name._native_ptr(), 36873697)
-        assert(PhysicalBone3D._method_is_able_to_sleep_36873697 != nil)
+        self._method_apply_central_impulse_3460891852 = StringName(from: "apply_central_impulse")
+        assert(self._method_apply_central_impulse_3460891852 != nil)
+        self._method_apply_impulse_1002852006 = StringName(from: "apply_impulse")
+        assert(self._method_apply_impulse_1002852006 != nil)
+        self._method_set_joint_type_2289552604 = StringName(from: "set_joint_type")
+        assert(self._method_set_joint_type_2289552604 != nil)
+        self._method_get_joint_type_931347320 = StringName(from: "get_joint_type")
+        assert(self._method_get_joint_type_931347320 != nil)
+        self._method_set_joint_offset_2952846383 = StringName(from: "set_joint_offset")
+        assert(self._method_set_joint_offset_2952846383 != nil)
+        self._method_get_joint_offset_3229777777 = StringName(from: "get_joint_offset")
+        assert(self._method_get_joint_offset_3229777777 != nil)
+        self._method_set_joint_rotation_3460891852 = StringName(from: "set_joint_rotation")
+        assert(self._method_set_joint_rotation_3460891852 != nil)
+        self._method_get_joint_rotation_3360562783 = StringName(from: "get_joint_rotation")
+        assert(self._method_get_joint_rotation_3360562783 != nil)
+        self._method_set_body_offset_2952846383 = StringName(from: "set_body_offset")
+        assert(self._method_set_body_offset_2952846383 != nil)
+        self._method_get_body_offset_3229777777 = StringName(from: "get_body_offset")
+        assert(self._method_get_body_offset_3229777777 != nil)
+        self._method_get_simulate_physics_2240911060 = StringName(from: "get_simulate_physics")
+        assert(self._method_get_simulate_physics_2240911060 != nil)
+        self._method_is_simulating_physics_2240911060 = StringName(from: "is_simulating_physics")
+        assert(self._method_is_simulating_physics_2240911060 != nil)
+        self._method_get_bone_id_3905245786 = StringName(from: "get_bone_id")
+        assert(self._method_get_bone_id_3905245786 != nil)
+        self._method_set_mass_373806689 = StringName(from: "set_mass")
+        assert(self._method_set_mass_373806689 != nil)
+        self._method_get_mass_1740695150 = StringName(from: "get_mass")
+        assert(self._method_get_mass_1740695150 != nil)
+        self._method_set_friction_373806689 = StringName(from: "set_friction")
+        assert(self._method_set_friction_373806689 != nil)
+        self._method_get_friction_1740695150 = StringName(from: "get_friction")
+        assert(self._method_get_friction_1740695150 != nil)
+        self._method_set_bounce_373806689 = StringName(from: "set_bounce")
+        assert(self._method_set_bounce_373806689 != nil)
+        self._method_get_bounce_1740695150 = StringName(from: "get_bounce")
+        assert(self._method_get_bounce_1740695150 != nil)
+        self._method_set_gravity_scale_373806689 = StringName(from: "set_gravity_scale")
+        assert(self._method_set_gravity_scale_373806689 != nil)
+        self._method_get_gravity_scale_1740695150 = StringName(from: "get_gravity_scale")
+        assert(self._method_get_gravity_scale_1740695150 != nil)
+        self._method_set_linear_damp_mode_1244972221 = StringName(from: "set_linear_damp_mode")
+        assert(self._method_set_linear_damp_mode_1244972221 != nil)
+        self._method_get_linear_damp_mode_205884699 = StringName(from: "get_linear_damp_mode")
+        assert(self._method_get_linear_damp_mode_205884699 != nil)
+        self._method_set_angular_damp_mode_1244972221 = StringName(from: "set_angular_damp_mode")
+        assert(self._method_set_angular_damp_mode_1244972221 != nil)
+        self._method_get_angular_damp_mode_205884699 = StringName(from: "get_angular_damp_mode")
+        assert(self._method_get_angular_damp_mode_205884699 != nil)
+        self._method_set_linear_damp_373806689 = StringName(from: "set_linear_damp")
+        assert(self._method_set_linear_damp_373806689 != nil)
+        self._method_get_linear_damp_1740695150 = StringName(from: "get_linear_damp")
+        assert(self._method_get_linear_damp_1740695150 != nil)
+        self._method_set_angular_damp_373806689 = StringName(from: "set_angular_damp")
+        assert(self._method_set_angular_damp_373806689 != nil)
+        self._method_get_angular_damp_1740695150 = StringName(from: "get_angular_damp")
+        assert(self._method_get_angular_damp_1740695150 != nil)
+        self._method_set_linear_velocity_3460891852 = StringName(from: "set_linear_velocity")
+        assert(self._method_set_linear_velocity_3460891852 != nil)
+        self._method_get_linear_velocity_3360562783 = StringName(from: "get_linear_velocity")
+        assert(self._method_get_linear_velocity_3360562783 != nil)
+        self._method_set_angular_velocity_3460891852 = StringName(from: "set_angular_velocity")
+        assert(self._method_set_angular_velocity_3460891852 != nil)
+        self._method_get_angular_velocity_3360562783 = StringName(from: "get_angular_velocity")
+        assert(self._method_get_angular_velocity_3360562783 != nil)
+        self._method_set_use_custom_integrator_2586408642 = StringName(from: "set_use_custom_integrator")
+        assert(self._method_set_use_custom_integrator_2586408642 != nil)
+        self._method_is_using_custom_integrator_2240911060 = StringName(from: "is_using_custom_integrator")
+        assert(self._method_is_using_custom_integrator_2240911060 != nil)
+        self._method_set_can_sleep_2586408642 = StringName(from: "set_can_sleep")
+        assert(self._method_set_can_sleep_2586408642 != nil)
+        self._method_is_able_to_sleep_36873697 = StringName(from: "is_able_to_sleep")
+        assert(self._method_is_able_to_sleep_36873697 != nil)
     }
 
     public func _integrate_forces(state: PhysicsDirectBodyState3D)  {
@@ -190,12 +154,7 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(state_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__integrate_forces_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func apply_central_impulse(impulse: Vector3)  {
         let impulse_native = impulse._native_ptr()
@@ -205,8 +164,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(impulse_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_apply_central_impulse_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_apply_central_impulse_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -221,8 +185,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(impulse_native), .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_apply_impulse_1002852006,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_apply_impulse_1002852006._native_ptr(),
+                    1002852006)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -236,8 +205,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(joint_type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_joint_type_2289552604,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_joint_type_2289552604._native_ptr(),
+                    2289552604)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -252,8 +226,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_joint_type_931347320,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_joint_type_931347320._native_ptr(),
+                    931347320)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -268,8 +247,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_joint_offset_2952846383,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_joint_offset_2952846383._native_ptr(),
+                    2952846383)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -283,8 +267,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_joint_offset_3229777777,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_joint_offset_3229777777._native_ptr(),
+                    3229777777)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -299,8 +288,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(euler_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_joint_rotation_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_joint_rotation_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -314,8 +308,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_joint_rotation_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_joint_rotation_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -330,8 +329,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_body_offset_2952846383,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_body_offset_2952846383._native_ptr(),
+                    2952846383)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -345,8 +349,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_body_offset_3229777777,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_body_offset_3229777777._native_ptr(),
+                    3229777777)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -362,8 +371,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_simulate_physics_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_simulate_physics_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -379,8 +393,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_simulating_physics_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_simulating_physics_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -396,8 +415,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_id_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_id_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -412,8 +436,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(mass_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_mass_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_mass_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -429,8 +458,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_mass_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_mass_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -445,8 +479,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(friction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_friction_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_friction_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -462,8 +501,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_friction_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_friction_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -478,8 +522,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(bounce_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bounce_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bounce_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -495,8 +544,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bounce_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bounce_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -511,8 +565,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(gravity_scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_gravity_scale_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_gravity_scale_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -528,8 +587,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_gravity_scale_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_gravity_scale_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -544,8 +608,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(linear_damp_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_linear_damp_mode_1244972221,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_linear_damp_mode_1244972221._native_ptr(),
+                    1244972221)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -560,8 +629,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_linear_damp_mode_205884699,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_linear_damp_mode_205884699._native_ptr(),
+                    205884699)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -576,8 +650,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(angular_damp_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_angular_damp_mode_1244972221,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_angular_damp_mode_1244972221._native_ptr(),
+                    1244972221)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -592,8 +671,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_angular_damp_mode_205884699,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_angular_damp_mode_205884699._native_ptr(),
+                    205884699)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -608,8 +692,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(linear_damp_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_linear_damp_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_linear_damp_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -625,8 +714,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_linear_damp_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_linear_damp_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -641,8 +735,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(angular_damp_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_angular_damp_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_angular_damp_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -658,8 +757,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_angular_damp_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_angular_damp_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -674,8 +778,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(linear_velocity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_linear_velocity_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_linear_velocity_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -689,8 +798,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_linear_velocity_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_linear_velocity_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -705,8 +819,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(angular_velocity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_angular_velocity_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_angular_velocity_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -720,8 +839,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_angular_velocity_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_angular_velocity_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -736,8 +860,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_custom_integrator_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_custom_integrator_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -753,8 +882,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_using_custom_integrator_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_using_custom_integrator_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -769,8 +903,13 @@ open class PhysicalBone3D : PhysicsBody3D {
                 .init(able_to_sleep_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_can_sleep_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_can_sleep_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -786,8 +925,13 @@ open class PhysicalBone3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_able_to_sleep_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_able_to_sleep_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

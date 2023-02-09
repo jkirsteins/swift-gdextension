@@ -13,52 +13,48 @@ open class EditorNode3DGizmoPlugin : Resource {
 
     public override class var __godot_name: StringName { __godot_name_EditorNode3DGizmoPlugin }
 
-    static var _method__has_gizmo_0: GDExtensionMethodBindPtr! = nil
-    static var _method__create_gizmo_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_gizmo_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_priority_0: GDExtensionMethodBindPtr! = nil
-    static var _method__can_be_hidden_0: GDExtensionMethodBindPtr! = nil
-    static var _method__is_selectable_when_hidden_0: GDExtensionMethodBindPtr! = nil
-    static var _method__redraw_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_handle_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__is_handle_highlighted_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_handle_value_0: GDExtensionMethodBindPtr! = nil
-    static var _method__set_handle_0: GDExtensionMethodBindPtr! = nil
-    static var _method__commit_handle_0: GDExtensionMethodBindPtr! = nil
-    static var _method__subgizmos_intersect_ray_0: GDExtensionMethodBindPtr! = nil
-    static var _method__subgizmos_intersect_frustum_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_subgizmo_transform_0: GDExtensionMethodBindPtr! = nil
-    static var _method__set_subgizmo_transform_0: GDExtensionMethodBindPtr! = nil
-    static var _method__commit_subgizmos_0: GDExtensionMethodBindPtr! = nil
-    static var _method_create_material_3486012546: GDExtensionMethodBindPtr! = nil
-    static var _method_create_icon_material_2976007329: GDExtensionMethodBindPtr! = nil
-    static var _method_create_handle_material_2486475223: GDExtensionMethodBindPtr! = nil
-    static var _method_add_material_1374068695: GDExtensionMethodBindPtr! = nil
-    static var _method_get_material_3501703615: GDExtensionMethodBindPtr! = nil
+    static var _method__has_gizmo_0: StringName! = nil
+    static var _method__create_gizmo_0: StringName! = nil
+    static var _method__get_gizmo_name_0: StringName! = nil
+    static var _method__get_priority_0: StringName! = nil
+    static var _method__can_be_hidden_0: StringName! = nil
+    static var _method__is_selectable_when_hidden_0: StringName! = nil
+    static var _method__redraw_0: StringName! = nil
+    static var _method__get_handle_name_0: StringName! = nil
+    static var _method__is_handle_highlighted_0: StringName! = nil
+    static var _method__get_handle_value_0: StringName! = nil
+    static var _method__set_handle_0: StringName! = nil
+    static var _method__commit_handle_0: StringName! = nil
+    static var _method__subgizmos_intersect_ray_0: StringName! = nil
+    static var _method__subgizmos_intersect_frustum_0: StringName! = nil
+    static var _method__get_subgizmo_transform_0: StringName! = nil
+    static var _method__set_subgizmo_transform_0: StringName! = nil
+    static var _method__commit_subgizmos_0: StringName! = nil
+    static var _method_create_material_3486012546: StringName! = nil
+    static var _method_create_icon_material_2976007329: StringName! = nil
+    static var _method_create_handle_material_2486475223: StringName! = nil
+    static var _method_add_material_1374068695: StringName! = nil
+    static var _method_get_material_3501703615: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorNode3DGizmoPlugin == nil)
         __godot_name_EditorNode3DGizmoPlugin = StringName(from: "EditorNode3DGizmoPlugin")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_create_material_3486012546_name = StringName(from: "create_material")
-        self._method_create_material_3486012546 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmoPlugin._native_ptr(), _method_create_material_3486012546_name._native_ptr(), 3486012546)
-        assert(EditorNode3DGizmoPlugin._method_create_material_3486012546 != nil)
-        let _method_create_icon_material_2976007329_name = StringName(from: "create_icon_material")
-        self._method_create_icon_material_2976007329 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmoPlugin._native_ptr(), _method_create_icon_material_2976007329_name._native_ptr(), 2976007329)
-        assert(EditorNode3DGizmoPlugin._method_create_icon_material_2976007329 != nil)
-        let _method_create_handle_material_2486475223_name = StringName(from: "create_handle_material")
-        self._method_create_handle_material_2486475223 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmoPlugin._native_ptr(), _method_create_handle_material_2486475223_name._native_ptr(), 2486475223)
-        assert(EditorNode3DGizmoPlugin._method_create_handle_material_2486475223 != nil)
-        let _method_add_material_1374068695_name = StringName(from: "add_material")
-        self._method_add_material_1374068695 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmoPlugin._native_ptr(), _method_add_material_1374068695_name._native_ptr(), 1374068695)
-        assert(EditorNode3DGizmoPlugin._method_add_material_1374068695 != nil)
-        let _method_get_material_3501703615_name = StringName(from: "get_material")
-        self._method_get_material_3501703615 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorNode3DGizmoPlugin._native_ptr(), _method_get_material_3501703615_name._native_ptr(), 3501703615)
-        assert(EditorNode3DGizmoPlugin._method_get_material_3501703615 != nil)
+        self._method_create_material_3486012546 = StringName(from: "create_material")
+        assert(self._method_create_material_3486012546 != nil)
+        self._method_create_icon_material_2976007329 = StringName(from: "create_icon_material")
+        assert(self._method_create_icon_material_2976007329 != nil)
+        self._method_create_handle_material_2486475223 = StringName(from: "create_handle_material")
+        assert(self._method_create_handle_material_2486475223 != nil)
+        self._method_add_material_1374068695 = StringName(from: "add_material")
+        assert(self._method_add_material_1374068695 != nil)
+        self._method_get_material_3501703615 = StringName(from: "get_material")
+        assert(self._method_get_material_3501703615 != nil)
     }
 
     public func _has_gizmo(for_node_3d: Node3D) -> UInt8 {
@@ -71,12 +67,7 @@ open class EditorNode3DGizmoPlugin : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__has_gizmo_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _create_gizmo(for_node_3d: Node3D) -> EditorNode3DGizmo {
@@ -88,12 +79,7 @@ open class EditorNode3DGizmoPlugin : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__create_gizmo_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return EditorNode3DGizmo(godot: __resPtr.pointee)
     }
     public func _get_gizmo_name() -> godot.String {
@@ -104,12 +90,7 @@ open class EditorNode3DGizmoPlugin : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_gizmo_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _get_priority() -> Int64 {
@@ -121,12 +102,7 @@ open class EditorNode3DGizmoPlugin : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_priority_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _can_be_hidden() -> UInt8 {
@@ -138,12 +114,7 @@ open class EditorNode3DGizmoPlugin : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__can_be_hidden_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _is_selectable_when_hidden() -> UInt8 {
@@ -155,12 +126,7 @@ open class EditorNode3DGizmoPlugin : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__is_selectable_when_hidden_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _redraw(gizmo: EditorNode3DGizmo)  {
@@ -171,12 +137,7 @@ open class EditorNode3DGizmoPlugin : Resource {
                 .init(gizmo_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__redraw_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _get_handle_name(gizmo: EditorNode3DGizmo, handle_id: Int64, secondary: UInt8) -> godot.String {
         withUnsafePointer(to: secondary) { secondary_native in
@@ -189,12 +150,7 @@ open class EditorNode3DGizmoPlugin : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_handle_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
         }
         }
@@ -211,12 +167,7 @@ open class EditorNode3DGizmoPlugin : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__is_handle_highlighted_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
         }
@@ -232,12 +183,7 @@ open class EditorNode3DGizmoPlugin : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_handle_value_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Variant(godot: __resPtr.pointee)
         }
         }
@@ -254,12 +200,7 @@ open class EditorNode3DGizmoPlugin : Resource {
                 .init(gizmo_native), .init(handle_id_native), .init(secondary_native), .init(camera_native), .init(screen_pos_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__set_handle_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -275,12 +216,7 @@ open class EditorNode3DGizmoPlugin : Resource {
                 .init(gizmo_native), .init(handle_id_native), .init(secondary_native), .init(restore_native), .init(cancel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__commit_handle_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
         }
@@ -297,12 +233,7 @@ open class EditorNode3DGizmoPlugin : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__subgizmos_intersect_ray_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _subgizmos_intersect_frustum(gizmo: EditorNode3DGizmo, camera: Camera3D, frustum_planes: [Plane]) -> PackedInt32Array {
@@ -316,12 +247,7 @@ open class EditorNode3DGizmoPlugin : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__subgizmos_intersect_frustum_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedInt32Array(godot: __resPtr.pointee)
     }
     public func _get_subgizmo_transform(gizmo: EditorNode3DGizmo, subgizmo_id: Int64) -> Transform3D {
@@ -334,12 +260,7 @@ open class EditorNode3DGizmoPlugin : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_subgizmo_transform_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Transform3D(godot: __resPtr.pointee)
         }
     }
@@ -353,12 +274,7 @@ open class EditorNode3DGizmoPlugin : Resource {
                 .init(gizmo_native), .init(subgizmo_id_native), .init(transform_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__set_subgizmo_transform_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _commit_subgizmos(gizmo: EditorNode3DGizmo, ids: PackedInt32Array, restores: [Transform3D], cancel: UInt8)  {
@@ -372,12 +288,7 @@ open class EditorNode3DGizmoPlugin : Resource {
                 .init(gizmo_native), .init(ids_native), .init(restores_native), .init(cancel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__commit_subgizmos_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func create_material(name: godot.String, color: Color, billboard: UInt8, on_top: UInt8, use_vertex_color: UInt8)  {
@@ -392,8 +303,13 @@ open class EditorNode3DGizmoPlugin : Resource {
                 .init(name_native), .init(color_native), .init(billboard_native), .init(on_top_native), .init(use_vertex_color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_material_3486012546,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_material_3486012546._native_ptr(),
+                    3486012546)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -413,8 +329,13 @@ open class EditorNode3DGizmoPlugin : Resource {
                 .init(name_native), .init(texture_native), .init(on_top_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_icon_material_2976007329,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_icon_material_2976007329._native_ptr(),
+                    2976007329)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -431,8 +352,13 @@ open class EditorNode3DGizmoPlugin : Resource {
                 .init(name_native), .init(billboard_native), .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_handle_material_2486475223,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_handle_material_2486475223._native_ptr(),
+                    2486475223)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -448,8 +374,13 @@ open class EditorNode3DGizmoPlugin : Resource {
                 .init(name_native), .init(material_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_material_1374068695,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_material_1374068695._native_ptr(),
+                    1374068695)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -465,8 +396,13 @@ open class EditorNode3DGizmoPlugin : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_material_3501703615,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_material_3501703615._native_ptr(),
+                    3501703615)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

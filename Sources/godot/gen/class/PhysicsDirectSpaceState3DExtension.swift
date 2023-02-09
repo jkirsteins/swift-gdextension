@@ -11,26 +11,26 @@ open class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
 
     public override class var __godot_name: StringName { __godot_name_PhysicsDirectSpaceState3DExtension }
 
-    static var _method__intersect_ray_0: GDExtensionMethodBindPtr! = nil
-    static var _method__intersect_point_0: GDExtensionMethodBindPtr! = nil
-    static var _method__intersect_shape_0: GDExtensionMethodBindPtr! = nil
-    static var _method__cast_motion_0: GDExtensionMethodBindPtr! = nil
-    static var _method__collide_shape_0: GDExtensionMethodBindPtr! = nil
-    static var _method__rest_info_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_closest_point_to_object_volume_0: GDExtensionMethodBindPtr! = nil
-    static var _method_is_body_excluded_from_query_4155700596: GDExtensionMethodBindPtr! = nil
+    static var _method__intersect_ray_0: StringName! = nil
+    static var _method__intersect_point_0: StringName! = nil
+    static var _method__intersect_shape_0: StringName! = nil
+    static var _method__cast_motion_0: StringName! = nil
+    static var _method__collide_shape_0: StringName! = nil
+    static var _method__rest_info_0: StringName! = nil
+    static var _method__get_closest_point_to_object_volume_0: StringName! = nil
+    static var _method_is_body_excluded_from_query_4155700596: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PhysicsDirectSpaceState3DExtension == nil)
         __godot_name_PhysicsDirectSpaceState3DExtension = StringName(from: "PhysicsDirectSpaceState3DExtension")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_is_body_excluded_from_query_4155700596_name = StringName(from: "is_body_excluded_from_query")
-        self._method_is_body_excluded_from_query_4155700596 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectSpaceState3DExtension._native_ptr(), _method_is_body_excluded_from_query_4155700596_name._native_ptr(), 4155700596)
-        assert(PhysicsDirectSpaceState3DExtension._method_is_body_excluded_from_query_4155700596 != nil)
+        self._method_is_body_excluded_from_query_4155700596 = StringName(from: "is_body_excluded_from_query")
+        assert(self._method_is_body_excluded_from_query_4155700596 != nil)
     }
 
     public func _intersect_ray(from: Vector3, to: Vector3, collision_mask: Int64, collide_with_bodies: UInt8, collide_with_areas: UInt8, hit_from_inside: UInt8, hit_back_faces: UInt8, result: UnsafePointer<PhysicsServer3DExtensionRayResult>) -> UInt8 {
@@ -50,12 +50,7 @@ open class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__intersect_ray_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
         }
@@ -79,12 +74,7 @@ open class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__intersect_point_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
         }
         }
@@ -110,12 +100,7 @@ open class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__intersect_shape_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
         }
         }
@@ -143,12 +128,7 @@ open class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__cast_motion_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
         }
@@ -177,12 +157,7 @@ open class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__collide_shape_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
         }
@@ -209,12 +184,7 @@ open class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__rest_info_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
         }
@@ -232,12 +202,7 @@ open class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_closest_point_to_object_volume_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Vector3(godot: __resPtr.pointee)
     }
     public func is_body_excluded_from_query(body: RID) -> UInt8 {
@@ -250,8 +215,13 @@ open class PhysicsDirectSpaceState3DExtension : PhysicsDirectSpaceState3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_body_excluded_from_query_4155700596,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_body_excluded_from_query_4155700596._native_ptr(),
+                    4155700596)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

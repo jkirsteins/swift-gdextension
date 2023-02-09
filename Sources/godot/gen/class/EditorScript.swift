@@ -59,28 +59,26 @@ open class EditorScript : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_EditorScript }
 
-    static var _method__run_0: GDExtensionMethodBindPtr! = nil
-    static var _method_add_root_node_1078189570: GDExtensionMethodBindPtr! = nil
-    static var _method_get_scene_1818953479: GDExtensionMethodBindPtr! = nil
-    static var _method_get_editor_interface_4223731786: GDExtensionMethodBindPtr! = nil
+    static var _method__run_0: StringName! = nil
+    static var _method_add_root_node_1078189570: StringName! = nil
+    static var _method_get_scene_1818953479: StringName! = nil
+    static var _method_get_editor_interface_4223731786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorScript == nil)
         __godot_name_EditorScript = StringName(from: "EditorScript")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_add_root_node_1078189570_name = StringName(from: "add_root_node")
-        self._method_add_root_node_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorScript._native_ptr(), _method_add_root_node_1078189570_name._native_ptr(), 1078189570)
-        assert(EditorScript._method_add_root_node_1078189570 != nil)
-        let _method_get_scene_1818953479_name = StringName(from: "get_scene")
-        self._method_get_scene_1818953479 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorScript._native_ptr(), _method_get_scene_1818953479_name._native_ptr(), 1818953479)
-        assert(EditorScript._method_get_scene_1818953479 != nil)
-        let _method_get_editor_interface_4223731786_name = StringName(from: "get_editor_interface")
-        self._method_get_editor_interface_4223731786 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorScript._native_ptr(), _method_get_editor_interface_4223731786_name._native_ptr(), 4223731786)
-        assert(EditorScript._method_get_editor_interface_4223731786 != nil)
+        self._method_add_root_node_1078189570 = StringName(from: "add_root_node")
+        assert(self._method_add_root_node_1078189570 != nil)
+        self._method_get_scene_1818953479 = StringName(from: "get_scene")
+        assert(self._method_get_scene_1818953479 != nil)
+        self._method_get_editor_interface_4223731786 = StringName(from: "get_editor_interface")
+        assert(self._method_get_editor_interface_4223731786 != nil)
     }
 
     public func _run()  {
@@ -90,12 +88,7 @@ open class EditorScript : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__run_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func add_root_node(node: Node)  {
         let node_native = node._native_ptr()
@@ -105,8 +98,13 @@ open class EditorScript : RefCounted {
                 .init(node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_root_node_1078189570,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_root_node_1078189570._native_ptr(),
+                    1078189570)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -120,8 +118,13 @@ open class EditorScript : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_scene_1818953479,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_scene_1818953479._native_ptr(),
+                    1818953479)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -136,8 +139,13 @@ open class EditorScript : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_editor_interface_4223731786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_editor_interface_4223731786._native_ptr(),
+                    4223731786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

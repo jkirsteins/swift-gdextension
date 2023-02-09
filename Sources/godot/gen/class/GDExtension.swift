@@ -16,35 +16,31 @@ open class GDExtension : Resource {
 
     public override class var __godot_name: StringName { __godot_name_GDExtension }
 
-    static var _method_open_library_852856452: GDExtensionMethodBindPtr! = nil
-    static var _method_close_library_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_is_library_open_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_minimum_library_initialization_level_964858755: GDExtensionMethodBindPtr! = nil
-    static var _method_initialize_library_3409922941: GDExtensionMethodBindPtr! = nil
+    static var _method_open_library_852856452: StringName! = nil
+    static var _method_close_library_3218959716: StringName! = nil
+    static var _method_is_library_open_36873697: StringName! = nil
+    static var _method_get_minimum_library_initialization_level_964858755: StringName! = nil
+    static var _method_initialize_library_3409922941: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_GDExtension == nil)
         __godot_name_GDExtension = StringName(from: "GDExtension")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_open_library_852856452_name = StringName(from: "open_library")
-        self._method_open_library_852856452 = self.interface.pointee.classdb_get_method_bind(__godot_name_GDExtension._native_ptr(), _method_open_library_852856452_name._native_ptr(), 852856452)
-        assert(GDExtension._method_open_library_852856452 != nil)
-        let _method_close_library_3218959716_name = StringName(from: "close_library")
-        self._method_close_library_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_GDExtension._native_ptr(), _method_close_library_3218959716_name._native_ptr(), 3218959716)
-        assert(GDExtension._method_close_library_3218959716 != nil)
-        let _method_is_library_open_36873697_name = StringName(from: "is_library_open")
-        self._method_is_library_open_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_GDExtension._native_ptr(), _method_is_library_open_36873697_name._native_ptr(), 36873697)
-        assert(GDExtension._method_is_library_open_36873697 != nil)
-        let _method_get_minimum_library_initialization_level_964858755_name = StringName(from: "get_minimum_library_initialization_level")
-        self._method_get_minimum_library_initialization_level_964858755 = self.interface.pointee.classdb_get_method_bind(__godot_name_GDExtension._native_ptr(), _method_get_minimum_library_initialization_level_964858755_name._native_ptr(), 964858755)
-        assert(GDExtension._method_get_minimum_library_initialization_level_964858755 != nil)
-        let _method_initialize_library_3409922941_name = StringName(from: "initialize_library")
-        self._method_initialize_library_3409922941 = self.interface.pointee.classdb_get_method_bind(__godot_name_GDExtension._native_ptr(), _method_initialize_library_3409922941_name._native_ptr(), 3409922941)
-        assert(GDExtension._method_initialize_library_3409922941 != nil)
+        self._method_open_library_852856452 = StringName(from: "open_library")
+        assert(self._method_open_library_852856452 != nil)
+        self._method_close_library_3218959716 = StringName(from: "close_library")
+        assert(self._method_close_library_3218959716 != nil)
+        self._method_is_library_open_36873697 = StringName(from: "is_library_open")
+        assert(self._method_is_library_open_36873697 != nil)
+        self._method_get_minimum_library_initialization_level_964858755 = StringName(from: "get_minimum_library_initialization_level")
+        assert(self._method_get_minimum_library_initialization_level_964858755 != nil)
+        self._method_initialize_library_3409922941 = StringName(from: "initialize_library")
+        assert(self._method_initialize_library_3409922941 != nil)
     }
 
     public func open_library(path: godot.String, entry_symbol: godot.String) -> Error {
@@ -57,8 +53,13 @@ open class GDExtension : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_open_library_852856452,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_open_library_852856452._native_ptr(),
+                    852856452)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -72,8 +73,13 @@ open class GDExtension : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_close_library_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_close_library_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -88,8 +94,13 @@ open class GDExtension : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_library_open_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_library_open_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -104,8 +115,13 @@ open class GDExtension : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_minimum_library_initialization_level_964858755,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_minimum_library_initialization_level_964858755._native_ptr(),
+                    964858755)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -120,8 +136,13 @@ open class GDExtension : Resource {
                 .init(level_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_initialize_library_3409922941,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_initialize_library_3409922941._native_ptr(),
+                    3409922941)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

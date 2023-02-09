@@ -13,31 +13,28 @@ open class SegmentShape2D : Shape2D {
 
     public override class var __godot_name: StringName { __godot_name_SegmentShape2D }
 
-    static var _method_set_a_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_a_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_b_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_b_3341600327: GDExtensionMethodBindPtr! = nil
+    static var _method_set_a_743155724: StringName! = nil
+    static var _method_get_a_3341600327: StringName! = nil
+    static var _method_set_b_743155724: StringName! = nil
+    static var _method_get_b_3341600327: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_SegmentShape2D == nil)
         __godot_name_SegmentShape2D = StringName(from: "SegmentShape2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_a_743155724_name = StringName(from: "set_a")
-        self._method_set_a_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_SegmentShape2D._native_ptr(), _method_set_a_743155724_name._native_ptr(), 743155724)
-        assert(SegmentShape2D._method_set_a_743155724 != nil)
-        let _method_get_a_3341600327_name = StringName(from: "get_a")
-        self._method_get_a_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_SegmentShape2D._native_ptr(), _method_get_a_3341600327_name._native_ptr(), 3341600327)
-        assert(SegmentShape2D._method_get_a_3341600327 != nil)
-        let _method_set_b_743155724_name = StringName(from: "set_b")
-        self._method_set_b_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_SegmentShape2D._native_ptr(), _method_set_b_743155724_name._native_ptr(), 743155724)
-        assert(SegmentShape2D._method_set_b_743155724 != nil)
-        let _method_get_b_3341600327_name = StringName(from: "get_b")
-        self._method_get_b_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_SegmentShape2D._native_ptr(), _method_get_b_3341600327_name._native_ptr(), 3341600327)
-        assert(SegmentShape2D._method_get_b_3341600327 != nil)
+        self._method_set_a_743155724 = StringName(from: "set_a")
+        assert(self._method_set_a_743155724 != nil)
+        self._method_get_a_3341600327 = StringName(from: "get_a")
+        assert(self._method_get_a_3341600327 != nil)
+        self._method_set_b_743155724 = StringName(from: "set_b")
+        assert(self._method_set_b_743155724 != nil)
+        self._method_get_b_3341600327 = StringName(from: "get_b")
+        assert(self._method_get_b_3341600327 != nil)
     }
 
     public func set_a(a: Vector2)  {
@@ -48,8 +45,13 @@ open class SegmentShape2D : Shape2D {
                 .init(a_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_a_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_a_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -63,8 +65,13 @@ open class SegmentShape2D : Shape2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_a_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_a_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -79,8 +86,13 @@ open class SegmentShape2D : Shape2D {
                 .init(b_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_b_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_b_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -94,8 +106,13 @@ open class SegmentShape2D : Shape2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_b_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_b_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

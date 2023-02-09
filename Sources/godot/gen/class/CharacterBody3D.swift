@@ -25,207 +25,160 @@ open class CharacterBody3D : PhysicsBody3D {
 
     public override class var __godot_name: StringName { __godot_name_CharacterBody3D }
 
-    static var _method_move_and_slide_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_set_velocity_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_velocity_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_safe_margin_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_safe_margin_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_is_floor_stop_on_slope_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_floor_stop_on_slope_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_floor_constant_speed_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_floor_constant_speed_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_floor_block_on_wall_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_floor_block_on_wall_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_slide_on_ceiling_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_slide_on_ceiling_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_platform_floor_layers_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_platform_floor_layers_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_platform_wall_layers_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_platform_wall_layers_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_max_slides_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_max_slides_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_floor_max_angle_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_floor_max_angle_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_floor_snap_length_191475506: GDExtensionMethodBindPtr! = nil
-    static var _method_set_floor_snap_length_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_wall_min_slide_angle_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_wall_min_slide_angle_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_up_direction_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_up_direction_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_set_motion_mode_2690739026: GDExtensionMethodBindPtr! = nil
-    static var _method_get_motion_mode_3529553604: GDExtensionMethodBindPtr! = nil
-    static var _method_set_platform_on_leave_1459986142: GDExtensionMethodBindPtr! = nil
-    static var _method_get_platform_on_leave_996491171: GDExtensionMethodBindPtr! = nil
-    static var _method_is_on_floor_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_is_on_floor_only_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_is_on_ceiling_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_is_on_ceiling_only_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_is_on_wall_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_is_on_wall_only_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_floor_normal_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_get_wall_normal_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_get_last_motion_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_get_position_delta_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_get_real_velocity_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_get_floor_angle_2906300789: GDExtensionMethodBindPtr! = nil
-    static var _method_get_platform_velocity_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_get_platform_angular_velocity_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_get_slide_collision_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_slide_collision_107003663: GDExtensionMethodBindPtr! = nil
-    static var _method_get_last_slide_collision_186875014: GDExtensionMethodBindPtr! = nil
+    static var _method_move_and_slide_2240911060: StringName! = nil
+    static var _method_set_velocity_3460891852: StringName! = nil
+    static var _method_get_velocity_3360562783: StringName! = nil
+    static var _method_set_safe_margin_373806689: StringName! = nil
+    static var _method_get_safe_margin_1740695150: StringName! = nil
+    static var _method_is_floor_stop_on_slope_enabled_36873697: StringName! = nil
+    static var _method_set_floor_stop_on_slope_enabled_2586408642: StringName! = nil
+    static var _method_set_floor_constant_speed_enabled_2586408642: StringName! = nil
+    static var _method_is_floor_constant_speed_enabled_36873697: StringName! = nil
+    static var _method_set_floor_block_on_wall_enabled_2586408642: StringName! = nil
+    static var _method_is_floor_block_on_wall_enabled_36873697: StringName! = nil
+    static var _method_set_slide_on_ceiling_enabled_2586408642: StringName! = nil
+    static var _method_is_slide_on_ceiling_enabled_36873697: StringName! = nil
+    static var _method_set_platform_floor_layers_1286410249: StringName! = nil
+    static var _method_get_platform_floor_layers_3905245786: StringName! = nil
+    static var _method_set_platform_wall_layers_1286410249: StringName! = nil
+    static var _method_get_platform_wall_layers_3905245786: StringName! = nil
+    static var _method_get_max_slides_3905245786: StringName! = nil
+    static var _method_set_max_slides_1286410249: StringName! = nil
+    static var _method_get_floor_max_angle_1740695150: StringName! = nil
+    static var _method_set_floor_max_angle_373806689: StringName! = nil
+    static var _method_get_floor_snap_length_191475506: StringName! = nil
+    static var _method_set_floor_snap_length_373806689: StringName! = nil
+    static var _method_get_wall_min_slide_angle_1740695150: StringName! = nil
+    static var _method_set_wall_min_slide_angle_373806689: StringName! = nil
+    static var _method_get_up_direction_3360562783: StringName! = nil
+    static var _method_set_up_direction_3460891852: StringName! = nil
+    static var _method_set_motion_mode_2690739026: StringName! = nil
+    static var _method_get_motion_mode_3529553604: StringName! = nil
+    static var _method_set_platform_on_leave_1459986142: StringName! = nil
+    static var _method_get_platform_on_leave_996491171: StringName! = nil
+    static var _method_is_on_floor_36873697: StringName! = nil
+    static var _method_is_on_floor_only_36873697: StringName! = nil
+    static var _method_is_on_ceiling_36873697: StringName! = nil
+    static var _method_is_on_ceiling_only_36873697: StringName! = nil
+    static var _method_is_on_wall_36873697: StringName! = nil
+    static var _method_is_on_wall_only_36873697: StringName! = nil
+    static var _method_get_floor_normal_3360562783: StringName! = nil
+    static var _method_get_wall_normal_3360562783: StringName! = nil
+    static var _method_get_last_motion_3360562783: StringName! = nil
+    static var _method_get_position_delta_3360562783: StringName! = nil
+    static var _method_get_real_velocity_3360562783: StringName! = nil
+    static var _method_get_floor_angle_2906300789: StringName! = nil
+    static var _method_get_platform_velocity_3360562783: StringName! = nil
+    static var _method_get_platform_angular_velocity_3360562783: StringName! = nil
+    static var _method_get_slide_collision_count_3905245786: StringName! = nil
+    static var _method_get_slide_collision_107003663: StringName! = nil
+    static var _method_get_last_slide_collision_186875014: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CharacterBody3D == nil)
         __godot_name_CharacterBody3D = StringName(from: "CharacterBody3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_move_and_slide_2240911060_name = StringName(from: "move_and_slide")
-        self._method_move_and_slide_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_move_and_slide_2240911060_name._native_ptr(), 2240911060)
-        assert(CharacterBody3D._method_move_and_slide_2240911060 != nil)
-        let _method_set_velocity_3460891852_name = StringName(from: "set_velocity")
-        self._method_set_velocity_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_set_velocity_3460891852_name._native_ptr(), 3460891852)
-        assert(CharacterBody3D._method_set_velocity_3460891852 != nil)
-        let _method_get_velocity_3360562783_name = StringName(from: "get_velocity")
-        self._method_get_velocity_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_velocity_3360562783_name._native_ptr(), 3360562783)
-        assert(CharacterBody3D._method_get_velocity_3360562783 != nil)
-        let _method_set_safe_margin_373806689_name = StringName(from: "set_safe_margin")
-        self._method_set_safe_margin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_set_safe_margin_373806689_name._native_ptr(), 373806689)
-        assert(CharacterBody3D._method_set_safe_margin_373806689 != nil)
-        let _method_get_safe_margin_1740695150_name = StringName(from: "get_safe_margin")
-        self._method_get_safe_margin_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_safe_margin_1740695150_name._native_ptr(), 1740695150)
-        assert(CharacterBody3D._method_get_safe_margin_1740695150 != nil)
-        let _method_is_floor_stop_on_slope_enabled_36873697_name = StringName(from: "is_floor_stop_on_slope_enabled")
-        self._method_is_floor_stop_on_slope_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_is_floor_stop_on_slope_enabled_36873697_name._native_ptr(), 36873697)
-        assert(CharacterBody3D._method_is_floor_stop_on_slope_enabled_36873697 != nil)
-        let _method_set_floor_stop_on_slope_enabled_2586408642_name = StringName(from: "set_floor_stop_on_slope_enabled")
-        self._method_set_floor_stop_on_slope_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_set_floor_stop_on_slope_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(CharacterBody3D._method_set_floor_stop_on_slope_enabled_2586408642 != nil)
-        let _method_set_floor_constant_speed_enabled_2586408642_name = StringName(from: "set_floor_constant_speed_enabled")
-        self._method_set_floor_constant_speed_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_set_floor_constant_speed_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(CharacterBody3D._method_set_floor_constant_speed_enabled_2586408642 != nil)
-        let _method_is_floor_constant_speed_enabled_36873697_name = StringName(from: "is_floor_constant_speed_enabled")
-        self._method_is_floor_constant_speed_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_is_floor_constant_speed_enabled_36873697_name._native_ptr(), 36873697)
-        assert(CharacterBody3D._method_is_floor_constant_speed_enabled_36873697 != nil)
-        let _method_set_floor_block_on_wall_enabled_2586408642_name = StringName(from: "set_floor_block_on_wall_enabled")
-        self._method_set_floor_block_on_wall_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_set_floor_block_on_wall_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(CharacterBody3D._method_set_floor_block_on_wall_enabled_2586408642 != nil)
-        let _method_is_floor_block_on_wall_enabled_36873697_name = StringName(from: "is_floor_block_on_wall_enabled")
-        self._method_is_floor_block_on_wall_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_is_floor_block_on_wall_enabled_36873697_name._native_ptr(), 36873697)
-        assert(CharacterBody3D._method_is_floor_block_on_wall_enabled_36873697 != nil)
-        let _method_set_slide_on_ceiling_enabled_2586408642_name = StringName(from: "set_slide_on_ceiling_enabled")
-        self._method_set_slide_on_ceiling_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_set_slide_on_ceiling_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(CharacterBody3D._method_set_slide_on_ceiling_enabled_2586408642 != nil)
-        let _method_is_slide_on_ceiling_enabled_36873697_name = StringName(from: "is_slide_on_ceiling_enabled")
-        self._method_is_slide_on_ceiling_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_is_slide_on_ceiling_enabled_36873697_name._native_ptr(), 36873697)
-        assert(CharacterBody3D._method_is_slide_on_ceiling_enabled_36873697 != nil)
-        let _method_set_platform_floor_layers_1286410249_name = StringName(from: "set_platform_floor_layers")
-        self._method_set_platform_floor_layers_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_set_platform_floor_layers_1286410249_name._native_ptr(), 1286410249)
-        assert(CharacterBody3D._method_set_platform_floor_layers_1286410249 != nil)
-        let _method_get_platform_floor_layers_3905245786_name = StringName(from: "get_platform_floor_layers")
-        self._method_get_platform_floor_layers_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_platform_floor_layers_3905245786_name._native_ptr(), 3905245786)
-        assert(CharacterBody3D._method_get_platform_floor_layers_3905245786 != nil)
-        let _method_set_platform_wall_layers_1286410249_name = StringName(from: "set_platform_wall_layers")
-        self._method_set_platform_wall_layers_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_set_platform_wall_layers_1286410249_name._native_ptr(), 1286410249)
-        assert(CharacterBody3D._method_set_platform_wall_layers_1286410249 != nil)
-        let _method_get_platform_wall_layers_3905245786_name = StringName(from: "get_platform_wall_layers")
-        self._method_get_platform_wall_layers_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_platform_wall_layers_3905245786_name._native_ptr(), 3905245786)
-        assert(CharacterBody3D._method_get_platform_wall_layers_3905245786 != nil)
-        let _method_get_max_slides_3905245786_name = StringName(from: "get_max_slides")
-        self._method_get_max_slides_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_max_slides_3905245786_name._native_ptr(), 3905245786)
-        assert(CharacterBody3D._method_get_max_slides_3905245786 != nil)
-        let _method_set_max_slides_1286410249_name = StringName(from: "set_max_slides")
-        self._method_set_max_slides_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_set_max_slides_1286410249_name._native_ptr(), 1286410249)
-        assert(CharacterBody3D._method_set_max_slides_1286410249 != nil)
-        let _method_get_floor_max_angle_1740695150_name = StringName(from: "get_floor_max_angle")
-        self._method_get_floor_max_angle_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_floor_max_angle_1740695150_name._native_ptr(), 1740695150)
-        assert(CharacterBody3D._method_get_floor_max_angle_1740695150 != nil)
-        let _method_set_floor_max_angle_373806689_name = StringName(from: "set_floor_max_angle")
-        self._method_set_floor_max_angle_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_set_floor_max_angle_373806689_name._native_ptr(), 373806689)
-        assert(CharacterBody3D._method_set_floor_max_angle_373806689 != nil)
-        let _method_get_floor_snap_length_191475506_name = StringName(from: "get_floor_snap_length")
-        self._method_get_floor_snap_length_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_floor_snap_length_191475506_name._native_ptr(), 191475506)
-        assert(CharacterBody3D._method_get_floor_snap_length_191475506 != nil)
-        let _method_set_floor_snap_length_373806689_name = StringName(from: "set_floor_snap_length")
-        self._method_set_floor_snap_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_set_floor_snap_length_373806689_name._native_ptr(), 373806689)
-        assert(CharacterBody3D._method_set_floor_snap_length_373806689 != nil)
-        let _method_get_wall_min_slide_angle_1740695150_name = StringName(from: "get_wall_min_slide_angle")
-        self._method_get_wall_min_slide_angle_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_wall_min_slide_angle_1740695150_name._native_ptr(), 1740695150)
-        assert(CharacterBody3D._method_get_wall_min_slide_angle_1740695150 != nil)
-        let _method_set_wall_min_slide_angle_373806689_name = StringName(from: "set_wall_min_slide_angle")
-        self._method_set_wall_min_slide_angle_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_set_wall_min_slide_angle_373806689_name._native_ptr(), 373806689)
-        assert(CharacterBody3D._method_set_wall_min_slide_angle_373806689 != nil)
-        let _method_get_up_direction_3360562783_name = StringName(from: "get_up_direction")
-        self._method_get_up_direction_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_up_direction_3360562783_name._native_ptr(), 3360562783)
-        assert(CharacterBody3D._method_get_up_direction_3360562783 != nil)
-        let _method_set_up_direction_3460891852_name = StringName(from: "set_up_direction")
-        self._method_set_up_direction_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_set_up_direction_3460891852_name._native_ptr(), 3460891852)
-        assert(CharacterBody3D._method_set_up_direction_3460891852 != nil)
-        let _method_set_motion_mode_2690739026_name = StringName(from: "set_motion_mode")
-        self._method_set_motion_mode_2690739026 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_set_motion_mode_2690739026_name._native_ptr(), 2690739026)
-        assert(CharacterBody3D._method_set_motion_mode_2690739026 != nil)
-        let _method_get_motion_mode_3529553604_name = StringName(from: "get_motion_mode")
-        self._method_get_motion_mode_3529553604 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_motion_mode_3529553604_name._native_ptr(), 3529553604)
-        assert(CharacterBody3D._method_get_motion_mode_3529553604 != nil)
-        let _method_set_platform_on_leave_1459986142_name = StringName(from: "set_platform_on_leave")
-        self._method_set_platform_on_leave_1459986142 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_set_platform_on_leave_1459986142_name._native_ptr(), 1459986142)
-        assert(CharacterBody3D._method_set_platform_on_leave_1459986142 != nil)
-        let _method_get_platform_on_leave_996491171_name = StringName(from: "get_platform_on_leave")
-        self._method_get_platform_on_leave_996491171 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_platform_on_leave_996491171_name._native_ptr(), 996491171)
-        assert(CharacterBody3D._method_get_platform_on_leave_996491171 != nil)
-        let _method_is_on_floor_36873697_name = StringName(from: "is_on_floor")
-        self._method_is_on_floor_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_is_on_floor_36873697_name._native_ptr(), 36873697)
-        assert(CharacterBody3D._method_is_on_floor_36873697 != nil)
-        let _method_is_on_floor_only_36873697_name = StringName(from: "is_on_floor_only")
-        self._method_is_on_floor_only_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_is_on_floor_only_36873697_name._native_ptr(), 36873697)
-        assert(CharacterBody3D._method_is_on_floor_only_36873697 != nil)
-        let _method_is_on_ceiling_36873697_name = StringName(from: "is_on_ceiling")
-        self._method_is_on_ceiling_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_is_on_ceiling_36873697_name._native_ptr(), 36873697)
-        assert(CharacterBody3D._method_is_on_ceiling_36873697 != nil)
-        let _method_is_on_ceiling_only_36873697_name = StringName(from: "is_on_ceiling_only")
-        self._method_is_on_ceiling_only_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_is_on_ceiling_only_36873697_name._native_ptr(), 36873697)
-        assert(CharacterBody3D._method_is_on_ceiling_only_36873697 != nil)
-        let _method_is_on_wall_36873697_name = StringName(from: "is_on_wall")
-        self._method_is_on_wall_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_is_on_wall_36873697_name._native_ptr(), 36873697)
-        assert(CharacterBody3D._method_is_on_wall_36873697 != nil)
-        let _method_is_on_wall_only_36873697_name = StringName(from: "is_on_wall_only")
-        self._method_is_on_wall_only_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_is_on_wall_only_36873697_name._native_ptr(), 36873697)
-        assert(CharacterBody3D._method_is_on_wall_only_36873697 != nil)
-        let _method_get_floor_normal_3360562783_name = StringName(from: "get_floor_normal")
-        self._method_get_floor_normal_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_floor_normal_3360562783_name._native_ptr(), 3360562783)
-        assert(CharacterBody3D._method_get_floor_normal_3360562783 != nil)
-        let _method_get_wall_normal_3360562783_name = StringName(from: "get_wall_normal")
-        self._method_get_wall_normal_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_wall_normal_3360562783_name._native_ptr(), 3360562783)
-        assert(CharacterBody3D._method_get_wall_normal_3360562783 != nil)
-        let _method_get_last_motion_3360562783_name = StringName(from: "get_last_motion")
-        self._method_get_last_motion_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_last_motion_3360562783_name._native_ptr(), 3360562783)
-        assert(CharacterBody3D._method_get_last_motion_3360562783 != nil)
-        let _method_get_position_delta_3360562783_name = StringName(from: "get_position_delta")
-        self._method_get_position_delta_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_position_delta_3360562783_name._native_ptr(), 3360562783)
-        assert(CharacterBody3D._method_get_position_delta_3360562783 != nil)
-        let _method_get_real_velocity_3360562783_name = StringName(from: "get_real_velocity")
-        self._method_get_real_velocity_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_real_velocity_3360562783_name._native_ptr(), 3360562783)
-        assert(CharacterBody3D._method_get_real_velocity_3360562783 != nil)
-        let _method_get_floor_angle_2906300789_name = StringName(from: "get_floor_angle")
-        self._method_get_floor_angle_2906300789 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_floor_angle_2906300789_name._native_ptr(), 2906300789)
-        assert(CharacterBody3D._method_get_floor_angle_2906300789 != nil)
-        let _method_get_platform_velocity_3360562783_name = StringName(from: "get_platform_velocity")
-        self._method_get_platform_velocity_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_platform_velocity_3360562783_name._native_ptr(), 3360562783)
-        assert(CharacterBody3D._method_get_platform_velocity_3360562783 != nil)
-        let _method_get_platform_angular_velocity_3360562783_name = StringName(from: "get_platform_angular_velocity")
-        self._method_get_platform_angular_velocity_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_platform_angular_velocity_3360562783_name._native_ptr(), 3360562783)
-        assert(CharacterBody3D._method_get_platform_angular_velocity_3360562783 != nil)
-        let _method_get_slide_collision_count_3905245786_name = StringName(from: "get_slide_collision_count")
-        self._method_get_slide_collision_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_slide_collision_count_3905245786_name._native_ptr(), 3905245786)
-        assert(CharacterBody3D._method_get_slide_collision_count_3905245786 != nil)
-        let _method_get_slide_collision_107003663_name = StringName(from: "get_slide_collision")
-        self._method_get_slide_collision_107003663 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_slide_collision_107003663_name._native_ptr(), 107003663)
-        assert(CharacterBody3D._method_get_slide_collision_107003663 != nil)
-        let _method_get_last_slide_collision_186875014_name = StringName(from: "get_last_slide_collision")
-        self._method_get_last_slide_collision_186875014 = self.interface.pointee.classdb_get_method_bind(__godot_name_CharacterBody3D._native_ptr(), _method_get_last_slide_collision_186875014_name._native_ptr(), 186875014)
-        assert(CharacterBody3D._method_get_last_slide_collision_186875014 != nil)
+        self._method_move_and_slide_2240911060 = StringName(from: "move_and_slide")
+        assert(self._method_move_and_slide_2240911060 != nil)
+        self._method_set_velocity_3460891852 = StringName(from: "set_velocity")
+        assert(self._method_set_velocity_3460891852 != nil)
+        self._method_get_velocity_3360562783 = StringName(from: "get_velocity")
+        assert(self._method_get_velocity_3360562783 != nil)
+        self._method_set_safe_margin_373806689 = StringName(from: "set_safe_margin")
+        assert(self._method_set_safe_margin_373806689 != nil)
+        self._method_get_safe_margin_1740695150 = StringName(from: "get_safe_margin")
+        assert(self._method_get_safe_margin_1740695150 != nil)
+        self._method_is_floor_stop_on_slope_enabled_36873697 = StringName(from: "is_floor_stop_on_slope_enabled")
+        assert(self._method_is_floor_stop_on_slope_enabled_36873697 != nil)
+        self._method_set_floor_stop_on_slope_enabled_2586408642 = StringName(from: "set_floor_stop_on_slope_enabled")
+        assert(self._method_set_floor_stop_on_slope_enabled_2586408642 != nil)
+        self._method_set_floor_constant_speed_enabled_2586408642 = StringName(from: "set_floor_constant_speed_enabled")
+        assert(self._method_set_floor_constant_speed_enabled_2586408642 != nil)
+        self._method_is_floor_constant_speed_enabled_36873697 = StringName(from: "is_floor_constant_speed_enabled")
+        assert(self._method_is_floor_constant_speed_enabled_36873697 != nil)
+        self._method_set_floor_block_on_wall_enabled_2586408642 = StringName(from: "set_floor_block_on_wall_enabled")
+        assert(self._method_set_floor_block_on_wall_enabled_2586408642 != nil)
+        self._method_is_floor_block_on_wall_enabled_36873697 = StringName(from: "is_floor_block_on_wall_enabled")
+        assert(self._method_is_floor_block_on_wall_enabled_36873697 != nil)
+        self._method_set_slide_on_ceiling_enabled_2586408642 = StringName(from: "set_slide_on_ceiling_enabled")
+        assert(self._method_set_slide_on_ceiling_enabled_2586408642 != nil)
+        self._method_is_slide_on_ceiling_enabled_36873697 = StringName(from: "is_slide_on_ceiling_enabled")
+        assert(self._method_is_slide_on_ceiling_enabled_36873697 != nil)
+        self._method_set_platform_floor_layers_1286410249 = StringName(from: "set_platform_floor_layers")
+        assert(self._method_set_platform_floor_layers_1286410249 != nil)
+        self._method_get_platform_floor_layers_3905245786 = StringName(from: "get_platform_floor_layers")
+        assert(self._method_get_platform_floor_layers_3905245786 != nil)
+        self._method_set_platform_wall_layers_1286410249 = StringName(from: "set_platform_wall_layers")
+        assert(self._method_set_platform_wall_layers_1286410249 != nil)
+        self._method_get_platform_wall_layers_3905245786 = StringName(from: "get_platform_wall_layers")
+        assert(self._method_get_platform_wall_layers_3905245786 != nil)
+        self._method_get_max_slides_3905245786 = StringName(from: "get_max_slides")
+        assert(self._method_get_max_slides_3905245786 != nil)
+        self._method_set_max_slides_1286410249 = StringName(from: "set_max_slides")
+        assert(self._method_set_max_slides_1286410249 != nil)
+        self._method_get_floor_max_angle_1740695150 = StringName(from: "get_floor_max_angle")
+        assert(self._method_get_floor_max_angle_1740695150 != nil)
+        self._method_set_floor_max_angle_373806689 = StringName(from: "set_floor_max_angle")
+        assert(self._method_set_floor_max_angle_373806689 != nil)
+        self._method_get_floor_snap_length_191475506 = StringName(from: "get_floor_snap_length")
+        assert(self._method_get_floor_snap_length_191475506 != nil)
+        self._method_set_floor_snap_length_373806689 = StringName(from: "set_floor_snap_length")
+        assert(self._method_set_floor_snap_length_373806689 != nil)
+        self._method_get_wall_min_slide_angle_1740695150 = StringName(from: "get_wall_min_slide_angle")
+        assert(self._method_get_wall_min_slide_angle_1740695150 != nil)
+        self._method_set_wall_min_slide_angle_373806689 = StringName(from: "set_wall_min_slide_angle")
+        assert(self._method_set_wall_min_slide_angle_373806689 != nil)
+        self._method_get_up_direction_3360562783 = StringName(from: "get_up_direction")
+        assert(self._method_get_up_direction_3360562783 != nil)
+        self._method_set_up_direction_3460891852 = StringName(from: "set_up_direction")
+        assert(self._method_set_up_direction_3460891852 != nil)
+        self._method_set_motion_mode_2690739026 = StringName(from: "set_motion_mode")
+        assert(self._method_set_motion_mode_2690739026 != nil)
+        self._method_get_motion_mode_3529553604 = StringName(from: "get_motion_mode")
+        assert(self._method_get_motion_mode_3529553604 != nil)
+        self._method_set_platform_on_leave_1459986142 = StringName(from: "set_platform_on_leave")
+        assert(self._method_set_platform_on_leave_1459986142 != nil)
+        self._method_get_platform_on_leave_996491171 = StringName(from: "get_platform_on_leave")
+        assert(self._method_get_platform_on_leave_996491171 != nil)
+        self._method_is_on_floor_36873697 = StringName(from: "is_on_floor")
+        assert(self._method_is_on_floor_36873697 != nil)
+        self._method_is_on_floor_only_36873697 = StringName(from: "is_on_floor_only")
+        assert(self._method_is_on_floor_only_36873697 != nil)
+        self._method_is_on_ceiling_36873697 = StringName(from: "is_on_ceiling")
+        assert(self._method_is_on_ceiling_36873697 != nil)
+        self._method_is_on_ceiling_only_36873697 = StringName(from: "is_on_ceiling_only")
+        assert(self._method_is_on_ceiling_only_36873697 != nil)
+        self._method_is_on_wall_36873697 = StringName(from: "is_on_wall")
+        assert(self._method_is_on_wall_36873697 != nil)
+        self._method_is_on_wall_only_36873697 = StringName(from: "is_on_wall_only")
+        assert(self._method_is_on_wall_only_36873697 != nil)
+        self._method_get_floor_normal_3360562783 = StringName(from: "get_floor_normal")
+        assert(self._method_get_floor_normal_3360562783 != nil)
+        self._method_get_wall_normal_3360562783 = StringName(from: "get_wall_normal")
+        assert(self._method_get_wall_normal_3360562783 != nil)
+        self._method_get_last_motion_3360562783 = StringName(from: "get_last_motion")
+        assert(self._method_get_last_motion_3360562783 != nil)
+        self._method_get_position_delta_3360562783 = StringName(from: "get_position_delta")
+        assert(self._method_get_position_delta_3360562783 != nil)
+        self._method_get_real_velocity_3360562783 = StringName(from: "get_real_velocity")
+        assert(self._method_get_real_velocity_3360562783 != nil)
+        self._method_get_floor_angle_2906300789 = StringName(from: "get_floor_angle")
+        assert(self._method_get_floor_angle_2906300789 != nil)
+        self._method_get_platform_velocity_3360562783 = StringName(from: "get_platform_velocity")
+        assert(self._method_get_platform_velocity_3360562783 != nil)
+        self._method_get_platform_angular_velocity_3360562783 = StringName(from: "get_platform_angular_velocity")
+        assert(self._method_get_platform_angular_velocity_3360562783 != nil)
+        self._method_get_slide_collision_count_3905245786 = StringName(from: "get_slide_collision_count")
+        assert(self._method_get_slide_collision_count_3905245786 != nil)
+        self._method_get_slide_collision_107003663 = StringName(from: "get_slide_collision")
+        assert(self._method_get_slide_collision_107003663 != nil)
+        self._method_get_last_slide_collision_186875014 = StringName(from: "get_last_slide_collision")
+        assert(self._method_get_last_slide_collision_186875014 != nil)
     }
 
     public func move_and_slide() -> UInt8 {
@@ -237,8 +190,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_move_and_slide_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_move_and_slide_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -253,8 +211,13 @@ open class CharacterBody3D : PhysicsBody3D {
                 .init(velocity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_velocity_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_velocity_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -268,8 +231,13 @@ open class CharacterBody3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_velocity_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_velocity_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -284,8 +252,13 @@ open class CharacterBody3D : PhysicsBody3D {
                 .init(margin_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_safe_margin_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_safe_margin_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -301,8 +274,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_safe_margin_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_safe_margin_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -318,8 +296,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_floor_stop_on_slope_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_floor_stop_on_slope_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -334,8 +317,13 @@ open class CharacterBody3D : PhysicsBody3D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_floor_stop_on_slope_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_floor_stop_on_slope_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -350,8 +338,13 @@ open class CharacterBody3D : PhysicsBody3D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_floor_constant_speed_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_floor_constant_speed_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -367,8 +360,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_floor_constant_speed_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_floor_constant_speed_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -383,8 +381,13 @@ open class CharacterBody3D : PhysicsBody3D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_floor_block_on_wall_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_floor_block_on_wall_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -400,8 +403,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_floor_block_on_wall_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_floor_block_on_wall_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -416,8 +424,13 @@ open class CharacterBody3D : PhysicsBody3D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_slide_on_ceiling_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_slide_on_ceiling_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -433,8 +446,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_slide_on_ceiling_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_slide_on_ceiling_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -449,8 +467,13 @@ open class CharacterBody3D : PhysicsBody3D {
                 .init(exclude_layer_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_platform_floor_layers_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_platform_floor_layers_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -466,8 +489,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_platform_floor_layers_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_platform_floor_layers_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -482,8 +510,13 @@ open class CharacterBody3D : PhysicsBody3D {
                 .init(exclude_layer_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_platform_wall_layers_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_platform_wall_layers_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -499,8 +532,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_platform_wall_layers_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_platform_wall_layers_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -516,8 +554,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_max_slides_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_max_slides_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -532,8 +575,13 @@ open class CharacterBody3D : PhysicsBody3D {
                 .init(max_slides_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_max_slides_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_max_slides_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -549,8 +597,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_floor_max_angle_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_floor_max_angle_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -565,8 +618,13 @@ open class CharacterBody3D : PhysicsBody3D {
                 .init(radians_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_floor_max_angle_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_floor_max_angle_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -582,8 +640,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_floor_snap_length_191475506,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_floor_snap_length_191475506._native_ptr(),
+                    191475506)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -598,8 +661,13 @@ open class CharacterBody3D : PhysicsBody3D {
                 .init(floor_snap_length_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_floor_snap_length_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_floor_snap_length_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -615,8 +683,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_wall_min_slide_angle_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_wall_min_slide_angle_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -631,8 +704,13 @@ open class CharacterBody3D : PhysicsBody3D {
                 .init(radians_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_wall_min_slide_angle_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_wall_min_slide_angle_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -647,8 +725,13 @@ open class CharacterBody3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_up_direction_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_up_direction_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -663,8 +746,13 @@ open class CharacterBody3D : PhysicsBody3D {
                 .init(up_direction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_up_direction_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_up_direction_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -678,8 +766,13 @@ open class CharacterBody3D : PhysicsBody3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_motion_mode_2690739026,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_motion_mode_2690739026._native_ptr(),
+                    2690739026)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -694,8 +787,13 @@ open class CharacterBody3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_motion_mode_3529553604,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_motion_mode_3529553604._native_ptr(),
+                    3529553604)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -710,8 +808,13 @@ open class CharacterBody3D : PhysicsBody3D {
                 .init(on_leave_apply_velocity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_platform_on_leave_1459986142,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_platform_on_leave_1459986142._native_ptr(),
+                    1459986142)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -726,8 +829,13 @@ open class CharacterBody3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_platform_on_leave_996491171,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_platform_on_leave_996491171._native_ptr(),
+                    996491171)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -743,8 +851,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_on_floor_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_on_floor_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -760,8 +873,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_on_floor_only_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_on_floor_only_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -777,8 +895,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_on_ceiling_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_on_ceiling_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -794,8 +917,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_on_ceiling_only_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_on_ceiling_only_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -811,8 +939,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_on_wall_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_on_wall_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -828,8 +961,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_on_wall_only_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_on_wall_only_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -844,8 +982,13 @@ open class CharacterBody3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_floor_normal_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_floor_normal_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -860,8 +1003,13 @@ open class CharacterBody3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_wall_normal_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_wall_normal_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -876,8 +1024,13 @@ open class CharacterBody3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_last_motion_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_last_motion_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -892,8 +1045,13 @@ open class CharacterBody3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_position_delta_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_position_delta_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -908,8 +1066,13 @@ open class CharacterBody3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_real_velocity_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_real_velocity_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -926,8 +1089,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_floor_angle_2906300789,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_floor_angle_2906300789._native_ptr(),
+                    2906300789)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -942,8 +1110,13 @@ open class CharacterBody3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_platform_velocity_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_platform_velocity_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -958,8 +1131,13 @@ open class CharacterBody3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_platform_angular_velocity_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_platform_angular_velocity_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -975,8 +1153,13 @@ open class CharacterBody3D : PhysicsBody3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_slide_collision_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_slide_collision_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -992,8 +1175,13 @@ open class CharacterBody3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_slide_collision_107003663,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_slide_collision_107003663._native_ptr(),
+                    107003663)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1009,8 +1197,13 @@ open class CharacterBody3D : PhysicsBody3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_last_slide_collision_186875014,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_last_slide_collision_186875014._native_ptr(),
+                    186875014)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

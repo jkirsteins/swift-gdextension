@@ -17,75 +17,61 @@ open class ProjectSettings : Object {
 
     public override class var __godot_name: StringName { __godot_name_ProjectSettings }
 
-    static var _method_has_setting_3927539163: GDExtensionMethodBindPtr! = nil
-    static var _method_set_setting_402577236: GDExtensionMethodBindPtr! = nil
-    static var _method_get_setting_223050753: GDExtensionMethodBindPtr! = nil
-    static var _method_get_setting_with_override_2760726917: GDExtensionMethodBindPtr! = nil
-    static var _method_set_order_2956805083: GDExtensionMethodBindPtr! = nil
-    static var _method_get_order_1321353865: GDExtensionMethodBindPtr! = nil
-    static var _method_set_initial_value_402577236: GDExtensionMethodBindPtr! = nil
-    static var _method_add_property_info_4155329257: GDExtensionMethodBindPtr! = nil
-    static var _method_set_restart_if_changed_2678287736: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_localize_path_3135753539: GDExtensionMethodBindPtr! = nil
-    static var _method_globalize_path_3135753539: GDExtensionMethodBindPtr! = nil
-    static var _method_save_166280745: GDExtensionMethodBindPtr! = nil
-    static var _method_load_resource_pack_3001721055: GDExtensionMethodBindPtr! = nil
-    static var _method_save_custom_166001499: GDExtensionMethodBindPtr! = nil
+    static var _method_has_setting_3927539163: StringName! = nil
+    static var _method_set_setting_402577236: StringName! = nil
+    static var _method_get_setting_223050753: StringName! = nil
+    static var _method_get_setting_with_override_2760726917: StringName! = nil
+    static var _method_set_order_2956805083: StringName! = nil
+    static var _method_get_order_1321353865: StringName! = nil
+    static var _method_set_initial_value_402577236: StringName! = nil
+    static var _method_add_property_info_4155329257: StringName! = nil
+    static var _method_set_restart_if_changed_2678287736: StringName! = nil
+    static var _method_clear_83702148: StringName! = nil
+    static var _method_localize_path_3135753539: StringName! = nil
+    static var _method_globalize_path_3135753539: StringName! = nil
+    static var _method_save_166280745: StringName! = nil
+    static var _method_load_resource_pack_3001721055: StringName! = nil
+    static var _method_save_custom_166001499: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ProjectSettings == nil)
         __godot_name_ProjectSettings = StringName(from: "ProjectSettings")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_has_setting_3927539163_name = StringName(from: "has_setting")
-        self._method_has_setting_3927539163 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_has_setting_3927539163_name._native_ptr(), 3927539163)
-        assert(ProjectSettings._method_has_setting_3927539163 != nil)
-        let _method_set_setting_402577236_name = StringName(from: "set_setting")
-        self._method_set_setting_402577236 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_set_setting_402577236_name._native_ptr(), 402577236)
-        assert(ProjectSettings._method_set_setting_402577236 != nil)
-        let _method_get_setting_223050753_name = StringName(from: "get_setting")
-        self._method_get_setting_223050753 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_get_setting_223050753_name._native_ptr(), 223050753)
-        assert(ProjectSettings._method_get_setting_223050753 != nil)
-        let _method_get_setting_with_override_2760726917_name = StringName(from: "get_setting_with_override")
-        self._method_get_setting_with_override_2760726917 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_get_setting_with_override_2760726917_name._native_ptr(), 2760726917)
-        assert(ProjectSettings._method_get_setting_with_override_2760726917 != nil)
-        let _method_set_order_2956805083_name = StringName(from: "set_order")
-        self._method_set_order_2956805083 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_set_order_2956805083_name._native_ptr(), 2956805083)
-        assert(ProjectSettings._method_set_order_2956805083 != nil)
-        let _method_get_order_1321353865_name = StringName(from: "get_order")
-        self._method_get_order_1321353865 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_get_order_1321353865_name._native_ptr(), 1321353865)
-        assert(ProjectSettings._method_get_order_1321353865 != nil)
-        let _method_set_initial_value_402577236_name = StringName(from: "set_initial_value")
-        self._method_set_initial_value_402577236 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_set_initial_value_402577236_name._native_ptr(), 402577236)
-        assert(ProjectSettings._method_set_initial_value_402577236 != nil)
-        let _method_add_property_info_4155329257_name = StringName(from: "add_property_info")
-        self._method_add_property_info_4155329257 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_add_property_info_4155329257_name._native_ptr(), 4155329257)
-        assert(ProjectSettings._method_add_property_info_4155329257 != nil)
-        let _method_set_restart_if_changed_2678287736_name = StringName(from: "set_restart_if_changed")
-        self._method_set_restart_if_changed_2678287736 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_set_restart_if_changed_2678287736_name._native_ptr(), 2678287736)
-        assert(ProjectSettings._method_set_restart_if_changed_2678287736 != nil)
-        let _method_clear_83702148_name = StringName(from: "clear")
-        self._method_clear_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_clear_83702148_name._native_ptr(), 83702148)
-        assert(ProjectSettings._method_clear_83702148 != nil)
-        let _method_localize_path_3135753539_name = StringName(from: "localize_path")
-        self._method_localize_path_3135753539 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_localize_path_3135753539_name._native_ptr(), 3135753539)
-        assert(ProjectSettings._method_localize_path_3135753539 != nil)
-        let _method_globalize_path_3135753539_name = StringName(from: "globalize_path")
-        self._method_globalize_path_3135753539 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_globalize_path_3135753539_name._native_ptr(), 3135753539)
-        assert(ProjectSettings._method_globalize_path_3135753539 != nil)
-        let _method_save_166280745_name = StringName(from: "save")
-        self._method_save_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_save_166280745_name._native_ptr(), 166280745)
-        assert(ProjectSettings._method_save_166280745 != nil)
-        let _method_load_resource_pack_3001721055_name = StringName(from: "load_resource_pack")
-        self._method_load_resource_pack_3001721055 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_load_resource_pack_3001721055_name._native_ptr(), 3001721055)
-        assert(ProjectSettings._method_load_resource_pack_3001721055 != nil)
-        let _method_save_custom_166001499_name = StringName(from: "save_custom")
-        self._method_save_custom_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProjectSettings._native_ptr(), _method_save_custom_166001499_name._native_ptr(), 166001499)
-        assert(ProjectSettings._method_save_custom_166001499 != nil)
+        self._method_has_setting_3927539163 = StringName(from: "has_setting")
+        assert(self._method_has_setting_3927539163 != nil)
+        self._method_set_setting_402577236 = StringName(from: "set_setting")
+        assert(self._method_set_setting_402577236 != nil)
+        self._method_get_setting_223050753 = StringName(from: "get_setting")
+        assert(self._method_get_setting_223050753 != nil)
+        self._method_get_setting_with_override_2760726917 = StringName(from: "get_setting_with_override")
+        assert(self._method_get_setting_with_override_2760726917 != nil)
+        self._method_set_order_2956805083 = StringName(from: "set_order")
+        assert(self._method_set_order_2956805083 != nil)
+        self._method_get_order_1321353865 = StringName(from: "get_order")
+        assert(self._method_get_order_1321353865 != nil)
+        self._method_set_initial_value_402577236 = StringName(from: "set_initial_value")
+        assert(self._method_set_initial_value_402577236 != nil)
+        self._method_add_property_info_4155329257 = StringName(from: "add_property_info")
+        assert(self._method_add_property_info_4155329257 != nil)
+        self._method_set_restart_if_changed_2678287736 = StringName(from: "set_restart_if_changed")
+        assert(self._method_set_restart_if_changed_2678287736 != nil)
+        self._method_clear_83702148 = StringName(from: "clear")
+        assert(self._method_clear_83702148 != nil)
+        self._method_localize_path_3135753539 = StringName(from: "localize_path")
+        assert(self._method_localize_path_3135753539 != nil)
+        self._method_globalize_path_3135753539 = StringName(from: "globalize_path")
+        assert(self._method_globalize_path_3135753539 != nil)
+        self._method_save_166280745 = StringName(from: "save")
+        assert(self._method_save_166280745 != nil)
+        self._method_load_resource_pack_3001721055 = StringName(from: "load_resource_pack")
+        assert(self._method_load_resource_pack_3001721055 != nil)
+        self._method_save_custom_166001499 = StringName(from: "save_custom")
+        assert(self._method_save_custom_166001499 != nil)
     }
 
     public func has_setting(name: godot.String) -> UInt8 {
@@ -98,8 +84,13 @@ open class ProjectSettings : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_setting_3927539163,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_setting_3927539163._native_ptr(),
+                    3927539163)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -115,8 +106,13 @@ open class ProjectSettings : Object {
                 .init(name_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_setting_402577236,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_setting_402577236._native_ptr(),
+                    402577236)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -132,8 +128,13 @@ open class ProjectSettings : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_setting_223050753,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_setting_223050753._native_ptr(),
+                    223050753)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -149,8 +150,13 @@ open class ProjectSettings : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_setting_with_override_2760726917,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_setting_with_override_2760726917._native_ptr(),
+                    2760726917)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -166,8 +172,13 @@ open class ProjectSettings : Object {
                 .init(name_native), .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_order_2956805083,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_order_2956805083._native_ptr(),
+                    2956805083)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -184,8 +195,13 @@ open class ProjectSettings : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_order_1321353865,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_order_1321353865._native_ptr(),
+                    1321353865)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -201,8 +217,13 @@ open class ProjectSettings : Object {
                 .init(name_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_initial_value_402577236,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_initial_value_402577236._native_ptr(),
+                    402577236)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -216,8 +237,13 @@ open class ProjectSettings : Object {
                 .init(hint_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_property_info_4155329257,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_property_info_4155329257._native_ptr(),
+                    4155329257)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -232,8 +258,13 @@ open class ProjectSettings : Object {
                 .init(name_native), .init(restart_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_restart_if_changed_2678287736,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_restart_if_changed_2678287736._native_ptr(),
+                    2678287736)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -248,8 +279,13 @@ open class ProjectSettings : Object {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -264,8 +300,13 @@ open class ProjectSettings : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_localize_path_3135753539,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_localize_path_3135753539._native_ptr(),
+                    3135753539)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -281,8 +322,13 @@ open class ProjectSettings : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_globalize_path_3135753539,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_globalize_path_3135753539._native_ptr(),
+                    3135753539)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -297,8 +343,13 @@ open class ProjectSettings : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_166280745,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_166280745._native_ptr(),
+                    166280745)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -317,8 +368,13 @@ open class ProjectSettings : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_load_resource_pack_3001721055,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_load_resource_pack_3001721055._native_ptr(),
+                    3001721055)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -336,8 +392,13 @@ open class ProjectSettings : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_custom_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_custom_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

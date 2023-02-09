@@ -15,23 +15,22 @@ open class XRAnchor3D : XRNode3D {
 
     public override class var __godot_name: StringName { __godot_name_XRAnchor3D }
 
-    static var _method_get_size_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_get_plane_2753500971: GDExtensionMethodBindPtr! = nil
+    static var _method_get_size_3360562783: StringName! = nil
+    static var _method_get_plane_2753500971: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_XRAnchor3D == nil)
         __godot_name_XRAnchor3D = StringName(from: "XRAnchor3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_size_3360562783_name = StringName(from: "get_size")
-        self._method_get_size_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRAnchor3D._native_ptr(), _method_get_size_3360562783_name._native_ptr(), 3360562783)
-        assert(XRAnchor3D._method_get_size_3360562783 != nil)
-        let _method_get_plane_2753500971_name = StringName(from: "get_plane")
-        self._method_get_plane_2753500971 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRAnchor3D._native_ptr(), _method_get_plane_2753500971_name._native_ptr(), 2753500971)
-        assert(XRAnchor3D._method_get_plane_2753500971 != nil)
+        self._method_get_size_3360562783 = StringName(from: "get_size")
+        assert(self._method_get_size_3360562783 != nil)
+        self._method_get_plane_2753500971 = StringName(from: "get_plane")
+        assert(self._method_get_plane_2753500971 != nil)
     }
 
     public func get_size() -> Vector3 {
@@ -42,8 +41,13 @@ open class XRAnchor3D : XRNode3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -58,8 +62,13 @@ open class XRAnchor3D : XRNode3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_plane_2753500971,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_plane_2753500971._native_ptr(),
+                    2753500971)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

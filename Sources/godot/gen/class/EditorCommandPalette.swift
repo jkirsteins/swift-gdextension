@@ -43,23 +43,22 @@ open class EditorCommandPalette : ConfirmationDialog {
 
     public override class var __godot_name: StringName { __godot_name_EditorCommandPalette }
 
-    static var _method_add_command_3664614892: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_command_83702148: GDExtensionMethodBindPtr! = nil
+    static var _method_add_command_3664614892: StringName! = nil
+    static var _method_remove_command_83702148: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorCommandPalette == nil)
         __godot_name_EditorCommandPalette = StringName(from: "EditorCommandPalette")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_add_command_3664614892_name = StringName(from: "add_command")
-        self._method_add_command_3664614892 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorCommandPalette._native_ptr(), _method_add_command_3664614892_name._native_ptr(), 3664614892)
-        assert(EditorCommandPalette._method_add_command_3664614892 != nil)
-        let _method_remove_command_83702148_name = StringName(from: "remove_command")
-        self._method_remove_command_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorCommandPalette._native_ptr(), _method_remove_command_83702148_name._native_ptr(), 83702148)
-        assert(EditorCommandPalette._method_remove_command_83702148 != nil)
+        self._method_add_command_3664614892 = StringName(from: "add_command")
+        assert(self._method_add_command_3664614892 != nil)
+        self._method_remove_command_83702148 = StringName(from: "remove_command")
+        assert(self._method_remove_command_83702148 != nil)
     }
 
     public func add_command(command_name: godot.String, key_name: godot.String, binded_callable: Callable, shortcut_text: godot.String)  {
@@ -73,8 +72,13 @@ open class EditorCommandPalette : ConfirmationDialog {
                 .init(command_name_native), .init(key_name_native), .init(binded_callable_native), .init(shortcut_text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_command_3664614892,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_command_3664614892._native_ptr(),
+                    3664614892)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -88,8 +92,13 @@ open class EditorCommandPalette : ConfirmationDialog {
                 .init(key_name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_command_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_command_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

@@ -91,31 +91,28 @@ open class Expression : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_Expression }
 
-    static var _method_parse_3658149758: GDExtensionMethodBindPtr! = nil
-    static var _method_execute_3712471238: GDExtensionMethodBindPtr! = nil
-    static var _method_has_execute_failed_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_error_text_201670096: GDExtensionMethodBindPtr! = nil
+    static var _method_parse_3658149758: StringName! = nil
+    static var _method_execute_3712471238: StringName! = nil
+    static var _method_has_execute_failed_36873697: StringName! = nil
+    static var _method_get_error_text_201670096: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Expression == nil)
         __godot_name_Expression = StringName(from: "Expression")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_parse_3658149758_name = StringName(from: "parse")
-        self._method_parse_3658149758 = self.interface.pointee.classdb_get_method_bind(__godot_name_Expression._native_ptr(), _method_parse_3658149758_name._native_ptr(), 3658149758)
-        assert(Expression._method_parse_3658149758 != nil)
-        let _method_execute_3712471238_name = StringName(from: "execute")
-        self._method_execute_3712471238 = self.interface.pointee.classdb_get_method_bind(__godot_name_Expression._native_ptr(), _method_execute_3712471238_name._native_ptr(), 3712471238)
-        assert(Expression._method_execute_3712471238 != nil)
-        let _method_has_execute_failed_36873697_name = StringName(from: "has_execute_failed")
-        self._method_has_execute_failed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Expression._native_ptr(), _method_has_execute_failed_36873697_name._native_ptr(), 36873697)
-        assert(Expression._method_has_execute_failed_36873697 != nil)
-        let _method_get_error_text_201670096_name = StringName(from: "get_error_text")
-        self._method_get_error_text_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_Expression._native_ptr(), _method_get_error_text_201670096_name._native_ptr(), 201670096)
-        assert(Expression._method_get_error_text_201670096 != nil)
+        self._method_parse_3658149758 = StringName(from: "parse")
+        assert(self._method_parse_3658149758 != nil)
+        self._method_execute_3712471238 = StringName(from: "execute")
+        assert(self._method_execute_3712471238 != nil)
+        self._method_has_execute_failed_36873697 = StringName(from: "has_execute_failed")
+        assert(self._method_has_execute_failed_36873697 != nil)
+        self._method_get_error_text_201670096 = StringName(from: "get_error_text")
+        assert(self._method_get_error_text_201670096 != nil)
     }
 
     public func parse(expression: godot.String, input_names: PackedStringArray) -> Error {
@@ -128,8 +125,13 @@ open class Expression : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_parse_3658149758,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_parse_3658149758._native_ptr(),
+                    3658149758)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -148,8 +150,13 @@ open class Expression : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_execute_3712471238,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_execute_3712471238._native_ptr(),
+                    3712471238)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -167,8 +174,13 @@ open class Expression : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_execute_failed_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_execute_failed_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -183,8 +195,13 @@ open class Expression : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_error_text_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_error_text_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

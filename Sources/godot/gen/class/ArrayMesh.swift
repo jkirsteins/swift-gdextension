@@ -91,115 +91,91 @@ open class ArrayMesh : Mesh {
 
     public override class var __godot_name: StringName { __godot_name_ArrayMesh }
 
-    static var _method_add_blend_shape_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_get_blend_shape_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_blend_shape_name_659327637: GDExtensionMethodBindPtr! = nil
-    static var _method_set_blend_shape_name_3780747571: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_blend_shapes_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_blend_shape_mode_227983991: GDExtensionMethodBindPtr! = nil
-    static var _method_get_blend_shape_mode_836485024: GDExtensionMethodBindPtr! = nil
-    static var _method_add_surface_from_arrays_172284304: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_surfaces_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_surface_update_vertex_region_3837166854: GDExtensionMethodBindPtr! = nil
-    static var _method_surface_update_attribute_region_3837166854: GDExtensionMethodBindPtr! = nil
-    static var _method_surface_update_skin_region_3837166854: GDExtensionMethodBindPtr! = nil
-    static var _method_surface_get_array_len_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_surface_get_array_index_len_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_surface_get_format_3718287884: GDExtensionMethodBindPtr! = nil
-    static var _method_surface_get_primitive_type_4141943888: GDExtensionMethodBindPtr! = nil
-    static var _method_surface_find_by_name_1321353865: GDExtensionMethodBindPtr! = nil
-    static var _method_surface_set_name_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_surface_get_name_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_regen_normal_maps_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_lightmap_unwrap_1476641071: GDExtensionMethodBindPtr! = nil
-    static var _method_set_custom_aabb_259215842: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_aabb_1068685055: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shadow_mesh_3377897901: GDExtensionMethodBindPtr! = nil
-    static var _method_get_shadow_mesh_3206942465: GDExtensionMethodBindPtr! = nil
+    static var _method_add_blend_shape_3304788590: StringName! = nil
+    static var _method_get_blend_shape_count_3905245786: StringName! = nil
+    static var _method_get_blend_shape_name_659327637: StringName! = nil
+    static var _method_set_blend_shape_name_3780747571: StringName! = nil
+    static var _method_clear_blend_shapes_3218959716: StringName! = nil
+    static var _method_set_blend_shape_mode_227983991: StringName! = nil
+    static var _method_get_blend_shape_mode_836485024: StringName! = nil
+    static var _method_add_surface_from_arrays_172284304: StringName! = nil
+    static var _method_clear_surfaces_3218959716: StringName! = nil
+    static var _method_surface_update_vertex_region_3837166854: StringName! = nil
+    static var _method_surface_update_attribute_region_3837166854: StringName! = nil
+    static var _method_surface_update_skin_region_3837166854: StringName! = nil
+    static var _method_surface_get_array_len_923996154: StringName! = nil
+    static var _method_surface_get_array_index_len_923996154: StringName! = nil
+    static var _method_surface_get_format_3718287884: StringName! = nil
+    static var _method_surface_get_primitive_type_4141943888: StringName! = nil
+    static var _method_surface_find_by_name_1321353865: StringName! = nil
+    static var _method_surface_set_name_501894301: StringName! = nil
+    static var _method_surface_get_name_844755477: StringName! = nil
+    static var _method_regen_normal_maps_3218959716: StringName! = nil
+    static var _method_lightmap_unwrap_1476641071: StringName! = nil
+    static var _method_set_custom_aabb_259215842: StringName! = nil
+    static var _method_get_custom_aabb_1068685055: StringName! = nil
+    static var _method_set_shadow_mesh_3377897901: StringName! = nil
+    static var _method_get_shadow_mesh_3206942465: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ArrayMesh == nil)
         __godot_name_ArrayMesh = StringName(from: "ArrayMesh")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_add_blend_shape_3304788590_name = StringName(from: "add_blend_shape")
-        self._method_add_blend_shape_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_add_blend_shape_3304788590_name._native_ptr(), 3304788590)
-        assert(ArrayMesh._method_add_blend_shape_3304788590 != nil)
-        let _method_get_blend_shape_count_3905245786_name = StringName(from: "get_blend_shape_count")
-        self._method_get_blend_shape_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_get_blend_shape_count_3905245786_name._native_ptr(), 3905245786)
-        assert(ArrayMesh._method_get_blend_shape_count_3905245786 != nil)
-        let _method_get_blend_shape_name_659327637_name = StringName(from: "get_blend_shape_name")
-        self._method_get_blend_shape_name_659327637 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_get_blend_shape_name_659327637_name._native_ptr(), 659327637)
-        assert(ArrayMesh._method_get_blend_shape_name_659327637 != nil)
-        let _method_set_blend_shape_name_3780747571_name = StringName(from: "set_blend_shape_name")
-        self._method_set_blend_shape_name_3780747571 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_set_blend_shape_name_3780747571_name._native_ptr(), 3780747571)
-        assert(ArrayMesh._method_set_blend_shape_name_3780747571 != nil)
-        let _method_clear_blend_shapes_3218959716_name = StringName(from: "clear_blend_shapes")
-        self._method_clear_blend_shapes_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_clear_blend_shapes_3218959716_name._native_ptr(), 3218959716)
-        assert(ArrayMesh._method_clear_blend_shapes_3218959716 != nil)
-        let _method_set_blend_shape_mode_227983991_name = StringName(from: "set_blend_shape_mode")
-        self._method_set_blend_shape_mode_227983991 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_set_blend_shape_mode_227983991_name._native_ptr(), 227983991)
-        assert(ArrayMesh._method_set_blend_shape_mode_227983991 != nil)
-        let _method_get_blend_shape_mode_836485024_name = StringName(from: "get_blend_shape_mode")
-        self._method_get_blend_shape_mode_836485024 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_get_blend_shape_mode_836485024_name._native_ptr(), 836485024)
-        assert(ArrayMesh._method_get_blend_shape_mode_836485024 != nil)
-        let _method_add_surface_from_arrays_172284304_name = StringName(from: "add_surface_from_arrays")
-        self._method_add_surface_from_arrays_172284304 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_add_surface_from_arrays_172284304_name._native_ptr(), 172284304)
-        assert(ArrayMesh._method_add_surface_from_arrays_172284304 != nil)
-        let _method_clear_surfaces_3218959716_name = StringName(from: "clear_surfaces")
-        self._method_clear_surfaces_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_clear_surfaces_3218959716_name._native_ptr(), 3218959716)
-        assert(ArrayMesh._method_clear_surfaces_3218959716 != nil)
-        let _method_surface_update_vertex_region_3837166854_name = StringName(from: "surface_update_vertex_region")
-        self._method_surface_update_vertex_region_3837166854 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_surface_update_vertex_region_3837166854_name._native_ptr(), 3837166854)
-        assert(ArrayMesh._method_surface_update_vertex_region_3837166854 != nil)
-        let _method_surface_update_attribute_region_3837166854_name = StringName(from: "surface_update_attribute_region")
-        self._method_surface_update_attribute_region_3837166854 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_surface_update_attribute_region_3837166854_name._native_ptr(), 3837166854)
-        assert(ArrayMesh._method_surface_update_attribute_region_3837166854 != nil)
-        let _method_surface_update_skin_region_3837166854_name = StringName(from: "surface_update_skin_region")
-        self._method_surface_update_skin_region_3837166854 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_surface_update_skin_region_3837166854_name._native_ptr(), 3837166854)
-        assert(ArrayMesh._method_surface_update_skin_region_3837166854 != nil)
-        let _method_surface_get_array_len_923996154_name = StringName(from: "surface_get_array_len")
-        self._method_surface_get_array_len_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_surface_get_array_len_923996154_name._native_ptr(), 923996154)
-        assert(ArrayMesh._method_surface_get_array_len_923996154 != nil)
-        let _method_surface_get_array_index_len_923996154_name = StringName(from: "surface_get_array_index_len")
-        self._method_surface_get_array_index_len_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_surface_get_array_index_len_923996154_name._native_ptr(), 923996154)
-        assert(ArrayMesh._method_surface_get_array_index_len_923996154 != nil)
-        let _method_surface_get_format_3718287884_name = StringName(from: "surface_get_format")
-        self._method_surface_get_format_3718287884 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_surface_get_format_3718287884_name._native_ptr(), 3718287884)
-        assert(ArrayMesh._method_surface_get_format_3718287884 != nil)
-        let _method_surface_get_primitive_type_4141943888_name = StringName(from: "surface_get_primitive_type")
-        self._method_surface_get_primitive_type_4141943888 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_surface_get_primitive_type_4141943888_name._native_ptr(), 4141943888)
-        assert(ArrayMesh._method_surface_get_primitive_type_4141943888 != nil)
-        let _method_surface_find_by_name_1321353865_name = StringName(from: "surface_find_by_name")
-        self._method_surface_find_by_name_1321353865 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_surface_find_by_name_1321353865_name._native_ptr(), 1321353865)
-        assert(ArrayMesh._method_surface_find_by_name_1321353865 != nil)
-        let _method_surface_set_name_501894301_name = StringName(from: "surface_set_name")
-        self._method_surface_set_name_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_surface_set_name_501894301_name._native_ptr(), 501894301)
-        assert(ArrayMesh._method_surface_set_name_501894301 != nil)
-        let _method_surface_get_name_844755477_name = StringName(from: "surface_get_name")
-        self._method_surface_get_name_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_surface_get_name_844755477_name._native_ptr(), 844755477)
-        assert(ArrayMesh._method_surface_get_name_844755477 != nil)
-        let _method_regen_normal_maps_3218959716_name = StringName(from: "regen_normal_maps")
-        self._method_regen_normal_maps_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_regen_normal_maps_3218959716_name._native_ptr(), 3218959716)
-        assert(ArrayMesh._method_regen_normal_maps_3218959716 != nil)
-        let _method_lightmap_unwrap_1476641071_name = StringName(from: "lightmap_unwrap")
-        self._method_lightmap_unwrap_1476641071 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_lightmap_unwrap_1476641071_name._native_ptr(), 1476641071)
-        assert(ArrayMesh._method_lightmap_unwrap_1476641071 != nil)
-        let _method_set_custom_aabb_259215842_name = StringName(from: "set_custom_aabb")
-        self._method_set_custom_aabb_259215842 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_set_custom_aabb_259215842_name._native_ptr(), 259215842)
-        assert(ArrayMesh._method_set_custom_aabb_259215842 != nil)
-        let _method_get_custom_aabb_1068685055_name = StringName(from: "get_custom_aabb")
-        self._method_get_custom_aabb_1068685055 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_get_custom_aabb_1068685055_name._native_ptr(), 1068685055)
-        assert(ArrayMesh._method_get_custom_aabb_1068685055 != nil)
-        let _method_set_shadow_mesh_3377897901_name = StringName(from: "set_shadow_mesh")
-        self._method_set_shadow_mesh_3377897901 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_set_shadow_mesh_3377897901_name._native_ptr(), 3377897901)
-        assert(ArrayMesh._method_set_shadow_mesh_3377897901 != nil)
-        let _method_get_shadow_mesh_3206942465_name = StringName(from: "get_shadow_mesh")
-        self._method_get_shadow_mesh_3206942465 = self.interface.pointee.classdb_get_method_bind(__godot_name_ArrayMesh._native_ptr(), _method_get_shadow_mesh_3206942465_name._native_ptr(), 3206942465)
-        assert(ArrayMesh._method_get_shadow_mesh_3206942465 != nil)
+        self._method_add_blend_shape_3304788590 = StringName(from: "add_blend_shape")
+        assert(self._method_add_blend_shape_3304788590 != nil)
+        self._method_get_blend_shape_count_3905245786 = StringName(from: "get_blend_shape_count")
+        assert(self._method_get_blend_shape_count_3905245786 != nil)
+        self._method_get_blend_shape_name_659327637 = StringName(from: "get_blend_shape_name")
+        assert(self._method_get_blend_shape_name_659327637 != nil)
+        self._method_set_blend_shape_name_3780747571 = StringName(from: "set_blend_shape_name")
+        assert(self._method_set_blend_shape_name_3780747571 != nil)
+        self._method_clear_blend_shapes_3218959716 = StringName(from: "clear_blend_shapes")
+        assert(self._method_clear_blend_shapes_3218959716 != nil)
+        self._method_set_blend_shape_mode_227983991 = StringName(from: "set_blend_shape_mode")
+        assert(self._method_set_blend_shape_mode_227983991 != nil)
+        self._method_get_blend_shape_mode_836485024 = StringName(from: "get_blend_shape_mode")
+        assert(self._method_get_blend_shape_mode_836485024 != nil)
+        self._method_add_surface_from_arrays_172284304 = StringName(from: "add_surface_from_arrays")
+        assert(self._method_add_surface_from_arrays_172284304 != nil)
+        self._method_clear_surfaces_3218959716 = StringName(from: "clear_surfaces")
+        assert(self._method_clear_surfaces_3218959716 != nil)
+        self._method_surface_update_vertex_region_3837166854 = StringName(from: "surface_update_vertex_region")
+        assert(self._method_surface_update_vertex_region_3837166854 != nil)
+        self._method_surface_update_attribute_region_3837166854 = StringName(from: "surface_update_attribute_region")
+        assert(self._method_surface_update_attribute_region_3837166854 != nil)
+        self._method_surface_update_skin_region_3837166854 = StringName(from: "surface_update_skin_region")
+        assert(self._method_surface_update_skin_region_3837166854 != nil)
+        self._method_surface_get_array_len_923996154 = StringName(from: "surface_get_array_len")
+        assert(self._method_surface_get_array_len_923996154 != nil)
+        self._method_surface_get_array_index_len_923996154 = StringName(from: "surface_get_array_index_len")
+        assert(self._method_surface_get_array_index_len_923996154 != nil)
+        self._method_surface_get_format_3718287884 = StringName(from: "surface_get_format")
+        assert(self._method_surface_get_format_3718287884 != nil)
+        self._method_surface_get_primitive_type_4141943888 = StringName(from: "surface_get_primitive_type")
+        assert(self._method_surface_get_primitive_type_4141943888 != nil)
+        self._method_surface_find_by_name_1321353865 = StringName(from: "surface_find_by_name")
+        assert(self._method_surface_find_by_name_1321353865 != nil)
+        self._method_surface_set_name_501894301 = StringName(from: "surface_set_name")
+        assert(self._method_surface_set_name_501894301 != nil)
+        self._method_surface_get_name_844755477 = StringName(from: "surface_get_name")
+        assert(self._method_surface_get_name_844755477 != nil)
+        self._method_regen_normal_maps_3218959716 = StringName(from: "regen_normal_maps")
+        assert(self._method_regen_normal_maps_3218959716 != nil)
+        self._method_lightmap_unwrap_1476641071 = StringName(from: "lightmap_unwrap")
+        assert(self._method_lightmap_unwrap_1476641071 != nil)
+        self._method_set_custom_aabb_259215842 = StringName(from: "set_custom_aabb")
+        assert(self._method_set_custom_aabb_259215842 != nil)
+        self._method_get_custom_aabb_1068685055 = StringName(from: "get_custom_aabb")
+        assert(self._method_get_custom_aabb_1068685055 != nil)
+        self._method_set_shadow_mesh_3377897901 = StringName(from: "set_shadow_mesh")
+        assert(self._method_set_shadow_mesh_3377897901 != nil)
+        self._method_get_shadow_mesh_3206942465 = StringName(from: "get_shadow_mesh")
+        assert(self._method_get_shadow_mesh_3206942465 != nil)
     }
 
     public func add_blend_shape(name: StringName)  {
@@ -210,8 +186,13 @@ open class ArrayMesh : Mesh {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_blend_shape_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_blend_shape_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -226,8 +207,13 @@ open class ArrayMesh : Mesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_blend_shape_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_blend_shape_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -243,8 +229,13 @@ open class ArrayMesh : Mesh {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_blend_shape_name_659327637,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_blend_shape_name_659327637._native_ptr(),
+                    659327637)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -261,8 +252,13 @@ open class ArrayMesh : Mesh {
                 .init(index_native), .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_blend_shape_name_3780747571,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_blend_shape_name_3780747571._native_ptr(),
+                    3780747571)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -276,8 +272,13 @@ open class ArrayMesh : Mesh {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_blend_shapes_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_blend_shapes_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -291,8 +292,13 @@ open class ArrayMesh : Mesh {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_blend_shape_mode_227983991,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_blend_shape_mode_227983991._native_ptr(),
+                    227983991)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -307,8 +313,13 @@ open class ArrayMesh : Mesh {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_blend_shape_mode_836485024,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_blend_shape_mode_836485024._native_ptr(),
+                    836485024)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -327,8 +338,13 @@ open class ArrayMesh : Mesh {
                 .init(primitive_native), .init(arrays_native), .init(blend_shapes_native), .init(lods_native), .init(flags_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_surface_from_arrays_172284304,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_surface_from_arrays_172284304._native_ptr(),
+                    172284304)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -343,8 +359,13 @@ open class ArrayMesh : Mesh {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_surfaces_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_surfaces_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -360,8 +381,13 @@ open class ArrayMesh : Mesh {
                 .init(surf_idx_native), .init(offset_native), .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_surface_update_vertex_region_3837166854,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_surface_update_vertex_region_3837166854._native_ptr(),
+                    3837166854)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -379,8 +405,13 @@ open class ArrayMesh : Mesh {
                 .init(surf_idx_native), .init(offset_native), .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_surface_update_attribute_region_3837166854,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_surface_update_attribute_region_3837166854._native_ptr(),
+                    3837166854)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -398,8 +429,13 @@ open class ArrayMesh : Mesh {
                 .init(surf_idx_native), .init(offset_native), .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_surface_update_skin_region_3837166854,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_surface_update_skin_region_3837166854._native_ptr(),
+                    3837166854)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -417,8 +453,13 @@ open class ArrayMesh : Mesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_surface_get_array_len_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_surface_get_array_len_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -436,8 +477,13 @@ open class ArrayMesh : Mesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_surface_get_array_index_len_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_surface_get_array_index_len_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -454,8 +500,13 @@ open class ArrayMesh : Mesh {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_surface_get_format_3718287884,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_surface_get_format_3718287884._native_ptr(),
+                    3718287884)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -472,8 +523,13 @@ open class ArrayMesh : Mesh {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_surface_get_primitive_type_4141943888,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_surface_get_primitive_type_4141943888._native_ptr(),
+                    4141943888)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -491,8 +547,13 @@ open class ArrayMesh : Mesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_surface_find_by_name_1321353865,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_surface_find_by_name_1321353865._native_ptr(),
+                    1321353865)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -508,8 +569,13 @@ open class ArrayMesh : Mesh {
                 .init(surf_idx_native), .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_surface_set_name_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_surface_set_name_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -525,8 +591,13 @@ open class ArrayMesh : Mesh {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_surface_get_name_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_surface_get_name_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -541,8 +612,13 @@ open class ArrayMesh : Mesh {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_regen_normal_maps_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_regen_normal_maps_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -558,8 +634,13 @@ open class ArrayMesh : Mesh {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_lightmap_unwrap_1476641071,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_lightmap_unwrap_1476641071._native_ptr(),
+                    1476641071)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -575,8 +656,13 @@ open class ArrayMesh : Mesh {
                 .init(aabb_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_custom_aabb_259215842,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_custom_aabb_259215842._native_ptr(),
+                    259215842)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -590,8 +676,13 @@ open class ArrayMesh : Mesh {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_aabb_1068685055,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_aabb_1068685055._native_ptr(),
+                    1068685055)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -606,8 +697,13 @@ open class ArrayMesh : Mesh {
                 .init(mesh_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shadow_mesh_3377897901,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shadow_mesh_3377897901._native_ptr(),
+                    3377897901)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -621,8 +717,13 @@ open class ArrayMesh : Mesh {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_shadow_mesh_3206942465,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_shadow_mesh_3206942465._native_ptr(),
+                    3206942465)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -17,47 +17,40 @@ open class GPUParticlesAttractor3D : VisualInstance3D {
 
     public override class var __godot_name: StringName { __godot_name_GPUParticlesAttractor3D }
 
-    static var _method_set_cull_mask_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cull_mask_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_strength_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_strength_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_attenuation_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_attenuation_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_directionality_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_directionality_1740695150: GDExtensionMethodBindPtr! = nil
+    static var _method_set_cull_mask_1286410249: StringName! = nil
+    static var _method_get_cull_mask_3905245786: StringName! = nil
+    static var _method_set_strength_373806689: StringName! = nil
+    static var _method_get_strength_1740695150: StringName! = nil
+    static var _method_set_attenuation_373806689: StringName! = nil
+    static var _method_get_attenuation_1740695150: StringName! = nil
+    static var _method_set_directionality_373806689: StringName! = nil
+    static var _method_get_directionality_1740695150: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_GPUParticlesAttractor3D == nil)
         __godot_name_GPUParticlesAttractor3D = StringName(from: "GPUParticlesAttractor3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_cull_mask_1286410249_name = StringName(from: "set_cull_mask")
-        self._method_set_cull_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesAttractor3D._native_ptr(), _method_set_cull_mask_1286410249_name._native_ptr(), 1286410249)
-        assert(GPUParticlesAttractor3D._method_set_cull_mask_1286410249 != nil)
-        let _method_get_cull_mask_3905245786_name = StringName(from: "get_cull_mask")
-        self._method_get_cull_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesAttractor3D._native_ptr(), _method_get_cull_mask_3905245786_name._native_ptr(), 3905245786)
-        assert(GPUParticlesAttractor3D._method_get_cull_mask_3905245786 != nil)
-        let _method_set_strength_373806689_name = StringName(from: "set_strength")
-        self._method_set_strength_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesAttractor3D._native_ptr(), _method_set_strength_373806689_name._native_ptr(), 373806689)
-        assert(GPUParticlesAttractor3D._method_set_strength_373806689 != nil)
-        let _method_get_strength_1740695150_name = StringName(from: "get_strength")
-        self._method_get_strength_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesAttractor3D._native_ptr(), _method_get_strength_1740695150_name._native_ptr(), 1740695150)
-        assert(GPUParticlesAttractor3D._method_get_strength_1740695150 != nil)
-        let _method_set_attenuation_373806689_name = StringName(from: "set_attenuation")
-        self._method_set_attenuation_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesAttractor3D._native_ptr(), _method_set_attenuation_373806689_name._native_ptr(), 373806689)
-        assert(GPUParticlesAttractor3D._method_set_attenuation_373806689 != nil)
-        let _method_get_attenuation_1740695150_name = StringName(from: "get_attenuation")
-        self._method_get_attenuation_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesAttractor3D._native_ptr(), _method_get_attenuation_1740695150_name._native_ptr(), 1740695150)
-        assert(GPUParticlesAttractor3D._method_get_attenuation_1740695150 != nil)
-        let _method_set_directionality_373806689_name = StringName(from: "set_directionality")
-        self._method_set_directionality_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesAttractor3D._native_ptr(), _method_set_directionality_373806689_name._native_ptr(), 373806689)
-        assert(GPUParticlesAttractor3D._method_set_directionality_373806689 != nil)
-        let _method_get_directionality_1740695150_name = StringName(from: "get_directionality")
-        self._method_get_directionality_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesAttractor3D._native_ptr(), _method_get_directionality_1740695150_name._native_ptr(), 1740695150)
-        assert(GPUParticlesAttractor3D._method_get_directionality_1740695150 != nil)
+        self._method_set_cull_mask_1286410249 = StringName(from: "set_cull_mask")
+        assert(self._method_set_cull_mask_1286410249 != nil)
+        self._method_get_cull_mask_3905245786 = StringName(from: "get_cull_mask")
+        assert(self._method_get_cull_mask_3905245786 != nil)
+        self._method_set_strength_373806689 = StringName(from: "set_strength")
+        assert(self._method_set_strength_373806689 != nil)
+        self._method_get_strength_1740695150 = StringName(from: "get_strength")
+        assert(self._method_get_strength_1740695150 != nil)
+        self._method_set_attenuation_373806689 = StringName(from: "set_attenuation")
+        assert(self._method_set_attenuation_373806689 != nil)
+        self._method_get_attenuation_1740695150 = StringName(from: "get_attenuation")
+        assert(self._method_get_attenuation_1740695150 != nil)
+        self._method_set_directionality_373806689 = StringName(from: "set_directionality")
+        assert(self._method_set_directionality_373806689 != nil)
+        self._method_get_directionality_1740695150 = StringName(from: "get_directionality")
+        assert(self._method_get_directionality_1740695150 != nil)
     }
 
     public func set_cull_mask(mask: Int64)  {
@@ -68,8 +61,13 @@ open class GPUParticlesAttractor3D : VisualInstance3D {
                 .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cull_mask_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cull_mask_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -85,8 +83,13 @@ open class GPUParticlesAttractor3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cull_mask_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cull_mask_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -101,8 +104,13 @@ open class GPUParticlesAttractor3D : VisualInstance3D {
                 .init(strength_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_strength_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_strength_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -118,8 +126,13 @@ open class GPUParticlesAttractor3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_strength_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_strength_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -134,8 +147,13 @@ open class GPUParticlesAttractor3D : VisualInstance3D {
                 .init(attenuation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_attenuation_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_attenuation_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -151,8 +169,13 @@ open class GPUParticlesAttractor3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_attenuation_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_attenuation_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -167,8 +190,13 @@ open class GPUParticlesAttractor3D : VisualInstance3D {
                 .init(amount_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_directionality_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_directionality_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -184,8 +212,13 @@ open class GPUParticlesAttractor3D : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_directionality_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_directionality_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

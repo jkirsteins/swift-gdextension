@@ -61,359 +61,274 @@ open class TileSet : Resource {
 
     public override class var __godot_name: StringName { __godot_name_TileSet }
 
-    static var _method_get_next_source_id_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_add_source_276991387: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_source_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_source_id_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_get_source_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_source_id_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_has_source_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_get_source_1763540252: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tile_shape_2131427112: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tile_shape_716918169: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tile_layout_1071216679: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tile_layout_194628839: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tile_offset_axis_3300198521: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tile_offset_axis_762494114: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tile_size_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tile_size_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_set_uv_clipping_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_uv_clipping_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_occlusion_layers_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_add_occlusion_layer_1025054187: GDExtensionMethodBindPtr! = nil
-    static var _method_move_occlusion_layer_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_occlusion_layer_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_occlusion_layer_light_mask_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_get_occlusion_layer_light_mask_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_set_occlusion_layer_sdf_collision_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_get_occlusion_layer_sdf_collision_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_get_physics_layers_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_add_physics_layer_1025054187: GDExtensionMethodBindPtr! = nil
-    static var _method_move_physics_layer_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_physics_layer_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_physics_layer_collision_layer_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_get_physics_layer_collision_layer_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_set_physics_layer_collision_mask_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_get_physics_layer_collision_mask_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_set_physics_layer_physics_material_1018687357: GDExtensionMethodBindPtr! = nil
-    static var _method_get_physics_layer_physics_material_788318639: GDExtensionMethodBindPtr! = nil
-    static var _method_get_terrain_sets_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_add_terrain_set_1025054187: GDExtensionMethodBindPtr! = nil
-    static var _method_move_terrain_set_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_terrain_set_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_terrain_set_mode_3943003916: GDExtensionMethodBindPtr! = nil
-    static var _method_get_terrain_set_mode_2084469411: GDExtensionMethodBindPtr! = nil
-    static var _method_get_terrains_count_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_add_terrain_3023605688: GDExtensionMethodBindPtr! = nil
-    static var _method_move_terrain_1649997291: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_terrain_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_set_terrain_name_2285447957: GDExtensionMethodBindPtr! = nil
-    static var _method_get_terrain_name_1391810591: GDExtensionMethodBindPtr! = nil
-    static var _method_set_terrain_color_3733378741: GDExtensionMethodBindPtr! = nil
-    static var _method_get_terrain_color_2165839948: GDExtensionMethodBindPtr! = nil
-    static var _method_get_navigation_layers_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_add_navigation_layer_1025054187: GDExtensionMethodBindPtr! = nil
-    static var _method_move_navigation_layer_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_navigation_layer_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_navigation_layer_layers_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_get_navigation_layer_layers_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_set_navigation_layer_layer_value_1383440665: GDExtensionMethodBindPtr! = nil
-    static var _method_get_navigation_layer_layer_value_2522259332: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_data_layers_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_add_custom_data_layer_1025054187: GDExtensionMethodBindPtr! = nil
-    static var _method_move_custom_data_layer_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_custom_data_layer_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_data_layer_by_name_1321353865: GDExtensionMethodBindPtr! = nil
-    static var _method_set_custom_data_layer_name_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_data_layer_name_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_set_custom_data_layer_type_3492912874: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_data_layer_type_2990820875: GDExtensionMethodBindPtr! = nil
-    static var _method_set_source_level_tile_proxy_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_get_source_level_tile_proxy_3744713108: GDExtensionMethodBindPtr! = nil
-    static var _method_has_source_level_tile_proxy_3067735520: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_source_level_tile_proxy_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_coords_level_tile_proxy_1769939278: GDExtensionMethodBindPtr! = nil
-    static var _method_get_coords_level_tile_proxy_2856536371: GDExtensionMethodBindPtr! = nil
-    static var _method_has_coords_level_tile_proxy_3957903770: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_coords_level_tile_proxy_2311374912: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alternative_level_tile_proxy_3862385460: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alternative_level_tile_proxy_2303761075: GDExtensionMethodBindPtr! = nil
-    static var _method_has_alternative_level_tile_proxy_180086755: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_alternative_level_tile_proxy_2328951467: GDExtensionMethodBindPtr! = nil
-    static var _method_map_tile_proxy_4267935328: GDExtensionMethodBindPtr! = nil
-    static var _method_cleanup_invalid_tile_proxies_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_tile_proxies_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_add_pattern_3009264082: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pattern_4207737510: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_pattern_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_patterns_count_2455072627: GDExtensionMethodBindPtr! = nil
+    static var _method_get_next_source_id_3905245786: StringName! = nil
+    static var _method_add_source_276991387: StringName! = nil
+    static var _method_remove_source_1286410249: StringName! = nil
+    static var _method_set_source_id_3937882851: StringName! = nil
+    static var _method_get_source_count_3905245786: StringName! = nil
+    static var _method_get_source_id_923996154: StringName! = nil
+    static var _method_has_source_1116898809: StringName! = nil
+    static var _method_get_source_1763540252: StringName! = nil
+    static var _method_set_tile_shape_2131427112: StringName! = nil
+    static var _method_get_tile_shape_716918169: StringName! = nil
+    static var _method_set_tile_layout_1071216679: StringName! = nil
+    static var _method_get_tile_layout_194628839: StringName! = nil
+    static var _method_set_tile_offset_axis_3300198521: StringName! = nil
+    static var _method_get_tile_offset_axis_762494114: StringName! = nil
+    static var _method_set_tile_size_1130785943: StringName! = nil
+    static var _method_get_tile_size_3690982128: StringName! = nil
+    static var _method_set_uv_clipping_2586408642: StringName! = nil
+    static var _method_is_uv_clipping_36873697: StringName! = nil
+    static var _method_get_occlusion_layers_count_3905245786: StringName! = nil
+    static var _method_add_occlusion_layer_1025054187: StringName! = nil
+    static var _method_move_occlusion_layer_3937882851: StringName! = nil
+    static var _method_remove_occlusion_layer_1286410249: StringName! = nil
+    static var _method_set_occlusion_layer_light_mask_3937882851: StringName! = nil
+    static var _method_get_occlusion_layer_light_mask_923996154: StringName! = nil
+    static var _method_set_occlusion_layer_sdf_collision_300928843: StringName! = nil
+    static var _method_get_occlusion_layer_sdf_collision_1116898809: StringName! = nil
+    static var _method_get_physics_layers_count_3905245786: StringName! = nil
+    static var _method_add_physics_layer_1025054187: StringName! = nil
+    static var _method_move_physics_layer_3937882851: StringName! = nil
+    static var _method_remove_physics_layer_1286410249: StringName! = nil
+    static var _method_set_physics_layer_collision_layer_3937882851: StringName! = nil
+    static var _method_get_physics_layer_collision_layer_923996154: StringName! = nil
+    static var _method_set_physics_layer_collision_mask_3937882851: StringName! = nil
+    static var _method_get_physics_layer_collision_mask_923996154: StringName! = nil
+    static var _method_set_physics_layer_physics_material_1018687357: StringName! = nil
+    static var _method_get_physics_layer_physics_material_788318639: StringName! = nil
+    static var _method_get_terrain_sets_count_3905245786: StringName! = nil
+    static var _method_add_terrain_set_1025054187: StringName! = nil
+    static var _method_move_terrain_set_3937882851: StringName! = nil
+    static var _method_remove_terrain_set_1286410249: StringName! = nil
+    static var _method_set_terrain_set_mode_3943003916: StringName! = nil
+    static var _method_get_terrain_set_mode_2084469411: StringName! = nil
+    static var _method_get_terrains_count_923996154: StringName! = nil
+    static var _method_add_terrain_3023605688: StringName! = nil
+    static var _method_move_terrain_1649997291: StringName! = nil
+    static var _method_remove_terrain_3937882851: StringName! = nil
+    static var _method_set_terrain_name_2285447957: StringName! = nil
+    static var _method_get_terrain_name_1391810591: StringName! = nil
+    static var _method_set_terrain_color_3733378741: StringName! = nil
+    static var _method_get_terrain_color_2165839948: StringName! = nil
+    static var _method_get_navigation_layers_count_3905245786: StringName! = nil
+    static var _method_add_navigation_layer_1025054187: StringName! = nil
+    static var _method_move_navigation_layer_3937882851: StringName! = nil
+    static var _method_remove_navigation_layer_1286410249: StringName! = nil
+    static var _method_set_navigation_layer_layers_3937882851: StringName! = nil
+    static var _method_get_navigation_layer_layers_923996154: StringName! = nil
+    static var _method_set_navigation_layer_layer_value_1383440665: StringName! = nil
+    static var _method_get_navigation_layer_layer_value_2522259332: StringName! = nil
+    static var _method_get_custom_data_layers_count_3905245786: StringName! = nil
+    static var _method_add_custom_data_layer_1025054187: StringName! = nil
+    static var _method_move_custom_data_layer_3937882851: StringName! = nil
+    static var _method_remove_custom_data_layer_1286410249: StringName! = nil
+    static var _method_get_custom_data_layer_by_name_1321353865: StringName! = nil
+    static var _method_set_custom_data_layer_name_501894301: StringName! = nil
+    static var _method_get_custom_data_layer_name_844755477: StringName! = nil
+    static var _method_set_custom_data_layer_type_3492912874: StringName! = nil
+    static var _method_get_custom_data_layer_type_2990820875: StringName! = nil
+    static var _method_set_source_level_tile_proxy_3937882851: StringName! = nil
+    static var _method_get_source_level_tile_proxy_3744713108: StringName! = nil
+    static var _method_has_source_level_tile_proxy_3067735520: StringName! = nil
+    static var _method_remove_source_level_tile_proxy_1286410249: StringName! = nil
+    static var _method_set_coords_level_tile_proxy_1769939278: StringName! = nil
+    static var _method_get_coords_level_tile_proxy_2856536371: StringName! = nil
+    static var _method_has_coords_level_tile_proxy_3957903770: StringName! = nil
+    static var _method_remove_coords_level_tile_proxy_2311374912: StringName! = nil
+    static var _method_set_alternative_level_tile_proxy_3862385460: StringName! = nil
+    static var _method_get_alternative_level_tile_proxy_2303761075: StringName! = nil
+    static var _method_has_alternative_level_tile_proxy_180086755: StringName! = nil
+    static var _method_remove_alternative_level_tile_proxy_2328951467: StringName! = nil
+    static var _method_map_tile_proxy_4267935328: StringName! = nil
+    static var _method_cleanup_invalid_tile_proxies_3218959716: StringName! = nil
+    static var _method_clear_tile_proxies_3218959716: StringName! = nil
+    static var _method_add_pattern_3009264082: StringName! = nil
+    static var _method_get_pattern_4207737510: StringName! = nil
+    static var _method_remove_pattern_1286410249: StringName! = nil
+    static var _method_get_patterns_count_2455072627: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_TileSet == nil)
         __godot_name_TileSet = StringName(from: "TileSet")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_next_source_id_3905245786_name = StringName(from: "get_next_source_id")
-        self._method_get_next_source_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_next_source_id_3905245786_name._native_ptr(), 3905245786)
-        assert(TileSet._method_get_next_source_id_3905245786 != nil)
-        let _method_add_source_276991387_name = StringName(from: "add_source")
-        self._method_add_source_276991387 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_add_source_276991387_name._native_ptr(), 276991387)
-        assert(TileSet._method_add_source_276991387 != nil)
-        let _method_remove_source_1286410249_name = StringName(from: "remove_source")
-        self._method_remove_source_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_remove_source_1286410249_name._native_ptr(), 1286410249)
-        assert(TileSet._method_remove_source_1286410249 != nil)
-        let _method_set_source_id_3937882851_name = StringName(from: "set_source_id")
-        self._method_set_source_id_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_source_id_3937882851_name._native_ptr(), 3937882851)
-        assert(TileSet._method_set_source_id_3937882851 != nil)
-        let _method_get_source_count_3905245786_name = StringName(from: "get_source_count")
-        self._method_get_source_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_source_count_3905245786_name._native_ptr(), 3905245786)
-        assert(TileSet._method_get_source_count_3905245786 != nil)
-        let _method_get_source_id_923996154_name = StringName(from: "get_source_id")
-        self._method_get_source_id_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_source_id_923996154_name._native_ptr(), 923996154)
-        assert(TileSet._method_get_source_id_923996154 != nil)
-        let _method_has_source_1116898809_name = StringName(from: "has_source")
-        self._method_has_source_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_has_source_1116898809_name._native_ptr(), 1116898809)
-        assert(TileSet._method_has_source_1116898809 != nil)
-        let _method_get_source_1763540252_name = StringName(from: "get_source")
-        self._method_get_source_1763540252 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_source_1763540252_name._native_ptr(), 1763540252)
-        assert(TileSet._method_get_source_1763540252 != nil)
-        let _method_set_tile_shape_2131427112_name = StringName(from: "set_tile_shape")
-        self._method_set_tile_shape_2131427112 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_tile_shape_2131427112_name._native_ptr(), 2131427112)
-        assert(TileSet._method_set_tile_shape_2131427112 != nil)
-        let _method_get_tile_shape_716918169_name = StringName(from: "get_tile_shape")
-        self._method_get_tile_shape_716918169 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_tile_shape_716918169_name._native_ptr(), 716918169)
-        assert(TileSet._method_get_tile_shape_716918169 != nil)
-        let _method_set_tile_layout_1071216679_name = StringName(from: "set_tile_layout")
-        self._method_set_tile_layout_1071216679 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_tile_layout_1071216679_name._native_ptr(), 1071216679)
-        assert(TileSet._method_set_tile_layout_1071216679 != nil)
-        let _method_get_tile_layout_194628839_name = StringName(from: "get_tile_layout")
-        self._method_get_tile_layout_194628839 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_tile_layout_194628839_name._native_ptr(), 194628839)
-        assert(TileSet._method_get_tile_layout_194628839 != nil)
-        let _method_set_tile_offset_axis_3300198521_name = StringName(from: "set_tile_offset_axis")
-        self._method_set_tile_offset_axis_3300198521 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_tile_offset_axis_3300198521_name._native_ptr(), 3300198521)
-        assert(TileSet._method_set_tile_offset_axis_3300198521 != nil)
-        let _method_get_tile_offset_axis_762494114_name = StringName(from: "get_tile_offset_axis")
-        self._method_get_tile_offset_axis_762494114 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_tile_offset_axis_762494114_name._native_ptr(), 762494114)
-        assert(TileSet._method_get_tile_offset_axis_762494114 != nil)
-        let _method_set_tile_size_1130785943_name = StringName(from: "set_tile_size")
-        self._method_set_tile_size_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_tile_size_1130785943_name._native_ptr(), 1130785943)
-        assert(TileSet._method_set_tile_size_1130785943 != nil)
-        let _method_get_tile_size_3690982128_name = StringName(from: "get_tile_size")
-        self._method_get_tile_size_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_tile_size_3690982128_name._native_ptr(), 3690982128)
-        assert(TileSet._method_get_tile_size_3690982128 != nil)
-        let _method_set_uv_clipping_2586408642_name = StringName(from: "set_uv_clipping")
-        self._method_set_uv_clipping_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_uv_clipping_2586408642_name._native_ptr(), 2586408642)
-        assert(TileSet._method_set_uv_clipping_2586408642 != nil)
-        let _method_is_uv_clipping_36873697_name = StringName(from: "is_uv_clipping")
-        self._method_is_uv_clipping_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_is_uv_clipping_36873697_name._native_ptr(), 36873697)
-        assert(TileSet._method_is_uv_clipping_36873697 != nil)
-        let _method_get_occlusion_layers_count_3905245786_name = StringName(from: "get_occlusion_layers_count")
-        self._method_get_occlusion_layers_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_occlusion_layers_count_3905245786_name._native_ptr(), 3905245786)
-        assert(TileSet._method_get_occlusion_layers_count_3905245786 != nil)
-        let _method_add_occlusion_layer_1025054187_name = StringName(from: "add_occlusion_layer")
-        self._method_add_occlusion_layer_1025054187 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_add_occlusion_layer_1025054187_name._native_ptr(), 1025054187)
-        assert(TileSet._method_add_occlusion_layer_1025054187 != nil)
-        let _method_move_occlusion_layer_3937882851_name = StringName(from: "move_occlusion_layer")
-        self._method_move_occlusion_layer_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_move_occlusion_layer_3937882851_name._native_ptr(), 3937882851)
-        assert(TileSet._method_move_occlusion_layer_3937882851 != nil)
-        let _method_remove_occlusion_layer_1286410249_name = StringName(from: "remove_occlusion_layer")
-        self._method_remove_occlusion_layer_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_remove_occlusion_layer_1286410249_name._native_ptr(), 1286410249)
-        assert(TileSet._method_remove_occlusion_layer_1286410249 != nil)
-        let _method_set_occlusion_layer_light_mask_3937882851_name = StringName(from: "set_occlusion_layer_light_mask")
-        self._method_set_occlusion_layer_light_mask_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_occlusion_layer_light_mask_3937882851_name._native_ptr(), 3937882851)
-        assert(TileSet._method_set_occlusion_layer_light_mask_3937882851 != nil)
-        let _method_get_occlusion_layer_light_mask_923996154_name = StringName(from: "get_occlusion_layer_light_mask")
-        self._method_get_occlusion_layer_light_mask_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_occlusion_layer_light_mask_923996154_name._native_ptr(), 923996154)
-        assert(TileSet._method_get_occlusion_layer_light_mask_923996154 != nil)
-        let _method_set_occlusion_layer_sdf_collision_300928843_name = StringName(from: "set_occlusion_layer_sdf_collision")
-        self._method_set_occlusion_layer_sdf_collision_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_occlusion_layer_sdf_collision_300928843_name._native_ptr(), 300928843)
-        assert(TileSet._method_set_occlusion_layer_sdf_collision_300928843 != nil)
-        let _method_get_occlusion_layer_sdf_collision_1116898809_name = StringName(from: "get_occlusion_layer_sdf_collision")
-        self._method_get_occlusion_layer_sdf_collision_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_occlusion_layer_sdf_collision_1116898809_name._native_ptr(), 1116898809)
-        assert(TileSet._method_get_occlusion_layer_sdf_collision_1116898809 != nil)
-        let _method_get_physics_layers_count_3905245786_name = StringName(from: "get_physics_layers_count")
-        self._method_get_physics_layers_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_physics_layers_count_3905245786_name._native_ptr(), 3905245786)
-        assert(TileSet._method_get_physics_layers_count_3905245786 != nil)
-        let _method_add_physics_layer_1025054187_name = StringName(from: "add_physics_layer")
-        self._method_add_physics_layer_1025054187 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_add_physics_layer_1025054187_name._native_ptr(), 1025054187)
-        assert(TileSet._method_add_physics_layer_1025054187 != nil)
-        let _method_move_physics_layer_3937882851_name = StringName(from: "move_physics_layer")
-        self._method_move_physics_layer_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_move_physics_layer_3937882851_name._native_ptr(), 3937882851)
-        assert(TileSet._method_move_physics_layer_3937882851 != nil)
-        let _method_remove_physics_layer_1286410249_name = StringName(from: "remove_physics_layer")
-        self._method_remove_physics_layer_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_remove_physics_layer_1286410249_name._native_ptr(), 1286410249)
-        assert(TileSet._method_remove_physics_layer_1286410249 != nil)
-        let _method_set_physics_layer_collision_layer_3937882851_name = StringName(from: "set_physics_layer_collision_layer")
-        self._method_set_physics_layer_collision_layer_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_physics_layer_collision_layer_3937882851_name._native_ptr(), 3937882851)
-        assert(TileSet._method_set_physics_layer_collision_layer_3937882851 != nil)
-        let _method_get_physics_layer_collision_layer_923996154_name = StringName(from: "get_physics_layer_collision_layer")
-        self._method_get_physics_layer_collision_layer_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_physics_layer_collision_layer_923996154_name._native_ptr(), 923996154)
-        assert(TileSet._method_get_physics_layer_collision_layer_923996154 != nil)
-        let _method_set_physics_layer_collision_mask_3937882851_name = StringName(from: "set_physics_layer_collision_mask")
-        self._method_set_physics_layer_collision_mask_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_physics_layer_collision_mask_3937882851_name._native_ptr(), 3937882851)
-        assert(TileSet._method_set_physics_layer_collision_mask_3937882851 != nil)
-        let _method_get_physics_layer_collision_mask_923996154_name = StringName(from: "get_physics_layer_collision_mask")
-        self._method_get_physics_layer_collision_mask_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_physics_layer_collision_mask_923996154_name._native_ptr(), 923996154)
-        assert(TileSet._method_get_physics_layer_collision_mask_923996154 != nil)
-        let _method_set_physics_layer_physics_material_1018687357_name = StringName(from: "set_physics_layer_physics_material")
-        self._method_set_physics_layer_physics_material_1018687357 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_physics_layer_physics_material_1018687357_name._native_ptr(), 1018687357)
-        assert(TileSet._method_set_physics_layer_physics_material_1018687357 != nil)
-        let _method_get_physics_layer_physics_material_788318639_name = StringName(from: "get_physics_layer_physics_material")
-        self._method_get_physics_layer_physics_material_788318639 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_physics_layer_physics_material_788318639_name._native_ptr(), 788318639)
-        assert(TileSet._method_get_physics_layer_physics_material_788318639 != nil)
-        let _method_get_terrain_sets_count_3905245786_name = StringName(from: "get_terrain_sets_count")
-        self._method_get_terrain_sets_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_terrain_sets_count_3905245786_name._native_ptr(), 3905245786)
-        assert(TileSet._method_get_terrain_sets_count_3905245786 != nil)
-        let _method_add_terrain_set_1025054187_name = StringName(from: "add_terrain_set")
-        self._method_add_terrain_set_1025054187 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_add_terrain_set_1025054187_name._native_ptr(), 1025054187)
-        assert(TileSet._method_add_terrain_set_1025054187 != nil)
-        let _method_move_terrain_set_3937882851_name = StringName(from: "move_terrain_set")
-        self._method_move_terrain_set_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_move_terrain_set_3937882851_name._native_ptr(), 3937882851)
-        assert(TileSet._method_move_terrain_set_3937882851 != nil)
-        let _method_remove_terrain_set_1286410249_name = StringName(from: "remove_terrain_set")
-        self._method_remove_terrain_set_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_remove_terrain_set_1286410249_name._native_ptr(), 1286410249)
-        assert(TileSet._method_remove_terrain_set_1286410249 != nil)
-        let _method_set_terrain_set_mode_3943003916_name = StringName(from: "set_terrain_set_mode")
-        self._method_set_terrain_set_mode_3943003916 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_terrain_set_mode_3943003916_name._native_ptr(), 3943003916)
-        assert(TileSet._method_set_terrain_set_mode_3943003916 != nil)
-        let _method_get_terrain_set_mode_2084469411_name = StringName(from: "get_terrain_set_mode")
-        self._method_get_terrain_set_mode_2084469411 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_terrain_set_mode_2084469411_name._native_ptr(), 2084469411)
-        assert(TileSet._method_get_terrain_set_mode_2084469411 != nil)
-        let _method_get_terrains_count_923996154_name = StringName(from: "get_terrains_count")
-        self._method_get_terrains_count_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_terrains_count_923996154_name._native_ptr(), 923996154)
-        assert(TileSet._method_get_terrains_count_923996154 != nil)
-        let _method_add_terrain_3023605688_name = StringName(from: "add_terrain")
-        self._method_add_terrain_3023605688 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_add_terrain_3023605688_name._native_ptr(), 3023605688)
-        assert(TileSet._method_add_terrain_3023605688 != nil)
-        let _method_move_terrain_1649997291_name = StringName(from: "move_terrain")
-        self._method_move_terrain_1649997291 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_move_terrain_1649997291_name._native_ptr(), 1649997291)
-        assert(TileSet._method_move_terrain_1649997291 != nil)
-        let _method_remove_terrain_3937882851_name = StringName(from: "remove_terrain")
-        self._method_remove_terrain_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_remove_terrain_3937882851_name._native_ptr(), 3937882851)
-        assert(TileSet._method_remove_terrain_3937882851 != nil)
-        let _method_set_terrain_name_2285447957_name = StringName(from: "set_terrain_name")
-        self._method_set_terrain_name_2285447957 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_terrain_name_2285447957_name._native_ptr(), 2285447957)
-        assert(TileSet._method_set_terrain_name_2285447957 != nil)
-        let _method_get_terrain_name_1391810591_name = StringName(from: "get_terrain_name")
-        self._method_get_terrain_name_1391810591 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_terrain_name_1391810591_name._native_ptr(), 1391810591)
-        assert(TileSet._method_get_terrain_name_1391810591 != nil)
-        let _method_set_terrain_color_3733378741_name = StringName(from: "set_terrain_color")
-        self._method_set_terrain_color_3733378741 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_terrain_color_3733378741_name._native_ptr(), 3733378741)
-        assert(TileSet._method_set_terrain_color_3733378741 != nil)
-        let _method_get_terrain_color_2165839948_name = StringName(from: "get_terrain_color")
-        self._method_get_terrain_color_2165839948 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_terrain_color_2165839948_name._native_ptr(), 2165839948)
-        assert(TileSet._method_get_terrain_color_2165839948 != nil)
-        let _method_get_navigation_layers_count_3905245786_name = StringName(from: "get_navigation_layers_count")
-        self._method_get_navigation_layers_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_navigation_layers_count_3905245786_name._native_ptr(), 3905245786)
-        assert(TileSet._method_get_navigation_layers_count_3905245786 != nil)
-        let _method_add_navigation_layer_1025054187_name = StringName(from: "add_navigation_layer")
-        self._method_add_navigation_layer_1025054187 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_add_navigation_layer_1025054187_name._native_ptr(), 1025054187)
-        assert(TileSet._method_add_navigation_layer_1025054187 != nil)
-        let _method_move_navigation_layer_3937882851_name = StringName(from: "move_navigation_layer")
-        self._method_move_navigation_layer_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_move_navigation_layer_3937882851_name._native_ptr(), 3937882851)
-        assert(TileSet._method_move_navigation_layer_3937882851 != nil)
-        let _method_remove_navigation_layer_1286410249_name = StringName(from: "remove_navigation_layer")
-        self._method_remove_navigation_layer_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_remove_navigation_layer_1286410249_name._native_ptr(), 1286410249)
-        assert(TileSet._method_remove_navigation_layer_1286410249 != nil)
-        let _method_set_navigation_layer_layers_3937882851_name = StringName(from: "set_navigation_layer_layers")
-        self._method_set_navigation_layer_layers_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_navigation_layer_layers_3937882851_name._native_ptr(), 3937882851)
-        assert(TileSet._method_set_navigation_layer_layers_3937882851 != nil)
-        let _method_get_navigation_layer_layers_923996154_name = StringName(from: "get_navigation_layer_layers")
-        self._method_get_navigation_layer_layers_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_navigation_layer_layers_923996154_name._native_ptr(), 923996154)
-        assert(TileSet._method_get_navigation_layer_layers_923996154 != nil)
-        let _method_set_navigation_layer_layer_value_1383440665_name = StringName(from: "set_navigation_layer_layer_value")
-        self._method_set_navigation_layer_layer_value_1383440665 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_navigation_layer_layer_value_1383440665_name._native_ptr(), 1383440665)
-        assert(TileSet._method_set_navigation_layer_layer_value_1383440665 != nil)
-        let _method_get_navigation_layer_layer_value_2522259332_name = StringName(from: "get_navigation_layer_layer_value")
-        self._method_get_navigation_layer_layer_value_2522259332 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_navigation_layer_layer_value_2522259332_name._native_ptr(), 2522259332)
-        assert(TileSet._method_get_navigation_layer_layer_value_2522259332 != nil)
-        let _method_get_custom_data_layers_count_3905245786_name = StringName(from: "get_custom_data_layers_count")
-        self._method_get_custom_data_layers_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_custom_data_layers_count_3905245786_name._native_ptr(), 3905245786)
-        assert(TileSet._method_get_custom_data_layers_count_3905245786 != nil)
-        let _method_add_custom_data_layer_1025054187_name = StringName(from: "add_custom_data_layer")
-        self._method_add_custom_data_layer_1025054187 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_add_custom_data_layer_1025054187_name._native_ptr(), 1025054187)
-        assert(TileSet._method_add_custom_data_layer_1025054187 != nil)
-        let _method_move_custom_data_layer_3937882851_name = StringName(from: "move_custom_data_layer")
-        self._method_move_custom_data_layer_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_move_custom_data_layer_3937882851_name._native_ptr(), 3937882851)
-        assert(TileSet._method_move_custom_data_layer_3937882851 != nil)
-        let _method_remove_custom_data_layer_1286410249_name = StringName(from: "remove_custom_data_layer")
-        self._method_remove_custom_data_layer_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_remove_custom_data_layer_1286410249_name._native_ptr(), 1286410249)
-        assert(TileSet._method_remove_custom_data_layer_1286410249 != nil)
-        let _method_get_custom_data_layer_by_name_1321353865_name = StringName(from: "get_custom_data_layer_by_name")
-        self._method_get_custom_data_layer_by_name_1321353865 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_custom_data_layer_by_name_1321353865_name._native_ptr(), 1321353865)
-        assert(TileSet._method_get_custom_data_layer_by_name_1321353865 != nil)
-        let _method_set_custom_data_layer_name_501894301_name = StringName(from: "set_custom_data_layer_name")
-        self._method_set_custom_data_layer_name_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_custom_data_layer_name_501894301_name._native_ptr(), 501894301)
-        assert(TileSet._method_set_custom_data_layer_name_501894301 != nil)
-        let _method_get_custom_data_layer_name_844755477_name = StringName(from: "get_custom_data_layer_name")
-        self._method_get_custom_data_layer_name_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_custom_data_layer_name_844755477_name._native_ptr(), 844755477)
-        assert(TileSet._method_get_custom_data_layer_name_844755477 != nil)
-        let _method_set_custom_data_layer_type_3492912874_name = StringName(from: "set_custom_data_layer_type")
-        self._method_set_custom_data_layer_type_3492912874 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_custom_data_layer_type_3492912874_name._native_ptr(), 3492912874)
-        assert(TileSet._method_set_custom_data_layer_type_3492912874 != nil)
-        let _method_get_custom_data_layer_type_2990820875_name = StringName(from: "get_custom_data_layer_type")
-        self._method_get_custom_data_layer_type_2990820875 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_custom_data_layer_type_2990820875_name._native_ptr(), 2990820875)
-        assert(TileSet._method_get_custom_data_layer_type_2990820875 != nil)
-        let _method_set_source_level_tile_proxy_3937882851_name = StringName(from: "set_source_level_tile_proxy")
-        self._method_set_source_level_tile_proxy_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_source_level_tile_proxy_3937882851_name._native_ptr(), 3937882851)
-        assert(TileSet._method_set_source_level_tile_proxy_3937882851 != nil)
-        let _method_get_source_level_tile_proxy_3744713108_name = StringName(from: "get_source_level_tile_proxy")
-        self._method_get_source_level_tile_proxy_3744713108 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_source_level_tile_proxy_3744713108_name._native_ptr(), 3744713108)
-        assert(TileSet._method_get_source_level_tile_proxy_3744713108 != nil)
-        let _method_has_source_level_tile_proxy_3067735520_name = StringName(from: "has_source_level_tile_proxy")
-        self._method_has_source_level_tile_proxy_3067735520 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_has_source_level_tile_proxy_3067735520_name._native_ptr(), 3067735520)
-        assert(TileSet._method_has_source_level_tile_proxy_3067735520 != nil)
-        let _method_remove_source_level_tile_proxy_1286410249_name = StringName(from: "remove_source_level_tile_proxy")
-        self._method_remove_source_level_tile_proxy_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_remove_source_level_tile_proxy_1286410249_name._native_ptr(), 1286410249)
-        assert(TileSet._method_remove_source_level_tile_proxy_1286410249 != nil)
-        let _method_set_coords_level_tile_proxy_1769939278_name = StringName(from: "set_coords_level_tile_proxy")
-        self._method_set_coords_level_tile_proxy_1769939278 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_coords_level_tile_proxy_1769939278_name._native_ptr(), 1769939278)
-        assert(TileSet._method_set_coords_level_tile_proxy_1769939278 != nil)
-        let _method_get_coords_level_tile_proxy_2856536371_name = StringName(from: "get_coords_level_tile_proxy")
-        self._method_get_coords_level_tile_proxy_2856536371 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_coords_level_tile_proxy_2856536371_name._native_ptr(), 2856536371)
-        assert(TileSet._method_get_coords_level_tile_proxy_2856536371 != nil)
-        let _method_has_coords_level_tile_proxy_3957903770_name = StringName(from: "has_coords_level_tile_proxy")
-        self._method_has_coords_level_tile_proxy_3957903770 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_has_coords_level_tile_proxy_3957903770_name._native_ptr(), 3957903770)
-        assert(TileSet._method_has_coords_level_tile_proxy_3957903770 != nil)
-        let _method_remove_coords_level_tile_proxy_2311374912_name = StringName(from: "remove_coords_level_tile_proxy")
-        self._method_remove_coords_level_tile_proxy_2311374912 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_remove_coords_level_tile_proxy_2311374912_name._native_ptr(), 2311374912)
-        assert(TileSet._method_remove_coords_level_tile_proxy_2311374912 != nil)
-        let _method_set_alternative_level_tile_proxy_3862385460_name = StringName(from: "set_alternative_level_tile_proxy")
-        self._method_set_alternative_level_tile_proxy_3862385460 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_set_alternative_level_tile_proxy_3862385460_name._native_ptr(), 3862385460)
-        assert(TileSet._method_set_alternative_level_tile_proxy_3862385460 != nil)
-        let _method_get_alternative_level_tile_proxy_2303761075_name = StringName(from: "get_alternative_level_tile_proxy")
-        self._method_get_alternative_level_tile_proxy_2303761075 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_alternative_level_tile_proxy_2303761075_name._native_ptr(), 2303761075)
-        assert(TileSet._method_get_alternative_level_tile_proxy_2303761075 != nil)
-        let _method_has_alternative_level_tile_proxy_180086755_name = StringName(from: "has_alternative_level_tile_proxy")
-        self._method_has_alternative_level_tile_proxy_180086755 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_has_alternative_level_tile_proxy_180086755_name._native_ptr(), 180086755)
-        assert(TileSet._method_has_alternative_level_tile_proxy_180086755 != nil)
-        let _method_remove_alternative_level_tile_proxy_2328951467_name = StringName(from: "remove_alternative_level_tile_proxy")
-        self._method_remove_alternative_level_tile_proxy_2328951467 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_remove_alternative_level_tile_proxy_2328951467_name._native_ptr(), 2328951467)
-        assert(TileSet._method_remove_alternative_level_tile_proxy_2328951467 != nil)
-        let _method_map_tile_proxy_4267935328_name = StringName(from: "map_tile_proxy")
-        self._method_map_tile_proxy_4267935328 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_map_tile_proxy_4267935328_name._native_ptr(), 4267935328)
-        assert(TileSet._method_map_tile_proxy_4267935328 != nil)
-        let _method_cleanup_invalid_tile_proxies_3218959716_name = StringName(from: "cleanup_invalid_tile_proxies")
-        self._method_cleanup_invalid_tile_proxies_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_cleanup_invalid_tile_proxies_3218959716_name._native_ptr(), 3218959716)
-        assert(TileSet._method_cleanup_invalid_tile_proxies_3218959716 != nil)
-        let _method_clear_tile_proxies_3218959716_name = StringName(from: "clear_tile_proxies")
-        self._method_clear_tile_proxies_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_clear_tile_proxies_3218959716_name._native_ptr(), 3218959716)
-        assert(TileSet._method_clear_tile_proxies_3218959716 != nil)
-        let _method_add_pattern_3009264082_name = StringName(from: "add_pattern")
-        self._method_add_pattern_3009264082 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_add_pattern_3009264082_name._native_ptr(), 3009264082)
-        assert(TileSet._method_add_pattern_3009264082 != nil)
-        let _method_get_pattern_4207737510_name = StringName(from: "get_pattern")
-        self._method_get_pattern_4207737510 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_pattern_4207737510_name._native_ptr(), 4207737510)
-        assert(TileSet._method_get_pattern_4207737510 != nil)
-        let _method_remove_pattern_1286410249_name = StringName(from: "remove_pattern")
-        self._method_remove_pattern_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_remove_pattern_1286410249_name._native_ptr(), 1286410249)
-        assert(TileSet._method_remove_pattern_1286410249 != nil)
-        let _method_get_patterns_count_2455072627_name = StringName(from: "get_patterns_count")
-        self._method_get_patterns_count_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSet._native_ptr(), _method_get_patterns_count_2455072627_name._native_ptr(), 2455072627)
-        assert(TileSet._method_get_patterns_count_2455072627 != nil)
+        self._method_get_next_source_id_3905245786 = StringName(from: "get_next_source_id")
+        assert(self._method_get_next_source_id_3905245786 != nil)
+        self._method_add_source_276991387 = StringName(from: "add_source")
+        assert(self._method_add_source_276991387 != nil)
+        self._method_remove_source_1286410249 = StringName(from: "remove_source")
+        assert(self._method_remove_source_1286410249 != nil)
+        self._method_set_source_id_3937882851 = StringName(from: "set_source_id")
+        assert(self._method_set_source_id_3937882851 != nil)
+        self._method_get_source_count_3905245786 = StringName(from: "get_source_count")
+        assert(self._method_get_source_count_3905245786 != nil)
+        self._method_get_source_id_923996154 = StringName(from: "get_source_id")
+        assert(self._method_get_source_id_923996154 != nil)
+        self._method_has_source_1116898809 = StringName(from: "has_source")
+        assert(self._method_has_source_1116898809 != nil)
+        self._method_get_source_1763540252 = StringName(from: "get_source")
+        assert(self._method_get_source_1763540252 != nil)
+        self._method_set_tile_shape_2131427112 = StringName(from: "set_tile_shape")
+        assert(self._method_set_tile_shape_2131427112 != nil)
+        self._method_get_tile_shape_716918169 = StringName(from: "get_tile_shape")
+        assert(self._method_get_tile_shape_716918169 != nil)
+        self._method_set_tile_layout_1071216679 = StringName(from: "set_tile_layout")
+        assert(self._method_set_tile_layout_1071216679 != nil)
+        self._method_get_tile_layout_194628839 = StringName(from: "get_tile_layout")
+        assert(self._method_get_tile_layout_194628839 != nil)
+        self._method_set_tile_offset_axis_3300198521 = StringName(from: "set_tile_offset_axis")
+        assert(self._method_set_tile_offset_axis_3300198521 != nil)
+        self._method_get_tile_offset_axis_762494114 = StringName(from: "get_tile_offset_axis")
+        assert(self._method_get_tile_offset_axis_762494114 != nil)
+        self._method_set_tile_size_1130785943 = StringName(from: "set_tile_size")
+        assert(self._method_set_tile_size_1130785943 != nil)
+        self._method_get_tile_size_3690982128 = StringName(from: "get_tile_size")
+        assert(self._method_get_tile_size_3690982128 != nil)
+        self._method_set_uv_clipping_2586408642 = StringName(from: "set_uv_clipping")
+        assert(self._method_set_uv_clipping_2586408642 != nil)
+        self._method_is_uv_clipping_36873697 = StringName(from: "is_uv_clipping")
+        assert(self._method_is_uv_clipping_36873697 != nil)
+        self._method_get_occlusion_layers_count_3905245786 = StringName(from: "get_occlusion_layers_count")
+        assert(self._method_get_occlusion_layers_count_3905245786 != nil)
+        self._method_add_occlusion_layer_1025054187 = StringName(from: "add_occlusion_layer")
+        assert(self._method_add_occlusion_layer_1025054187 != nil)
+        self._method_move_occlusion_layer_3937882851 = StringName(from: "move_occlusion_layer")
+        assert(self._method_move_occlusion_layer_3937882851 != nil)
+        self._method_remove_occlusion_layer_1286410249 = StringName(from: "remove_occlusion_layer")
+        assert(self._method_remove_occlusion_layer_1286410249 != nil)
+        self._method_set_occlusion_layer_light_mask_3937882851 = StringName(from: "set_occlusion_layer_light_mask")
+        assert(self._method_set_occlusion_layer_light_mask_3937882851 != nil)
+        self._method_get_occlusion_layer_light_mask_923996154 = StringName(from: "get_occlusion_layer_light_mask")
+        assert(self._method_get_occlusion_layer_light_mask_923996154 != nil)
+        self._method_set_occlusion_layer_sdf_collision_300928843 = StringName(from: "set_occlusion_layer_sdf_collision")
+        assert(self._method_set_occlusion_layer_sdf_collision_300928843 != nil)
+        self._method_get_occlusion_layer_sdf_collision_1116898809 = StringName(from: "get_occlusion_layer_sdf_collision")
+        assert(self._method_get_occlusion_layer_sdf_collision_1116898809 != nil)
+        self._method_get_physics_layers_count_3905245786 = StringName(from: "get_physics_layers_count")
+        assert(self._method_get_physics_layers_count_3905245786 != nil)
+        self._method_add_physics_layer_1025054187 = StringName(from: "add_physics_layer")
+        assert(self._method_add_physics_layer_1025054187 != nil)
+        self._method_move_physics_layer_3937882851 = StringName(from: "move_physics_layer")
+        assert(self._method_move_physics_layer_3937882851 != nil)
+        self._method_remove_physics_layer_1286410249 = StringName(from: "remove_physics_layer")
+        assert(self._method_remove_physics_layer_1286410249 != nil)
+        self._method_set_physics_layer_collision_layer_3937882851 = StringName(from: "set_physics_layer_collision_layer")
+        assert(self._method_set_physics_layer_collision_layer_3937882851 != nil)
+        self._method_get_physics_layer_collision_layer_923996154 = StringName(from: "get_physics_layer_collision_layer")
+        assert(self._method_get_physics_layer_collision_layer_923996154 != nil)
+        self._method_set_physics_layer_collision_mask_3937882851 = StringName(from: "set_physics_layer_collision_mask")
+        assert(self._method_set_physics_layer_collision_mask_3937882851 != nil)
+        self._method_get_physics_layer_collision_mask_923996154 = StringName(from: "get_physics_layer_collision_mask")
+        assert(self._method_get_physics_layer_collision_mask_923996154 != nil)
+        self._method_set_physics_layer_physics_material_1018687357 = StringName(from: "set_physics_layer_physics_material")
+        assert(self._method_set_physics_layer_physics_material_1018687357 != nil)
+        self._method_get_physics_layer_physics_material_788318639 = StringName(from: "get_physics_layer_physics_material")
+        assert(self._method_get_physics_layer_physics_material_788318639 != nil)
+        self._method_get_terrain_sets_count_3905245786 = StringName(from: "get_terrain_sets_count")
+        assert(self._method_get_terrain_sets_count_3905245786 != nil)
+        self._method_add_terrain_set_1025054187 = StringName(from: "add_terrain_set")
+        assert(self._method_add_terrain_set_1025054187 != nil)
+        self._method_move_terrain_set_3937882851 = StringName(from: "move_terrain_set")
+        assert(self._method_move_terrain_set_3937882851 != nil)
+        self._method_remove_terrain_set_1286410249 = StringName(from: "remove_terrain_set")
+        assert(self._method_remove_terrain_set_1286410249 != nil)
+        self._method_set_terrain_set_mode_3943003916 = StringName(from: "set_terrain_set_mode")
+        assert(self._method_set_terrain_set_mode_3943003916 != nil)
+        self._method_get_terrain_set_mode_2084469411 = StringName(from: "get_terrain_set_mode")
+        assert(self._method_get_terrain_set_mode_2084469411 != nil)
+        self._method_get_terrains_count_923996154 = StringName(from: "get_terrains_count")
+        assert(self._method_get_terrains_count_923996154 != nil)
+        self._method_add_terrain_3023605688 = StringName(from: "add_terrain")
+        assert(self._method_add_terrain_3023605688 != nil)
+        self._method_move_terrain_1649997291 = StringName(from: "move_terrain")
+        assert(self._method_move_terrain_1649997291 != nil)
+        self._method_remove_terrain_3937882851 = StringName(from: "remove_terrain")
+        assert(self._method_remove_terrain_3937882851 != nil)
+        self._method_set_terrain_name_2285447957 = StringName(from: "set_terrain_name")
+        assert(self._method_set_terrain_name_2285447957 != nil)
+        self._method_get_terrain_name_1391810591 = StringName(from: "get_terrain_name")
+        assert(self._method_get_terrain_name_1391810591 != nil)
+        self._method_set_terrain_color_3733378741 = StringName(from: "set_terrain_color")
+        assert(self._method_set_terrain_color_3733378741 != nil)
+        self._method_get_terrain_color_2165839948 = StringName(from: "get_terrain_color")
+        assert(self._method_get_terrain_color_2165839948 != nil)
+        self._method_get_navigation_layers_count_3905245786 = StringName(from: "get_navigation_layers_count")
+        assert(self._method_get_navigation_layers_count_3905245786 != nil)
+        self._method_add_navigation_layer_1025054187 = StringName(from: "add_navigation_layer")
+        assert(self._method_add_navigation_layer_1025054187 != nil)
+        self._method_move_navigation_layer_3937882851 = StringName(from: "move_navigation_layer")
+        assert(self._method_move_navigation_layer_3937882851 != nil)
+        self._method_remove_navigation_layer_1286410249 = StringName(from: "remove_navigation_layer")
+        assert(self._method_remove_navigation_layer_1286410249 != nil)
+        self._method_set_navigation_layer_layers_3937882851 = StringName(from: "set_navigation_layer_layers")
+        assert(self._method_set_navigation_layer_layers_3937882851 != nil)
+        self._method_get_navigation_layer_layers_923996154 = StringName(from: "get_navigation_layer_layers")
+        assert(self._method_get_navigation_layer_layers_923996154 != nil)
+        self._method_set_navigation_layer_layer_value_1383440665 = StringName(from: "set_navigation_layer_layer_value")
+        assert(self._method_set_navigation_layer_layer_value_1383440665 != nil)
+        self._method_get_navigation_layer_layer_value_2522259332 = StringName(from: "get_navigation_layer_layer_value")
+        assert(self._method_get_navigation_layer_layer_value_2522259332 != nil)
+        self._method_get_custom_data_layers_count_3905245786 = StringName(from: "get_custom_data_layers_count")
+        assert(self._method_get_custom_data_layers_count_3905245786 != nil)
+        self._method_add_custom_data_layer_1025054187 = StringName(from: "add_custom_data_layer")
+        assert(self._method_add_custom_data_layer_1025054187 != nil)
+        self._method_move_custom_data_layer_3937882851 = StringName(from: "move_custom_data_layer")
+        assert(self._method_move_custom_data_layer_3937882851 != nil)
+        self._method_remove_custom_data_layer_1286410249 = StringName(from: "remove_custom_data_layer")
+        assert(self._method_remove_custom_data_layer_1286410249 != nil)
+        self._method_get_custom_data_layer_by_name_1321353865 = StringName(from: "get_custom_data_layer_by_name")
+        assert(self._method_get_custom_data_layer_by_name_1321353865 != nil)
+        self._method_set_custom_data_layer_name_501894301 = StringName(from: "set_custom_data_layer_name")
+        assert(self._method_set_custom_data_layer_name_501894301 != nil)
+        self._method_get_custom_data_layer_name_844755477 = StringName(from: "get_custom_data_layer_name")
+        assert(self._method_get_custom_data_layer_name_844755477 != nil)
+        self._method_set_custom_data_layer_type_3492912874 = StringName(from: "set_custom_data_layer_type")
+        assert(self._method_set_custom_data_layer_type_3492912874 != nil)
+        self._method_get_custom_data_layer_type_2990820875 = StringName(from: "get_custom_data_layer_type")
+        assert(self._method_get_custom_data_layer_type_2990820875 != nil)
+        self._method_set_source_level_tile_proxy_3937882851 = StringName(from: "set_source_level_tile_proxy")
+        assert(self._method_set_source_level_tile_proxy_3937882851 != nil)
+        self._method_get_source_level_tile_proxy_3744713108 = StringName(from: "get_source_level_tile_proxy")
+        assert(self._method_get_source_level_tile_proxy_3744713108 != nil)
+        self._method_has_source_level_tile_proxy_3067735520 = StringName(from: "has_source_level_tile_proxy")
+        assert(self._method_has_source_level_tile_proxy_3067735520 != nil)
+        self._method_remove_source_level_tile_proxy_1286410249 = StringName(from: "remove_source_level_tile_proxy")
+        assert(self._method_remove_source_level_tile_proxy_1286410249 != nil)
+        self._method_set_coords_level_tile_proxy_1769939278 = StringName(from: "set_coords_level_tile_proxy")
+        assert(self._method_set_coords_level_tile_proxy_1769939278 != nil)
+        self._method_get_coords_level_tile_proxy_2856536371 = StringName(from: "get_coords_level_tile_proxy")
+        assert(self._method_get_coords_level_tile_proxy_2856536371 != nil)
+        self._method_has_coords_level_tile_proxy_3957903770 = StringName(from: "has_coords_level_tile_proxy")
+        assert(self._method_has_coords_level_tile_proxy_3957903770 != nil)
+        self._method_remove_coords_level_tile_proxy_2311374912 = StringName(from: "remove_coords_level_tile_proxy")
+        assert(self._method_remove_coords_level_tile_proxy_2311374912 != nil)
+        self._method_set_alternative_level_tile_proxy_3862385460 = StringName(from: "set_alternative_level_tile_proxy")
+        assert(self._method_set_alternative_level_tile_proxy_3862385460 != nil)
+        self._method_get_alternative_level_tile_proxy_2303761075 = StringName(from: "get_alternative_level_tile_proxy")
+        assert(self._method_get_alternative_level_tile_proxy_2303761075 != nil)
+        self._method_has_alternative_level_tile_proxy_180086755 = StringName(from: "has_alternative_level_tile_proxy")
+        assert(self._method_has_alternative_level_tile_proxy_180086755 != nil)
+        self._method_remove_alternative_level_tile_proxy_2328951467 = StringName(from: "remove_alternative_level_tile_proxy")
+        assert(self._method_remove_alternative_level_tile_proxy_2328951467 != nil)
+        self._method_map_tile_proxy_4267935328 = StringName(from: "map_tile_proxy")
+        assert(self._method_map_tile_proxy_4267935328 != nil)
+        self._method_cleanup_invalid_tile_proxies_3218959716 = StringName(from: "cleanup_invalid_tile_proxies")
+        assert(self._method_cleanup_invalid_tile_proxies_3218959716 != nil)
+        self._method_clear_tile_proxies_3218959716 = StringName(from: "clear_tile_proxies")
+        assert(self._method_clear_tile_proxies_3218959716 != nil)
+        self._method_add_pattern_3009264082 = StringName(from: "add_pattern")
+        assert(self._method_add_pattern_3009264082 != nil)
+        self._method_get_pattern_4207737510 = StringName(from: "get_pattern")
+        assert(self._method_get_pattern_4207737510 != nil)
+        self._method_remove_pattern_1286410249 = StringName(from: "remove_pattern")
+        assert(self._method_remove_pattern_1286410249 != nil)
+        self._method_get_patterns_count_2455072627 = StringName(from: "get_patterns_count")
+        assert(self._method_get_patterns_count_2455072627 != nil)
     }
 
     public func get_next_source_id() -> Int64 {
@@ -425,8 +340,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_next_source_id_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_next_source_id_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -444,8 +364,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_source_276991387,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_source_276991387._native_ptr(),
+                    276991387)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -461,8 +386,13 @@ open class TileSet : Resource {
                 .init(source_id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_source_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_source_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -478,8 +408,13 @@ open class TileSet : Resource {
                 .init(source_id_native), .init(new_source_id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_source_id_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_source_id_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -496,8 +431,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_source_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_source_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -514,8 +454,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_source_id_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_source_id_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -533,8 +478,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_source_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_source_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -551,8 +501,13 @@ open class TileSet : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_source_1763540252,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_source_1763540252._native_ptr(),
+                    1763540252)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -568,8 +523,13 @@ open class TileSet : Resource {
                 .init(shape_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tile_shape_2131427112,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tile_shape_2131427112._native_ptr(),
+                    2131427112)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -584,8 +544,13 @@ open class TileSet : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tile_shape_716918169,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tile_shape_716918169._native_ptr(),
+                    716918169)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -600,8 +565,13 @@ open class TileSet : Resource {
                 .init(layout_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tile_layout_1071216679,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tile_layout_1071216679._native_ptr(),
+                    1071216679)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -616,8 +586,13 @@ open class TileSet : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tile_layout_194628839,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tile_layout_194628839._native_ptr(),
+                    194628839)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -632,8 +607,13 @@ open class TileSet : Resource {
                 .init(alignment_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tile_offset_axis_3300198521,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tile_offset_axis_3300198521._native_ptr(),
+                    3300198521)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -648,8 +628,13 @@ open class TileSet : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tile_offset_axis_762494114,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tile_offset_axis_762494114._native_ptr(),
+                    762494114)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -664,8 +649,13 @@ open class TileSet : Resource {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tile_size_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tile_size_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -679,8 +669,13 @@ open class TileSet : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tile_size_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tile_size_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -695,8 +690,13 @@ open class TileSet : Resource {
                 .init(uv_clipping_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_uv_clipping_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_uv_clipping_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -712,8 +712,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_uv_clipping_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_uv_clipping_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -729,8 +734,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_occlusion_layers_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_occlusion_layers_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -745,8 +755,13 @@ open class TileSet : Resource {
                 .init(to_position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_occlusion_layer_1025054187,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_occlusion_layer_1025054187._native_ptr(),
+                    1025054187)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -762,8 +777,13 @@ open class TileSet : Resource {
                 .init(layer_index_native), .init(to_position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_move_occlusion_layer_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_move_occlusion_layer_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -779,8 +799,13 @@ open class TileSet : Resource {
                 .init(layer_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_occlusion_layer_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_occlusion_layer_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -796,8 +821,13 @@ open class TileSet : Resource {
                 .init(layer_index_native), .init(light_mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_occlusion_layer_light_mask_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_occlusion_layer_light_mask_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -815,8 +845,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_occlusion_layer_light_mask_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_occlusion_layer_light_mask_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -833,8 +868,13 @@ open class TileSet : Resource {
                 .init(layer_index_native), .init(sdf_collision_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_occlusion_layer_sdf_collision_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_occlusion_layer_sdf_collision_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -852,8 +892,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_occlusion_layer_sdf_collision_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_occlusion_layer_sdf_collision_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -870,8 +915,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_physics_layers_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_physics_layers_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -886,8 +936,13 @@ open class TileSet : Resource {
                 .init(to_position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_physics_layer_1025054187,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_physics_layer_1025054187._native_ptr(),
+                    1025054187)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -903,8 +958,13 @@ open class TileSet : Resource {
                 .init(layer_index_native), .init(to_position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_move_physics_layer_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_move_physics_layer_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -920,8 +980,13 @@ open class TileSet : Resource {
                 .init(layer_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_physics_layer_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_physics_layer_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -937,8 +1002,13 @@ open class TileSet : Resource {
                 .init(layer_index_native), .init(layer_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_physics_layer_collision_layer_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_physics_layer_collision_layer_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -956,8 +1026,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_physics_layer_collision_layer_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_physics_layer_collision_layer_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -974,8 +1049,13 @@ open class TileSet : Resource {
                 .init(layer_index_native), .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_physics_layer_collision_mask_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_physics_layer_collision_mask_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -993,8 +1073,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_physics_layer_collision_mask_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_physics_layer_collision_mask_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1011,8 +1096,13 @@ open class TileSet : Resource {
                 .init(layer_index_native), .init(physics_material_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_physics_layer_physics_material_1018687357,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_physics_layer_physics_material_1018687357._native_ptr(),
+                    1018687357)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1028,8 +1118,13 @@ open class TileSet : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_physics_layer_physics_material_788318639,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_physics_layer_physics_material_788318639._native_ptr(),
+                    788318639)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1046,8 +1141,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_terrain_sets_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_terrain_sets_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1062,8 +1162,13 @@ open class TileSet : Resource {
                 .init(to_position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_terrain_set_1025054187,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_terrain_set_1025054187._native_ptr(),
+                    1025054187)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1079,8 +1184,13 @@ open class TileSet : Resource {
                 .init(terrain_set_native), .init(to_position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_move_terrain_set_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_move_terrain_set_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1096,8 +1206,13 @@ open class TileSet : Resource {
                 .init(terrain_set_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_terrain_set_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_terrain_set_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1113,8 +1228,13 @@ open class TileSet : Resource {
                 .init(terrain_set_native), .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_terrain_set_mode_3943003916,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_terrain_set_mode_3943003916._native_ptr(),
+                    3943003916)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1131,8 +1251,13 @@ open class TileSet : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_terrain_set_mode_2084469411,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_terrain_set_mode_2084469411._native_ptr(),
+                    2084469411)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1150,8 +1275,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_terrains_count_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_terrains_count_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1168,8 +1298,13 @@ open class TileSet : Resource {
                 .init(terrain_set_native), .init(to_position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_terrain_3023605688,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_terrain_3023605688._native_ptr(),
+                    3023605688)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1187,8 +1322,13 @@ open class TileSet : Resource {
                 .init(terrain_set_native), .init(terrain_index_native), .init(to_position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_move_terrain_1649997291,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_move_terrain_1649997291._native_ptr(),
+                    1649997291)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1206,8 +1346,13 @@ open class TileSet : Resource {
                 .init(terrain_set_native), .init(terrain_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_terrain_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_terrain_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1225,8 +1370,13 @@ open class TileSet : Resource {
                 .init(terrain_set_native), .init(terrain_index_native), .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_terrain_name_2285447957,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_terrain_name_2285447957._native_ptr(),
+                    2285447957)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1244,8 +1394,13 @@ open class TileSet : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_terrain_name_1391810591,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_terrain_name_1391810591._native_ptr(),
+                    1391810591)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1264,8 +1419,13 @@ open class TileSet : Resource {
                 .init(terrain_set_native), .init(terrain_index_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_terrain_color_3733378741,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_terrain_color_3733378741._native_ptr(),
+                    3733378741)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1283,8 +1443,13 @@ open class TileSet : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_terrain_color_2165839948,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_terrain_color_2165839948._native_ptr(),
+                    2165839948)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1302,8 +1467,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_navigation_layers_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_navigation_layers_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1318,8 +1488,13 @@ open class TileSet : Resource {
                 .init(to_position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_navigation_layer_1025054187,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_navigation_layer_1025054187._native_ptr(),
+                    1025054187)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1335,8 +1510,13 @@ open class TileSet : Resource {
                 .init(layer_index_native), .init(to_position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_move_navigation_layer_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_move_navigation_layer_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1352,8 +1532,13 @@ open class TileSet : Resource {
                 .init(layer_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_navigation_layer_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_navigation_layer_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1369,8 +1554,13 @@ open class TileSet : Resource {
                 .init(layer_index_native), .init(layers_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_navigation_layer_layers_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_navigation_layer_layers_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1388,8 +1578,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_navigation_layer_layers_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_navigation_layer_layers_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1407,8 +1602,13 @@ open class TileSet : Resource {
                 .init(layer_index_native), .init(layer_number_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_navigation_layer_layer_value_1383440665,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_navigation_layer_layer_value_1383440665._native_ptr(),
+                    1383440665)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1428,8 +1628,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_navigation_layer_layer_value_2522259332,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_navigation_layer_layer_value_2522259332._native_ptr(),
+                    2522259332)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1447,8 +1652,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_data_layers_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_data_layers_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1463,8 +1673,13 @@ open class TileSet : Resource {
                 .init(to_position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_custom_data_layer_1025054187,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_custom_data_layer_1025054187._native_ptr(),
+                    1025054187)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1480,8 +1695,13 @@ open class TileSet : Resource {
                 .init(layer_index_native), .init(to_position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_move_custom_data_layer_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_move_custom_data_layer_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1497,8 +1717,13 @@ open class TileSet : Resource {
                 .init(layer_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_custom_data_layer_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_custom_data_layer_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1515,8 +1740,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_data_layer_by_name_1321353865,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_data_layer_by_name_1321353865._native_ptr(),
+                    1321353865)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1532,8 +1762,13 @@ open class TileSet : Resource {
                 .init(layer_index_native), .init(layer_name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_custom_data_layer_name_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_custom_data_layer_name_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1549,8 +1784,13 @@ open class TileSet : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_data_layer_name_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_data_layer_name_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1567,8 +1807,13 @@ open class TileSet : Resource {
                 .init(layer_index_native), .init(layer_type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_custom_data_layer_type_3492912874,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_custom_data_layer_type_3492912874._native_ptr(),
+                    3492912874)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1585,8 +1830,13 @@ open class TileSet : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_data_layer_type_2990820875,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_data_layer_type_2990820875._native_ptr(),
+                    2990820875)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1603,8 +1853,13 @@ open class TileSet : Resource {
                 .init(source_from_native), .init(source_to_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_source_level_tile_proxy_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_source_level_tile_proxy_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1622,8 +1877,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_source_level_tile_proxy_3744713108,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_source_level_tile_proxy_3744713108._native_ptr(),
+                    3744713108)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1641,8 +1901,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_source_level_tile_proxy_3067735520,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_source_level_tile_proxy_3067735520._native_ptr(),
+                    3067735520)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1658,8 +1923,13 @@ open class TileSet : Resource {
                 .init(source_from_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_source_level_tile_proxy_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_source_level_tile_proxy_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1677,8 +1947,13 @@ open class TileSet : Resource {
                 .init(p_source_from_native), .init(coords_from_native), .init(source_to_native), .init(coords_to_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_coords_level_tile_proxy_1769939278,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_coords_level_tile_proxy_1769939278._native_ptr(),
+                    1769939278)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1696,8 +1971,13 @@ open class TileSet : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_coords_level_tile_proxy_2856536371,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_coords_level_tile_proxy_2856536371._native_ptr(),
+                    2856536371)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1716,8 +1996,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_coords_level_tile_proxy_3957903770,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_coords_level_tile_proxy_3957903770._native_ptr(),
+                    3957903770)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1734,8 +2019,13 @@ open class TileSet : Resource {
                 .init(source_from_native), .init(coords_from_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_coords_level_tile_proxy_2311374912,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_coords_level_tile_proxy_2311374912._native_ptr(),
+                    2311374912)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1755,8 +2045,13 @@ open class TileSet : Resource {
                 .init(source_from_native), .init(coords_from_native), .init(alternative_from_native), .init(source_to_native), .init(coords_to_native), .init(alternative_to_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alternative_level_tile_proxy_3862385460,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alternative_level_tile_proxy_3862385460._native_ptr(),
+                    3862385460)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1777,8 +2072,13 @@ open class TileSet : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alternative_level_tile_proxy_2303761075,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alternative_level_tile_proxy_2303761075._native_ptr(),
+                    2303761075)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1799,8 +2099,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_alternative_level_tile_proxy_180086755,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_alternative_level_tile_proxy_180086755._native_ptr(),
+                    180086755)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1819,8 +2124,13 @@ open class TileSet : Resource {
                 .init(source_from_native), .init(coords_from_native), .init(alternative_from_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_alternative_level_tile_proxy_2328951467,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_alternative_level_tile_proxy_2328951467._native_ptr(),
+                    2328951467)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1839,8 +2149,13 @@ open class TileSet : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_map_tile_proxy_4267935328,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_map_tile_proxy_4267935328._native_ptr(),
+                    4267935328)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1856,8 +2171,13 @@ open class TileSet : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_cleanup_invalid_tile_proxies_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_cleanup_invalid_tile_proxies_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1870,8 +2190,13 @@ open class TileSet : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_tile_proxies_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_tile_proxies_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1888,8 +2213,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_pattern_3009264082,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_pattern_3009264082._native_ptr(),
+                    3009264082)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1906,8 +2236,13 @@ open class TileSet : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pattern_4207737510,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pattern_4207737510._native_ptr(),
+                    4207737510)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1923,8 +2258,13 @@ open class TileSet : Resource {
                 .init(index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_pattern_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_pattern_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1940,8 +2280,13 @@ open class TileSet : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_patterns_count_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_patterns_count_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

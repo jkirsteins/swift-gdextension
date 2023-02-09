@@ -11,123 +11,97 @@ open class AnimatedSprite2D : Node2D {
 
     public override class var __godot_name: StringName { __godot_name_AnimatedSprite2D }
 
-    static var _method_set_sprite_frames_905781144: GDExtensionMethodBindPtr! = nil
-    static var _method_get_sprite_frames_3804851214: GDExtensionMethodBindPtr! = nil
-    static var _method_set_animation_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_get_animation_2002593661: GDExtensionMethodBindPtr! = nil
-    static var _method_set_autoplay_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_autoplay_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_is_playing_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_play_1459844657: GDExtensionMethodBindPtr! = nil
-    static var _method_play_backwards_1421762485: GDExtensionMethodBindPtr! = nil
-    static var _method_pause_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_stop_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_centered_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_centered_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_offset_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_offset_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flip_h_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_flipped_h_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flip_v_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_flipped_v_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_frame_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_frame_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_frame_progress_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_frame_progress_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_frame_and_progress_1602489585: GDExtensionMethodBindPtr! = nil
-    static var _method_set_speed_scale_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_speed_scale_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_playing_speed_1740695150: GDExtensionMethodBindPtr! = nil
+    static var _method_set_sprite_frames_905781144: StringName! = nil
+    static var _method_get_sprite_frames_3804851214: StringName! = nil
+    static var _method_set_animation_3304788590: StringName! = nil
+    static var _method_get_animation_2002593661: StringName! = nil
+    static var _method_set_autoplay_83702148: StringName! = nil
+    static var _method_get_autoplay_201670096: StringName! = nil
+    static var _method_is_playing_36873697: StringName! = nil
+    static var _method_play_1459844657: StringName! = nil
+    static var _method_play_backwards_1421762485: StringName! = nil
+    static var _method_pause_3218959716: StringName! = nil
+    static var _method_stop_3218959716: StringName! = nil
+    static var _method_set_centered_2586408642: StringName! = nil
+    static var _method_is_centered_36873697: StringName! = nil
+    static var _method_set_offset_743155724: StringName! = nil
+    static var _method_get_offset_3341600327: StringName! = nil
+    static var _method_set_flip_h_2586408642: StringName! = nil
+    static var _method_is_flipped_h_36873697: StringName! = nil
+    static var _method_set_flip_v_2586408642: StringName! = nil
+    static var _method_is_flipped_v_36873697: StringName! = nil
+    static var _method_set_frame_1286410249: StringName! = nil
+    static var _method_get_frame_3905245786: StringName! = nil
+    static var _method_set_frame_progress_373806689: StringName! = nil
+    static var _method_get_frame_progress_1740695150: StringName! = nil
+    static var _method_set_frame_and_progress_1602489585: StringName! = nil
+    static var _method_set_speed_scale_373806689: StringName! = nil
+    static var _method_get_speed_scale_1740695150: StringName! = nil
+    static var _method_get_playing_speed_1740695150: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AnimatedSprite2D == nil)
         __godot_name_AnimatedSprite2D = StringName(from: "AnimatedSprite2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_sprite_frames_905781144_name = StringName(from: "set_sprite_frames")
-        self._method_set_sprite_frames_905781144 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_set_sprite_frames_905781144_name._native_ptr(), 905781144)
-        assert(AnimatedSprite2D._method_set_sprite_frames_905781144 != nil)
-        let _method_get_sprite_frames_3804851214_name = StringName(from: "get_sprite_frames")
-        self._method_get_sprite_frames_3804851214 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_get_sprite_frames_3804851214_name._native_ptr(), 3804851214)
-        assert(AnimatedSprite2D._method_get_sprite_frames_3804851214 != nil)
-        let _method_set_animation_3304788590_name = StringName(from: "set_animation")
-        self._method_set_animation_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_set_animation_3304788590_name._native_ptr(), 3304788590)
-        assert(AnimatedSprite2D._method_set_animation_3304788590 != nil)
-        let _method_get_animation_2002593661_name = StringName(from: "get_animation")
-        self._method_get_animation_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_get_animation_2002593661_name._native_ptr(), 2002593661)
-        assert(AnimatedSprite2D._method_get_animation_2002593661 != nil)
-        let _method_set_autoplay_83702148_name = StringName(from: "set_autoplay")
-        self._method_set_autoplay_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_set_autoplay_83702148_name._native_ptr(), 83702148)
-        assert(AnimatedSprite2D._method_set_autoplay_83702148 != nil)
-        let _method_get_autoplay_201670096_name = StringName(from: "get_autoplay")
-        self._method_get_autoplay_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_get_autoplay_201670096_name._native_ptr(), 201670096)
-        assert(AnimatedSprite2D._method_get_autoplay_201670096 != nil)
-        let _method_is_playing_36873697_name = StringName(from: "is_playing")
-        self._method_is_playing_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_is_playing_36873697_name._native_ptr(), 36873697)
-        assert(AnimatedSprite2D._method_is_playing_36873697 != nil)
-        let _method_play_1459844657_name = StringName(from: "play")
-        self._method_play_1459844657 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_play_1459844657_name._native_ptr(), 1459844657)
-        assert(AnimatedSprite2D._method_play_1459844657 != nil)
-        let _method_play_backwards_1421762485_name = StringName(from: "play_backwards")
-        self._method_play_backwards_1421762485 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_play_backwards_1421762485_name._native_ptr(), 1421762485)
-        assert(AnimatedSprite2D._method_play_backwards_1421762485 != nil)
-        let _method_pause_3218959716_name = StringName(from: "pause")
-        self._method_pause_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_pause_3218959716_name._native_ptr(), 3218959716)
-        assert(AnimatedSprite2D._method_pause_3218959716 != nil)
-        let _method_stop_3218959716_name = StringName(from: "stop")
-        self._method_stop_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_stop_3218959716_name._native_ptr(), 3218959716)
-        assert(AnimatedSprite2D._method_stop_3218959716 != nil)
-        let _method_set_centered_2586408642_name = StringName(from: "set_centered")
-        self._method_set_centered_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_set_centered_2586408642_name._native_ptr(), 2586408642)
-        assert(AnimatedSprite2D._method_set_centered_2586408642 != nil)
-        let _method_is_centered_36873697_name = StringName(from: "is_centered")
-        self._method_is_centered_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_is_centered_36873697_name._native_ptr(), 36873697)
-        assert(AnimatedSprite2D._method_is_centered_36873697 != nil)
-        let _method_set_offset_743155724_name = StringName(from: "set_offset")
-        self._method_set_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_set_offset_743155724_name._native_ptr(), 743155724)
-        assert(AnimatedSprite2D._method_set_offset_743155724 != nil)
-        let _method_get_offset_3341600327_name = StringName(from: "get_offset")
-        self._method_get_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_get_offset_3341600327_name._native_ptr(), 3341600327)
-        assert(AnimatedSprite2D._method_get_offset_3341600327 != nil)
-        let _method_set_flip_h_2586408642_name = StringName(from: "set_flip_h")
-        self._method_set_flip_h_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_set_flip_h_2586408642_name._native_ptr(), 2586408642)
-        assert(AnimatedSprite2D._method_set_flip_h_2586408642 != nil)
-        let _method_is_flipped_h_36873697_name = StringName(from: "is_flipped_h")
-        self._method_is_flipped_h_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_is_flipped_h_36873697_name._native_ptr(), 36873697)
-        assert(AnimatedSprite2D._method_is_flipped_h_36873697 != nil)
-        let _method_set_flip_v_2586408642_name = StringName(from: "set_flip_v")
-        self._method_set_flip_v_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_set_flip_v_2586408642_name._native_ptr(), 2586408642)
-        assert(AnimatedSprite2D._method_set_flip_v_2586408642 != nil)
-        let _method_is_flipped_v_36873697_name = StringName(from: "is_flipped_v")
-        self._method_is_flipped_v_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_is_flipped_v_36873697_name._native_ptr(), 36873697)
-        assert(AnimatedSprite2D._method_is_flipped_v_36873697 != nil)
-        let _method_set_frame_1286410249_name = StringName(from: "set_frame")
-        self._method_set_frame_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_set_frame_1286410249_name._native_ptr(), 1286410249)
-        assert(AnimatedSprite2D._method_set_frame_1286410249 != nil)
-        let _method_get_frame_3905245786_name = StringName(from: "get_frame")
-        self._method_get_frame_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_get_frame_3905245786_name._native_ptr(), 3905245786)
-        assert(AnimatedSprite2D._method_get_frame_3905245786 != nil)
-        let _method_set_frame_progress_373806689_name = StringName(from: "set_frame_progress")
-        self._method_set_frame_progress_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_set_frame_progress_373806689_name._native_ptr(), 373806689)
-        assert(AnimatedSprite2D._method_set_frame_progress_373806689 != nil)
-        let _method_get_frame_progress_1740695150_name = StringName(from: "get_frame_progress")
-        self._method_get_frame_progress_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_get_frame_progress_1740695150_name._native_ptr(), 1740695150)
-        assert(AnimatedSprite2D._method_get_frame_progress_1740695150 != nil)
-        let _method_set_frame_and_progress_1602489585_name = StringName(from: "set_frame_and_progress")
-        self._method_set_frame_and_progress_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_set_frame_and_progress_1602489585_name._native_ptr(), 1602489585)
-        assert(AnimatedSprite2D._method_set_frame_and_progress_1602489585 != nil)
-        let _method_set_speed_scale_373806689_name = StringName(from: "set_speed_scale")
-        self._method_set_speed_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_set_speed_scale_373806689_name._native_ptr(), 373806689)
-        assert(AnimatedSprite2D._method_set_speed_scale_373806689 != nil)
-        let _method_get_speed_scale_1740695150_name = StringName(from: "get_speed_scale")
-        self._method_get_speed_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_get_speed_scale_1740695150_name._native_ptr(), 1740695150)
-        assert(AnimatedSprite2D._method_get_speed_scale_1740695150 != nil)
-        let _method_get_playing_speed_1740695150_name = StringName(from: "get_playing_speed")
-        self._method_get_playing_speed_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimatedSprite2D._native_ptr(), _method_get_playing_speed_1740695150_name._native_ptr(), 1740695150)
-        assert(AnimatedSprite2D._method_get_playing_speed_1740695150 != nil)
+        self._method_set_sprite_frames_905781144 = StringName(from: "set_sprite_frames")
+        assert(self._method_set_sprite_frames_905781144 != nil)
+        self._method_get_sprite_frames_3804851214 = StringName(from: "get_sprite_frames")
+        assert(self._method_get_sprite_frames_3804851214 != nil)
+        self._method_set_animation_3304788590 = StringName(from: "set_animation")
+        assert(self._method_set_animation_3304788590 != nil)
+        self._method_get_animation_2002593661 = StringName(from: "get_animation")
+        assert(self._method_get_animation_2002593661 != nil)
+        self._method_set_autoplay_83702148 = StringName(from: "set_autoplay")
+        assert(self._method_set_autoplay_83702148 != nil)
+        self._method_get_autoplay_201670096 = StringName(from: "get_autoplay")
+        assert(self._method_get_autoplay_201670096 != nil)
+        self._method_is_playing_36873697 = StringName(from: "is_playing")
+        assert(self._method_is_playing_36873697 != nil)
+        self._method_play_1459844657 = StringName(from: "play")
+        assert(self._method_play_1459844657 != nil)
+        self._method_play_backwards_1421762485 = StringName(from: "play_backwards")
+        assert(self._method_play_backwards_1421762485 != nil)
+        self._method_pause_3218959716 = StringName(from: "pause")
+        assert(self._method_pause_3218959716 != nil)
+        self._method_stop_3218959716 = StringName(from: "stop")
+        assert(self._method_stop_3218959716 != nil)
+        self._method_set_centered_2586408642 = StringName(from: "set_centered")
+        assert(self._method_set_centered_2586408642 != nil)
+        self._method_is_centered_36873697 = StringName(from: "is_centered")
+        assert(self._method_is_centered_36873697 != nil)
+        self._method_set_offset_743155724 = StringName(from: "set_offset")
+        assert(self._method_set_offset_743155724 != nil)
+        self._method_get_offset_3341600327 = StringName(from: "get_offset")
+        assert(self._method_get_offset_3341600327 != nil)
+        self._method_set_flip_h_2586408642 = StringName(from: "set_flip_h")
+        assert(self._method_set_flip_h_2586408642 != nil)
+        self._method_is_flipped_h_36873697 = StringName(from: "is_flipped_h")
+        assert(self._method_is_flipped_h_36873697 != nil)
+        self._method_set_flip_v_2586408642 = StringName(from: "set_flip_v")
+        assert(self._method_set_flip_v_2586408642 != nil)
+        self._method_is_flipped_v_36873697 = StringName(from: "is_flipped_v")
+        assert(self._method_is_flipped_v_36873697 != nil)
+        self._method_set_frame_1286410249 = StringName(from: "set_frame")
+        assert(self._method_set_frame_1286410249 != nil)
+        self._method_get_frame_3905245786 = StringName(from: "get_frame")
+        assert(self._method_get_frame_3905245786 != nil)
+        self._method_set_frame_progress_373806689 = StringName(from: "set_frame_progress")
+        assert(self._method_set_frame_progress_373806689 != nil)
+        self._method_get_frame_progress_1740695150 = StringName(from: "get_frame_progress")
+        assert(self._method_get_frame_progress_1740695150 != nil)
+        self._method_set_frame_and_progress_1602489585 = StringName(from: "set_frame_and_progress")
+        assert(self._method_set_frame_and_progress_1602489585 != nil)
+        self._method_set_speed_scale_373806689 = StringName(from: "set_speed_scale")
+        assert(self._method_set_speed_scale_373806689 != nil)
+        self._method_get_speed_scale_1740695150 = StringName(from: "get_speed_scale")
+        assert(self._method_get_speed_scale_1740695150 != nil)
+        self._method_get_playing_speed_1740695150 = StringName(from: "get_playing_speed")
+        assert(self._method_get_playing_speed_1740695150 != nil)
     }
 
     public func set_sprite_frames(sprite_frames: SpriteFrames)  {
@@ -138,8 +112,13 @@ open class AnimatedSprite2D : Node2D {
                 .init(sprite_frames_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_sprite_frames_905781144,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_sprite_frames_905781144._native_ptr(),
+                    905781144)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -153,8 +132,13 @@ open class AnimatedSprite2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_sprite_frames_3804851214,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_sprite_frames_3804851214._native_ptr(),
+                    3804851214)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -169,8 +153,13 @@ open class AnimatedSprite2D : Node2D {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_animation_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_animation_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -184,8 +173,13 @@ open class AnimatedSprite2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_animation_2002593661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_animation_2002593661._native_ptr(),
+                    2002593661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -200,8 +194,13 @@ open class AnimatedSprite2D : Node2D {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_autoplay_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_autoplay_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -215,8 +214,13 @@ open class AnimatedSprite2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_autoplay_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_autoplay_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -232,8 +236,13 @@ open class AnimatedSprite2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_playing_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_playing_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -250,8 +259,13 @@ open class AnimatedSprite2D : Node2D {
                 .init(name_native), .init(custom_speed_native), .init(from_end_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_play_1459844657,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_play_1459844657._native_ptr(),
+                    1459844657)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -267,8 +281,13 @@ open class AnimatedSprite2D : Node2D {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_play_backwards_1421762485,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_play_backwards_1421762485._native_ptr(),
+                    1421762485)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -281,8 +300,13 @@ open class AnimatedSprite2D : Node2D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_pause_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_pause_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -295,8 +319,13 @@ open class AnimatedSprite2D : Node2D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_stop_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_stop_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -310,8 +339,13 @@ open class AnimatedSprite2D : Node2D {
                 .init(centered_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_centered_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_centered_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -327,8 +361,13 @@ open class AnimatedSprite2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_centered_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_centered_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -343,8 +382,13 @@ open class AnimatedSprite2D : Node2D {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_offset_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_offset_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -358,8 +402,13 @@ open class AnimatedSprite2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_offset_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_offset_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -374,8 +423,13 @@ open class AnimatedSprite2D : Node2D {
                 .init(flip_h_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flip_h_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flip_h_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -391,8 +445,13 @@ open class AnimatedSprite2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_flipped_h_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_flipped_h_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -407,8 +466,13 @@ open class AnimatedSprite2D : Node2D {
                 .init(flip_v_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flip_v_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flip_v_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -424,8 +488,13 @@ open class AnimatedSprite2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_flipped_v_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_flipped_v_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -440,8 +509,13 @@ open class AnimatedSprite2D : Node2D {
                 .init(frame_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_frame_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_frame_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -457,8 +531,13 @@ open class AnimatedSprite2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_frame_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_frame_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -473,8 +552,13 @@ open class AnimatedSprite2D : Node2D {
                 .init(progress_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_frame_progress_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_frame_progress_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -490,8 +574,13 @@ open class AnimatedSprite2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_frame_progress_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_frame_progress_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -507,8 +596,13 @@ open class AnimatedSprite2D : Node2D {
                 .init(frame_native), .init(progress_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_frame_and_progress_1602489585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_frame_and_progress_1602489585._native_ptr(),
+                    1602489585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -524,8 +618,13 @@ open class AnimatedSprite2D : Node2D {
                 .init(speed_scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_speed_scale_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_speed_scale_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -541,8 +640,13 @@ open class AnimatedSprite2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_speed_scale_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_speed_scale_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -558,8 +662,13 @@ open class AnimatedSprite2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_playing_speed_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_playing_speed_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -11,83 +11,67 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
 
     public override class var __godot_name: StringName { __godot_name_WebSocketMultiplayerPeer }
 
-    static var _method_create_client_3097527179: GDExtensionMethodBindPtr! = nil
-    static var _method_create_server_337374795: GDExtensionMethodBindPtr! = nil
-    static var _method_get_peer_1381378851: GDExtensionMethodBindPtr! = nil
-    static var _method_get_peer_address_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_peer_port_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_get_supported_protocols_1139954409: GDExtensionMethodBindPtr! = nil
-    static var _method_set_supported_protocols_4015028928: GDExtensionMethodBindPtr! = nil
-    static var _method_get_handshake_headers_1139954409: GDExtensionMethodBindPtr! = nil
-    static var _method_set_handshake_headers_4015028928: GDExtensionMethodBindPtr! = nil
-    static var _method_get_inbound_buffer_size_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_inbound_buffer_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_outbound_buffer_size_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_outbound_buffer_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_handshake_timeout_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_handshake_timeout_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_set_max_queued_packets_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_max_queued_packets_3905245786: GDExtensionMethodBindPtr! = nil
+    static var _method_create_client_3097527179: StringName! = nil
+    static var _method_create_server_337374795: StringName! = nil
+    static var _method_get_peer_1381378851: StringName! = nil
+    static var _method_get_peer_address_844755477: StringName! = nil
+    static var _method_get_peer_port_923996154: StringName! = nil
+    static var _method_get_supported_protocols_1139954409: StringName! = nil
+    static var _method_set_supported_protocols_4015028928: StringName! = nil
+    static var _method_get_handshake_headers_1139954409: StringName! = nil
+    static var _method_set_handshake_headers_4015028928: StringName! = nil
+    static var _method_get_inbound_buffer_size_3905245786: StringName! = nil
+    static var _method_set_inbound_buffer_size_1286410249: StringName! = nil
+    static var _method_get_outbound_buffer_size_3905245786: StringName! = nil
+    static var _method_set_outbound_buffer_size_1286410249: StringName! = nil
+    static var _method_get_handshake_timeout_1740695150: StringName! = nil
+    static var _method_set_handshake_timeout_373806689: StringName! = nil
+    static var _method_set_max_queued_packets_1286410249: StringName! = nil
+    static var _method_get_max_queued_packets_3905245786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_WebSocketMultiplayerPeer == nil)
         __godot_name_WebSocketMultiplayerPeer = StringName(from: "WebSocketMultiplayerPeer")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_create_client_3097527179_name = StringName(from: "create_client")
-        self._method_create_client_3097527179 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_create_client_3097527179_name._native_ptr(), 3097527179)
-        assert(WebSocketMultiplayerPeer._method_create_client_3097527179 != nil)
-        let _method_create_server_337374795_name = StringName(from: "create_server")
-        self._method_create_server_337374795 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_create_server_337374795_name._native_ptr(), 337374795)
-        assert(WebSocketMultiplayerPeer._method_create_server_337374795 != nil)
-        let _method_get_peer_1381378851_name = StringName(from: "get_peer")
-        self._method_get_peer_1381378851 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_get_peer_1381378851_name._native_ptr(), 1381378851)
-        assert(WebSocketMultiplayerPeer._method_get_peer_1381378851 != nil)
-        let _method_get_peer_address_844755477_name = StringName(from: "get_peer_address")
-        self._method_get_peer_address_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_get_peer_address_844755477_name._native_ptr(), 844755477)
-        assert(WebSocketMultiplayerPeer._method_get_peer_address_844755477 != nil)
-        let _method_get_peer_port_923996154_name = StringName(from: "get_peer_port")
-        self._method_get_peer_port_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_get_peer_port_923996154_name._native_ptr(), 923996154)
-        assert(WebSocketMultiplayerPeer._method_get_peer_port_923996154 != nil)
-        let _method_get_supported_protocols_1139954409_name = StringName(from: "get_supported_protocols")
-        self._method_get_supported_protocols_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_get_supported_protocols_1139954409_name._native_ptr(), 1139954409)
-        assert(WebSocketMultiplayerPeer._method_get_supported_protocols_1139954409 != nil)
-        let _method_set_supported_protocols_4015028928_name = StringName(from: "set_supported_protocols")
-        self._method_set_supported_protocols_4015028928 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_set_supported_protocols_4015028928_name._native_ptr(), 4015028928)
-        assert(WebSocketMultiplayerPeer._method_set_supported_protocols_4015028928 != nil)
-        let _method_get_handshake_headers_1139954409_name = StringName(from: "get_handshake_headers")
-        self._method_get_handshake_headers_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_get_handshake_headers_1139954409_name._native_ptr(), 1139954409)
-        assert(WebSocketMultiplayerPeer._method_get_handshake_headers_1139954409 != nil)
-        let _method_set_handshake_headers_4015028928_name = StringName(from: "set_handshake_headers")
-        self._method_set_handshake_headers_4015028928 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_set_handshake_headers_4015028928_name._native_ptr(), 4015028928)
-        assert(WebSocketMultiplayerPeer._method_set_handshake_headers_4015028928 != nil)
-        let _method_get_inbound_buffer_size_3905245786_name = StringName(from: "get_inbound_buffer_size")
-        self._method_get_inbound_buffer_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_get_inbound_buffer_size_3905245786_name._native_ptr(), 3905245786)
-        assert(WebSocketMultiplayerPeer._method_get_inbound_buffer_size_3905245786 != nil)
-        let _method_set_inbound_buffer_size_1286410249_name = StringName(from: "set_inbound_buffer_size")
-        self._method_set_inbound_buffer_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_set_inbound_buffer_size_1286410249_name._native_ptr(), 1286410249)
-        assert(WebSocketMultiplayerPeer._method_set_inbound_buffer_size_1286410249 != nil)
-        let _method_get_outbound_buffer_size_3905245786_name = StringName(from: "get_outbound_buffer_size")
-        self._method_get_outbound_buffer_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_get_outbound_buffer_size_3905245786_name._native_ptr(), 3905245786)
-        assert(WebSocketMultiplayerPeer._method_get_outbound_buffer_size_3905245786 != nil)
-        let _method_set_outbound_buffer_size_1286410249_name = StringName(from: "set_outbound_buffer_size")
-        self._method_set_outbound_buffer_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_set_outbound_buffer_size_1286410249_name._native_ptr(), 1286410249)
-        assert(WebSocketMultiplayerPeer._method_set_outbound_buffer_size_1286410249 != nil)
-        let _method_get_handshake_timeout_1740695150_name = StringName(from: "get_handshake_timeout")
-        self._method_get_handshake_timeout_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_get_handshake_timeout_1740695150_name._native_ptr(), 1740695150)
-        assert(WebSocketMultiplayerPeer._method_get_handshake_timeout_1740695150 != nil)
-        let _method_set_handshake_timeout_373806689_name = StringName(from: "set_handshake_timeout")
-        self._method_set_handshake_timeout_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_set_handshake_timeout_373806689_name._native_ptr(), 373806689)
-        assert(WebSocketMultiplayerPeer._method_set_handshake_timeout_373806689 != nil)
-        let _method_set_max_queued_packets_1286410249_name = StringName(from: "set_max_queued_packets")
-        self._method_set_max_queued_packets_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_set_max_queued_packets_1286410249_name._native_ptr(), 1286410249)
-        assert(WebSocketMultiplayerPeer._method_set_max_queued_packets_1286410249 != nil)
-        let _method_get_max_queued_packets_3905245786_name = StringName(from: "get_max_queued_packets")
-        self._method_get_max_queued_packets_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebSocketMultiplayerPeer._native_ptr(), _method_get_max_queued_packets_3905245786_name._native_ptr(), 3905245786)
-        assert(WebSocketMultiplayerPeer._method_get_max_queued_packets_3905245786 != nil)
+        self._method_create_client_3097527179 = StringName(from: "create_client")
+        assert(self._method_create_client_3097527179 != nil)
+        self._method_create_server_337374795 = StringName(from: "create_server")
+        assert(self._method_create_server_337374795 != nil)
+        self._method_get_peer_1381378851 = StringName(from: "get_peer")
+        assert(self._method_get_peer_1381378851 != nil)
+        self._method_get_peer_address_844755477 = StringName(from: "get_peer_address")
+        assert(self._method_get_peer_address_844755477 != nil)
+        self._method_get_peer_port_923996154 = StringName(from: "get_peer_port")
+        assert(self._method_get_peer_port_923996154 != nil)
+        self._method_get_supported_protocols_1139954409 = StringName(from: "get_supported_protocols")
+        assert(self._method_get_supported_protocols_1139954409 != nil)
+        self._method_set_supported_protocols_4015028928 = StringName(from: "set_supported_protocols")
+        assert(self._method_set_supported_protocols_4015028928 != nil)
+        self._method_get_handshake_headers_1139954409 = StringName(from: "get_handshake_headers")
+        assert(self._method_get_handshake_headers_1139954409 != nil)
+        self._method_set_handshake_headers_4015028928 = StringName(from: "set_handshake_headers")
+        assert(self._method_set_handshake_headers_4015028928 != nil)
+        self._method_get_inbound_buffer_size_3905245786 = StringName(from: "get_inbound_buffer_size")
+        assert(self._method_get_inbound_buffer_size_3905245786 != nil)
+        self._method_set_inbound_buffer_size_1286410249 = StringName(from: "set_inbound_buffer_size")
+        assert(self._method_set_inbound_buffer_size_1286410249 != nil)
+        self._method_get_outbound_buffer_size_3905245786 = StringName(from: "get_outbound_buffer_size")
+        assert(self._method_get_outbound_buffer_size_3905245786 != nil)
+        self._method_set_outbound_buffer_size_1286410249 = StringName(from: "set_outbound_buffer_size")
+        assert(self._method_set_outbound_buffer_size_1286410249 != nil)
+        self._method_get_handshake_timeout_1740695150 = StringName(from: "get_handshake_timeout")
+        assert(self._method_get_handshake_timeout_1740695150 != nil)
+        self._method_set_handshake_timeout_373806689 = StringName(from: "set_handshake_timeout")
+        assert(self._method_set_handshake_timeout_373806689 != nil)
+        self._method_set_max_queued_packets_1286410249 = StringName(from: "set_max_queued_packets")
+        assert(self._method_set_max_queued_packets_1286410249 != nil)
+        self._method_get_max_queued_packets_3905245786 = StringName(from: "get_max_queued_packets")
+        assert(self._method_get_max_queued_packets_3905245786 != nil)
     }
 
     public func create_client(url: godot.String, tls_client_options: TLSOptions) -> Error {
@@ -100,8 +84,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_client_3097527179,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_client_3097527179._native_ptr(),
+                    3097527179)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -119,8 +108,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_server_337374795,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_server_337374795._native_ptr(),
+                    337374795)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -137,8 +131,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_peer_1381378851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_peer_1381378851._native_ptr(),
+                    1381378851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -155,8 +154,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_peer_address_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_peer_address_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -174,8 +178,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_peer_port_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_peer_port_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -191,8 +200,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_supported_protocols_1139954409,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_supported_protocols_1139954409._native_ptr(),
+                    1139954409)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -207,8 +221,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
                 .init(protocols_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_supported_protocols_4015028928,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_supported_protocols_4015028928._native_ptr(),
+                    4015028928)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -222,8 +241,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_handshake_headers_1139954409,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_handshake_headers_1139954409._native_ptr(),
+                    1139954409)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -238,8 +262,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
                 .init(protocols_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_handshake_headers_4015028928,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_handshake_headers_4015028928._native_ptr(),
+                    4015028928)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -254,8 +283,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_inbound_buffer_size_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_inbound_buffer_size_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -270,8 +304,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
                 .init(buffer_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_inbound_buffer_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_inbound_buffer_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -287,8 +326,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_outbound_buffer_size_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_outbound_buffer_size_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -303,8 +347,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
                 .init(buffer_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_outbound_buffer_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_outbound_buffer_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -320,8 +369,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_handshake_timeout_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_handshake_timeout_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -336,8 +390,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
                 .init(timeout_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_handshake_timeout_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_handshake_timeout_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -352,8 +411,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
                 .init(max_queued_packets_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_max_queued_packets_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_max_queued_packets_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -369,8 +433,13 @@ open class WebSocketMultiplayerPeer : MultiplayerPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_max_queued_packets_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_max_queued_packets_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

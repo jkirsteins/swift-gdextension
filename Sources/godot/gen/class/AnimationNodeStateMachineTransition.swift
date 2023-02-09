@@ -20,79 +20,64 @@ open class AnimationNodeStateMachineTransition : Resource {
 
     public override class var __godot_name: StringName { __godot_name_AnimationNodeStateMachineTransition }
 
-    static var _method_set_switch_mode_2074906633: GDExtensionMethodBindPtr! = nil
-    static var _method_get_switch_mode_2138562085: GDExtensionMethodBindPtr! = nil
-    static var _method_set_advance_mode_1210869868: GDExtensionMethodBindPtr! = nil
-    static var _method_get_advance_mode_61101689: GDExtensionMethodBindPtr! = nil
-    static var _method_set_advance_condition_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_get_advance_condition_2002593661: GDExtensionMethodBindPtr! = nil
-    static var _method_set_xfade_time_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_xfade_time_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_xfade_curve_270443179: GDExtensionMethodBindPtr! = nil
-    static var _method_get_xfade_curve_2460114913: GDExtensionMethodBindPtr! = nil
-    static var _method_set_reset_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_reset_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_priority_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_priority_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_advance_expression_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_advance_expression_201670096: GDExtensionMethodBindPtr! = nil
+    static var _method_set_switch_mode_2074906633: StringName! = nil
+    static var _method_get_switch_mode_2138562085: StringName! = nil
+    static var _method_set_advance_mode_1210869868: StringName! = nil
+    static var _method_get_advance_mode_61101689: StringName! = nil
+    static var _method_set_advance_condition_3304788590: StringName! = nil
+    static var _method_get_advance_condition_2002593661: StringName! = nil
+    static var _method_set_xfade_time_373806689: StringName! = nil
+    static var _method_get_xfade_time_1740695150: StringName! = nil
+    static var _method_set_xfade_curve_270443179: StringName! = nil
+    static var _method_get_xfade_curve_2460114913: StringName! = nil
+    static var _method_set_reset_2586408642: StringName! = nil
+    static var _method_is_reset_36873697: StringName! = nil
+    static var _method_set_priority_1286410249: StringName! = nil
+    static var _method_get_priority_3905245786: StringName! = nil
+    static var _method_set_advance_expression_83702148: StringName! = nil
+    static var _method_get_advance_expression_201670096: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AnimationNodeStateMachineTransition == nil)
         __godot_name_AnimationNodeStateMachineTransition = StringName(from: "AnimationNodeStateMachineTransition")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_switch_mode_2074906633_name = StringName(from: "set_switch_mode")
-        self._method_set_switch_mode_2074906633 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachineTransition._native_ptr(), _method_set_switch_mode_2074906633_name._native_ptr(), 2074906633)
-        assert(AnimationNodeStateMachineTransition._method_set_switch_mode_2074906633 != nil)
-        let _method_get_switch_mode_2138562085_name = StringName(from: "get_switch_mode")
-        self._method_get_switch_mode_2138562085 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachineTransition._native_ptr(), _method_get_switch_mode_2138562085_name._native_ptr(), 2138562085)
-        assert(AnimationNodeStateMachineTransition._method_get_switch_mode_2138562085 != nil)
-        let _method_set_advance_mode_1210869868_name = StringName(from: "set_advance_mode")
-        self._method_set_advance_mode_1210869868 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachineTransition._native_ptr(), _method_set_advance_mode_1210869868_name._native_ptr(), 1210869868)
-        assert(AnimationNodeStateMachineTransition._method_set_advance_mode_1210869868 != nil)
-        let _method_get_advance_mode_61101689_name = StringName(from: "get_advance_mode")
-        self._method_get_advance_mode_61101689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachineTransition._native_ptr(), _method_get_advance_mode_61101689_name._native_ptr(), 61101689)
-        assert(AnimationNodeStateMachineTransition._method_get_advance_mode_61101689 != nil)
-        let _method_set_advance_condition_3304788590_name = StringName(from: "set_advance_condition")
-        self._method_set_advance_condition_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachineTransition._native_ptr(), _method_set_advance_condition_3304788590_name._native_ptr(), 3304788590)
-        assert(AnimationNodeStateMachineTransition._method_set_advance_condition_3304788590 != nil)
-        let _method_get_advance_condition_2002593661_name = StringName(from: "get_advance_condition")
-        self._method_get_advance_condition_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachineTransition._native_ptr(), _method_get_advance_condition_2002593661_name._native_ptr(), 2002593661)
-        assert(AnimationNodeStateMachineTransition._method_get_advance_condition_2002593661 != nil)
-        let _method_set_xfade_time_373806689_name = StringName(from: "set_xfade_time")
-        self._method_set_xfade_time_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachineTransition._native_ptr(), _method_set_xfade_time_373806689_name._native_ptr(), 373806689)
-        assert(AnimationNodeStateMachineTransition._method_set_xfade_time_373806689 != nil)
-        let _method_get_xfade_time_1740695150_name = StringName(from: "get_xfade_time")
-        self._method_get_xfade_time_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachineTransition._native_ptr(), _method_get_xfade_time_1740695150_name._native_ptr(), 1740695150)
-        assert(AnimationNodeStateMachineTransition._method_get_xfade_time_1740695150 != nil)
-        let _method_set_xfade_curve_270443179_name = StringName(from: "set_xfade_curve")
-        self._method_set_xfade_curve_270443179 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachineTransition._native_ptr(), _method_set_xfade_curve_270443179_name._native_ptr(), 270443179)
-        assert(AnimationNodeStateMachineTransition._method_set_xfade_curve_270443179 != nil)
-        let _method_get_xfade_curve_2460114913_name = StringName(from: "get_xfade_curve")
-        self._method_get_xfade_curve_2460114913 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachineTransition._native_ptr(), _method_get_xfade_curve_2460114913_name._native_ptr(), 2460114913)
-        assert(AnimationNodeStateMachineTransition._method_get_xfade_curve_2460114913 != nil)
-        let _method_set_reset_2586408642_name = StringName(from: "set_reset")
-        self._method_set_reset_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachineTransition._native_ptr(), _method_set_reset_2586408642_name._native_ptr(), 2586408642)
-        assert(AnimationNodeStateMachineTransition._method_set_reset_2586408642 != nil)
-        let _method_is_reset_36873697_name = StringName(from: "is_reset")
-        self._method_is_reset_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachineTransition._native_ptr(), _method_is_reset_36873697_name._native_ptr(), 36873697)
-        assert(AnimationNodeStateMachineTransition._method_is_reset_36873697 != nil)
-        let _method_set_priority_1286410249_name = StringName(from: "set_priority")
-        self._method_set_priority_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachineTransition._native_ptr(), _method_set_priority_1286410249_name._native_ptr(), 1286410249)
-        assert(AnimationNodeStateMachineTransition._method_set_priority_1286410249 != nil)
-        let _method_get_priority_3905245786_name = StringName(from: "get_priority")
-        self._method_get_priority_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachineTransition._native_ptr(), _method_get_priority_3905245786_name._native_ptr(), 3905245786)
-        assert(AnimationNodeStateMachineTransition._method_get_priority_3905245786 != nil)
-        let _method_set_advance_expression_83702148_name = StringName(from: "set_advance_expression")
-        self._method_set_advance_expression_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachineTransition._native_ptr(), _method_set_advance_expression_83702148_name._native_ptr(), 83702148)
-        assert(AnimationNodeStateMachineTransition._method_set_advance_expression_83702148 != nil)
-        let _method_get_advance_expression_201670096_name = StringName(from: "get_advance_expression")
-        self._method_get_advance_expression_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeStateMachineTransition._native_ptr(), _method_get_advance_expression_201670096_name._native_ptr(), 201670096)
-        assert(AnimationNodeStateMachineTransition._method_get_advance_expression_201670096 != nil)
+        self._method_set_switch_mode_2074906633 = StringName(from: "set_switch_mode")
+        assert(self._method_set_switch_mode_2074906633 != nil)
+        self._method_get_switch_mode_2138562085 = StringName(from: "get_switch_mode")
+        assert(self._method_get_switch_mode_2138562085 != nil)
+        self._method_set_advance_mode_1210869868 = StringName(from: "set_advance_mode")
+        assert(self._method_set_advance_mode_1210869868 != nil)
+        self._method_get_advance_mode_61101689 = StringName(from: "get_advance_mode")
+        assert(self._method_get_advance_mode_61101689 != nil)
+        self._method_set_advance_condition_3304788590 = StringName(from: "set_advance_condition")
+        assert(self._method_set_advance_condition_3304788590 != nil)
+        self._method_get_advance_condition_2002593661 = StringName(from: "get_advance_condition")
+        assert(self._method_get_advance_condition_2002593661 != nil)
+        self._method_set_xfade_time_373806689 = StringName(from: "set_xfade_time")
+        assert(self._method_set_xfade_time_373806689 != nil)
+        self._method_get_xfade_time_1740695150 = StringName(from: "get_xfade_time")
+        assert(self._method_get_xfade_time_1740695150 != nil)
+        self._method_set_xfade_curve_270443179 = StringName(from: "set_xfade_curve")
+        assert(self._method_set_xfade_curve_270443179 != nil)
+        self._method_get_xfade_curve_2460114913 = StringName(from: "get_xfade_curve")
+        assert(self._method_get_xfade_curve_2460114913 != nil)
+        self._method_set_reset_2586408642 = StringName(from: "set_reset")
+        assert(self._method_set_reset_2586408642 != nil)
+        self._method_is_reset_36873697 = StringName(from: "is_reset")
+        assert(self._method_is_reset_36873697 != nil)
+        self._method_set_priority_1286410249 = StringName(from: "set_priority")
+        assert(self._method_set_priority_1286410249 != nil)
+        self._method_get_priority_3905245786 = StringName(from: "get_priority")
+        assert(self._method_get_priority_3905245786 != nil)
+        self._method_set_advance_expression_83702148 = StringName(from: "set_advance_expression")
+        assert(self._method_set_advance_expression_83702148 != nil)
+        self._method_get_advance_expression_201670096 = StringName(from: "get_advance_expression")
+        assert(self._method_get_advance_expression_201670096 != nil)
     }
 
     public func set_switch_mode(mode: AnimationNodeStateMachineTransition.SwitchMode)  {
@@ -103,8 +88,13 @@ open class AnimationNodeStateMachineTransition : Resource {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_switch_mode_2074906633,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_switch_mode_2074906633._native_ptr(),
+                    2074906633)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -119,8 +109,13 @@ open class AnimationNodeStateMachineTransition : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_switch_mode_2138562085,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_switch_mode_2138562085._native_ptr(),
+                    2138562085)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -135,8 +130,13 @@ open class AnimationNodeStateMachineTransition : Resource {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_advance_mode_1210869868,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_advance_mode_1210869868._native_ptr(),
+                    1210869868)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -151,8 +151,13 @@ open class AnimationNodeStateMachineTransition : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_advance_mode_61101689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_advance_mode_61101689._native_ptr(),
+                    61101689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -167,8 +172,13 @@ open class AnimationNodeStateMachineTransition : Resource {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_advance_condition_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_advance_condition_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -182,8 +192,13 @@ open class AnimationNodeStateMachineTransition : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_advance_condition_2002593661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_advance_condition_2002593661._native_ptr(),
+                    2002593661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -198,8 +213,13 @@ open class AnimationNodeStateMachineTransition : Resource {
                 .init(secs_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_xfade_time_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_xfade_time_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -215,8 +235,13 @@ open class AnimationNodeStateMachineTransition : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_xfade_time_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_xfade_time_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -231,8 +256,13 @@ open class AnimationNodeStateMachineTransition : Resource {
                 .init(curve_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_xfade_curve_270443179,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_xfade_curve_270443179._native_ptr(),
+                    270443179)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -246,8 +276,13 @@ open class AnimationNodeStateMachineTransition : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_xfade_curve_2460114913,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_xfade_curve_2460114913._native_ptr(),
+                    2460114913)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -262,8 +297,13 @@ open class AnimationNodeStateMachineTransition : Resource {
                 .init(reset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_reset_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_reset_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -279,8 +319,13 @@ open class AnimationNodeStateMachineTransition : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_reset_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_reset_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -295,8 +340,13 @@ open class AnimationNodeStateMachineTransition : Resource {
                 .init(priority_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_priority_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_priority_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -312,8 +362,13 @@ open class AnimationNodeStateMachineTransition : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_priority_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_priority_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -328,8 +383,13 @@ open class AnimationNodeStateMachineTransition : Resource {
                 .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_advance_expression_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_advance_expression_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -343,8 +403,13 @@ open class AnimationNodeStateMachineTransition : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_advance_expression_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_advance_expression_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -16,31 +16,28 @@ open class ProgressBar : Range {
 
     public override class var __godot_name: StringName { __godot_name_ProgressBar }
 
-    static var _method_set_fill_mode_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fill_mode_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_set_show_percentage_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_percentage_shown_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_fill_mode_1286410249: StringName! = nil
+    static var _method_get_fill_mode_2455072627: StringName! = nil
+    static var _method_set_show_percentage_2586408642: StringName! = nil
+    static var _method_is_percentage_shown_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ProgressBar == nil)
         __godot_name_ProgressBar = StringName(from: "ProgressBar")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_fill_mode_1286410249_name = StringName(from: "set_fill_mode")
-        self._method_set_fill_mode_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProgressBar._native_ptr(), _method_set_fill_mode_1286410249_name._native_ptr(), 1286410249)
-        assert(ProgressBar._method_set_fill_mode_1286410249 != nil)
-        let _method_get_fill_mode_2455072627_name = StringName(from: "get_fill_mode")
-        self._method_get_fill_mode_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProgressBar._native_ptr(), _method_get_fill_mode_2455072627_name._native_ptr(), 2455072627)
-        assert(ProgressBar._method_get_fill_mode_2455072627 != nil)
-        let _method_set_show_percentage_2586408642_name = StringName(from: "set_show_percentage")
-        self._method_set_show_percentage_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProgressBar._native_ptr(), _method_set_show_percentage_2586408642_name._native_ptr(), 2586408642)
-        assert(ProgressBar._method_set_show_percentage_2586408642 != nil)
-        let _method_is_percentage_shown_36873697_name = StringName(from: "is_percentage_shown")
-        self._method_is_percentage_shown_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ProgressBar._native_ptr(), _method_is_percentage_shown_36873697_name._native_ptr(), 36873697)
-        assert(ProgressBar._method_is_percentage_shown_36873697 != nil)
+        self._method_set_fill_mode_1286410249 = StringName(from: "set_fill_mode")
+        assert(self._method_set_fill_mode_1286410249 != nil)
+        self._method_get_fill_mode_2455072627 = StringName(from: "get_fill_mode")
+        assert(self._method_get_fill_mode_2455072627 != nil)
+        self._method_set_show_percentage_2586408642 = StringName(from: "set_show_percentage")
+        assert(self._method_set_show_percentage_2586408642 != nil)
+        self._method_is_percentage_shown_36873697 = StringName(from: "is_percentage_shown")
+        assert(self._method_is_percentage_shown_36873697 != nil)
     }
 
     public func set_fill_mode(mode: Int64)  {
@@ -51,8 +48,13 @@ open class ProgressBar : Range {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fill_mode_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fill_mode_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -68,8 +70,13 @@ open class ProgressBar : Range {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fill_mode_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fill_mode_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -84,8 +91,13 @@ open class ProgressBar : Range {
                 .init(visible_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_show_percentage_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_show_percentage_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -101,8 +113,13 @@ open class ProgressBar : Range {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_percentage_shown_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_percentage_shown_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

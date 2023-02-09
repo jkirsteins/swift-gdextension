@@ -107,12 +107,21 @@ ${body}
 """
     
     let invoke_binding_template__method = """
+let _mbinding = self.interface.pointee.classdb_get_method_bind(
+    Self.__godot_name._native_ptr(),
+    Self.${methodBindingName}._native_ptr(),
+    ${hash})
+assert(_mbinding != nil)
 self.interface.pointee.object_method_bind_ptrcall(
-    Self.${methodBindingName},
+    _mbinding,
     self._native_ptr(),
     args.baseAddress!,
     ${resultOut}
 )
+"""
+    
+    let invoke_binding_template__method__virtual = """
+fatalError("Not implemented: virtual default results")
 """
     
     let invoke_binding_template__init = """
@@ -128,12 +137,44 @@ Self.${methodBindingName}!(self._native_ptr(), .init(args.baseAddress!))
         let argSignature = rawArgs.map { "\($0.unsanitizedName.sanitizedName): \($0.type.sanitizedType)" }.joined(separator: ", ")
         let returnSignature = self.method.has_return ? "-> \(self.method.sanitized_return_type!.sanitizedType)" : ""
         
-        let bindingCall = TemplatedRenderable(
+        let bindingCall: any Renderable
+        if self.method.is_virtual {
+            guard !self.method.is_constructor else { fatalError() }
+            
+            bindingCall = TemplatedRenderable(
             variables: [
                 "methodBindingName": self.method.binding_name,
                 "resultOut": self.method.has_return ? "__resPtr" : "nil"],
-            template: self.method.is_constructor ? invoke_binding_template__init :  invoke_binding_template__method,
+            template: self.invoke_binding_template__method__virtual,
             indent: 4)
+        } else {
+            guard !self.method.is_virtual else { fatalError() }
+            
+            if self.method.is_constructor {
+                guard self.method.method_hash == nil else {
+                    fatalError("No hash expected for constructor")
+                }
+                
+                bindingCall = TemplatedRenderable(
+                    variables: [
+                        "methodBindingName": self.method.binding_name,
+                        "resultOut": self.method.has_return ? "__resPtr" : "nil"],
+                    template: invoke_binding_template__init,
+                    indent: 4)
+            } else {
+                guard let hash = self.method.method_hash else {
+                    fatalError("No hash for \(self.method.method_name)")
+                }
+                
+                bindingCall = TemplatedRenderable(
+                    variables: [
+                        "methodBindingName": self.method.binding_name,
+                        "hash": hash,
+                        "resultOut": self.method.has_return ? "__resPtr" : "nil"],
+                    template: invoke_binding_template__method,
+                    indent: 4)
+            }
+        }
         
         let resultWrapper = TemplatedRenderable(
             variables: [

@@ -19,163 +19,127 @@ open class TileSetAtlasSource : TileSetSource {
 
     public override class var __godot_name: StringName { __godot_name_TileSetAtlasSource }
 
-    static var _method_set_texture_4051416890: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_3635182373: GDExtensionMethodBindPtr! = nil
-    static var _method_set_margins_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_get_margins_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_set_separation_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_get_separation_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_region_size_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_region_size_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_texture_padding_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_use_texture_padding_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_create_tile_1583819816: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_tile_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_move_tile_in_atlas_1375626516: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tile_size_in_atlas_3050897911: GDExtensionMethodBindPtr! = nil
-    static var _method_has_room_for_tile_4182444377: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tiles_to_be_removed_on_change_1240378054: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tile_at_coords_3050897911: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tile_animation_columns_3200960707: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tile_animation_columns_2485466453: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tile_animation_separation_1941061099: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tile_animation_separation_3050897911: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tile_animation_speed_2262553149: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tile_animation_speed_719993801: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tile_animation_frames_count_3200960707: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tile_animation_frames_count_2485466453: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tile_animation_frame_duration_2843487787: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tile_animation_frame_duration_1802448425: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tile_animation_total_duration_719993801: GDExtensionMethodBindPtr! = nil
-    static var _method_create_alternative_tile_3531100812: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_alternative_tile_3200960707: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alternative_tile_id_1499785778: GDExtensionMethodBindPtr! = nil
-    static var _method_get_next_alternative_tile_id_2485466453: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tile_data_3534028207: GDExtensionMethodBindPtr! = nil
-    static var _method_get_atlas_grid_size_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tile_texture_region_1321423751: GDExtensionMethodBindPtr! = nil
-    static var _method_get_runtime_texture_3635182373: GDExtensionMethodBindPtr! = nil
-    static var _method_get_runtime_tile_texture_region_104874263: GDExtensionMethodBindPtr! = nil
+    static var _method_set_texture_4051416890: StringName! = nil
+    static var _method_get_texture_3635182373: StringName! = nil
+    static var _method_set_margins_1130785943: StringName! = nil
+    static var _method_get_margins_3690982128: StringName! = nil
+    static var _method_set_separation_1130785943: StringName! = nil
+    static var _method_get_separation_3690982128: StringName! = nil
+    static var _method_set_texture_region_size_1130785943: StringName! = nil
+    static var _method_get_texture_region_size_3690982128: StringName! = nil
+    static var _method_set_use_texture_padding_2586408642: StringName! = nil
+    static var _method_get_use_texture_padding_36873697: StringName! = nil
+    static var _method_create_tile_1583819816: StringName! = nil
+    static var _method_remove_tile_1130785943: StringName! = nil
+    static var _method_move_tile_in_atlas_1375626516: StringName! = nil
+    static var _method_get_tile_size_in_atlas_3050897911: StringName! = nil
+    static var _method_has_room_for_tile_4182444377: StringName! = nil
+    static var _method_get_tiles_to_be_removed_on_change_1240378054: StringName! = nil
+    static var _method_get_tile_at_coords_3050897911: StringName! = nil
+    static var _method_set_tile_animation_columns_3200960707: StringName! = nil
+    static var _method_get_tile_animation_columns_2485466453: StringName! = nil
+    static var _method_set_tile_animation_separation_1941061099: StringName! = nil
+    static var _method_get_tile_animation_separation_3050897911: StringName! = nil
+    static var _method_set_tile_animation_speed_2262553149: StringName! = nil
+    static var _method_get_tile_animation_speed_719993801: StringName! = nil
+    static var _method_set_tile_animation_frames_count_3200960707: StringName! = nil
+    static var _method_get_tile_animation_frames_count_2485466453: StringName! = nil
+    static var _method_set_tile_animation_frame_duration_2843487787: StringName! = nil
+    static var _method_get_tile_animation_frame_duration_1802448425: StringName! = nil
+    static var _method_get_tile_animation_total_duration_719993801: StringName! = nil
+    static var _method_create_alternative_tile_3531100812: StringName! = nil
+    static var _method_remove_alternative_tile_3200960707: StringName! = nil
+    static var _method_set_alternative_tile_id_1499785778: StringName! = nil
+    static var _method_get_next_alternative_tile_id_2485466453: StringName! = nil
+    static var _method_get_tile_data_3534028207: StringName! = nil
+    static var _method_get_atlas_grid_size_3690982128: StringName! = nil
+    static var _method_get_tile_texture_region_1321423751: StringName! = nil
+    static var _method_get_runtime_texture_3635182373: StringName! = nil
+    static var _method_get_runtime_tile_texture_region_104874263: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_TileSetAtlasSource == nil)
         __godot_name_TileSetAtlasSource = StringName(from: "TileSetAtlasSource")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_texture_4051416890_name = StringName(from: "set_texture")
-        self._method_set_texture_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_set_texture_4051416890_name._native_ptr(), 4051416890)
-        assert(TileSetAtlasSource._method_set_texture_4051416890 != nil)
-        let _method_get_texture_3635182373_name = StringName(from: "get_texture")
-        self._method_get_texture_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_texture_3635182373_name._native_ptr(), 3635182373)
-        assert(TileSetAtlasSource._method_get_texture_3635182373 != nil)
-        let _method_set_margins_1130785943_name = StringName(from: "set_margins")
-        self._method_set_margins_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_set_margins_1130785943_name._native_ptr(), 1130785943)
-        assert(TileSetAtlasSource._method_set_margins_1130785943 != nil)
-        let _method_get_margins_3690982128_name = StringName(from: "get_margins")
-        self._method_get_margins_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_margins_3690982128_name._native_ptr(), 3690982128)
-        assert(TileSetAtlasSource._method_get_margins_3690982128 != nil)
-        let _method_set_separation_1130785943_name = StringName(from: "set_separation")
-        self._method_set_separation_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_set_separation_1130785943_name._native_ptr(), 1130785943)
-        assert(TileSetAtlasSource._method_set_separation_1130785943 != nil)
-        let _method_get_separation_3690982128_name = StringName(from: "get_separation")
-        self._method_get_separation_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_separation_3690982128_name._native_ptr(), 3690982128)
-        assert(TileSetAtlasSource._method_get_separation_3690982128 != nil)
-        let _method_set_texture_region_size_1130785943_name = StringName(from: "set_texture_region_size")
-        self._method_set_texture_region_size_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_set_texture_region_size_1130785943_name._native_ptr(), 1130785943)
-        assert(TileSetAtlasSource._method_set_texture_region_size_1130785943 != nil)
-        let _method_get_texture_region_size_3690982128_name = StringName(from: "get_texture_region_size")
-        self._method_get_texture_region_size_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_texture_region_size_3690982128_name._native_ptr(), 3690982128)
-        assert(TileSetAtlasSource._method_get_texture_region_size_3690982128 != nil)
-        let _method_set_use_texture_padding_2586408642_name = StringName(from: "set_use_texture_padding")
-        self._method_set_use_texture_padding_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_set_use_texture_padding_2586408642_name._native_ptr(), 2586408642)
-        assert(TileSetAtlasSource._method_set_use_texture_padding_2586408642 != nil)
-        let _method_get_use_texture_padding_36873697_name = StringName(from: "get_use_texture_padding")
-        self._method_get_use_texture_padding_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_use_texture_padding_36873697_name._native_ptr(), 36873697)
-        assert(TileSetAtlasSource._method_get_use_texture_padding_36873697 != nil)
-        let _method_create_tile_1583819816_name = StringName(from: "create_tile")
-        self._method_create_tile_1583819816 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_create_tile_1583819816_name._native_ptr(), 1583819816)
-        assert(TileSetAtlasSource._method_create_tile_1583819816 != nil)
-        let _method_remove_tile_1130785943_name = StringName(from: "remove_tile")
-        self._method_remove_tile_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_remove_tile_1130785943_name._native_ptr(), 1130785943)
-        assert(TileSetAtlasSource._method_remove_tile_1130785943 != nil)
-        let _method_move_tile_in_atlas_1375626516_name = StringName(from: "move_tile_in_atlas")
-        self._method_move_tile_in_atlas_1375626516 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_move_tile_in_atlas_1375626516_name._native_ptr(), 1375626516)
-        assert(TileSetAtlasSource._method_move_tile_in_atlas_1375626516 != nil)
-        let _method_get_tile_size_in_atlas_3050897911_name = StringName(from: "get_tile_size_in_atlas")
-        self._method_get_tile_size_in_atlas_3050897911 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_tile_size_in_atlas_3050897911_name._native_ptr(), 3050897911)
-        assert(TileSetAtlasSource._method_get_tile_size_in_atlas_3050897911 != nil)
-        let _method_has_room_for_tile_4182444377_name = StringName(from: "has_room_for_tile")
-        self._method_has_room_for_tile_4182444377 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_has_room_for_tile_4182444377_name._native_ptr(), 4182444377)
-        assert(TileSetAtlasSource._method_has_room_for_tile_4182444377 != nil)
-        let _method_get_tiles_to_be_removed_on_change_1240378054_name = StringName(from: "get_tiles_to_be_removed_on_change")
-        self._method_get_tiles_to_be_removed_on_change_1240378054 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_tiles_to_be_removed_on_change_1240378054_name._native_ptr(), 1240378054)
-        assert(TileSetAtlasSource._method_get_tiles_to_be_removed_on_change_1240378054 != nil)
-        let _method_get_tile_at_coords_3050897911_name = StringName(from: "get_tile_at_coords")
-        self._method_get_tile_at_coords_3050897911 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_tile_at_coords_3050897911_name._native_ptr(), 3050897911)
-        assert(TileSetAtlasSource._method_get_tile_at_coords_3050897911 != nil)
-        let _method_set_tile_animation_columns_3200960707_name = StringName(from: "set_tile_animation_columns")
-        self._method_set_tile_animation_columns_3200960707 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_set_tile_animation_columns_3200960707_name._native_ptr(), 3200960707)
-        assert(TileSetAtlasSource._method_set_tile_animation_columns_3200960707 != nil)
-        let _method_get_tile_animation_columns_2485466453_name = StringName(from: "get_tile_animation_columns")
-        self._method_get_tile_animation_columns_2485466453 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_tile_animation_columns_2485466453_name._native_ptr(), 2485466453)
-        assert(TileSetAtlasSource._method_get_tile_animation_columns_2485466453 != nil)
-        let _method_set_tile_animation_separation_1941061099_name = StringName(from: "set_tile_animation_separation")
-        self._method_set_tile_animation_separation_1941061099 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_set_tile_animation_separation_1941061099_name._native_ptr(), 1941061099)
-        assert(TileSetAtlasSource._method_set_tile_animation_separation_1941061099 != nil)
-        let _method_get_tile_animation_separation_3050897911_name = StringName(from: "get_tile_animation_separation")
-        self._method_get_tile_animation_separation_3050897911 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_tile_animation_separation_3050897911_name._native_ptr(), 3050897911)
-        assert(TileSetAtlasSource._method_get_tile_animation_separation_3050897911 != nil)
-        let _method_set_tile_animation_speed_2262553149_name = StringName(from: "set_tile_animation_speed")
-        self._method_set_tile_animation_speed_2262553149 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_set_tile_animation_speed_2262553149_name._native_ptr(), 2262553149)
-        assert(TileSetAtlasSource._method_set_tile_animation_speed_2262553149 != nil)
-        let _method_get_tile_animation_speed_719993801_name = StringName(from: "get_tile_animation_speed")
-        self._method_get_tile_animation_speed_719993801 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_tile_animation_speed_719993801_name._native_ptr(), 719993801)
-        assert(TileSetAtlasSource._method_get_tile_animation_speed_719993801 != nil)
-        let _method_set_tile_animation_frames_count_3200960707_name = StringName(from: "set_tile_animation_frames_count")
-        self._method_set_tile_animation_frames_count_3200960707 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_set_tile_animation_frames_count_3200960707_name._native_ptr(), 3200960707)
-        assert(TileSetAtlasSource._method_set_tile_animation_frames_count_3200960707 != nil)
-        let _method_get_tile_animation_frames_count_2485466453_name = StringName(from: "get_tile_animation_frames_count")
-        self._method_get_tile_animation_frames_count_2485466453 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_tile_animation_frames_count_2485466453_name._native_ptr(), 2485466453)
-        assert(TileSetAtlasSource._method_get_tile_animation_frames_count_2485466453 != nil)
-        let _method_set_tile_animation_frame_duration_2843487787_name = StringName(from: "set_tile_animation_frame_duration")
-        self._method_set_tile_animation_frame_duration_2843487787 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_set_tile_animation_frame_duration_2843487787_name._native_ptr(), 2843487787)
-        assert(TileSetAtlasSource._method_set_tile_animation_frame_duration_2843487787 != nil)
-        let _method_get_tile_animation_frame_duration_1802448425_name = StringName(from: "get_tile_animation_frame_duration")
-        self._method_get_tile_animation_frame_duration_1802448425 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_tile_animation_frame_duration_1802448425_name._native_ptr(), 1802448425)
-        assert(TileSetAtlasSource._method_get_tile_animation_frame_duration_1802448425 != nil)
-        let _method_get_tile_animation_total_duration_719993801_name = StringName(from: "get_tile_animation_total_duration")
-        self._method_get_tile_animation_total_duration_719993801 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_tile_animation_total_duration_719993801_name._native_ptr(), 719993801)
-        assert(TileSetAtlasSource._method_get_tile_animation_total_duration_719993801 != nil)
-        let _method_create_alternative_tile_3531100812_name = StringName(from: "create_alternative_tile")
-        self._method_create_alternative_tile_3531100812 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_create_alternative_tile_3531100812_name._native_ptr(), 3531100812)
-        assert(TileSetAtlasSource._method_create_alternative_tile_3531100812 != nil)
-        let _method_remove_alternative_tile_3200960707_name = StringName(from: "remove_alternative_tile")
-        self._method_remove_alternative_tile_3200960707 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_remove_alternative_tile_3200960707_name._native_ptr(), 3200960707)
-        assert(TileSetAtlasSource._method_remove_alternative_tile_3200960707 != nil)
-        let _method_set_alternative_tile_id_1499785778_name = StringName(from: "set_alternative_tile_id")
-        self._method_set_alternative_tile_id_1499785778 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_set_alternative_tile_id_1499785778_name._native_ptr(), 1499785778)
-        assert(TileSetAtlasSource._method_set_alternative_tile_id_1499785778 != nil)
-        let _method_get_next_alternative_tile_id_2485466453_name = StringName(from: "get_next_alternative_tile_id")
-        self._method_get_next_alternative_tile_id_2485466453 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_next_alternative_tile_id_2485466453_name._native_ptr(), 2485466453)
-        assert(TileSetAtlasSource._method_get_next_alternative_tile_id_2485466453 != nil)
-        let _method_get_tile_data_3534028207_name = StringName(from: "get_tile_data")
-        self._method_get_tile_data_3534028207 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_tile_data_3534028207_name._native_ptr(), 3534028207)
-        assert(TileSetAtlasSource._method_get_tile_data_3534028207 != nil)
-        let _method_get_atlas_grid_size_3690982128_name = StringName(from: "get_atlas_grid_size")
-        self._method_get_atlas_grid_size_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_atlas_grid_size_3690982128_name._native_ptr(), 3690982128)
-        assert(TileSetAtlasSource._method_get_atlas_grid_size_3690982128 != nil)
-        let _method_get_tile_texture_region_1321423751_name = StringName(from: "get_tile_texture_region")
-        self._method_get_tile_texture_region_1321423751 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_tile_texture_region_1321423751_name._native_ptr(), 1321423751)
-        assert(TileSetAtlasSource._method_get_tile_texture_region_1321423751 != nil)
-        let _method_get_runtime_texture_3635182373_name = StringName(from: "get_runtime_texture")
-        self._method_get_runtime_texture_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_runtime_texture_3635182373_name._native_ptr(), 3635182373)
-        assert(TileSetAtlasSource._method_get_runtime_texture_3635182373 != nil)
-        let _method_get_runtime_tile_texture_region_104874263_name = StringName(from: "get_runtime_tile_texture_region")
-        self._method_get_runtime_tile_texture_region_104874263 = self.interface.pointee.classdb_get_method_bind(__godot_name_TileSetAtlasSource._native_ptr(), _method_get_runtime_tile_texture_region_104874263_name._native_ptr(), 104874263)
-        assert(TileSetAtlasSource._method_get_runtime_tile_texture_region_104874263 != nil)
+        self._method_set_texture_4051416890 = StringName(from: "set_texture")
+        assert(self._method_set_texture_4051416890 != nil)
+        self._method_get_texture_3635182373 = StringName(from: "get_texture")
+        assert(self._method_get_texture_3635182373 != nil)
+        self._method_set_margins_1130785943 = StringName(from: "set_margins")
+        assert(self._method_set_margins_1130785943 != nil)
+        self._method_get_margins_3690982128 = StringName(from: "get_margins")
+        assert(self._method_get_margins_3690982128 != nil)
+        self._method_set_separation_1130785943 = StringName(from: "set_separation")
+        assert(self._method_set_separation_1130785943 != nil)
+        self._method_get_separation_3690982128 = StringName(from: "get_separation")
+        assert(self._method_get_separation_3690982128 != nil)
+        self._method_set_texture_region_size_1130785943 = StringName(from: "set_texture_region_size")
+        assert(self._method_set_texture_region_size_1130785943 != nil)
+        self._method_get_texture_region_size_3690982128 = StringName(from: "get_texture_region_size")
+        assert(self._method_get_texture_region_size_3690982128 != nil)
+        self._method_set_use_texture_padding_2586408642 = StringName(from: "set_use_texture_padding")
+        assert(self._method_set_use_texture_padding_2586408642 != nil)
+        self._method_get_use_texture_padding_36873697 = StringName(from: "get_use_texture_padding")
+        assert(self._method_get_use_texture_padding_36873697 != nil)
+        self._method_create_tile_1583819816 = StringName(from: "create_tile")
+        assert(self._method_create_tile_1583819816 != nil)
+        self._method_remove_tile_1130785943 = StringName(from: "remove_tile")
+        assert(self._method_remove_tile_1130785943 != nil)
+        self._method_move_tile_in_atlas_1375626516 = StringName(from: "move_tile_in_atlas")
+        assert(self._method_move_tile_in_atlas_1375626516 != nil)
+        self._method_get_tile_size_in_atlas_3050897911 = StringName(from: "get_tile_size_in_atlas")
+        assert(self._method_get_tile_size_in_atlas_3050897911 != nil)
+        self._method_has_room_for_tile_4182444377 = StringName(from: "has_room_for_tile")
+        assert(self._method_has_room_for_tile_4182444377 != nil)
+        self._method_get_tiles_to_be_removed_on_change_1240378054 = StringName(from: "get_tiles_to_be_removed_on_change")
+        assert(self._method_get_tiles_to_be_removed_on_change_1240378054 != nil)
+        self._method_get_tile_at_coords_3050897911 = StringName(from: "get_tile_at_coords")
+        assert(self._method_get_tile_at_coords_3050897911 != nil)
+        self._method_set_tile_animation_columns_3200960707 = StringName(from: "set_tile_animation_columns")
+        assert(self._method_set_tile_animation_columns_3200960707 != nil)
+        self._method_get_tile_animation_columns_2485466453 = StringName(from: "get_tile_animation_columns")
+        assert(self._method_get_tile_animation_columns_2485466453 != nil)
+        self._method_set_tile_animation_separation_1941061099 = StringName(from: "set_tile_animation_separation")
+        assert(self._method_set_tile_animation_separation_1941061099 != nil)
+        self._method_get_tile_animation_separation_3050897911 = StringName(from: "get_tile_animation_separation")
+        assert(self._method_get_tile_animation_separation_3050897911 != nil)
+        self._method_set_tile_animation_speed_2262553149 = StringName(from: "set_tile_animation_speed")
+        assert(self._method_set_tile_animation_speed_2262553149 != nil)
+        self._method_get_tile_animation_speed_719993801 = StringName(from: "get_tile_animation_speed")
+        assert(self._method_get_tile_animation_speed_719993801 != nil)
+        self._method_set_tile_animation_frames_count_3200960707 = StringName(from: "set_tile_animation_frames_count")
+        assert(self._method_set_tile_animation_frames_count_3200960707 != nil)
+        self._method_get_tile_animation_frames_count_2485466453 = StringName(from: "get_tile_animation_frames_count")
+        assert(self._method_get_tile_animation_frames_count_2485466453 != nil)
+        self._method_set_tile_animation_frame_duration_2843487787 = StringName(from: "set_tile_animation_frame_duration")
+        assert(self._method_set_tile_animation_frame_duration_2843487787 != nil)
+        self._method_get_tile_animation_frame_duration_1802448425 = StringName(from: "get_tile_animation_frame_duration")
+        assert(self._method_get_tile_animation_frame_duration_1802448425 != nil)
+        self._method_get_tile_animation_total_duration_719993801 = StringName(from: "get_tile_animation_total_duration")
+        assert(self._method_get_tile_animation_total_duration_719993801 != nil)
+        self._method_create_alternative_tile_3531100812 = StringName(from: "create_alternative_tile")
+        assert(self._method_create_alternative_tile_3531100812 != nil)
+        self._method_remove_alternative_tile_3200960707 = StringName(from: "remove_alternative_tile")
+        assert(self._method_remove_alternative_tile_3200960707 != nil)
+        self._method_set_alternative_tile_id_1499785778 = StringName(from: "set_alternative_tile_id")
+        assert(self._method_set_alternative_tile_id_1499785778 != nil)
+        self._method_get_next_alternative_tile_id_2485466453 = StringName(from: "get_next_alternative_tile_id")
+        assert(self._method_get_next_alternative_tile_id_2485466453 != nil)
+        self._method_get_tile_data_3534028207 = StringName(from: "get_tile_data")
+        assert(self._method_get_tile_data_3534028207 != nil)
+        self._method_get_atlas_grid_size_3690982128 = StringName(from: "get_atlas_grid_size")
+        assert(self._method_get_atlas_grid_size_3690982128 != nil)
+        self._method_get_tile_texture_region_1321423751 = StringName(from: "get_tile_texture_region")
+        assert(self._method_get_tile_texture_region_1321423751 != nil)
+        self._method_get_runtime_texture_3635182373 = StringName(from: "get_runtime_texture")
+        assert(self._method_get_runtime_texture_3635182373 != nil)
+        self._method_get_runtime_tile_texture_region_104874263 = StringName(from: "get_runtime_tile_texture_region")
+        assert(self._method_get_runtime_tile_texture_region_104874263 != nil)
     }
 
     public func set_texture(texture: Texture2D)  {
@@ -186,8 +150,13 @@ open class TileSetAtlasSource : TileSetSource {
                 .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_4051416890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_4051416890._native_ptr(),
+                    4051416890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -201,8 +170,13 @@ open class TileSetAtlasSource : TileSetSource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_3635182373,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_3635182373._native_ptr(),
+                    3635182373)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -217,8 +191,13 @@ open class TileSetAtlasSource : TileSetSource {
                 .init(margins_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_margins_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_margins_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -232,8 +211,13 @@ open class TileSetAtlasSource : TileSetSource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_margins_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_margins_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -248,8 +232,13 @@ open class TileSetAtlasSource : TileSetSource {
                 .init(separation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_separation_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_separation_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -263,8 +252,13 @@ open class TileSetAtlasSource : TileSetSource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_separation_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_separation_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -279,8 +273,13 @@ open class TileSetAtlasSource : TileSetSource {
                 .init(texture_region_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_region_size_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_region_size_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -294,8 +293,13 @@ open class TileSetAtlasSource : TileSetSource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_region_size_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_region_size_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -310,8 +314,13 @@ open class TileSetAtlasSource : TileSetSource {
                 .init(use_texture_padding_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_texture_padding_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_texture_padding_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -327,8 +336,13 @@ open class TileSetAtlasSource : TileSetSource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_use_texture_padding_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_use_texture_padding_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -344,8 +358,13 @@ open class TileSetAtlasSource : TileSetSource {
                 .init(atlas_coords_native), .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_tile_1583819816,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_tile_1583819816._native_ptr(),
+                    1583819816)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -359,8 +378,13 @@ open class TileSetAtlasSource : TileSetSource {
                 .init(atlas_coords_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_tile_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_tile_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -376,8 +400,13 @@ open class TileSetAtlasSource : TileSetSource {
                 .init(atlas_coords_native), .init(new_atlas_coords_native), .init(new_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_move_tile_in_atlas_1375626516,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_move_tile_in_atlas_1375626516._native_ptr(),
+                    1375626516)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -392,8 +421,13 @@ open class TileSetAtlasSource : TileSetSource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tile_size_in_atlas_3050897911,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tile_size_in_atlas_3050897911._native_ptr(),
+                    3050897911)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -415,8 +449,13 @@ open class TileSetAtlasSource : TileSetSource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_room_for_tile_4182444377,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_room_for_tile_4182444377._native_ptr(),
+                    4182444377)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -437,8 +476,13 @@ open class TileSetAtlasSource : TileSetSource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tiles_to_be_removed_on_change_1240378054,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tiles_to_be_removed_on_change_1240378054._native_ptr(),
+                    1240378054)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -454,8 +498,13 @@ open class TileSetAtlasSource : TileSetSource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tile_at_coords_3050897911,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tile_at_coords_3050897911._native_ptr(),
+                    3050897911)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -471,8 +520,13 @@ open class TileSetAtlasSource : TileSetSource {
                 .init(atlas_coords_native), .init(frame_columns_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tile_animation_columns_3200960707,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tile_animation_columns_3200960707._native_ptr(),
+                    3200960707)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -489,8 +543,13 @@ open class TileSetAtlasSource : TileSetSource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tile_animation_columns_2485466453,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tile_animation_columns_2485466453._native_ptr(),
+                    2485466453)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -506,8 +565,13 @@ open class TileSetAtlasSource : TileSetSource {
                 .init(atlas_coords_native), .init(separation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tile_animation_separation_1941061099,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tile_animation_separation_1941061099._native_ptr(),
+                    1941061099)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -522,8 +586,13 @@ open class TileSetAtlasSource : TileSetSource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tile_animation_separation_3050897911,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tile_animation_separation_3050897911._native_ptr(),
+                    3050897911)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -539,8 +608,13 @@ open class TileSetAtlasSource : TileSetSource {
                 .init(atlas_coords_native), .init(speed_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tile_animation_speed_2262553149,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tile_animation_speed_2262553149._native_ptr(),
+                    2262553149)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -557,8 +631,13 @@ open class TileSetAtlasSource : TileSetSource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tile_animation_speed_719993801,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tile_animation_speed_719993801._native_ptr(),
+                    719993801)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -574,8 +653,13 @@ open class TileSetAtlasSource : TileSetSource {
                 .init(atlas_coords_native), .init(frames_count_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tile_animation_frames_count_3200960707,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tile_animation_frames_count_3200960707._native_ptr(),
+                    3200960707)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -592,8 +676,13 @@ open class TileSetAtlasSource : TileSetSource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tile_animation_frames_count_2485466453,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tile_animation_frames_count_2485466453._native_ptr(),
+                    2485466453)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -610,8 +699,13 @@ open class TileSetAtlasSource : TileSetSource {
                 .init(atlas_coords_native), .init(frame_index_native), .init(duration_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tile_animation_frame_duration_2843487787,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tile_animation_frame_duration_2843487787._native_ptr(),
+                    2843487787)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -630,8 +724,13 @@ open class TileSetAtlasSource : TileSetSource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tile_animation_frame_duration_1802448425,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tile_animation_frame_duration_1802448425._native_ptr(),
+                    1802448425)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -649,8 +748,13 @@ open class TileSetAtlasSource : TileSetSource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tile_animation_total_duration_719993801,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tile_animation_total_duration_719993801._native_ptr(),
+                    719993801)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -668,8 +772,13 @@ open class TileSetAtlasSource : TileSetSource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_alternative_tile_3531100812,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_alternative_tile_3531100812._native_ptr(),
+                    3531100812)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -686,8 +795,13 @@ open class TileSetAtlasSource : TileSetSource {
                 .init(atlas_coords_native), .init(alternative_tile_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_alternative_tile_3200960707,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_alternative_tile_3200960707._native_ptr(),
+                    3200960707)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -704,8 +818,13 @@ open class TileSetAtlasSource : TileSetSource {
                 .init(atlas_coords_native), .init(alternative_tile_native), .init(new_id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alternative_tile_id_1499785778,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alternative_tile_id_1499785778._native_ptr(),
+                    1499785778)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -723,8 +842,13 @@ open class TileSetAtlasSource : TileSetSource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_next_alternative_tile_id_2485466453,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_next_alternative_tile_id_2485466453._native_ptr(),
+                    2485466453)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -741,8 +865,13 @@ open class TileSetAtlasSource : TileSetSource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tile_data_3534028207,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tile_data_3534028207._native_ptr(),
+                    3534028207)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -758,8 +887,13 @@ open class TileSetAtlasSource : TileSetSource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_atlas_grid_size_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_atlas_grid_size_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -776,8 +910,13 @@ open class TileSetAtlasSource : TileSetSource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tile_texture_region_1321423751,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tile_texture_region_1321423751._native_ptr(),
+                    1321423751)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -793,8 +932,13 @@ open class TileSetAtlasSource : TileSetSource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_runtime_texture_3635182373,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_runtime_texture_3635182373._native_ptr(),
+                    3635182373)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -811,8 +955,13 @@ open class TileSetAtlasSource : TileSetSource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_runtime_tile_texture_region_104874263,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_runtime_tile_texture_region_104874263._native_ptr(),
+                    104874263)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

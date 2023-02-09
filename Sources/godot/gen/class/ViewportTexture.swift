@@ -15,23 +15,22 @@ open class ViewportTexture : Texture2D {
 
     public override class var __godot_name: StringName { __godot_name_ViewportTexture }
 
-    static var _method_set_viewport_path_in_scene_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_viewport_path_in_scene_4075236667: GDExtensionMethodBindPtr! = nil
+    static var _method_set_viewport_path_in_scene_1348162250: StringName! = nil
+    static var _method_get_viewport_path_in_scene_4075236667: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ViewportTexture == nil)
         __godot_name_ViewportTexture = StringName(from: "ViewportTexture")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_viewport_path_in_scene_1348162250_name = StringName(from: "set_viewport_path_in_scene")
-        self._method_set_viewport_path_in_scene_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_ViewportTexture._native_ptr(), _method_set_viewport_path_in_scene_1348162250_name._native_ptr(), 1348162250)
-        assert(ViewportTexture._method_set_viewport_path_in_scene_1348162250 != nil)
-        let _method_get_viewport_path_in_scene_4075236667_name = StringName(from: "get_viewport_path_in_scene")
-        self._method_get_viewport_path_in_scene_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_ViewportTexture._native_ptr(), _method_get_viewport_path_in_scene_4075236667_name._native_ptr(), 4075236667)
-        assert(ViewportTexture._method_get_viewport_path_in_scene_4075236667 != nil)
+        self._method_set_viewport_path_in_scene_1348162250 = StringName(from: "set_viewport_path_in_scene")
+        assert(self._method_set_viewport_path_in_scene_1348162250 != nil)
+        self._method_get_viewport_path_in_scene_4075236667 = StringName(from: "get_viewport_path_in_scene")
+        assert(self._method_get_viewport_path_in_scene_4075236667 != nil)
     }
 
     public func set_viewport_path_in_scene(path: NodePath)  {
@@ -42,8 +41,13 @@ open class ViewportTexture : Texture2D {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_viewport_path_in_scene_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_viewport_path_in_scene_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -57,8 +61,13 @@ open class ViewportTexture : Texture2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_viewport_path_in_scene_4075236667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_viewport_path_in_scene_4075236667._native_ptr(),
+                    4075236667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

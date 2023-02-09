@@ -11,47 +11,40 @@ open class Joint3D : Node3D {
 
     public override class var __godot_name: StringName { __godot_name_Joint3D }
 
-    static var _method_set_node_a_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_node_a_4075236667: GDExtensionMethodBindPtr! = nil
-    static var _method_set_node_b_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_node_b_4075236667: GDExtensionMethodBindPtr! = nil
-    static var _method_set_solver_priority_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_solver_priority_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_exclude_nodes_from_collision_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_exclude_nodes_from_collision_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_node_a_1348162250: StringName! = nil
+    static var _method_get_node_a_4075236667: StringName! = nil
+    static var _method_set_node_b_1348162250: StringName! = nil
+    static var _method_get_node_b_4075236667: StringName! = nil
+    static var _method_set_solver_priority_1286410249: StringName! = nil
+    static var _method_get_solver_priority_3905245786: StringName! = nil
+    static var _method_set_exclude_nodes_from_collision_2586408642: StringName! = nil
+    static var _method_get_exclude_nodes_from_collision_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Joint3D == nil)
         __godot_name_Joint3D = StringName(from: "Joint3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_node_a_1348162250_name = StringName(from: "set_node_a")
-        self._method_set_node_a_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_Joint3D._native_ptr(), _method_set_node_a_1348162250_name._native_ptr(), 1348162250)
-        assert(Joint3D._method_set_node_a_1348162250 != nil)
-        let _method_get_node_a_4075236667_name = StringName(from: "get_node_a")
-        self._method_get_node_a_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_Joint3D._native_ptr(), _method_get_node_a_4075236667_name._native_ptr(), 4075236667)
-        assert(Joint3D._method_get_node_a_4075236667 != nil)
-        let _method_set_node_b_1348162250_name = StringName(from: "set_node_b")
-        self._method_set_node_b_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_Joint3D._native_ptr(), _method_set_node_b_1348162250_name._native_ptr(), 1348162250)
-        assert(Joint3D._method_set_node_b_1348162250 != nil)
-        let _method_get_node_b_4075236667_name = StringName(from: "get_node_b")
-        self._method_get_node_b_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_Joint3D._native_ptr(), _method_get_node_b_4075236667_name._native_ptr(), 4075236667)
-        assert(Joint3D._method_get_node_b_4075236667 != nil)
-        let _method_set_solver_priority_1286410249_name = StringName(from: "set_solver_priority")
-        self._method_set_solver_priority_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Joint3D._native_ptr(), _method_set_solver_priority_1286410249_name._native_ptr(), 1286410249)
-        assert(Joint3D._method_set_solver_priority_1286410249 != nil)
-        let _method_get_solver_priority_3905245786_name = StringName(from: "get_solver_priority")
-        self._method_get_solver_priority_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Joint3D._native_ptr(), _method_get_solver_priority_3905245786_name._native_ptr(), 3905245786)
-        assert(Joint3D._method_get_solver_priority_3905245786 != nil)
-        let _method_set_exclude_nodes_from_collision_2586408642_name = StringName(from: "set_exclude_nodes_from_collision")
-        self._method_set_exclude_nodes_from_collision_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Joint3D._native_ptr(), _method_set_exclude_nodes_from_collision_2586408642_name._native_ptr(), 2586408642)
-        assert(Joint3D._method_set_exclude_nodes_from_collision_2586408642 != nil)
-        let _method_get_exclude_nodes_from_collision_36873697_name = StringName(from: "get_exclude_nodes_from_collision")
-        self._method_get_exclude_nodes_from_collision_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Joint3D._native_ptr(), _method_get_exclude_nodes_from_collision_36873697_name._native_ptr(), 36873697)
-        assert(Joint3D._method_get_exclude_nodes_from_collision_36873697 != nil)
+        self._method_set_node_a_1348162250 = StringName(from: "set_node_a")
+        assert(self._method_set_node_a_1348162250 != nil)
+        self._method_get_node_a_4075236667 = StringName(from: "get_node_a")
+        assert(self._method_get_node_a_4075236667 != nil)
+        self._method_set_node_b_1348162250 = StringName(from: "set_node_b")
+        assert(self._method_set_node_b_1348162250 != nil)
+        self._method_get_node_b_4075236667 = StringName(from: "get_node_b")
+        assert(self._method_get_node_b_4075236667 != nil)
+        self._method_set_solver_priority_1286410249 = StringName(from: "set_solver_priority")
+        assert(self._method_set_solver_priority_1286410249 != nil)
+        self._method_get_solver_priority_3905245786 = StringName(from: "get_solver_priority")
+        assert(self._method_get_solver_priority_3905245786 != nil)
+        self._method_set_exclude_nodes_from_collision_2586408642 = StringName(from: "set_exclude_nodes_from_collision")
+        assert(self._method_set_exclude_nodes_from_collision_2586408642 != nil)
+        self._method_get_exclude_nodes_from_collision_36873697 = StringName(from: "get_exclude_nodes_from_collision")
+        assert(self._method_get_exclude_nodes_from_collision_36873697 != nil)
     }
 
     public func set_node_a(node: NodePath)  {
@@ -62,8 +55,13 @@ open class Joint3D : Node3D {
                 .init(node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_node_a_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_node_a_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -77,8 +75,13 @@ open class Joint3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_node_a_4075236667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_node_a_4075236667._native_ptr(),
+                    4075236667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -93,8 +96,13 @@ open class Joint3D : Node3D {
                 .init(node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_node_b_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_node_b_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -108,8 +116,13 @@ open class Joint3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_node_b_4075236667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_node_b_4075236667._native_ptr(),
+                    4075236667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -124,8 +137,13 @@ open class Joint3D : Node3D {
                 .init(priority_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_solver_priority_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_solver_priority_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -141,8 +159,13 @@ open class Joint3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_solver_priority_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_solver_priority_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -157,8 +180,13 @@ open class Joint3D : Node3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_exclude_nodes_from_collision_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_exclude_nodes_from_collision_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -174,8 +202,13 @@ open class Joint3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_exclude_nodes_from_collision_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_exclude_nodes_from_collision_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

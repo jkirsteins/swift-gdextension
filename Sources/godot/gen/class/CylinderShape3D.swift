@@ -15,31 +15,28 @@ open class CylinderShape3D : Shape3D {
 
     public override class var __godot_name: StringName { __godot_name_CylinderShape3D }
 
-    static var _method_set_radius_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_radius_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_height_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_height_1740695150: GDExtensionMethodBindPtr! = nil
+    static var _method_set_radius_373806689: StringName! = nil
+    static var _method_get_radius_1740695150: StringName! = nil
+    static var _method_set_height_373806689: StringName! = nil
+    static var _method_get_height_1740695150: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CylinderShape3D == nil)
         __godot_name_CylinderShape3D = StringName(from: "CylinderShape3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_radius_373806689_name = StringName(from: "set_radius")
-        self._method_set_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderShape3D._native_ptr(), _method_set_radius_373806689_name._native_ptr(), 373806689)
-        assert(CylinderShape3D._method_set_radius_373806689 != nil)
-        let _method_get_radius_1740695150_name = StringName(from: "get_radius")
-        self._method_get_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderShape3D._native_ptr(), _method_get_radius_1740695150_name._native_ptr(), 1740695150)
-        assert(CylinderShape3D._method_get_radius_1740695150 != nil)
-        let _method_set_height_373806689_name = StringName(from: "set_height")
-        self._method_set_height_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderShape3D._native_ptr(), _method_set_height_373806689_name._native_ptr(), 373806689)
-        assert(CylinderShape3D._method_set_height_373806689 != nil)
-        let _method_get_height_1740695150_name = StringName(from: "get_height")
-        self._method_get_height_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderShape3D._native_ptr(), _method_get_height_1740695150_name._native_ptr(), 1740695150)
-        assert(CylinderShape3D._method_get_height_1740695150 != nil)
+        self._method_set_radius_373806689 = StringName(from: "set_radius")
+        assert(self._method_set_radius_373806689 != nil)
+        self._method_get_radius_1740695150 = StringName(from: "get_radius")
+        assert(self._method_get_radius_1740695150 != nil)
+        self._method_set_height_373806689 = StringName(from: "set_height")
+        assert(self._method_set_height_373806689 != nil)
+        self._method_get_height_1740695150 = StringName(from: "get_height")
+        assert(self._method_get_height_1740695150 != nil)
     }
 
     public func set_radius(radius: Float64)  {
@@ -50,8 +47,13 @@ open class CylinderShape3D : Shape3D {
                 .init(radius_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_radius_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_radius_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -67,8 +69,13 @@ open class CylinderShape3D : Shape3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_radius_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_radius_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -83,8 +90,13 @@ open class CylinderShape3D : Shape3D {
                 .init(height_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_height_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_height_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -100,8 +112,13 @@ open class CylinderShape3D : Shape3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_height_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_height_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -11,103 +11,82 @@ open class NoiseTexture2D : Texture2D {
 
     public override class var __godot_name: StringName { __godot_name_NoiseTexture2D }
 
-    static var _method_set_width_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_height_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_invert_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_invert_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_in_3d_space_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_in_3d_space_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_generate_mipmaps_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_generating_mipmaps_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_seamless_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_seamless_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_set_seamless_blend_skirt_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_seamless_blend_skirt_191475506: GDExtensionMethodBindPtr! = nil
-    static var _method_set_as_normal_map_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_normal_map_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bump_strength_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bump_strength_191475506: GDExtensionMethodBindPtr! = nil
-    static var _method_set_normalize_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_normalized_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_color_ramp_2756054477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_color_ramp_132272999: GDExtensionMethodBindPtr! = nil
-    static var _method_set_noise_4135492439: GDExtensionMethodBindPtr! = nil
-    static var _method_get_noise_185851837: GDExtensionMethodBindPtr! = nil
+    static var _method_set_width_1286410249: StringName! = nil
+    static var _method_set_height_1286410249: StringName! = nil
+    static var _method_set_invert_2586408642: StringName! = nil
+    static var _method_get_invert_36873697: StringName! = nil
+    static var _method_set_in_3d_space_2586408642: StringName! = nil
+    static var _method_is_in_3d_space_36873697: StringName! = nil
+    static var _method_set_generate_mipmaps_2586408642: StringName! = nil
+    static var _method_is_generating_mipmaps_36873697: StringName! = nil
+    static var _method_set_seamless_2586408642: StringName! = nil
+    static var _method_get_seamless_2240911060: StringName! = nil
+    static var _method_set_seamless_blend_skirt_373806689: StringName! = nil
+    static var _method_get_seamless_blend_skirt_191475506: StringName! = nil
+    static var _method_set_as_normal_map_2586408642: StringName! = nil
+    static var _method_is_normal_map_2240911060: StringName! = nil
+    static var _method_set_bump_strength_373806689: StringName! = nil
+    static var _method_get_bump_strength_191475506: StringName! = nil
+    static var _method_set_normalize_2586408642: StringName! = nil
+    static var _method_is_normalized_36873697: StringName! = nil
+    static var _method_set_color_ramp_2756054477: StringName! = nil
+    static var _method_get_color_ramp_132272999: StringName! = nil
+    static var _method_set_noise_4135492439: StringName! = nil
+    static var _method_get_noise_185851837: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_NoiseTexture2D == nil)
         __godot_name_NoiseTexture2D = StringName(from: "NoiseTexture2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_width_1286410249_name = StringName(from: "set_width")
-        self._method_set_width_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_set_width_1286410249_name._native_ptr(), 1286410249)
-        assert(NoiseTexture2D._method_set_width_1286410249 != nil)
-        let _method_set_height_1286410249_name = StringName(from: "set_height")
-        self._method_set_height_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_set_height_1286410249_name._native_ptr(), 1286410249)
-        assert(NoiseTexture2D._method_set_height_1286410249 != nil)
-        let _method_set_invert_2586408642_name = StringName(from: "set_invert")
-        self._method_set_invert_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_set_invert_2586408642_name._native_ptr(), 2586408642)
-        assert(NoiseTexture2D._method_set_invert_2586408642 != nil)
-        let _method_get_invert_36873697_name = StringName(from: "get_invert")
-        self._method_get_invert_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_get_invert_36873697_name._native_ptr(), 36873697)
-        assert(NoiseTexture2D._method_get_invert_36873697 != nil)
-        let _method_set_in_3d_space_2586408642_name = StringName(from: "set_in_3d_space")
-        self._method_set_in_3d_space_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_set_in_3d_space_2586408642_name._native_ptr(), 2586408642)
-        assert(NoiseTexture2D._method_set_in_3d_space_2586408642 != nil)
-        let _method_is_in_3d_space_36873697_name = StringName(from: "is_in_3d_space")
-        self._method_is_in_3d_space_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_is_in_3d_space_36873697_name._native_ptr(), 36873697)
-        assert(NoiseTexture2D._method_is_in_3d_space_36873697 != nil)
-        let _method_set_generate_mipmaps_2586408642_name = StringName(from: "set_generate_mipmaps")
-        self._method_set_generate_mipmaps_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_set_generate_mipmaps_2586408642_name._native_ptr(), 2586408642)
-        assert(NoiseTexture2D._method_set_generate_mipmaps_2586408642 != nil)
-        let _method_is_generating_mipmaps_36873697_name = StringName(from: "is_generating_mipmaps")
-        self._method_is_generating_mipmaps_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_is_generating_mipmaps_36873697_name._native_ptr(), 36873697)
-        assert(NoiseTexture2D._method_is_generating_mipmaps_36873697 != nil)
-        let _method_set_seamless_2586408642_name = StringName(from: "set_seamless")
-        self._method_set_seamless_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_set_seamless_2586408642_name._native_ptr(), 2586408642)
-        assert(NoiseTexture2D._method_set_seamless_2586408642 != nil)
-        let _method_get_seamless_2240911060_name = StringName(from: "get_seamless")
-        self._method_get_seamless_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_get_seamless_2240911060_name._native_ptr(), 2240911060)
-        assert(NoiseTexture2D._method_get_seamless_2240911060 != nil)
-        let _method_set_seamless_blend_skirt_373806689_name = StringName(from: "set_seamless_blend_skirt")
-        self._method_set_seamless_blend_skirt_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_set_seamless_blend_skirt_373806689_name._native_ptr(), 373806689)
-        assert(NoiseTexture2D._method_set_seamless_blend_skirt_373806689 != nil)
-        let _method_get_seamless_blend_skirt_191475506_name = StringName(from: "get_seamless_blend_skirt")
-        self._method_get_seamless_blend_skirt_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_get_seamless_blend_skirt_191475506_name._native_ptr(), 191475506)
-        assert(NoiseTexture2D._method_get_seamless_blend_skirt_191475506 != nil)
-        let _method_set_as_normal_map_2586408642_name = StringName(from: "set_as_normal_map")
-        self._method_set_as_normal_map_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_set_as_normal_map_2586408642_name._native_ptr(), 2586408642)
-        assert(NoiseTexture2D._method_set_as_normal_map_2586408642 != nil)
-        let _method_is_normal_map_2240911060_name = StringName(from: "is_normal_map")
-        self._method_is_normal_map_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_is_normal_map_2240911060_name._native_ptr(), 2240911060)
-        assert(NoiseTexture2D._method_is_normal_map_2240911060 != nil)
-        let _method_set_bump_strength_373806689_name = StringName(from: "set_bump_strength")
-        self._method_set_bump_strength_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_set_bump_strength_373806689_name._native_ptr(), 373806689)
-        assert(NoiseTexture2D._method_set_bump_strength_373806689 != nil)
-        let _method_get_bump_strength_191475506_name = StringName(from: "get_bump_strength")
-        self._method_get_bump_strength_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_get_bump_strength_191475506_name._native_ptr(), 191475506)
-        assert(NoiseTexture2D._method_get_bump_strength_191475506 != nil)
-        let _method_set_normalize_2586408642_name = StringName(from: "set_normalize")
-        self._method_set_normalize_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_set_normalize_2586408642_name._native_ptr(), 2586408642)
-        assert(NoiseTexture2D._method_set_normalize_2586408642 != nil)
-        let _method_is_normalized_36873697_name = StringName(from: "is_normalized")
-        self._method_is_normalized_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_is_normalized_36873697_name._native_ptr(), 36873697)
-        assert(NoiseTexture2D._method_is_normalized_36873697 != nil)
-        let _method_set_color_ramp_2756054477_name = StringName(from: "set_color_ramp")
-        self._method_set_color_ramp_2756054477 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_set_color_ramp_2756054477_name._native_ptr(), 2756054477)
-        assert(NoiseTexture2D._method_set_color_ramp_2756054477 != nil)
-        let _method_get_color_ramp_132272999_name = StringName(from: "get_color_ramp")
-        self._method_get_color_ramp_132272999 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_get_color_ramp_132272999_name._native_ptr(), 132272999)
-        assert(NoiseTexture2D._method_get_color_ramp_132272999 != nil)
-        let _method_set_noise_4135492439_name = StringName(from: "set_noise")
-        self._method_set_noise_4135492439 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_set_noise_4135492439_name._native_ptr(), 4135492439)
-        assert(NoiseTexture2D._method_set_noise_4135492439 != nil)
-        let _method_get_noise_185851837_name = StringName(from: "get_noise")
-        self._method_get_noise_185851837 = self.interface.pointee.classdb_get_method_bind(__godot_name_NoiseTexture2D._native_ptr(), _method_get_noise_185851837_name._native_ptr(), 185851837)
-        assert(NoiseTexture2D._method_get_noise_185851837 != nil)
+        self._method_set_width_1286410249 = StringName(from: "set_width")
+        assert(self._method_set_width_1286410249 != nil)
+        self._method_set_height_1286410249 = StringName(from: "set_height")
+        assert(self._method_set_height_1286410249 != nil)
+        self._method_set_invert_2586408642 = StringName(from: "set_invert")
+        assert(self._method_set_invert_2586408642 != nil)
+        self._method_get_invert_36873697 = StringName(from: "get_invert")
+        assert(self._method_get_invert_36873697 != nil)
+        self._method_set_in_3d_space_2586408642 = StringName(from: "set_in_3d_space")
+        assert(self._method_set_in_3d_space_2586408642 != nil)
+        self._method_is_in_3d_space_36873697 = StringName(from: "is_in_3d_space")
+        assert(self._method_is_in_3d_space_36873697 != nil)
+        self._method_set_generate_mipmaps_2586408642 = StringName(from: "set_generate_mipmaps")
+        assert(self._method_set_generate_mipmaps_2586408642 != nil)
+        self._method_is_generating_mipmaps_36873697 = StringName(from: "is_generating_mipmaps")
+        assert(self._method_is_generating_mipmaps_36873697 != nil)
+        self._method_set_seamless_2586408642 = StringName(from: "set_seamless")
+        assert(self._method_set_seamless_2586408642 != nil)
+        self._method_get_seamless_2240911060 = StringName(from: "get_seamless")
+        assert(self._method_get_seamless_2240911060 != nil)
+        self._method_set_seamless_blend_skirt_373806689 = StringName(from: "set_seamless_blend_skirt")
+        assert(self._method_set_seamless_blend_skirt_373806689 != nil)
+        self._method_get_seamless_blend_skirt_191475506 = StringName(from: "get_seamless_blend_skirt")
+        assert(self._method_get_seamless_blend_skirt_191475506 != nil)
+        self._method_set_as_normal_map_2586408642 = StringName(from: "set_as_normal_map")
+        assert(self._method_set_as_normal_map_2586408642 != nil)
+        self._method_is_normal_map_2240911060 = StringName(from: "is_normal_map")
+        assert(self._method_is_normal_map_2240911060 != nil)
+        self._method_set_bump_strength_373806689 = StringName(from: "set_bump_strength")
+        assert(self._method_set_bump_strength_373806689 != nil)
+        self._method_get_bump_strength_191475506 = StringName(from: "get_bump_strength")
+        assert(self._method_get_bump_strength_191475506 != nil)
+        self._method_set_normalize_2586408642 = StringName(from: "set_normalize")
+        assert(self._method_set_normalize_2586408642 != nil)
+        self._method_is_normalized_36873697 = StringName(from: "is_normalized")
+        assert(self._method_is_normalized_36873697 != nil)
+        self._method_set_color_ramp_2756054477 = StringName(from: "set_color_ramp")
+        assert(self._method_set_color_ramp_2756054477 != nil)
+        self._method_get_color_ramp_132272999 = StringName(from: "get_color_ramp")
+        assert(self._method_get_color_ramp_132272999 != nil)
+        self._method_set_noise_4135492439 = StringName(from: "set_noise")
+        assert(self._method_set_noise_4135492439 != nil)
+        self._method_get_noise_185851837 = StringName(from: "get_noise")
+        assert(self._method_get_noise_185851837 != nil)
     }
 
     public func set_width(width: Int64)  {
@@ -118,8 +97,13 @@ open class NoiseTexture2D : Texture2D {
                 .init(width_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_width_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_width_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -134,8 +118,13 @@ open class NoiseTexture2D : Texture2D {
                 .init(height_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_height_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_height_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -150,8 +139,13 @@ open class NoiseTexture2D : Texture2D {
                 .init(invert_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_invert_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_invert_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -167,8 +161,13 @@ open class NoiseTexture2D : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_invert_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_invert_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -183,8 +182,13 @@ open class NoiseTexture2D : Texture2D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_in_3d_space_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_in_3d_space_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -200,8 +204,13 @@ open class NoiseTexture2D : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_in_3d_space_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_in_3d_space_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -216,8 +225,13 @@ open class NoiseTexture2D : Texture2D {
                 .init(invert_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_generate_mipmaps_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_generate_mipmaps_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -233,8 +247,13 @@ open class NoiseTexture2D : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_generating_mipmaps_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_generating_mipmaps_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -249,8 +268,13 @@ open class NoiseTexture2D : Texture2D {
                 .init(seamless_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_seamless_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_seamless_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -266,8 +290,13 @@ open class NoiseTexture2D : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_seamless_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_seamless_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -282,8 +311,13 @@ open class NoiseTexture2D : Texture2D {
                 .init(seamless_blend_skirt_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_seamless_blend_skirt_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_seamless_blend_skirt_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -299,8 +333,13 @@ open class NoiseTexture2D : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_seamless_blend_skirt_191475506,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_seamless_blend_skirt_191475506._native_ptr(),
+                    191475506)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -315,8 +354,13 @@ open class NoiseTexture2D : Texture2D {
                 .init(as_normal_map_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_as_normal_map_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_as_normal_map_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -332,8 +376,13 @@ open class NoiseTexture2D : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_normal_map_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_normal_map_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -348,8 +397,13 @@ open class NoiseTexture2D : Texture2D {
                 .init(bump_strength_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bump_strength_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bump_strength_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -365,8 +419,13 @@ open class NoiseTexture2D : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bump_strength_191475506,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bump_strength_191475506._native_ptr(),
+                    191475506)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -381,8 +440,13 @@ open class NoiseTexture2D : Texture2D {
                 .init(normalize_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_normalize_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_normalize_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -398,8 +462,13 @@ open class NoiseTexture2D : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_normalized_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_normalized_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -414,8 +483,13 @@ open class NoiseTexture2D : Texture2D {
                 .init(gradient_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_color_ramp_2756054477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_color_ramp_2756054477._native_ptr(),
+                    2756054477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -429,8 +503,13 @@ open class NoiseTexture2D : Texture2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_color_ramp_132272999,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_color_ramp_132272999._native_ptr(),
+                    132272999)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -445,8 +524,13 @@ open class NoiseTexture2D : Texture2D {
                 .init(noise_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_noise_4135492439,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_noise_4135492439._native_ptr(),
+                    4135492439)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -460,8 +544,13 @@ open class NoiseTexture2D : Texture2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_noise_185851837,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_noise_185851837._native_ptr(),
+                    185851837)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

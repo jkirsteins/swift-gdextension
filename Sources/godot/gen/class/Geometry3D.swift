@@ -11,63 +11,52 @@ open class Geometry3D : Object {
 
     public override class var __godot_name: StringName { __godot_name_Geometry3D }
 
-    static var _method_build_box_planes_3622277145: GDExtensionMethodBindPtr! = nil
-    static var _method_build_cylinder_planes_3142160516: GDExtensionMethodBindPtr! = nil
-    static var _method_build_capsule_planes_410870045: GDExtensionMethodBindPtr! = nil
-    static var _method_get_closest_points_between_segments_1056373962: GDExtensionMethodBindPtr! = nil
-    static var _method_get_closest_point_to_segment_2168193209: GDExtensionMethodBindPtr! = nil
-    static var _method_get_closest_point_to_segment_uncapped_2168193209: GDExtensionMethodBindPtr! = nil
-    static var _method_ray_intersects_triangle_1718655448: GDExtensionMethodBindPtr! = nil
-    static var _method_segment_intersects_triangle_1718655448: GDExtensionMethodBindPtr! = nil
-    static var _method_segment_intersects_sphere_4080141172: GDExtensionMethodBindPtr! = nil
-    static var _method_segment_intersects_cylinder_2361316491: GDExtensionMethodBindPtr! = nil
-    static var _method_segment_intersects_convex_537425332: GDExtensionMethodBindPtr! = nil
-    static var _method_clip_polygon_2603188319: GDExtensionMethodBindPtr! = nil
+    static var _method_build_box_planes_3622277145: StringName! = nil
+    static var _method_build_cylinder_planes_3142160516: StringName! = nil
+    static var _method_build_capsule_planes_410870045: StringName! = nil
+    static var _method_get_closest_points_between_segments_1056373962: StringName! = nil
+    static var _method_get_closest_point_to_segment_2168193209: StringName! = nil
+    static var _method_get_closest_point_to_segment_uncapped_2168193209: StringName! = nil
+    static var _method_ray_intersects_triangle_1718655448: StringName! = nil
+    static var _method_segment_intersects_triangle_1718655448: StringName! = nil
+    static var _method_segment_intersects_sphere_4080141172: StringName! = nil
+    static var _method_segment_intersects_cylinder_2361316491: StringName! = nil
+    static var _method_segment_intersects_convex_537425332: StringName! = nil
+    static var _method_clip_polygon_2603188319: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Geometry3D == nil)
         __godot_name_Geometry3D = StringName(from: "Geometry3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_build_box_planes_3622277145_name = StringName(from: "build_box_planes")
-        self._method_build_box_planes_3622277145 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_build_box_planes_3622277145_name._native_ptr(), 3622277145)
-        assert(Geometry3D._method_build_box_planes_3622277145 != nil)
-        let _method_build_cylinder_planes_3142160516_name = StringName(from: "build_cylinder_planes")
-        self._method_build_cylinder_planes_3142160516 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_build_cylinder_planes_3142160516_name._native_ptr(), 3142160516)
-        assert(Geometry3D._method_build_cylinder_planes_3142160516 != nil)
-        let _method_build_capsule_planes_410870045_name = StringName(from: "build_capsule_planes")
-        self._method_build_capsule_planes_410870045 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_build_capsule_planes_410870045_name._native_ptr(), 410870045)
-        assert(Geometry3D._method_build_capsule_planes_410870045 != nil)
-        let _method_get_closest_points_between_segments_1056373962_name = StringName(from: "get_closest_points_between_segments")
-        self._method_get_closest_points_between_segments_1056373962 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_get_closest_points_between_segments_1056373962_name._native_ptr(), 1056373962)
-        assert(Geometry3D._method_get_closest_points_between_segments_1056373962 != nil)
-        let _method_get_closest_point_to_segment_2168193209_name = StringName(from: "get_closest_point_to_segment")
-        self._method_get_closest_point_to_segment_2168193209 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_get_closest_point_to_segment_2168193209_name._native_ptr(), 2168193209)
-        assert(Geometry3D._method_get_closest_point_to_segment_2168193209 != nil)
-        let _method_get_closest_point_to_segment_uncapped_2168193209_name = StringName(from: "get_closest_point_to_segment_uncapped")
-        self._method_get_closest_point_to_segment_uncapped_2168193209 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_get_closest_point_to_segment_uncapped_2168193209_name._native_ptr(), 2168193209)
-        assert(Geometry3D._method_get_closest_point_to_segment_uncapped_2168193209 != nil)
-        let _method_ray_intersects_triangle_1718655448_name = StringName(from: "ray_intersects_triangle")
-        self._method_ray_intersects_triangle_1718655448 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_ray_intersects_triangle_1718655448_name._native_ptr(), 1718655448)
-        assert(Geometry3D._method_ray_intersects_triangle_1718655448 != nil)
-        let _method_segment_intersects_triangle_1718655448_name = StringName(from: "segment_intersects_triangle")
-        self._method_segment_intersects_triangle_1718655448 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_segment_intersects_triangle_1718655448_name._native_ptr(), 1718655448)
-        assert(Geometry3D._method_segment_intersects_triangle_1718655448 != nil)
-        let _method_segment_intersects_sphere_4080141172_name = StringName(from: "segment_intersects_sphere")
-        self._method_segment_intersects_sphere_4080141172 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_segment_intersects_sphere_4080141172_name._native_ptr(), 4080141172)
-        assert(Geometry3D._method_segment_intersects_sphere_4080141172 != nil)
-        let _method_segment_intersects_cylinder_2361316491_name = StringName(from: "segment_intersects_cylinder")
-        self._method_segment_intersects_cylinder_2361316491 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_segment_intersects_cylinder_2361316491_name._native_ptr(), 2361316491)
-        assert(Geometry3D._method_segment_intersects_cylinder_2361316491 != nil)
-        let _method_segment_intersects_convex_537425332_name = StringName(from: "segment_intersects_convex")
-        self._method_segment_intersects_convex_537425332 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_segment_intersects_convex_537425332_name._native_ptr(), 537425332)
-        assert(Geometry3D._method_segment_intersects_convex_537425332 != nil)
-        let _method_clip_polygon_2603188319_name = StringName(from: "clip_polygon")
-        self._method_clip_polygon_2603188319 = self.interface.pointee.classdb_get_method_bind(__godot_name_Geometry3D._native_ptr(), _method_clip_polygon_2603188319_name._native_ptr(), 2603188319)
-        assert(Geometry3D._method_clip_polygon_2603188319 != nil)
+        self._method_build_box_planes_3622277145 = StringName(from: "build_box_planes")
+        assert(self._method_build_box_planes_3622277145 != nil)
+        self._method_build_cylinder_planes_3142160516 = StringName(from: "build_cylinder_planes")
+        assert(self._method_build_cylinder_planes_3142160516 != nil)
+        self._method_build_capsule_planes_410870045 = StringName(from: "build_capsule_planes")
+        assert(self._method_build_capsule_planes_410870045 != nil)
+        self._method_get_closest_points_between_segments_1056373962 = StringName(from: "get_closest_points_between_segments")
+        assert(self._method_get_closest_points_between_segments_1056373962 != nil)
+        self._method_get_closest_point_to_segment_2168193209 = StringName(from: "get_closest_point_to_segment")
+        assert(self._method_get_closest_point_to_segment_2168193209 != nil)
+        self._method_get_closest_point_to_segment_uncapped_2168193209 = StringName(from: "get_closest_point_to_segment_uncapped")
+        assert(self._method_get_closest_point_to_segment_uncapped_2168193209 != nil)
+        self._method_ray_intersects_triangle_1718655448 = StringName(from: "ray_intersects_triangle")
+        assert(self._method_ray_intersects_triangle_1718655448 != nil)
+        self._method_segment_intersects_triangle_1718655448 = StringName(from: "segment_intersects_triangle")
+        assert(self._method_segment_intersects_triangle_1718655448 != nil)
+        self._method_segment_intersects_sphere_4080141172 = StringName(from: "segment_intersects_sphere")
+        assert(self._method_segment_intersects_sphere_4080141172 != nil)
+        self._method_segment_intersects_cylinder_2361316491 = StringName(from: "segment_intersects_cylinder")
+        assert(self._method_segment_intersects_cylinder_2361316491 != nil)
+        self._method_segment_intersects_convex_537425332 = StringName(from: "segment_intersects_convex")
+        assert(self._method_segment_intersects_convex_537425332 != nil)
+        self._method_clip_polygon_2603188319 = StringName(from: "clip_polygon")
+        assert(self._method_clip_polygon_2603188319 != nil)
     }
 
     public func build_box_planes(extents: Vector3) -> [Plane] {
@@ -79,8 +68,13 @@ open class Geometry3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_build_box_planes_3622277145,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_build_box_planes_3622277145._native_ptr(),
+                    3622277145)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -99,8 +93,13 @@ open class Geometry3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_build_cylinder_planes_3142160516,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_build_cylinder_planes_3142160516._native_ptr(),
+                    3142160516)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -124,8 +123,13 @@ open class Geometry3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_build_capsule_planes_410870045,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_build_capsule_planes_410870045._native_ptr(),
+                    410870045)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -149,8 +153,13 @@ open class Geometry3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_closest_points_between_segments_1056373962,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_closest_points_between_segments_1056373962._native_ptr(),
+                    1056373962)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -168,8 +177,13 @@ open class Geometry3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_closest_point_to_segment_2168193209,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_closest_point_to_segment_2168193209._native_ptr(),
+                    2168193209)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -187,8 +201,13 @@ open class Geometry3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_closest_point_to_segment_uncapped_2168193209,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_closest_point_to_segment_uncapped_2168193209._native_ptr(),
+                    2168193209)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -208,8 +227,13 @@ open class Geometry3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_ray_intersects_triangle_1718655448,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_ray_intersects_triangle_1718655448._native_ptr(),
+                    1718655448)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -229,8 +253,13 @@ open class Geometry3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_segment_intersects_triangle_1718655448,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_segment_intersects_triangle_1718655448._native_ptr(),
+                    1718655448)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -249,8 +278,13 @@ open class Geometry3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_segment_intersects_sphere_4080141172,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_segment_intersects_sphere_4080141172._native_ptr(),
+                    4080141172)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -270,8 +304,13 @@ open class Geometry3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_segment_intersects_cylinder_2361316491,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_segment_intersects_cylinder_2361316491._native_ptr(),
+                    2361316491)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -291,8 +330,13 @@ open class Geometry3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_segment_intersects_convex_537425332,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_segment_intersects_convex_537425332._native_ptr(),
+                    537425332)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -309,8 +353,13 @@ open class Geometry3D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clip_polygon_2603188319,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clip_polygon_2603188319._native_ptr(),
+                    2603188319)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

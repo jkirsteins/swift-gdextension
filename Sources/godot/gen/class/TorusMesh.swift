@@ -11,47 +11,40 @@ open class TorusMesh : PrimitiveMesh {
 
     public override class var __godot_name: StringName { __godot_name_TorusMesh }
 
-    static var _method_set_inner_radius_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_inner_radius_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_outer_radius_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_outer_radius_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_rings_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rings_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_ring_segments_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_ring_segments_3905245786: GDExtensionMethodBindPtr! = nil
+    static var _method_set_inner_radius_373806689: StringName! = nil
+    static var _method_get_inner_radius_1740695150: StringName! = nil
+    static var _method_set_outer_radius_373806689: StringName! = nil
+    static var _method_get_outer_radius_1740695150: StringName! = nil
+    static var _method_set_rings_1286410249: StringName! = nil
+    static var _method_get_rings_3905245786: StringName! = nil
+    static var _method_set_ring_segments_1286410249: StringName! = nil
+    static var _method_get_ring_segments_3905245786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_TorusMesh == nil)
         __godot_name_TorusMesh = StringName(from: "TorusMesh")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_inner_radius_373806689_name = StringName(from: "set_inner_radius")
-        self._method_set_inner_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_TorusMesh._native_ptr(), _method_set_inner_radius_373806689_name._native_ptr(), 373806689)
-        assert(TorusMesh._method_set_inner_radius_373806689 != nil)
-        let _method_get_inner_radius_1740695150_name = StringName(from: "get_inner_radius")
-        self._method_get_inner_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_TorusMesh._native_ptr(), _method_get_inner_radius_1740695150_name._native_ptr(), 1740695150)
-        assert(TorusMesh._method_get_inner_radius_1740695150 != nil)
-        let _method_set_outer_radius_373806689_name = StringName(from: "set_outer_radius")
-        self._method_set_outer_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_TorusMesh._native_ptr(), _method_set_outer_radius_373806689_name._native_ptr(), 373806689)
-        assert(TorusMesh._method_set_outer_radius_373806689 != nil)
-        let _method_get_outer_radius_1740695150_name = StringName(from: "get_outer_radius")
-        self._method_get_outer_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_TorusMesh._native_ptr(), _method_get_outer_radius_1740695150_name._native_ptr(), 1740695150)
-        assert(TorusMesh._method_get_outer_radius_1740695150 != nil)
-        let _method_set_rings_1286410249_name = StringName(from: "set_rings")
-        self._method_set_rings_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TorusMesh._native_ptr(), _method_set_rings_1286410249_name._native_ptr(), 1286410249)
-        assert(TorusMesh._method_set_rings_1286410249 != nil)
-        let _method_get_rings_3905245786_name = StringName(from: "get_rings")
-        self._method_get_rings_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TorusMesh._native_ptr(), _method_get_rings_3905245786_name._native_ptr(), 3905245786)
-        assert(TorusMesh._method_get_rings_3905245786 != nil)
-        let _method_set_ring_segments_1286410249_name = StringName(from: "set_ring_segments")
-        self._method_set_ring_segments_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TorusMesh._native_ptr(), _method_set_ring_segments_1286410249_name._native_ptr(), 1286410249)
-        assert(TorusMesh._method_set_ring_segments_1286410249 != nil)
-        let _method_get_ring_segments_3905245786_name = StringName(from: "get_ring_segments")
-        self._method_get_ring_segments_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TorusMesh._native_ptr(), _method_get_ring_segments_3905245786_name._native_ptr(), 3905245786)
-        assert(TorusMesh._method_get_ring_segments_3905245786 != nil)
+        self._method_set_inner_radius_373806689 = StringName(from: "set_inner_radius")
+        assert(self._method_set_inner_radius_373806689 != nil)
+        self._method_get_inner_radius_1740695150 = StringName(from: "get_inner_radius")
+        assert(self._method_get_inner_radius_1740695150 != nil)
+        self._method_set_outer_radius_373806689 = StringName(from: "set_outer_radius")
+        assert(self._method_set_outer_radius_373806689 != nil)
+        self._method_get_outer_radius_1740695150 = StringName(from: "get_outer_radius")
+        assert(self._method_get_outer_radius_1740695150 != nil)
+        self._method_set_rings_1286410249 = StringName(from: "set_rings")
+        assert(self._method_set_rings_1286410249 != nil)
+        self._method_get_rings_3905245786 = StringName(from: "get_rings")
+        assert(self._method_get_rings_3905245786 != nil)
+        self._method_set_ring_segments_1286410249 = StringName(from: "set_ring_segments")
+        assert(self._method_set_ring_segments_1286410249 != nil)
+        self._method_get_ring_segments_3905245786 = StringName(from: "get_ring_segments")
+        assert(self._method_get_ring_segments_3905245786 != nil)
     }
 
     public func set_inner_radius(radius: Float64)  {
@@ -62,8 +55,13 @@ open class TorusMesh : PrimitiveMesh {
                 .init(radius_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_inner_radius_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_inner_radius_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -79,8 +77,13 @@ open class TorusMesh : PrimitiveMesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_inner_radius_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_inner_radius_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -95,8 +98,13 @@ open class TorusMesh : PrimitiveMesh {
                 .init(radius_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_outer_radius_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_outer_radius_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -112,8 +120,13 @@ open class TorusMesh : PrimitiveMesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_outer_radius_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_outer_radius_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -128,8 +141,13 @@ open class TorusMesh : PrimitiveMesh {
                 .init(rings_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_rings_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_rings_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -145,8 +163,13 @@ open class TorusMesh : PrimitiveMesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rings_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rings_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -161,8 +184,13 @@ open class TorusMesh : PrimitiveMesh {
                 .init(rings_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_ring_segments_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_ring_segments_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -178,8 +206,13 @@ open class TorusMesh : PrimitiveMesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_ring_segments_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_ring_segments_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

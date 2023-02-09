@@ -11,43 +11,37 @@ open class WorkerThreadPool : Object {
 
     public override class var __godot_name: StringName { __godot_name_WorkerThreadPool }
 
-    static var _method_add_task_3976347598: GDExtensionMethodBindPtr! = nil
-    static var _method_is_task_completed_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_wait_for_task_completion_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_add_group_task_2377228549: GDExtensionMethodBindPtr! = nil
-    static var _method_is_group_task_completed_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_get_group_processed_element_count_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_wait_for_group_task_completion_1286410249: GDExtensionMethodBindPtr! = nil
+    static var _method_add_task_3976347598: StringName! = nil
+    static var _method_is_task_completed_1116898809: StringName! = nil
+    static var _method_wait_for_task_completion_1286410249: StringName! = nil
+    static var _method_add_group_task_2377228549: StringName! = nil
+    static var _method_is_group_task_completed_1116898809: StringName! = nil
+    static var _method_get_group_processed_element_count_923996154: StringName! = nil
+    static var _method_wait_for_group_task_completion_1286410249: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_WorkerThreadPool == nil)
         __godot_name_WorkerThreadPool = StringName(from: "WorkerThreadPool")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_add_task_3976347598_name = StringName(from: "add_task")
-        self._method_add_task_3976347598 = self.interface.pointee.classdb_get_method_bind(__godot_name_WorkerThreadPool._native_ptr(), _method_add_task_3976347598_name._native_ptr(), 3976347598)
-        assert(WorkerThreadPool._method_add_task_3976347598 != nil)
-        let _method_is_task_completed_1116898809_name = StringName(from: "is_task_completed")
-        self._method_is_task_completed_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_WorkerThreadPool._native_ptr(), _method_is_task_completed_1116898809_name._native_ptr(), 1116898809)
-        assert(WorkerThreadPool._method_is_task_completed_1116898809 != nil)
-        let _method_wait_for_task_completion_1286410249_name = StringName(from: "wait_for_task_completion")
-        self._method_wait_for_task_completion_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_WorkerThreadPool._native_ptr(), _method_wait_for_task_completion_1286410249_name._native_ptr(), 1286410249)
-        assert(WorkerThreadPool._method_wait_for_task_completion_1286410249 != nil)
-        let _method_add_group_task_2377228549_name = StringName(from: "add_group_task")
-        self._method_add_group_task_2377228549 = self.interface.pointee.classdb_get_method_bind(__godot_name_WorkerThreadPool._native_ptr(), _method_add_group_task_2377228549_name._native_ptr(), 2377228549)
-        assert(WorkerThreadPool._method_add_group_task_2377228549 != nil)
-        let _method_is_group_task_completed_1116898809_name = StringName(from: "is_group_task_completed")
-        self._method_is_group_task_completed_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_WorkerThreadPool._native_ptr(), _method_is_group_task_completed_1116898809_name._native_ptr(), 1116898809)
-        assert(WorkerThreadPool._method_is_group_task_completed_1116898809 != nil)
-        let _method_get_group_processed_element_count_923996154_name = StringName(from: "get_group_processed_element_count")
-        self._method_get_group_processed_element_count_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_WorkerThreadPool._native_ptr(), _method_get_group_processed_element_count_923996154_name._native_ptr(), 923996154)
-        assert(WorkerThreadPool._method_get_group_processed_element_count_923996154 != nil)
-        let _method_wait_for_group_task_completion_1286410249_name = StringName(from: "wait_for_group_task_completion")
-        self._method_wait_for_group_task_completion_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_WorkerThreadPool._native_ptr(), _method_wait_for_group_task_completion_1286410249_name._native_ptr(), 1286410249)
-        assert(WorkerThreadPool._method_wait_for_group_task_completion_1286410249 != nil)
+        self._method_add_task_3976347598 = StringName(from: "add_task")
+        assert(self._method_add_task_3976347598 != nil)
+        self._method_is_task_completed_1116898809 = StringName(from: "is_task_completed")
+        assert(self._method_is_task_completed_1116898809 != nil)
+        self._method_wait_for_task_completion_1286410249 = StringName(from: "wait_for_task_completion")
+        assert(self._method_wait_for_task_completion_1286410249 != nil)
+        self._method_add_group_task_2377228549 = StringName(from: "add_group_task")
+        assert(self._method_add_group_task_2377228549 != nil)
+        self._method_is_group_task_completed_1116898809 = StringName(from: "is_group_task_completed")
+        assert(self._method_is_group_task_completed_1116898809 != nil)
+        self._method_get_group_processed_element_count_923996154 = StringName(from: "get_group_processed_element_count")
+        assert(self._method_get_group_processed_element_count_923996154 != nil)
+        self._method_wait_for_group_task_completion_1286410249 = StringName(from: "wait_for_group_task_completion")
+        assert(self._method_wait_for_group_task_completion_1286410249 != nil)
     }
 
     public func add_task(action: Callable, high_priority: UInt8, description: godot.String) -> Int64 {
@@ -62,8 +56,13 @@ open class WorkerThreadPool : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_task_3976347598,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_task_3976347598._native_ptr(),
+                    3976347598)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -81,8 +80,13 @@ open class WorkerThreadPool : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_task_completed_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_task_completed_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -98,8 +102,13 @@ open class WorkerThreadPool : Object {
                 .init(task_id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_wait_for_task_completion_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_wait_for_task_completion_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -120,8 +129,13 @@ open class WorkerThreadPool : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_group_task_2377228549,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_group_task_2377228549._native_ptr(),
+                    2377228549)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -141,8 +155,13 @@ open class WorkerThreadPool : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_group_task_completed_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_group_task_completed_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -160,8 +179,13 @@ open class WorkerThreadPool : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_group_processed_element_count_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_group_processed_element_count_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -177,8 +201,13 @@ open class WorkerThreadPool : Object {
                 .init(group_id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_wait_for_group_task_completion_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_wait_for_group_task_completion_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

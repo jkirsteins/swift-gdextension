@@ -22,63 +22,52 @@ open class CanvasItemMaterial : Material {
 
     public override class var __godot_name: StringName { __godot_name_CanvasItemMaterial }
 
-    static var _method_set_blend_mode_1786054936: GDExtensionMethodBindPtr! = nil
-    static var _method_get_blend_mode_3318684035: GDExtensionMethodBindPtr! = nil
-    static var _method_set_light_mode_628074070: GDExtensionMethodBindPtr! = nil
-    static var _method_get_light_mode_3863292382: GDExtensionMethodBindPtr! = nil
-    static var _method_set_particles_animation_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_particles_animation_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_particles_anim_h_frames_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_particles_anim_h_frames_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_particles_anim_v_frames_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_particles_anim_v_frames_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_particles_anim_loop_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_particles_anim_loop_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_blend_mode_1786054936: StringName! = nil
+    static var _method_get_blend_mode_3318684035: StringName! = nil
+    static var _method_set_light_mode_628074070: StringName! = nil
+    static var _method_get_light_mode_3863292382: StringName! = nil
+    static var _method_set_particles_animation_2586408642: StringName! = nil
+    static var _method_get_particles_animation_36873697: StringName! = nil
+    static var _method_set_particles_anim_h_frames_1286410249: StringName! = nil
+    static var _method_get_particles_anim_h_frames_3905245786: StringName! = nil
+    static var _method_set_particles_anim_v_frames_1286410249: StringName! = nil
+    static var _method_get_particles_anim_v_frames_3905245786: StringName! = nil
+    static var _method_set_particles_anim_loop_2586408642: StringName! = nil
+    static var _method_get_particles_anim_loop_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CanvasItemMaterial == nil)
         __godot_name_CanvasItemMaterial = StringName(from: "CanvasItemMaterial")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_blend_mode_1786054936_name = StringName(from: "set_blend_mode")
-        self._method_set_blend_mode_1786054936 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasItemMaterial._native_ptr(), _method_set_blend_mode_1786054936_name._native_ptr(), 1786054936)
-        assert(CanvasItemMaterial._method_set_blend_mode_1786054936 != nil)
-        let _method_get_blend_mode_3318684035_name = StringName(from: "get_blend_mode")
-        self._method_get_blend_mode_3318684035 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasItemMaterial._native_ptr(), _method_get_blend_mode_3318684035_name._native_ptr(), 3318684035)
-        assert(CanvasItemMaterial._method_get_blend_mode_3318684035 != nil)
-        let _method_set_light_mode_628074070_name = StringName(from: "set_light_mode")
-        self._method_set_light_mode_628074070 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasItemMaterial._native_ptr(), _method_set_light_mode_628074070_name._native_ptr(), 628074070)
-        assert(CanvasItemMaterial._method_set_light_mode_628074070 != nil)
-        let _method_get_light_mode_3863292382_name = StringName(from: "get_light_mode")
-        self._method_get_light_mode_3863292382 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasItemMaterial._native_ptr(), _method_get_light_mode_3863292382_name._native_ptr(), 3863292382)
-        assert(CanvasItemMaterial._method_get_light_mode_3863292382 != nil)
-        let _method_set_particles_animation_2586408642_name = StringName(from: "set_particles_animation")
-        self._method_set_particles_animation_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasItemMaterial._native_ptr(), _method_set_particles_animation_2586408642_name._native_ptr(), 2586408642)
-        assert(CanvasItemMaterial._method_set_particles_animation_2586408642 != nil)
-        let _method_get_particles_animation_36873697_name = StringName(from: "get_particles_animation")
-        self._method_get_particles_animation_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasItemMaterial._native_ptr(), _method_get_particles_animation_36873697_name._native_ptr(), 36873697)
-        assert(CanvasItemMaterial._method_get_particles_animation_36873697 != nil)
-        let _method_set_particles_anim_h_frames_1286410249_name = StringName(from: "set_particles_anim_h_frames")
-        self._method_set_particles_anim_h_frames_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasItemMaterial._native_ptr(), _method_set_particles_anim_h_frames_1286410249_name._native_ptr(), 1286410249)
-        assert(CanvasItemMaterial._method_set_particles_anim_h_frames_1286410249 != nil)
-        let _method_get_particles_anim_h_frames_3905245786_name = StringName(from: "get_particles_anim_h_frames")
-        self._method_get_particles_anim_h_frames_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasItemMaterial._native_ptr(), _method_get_particles_anim_h_frames_3905245786_name._native_ptr(), 3905245786)
-        assert(CanvasItemMaterial._method_get_particles_anim_h_frames_3905245786 != nil)
-        let _method_set_particles_anim_v_frames_1286410249_name = StringName(from: "set_particles_anim_v_frames")
-        self._method_set_particles_anim_v_frames_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasItemMaterial._native_ptr(), _method_set_particles_anim_v_frames_1286410249_name._native_ptr(), 1286410249)
-        assert(CanvasItemMaterial._method_set_particles_anim_v_frames_1286410249 != nil)
-        let _method_get_particles_anim_v_frames_3905245786_name = StringName(from: "get_particles_anim_v_frames")
-        self._method_get_particles_anim_v_frames_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasItemMaterial._native_ptr(), _method_get_particles_anim_v_frames_3905245786_name._native_ptr(), 3905245786)
-        assert(CanvasItemMaterial._method_get_particles_anim_v_frames_3905245786 != nil)
-        let _method_set_particles_anim_loop_2586408642_name = StringName(from: "set_particles_anim_loop")
-        self._method_set_particles_anim_loop_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasItemMaterial._native_ptr(), _method_set_particles_anim_loop_2586408642_name._native_ptr(), 2586408642)
-        assert(CanvasItemMaterial._method_set_particles_anim_loop_2586408642 != nil)
-        let _method_get_particles_anim_loop_36873697_name = StringName(from: "get_particles_anim_loop")
-        self._method_get_particles_anim_loop_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CanvasItemMaterial._native_ptr(), _method_get_particles_anim_loop_36873697_name._native_ptr(), 36873697)
-        assert(CanvasItemMaterial._method_get_particles_anim_loop_36873697 != nil)
+        self._method_set_blend_mode_1786054936 = StringName(from: "set_blend_mode")
+        assert(self._method_set_blend_mode_1786054936 != nil)
+        self._method_get_blend_mode_3318684035 = StringName(from: "get_blend_mode")
+        assert(self._method_get_blend_mode_3318684035 != nil)
+        self._method_set_light_mode_628074070 = StringName(from: "set_light_mode")
+        assert(self._method_set_light_mode_628074070 != nil)
+        self._method_get_light_mode_3863292382 = StringName(from: "get_light_mode")
+        assert(self._method_get_light_mode_3863292382 != nil)
+        self._method_set_particles_animation_2586408642 = StringName(from: "set_particles_animation")
+        assert(self._method_set_particles_animation_2586408642 != nil)
+        self._method_get_particles_animation_36873697 = StringName(from: "get_particles_animation")
+        assert(self._method_get_particles_animation_36873697 != nil)
+        self._method_set_particles_anim_h_frames_1286410249 = StringName(from: "set_particles_anim_h_frames")
+        assert(self._method_set_particles_anim_h_frames_1286410249 != nil)
+        self._method_get_particles_anim_h_frames_3905245786 = StringName(from: "get_particles_anim_h_frames")
+        assert(self._method_get_particles_anim_h_frames_3905245786 != nil)
+        self._method_set_particles_anim_v_frames_1286410249 = StringName(from: "set_particles_anim_v_frames")
+        assert(self._method_set_particles_anim_v_frames_1286410249 != nil)
+        self._method_get_particles_anim_v_frames_3905245786 = StringName(from: "get_particles_anim_v_frames")
+        assert(self._method_get_particles_anim_v_frames_3905245786 != nil)
+        self._method_set_particles_anim_loop_2586408642 = StringName(from: "set_particles_anim_loop")
+        assert(self._method_set_particles_anim_loop_2586408642 != nil)
+        self._method_get_particles_anim_loop_36873697 = StringName(from: "get_particles_anim_loop")
+        assert(self._method_get_particles_anim_loop_36873697 != nil)
     }
 
     public func set_blend_mode(blend_mode: CanvasItemMaterial.BlendMode)  {
@@ -89,8 +78,13 @@ open class CanvasItemMaterial : Material {
                 .init(blend_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_blend_mode_1786054936,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_blend_mode_1786054936._native_ptr(),
+                    1786054936)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -105,8 +99,13 @@ open class CanvasItemMaterial : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_blend_mode_3318684035,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_blend_mode_3318684035._native_ptr(),
+                    3318684035)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -121,8 +120,13 @@ open class CanvasItemMaterial : Material {
                 .init(light_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_light_mode_628074070,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_light_mode_628074070._native_ptr(),
+                    628074070)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -137,8 +141,13 @@ open class CanvasItemMaterial : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_light_mode_3863292382,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_light_mode_3863292382._native_ptr(),
+                    3863292382)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -153,8 +162,13 @@ open class CanvasItemMaterial : Material {
                 .init(particles_anim_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_particles_animation_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_particles_animation_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -170,8 +184,13 @@ open class CanvasItemMaterial : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_particles_animation_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_particles_animation_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -186,8 +205,13 @@ open class CanvasItemMaterial : Material {
                 .init(frames_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_particles_anim_h_frames_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_particles_anim_h_frames_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -203,8 +227,13 @@ open class CanvasItemMaterial : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_particles_anim_h_frames_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_particles_anim_h_frames_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -219,8 +248,13 @@ open class CanvasItemMaterial : Material {
                 .init(frames_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_particles_anim_v_frames_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_particles_anim_v_frames_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -236,8 +270,13 @@ open class CanvasItemMaterial : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_particles_anim_v_frames_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_particles_anim_v_frames_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -252,8 +291,13 @@ open class CanvasItemMaterial : Material {
                 .init(loop_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_particles_anim_loop_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_particles_anim_loop_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -269,8 +313,13 @@ open class CanvasItemMaterial : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_particles_anim_loop_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_particles_anim_loop_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

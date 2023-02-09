@@ -23,47 +23,40 @@ open class CameraFeed : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_CameraFeed }
 
-    static var _method_get_id_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_is_active_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_active_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_name_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_position_2711679033: GDExtensionMethodBindPtr! = nil
-    static var _method_get_transform_3814499831: GDExtensionMethodBindPtr! = nil
-    static var _method_set_transform_2761652528: GDExtensionMethodBindPtr! = nil
-    static var _method_get_datatype_1477782850: GDExtensionMethodBindPtr! = nil
+    static var _method_get_id_3905245786: StringName! = nil
+    static var _method_is_active_36873697: StringName! = nil
+    static var _method_set_active_2586408642: StringName! = nil
+    static var _method_get_name_201670096: StringName! = nil
+    static var _method_get_position_2711679033: StringName! = nil
+    static var _method_get_transform_3814499831: StringName! = nil
+    static var _method_set_transform_2761652528: StringName! = nil
+    static var _method_get_datatype_1477782850: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CameraFeed == nil)
         __godot_name_CameraFeed = StringName(from: "CameraFeed")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_id_3905245786_name = StringName(from: "get_id")
-        self._method_get_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraFeed._native_ptr(), _method_get_id_3905245786_name._native_ptr(), 3905245786)
-        assert(CameraFeed._method_get_id_3905245786 != nil)
-        let _method_is_active_36873697_name = StringName(from: "is_active")
-        self._method_is_active_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraFeed._native_ptr(), _method_is_active_36873697_name._native_ptr(), 36873697)
-        assert(CameraFeed._method_is_active_36873697 != nil)
-        let _method_set_active_2586408642_name = StringName(from: "set_active")
-        self._method_set_active_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraFeed._native_ptr(), _method_set_active_2586408642_name._native_ptr(), 2586408642)
-        assert(CameraFeed._method_set_active_2586408642 != nil)
-        let _method_get_name_201670096_name = StringName(from: "get_name")
-        self._method_get_name_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraFeed._native_ptr(), _method_get_name_201670096_name._native_ptr(), 201670096)
-        assert(CameraFeed._method_get_name_201670096 != nil)
-        let _method_get_position_2711679033_name = StringName(from: "get_position")
-        self._method_get_position_2711679033 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraFeed._native_ptr(), _method_get_position_2711679033_name._native_ptr(), 2711679033)
-        assert(CameraFeed._method_get_position_2711679033 != nil)
-        let _method_get_transform_3814499831_name = StringName(from: "get_transform")
-        self._method_get_transform_3814499831 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraFeed._native_ptr(), _method_get_transform_3814499831_name._native_ptr(), 3814499831)
-        assert(CameraFeed._method_get_transform_3814499831 != nil)
-        let _method_set_transform_2761652528_name = StringName(from: "set_transform")
-        self._method_set_transform_2761652528 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraFeed._native_ptr(), _method_set_transform_2761652528_name._native_ptr(), 2761652528)
-        assert(CameraFeed._method_set_transform_2761652528 != nil)
-        let _method_get_datatype_1477782850_name = StringName(from: "get_datatype")
-        self._method_get_datatype_1477782850 = self.interface.pointee.classdb_get_method_bind(__godot_name_CameraFeed._native_ptr(), _method_get_datatype_1477782850_name._native_ptr(), 1477782850)
-        assert(CameraFeed._method_get_datatype_1477782850 != nil)
+        self._method_get_id_3905245786 = StringName(from: "get_id")
+        assert(self._method_get_id_3905245786 != nil)
+        self._method_is_active_36873697 = StringName(from: "is_active")
+        assert(self._method_is_active_36873697 != nil)
+        self._method_set_active_2586408642 = StringName(from: "set_active")
+        assert(self._method_set_active_2586408642 != nil)
+        self._method_get_name_201670096 = StringName(from: "get_name")
+        assert(self._method_get_name_201670096 != nil)
+        self._method_get_position_2711679033 = StringName(from: "get_position")
+        assert(self._method_get_position_2711679033 != nil)
+        self._method_get_transform_3814499831 = StringName(from: "get_transform")
+        assert(self._method_get_transform_3814499831 != nil)
+        self._method_set_transform_2761652528 = StringName(from: "set_transform")
+        assert(self._method_set_transform_2761652528 != nil)
+        self._method_get_datatype_1477782850 = StringName(from: "get_datatype")
+        assert(self._method_get_datatype_1477782850 != nil)
     }
 
     public func get_id() -> Int64 {
@@ -75,8 +68,13 @@ open class CameraFeed : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_id_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_id_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -92,8 +90,13 @@ open class CameraFeed : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_active_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_active_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -108,8 +111,13 @@ open class CameraFeed : RefCounted {
                 .init(active_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_active_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_active_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -124,8 +132,13 @@ open class CameraFeed : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_name_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_name_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -140,8 +153,13 @@ open class CameraFeed : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_position_2711679033,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_position_2711679033._native_ptr(),
+                    2711679033)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -156,8 +174,13 @@ open class CameraFeed : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_transform_3814499831,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_transform_3814499831._native_ptr(),
+                    3814499831)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -172,8 +195,13 @@ open class CameraFeed : RefCounted {
                 .init(transform_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_transform_2761652528,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_transform_2761652528._native_ptr(),
+                    2761652528)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -187,8 +215,13 @@ open class CameraFeed : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_datatype_1477782850,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_datatype_1477782850._native_ptr(),
+                    1477782850)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

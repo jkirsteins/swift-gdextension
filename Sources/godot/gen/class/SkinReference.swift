@@ -11,23 +11,22 @@ open class SkinReference : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_SkinReference }
 
-    static var _method_get_skeleton_2944877500: GDExtensionMethodBindPtr! = nil
-    static var _method_get_skin_2074563878: GDExtensionMethodBindPtr! = nil
+    static var _method_get_skeleton_2944877500: StringName! = nil
+    static var _method_get_skin_2074563878: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_SkinReference == nil)
         __godot_name_SkinReference = StringName(from: "SkinReference")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_skeleton_2944877500_name = StringName(from: "get_skeleton")
-        self._method_get_skeleton_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkinReference._native_ptr(), _method_get_skeleton_2944877500_name._native_ptr(), 2944877500)
-        assert(SkinReference._method_get_skeleton_2944877500 != nil)
-        let _method_get_skin_2074563878_name = StringName(from: "get_skin")
-        self._method_get_skin_2074563878 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkinReference._native_ptr(), _method_get_skin_2074563878_name._native_ptr(), 2074563878)
-        assert(SkinReference._method_get_skin_2074563878 != nil)
+        self._method_get_skeleton_2944877500 = StringName(from: "get_skeleton")
+        assert(self._method_get_skeleton_2944877500 != nil)
+        self._method_get_skin_2074563878 = StringName(from: "get_skin")
+        assert(self._method_get_skin_2074563878 != nil)
     }
 
     public func get_skeleton() -> RID {
@@ -38,8 +37,13 @@ open class SkinReference : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_skeleton_2944877500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_skeleton_2944877500._native_ptr(),
+                    2944877500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -54,8 +58,13 @@ open class SkinReference : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_skin_2074563878,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_skin_2074563878._native_ptr(),
+                    2074563878)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

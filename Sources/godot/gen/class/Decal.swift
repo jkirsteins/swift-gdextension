@@ -23,111 +23,88 @@ open class Decal : VisualInstance3D {
 
     public override class var __godot_name: StringName { __godot_name_Decal }
 
-    static var _method_set_size_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_2086764391: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_3244119503: GDExtensionMethodBindPtr! = nil
-    static var _method_set_emission_energy_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_emission_energy_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_albedo_mix_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_albedo_mix_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_modulate_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_modulate_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_upper_fade_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_upper_fade_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_lower_fade_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_lower_fade_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_normal_fade_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_normal_fade_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_enable_distance_fade_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_distance_fade_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_distance_fade_begin_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_distance_fade_begin_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_distance_fade_length_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_distance_fade_length_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cull_mask_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cull_mask_3905245786: GDExtensionMethodBindPtr! = nil
+    static var _method_set_size_3460891852: StringName! = nil
+    static var _method_get_size_3360562783: StringName! = nil
+    static var _method_set_texture_2086764391: StringName! = nil
+    static var _method_get_texture_3244119503: StringName! = nil
+    static var _method_set_emission_energy_373806689: StringName! = nil
+    static var _method_get_emission_energy_1740695150: StringName! = nil
+    static var _method_set_albedo_mix_373806689: StringName! = nil
+    static var _method_get_albedo_mix_1740695150: StringName! = nil
+    static var _method_set_modulate_2920490490: StringName! = nil
+    static var _method_get_modulate_3444240500: StringName! = nil
+    static var _method_set_upper_fade_373806689: StringName! = nil
+    static var _method_get_upper_fade_1740695150: StringName! = nil
+    static var _method_set_lower_fade_373806689: StringName! = nil
+    static var _method_get_lower_fade_1740695150: StringName! = nil
+    static var _method_set_normal_fade_373806689: StringName! = nil
+    static var _method_get_normal_fade_1740695150: StringName! = nil
+    static var _method_set_enable_distance_fade_2586408642: StringName! = nil
+    static var _method_is_distance_fade_enabled_36873697: StringName! = nil
+    static var _method_set_distance_fade_begin_373806689: StringName! = nil
+    static var _method_get_distance_fade_begin_1740695150: StringName! = nil
+    static var _method_set_distance_fade_length_373806689: StringName! = nil
+    static var _method_get_distance_fade_length_1740695150: StringName! = nil
+    static var _method_set_cull_mask_1286410249: StringName! = nil
+    static var _method_get_cull_mask_3905245786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Decal == nil)
         __godot_name_Decal = StringName(from: "Decal")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_size_3460891852_name = StringName(from: "set_size")
-        self._method_set_size_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_set_size_3460891852_name._native_ptr(), 3460891852)
-        assert(Decal._method_set_size_3460891852 != nil)
-        let _method_get_size_3360562783_name = StringName(from: "get_size")
-        self._method_get_size_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_get_size_3360562783_name._native_ptr(), 3360562783)
-        assert(Decal._method_get_size_3360562783 != nil)
-        let _method_set_texture_2086764391_name = StringName(from: "set_texture")
-        self._method_set_texture_2086764391 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_set_texture_2086764391_name._native_ptr(), 2086764391)
-        assert(Decal._method_set_texture_2086764391 != nil)
-        let _method_get_texture_3244119503_name = StringName(from: "get_texture")
-        self._method_get_texture_3244119503 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_get_texture_3244119503_name._native_ptr(), 3244119503)
-        assert(Decal._method_get_texture_3244119503 != nil)
-        let _method_set_emission_energy_373806689_name = StringName(from: "set_emission_energy")
-        self._method_set_emission_energy_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_set_emission_energy_373806689_name._native_ptr(), 373806689)
-        assert(Decal._method_set_emission_energy_373806689 != nil)
-        let _method_get_emission_energy_1740695150_name = StringName(from: "get_emission_energy")
-        self._method_get_emission_energy_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_get_emission_energy_1740695150_name._native_ptr(), 1740695150)
-        assert(Decal._method_get_emission_energy_1740695150 != nil)
-        let _method_set_albedo_mix_373806689_name = StringName(from: "set_albedo_mix")
-        self._method_set_albedo_mix_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_set_albedo_mix_373806689_name._native_ptr(), 373806689)
-        assert(Decal._method_set_albedo_mix_373806689 != nil)
-        let _method_get_albedo_mix_1740695150_name = StringName(from: "get_albedo_mix")
-        self._method_get_albedo_mix_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_get_albedo_mix_1740695150_name._native_ptr(), 1740695150)
-        assert(Decal._method_get_albedo_mix_1740695150 != nil)
-        let _method_set_modulate_2920490490_name = StringName(from: "set_modulate")
-        self._method_set_modulate_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_set_modulate_2920490490_name._native_ptr(), 2920490490)
-        assert(Decal._method_set_modulate_2920490490 != nil)
-        let _method_get_modulate_3444240500_name = StringName(from: "get_modulate")
-        self._method_get_modulate_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_get_modulate_3444240500_name._native_ptr(), 3444240500)
-        assert(Decal._method_get_modulate_3444240500 != nil)
-        let _method_set_upper_fade_373806689_name = StringName(from: "set_upper_fade")
-        self._method_set_upper_fade_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_set_upper_fade_373806689_name._native_ptr(), 373806689)
-        assert(Decal._method_set_upper_fade_373806689 != nil)
-        let _method_get_upper_fade_1740695150_name = StringName(from: "get_upper_fade")
-        self._method_get_upper_fade_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_get_upper_fade_1740695150_name._native_ptr(), 1740695150)
-        assert(Decal._method_get_upper_fade_1740695150 != nil)
-        let _method_set_lower_fade_373806689_name = StringName(from: "set_lower_fade")
-        self._method_set_lower_fade_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_set_lower_fade_373806689_name._native_ptr(), 373806689)
-        assert(Decal._method_set_lower_fade_373806689 != nil)
-        let _method_get_lower_fade_1740695150_name = StringName(from: "get_lower_fade")
-        self._method_get_lower_fade_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_get_lower_fade_1740695150_name._native_ptr(), 1740695150)
-        assert(Decal._method_get_lower_fade_1740695150 != nil)
-        let _method_set_normal_fade_373806689_name = StringName(from: "set_normal_fade")
-        self._method_set_normal_fade_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_set_normal_fade_373806689_name._native_ptr(), 373806689)
-        assert(Decal._method_set_normal_fade_373806689 != nil)
-        let _method_get_normal_fade_1740695150_name = StringName(from: "get_normal_fade")
-        self._method_get_normal_fade_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_get_normal_fade_1740695150_name._native_ptr(), 1740695150)
-        assert(Decal._method_get_normal_fade_1740695150 != nil)
-        let _method_set_enable_distance_fade_2586408642_name = StringName(from: "set_enable_distance_fade")
-        self._method_set_enable_distance_fade_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_set_enable_distance_fade_2586408642_name._native_ptr(), 2586408642)
-        assert(Decal._method_set_enable_distance_fade_2586408642 != nil)
-        let _method_is_distance_fade_enabled_36873697_name = StringName(from: "is_distance_fade_enabled")
-        self._method_is_distance_fade_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_is_distance_fade_enabled_36873697_name._native_ptr(), 36873697)
-        assert(Decal._method_is_distance_fade_enabled_36873697 != nil)
-        let _method_set_distance_fade_begin_373806689_name = StringName(from: "set_distance_fade_begin")
-        self._method_set_distance_fade_begin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_set_distance_fade_begin_373806689_name._native_ptr(), 373806689)
-        assert(Decal._method_set_distance_fade_begin_373806689 != nil)
-        let _method_get_distance_fade_begin_1740695150_name = StringName(from: "get_distance_fade_begin")
-        self._method_get_distance_fade_begin_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_get_distance_fade_begin_1740695150_name._native_ptr(), 1740695150)
-        assert(Decal._method_get_distance_fade_begin_1740695150 != nil)
-        let _method_set_distance_fade_length_373806689_name = StringName(from: "set_distance_fade_length")
-        self._method_set_distance_fade_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_set_distance_fade_length_373806689_name._native_ptr(), 373806689)
-        assert(Decal._method_set_distance_fade_length_373806689 != nil)
-        let _method_get_distance_fade_length_1740695150_name = StringName(from: "get_distance_fade_length")
-        self._method_get_distance_fade_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_get_distance_fade_length_1740695150_name._native_ptr(), 1740695150)
-        assert(Decal._method_get_distance_fade_length_1740695150 != nil)
-        let _method_set_cull_mask_1286410249_name = StringName(from: "set_cull_mask")
-        self._method_set_cull_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_set_cull_mask_1286410249_name._native_ptr(), 1286410249)
-        assert(Decal._method_set_cull_mask_1286410249 != nil)
-        let _method_get_cull_mask_3905245786_name = StringName(from: "get_cull_mask")
-        self._method_get_cull_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Decal._native_ptr(), _method_get_cull_mask_3905245786_name._native_ptr(), 3905245786)
-        assert(Decal._method_get_cull_mask_3905245786 != nil)
+        self._method_set_size_3460891852 = StringName(from: "set_size")
+        assert(self._method_set_size_3460891852 != nil)
+        self._method_get_size_3360562783 = StringName(from: "get_size")
+        assert(self._method_get_size_3360562783 != nil)
+        self._method_set_texture_2086764391 = StringName(from: "set_texture")
+        assert(self._method_set_texture_2086764391 != nil)
+        self._method_get_texture_3244119503 = StringName(from: "get_texture")
+        assert(self._method_get_texture_3244119503 != nil)
+        self._method_set_emission_energy_373806689 = StringName(from: "set_emission_energy")
+        assert(self._method_set_emission_energy_373806689 != nil)
+        self._method_get_emission_energy_1740695150 = StringName(from: "get_emission_energy")
+        assert(self._method_get_emission_energy_1740695150 != nil)
+        self._method_set_albedo_mix_373806689 = StringName(from: "set_albedo_mix")
+        assert(self._method_set_albedo_mix_373806689 != nil)
+        self._method_get_albedo_mix_1740695150 = StringName(from: "get_albedo_mix")
+        assert(self._method_get_albedo_mix_1740695150 != nil)
+        self._method_set_modulate_2920490490 = StringName(from: "set_modulate")
+        assert(self._method_set_modulate_2920490490 != nil)
+        self._method_get_modulate_3444240500 = StringName(from: "get_modulate")
+        assert(self._method_get_modulate_3444240500 != nil)
+        self._method_set_upper_fade_373806689 = StringName(from: "set_upper_fade")
+        assert(self._method_set_upper_fade_373806689 != nil)
+        self._method_get_upper_fade_1740695150 = StringName(from: "get_upper_fade")
+        assert(self._method_get_upper_fade_1740695150 != nil)
+        self._method_set_lower_fade_373806689 = StringName(from: "set_lower_fade")
+        assert(self._method_set_lower_fade_373806689 != nil)
+        self._method_get_lower_fade_1740695150 = StringName(from: "get_lower_fade")
+        assert(self._method_get_lower_fade_1740695150 != nil)
+        self._method_set_normal_fade_373806689 = StringName(from: "set_normal_fade")
+        assert(self._method_set_normal_fade_373806689 != nil)
+        self._method_get_normal_fade_1740695150 = StringName(from: "get_normal_fade")
+        assert(self._method_get_normal_fade_1740695150 != nil)
+        self._method_set_enable_distance_fade_2586408642 = StringName(from: "set_enable_distance_fade")
+        assert(self._method_set_enable_distance_fade_2586408642 != nil)
+        self._method_is_distance_fade_enabled_36873697 = StringName(from: "is_distance_fade_enabled")
+        assert(self._method_is_distance_fade_enabled_36873697 != nil)
+        self._method_set_distance_fade_begin_373806689 = StringName(from: "set_distance_fade_begin")
+        assert(self._method_set_distance_fade_begin_373806689 != nil)
+        self._method_get_distance_fade_begin_1740695150 = StringName(from: "get_distance_fade_begin")
+        assert(self._method_get_distance_fade_begin_1740695150 != nil)
+        self._method_set_distance_fade_length_373806689 = StringName(from: "set_distance_fade_length")
+        assert(self._method_set_distance_fade_length_373806689 != nil)
+        self._method_get_distance_fade_length_1740695150 = StringName(from: "get_distance_fade_length")
+        assert(self._method_get_distance_fade_length_1740695150 != nil)
+        self._method_set_cull_mask_1286410249 = StringName(from: "set_cull_mask")
+        assert(self._method_set_cull_mask_1286410249 != nil)
+        self._method_get_cull_mask_3905245786 = StringName(from: "get_cull_mask")
+        assert(self._method_get_cull_mask_3905245786 != nil)
     }
 
     public func set_size(size: Vector3)  {
@@ -138,8 +115,13 @@ open class Decal : VisualInstance3D {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_size_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_size_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -153,8 +135,13 @@ open class Decal : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -170,8 +157,13 @@ open class Decal : VisualInstance3D {
                 .init(type_native), .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_2086764391,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_2086764391._native_ptr(),
+                    2086764391)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -187,8 +179,13 @@ open class Decal : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_3244119503,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_3244119503._native_ptr(),
+                    3244119503)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -204,8 +201,13 @@ open class Decal : VisualInstance3D {
                 .init(energy_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_emission_energy_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_emission_energy_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -221,8 +223,13 @@ open class Decal : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_emission_energy_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_emission_energy_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -237,8 +244,13 @@ open class Decal : VisualInstance3D {
                 .init(energy_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_albedo_mix_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_albedo_mix_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -254,8 +266,13 @@ open class Decal : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_albedo_mix_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_albedo_mix_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -270,8 +287,13 @@ open class Decal : VisualInstance3D {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_modulate_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_modulate_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -285,8 +307,13 @@ open class Decal : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_modulate_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_modulate_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -301,8 +328,13 @@ open class Decal : VisualInstance3D {
                 .init(fade_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_upper_fade_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_upper_fade_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -318,8 +350,13 @@ open class Decal : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_upper_fade_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_upper_fade_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -334,8 +371,13 @@ open class Decal : VisualInstance3D {
                 .init(fade_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_lower_fade_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_lower_fade_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -351,8 +393,13 @@ open class Decal : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_lower_fade_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_lower_fade_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -367,8 +414,13 @@ open class Decal : VisualInstance3D {
                 .init(fade_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_normal_fade_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_normal_fade_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -384,8 +436,13 @@ open class Decal : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_normal_fade_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_normal_fade_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -400,8 +457,13 @@ open class Decal : VisualInstance3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_enable_distance_fade_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_enable_distance_fade_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -417,8 +479,13 @@ open class Decal : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_distance_fade_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_distance_fade_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -433,8 +500,13 @@ open class Decal : VisualInstance3D {
                 .init(distance_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_distance_fade_begin_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_distance_fade_begin_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -450,8 +522,13 @@ open class Decal : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_distance_fade_begin_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_distance_fade_begin_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -466,8 +543,13 @@ open class Decal : VisualInstance3D {
                 .init(distance_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_distance_fade_length_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_distance_fade_length_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -483,8 +565,13 @@ open class Decal : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_distance_fade_length_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_distance_fade_length_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -499,8 +586,13 @@ open class Decal : VisualInstance3D {
                 .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cull_mask_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cull_mask_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -516,8 +608,13 @@ open class Decal : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cull_mask_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cull_mask_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

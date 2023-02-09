@@ -20,39 +20,34 @@ open class DirectionalLight3D : Light3D {
 
     public override class var __godot_name: StringName { __godot_name_DirectionalLight3D }
 
-    static var _method_set_shadow_mode_1261211726: GDExtensionMethodBindPtr! = nil
-    static var _method_get_shadow_mode_2765228544: GDExtensionMethodBindPtr! = nil
-    static var _method_set_blend_splits_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_blend_splits_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_sky_mode_2691194817: GDExtensionMethodBindPtr! = nil
-    static var _method_get_sky_mode_3819982774: GDExtensionMethodBindPtr! = nil
+    static var _method_set_shadow_mode_1261211726: StringName! = nil
+    static var _method_get_shadow_mode_2765228544: StringName! = nil
+    static var _method_set_blend_splits_2586408642: StringName! = nil
+    static var _method_is_blend_splits_enabled_36873697: StringName! = nil
+    static var _method_set_sky_mode_2691194817: StringName! = nil
+    static var _method_get_sky_mode_3819982774: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_DirectionalLight3D == nil)
         __godot_name_DirectionalLight3D = StringName(from: "DirectionalLight3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_shadow_mode_1261211726_name = StringName(from: "set_shadow_mode")
-        self._method_set_shadow_mode_1261211726 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirectionalLight3D._native_ptr(), _method_set_shadow_mode_1261211726_name._native_ptr(), 1261211726)
-        assert(DirectionalLight3D._method_set_shadow_mode_1261211726 != nil)
-        let _method_get_shadow_mode_2765228544_name = StringName(from: "get_shadow_mode")
-        self._method_get_shadow_mode_2765228544 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirectionalLight3D._native_ptr(), _method_get_shadow_mode_2765228544_name._native_ptr(), 2765228544)
-        assert(DirectionalLight3D._method_get_shadow_mode_2765228544 != nil)
-        let _method_set_blend_splits_2586408642_name = StringName(from: "set_blend_splits")
-        self._method_set_blend_splits_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirectionalLight3D._native_ptr(), _method_set_blend_splits_2586408642_name._native_ptr(), 2586408642)
-        assert(DirectionalLight3D._method_set_blend_splits_2586408642 != nil)
-        let _method_is_blend_splits_enabled_36873697_name = StringName(from: "is_blend_splits_enabled")
-        self._method_is_blend_splits_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirectionalLight3D._native_ptr(), _method_is_blend_splits_enabled_36873697_name._native_ptr(), 36873697)
-        assert(DirectionalLight3D._method_is_blend_splits_enabled_36873697 != nil)
-        let _method_set_sky_mode_2691194817_name = StringName(from: "set_sky_mode")
-        self._method_set_sky_mode_2691194817 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirectionalLight3D._native_ptr(), _method_set_sky_mode_2691194817_name._native_ptr(), 2691194817)
-        assert(DirectionalLight3D._method_set_sky_mode_2691194817 != nil)
-        let _method_get_sky_mode_3819982774_name = StringName(from: "get_sky_mode")
-        self._method_get_sky_mode_3819982774 = self.interface.pointee.classdb_get_method_bind(__godot_name_DirectionalLight3D._native_ptr(), _method_get_sky_mode_3819982774_name._native_ptr(), 3819982774)
-        assert(DirectionalLight3D._method_get_sky_mode_3819982774 != nil)
+        self._method_set_shadow_mode_1261211726 = StringName(from: "set_shadow_mode")
+        assert(self._method_set_shadow_mode_1261211726 != nil)
+        self._method_get_shadow_mode_2765228544 = StringName(from: "get_shadow_mode")
+        assert(self._method_get_shadow_mode_2765228544 != nil)
+        self._method_set_blend_splits_2586408642 = StringName(from: "set_blend_splits")
+        assert(self._method_set_blend_splits_2586408642 != nil)
+        self._method_is_blend_splits_enabled_36873697 = StringName(from: "is_blend_splits_enabled")
+        assert(self._method_is_blend_splits_enabled_36873697 != nil)
+        self._method_set_sky_mode_2691194817 = StringName(from: "set_sky_mode")
+        assert(self._method_set_sky_mode_2691194817 != nil)
+        self._method_get_sky_mode_3819982774 = StringName(from: "get_sky_mode")
+        assert(self._method_get_sky_mode_3819982774 != nil)
     }
 
     public func set_shadow_mode(mode: DirectionalLight3D.ShadowMode)  {
@@ -63,8 +58,13 @@ open class DirectionalLight3D : Light3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shadow_mode_1261211726,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shadow_mode_1261211726._native_ptr(),
+                    1261211726)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -79,8 +79,13 @@ open class DirectionalLight3D : Light3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_shadow_mode_2765228544,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_shadow_mode_2765228544._native_ptr(),
+                    2765228544)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -95,8 +100,13 @@ open class DirectionalLight3D : Light3D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_blend_splits_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_blend_splits_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -112,8 +122,13 @@ open class DirectionalLight3D : Light3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_blend_splits_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_blend_splits_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -128,8 +143,13 @@ open class DirectionalLight3D : Light3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_sky_mode_2691194817,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_sky_mode_2691194817._native_ptr(),
+                    2691194817)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -144,8 +164,13 @@ open class DirectionalLight3D : Light3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_sky_mode_3819982774,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_sky_mode_3819982774._native_ptr(),
+                    3819982774)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

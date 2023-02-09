@@ -43,143 +43,112 @@ open class StyleBoxFlat : StyleBox {
 
     public override class var __godot_name: StringName { __godot_name_StyleBoxFlat }
 
-    static var _method_set_bg_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bg_color_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_border_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_border_color_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_border_width_all_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_border_width_min_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_border_width_437707142: GDExtensionMethodBindPtr! = nil
-    static var _method_get_border_width_1983885014: GDExtensionMethodBindPtr! = nil
-    static var _method_set_border_blend_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_border_blend_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_corner_radius_all_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_corner_radius_2696158768: GDExtensionMethodBindPtr! = nil
-    static var _method_get_corner_radius_3982397690: GDExtensionMethodBindPtr! = nil
-    static var _method_set_expand_margin_4290182280: GDExtensionMethodBindPtr! = nil
-    static var _method_set_expand_margin_all_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_expand_margin_2869120046: GDExtensionMethodBindPtr! = nil
-    static var _method_set_draw_center_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_draw_center_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_skew_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_skew_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shadow_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_shadow_color_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shadow_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_shadow_size_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shadow_offset_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_shadow_offset_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_anti_aliased_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_anti_aliased_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_aa_size_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_aa_size_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_corner_detail_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_corner_detail_3905245786: GDExtensionMethodBindPtr! = nil
+    static var _method_set_bg_color_2920490490: StringName! = nil
+    static var _method_get_bg_color_3444240500: StringName! = nil
+    static var _method_set_border_color_2920490490: StringName! = nil
+    static var _method_get_border_color_3444240500: StringName! = nil
+    static var _method_set_border_width_all_1286410249: StringName! = nil
+    static var _method_get_border_width_min_3905245786: StringName! = nil
+    static var _method_set_border_width_437707142: StringName! = nil
+    static var _method_get_border_width_1983885014: StringName! = nil
+    static var _method_set_border_blend_2586408642: StringName! = nil
+    static var _method_get_border_blend_36873697: StringName! = nil
+    static var _method_set_corner_radius_all_1286410249: StringName! = nil
+    static var _method_set_corner_radius_2696158768: StringName! = nil
+    static var _method_get_corner_radius_3982397690: StringName! = nil
+    static var _method_set_expand_margin_4290182280: StringName! = nil
+    static var _method_set_expand_margin_all_373806689: StringName! = nil
+    static var _method_get_expand_margin_2869120046: StringName! = nil
+    static var _method_set_draw_center_2586408642: StringName! = nil
+    static var _method_is_draw_center_enabled_36873697: StringName! = nil
+    static var _method_set_skew_743155724: StringName! = nil
+    static var _method_get_skew_3341600327: StringName! = nil
+    static var _method_set_shadow_color_2920490490: StringName! = nil
+    static var _method_get_shadow_color_3444240500: StringName! = nil
+    static var _method_set_shadow_size_1286410249: StringName! = nil
+    static var _method_get_shadow_size_3905245786: StringName! = nil
+    static var _method_set_shadow_offset_743155724: StringName! = nil
+    static var _method_get_shadow_offset_3341600327: StringName! = nil
+    static var _method_set_anti_aliased_2586408642: StringName! = nil
+    static var _method_is_anti_aliased_36873697: StringName! = nil
+    static var _method_set_aa_size_373806689: StringName! = nil
+    static var _method_get_aa_size_1740695150: StringName! = nil
+    static var _method_set_corner_detail_1286410249: StringName! = nil
+    static var _method_get_corner_detail_3905245786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_StyleBoxFlat == nil)
         __godot_name_StyleBoxFlat = StringName(from: "StyleBoxFlat")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_bg_color_2920490490_name = StringName(from: "set_bg_color")
-        self._method_set_bg_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_bg_color_2920490490_name._native_ptr(), 2920490490)
-        assert(StyleBoxFlat._method_set_bg_color_2920490490 != nil)
-        let _method_get_bg_color_3444240500_name = StringName(from: "get_bg_color")
-        self._method_get_bg_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_get_bg_color_3444240500_name._native_ptr(), 3444240500)
-        assert(StyleBoxFlat._method_get_bg_color_3444240500 != nil)
-        let _method_set_border_color_2920490490_name = StringName(from: "set_border_color")
-        self._method_set_border_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_border_color_2920490490_name._native_ptr(), 2920490490)
-        assert(StyleBoxFlat._method_set_border_color_2920490490 != nil)
-        let _method_get_border_color_3444240500_name = StringName(from: "get_border_color")
-        self._method_get_border_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_get_border_color_3444240500_name._native_ptr(), 3444240500)
-        assert(StyleBoxFlat._method_get_border_color_3444240500 != nil)
-        let _method_set_border_width_all_1286410249_name = StringName(from: "set_border_width_all")
-        self._method_set_border_width_all_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_border_width_all_1286410249_name._native_ptr(), 1286410249)
-        assert(StyleBoxFlat._method_set_border_width_all_1286410249 != nil)
-        let _method_get_border_width_min_3905245786_name = StringName(from: "get_border_width_min")
-        self._method_get_border_width_min_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_get_border_width_min_3905245786_name._native_ptr(), 3905245786)
-        assert(StyleBoxFlat._method_get_border_width_min_3905245786 != nil)
-        let _method_set_border_width_437707142_name = StringName(from: "set_border_width")
-        self._method_set_border_width_437707142 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_border_width_437707142_name._native_ptr(), 437707142)
-        assert(StyleBoxFlat._method_set_border_width_437707142 != nil)
-        let _method_get_border_width_1983885014_name = StringName(from: "get_border_width")
-        self._method_get_border_width_1983885014 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_get_border_width_1983885014_name._native_ptr(), 1983885014)
-        assert(StyleBoxFlat._method_get_border_width_1983885014 != nil)
-        let _method_set_border_blend_2586408642_name = StringName(from: "set_border_blend")
-        self._method_set_border_blend_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_border_blend_2586408642_name._native_ptr(), 2586408642)
-        assert(StyleBoxFlat._method_set_border_blend_2586408642 != nil)
-        let _method_get_border_blend_36873697_name = StringName(from: "get_border_blend")
-        self._method_get_border_blend_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_get_border_blend_36873697_name._native_ptr(), 36873697)
-        assert(StyleBoxFlat._method_get_border_blend_36873697 != nil)
-        let _method_set_corner_radius_all_1286410249_name = StringName(from: "set_corner_radius_all")
-        self._method_set_corner_radius_all_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_corner_radius_all_1286410249_name._native_ptr(), 1286410249)
-        assert(StyleBoxFlat._method_set_corner_radius_all_1286410249 != nil)
-        let _method_set_corner_radius_2696158768_name = StringName(from: "set_corner_radius")
-        self._method_set_corner_radius_2696158768 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_corner_radius_2696158768_name._native_ptr(), 2696158768)
-        assert(StyleBoxFlat._method_set_corner_radius_2696158768 != nil)
-        let _method_get_corner_radius_3982397690_name = StringName(from: "get_corner_radius")
-        self._method_get_corner_radius_3982397690 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_get_corner_radius_3982397690_name._native_ptr(), 3982397690)
-        assert(StyleBoxFlat._method_get_corner_radius_3982397690 != nil)
-        let _method_set_expand_margin_4290182280_name = StringName(from: "set_expand_margin")
-        self._method_set_expand_margin_4290182280 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_expand_margin_4290182280_name._native_ptr(), 4290182280)
-        assert(StyleBoxFlat._method_set_expand_margin_4290182280 != nil)
-        let _method_set_expand_margin_all_373806689_name = StringName(from: "set_expand_margin_all")
-        self._method_set_expand_margin_all_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_expand_margin_all_373806689_name._native_ptr(), 373806689)
-        assert(StyleBoxFlat._method_set_expand_margin_all_373806689 != nil)
-        let _method_get_expand_margin_2869120046_name = StringName(from: "get_expand_margin")
-        self._method_get_expand_margin_2869120046 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_get_expand_margin_2869120046_name._native_ptr(), 2869120046)
-        assert(StyleBoxFlat._method_get_expand_margin_2869120046 != nil)
-        let _method_set_draw_center_2586408642_name = StringName(from: "set_draw_center")
-        self._method_set_draw_center_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_draw_center_2586408642_name._native_ptr(), 2586408642)
-        assert(StyleBoxFlat._method_set_draw_center_2586408642 != nil)
-        let _method_is_draw_center_enabled_36873697_name = StringName(from: "is_draw_center_enabled")
-        self._method_is_draw_center_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_is_draw_center_enabled_36873697_name._native_ptr(), 36873697)
-        assert(StyleBoxFlat._method_is_draw_center_enabled_36873697 != nil)
-        let _method_set_skew_743155724_name = StringName(from: "set_skew")
-        self._method_set_skew_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_skew_743155724_name._native_ptr(), 743155724)
-        assert(StyleBoxFlat._method_set_skew_743155724 != nil)
-        let _method_get_skew_3341600327_name = StringName(from: "get_skew")
-        self._method_get_skew_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_get_skew_3341600327_name._native_ptr(), 3341600327)
-        assert(StyleBoxFlat._method_get_skew_3341600327 != nil)
-        let _method_set_shadow_color_2920490490_name = StringName(from: "set_shadow_color")
-        self._method_set_shadow_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_shadow_color_2920490490_name._native_ptr(), 2920490490)
-        assert(StyleBoxFlat._method_set_shadow_color_2920490490 != nil)
-        let _method_get_shadow_color_3444240500_name = StringName(from: "get_shadow_color")
-        self._method_get_shadow_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_get_shadow_color_3444240500_name._native_ptr(), 3444240500)
-        assert(StyleBoxFlat._method_get_shadow_color_3444240500 != nil)
-        let _method_set_shadow_size_1286410249_name = StringName(from: "set_shadow_size")
-        self._method_set_shadow_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_shadow_size_1286410249_name._native_ptr(), 1286410249)
-        assert(StyleBoxFlat._method_set_shadow_size_1286410249 != nil)
-        let _method_get_shadow_size_3905245786_name = StringName(from: "get_shadow_size")
-        self._method_get_shadow_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_get_shadow_size_3905245786_name._native_ptr(), 3905245786)
-        assert(StyleBoxFlat._method_get_shadow_size_3905245786 != nil)
-        let _method_set_shadow_offset_743155724_name = StringName(from: "set_shadow_offset")
-        self._method_set_shadow_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_shadow_offset_743155724_name._native_ptr(), 743155724)
-        assert(StyleBoxFlat._method_set_shadow_offset_743155724 != nil)
-        let _method_get_shadow_offset_3341600327_name = StringName(from: "get_shadow_offset")
-        self._method_get_shadow_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_get_shadow_offset_3341600327_name._native_ptr(), 3341600327)
-        assert(StyleBoxFlat._method_get_shadow_offset_3341600327 != nil)
-        let _method_set_anti_aliased_2586408642_name = StringName(from: "set_anti_aliased")
-        self._method_set_anti_aliased_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_anti_aliased_2586408642_name._native_ptr(), 2586408642)
-        assert(StyleBoxFlat._method_set_anti_aliased_2586408642 != nil)
-        let _method_is_anti_aliased_36873697_name = StringName(from: "is_anti_aliased")
-        self._method_is_anti_aliased_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_is_anti_aliased_36873697_name._native_ptr(), 36873697)
-        assert(StyleBoxFlat._method_is_anti_aliased_36873697 != nil)
-        let _method_set_aa_size_373806689_name = StringName(from: "set_aa_size")
-        self._method_set_aa_size_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_aa_size_373806689_name._native_ptr(), 373806689)
-        assert(StyleBoxFlat._method_set_aa_size_373806689 != nil)
-        let _method_get_aa_size_1740695150_name = StringName(from: "get_aa_size")
-        self._method_get_aa_size_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_get_aa_size_1740695150_name._native_ptr(), 1740695150)
-        assert(StyleBoxFlat._method_get_aa_size_1740695150 != nil)
-        let _method_set_corner_detail_1286410249_name = StringName(from: "set_corner_detail")
-        self._method_set_corner_detail_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_set_corner_detail_1286410249_name._native_ptr(), 1286410249)
-        assert(StyleBoxFlat._method_set_corner_detail_1286410249 != nil)
-        let _method_get_corner_detail_3905245786_name = StringName(from: "get_corner_detail")
-        self._method_get_corner_detail_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxFlat._native_ptr(), _method_get_corner_detail_3905245786_name._native_ptr(), 3905245786)
-        assert(StyleBoxFlat._method_get_corner_detail_3905245786 != nil)
+        self._method_set_bg_color_2920490490 = StringName(from: "set_bg_color")
+        assert(self._method_set_bg_color_2920490490 != nil)
+        self._method_get_bg_color_3444240500 = StringName(from: "get_bg_color")
+        assert(self._method_get_bg_color_3444240500 != nil)
+        self._method_set_border_color_2920490490 = StringName(from: "set_border_color")
+        assert(self._method_set_border_color_2920490490 != nil)
+        self._method_get_border_color_3444240500 = StringName(from: "get_border_color")
+        assert(self._method_get_border_color_3444240500 != nil)
+        self._method_set_border_width_all_1286410249 = StringName(from: "set_border_width_all")
+        assert(self._method_set_border_width_all_1286410249 != nil)
+        self._method_get_border_width_min_3905245786 = StringName(from: "get_border_width_min")
+        assert(self._method_get_border_width_min_3905245786 != nil)
+        self._method_set_border_width_437707142 = StringName(from: "set_border_width")
+        assert(self._method_set_border_width_437707142 != nil)
+        self._method_get_border_width_1983885014 = StringName(from: "get_border_width")
+        assert(self._method_get_border_width_1983885014 != nil)
+        self._method_set_border_blend_2586408642 = StringName(from: "set_border_blend")
+        assert(self._method_set_border_blend_2586408642 != nil)
+        self._method_get_border_blend_36873697 = StringName(from: "get_border_blend")
+        assert(self._method_get_border_blend_36873697 != nil)
+        self._method_set_corner_radius_all_1286410249 = StringName(from: "set_corner_radius_all")
+        assert(self._method_set_corner_radius_all_1286410249 != nil)
+        self._method_set_corner_radius_2696158768 = StringName(from: "set_corner_radius")
+        assert(self._method_set_corner_radius_2696158768 != nil)
+        self._method_get_corner_radius_3982397690 = StringName(from: "get_corner_radius")
+        assert(self._method_get_corner_radius_3982397690 != nil)
+        self._method_set_expand_margin_4290182280 = StringName(from: "set_expand_margin")
+        assert(self._method_set_expand_margin_4290182280 != nil)
+        self._method_set_expand_margin_all_373806689 = StringName(from: "set_expand_margin_all")
+        assert(self._method_set_expand_margin_all_373806689 != nil)
+        self._method_get_expand_margin_2869120046 = StringName(from: "get_expand_margin")
+        assert(self._method_get_expand_margin_2869120046 != nil)
+        self._method_set_draw_center_2586408642 = StringName(from: "set_draw_center")
+        assert(self._method_set_draw_center_2586408642 != nil)
+        self._method_is_draw_center_enabled_36873697 = StringName(from: "is_draw_center_enabled")
+        assert(self._method_is_draw_center_enabled_36873697 != nil)
+        self._method_set_skew_743155724 = StringName(from: "set_skew")
+        assert(self._method_set_skew_743155724 != nil)
+        self._method_get_skew_3341600327 = StringName(from: "get_skew")
+        assert(self._method_get_skew_3341600327 != nil)
+        self._method_set_shadow_color_2920490490 = StringName(from: "set_shadow_color")
+        assert(self._method_set_shadow_color_2920490490 != nil)
+        self._method_get_shadow_color_3444240500 = StringName(from: "get_shadow_color")
+        assert(self._method_get_shadow_color_3444240500 != nil)
+        self._method_set_shadow_size_1286410249 = StringName(from: "set_shadow_size")
+        assert(self._method_set_shadow_size_1286410249 != nil)
+        self._method_get_shadow_size_3905245786 = StringName(from: "get_shadow_size")
+        assert(self._method_get_shadow_size_3905245786 != nil)
+        self._method_set_shadow_offset_743155724 = StringName(from: "set_shadow_offset")
+        assert(self._method_set_shadow_offset_743155724 != nil)
+        self._method_get_shadow_offset_3341600327 = StringName(from: "get_shadow_offset")
+        assert(self._method_get_shadow_offset_3341600327 != nil)
+        self._method_set_anti_aliased_2586408642 = StringName(from: "set_anti_aliased")
+        assert(self._method_set_anti_aliased_2586408642 != nil)
+        self._method_is_anti_aliased_36873697 = StringName(from: "is_anti_aliased")
+        assert(self._method_is_anti_aliased_36873697 != nil)
+        self._method_set_aa_size_373806689 = StringName(from: "set_aa_size")
+        assert(self._method_set_aa_size_373806689 != nil)
+        self._method_get_aa_size_1740695150 = StringName(from: "get_aa_size")
+        assert(self._method_get_aa_size_1740695150 != nil)
+        self._method_set_corner_detail_1286410249 = StringName(from: "set_corner_detail")
+        assert(self._method_set_corner_detail_1286410249 != nil)
+        self._method_get_corner_detail_3905245786 = StringName(from: "get_corner_detail")
+        assert(self._method_get_corner_detail_3905245786 != nil)
     }
 
     public func set_bg_color(color: Color)  {
@@ -190,8 +159,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bg_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bg_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -205,8 +179,13 @@ open class StyleBoxFlat : StyleBox {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bg_color_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bg_color_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -221,8 +200,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_border_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_border_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -236,8 +220,13 @@ open class StyleBoxFlat : StyleBox {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_border_color_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_border_color_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -252,8 +241,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(width_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_border_width_all_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_border_width_all_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -269,8 +263,13 @@ open class StyleBoxFlat : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_border_width_min_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_border_width_min_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -286,8 +285,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(margin_native), .init(width_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_border_width_437707142,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_border_width_437707142._native_ptr(),
+                    437707142)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -305,8 +309,13 @@ open class StyleBoxFlat : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_border_width_1983885014,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_border_width_1983885014._native_ptr(),
+                    1983885014)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -322,8 +331,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(blend_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_border_blend_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_border_blend_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -339,8 +353,13 @@ open class StyleBoxFlat : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_border_blend_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_border_blend_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -355,8 +374,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(radius_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_corner_radius_all_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_corner_radius_all_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -372,8 +396,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(corner_native), .init(radius_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_corner_radius_2696158768,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_corner_radius_2696158768._native_ptr(),
+                    2696158768)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -391,8 +420,13 @@ open class StyleBoxFlat : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_corner_radius_3982397690,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_corner_radius_3982397690._native_ptr(),
+                    3982397690)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -409,8 +443,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(margin_native), .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_expand_margin_4290182280,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_expand_margin_4290182280._native_ptr(),
+                    4290182280)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -426,8 +465,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_expand_margin_all_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_expand_margin_all_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -444,8 +488,13 @@ open class StyleBoxFlat : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_expand_margin_2869120046,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_expand_margin_2869120046._native_ptr(),
+                    2869120046)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -461,8 +510,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(draw_center_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_draw_center_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_draw_center_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -478,8 +532,13 @@ open class StyleBoxFlat : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_draw_center_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_draw_center_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -494,8 +553,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(skew_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_skew_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_skew_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -509,8 +573,13 @@ open class StyleBoxFlat : StyleBox {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_skew_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_skew_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -525,8 +594,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shadow_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shadow_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -540,8 +614,13 @@ open class StyleBoxFlat : StyleBox {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_shadow_color_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_shadow_color_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -556,8 +635,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shadow_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shadow_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -573,8 +657,13 @@ open class StyleBoxFlat : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_shadow_size_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_shadow_size_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -589,8 +678,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shadow_offset_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shadow_offset_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -604,8 +698,13 @@ open class StyleBoxFlat : StyleBox {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_shadow_offset_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_shadow_offset_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -620,8 +719,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(anti_aliased_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_anti_aliased_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_anti_aliased_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -637,8 +741,13 @@ open class StyleBoxFlat : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_anti_aliased_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_anti_aliased_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -653,8 +762,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_aa_size_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_aa_size_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -670,8 +784,13 @@ open class StyleBoxFlat : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_aa_size_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_aa_size_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -686,8 +805,13 @@ open class StyleBoxFlat : StyleBox {
                 .init(detail_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_corner_detail_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_corner_detail_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -703,8 +827,13 @@ open class StyleBoxFlat : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_corner_detail_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_corner_detail_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

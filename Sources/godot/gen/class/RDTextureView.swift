@@ -11,55 +11,46 @@ open class RDTextureView : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_RDTextureView }
 
-    static var _method_set_format_override_565531219: GDExtensionMethodBindPtr! = nil
-    static var _method_get_format_override_2235804183: GDExtensionMethodBindPtr! = nil
-    static var _method_set_swizzle_r_3833362581: GDExtensionMethodBindPtr! = nil
-    static var _method_get_swizzle_r_4150792614: GDExtensionMethodBindPtr! = nil
-    static var _method_set_swizzle_g_3833362581: GDExtensionMethodBindPtr! = nil
-    static var _method_get_swizzle_g_4150792614: GDExtensionMethodBindPtr! = nil
-    static var _method_set_swizzle_b_3833362581: GDExtensionMethodBindPtr! = nil
-    static var _method_get_swizzle_b_4150792614: GDExtensionMethodBindPtr! = nil
-    static var _method_set_swizzle_a_3833362581: GDExtensionMethodBindPtr! = nil
-    static var _method_get_swizzle_a_4150792614: GDExtensionMethodBindPtr! = nil
+    static var _method_set_format_override_565531219: StringName! = nil
+    static var _method_get_format_override_2235804183: StringName! = nil
+    static var _method_set_swizzle_r_3833362581: StringName! = nil
+    static var _method_get_swizzle_r_4150792614: StringName! = nil
+    static var _method_set_swizzle_g_3833362581: StringName! = nil
+    static var _method_get_swizzle_g_4150792614: StringName! = nil
+    static var _method_set_swizzle_b_3833362581: StringName! = nil
+    static var _method_get_swizzle_b_4150792614: StringName! = nil
+    static var _method_set_swizzle_a_3833362581: StringName! = nil
+    static var _method_get_swizzle_a_4150792614: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_RDTextureView == nil)
         __godot_name_RDTextureView = StringName(from: "RDTextureView")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_format_override_565531219_name = StringName(from: "set_format_override")
-        self._method_set_format_override_565531219 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureView._native_ptr(), _method_set_format_override_565531219_name._native_ptr(), 565531219)
-        assert(RDTextureView._method_set_format_override_565531219 != nil)
-        let _method_get_format_override_2235804183_name = StringName(from: "get_format_override")
-        self._method_get_format_override_2235804183 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureView._native_ptr(), _method_get_format_override_2235804183_name._native_ptr(), 2235804183)
-        assert(RDTextureView._method_get_format_override_2235804183 != nil)
-        let _method_set_swizzle_r_3833362581_name = StringName(from: "set_swizzle_r")
-        self._method_set_swizzle_r_3833362581 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureView._native_ptr(), _method_set_swizzle_r_3833362581_name._native_ptr(), 3833362581)
-        assert(RDTextureView._method_set_swizzle_r_3833362581 != nil)
-        let _method_get_swizzle_r_4150792614_name = StringName(from: "get_swizzle_r")
-        self._method_get_swizzle_r_4150792614 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureView._native_ptr(), _method_get_swizzle_r_4150792614_name._native_ptr(), 4150792614)
-        assert(RDTextureView._method_get_swizzle_r_4150792614 != nil)
-        let _method_set_swizzle_g_3833362581_name = StringName(from: "set_swizzle_g")
-        self._method_set_swizzle_g_3833362581 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureView._native_ptr(), _method_set_swizzle_g_3833362581_name._native_ptr(), 3833362581)
-        assert(RDTextureView._method_set_swizzle_g_3833362581 != nil)
-        let _method_get_swizzle_g_4150792614_name = StringName(from: "get_swizzle_g")
-        self._method_get_swizzle_g_4150792614 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureView._native_ptr(), _method_get_swizzle_g_4150792614_name._native_ptr(), 4150792614)
-        assert(RDTextureView._method_get_swizzle_g_4150792614 != nil)
-        let _method_set_swizzle_b_3833362581_name = StringName(from: "set_swizzle_b")
-        self._method_set_swizzle_b_3833362581 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureView._native_ptr(), _method_set_swizzle_b_3833362581_name._native_ptr(), 3833362581)
-        assert(RDTextureView._method_set_swizzle_b_3833362581 != nil)
-        let _method_get_swizzle_b_4150792614_name = StringName(from: "get_swizzle_b")
-        self._method_get_swizzle_b_4150792614 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureView._native_ptr(), _method_get_swizzle_b_4150792614_name._native_ptr(), 4150792614)
-        assert(RDTextureView._method_get_swizzle_b_4150792614 != nil)
-        let _method_set_swizzle_a_3833362581_name = StringName(from: "set_swizzle_a")
-        self._method_set_swizzle_a_3833362581 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureView._native_ptr(), _method_set_swizzle_a_3833362581_name._native_ptr(), 3833362581)
-        assert(RDTextureView._method_set_swizzle_a_3833362581 != nil)
-        let _method_get_swizzle_a_4150792614_name = StringName(from: "get_swizzle_a")
-        self._method_get_swizzle_a_4150792614 = self.interface.pointee.classdb_get_method_bind(__godot_name_RDTextureView._native_ptr(), _method_get_swizzle_a_4150792614_name._native_ptr(), 4150792614)
-        assert(RDTextureView._method_get_swizzle_a_4150792614 != nil)
+        self._method_set_format_override_565531219 = StringName(from: "set_format_override")
+        assert(self._method_set_format_override_565531219 != nil)
+        self._method_get_format_override_2235804183 = StringName(from: "get_format_override")
+        assert(self._method_get_format_override_2235804183 != nil)
+        self._method_set_swizzle_r_3833362581 = StringName(from: "set_swizzle_r")
+        assert(self._method_set_swizzle_r_3833362581 != nil)
+        self._method_get_swizzle_r_4150792614 = StringName(from: "get_swizzle_r")
+        assert(self._method_get_swizzle_r_4150792614 != nil)
+        self._method_set_swizzle_g_3833362581 = StringName(from: "set_swizzle_g")
+        assert(self._method_set_swizzle_g_3833362581 != nil)
+        self._method_get_swizzle_g_4150792614 = StringName(from: "get_swizzle_g")
+        assert(self._method_get_swizzle_g_4150792614 != nil)
+        self._method_set_swizzle_b_3833362581 = StringName(from: "set_swizzle_b")
+        assert(self._method_set_swizzle_b_3833362581 != nil)
+        self._method_get_swizzle_b_4150792614 = StringName(from: "get_swizzle_b")
+        assert(self._method_get_swizzle_b_4150792614 != nil)
+        self._method_set_swizzle_a_3833362581 = StringName(from: "set_swizzle_a")
+        assert(self._method_set_swizzle_a_3833362581 != nil)
+        self._method_get_swizzle_a_4150792614 = StringName(from: "get_swizzle_a")
+        assert(self._method_get_swizzle_a_4150792614 != nil)
     }
 
     public func set_format_override(p_member: RenderingDevice.DataFormat)  {
@@ -70,8 +61,13 @@ open class RDTextureView : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_format_override_565531219,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_format_override_565531219._native_ptr(),
+                    565531219)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -86,8 +82,13 @@ open class RDTextureView : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_format_override_2235804183,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_format_override_2235804183._native_ptr(),
+                    2235804183)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -102,8 +103,13 @@ open class RDTextureView : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_swizzle_r_3833362581,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_swizzle_r_3833362581._native_ptr(),
+                    3833362581)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -118,8 +124,13 @@ open class RDTextureView : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_swizzle_r_4150792614,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_swizzle_r_4150792614._native_ptr(),
+                    4150792614)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -134,8 +145,13 @@ open class RDTextureView : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_swizzle_g_3833362581,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_swizzle_g_3833362581._native_ptr(),
+                    3833362581)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -150,8 +166,13 @@ open class RDTextureView : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_swizzle_g_4150792614,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_swizzle_g_4150792614._native_ptr(),
+                    4150792614)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -166,8 +187,13 @@ open class RDTextureView : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_swizzle_b_3833362581,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_swizzle_b_3833362581._native_ptr(),
+                    3833362581)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -182,8 +208,13 @@ open class RDTextureView : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_swizzle_b_4150792614,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_swizzle_b_4150792614._native_ptr(),
+                    4150792614)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -198,8 +229,13 @@ open class RDTextureView : RefCounted {
                 .init(p_member_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_swizzle_a_3833362581,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_swizzle_a_3833362581._native_ptr(),
+                    3833362581)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -214,8 +250,13 @@ open class RDTextureView : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_swizzle_a_4150792614,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_swizzle_a_4150792614._native_ptr(),
+                    4150792614)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

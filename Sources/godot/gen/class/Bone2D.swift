@@ -17,67 +17,55 @@ open class Bone2D : Node2D {
 
     public override class var __godot_name: StringName { __godot_name_Bone2D }
 
-    static var _method_set_rest_2761652528: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rest_3814499831: GDExtensionMethodBindPtr! = nil
-    static var _method_apply_rest_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_skeleton_rest_3814499831: GDExtensionMethodBindPtr! = nil
-    static var _method_get_index_in_skeleton_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_default_length_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_default_length_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_autocalculate_length_and_angle_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_autocalculate_length_and_angle_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_length_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_length_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bone_angle_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone_angle_1740695150: GDExtensionMethodBindPtr! = nil
+    static var _method_set_rest_2761652528: StringName! = nil
+    static var _method_get_rest_3814499831: StringName! = nil
+    static var _method_apply_rest_3218959716: StringName! = nil
+    static var _method_get_skeleton_rest_3814499831: StringName! = nil
+    static var _method_get_index_in_skeleton_3905245786: StringName! = nil
+    static var _method_set_default_length_373806689: StringName! = nil
+    static var _method_get_default_length_1740695150: StringName! = nil
+    static var _method_set_autocalculate_length_and_angle_2586408642: StringName! = nil
+    static var _method_get_autocalculate_length_and_angle_36873697: StringName! = nil
+    static var _method_set_length_373806689: StringName! = nil
+    static var _method_get_length_1740695150: StringName! = nil
+    static var _method_set_bone_angle_373806689: StringName! = nil
+    static var _method_get_bone_angle_1740695150: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Bone2D == nil)
         __godot_name_Bone2D = StringName(from: "Bone2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_rest_2761652528_name = StringName(from: "set_rest")
-        self._method_set_rest_2761652528 = self.interface.pointee.classdb_get_method_bind(__godot_name_Bone2D._native_ptr(), _method_set_rest_2761652528_name._native_ptr(), 2761652528)
-        assert(Bone2D._method_set_rest_2761652528 != nil)
-        let _method_get_rest_3814499831_name = StringName(from: "get_rest")
-        self._method_get_rest_3814499831 = self.interface.pointee.classdb_get_method_bind(__godot_name_Bone2D._native_ptr(), _method_get_rest_3814499831_name._native_ptr(), 3814499831)
-        assert(Bone2D._method_get_rest_3814499831 != nil)
-        let _method_apply_rest_3218959716_name = StringName(from: "apply_rest")
-        self._method_apply_rest_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Bone2D._native_ptr(), _method_apply_rest_3218959716_name._native_ptr(), 3218959716)
-        assert(Bone2D._method_apply_rest_3218959716 != nil)
-        let _method_get_skeleton_rest_3814499831_name = StringName(from: "get_skeleton_rest")
-        self._method_get_skeleton_rest_3814499831 = self.interface.pointee.classdb_get_method_bind(__godot_name_Bone2D._native_ptr(), _method_get_skeleton_rest_3814499831_name._native_ptr(), 3814499831)
-        assert(Bone2D._method_get_skeleton_rest_3814499831 != nil)
-        let _method_get_index_in_skeleton_3905245786_name = StringName(from: "get_index_in_skeleton")
-        self._method_get_index_in_skeleton_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Bone2D._native_ptr(), _method_get_index_in_skeleton_3905245786_name._native_ptr(), 3905245786)
-        assert(Bone2D._method_get_index_in_skeleton_3905245786 != nil)
-        let _method_set_default_length_373806689_name = StringName(from: "set_default_length")
-        self._method_set_default_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Bone2D._native_ptr(), _method_set_default_length_373806689_name._native_ptr(), 373806689)
-        assert(Bone2D._method_set_default_length_373806689 != nil)
-        let _method_get_default_length_1740695150_name = StringName(from: "get_default_length")
-        self._method_get_default_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Bone2D._native_ptr(), _method_get_default_length_1740695150_name._native_ptr(), 1740695150)
-        assert(Bone2D._method_get_default_length_1740695150 != nil)
-        let _method_set_autocalculate_length_and_angle_2586408642_name = StringName(from: "set_autocalculate_length_and_angle")
-        self._method_set_autocalculate_length_and_angle_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Bone2D._native_ptr(), _method_set_autocalculate_length_and_angle_2586408642_name._native_ptr(), 2586408642)
-        assert(Bone2D._method_set_autocalculate_length_and_angle_2586408642 != nil)
-        let _method_get_autocalculate_length_and_angle_36873697_name = StringName(from: "get_autocalculate_length_and_angle")
-        self._method_get_autocalculate_length_and_angle_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Bone2D._native_ptr(), _method_get_autocalculate_length_and_angle_36873697_name._native_ptr(), 36873697)
-        assert(Bone2D._method_get_autocalculate_length_and_angle_36873697 != nil)
-        let _method_set_length_373806689_name = StringName(from: "set_length")
-        self._method_set_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Bone2D._native_ptr(), _method_set_length_373806689_name._native_ptr(), 373806689)
-        assert(Bone2D._method_set_length_373806689 != nil)
-        let _method_get_length_1740695150_name = StringName(from: "get_length")
-        self._method_get_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Bone2D._native_ptr(), _method_get_length_1740695150_name._native_ptr(), 1740695150)
-        assert(Bone2D._method_get_length_1740695150 != nil)
-        let _method_set_bone_angle_373806689_name = StringName(from: "set_bone_angle")
-        self._method_set_bone_angle_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Bone2D._native_ptr(), _method_set_bone_angle_373806689_name._native_ptr(), 373806689)
-        assert(Bone2D._method_set_bone_angle_373806689 != nil)
-        let _method_get_bone_angle_1740695150_name = StringName(from: "get_bone_angle")
-        self._method_get_bone_angle_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Bone2D._native_ptr(), _method_get_bone_angle_1740695150_name._native_ptr(), 1740695150)
-        assert(Bone2D._method_get_bone_angle_1740695150 != nil)
+        self._method_set_rest_2761652528 = StringName(from: "set_rest")
+        assert(self._method_set_rest_2761652528 != nil)
+        self._method_get_rest_3814499831 = StringName(from: "get_rest")
+        assert(self._method_get_rest_3814499831 != nil)
+        self._method_apply_rest_3218959716 = StringName(from: "apply_rest")
+        assert(self._method_apply_rest_3218959716 != nil)
+        self._method_get_skeleton_rest_3814499831 = StringName(from: "get_skeleton_rest")
+        assert(self._method_get_skeleton_rest_3814499831 != nil)
+        self._method_get_index_in_skeleton_3905245786 = StringName(from: "get_index_in_skeleton")
+        assert(self._method_get_index_in_skeleton_3905245786 != nil)
+        self._method_set_default_length_373806689 = StringName(from: "set_default_length")
+        assert(self._method_set_default_length_373806689 != nil)
+        self._method_get_default_length_1740695150 = StringName(from: "get_default_length")
+        assert(self._method_get_default_length_1740695150 != nil)
+        self._method_set_autocalculate_length_and_angle_2586408642 = StringName(from: "set_autocalculate_length_and_angle")
+        assert(self._method_set_autocalculate_length_and_angle_2586408642 != nil)
+        self._method_get_autocalculate_length_and_angle_36873697 = StringName(from: "get_autocalculate_length_and_angle")
+        assert(self._method_get_autocalculate_length_and_angle_36873697 != nil)
+        self._method_set_length_373806689 = StringName(from: "set_length")
+        assert(self._method_set_length_373806689 != nil)
+        self._method_get_length_1740695150 = StringName(from: "get_length")
+        assert(self._method_get_length_1740695150 != nil)
+        self._method_set_bone_angle_373806689 = StringName(from: "set_bone_angle")
+        assert(self._method_set_bone_angle_373806689 != nil)
+        self._method_get_bone_angle_1740695150 = StringName(from: "get_bone_angle")
+        assert(self._method_get_bone_angle_1740695150 != nil)
     }
 
     public func set_rest(rest: Transform2D)  {
@@ -88,8 +76,13 @@ open class Bone2D : Node2D {
                 .init(rest_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_rest_2761652528,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_rest_2761652528._native_ptr(),
+                    2761652528)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -103,8 +96,13 @@ open class Bone2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rest_3814499831,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rest_3814499831._native_ptr(),
+                    3814499831)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -118,8 +116,13 @@ open class Bone2D : Node2D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_apply_rest_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_apply_rest_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -133,8 +136,13 @@ open class Bone2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_skeleton_rest_3814499831,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_skeleton_rest_3814499831._native_ptr(),
+                    3814499831)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -150,8 +158,13 @@ open class Bone2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_index_in_skeleton_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_index_in_skeleton_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -166,8 +179,13 @@ open class Bone2D : Node2D {
                 .init(default_length_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_default_length_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_default_length_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -183,8 +201,13 @@ open class Bone2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_default_length_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_default_length_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -199,8 +222,13 @@ open class Bone2D : Node2D {
                 .init(auto_calculate_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_autocalculate_length_and_angle_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_autocalculate_length_and_angle_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -216,8 +244,13 @@ open class Bone2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_autocalculate_length_and_angle_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_autocalculate_length_and_angle_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -232,8 +265,13 @@ open class Bone2D : Node2D {
                 .init(length_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_length_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_length_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -249,8 +287,13 @@ open class Bone2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_length_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_length_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -265,8 +308,13 @@ open class Bone2D : Node2D {
                 .init(angle_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bone_angle_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bone_angle_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -282,8 +330,13 @@ open class Bone2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_angle_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_angle_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

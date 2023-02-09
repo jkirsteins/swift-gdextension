@@ -91,275 +91,211 @@ open class Image : Resource {
 
     public override class var __godot_name: StringName { __godot_name_Image }
 
-    static var _method_get_width_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_height_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_has_mipmaps_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_format_3847873762: GDExtensionMethodBindPtr! = nil
-    static var _method_get_data_2362200018: GDExtensionMethodBindPtr! = nil
-    static var _method_convert_2120693146: GDExtensionMethodBindPtr! = nil
-    static var _method_get_mipmap_offset_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_resize_to_po2_4189212329: GDExtensionMethodBindPtr! = nil
-    static var _method_resize_2461393748: GDExtensionMethodBindPtr! = nil
-    static var _method_shrink_x2_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_crop_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_flip_x_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_flip_y_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_generate_mipmaps_1633102583: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_mipmaps_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_create_986942177: GDExtensionMethodBindPtr! = nil
-    static var _method_create_from_data_299398494: GDExtensionMethodBindPtr! = nil
-    static var _method_set_data_2740482212: GDExtensionMethodBindPtr! = nil
-    static var _method_is_empty_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_load_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_load_from_file_736337515: GDExtensionMethodBindPtr! = nil
-    static var _method_save_png_2113323047: GDExtensionMethodBindPtr! = nil
-    static var _method_save_png_to_buffer_2362200018: GDExtensionMethodBindPtr! = nil
-    static var _method_save_jpg_578836491: GDExtensionMethodBindPtr! = nil
-    static var _method_save_jpg_to_buffer_310747435: GDExtensionMethodBindPtr! = nil
-    static var _method_save_exr_3108122999: GDExtensionMethodBindPtr! = nil
-    static var _method_save_exr_to_buffer_3178917920: GDExtensionMethodBindPtr! = nil
-    static var _method_save_webp_3594949219: GDExtensionMethodBindPtr! = nil
-    static var _method_save_webp_to_buffer_1235769281: GDExtensionMethodBindPtr! = nil
-    static var _method_detect_alpha_2030116505: GDExtensionMethodBindPtr! = nil
-    static var _method_is_invisible_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_detect_used_channels_2703139984: GDExtensionMethodBindPtr! = nil
-    static var _method_compress_4094210332: GDExtensionMethodBindPtr! = nil
-    static var _method_compress_from_channels_279105990: GDExtensionMethodBindPtr! = nil
-    static var _method_decompress_166280745: GDExtensionMethodBindPtr! = nil
-    static var _method_is_compressed_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_rotate_90_1901204267: GDExtensionMethodBindPtr! = nil
-    static var _method_rotate_180_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_fix_alpha_edges_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_premultiply_alpha_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_srgb_to_linear_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_normal_map_to_xy_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_rgbe_to_srgb_564927088: GDExtensionMethodBindPtr! = nil
-    static var _method_bump_map_to_normal_map_336773324: GDExtensionMethodBindPtr! = nil
-    static var _method_compute_image_metrics_3080961247: GDExtensionMethodBindPtr! = nil
-    static var _method_blit_rect_2903928755: GDExtensionMethodBindPtr! = nil
-    static var _method_blit_rect_mask_3383581145: GDExtensionMethodBindPtr! = nil
-    static var _method_blend_rect_2903928755: GDExtensionMethodBindPtr! = nil
-    static var _method_blend_rect_mask_3383581145: GDExtensionMethodBindPtr! = nil
-    static var _method_fill_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_fill_rect_514693913: GDExtensionMethodBindPtr! = nil
-    static var _method_get_used_rect_410525958: GDExtensionMethodBindPtr! = nil
-    static var _method_get_region_2601441065: GDExtensionMethodBindPtr! = nil
-    static var _method_copy_from_532598488: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pixelv_1532707496: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pixel_2165839948: GDExtensionMethodBindPtr! = nil
-    static var _method_set_pixelv_287851464: GDExtensionMethodBindPtr! = nil
-    static var _method_set_pixel_3733378741: GDExtensionMethodBindPtr! = nil
-    static var _method_adjust_bcs_2385087082: GDExtensionMethodBindPtr! = nil
-    static var _method_load_png_from_buffer_680677267: GDExtensionMethodBindPtr! = nil
-    static var _method_load_jpg_from_buffer_680677267: GDExtensionMethodBindPtr! = nil
-    static var _method_load_webp_from_buffer_680677267: GDExtensionMethodBindPtr! = nil
-    static var _method_load_tga_from_buffer_680677267: GDExtensionMethodBindPtr! = nil
-    static var _method_load_bmp_from_buffer_680677267: GDExtensionMethodBindPtr! = nil
+    static var _method_get_width_3905245786: StringName! = nil
+    static var _method_get_height_3905245786: StringName! = nil
+    static var _method_get_size_3690982128: StringName! = nil
+    static var _method_has_mipmaps_36873697: StringName! = nil
+    static var _method_get_format_3847873762: StringName! = nil
+    static var _method_get_data_2362200018: StringName! = nil
+    static var _method_convert_2120693146: StringName! = nil
+    static var _method_get_mipmap_offset_923996154: StringName! = nil
+    static var _method_resize_to_po2_4189212329: StringName! = nil
+    static var _method_resize_2461393748: StringName! = nil
+    static var _method_shrink_x2_3218959716: StringName! = nil
+    static var _method_crop_3937882851: StringName! = nil
+    static var _method_flip_x_3218959716: StringName! = nil
+    static var _method_flip_y_3218959716: StringName! = nil
+    static var _method_generate_mipmaps_1633102583: StringName! = nil
+    static var _method_clear_mipmaps_3218959716: StringName! = nil
+    static var _method_create_986942177: StringName! = nil
+    static var _method_create_from_data_299398494: StringName! = nil
+    static var _method_set_data_2740482212: StringName! = nil
+    static var _method_is_empty_36873697: StringName! = nil
+    static var _method_load_166001499: StringName! = nil
+    static var _method_load_from_file_736337515: StringName! = nil
+    static var _method_save_png_2113323047: StringName! = nil
+    static var _method_save_png_to_buffer_2362200018: StringName! = nil
+    static var _method_save_jpg_578836491: StringName! = nil
+    static var _method_save_jpg_to_buffer_310747435: StringName! = nil
+    static var _method_save_exr_3108122999: StringName! = nil
+    static var _method_save_exr_to_buffer_3178917920: StringName! = nil
+    static var _method_save_webp_3594949219: StringName! = nil
+    static var _method_save_webp_to_buffer_1235769281: StringName! = nil
+    static var _method_detect_alpha_2030116505: StringName! = nil
+    static var _method_is_invisible_36873697: StringName! = nil
+    static var _method_detect_used_channels_2703139984: StringName! = nil
+    static var _method_compress_4094210332: StringName! = nil
+    static var _method_compress_from_channels_279105990: StringName! = nil
+    static var _method_decompress_166280745: StringName! = nil
+    static var _method_is_compressed_36873697: StringName! = nil
+    static var _method_rotate_90_1901204267: StringName! = nil
+    static var _method_rotate_180_3218959716: StringName! = nil
+    static var _method_fix_alpha_edges_3218959716: StringName! = nil
+    static var _method_premultiply_alpha_3218959716: StringName! = nil
+    static var _method_srgb_to_linear_3218959716: StringName! = nil
+    static var _method_normal_map_to_xy_3218959716: StringName! = nil
+    static var _method_rgbe_to_srgb_564927088: StringName! = nil
+    static var _method_bump_map_to_normal_map_336773324: StringName! = nil
+    static var _method_compute_image_metrics_3080961247: StringName! = nil
+    static var _method_blit_rect_2903928755: StringName! = nil
+    static var _method_blit_rect_mask_3383581145: StringName! = nil
+    static var _method_blend_rect_2903928755: StringName! = nil
+    static var _method_blend_rect_mask_3383581145: StringName! = nil
+    static var _method_fill_2920490490: StringName! = nil
+    static var _method_fill_rect_514693913: StringName! = nil
+    static var _method_get_used_rect_410525958: StringName! = nil
+    static var _method_get_region_2601441065: StringName! = nil
+    static var _method_copy_from_532598488: StringName! = nil
+    static var _method_get_pixelv_1532707496: StringName! = nil
+    static var _method_get_pixel_2165839948: StringName! = nil
+    static var _method_set_pixelv_287851464: StringName! = nil
+    static var _method_set_pixel_3733378741: StringName! = nil
+    static var _method_adjust_bcs_2385087082: StringName! = nil
+    static var _method_load_png_from_buffer_680677267: StringName! = nil
+    static var _method_load_jpg_from_buffer_680677267: StringName! = nil
+    static var _method_load_webp_from_buffer_680677267: StringName! = nil
+    static var _method_load_tga_from_buffer_680677267: StringName! = nil
+    static var _method_load_bmp_from_buffer_680677267: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Image == nil)
         __godot_name_Image = StringName(from: "Image")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_width_3905245786_name = StringName(from: "get_width")
-        self._method_get_width_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_width_3905245786_name._native_ptr(), 3905245786)
-        assert(Image._method_get_width_3905245786 != nil)
-        let _method_get_height_3905245786_name = StringName(from: "get_height")
-        self._method_get_height_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_height_3905245786_name._native_ptr(), 3905245786)
-        assert(Image._method_get_height_3905245786 != nil)
-        let _method_get_size_3690982128_name = StringName(from: "get_size")
-        self._method_get_size_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_size_3690982128_name._native_ptr(), 3690982128)
-        assert(Image._method_get_size_3690982128 != nil)
-        let _method_has_mipmaps_36873697_name = StringName(from: "has_mipmaps")
-        self._method_has_mipmaps_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_has_mipmaps_36873697_name._native_ptr(), 36873697)
-        assert(Image._method_has_mipmaps_36873697 != nil)
-        let _method_get_format_3847873762_name = StringName(from: "get_format")
-        self._method_get_format_3847873762 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_format_3847873762_name._native_ptr(), 3847873762)
-        assert(Image._method_get_format_3847873762 != nil)
-        let _method_get_data_2362200018_name = StringName(from: "get_data")
-        self._method_get_data_2362200018 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_data_2362200018_name._native_ptr(), 2362200018)
-        assert(Image._method_get_data_2362200018 != nil)
-        let _method_convert_2120693146_name = StringName(from: "convert")
-        self._method_convert_2120693146 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_convert_2120693146_name._native_ptr(), 2120693146)
-        assert(Image._method_convert_2120693146 != nil)
-        let _method_get_mipmap_offset_923996154_name = StringName(from: "get_mipmap_offset")
-        self._method_get_mipmap_offset_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_mipmap_offset_923996154_name._native_ptr(), 923996154)
-        assert(Image._method_get_mipmap_offset_923996154 != nil)
-        let _method_resize_to_po2_4189212329_name = StringName(from: "resize_to_po2")
-        self._method_resize_to_po2_4189212329 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_resize_to_po2_4189212329_name._native_ptr(), 4189212329)
-        assert(Image._method_resize_to_po2_4189212329 != nil)
-        let _method_resize_2461393748_name = StringName(from: "resize")
-        self._method_resize_2461393748 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_resize_2461393748_name._native_ptr(), 2461393748)
-        assert(Image._method_resize_2461393748 != nil)
-        let _method_shrink_x2_3218959716_name = StringName(from: "shrink_x2")
-        self._method_shrink_x2_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_shrink_x2_3218959716_name._native_ptr(), 3218959716)
-        assert(Image._method_shrink_x2_3218959716 != nil)
-        let _method_crop_3937882851_name = StringName(from: "crop")
-        self._method_crop_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_crop_3937882851_name._native_ptr(), 3937882851)
-        assert(Image._method_crop_3937882851 != nil)
-        let _method_flip_x_3218959716_name = StringName(from: "flip_x")
-        self._method_flip_x_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_flip_x_3218959716_name._native_ptr(), 3218959716)
-        assert(Image._method_flip_x_3218959716 != nil)
-        let _method_flip_y_3218959716_name = StringName(from: "flip_y")
-        self._method_flip_y_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_flip_y_3218959716_name._native_ptr(), 3218959716)
-        assert(Image._method_flip_y_3218959716 != nil)
-        let _method_generate_mipmaps_1633102583_name = StringName(from: "generate_mipmaps")
-        self._method_generate_mipmaps_1633102583 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_generate_mipmaps_1633102583_name._native_ptr(), 1633102583)
-        assert(Image._method_generate_mipmaps_1633102583 != nil)
-        let _method_clear_mipmaps_3218959716_name = StringName(from: "clear_mipmaps")
-        self._method_clear_mipmaps_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_clear_mipmaps_3218959716_name._native_ptr(), 3218959716)
-        assert(Image._method_clear_mipmaps_3218959716 != nil)
-        let _method_create_986942177_name = StringName(from: "create")
-        self._method_create_986942177 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_create_986942177_name._native_ptr(), 986942177)
-        assert(Image._method_create_986942177 != nil)
-        let _method_create_from_data_299398494_name = StringName(from: "create_from_data")
-        self._method_create_from_data_299398494 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_create_from_data_299398494_name._native_ptr(), 299398494)
-        assert(Image._method_create_from_data_299398494 != nil)
-        let _method_set_data_2740482212_name = StringName(from: "set_data")
-        self._method_set_data_2740482212 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_set_data_2740482212_name._native_ptr(), 2740482212)
-        assert(Image._method_set_data_2740482212 != nil)
-        let _method_is_empty_36873697_name = StringName(from: "is_empty")
-        self._method_is_empty_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_is_empty_36873697_name._native_ptr(), 36873697)
-        assert(Image._method_is_empty_36873697 != nil)
-        let _method_load_166001499_name = StringName(from: "load")
-        self._method_load_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_load_166001499_name._native_ptr(), 166001499)
-        assert(Image._method_load_166001499 != nil)
-        let _method_load_from_file_736337515_name = StringName(from: "load_from_file")
-        self._method_load_from_file_736337515 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_load_from_file_736337515_name._native_ptr(), 736337515)
-        assert(Image._method_load_from_file_736337515 != nil)
-        let _method_save_png_2113323047_name = StringName(from: "save_png")
-        self._method_save_png_2113323047 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_save_png_2113323047_name._native_ptr(), 2113323047)
-        assert(Image._method_save_png_2113323047 != nil)
-        let _method_save_png_to_buffer_2362200018_name = StringName(from: "save_png_to_buffer")
-        self._method_save_png_to_buffer_2362200018 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_save_png_to_buffer_2362200018_name._native_ptr(), 2362200018)
-        assert(Image._method_save_png_to_buffer_2362200018 != nil)
-        let _method_save_jpg_578836491_name = StringName(from: "save_jpg")
-        self._method_save_jpg_578836491 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_save_jpg_578836491_name._native_ptr(), 578836491)
-        assert(Image._method_save_jpg_578836491 != nil)
-        let _method_save_jpg_to_buffer_310747435_name = StringName(from: "save_jpg_to_buffer")
-        self._method_save_jpg_to_buffer_310747435 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_save_jpg_to_buffer_310747435_name._native_ptr(), 310747435)
-        assert(Image._method_save_jpg_to_buffer_310747435 != nil)
-        let _method_save_exr_3108122999_name = StringName(from: "save_exr")
-        self._method_save_exr_3108122999 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_save_exr_3108122999_name._native_ptr(), 3108122999)
-        assert(Image._method_save_exr_3108122999 != nil)
-        let _method_save_exr_to_buffer_3178917920_name = StringName(from: "save_exr_to_buffer")
-        self._method_save_exr_to_buffer_3178917920 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_save_exr_to_buffer_3178917920_name._native_ptr(), 3178917920)
-        assert(Image._method_save_exr_to_buffer_3178917920 != nil)
-        let _method_save_webp_3594949219_name = StringName(from: "save_webp")
-        self._method_save_webp_3594949219 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_save_webp_3594949219_name._native_ptr(), 3594949219)
-        assert(Image._method_save_webp_3594949219 != nil)
-        let _method_save_webp_to_buffer_1235769281_name = StringName(from: "save_webp_to_buffer")
-        self._method_save_webp_to_buffer_1235769281 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_save_webp_to_buffer_1235769281_name._native_ptr(), 1235769281)
-        assert(Image._method_save_webp_to_buffer_1235769281 != nil)
-        let _method_detect_alpha_2030116505_name = StringName(from: "detect_alpha")
-        self._method_detect_alpha_2030116505 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_detect_alpha_2030116505_name._native_ptr(), 2030116505)
-        assert(Image._method_detect_alpha_2030116505 != nil)
-        let _method_is_invisible_36873697_name = StringName(from: "is_invisible")
-        self._method_is_invisible_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_is_invisible_36873697_name._native_ptr(), 36873697)
-        assert(Image._method_is_invisible_36873697 != nil)
-        let _method_detect_used_channels_2703139984_name = StringName(from: "detect_used_channels")
-        self._method_detect_used_channels_2703139984 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_detect_used_channels_2703139984_name._native_ptr(), 2703139984)
-        assert(Image._method_detect_used_channels_2703139984 != nil)
-        let _method_compress_4094210332_name = StringName(from: "compress")
-        self._method_compress_4094210332 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_compress_4094210332_name._native_ptr(), 4094210332)
-        assert(Image._method_compress_4094210332 != nil)
-        let _method_compress_from_channels_279105990_name = StringName(from: "compress_from_channels")
-        self._method_compress_from_channels_279105990 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_compress_from_channels_279105990_name._native_ptr(), 279105990)
-        assert(Image._method_compress_from_channels_279105990 != nil)
-        let _method_decompress_166280745_name = StringName(from: "decompress")
-        self._method_decompress_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_decompress_166280745_name._native_ptr(), 166280745)
-        assert(Image._method_decompress_166280745 != nil)
-        let _method_is_compressed_36873697_name = StringName(from: "is_compressed")
-        self._method_is_compressed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_is_compressed_36873697_name._native_ptr(), 36873697)
-        assert(Image._method_is_compressed_36873697 != nil)
-        let _method_rotate_90_1901204267_name = StringName(from: "rotate_90")
-        self._method_rotate_90_1901204267 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_rotate_90_1901204267_name._native_ptr(), 1901204267)
-        assert(Image._method_rotate_90_1901204267 != nil)
-        let _method_rotate_180_3218959716_name = StringName(from: "rotate_180")
-        self._method_rotate_180_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_rotate_180_3218959716_name._native_ptr(), 3218959716)
-        assert(Image._method_rotate_180_3218959716 != nil)
-        let _method_fix_alpha_edges_3218959716_name = StringName(from: "fix_alpha_edges")
-        self._method_fix_alpha_edges_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_fix_alpha_edges_3218959716_name._native_ptr(), 3218959716)
-        assert(Image._method_fix_alpha_edges_3218959716 != nil)
-        let _method_premultiply_alpha_3218959716_name = StringName(from: "premultiply_alpha")
-        self._method_premultiply_alpha_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_premultiply_alpha_3218959716_name._native_ptr(), 3218959716)
-        assert(Image._method_premultiply_alpha_3218959716 != nil)
-        let _method_srgb_to_linear_3218959716_name = StringName(from: "srgb_to_linear")
-        self._method_srgb_to_linear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_srgb_to_linear_3218959716_name._native_ptr(), 3218959716)
-        assert(Image._method_srgb_to_linear_3218959716 != nil)
-        let _method_normal_map_to_xy_3218959716_name = StringName(from: "normal_map_to_xy")
-        self._method_normal_map_to_xy_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_normal_map_to_xy_3218959716_name._native_ptr(), 3218959716)
-        assert(Image._method_normal_map_to_xy_3218959716 != nil)
-        let _method_rgbe_to_srgb_564927088_name = StringName(from: "rgbe_to_srgb")
-        self._method_rgbe_to_srgb_564927088 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_rgbe_to_srgb_564927088_name._native_ptr(), 564927088)
-        assert(Image._method_rgbe_to_srgb_564927088 != nil)
-        let _method_bump_map_to_normal_map_336773324_name = StringName(from: "bump_map_to_normal_map")
-        self._method_bump_map_to_normal_map_336773324 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_bump_map_to_normal_map_336773324_name._native_ptr(), 336773324)
-        assert(Image._method_bump_map_to_normal_map_336773324 != nil)
-        let _method_compute_image_metrics_3080961247_name = StringName(from: "compute_image_metrics")
-        self._method_compute_image_metrics_3080961247 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_compute_image_metrics_3080961247_name._native_ptr(), 3080961247)
-        assert(Image._method_compute_image_metrics_3080961247 != nil)
-        let _method_blit_rect_2903928755_name = StringName(from: "blit_rect")
-        self._method_blit_rect_2903928755 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_blit_rect_2903928755_name._native_ptr(), 2903928755)
-        assert(Image._method_blit_rect_2903928755 != nil)
-        let _method_blit_rect_mask_3383581145_name = StringName(from: "blit_rect_mask")
-        self._method_blit_rect_mask_3383581145 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_blit_rect_mask_3383581145_name._native_ptr(), 3383581145)
-        assert(Image._method_blit_rect_mask_3383581145 != nil)
-        let _method_blend_rect_2903928755_name = StringName(from: "blend_rect")
-        self._method_blend_rect_2903928755 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_blend_rect_2903928755_name._native_ptr(), 2903928755)
-        assert(Image._method_blend_rect_2903928755 != nil)
-        let _method_blend_rect_mask_3383581145_name = StringName(from: "blend_rect_mask")
-        self._method_blend_rect_mask_3383581145 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_blend_rect_mask_3383581145_name._native_ptr(), 3383581145)
-        assert(Image._method_blend_rect_mask_3383581145 != nil)
-        let _method_fill_2920490490_name = StringName(from: "fill")
-        self._method_fill_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_fill_2920490490_name._native_ptr(), 2920490490)
-        assert(Image._method_fill_2920490490 != nil)
-        let _method_fill_rect_514693913_name = StringName(from: "fill_rect")
-        self._method_fill_rect_514693913 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_fill_rect_514693913_name._native_ptr(), 514693913)
-        assert(Image._method_fill_rect_514693913 != nil)
-        let _method_get_used_rect_410525958_name = StringName(from: "get_used_rect")
-        self._method_get_used_rect_410525958 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_used_rect_410525958_name._native_ptr(), 410525958)
-        assert(Image._method_get_used_rect_410525958 != nil)
-        let _method_get_region_2601441065_name = StringName(from: "get_region")
-        self._method_get_region_2601441065 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_region_2601441065_name._native_ptr(), 2601441065)
-        assert(Image._method_get_region_2601441065 != nil)
-        let _method_copy_from_532598488_name = StringName(from: "copy_from")
-        self._method_copy_from_532598488 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_copy_from_532598488_name._native_ptr(), 532598488)
-        assert(Image._method_copy_from_532598488 != nil)
-        let _method_get_pixelv_1532707496_name = StringName(from: "get_pixelv")
-        self._method_get_pixelv_1532707496 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_pixelv_1532707496_name._native_ptr(), 1532707496)
-        assert(Image._method_get_pixelv_1532707496 != nil)
-        let _method_get_pixel_2165839948_name = StringName(from: "get_pixel")
-        self._method_get_pixel_2165839948 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_get_pixel_2165839948_name._native_ptr(), 2165839948)
-        assert(Image._method_get_pixel_2165839948 != nil)
-        let _method_set_pixelv_287851464_name = StringName(from: "set_pixelv")
-        self._method_set_pixelv_287851464 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_set_pixelv_287851464_name._native_ptr(), 287851464)
-        assert(Image._method_set_pixelv_287851464 != nil)
-        let _method_set_pixel_3733378741_name = StringName(from: "set_pixel")
-        self._method_set_pixel_3733378741 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_set_pixel_3733378741_name._native_ptr(), 3733378741)
-        assert(Image._method_set_pixel_3733378741 != nil)
-        let _method_adjust_bcs_2385087082_name = StringName(from: "adjust_bcs")
-        self._method_adjust_bcs_2385087082 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_adjust_bcs_2385087082_name._native_ptr(), 2385087082)
-        assert(Image._method_adjust_bcs_2385087082 != nil)
-        let _method_load_png_from_buffer_680677267_name = StringName(from: "load_png_from_buffer")
-        self._method_load_png_from_buffer_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_load_png_from_buffer_680677267_name._native_ptr(), 680677267)
-        assert(Image._method_load_png_from_buffer_680677267 != nil)
-        let _method_load_jpg_from_buffer_680677267_name = StringName(from: "load_jpg_from_buffer")
-        self._method_load_jpg_from_buffer_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_load_jpg_from_buffer_680677267_name._native_ptr(), 680677267)
-        assert(Image._method_load_jpg_from_buffer_680677267 != nil)
-        let _method_load_webp_from_buffer_680677267_name = StringName(from: "load_webp_from_buffer")
-        self._method_load_webp_from_buffer_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_load_webp_from_buffer_680677267_name._native_ptr(), 680677267)
-        assert(Image._method_load_webp_from_buffer_680677267 != nil)
-        let _method_load_tga_from_buffer_680677267_name = StringName(from: "load_tga_from_buffer")
-        self._method_load_tga_from_buffer_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_load_tga_from_buffer_680677267_name._native_ptr(), 680677267)
-        assert(Image._method_load_tga_from_buffer_680677267 != nil)
-        let _method_load_bmp_from_buffer_680677267_name = StringName(from: "load_bmp_from_buffer")
-        self._method_load_bmp_from_buffer_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_Image._native_ptr(), _method_load_bmp_from_buffer_680677267_name._native_ptr(), 680677267)
-        assert(Image._method_load_bmp_from_buffer_680677267 != nil)
+        self._method_get_width_3905245786 = StringName(from: "get_width")
+        assert(self._method_get_width_3905245786 != nil)
+        self._method_get_height_3905245786 = StringName(from: "get_height")
+        assert(self._method_get_height_3905245786 != nil)
+        self._method_get_size_3690982128 = StringName(from: "get_size")
+        assert(self._method_get_size_3690982128 != nil)
+        self._method_has_mipmaps_36873697 = StringName(from: "has_mipmaps")
+        assert(self._method_has_mipmaps_36873697 != nil)
+        self._method_get_format_3847873762 = StringName(from: "get_format")
+        assert(self._method_get_format_3847873762 != nil)
+        self._method_get_data_2362200018 = StringName(from: "get_data")
+        assert(self._method_get_data_2362200018 != nil)
+        self._method_convert_2120693146 = StringName(from: "convert")
+        assert(self._method_convert_2120693146 != nil)
+        self._method_get_mipmap_offset_923996154 = StringName(from: "get_mipmap_offset")
+        assert(self._method_get_mipmap_offset_923996154 != nil)
+        self._method_resize_to_po2_4189212329 = StringName(from: "resize_to_po2")
+        assert(self._method_resize_to_po2_4189212329 != nil)
+        self._method_resize_2461393748 = StringName(from: "resize")
+        assert(self._method_resize_2461393748 != nil)
+        self._method_shrink_x2_3218959716 = StringName(from: "shrink_x2")
+        assert(self._method_shrink_x2_3218959716 != nil)
+        self._method_crop_3937882851 = StringName(from: "crop")
+        assert(self._method_crop_3937882851 != nil)
+        self._method_flip_x_3218959716 = StringName(from: "flip_x")
+        assert(self._method_flip_x_3218959716 != nil)
+        self._method_flip_y_3218959716 = StringName(from: "flip_y")
+        assert(self._method_flip_y_3218959716 != nil)
+        self._method_generate_mipmaps_1633102583 = StringName(from: "generate_mipmaps")
+        assert(self._method_generate_mipmaps_1633102583 != nil)
+        self._method_clear_mipmaps_3218959716 = StringName(from: "clear_mipmaps")
+        assert(self._method_clear_mipmaps_3218959716 != nil)
+        self._method_create_986942177 = StringName(from: "create")
+        assert(self._method_create_986942177 != nil)
+        self._method_create_from_data_299398494 = StringName(from: "create_from_data")
+        assert(self._method_create_from_data_299398494 != nil)
+        self._method_set_data_2740482212 = StringName(from: "set_data")
+        assert(self._method_set_data_2740482212 != nil)
+        self._method_is_empty_36873697 = StringName(from: "is_empty")
+        assert(self._method_is_empty_36873697 != nil)
+        self._method_load_166001499 = StringName(from: "load")
+        assert(self._method_load_166001499 != nil)
+        self._method_load_from_file_736337515 = StringName(from: "load_from_file")
+        assert(self._method_load_from_file_736337515 != nil)
+        self._method_save_png_2113323047 = StringName(from: "save_png")
+        assert(self._method_save_png_2113323047 != nil)
+        self._method_save_png_to_buffer_2362200018 = StringName(from: "save_png_to_buffer")
+        assert(self._method_save_png_to_buffer_2362200018 != nil)
+        self._method_save_jpg_578836491 = StringName(from: "save_jpg")
+        assert(self._method_save_jpg_578836491 != nil)
+        self._method_save_jpg_to_buffer_310747435 = StringName(from: "save_jpg_to_buffer")
+        assert(self._method_save_jpg_to_buffer_310747435 != nil)
+        self._method_save_exr_3108122999 = StringName(from: "save_exr")
+        assert(self._method_save_exr_3108122999 != nil)
+        self._method_save_exr_to_buffer_3178917920 = StringName(from: "save_exr_to_buffer")
+        assert(self._method_save_exr_to_buffer_3178917920 != nil)
+        self._method_save_webp_3594949219 = StringName(from: "save_webp")
+        assert(self._method_save_webp_3594949219 != nil)
+        self._method_save_webp_to_buffer_1235769281 = StringName(from: "save_webp_to_buffer")
+        assert(self._method_save_webp_to_buffer_1235769281 != nil)
+        self._method_detect_alpha_2030116505 = StringName(from: "detect_alpha")
+        assert(self._method_detect_alpha_2030116505 != nil)
+        self._method_is_invisible_36873697 = StringName(from: "is_invisible")
+        assert(self._method_is_invisible_36873697 != nil)
+        self._method_detect_used_channels_2703139984 = StringName(from: "detect_used_channels")
+        assert(self._method_detect_used_channels_2703139984 != nil)
+        self._method_compress_4094210332 = StringName(from: "compress")
+        assert(self._method_compress_4094210332 != nil)
+        self._method_compress_from_channels_279105990 = StringName(from: "compress_from_channels")
+        assert(self._method_compress_from_channels_279105990 != nil)
+        self._method_decompress_166280745 = StringName(from: "decompress")
+        assert(self._method_decompress_166280745 != nil)
+        self._method_is_compressed_36873697 = StringName(from: "is_compressed")
+        assert(self._method_is_compressed_36873697 != nil)
+        self._method_rotate_90_1901204267 = StringName(from: "rotate_90")
+        assert(self._method_rotate_90_1901204267 != nil)
+        self._method_rotate_180_3218959716 = StringName(from: "rotate_180")
+        assert(self._method_rotate_180_3218959716 != nil)
+        self._method_fix_alpha_edges_3218959716 = StringName(from: "fix_alpha_edges")
+        assert(self._method_fix_alpha_edges_3218959716 != nil)
+        self._method_premultiply_alpha_3218959716 = StringName(from: "premultiply_alpha")
+        assert(self._method_premultiply_alpha_3218959716 != nil)
+        self._method_srgb_to_linear_3218959716 = StringName(from: "srgb_to_linear")
+        assert(self._method_srgb_to_linear_3218959716 != nil)
+        self._method_normal_map_to_xy_3218959716 = StringName(from: "normal_map_to_xy")
+        assert(self._method_normal_map_to_xy_3218959716 != nil)
+        self._method_rgbe_to_srgb_564927088 = StringName(from: "rgbe_to_srgb")
+        assert(self._method_rgbe_to_srgb_564927088 != nil)
+        self._method_bump_map_to_normal_map_336773324 = StringName(from: "bump_map_to_normal_map")
+        assert(self._method_bump_map_to_normal_map_336773324 != nil)
+        self._method_compute_image_metrics_3080961247 = StringName(from: "compute_image_metrics")
+        assert(self._method_compute_image_metrics_3080961247 != nil)
+        self._method_blit_rect_2903928755 = StringName(from: "blit_rect")
+        assert(self._method_blit_rect_2903928755 != nil)
+        self._method_blit_rect_mask_3383581145 = StringName(from: "blit_rect_mask")
+        assert(self._method_blit_rect_mask_3383581145 != nil)
+        self._method_blend_rect_2903928755 = StringName(from: "blend_rect")
+        assert(self._method_blend_rect_2903928755 != nil)
+        self._method_blend_rect_mask_3383581145 = StringName(from: "blend_rect_mask")
+        assert(self._method_blend_rect_mask_3383581145 != nil)
+        self._method_fill_2920490490 = StringName(from: "fill")
+        assert(self._method_fill_2920490490 != nil)
+        self._method_fill_rect_514693913 = StringName(from: "fill_rect")
+        assert(self._method_fill_rect_514693913 != nil)
+        self._method_get_used_rect_410525958 = StringName(from: "get_used_rect")
+        assert(self._method_get_used_rect_410525958 != nil)
+        self._method_get_region_2601441065 = StringName(from: "get_region")
+        assert(self._method_get_region_2601441065 != nil)
+        self._method_copy_from_532598488 = StringName(from: "copy_from")
+        assert(self._method_copy_from_532598488 != nil)
+        self._method_get_pixelv_1532707496 = StringName(from: "get_pixelv")
+        assert(self._method_get_pixelv_1532707496 != nil)
+        self._method_get_pixel_2165839948 = StringName(from: "get_pixel")
+        assert(self._method_get_pixel_2165839948 != nil)
+        self._method_set_pixelv_287851464 = StringName(from: "set_pixelv")
+        assert(self._method_set_pixelv_287851464 != nil)
+        self._method_set_pixel_3733378741 = StringName(from: "set_pixel")
+        assert(self._method_set_pixel_3733378741 != nil)
+        self._method_adjust_bcs_2385087082 = StringName(from: "adjust_bcs")
+        assert(self._method_adjust_bcs_2385087082 != nil)
+        self._method_load_png_from_buffer_680677267 = StringName(from: "load_png_from_buffer")
+        assert(self._method_load_png_from_buffer_680677267 != nil)
+        self._method_load_jpg_from_buffer_680677267 = StringName(from: "load_jpg_from_buffer")
+        assert(self._method_load_jpg_from_buffer_680677267 != nil)
+        self._method_load_webp_from_buffer_680677267 = StringName(from: "load_webp_from_buffer")
+        assert(self._method_load_webp_from_buffer_680677267 != nil)
+        self._method_load_tga_from_buffer_680677267 = StringName(from: "load_tga_from_buffer")
+        assert(self._method_load_tga_from_buffer_680677267 != nil)
+        self._method_load_bmp_from_buffer_680677267 = StringName(from: "load_bmp_from_buffer")
+        assert(self._method_load_bmp_from_buffer_680677267 != nil)
     }
 
     public func get_width() -> Int64 {
@@ -371,8 +307,13 @@ open class Image : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_width_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_width_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -388,8 +329,13 @@ open class Image : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_height_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_height_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -404,8 +350,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -421,8 +372,13 @@ open class Image : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_mipmaps_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_mipmaps_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -437,8 +393,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_format_3847873762,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_format_3847873762._native_ptr(),
+                    3847873762)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -453,8 +414,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_data_2362200018,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_data_2362200018._native_ptr(),
+                    2362200018)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -469,8 +435,13 @@ open class Image : Resource {
                 .init(format_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_convert_2120693146,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_convert_2120693146._native_ptr(),
+                    2120693146)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -487,8 +458,13 @@ open class Image : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_mipmap_offset_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_mipmap_offset_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -505,8 +481,13 @@ open class Image : Resource {
                 .init(square_native), .init(interpolation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_resize_to_po2_4189212329,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_resize_to_po2_4189212329._native_ptr(),
+                    4189212329)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -524,8 +505,13 @@ open class Image : Resource {
                 .init(width_native), .init(height_native), .init(interpolation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_resize_2461393748,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_resize_2461393748._native_ptr(),
+                    2461393748)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -541,8 +527,13 @@ open class Image : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_shrink_x2_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_shrink_x2_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -557,8 +548,13 @@ open class Image : Resource {
                 .init(width_native), .init(height_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_crop_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_crop_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -573,8 +569,13 @@ open class Image : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_flip_x_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_flip_x_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -587,8 +588,13 @@ open class Image : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_flip_y_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_flip_y_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -603,8 +609,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_generate_mipmaps_1633102583,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_generate_mipmaps_1633102583._native_ptr(),
+                    1633102583)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -619,8 +630,13 @@ open class Image : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_mipmaps_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_mipmaps_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -638,8 +654,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_986942177,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_986942177._native_ptr(),
+                    986942177)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -663,8 +684,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_from_data_299398494,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_from_data_299398494._native_ptr(),
+                    299398494)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -687,8 +713,13 @@ open class Image : Resource {
                 .init(width_native), .init(height_native), .init(use_mipmaps_native), .init(format_native), .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_data_2740482212,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_data_2740482212._native_ptr(),
+                    2740482212)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -707,8 +738,13 @@ open class Image : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_empty_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_empty_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -724,8 +760,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_load_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_load_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -741,8 +782,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_load_from_file_736337515,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_load_from_file_736337515._native_ptr(),
+                    736337515)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -758,8 +804,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_png_2113323047,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_png_2113323047._native_ptr(),
+                    2113323047)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -774,8 +825,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_png_to_buffer_2362200018,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_png_to_buffer_2362200018._native_ptr(),
+                    2362200018)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -792,8 +848,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_jpg_578836491,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_jpg_578836491._native_ptr(),
+                    578836491)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -810,8 +871,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_jpg_to_buffer_310747435,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_jpg_to_buffer_310747435._native_ptr(),
+                    310747435)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -829,8 +895,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_exr_3108122999,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_exr_3108122999._native_ptr(),
+                    3108122999)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -847,8 +918,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_exr_to_buffer_3178917920,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_exr_to_buffer_3178917920._native_ptr(),
+                    3178917920)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -867,8 +943,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_webp_3594949219,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_webp_3594949219._native_ptr(),
+                    3594949219)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -887,8 +968,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_webp_to_buffer_1235769281,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_webp_to_buffer_1235769281._native_ptr(),
+                    1235769281)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -905,8 +991,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_detect_alpha_2030116505,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_detect_alpha_2030116505._native_ptr(),
+                    2030116505)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -922,8 +1013,13 @@ open class Image : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_invisible_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_invisible_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -939,8 +1035,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_detect_used_channels_2703139984,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_detect_used_channels_2703139984._native_ptr(),
+                    2703139984)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -959,8 +1060,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_compress_4094210332,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_compress_4094210332._native_ptr(),
+                    4094210332)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -981,8 +1087,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_compress_from_channels_279105990,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_compress_from_channels_279105990._native_ptr(),
+                    279105990)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1000,8 +1111,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_decompress_166280745,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_decompress_166280745._native_ptr(),
+                    166280745)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1017,8 +1133,13 @@ open class Image : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_compressed_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_compressed_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1033,8 +1154,13 @@ open class Image : Resource {
                 .init(direction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_rotate_90_1901204267,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_rotate_90_1901204267._native_ptr(),
+                    1901204267)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1048,8 +1174,13 @@ open class Image : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_rotate_180_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_rotate_180_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1062,8 +1193,13 @@ open class Image : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_fix_alpha_edges_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_fix_alpha_edges_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1076,8 +1212,13 @@ open class Image : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_premultiply_alpha_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_premultiply_alpha_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1090,8 +1231,13 @@ open class Image : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_srgb_to_linear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_srgb_to_linear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1104,8 +1250,13 @@ open class Image : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_normal_map_to_xy_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_normal_map_to_xy_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1119,8 +1270,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_rgbe_to_srgb_564927088,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_rgbe_to_srgb_564927088._native_ptr(),
+                    564927088)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1135,8 +1291,13 @@ open class Image : Resource {
                 .init(bump_scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_bump_map_to_normal_map_336773324,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_bump_map_to_normal_map_336773324._native_ptr(),
+                    336773324)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1153,8 +1314,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_compute_image_metrics_3080961247,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_compute_image_metrics_3080961247._native_ptr(),
+                    3080961247)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1172,8 +1338,13 @@ open class Image : Resource {
                 .init(src_native), .init(src_rect_native), .init(dst_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_blit_rect_2903928755,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_blit_rect_2903928755._native_ptr(),
+                    2903928755)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1190,8 +1361,13 @@ open class Image : Resource {
                 .init(src_native), .init(mask_native), .init(src_rect_native), .init(dst_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_blit_rect_mask_3383581145,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_blit_rect_mask_3383581145._native_ptr(),
+                    3383581145)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1207,8 +1383,13 @@ open class Image : Resource {
                 .init(src_native), .init(src_rect_native), .init(dst_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_blend_rect_2903928755,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_blend_rect_2903928755._native_ptr(),
+                    2903928755)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1225,8 +1406,13 @@ open class Image : Resource {
                 .init(src_native), .init(mask_native), .init(src_rect_native), .init(dst_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_blend_rect_mask_3383581145,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_blend_rect_mask_3383581145._native_ptr(),
+                    3383581145)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1240,8 +1426,13 @@ open class Image : Resource {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_fill_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_fill_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1256,8 +1447,13 @@ open class Image : Resource {
                 .init(rect_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_fill_rect_514693913,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_fill_rect_514693913._native_ptr(),
+                    514693913)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1271,8 +1467,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_used_rect_410525958,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_used_rect_410525958._native_ptr(),
+                    410525958)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1288,8 +1489,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_region_2601441065,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_region_2601441065._native_ptr(),
+                    2601441065)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1304,8 +1510,13 @@ open class Image : Resource {
                 .init(src_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_copy_from_532598488,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_copy_from_532598488._native_ptr(),
+                    532598488)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1320,8 +1531,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pixelv_1532707496,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pixelv_1532707496._native_ptr(),
+                    1532707496)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1338,8 +1554,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pixel_2165839948,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pixel_2165839948._native_ptr(),
+                    2165839948)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1357,8 +1578,13 @@ open class Image : Resource {
                 .init(point_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pixelv_287851464,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pixelv_287851464._native_ptr(),
+                    287851464)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1374,8 +1600,13 @@ open class Image : Resource {
                 .init(x_native), .init(y_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pixel_3733378741,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pixel_3733378741._native_ptr(),
+                    3733378741)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1393,8 +1624,13 @@ open class Image : Resource {
                 .init(brightness_native), .init(contrast_native), .init(saturation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_adjust_bcs_2385087082,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_adjust_bcs_2385087082._native_ptr(),
+                    2385087082)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1412,8 +1648,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_load_png_from_buffer_680677267,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_load_png_from_buffer_680677267._native_ptr(),
+                    680677267)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1429,8 +1670,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_load_jpg_from_buffer_680677267,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_load_jpg_from_buffer_680677267._native_ptr(),
+                    680677267)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1446,8 +1692,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_load_webp_from_buffer_680677267,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_load_webp_from_buffer_680677267._native_ptr(),
+                    680677267)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1463,8 +1714,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_load_tga_from_buffer_680677267,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_load_tga_from_buffer_680677267._native_ptr(),
+                    680677267)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1480,8 +1736,13 @@ open class Image : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_load_bmp_from_buffer_680677267,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_load_bmp_from_buffer_680677267._native_ptr(),
+                    680677267)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

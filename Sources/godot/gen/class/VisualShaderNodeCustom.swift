@@ -23,26 +23,27 @@ open class VisualShaderNodeCustom : VisualShaderNode {
 
     public override class var __godot_name: StringName { __godot_name_VisualShaderNodeCustom }
 
-    static var _method__get_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_description_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_category_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_return_icon_type_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_input_port_count_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_input_port_type_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_input_port_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_output_port_count_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_output_port_type_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_output_port_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_code_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_func_code_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_global_code_0: GDExtensionMethodBindPtr! = nil
-    static var _method__is_highend_0: GDExtensionMethodBindPtr! = nil
-    static var _method__is_available_0: GDExtensionMethodBindPtr! = nil
+    static var _method__get_name_0: StringName! = nil
+    static var _method__get_description_0: StringName! = nil
+    static var _method__get_category_0: StringName! = nil
+    static var _method__get_return_icon_type_0: StringName! = nil
+    static var _method__get_input_port_count_0: StringName! = nil
+    static var _method__get_input_port_type_0: StringName! = nil
+    static var _method__get_input_port_name_0: StringName! = nil
+    static var _method__get_output_port_count_0: StringName! = nil
+    static var _method__get_output_port_type_0: StringName! = nil
+    static var _method__get_output_port_name_0: StringName! = nil
+    static var _method__get_code_0: StringName! = nil
+    static var _method__get_func_code_0: StringName! = nil
+    static var _method__get_global_code_0: StringName! = nil
+    static var _method__is_highend_0: StringName! = nil
+    static var _method__is_available_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShaderNodeCustom == nil)
         __godot_name_VisualShaderNodeCustom = StringName(from: "VisualShaderNodeCustom")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -58,12 +59,7 @@ open class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _get_description() -> godot.String {
@@ -74,12 +70,7 @@ open class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_description_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _get_category() -> godot.String {
@@ -90,12 +81,7 @@ open class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_category_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _get_return_icon_type() -> VisualShaderNode.PortType {
@@ -106,12 +92,7 @@ open class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_return_icon_type_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return VisualShaderNode.PortType(godot: __resPtr.pointee)
     }
     public func _get_input_port_count() -> Int64 {
@@ -123,12 +104,7 @@ open class VisualShaderNodeCustom : VisualShaderNode {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_input_port_count_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _get_input_port_type(port: Int64) -> VisualShaderNode.PortType {
@@ -140,12 +116,7 @@ open class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_input_port_type_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return VisualShaderNode.PortType(godot: __resPtr.pointee)
         }
     }
@@ -158,12 +129,7 @@ open class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_input_port_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
         }
     }
@@ -176,12 +142,7 @@ open class VisualShaderNodeCustom : VisualShaderNode {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_output_port_count_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _get_output_port_type(port: Int64) -> VisualShaderNode.PortType {
@@ -193,12 +154,7 @@ open class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_output_port_type_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return VisualShaderNode.PortType(godot: __resPtr.pointee)
         }
     }
@@ -211,12 +167,7 @@ open class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_output_port_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
         }
     }
@@ -232,12 +183,7 @@ open class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_code_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
         }
         }
@@ -252,12 +198,7 @@ open class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_func_code_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
         }
         }
@@ -271,12 +212,7 @@ open class VisualShaderNodeCustom : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_global_code_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
         }
     }
@@ -289,12 +225,7 @@ open class VisualShaderNodeCustom : VisualShaderNode {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__is_highend_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _is_available(mode: Shader.Mode, `type`: VisualShader.`Typ`) -> UInt8 {
@@ -308,12 +239,7 @@ open class VisualShaderNodeCustom : VisualShaderNode {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__is_available_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
         }

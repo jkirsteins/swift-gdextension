@@ -11,31 +11,32 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
 
     public override class var __godot_name: StringName { __godot_name_MultiplayerPeerExtension }
 
-    static var _method__get_packet_0: GDExtensionMethodBindPtr! = nil
-    static var _method__put_packet_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_available_packet_count_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_max_packet_size_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_packet_script_0: GDExtensionMethodBindPtr! = nil
-    static var _method__put_packet_script_0: GDExtensionMethodBindPtr! = nil
-    static var _method__set_transfer_channel_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_transfer_channel_0: GDExtensionMethodBindPtr! = nil
-    static var _method__set_transfer_mode_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_transfer_mode_0: GDExtensionMethodBindPtr! = nil
-    static var _method__set_target_peer_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_packet_peer_0: GDExtensionMethodBindPtr! = nil
-    static var _method__is_server_0: GDExtensionMethodBindPtr! = nil
-    static var _method__poll_0: GDExtensionMethodBindPtr! = nil
-    static var _method__close_0: GDExtensionMethodBindPtr! = nil
-    static var _method__disconnect_peer_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_unique_id_0: GDExtensionMethodBindPtr! = nil
-    static var _method__set_refuse_new_connections_0: GDExtensionMethodBindPtr! = nil
-    static var _method__is_refusing_new_connections_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_connection_status_0: GDExtensionMethodBindPtr! = nil
+    static var _method__get_packet_0: StringName! = nil
+    static var _method__put_packet_0: StringName! = nil
+    static var _method__get_available_packet_count_0: StringName! = nil
+    static var _method__get_max_packet_size_0: StringName! = nil
+    static var _method__get_packet_script_0: StringName! = nil
+    static var _method__put_packet_script_0: StringName! = nil
+    static var _method__set_transfer_channel_0: StringName! = nil
+    static var _method__get_transfer_channel_0: StringName! = nil
+    static var _method__set_transfer_mode_0: StringName! = nil
+    static var _method__get_transfer_mode_0: StringName! = nil
+    static var _method__set_target_peer_0: StringName! = nil
+    static var _method__get_packet_peer_0: StringName! = nil
+    static var _method__is_server_0: StringName! = nil
+    static var _method__poll_0: StringName! = nil
+    static var _method__close_0: StringName! = nil
+    static var _method__disconnect_peer_0: StringName! = nil
+    static var _method__get_unique_id_0: StringName! = nil
+    static var _method__set_refuse_new_connections_0: StringName! = nil
+    static var _method__is_refusing_new_connections_0: StringName! = nil
+    static var _method__get_connection_status_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_MultiplayerPeerExtension == nil)
         __godot_name_MultiplayerPeerExtension = StringName(from: "MultiplayerPeerExtension")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -53,12 +54,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_packet_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
         }
         }
@@ -73,12 +69,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__put_packet_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
         }
         }
@@ -92,12 +83,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_available_packet_count_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _get_max_packet_size() -> Int64 {
@@ -109,12 +95,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_max_packet_size_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _get_packet_script() -> PackedByteArray {
@@ -125,12 +106,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_packet_script_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedByteArray(godot: __resPtr.pointee)
     }
     public func _put_packet_script(p_buffer: PackedByteArray) -> Error {
@@ -142,12 +118,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__put_packet_script_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _set_transfer_channel(p_channel: Int64)  {
@@ -158,12 +129,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
                 .init(p_channel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__set_transfer_channel_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _get_transfer_channel() -> Int64 {
@@ -175,12 +141,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_transfer_channel_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _set_transfer_mode(p_mode: MultiplayerPeer.TransferMode)  {
@@ -191,12 +152,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
                 .init(p_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__set_transfer_mode_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _get_transfer_mode() -> MultiplayerPeer.TransferMode {
@@ -207,12 +163,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_transfer_mode_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return MultiplayerPeer.TransferMode(godot: __resPtr.pointee)
     }
     public func _set_target_peer(p_peer: Int64)  {
@@ -223,12 +174,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
                 .init(p_peer_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__set_target_peer_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _get_packet_peer() -> Int64 {
@@ -240,12 +186,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_packet_peer_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _is_server() -> UInt8 {
@@ -257,12 +198,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__is_server_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _poll()  {
@@ -272,12 +208,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__poll_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _close()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -286,12 +217,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__close_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _disconnect_peer(p_peer: Int64, p_force: UInt8)  {
         withUnsafePointer(to: p_force) { p_force_native in
@@ -302,12 +228,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
                 .init(p_peer_native), .init(p_force_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__disconnect_peer_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -320,12 +241,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_unique_id_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _set_refuse_new_connections(p_enable: UInt8)  {
@@ -336,12 +252,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
                 .init(p_enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__set_refuse_new_connections_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _is_refusing_new_connections() -> UInt8 {
@@ -353,12 +264,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__is_refusing_new_connections_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _get_connection_status() -> MultiplayerPeer.ConnectionStatus {
@@ -369,12 +275,7 @@ open class MultiplayerPeerExtension : MultiplayerPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_connection_status_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return MultiplayerPeer.ConnectionStatus(godot: __resPtr.pointee)
     }
 }

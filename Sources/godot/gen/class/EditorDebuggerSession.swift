@@ -13,43 +13,37 @@ open class EditorDebuggerSession : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_EditorDebuggerSession }
 
-    static var _method_send_message_3780025912: GDExtensionMethodBindPtr! = nil
-    static var _method_toggle_profiler_35674246: GDExtensionMethodBindPtr! = nil
-    static var _method_is_breaked_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_is_debuggable_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_is_active_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_add_session_tab_1496901182: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_session_tab_1496901182: GDExtensionMethodBindPtr! = nil
+    static var _method_send_message_3780025912: StringName! = nil
+    static var _method_toggle_profiler_35674246: StringName! = nil
+    static var _method_is_breaked_2240911060: StringName! = nil
+    static var _method_is_debuggable_2240911060: StringName! = nil
+    static var _method_is_active_2240911060: StringName! = nil
+    static var _method_add_session_tab_1496901182: StringName! = nil
+    static var _method_remove_session_tab_1496901182: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorDebuggerSession == nil)
         __godot_name_EditorDebuggerSession = StringName(from: "EditorDebuggerSession")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_send_message_3780025912_name = StringName(from: "send_message")
-        self._method_send_message_3780025912 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorDebuggerSession._native_ptr(), _method_send_message_3780025912_name._native_ptr(), 3780025912)
-        assert(EditorDebuggerSession._method_send_message_3780025912 != nil)
-        let _method_toggle_profiler_35674246_name = StringName(from: "toggle_profiler")
-        self._method_toggle_profiler_35674246 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorDebuggerSession._native_ptr(), _method_toggle_profiler_35674246_name._native_ptr(), 35674246)
-        assert(EditorDebuggerSession._method_toggle_profiler_35674246 != nil)
-        let _method_is_breaked_2240911060_name = StringName(from: "is_breaked")
-        self._method_is_breaked_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorDebuggerSession._native_ptr(), _method_is_breaked_2240911060_name._native_ptr(), 2240911060)
-        assert(EditorDebuggerSession._method_is_breaked_2240911060 != nil)
-        let _method_is_debuggable_2240911060_name = StringName(from: "is_debuggable")
-        self._method_is_debuggable_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorDebuggerSession._native_ptr(), _method_is_debuggable_2240911060_name._native_ptr(), 2240911060)
-        assert(EditorDebuggerSession._method_is_debuggable_2240911060 != nil)
-        let _method_is_active_2240911060_name = StringName(from: "is_active")
-        self._method_is_active_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorDebuggerSession._native_ptr(), _method_is_active_2240911060_name._native_ptr(), 2240911060)
-        assert(EditorDebuggerSession._method_is_active_2240911060 != nil)
-        let _method_add_session_tab_1496901182_name = StringName(from: "add_session_tab")
-        self._method_add_session_tab_1496901182 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorDebuggerSession._native_ptr(), _method_add_session_tab_1496901182_name._native_ptr(), 1496901182)
-        assert(EditorDebuggerSession._method_add_session_tab_1496901182 != nil)
-        let _method_remove_session_tab_1496901182_name = StringName(from: "remove_session_tab")
-        self._method_remove_session_tab_1496901182 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorDebuggerSession._native_ptr(), _method_remove_session_tab_1496901182_name._native_ptr(), 1496901182)
-        assert(EditorDebuggerSession._method_remove_session_tab_1496901182 != nil)
+        self._method_send_message_3780025912 = StringName(from: "send_message")
+        assert(self._method_send_message_3780025912 != nil)
+        self._method_toggle_profiler_35674246 = StringName(from: "toggle_profiler")
+        assert(self._method_toggle_profiler_35674246 != nil)
+        self._method_is_breaked_2240911060 = StringName(from: "is_breaked")
+        assert(self._method_is_breaked_2240911060 != nil)
+        self._method_is_debuggable_2240911060 = StringName(from: "is_debuggable")
+        assert(self._method_is_debuggable_2240911060 != nil)
+        self._method_is_active_2240911060 = StringName(from: "is_active")
+        assert(self._method_is_active_2240911060 != nil)
+        self._method_add_session_tab_1496901182 = StringName(from: "add_session_tab")
+        assert(self._method_add_session_tab_1496901182 != nil)
+        self._method_remove_session_tab_1496901182 = StringName(from: "remove_session_tab")
+        assert(self._method_remove_session_tab_1496901182 != nil)
     }
 
     public func send_message(message: godot.String, data: Array)  {
@@ -61,8 +55,13 @@ open class EditorDebuggerSession : RefCounted {
                 .init(message_native), .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_send_message_3780025912,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_send_message_3780025912._native_ptr(),
+                    3780025912)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -78,8 +77,13 @@ open class EditorDebuggerSession : RefCounted {
                 .init(profiler_native), .init(enable_native), .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_toggle_profiler_35674246,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_toggle_profiler_35674246._native_ptr(),
+                    35674246)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -95,8 +99,13 @@ open class EditorDebuggerSession : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_breaked_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_breaked_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -112,8 +121,13 @@ open class EditorDebuggerSession : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_debuggable_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_debuggable_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -129,8 +143,13 @@ open class EditorDebuggerSession : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_active_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_active_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -145,8 +164,13 @@ open class EditorDebuggerSession : RefCounted {
                 .init(control_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_session_tab_1496901182,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_session_tab_1496901182._native_ptr(),
+                    1496901182)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -160,8 +184,13 @@ open class EditorDebuggerSession : RefCounted {
                 .init(control_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_session_tab_1496901182,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_session_tab_1496901182._native_ptr(),
+                    1496901182)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

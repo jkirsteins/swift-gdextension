@@ -13,59 +13,49 @@ open class AnimationNodeBlendTree : AnimationRootNode {
 
     public override class var __godot_name: StringName { __godot_name_AnimationNodeBlendTree }
 
-    static var _method_add_node_2055804584: GDExtensionMethodBindPtr! = nil
-    static var _method_get_node_625644256: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_node_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_rename_node_3740211285: GDExtensionMethodBindPtr! = nil
-    static var _method_has_node_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_connect_node_2168001410: GDExtensionMethodBindPtr! = nil
-    static var _method_disconnect_node_2415702435: GDExtensionMethodBindPtr! = nil
-    static var _method_set_node_position_1999414630: GDExtensionMethodBindPtr! = nil
-    static var _method_get_node_position_3100822709: GDExtensionMethodBindPtr! = nil
-    static var _method_set_graph_offset_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_graph_offset_3341600327: GDExtensionMethodBindPtr! = nil
+    static var _method_add_node_2055804584: StringName! = nil
+    static var _method_get_node_625644256: StringName! = nil
+    static var _method_remove_node_3304788590: StringName! = nil
+    static var _method_rename_node_3740211285: StringName! = nil
+    static var _method_has_node_2619796661: StringName! = nil
+    static var _method_connect_node_2168001410: StringName! = nil
+    static var _method_disconnect_node_2415702435: StringName! = nil
+    static var _method_set_node_position_1999414630: StringName! = nil
+    static var _method_get_node_position_3100822709: StringName! = nil
+    static var _method_set_graph_offset_743155724: StringName! = nil
+    static var _method_get_graph_offset_3341600327: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AnimationNodeBlendTree == nil)
         __godot_name_AnimationNodeBlendTree = StringName(from: "AnimationNodeBlendTree")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_add_node_2055804584_name = StringName(from: "add_node")
-        self._method_add_node_2055804584 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendTree._native_ptr(), _method_add_node_2055804584_name._native_ptr(), 2055804584)
-        assert(AnimationNodeBlendTree._method_add_node_2055804584 != nil)
-        let _method_get_node_625644256_name = StringName(from: "get_node")
-        self._method_get_node_625644256 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendTree._native_ptr(), _method_get_node_625644256_name._native_ptr(), 625644256)
-        assert(AnimationNodeBlendTree._method_get_node_625644256 != nil)
-        let _method_remove_node_3304788590_name = StringName(from: "remove_node")
-        self._method_remove_node_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendTree._native_ptr(), _method_remove_node_3304788590_name._native_ptr(), 3304788590)
-        assert(AnimationNodeBlendTree._method_remove_node_3304788590 != nil)
-        let _method_rename_node_3740211285_name = StringName(from: "rename_node")
-        self._method_rename_node_3740211285 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendTree._native_ptr(), _method_rename_node_3740211285_name._native_ptr(), 3740211285)
-        assert(AnimationNodeBlendTree._method_rename_node_3740211285 != nil)
-        let _method_has_node_2619796661_name = StringName(from: "has_node")
-        self._method_has_node_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendTree._native_ptr(), _method_has_node_2619796661_name._native_ptr(), 2619796661)
-        assert(AnimationNodeBlendTree._method_has_node_2619796661 != nil)
-        let _method_connect_node_2168001410_name = StringName(from: "connect_node")
-        self._method_connect_node_2168001410 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendTree._native_ptr(), _method_connect_node_2168001410_name._native_ptr(), 2168001410)
-        assert(AnimationNodeBlendTree._method_connect_node_2168001410 != nil)
-        let _method_disconnect_node_2415702435_name = StringName(from: "disconnect_node")
-        self._method_disconnect_node_2415702435 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendTree._native_ptr(), _method_disconnect_node_2415702435_name._native_ptr(), 2415702435)
-        assert(AnimationNodeBlendTree._method_disconnect_node_2415702435 != nil)
-        let _method_set_node_position_1999414630_name = StringName(from: "set_node_position")
-        self._method_set_node_position_1999414630 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendTree._native_ptr(), _method_set_node_position_1999414630_name._native_ptr(), 1999414630)
-        assert(AnimationNodeBlendTree._method_set_node_position_1999414630 != nil)
-        let _method_get_node_position_3100822709_name = StringName(from: "get_node_position")
-        self._method_get_node_position_3100822709 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendTree._native_ptr(), _method_get_node_position_3100822709_name._native_ptr(), 3100822709)
-        assert(AnimationNodeBlendTree._method_get_node_position_3100822709 != nil)
-        let _method_set_graph_offset_743155724_name = StringName(from: "set_graph_offset")
-        self._method_set_graph_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendTree._native_ptr(), _method_set_graph_offset_743155724_name._native_ptr(), 743155724)
-        assert(AnimationNodeBlendTree._method_set_graph_offset_743155724 != nil)
-        let _method_get_graph_offset_3341600327_name = StringName(from: "get_graph_offset")
-        self._method_get_graph_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeBlendTree._native_ptr(), _method_get_graph_offset_3341600327_name._native_ptr(), 3341600327)
-        assert(AnimationNodeBlendTree._method_get_graph_offset_3341600327 != nil)
+        self._method_add_node_2055804584 = StringName(from: "add_node")
+        assert(self._method_add_node_2055804584 != nil)
+        self._method_get_node_625644256 = StringName(from: "get_node")
+        assert(self._method_get_node_625644256 != nil)
+        self._method_remove_node_3304788590 = StringName(from: "remove_node")
+        assert(self._method_remove_node_3304788590 != nil)
+        self._method_rename_node_3740211285 = StringName(from: "rename_node")
+        assert(self._method_rename_node_3740211285 != nil)
+        self._method_has_node_2619796661 = StringName(from: "has_node")
+        assert(self._method_has_node_2619796661 != nil)
+        self._method_connect_node_2168001410 = StringName(from: "connect_node")
+        assert(self._method_connect_node_2168001410 != nil)
+        self._method_disconnect_node_2415702435 = StringName(from: "disconnect_node")
+        assert(self._method_disconnect_node_2415702435 != nil)
+        self._method_set_node_position_1999414630 = StringName(from: "set_node_position")
+        assert(self._method_set_node_position_1999414630 != nil)
+        self._method_get_node_position_3100822709 = StringName(from: "get_node_position")
+        assert(self._method_get_node_position_3100822709 != nil)
+        self._method_set_graph_offset_743155724 = StringName(from: "set_graph_offset")
+        assert(self._method_set_graph_offset_743155724 != nil)
+        self._method_get_graph_offset_3341600327 = StringName(from: "get_graph_offset")
+        assert(self._method_get_graph_offset_3341600327 != nil)
     }
 
     public func add_node(name: StringName, node: AnimationNode, position: Vector2)  {
@@ -78,8 +68,13 @@ open class AnimationNodeBlendTree : AnimationRootNode {
                 .init(name_native), .init(node_native), .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_node_2055804584,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_node_2055804584._native_ptr(),
+                    2055804584)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -94,8 +89,13 @@ open class AnimationNodeBlendTree : AnimationRootNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_node_625644256,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_node_625644256._native_ptr(),
+                    625644256)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -110,8 +110,13 @@ open class AnimationNodeBlendTree : AnimationRootNode {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_node_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_node_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -126,8 +131,13 @@ open class AnimationNodeBlendTree : AnimationRootNode {
                 .init(name_native), .init(new_name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_rename_node_3740211285,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_rename_node_3740211285._native_ptr(),
+                    3740211285)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -143,8 +153,13 @@ open class AnimationNodeBlendTree : AnimationRootNode {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_node_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_node_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -161,8 +176,13 @@ open class AnimationNodeBlendTree : AnimationRootNode {
                 .init(input_node_native), .init(input_index_native), .init(output_node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_connect_node_2168001410,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_connect_node_2168001410._native_ptr(),
+                    2168001410)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -178,8 +198,13 @@ open class AnimationNodeBlendTree : AnimationRootNode {
                 .init(input_node_native), .init(input_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_disconnect_node_2415702435,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_disconnect_node_2415702435._native_ptr(),
+                    2415702435)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -195,8 +220,13 @@ open class AnimationNodeBlendTree : AnimationRootNode {
                 .init(name_native), .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_node_position_1999414630,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_node_position_1999414630._native_ptr(),
+                    1999414630)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -211,8 +241,13 @@ open class AnimationNodeBlendTree : AnimationRootNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_node_position_3100822709,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_node_position_3100822709._native_ptr(),
+                    3100822709)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -227,8 +262,13 @@ open class AnimationNodeBlendTree : AnimationRootNode {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_graph_offset_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_graph_offset_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -242,8 +282,13 @@ open class AnimationNodeBlendTree : AnimationRootNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_graph_offset_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_graph_offset_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

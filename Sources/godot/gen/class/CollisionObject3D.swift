@@ -17,146 +17,115 @@ open class CollisionObject3D : Node3D {
 
     public override class var __godot_name: StringName { __godot_name_CollisionObject3D }
 
-    static var _method__input_event_0: GDExtensionMethodBindPtr! = nil
-    static var _method__mouse_enter_0: GDExtensionMethodBindPtr! = nil
-    static var _method__mouse_exit_0: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_layer_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_layer_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_mask_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_mask_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_layer_value_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_layer_value_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_mask_value_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_mask_value_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_priority_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_priority_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_disable_mode_1623620376: GDExtensionMethodBindPtr! = nil
-    static var _method_get_disable_mode_410164780: GDExtensionMethodBindPtr! = nil
-    static var _method_set_ray_pickable_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_ray_pickable_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_capture_input_on_drag_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_capture_input_on_drag_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rid_2944877500: GDExtensionMethodBindPtr! = nil
-    static var _method_create_shape_owner_3429307534: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_shape_owner_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_shape_owners_969006518: GDExtensionMethodBindPtr! = nil
-    static var _method_shape_owner_set_transform_3616898986: GDExtensionMethodBindPtr! = nil
-    static var _method_shape_owner_get_transform_1965739696: GDExtensionMethodBindPtr! = nil
-    static var _method_shape_owner_get_owner_3332903315: GDExtensionMethodBindPtr! = nil
-    static var _method_shape_owner_set_disabled_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_is_shape_owner_disabled_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_shape_owner_add_shape_2566676345: GDExtensionMethodBindPtr! = nil
-    static var _method_shape_owner_get_shape_count_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_shape_owner_get_shape_4015519174: GDExtensionMethodBindPtr! = nil
-    static var _method_shape_owner_get_shape_index_3175239445: GDExtensionMethodBindPtr! = nil
-    static var _method_shape_owner_remove_shape_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_shape_owner_clear_shapes_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_shape_find_owner_923996154: GDExtensionMethodBindPtr! = nil
+    static var _method__input_event_0: StringName! = nil
+    static var _method__mouse_enter_0: StringName! = nil
+    static var _method__mouse_exit_0: StringName! = nil
+    static var _method_set_collision_layer_1286410249: StringName! = nil
+    static var _method_get_collision_layer_3905245786: StringName! = nil
+    static var _method_set_collision_mask_1286410249: StringName! = nil
+    static var _method_get_collision_mask_3905245786: StringName! = nil
+    static var _method_set_collision_layer_value_300928843: StringName! = nil
+    static var _method_get_collision_layer_value_1116898809: StringName! = nil
+    static var _method_set_collision_mask_value_300928843: StringName! = nil
+    static var _method_get_collision_mask_value_1116898809: StringName! = nil
+    static var _method_set_collision_priority_373806689: StringName! = nil
+    static var _method_get_collision_priority_1740695150: StringName! = nil
+    static var _method_set_disable_mode_1623620376: StringName! = nil
+    static var _method_get_disable_mode_410164780: StringName! = nil
+    static var _method_set_ray_pickable_2586408642: StringName! = nil
+    static var _method_is_ray_pickable_36873697: StringName! = nil
+    static var _method_set_capture_input_on_drag_2586408642: StringName! = nil
+    static var _method_get_capture_input_on_drag_36873697: StringName! = nil
+    static var _method_get_rid_2944877500: StringName! = nil
+    static var _method_create_shape_owner_3429307534: StringName! = nil
+    static var _method_remove_shape_owner_1286410249: StringName! = nil
+    static var _method_get_shape_owners_969006518: StringName! = nil
+    static var _method_shape_owner_set_transform_3616898986: StringName! = nil
+    static var _method_shape_owner_get_transform_1965739696: StringName! = nil
+    static var _method_shape_owner_get_owner_3332903315: StringName! = nil
+    static var _method_shape_owner_set_disabled_300928843: StringName! = nil
+    static var _method_is_shape_owner_disabled_1116898809: StringName! = nil
+    static var _method_shape_owner_add_shape_2566676345: StringName! = nil
+    static var _method_shape_owner_get_shape_count_923996154: StringName! = nil
+    static var _method_shape_owner_get_shape_4015519174: StringName! = nil
+    static var _method_shape_owner_get_shape_index_3175239445: StringName! = nil
+    static var _method_shape_owner_remove_shape_3937882851: StringName! = nil
+    static var _method_shape_owner_clear_shapes_1286410249: StringName! = nil
+    static var _method_shape_find_owner_923996154: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CollisionObject3D == nil)
         __godot_name_CollisionObject3D = StringName(from: "CollisionObject3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_collision_layer_1286410249_name = StringName(from: "set_collision_layer")
-        self._method_set_collision_layer_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_set_collision_layer_1286410249_name._native_ptr(), 1286410249)
-        assert(CollisionObject3D._method_set_collision_layer_1286410249 != nil)
-        let _method_get_collision_layer_3905245786_name = StringName(from: "get_collision_layer")
-        self._method_get_collision_layer_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_get_collision_layer_3905245786_name._native_ptr(), 3905245786)
-        assert(CollisionObject3D._method_get_collision_layer_3905245786 != nil)
-        let _method_set_collision_mask_1286410249_name = StringName(from: "set_collision_mask")
-        self._method_set_collision_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_set_collision_mask_1286410249_name._native_ptr(), 1286410249)
-        assert(CollisionObject3D._method_set_collision_mask_1286410249 != nil)
-        let _method_get_collision_mask_3905245786_name = StringName(from: "get_collision_mask")
-        self._method_get_collision_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_get_collision_mask_3905245786_name._native_ptr(), 3905245786)
-        assert(CollisionObject3D._method_get_collision_mask_3905245786 != nil)
-        let _method_set_collision_layer_value_300928843_name = StringName(from: "set_collision_layer_value")
-        self._method_set_collision_layer_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_set_collision_layer_value_300928843_name._native_ptr(), 300928843)
-        assert(CollisionObject3D._method_set_collision_layer_value_300928843 != nil)
-        let _method_get_collision_layer_value_1116898809_name = StringName(from: "get_collision_layer_value")
-        self._method_get_collision_layer_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_get_collision_layer_value_1116898809_name._native_ptr(), 1116898809)
-        assert(CollisionObject3D._method_get_collision_layer_value_1116898809 != nil)
-        let _method_set_collision_mask_value_300928843_name = StringName(from: "set_collision_mask_value")
-        self._method_set_collision_mask_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_set_collision_mask_value_300928843_name._native_ptr(), 300928843)
-        assert(CollisionObject3D._method_set_collision_mask_value_300928843 != nil)
-        let _method_get_collision_mask_value_1116898809_name = StringName(from: "get_collision_mask_value")
-        self._method_get_collision_mask_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_get_collision_mask_value_1116898809_name._native_ptr(), 1116898809)
-        assert(CollisionObject3D._method_get_collision_mask_value_1116898809 != nil)
-        let _method_set_collision_priority_373806689_name = StringName(from: "set_collision_priority")
-        self._method_set_collision_priority_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_set_collision_priority_373806689_name._native_ptr(), 373806689)
-        assert(CollisionObject3D._method_set_collision_priority_373806689 != nil)
-        let _method_get_collision_priority_1740695150_name = StringName(from: "get_collision_priority")
-        self._method_get_collision_priority_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_get_collision_priority_1740695150_name._native_ptr(), 1740695150)
-        assert(CollisionObject3D._method_get_collision_priority_1740695150 != nil)
-        let _method_set_disable_mode_1623620376_name = StringName(from: "set_disable_mode")
-        self._method_set_disable_mode_1623620376 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_set_disable_mode_1623620376_name._native_ptr(), 1623620376)
-        assert(CollisionObject3D._method_set_disable_mode_1623620376 != nil)
-        let _method_get_disable_mode_410164780_name = StringName(from: "get_disable_mode")
-        self._method_get_disable_mode_410164780 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_get_disable_mode_410164780_name._native_ptr(), 410164780)
-        assert(CollisionObject3D._method_get_disable_mode_410164780 != nil)
-        let _method_set_ray_pickable_2586408642_name = StringName(from: "set_ray_pickable")
-        self._method_set_ray_pickable_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_set_ray_pickable_2586408642_name._native_ptr(), 2586408642)
-        assert(CollisionObject3D._method_set_ray_pickable_2586408642 != nil)
-        let _method_is_ray_pickable_36873697_name = StringName(from: "is_ray_pickable")
-        self._method_is_ray_pickable_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_is_ray_pickable_36873697_name._native_ptr(), 36873697)
-        assert(CollisionObject3D._method_is_ray_pickable_36873697 != nil)
-        let _method_set_capture_input_on_drag_2586408642_name = StringName(from: "set_capture_input_on_drag")
-        self._method_set_capture_input_on_drag_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_set_capture_input_on_drag_2586408642_name._native_ptr(), 2586408642)
-        assert(CollisionObject3D._method_set_capture_input_on_drag_2586408642 != nil)
-        let _method_get_capture_input_on_drag_36873697_name = StringName(from: "get_capture_input_on_drag")
-        self._method_get_capture_input_on_drag_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_get_capture_input_on_drag_36873697_name._native_ptr(), 36873697)
-        assert(CollisionObject3D._method_get_capture_input_on_drag_36873697 != nil)
-        let _method_get_rid_2944877500_name = StringName(from: "get_rid")
-        self._method_get_rid_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_get_rid_2944877500_name._native_ptr(), 2944877500)
-        assert(CollisionObject3D._method_get_rid_2944877500 != nil)
-        let _method_create_shape_owner_3429307534_name = StringName(from: "create_shape_owner")
-        self._method_create_shape_owner_3429307534 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_create_shape_owner_3429307534_name._native_ptr(), 3429307534)
-        assert(CollisionObject3D._method_create_shape_owner_3429307534 != nil)
-        let _method_remove_shape_owner_1286410249_name = StringName(from: "remove_shape_owner")
-        self._method_remove_shape_owner_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_remove_shape_owner_1286410249_name._native_ptr(), 1286410249)
-        assert(CollisionObject3D._method_remove_shape_owner_1286410249 != nil)
-        let _method_get_shape_owners_969006518_name = StringName(from: "get_shape_owners")
-        self._method_get_shape_owners_969006518 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_get_shape_owners_969006518_name._native_ptr(), 969006518)
-        assert(CollisionObject3D._method_get_shape_owners_969006518 != nil)
-        let _method_shape_owner_set_transform_3616898986_name = StringName(from: "shape_owner_set_transform")
-        self._method_shape_owner_set_transform_3616898986 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_shape_owner_set_transform_3616898986_name._native_ptr(), 3616898986)
-        assert(CollisionObject3D._method_shape_owner_set_transform_3616898986 != nil)
-        let _method_shape_owner_get_transform_1965739696_name = StringName(from: "shape_owner_get_transform")
-        self._method_shape_owner_get_transform_1965739696 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_shape_owner_get_transform_1965739696_name._native_ptr(), 1965739696)
-        assert(CollisionObject3D._method_shape_owner_get_transform_1965739696 != nil)
-        let _method_shape_owner_get_owner_3332903315_name = StringName(from: "shape_owner_get_owner")
-        self._method_shape_owner_get_owner_3332903315 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_shape_owner_get_owner_3332903315_name._native_ptr(), 3332903315)
-        assert(CollisionObject3D._method_shape_owner_get_owner_3332903315 != nil)
-        let _method_shape_owner_set_disabled_300928843_name = StringName(from: "shape_owner_set_disabled")
-        self._method_shape_owner_set_disabled_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_shape_owner_set_disabled_300928843_name._native_ptr(), 300928843)
-        assert(CollisionObject3D._method_shape_owner_set_disabled_300928843 != nil)
-        let _method_is_shape_owner_disabled_1116898809_name = StringName(from: "is_shape_owner_disabled")
-        self._method_is_shape_owner_disabled_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_is_shape_owner_disabled_1116898809_name._native_ptr(), 1116898809)
-        assert(CollisionObject3D._method_is_shape_owner_disabled_1116898809 != nil)
-        let _method_shape_owner_add_shape_2566676345_name = StringName(from: "shape_owner_add_shape")
-        self._method_shape_owner_add_shape_2566676345 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_shape_owner_add_shape_2566676345_name._native_ptr(), 2566676345)
-        assert(CollisionObject3D._method_shape_owner_add_shape_2566676345 != nil)
-        let _method_shape_owner_get_shape_count_923996154_name = StringName(from: "shape_owner_get_shape_count")
-        self._method_shape_owner_get_shape_count_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_shape_owner_get_shape_count_923996154_name._native_ptr(), 923996154)
-        assert(CollisionObject3D._method_shape_owner_get_shape_count_923996154 != nil)
-        let _method_shape_owner_get_shape_4015519174_name = StringName(from: "shape_owner_get_shape")
-        self._method_shape_owner_get_shape_4015519174 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_shape_owner_get_shape_4015519174_name._native_ptr(), 4015519174)
-        assert(CollisionObject3D._method_shape_owner_get_shape_4015519174 != nil)
-        let _method_shape_owner_get_shape_index_3175239445_name = StringName(from: "shape_owner_get_shape_index")
-        self._method_shape_owner_get_shape_index_3175239445 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_shape_owner_get_shape_index_3175239445_name._native_ptr(), 3175239445)
-        assert(CollisionObject3D._method_shape_owner_get_shape_index_3175239445 != nil)
-        let _method_shape_owner_remove_shape_3937882851_name = StringName(from: "shape_owner_remove_shape")
-        self._method_shape_owner_remove_shape_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_shape_owner_remove_shape_3937882851_name._native_ptr(), 3937882851)
-        assert(CollisionObject3D._method_shape_owner_remove_shape_3937882851 != nil)
-        let _method_shape_owner_clear_shapes_1286410249_name = StringName(from: "shape_owner_clear_shapes")
-        self._method_shape_owner_clear_shapes_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_shape_owner_clear_shapes_1286410249_name._native_ptr(), 1286410249)
-        assert(CollisionObject3D._method_shape_owner_clear_shapes_1286410249 != nil)
-        let _method_shape_find_owner_923996154_name = StringName(from: "shape_find_owner")
-        self._method_shape_find_owner_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_CollisionObject3D._native_ptr(), _method_shape_find_owner_923996154_name._native_ptr(), 923996154)
-        assert(CollisionObject3D._method_shape_find_owner_923996154 != nil)
+        self._method_set_collision_layer_1286410249 = StringName(from: "set_collision_layer")
+        assert(self._method_set_collision_layer_1286410249 != nil)
+        self._method_get_collision_layer_3905245786 = StringName(from: "get_collision_layer")
+        assert(self._method_get_collision_layer_3905245786 != nil)
+        self._method_set_collision_mask_1286410249 = StringName(from: "set_collision_mask")
+        assert(self._method_set_collision_mask_1286410249 != nil)
+        self._method_get_collision_mask_3905245786 = StringName(from: "get_collision_mask")
+        assert(self._method_get_collision_mask_3905245786 != nil)
+        self._method_set_collision_layer_value_300928843 = StringName(from: "set_collision_layer_value")
+        assert(self._method_set_collision_layer_value_300928843 != nil)
+        self._method_get_collision_layer_value_1116898809 = StringName(from: "get_collision_layer_value")
+        assert(self._method_get_collision_layer_value_1116898809 != nil)
+        self._method_set_collision_mask_value_300928843 = StringName(from: "set_collision_mask_value")
+        assert(self._method_set_collision_mask_value_300928843 != nil)
+        self._method_get_collision_mask_value_1116898809 = StringName(from: "get_collision_mask_value")
+        assert(self._method_get_collision_mask_value_1116898809 != nil)
+        self._method_set_collision_priority_373806689 = StringName(from: "set_collision_priority")
+        assert(self._method_set_collision_priority_373806689 != nil)
+        self._method_get_collision_priority_1740695150 = StringName(from: "get_collision_priority")
+        assert(self._method_get_collision_priority_1740695150 != nil)
+        self._method_set_disable_mode_1623620376 = StringName(from: "set_disable_mode")
+        assert(self._method_set_disable_mode_1623620376 != nil)
+        self._method_get_disable_mode_410164780 = StringName(from: "get_disable_mode")
+        assert(self._method_get_disable_mode_410164780 != nil)
+        self._method_set_ray_pickable_2586408642 = StringName(from: "set_ray_pickable")
+        assert(self._method_set_ray_pickable_2586408642 != nil)
+        self._method_is_ray_pickable_36873697 = StringName(from: "is_ray_pickable")
+        assert(self._method_is_ray_pickable_36873697 != nil)
+        self._method_set_capture_input_on_drag_2586408642 = StringName(from: "set_capture_input_on_drag")
+        assert(self._method_set_capture_input_on_drag_2586408642 != nil)
+        self._method_get_capture_input_on_drag_36873697 = StringName(from: "get_capture_input_on_drag")
+        assert(self._method_get_capture_input_on_drag_36873697 != nil)
+        self._method_get_rid_2944877500 = StringName(from: "get_rid")
+        assert(self._method_get_rid_2944877500 != nil)
+        self._method_create_shape_owner_3429307534 = StringName(from: "create_shape_owner")
+        assert(self._method_create_shape_owner_3429307534 != nil)
+        self._method_remove_shape_owner_1286410249 = StringName(from: "remove_shape_owner")
+        assert(self._method_remove_shape_owner_1286410249 != nil)
+        self._method_get_shape_owners_969006518 = StringName(from: "get_shape_owners")
+        assert(self._method_get_shape_owners_969006518 != nil)
+        self._method_shape_owner_set_transform_3616898986 = StringName(from: "shape_owner_set_transform")
+        assert(self._method_shape_owner_set_transform_3616898986 != nil)
+        self._method_shape_owner_get_transform_1965739696 = StringName(from: "shape_owner_get_transform")
+        assert(self._method_shape_owner_get_transform_1965739696 != nil)
+        self._method_shape_owner_get_owner_3332903315 = StringName(from: "shape_owner_get_owner")
+        assert(self._method_shape_owner_get_owner_3332903315 != nil)
+        self._method_shape_owner_set_disabled_300928843 = StringName(from: "shape_owner_set_disabled")
+        assert(self._method_shape_owner_set_disabled_300928843 != nil)
+        self._method_is_shape_owner_disabled_1116898809 = StringName(from: "is_shape_owner_disabled")
+        assert(self._method_is_shape_owner_disabled_1116898809 != nil)
+        self._method_shape_owner_add_shape_2566676345 = StringName(from: "shape_owner_add_shape")
+        assert(self._method_shape_owner_add_shape_2566676345 != nil)
+        self._method_shape_owner_get_shape_count_923996154 = StringName(from: "shape_owner_get_shape_count")
+        assert(self._method_shape_owner_get_shape_count_923996154 != nil)
+        self._method_shape_owner_get_shape_4015519174 = StringName(from: "shape_owner_get_shape")
+        assert(self._method_shape_owner_get_shape_4015519174 != nil)
+        self._method_shape_owner_get_shape_index_3175239445 = StringName(from: "shape_owner_get_shape_index")
+        assert(self._method_shape_owner_get_shape_index_3175239445 != nil)
+        self._method_shape_owner_remove_shape_3937882851 = StringName(from: "shape_owner_remove_shape")
+        assert(self._method_shape_owner_remove_shape_3937882851 != nil)
+        self._method_shape_owner_clear_shapes_1286410249 = StringName(from: "shape_owner_clear_shapes")
+        assert(self._method_shape_owner_clear_shapes_1286410249 != nil)
+        self._method_shape_find_owner_923996154 = StringName(from: "shape_find_owner")
+        assert(self._method_shape_find_owner_923996154 != nil)
     }
 
     public func _input_event(camera: Camera3D, event: InputEvent, position: Vector3, normal: Vector3, shape_idx: Int64)  {
@@ -171,12 +140,7 @@ open class CollisionObject3D : Node3D {
                 .init(camera_native), .init(event_native), .init(position_native), .init(normal_native), .init(shape_idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__input_event_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _mouse_enter()  {
@@ -186,12 +150,7 @@ open class CollisionObject3D : Node3D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__mouse_enter_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _mouse_exit()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -200,12 +159,7 @@ open class CollisionObject3D : Node3D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__mouse_exit_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func set_collision_layer(layer: Int64)  {
         withUnsafePointer(to: layer) { layer_native in
@@ -215,8 +169,13 @@ open class CollisionObject3D : Node3D {
                 .init(layer_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_layer_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_layer_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -232,8 +191,13 @@ open class CollisionObject3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_layer_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_layer_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -248,8 +212,13 @@ open class CollisionObject3D : Node3D {
                 .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_mask_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_mask_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -265,8 +234,13 @@ open class CollisionObject3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_mask_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_mask_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -282,8 +256,13 @@ open class CollisionObject3D : Node3D {
                 .init(layer_number_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_layer_value_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_layer_value_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -301,8 +280,13 @@ open class CollisionObject3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_layer_value_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_layer_value_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -319,8 +303,13 @@ open class CollisionObject3D : Node3D {
                 .init(layer_number_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_mask_value_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_mask_value_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -338,8 +327,13 @@ open class CollisionObject3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_mask_value_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_mask_value_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -355,8 +349,13 @@ open class CollisionObject3D : Node3D {
                 .init(priority_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_priority_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_priority_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -372,8 +371,13 @@ open class CollisionObject3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_priority_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_priority_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -388,8 +392,13 @@ open class CollisionObject3D : Node3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_disable_mode_1623620376,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_disable_mode_1623620376._native_ptr(),
+                    1623620376)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -404,8 +413,13 @@ open class CollisionObject3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_disable_mode_410164780,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_disable_mode_410164780._native_ptr(),
+                    410164780)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -420,8 +434,13 @@ open class CollisionObject3D : Node3D {
                 .init(ray_pickable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_ray_pickable_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_ray_pickable_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -437,8 +456,13 @@ open class CollisionObject3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_ray_pickable_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_ray_pickable_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -453,8 +477,13 @@ open class CollisionObject3D : Node3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_capture_input_on_drag_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_capture_input_on_drag_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -470,8 +499,13 @@ open class CollisionObject3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_capture_input_on_drag_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_capture_input_on_drag_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -486,8 +520,13 @@ open class CollisionObject3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rid_2944877500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rid_2944877500._native_ptr(),
+                    2944877500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -504,8 +543,13 @@ open class CollisionObject3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_shape_owner_3429307534,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_shape_owner_3429307534._native_ptr(),
+                    3429307534)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -520,8 +564,13 @@ open class CollisionObject3D : Node3D {
                 .init(owner_id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_shape_owner_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_shape_owner_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -536,8 +585,13 @@ open class CollisionObject3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_shape_owners_969006518,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_shape_owners_969006518._native_ptr(),
+                    969006518)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -553,8 +607,13 @@ open class CollisionObject3D : Node3D {
                 .init(owner_id_native), .init(transform_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_shape_owner_set_transform_3616898986,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_shape_owner_set_transform_3616898986._native_ptr(),
+                    3616898986)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -570,8 +629,13 @@ open class CollisionObject3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_shape_owner_get_transform_1965739696,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_shape_owner_get_transform_1965739696._native_ptr(),
+                    1965739696)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -588,8 +652,13 @@ open class CollisionObject3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_shape_owner_get_owner_3332903315,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_shape_owner_get_owner_3332903315._native_ptr(),
+                    3332903315)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -606,8 +675,13 @@ open class CollisionObject3D : Node3D {
                 .init(owner_id_native), .init(disabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_shape_owner_set_disabled_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_shape_owner_set_disabled_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -625,8 +699,13 @@ open class CollisionObject3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_shape_owner_disabled_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_shape_owner_disabled_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -643,8 +722,13 @@ open class CollisionObject3D : Node3D {
                 .init(owner_id_native), .init(shape_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_shape_owner_add_shape_2566676345,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_shape_owner_add_shape_2566676345._native_ptr(),
+                    2566676345)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -661,8 +745,13 @@ open class CollisionObject3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_shape_owner_get_shape_count_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_shape_owner_get_shape_count_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -680,8 +769,13 @@ open class CollisionObject3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_shape_owner_get_shape_4015519174,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_shape_owner_get_shape_4015519174._native_ptr(),
+                    4015519174)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -701,8 +795,13 @@ open class CollisionObject3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_shape_owner_get_shape_index_3175239445,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_shape_owner_get_shape_index_3175239445._native_ptr(),
+                    3175239445)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -720,8 +819,13 @@ open class CollisionObject3D : Node3D {
                 .init(owner_id_native), .init(shape_id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_shape_owner_remove_shape_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_shape_owner_remove_shape_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -737,8 +841,13 @@ open class CollisionObject3D : Node3D {
                 .init(owner_id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_shape_owner_clear_shapes_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_shape_owner_clear_shapes_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -755,8 +864,13 @@ open class CollisionObject3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_shape_find_owner_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_shape_find_owner_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

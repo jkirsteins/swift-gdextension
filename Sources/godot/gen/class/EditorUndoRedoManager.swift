@@ -25,59 +25,49 @@ open class EditorUndoRedoManager : Object {
 
     public override class var __godot_name: StringName { __godot_name_EditorUndoRedoManager }
 
-    static var _method_create_action_3766330317: GDExtensionMethodBindPtr! = nil
-    static var _method_commit_action_3216645846: GDExtensionMethodBindPtr! = nil
-    static var _method_is_committing_action_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_add_do_method_1517810467: GDExtensionMethodBindPtr! = nil
-    static var _method_add_undo_method_1517810467: GDExtensionMethodBindPtr! = nil
-    static var _method_add_do_property_1017172818: GDExtensionMethodBindPtr! = nil
-    static var _method_add_undo_property_1017172818: GDExtensionMethodBindPtr! = nil
-    static var _method_add_do_reference_3975164845: GDExtensionMethodBindPtr! = nil
-    static var _method_add_undo_reference_3975164845: GDExtensionMethodBindPtr! = nil
-    static var _method_get_object_history_id_1107568780: GDExtensionMethodBindPtr! = nil
-    static var _method_get_history_undo_redo_2417974513: GDExtensionMethodBindPtr! = nil
+    static var _method_create_action_3766330317: StringName! = nil
+    static var _method_commit_action_3216645846: StringName! = nil
+    static var _method_is_committing_action_36873697: StringName! = nil
+    static var _method_add_do_method_1517810467: StringName! = nil
+    static var _method_add_undo_method_1517810467: StringName! = nil
+    static var _method_add_do_property_1017172818: StringName! = nil
+    static var _method_add_undo_property_1017172818: StringName! = nil
+    static var _method_add_do_reference_3975164845: StringName! = nil
+    static var _method_add_undo_reference_3975164845: StringName! = nil
+    static var _method_get_object_history_id_1107568780: StringName! = nil
+    static var _method_get_history_undo_redo_2417974513: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorUndoRedoManager == nil)
         __godot_name_EditorUndoRedoManager = StringName(from: "EditorUndoRedoManager")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_create_action_3766330317_name = StringName(from: "create_action")
-        self._method_create_action_3766330317 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorUndoRedoManager._native_ptr(), _method_create_action_3766330317_name._native_ptr(), 3766330317)
-        assert(EditorUndoRedoManager._method_create_action_3766330317 != nil)
-        let _method_commit_action_3216645846_name = StringName(from: "commit_action")
-        self._method_commit_action_3216645846 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorUndoRedoManager._native_ptr(), _method_commit_action_3216645846_name._native_ptr(), 3216645846)
-        assert(EditorUndoRedoManager._method_commit_action_3216645846 != nil)
-        let _method_is_committing_action_36873697_name = StringName(from: "is_committing_action")
-        self._method_is_committing_action_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorUndoRedoManager._native_ptr(), _method_is_committing_action_36873697_name._native_ptr(), 36873697)
-        assert(EditorUndoRedoManager._method_is_committing_action_36873697 != nil)
-        let _method_add_do_method_1517810467_name = StringName(from: "add_do_method")
-        self._method_add_do_method_1517810467 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorUndoRedoManager._native_ptr(), _method_add_do_method_1517810467_name._native_ptr(), 1517810467)
-        assert(EditorUndoRedoManager._method_add_do_method_1517810467 != nil)
-        let _method_add_undo_method_1517810467_name = StringName(from: "add_undo_method")
-        self._method_add_undo_method_1517810467 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorUndoRedoManager._native_ptr(), _method_add_undo_method_1517810467_name._native_ptr(), 1517810467)
-        assert(EditorUndoRedoManager._method_add_undo_method_1517810467 != nil)
-        let _method_add_do_property_1017172818_name = StringName(from: "add_do_property")
-        self._method_add_do_property_1017172818 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorUndoRedoManager._native_ptr(), _method_add_do_property_1017172818_name._native_ptr(), 1017172818)
-        assert(EditorUndoRedoManager._method_add_do_property_1017172818 != nil)
-        let _method_add_undo_property_1017172818_name = StringName(from: "add_undo_property")
-        self._method_add_undo_property_1017172818 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorUndoRedoManager._native_ptr(), _method_add_undo_property_1017172818_name._native_ptr(), 1017172818)
-        assert(EditorUndoRedoManager._method_add_undo_property_1017172818 != nil)
-        let _method_add_do_reference_3975164845_name = StringName(from: "add_do_reference")
-        self._method_add_do_reference_3975164845 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorUndoRedoManager._native_ptr(), _method_add_do_reference_3975164845_name._native_ptr(), 3975164845)
-        assert(EditorUndoRedoManager._method_add_do_reference_3975164845 != nil)
-        let _method_add_undo_reference_3975164845_name = StringName(from: "add_undo_reference")
-        self._method_add_undo_reference_3975164845 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorUndoRedoManager._native_ptr(), _method_add_undo_reference_3975164845_name._native_ptr(), 3975164845)
-        assert(EditorUndoRedoManager._method_add_undo_reference_3975164845 != nil)
-        let _method_get_object_history_id_1107568780_name = StringName(from: "get_object_history_id")
-        self._method_get_object_history_id_1107568780 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorUndoRedoManager._native_ptr(), _method_get_object_history_id_1107568780_name._native_ptr(), 1107568780)
-        assert(EditorUndoRedoManager._method_get_object_history_id_1107568780 != nil)
-        let _method_get_history_undo_redo_2417974513_name = StringName(from: "get_history_undo_redo")
-        self._method_get_history_undo_redo_2417974513 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorUndoRedoManager._native_ptr(), _method_get_history_undo_redo_2417974513_name._native_ptr(), 2417974513)
-        assert(EditorUndoRedoManager._method_get_history_undo_redo_2417974513 != nil)
+        self._method_create_action_3766330317 = StringName(from: "create_action")
+        assert(self._method_create_action_3766330317 != nil)
+        self._method_commit_action_3216645846 = StringName(from: "commit_action")
+        assert(self._method_commit_action_3216645846 != nil)
+        self._method_is_committing_action_36873697 = StringName(from: "is_committing_action")
+        assert(self._method_is_committing_action_36873697 != nil)
+        self._method_add_do_method_1517810467 = StringName(from: "add_do_method")
+        assert(self._method_add_do_method_1517810467 != nil)
+        self._method_add_undo_method_1517810467 = StringName(from: "add_undo_method")
+        assert(self._method_add_undo_method_1517810467 != nil)
+        self._method_add_do_property_1017172818 = StringName(from: "add_do_property")
+        assert(self._method_add_do_property_1017172818 != nil)
+        self._method_add_undo_property_1017172818 = StringName(from: "add_undo_property")
+        assert(self._method_add_undo_property_1017172818 != nil)
+        self._method_add_do_reference_3975164845 = StringName(from: "add_do_reference")
+        assert(self._method_add_do_reference_3975164845 != nil)
+        self._method_add_undo_reference_3975164845 = StringName(from: "add_undo_reference")
+        assert(self._method_add_undo_reference_3975164845 != nil)
+        self._method_get_object_history_id_1107568780 = StringName(from: "get_object_history_id")
+        assert(self._method_get_object_history_id_1107568780 != nil)
+        self._method_get_history_undo_redo_2417974513 = StringName(from: "get_history_undo_redo")
+        assert(self._method_get_history_undo_redo_2417974513 != nil)
     }
 
     public func create_action(name: godot.String, merge_mode: UndoRedo.MergeMode, custom_context: Object)  {
@@ -90,8 +80,13 @@ open class EditorUndoRedoManager : Object {
                 .init(name_native), .init(merge_mode_native), .init(custom_context_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_action_3766330317,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_action_3766330317._native_ptr(),
+                    3766330317)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -106,8 +101,13 @@ open class EditorUndoRedoManager : Object {
                 .init(execute_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_commit_action_3216645846,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_commit_action_3216645846._native_ptr(),
+                    3216645846)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -123,8 +123,13 @@ open class EditorUndoRedoManager : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_committing_action_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_committing_action_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -140,8 +145,13 @@ open class EditorUndoRedoManager : Object {
                 .init(object_native), .init(method_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_do_method_1517810467,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_do_method_1517810467._native_ptr(),
+                    1517810467)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -156,8 +166,13 @@ open class EditorUndoRedoManager : Object {
                 .init(object_native), .init(method_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_undo_method_1517810467,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_undo_method_1517810467._native_ptr(),
+                    1517810467)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -173,8 +188,13 @@ open class EditorUndoRedoManager : Object {
                 .init(object_native), .init(property_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_do_property_1017172818,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_do_property_1017172818._native_ptr(),
+                    1017172818)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -190,8 +210,13 @@ open class EditorUndoRedoManager : Object {
                 .init(object_native), .init(property_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_undo_property_1017172818,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_undo_property_1017172818._native_ptr(),
+                    1017172818)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -205,8 +230,13 @@ open class EditorUndoRedoManager : Object {
                 .init(object_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_do_reference_3975164845,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_do_reference_3975164845._native_ptr(),
+                    3975164845)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -220,8 +250,13 @@ open class EditorUndoRedoManager : Object {
                 .init(object_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_undo_reference_3975164845,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_undo_reference_3975164845._native_ptr(),
+                    3975164845)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -237,8 +272,13 @@ open class EditorUndoRedoManager : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_object_history_id_1107568780,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_object_history_id_1107568780._native_ptr(),
+                    1107568780)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -254,8 +294,13 @@ open class EditorUndoRedoManager : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_history_undo_redo_2417974513,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_history_undo_redo_2417974513._native_ptr(),
+                    2417974513)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

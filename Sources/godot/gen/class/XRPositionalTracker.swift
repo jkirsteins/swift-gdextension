@@ -19,79 +19,64 @@ open class XRPositionalTracker : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_XRPositionalTracker }
 
-    static var _method_get_tracker_type_2784508102: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tracker_type_3055763575: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tracker_name_2002593661: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tracker_name_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tracker_desc_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tracker_desc_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tracker_profile_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tracker_profile_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tracker_hand_4181770860: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tracker_hand_3904108980: GDExtensionMethodBindPtr! = nil
-    static var _method_has_pose_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pose_4099720006: GDExtensionMethodBindPtr! = nil
-    static var _method_invalidate_pose_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_set_pose_3451230163: GDExtensionMethodBindPtr! = nil
-    static var _method_get_input_2760726917: GDExtensionMethodBindPtr! = nil
-    static var _method_set_input_3776071444: GDExtensionMethodBindPtr! = nil
+    static var _method_get_tracker_type_2784508102: StringName! = nil
+    static var _method_set_tracker_type_3055763575: StringName! = nil
+    static var _method_get_tracker_name_2002593661: StringName! = nil
+    static var _method_set_tracker_name_3304788590: StringName! = nil
+    static var _method_get_tracker_desc_201670096: StringName! = nil
+    static var _method_set_tracker_desc_83702148: StringName! = nil
+    static var _method_get_tracker_profile_201670096: StringName! = nil
+    static var _method_set_tracker_profile_83702148: StringName! = nil
+    static var _method_get_tracker_hand_4181770860: StringName! = nil
+    static var _method_set_tracker_hand_3904108980: StringName! = nil
+    static var _method_has_pose_2619796661: StringName! = nil
+    static var _method_get_pose_4099720006: StringName! = nil
+    static var _method_invalidate_pose_3304788590: StringName! = nil
+    static var _method_set_pose_3451230163: StringName! = nil
+    static var _method_get_input_2760726917: StringName! = nil
+    static var _method_set_input_3776071444: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_XRPositionalTracker == nil)
         __godot_name_XRPositionalTracker = StringName(from: "XRPositionalTracker")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_tracker_type_2784508102_name = StringName(from: "get_tracker_type")
-        self._method_get_tracker_type_2784508102 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPositionalTracker._native_ptr(), _method_get_tracker_type_2784508102_name._native_ptr(), 2784508102)
-        assert(XRPositionalTracker._method_get_tracker_type_2784508102 != nil)
-        let _method_set_tracker_type_3055763575_name = StringName(from: "set_tracker_type")
-        self._method_set_tracker_type_3055763575 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPositionalTracker._native_ptr(), _method_set_tracker_type_3055763575_name._native_ptr(), 3055763575)
-        assert(XRPositionalTracker._method_set_tracker_type_3055763575 != nil)
-        let _method_get_tracker_name_2002593661_name = StringName(from: "get_tracker_name")
-        self._method_get_tracker_name_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPositionalTracker._native_ptr(), _method_get_tracker_name_2002593661_name._native_ptr(), 2002593661)
-        assert(XRPositionalTracker._method_get_tracker_name_2002593661 != nil)
-        let _method_set_tracker_name_3304788590_name = StringName(from: "set_tracker_name")
-        self._method_set_tracker_name_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPositionalTracker._native_ptr(), _method_set_tracker_name_3304788590_name._native_ptr(), 3304788590)
-        assert(XRPositionalTracker._method_set_tracker_name_3304788590 != nil)
-        let _method_get_tracker_desc_201670096_name = StringName(from: "get_tracker_desc")
-        self._method_get_tracker_desc_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPositionalTracker._native_ptr(), _method_get_tracker_desc_201670096_name._native_ptr(), 201670096)
-        assert(XRPositionalTracker._method_get_tracker_desc_201670096 != nil)
-        let _method_set_tracker_desc_83702148_name = StringName(from: "set_tracker_desc")
-        self._method_set_tracker_desc_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPositionalTracker._native_ptr(), _method_set_tracker_desc_83702148_name._native_ptr(), 83702148)
-        assert(XRPositionalTracker._method_set_tracker_desc_83702148 != nil)
-        let _method_get_tracker_profile_201670096_name = StringName(from: "get_tracker_profile")
-        self._method_get_tracker_profile_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPositionalTracker._native_ptr(), _method_get_tracker_profile_201670096_name._native_ptr(), 201670096)
-        assert(XRPositionalTracker._method_get_tracker_profile_201670096 != nil)
-        let _method_set_tracker_profile_83702148_name = StringName(from: "set_tracker_profile")
-        self._method_set_tracker_profile_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPositionalTracker._native_ptr(), _method_set_tracker_profile_83702148_name._native_ptr(), 83702148)
-        assert(XRPositionalTracker._method_set_tracker_profile_83702148 != nil)
-        let _method_get_tracker_hand_4181770860_name = StringName(from: "get_tracker_hand")
-        self._method_get_tracker_hand_4181770860 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPositionalTracker._native_ptr(), _method_get_tracker_hand_4181770860_name._native_ptr(), 4181770860)
-        assert(XRPositionalTracker._method_get_tracker_hand_4181770860 != nil)
-        let _method_set_tracker_hand_3904108980_name = StringName(from: "set_tracker_hand")
-        self._method_set_tracker_hand_3904108980 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPositionalTracker._native_ptr(), _method_set_tracker_hand_3904108980_name._native_ptr(), 3904108980)
-        assert(XRPositionalTracker._method_set_tracker_hand_3904108980 != nil)
-        let _method_has_pose_2619796661_name = StringName(from: "has_pose")
-        self._method_has_pose_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPositionalTracker._native_ptr(), _method_has_pose_2619796661_name._native_ptr(), 2619796661)
-        assert(XRPositionalTracker._method_has_pose_2619796661 != nil)
-        let _method_get_pose_4099720006_name = StringName(from: "get_pose")
-        self._method_get_pose_4099720006 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPositionalTracker._native_ptr(), _method_get_pose_4099720006_name._native_ptr(), 4099720006)
-        assert(XRPositionalTracker._method_get_pose_4099720006 != nil)
-        let _method_invalidate_pose_3304788590_name = StringName(from: "invalidate_pose")
-        self._method_invalidate_pose_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPositionalTracker._native_ptr(), _method_invalidate_pose_3304788590_name._native_ptr(), 3304788590)
-        assert(XRPositionalTracker._method_invalidate_pose_3304788590 != nil)
-        let _method_set_pose_3451230163_name = StringName(from: "set_pose")
-        self._method_set_pose_3451230163 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPositionalTracker._native_ptr(), _method_set_pose_3451230163_name._native_ptr(), 3451230163)
-        assert(XRPositionalTracker._method_set_pose_3451230163 != nil)
-        let _method_get_input_2760726917_name = StringName(from: "get_input")
-        self._method_get_input_2760726917 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPositionalTracker._native_ptr(), _method_get_input_2760726917_name._native_ptr(), 2760726917)
-        assert(XRPositionalTracker._method_get_input_2760726917 != nil)
-        let _method_set_input_3776071444_name = StringName(from: "set_input")
-        self._method_set_input_3776071444 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPositionalTracker._native_ptr(), _method_set_input_3776071444_name._native_ptr(), 3776071444)
-        assert(XRPositionalTracker._method_set_input_3776071444 != nil)
+        self._method_get_tracker_type_2784508102 = StringName(from: "get_tracker_type")
+        assert(self._method_get_tracker_type_2784508102 != nil)
+        self._method_set_tracker_type_3055763575 = StringName(from: "set_tracker_type")
+        assert(self._method_set_tracker_type_3055763575 != nil)
+        self._method_get_tracker_name_2002593661 = StringName(from: "get_tracker_name")
+        assert(self._method_get_tracker_name_2002593661 != nil)
+        self._method_set_tracker_name_3304788590 = StringName(from: "set_tracker_name")
+        assert(self._method_set_tracker_name_3304788590 != nil)
+        self._method_get_tracker_desc_201670096 = StringName(from: "get_tracker_desc")
+        assert(self._method_get_tracker_desc_201670096 != nil)
+        self._method_set_tracker_desc_83702148 = StringName(from: "set_tracker_desc")
+        assert(self._method_set_tracker_desc_83702148 != nil)
+        self._method_get_tracker_profile_201670096 = StringName(from: "get_tracker_profile")
+        assert(self._method_get_tracker_profile_201670096 != nil)
+        self._method_set_tracker_profile_83702148 = StringName(from: "set_tracker_profile")
+        assert(self._method_set_tracker_profile_83702148 != nil)
+        self._method_get_tracker_hand_4181770860 = StringName(from: "get_tracker_hand")
+        assert(self._method_get_tracker_hand_4181770860 != nil)
+        self._method_set_tracker_hand_3904108980 = StringName(from: "set_tracker_hand")
+        assert(self._method_set_tracker_hand_3904108980 != nil)
+        self._method_has_pose_2619796661 = StringName(from: "has_pose")
+        assert(self._method_has_pose_2619796661 != nil)
+        self._method_get_pose_4099720006 = StringName(from: "get_pose")
+        assert(self._method_get_pose_4099720006 != nil)
+        self._method_invalidate_pose_3304788590 = StringName(from: "invalidate_pose")
+        assert(self._method_invalidate_pose_3304788590 != nil)
+        self._method_set_pose_3451230163 = StringName(from: "set_pose")
+        assert(self._method_set_pose_3451230163 != nil)
+        self._method_get_input_2760726917 = StringName(from: "get_input")
+        assert(self._method_get_input_2760726917 != nil)
+        self._method_set_input_3776071444 = StringName(from: "set_input")
+        assert(self._method_set_input_3776071444 != nil)
     }
 
     public func get_tracker_type() -> XRServer.TrackerType {
@@ -102,8 +87,13 @@ open class XRPositionalTracker : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tracker_type_2784508102,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tracker_type_2784508102._native_ptr(),
+                    2784508102)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -118,8 +108,13 @@ open class XRPositionalTracker : RefCounted {
                 .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tracker_type_3055763575,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tracker_type_3055763575._native_ptr(),
+                    3055763575)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -134,8 +129,13 @@ open class XRPositionalTracker : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tracker_name_2002593661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tracker_name_2002593661._native_ptr(),
+                    2002593661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -150,8 +150,13 @@ open class XRPositionalTracker : RefCounted {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tracker_name_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tracker_name_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -165,8 +170,13 @@ open class XRPositionalTracker : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tracker_desc_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tracker_desc_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -181,8 +191,13 @@ open class XRPositionalTracker : RefCounted {
                 .init(description_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tracker_desc_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tracker_desc_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -196,8 +211,13 @@ open class XRPositionalTracker : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tracker_profile_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tracker_profile_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -212,8 +232,13 @@ open class XRPositionalTracker : RefCounted {
                 .init(profile_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tracker_profile_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tracker_profile_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -227,8 +252,13 @@ open class XRPositionalTracker : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tracker_hand_4181770860,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tracker_hand_4181770860._native_ptr(),
+                    4181770860)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -243,8 +273,13 @@ open class XRPositionalTracker : RefCounted {
                 .init(hand_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tracker_hand_3904108980,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tracker_hand_3904108980._native_ptr(),
+                    3904108980)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -261,8 +296,13 @@ open class XRPositionalTracker : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_pose_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_pose_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -278,8 +318,13 @@ open class XRPositionalTracker : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pose_4099720006,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pose_4099720006._native_ptr(),
+                    4099720006)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -294,8 +339,13 @@ open class XRPositionalTracker : RefCounted {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_invalidate_pose_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_invalidate_pose_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -313,8 +363,13 @@ open class XRPositionalTracker : RefCounted {
                 .init(name_native), .init(transform_native), .init(linear_velocity_native), .init(angular_velocity_native), .init(tracking_confidence_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pose_3451230163,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pose_3451230163._native_ptr(),
+                    3451230163)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -330,8 +385,13 @@ open class XRPositionalTracker : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_input_2760726917,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_input_2760726917._native_ptr(),
+                    2760726917)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -347,8 +407,13 @@ open class XRPositionalTracker : RefCounted {
                 .init(name_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_input_3776071444,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_input_3776071444._native_ptr(),
+                    3776071444)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

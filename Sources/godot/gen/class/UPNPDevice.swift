@@ -22,79 +22,64 @@ open class UPNPDevice : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_UPNPDevice }
 
-    static var _method_is_valid_gateway_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_query_external_address_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_add_port_mapping_3358934458: GDExtensionMethodBindPtr! = nil
-    static var _method_delete_port_mapping_760296170: GDExtensionMethodBindPtr! = nil
-    static var _method_set_description_url_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_description_url_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_service_type_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_service_type_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_igd_control_url_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_igd_control_url_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_igd_service_type_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_igd_service_type_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_igd_our_addr_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_igd_our_addr_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_igd_status_519504122: GDExtensionMethodBindPtr! = nil
-    static var _method_get_igd_status_180887011: GDExtensionMethodBindPtr! = nil
+    static var _method_is_valid_gateway_36873697: StringName! = nil
+    static var _method_query_external_address_201670096: StringName! = nil
+    static var _method_add_port_mapping_3358934458: StringName! = nil
+    static var _method_delete_port_mapping_760296170: StringName! = nil
+    static var _method_set_description_url_83702148: StringName! = nil
+    static var _method_get_description_url_201670096: StringName! = nil
+    static var _method_set_service_type_83702148: StringName! = nil
+    static var _method_get_service_type_201670096: StringName! = nil
+    static var _method_set_igd_control_url_83702148: StringName! = nil
+    static var _method_get_igd_control_url_201670096: StringName! = nil
+    static var _method_set_igd_service_type_83702148: StringName! = nil
+    static var _method_get_igd_service_type_201670096: StringName! = nil
+    static var _method_set_igd_our_addr_83702148: StringName! = nil
+    static var _method_get_igd_our_addr_201670096: StringName! = nil
+    static var _method_set_igd_status_519504122: StringName! = nil
+    static var _method_get_igd_status_180887011: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_UPNPDevice == nil)
         __godot_name_UPNPDevice = StringName(from: "UPNPDevice")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_is_valid_gateway_36873697_name = StringName(from: "is_valid_gateway")
-        self._method_is_valid_gateway_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_UPNPDevice._native_ptr(), _method_is_valid_gateway_36873697_name._native_ptr(), 36873697)
-        assert(UPNPDevice._method_is_valid_gateway_36873697 != nil)
-        let _method_query_external_address_201670096_name = StringName(from: "query_external_address")
-        self._method_query_external_address_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_UPNPDevice._native_ptr(), _method_query_external_address_201670096_name._native_ptr(), 201670096)
-        assert(UPNPDevice._method_query_external_address_201670096 != nil)
-        let _method_add_port_mapping_3358934458_name = StringName(from: "add_port_mapping")
-        self._method_add_port_mapping_3358934458 = self.interface.pointee.classdb_get_method_bind(__godot_name_UPNPDevice._native_ptr(), _method_add_port_mapping_3358934458_name._native_ptr(), 3358934458)
-        assert(UPNPDevice._method_add_port_mapping_3358934458 != nil)
-        let _method_delete_port_mapping_760296170_name = StringName(from: "delete_port_mapping")
-        self._method_delete_port_mapping_760296170 = self.interface.pointee.classdb_get_method_bind(__godot_name_UPNPDevice._native_ptr(), _method_delete_port_mapping_760296170_name._native_ptr(), 760296170)
-        assert(UPNPDevice._method_delete_port_mapping_760296170 != nil)
-        let _method_set_description_url_83702148_name = StringName(from: "set_description_url")
-        self._method_set_description_url_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_UPNPDevice._native_ptr(), _method_set_description_url_83702148_name._native_ptr(), 83702148)
-        assert(UPNPDevice._method_set_description_url_83702148 != nil)
-        let _method_get_description_url_201670096_name = StringName(from: "get_description_url")
-        self._method_get_description_url_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_UPNPDevice._native_ptr(), _method_get_description_url_201670096_name._native_ptr(), 201670096)
-        assert(UPNPDevice._method_get_description_url_201670096 != nil)
-        let _method_set_service_type_83702148_name = StringName(from: "set_service_type")
-        self._method_set_service_type_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_UPNPDevice._native_ptr(), _method_set_service_type_83702148_name._native_ptr(), 83702148)
-        assert(UPNPDevice._method_set_service_type_83702148 != nil)
-        let _method_get_service_type_201670096_name = StringName(from: "get_service_type")
-        self._method_get_service_type_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_UPNPDevice._native_ptr(), _method_get_service_type_201670096_name._native_ptr(), 201670096)
-        assert(UPNPDevice._method_get_service_type_201670096 != nil)
-        let _method_set_igd_control_url_83702148_name = StringName(from: "set_igd_control_url")
-        self._method_set_igd_control_url_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_UPNPDevice._native_ptr(), _method_set_igd_control_url_83702148_name._native_ptr(), 83702148)
-        assert(UPNPDevice._method_set_igd_control_url_83702148 != nil)
-        let _method_get_igd_control_url_201670096_name = StringName(from: "get_igd_control_url")
-        self._method_get_igd_control_url_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_UPNPDevice._native_ptr(), _method_get_igd_control_url_201670096_name._native_ptr(), 201670096)
-        assert(UPNPDevice._method_get_igd_control_url_201670096 != nil)
-        let _method_set_igd_service_type_83702148_name = StringName(from: "set_igd_service_type")
-        self._method_set_igd_service_type_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_UPNPDevice._native_ptr(), _method_set_igd_service_type_83702148_name._native_ptr(), 83702148)
-        assert(UPNPDevice._method_set_igd_service_type_83702148 != nil)
-        let _method_get_igd_service_type_201670096_name = StringName(from: "get_igd_service_type")
-        self._method_get_igd_service_type_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_UPNPDevice._native_ptr(), _method_get_igd_service_type_201670096_name._native_ptr(), 201670096)
-        assert(UPNPDevice._method_get_igd_service_type_201670096 != nil)
-        let _method_set_igd_our_addr_83702148_name = StringName(from: "set_igd_our_addr")
-        self._method_set_igd_our_addr_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_UPNPDevice._native_ptr(), _method_set_igd_our_addr_83702148_name._native_ptr(), 83702148)
-        assert(UPNPDevice._method_set_igd_our_addr_83702148 != nil)
-        let _method_get_igd_our_addr_201670096_name = StringName(from: "get_igd_our_addr")
-        self._method_get_igd_our_addr_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_UPNPDevice._native_ptr(), _method_get_igd_our_addr_201670096_name._native_ptr(), 201670096)
-        assert(UPNPDevice._method_get_igd_our_addr_201670096 != nil)
-        let _method_set_igd_status_519504122_name = StringName(from: "set_igd_status")
-        self._method_set_igd_status_519504122 = self.interface.pointee.classdb_get_method_bind(__godot_name_UPNPDevice._native_ptr(), _method_set_igd_status_519504122_name._native_ptr(), 519504122)
-        assert(UPNPDevice._method_set_igd_status_519504122 != nil)
-        let _method_get_igd_status_180887011_name = StringName(from: "get_igd_status")
-        self._method_get_igd_status_180887011 = self.interface.pointee.classdb_get_method_bind(__godot_name_UPNPDevice._native_ptr(), _method_get_igd_status_180887011_name._native_ptr(), 180887011)
-        assert(UPNPDevice._method_get_igd_status_180887011 != nil)
+        self._method_is_valid_gateway_36873697 = StringName(from: "is_valid_gateway")
+        assert(self._method_is_valid_gateway_36873697 != nil)
+        self._method_query_external_address_201670096 = StringName(from: "query_external_address")
+        assert(self._method_query_external_address_201670096 != nil)
+        self._method_add_port_mapping_3358934458 = StringName(from: "add_port_mapping")
+        assert(self._method_add_port_mapping_3358934458 != nil)
+        self._method_delete_port_mapping_760296170 = StringName(from: "delete_port_mapping")
+        assert(self._method_delete_port_mapping_760296170 != nil)
+        self._method_set_description_url_83702148 = StringName(from: "set_description_url")
+        assert(self._method_set_description_url_83702148 != nil)
+        self._method_get_description_url_201670096 = StringName(from: "get_description_url")
+        assert(self._method_get_description_url_201670096 != nil)
+        self._method_set_service_type_83702148 = StringName(from: "set_service_type")
+        assert(self._method_set_service_type_83702148 != nil)
+        self._method_get_service_type_201670096 = StringName(from: "get_service_type")
+        assert(self._method_get_service_type_201670096 != nil)
+        self._method_set_igd_control_url_83702148 = StringName(from: "set_igd_control_url")
+        assert(self._method_set_igd_control_url_83702148 != nil)
+        self._method_get_igd_control_url_201670096 = StringName(from: "get_igd_control_url")
+        assert(self._method_get_igd_control_url_201670096 != nil)
+        self._method_set_igd_service_type_83702148 = StringName(from: "set_igd_service_type")
+        assert(self._method_set_igd_service_type_83702148 != nil)
+        self._method_get_igd_service_type_201670096 = StringName(from: "get_igd_service_type")
+        assert(self._method_get_igd_service_type_201670096 != nil)
+        self._method_set_igd_our_addr_83702148 = StringName(from: "set_igd_our_addr")
+        assert(self._method_set_igd_our_addr_83702148 != nil)
+        self._method_get_igd_our_addr_201670096 = StringName(from: "get_igd_our_addr")
+        assert(self._method_get_igd_our_addr_201670096 != nil)
+        self._method_set_igd_status_519504122 = StringName(from: "set_igd_status")
+        assert(self._method_set_igd_status_519504122 != nil)
+        self._method_get_igd_status_180887011 = StringName(from: "get_igd_status")
+        assert(self._method_get_igd_status_180887011 != nil)
     }
 
     public func is_valid_gateway() -> UInt8 {
@@ -106,8 +91,13 @@ open class UPNPDevice : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_valid_gateway_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_valid_gateway_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -122,8 +112,13 @@ open class UPNPDevice : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_query_external_address_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_query_external_address_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -144,8 +139,13 @@ open class UPNPDevice : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_port_mapping_3358934458,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_port_mapping_3358934458._native_ptr(),
+                    3358934458)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -166,8 +166,13 @@ open class UPNPDevice : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_delete_port_mapping_760296170,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_delete_port_mapping_760296170._native_ptr(),
+                    760296170)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -183,8 +188,13 @@ open class UPNPDevice : RefCounted {
                 .init(url_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_description_url_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_description_url_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -198,8 +208,13 @@ open class UPNPDevice : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_description_url_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_description_url_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -214,8 +229,13 @@ open class UPNPDevice : RefCounted {
                 .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_service_type_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_service_type_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -229,8 +249,13 @@ open class UPNPDevice : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_service_type_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_service_type_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -245,8 +270,13 @@ open class UPNPDevice : RefCounted {
                 .init(url_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_igd_control_url_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_igd_control_url_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -260,8 +290,13 @@ open class UPNPDevice : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_igd_control_url_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_igd_control_url_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -276,8 +311,13 @@ open class UPNPDevice : RefCounted {
                 .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_igd_service_type_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_igd_service_type_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -291,8 +331,13 @@ open class UPNPDevice : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_igd_service_type_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_igd_service_type_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -307,8 +352,13 @@ open class UPNPDevice : RefCounted {
                 .init(addr_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_igd_our_addr_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_igd_our_addr_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -322,8 +372,13 @@ open class UPNPDevice : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_igd_our_addr_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_igd_our_addr_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -338,8 +393,13 @@ open class UPNPDevice : RefCounted {
                 .init(status_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_igd_status_519504122,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_igd_status_519504122._native_ptr(),
+                    519504122)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -354,8 +414,13 @@ open class UPNPDevice : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_igd_status_180887011,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_igd_status_180887011._native_ptr(),
+                    180887011)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

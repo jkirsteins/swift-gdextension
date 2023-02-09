@@ -31,63 +31,52 @@ open class WebRTCPeerConnection : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_WebRTCPeerConnection }
 
-    static var _method_set_default_extension_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_initialize_2625064318: GDExtensionMethodBindPtr! = nil
-    static var _method_create_data_channel_3997447457: GDExtensionMethodBindPtr! = nil
-    static var _method_create_offer_166280745: GDExtensionMethodBindPtr! = nil
-    static var _method_set_local_description_852856452: GDExtensionMethodBindPtr! = nil
-    static var _method_set_remote_description_852856452: GDExtensionMethodBindPtr! = nil
-    static var _method_add_ice_candidate_3958950400: GDExtensionMethodBindPtr! = nil
-    static var _method_poll_166280745: GDExtensionMethodBindPtr! = nil
-    static var _method_close_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_state_2275710506: GDExtensionMethodBindPtr! = nil
-    static var _method_get_gathering_state_4262591401: GDExtensionMethodBindPtr! = nil
-    static var _method_get_signaling_state_3342956226: GDExtensionMethodBindPtr! = nil
+    static var _method_set_default_extension_3304788590: StringName! = nil
+    static var _method_initialize_2625064318: StringName! = nil
+    static var _method_create_data_channel_3997447457: StringName! = nil
+    static var _method_create_offer_166280745: StringName! = nil
+    static var _method_set_local_description_852856452: StringName! = nil
+    static var _method_set_remote_description_852856452: StringName! = nil
+    static var _method_add_ice_candidate_3958950400: StringName! = nil
+    static var _method_poll_166280745: StringName! = nil
+    static var _method_close_3218959716: StringName! = nil
+    static var _method_get_connection_state_2275710506: StringName! = nil
+    static var _method_get_gathering_state_4262591401: StringName! = nil
+    static var _method_get_signaling_state_3342956226: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_WebRTCPeerConnection == nil)
         __godot_name_WebRTCPeerConnection = StringName(from: "WebRTCPeerConnection")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_default_extension_3304788590_name = StringName(from: "set_default_extension")
-        self._method_set_default_extension_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCPeerConnection._native_ptr(), _method_set_default_extension_3304788590_name._native_ptr(), 3304788590)
-        assert(WebRTCPeerConnection._method_set_default_extension_3304788590 != nil)
-        let _method_initialize_2625064318_name = StringName(from: "initialize")
-        self._method_initialize_2625064318 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCPeerConnection._native_ptr(), _method_initialize_2625064318_name._native_ptr(), 2625064318)
-        assert(WebRTCPeerConnection._method_initialize_2625064318 != nil)
-        let _method_create_data_channel_3997447457_name = StringName(from: "create_data_channel")
-        self._method_create_data_channel_3997447457 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCPeerConnection._native_ptr(), _method_create_data_channel_3997447457_name._native_ptr(), 3997447457)
-        assert(WebRTCPeerConnection._method_create_data_channel_3997447457 != nil)
-        let _method_create_offer_166280745_name = StringName(from: "create_offer")
-        self._method_create_offer_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCPeerConnection._native_ptr(), _method_create_offer_166280745_name._native_ptr(), 166280745)
-        assert(WebRTCPeerConnection._method_create_offer_166280745 != nil)
-        let _method_set_local_description_852856452_name = StringName(from: "set_local_description")
-        self._method_set_local_description_852856452 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCPeerConnection._native_ptr(), _method_set_local_description_852856452_name._native_ptr(), 852856452)
-        assert(WebRTCPeerConnection._method_set_local_description_852856452 != nil)
-        let _method_set_remote_description_852856452_name = StringName(from: "set_remote_description")
-        self._method_set_remote_description_852856452 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCPeerConnection._native_ptr(), _method_set_remote_description_852856452_name._native_ptr(), 852856452)
-        assert(WebRTCPeerConnection._method_set_remote_description_852856452 != nil)
-        let _method_add_ice_candidate_3958950400_name = StringName(from: "add_ice_candidate")
-        self._method_add_ice_candidate_3958950400 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCPeerConnection._native_ptr(), _method_add_ice_candidate_3958950400_name._native_ptr(), 3958950400)
-        assert(WebRTCPeerConnection._method_add_ice_candidate_3958950400 != nil)
-        let _method_poll_166280745_name = StringName(from: "poll")
-        self._method_poll_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCPeerConnection._native_ptr(), _method_poll_166280745_name._native_ptr(), 166280745)
-        assert(WebRTCPeerConnection._method_poll_166280745 != nil)
-        let _method_close_3218959716_name = StringName(from: "close")
-        self._method_close_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCPeerConnection._native_ptr(), _method_close_3218959716_name._native_ptr(), 3218959716)
-        assert(WebRTCPeerConnection._method_close_3218959716 != nil)
-        let _method_get_connection_state_2275710506_name = StringName(from: "get_connection_state")
-        self._method_get_connection_state_2275710506 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCPeerConnection._native_ptr(), _method_get_connection_state_2275710506_name._native_ptr(), 2275710506)
-        assert(WebRTCPeerConnection._method_get_connection_state_2275710506 != nil)
-        let _method_get_gathering_state_4262591401_name = StringName(from: "get_gathering_state")
-        self._method_get_gathering_state_4262591401 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCPeerConnection._native_ptr(), _method_get_gathering_state_4262591401_name._native_ptr(), 4262591401)
-        assert(WebRTCPeerConnection._method_get_gathering_state_4262591401 != nil)
-        let _method_get_signaling_state_3342956226_name = StringName(from: "get_signaling_state")
-        self._method_get_signaling_state_3342956226 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCPeerConnection._native_ptr(), _method_get_signaling_state_3342956226_name._native_ptr(), 3342956226)
-        assert(WebRTCPeerConnection._method_get_signaling_state_3342956226 != nil)
+        self._method_set_default_extension_3304788590 = StringName(from: "set_default_extension")
+        assert(self._method_set_default_extension_3304788590 != nil)
+        self._method_initialize_2625064318 = StringName(from: "initialize")
+        assert(self._method_initialize_2625064318 != nil)
+        self._method_create_data_channel_3997447457 = StringName(from: "create_data_channel")
+        assert(self._method_create_data_channel_3997447457 != nil)
+        self._method_create_offer_166280745 = StringName(from: "create_offer")
+        assert(self._method_create_offer_166280745 != nil)
+        self._method_set_local_description_852856452 = StringName(from: "set_local_description")
+        assert(self._method_set_local_description_852856452 != nil)
+        self._method_set_remote_description_852856452 = StringName(from: "set_remote_description")
+        assert(self._method_set_remote_description_852856452 != nil)
+        self._method_add_ice_candidate_3958950400 = StringName(from: "add_ice_candidate")
+        assert(self._method_add_ice_candidate_3958950400 != nil)
+        self._method_poll_166280745 = StringName(from: "poll")
+        assert(self._method_poll_166280745 != nil)
+        self._method_close_3218959716 = StringName(from: "close")
+        assert(self._method_close_3218959716 != nil)
+        self._method_get_connection_state_2275710506 = StringName(from: "get_connection_state")
+        assert(self._method_get_connection_state_2275710506 != nil)
+        self._method_get_gathering_state_4262591401 = StringName(from: "get_gathering_state")
+        assert(self._method_get_gathering_state_4262591401 != nil)
+        self._method_get_signaling_state_3342956226 = StringName(from: "get_signaling_state")
+        assert(self._method_get_signaling_state_3342956226 != nil)
     }
 
     public func set_default_extension(extension_class: StringName)  {
@@ -98,8 +87,13 @@ open class WebRTCPeerConnection : RefCounted {
                 .init(extension_class_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_default_extension_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_default_extension_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -114,8 +108,13 @@ open class WebRTCPeerConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_initialize_2625064318,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_initialize_2625064318._native_ptr(),
+                    2625064318)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -132,8 +131,13 @@ open class WebRTCPeerConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_data_channel_3997447457,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_data_channel_3997447457._native_ptr(),
+                    3997447457)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -148,8 +152,13 @@ open class WebRTCPeerConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_offer_166280745,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_offer_166280745._native_ptr(),
+                    166280745)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -166,8 +175,13 @@ open class WebRTCPeerConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_local_description_852856452,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_local_description_852856452._native_ptr(),
+                    852856452)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -184,8 +198,13 @@ open class WebRTCPeerConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_remote_description_852856452,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_remote_description_852856452._native_ptr(),
+                    852856452)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -203,8 +222,13 @@ open class WebRTCPeerConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_ice_candidate_3958950400,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_ice_candidate_3958950400._native_ptr(),
+                    3958950400)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -220,8 +244,13 @@ open class WebRTCPeerConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_poll_166280745,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_poll_166280745._native_ptr(),
+                    166280745)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -235,8 +264,13 @@ open class WebRTCPeerConnection : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_close_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_close_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -250,8 +284,13 @@ open class WebRTCPeerConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_state_2275710506,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_state_2275710506._native_ptr(),
+                    2275710506)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -266,8 +305,13 @@ open class WebRTCPeerConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_gathering_state_4262591401,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_gathering_state_4262591401._native_ptr(),
+                    4262591401)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -282,8 +326,13 @@ open class WebRTCPeerConnection : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_signaling_state_3342956226,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_signaling_state_3342956226._native_ptr(),
+                    3342956226)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

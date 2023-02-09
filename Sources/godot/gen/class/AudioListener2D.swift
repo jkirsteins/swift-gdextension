@@ -13,27 +13,25 @@ open class AudioListener2D : Node2D {
 
     public override class var __godot_name: StringName { __godot_name_AudioListener2D }
 
-    static var _method_make_current_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_current_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_is_current_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_make_current_3218959716: StringName! = nil
+    static var _method_clear_current_3218959716: StringName! = nil
+    static var _method_is_current_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AudioListener2D == nil)
         __godot_name_AudioListener2D = StringName(from: "AudioListener2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_make_current_3218959716_name = StringName(from: "make_current")
-        self._method_make_current_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioListener2D._native_ptr(), _method_make_current_3218959716_name._native_ptr(), 3218959716)
-        assert(AudioListener2D._method_make_current_3218959716 != nil)
-        let _method_clear_current_3218959716_name = StringName(from: "clear_current")
-        self._method_clear_current_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioListener2D._native_ptr(), _method_clear_current_3218959716_name._native_ptr(), 3218959716)
-        assert(AudioListener2D._method_clear_current_3218959716 != nil)
-        let _method_is_current_36873697_name = StringName(from: "is_current")
-        self._method_is_current_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioListener2D._native_ptr(), _method_is_current_36873697_name._native_ptr(), 36873697)
-        assert(AudioListener2D._method_is_current_36873697 != nil)
+        self._method_make_current_3218959716 = StringName(from: "make_current")
+        assert(self._method_make_current_3218959716 != nil)
+        self._method_clear_current_3218959716 = StringName(from: "clear_current")
+        assert(self._method_clear_current_3218959716 != nil)
+        self._method_is_current_36873697 = StringName(from: "is_current")
+        assert(self._method_is_current_36873697 != nil)
     }
 
     public func make_current()  {
@@ -43,8 +41,13 @@ open class AudioListener2D : Node2D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_make_current_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_make_current_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -57,8 +60,13 @@ open class AudioListener2D : Node2D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_current_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_current_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -73,8 +81,13 @@ open class AudioListener2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_current_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_current_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

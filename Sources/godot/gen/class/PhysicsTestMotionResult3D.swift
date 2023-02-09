@@ -11,71 +11,58 @@ open class PhysicsTestMotionResult3D : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_PhysicsTestMotionResult3D }
 
-    static var _method_get_travel_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_get_remainder_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_safe_fraction_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_unsafe_fraction_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_point_1914908202: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_normal_1914908202: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collider_velocity_1914908202: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collider_id_1591665591: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collider_rid_1231817359: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collider_2639523548: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collider_shape_1591665591: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_local_shape_1591665591: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_depth_218038398: GDExtensionMethodBindPtr! = nil
+    static var _method_get_travel_3360562783: StringName! = nil
+    static var _method_get_remainder_3360562783: StringName! = nil
+    static var _method_get_collision_safe_fraction_1740695150: StringName! = nil
+    static var _method_get_collision_unsafe_fraction_1740695150: StringName! = nil
+    static var _method_get_collision_count_3905245786: StringName! = nil
+    static var _method_get_collision_point_1914908202: StringName! = nil
+    static var _method_get_collision_normal_1914908202: StringName! = nil
+    static var _method_get_collider_velocity_1914908202: StringName! = nil
+    static var _method_get_collider_id_1591665591: StringName! = nil
+    static var _method_get_collider_rid_1231817359: StringName! = nil
+    static var _method_get_collider_2639523548: StringName! = nil
+    static var _method_get_collider_shape_1591665591: StringName! = nil
+    static var _method_get_collision_local_shape_1591665591: StringName! = nil
+    static var _method_get_collision_depth_218038398: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PhysicsTestMotionResult3D == nil)
         __godot_name_PhysicsTestMotionResult3D = StringName(from: "PhysicsTestMotionResult3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_travel_3360562783_name = StringName(from: "get_travel")
-        self._method_get_travel_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionResult3D._native_ptr(), _method_get_travel_3360562783_name._native_ptr(), 3360562783)
-        assert(PhysicsTestMotionResult3D._method_get_travel_3360562783 != nil)
-        let _method_get_remainder_3360562783_name = StringName(from: "get_remainder")
-        self._method_get_remainder_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionResult3D._native_ptr(), _method_get_remainder_3360562783_name._native_ptr(), 3360562783)
-        assert(PhysicsTestMotionResult3D._method_get_remainder_3360562783 != nil)
-        let _method_get_collision_safe_fraction_1740695150_name = StringName(from: "get_collision_safe_fraction")
-        self._method_get_collision_safe_fraction_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionResult3D._native_ptr(), _method_get_collision_safe_fraction_1740695150_name._native_ptr(), 1740695150)
-        assert(PhysicsTestMotionResult3D._method_get_collision_safe_fraction_1740695150 != nil)
-        let _method_get_collision_unsafe_fraction_1740695150_name = StringName(from: "get_collision_unsafe_fraction")
-        self._method_get_collision_unsafe_fraction_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionResult3D._native_ptr(), _method_get_collision_unsafe_fraction_1740695150_name._native_ptr(), 1740695150)
-        assert(PhysicsTestMotionResult3D._method_get_collision_unsafe_fraction_1740695150 != nil)
-        let _method_get_collision_count_3905245786_name = StringName(from: "get_collision_count")
-        self._method_get_collision_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionResult3D._native_ptr(), _method_get_collision_count_3905245786_name._native_ptr(), 3905245786)
-        assert(PhysicsTestMotionResult3D._method_get_collision_count_3905245786 != nil)
-        let _method_get_collision_point_1914908202_name = StringName(from: "get_collision_point")
-        self._method_get_collision_point_1914908202 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionResult3D._native_ptr(), _method_get_collision_point_1914908202_name._native_ptr(), 1914908202)
-        assert(PhysicsTestMotionResult3D._method_get_collision_point_1914908202 != nil)
-        let _method_get_collision_normal_1914908202_name = StringName(from: "get_collision_normal")
-        self._method_get_collision_normal_1914908202 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionResult3D._native_ptr(), _method_get_collision_normal_1914908202_name._native_ptr(), 1914908202)
-        assert(PhysicsTestMotionResult3D._method_get_collision_normal_1914908202 != nil)
-        let _method_get_collider_velocity_1914908202_name = StringName(from: "get_collider_velocity")
-        self._method_get_collider_velocity_1914908202 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionResult3D._native_ptr(), _method_get_collider_velocity_1914908202_name._native_ptr(), 1914908202)
-        assert(PhysicsTestMotionResult3D._method_get_collider_velocity_1914908202 != nil)
-        let _method_get_collider_id_1591665591_name = StringName(from: "get_collider_id")
-        self._method_get_collider_id_1591665591 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionResult3D._native_ptr(), _method_get_collider_id_1591665591_name._native_ptr(), 1591665591)
-        assert(PhysicsTestMotionResult3D._method_get_collider_id_1591665591 != nil)
-        let _method_get_collider_rid_1231817359_name = StringName(from: "get_collider_rid")
-        self._method_get_collider_rid_1231817359 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionResult3D._native_ptr(), _method_get_collider_rid_1231817359_name._native_ptr(), 1231817359)
-        assert(PhysicsTestMotionResult3D._method_get_collider_rid_1231817359 != nil)
-        let _method_get_collider_2639523548_name = StringName(from: "get_collider")
-        self._method_get_collider_2639523548 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionResult3D._native_ptr(), _method_get_collider_2639523548_name._native_ptr(), 2639523548)
-        assert(PhysicsTestMotionResult3D._method_get_collider_2639523548 != nil)
-        let _method_get_collider_shape_1591665591_name = StringName(from: "get_collider_shape")
-        self._method_get_collider_shape_1591665591 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionResult3D._native_ptr(), _method_get_collider_shape_1591665591_name._native_ptr(), 1591665591)
-        assert(PhysicsTestMotionResult3D._method_get_collider_shape_1591665591 != nil)
-        let _method_get_collision_local_shape_1591665591_name = StringName(from: "get_collision_local_shape")
-        self._method_get_collision_local_shape_1591665591 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionResult3D._native_ptr(), _method_get_collision_local_shape_1591665591_name._native_ptr(), 1591665591)
-        assert(PhysicsTestMotionResult3D._method_get_collision_local_shape_1591665591 != nil)
-        let _method_get_collision_depth_218038398_name = StringName(from: "get_collision_depth")
-        self._method_get_collision_depth_218038398 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionResult3D._native_ptr(), _method_get_collision_depth_218038398_name._native_ptr(), 218038398)
-        assert(PhysicsTestMotionResult3D._method_get_collision_depth_218038398 != nil)
+        self._method_get_travel_3360562783 = StringName(from: "get_travel")
+        assert(self._method_get_travel_3360562783 != nil)
+        self._method_get_remainder_3360562783 = StringName(from: "get_remainder")
+        assert(self._method_get_remainder_3360562783 != nil)
+        self._method_get_collision_safe_fraction_1740695150 = StringName(from: "get_collision_safe_fraction")
+        assert(self._method_get_collision_safe_fraction_1740695150 != nil)
+        self._method_get_collision_unsafe_fraction_1740695150 = StringName(from: "get_collision_unsafe_fraction")
+        assert(self._method_get_collision_unsafe_fraction_1740695150 != nil)
+        self._method_get_collision_count_3905245786 = StringName(from: "get_collision_count")
+        assert(self._method_get_collision_count_3905245786 != nil)
+        self._method_get_collision_point_1914908202 = StringName(from: "get_collision_point")
+        assert(self._method_get_collision_point_1914908202 != nil)
+        self._method_get_collision_normal_1914908202 = StringName(from: "get_collision_normal")
+        assert(self._method_get_collision_normal_1914908202 != nil)
+        self._method_get_collider_velocity_1914908202 = StringName(from: "get_collider_velocity")
+        assert(self._method_get_collider_velocity_1914908202 != nil)
+        self._method_get_collider_id_1591665591 = StringName(from: "get_collider_id")
+        assert(self._method_get_collider_id_1591665591 != nil)
+        self._method_get_collider_rid_1231817359 = StringName(from: "get_collider_rid")
+        assert(self._method_get_collider_rid_1231817359 != nil)
+        self._method_get_collider_2639523548 = StringName(from: "get_collider")
+        assert(self._method_get_collider_2639523548 != nil)
+        self._method_get_collider_shape_1591665591 = StringName(from: "get_collider_shape")
+        assert(self._method_get_collider_shape_1591665591 != nil)
+        self._method_get_collision_local_shape_1591665591 = StringName(from: "get_collision_local_shape")
+        assert(self._method_get_collision_local_shape_1591665591 != nil)
+        self._method_get_collision_depth_218038398 = StringName(from: "get_collision_depth")
+        assert(self._method_get_collision_depth_218038398 != nil)
     }
 
     public func get_travel() -> Vector3 {
@@ -86,8 +73,13 @@ open class PhysicsTestMotionResult3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_travel_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_travel_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -102,8 +94,13 @@ open class PhysicsTestMotionResult3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_remainder_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_remainder_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -119,8 +116,13 @@ open class PhysicsTestMotionResult3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_safe_fraction_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_safe_fraction_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -136,8 +138,13 @@ open class PhysicsTestMotionResult3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_unsafe_fraction_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_unsafe_fraction_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -153,8 +160,13 @@ open class PhysicsTestMotionResult3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -170,8 +182,13 @@ open class PhysicsTestMotionResult3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_point_1914908202,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_point_1914908202._native_ptr(),
+                    1914908202)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -188,8 +205,13 @@ open class PhysicsTestMotionResult3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_normal_1914908202,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_normal_1914908202._native_ptr(),
+                    1914908202)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -206,8 +228,13 @@ open class PhysicsTestMotionResult3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collider_velocity_1914908202,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collider_velocity_1914908202._native_ptr(),
+                    1914908202)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -225,8 +252,13 @@ open class PhysicsTestMotionResult3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collider_id_1591665591,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collider_id_1591665591._native_ptr(),
+                    1591665591)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -243,8 +275,13 @@ open class PhysicsTestMotionResult3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collider_rid_1231817359,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collider_rid_1231817359._native_ptr(),
+                    1231817359)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -261,8 +298,13 @@ open class PhysicsTestMotionResult3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collider_2639523548,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collider_2639523548._native_ptr(),
+                    2639523548)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -280,8 +322,13 @@ open class PhysicsTestMotionResult3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collider_shape_1591665591,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collider_shape_1591665591._native_ptr(),
+                    1591665591)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -299,8 +346,13 @@ open class PhysicsTestMotionResult3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_local_shape_1591665591,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_local_shape_1591665591._native_ptr(),
+                    1591665591)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -318,8 +370,13 @@ open class PhysicsTestMotionResult3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_depth_218038398,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_depth_218038398._native_ptr(),
+                    218038398)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

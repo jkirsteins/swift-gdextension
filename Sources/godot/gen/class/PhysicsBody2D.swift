@@ -11,35 +11,31 @@ open class PhysicsBody2D : CollisionObject2D {
 
     public override class var __godot_name: StringName { __godot_name_PhysicsBody2D }
 
-    static var _method_move_and_collide_3198110832: GDExtensionMethodBindPtr! = nil
-    static var _method_test_move_1369208982: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_exceptions_2915620761: GDExtensionMethodBindPtr! = nil
-    static var _method_add_collision_exception_with_1078189570: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_collision_exception_with_1078189570: GDExtensionMethodBindPtr! = nil
+    static var _method_move_and_collide_3198110832: StringName! = nil
+    static var _method_test_move_1369208982: StringName! = nil
+    static var _method_get_collision_exceptions_2915620761: StringName! = nil
+    static var _method_add_collision_exception_with_1078189570: StringName! = nil
+    static var _method_remove_collision_exception_with_1078189570: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PhysicsBody2D == nil)
         __godot_name_PhysicsBody2D = StringName(from: "PhysicsBody2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_move_and_collide_3198110832_name = StringName(from: "move_and_collide")
-        self._method_move_and_collide_3198110832 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsBody2D._native_ptr(), _method_move_and_collide_3198110832_name._native_ptr(), 3198110832)
-        assert(PhysicsBody2D._method_move_and_collide_3198110832 != nil)
-        let _method_test_move_1369208982_name = StringName(from: "test_move")
-        self._method_test_move_1369208982 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsBody2D._native_ptr(), _method_test_move_1369208982_name._native_ptr(), 1369208982)
-        assert(PhysicsBody2D._method_test_move_1369208982 != nil)
-        let _method_get_collision_exceptions_2915620761_name = StringName(from: "get_collision_exceptions")
-        self._method_get_collision_exceptions_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsBody2D._native_ptr(), _method_get_collision_exceptions_2915620761_name._native_ptr(), 2915620761)
-        assert(PhysicsBody2D._method_get_collision_exceptions_2915620761 != nil)
-        let _method_add_collision_exception_with_1078189570_name = StringName(from: "add_collision_exception_with")
-        self._method_add_collision_exception_with_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsBody2D._native_ptr(), _method_add_collision_exception_with_1078189570_name._native_ptr(), 1078189570)
-        assert(PhysicsBody2D._method_add_collision_exception_with_1078189570 != nil)
-        let _method_remove_collision_exception_with_1078189570_name = StringName(from: "remove_collision_exception_with")
-        self._method_remove_collision_exception_with_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsBody2D._native_ptr(), _method_remove_collision_exception_with_1078189570_name._native_ptr(), 1078189570)
-        assert(PhysicsBody2D._method_remove_collision_exception_with_1078189570 != nil)
+        self._method_move_and_collide_3198110832 = StringName(from: "move_and_collide")
+        assert(self._method_move_and_collide_3198110832 != nil)
+        self._method_test_move_1369208982 = StringName(from: "test_move")
+        assert(self._method_test_move_1369208982 != nil)
+        self._method_get_collision_exceptions_2915620761 = StringName(from: "get_collision_exceptions")
+        assert(self._method_get_collision_exceptions_2915620761 != nil)
+        self._method_add_collision_exception_with_1078189570 = StringName(from: "add_collision_exception_with")
+        assert(self._method_add_collision_exception_with_1078189570 != nil)
+        self._method_remove_collision_exception_with_1078189570 = StringName(from: "remove_collision_exception_with")
+        assert(self._method_remove_collision_exception_with_1078189570 != nil)
     }
 
     public func move_and_collide(motion: Vector2, test_only: UInt8, safe_margin: Float64, recovery_as_collision: UInt8) -> KinematicCollision2D {
@@ -54,8 +50,13 @@ open class PhysicsBody2D : CollisionObject2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_move_and_collide_3198110832,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_move_and_collide_3198110832._native_ptr(),
+                    3198110832)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -79,8 +80,13 @@ open class PhysicsBody2D : CollisionObject2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_test_move_1369208982,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_test_move_1369208982._native_ptr(),
+                    1369208982)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -97,8 +103,13 @@ open class PhysicsBody2D : CollisionObject2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_exceptions_2915620761,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_exceptions_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -113,8 +124,13 @@ open class PhysicsBody2D : CollisionObject2D {
                 .init(body_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_collision_exception_with_1078189570,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_collision_exception_with_1078189570._native_ptr(),
+                    1078189570)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -128,8 +144,13 @@ open class PhysicsBody2D : CollisionObject2D {
                 .init(body_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_collision_exception_with_1078189570,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_collision_exception_with_1078189570._native_ptr(),
+                    1078189570)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

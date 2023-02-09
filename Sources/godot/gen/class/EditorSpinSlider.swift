@@ -11,55 +11,46 @@ open class EditorSpinSlider : Range {
 
     public override class var __godot_name: StringName { __godot_name_EditorSpinSlider }
 
-    static var _method_set_label_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_label_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_suffix_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_suffix_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_read_only_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_read_only_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flat_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_flat_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_hide_slider_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_hiding_slider_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_label_83702148: StringName! = nil
+    static var _method_get_label_201670096: StringName! = nil
+    static var _method_set_suffix_83702148: StringName! = nil
+    static var _method_get_suffix_201670096: StringName! = nil
+    static var _method_set_read_only_2586408642: StringName! = nil
+    static var _method_is_read_only_36873697: StringName! = nil
+    static var _method_set_flat_2586408642: StringName! = nil
+    static var _method_is_flat_36873697: StringName! = nil
+    static var _method_set_hide_slider_2586408642: StringName! = nil
+    static var _method_is_hiding_slider_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorSpinSlider == nil)
         __godot_name_EditorSpinSlider = StringName(from: "EditorSpinSlider")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_label_83702148_name = StringName(from: "set_label")
-        self._method_set_label_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorSpinSlider._native_ptr(), _method_set_label_83702148_name._native_ptr(), 83702148)
-        assert(EditorSpinSlider._method_set_label_83702148 != nil)
-        let _method_get_label_201670096_name = StringName(from: "get_label")
-        self._method_get_label_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorSpinSlider._native_ptr(), _method_get_label_201670096_name._native_ptr(), 201670096)
-        assert(EditorSpinSlider._method_get_label_201670096 != nil)
-        let _method_set_suffix_83702148_name = StringName(from: "set_suffix")
-        self._method_set_suffix_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorSpinSlider._native_ptr(), _method_set_suffix_83702148_name._native_ptr(), 83702148)
-        assert(EditorSpinSlider._method_set_suffix_83702148 != nil)
-        let _method_get_suffix_201670096_name = StringName(from: "get_suffix")
-        self._method_get_suffix_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorSpinSlider._native_ptr(), _method_get_suffix_201670096_name._native_ptr(), 201670096)
-        assert(EditorSpinSlider._method_get_suffix_201670096 != nil)
-        let _method_set_read_only_2586408642_name = StringName(from: "set_read_only")
-        self._method_set_read_only_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorSpinSlider._native_ptr(), _method_set_read_only_2586408642_name._native_ptr(), 2586408642)
-        assert(EditorSpinSlider._method_set_read_only_2586408642 != nil)
-        let _method_is_read_only_36873697_name = StringName(from: "is_read_only")
-        self._method_is_read_only_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorSpinSlider._native_ptr(), _method_is_read_only_36873697_name._native_ptr(), 36873697)
-        assert(EditorSpinSlider._method_is_read_only_36873697 != nil)
-        let _method_set_flat_2586408642_name = StringName(from: "set_flat")
-        self._method_set_flat_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorSpinSlider._native_ptr(), _method_set_flat_2586408642_name._native_ptr(), 2586408642)
-        assert(EditorSpinSlider._method_set_flat_2586408642 != nil)
-        let _method_is_flat_36873697_name = StringName(from: "is_flat")
-        self._method_is_flat_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorSpinSlider._native_ptr(), _method_is_flat_36873697_name._native_ptr(), 36873697)
-        assert(EditorSpinSlider._method_is_flat_36873697 != nil)
-        let _method_set_hide_slider_2586408642_name = StringName(from: "set_hide_slider")
-        self._method_set_hide_slider_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorSpinSlider._native_ptr(), _method_set_hide_slider_2586408642_name._native_ptr(), 2586408642)
-        assert(EditorSpinSlider._method_set_hide_slider_2586408642 != nil)
-        let _method_is_hiding_slider_36873697_name = StringName(from: "is_hiding_slider")
-        self._method_is_hiding_slider_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorSpinSlider._native_ptr(), _method_is_hiding_slider_36873697_name._native_ptr(), 36873697)
-        assert(EditorSpinSlider._method_is_hiding_slider_36873697 != nil)
+        self._method_set_label_83702148 = StringName(from: "set_label")
+        assert(self._method_set_label_83702148 != nil)
+        self._method_get_label_201670096 = StringName(from: "get_label")
+        assert(self._method_get_label_201670096 != nil)
+        self._method_set_suffix_83702148 = StringName(from: "set_suffix")
+        assert(self._method_set_suffix_83702148 != nil)
+        self._method_get_suffix_201670096 = StringName(from: "get_suffix")
+        assert(self._method_get_suffix_201670096 != nil)
+        self._method_set_read_only_2586408642 = StringName(from: "set_read_only")
+        assert(self._method_set_read_only_2586408642 != nil)
+        self._method_is_read_only_36873697 = StringName(from: "is_read_only")
+        assert(self._method_is_read_only_36873697 != nil)
+        self._method_set_flat_2586408642 = StringName(from: "set_flat")
+        assert(self._method_set_flat_2586408642 != nil)
+        self._method_is_flat_36873697 = StringName(from: "is_flat")
+        assert(self._method_is_flat_36873697 != nil)
+        self._method_set_hide_slider_2586408642 = StringName(from: "set_hide_slider")
+        assert(self._method_set_hide_slider_2586408642 != nil)
+        self._method_is_hiding_slider_36873697 = StringName(from: "is_hiding_slider")
+        assert(self._method_is_hiding_slider_36873697 != nil)
     }
 
     public func set_label(label: godot.String)  {
@@ -70,8 +61,13 @@ open class EditorSpinSlider : Range {
                 .init(label_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_label_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_label_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -85,8 +81,13 @@ open class EditorSpinSlider : Range {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_label_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_label_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -101,8 +102,13 @@ open class EditorSpinSlider : Range {
                 .init(suffix_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_suffix_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_suffix_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -116,8 +122,13 @@ open class EditorSpinSlider : Range {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_suffix_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_suffix_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -132,8 +143,13 @@ open class EditorSpinSlider : Range {
                 .init(read_only_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_read_only_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_read_only_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -149,8 +165,13 @@ open class EditorSpinSlider : Range {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_read_only_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_read_only_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -165,8 +186,13 @@ open class EditorSpinSlider : Range {
                 .init(flat_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flat_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flat_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -182,8 +208,13 @@ open class EditorSpinSlider : Range {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_flat_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_flat_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -198,8 +229,13 @@ open class EditorSpinSlider : Range {
                 .init(hide_slider_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_hide_slider_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_hide_slider_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -215,8 +251,13 @@ open class EditorSpinSlider : Range {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_hiding_slider_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_hiding_slider_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

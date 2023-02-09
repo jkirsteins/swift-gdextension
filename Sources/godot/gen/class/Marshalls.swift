@@ -11,39 +11,34 @@ open class Marshalls : Object {
 
     public override class var __godot_name: StringName { __godot_name_Marshalls }
 
-    static var _method_variant_to_base64_3876248563: GDExtensionMethodBindPtr! = nil
-    static var _method_base64_to_variant_218087648: GDExtensionMethodBindPtr! = nil
-    static var _method_raw_to_base64_3999417757: GDExtensionMethodBindPtr! = nil
-    static var _method_base64_to_raw_659035735: GDExtensionMethodBindPtr! = nil
-    static var _method_utf8_to_base64_1703090593: GDExtensionMethodBindPtr! = nil
-    static var _method_base64_to_utf8_1703090593: GDExtensionMethodBindPtr! = nil
+    static var _method_variant_to_base64_3876248563: StringName! = nil
+    static var _method_base64_to_variant_218087648: StringName! = nil
+    static var _method_raw_to_base64_3999417757: StringName! = nil
+    static var _method_base64_to_raw_659035735: StringName! = nil
+    static var _method_utf8_to_base64_1703090593: StringName! = nil
+    static var _method_base64_to_utf8_1703090593: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Marshalls == nil)
         __godot_name_Marshalls = StringName(from: "Marshalls")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_variant_to_base64_3876248563_name = StringName(from: "variant_to_base64")
-        self._method_variant_to_base64_3876248563 = self.interface.pointee.classdb_get_method_bind(__godot_name_Marshalls._native_ptr(), _method_variant_to_base64_3876248563_name._native_ptr(), 3876248563)
-        assert(Marshalls._method_variant_to_base64_3876248563 != nil)
-        let _method_base64_to_variant_218087648_name = StringName(from: "base64_to_variant")
-        self._method_base64_to_variant_218087648 = self.interface.pointee.classdb_get_method_bind(__godot_name_Marshalls._native_ptr(), _method_base64_to_variant_218087648_name._native_ptr(), 218087648)
-        assert(Marshalls._method_base64_to_variant_218087648 != nil)
-        let _method_raw_to_base64_3999417757_name = StringName(from: "raw_to_base64")
-        self._method_raw_to_base64_3999417757 = self.interface.pointee.classdb_get_method_bind(__godot_name_Marshalls._native_ptr(), _method_raw_to_base64_3999417757_name._native_ptr(), 3999417757)
-        assert(Marshalls._method_raw_to_base64_3999417757 != nil)
-        let _method_base64_to_raw_659035735_name = StringName(from: "base64_to_raw")
-        self._method_base64_to_raw_659035735 = self.interface.pointee.classdb_get_method_bind(__godot_name_Marshalls._native_ptr(), _method_base64_to_raw_659035735_name._native_ptr(), 659035735)
-        assert(Marshalls._method_base64_to_raw_659035735 != nil)
-        let _method_utf8_to_base64_1703090593_name = StringName(from: "utf8_to_base64")
-        self._method_utf8_to_base64_1703090593 = self.interface.pointee.classdb_get_method_bind(__godot_name_Marshalls._native_ptr(), _method_utf8_to_base64_1703090593_name._native_ptr(), 1703090593)
-        assert(Marshalls._method_utf8_to_base64_1703090593 != nil)
-        let _method_base64_to_utf8_1703090593_name = StringName(from: "base64_to_utf8")
-        self._method_base64_to_utf8_1703090593 = self.interface.pointee.classdb_get_method_bind(__godot_name_Marshalls._native_ptr(), _method_base64_to_utf8_1703090593_name._native_ptr(), 1703090593)
-        assert(Marshalls._method_base64_to_utf8_1703090593 != nil)
+        self._method_variant_to_base64_3876248563 = StringName(from: "variant_to_base64")
+        assert(self._method_variant_to_base64_3876248563 != nil)
+        self._method_base64_to_variant_218087648 = StringName(from: "base64_to_variant")
+        assert(self._method_base64_to_variant_218087648 != nil)
+        self._method_raw_to_base64_3999417757 = StringName(from: "raw_to_base64")
+        assert(self._method_raw_to_base64_3999417757 != nil)
+        self._method_base64_to_raw_659035735 = StringName(from: "base64_to_raw")
+        assert(self._method_base64_to_raw_659035735 != nil)
+        self._method_utf8_to_base64_1703090593 = StringName(from: "utf8_to_base64")
+        assert(self._method_utf8_to_base64_1703090593 != nil)
+        self._method_base64_to_utf8_1703090593 = StringName(from: "base64_to_utf8")
+        assert(self._method_base64_to_utf8_1703090593 != nil)
     }
 
     public func variant_to_base64(variant: Variant, full_objects: UInt8) -> godot.String {
@@ -56,8 +51,13 @@ open class Marshalls : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_variant_to_base64_3876248563,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_variant_to_base64_3876248563._native_ptr(),
+                    3876248563)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -75,8 +75,13 @@ open class Marshalls : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_base64_to_variant_218087648,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_base64_to_variant_218087648._native_ptr(),
+                    218087648)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -93,8 +98,13 @@ open class Marshalls : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_raw_to_base64_3999417757,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_raw_to_base64_3999417757._native_ptr(),
+                    3999417757)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -110,8 +120,13 @@ open class Marshalls : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_base64_to_raw_659035735,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_base64_to_raw_659035735._native_ptr(),
+                    659035735)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -127,8 +142,13 @@ open class Marshalls : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_utf8_to_base64_1703090593,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_utf8_to_base64_1703090593._native_ptr(),
+                    1703090593)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -144,8 +164,13 @@ open class Marshalls : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_base64_to_utf8_1703090593,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_base64_to_utf8_1703090593._native_ptr(),
+                    1703090593)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

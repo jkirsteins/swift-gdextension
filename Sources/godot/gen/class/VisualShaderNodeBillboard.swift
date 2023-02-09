@@ -17,31 +17,28 @@ open class VisualShaderNodeBillboard : VisualShaderNode {
 
     public override class var __godot_name: StringName { __godot_name_VisualShaderNodeBillboard }
 
-    static var _method_set_billboard_type_1227463289: GDExtensionMethodBindPtr! = nil
-    static var _method_get_billboard_type_3724188517: GDExtensionMethodBindPtr! = nil
-    static var _method_set_keep_scale_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_keep_scale_enabled_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_billboard_type_1227463289: StringName! = nil
+    static var _method_get_billboard_type_3724188517: StringName! = nil
+    static var _method_set_keep_scale_enabled_2586408642: StringName! = nil
+    static var _method_is_keep_scale_enabled_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShaderNodeBillboard == nil)
         __godot_name_VisualShaderNodeBillboard = StringName(from: "VisualShaderNodeBillboard")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_billboard_type_1227463289_name = StringName(from: "set_billboard_type")
-        self._method_set_billboard_type_1227463289 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeBillboard._native_ptr(), _method_set_billboard_type_1227463289_name._native_ptr(), 1227463289)
-        assert(VisualShaderNodeBillboard._method_set_billboard_type_1227463289 != nil)
-        let _method_get_billboard_type_3724188517_name = StringName(from: "get_billboard_type")
-        self._method_get_billboard_type_3724188517 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeBillboard._native_ptr(), _method_get_billboard_type_3724188517_name._native_ptr(), 3724188517)
-        assert(VisualShaderNodeBillboard._method_get_billboard_type_3724188517 != nil)
-        let _method_set_keep_scale_enabled_2586408642_name = StringName(from: "set_keep_scale_enabled")
-        self._method_set_keep_scale_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeBillboard._native_ptr(), _method_set_keep_scale_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(VisualShaderNodeBillboard._method_set_keep_scale_enabled_2586408642 != nil)
-        let _method_is_keep_scale_enabled_36873697_name = StringName(from: "is_keep_scale_enabled")
-        self._method_is_keep_scale_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeBillboard._native_ptr(), _method_is_keep_scale_enabled_36873697_name._native_ptr(), 36873697)
-        assert(VisualShaderNodeBillboard._method_is_keep_scale_enabled_36873697 != nil)
+        self._method_set_billboard_type_1227463289 = StringName(from: "set_billboard_type")
+        assert(self._method_set_billboard_type_1227463289 != nil)
+        self._method_get_billboard_type_3724188517 = StringName(from: "get_billboard_type")
+        assert(self._method_get_billboard_type_3724188517 != nil)
+        self._method_set_keep_scale_enabled_2586408642 = StringName(from: "set_keep_scale_enabled")
+        assert(self._method_set_keep_scale_enabled_2586408642 != nil)
+        self._method_is_keep_scale_enabled_36873697 = StringName(from: "is_keep_scale_enabled")
+        assert(self._method_is_keep_scale_enabled_36873697 != nil)
     }
 
     public func set_billboard_type(billboard_type: VisualShaderNodeBillboard.BillboardType)  {
@@ -52,8 +49,13 @@ open class VisualShaderNodeBillboard : VisualShaderNode {
                 .init(billboard_type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_billboard_type_1227463289,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_billboard_type_1227463289._native_ptr(),
+                    1227463289)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -68,8 +70,13 @@ open class VisualShaderNodeBillboard : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_billboard_type_3724188517,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_billboard_type_3724188517._native_ptr(),
+                    3724188517)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -84,8 +91,13 @@ open class VisualShaderNodeBillboard : VisualShaderNode {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_keep_scale_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_keep_scale_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -101,8 +113,13 @@ open class VisualShaderNodeBillboard : VisualShaderNode {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_keep_scale_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_keep_scale_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -11,167 +11,130 @@ open class Polygon2D : Node2D {
 
     public override class var __godot_name: StringName { __godot_name_Polygon2D }
 
-    static var _method_set_polygon_1509147220: GDExtensionMethodBindPtr! = nil
-    static var _method_get_polygon_2961356807: GDExtensionMethodBindPtr! = nil
-    static var _method_set_uv_1509147220: GDExtensionMethodBindPtr! = nil
-    static var _method_get_uv_2961356807: GDExtensionMethodBindPtr! = nil
-    static var _method_set_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_color_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_polygons_381264803: GDExtensionMethodBindPtr! = nil
-    static var _method_get_polygons_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_set_vertex_colors_3546319833: GDExtensionMethodBindPtr! = nil
-    static var _method_get_vertex_colors_1392750486: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_4051416890: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_3635182373: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_offset_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_offset_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_rotation_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_rotation_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_scale_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_scale_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_invert_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_invert_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_antialiased_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_antialiased_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_invert_border_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_invert_border_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_offset_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_offset_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_add_bone_703042815: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone_path_408788394: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone_weights_1542882410: GDExtensionMethodBindPtr! = nil
-    static var _method_erase_bone_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_bones_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bone_path_2761262315: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bone_weights_1345852415: GDExtensionMethodBindPtr! = nil
-    static var _method_set_skeleton_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_skeleton_4075236667: GDExtensionMethodBindPtr! = nil
-    static var _method_set_internal_vertex_count_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_internal_vertex_count_3905245786: GDExtensionMethodBindPtr! = nil
+    static var _method_set_polygon_1509147220: StringName! = nil
+    static var _method_get_polygon_2961356807: StringName! = nil
+    static var _method_set_uv_1509147220: StringName! = nil
+    static var _method_get_uv_2961356807: StringName! = nil
+    static var _method_set_color_2920490490: StringName! = nil
+    static var _method_get_color_3444240500: StringName! = nil
+    static var _method_set_polygons_381264803: StringName! = nil
+    static var _method_get_polygons_3995934104: StringName! = nil
+    static var _method_set_vertex_colors_3546319833: StringName! = nil
+    static var _method_get_vertex_colors_1392750486: StringName! = nil
+    static var _method_set_texture_4051416890: StringName! = nil
+    static var _method_get_texture_3635182373: StringName! = nil
+    static var _method_set_texture_offset_743155724: StringName! = nil
+    static var _method_get_texture_offset_3341600327: StringName! = nil
+    static var _method_set_texture_rotation_373806689: StringName! = nil
+    static var _method_get_texture_rotation_1740695150: StringName! = nil
+    static var _method_set_texture_scale_743155724: StringName! = nil
+    static var _method_get_texture_scale_3341600327: StringName! = nil
+    static var _method_set_invert_enabled_2586408642: StringName! = nil
+    static var _method_get_invert_enabled_36873697: StringName! = nil
+    static var _method_set_antialiased_2586408642: StringName! = nil
+    static var _method_get_antialiased_36873697: StringName! = nil
+    static var _method_set_invert_border_373806689: StringName! = nil
+    static var _method_get_invert_border_1740695150: StringName! = nil
+    static var _method_set_offset_743155724: StringName! = nil
+    static var _method_get_offset_3341600327: StringName! = nil
+    static var _method_add_bone_703042815: StringName! = nil
+    static var _method_get_bone_count_3905245786: StringName! = nil
+    static var _method_get_bone_path_408788394: StringName! = nil
+    static var _method_get_bone_weights_1542882410: StringName! = nil
+    static var _method_erase_bone_1286410249: StringName! = nil
+    static var _method_clear_bones_3218959716: StringName! = nil
+    static var _method_set_bone_path_2761262315: StringName! = nil
+    static var _method_set_bone_weights_1345852415: StringName! = nil
+    static var _method_set_skeleton_1348162250: StringName! = nil
+    static var _method_get_skeleton_4075236667: StringName! = nil
+    static var _method_set_internal_vertex_count_1286410249: StringName! = nil
+    static var _method_get_internal_vertex_count_3905245786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Polygon2D == nil)
         __godot_name_Polygon2D = StringName(from: "Polygon2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_polygon_1509147220_name = StringName(from: "set_polygon")
-        self._method_set_polygon_1509147220 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_polygon_1509147220_name._native_ptr(), 1509147220)
-        assert(Polygon2D._method_set_polygon_1509147220 != nil)
-        let _method_get_polygon_2961356807_name = StringName(from: "get_polygon")
-        self._method_get_polygon_2961356807 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_polygon_2961356807_name._native_ptr(), 2961356807)
-        assert(Polygon2D._method_get_polygon_2961356807 != nil)
-        let _method_set_uv_1509147220_name = StringName(from: "set_uv")
-        self._method_set_uv_1509147220 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_uv_1509147220_name._native_ptr(), 1509147220)
-        assert(Polygon2D._method_set_uv_1509147220 != nil)
-        let _method_get_uv_2961356807_name = StringName(from: "get_uv")
-        self._method_get_uv_2961356807 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_uv_2961356807_name._native_ptr(), 2961356807)
-        assert(Polygon2D._method_get_uv_2961356807 != nil)
-        let _method_set_color_2920490490_name = StringName(from: "set_color")
-        self._method_set_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_color_2920490490_name._native_ptr(), 2920490490)
-        assert(Polygon2D._method_set_color_2920490490 != nil)
-        let _method_get_color_3444240500_name = StringName(from: "get_color")
-        self._method_get_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_color_3444240500_name._native_ptr(), 3444240500)
-        assert(Polygon2D._method_get_color_3444240500 != nil)
-        let _method_set_polygons_381264803_name = StringName(from: "set_polygons")
-        self._method_set_polygons_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_polygons_381264803_name._native_ptr(), 381264803)
-        assert(Polygon2D._method_set_polygons_381264803 != nil)
-        let _method_get_polygons_3995934104_name = StringName(from: "get_polygons")
-        self._method_get_polygons_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_polygons_3995934104_name._native_ptr(), 3995934104)
-        assert(Polygon2D._method_get_polygons_3995934104 != nil)
-        let _method_set_vertex_colors_3546319833_name = StringName(from: "set_vertex_colors")
-        self._method_set_vertex_colors_3546319833 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_vertex_colors_3546319833_name._native_ptr(), 3546319833)
-        assert(Polygon2D._method_set_vertex_colors_3546319833 != nil)
-        let _method_get_vertex_colors_1392750486_name = StringName(from: "get_vertex_colors")
-        self._method_get_vertex_colors_1392750486 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_vertex_colors_1392750486_name._native_ptr(), 1392750486)
-        assert(Polygon2D._method_get_vertex_colors_1392750486 != nil)
-        let _method_set_texture_4051416890_name = StringName(from: "set_texture")
-        self._method_set_texture_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_texture_4051416890_name._native_ptr(), 4051416890)
-        assert(Polygon2D._method_set_texture_4051416890 != nil)
-        let _method_get_texture_3635182373_name = StringName(from: "get_texture")
-        self._method_get_texture_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_texture_3635182373_name._native_ptr(), 3635182373)
-        assert(Polygon2D._method_get_texture_3635182373 != nil)
-        let _method_set_texture_offset_743155724_name = StringName(from: "set_texture_offset")
-        self._method_set_texture_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_texture_offset_743155724_name._native_ptr(), 743155724)
-        assert(Polygon2D._method_set_texture_offset_743155724 != nil)
-        let _method_get_texture_offset_3341600327_name = StringName(from: "get_texture_offset")
-        self._method_get_texture_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_texture_offset_3341600327_name._native_ptr(), 3341600327)
-        assert(Polygon2D._method_get_texture_offset_3341600327 != nil)
-        let _method_set_texture_rotation_373806689_name = StringName(from: "set_texture_rotation")
-        self._method_set_texture_rotation_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_texture_rotation_373806689_name._native_ptr(), 373806689)
-        assert(Polygon2D._method_set_texture_rotation_373806689 != nil)
-        let _method_get_texture_rotation_1740695150_name = StringName(from: "get_texture_rotation")
-        self._method_get_texture_rotation_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_texture_rotation_1740695150_name._native_ptr(), 1740695150)
-        assert(Polygon2D._method_get_texture_rotation_1740695150 != nil)
-        let _method_set_texture_scale_743155724_name = StringName(from: "set_texture_scale")
-        self._method_set_texture_scale_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_texture_scale_743155724_name._native_ptr(), 743155724)
-        assert(Polygon2D._method_set_texture_scale_743155724 != nil)
-        let _method_get_texture_scale_3341600327_name = StringName(from: "get_texture_scale")
-        self._method_get_texture_scale_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_texture_scale_3341600327_name._native_ptr(), 3341600327)
-        assert(Polygon2D._method_get_texture_scale_3341600327 != nil)
-        let _method_set_invert_enabled_2586408642_name = StringName(from: "set_invert_enabled")
-        self._method_set_invert_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_invert_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(Polygon2D._method_set_invert_enabled_2586408642 != nil)
-        let _method_get_invert_enabled_36873697_name = StringName(from: "get_invert_enabled")
-        self._method_get_invert_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_invert_enabled_36873697_name._native_ptr(), 36873697)
-        assert(Polygon2D._method_get_invert_enabled_36873697 != nil)
-        let _method_set_antialiased_2586408642_name = StringName(from: "set_antialiased")
-        self._method_set_antialiased_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_antialiased_2586408642_name._native_ptr(), 2586408642)
-        assert(Polygon2D._method_set_antialiased_2586408642 != nil)
-        let _method_get_antialiased_36873697_name = StringName(from: "get_antialiased")
-        self._method_get_antialiased_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_antialiased_36873697_name._native_ptr(), 36873697)
-        assert(Polygon2D._method_get_antialiased_36873697 != nil)
-        let _method_set_invert_border_373806689_name = StringName(from: "set_invert_border")
-        self._method_set_invert_border_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_invert_border_373806689_name._native_ptr(), 373806689)
-        assert(Polygon2D._method_set_invert_border_373806689 != nil)
-        let _method_get_invert_border_1740695150_name = StringName(from: "get_invert_border")
-        self._method_get_invert_border_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_invert_border_1740695150_name._native_ptr(), 1740695150)
-        assert(Polygon2D._method_get_invert_border_1740695150 != nil)
-        let _method_set_offset_743155724_name = StringName(from: "set_offset")
-        self._method_set_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_offset_743155724_name._native_ptr(), 743155724)
-        assert(Polygon2D._method_set_offset_743155724 != nil)
-        let _method_get_offset_3341600327_name = StringName(from: "get_offset")
-        self._method_get_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_offset_3341600327_name._native_ptr(), 3341600327)
-        assert(Polygon2D._method_get_offset_3341600327 != nil)
-        let _method_add_bone_703042815_name = StringName(from: "add_bone")
-        self._method_add_bone_703042815 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_add_bone_703042815_name._native_ptr(), 703042815)
-        assert(Polygon2D._method_add_bone_703042815 != nil)
-        let _method_get_bone_count_3905245786_name = StringName(from: "get_bone_count")
-        self._method_get_bone_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_bone_count_3905245786_name._native_ptr(), 3905245786)
-        assert(Polygon2D._method_get_bone_count_3905245786 != nil)
-        let _method_get_bone_path_408788394_name = StringName(from: "get_bone_path")
-        self._method_get_bone_path_408788394 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_bone_path_408788394_name._native_ptr(), 408788394)
-        assert(Polygon2D._method_get_bone_path_408788394 != nil)
-        let _method_get_bone_weights_1542882410_name = StringName(from: "get_bone_weights")
-        self._method_get_bone_weights_1542882410 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_bone_weights_1542882410_name._native_ptr(), 1542882410)
-        assert(Polygon2D._method_get_bone_weights_1542882410 != nil)
-        let _method_erase_bone_1286410249_name = StringName(from: "erase_bone")
-        self._method_erase_bone_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_erase_bone_1286410249_name._native_ptr(), 1286410249)
-        assert(Polygon2D._method_erase_bone_1286410249 != nil)
-        let _method_clear_bones_3218959716_name = StringName(from: "clear_bones")
-        self._method_clear_bones_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_clear_bones_3218959716_name._native_ptr(), 3218959716)
-        assert(Polygon2D._method_clear_bones_3218959716 != nil)
-        let _method_set_bone_path_2761262315_name = StringName(from: "set_bone_path")
-        self._method_set_bone_path_2761262315 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_bone_path_2761262315_name._native_ptr(), 2761262315)
-        assert(Polygon2D._method_set_bone_path_2761262315 != nil)
-        let _method_set_bone_weights_1345852415_name = StringName(from: "set_bone_weights")
-        self._method_set_bone_weights_1345852415 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_bone_weights_1345852415_name._native_ptr(), 1345852415)
-        assert(Polygon2D._method_set_bone_weights_1345852415 != nil)
-        let _method_set_skeleton_1348162250_name = StringName(from: "set_skeleton")
-        self._method_set_skeleton_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_skeleton_1348162250_name._native_ptr(), 1348162250)
-        assert(Polygon2D._method_set_skeleton_1348162250 != nil)
-        let _method_get_skeleton_4075236667_name = StringName(from: "get_skeleton")
-        self._method_get_skeleton_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_skeleton_4075236667_name._native_ptr(), 4075236667)
-        assert(Polygon2D._method_get_skeleton_4075236667 != nil)
-        let _method_set_internal_vertex_count_1286410249_name = StringName(from: "set_internal_vertex_count")
-        self._method_set_internal_vertex_count_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_set_internal_vertex_count_1286410249_name._native_ptr(), 1286410249)
-        assert(Polygon2D._method_set_internal_vertex_count_1286410249 != nil)
-        let _method_get_internal_vertex_count_3905245786_name = StringName(from: "get_internal_vertex_count")
-        self._method_get_internal_vertex_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Polygon2D._native_ptr(), _method_get_internal_vertex_count_3905245786_name._native_ptr(), 3905245786)
-        assert(Polygon2D._method_get_internal_vertex_count_3905245786 != nil)
+        self._method_set_polygon_1509147220 = StringName(from: "set_polygon")
+        assert(self._method_set_polygon_1509147220 != nil)
+        self._method_get_polygon_2961356807 = StringName(from: "get_polygon")
+        assert(self._method_get_polygon_2961356807 != nil)
+        self._method_set_uv_1509147220 = StringName(from: "set_uv")
+        assert(self._method_set_uv_1509147220 != nil)
+        self._method_get_uv_2961356807 = StringName(from: "get_uv")
+        assert(self._method_get_uv_2961356807 != nil)
+        self._method_set_color_2920490490 = StringName(from: "set_color")
+        assert(self._method_set_color_2920490490 != nil)
+        self._method_get_color_3444240500 = StringName(from: "get_color")
+        assert(self._method_get_color_3444240500 != nil)
+        self._method_set_polygons_381264803 = StringName(from: "set_polygons")
+        assert(self._method_set_polygons_381264803 != nil)
+        self._method_get_polygons_3995934104 = StringName(from: "get_polygons")
+        assert(self._method_get_polygons_3995934104 != nil)
+        self._method_set_vertex_colors_3546319833 = StringName(from: "set_vertex_colors")
+        assert(self._method_set_vertex_colors_3546319833 != nil)
+        self._method_get_vertex_colors_1392750486 = StringName(from: "get_vertex_colors")
+        assert(self._method_get_vertex_colors_1392750486 != nil)
+        self._method_set_texture_4051416890 = StringName(from: "set_texture")
+        assert(self._method_set_texture_4051416890 != nil)
+        self._method_get_texture_3635182373 = StringName(from: "get_texture")
+        assert(self._method_get_texture_3635182373 != nil)
+        self._method_set_texture_offset_743155724 = StringName(from: "set_texture_offset")
+        assert(self._method_set_texture_offset_743155724 != nil)
+        self._method_get_texture_offset_3341600327 = StringName(from: "get_texture_offset")
+        assert(self._method_get_texture_offset_3341600327 != nil)
+        self._method_set_texture_rotation_373806689 = StringName(from: "set_texture_rotation")
+        assert(self._method_set_texture_rotation_373806689 != nil)
+        self._method_get_texture_rotation_1740695150 = StringName(from: "get_texture_rotation")
+        assert(self._method_get_texture_rotation_1740695150 != nil)
+        self._method_set_texture_scale_743155724 = StringName(from: "set_texture_scale")
+        assert(self._method_set_texture_scale_743155724 != nil)
+        self._method_get_texture_scale_3341600327 = StringName(from: "get_texture_scale")
+        assert(self._method_get_texture_scale_3341600327 != nil)
+        self._method_set_invert_enabled_2586408642 = StringName(from: "set_invert_enabled")
+        assert(self._method_set_invert_enabled_2586408642 != nil)
+        self._method_get_invert_enabled_36873697 = StringName(from: "get_invert_enabled")
+        assert(self._method_get_invert_enabled_36873697 != nil)
+        self._method_set_antialiased_2586408642 = StringName(from: "set_antialiased")
+        assert(self._method_set_antialiased_2586408642 != nil)
+        self._method_get_antialiased_36873697 = StringName(from: "get_antialiased")
+        assert(self._method_get_antialiased_36873697 != nil)
+        self._method_set_invert_border_373806689 = StringName(from: "set_invert_border")
+        assert(self._method_set_invert_border_373806689 != nil)
+        self._method_get_invert_border_1740695150 = StringName(from: "get_invert_border")
+        assert(self._method_get_invert_border_1740695150 != nil)
+        self._method_set_offset_743155724 = StringName(from: "set_offset")
+        assert(self._method_set_offset_743155724 != nil)
+        self._method_get_offset_3341600327 = StringName(from: "get_offset")
+        assert(self._method_get_offset_3341600327 != nil)
+        self._method_add_bone_703042815 = StringName(from: "add_bone")
+        assert(self._method_add_bone_703042815 != nil)
+        self._method_get_bone_count_3905245786 = StringName(from: "get_bone_count")
+        assert(self._method_get_bone_count_3905245786 != nil)
+        self._method_get_bone_path_408788394 = StringName(from: "get_bone_path")
+        assert(self._method_get_bone_path_408788394 != nil)
+        self._method_get_bone_weights_1542882410 = StringName(from: "get_bone_weights")
+        assert(self._method_get_bone_weights_1542882410 != nil)
+        self._method_erase_bone_1286410249 = StringName(from: "erase_bone")
+        assert(self._method_erase_bone_1286410249 != nil)
+        self._method_clear_bones_3218959716 = StringName(from: "clear_bones")
+        assert(self._method_clear_bones_3218959716 != nil)
+        self._method_set_bone_path_2761262315 = StringName(from: "set_bone_path")
+        assert(self._method_set_bone_path_2761262315 != nil)
+        self._method_set_bone_weights_1345852415 = StringName(from: "set_bone_weights")
+        assert(self._method_set_bone_weights_1345852415 != nil)
+        self._method_set_skeleton_1348162250 = StringName(from: "set_skeleton")
+        assert(self._method_set_skeleton_1348162250 != nil)
+        self._method_get_skeleton_4075236667 = StringName(from: "get_skeleton")
+        assert(self._method_get_skeleton_4075236667 != nil)
+        self._method_set_internal_vertex_count_1286410249 = StringName(from: "set_internal_vertex_count")
+        assert(self._method_set_internal_vertex_count_1286410249 != nil)
+        self._method_get_internal_vertex_count_3905245786 = StringName(from: "get_internal_vertex_count")
+        assert(self._method_get_internal_vertex_count_3905245786 != nil)
     }
 
     public func set_polygon(polygon: PackedVector2Array)  {
@@ -182,8 +145,13 @@ open class Polygon2D : Node2D {
                 .init(polygon_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_polygon_1509147220,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_polygon_1509147220._native_ptr(),
+                    1509147220)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -197,8 +165,13 @@ open class Polygon2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_polygon_2961356807,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_polygon_2961356807._native_ptr(),
+                    2961356807)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -213,8 +186,13 @@ open class Polygon2D : Node2D {
                 .init(uv_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_uv_1509147220,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_uv_1509147220._native_ptr(),
+                    1509147220)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -228,8 +206,13 @@ open class Polygon2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_uv_2961356807,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_uv_2961356807._native_ptr(),
+                    2961356807)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -244,8 +227,13 @@ open class Polygon2D : Node2D {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -259,8 +247,13 @@ open class Polygon2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_color_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_color_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -275,8 +268,13 @@ open class Polygon2D : Node2D {
                 .init(polygons_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_polygons_381264803,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_polygons_381264803._native_ptr(),
+                    381264803)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -290,8 +288,13 @@ open class Polygon2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_polygons_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_polygons_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -306,8 +309,13 @@ open class Polygon2D : Node2D {
                 .init(vertex_colors_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_vertex_colors_3546319833,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_vertex_colors_3546319833._native_ptr(),
+                    3546319833)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -321,8 +329,13 @@ open class Polygon2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_vertex_colors_1392750486,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_vertex_colors_1392750486._native_ptr(),
+                    1392750486)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -337,8 +350,13 @@ open class Polygon2D : Node2D {
                 .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_4051416890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_4051416890._native_ptr(),
+                    4051416890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -352,8 +370,13 @@ open class Polygon2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_3635182373,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_3635182373._native_ptr(),
+                    3635182373)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -368,8 +391,13 @@ open class Polygon2D : Node2D {
                 .init(texture_offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_offset_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_offset_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -383,8 +411,13 @@ open class Polygon2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_offset_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_offset_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -399,8 +432,13 @@ open class Polygon2D : Node2D {
                 .init(texture_rotation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_rotation_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_rotation_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -416,8 +454,13 @@ open class Polygon2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_rotation_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_rotation_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -432,8 +475,13 @@ open class Polygon2D : Node2D {
                 .init(texture_scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_scale_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_scale_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -447,8 +495,13 @@ open class Polygon2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_scale_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_scale_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -463,8 +516,13 @@ open class Polygon2D : Node2D {
                 .init(invert_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_invert_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_invert_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -480,8 +538,13 @@ open class Polygon2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_invert_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_invert_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -496,8 +559,13 @@ open class Polygon2D : Node2D {
                 .init(antialiased_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_antialiased_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_antialiased_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -513,8 +581,13 @@ open class Polygon2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_antialiased_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_antialiased_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -529,8 +602,13 @@ open class Polygon2D : Node2D {
                 .init(invert_border_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_invert_border_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_invert_border_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -546,8 +624,13 @@ open class Polygon2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_invert_border_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_invert_border_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -562,8 +645,13 @@ open class Polygon2D : Node2D {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_offset_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_offset_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -577,8 +665,13 @@ open class Polygon2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_offset_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_offset_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -594,8 +687,13 @@ open class Polygon2D : Node2D {
                 .init(path_native), .init(weights_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_bone_703042815,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_bone_703042815._native_ptr(),
+                    703042815)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -610,8 +708,13 @@ open class Polygon2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -627,8 +730,13 @@ open class Polygon2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_path_408788394,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_path_408788394._native_ptr(),
+                    408788394)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -645,8 +753,13 @@ open class Polygon2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_weights_1542882410,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_weights_1542882410._native_ptr(),
+                    1542882410)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -662,8 +775,13 @@ open class Polygon2D : Node2D {
                 .init(index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_erase_bone_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_erase_bone_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -677,8 +795,13 @@ open class Polygon2D : Node2D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_bones_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_bones_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -693,8 +816,13 @@ open class Polygon2D : Node2D {
                 .init(index_native), .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bone_path_2761262315,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bone_path_2761262315._native_ptr(),
+                    2761262315)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -710,8 +838,13 @@ open class Polygon2D : Node2D {
                 .init(index_native), .init(weights_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bone_weights_1345852415,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bone_weights_1345852415._native_ptr(),
+                    1345852415)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -726,8 +859,13 @@ open class Polygon2D : Node2D {
                 .init(skeleton_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_skeleton_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_skeleton_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -741,8 +879,13 @@ open class Polygon2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_skeleton_4075236667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_skeleton_4075236667._native_ptr(),
+                    4075236667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -757,8 +900,13 @@ open class Polygon2D : Node2D {
                 .init(internal_vertex_count_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_internal_vertex_count_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_internal_vertex_count_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -774,8 +922,13 @@ open class Polygon2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_internal_vertex_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_internal_vertex_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -14,19 +14,19 @@ open class AudioEffectSpectrumAnalyzerInstance : AudioEffectInstance {
 
     public override class var __godot_name: StringName { __godot_name_AudioEffectSpectrumAnalyzerInstance }
 
-    static var _method_get_magnitude_for_frequency_range_2693213071: GDExtensionMethodBindPtr! = nil
+    static var _method_get_magnitude_for_frequency_range_2693213071: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AudioEffectSpectrumAnalyzerInstance == nil)
         __godot_name_AudioEffectSpectrumAnalyzerInstance = StringName(from: "AudioEffectSpectrumAnalyzerInstance")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_magnitude_for_frequency_range_2693213071_name = StringName(from: "get_magnitude_for_frequency_range")
-        self._method_get_magnitude_for_frequency_range_2693213071 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectSpectrumAnalyzerInstance._native_ptr(), _method_get_magnitude_for_frequency_range_2693213071_name._native_ptr(), 2693213071)
-        assert(AudioEffectSpectrumAnalyzerInstance._method_get_magnitude_for_frequency_range_2693213071 != nil)
+        self._method_get_magnitude_for_frequency_range_2693213071 = StringName(from: "get_magnitude_for_frequency_range")
+        assert(self._method_get_magnitude_for_frequency_range_2693213071 != nil)
     }
 
     public func get_magnitude_for_frequency_range(from_hz: Float64, to_hz: Float64, mode: AudioEffectSpectrumAnalyzerInstance.MagnitudeMode) -> Vector2 {
@@ -40,8 +40,13 @@ open class AudioEffectSpectrumAnalyzerInstance : AudioEffectInstance {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_magnitude_for_frequency_range_2693213071,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_magnitude_for_frequency_range_2693213071._native_ptr(),
+                    2693213071)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

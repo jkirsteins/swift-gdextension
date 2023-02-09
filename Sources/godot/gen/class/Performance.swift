@@ -54,43 +54,37 @@ open class Performance : Object {
 
     public override class var __godot_name: StringName { __godot_name_Performance }
 
-    static var _method_get_monitor_1943275655: GDExtensionMethodBindPtr! = nil
-    static var _method_add_custom_monitor_2865980031: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_custom_monitor_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_has_custom_monitor_2041966384: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_monitor_2138907829: GDExtensionMethodBindPtr! = nil
-    static var _method_get_monitor_modification_time_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_monitor_names_2915620761: GDExtensionMethodBindPtr! = nil
+    static var _method_get_monitor_1943275655: StringName! = nil
+    static var _method_add_custom_monitor_2865980031: StringName! = nil
+    static var _method_remove_custom_monitor_3304788590: StringName! = nil
+    static var _method_has_custom_monitor_2041966384: StringName! = nil
+    static var _method_get_custom_monitor_2138907829: StringName! = nil
+    static var _method_get_monitor_modification_time_2455072627: StringName! = nil
+    static var _method_get_custom_monitor_names_2915620761: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Performance == nil)
         __godot_name_Performance = StringName(from: "Performance")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_monitor_1943275655_name = StringName(from: "get_monitor")
-        self._method_get_monitor_1943275655 = self.interface.pointee.classdb_get_method_bind(__godot_name_Performance._native_ptr(), _method_get_monitor_1943275655_name._native_ptr(), 1943275655)
-        assert(Performance._method_get_monitor_1943275655 != nil)
-        let _method_add_custom_monitor_2865980031_name = StringName(from: "add_custom_monitor")
-        self._method_add_custom_monitor_2865980031 = self.interface.pointee.classdb_get_method_bind(__godot_name_Performance._native_ptr(), _method_add_custom_monitor_2865980031_name._native_ptr(), 2865980031)
-        assert(Performance._method_add_custom_monitor_2865980031 != nil)
-        let _method_remove_custom_monitor_3304788590_name = StringName(from: "remove_custom_monitor")
-        self._method_remove_custom_monitor_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_Performance._native_ptr(), _method_remove_custom_monitor_3304788590_name._native_ptr(), 3304788590)
-        assert(Performance._method_remove_custom_monitor_3304788590 != nil)
-        let _method_has_custom_monitor_2041966384_name = StringName(from: "has_custom_monitor")
-        self._method_has_custom_monitor_2041966384 = self.interface.pointee.classdb_get_method_bind(__godot_name_Performance._native_ptr(), _method_has_custom_monitor_2041966384_name._native_ptr(), 2041966384)
-        assert(Performance._method_has_custom_monitor_2041966384 != nil)
-        let _method_get_custom_monitor_2138907829_name = StringName(from: "get_custom_monitor")
-        self._method_get_custom_monitor_2138907829 = self.interface.pointee.classdb_get_method_bind(__godot_name_Performance._native_ptr(), _method_get_custom_monitor_2138907829_name._native_ptr(), 2138907829)
-        assert(Performance._method_get_custom_monitor_2138907829 != nil)
-        let _method_get_monitor_modification_time_2455072627_name = StringName(from: "get_monitor_modification_time")
-        self._method_get_monitor_modification_time_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_Performance._native_ptr(), _method_get_monitor_modification_time_2455072627_name._native_ptr(), 2455072627)
-        assert(Performance._method_get_monitor_modification_time_2455072627 != nil)
-        let _method_get_custom_monitor_names_2915620761_name = StringName(from: "get_custom_monitor_names")
-        self._method_get_custom_monitor_names_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_Performance._native_ptr(), _method_get_custom_monitor_names_2915620761_name._native_ptr(), 2915620761)
-        assert(Performance._method_get_custom_monitor_names_2915620761 != nil)
+        self._method_get_monitor_1943275655 = StringName(from: "get_monitor")
+        assert(self._method_get_monitor_1943275655 != nil)
+        self._method_add_custom_monitor_2865980031 = StringName(from: "add_custom_monitor")
+        assert(self._method_add_custom_monitor_2865980031 != nil)
+        self._method_remove_custom_monitor_3304788590 = StringName(from: "remove_custom_monitor")
+        assert(self._method_remove_custom_monitor_3304788590 != nil)
+        self._method_has_custom_monitor_2041966384 = StringName(from: "has_custom_monitor")
+        assert(self._method_has_custom_monitor_2041966384 != nil)
+        self._method_get_custom_monitor_2138907829 = StringName(from: "get_custom_monitor")
+        assert(self._method_get_custom_monitor_2138907829 != nil)
+        self._method_get_monitor_modification_time_2455072627 = StringName(from: "get_monitor_modification_time")
+        assert(self._method_get_monitor_modification_time_2455072627 != nil)
+        self._method_get_custom_monitor_names_2915620761 = StringName(from: "get_custom_monitor_names")
+        assert(self._method_get_custom_monitor_names_2915620761 != nil)
     }
 
     public func get_monitor(monitor: Performance.Monitor) -> Float64 {
@@ -103,8 +97,13 @@ open class Performance : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_monitor_1943275655,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_monitor_1943275655._native_ptr(),
+                    1943275655)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -122,8 +121,13 @@ open class Performance : Object {
                 .init(id_native), .init(callable_native), .init(arguments_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_custom_monitor_2865980031,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_custom_monitor_2865980031._native_ptr(),
+                    2865980031)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -137,8 +141,13 @@ open class Performance : Object {
                 .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_custom_monitor_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_custom_monitor_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -154,8 +163,13 @@ open class Performance : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_custom_monitor_2041966384,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_custom_monitor_2041966384._native_ptr(),
+                    2041966384)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -171,8 +185,13 @@ open class Performance : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_monitor_2138907829,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_monitor_2138907829._native_ptr(),
+                    2138907829)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -188,8 +207,13 @@ open class Performance : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_monitor_modification_time_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_monitor_modification_time_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -204,8 +228,13 @@ open class Performance : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_monitor_names_2915620761,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_monitor_names_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

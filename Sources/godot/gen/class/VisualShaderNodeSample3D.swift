@@ -15,23 +15,22 @@ open class VisualShaderNodeSample3D : VisualShaderNode {
 
     public override class var __godot_name: StringName { __godot_name_VisualShaderNodeSample3D }
 
-    static var _method_set_source_3315130991: GDExtensionMethodBindPtr! = nil
-    static var _method_get_source_1079494121: GDExtensionMethodBindPtr! = nil
+    static var _method_set_source_3315130991: StringName! = nil
+    static var _method_get_source_1079494121: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShaderNodeSample3D == nil)
         __godot_name_VisualShaderNodeSample3D = StringName(from: "VisualShaderNodeSample3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_source_3315130991_name = StringName(from: "set_source")
-        self._method_set_source_3315130991 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeSample3D._native_ptr(), _method_set_source_3315130991_name._native_ptr(), 3315130991)
-        assert(VisualShaderNodeSample3D._method_set_source_3315130991 != nil)
-        let _method_get_source_1079494121_name = StringName(from: "get_source")
-        self._method_get_source_1079494121 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeSample3D._native_ptr(), _method_get_source_1079494121_name._native_ptr(), 1079494121)
-        assert(VisualShaderNodeSample3D._method_get_source_1079494121 != nil)
+        self._method_set_source_3315130991 = StringName(from: "set_source")
+        assert(self._method_set_source_3315130991 != nil)
+        self._method_get_source_1079494121 = StringName(from: "get_source")
+        assert(self._method_get_source_1079494121 != nil)
     }
 
     public func set_source(value: VisualShaderNodeSample3D.Source)  {
@@ -42,8 +41,13 @@ open class VisualShaderNodeSample3D : VisualShaderNode {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_source_3315130991,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_source_3315130991._native_ptr(),
+                    3315130991)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -58,8 +62,13 @@ open class VisualShaderNodeSample3D : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_source_1079494121,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_source_1079494121._native_ptr(),
+                    1079494121)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

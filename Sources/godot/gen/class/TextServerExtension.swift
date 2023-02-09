@@ -11,205 +11,206 @@ open class TextServerExtension : TextServer {
 
     public override class var __godot_name: StringName { __godot_name_TextServerExtension }
 
-    static var _method__has_feature_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_features_0: GDExtensionMethodBindPtr! = nil
-    static var _method__free_rid_0: GDExtensionMethodBindPtr! = nil
-    static var _method__has_0: GDExtensionMethodBindPtr! = nil
-    static var _method__load_support_data_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_support_data_filename_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_support_data_info_0: GDExtensionMethodBindPtr! = nil
-    static var _method__save_support_data_0: GDExtensionMethodBindPtr! = nil
-    static var _method__is_locale_right_to_left_0: GDExtensionMethodBindPtr! = nil
-    static var _method__name_to_tag_0: GDExtensionMethodBindPtr! = nil
-    static var _method__tag_to_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__create_font_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_data_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_data_ptr_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_face_index_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_face_index_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_face_count_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_style_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_style_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_style_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_style_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_weight_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_weight_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_stretch_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_stretch_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_antialiasing_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_antialiasing_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_generate_mipmaps_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_generate_mipmaps_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_multichannel_signed_distance_field_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_is_multichannel_signed_distance_field_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_msdf_pixel_range_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_msdf_pixel_range_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_msdf_size_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_msdf_size_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_fixed_size_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_fixed_size_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_allow_system_fallback_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_is_allow_system_fallback_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_force_autohinter_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_is_force_autohinter_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_hinting_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_hinting_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_subpixel_positioning_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_subpixel_positioning_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_embolden_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_embolden_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_transform_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_transform_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_variation_coordinates_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_variation_coordinates_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_oversampling_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_oversampling_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_size_cache_list_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_clear_size_cache_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_remove_size_cache_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_ascent_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_ascent_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_descent_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_descent_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_underline_position_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_underline_position_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_underline_thickness_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_underline_thickness_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_scale_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_scale_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_texture_count_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_clear_textures_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_remove_texture_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_texture_image_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_texture_image_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_texture_offsets_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_texture_offsets_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_glyph_list_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_clear_glyphs_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_remove_glyph_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_glyph_advance_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_glyph_advance_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_glyph_offset_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_glyph_offset_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_glyph_size_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_glyph_size_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_glyph_uv_rect_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_glyph_uv_rect_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_glyph_texture_idx_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_glyph_texture_idx_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_glyph_texture_rid_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_glyph_texture_size_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_glyph_contours_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_kerning_list_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_clear_kerning_map_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_remove_kerning_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_kerning_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_kerning_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_glyph_index_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_has_char_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_supported_chars_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_render_range_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_render_glyph_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_draw_glyph_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_draw_glyph_outline_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_is_language_supported_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_language_support_override_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_language_support_override_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_remove_language_support_override_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_language_support_overrides_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_is_script_supported_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_script_support_override_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_script_support_override_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_remove_script_support_override_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_script_support_overrides_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_opentype_feature_overrides_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_opentype_feature_overrides_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_supported_feature_list_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_supported_variation_list_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_get_global_oversampling_0: GDExtensionMethodBindPtr! = nil
-    static var _method__font_set_global_oversampling_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_hex_code_box_size_0: GDExtensionMethodBindPtr! = nil
-    static var _method__draw_hex_code_box_0: GDExtensionMethodBindPtr! = nil
-    static var _method__create_shaped_text_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_clear_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_set_direction_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_direction_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_inferred_direction_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_set_bidi_override_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_set_custom_punctuation_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_custom_punctuation_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_set_orientation_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_orientation_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_set_preserve_invalid_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_preserve_invalid_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_set_preserve_control_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_preserve_control_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_set_spacing_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_spacing_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_add_string_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_add_object_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_resize_object_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_get_span_count_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_get_span_meta_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_set_span_update_font_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_substr_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_parent_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_fit_to_width_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_tab_align_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_shape_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_update_breaks_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_update_justification_ops_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_is_ready_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_glyphs_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_sort_logical_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_glyph_count_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_range_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_line_breaks_adv_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_line_breaks_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_word_breaks_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_trim_pos_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_ellipsis_pos_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_ellipsis_glyph_count_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_ellipsis_glyphs_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_overrun_trim_to_width_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_objects_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_object_rect_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_size_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_ascent_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_descent_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_width_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_underline_position_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_underline_thickness_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_dominant_direction_in_range_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_carets_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_selection_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_hit_test_grapheme_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_hit_test_position_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_draw_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_draw_outline_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_get_grapheme_bounds_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_next_grapheme_pos_0: GDExtensionMethodBindPtr! = nil
-    static var _method__shaped_text_prev_grapheme_pos_0: GDExtensionMethodBindPtr! = nil
-    static var _method__format_number_0: GDExtensionMethodBindPtr! = nil
-    static var _method__parse_number_0: GDExtensionMethodBindPtr! = nil
-    static var _method__percent_sign_0: GDExtensionMethodBindPtr! = nil
-    static var _method__strip_diacritics_0: GDExtensionMethodBindPtr! = nil
-    static var _method__is_valid_identifier_0: GDExtensionMethodBindPtr! = nil
-    static var _method__string_get_word_breaks_0: GDExtensionMethodBindPtr! = nil
-    static var _method__is_confusable_0: GDExtensionMethodBindPtr! = nil
-    static var _method__spoof_check_0: GDExtensionMethodBindPtr! = nil
-    static var _method__string_to_upper_0: GDExtensionMethodBindPtr! = nil
-    static var _method__string_to_lower_0: GDExtensionMethodBindPtr! = nil
-    static var _method__parse_structured_text_0: GDExtensionMethodBindPtr! = nil
-    static var _method__cleanup_0: GDExtensionMethodBindPtr! = nil
+    static var _method__has_feature_0: StringName! = nil
+    static var _method__get_name_0: StringName! = nil
+    static var _method__get_features_0: StringName! = nil
+    static var _method__free_rid_0: StringName! = nil
+    static var _method__has_0: StringName! = nil
+    static var _method__load_support_data_0: StringName! = nil
+    static var _method__get_support_data_filename_0: StringName! = nil
+    static var _method__get_support_data_info_0: StringName! = nil
+    static var _method__save_support_data_0: StringName! = nil
+    static var _method__is_locale_right_to_left_0: StringName! = nil
+    static var _method__name_to_tag_0: StringName! = nil
+    static var _method__tag_to_name_0: StringName! = nil
+    static var _method__create_font_0: StringName! = nil
+    static var _method__font_set_data_0: StringName! = nil
+    static var _method__font_set_data_ptr_0: StringName! = nil
+    static var _method__font_set_face_index_0: StringName! = nil
+    static var _method__font_get_face_index_0: StringName! = nil
+    static var _method__font_get_face_count_0: StringName! = nil
+    static var _method__font_set_style_0: StringName! = nil
+    static var _method__font_get_style_0: StringName! = nil
+    static var _method__font_set_name_0: StringName! = nil
+    static var _method__font_get_name_0: StringName! = nil
+    static var _method__font_set_style_name_0: StringName! = nil
+    static var _method__font_get_style_name_0: StringName! = nil
+    static var _method__font_set_weight_0: StringName! = nil
+    static var _method__font_get_weight_0: StringName! = nil
+    static var _method__font_set_stretch_0: StringName! = nil
+    static var _method__font_get_stretch_0: StringName! = nil
+    static var _method__font_set_antialiasing_0: StringName! = nil
+    static var _method__font_get_antialiasing_0: StringName! = nil
+    static var _method__font_set_generate_mipmaps_0: StringName! = nil
+    static var _method__font_get_generate_mipmaps_0: StringName! = nil
+    static var _method__font_set_multichannel_signed_distance_field_0: StringName! = nil
+    static var _method__font_is_multichannel_signed_distance_field_0: StringName! = nil
+    static var _method__font_set_msdf_pixel_range_0: StringName! = nil
+    static var _method__font_get_msdf_pixel_range_0: StringName! = nil
+    static var _method__font_set_msdf_size_0: StringName! = nil
+    static var _method__font_get_msdf_size_0: StringName! = nil
+    static var _method__font_set_fixed_size_0: StringName! = nil
+    static var _method__font_get_fixed_size_0: StringName! = nil
+    static var _method__font_set_allow_system_fallback_0: StringName! = nil
+    static var _method__font_is_allow_system_fallback_0: StringName! = nil
+    static var _method__font_set_force_autohinter_0: StringName! = nil
+    static var _method__font_is_force_autohinter_0: StringName! = nil
+    static var _method__font_set_hinting_0: StringName! = nil
+    static var _method__font_get_hinting_0: StringName! = nil
+    static var _method__font_set_subpixel_positioning_0: StringName! = nil
+    static var _method__font_get_subpixel_positioning_0: StringName! = nil
+    static var _method__font_set_embolden_0: StringName! = nil
+    static var _method__font_get_embolden_0: StringName! = nil
+    static var _method__font_set_transform_0: StringName! = nil
+    static var _method__font_get_transform_0: StringName! = nil
+    static var _method__font_set_variation_coordinates_0: StringName! = nil
+    static var _method__font_get_variation_coordinates_0: StringName! = nil
+    static var _method__font_set_oversampling_0: StringName! = nil
+    static var _method__font_get_oversampling_0: StringName! = nil
+    static var _method__font_get_size_cache_list_0: StringName! = nil
+    static var _method__font_clear_size_cache_0: StringName! = nil
+    static var _method__font_remove_size_cache_0: StringName! = nil
+    static var _method__font_set_ascent_0: StringName! = nil
+    static var _method__font_get_ascent_0: StringName! = nil
+    static var _method__font_set_descent_0: StringName! = nil
+    static var _method__font_get_descent_0: StringName! = nil
+    static var _method__font_set_underline_position_0: StringName! = nil
+    static var _method__font_get_underline_position_0: StringName! = nil
+    static var _method__font_set_underline_thickness_0: StringName! = nil
+    static var _method__font_get_underline_thickness_0: StringName! = nil
+    static var _method__font_set_scale_0: StringName! = nil
+    static var _method__font_get_scale_0: StringName! = nil
+    static var _method__font_get_texture_count_0: StringName! = nil
+    static var _method__font_clear_textures_0: StringName! = nil
+    static var _method__font_remove_texture_0: StringName! = nil
+    static var _method__font_set_texture_image_0: StringName! = nil
+    static var _method__font_get_texture_image_0: StringName! = nil
+    static var _method__font_set_texture_offsets_0: StringName! = nil
+    static var _method__font_get_texture_offsets_0: StringName! = nil
+    static var _method__font_get_glyph_list_0: StringName! = nil
+    static var _method__font_clear_glyphs_0: StringName! = nil
+    static var _method__font_remove_glyph_0: StringName! = nil
+    static var _method__font_get_glyph_advance_0: StringName! = nil
+    static var _method__font_set_glyph_advance_0: StringName! = nil
+    static var _method__font_get_glyph_offset_0: StringName! = nil
+    static var _method__font_set_glyph_offset_0: StringName! = nil
+    static var _method__font_get_glyph_size_0: StringName! = nil
+    static var _method__font_set_glyph_size_0: StringName! = nil
+    static var _method__font_get_glyph_uv_rect_0: StringName! = nil
+    static var _method__font_set_glyph_uv_rect_0: StringName! = nil
+    static var _method__font_get_glyph_texture_idx_0: StringName! = nil
+    static var _method__font_set_glyph_texture_idx_0: StringName! = nil
+    static var _method__font_get_glyph_texture_rid_0: StringName! = nil
+    static var _method__font_get_glyph_texture_size_0: StringName! = nil
+    static var _method__font_get_glyph_contours_0: StringName! = nil
+    static var _method__font_get_kerning_list_0: StringName! = nil
+    static var _method__font_clear_kerning_map_0: StringName! = nil
+    static var _method__font_remove_kerning_0: StringName! = nil
+    static var _method__font_set_kerning_0: StringName! = nil
+    static var _method__font_get_kerning_0: StringName! = nil
+    static var _method__font_get_glyph_index_0: StringName! = nil
+    static var _method__font_has_char_0: StringName! = nil
+    static var _method__font_get_supported_chars_0: StringName! = nil
+    static var _method__font_render_range_0: StringName! = nil
+    static var _method__font_render_glyph_0: StringName! = nil
+    static var _method__font_draw_glyph_0: StringName! = nil
+    static var _method__font_draw_glyph_outline_0: StringName! = nil
+    static var _method__font_is_language_supported_0: StringName! = nil
+    static var _method__font_set_language_support_override_0: StringName! = nil
+    static var _method__font_get_language_support_override_0: StringName! = nil
+    static var _method__font_remove_language_support_override_0: StringName! = nil
+    static var _method__font_get_language_support_overrides_0: StringName! = nil
+    static var _method__font_is_script_supported_0: StringName! = nil
+    static var _method__font_set_script_support_override_0: StringName! = nil
+    static var _method__font_get_script_support_override_0: StringName! = nil
+    static var _method__font_remove_script_support_override_0: StringName! = nil
+    static var _method__font_get_script_support_overrides_0: StringName! = nil
+    static var _method__font_set_opentype_feature_overrides_0: StringName! = nil
+    static var _method__font_get_opentype_feature_overrides_0: StringName! = nil
+    static var _method__font_supported_feature_list_0: StringName! = nil
+    static var _method__font_supported_variation_list_0: StringName! = nil
+    static var _method__font_get_global_oversampling_0: StringName! = nil
+    static var _method__font_set_global_oversampling_0: StringName! = nil
+    static var _method__get_hex_code_box_size_0: StringName! = nil
+    static var _method__draw_hex_code_box_0: StringName! = nil
+    static var _method__create_shaped_text_0: StringName! = nil
+    static var _method__shaped_text_clear_0: StringName! = nil
+    static var _method__shaped_text_set_direction_0: StringName! = nil
+    static var _method__shaped_text_get_direction_0: StringName! = nil
+    static var _method__shaped_text_get_inferred_direction_0: StringName! = nil
+    static var _method__shaped_text_set_bidi_override_0: StringName! = nil
+    static var _method__shaped_text_set_custom_punctuation_0: StringName! = nil
+    static var _method__shaped_text_get_custom_punctuation_0: StringName! = nil
+    static var _method__shaped_text_set_orientation_0: StringName! = nil
+    static var _method__shaped_text_get_orientation_0: StringName! = nil
+    static var _method__shaped_text_set_preserve_invalid_0: StringName! = nil
+    static var _method__shaped_text_get_preserve_invalid_0: StringName! = nil
+    static var _method__shaped_text_set_preserve_control_0: StringName! = nil
+    static var _method__shaped_text_get_preserve_control_0: StringName! = nil
+    static var _method__shaped_text_set_spacing_0: StringName! = nil
+    static var _method__shaped_text_get_spacing_0: StringName! = nil
+    static var _method__shaped_text_add_string_0: StringName! = nil
+    static var _method__shaped_text_add_object_0: StringName! = nil
+    static var _method__shaped_text_resize_object_0: StringName! = nil
+    static var _method__shaped_get_span_count_0: StringName! = nil
+    static var _method__shaped_get_span_meta_0: StringName! = nil
+    static var _method__shaped_set_span_update_font_0: StringName! = nil
+    static var _method__shaped_text_substr_0: StringName! = nil
+    static var _method__shaped_text_get_parent_0: StringName! = nil
+    static var _method__shaped_text_fit_to_width_0: StringName! = nil
+    static var _method__shaped_text_tab_align_0: StringName! = nil
+    static var _method__shaped_text_shape_0: StringName! = nil
+    static var _method__shaped_text_update_breaks_0: StringName! = nil
+    static var _method__shaped_text_update_justification_ops_0: StringName! = nil
+    static var _method__shaped_text_is_ready_0: StringName! = nil
+    static var _method__shaped_text_get_glyphs_0: StringName! = nil
+    static var _method__shaped_text_sort_logical_0: StringName! = nil
+    static var _method__shaped_text_get_glyph_count_0: StringName! = nil
+    static var _method__shaped_text_get_range_0: StringName! = nil
+    static var _method__shaped_text_get_line_breaks_adv_0: StringName! = nil
+    static var _method__shaped_text_get_line_breaks_0: StringName! = nil
+    static var _method__shaped_text_get_word_breaks_0: StringName! = nil
+    static var _method__shaped_text_get_trim_pos_0: StringName! = nil
+    static var _method__shaped_text_get_ellipsis_pos_0: StringName! = nil
+    static var _method__shaped_text_get_ellipsis_glyph_count_0: StringName! = nil
+    static var _method__shaped_text_get_ellipsis_glyphs_0: StringName! = nil
+    static var _method__shaped_text_overrun_trim_to_width_0: StringName! = nil
+    static var _method__shaped_text_get_objects_0: StringName! = nil
+    static var _method__shaped_text_get_object_rect_0: StringName! = nil
+    static var _method__shaped_text_get_size_0: StringName! = nil
+    static var _method__shaped_text_get_ascent_0: StringName! = nil
+    static var _method__shaped_text_get_descent_0: StringName! = nil
+    static var _method__shaped_text_get_width_0: StringName! = nil
+    static var _method__shaped_text_get_underline_position_0: StringName! = nil
+    static var _method__shaped_text_get_underline_thickness_0: StringName! = nil
+    static var _method__shaped_text_get_dominant_direction_in_range_0: StringName! = nil
+    static var _method__shaped_text_get_carets_0: StringName! = nil
+    static var _method__shaped_text_get_selection_0: StringName! = nil
+    static var _method__shaped_text_hit_test_grapheme_0: StringName! = nil
+    static var _method__shaped_text_hit_test_position_0: StringName! = nil
+    static var _method__shaped_text_draw_0: StringName! = nil
+    static var _method__shaped_text_draw_outline_0: StringName! = nil
+    static var _method__shaped_text_get_grapheme_bounds_0: StringName! = nil
+    static var _method__shaped_text_next_grapheme_pos_0: StringName! = nil
+    static var _method__shaped_text_prev_grapheme_pos_0: StringName! = nil
+    static var _method__format_number_0: StringName! = nil
+    static var _method__parse_number_0: StringName! = nil
+    static var _method__percent_sign_0: StringName! = nil
+    static var _method__strip_diacritics_0: StringName! = nil
+    static var _method__is_valid_identifier_0: StringName! = nil
+    static var _method__string_get_word_breaks_0: StringName! = nil
+    static var _method__is_confusable_0: StringName! = nil
+    static var _method__spoof_check_0: StringName! = nil
+    static var _method__string_to_upper_0: StringName! = nil
+    static var _method__string_to_lower_0: StringName! = nil
+    static var _method__parse_structured_text_0: StringName! = nil
+    static var _method__cleanup_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_TextServerExtension == nil)
         __godot_name_TextServerExtension = StringName(from: "TextServerExtension")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -227,12 +228,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__has_feature_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
     }
@@ -244,12 +240,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _get_features() -> Int64 {
@@ -261,12 +252,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_features_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _free_rid(rid: RID)  {
@@ -277,12 +263,7 @@ open class TextServerExtension : TextServer {
                 .init(rid_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__free_rid_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _has(rid: RID) -> UInt8 {
         let rid_native = rid._native_ptr()
@@ -294,12 +275,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__has_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _load_support_data(filename: godot.String) -> UInt8 {
@@ -312,12 +288,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__load_support_data_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _get_support_data_filename() -> godot.String {
@@ -328,12 +299,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_support_data_filename_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _get_support_data_info() -> godot.String {
@@ -344,12 +310,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_support_data_info_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _save_support_data(filename: godot.String) -> UInt8 {
@@ -362,12 +323,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__save_support_data_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _is_locale_right_to_left(locale: godot.String) -> UInt8 {
@@ -380,12 +336,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__is_locale_right_to_left_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _name_to_tag(name: godot.String) -> Int64 {
@@ -398,12 +349,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__name_to_tag_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _tag_to_name(tag: Int64) -> godot.String {
@@ -415,12 +361,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__tag_to_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
         }
     }
@@ -432,12 +373,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__create_font_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
     }
     public func _font_set_data(font_rid: RID, data: PackedByteArray)  {
@@ -449,12 +385,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_data_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _font_set_data_ptr(font_rid: RID, data_ptr: UnsafePointer<UInt8>, data_size: Int64)  {
         withUnsafePointer(to: data_size) { data_size_native in
@@ -466,12 +397,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(data_ptr_native), .init(data_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_data_ptr_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -484,12 +410,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(face_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_face_index_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_face_index(font_rid: RID) -> Int64 {
@@ -502,12 +423,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_face_index_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _font_get_face_count(font_rid: RID) -> Int64 {
@@ -520,12 +436,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_face_count_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _font_set_style(font_rid: RID, style: TextServer.FontStyle)  {
@@ -537,12 +448,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(style_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_style_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_style(font_rid: RID) -> TextServer.FontStyle {
@@ -554,12 +460,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_style_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return TextServer.FontStyle(godot: __resPtr.pointee)
     }
     public func _font_set_name(font_rid: RID, name: godot.String)  {
@@ -571,12 +472,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _font_get_name(font_rid: RID) -> godot.String {
         let font_rid_native = font_rid._native_ptr()
@@ -587,12 +483,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _font_set_style_name(font_rid: RID, name_style: godot.String)  {
@@ -604,12 +495,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(name_style_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_style_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _font_get_style_name(font_rid: RID) -> godot.String {
         let font_rid_native = font_rid._native_ptr()
@@ -620,12 +506,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_style_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _font_set_weight(font_rid: RID, weight: Int64)  {
@@ -637,12 +518,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(weight_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_weight_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_weight(font_rid: RID) -> Int64 {
@@ -655,12 +531,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_weight_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _font_set_stretch(font_rid: RID, stretch: Int64)  {
@@ -672,12 +543,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(stretch_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_stretch_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_stretch(font_rid: RID) -> Int64 {
@@ -690,12 +556,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_stretch_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _font_set_antialiasing(font_rid: RID, antialiasing: TextServer.FontAntialiasing)  {
@@ -707,12 +568,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(antialiasing_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_antialiasing_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_antialiasing(font_rid: RID) -> TextServer.FontAntialiasing {
@@ -724,12 +580,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_antialiasing_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return TextServer.FontAntialiasing(godot: __resPtr.pointee)
     }
     public func _font_set_generate_mipmaps(font_rid: RID, generate_mipmaps: UInt8)  {
@@ -741,12 +592,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(generate_mipmaps_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_generate_mipmaps_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_generate_mipmaps(font_rid: RID) -> UInt8 {
@@ -759,12 +605,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_generate_mipmaps_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _font_set_multichannel_signed_distance_field(font_rid: RID, msdf: UInt8)  {
@@ -776,12 +617,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(msdf_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_multichannel_signed_distance_field_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_is_multichannel_signed_distance_field(font_rid: RID) -> UInt8 {
@@ -794,12 +630,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_is_multichannel_signed_distance_field_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _font_set_msdf_pixel_range(font_rid: RID, msdf_pixel_range: Int64)  {
@@ -811,12 +642,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(msdf_pixel_range_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_msdf_pixel_range_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_msdf_pixel_range(font_rid: RID) -> Int64 {
@@ -829,12 +655,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_msdf_pixel_range_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _font_set_msdf_size(font_rid: RID, msdf_size: Int64)  {
@@ -846,12 +667,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(msdf_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_msdf_size_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_msdf_size(font_rid: RID) -> Int64 {
@@ -864,12 +680,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_msdf_size_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _font_set_fixed_size(font_rid: RID, fixed_size: Int64)  {
@@ -881,12 +692,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(fixed_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_fixed_size_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_fixed_size(font_rid: RID) -> Int64 {
@@ -899,12 +705,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_fixed_size_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _font_set_allow_system_fallback(font_rid: RID, allow_system_fallback: UInt8)  {
@@ -916,12 +717,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(allow_system_fallback_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_allow_system_fallback_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_is_allow_system_fallback(font_rid: RID) -> UInt8 {
@@ -934,12 +730,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_is_allow_system_fallback_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _font_set_force_autohinter(font_rid: RID, force_autohinter: UInt8)  {
@@ -951,12 +742,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(force_autohinter_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_force_autohinter_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_is_force_autohinter(font_rid: RID) -> UInt8 {
@@ -969,12 +755,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_is_force_autohinter_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _font_set_hinting(font_rid: RID, hinting: TextServer.Hinting)  {
@@ -986,12 +767,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(hinting_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_hinting_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_hinting(font_rid: RID) -> TextServer.Hinting {
@@ -1003,12 +779,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_hinting_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return TextServer.Hinting(godot: __resPtr.pointee)
     }
     public func _font_set_subpixel_positioning(font_rid: RID, subpixel_positioning: TextServer.SubpixelPositioning)  {
@@ -1020,12 +791,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(subpixel_positioning_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_subpixel_positioning_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_subpixel_positioning(font_rid: RID) -> TextServer.SubpixelPositioning {
@@ -1037,12 +803,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_subpixel_positioning_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return TextServer.SubpixelPositioning(godot: __resPtr.pointee)
     }
     public func _font_set_embolden(font_rid: RID, strength: Float64)  {
@@ -1054,12 +815,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(strength_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_embolden_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_embolden(font_rid: RID) -> Float64 {
@@ -1072,12 +828,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_embolden_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func _font_set_transform(font_rid: RID, transform: Transform2D)  {
@@ -1089,12 +840,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(transform_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_transform_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _font_get_transform(font_rid: RID) -> Transform2D {
         let font_rid_native = font_rid._native_ptr()
@@ -1105,12 +851,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_transform_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Transform2D(godot: __resPtr.pointee)
     }
     public func _font_set_variation_coordinates(font_rid: RID, variation_coordinates: Dictionary)  {
@@ -1122,12 +863,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(variation_coordinates_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_variation_coordinates_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _font_get_variation_coordinates(font_rid: RID) -> Dictionary {
         let font_rid_native = font_rid._native_ptr()
@@ -1138,12 +874,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_variation_coordinates_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Dictionary(godot: __resPtr.pointee)
     }
     public func _font_set_oversampling(font_rid: RID, oversampling: Float64)  {
@@ -1155,12 +886,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(oversampling_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_oversampling_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_oversampling(font_rid: RID) -> Float64 {
@@ -1173,12 +899,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_oversampling_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func _font_get_size_cache_list(font_rid: RID) -> [Vector2i] {
@@ -1190,12 +911,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_size_cache_list_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return [Vector2i](godot: __resPtr.pointee)
     }
     public func _font_clear_size_cache(font_rid: RID)  {
@@ -1206,12 +922,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_clear_size_cache_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _font_remove_size_cache(font_rid: RID, size: Vector2i)  {
         let size_native = size._native_ptr()
@@ -1222,12 +933,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_remove_size_cache_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _font_set_ascent(font_rid: RID, size: Int64, ascent: Float64)  {
         withUnsafePointer(to: ascent) { ascent_native in
@@ -1239,12 +945,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(ascent_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_ascent_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -1259,12 +960,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_ascent_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
         }
     }
@@ -1278,12 +974,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(descent_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_descent_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -1298,12 +989,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_descent_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
         }
     }
@@ -1317,12 +1003,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(underline_position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_underline_position_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -1337,12 +1018,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_underline_position_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
         }
     }
@@ -1356,12 +1032,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(underline_thickness_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_underline_thickness_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -1376,12 +1047,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_underline_thickness_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
         }
     }
@@ -1395,12 +1061,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_scale_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -1415,12 +1076,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_scale_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
         }
     }
@@ -1435,12 +1091,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_texture_count_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _font_clear_textures(font_rid: RID, size: Vector2i)  {
@@ -1452,12 +1103,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_clear_textures_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _font_remove_texture(font_rid: RID, size: Vector2i, texture_index: Int64)  {
         withUnsafePointer(to: texture_index) { texture_index_native in
@@ -1469,12 +1115,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(texture_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_remove_texture_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_set_texture_image(font_rid: RID, size: Vector2i, texture_index: Int64, image: Image)  {
@@ -1488,12 +1129,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(texture_index_native), .init(image_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_texture_image_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_texture_image(font_rid: RID, size: Vector2i, texture_index: Int64) -> Image {
@@ -1507,12 +1143,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_texture_image_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Image(godot: __resPtr.pointee)
         }
     }
@@ -1527,12 +1158,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(texture_index_native), .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_texture_offsets_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_texture_offsets(font_rid: RID, size: Vector2i, texture_index: Int64) -> PackedInt32Array {
@@ -1546,12 +1172,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_texture_offsets_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedInt32Array(godot: __resPtr.pointee)
         }
     }
@@ -1565,12 +1186,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_glyph_list_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedInt32Array(godot: __resPtr.pointee)
     }
     public func _font_clear_glyphs(font_rid: RID, size: Vector2i)  {
@@ -1582,12 +1198,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_clear_glyphs_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _font_remove_glyph(font_rid: RID, size: Vector2i, glyph: Int64)  {
         withUnsafePointer(to: glyph) { glyph_native in
@@ -1599,12 +1210,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(glyph_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_remove_glyph_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_glyph_advance(font_rid: RID, size: Int64, glyph: Int64) -> Vector2 {
@@ -1618,12 +1224,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_glyph_advance_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Vector2(godot: __resPtr.pointee)
         }
         }
@@ -1639,12 +1240,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(glyph_native), .init(advance_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_glyph_advance_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -1659,12 +1255,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_glyph_offset_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Vector2(godot: __resPtr.pointee)
         }
     }
@@ -1679,12 +1270,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(glyph_native), .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_glyph_offset_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_glyph_size(font_rid: RID, size: Vector2i, glyph: Int64) -> Vector2 {
@@ -1698,12 +1284,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_glyph_size_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Vector2(godot: __resPtr.pointee)
         }
     }
@@ -1718,12 +1299,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(glyph_native), .init(gl_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_glyph_size_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_glyph_uv_rect(font_rid: RID, size: Vector2i, glyph: Int64) -> Rect2 {
@@ -1737,12 +1313,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_glyph_uv_rect_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Rect2(godot: __resPtr.pointee)
         }
     }
@@ -1757,12 +1328,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(glyph_native), .init(uv_rect_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_glyph_uv_rect_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_glyph_texture_idx(font_rid: RID, size: Vector2i, glyph: Int64) -> Int64 {
@@ -1777,12 +1343,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_glyph_texture_idx_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
         }
     }
@@ -1797,12 +1358,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(glyph_native), .init(texture_idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_glyph_texture_idx_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -1817,12 +1373,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_glyph_texture_rid_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
         }
     }
@@ -1837,12 +1388,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_glyph_texture_size_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Vector2(godot: __resPtr.pointee)
         }
     }
@@ -1857,12 +1403,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_glyph_contours_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Dictionary(godot: __resPtr.pointee)
         }
         }
@@ -1877,12 +1418,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_kerning_list_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return [Vector2i](godot: __resPtr.pointee)
         }
     }
@@ -1895,12 +1431,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_clear_kerning_map_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_remove_kerning(font_rid: RID, size: Int64, glyph_pair: Vector2i)  {
@@ -1913,12 +1444,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(glyph_pair_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_remove_kerning_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_set_kerning(font_rid: RID, size: Int64, glyph_pair: Vector2i, kerning: Vector2)  {
@@ -1932,12 +1458,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(glyph_pair_native), .init(kerning_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_kerning_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_kerning(font_rid: RID, size: Int64, glyph_pair: Vector2i) -> Vector2 {
@@ -1951,12 +1472,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_kerning_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Vector2(godot: __resPtr.pointee)
         }
     }
@@ -1973,12 +1489,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_glyph_index_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
         }
         }
@@ -1995,12 +1506,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_has_char_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
     }
@@ -2013,12 +1519,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_supported_chars_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _font_render_range(font_rid: RID, size: Vector2i, start: Int64, end: Int64)  {
@@ -2032,12 +1533,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(start_native), .init(end_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_render_range_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -2051,12 +1547,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(size_native), .init(index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_render_glyph_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_draw_glyph(font_rid: RID, canvas: RID, size: Int64, pos: Vector2, index: Int64, color: Color)  {
@@ -2072,12 +1563,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(canvas_native), .init(size_native), .init(pos_native), .init(index_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_draw_glyph_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -2095,12 +1581,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(canvas_native), .init(size_native), .init(outline_size_native), .init(pos_native), .init(index_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_draw_glyph_outline_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
         }
@@ -2116,12 +1597,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_is_language_supported_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _font_set_language_support_override(font_rid: RID, language: godot.String, supported: UInt8)  {
@@ -2134,12 +1610,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(language_native), .init(supported_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_language_support_override_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_language_support_override(font_rid: RID, language: godot.String) -> UInt8 {
@@ -2153,12 +1624,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_language_support_override_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _font_remove_language_support_override(font_rid: RID, language: godot.String)  {
@@ -2170,12 +1636,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(language_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_remove_language_support_override_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _font_get_language_support_overrides(font_rid: RID) -> PackedStringArray {
         let font_rid_native = font_rid._native_ptr()
@@ -2186,12 +1647,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_language_support_overrides_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _font_is_script_supported(font_rid: RID, script: godot.String) -> UInt8 {
@@ -2205,12 +1661,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_is_script_supported_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _font_set_script_support_override(font_rid: RID, script: godot.String, supported: UInt8)  {
@@ -2223,12 +1674,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(script_native), .init(supported_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_script_support_override_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _font_get_script_support_override(font_rid: RID, script: godot.String) -> UInt8 {
@@ -2242,12 +1688,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_script_support_override_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _font_remove_script_support_override(font_rid: RID, script: godot.String)  {
@@ -2259,12 +1700,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(script_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_remove_script_support_override_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _font_get_script_support_overrides(font_rid: RID) -> PackedStringArray {
         let font_rid_native = font_rid._native_ptr()
@@ -2275,12 +1711,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_script_support_overrides_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _font_set_opentype_feature_overrides(font_rid: RID, overrides: Dictionary)  {
@@ -2292,12 +1723,7 @@ open class TextServerExtension : TextServer {
                 .init(font_rid_native), .init(overrides_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_opentype_feature_overrides_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _font_get_opentype_feature_overrides(font_rid: RID) -> Dictionary {
         let font_rid_native = font_rid._native_ptr()
@@ -2308,12 +1734,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_opentype_feature_overrides_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Dictionary(godot: __resPtr.pointee)
     }
     public func _font_supported_feature_list(font_rid: RID) -> Dictionary {
@@ -2325,12 +1746,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_supported_feature_list_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Dictionary(godot: __resPtr.pointee)
     }
     public func _font_supported_variation_list(font_rid: RID) -> Dictionary {
@@ -2342,12 +1758,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_supported_variation_list_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Dictionary(godot: __resPtr.pointee)
     }
     public func _font_get_global_oversampling() -> Float64 {
@@ -2359,12 +1770,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_get_global_oversampling_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func _font_set_global_oversampling(oversampling: Float64)  {
@@ -2375,12 +1781,7 @@ open class TextServerExtension : TextServer {
                 .init(oversampling_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__font_set_global_oversampling_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _get_hex_code_box_size(size: Int64, index: Int64) -> Vector2 {
@@ -2393,12 +1794,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_hex_code_box_size_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Vector2(godot: __resPtr.pointee)
         }
         }
@@ -2415,12 +1811,7 @@ open class TextServerExtension : TextServer {
                 .init(canvas_native), .init(size_native), .init(pos_native), .init(index_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__draw_hex_code_box_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -2434,12 +1825,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__create_shaped_text_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
         }
         }
@@ -2452,12 +1838,7 @@ open class TextServerExtension : TextServer {
                 .init(shaped_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_clear_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _shaped_text_set_direction(shaped: RID, direction: TextServer.Direction)  {
         withUnsafePointer(to: direction.rawValue) { direction_native in
@@ -2468,12 +1849,7 @@ open class TextServerExtension : TextServer {
                 .init(shaped_native), .init(direction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_set_direction_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _shaped_text_get_direction(shaped: RID) -> TextServer.Direction {
@@ -2485,12 +1861,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_direction_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return TextServer.Direction(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_inferred_direction(shaped: RID) -> TextServer.Direction {
@@ -2502,12 +1873,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_inferred_direction_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return TextServer.Direction(godot: __resPtr.pointee)
     }
     public func _shaped_text_set_bidi_override(shaped: RID, override: Array)  {
@@ -2519,12 +1885,7 @@ open class TextServerExtension : TextServer {
                 .init(shaped_native), .init(override_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_set_bidi_override_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _shaped_text_set_custom_punctuation(shaped: RID, punct: godot.String)  {
         let punct_native = punct._native_ptr()
@@ -2535,12 +1896,7 @@ open class TextServerExtension : TextServer {
                 .init(shaped_native), .init(punct_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_set_custom_punctuation_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _shaped_text_get_custom_punctuation(shaped: RID) -> godot.String {
         let shaped_native = shaped._native_ptr()
@@ -2551,12 +1907,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_custom_punctuation_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _shaped_text_set_orientation(shaped: RID, orientation: TextServer.Orientation)  {
@@ -2568,12 +1919,7 @@ open class TextServerExtension : TextServer {
                 .init(shaped_native), .init(orientation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_set_orientation_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _shaped_text_get_orientation(shaped: RID) -> TextServer.Orientation {
@@ -2585,12 +1931,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_orientation_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return TextServer.Orientation(godot: __resPtr.pointee)
     }
     public func _shaped_text_set_preserve_invalid(shaped: RID, enabled: UInt8)  {
@@ -2602,12 +1943,7 @@ open class TextServerExtension : TextServer {
                 .init(shaped_native), .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_set_preserve_invalid_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _shaped_text_get_preserve_invalid(shaped: RID) -> UInt8 {
@@ -2620,12 +1956,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_preserve_invalid_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _shaped_text_set_preserve_control(shaped: RID, enabled: UInt8)  {
@@ -2637,12 +1968,7 @@ open class TextServerExtension : TextServer {
                 .init(shaped_native), .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_set_preserve_control_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _shaped_text_get_preserve_control(shaped: RID) -> UInt8 {
@@ -2655,12 +1981,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_preserve_control_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _shaped_text_set_spacing(shaped: RID, spacing: TextServer.SpacingType, value: Int64)  {
@@ -2673,12 +1994,7 @@ open class TextServerExtension : TextServer {
                 .init(shaped_native), .init(spacing_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_set_spacing_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -2693,12 +2009,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_spacing_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
         }
     }
@@ -2718,12 +2029,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_add_string_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
     }
@@ -2742,12 +2048,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_add_object_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
         }
@@ -2767,12 +2068,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_resize_object_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
         }
@@ -2787,12 +2083,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_get_span_count_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _shaped_get_span_meta(shaped: RID, index: Int64) -> Variant {
@@ -2805,12 +2096,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_get_span_meta_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Variant(godot: __resPtr.pointee)
         }
     }
@@ -2826,12 +2112,7 @@ open class TextServerExtension : TextServer {
                 .init(shaped_native), .init(index_native), .init(fonts_native), .init(size_native), .init(opentype_features_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_set_span_update_font_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -2846,12 +2127,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_substr_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
         }
         }
@@ -2865,12 +2141,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_parent_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return RID(godot: __resPtr.pointee)
     }
     public func _shaped_text_fit_to_width(shaped: RID, width: Float64, jst_flags: TextServer.JustificationFlag) -> Float64 {
@@ -2885,12 +2156,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_fit_to_width_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
         }
         }
@@ -2906,12 +2172,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_tab_align_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func _shaped_text_shape(shaped: RID) -> UInt8 {
@@ -2924,12 +2185,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_shape_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _shaped_text_update_breaks(shaped: RID) -> UInt8 {
@@ -2942,12 +2198,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_update_breaks_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _shaped_text_update_justification_ops(shaped: RID) -> UInt8 {
@@ -2960,12 +2211,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_update_justification_ops_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _shaped_text_is_ready(shaped: RID) -> UInt8 {
@@ -2978,12 +2224,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_is_ready_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_glyphs(shaped: RID) -> UnsafePointer<Glyph> {
@@ -2995,12 +2236,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_glyphs_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UnsafePointer<Glyph>(godot: __resPtr.pointee)
     }
     public func _shaped_text_sort_logical(shaped: RID) -> UnsafePointer<Glyph> {
@@ -3012,12 +2248,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_sort_logical_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UnsafePointer<Glyph>(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_glyph_count(shaped: RID) -> Int64 {
@@ -3030,12 +2261,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_glyph_count_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_range(shaped: RID) -> Vector2i {
@@ -3047,12 +2273,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_range_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Vector2i(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_line_breaks_adv(shaped: RID, width: PackedFloat32Array, start: Int64, once: UInt8, break_flags: TextServer.LineBreakFlag) -> PackedInt32Array {
@@ -3068,12 +2289,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_line_breaks_adv_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedInt32Array(godot: __resPtr.pointee)
         }
         }
@@ -3091,12 +2307,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_line_breaks_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedInt32Array(godot: __resPtr.pointee)
         }
         }
@@ -3112,12 +2323,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_word_breaks_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedInt32Array(godot: __resPtr.pointee)
         }
     }
@@ -3131,12 +2337,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_trim_pos_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_ellipsis_pos(shaped: RID) -> Int64 {
@@ -3149,12 +2350,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_ellipsis_pos_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_ellipsis_glyph_count(shaped: RID) -> Int64 {
@@ -3167,12 +2363,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_ellipsis_glyph_count_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_ellipsis_glyphs(shaped: RID) -> UnsafePointer<Glyph> {
@@ -3184,12 +2375,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_ellipsis_glyphs_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UnsafePointer<Glyph>(godot: __resPtr.pointee)
     }
     public func _shaped_text_overrun_trim_to_width(shaped: RID, width: Float64, trim_flags: TextServer.TextOverrunFlag)  {
@@ -3202,12 +2388,7 @@ open class TextServerExtension : TextServer {
                 .init(shaped_native), .init(width_native), .init(trim_flags_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_overrun_trim_to_width_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -3220,12 +2401,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_objects_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Array(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_object_rect(shaped: RID, key: Variant) -> Rect2 {
@@ -3238,12 +2414,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_object_rect_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Rect2(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_size(shaped: RID) -> Vector2 {
@@ -3255,12 +2426,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_size_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Vector2(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_ascent(shaped: RID) -> Float64 {
@@ -3273,12 +2439,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_ascent_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_descent(shaped: RID) -> Float64 {
@@ -3291,12 +2452,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_descent_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_width(shaped: RID) -> Float64 {
@@ -3309,12 +2465,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_width_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_underline_position(shaped: RID) -> Float64 {
@@ -3327,12 +2478,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_underline_position_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_underline_thickness(shaped: RID) -> Float64 {
@@ -3345,12 +2491,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_underline_thickness_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func _shaped_text_get_dominant_direction_in_range(shaped: RID, start: Int64, end: Int64) -> Int64 {
@@ -3365,12 +2506,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_dominant_direction_in_range_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
         }
         }
@@ -3385,12 +2521,7 @@ open class TextServerExtension : TextServer {
                 .init(shaped_native), .init(position_native), .init(caret_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_carets_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -3405,12 +2536,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_selection_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedVector2Array(godot: __resPtr.pointee)
         }
         }
@@ -3426,12 +2552,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_hit_test_grapheme_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
         }
     }
@@ -3446,12 +2567,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_hit_test_position_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
         }
     }
@@ -3468,12 +2584,7 @@ open class TextServerExtension : TextServer {
                 .init(shaped_native), .init(canvas_native), .init(pos_native), .init(clip_l_native), .init(clip_r_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_draw_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -3491,12 +2602,7 @@ open class TextServerExtension : TextServer {
                 .init(shaped_native), .init(canvas_native), .init(pos_native), .init(clip_l_native), .init(clip_r_native), .init(outline_size_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_draw_outline_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
         }
@@ -3511,12 +2617,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_get_grapheme_bounds_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Vector2(godot: __resPtr.pointee)
         }
     }
@@ -3531,12 +2632,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_next_grapheme_pos_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
         }
     }
@@ -3551,12 +2647,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__shaped_text_prev_grapheme_pos_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
         }
     }
@@ -3570,12 +2661,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__format_number_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _parse_number(string: godot.String, language: godot.String) -> godot.String {
@@ -3588,12 +2674,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__parse_number_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _percent_sign(language: godot.String) -> godot.String {
@@ -3605,12 +2686,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__percent_sign_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _strip_diacritics(string: godot.String) -> godot.String {
@@ -3622,12 +2698,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__strip_diacritics_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _is_valid_identifier(string: godot.String) -> UInt8 {
@@ -3640,12 +2711,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__is_valid_identifier_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _string_get_word_breaks(string: godot.String, language: godot.String, chars_per_line: Int64) -> PackedInt32Array {
@@ -3659,12 +2725,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__string_get_word_breaks_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedInt32Array(godot: __resPtr.pointee)
         }
     }
@@ -3679,12 +2740,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__is_confusable_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _spoof_check(string: godot.String) -> UInt8 {
@@ -3697,12 +2753,7 @@ open class TextServerExtension : TextServer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__spoof_check_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _string_to_upper(string: godot.String, language: godot.String) -> godot.String {
@@ -3715,12 +2766,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__string_to_upper_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _string_to_lower(string: godot.String, language: godot.String) -> godot.String {
@@ -3733,12 +2779,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__string_to_lower_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _parse_structured_text(parser_type: TextServer.StructuredTextParser, args: Array, text: godot.String) -> [Vector3i] {
@@ -3752,12 +2793,7 @@ open class TextServerExtension : TextServer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__parse_structured_text_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return [Vector3i](godot: __resPtr.pointee)
         }
     }
@@ -3768,11 +2804,6 @@ open class TextServerExtension : TextServer {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__cleanup_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
 }

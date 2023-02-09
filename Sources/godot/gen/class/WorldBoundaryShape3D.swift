@@ -13,23 +13,22 @@ open class WorldBoundaryShape3D : Shape3D {
 
     public override class var __godot_name: StringName { __godot_name_WorldBoundaryShape3D }
 
-    static var _method_set_plane_3505987427: GDExtensionMethodBindPtr! = nil
-    static var _method_get_plane_2753500971: GDExtensionMethodBindPtr! = nil
+    static var _method_set_plane_3505987427: StringName! = nil
+    static var _method_get_plane_2753500971: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_WorldBoundaryShape3D == nil)
         __godot_name_WorldBoundaryShape3D = StringName(from: "WorldBoundaryShape3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_plane_3505987427_name = StringName(from: "set_plane")
-        self._method_set_plane_3505987427 = self.interface.pointee.classdb_get_method_bind(__godot_name_WorldBoundaryShape3D._native_ptr(), _method_set_plane_3505987427_name._native_ptr(), 3505987427)
-        assert(WorldBoundaryShape3D._method_set_plane_3505987427 != nil)
-        let _method_get_plane_2753500971_name = StringName(from: "get_plane")
-        self._method_get_plane_2753500971 = self.interface.pointee.classdb_get_method_bind(__godot_name_WorldBoundaryShape3D._native_ptr(), _method_get_plane_2753500971_name._native_ptr(), 2753500971)
-        assert(WorldBoundaryShape3D._method_get_plane_2753500971 != nil)
+        self._method_set_plane_3505987427 = StringName(from: "set_plane")
+        assert(self._method_set_plane_3505987427 != nil)
+        self._method_get_plane_2753500971 = StringName(from: "get_plane")
+        assert(self._method_get_plane_2753500971 != nil)
     }
 
     public func set_plane(plane: Plane)  {
@@ -40,8 +39,13 @@ open class WorldBoundaryShape3D : Shape3D {
                 .init(plane_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_plane_3505987427,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_plane_3505987427._native_ptr(),
+                    3505987427)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -55,8 +59,13 @@ open class WorldBoundaryShape3D : Shape3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_plane_2753500971,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_plane_2753500971._native_ptr(),
+                    2753500971)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -69,95 +69,76 @@ open class Button : BaseButton {
 
     public override class var __godot_name: StringName { __godot_name_Button }
 
-    static var _method_set_text_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_text_overrun_behavior_1008890932: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_overrun_behavior_3779142101: GDExtensionMethodBindPtr! = nil
-    static var _method_set_text_direction_119160795: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_direction_797257663: GDExtensionMethodBindPtr! = nil
-    static var _method_set_language_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_language_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_button_icon_4051416890: GDExtensionMethodBindPtr! = nil
-    static var _method_get_button_icon_3635182373: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flat_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_flat_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_clip_text_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_clip_text_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_text_alignment_2312603777: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_alignment_341400642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_icon_alignment_2312603777: GDExtensionMethodBindPtr! = nil
-    static var _method_get_icon_alignment_341400642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_expand_icon_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_expand_icon_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_text_83702148: StringName! = nil
+    static var _method_get_text_201670096: StringName! = nil
+    static var _method_set_text_overrun_behavior_1008890932: StringName! = nil
+    static var _method_get_text_overrun_behavior_3779142101: StringName! = nil
+    static var _method_set_text_direction_119160795: StringName! = nil
+    static var _method_get_text_direction_797257663: StringName! = nil
+    static var _method_set_language_83702148: StringName! = nil
+    static var _method_get_language_201670096: StringName! = nil
+    static var _method_set_button_icon_4051416890: StringName! = nil
+    static var _method_get_button_icon_3635182373: StringName! = nil
+    static var _method_set_flat_2586408642: StringName! = nil
+    static var _method_is_flat_36873697: StringName! = nil
+    static var _method_set_clip_text_2586408642: StringName! = nil
+    static var _method_get_clip_text_36873697: StringName! = nil
+    static var _method_set_text_alignment_2312603777: StringName! = nil
+    static var _method_get_text_alignment_341400642: StringName! = nil
+    static var _method_set_icon_alignment_2312603777: StringName! = nil
+    static var _method_get_icon_alignment_341400642: StringName! = nil
+    static var _method_set_expand_icon_2586408642: StringName! = nil
+    static var _method_is_expand_icon_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Button == nil)
         __godot_name_Button = StringName(from: "Button")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_text_83702148_name = StringName(from: "set_text")
-        self._method_set_text_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_set_text_83702148_name._native_ptr(), 83702148)
-        assert(Button._method_set_text_83702148 != nil)
-        let _method_get_text_201670096_name = StringName(from: "get_text")
-        self._method_get_text_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_get_text_201670096_name._native_ptr(), 201670096)
-        assert(Button._method_get_text_201670096 != nil)
-        let _method_set_text_overrun_behavior_1008890932_name = StringName(from: "set_text_overrun_behavior")
-        self._method_set_text_overrun_behavior_1008890932 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_set_text_overrun_behavior_1008890932_name._native_ptr(), 1008890932)
-        assert(Button._method_set_text_overrun_behavior_1008890932 != nil)
-        let _method_get_text_overrun_behavior_3779142101_name = StringName(from: "get_text_overrun_behavior")
-        self._method_get_text_overrun_behavior_3779142101 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_get_text_overrun_behavior_3779142101_name._native_ptr(), 3779142101)
-        assert(Button._method_get_text_overrun_behavior_3779142101 != nil)
-        let _method_set_text_direction_119160795_name = StringName(from: "set_text_direction")
-        self._method_set_text_direction_119160795 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_set_text_direction_119160795_name._native_ptr(), 119160795)
-        assert(Button._method_set_text_direction_119160795 != nil)
-        let _method_get_text_direction_797257663_name = StringName(from: "get_text_direction")
-        self._method_get_text_direction_797257663 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_get_text_direction_797257663_name._native_ptr(), 797257663)
-        assert(Button._method_get_text_direction_797257663 != nil)
-        let _method_set_language_83702148_name = StringName(from: "set_language")
-        self._method_set_language_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_set_language_83702148_name._native_ptr(), 83702148)
-        assert(Button._method_set_language_83702148 != nil)
-        let _method_get_language_201670096_name = StringName(from: "get_language")
-        self._method_get_language_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_get_language_201670096_name._native_ptr(), 201670096)
-        assert(Button._method_get_language_201670096 != nil)
-        let _method_set_button_icon_4051416890_name = StringName(from: "set_button_icon")
-        self._method_set_button_icon_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_set_button_icon_4051416890_name._native_ptr(), 4051416890)
-        assert(Button._method_set_button_icon_4051416890 != nil)
-        let _method_get_button_icon_3635182373_name = StringName(from: "get_button_icon")
-        self._method_get_button_icon_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_get_button_icon_3635182373_name._native_ptr(), 3635182373)
-        assert(Button._method_get_button_icon_3635182373 != nil)
-        let _method_set_flat_2586408642_name = StringName(from: "set_flat")
-        self._method_set_flat_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_set_flat_2586408642_name._native_ptr(), 2586408642)
-        assert(Button._method_set_flat_2586408642 != nil)
-        let _method_is_flat_36873697_name = StringName(from: "is_flat")
-        self._method_is_flat_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_is_flat_36873697_name._native_ptr(), 36873697)
-        assert(Button._method_is_flat_36873697 != nil)
-        let _method_set_clip_text_2586408642_name = StringName(from: "set_clip_text")
-        self._method_set_clip_text_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_set_clip_text_2586408642_name._native_ptr(), 2586408642)
-        assert(Button._method_set_clip_text_2586408642 != nil)
-        let _method_get_clip_text_36873697_name = StringName(from: "get_clip_text")
-        self._method_get_clip_text_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_get_clip_text_36873697_name._native_ptr(), 36873697)
-        assert(Button._method_get_clip_text_36873697 != nil)
-        let _method_set_text_alignment_2312603777_name = StringName(from: "set_text_alignment")
-        self._method_set_text_alignment_2312603777 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_set_text_alignment_2312603777_name._native_ptr(), 2312603777)
-        assert(Button._method_set_text_alignment_2312603777 != nil)
-        let _method_get_text_alignment_341400642_name = StringName(from: "get_text_alignment")
-        self._method_get_text_alignment_341400642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_get_text_alignment_341400642_name._native_ptr(), 341400642)
-        assert(Button._method_get_text_alignment_341400642 != nil)
-        let _method_set_icon_alignment_2312603777_name = StringName(from: "set_icon_alignment")
-        self._method_set_icon_alignment_2312603777 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_set_icon_alignment_2312603777_name._native_ptr(), 2312603777)
-        assert(Button._method_set_icon_alignment_2312603777 != nil)
-        let _method_get_icon_alignment_341400642_name = StringName(from: "get_icon_alignment")
-        self._method_get_icon_alignment_341400642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_get_icon_alignment_341400642_name._native_ptr(), 341400642)
-        assert(Button._method_get_icon_alignment_341400642 != nil)
-        let _method_set_expand_icon_2586408642_name = StringName(from: "set_expand_icon")
-        self._method_set_expand_icon_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_set_expand_icon_2586408642_name._native_ptr(), 2586408642)
-        assert(Button._method_set_expand_icon_2586408642 != nil)
-        let _method_is_expand_icon_36873697_name = StringName(from: "is_expand_icon")
-        self._method_is_expand_icon_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Button._native_ptr(), _method_is_expand_icon_36873697_name._native_ptr(), 36873697)
-        assert(Button._method_is_expand_icon_36873697 != nil)
+        self._method_set_text_83702148 = StringName(from: "set_text")
+        assert(self._method_set_text_83702148 != nil)
+        self._method_get_text_201670096 = StringName(from: "get_text")
+        assert(self._method_get_text_201670096 != nil)
+        self._method_set_text_overrun_behavior_1008890932 = StringName(from: "set_text_overrun_behavior")
+        assert(self._method_set_text_overrun_behavior_1008890932 != nil)
+        self._method_get_text_overrun_behavior_3779142101 = StringName(from: "get_text_overrun_behavior")
+        assert(self._method_get_text_overrun_behavior_3779142101 != nil)
+        self._method_set_text_direction_119160795 = StringName(from: "set_text_direction")
+        assert(self._method_set_text_direction_119160795 != nil)
+        self._method_get_text_direction_797257663 = StringName(from: "get_text_direction")
+        assert(self._method_get_text_direction_797257663 != nil)
+        self._method_set_language_83702148 = StringName(from: "set_language")
+        assert(self._method_set_language_83702148 != nil)
+        self._method_get_language_201670096 = StringName(from: "get_language")
+        assert(self._method_get_language_201670096 != nil)
+        self._method_set_button_icon_4051416890 = StringName(from: "set_button_icon")
+        assert(self._method_set_button_icon_4051416890 != nil)
+        self._method_get_button_icon_3635182373 = StringName(from: "get_button_icon")
+        assert(self._method_get_button_icon_3635182373 != nil)
+        self._method_set_flat_2586408642 = StringName(from: "set_flat")
+        assert(self._method_set_flat_2586408642 != nil)
+        self._method_is_flat_36873697 = StringName(from: "is_flat")
+        assert(self._method_is_flat_36873697 != nil)
+        self._method_set_clip_text_2586408642 = StringName(from: "set_clip_text")
+        assert(self._method_set_clip_text_2586408642 != nil)
+        self._method_get_clip_text_36873697 = StringName(from: "get_clip_text")
+        assert(self._method_get_clip_text_36873697 != nil)
+        self._method_set_text_alignment_2312603777 = StringName(from: "set_text_alignment")
+        assert(self._method_set_text_alignment_2312603777 != nil)
+        self._method_get_text_alignment_341400642 = StringName(from: "get_text_alignment")
+        assert(self._method_get_text_alignment_341400642 != nil)
+        self._method_set_icon_alignment_2312603777 = StringName(from: "set_icon_alignment")
+        assert(self._method_set_icon_alignment_2312603777 != nil)
+        self._method_get_icon_alignment_341400642 = StringName(from: "get_icon_alignment")
+        assert(self._method_get_icon_alignment_341400642 != nil)
+        self._method_set_expand_icon_2586408642 = StringName(from: "set_expand_icon")
+        assert(self._method_set_expand_icon_2586408642 != nil)
+        self._method_is_expand_icon_36873697 = StringName(from: "is_expand_icon")
+        assert(self._method_is_expand_icon_36873697 != nil)
     }
 
     public func set_text(text: godot.String)  {
@@ -168,8 +149,13 @@ open class Button : BaseButton {
                 .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_text_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_text_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -183,8 +169,13 @@ open class Button : BaseButton {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -199,8 +190,13 @@ open class Button : BaseButton {
                 .init(overrun_behavior_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_text_overrun_behavior_1008890932,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_text_overrun_behavior_1008890932._native_ptr(),
+                    1008890932)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -215,8 +211,13 @@ open class Button : BaseButton {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_overrun_behavior_3779142101,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_overrun_behavior_3779142101._native_ptr(),
+                    3779142101)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -231,8 +232,13 @@ open class Button : BaseButton {
                 .init(direction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_text_direction_119160795,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_text_direction_119160795._native_ptr(),
+                    119160795)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -247,8 +253,13 @@ open class Button : BaseButton {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_direction_797257663,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_direction_797257663._native_ptr(),
+                    797257663)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -263,8 +274,13 @@ open class Button : BaseButton {
                 .init(language_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_language_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_language_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -278,8 +294,13 @@ open class Button : BaseButton {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_language_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_language_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -294,8 +315,13 @@ open class Button : BaseButton {
                 .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_button_icon_4051416890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_button_icon_4051416890._native_ptr(),
+                    4051416890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -309,8 +335,13 @@ open class Button : BaseButton {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_button_icon_3635182373,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_button_icon_3635182373._native_ptr(),
+                    3635182373)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -325,8 +356,13 @@ open class Button : BaseButton {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flat_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flat_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -342,8 +378,13 @@ open class Button : BaseButton {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_flat_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_flat_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -358,8 +399,13 @@ open class Button : BaseButton {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_clip_text_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_clip_text_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -375,8 +421,13 @@ open class Button : BaseButton {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_clip_text_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_clip_text_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -391,8 +442,13 @@ open class Button : BaseButton {
                 .init(alignment_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_text_alignment_2312603777,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_text_alignment_2312603777._native_ptr(),
+                    2312603777)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -407,8 +463,13 @@ open class Button : BaseButton {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_alignment_341400642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_alignment_341400642._native_ptr(),
+                    341400642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -423,8 +484,13 @@ open class Button : BaseButton {
                 .init(icon_alignment_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_icon_alignment_2312603777,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_icon_alignment_2312603777._native_ptr(),
+                    2312603777)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -439,8 +505,13 @@ open class Button : BaseButton {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_icon_alignment_341400642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_icon_alignment_341400642._native_ptr(),
+                    341400642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -455,8 +526,13 @@ open class Button : BaseButton {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_expand_icon_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_expand_icon_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -472,8 +548,13 @@ open class Button : BaseButton {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_expand_icon_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_expand_icon_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

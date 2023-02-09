@@ -22,23 +22,22 @@ open class VisualShaderNodeTransformOp : VisualShaderNode {
 
     public override class var __godot_name: StringName { __godot_name_VisualShaderNodeTransformOp }
 
-    static var _method_set_operator_2287310733: GDExtensionMethodBindPtr! = nil
-    static var _method_get_operator_1238663601: GDExtensionMethodBindPtr! = nil
+    static var _method_set_operator_2287310733: StringName! = nil
+    static var _method_get_operator_1238663601: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShaderNodeTransformOp == nil)
         __godot_name_VisualShaderNodeTransformOp = StringName(from: "VisualShaderNodeTransformOp")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_operator_2287310733_name = StringName(from: "set_operator")
-        self._method_set_operator_2287310733 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTransformOp._native_ptr(), _method_set_operator_2287310733_name._native_ptr(), 2287310733)
-        assert(VisualShaderNodeTransformOp._method_set_operator_2287310733 != nil)
-        let _method_get_operator_1238663601_name = StringName(from: "get_operator")
-        self._method_get_operator_1238663601 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeTransformOp._native_ptr(), _method_get_operator_1238663601_name._native_ptr(), 1238663601)
-        assert(VisualShaderNodeTransformOp._method_get_operator_1238663601 != nil)
+        self._method_set_operator_2287310733 = StringName(from: "set_operator")
+        assert(self._method_set_operator_2287310733 != nil)
+        self._method_get_operator_1238663601 = StringName(from: "get_operator")
+        assert(self._method_get_operator_1238663601 != nil)
     }
 
     public func set_operator(op: VisualShaderNodeTransformOp.Operator)  {
@@ -49,8 +48,13 @@ open class VisualShaderNodeTransformOp : VisualShaderNode {
                 .init(op_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_operator_2287310733,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_operator_2287310733._native_ptr(),
+                    2287310733)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -65,8 +69,13 @@ open class VisualShaderNodeTransformOp : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_operator_1238663601,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_operator_1238663601._native_ptr(),
+                    1238663601)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

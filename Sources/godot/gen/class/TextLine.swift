@@ -11,151 +11,118 @@ open class TextLine : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_TextLine }
 
-    static var _method_clear_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_direction_1418190634: GDExtensionMethodBindPtr! = nil
-    static var _method_get_direction_2516697328: GDExtensionMethodBindPtr! = nil
-    static var _method_set_orientation_42823726: GDExtensionMethodBindPtr! = nil
-    static var _method_get_orientation_175768116: GDExtensionMethodBindPtr! = nil
-    static var _method_set_preserve_invalid_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_preserve_invalid_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_preserve_control_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_preserve_control_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bidi_override_381264803: GDExtensionMethodBindPtr! = nil
-    static var _method_add_string_867188035: GDExtensionMethodBindPtr! = nil
-    static var _method_add_object_735420116: GDExtensionMethodBindPtr! = nil
-    static var _method_resize_object_960819067: GDExtensionMethodBindPtr! = nil
-    static var _method_set_width_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_width_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_horizontal_alignment_2312603777: GDExtensionMethodBindPtr! = nil
-    static var _method_get_horizontal_alignment_341400642: GDExtensionMethodBindPtr! = nil
-    static var _method_tab_align_2899603908: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flags_2877345813: GDExtensionMethodBindPtr! = nil
-    static var _method_get_flags_1583363614: GDExtensionMethodBindPtr! = nil
-    static var _method_set_text_overrun_behavior_1008890932: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_overrun_behavior_3779142101: GDExtensionMethodBindPtr! = nil
-    static var _method_get_objects_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_get_object_rect_1742700391: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rid_2944877500: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_ascent_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_descent_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_width_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_underline_position_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_underline_thickness_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_draw_1164457837: GDExtensionMethodBindPtr! = nil
-    static var _method_draw_outline_1364491366: GDExtensionMethodBindPtr! = nil
-    static var _method_hit_test_2401831903: GDExtensionMethodBindPtr! = nil
+    static var _method_clear_3218959716: StringName! = nil
+    static var _method_set_direction_1418190634: StringName! = nil
+    static var _method_get_direction_2516697328: StringName! = nil
+    static var _method_set_orientation_42823726: StringName! = nil
+    static var _method_get_orientation_175768116: StringName! = nil
+    static var _method_set_preserve_invalid_2586408642: StringName! = nil
+    static var _method_get_preserve_invalid_36873697: StringName! = nil
+    static var _method_set_preserve_control_2586408642: StringName! = nil
+    static var _method_get_preserve_control_36873697: StringName! = nil
+    static var _method_set_bidi_override_381264803: StringName! = nil
+    static var _method_add_string_867188035: StringName! = nil
+    static var _method_add_object_735420116: StringName! = nil
+    static var _method_resize_object_960819067: StringName! = nil
+    static var _method_set_width_373806689: StringName! = nil
+    static var _method_get_width_1740695150: StringName! = nil
+    static var _method_set_horizontal_alignment_2312603777: StringName! = nil
+    static var _method_get_horizontal_alignment_341400642: StringName! = nil
+    static var _method_tab_align_2899603908: StringName! = nil
+    static var _method_set_flags_2877345813: StringName! = nil
+    static var _method_get_flags_1583363614: StringName! = nil
+    static var _method_set_text_overrun_behavior_1008890932: StringName! = nil
+    static var _method_get_text_overrun_behavior_3779142101: StringName! = nil
+    static var _method_get_objects_3995934104: StringName! = nil
+    static var _method_get_object_rect_1742700391: StringName! = nil
+    static var _method_get_size_3341600327: StringName! = nil
+    static var _method_get_rid_2944877500: StringName! = nil
+    static var _method_get_line_ascent_1740695150: StringName! = nil
+    static var _method_get_line_descent_1740695150: StringName! = nil
+    static var _method_get_line_width_1740695150: StringName! = nil
+    static var _method_get_line_underline_position_1740695150: StringName! = nil
+    static var _method_get_line_underline_thickness_1740695150: StringName! = nil
+    static var _method_draw_1164457837: StringName! = nil
+    static var _method_draw_outline_1364491366: StringName! = nil
+    static var _method_hit_test_2401831903: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_TextLine == nil)
         __godot_name_TextLine = StringName(from: "TextLine")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
-        assert(TextLine._method_clear_3218959716 != nil)
-        let _method_set_direction_1418190634_name = StringName(from: "set_direction")
-        self._method_set_direction_1418190634 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_set_direction_1418190634_name._native_ptr(), 1418190634)
-        assert(TextLine._method_set_direction_1418190634 != nil)
-        let _method_get_direction_2516697328_name = StringName(from: "get_direction")
-        self._method_get_direction_2516697328 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_direction_2516697328_name._native_ptr(), 2516697328)
-        assert(TextLine._method_get_direction_2516697328 != nil)
-        let _method_set_orientation_42823726_name = StringName(from: "set_orientation")
-        self._method_set_orientation_42823726 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_set_orientation_42823726_name._native_ptr(), 42823726)
-        assert(TextLine._method_set_orientation_42823726 != nil)
-        let _method_get_orientation_175768116_name = StringName(from: "get_orientation")
-        self._method_get_orientation_175768116 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_orientation_175768116_name._native_ptr(), 175768116)
-        assert(TextLine._method_get_orientation_175768116 != nil)
-        let _method_set_preserve_invalid_2586408642_name = StringName(from: "set_preserve_invalid")
-        self._method_set_preserve_invalid_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_set_preserve_invalid_2586408642_name._native_ptr(), 2586408642)
-        assert(TextLine._method_set_preserve_invalid_2586408642 != nil)
-        let _method_get_preserve_invalid_36873697_name = StringName(from: "get_preserve_invalid")
-        self._method_get_preserve_invalid_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_preserve_invalid_36873697_name._native_ptr(), 36873697)
-        assert(TextLine._method_get_preserve_invalid_36873697 != nil)
-        let _method_set_preserve_control_2586408642_name = StringName(from: "set_preserve_control")
-        self._method_set_preserve_control_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_set_preserve_control_2586408642_name._native_ptr(), 2586408642)
-        assert(TextLine._method_set_preserve_control_2586408642 != nil)
-        let _method_get_preserve_control_36873697_name = StringName(from: "get_preserve_control")
-        self._method_get_preserve_control_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_preserve_control_36873697_name._native_ptr(), 36873697)
-        assert(TextLine._method_get_preserve_control_36873697 != nil)
-        let _method_set_bidi_override_381264803_name = StringName(from: "set_bidi_override")
-        self._method_set_bidi_override_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_set_bidi_override_381264803_name._native_ptr(), 381264803)
-        assert(TextLine._method_set_bidi_override_381264803 != nil)
-        let _method_add_string_867188035_name = StringName(from: "add_string")
-        self._method_add_string_867188035 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_add_string_867188035_name._native_ptr(), 867188035)
-        assert(TextLine._method_add_string_867188035 != nil)
-        let _method_add_object_735420116_name = StringName(from: "add_object")
-        self._method_add_object_735420116 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_add_object_735420116_name._native_ptr(), 735420116)
-        assert(TextLine._method_add_object_735420116 != nil)
-        let _method_resize_object_960819067_name = StringName(from: "resize_object")
-        self._method_resize_object_960819067 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_resize_object_960819067_name._native_ptr(), 960819067)
-        assert(TextLine._method_resize_object_960819067 != nil)
-        let _method_set_width_373806689_name = StringName(from: "set_width")
-        self._method_set_width_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_set_width_373806689_name._native_ptr(), 373806689)
-        assert(TextLine._method_set_width_373806689 != nil)
-        let _method_get_width_1740695150_name = StringName(from: "get_width")
-        self._method_get_width_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_width_1740695150_name._native_ptr(), 1740695150)
-        assert(TextLine._method_get_width_1740695150 != nil)
-        let _method_set_horizontal_alignment_2312603777_name = StringName(from: "set_horizontal_alignment")
-        self._method_set_horizontal_alignment_2312603777 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_set_horizontal_alignment_2312603777_name._native_ptr(), 2312603777)
-        assert(TextLine._method_set_horizontal_alignment_2312603777 != nil)
-        let _method_get_horizontal_alignment_341400642_name = StringName(from: "get_horizontal_alignment")
-        self._method_get_horizontal_alignment_341400642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_horizontal_alignment_341400642_name._native_ptr(), 341400642)
-        assert(TextLine._method_get_horizontal_alignment_341400642 != nil)
-        let _method_tab_align_2899603908_name = StringName(from: "tab_align")
-        self._method_tab_align_2899603908 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_tab_align_2899603908_name._native_ptr(), 2899603908)
-        assert(TextLine._method_tab_align_2899603908 != nil)
-        let _method_set_flags_2877345813_name = StringName(from: "set_flags")
-        self._method_set_flags_2877345813 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_set_flags_2877345813_name._native_ptr(), 2877345813)
-        assert(TextLine._method_set_flags_2877345813 != nil)
-        let _method_get_flags_1583363614_name = StringName(from: "get_flags")
-        self._method_get_flags_1583363614 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_flags_1583363614_name._native_ptr(), 1583363614)
-        assert(TextLine._method_get_flags_1583363614 != nil)
-        let _method_set_text_overrun_behavior_1008890932_name = StringName(from: "set_text_overrun_behavior")
-        self._method_set_text_overrun_behavior_1008890932 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_set_text_overrun_behavior_1008890932_name._native_ptr(), 1008890932)
-        assert(TextLine._method_set_text_overrun_behavior_1008890932 != nil)
-        let _method_get_text_overrun_behavior_3779142101_name = StringName(from: "get_text_overrun_behavior")
-        self._method_get_text_overrun_behavior_3779142101 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_text_overrun_behavior_3779142101_name._native_ptr(), 3779142101)
-        assert(TextLine._method_get_text_overrun_behavior_3779142101 != nil)
-        let _method_get_objects_3995934104_name = StringName(from: "get_objects")
-        self._method_get_objects_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_objects_3995934104_name._native_ptr(), 3995934104)
-        assert(TextLine._method_get_objects_3995934104 != nil)
-        let _method_get_object_rect_1742700391_name = StringName(from: "get_object_rect")
-        self._method_get_object_rect_1742700391 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_object_rect_1742700391_name._native_ptr(), 1742700391)
-        assert(TextLine._method_get_object_rect_1742700391 != nil)
-        let _method_get_size_3341600327_name = StringName(from: "get_size")
-        self._method_get_size_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_size_3341600327_name._native_ptr(), 3341600327)
-        assert(TextLine._method_get_size_3341600327 != nil)
-        let _method_get_rid_2944877500_name = StringName(from: "get_rid")
-        self._method_get_rid_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_rid_2944877500_name._native_ptr(), 2944877500)
-        assert(TextLine._method_get_rid_2944877500 != nil)
-        let _method_get_line_ascent_1740695150_name = StringName(from: "get_line_ascent")
-        self._method_get_line_ascent_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_line_ascent_1740695150_name._native_ptr(), 1740695150)
-        assert(TextLine._method_get_line_ascent_1740695150 != nil)
-        let _method_get_line_descent_1740695150_name = StringName(from: "get_line_descent")
-        self._method_get_line_descent_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_line_descent_1740695150_name._native_ptr(), 1740695150)
-        assert(TextLine._method_get_line_descent_1740695150 != nil)
-        let _method_get_line_width_1740695150_name = StringName(from: "get_line_width")
-        self._method_get_line_width_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_line_width_1740695150_name._native_ptr(), 1740695150)
-        assert(TextLine._method_get_line_width_1740695150 != nil)
-        let _method_get_line_underline_position_1740695150_name = StringName(from: "get_line_underline_position")
-        self._method_get_line_underline_position_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_line_underline_position_1740695150_name._native_ptr(), 1740695150)
-        assert(TextLine._method_get_line_underline_position_1740695150 != nil)
-        let _method_get_line_underline_thickness_1740695150_name = StringName(from: "get_line_underline_thickness")
-        self._method_get_line_underline_thickness_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_get_line_underline_thickness_1740695150_name._native_ptr(), 1740695150)
-        assert(TextLine._method_get_line_underline_thickness_1740695150 != nil)
-        let _method_draw_1164457837_name = StringName(from: "draw")
-        self._method_draw_1164457837 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_draw_1164457837_name._native_ptr(), 1164457837)
-        assert(TextLine._method_draw_1164457837 != nil)
-        let _method_draw_outline_1364491366_name = StringName(from: "draw_outline")
-        self._method_draw_outline_1364491366 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_draw_outline_1364491366_name._native_ptr(), 1364491366)
-        assert(TextLine._method_draw_outline_1364491366 != nil)
-        let _method_hit_test_2401831903_name = StringName(from: "hit_test")
-        self._method_hit_test_2401831903 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextLine._native_ptr(), _method_hit_test_2401831903_name._native_ptr(), 2401831903)
-        assert(TextLine._method_hit_test_2401831903 != nil)
+        self._method_clear_3218959716 = StringName(from: "clear")
+        assert(self._method_clear_3218959716 != nil)
+        self._method_set_direction_1418190634 = StringName(from: "set_direction")
+        assert(self._method_set_direction_1418190634 != nil)
+        self._method_get_direction_2516697328 = StringName(from: "get_direction")
+        assert(self._method_get_direction_2516697328 != nil)
+        self._method_set_orientation_42823726 = StringName(from: "set_orientation")
+        assert(self._method_set_orientation_42823726 != nil)
+        self._method_get_orientation_175768116 = StringName(from: "get_orientation")
+        assert(self._method_get_orientation_175768116 != nil)
+        self._method_set_preserve_invalid_2586408642 = StringName(from: "set_preserve_invalid")
+        assert(self._method_set_preserve_invalid_2586408642 != nil)
+        self._method_get_preserve_invalid_36873697 = StringName(from: "get_preserve_invalid")
+        assert(self._method_get_preserve_invalid_36873697 != nil)
+        self._method_set_preserve_control_2586408642 = StringName(from: "set_preserve_control")
+        assert(self._method_set_preserve_control_2586408642 != nil)
+        self._method_get_preserve_control_36873697 = StringName(from: "get_preserve_control")
+        assert(self._method_get_preserve_control_36873697 != nil)
+        self._method_set_bidi_override_381264803 = StringName(from: "set_bidi_override")
+        assert(self._method_set_bidi_override_381264803 != nil)
+        self._method_add_string_867188035 = StringName(from: "add_string")
+        assert(self._method_add_string_867188035 != nil)
+        self._method_add_object_735420116 = StringName(from: "add_object")
+        assert(self._method_add_object_735420116 != nil)
+        self._method_resize_object_960819067 = StringName(from: "resize_object")
+        assert(self._method_resize_object_960819067 != nil)
+        self._method_set_width_373806689 = StringName(from: "set_width")
+        assert(self._method_set_width_373806689 != nil)
+        self._method_get_width_1740695150 = StringName(from: "get_width")
+        assert(self._method_get_width_1740695150 != nil)
+        self._method_set_horizontal_alignment_2312603777 = StringName(from: "set_horizontal_alignment")
+        assert(self._method_set_horizontal_alignment_2312603777 != nil)
+        self._method_get_horizontal_alignment_341400642 = StringName(from: "get_horizontal_alignment")
+        assert(self._method_get_horizontal_alignment_341400642 != nil)
+        self._method_tab_align_2899603908 = StringName(from: "tab_align")
+        assert(self._method_tab_align_2899603908 != nil)
+        self._method_set_flags_2877345813 = StringName(from: "set_flags")
+        assert(self._method_set_flags_2877345813 != nil)
+        self._method_get_flags_1583363614 = StringName(from: "get_flags")
+        assert(self._method_get_flags_1583363614 != nil)
+        self._method_set_text_overrun_behavior_1008890932 = StringName(from: "set_text_overrun_behavior")
+        assert(self._method_set_text_overrun_behavior_1008890932 != nil)
+        self._method_get_text_overrun_behavior_3779142101 = StringName(from: "get_text_overrun_behavior")
+        assert(self._method_get_text_overrun_behavior_3779142101 != nil)
+        self._method_get_objects_3995934104 = StringName(from: "get_objects")
+        assert(self._method_get_objects_3995934104 != nil)
+        self._method_get_object_rect_1742700391 = StringName(from: "get_object_rect")
+        assert(self._method_get_object_rect_1742700391 != nil)
+        self._method_get_size_3341600327 = StringName(from: "get_size")
+        assert(self._method_get_size_3341600327 != nil)
+        self._method_get_rid_2944877500 = StringName(from: "get_rid")
+        assert(self._method_get_rid_2944877500 != nil)
+        self._method_get_line_ascent_1740695150 = StringName(from: "get_line_ascent")
+        assert(self._method_get_line_ascent_1740695150 != nil)
+        self._method_get_line_descent_1740695150 = StringName(from: "get_line_descent")
+        assert(self._method_get_line_descent_1740695150 != nil)
+        self._method_get_line_width_1740695150 = StringName(from: "get_line_width")
+        assert(self._method_get_line_width_1740695150 != nil)
+        self._method_get_line_underline_position_1740695150 = StringName(from: "get_line_underline_position")
+        assert(self._method_get_line_underline_position_1740695150 != nil)
+        self._method_get_line_underline_thickness_1740695150 = StringName(from: "get_line_underline_thickness")
+        assert(self._method_get_line_underline_thickness_1740695150 != nil)
+        self._method_draw_1164457837 = StringName(from: "draw")
+        assert(self._method_draw_1164457837 != nil)
+        self._method_draw_outline_1364491366 = StringName(from: "draw_outline")
+        assert(self._method_draw_outline_1364491366 != nil)
+        self._method_hit_test_2401831903 = StringName(from: "hit_test")
+        assert(self._method_hit_test_2401831903 != nil)
     }
 
     public func clear()  {
@@ -165,8 +132,13 @@ open class TextLine : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -180,8 +152,13 @@ open class TextLine : RefCounted {
                 .init(direction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_direction_1418190634,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_direction_1418190634._native_ptr(),
+                    1418190634)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -196,8 +173,13 @@ open class TextLine : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_direction_2516697328,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_direction_2516697328._native_ptr(),
+                    2516697328)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -212,8 +194,13 @@ open class TextLine : RefCounted {
                 .init(orientation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_orientation_42823726,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_orientation_42823726._native_ptr(),
+                    42823726)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -228,8 +215,13 @@ open class TextLine : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_orientation_175768116,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_orientation_175768116._native_ptr(),
+                    175768116)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -244,8 +236,13 @@ open class TextLine : RefCounted {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_preserve_invalid_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_preserve_invalid_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -261,8 +258,13 @@ open class TextLine : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_preserve_invalid_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_preserve_invalid_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -277,8 +279,13 @@ open class TextLine : RefCounted {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_preserve_control_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_preserve_control_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -294,8 +301,13 @@ open class TextLine : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_preserve_control_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_preserve_control_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -310,8 +322,13 @@ open class TextLine : RefCounted {
                 .init(override_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bidi_override_381264803,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bidi_override_381264803._native_ptr(),
+                    381264803)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -331,8 +348,13 @@ open class TextLine : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_string_867188035,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_string_867188035._native_ptr(),
+                    867188035)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -354,8 +376,13 @@ open class TextLine : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_object_735420116,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_object_735420116._native_ptr(),
+                    735420116)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -378,8 +405,13 @@ open class TextLine : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_resize_object_960819067,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_resize_object_960819067._native_ptr(),
+                    960819067)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -396,8 +428,13 @@ open class TextLine : RefCounted {
                 .init(width_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_width_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_width_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -413,8 +450,13 @@ open class TextLine : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_width_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_width_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -429,8 +471,13 @@ open class TextLine : RefCounted {
                 .init(alignment_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_horizontal_alignment_2312603777,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_horizontal_alignment_2312603777._native_ptr(),
+                    2312603777)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -445,8 +492,13 @@ open class TextLine : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_horizontal_alignment_341400642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_horizontal_alignment_341400642._native_ptr(),
+                    341400642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -461,8 +513,13 @@ open class TextLine : RefCounted {
                 .init(tab_stops_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_tab_align_2899603908,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_tab_align_2899603908._native_ptr(),
+                    2899603908)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -476,8 +533,13 @@ open class TextLine : RefCounted {
                 .init(flags_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flags_2877345813,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flags_2877345813._native_ptr(),
+                    2877345813)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -492,8 +554,13 @@ open class TextLine : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_flags_1583363614,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_flags_1583363614._native_ptr(),
+                    1583363614)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -508,8 +575,13 @@ open class TextLine : RefCounted {
                 .init(overrun_behavior_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_text_overrun_behavior_1008890932,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_text_overrun_behavior_1008890932._native_ptr(),
+                    1008890932)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -524,8 +596,13 @@ open class TextLine : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_overrun_behavior_3779142101,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_overrun_behavior_3779142101._native_ptr(),
+                    3779142101)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -540,8 +617,13 @@ open class TextLine : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_objects_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_objects_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -557,8 +639,13 @@ open class TextLine : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_object_rect_1742700391,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_object_rect_1742700391._native_ptr(),
+                    1742700391)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -573,8 +660,13 @@ open class TextLine : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -589,8 +681,13 @@ open class TextLine : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rid_2944877500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rid_2944877500._native_ptr(),
+                    2944877500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -606,8 +703,13 @@ open class TextLine : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_ascent_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_ascent_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -623,8 +725,13 @@ open class TextLine : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_descent_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_descent_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -640,8 +747,13 @@ open class TextLine : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_width_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_width_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -657,8 +769,13 @@ open class TextLine : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_underline_position_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_underline_position_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -674,8 +791,13 @@ open class TextLine : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_underline_thickness_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_underline_thickness_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -692,8 +814,13 @@ open class TextLine : RefCounted {
                 .init(canvas_native), .init(pos_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_draw_1164457837,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_draw_1164457837._native_ptr(),
+                    1164457837)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -710,8 +837,13 @@ open class TextLine : RefCounted {
                 .init(canvas_native), .init(pos_native), .init(outline_size_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_draw_outline_1364491366,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_draw_outline_1364491366._native_ptr(),
+                    1364491366)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -728,8 +860,13 @@ open class TextLine : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_hit_test_2401831903,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_hit_test_2401831903._native_ptr(),
+                    2401831903)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

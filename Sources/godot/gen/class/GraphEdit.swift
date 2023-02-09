@@ -18,227 +18,176 @@ open class GraphEdit : Control {
 
     public override class var __godot_name: StringName { __godot_name_GraphEdit }
 
-    static var _method__is_in_input_hotzone_0: GDExtensionMethodBindPtr! = nil
-    static var _method__is_in_output_hotzone_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_connection_line_0: GDExtensionMethodBindPtr! = nil
-    static var _method__is_node_hover_valid_0: GDExtensionMethodBindPtr! = nil
-    static var _method_connect_node_195065850: GDExtensionMethodBindPtr! = nil
-    static var _method_is_node_connected_4216241294: GDExtensionMethodBindPtr! = nil
-    static var _method_disconnect_node_1933654315: GDExtensionMethodBindPtr! = nil
-    static var _method_set_connection_activity_1141899943: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_list_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_connections_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_force_connection_drag_end_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_scroll_ofs_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_scroll_ofs_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_add_valid_right_disconnect_type_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_valid_right_disconnect_type_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_add_valid_left_disconnect_type_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_valid_left_disconnect_type_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_add_valid_connection_type_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_valid_connection_type_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_is_valid_connection_type_2522259332: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_line_1562168077: GDExtensionMethodBindPtr! = nil
-    static var _method_set_panning_scheme_18893313: GDExtensionMethodBindPtr! = nil
-    static var _method_get_panning_scheme_549924446: GDExtensionMethodBindPtr! = nil
-    static var _method_set_zoom_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_zoom_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_zoom_min_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_zoom_min_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_zoom_max_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_zoom_max_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_zoom_step_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_zoom_step_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_show_zoom_label_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_showing_zoom_label_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_snap_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_snap_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_snap_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_using_snap_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_connection_lines_curvature_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_lines_curvature_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_connection_lines_thickness_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_connection_lines_thickness_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_connection_lines_antialiased_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_connection_lines_antialiased_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_minimap_size_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_minimap_size_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_minimap_opacity_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_minimap_opacity_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_minimap_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_minimap_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_arrange_nodes_button_hidden_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_arrange_nodes_button_hidden_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_right_disconnects_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_right_disconnects_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_zoom_hbox_3590609951: GDExtensionMethodBindPtr! = nil
-    static var _method_arrange_nodes_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_selected_1078189570: GDExtensionMethodBindPtr! = nil
+    static var _method__is_in_input_hotzone_0: StringName! = nil
+    static var _method__is_in_output_hotzone_0: StringName! = nil
+    static var _method__get_connection_line_0: StringName! = nil
+    static var _method__is_node_hover_valid_0: StringName! = nil
+    static var _method_connect_node_195065850: StringName! = nil
+    static var _method_is_node_connected_4216241294: StringName! = nil
+    static var _method_disconnect_node_1933654315: StringName! = nil
+    static var _method_set_connection_activity_1141899943: StringName! = nil
+    static var _method_get_connection_list_3995934104: StringName! = nil
+    static var _method_clear_connections_3218959716: StringName! = nil
+    static var _method_force_connection_drag_end_3218959716: StringName! = nil
+    static var _method_get_scroll_ofs_3341600327: StringName! = nil
+    static var _method_set_scroll_ofs_743155724: StringName! = nil
+    static var _method_add_valid_right_disconnect_type_1286410249: StringName! = nil
+    static var _method_remove_valid_right_disconnect_type_1286410249: StringName! = nil
+    static var _method_add_valid_left_disconnect_type_1286410249: StringName! = nil
+    static var _method_remove_valid_left_disconnect_type_1286410249: StringName! = nil
+    static var _method_add_valid_connection_type_3937882851: StringName! = nil
+    static var _method_remove_valid_connection_type_3937882851: StringName! = nil
+    static var _method_is_valid_connection_type_2522259332: StringName! = nil
+    static var _method_get_connection_line_1562168077: StringName! = nil
+    static var _method_set_panning_scheme_18893313: StringName! = nil
+    static var _method_get_panning_scheme_549924446: StringName! = nil
+    static var _method_set_zoom_373806689: StringName! = nil
+    static var _method_get_zoom_1740695150: StringName! = nil
+    static var _method_set_zoom_min_373806689: StringName! = nil
+    static var _method_get_zoom_min_1740695150: StringName! = nil
+    static var _method_set_zoom_max_373806689: StringName! = nil
+    static var _method_get_zoom_max_1740695150: StringName! = nil
+    static var _method_set_zoom_step_373806689: StringName! = nil
+    static var _method_get_zoom_step_1740695150: StringName! = nil
+    static var _method_set_show_zoom_label_2586408642: StringName! = nil
+    static var _method_is_showing_zoom_label_36873697: StringName! = nil
+    static var _method_set_snap_1286410249: StringName! = nil
+    static var _method_get_snap_3905245786: StringName! = nil
+    static var _method_set_use_snap_2586408642: StringName! = nil
+    static var _method_is_using_snap_36873697: StringName! = nil
+    static var _method_set_connection_lines_curvature_373806689: StringName! = nil
+    static var _method_get_connection_lines_curvature_1740695150: StringName! = nil
+    static var _method_set_connection_lines_thickness_373806689: StringName! = nil
+    static var _method_get_connection_lines_thickness_1740695150: StringName! = nil
+    static var _method_set_connection_lines_antialiased_2586408642: StringName! = nil
+    static var _method_is_connection_lines_antialiased_36873697: StringName! = nil
+    static var _method_set_minimap_size_743155724: StringName! = nil
+    static var _method_get_minimap_size_3341600327: StringName! = nil
+    static var _method_set_minimap_opacity_373806689: StringName! = nil
+    static var _method_get_minimap_opacity_1740695150: StringName! = nil
+    static var _method_set_minimap_enabled_2586408642: StringName! = nil
+    static var _method_is_minimap_enabled_36873697: StringName! = nil
+    static var _method_set_arrange_nodes_button_hidden_2586408642: StringName! = nil
+    static var _method_is_arrange_nodes_button_hidden_36873697: StringName! = nil
+    static var _method_set_right_disconnects_2586408642: StringName! = nil
+    static var _method_is_right_disconnects_enabled_36873697: StringName! = nil
+    static var _method_get_zoom_hbox_3590609951: StringName! = nil
+    static var _method_arrange_nodes_3218959716: StringName! = nil
+    static var _method_set_selected_1078189570: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_GraphEdit == nil)
         __godot_name_GraphEdit = StringName(from: "GraphEdit")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_connect_node_195065850_name = StringName(from: "connect_node")
-        self._method_connect_node_195065850 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_connect_node_195065850_name._native_ptr(), 195065850)
-        assert(GraphEdit._method_connect_node_195065850 != nil)
-        let _method_is_node_connected_4216241294_name = StringName(from: "is_node_connected")
-        self._method_is_node_connected_4216241294 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_is_node_connected_4216241294_name._native_ptr(), 4216241294)
-        assert(GraphEdit._method_is_node_connected_4216241294 != nil)
-        let _method_disconnect_node_1933654315_name = StringName(from: "disconnect_node")
-        self._method_disconnect_node_1933654315 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_disconnect_node_1933654315_name._native_ptr(), 1933654315)
-        assert(GraphEdit._method_disconnect_node_1933654315 != nil)
-        let _method_set_connection_activity_1141899943_name = StringName(from: "set_connection_activity")
-        self._method_set_connection_activity_1141899943 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_connection_activity_1141899943_name._native_ptr(), 1141899943)
-        assert(GraphEdit._method_set_connection_activity_1141899943 != nil)
-        let _method_get_connection_list_3995934104_name = StringName(from: "get_connection_list")
-        self._method_get_connection_list_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_get_connection_list_3995934104_name._native_ptr(), 3995934104)
-        assert(GraphEdit._method_get_connection_list_3995934104 != nil)
-        let _method_clear_connections_3218959716_name = StringName(from: "clear_connections")
-        self._method_clear_connections_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_clear_connections_3218959716_name._native_ptr(), 3218959716)
-        assert(GraphEdit._method_clear_connections_3218959716 != nil)
-        let _method_force_connection_drag_end_3218959716_name = StringName(from: "force_connection_drag_end")
-        self._method_force_connection_drag_end_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_force_connection_drag_end_3218959716_name._native_ptr(), 3218959716)
-        assert(GraphEdit._method_force_connection_drag_end_3218959716 != nil)
-        let _method_get_scroll_ofs_3341600327_name = StringName(from: "get_scroll_ofs")
-        self._method_get_scroll_ofs_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_get_scroll_ofs_3341600327_name._native_ptr(), 3341600327)
-        assert(GraphEdit._method_get_scroll_ofs_3341600327 != nil)
-        let _method_set_scroll_ofs_743155724_name = StringName(from: "set_scroll_ofs")
-        self._method_set_scroll_ofs_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_scroll_ofs_743155724_name._native_ptr(), 743155724)
-        assert(GraphEdit._method_set_scroll_ofs_743155724 != nil)
-        let _method_add_valid_right_disconnect_type_1286410249_name = StringName(from: "add_valid_right_disconnect_type")
-        self._method_add_valid_right_disconnect_type_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_add_valid_right_disconnect_type_1286410249_name._native_ptr(), 1286410249)
-        assert(GraphEdit._method_add_valid_right_disconnect_type_1286410249 != nil)
-        let _method_remove_valid_right_disconnect_type_1286410249_name = StringName(from: "remove_valid_right_disconnect_type")
-        self._method_remove_valid_right_disconnect_type_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_remove_valid_right_disconnect_type_1286410249_name._native_ptr(), 1286410249)
-        assert(GraphEdit._method_remove_valid_right_disconnect_type_1286410249 != nil)
-        let _method_add_valid_left_disconnect_type_1286410249_name = StringName(from: "add_valid_left_disconnect_type")
-        self._method_add_valid_left_disconnect_type_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_add_valid_left_disconnect_type_1286410249_name._native_ptr(), 1286410249)
-        assert(GraphEdit._method_add_valid_left_disconnect_type_1286410249 != nil)
-        let _method_remove_valid_left_disconnect_type_1286410249_name = StringName(from: "remove_valid_left_disconnect_type")
-        self._method_remove_valid_left_disconnect_type_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_remove_valid_left_disconnect_type_1286410249_name._native_ptr(), 1286410249)
-        assert(GraphEdit._method_remove_valid_left_disconnect_type_1286410249 != nil)
-        let _method_add_valid_connection_type_3937882851_name = StringName(from: "add_valid_connection_type")
-        self._method_add_valid_connection_type_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_add_valid_connection_type_3937882851_name._native_ptr(), 3937882851)
-        assert(GraphEdit._method_add_valid_connection_type_3937882851 != nil)
-        let _method_remove_valid_connection_type_3937882851_name = StringName(from: "remove_valid_connection_type")
-        self._method_remove_valid_connection_type_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_remove_valid_connection_type_3937882851_name._native_ptr(), 3937882851)
-        assert(GraphEdit._method_remove_valid_connection_type_3937882851 != nil)
-        let _method_is_valid_connection_type_2522259332_name = StringName(from: "is_valid_connection_type")
-        self._method_is_valid_connection_type_2522259332 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_is_valid_connection_type_2522259332_name._native_ptr(), 2522259332)
-        assert(GraphEdit._method_is_valid_connection_type_2522259332 != nil)
-        let _method_get_connection_line_1562168077_name = StringName(from: "get_connection_line")
-        self._method_get_connection_line_1562168077 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_get_connection_line_1562168077_name._native_ptr(), 1562168077)
-        assert(GraphEdit._method_get_connection_line_1562168077 != nil)
-        let _method_set_panning_scheme_18893313_name = StringName(from: "set_panning_scheme")
-        self._method_set_panning_scheme_18893313 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_panning_scheme_18893313_name._native_ptr(), 18893313)
-        assert(GraphEdit._method_set_panning_scheme_18893313 != nil)
-        let _method_get_panning_scheme_549924446_name = StringName(from: "get_panning_scheme")
-        self._method_get_panning_scheme_549924446 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_get_panning_scheme_549924446_name._native_ptr(), 549924446)
-        assert(GraphEdit._method_get_panning_scheme_549924446 != nil)
-        let _method_set_zoom_373806689_name = StringName(from: "set_zoom")
-        self._method_set_zoom_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_zoom_373806689_name._native_ptr(), 373806689)
-        assert(GraphEdit._method_set_zoom_373806689 != nil)
-        let _method_get_zoom_1740695150_name = StringName(from: "get_zoom")
-        self._method_get_zoom_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_get_zoom_1740695150_name._native_ptr(), 1740695150)
-        assert(GraphEdit._method_get_zoom_1740695150 != nil)
-        let _method_set_zoom_min_373806689_name = StringName(from: "set_zoom_min")
-        self._method_set_zoom_min_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_zoom_min_373806689_name._native_ptr(), 373806689)
-        assert(GraphEdit._method_set_zoom_min_373806689 != nil)
-        let _method_get_zoom_min_1740695150_name = StringName(from: "get_zoom_min")
-        self._method_get_zoom_min_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_get_zoom_min_1740695150_name._native_ptr(), 1740695150)
-        assert(GraphEdit._method_get_zoom_min_1740695150 != nil)
-        let _method_set_zoom_max_373806689_name = StringName(from: "set_zoom_max")
-        self._method_set_zoom_max_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_zoom_max_373806689_name._native_ptr(), 373806689)
-        assert(GraphEdit._method_set_zoom_max_373806689 != nil)
-        let _method_get_zoom_max_1740695150_name = StringName(from: "get_zoom_max")
-        self._method_get_zoom_max_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_get_zoom_max_1740695150_name._native_ptr(), 1740695150)
-        assert(GraphEdit._method_get_zoom_max_1740695150 != nil)
-        let _method_set_zoom_step_373806689_name = StringName(from: "set_zoom_step")
-        self._method_set_zoom_step_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_zoom_step_373806689_name._native_ptr(), 373806689)
-        assert(GraphEdit._method_set_zoom_step_373806689 != nil)
-        let _method_get_zoom_step_1740695150_name = StringName(from: "get_zoom_step")
-        self._method_get_zoom_step_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_get_zoom_step_1740695150_name._native_ptr(), 1740695150)
-        assert(GraphEdit._method_get_zoom_step_1740695150 != nil)
-        let _method_set_show_zoom_label_2586408642_name = StringName(from: "set_show_zoom_label")
-        self._method_set_show_zoom_label_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_show_zoom_label_2586408642_name._native_ptr(), 2586408642)
-        assert(GraphEdit._method_set_show_zoom_label_2586408642 != nil)
-        let _method_is_showing_zoom_label_36873697_name = StringName(from: "is_showing_zoom_label")
-        self._method_is_showing_zoom_label_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_is_showing_zoom_label_36873697_name._native_ptr(), 36873697)
-        assert(GraphEdit._method_is_showing_zoom_label_36873697 != nil)
-        let _method_set_snap_1286410249_name = StringName(from: "set_snap")
-        self._method_set_snap_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_snap_1286410249_name._native_ptr(), 1286410249)
-        assert(GraphEdit._method_set_snap_1286410249 != nil)
-        let _method_get_snap_3905245786_name = StringName(from: "get_snap")
-        self._method_get_snap_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_get_snap_3905245786_name._native_ptr(), 3905245786)
-        assert(GraphEdit._method_get_snap_3905245786 != nil)
-        let _method_set_use_snap_2586408642_name = StringName(from: "set_use_snap")
-        self._method_set_use_snap_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_use_snap_2586408642_name._native_ptr(), 2586408642)
-        assert(GraphEdit._method_set_use_snap_2586408642 != nil)
-        let _method_is_using_snap_36873697_name = StringName(from: "is_using_snap")
-        self._method_is_using_snap_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_is_using_snap_36873697_name._native_ptr(), 36873697)
-        assert(GraphEdit._method_is_using_snap_36873697 != nil)
-        let _method_set_connection_lines_curvature_373806689_name = StringName(from: "set_connection_lines_curvature")
-        self._method_set_connection_lines_curvature_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_connection_lines_curvature_373806689_name._native_ptr(), 373806689)
-        assert(GraphEdit._method_set_connection_lines_curvature_373806689 != nil)
-        let _method_get_connection_lines_curvature_1740695150_name = StringName(from: "get_connection_lines_curvature")
-        self._method_get_connection_lines_curvature_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_get_connection_lines_curvature_1740695150_name._native_ptr(), 1740695150)
-        assert(GraphEdit._method_get_connection_lines_curvature_1740695150 != nil)
-        let _method_set_connection_lines_thickness_373806689_name = StringName(from: "set_connection_lines_thickness")
-        self._method_set_connection_lines_thickness_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_connection_lines_thickness_373806689_name._native_ptr(), 373806689)
-        assert(GraphEdit._method_set_connection_lines_thickness_373806689 != nil)
-        let _method_get_connection_lines_thickness_1740695150_name = StringName(from: "get_connection_lines_thickness")
-        self._method_get_connection_lines_thickness_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_get_connection_lines_thickness_1740695150_name._native_ptr(), 1740695150)
-        assert(GraphEdit._method_get_connection_lines_thickness_1740695150 != nil)
-        let _method_set_connection_lines_antialiased_2586408642_name = StringName(from: "set_connection_lines_antialiased")
-        self._method_set_connection_lines_antialiased_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_connection_lines_antialiased_2586408642_name._native_ptr(), 2586408642)
-        assert(GraphEdit._method_set_connection_lines_antialiased_2586408642 != nil)
-        let _method_is_connection_lines_antialiased_36873697_name = StringName(from: "is_connection_lines_antialiased")
-        self._method_is_connection_lines_antialiased_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_is_connection_lines_antialiased_36873697_name._native_ptr(), 36873697)
-        assert(GraphEdit._method_is_connection_lines_antialiased_36873697 != nil)
-        let _method_set_minimap_size_743155724_name = StringName(from: "set_minimap_size")
-        self._method_set_minimap_size_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_minimap_size_743155724_name._native_ptr(), 743155724)
-        assert(GraphEdit._method_set_minimap_size_743155724 != nil)
-        let _method_get_minimap_size_3341600327_name = StringName(from: "get_minimap_size")
-        self._method_get_minimap_size_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_get_minimap_size_3341600327_name._native_ptr(), 3341600327)
-        assert(GraphEdit._method_get_minimap_size_3341600327 != nil)
-        let _method_set_minimap_opacity_373806689_name = StringName(from: "set_minimap_opacity")
-        self._method_set_minimap_opacity_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_minimap_opacity_373806689_name._native_ptr(), 373806689)
-        assert(GraphEdit._method_set_minimap_opacity_373806689 != nil)
-        let _method_get_minimap_opacity_1740695150_name = StringName(from: "get_minimap_opacity")
-        self._method_get_minimap_opacity_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_get_minimap_opacity_1740695150_name._native_ptr(), 1740695150)
-        assert(GraphEdit._method_get_minimap_opacity_1740695150 != nil)
-        let _method_set_minimap_enabled_2586408642_name = StringName(from: "set_minimap_enabled")
-        self._method_set_minimap_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_minimap_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(GraphEdit._method_set_minimap_enabled_2586408642 != nil)
-        let _method_is_minimap_enabled_36873697_name = StringName(from: "is_minimap_enabled")
-        self._method_is_minimap_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_is_minimap_enabled_36873697_name._native_ptr(), 36873697)
-        assert(GraphEdit._method_is_minimap_enabled_36873697 != nil)
-        let _method_set_arrange_nodes_button_hidden_2586408642_name = StringName(from: "set_arrange_nodes_button_hidden")
-        self._method_set_arrange_nodes_button_hidden_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_arrange_nodes_button_hidden_2586408642_name._native_ptr(), 2586408642)
-        assert(GraphEdit._method_set_arrange_nodes_button_hidden_2586408642 != nil)
-        let _method_is_arrange_nodes_button_hidden_36873697_name = StringName(from: "is_arrange_nodes_button_hidden")
-        self._method_is_arrange_nodes_button_hidden_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_is_arrange_nodes_button_hidden_36873697_name._native_ptr(), 36873697)
-        assert(GraphEdit._method_is_arrange_nodes_button_hidden_36873697 != nil)
-        let _method_set_right_disconnects_2586408642_name = StringName(from: "set_right_disconnects")
-        self._method_set_right_disconnects_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_right_disconnects_2586408642_name._native_ptr(), 2586408642)
-        assert(GraphEdit._method_set_right_disconnects_2586408642 != nil)
-        let _method_is_right_disconnects_enabled_36873697_name = StringName(from: "is_right_disconnects_enabled")
-        self._method_is_right_disconnects_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_is_right_disconnects_enabled_36873697_name._native_ptr(), 36873697)
-        assert(GraphEdit._method_is_right_disconnects_enabled_36873697 != nil)
-        let _method_get_zoom_hbox_3590609951_name = StringName(from: "get_zoom_hbox")
-        self._method_get_zoom_hbox_3590609951 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_get_zoom_hbox_3590609951_name._native_ptr(), 3590609951)
-        assert(GraphEdit._method_get_zoom_hbox_3590609951 != nil)
-        let _method_arrange_nodes_3218959716_name = StringName(from: "arrange_nodes")
-        self._method_arrange_nodes_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_arrange_nodes_3218959716_name._native_ptr(), 3218959716)
-        assert(GraphEdit._method_arrange_nodes_3218959716 != nil)
-        let _method_set_selected_1078189570_name = StringName(from: "set_selected")
-        self._method_set_selected_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_GraphEdit._native_ptr(), _method_set_selected_1078189570_name._native_ptr(), 1078189570)
-        assert(GraphEdit._method_set_selected_1078189570 != nil)
+        self._method_connect_node_195065850 = StringName(from: "connect_node")
+        assert(self._method_connect_node_195065850 != nil)
+        self._method_is_node_connected_4216241294 = StringName(from: "is_node_connected")
+        assert(self._method_is_node_connected_4216241294 != nil)
+        self._method_disconnect_node_1933654315 = StringName(from: "disconnect_node")
+        assert(self._method_disconnect_node_1933654315 != nil)
+        self._method_set_connection_activity_1141899943 = StringName(from: "set_connection_activity")
+        assert(self._method_set_connection_activity_1141899943 != nil)
+        self._method_get_connection_list_3995934104 = StringName(from: "get_connection_list")
+        assert(self._method_get_connection_list_3995934104 != nil)
+        self._method_clear_connections_3218959716 = StringName(from: "clear_connections")
+        assert(self._method_clear_connections_3218959716 != nil)
+        self._method_force_connection_drag_end_3218959716 = StringName(from: "force_connection_drag_end")
+        assert(self._method_force_connection_drag_end_3218959716 != nil)
+        self._method_get_scroll_ofs_3341600327 = StringName(from: "get_scroll_ofs")
+        assert(self._method_get_scroll_ofs_3341600327 != nil)
+        self._method_set_scroll_ofs_743155724 = StringName(from: "set_scroll_ofs")
+        assert(self._method_set_scroll_ofs_743155724 != nil)
+        self._method_add_valid_right_disconnect_type_1286410249 = StringName(from: "add_valid_right_disconnect_type")
+        assert(self._method_add_valid_right_disconnect_type_1286410249 != nil)
+        self._method_remove_valid_right_disconnect_type_1286410249 = StringName(from: "remove_valid_right_disconnect_type")
+        assert(self._method_remove_valid_right_disconnect_type_1286410249 != nil)
+        self._method_add_valid_left_disconnect_type_1286410249 = StringName(from: "add_valid_left_disconnect_type")
+        assert(self._method_add_valid_left_disconnect_type_1286410249 != nil)
+        self._method_remove_valid_left_disconnect_type_1286410249 = StringName(from: "remove_valid_left_disconnect_type")
+        assert(self._method_remove_valid_left_disconnect_type_1286410249 != nil)
+        self._method_add_valid_connection_type_3937882851 = StringName(from: "add_valid_connection_type")
+        assert(self._method_add_valid_connection_type_3937882851 != nil)
+        self._method_remove_valid_connection_type_3937882851 = StringName(from: "remove_valid_connection_type")
+        assert(self._method_remove_valid_connection_type_3937882851 != nil)
+        self._method_is_valid_connection_type_2522259332 = StringName(from: "is_valid_connection_type")
+        assert(self._method_is_valid_connection_type_2522259332 != nil)
+        self._method_get_connection_line_1562168077 = StringName(from: "get_connection_line")
+        assert(self._method_get_connection_line_1562168077 != nil)
+        self._method_set_panning_scheme_18893313 = StringName(from: "set_panning_scheme")
+        assert(self._method_set_panning_scheme_18893313 != nil)
+        self._method_get_panning_scheme_549924446 = StringName(from: "get_panning_scheme")
+        assert(self._method_get_panning_scheme_549924446 != nil)
+        self._method_set_zoom_373806689 = StringName(from: "set_zoom")
+        assert(self._method_set_zoom_373806689 != nil)
+        self._method_get_zoom_1740695150 = StringName(from: "get_zoom")
+        assert(self._method_get_zoom_1740695150 != nil)
+        self._method_set_zoom_min_373806689 = StringName(from: "set_zoom_min")
+        assert(self._method_set_zoom_min_373806689 != nil)
+        self._method_get_zoom_min_1740695150 = StringName(from: "get_zoom_min")
+        assert(self._method_get_zoom_min_1740695150 != nil)
+        self._method_set_zoom_max_373806689 = StringName(from: "set_zoom_max")
+        assert(self._method_set_zoom_max_373806689 != nil)
+        self._method_get_zoom_max_1740695150 = StringName(from: "get_zoom_max")
+        assert(self._method_get_zoom_max_1740695150 != nil)
+        self._method_set_zoom_step_373806689 = StringName(from: "set_zoom_step")
+        assert(self._method_set_zoom_step_373806689 != nil)
+        self._method_get_zoom_step_1740695150 = StringName(from: "get_zoom_step")
+        assert(self._method_get_zoom_step_1740695150 != nil)
+        self._method_set_show_zoom_label_2586408642 = StringName(from: "set_show_zoom_label")
+        assert(self._method_set_show_zoom_label_2586408642 != nil)
+        self._method_is_showing_zoom_label_36873697 = StringName(from: "is_showing_zoom_label")
+        assert(self._method_is_showing_zoom_label_36873697 != nil)
+        self._method_set_snap_1286410249 = StringName(from: "set_snap")
+        assert(self._method_set_snap_1286410249 != nil)
+        self._method_get_snap_3905245786 = StringName(from: "get_snap")
+        assert(self._method_get_snap_3905245786 != nil)
+        self._method_set_use_snap_2586408642 = StringName(from: "set_use_snap")
+        assert(self._method_set_use_snap_2586408642 != nil)
+        self._method_is_using_snap_36873697 = StringName(from: "is_using_snap")
+        assert(self._method_is_using_snap_36873697 != nil)
+        self._method_set_connection_lines_curvature_373806689 = StringName(from: "set_connection_lines_curvature")
+        assert(self._method_set_connection_lines_curvature_373806689 != nil)
+        self._method_get_connection_lines_curvature_1740695150 = StringName(from: "get_connection_lines_curvature")
+        assert(self._method_get_connection_lines_curvature_1740695150 != nil)
+        self._method_set_connection_lines_thickness_373806689 = StringName(from: "set_connection_lines_thickness")
+        assert(self._method_set_connection_lines_thickness_373806689 != nil)
+        self._method_get_connection_lines_thickness_1740695150 = StringName(from: "get_connection_lines_thickness")
+        assert(self._method_get_connection_lines_thickness_1740695150 != nil)
+        self._method_set_connection_lines_antialiased_2586408642 = StringName(from: "set_connection_lines_antialiased")
+        assert(self._method_set_connection_lines_antialiased_2586408642 != nil)
+        self._method_is_connection_lines_antialiased_36873697 = StringName(from: "is_connection_lines_antialiased")
+        assert(self._method_is_connection_lines_antialiased_36873697 != nil)
+        self._method_set_minimap_size_743155724 = StringName(from: "set_minimap_size")
+        assert(self._method_set_minimap_size_743155724 != nil)
+        self._method_get_minimap_size_3341600327 = StringName(from: "get_minimap_size")
+        assert(self._method_get_minimap_size_3341600327 != nil)
+        self._method_set_minimap_opacity_373806689 = StringName(from: "set_minimap_opacity")
+        assert(self._method_set_minimap_opacity_373806689 != nil)
+        self._method_get_minimap_opacity_1740695150 = StringName(from: "get_minimap_opacity")
+        assert(self._method_get_minimap_opacity_1740695150 != nil)
+        self._method_set_minimap_enabled_2586408642 = StringName(from: "set_minimap_enabled")
+        assert(self._method_set_minimap_enabled_2586408642 != nil)
+        self._method_is_minimap_enabled_36873697 = StringName(from: "is_minimap_enabled")
+        assert(self._method_is_minimap_enabled_36873697 != nil)
+        self._method_set_arrange_nodes_button_hidden_2586408642 = StringName(from: "set_arrange_nodes_button_hidden")
+        assert(self._method_set_arrange_nodes_button_hidden_2586408642 != nil)
+        self._method_is_arrange_nodes_button_hidden_36873697 = StringName(from: "is_arrange_nodes_button_hidden")
+        assert(self._method_is_arrange_nodes_button_hidden_36873697 != nil)
+        self._method_set_right_disconnects_2586408642 = StringName(from: "set_right_disconnects")
+        assert(self._method_set_right_disconnects_2586408642 != nil)
+        self._method_is_right_disconnects_enabled_36873697 = StringName(from: "is_right_disconnects_enabled")
+        assert(self._method_is_right_disconnects_enabled_36873697 != nil)
+        self._method_get_zoom_hbox_3590609951 = StringName(from: "get_zoom_hbox")
+        assert(self._method_get_zoom_hbox_3590609951 != nil)
+        self._method_arrange_nodes_3218959716 = StringName(from: "arrange_nodes")
+        assert(self._method_arrange_nodes_3218959716 != nil)
+        self._method_set_selected_1078189570 = StringName(from: "set_selected")
+        assert(self._method_set_selected_1078189570 != nil)
     }
 
     public func _is_in_input_hotzone(in_node: Object, in_port: Int64, mouse_position: Vector2) -> UInt8 {
@@ -253,12 +202,7 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__is_in_input_hotzone_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
     }
@@ -274,12 +218,7 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__is_in_output_hotzone_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
     }
@@ -293,12 +232,7 @@ open class GraphEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_connection_line_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedVector2Array(godot: __resPtr.pointee)
     }
     public func _is_node_hover_valid(from_node: StringName, from_port: Int64, to_node: StringName, to_port: Int64) -> UInt8 {
@@ -314,12 +248,7 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__is_node_hover_valid_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
         }
@@ -336,8 +265,13 @@ open class GraphEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_connect_node_195065850,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_connect_node_195065850._native_ptr(),
+                    195065850)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -359,8 +293,13 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_node_connected_4216241294,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_node_connected_4216241294._native_ptr(),
+                    4216241294)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -380,8 +319,13 @@ open class GraphEdit : Control {
                 .init(from_node_native), .init(from_port_native), .init(to_node_native), .init(to_port_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_disconnect_node_1933654315,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_disconnect_node_1933654315._native_ptr(),
+                    1933654315)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -401,8 +345,13 @@ open class GraphEdit : Control {
                 .init(from_node_native), .init(from_port_native), .init(to_node_native), .init(to_port_native), .init(amount_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_connection_activity_1141899943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_connection_activity_1141899943._native_ptr(),
+                    1141899943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -419,8 +368,13 @@ open class GraphEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_list_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_list_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -434,8 +388,13 @@ open class GraphEdit : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_connections_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_connections_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -448,8 +407,13 @@ open class GraphEdit : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_force_connection_drag_end_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_force_connection_drag_end_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -463,8 +427,13 @@ open class GraphEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_scroll_ofs_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_scroll_ofs_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -479,8 +448,13 @@ open class GraphEdit : Control {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_scroll_ofs_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_scroll_ofs_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -494,8 +468,13 @@ open class GraphEdit : Control {
                 .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_valid_right_disconnect_type_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_valid_right_disconnect_type_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -510,8 +489,13 @@ open class GraphEdit : Control {
                 .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_valid_right_disconnect_type_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_valid_right_disconnect_type_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -526,8 +510,13 @@ open class GraphEdit : Control {
                 .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_valid_left_disconnect_type_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_valid_left_disconnect_type_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -542,8 +531,13 @@ open class GraphEdit : Control {
                 .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_valid_left_disconnect_type_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_valid_left_disconnect_type_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -559,8 +553,13 @@ open class GraphEdit : Control {
                 .init(from_type_native), .init(to_type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_valid_connection_type_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_valid_connection_type_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -577,8 +576,13 @@ open class GraphEdit : Control {
                 .init(from_type_native), .init(to_type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_valid_connection_type_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_valid_connection_type_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -597,8 +601,13 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_valid_connection_type_2522259332,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_valid_connection_type_2522259332._native_ptr(),
+                    2522259332)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -617,8 +626,13 @@ open class GraphEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_line_1562168077,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_line_1562168077._native_ptr(),
+                    1562168077)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -633,8 +647,13 @@ open class GraphEdit : Control {
                 .init(scheme_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_panning_scheme_18893313,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_panning_scheme_18893313._native_ptr(),
+                    18893313)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -649,8 +668,13 @@ open class GraphEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_panning_scheme_549924446,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_panning_scheme_549924446._native_ptr(),
+                    549924446)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -665,8 +689,13 @@ open class GraphEdit : Control {
                 .init(zoom_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_zoom_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_zoom_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -682,8 +711,13 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_zoom_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_zoom_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -698,8 +732,13 @@ open class GraphEdit : Control {
                 .init(zoom_min_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_zoom_min_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_zoom_min_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -715,8 +754,13 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_zoom_min_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_zoom_min_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -731,8 +775,13 @@ open class GraphEdit : Control {
                 .init(zoom_max_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_zoom_max_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_zoom_max_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -748,8 +797,13 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_zoom_max_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_zoom_max_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -764,8 +818,13 @@ open class GraphEdit : Control {
                 .init(zoom_step_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_zoom_step_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_zoom_step_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -781,8 +840,13 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_zoom_step_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_zoom_step_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -797,8 +861,13 @@ open class GraphEdit : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_show_zoom_label_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_show_zoom_label_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -814,8 +883,13 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_showing_zoom_label_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_showing_zoom_label_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -830,8 +904,13 @@ open class GraphEdit : Control {
                 .init(pixels_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_snap_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_snap_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -847,8 +926,13 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_snap_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_snap_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -863,8 +947,13 @@ open class GraphEdit : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_snap_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_snap_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -880,8 +969,13 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_using_snap_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_using_snap_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -896,8 +990,13 @@ open class GraphEdit : Control {
                 .init(curvature_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_connection_lines_curvature_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_connection_lines_curvature_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -913,8 +1012,13 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_lines_curvature_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_lines_curvature_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -929,8 +1033,13 @@ open class GraphEdit : Control {
                 .init(pixels_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_connection_lines_thickness_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_connection_lines_thickness_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -946,8 +1055,13 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_connection_lines_thickness_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_connection_lines_thickness_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -962,8 +1076,13 @@ open class GraphEdit : Control {
                 .init(pixels_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_connection_lines_antialiased_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_connection_lines_antialiased_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -979,8 +1098,13 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_connection_lines_antialiased_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_connection_lines_antialiased_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -995,8 +1119,13 @@ open class GraphEdit : Control {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_minimap_size_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_minimap_size_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1010,8 +1139,13 @@ open class GraphEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_minimap_size_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_minimap_size_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1026,8 +1160,13 @@ open class GraphEdit : Control {
                 .init(opacity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_minimap_opacity_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_minimap_opacity_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1043,8 +1182,13 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_minimap_opacity_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_minimap_opacity_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1059,8 +1203,13 @@ open class GraphEdit : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_minimap_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_minimap_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1076,8 +1225,13 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_minimap_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_minimap_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1092,8 +1246,13 @@ open class GraphEdit : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_arrange_nodes_button_hidden_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_arrange_nodes_button_hidden_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1109,8 +1268,13 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_arrange_nodes_button_hidden_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_arrange_nodes_button_hidden_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1125,8 +1289,13 @@ open class GraphEdit : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_right_disconnects_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_right_disconnects_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1142,8 +1311,13 @@ open class GraphEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_right_disconnects_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_right_disconnects_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1158,8 +1332,13 @@ open class GraphEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_zoom_hbox_3590609951,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_zoom_hbox_3590609951._native_ptr(),
+                    3590609951)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1173,8 +1352,13 @@ open class GraphEdit : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_arrange_nodes_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_arrange_nodes_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1188,8 +1372,13 @@ open class GraphEdit : Control {
                 .init(node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_selected_1078189570,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_selected_1078189570._native_ptr(),
+                    1078189570)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

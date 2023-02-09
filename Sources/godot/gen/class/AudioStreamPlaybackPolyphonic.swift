@@ -11,35 +11,31 @@ open class AudioStreamPlaybackPolyphonic : AudioStreamPlayback {
 
     public override class var __godot_name: StringName { __godot_name_AudioStreamPlaybackPolyphonic }
 
-    static var _method_play_stream_3792189967: GDExtensionMethodBindPtr! = nil
-    static var _method_set_stream_volume_1602489585: GDExtensionMethodBindPtr! = nil
-    static var _method_set_stream_pitch_scale_1602489585: GDExtensionMethodBindPtr! = nil
-    static var _method_is_stream_playing_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_stop_stream_1286410249: GDExtensionMethodBindPtr! = nil
+    static var _method_play_stream_3792189967: StringName! = nil
+    static var _method_set_stream_volume_1602489585: StringName! = nil
+    static var _method_set_stream_pitch_scale_1602489585: StringName! = nil
+    static var _method_is_stream_playing_1116898809: StringName! = nil
+    static var _method_stop_stream_1286410249: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AudioStreamPlaybackPolyphonic == nil)
         __godot_name_AudioStreamPlaybackPolyphonic = StringName(from: "AudioStreamPlaybackPolyphonic")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_play_stream_3792189967_name = StringName(from: "play_stream")
-        self._method_play_stream_3792189967 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlaybackPolyphonic._native_ptr(), _method_play_stream_3792189967_name._native_ptr(), 3792189967)
-        assert(AudioStreamPlaybackPolyphonic._method_play_stream_3792189967 != nil)
-        let _method_set_stream_volume_1602489585_name = StringName(from: "set_stream_volume")
-        self._method_set_stream_volume_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlaybackPolyphonic._native_ptr(), _method_set_stream_volume_1602489585_name._native_ptr(), 1602489585)
-        assert(AudioStreamPlaybackPolyphonic._method_set_stream_volume_1602489585 != nil)
-        let _method_set_stream_pitch_scale_1602489585_name = StringName(from: "set_stream_pitch_scale")
-        self._method_set_stream_pitch_scale_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlaybackPolyphonic._native_ptr(), _method_set_stream_pitch_scale_1602489585_name._native_ptr(), 1602489585)
-        assert(AudioStreamPlaybackPolyphonic._method_set_stream_pitch_scale_1602489585 != nil)
-        let _method_is_stream_playing_1116898809_name = StringName(from: "is_stream_playing")
-        self._method_is_stream_playing_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlaybackPolyphonic._native_ptr(), _method_is_stream_playing_1116898809_name._native_ptr(), 1116898809)
-        assert(AudioStreamPlaybackPolyphonic._method_is_stream_playing_1116898809 != nil)
-        let _method_stop_stream_1286410249_name = StringName(from: "stop_stream")
-        self._method_stop_stream_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamPlaybackPolyphonic._native_ptr(), _method_stop_stream_1286410249_name._native_ptr(), 1286410249)
-        assert(AudioStreamPlaybackPolyphonic._method_stop_stream_1286410249 != nil)
+        self._method_play_stream_3792189967 = StringName(from: "play_stream")
+        assert(self._method_play_stream_3792189967 != nil)
+        self._method_set_stream_volume_1602489585 = StringName(from: "set_stream_volume")
+        assert(self._method_set_stream_volume_1602489585 != nil)
+        self._method_set_stream_pitch_scale_1602489585 = StringName(from: "set_stream_pitch_scale")
+        assert(self._method_set_stream_pitch_scale_1602489585 != nil)
+        self._method_is_stream_playing_1116898809 = StringName(from: "is_stream_playing")
+        assert(self._method_is_stream_playing_1116898809 != nil)
+        self._method_stop_stream_1286410249 = StringName(from: "stop_stream")
+        assert(self._method_stop_stream_1286410249 != nil)
     }
 
     public func play_stream(stream: AudioStream, from_offset: Float64, volume_db: Float64, pitch_scale: Float64) -> Int64 {
@@ -55,8 +51,13 @@ open class AudioStreamPlaybackPolyphonic : AudioStreamPlayback {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_play_stream_3792189967,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_play_stream_3792189967._native_ptr(),
+                    3792189967)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -75,8 +76,13 @@ open class AudioStreamPlaybackPolyphonic : AudioStreamPlayback {
                 .init(stream_native), .init(volume_db_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_stream_volume_1602489585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_stream_volume_1602489585._native_ptr(),
+                    1602489585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -93,8 +99,13 @@ open class AudioStreamPlaybackPolyphonic : AudioStreamPlayback {
                 .init(stream_native), .init(pitch_scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_stream_pitch_scale_1602489585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_stream_pitch_scale_1602489585._native_ptr(),
+                    1602489585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -112,8 +123,13 @@ open class AudioStreamPlaybackPolyphonic : AudioStreamPlayback {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_stream_playing_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_stream_playing_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -129,8 +145,13 @@ open class AudioStreamPlaybackPolyphonic : AudioStreamPlayback {
                 .init(stream_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_stop_stream_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_stop_stream_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

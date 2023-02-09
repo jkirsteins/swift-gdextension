@@ -17,23 +17,22 @@ open class VisualShaderNodeParticleEmit : VisualShaderNode {
 
     public override class var __godot_name: StringName { __godot_name_VisualShaderNodeParticleEmit }
 
-    static var _method_set_flags_3960756792: GDExtensionMethodBindPtr! = nil
-    static var _method_get_flags_171277835: GDExtensionMethodBindPtr! = nil
+    static var _method_set_flags_3960756792: StringName! = nil
+    static var _method_get_flags_171277835: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShaderNodeParticleEmit == nil)
         __godot_name_VisualShaderNodeParticleEmit = StringName(from: "VisualShaderNodeParticleEmit")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_flags_3960756792_name = StringName(from: "set_flags")
-        self._method_set_flags_3960756792 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParticleEmit._native_ptr(), _method_set_flags_3960756792_name._native_ptr(), 3960756792)
-        assert(VisualShaderNodeParticleEmit._method_set_flags_3960756792 != nil)
-        let _method_get_flags_171277835_name = StringName(from: "get_flags")
-        self._method_get_flags_171277835 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParticleEmit._native_ptr(), _method_get_flags_171277835_name._native_ptr(), 171277835)
-        assert(VisualShaderNodeParticleEmit._method_get_flags_171277835 != nil)
+        self._method_set_flags_3960756792 = StringName(from: "set_flags")
+        assert(self._method_set_flags_3960756792 != nil)
+        self._method_get_flags_171277835 = StringName(from: "get_flags")
+        assert(self._method_get_flags_171277835 != nil)
     }
 
     public func set_flags(flags: VisualShaderNodeParticleEmit.EmitFlags)  {
@@ -44,8 +43,13 @@ open class VisualShaderNodeParticleEmit : VisualShaderNode {
                 .init(flags_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flags_3960756792,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flags_3960756792._native_ptr(),
+                    3960756792)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -60,8 +64,13 @@ open class VisualShaderNodeParticleEmit : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_flags_171277835,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_flags_171277835._native_ptr(),
+                    171277835)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

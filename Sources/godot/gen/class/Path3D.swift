@@ -13,23 +13,22 @@ open class Path3D : Node3D {
 
     public override class var __godot_name: StringName { __godot_name_Path3D }
 
-    static var _method_set_curve_408955118: GDExtensionMethodBindPtr! = nil
-    static var _method_get_curve_4244715212: GDExtensionMethodBindPtr! = nil
+    static var _method_set_curve_408955118: StringName! = nil
+    static var _method_get_curve_4244715212: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Path3D == nil)
         __godot_name_Path3D = StringName(from: "Path3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_curve_408955118_name = StringName(from: "set_curve")
-        self._method_set_curve_408955118 = self.interface.pointee.classdb_get_method_bind(__godot_name_Path3D._native_ptr(), _method_set_curve_408955118_name._native_ptr(), 408955118)
-        assert(Path3D._method_set_curve_408955118 != nil)
-        let _method_get_curve_4244715212_name = StringName(from: "get_curve")
-        self._method_get_curve_4244715212 = self.interface.pointee.classdb_get_method_bind(__godot_name_Path3D._native_ptr(), _method_get_curve_4244715212_name._native_ptr(), 4244715212)
-        assert(Path3D._method_get_curve_4244715212 != nil)
+        self._method_set_curve_408955118 = StringName(from: "set_curve")
+        assert(self._method_set_curve_408955118 != nil)
+        self._method_get_curve_4244715212 = StringName(from: "get_curve")
+        assert(self._method_get_curve_4244715212 != nil)
     }
 
     public func set_curve(curve: Curve3D)  {
@@ -40,8 +39,13 @@ open class Path3D : Node3D {
                 .init(curve_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_curve_408955118,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_curve_408955118._native_ptr(),
+                    408955118)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -55,8 +59,13 @@ open class Path3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_curve_4244715212,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_curve_4244715212._native_ptr(),
+                    4244715212)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

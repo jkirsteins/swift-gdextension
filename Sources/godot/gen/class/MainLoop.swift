@@ -103,15 +103,16 @@ open class MainLoop : Object {
 
     public override class var __godot_name: StringName { __godot_name_MainLoop }
 
-    static var _method__initialize_0: GDExtensionMethodBindPtr! = nil
-    static var _method__physics_process_0: GDExtensionMethodBindPtr! = nil
-    static var _method__process_0: GDExtensionMethodBindPtr! = nil
-    static var _method__finalize_0: GDExtensionMethodBindPtr! = nil
+    static var _method__initialize_0: StringName! = nil
+    static var _method__physics_process_0: StringName! = nil
+    static var _method__process_0: StringName! = nil
+    static var _method__finalize_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_MainLoop == nil)
         __godot_name_MainLoop = StringName(from: "MainLoop")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -126,12 +127,7 @@ open class MainLoop : Object {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__initialize_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _physics_process(delta: Float64) -> UInt8 {
         withUnsafePointer(to: delta) { delta_native in
@@ -143,12 +139,7 @@ open class MainLoop : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__physics_process_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
     }
@@ -162,12 +153,7 @@ open class MainLoop : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__process_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
     }
@@ -178,11 +164,6 @@ open class MainLoop : Object {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__finalize_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
 }

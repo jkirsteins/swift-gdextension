@@ -62,121 +62,96 @@ open class AStarGrid2D : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_AStarGrid2D }
 
-    static var _method__estimate_cost_0: GDExtensionMethodBindPtr! = nil
-    static var _method__compute_cost_0: GDExtensionMethodBindPtr! = nil
-    static var _method_set_size_1130785943: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_3690982128: GDExtensionMethodBindPtr! = nil
-    static var _method_set_offset_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_offset_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cell_size_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cell_size_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_is_in_bounds_2522259332: GDExtensionMethodBindPtr! = nil
-    static var _method_is_in_boundsv_3900751641: GDExtensionMethodBindPtr! = nil
-    static var _method_is_dirty_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_update_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_jumping_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_jumping_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_diagonal_mode_1017829798: GDExtensionMethodBindPtr! = nil
-    static var _method_get_diagonal_mode_3129282674: GDExtensionMethodBindPtr! = nil
-    static var _method_set_default_compute_heuristic_1044375519: GDExtensionMethodBindPtr! = nil
-    static var _method_get_default_compute_heuristic_2074731422: GDExtensionMethodBindPtr! = nil
-    static var _method_set_default_estimate_heuristic_1044375519: GDExtensionMethodBindPtr! = nil
-    static var _method_get_default_estimate_heuristic_2074731422: GDExtensionMethodBindPtr! = nil
-    static var _method_set_point_solid_2825551965: GDExtensionMethodBindPtr! = nil
-    static var _method_is_point_solid_3900751641: GDExtensionMethodBindPtr! = nil
-    static var _method_set_point_weight_scale_2262553149: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_weight_scale_719993801: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_position_108438297: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_path_690373547: GDExtensionMethodBindPtr! = nil
-    static var _method_get_id_path_1989391000: GDExtensionMethodBindPtr! = nil
+    static var _method__estimate_cost_0: StringName! = nil
+    static var _method__compute_cost_0: StringName! = nil
+    static var _method_set_size_1130785943: StringName! = nil
+    static var _method_get_size_3690982128: StringName! = nil
+    static var _method_set_offset_743155724: StringName! = nil
+    static var _method_get_offset_3341600327: StringName! = nil
+    static var _method_set_cell_size_743155724: StringName! = nil
+    static var _method_get_cell_size_3341600327: StringName! = nil
+    static var _method_is_in_bounds_2522259332: StringName! = nil
+    static var _method_is_in_boundsv_3900751641: StringName! = nil
+    static var _method_is_dirty_36873697: StringName! = nil
+    static var _method_update_3218959716: StringName! = nil
+    static var _method_set_jumping_enabled_2586408642: StringName! = nil
+    static var _method_is_jumping_enabled_36873697: StringName! = nil
+    static var _method_set_diagonal_mode_1017829798: StringName! = nil
+    static var _method_get_diagonal_mode_3129282674: StringName! = nil
+    static var _method_set_default_compute_heuristic_1044375519: StringName! = nil
+    static var _method_get_default_compute_heuristic_2074731422: StringName! = nil
+    static var _method_set_default_estimate_heuristic_1044375519: StringName! = nil
+    static var _method_get_default_estimate_heuristic_2074731422: StringName! = nil
+    static var _method_set_point_solid_2825551965: StringName! = nil
+    static var _method_is_point_solid_3900751641: StringName! = nil
+    static var _method_set_point_weight_scale_2262553149: StringName! = nil
+    static var _method_get_point_weight_scale_719993801: StringName! = nil
+    static var _method_clear_3218959716: StringName! = nil
+    static var _method_get_point_position_108438297: StringName! = nil
+    static var _method_get_point_path_690373547: StringName! = nil
+    static var _method_get_id_path_1989391000: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AStarGrid2D == nil)
         __godot_name_AStarGrid2D = StringName(from: "AStarGrid2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_size_1130785943_name = StringName(from: "set_size")
-        self._method_set_size_1130785943 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_set_size_1130785943_name._native_ptr(), 1130785943)
-        assert(AStarGrid2D._method_set_size_1130785943 != nil)
-        let _method_get_size_3690982128_name = StringName(from: "get_size")
-        self._method_get_size_3690982128 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_get_size_3690982128_name._native_ptr(), 3690982128)
-        assert(AStarGrid2D._method_get_size_3690982128 != nil)
-        let _method_set_offset_743155724_name = StringName(from: "set_offset")
-        self._method_set_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_set_offset_743155724_name._native_ptr(), 743155724)
-        assert(AStarGrid2D._method_set_offset_743155724 != nil)
-        let _method_get_offset_3341600327_name = StringName(from: "get_offset")
-        self._method_get_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_get_offset_3341600327_name._native_ptr(), 3341600327)
-        assert(AStarGrid2D._method_get_offset_3341600327 != nil)
-        let _method_set_cell_size_743155724_name = StringName(from: "set_cell_size")
-        self._method_set_cell_size_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_set_cell_size_743155724_name._native_ptr(), 743155724)
-        assert(AStarGrid2D._method_set_cell_size_743155724 != nil)
-        let _method_get_cell_size_3341600327_name = StringName(from: "get_cell_size")
-        self._method_get_cell_size_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_get_cell_size_3341600327_name._native_ptr(), 3341600327)
-        assert(AStarGrid2D._method_get_cell_size_3341600327 != nil)
-        let _method_is_in_bounds_2522259332_name = StringName(from: "is_in_bounds")
-        self._method_is_in_bounds_2522259332 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_is_in_bounds_2522259332_name._native_ptr(), 2522259332)
-        assert(AStarGrid2D._method_is_in_bounds_2522259332 != nil)
-        let _method_is_in_boundsv_3900751641_name = StringName(from: "is_in_boundsv")
-        self._method_is_in_boundsv_3900751641 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_is_in_boundsv_3900751641_name._native_ptr(), 3900751641)
-        assert(AStarGrid2D._method_is_in_boundsv_3900751641 != nil)
-        let _method_is_dirty_36873697_name = StringName(from: "is_dirty")
-        self._method_is_dirty_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_is_dirty_36873697_name._native_ptr(), 36873697)
-        assert(AStarGrid2D._method_is_dirty_36873697 != nil)
-        let _method_update_3218959716_name = StringName(from: "update")
-        self._method_update_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_update_3218959716_name._native_ptr(), 3218959716)
-        assert(AStarGrid2D._method_update_3218959716 != nil)
-        let _method_set_jumping_enabled_2586408642_name = StringName(from: "set_jumping_enabled")
-        self._method_set_jumping_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_set_jumping_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(AStarGrid2D._method_set_jumping_enabled_2586408642 != nil)
-        let _method_is_jumping_enabled_36873697_name = StringName(from: "is_jumping_enabled")
-        self._method_is_jumping_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_is_jumping_enabled_36873697_name._native_ptr(), 36873697)
-        assert(AStarGrid2D._method_is_jumping_enabled_36873697 != nil)
-        let _method_set_diagonal_mode_1017829798_name = StringName(from: "set_diagonal_mode")
-        self._method_set_diagonal_mode_1017829798 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_set_diagonal_mode_1017829798_name._native_ptr(), 1017829798)
-        assert(AStarGrid2D._method_set_diagonal_mode_1017829798 != nil)
-        let _method_get_diagonal_mode_3129282674_name = StringName(from: "get_diagonal_mode")
-        self._method_get_diagonal_mode_3129282674 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_get_diagonal_mode_3129282674_name._native_ptr(), 3129282674)
-        assert(AStarGrid2D._method_get_diagonal_mode_3129282674 != nil)
-        let _method_set_default_compute_heuristic_1044375519_name = StringName(from: "set_default_compute_heuristic")
-        self._method_set_default_compute_heuristic_1044375519 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_set_default_compute_heuristic_1044375519_name._native_ptr(), 1044375519)
-        assert(AStarGrid2D._method_set_default_compute_heuristic_1044375519 != nil)
-        let _method_get_default_compute_heuristic_2074731422_name = StringName(from: "get_default_compute_heuristic")
-        self._method_get_default_compute_heuristic_2074731422 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_get_default_compute_heuristic_2074731422_name._native_ptr(), 2074731422)
-        assert(AStarGrid2D._method_get_default_compute_heuristic_2074731422 != nil)
-        let _method_set_default_estimate_heuristic_1044375519_name = StringName(from: "set_default_estimate_heuristic")
-        self._method_set_default_estimate_heuristic_1044375519 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_set_default_estimate_heuristic_1044375519_name._native_ptr(), 1044375519)
-        assert(AStarGrid2D._method_set_default_estimate_heuristic_1044375519 != nil)
-        let _method_get_default_estimate_heuristic_2074731422_name = StringName(from: "get_default_estimate_heuristic")
-        self._method_get_default_estimate_heuristic_2074731422 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_get_default_estimate_heuristic_2074731422_name._native_ptr(), 2074731422)
-        assert(AStarGrid2D._method_get_default_estimate_heuristic_2074731422 != nil)
-        let _method_set_point_solid_2825551965_name = StringName(from: "set_point_solid")
-        self._method_set_point_solid_2825551965 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_set_point_solid_2825551965_name._native_ptr(), 2825551965)
-        assert(AStarGrid2D._method_set_point_solid_2825551965 != nil)
-        let _method_is_point_solid_3900751641_name = StringName(from: "is_point_solid")
-        self._method_is_point_solid_3900751641 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_is_point_solid_3900751641_name._native_ptr(), 3900751641)
-        assert(AStarGrid2D._method_is_point_solid_3900751641 != nil)
-        let _method_set_point_weight_scale_2262553149_name = StringName(from: "set_point_weight_scale")
-        self._method_set_point_weight_scale_2262553149 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_set_point_weight_scale_2262553149_name._native_ptr(), 2262553149)
-        assert(AStarGrid2D._method_set_point_weight_scale_2262553149 != nil)
-        let _method_get_point_weight_scale_719993801_name = StringName(from: "get_point_weight_scale")
-        self._method_get_point_weight_scale_719993801 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_get_point_weight_scale_719993801_name._native_ptr(), 719993801)
-        assert(AStarGrid2D._method_get_point_weight_scale_719993801 != nil)
-        let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
-        assert(AStarGrid2D._method_clear_3218959716 != nil)
-        let _method_get_point_position_108438297_name = StringName(from: "get_point_position")
-        self._method_get_point_position_108438297 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_get_point_position_108438297_name._native_ptr(), 108438297)
-        assert(AStarGrid2D._method_get_point_position_108438297 != nil)
-        let _method_get_point_path_690373547_name = StringName(from: "get_point_path")
-        self._method_get_point_path_690373547 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_get_point_path_690373547_name._native_ptr(), 690373547)
-        assert(AStarGrid2D._method_get_point_path_690373547 != nil)
-        let _method_get_id_path_1989391000_name = StringName(from: "get_id_path")
-        self._method_get_id_path_1989391000 = self.interface.pointee.classdb_get_method_bind(__godot_name_AStarGrid2D._native_ptr(), _method_get_id_path_1989391000_name._native_ptr(), 1989391000)
-        assert(AStarGrid2D._method_get_id_path_1989391000 != nil)
+        self._method_set_size_1130785943 = StringName(from: "set_size")
+        assert(self._method_set_size_1130785943 != nil)
+        self._method_get_size_3690982128 = StringName(from: "get_size")
+        assert(self._method_get_size_3690982128 != nil)
+        self._method_set_offset_743155724 = StringName(from: "set_offset")
+        assert(self._method_set_offset_743155724 != nil)
+        self._method_get_offset_3341600327 = StringName(from: "get_offset")
+        assert(self._method_get_offset_3341600327 != nil)
+        self._method_set_cell_size_743155724 = StringName(from: "set_cell_size")
+        assert(self._method_set_cell_size_743155724 != nil)
+        self._method_get_cell_size_3341600327 = StringName(from: "get_cell_size")
+        assert(self._method_get_cell_size_3341600327 != nil)
+        self._method_is_in_bounds_2522259332 = StringName(from: "is_in_bounds")
+        assert(self._method_is_in_bounds_2522259332 != nil)
+        self._method_is_in_boundsv_3900751641 = StringName(from: "is_in_boundsv")
+        assert(self._method_is_in_boundsv_3900751641 != nil)
+        self._method_is_dirty_36873697 = StringName(from: "is_dirty")
+        assert(self._method_is_dirty_36873697 != nil)
+        self._method_update_3218959716 = StringName(from: "update")
+        assert(self._method_update_3218959716 != nil)
+        self._method_set_jumping_enabled_2586408642 = StringName(from: "set_jumping_enabled")
+        assert(self._method_set_jumping_enabled_2586408642 != nil)
+        self._method_is_jumping_enabled_36873697 = StringName(from: "is_jumping_enabled")
+        assert(self._method_is_jumping_enabled_36873697 != nil)
+        self._method_set_diagonal_mode_1017829798 = StringName(from: "set_diagonal_mode")
+        assert(self._method_set_diagonal_mode_1017829798 != nil)
+        self._method_get_diagonal_mode_3129282674 = StringName(from: "get_diagonal_mode")
+        assert(self._method_get_diagonal_mode_3129282674 != nil)
+        self._method_set_default_compute_heuristic_1044375519 = StringName(from: "set_default_compute_heuristic")
+        assert(self._method_set_default_compute_heuristic_1044375519 != nil)
+        self._method_get_default_compute_heuristic_2074731422 = StringName(from: "get_default_compute_heuristic")
+        assert(self._method_get_default_compute_heuristic_2074731422 != nil)
+        self._method_set_default_estimate_heuristic_1044375519 = StringName(from: "set_default_estimate_heuristic")
+        assert(self._method_set_default_estimate_heuristic_1044375519 != nil)
+        self._method_get_default_estimate_heuristic_2074731422 = StringName(from: "get_default_estimate_heuristic")
+        assert(self._method_get_default_estimate_heuristic_2074731422 != nil)
+        self._method_set_point_solid_2825551965 = StringName(from: "set_point_solid")
+        assert(self._method_set_point_solid_2825551965 != nil)
+        self._method_is_point_solid_3900751641 = StringName(from: "is_point_solid")
+        assert(self._method_is_point_solid_3900751641 != nil)
+        self._method_set_point_weight_scale_2262553149 = StringName(from: "set_point_weight_scale")
+        assert(self._method_set_point_weight_scale_2262553149 != nil)
+        self._method_get_point_weight_scale_719993801 = StringName(from: "get_point_weight_scale")
+        assert(self._method_get_point_weight_scale_719993801 != nil)
+        self._method_clear_3218959716 = StringName(from: "clear")
+        assert(self._method_clear_3218959716 != nil)
+        self._method_get_point_position_108438297 = StringName(from: "get_point_position")
+        assert(self._method_get_point_position_108438297 != nil)
+        self._method_get_point_path_690373547 = StringName(from: "get_point_path")
+        assert(self._method_get_point_path_690373547 != nil)
+        self._method_get_id_path_1989391000 = StringName(from: "get_id_path")
+        assert(self._method_get_id_path_1989391000 != nil)
     }
 
     public func _estimate_cost(from_id: Vector2i, to_id: Vector2i) -> Float64 {
@@ -190,12 +165,7 @@ open class AStarGrid2D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__estimate_cost_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func _compute_cost(from_id: Vector2i, to_id: Vector2i) -> Float64 {
@@ -209,12 +179,7 @@ open class AStarGrid2D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__compute_cost_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Float64(godot: __resPtr.pointee)
     }
     public func set_size(size: Vector2i)  {
@@ -225,8 +190,13 @@ open class AStarGrid2D : RefCounted {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_size_1130785943,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_size_1130785943._native_ptr(),
+                    1130785943)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -240,8 +210,13 @@ open class AStarGrid2D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_3690982128,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_3690982128._native_ptr(),
+                    3690982128)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -256,8 +231,13 @@ open class AStarGrid2D : RefCounted {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_offset_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_offset_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -271,8 +251,13 @@ open class AStarGrid2D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_offset_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_offset_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -287,8 +272,13 @@ open class AStarGrid2D : RefCounted {
                 .init(cell_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cell_size_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cell_size_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -302,8 +292,13 @@ open class AStarGrid2D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cell_size_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cell_size_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -321,8 +316,13 @@ open class AStarGrid2D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_in_bounds_2522259332,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_in_bounds_2522259332._native_ptr(),
+                    2522259332)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -341,8 +341,13 @@ open class AStarGrid2D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_in_boundsv_3900751641,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_in_boundsv_3900751641._native_ptr(),
+                    3900751641)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -358,8 +363,13 @@ open class AStarGrid2D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_dirty_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_dirty_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -373,8 +383,13 @@ open class AStarGrid2D : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_update_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_update_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -388,8 +403,13 @@ open class AStarGrid2D : RefCounted {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_jumping_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_jumping_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -405,8 +425,13 @@ open class AStarGrid2D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_jumping_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_jumping_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -421,8 +446,13 @@ open class AStarGrid2D : RefCounted {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_diagonal_mode_1017829798,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_diagonal_mode_1017829798._native_ptr(),
+                    1017829798)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -437,8 +467,13 @@ open class AStarGrid2D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_diagonal_mode_3129282674,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_diagonal_mode_3129282674._native_ptr(),
+                    3129282674)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -453,8 +488,13 @@ open class AStarGrid2D : RefCounted {
                 .init(heuristic_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_default_compute_heuristic_1044375519,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_default_compute_heuristic_1044375519._native_ptr(),
+                    1044375519)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -469,8 +509,13 @@ open class AStarGrid2D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_default_compute_heuristic_2074731422,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_default_compute_heuristic_2074731422._native_ptr(),
+                    2074731422)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -485,8 +530,13 @@ open class AStarGrid2D : RefCounted {
                 .init(heuristic_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_default_estimate_heuristic_1044375519,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_default_estimate_heuristic_1044375519._native_ptr(),
+                    1044375519)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -501,8 +551,13 @@ open class AStarGrid2D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_default_estimate_heuristic_2074731422,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_default_estimate_heuristic_2074731422._native_ptr(),
+                    2074731422)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -518,8 +573,13 @@ open class AStarGrid2D : RefCounted {
                 .init(id_native), .init(solid_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_point_solid_2825551965,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_point_solid_2825551965._native_ptr(),
+                    2825551965)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -536,8 +596,13 @@ open class AStarGrid2D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_point_solid_3900751641,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_point_solid_3900751641._native_ptr(),
+                    3900751641)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -553,8 +618,13 @@ open class AStarGrid2D : RefCounted {
                 .init(id_native), .init(weight_scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_point_weight_scale_2262553149,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_point_weight_scale_2262553149._native_ptr(),
+                    2262553149)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -571,8 +641,13 @@ open class AStarGrid2D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_weight_scale_719993801,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_weight_scale_719993801._native_ptr(),
+                    719993801)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -586,8 +661,13 @@ open class AStarGrid2D : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -602,8 +682,13 @@ open class AStarGrid2D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_position_108438297,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_position_108438297._native_ptr(),
+                    108438297)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -620,8 +705,13 @@ open class AStarGrid2D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_path_690373547,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_path_690373547._native_ptr(),
+                    690373547)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -638,8 +728,13 @@ open class AStarGrid2D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_id_path_1989391000,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_id_path_1989391000._native_ptr(),
+                    1989391000)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

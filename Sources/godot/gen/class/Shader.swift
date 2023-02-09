@@ -17,39 +17,34 @@ open class Shader : Resource {
 
     public override class var __godot_name: StringName { __godot_name_Shader }
 
-    static var _method_get_mode_3392948163: GDExtensionMethodBindPtr! = nil
-    static var _method_set_code_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_code_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_default_texture_parameter_1628453603: GDExtensionMethodBindPtr! = nil
-    static var _method_get_default_texture_parameter_3823812009: GDExtensionMethodBindPtr! = nil
-    static var _method_get_shader_uniform_list_1230511656: GDExtensionMethodBindPtr! = nil
+    static var _method_get_mode_3392948163: StringName! = nil
+    static var _method_set_code_83702148: StringName! = nil
+    static var _method_get_code_201670096: StringName! = nil
+    static var _method_set_default_texture_parameter_1628453603: StringName! = nil
+    static var _method_get_default_texture_parameter_3823812009: StringName! = nil
+    static var _method_get_shader_uniform_list_1230511656: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Shader == nil)
         __godot_name_Shader = StringName(from: "Shader")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_mode_3392948163_name = StringName(from: "get_mode")
-        self._method_get_mode_3392948163 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shader._native_ptr(), _method_get_mode_3392948163_name._native_ptr(), 3392948163)
-        assert(Shader._method_get_mode_3392948163 != nil)
-        let _method_set_code_83702148_name = StringName(from: "set_code")
-        self._method_set_code_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shader._native_ptr(), _method_set_code_83702148_name._native_ptr(), 83702148)
-        assert(Shader._method_set_code_83702148 != nil)
-        let _method_get_code_201670096_name = StringName(from: "get_code")
-        self._method_get_code_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shader._native_ptr(), _method_get_code_201670096_name._native_ptr(), 201670096)
-        assert(Shader._method_get_code_201670096 != nil)
-        let _method_set_default_texture_parameter_1628453603_name = StringName(from: "set_default_texture_parameter")
-        self._method_set_default_texture_parameter_1628453603 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shader._native_ptr(), _method_set_default_texture_parameter_1628453603_name._native_ptr(), 1628453603)
-        assert(Shader._method_set_default_texture_parameter_1628453603 != nil)
-        let _method_get_default_texture_parameter_3823812009_name = StringName(from: "get_default_texture_parameter")
-        self._method_get_default_texture_parameter_3823812009 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shader._native_ptr(), _method_get_default_texture_parameter_3823812009_name._native_ptr(), 3823812009)
-        assert(Shader._method_get_default_texture_parameter_3823812009 != nil)
-        let _method_get_shader_uniform_list_1230511656_name = StringName(from: "get_shader_uniform_list")
-        self._method_get_shader_uniform_list_1230511656 = self.interface.pointee.classdb_get_method_bind(__godot_name_Shader._native_ptr(), _method_get_shader_uniform_list_1230511656_name._native_ptr(), 1230511656)
-        assert(Shader._method_get_shader_uniform_list_1230511656 != nil)
+        self._method_get_mode_3392948163 = StringName(from: "get_mode")
+        assert(self._method_get_mode_3392948163 != nil)
+        self._method_set_code_83702148 = StringName(from: "set_code")
+        assert(self._method_set_code_83702148 != nil)
+        self._method_get_code_201670096 = StringName(from: "get_code")
+        assert(self._method_get_code_201670096 != nil)
+        self._method_set_default_texture_parameter_1628453603 = StringName(from: "set_default_texture_parameter")
+        assert(self._method_set_default_texture_parameter_1628453603 != nil)
+        self._method_get_default_texture_parameter_3823812009 = StringName(from: "get_default_texture_parameter")
+        assert(self._method_get_default_texture_parameter_3823812009 != nil)
+        self._method_get_shader_uniform_list_1230511656 = StringName(from: "get_shader_uniform_list")
+        assert(self._method_get_shader_uniform_list_1230511656 != nil)
     }
 
     public func get_mode() -> Shader.Mode {
@@ -60,8 +55,13 @@ open class Shader : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_mode_3392948163,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_mode_3392948163._native_ptr(),
+                    3392948163)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -76,8 +76,13 @@ open class Shader : Resource {
                 .init(code_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_code_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_code_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -91,8 +96,13 @@ open class Shader : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_code_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_code_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -109,8 +119,13 @@ open class Shader : Resource {
                 .init(name_native), .init(texture_native), .init(index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_default_texture_parameter_1628453603,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_default_texture_parameter_1628453603._native_ptr(),
+                    1628453603)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -127,8 +142,13 @@ open class Shader : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_default_texture_parameter_3823812009,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_default_texture_parameter_3823812009._native_ptr(),
+                    3823812009)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -145,8 +165,13 @@ open class Shader : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_shader_uniform_list_1230511656,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_shader_uniform_list_1230511656._native_ptr(),
+                    1230511656)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

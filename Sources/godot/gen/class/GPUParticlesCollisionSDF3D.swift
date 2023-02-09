@@ -29,63 +29,52 @@ open class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
 
     public override class var __godot_name: StringName { __godot_name_GPUParticlesCollisionSDF3D }
 
-    static var _method_set_size_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_resolution_1155629297: GDExtensionMethodBindPtr! = nil
-    static var _method_get_resolution_2919555867: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_1188404210: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_373985333: GDExtensionMethodBindPtr! = nil
-    static var _method_set_thickness_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_thickness_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bake_mask_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bake_mask_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bake_mask_value_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bake_mask_value_1116898809: GDExtensionMethodBindPtr! = nil
+    static var _method_set_size_3460891852: StringName! = nil
+    static var _method_get_size_3360562783: StringName! = nil
+    static var _method_set_resolution_1155629297: StringName! = nil
+    static var _method_get_resolution_2919555867: StringName! = nil
+    static var _method_set_texture_1188404210: StringName! = nil
+    static var _method_get_texture_373985333: StringName! = nil
+    static var _method_set_thickness_373806689: StringName! = nil
+    static var _method_get_thickness_1740695150: StringName! = nil
+    static var _method_set_bake_mask_1286410249: StringName! = nil
+    static var _method_get_bake_mask_3905245786: StringName! = nil
+    static var _method_set_bake_mask_value_300928843: StringName! = nil
+    static var _method_get_bake_mask_value_1116898809: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_GPUParticlesCollisionSDF3D == nil)
         __godot_name_GPUParticlesCollisionSDF3D = StringName(from: "GPUParticlesCollisionSDF3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_size_3460891852_name = StringName(from: "set_size")
-        self._method_set_size_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_set_size_3460891852_name._native_ptr(), 3460891852)
-        assert(GPUParticlesCollisionSDF3D._method_set_size_3460891852 != nil)
-        let _method_get_size_3360562783_name = StringName(from: "get_size")
-        self._method_get_size_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_get_size_3360562783_name._native_ptr(), 3360562783)
-        assert(GPUParticlesCollisionSDF3D._method_get_size_3360562783 != nil)
-        let _method_set_resolution_1155629297_name = StringName(from: "set_resolution")
-        self._method_set_resolution_1155629297 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_set_resolution_1155629297_name._native_ptr(), 1155629297)
-        assert(GPUParticlesCollisionSDF3D._method_set_resolution_1155629297 != nil)
-        let _method_get_resolution_2919555867_name = StringName(from: "get_resolution")
-        self._method_get_resolution_2919555867 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_get_resolution_2919555867_name._native_ptr(), 2919555867)
-        assert(GPUParticlesCollisionSDF3D._method_get_resolution_2919555867 != nil)
-        let _method_set_texture_1188404210_name = StringName(from: "set_texture")
-        self._method_set_texture_1188404210 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_set_texture_1188404210_name._native_ptr(), 1188404210)
-        assert(GPUParticlesCollisionSDF3D._method_set_texture_1188404210 != nil)
-        let _method_get_texture_373985333_name = StringName(from: "get_texture")
-        self._method_get_texture_373985333 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_get_texture_373985333_name._native_ptr(), 373985333)
-        assert(GPUParticlesCollisionSDF3D._method_get_texture_373985333 != nil)
-        let _method_set_thickness_373806689_name = StringName(from: "set_thickness")
-        self._method_set_thickness_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_set_thickness_373806689_name._native_ptr(), 373806689)
-        assert(GPUParticlesCollisionSDF3D._method_set_thickness_373806689 != nil)
-        let _method_get_thickness_1740695150_name = StringName(from: "get_thickness")
-        self._method_get_thickness_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_get_thickness_1740695150_name._native_ptr(), 1740695150)
-        assert(GPUParticlesCollisionSDF3D._method_get_thickness_1740695150 != nil)
-        let _method_set_bake_mask_1286410249_name = StringName(from: "set_bake_mask")
-        self._method_set_bake_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_set_bake_mask_1286410249_name._native_ptr(), 1286410249)
-        assert(GPUParticlesCollisionSDF3D._method_set_bake_mask_1286410249 != nil)
-        let _method_get_bake_mask_3905245786_name = StringName(from: "get_bake_mask")
-        self._method_get_bake_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_get_bake_mask_3905245786_name._native_ptr(), 3905245786)
-        assert(GPUParticlesCollisionSDF3D._method_get_bake_mask_3905245786 != nil)
-        let _method_set_bake_mask_value_300928843_name = StringName(from: "set_bake_mask_value")
-        self._method_set_bake_mask_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_set_bake_mask_value_300928843_name._native_ptr(), 300928843)
-        assert(GPUParticlesCollisionSDF3D._method_set_bake_mask_value_300928843 != nil)
-        let _method_get_bake_mask_value_1116898809_name = StringName(from: "get_bake_mask_value")
-        self._method_get_bake_mask_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_GPUParticlesCollisionSDF3D._native_ptr(), _method_get_bake_mask_value_1116898809_name._native_ptr(), 1116898809)
-        assert(GPUParticlesCollisionSDF3D._method_get_bake_mask_value_1116898809 != nil)
+        self._method_set_size_3460891852 = StringName(from: "set_size")
+        assert(self._method_set_size_3460891852 != nil)
+        self._method_get_size_3360562783 = StringName(from: "get_size")
+        assert(self._method_get_size_3360562783 != nil)
+        self._method_set_resolution_1155629297 = StringName(from: "set_resolution")
+        assert(self._method_set_resolution_1155629297 != nil)
+        self._method_get_resolution_2919555867 = StringName(from: "get_resolution")
+        assert(self._method_get_resolution_2919555867 != nil)
+        self._method_set_texture_1188404210 = StringName(from: "set_texture")
+        assert(self._method_set_texture_1188404210 != nil)
+        self._method_get_texture_373985333 = StringName(from: "get_texture")
+        assert(self._method_get_texture_373985333 != nil)
+        self._method_set_thickness_373806689 = StringName(from: "set_thickness")
+        assert(self._method_set_thickness_373806689 != nil)
+        self._method_get_thickness_1740695150 = StringName(from: "get_thickness")
+        assert(self._method_get_thickness_1740695150 != nil)
+        self._method_set_bake_mask_1286410249 = StringName(from: "set_bake_mask")
+        assert(self._method_set_bake_mask_1286410249 != nil)
+        self._method_get_bake_mask_3905245786 = StringName(from: "get_bake_mask")
+        assert(self._method_get_bake_mask_3905245786 != nil)
+        self._method_set_bake_mask_value_300928843 = StringName(from: "set_bake_mask_value")
+        assert(self._method_set_bake_mask_value_300928843 != nil)
+        self._method_get_bake_mask_value_1116898809 = StringName(from: "get_bake_mask_value")
+        assert(self._method_get_bake_mask_value_1116898809 != nil)
     }
 
     public func set_size(size: Vector3)  {
@@ -96,8 +85,13 @@ open class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_size_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_size_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -111,8 +105,13 @@ open class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -127,8 +126,13 @@ open class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
                 .init(resolution_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_resolution_1155629297,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_resolution_1155629297._native_ptr(),
+                    1155629297)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -143,8 +147,13 @@ open class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_resolution_2919555867,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_resolution_2919555867._native_ptr(),
+                    2919555867)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -159,8 +168,13 @@ open class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
                 .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_1188404210,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_1188404210._native_ptr(),
+                    1188404210)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -174,8 +188,13 @@ open class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_373985333,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_373985333._native_ptr(),
+                    373985333)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -190,8 +209,13 @@ open class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
                 .init(thickness_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_thickness_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_thickness_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -207,8 +231,13 @@ open class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_thickness_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_thickness_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -223,8 +252,13 @@ open class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
                 .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bake_mask_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bake_mask_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -240,8 +274,13 @@ open class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bake_mask_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bake_mask_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -257,8 +296,13 @@ open class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
                 .init(layer_number_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bake_mask_value_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bake_mask_value_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -276,8 +320,13 @@ open class GPUParticlesCollisionSDF3D : GPUParticlesCollision3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bake_mask_value_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bake_mask_value_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

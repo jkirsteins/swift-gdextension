@@ -50,127 +50,100 @@ open class LightmapGI : VisualInstance3D {
 
     public override class var __godot_name: StringName { __godot_name_LightmapGI }
 
-    static var _method_set_light_data_1790597277: GDExtensionMethodBindPtr! = nil
-    static var _method_get_light_data_290354153: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bake_quality_1192215803: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bake_quality_688832735: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bounces_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bounces_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_generate_probes_549981046: GDExtensionMethodBindPtr! = nil
-    static var _method_get_generate_probes_3930596226: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bias_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bias_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_environment_mode_2282650285: GDExtensionMethodBindPtr! = nil
-    static var _method_get_environment_mode_4128646479: GDExtensionMethodBindPtr! = nil
-    static var _method_set_environment_custom_sky_3336722921: GDExtensionMethodBindPtr! = nil
-    static var _method_get_environment_custom_sky_1177136966: GDExtensionMethodBindPtr! = nil
-    static var _method_set_environment_custom_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_environment_custom_color_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_environment_custom_energy_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_environment_custom_energy_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_max_texture_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_max_texture_size_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_denoiser_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_using_denoiser_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_interior_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_interior_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_directional_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_directional_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_camera_attributes_2817810567: GDExtensionMethodBindPtr! = nil
-    static var _method_get_camera_attributes_3921283215: GDExtensionMethodBindPtr! = nil
+    static var _method_set_light_data_1790597277: StringName! = nil
+    static var _method_get_light_data_290354153: StringName! = nil
+    static var _method_set_bake_quality_1192215803: StringName! = nil
+    static var _method_get_bake_quality_688832735: StringName! = nil
+    static var _method_set_bounces_1286410249: StringName! = nil
+    static var _method_get_bounces_3905245786: StringName! = nil
+    static var _method_set_generate_probes_549981046: StringName! = nil
+    static var _method_get_generate_probes_3930596226: StringName! = nil
+    static var _method_set_bias_373806689: StringName! = nil
+    static var _method_get_bias_1740695150: StringName! = nil
+    static var _method_set_environment_mode_2282650285: StringName! = nil
+    static var _method_get_environment_mode_4128646479: StringName! = nil
+    static var _method_set_environment_custom_sky_3336722921: StringName! = nil
+    static var _method_get_environment_custom_sky_1177136966: StringName! = nil
+    static var _method_set_environment_custom_color_2920490490: StringName! = nil
+    static var _method_get_environment_custom_color_3444240500: StringName! = nil
+    static var _method_set_environment_custom_energy_373806689: StringName! = nil
+    static var _method_get_environment_custom_energy_1740695150: StringName! = nil
+    static var _method_set_max_texture_size_1286410249: StringName! = nil
+    static var _method_get_max_texture_size_3905245786: StringName! = nil
+    static var _method_set_use_denoiser_2586408642: StringName! = nil
+    static var _method_is_using_denoiser_36873697: StringName! = nil
+    static var _method_set_interior_2586408642: StringName! = nil
+    static var _method_is_interior_36873697: StringName! = nil
+    static var _method_set_directional_2586408642: StringName! = nil
+    static var _method_is_directional_36873697: StringName! = nil
+    static var _method_set_camera_attributes_2817810567: StringName! = nil
+    static var _method_get_camera_attributes_3921283215: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_LightmapGI == nil)
         __godot_name_LightmapGI = StringName(from: "LightmapGI")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_light_data_1790597277_name = StringName(from: "set_light_data")
-        self._method_set_light_data_1790597277 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_set_light_data_1790597277_name._native_ptr(), 1790597277)
-        assert(LightmapGI._method_set_light_data_1790597277 != nil)
-        let _method_get_light_data_290354153_name = StringName(from: "get_light_data")
-        self._method_get_light_data_290354153 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_get_light_data_290354153_name._native_ptr(), 290354153)
-        assert(LightmapGI._method_get_light_data_290354153 != nil)
-        let _method_set_bake_quality_1192215803_name = StringName(from: "set_bake_quality")
-        self._method_set_bake_quality_1192215803 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_set_bake_quality_1192215803_name._native_ptr(), 1192215803)
-        assert(LightmapGI._method_set_bake_quality_1192215803 != nil)
-        let _method_get_bake_quality_688832735_name = StringName(from: "get_bake_quality")
-        self._method_get_bake_quality_688832735 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_get_bake_quality_688832735_name._native_ptr(), 688832735)
-        assert(LightmapGI._method_get_bake_quality_688832735 != nil)
-        let _method_set_bounces_1286410249_name = StringName(from: "set_bounces")
-        self._method_set_bounces_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_set_bounces_1286410249_name._native_ptr(), 1286410249)
-        assert(LightmapGI._method_set_bounces_1286410249 != nil)
-        let _method_get_bounces_3905245786_name = StringName(from: "get_bounces")
-        self._method_get_bounces_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_get_bounces_3905245786_name._native_ptr(), 3905245786)
-        assert(LightmapGI._method_get_bounces_3905245786 != nil)
-        let _method_set_generate_probes_549981046_name = StringName(from: "set_generate_probes")
-        self._method_set_generate_probes_549981046 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_set_generate_probes_549981046_name._native_ptr(), 549981046)
-        assert(LightmapGI._method_set_generate_probes_549981046 != nil)
-        let _method_get_generate_probes_3930596226_name = StringName(from: "get_generate_probes")
-        self._method_get_generate_probes_3930596226 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_get_generate_probes_3930596226_name._native_ptr(), 3930596226)
-        assert(LightmapGI._method_get_generate_probes_3930596226 != nil)
-        let _method_set_bias_373806689_name = StringName(from: "set_bias")
-        self._method_set_bias_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_set_bias_373806689_name._native_ptr(), 373806689)
-        assert(LightmapGI._method_set_bias_373806689 != nil)
-        let _method_get_bias_1740695150_name = StringName(from: "get_bias")
-        self._method_get_bias_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_get_bias_1740695150_name._native_ptr(), 1740695150)
-        assert(LightmapGI._method_get_bias_1740695150 != nil)
-        let _method_set_environment_mode_2282650285_name = StringName(from: "set_environment_mode")
-        self._method_set_environment_mode_2282650285 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_set_environment_mode_2282650285_name._native_ptr(), 2282650285)
-        assert(LightmapGI._method_set_environment_mode_2282650285 != nil)
-        let _method_get_environment_mode_4128646479_name = StringName(from: "get_environment_mode")
-        self._method_get_environment_mode_4128646479 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_get_environment_mode_4128646479_name._native_ptr(), 4128646479)
-        assert(LightmapGI._method_get_environment_mode_4128646479 != nil)
-        let _method_set_environment_custom_sky_3336722921_name = StringName(from: "set_environment_custom_sky")
-        self._method_set_environment_custom_sky_3336722921 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_set_environment_custom_sky_3336722921_name._native_ptr(), 3336722921)
-        assert(LightmapGI._method_set_environment_custom_sky_3336722921 != nil)
-        let _method_get_environment_custom_sky_1177136966_name = StringName(from: "get_environment_custom_sky")
-        self._method_get_environment_custom_sky_1177136966 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_get_environment_custom_sky_1177136966_name._native_ptr(), 1177136966)
-        assert(LightmapGI._method_get_environment_custom_sky_1177136966 != nil)
-        let _method_set_environment_custom_color_2920490490_name = StringName(from: "set_environment_custom_color")
-        self._method_set_environment_custom_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_set_environment_custom_color_2920490490_name._native_ptr(), 2920490490)
-        assert(LightmapGI._method_set_environment_custom_color_2920490490 != nil)
-        let _method_get_environment_custom_color_3444240500_name = StringName(from: "get_environment_custom_color")
-        self._method_get_environment_custom_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_get_environment_custom_color_3444240500_name._native_ptr(), 3444240500)
-        assert(LightmapGI._method_get_environment_custom_color_3444240500 != nil)
-        let _method_set_environment_custom_energy_373806689_name = StringName(from: "set_environment_custom_energy")
-        self._method_set_environment_custom_energy_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_set_environment_custom_energy_373806689_name._native_ptr(), 373806689)
-        assert(LightmapGI._method_set_environment_custom_energy_373806689 != nil)
-        let _method_get_environment_custom_energy_1740695150_name = StringName(from: "get_environment_custom_energy")
-        self._method_get_environment_custom_energy_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_get_environment_custom_energy_1740695150_name._native_ptr(), 1740695150)
-        assert(LightmapGI._method_get_environment_custom_energy_1740695150 != nil)
-        let _method_set_max_texture_size_1286410249_name = StringName(from: "set_max_texture_size")
-        self._method_set_max_texture_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_set_max_texture_size_1286410249_name._native_ptr(), 1286410249)
-        assert(LightmapGI._method_set_max_texture_size_1286410249 != nil)
-        let _method_get_max_texture_size_3905245786_name = StringName(from: "get_max_texture_size")
-        self._method_get_max_texture_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_get_max_texture_size_3905245786_name._native_ptr(), 3905245786)
-        assert(LightmapGI._method_get_max_texture_size_3905245786 != nil)
-        let _method_set_use_denoiser_2586408642_name = StringName(from: "set_use_denoiser")
-        self._method_set_use_denoiser_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_set_use_denoiser_2586408642_name._native_ptr(), 2586408642)
-        assert(LightmapGI._method_set_use_denoiser_2586408642 != nil)
-        let _method_is_using_denoiser_36873697_name = StringName(from: "is_using_denoiser")
-        self._method_is_using_denoiser_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_is_using_denoiser_36873697_name._native_ptr(), 36873697)
-        assert(LightmapGI._method_is_using_denoiser_36873697 != nil)
-        let _method_set_interior_2586408642_name = StringName(from: "set_interior")
-        self._method_set_interior_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_set_interior_2586408642_name._native_ptr(), 2586408642)
-        assert(LightmapGI._method_set_interior_2586408642 != nil)
-        let _method_is_interior_36873697_name = StringName(from: "is_interior")
-        self._method_is_interior_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_is_interior_36873697_name._native_ptr(), 36873697)
-        assert(LightmapGI._method_is_interior_36873697 != nil)
-        let _method_set_directional_2586408642_name = StringName(from: "set_directional")
-        self._method_set_directional_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_set_directional_2586408642_name._native_ptr(), 2586408642)
-        assert(LightmapGI._method_set_directional_2586408642 != nil)
-        let _method_is_directional_36873697_name = StringName(from: "is_directional")
-        self._method_is_directional_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_is_directional_36873697_name._native_ptr(), 36873697)
-        assert(LightmapGI._method_is_directional_36873697 != nil)
-        let _method_set_camera_attributes_2817810567_name = StringName(from: "set_camera_attributes")
-        self._method_set_camera_attributes_2817810567 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_set_camera_attributes_2817810567_name._native_ptr(), 2817810567)
-        assert(LightmapGI._method_set_camera_attributes_2817810567 != nil)
-        let _method_get_camera_attributes_3921283215_name = StringName(from: "get_camera_attributes")
-        self._method_get_camera_attributes_3921283215 = self.interface.pointee.classdb_get_method_bind(__godot_name_LightmapGI._native_ptr(), _method_get_camera_attributes_3921283215_name._native_ptr(), 3921283215)
-        assert(LightmapGI._method_get_camera_attributes_3921283215 != nil)
+        self._method_set_light_data_1790597277 = StringName(from: "set_light_data")
+        assert(self._method_set_light_data_1790597277 != nil)
+        self._method_get_light_data_290354153 = StringName(from: "get_light_data")
+        assert(self._method_get_light_data_290354153 != nil)
+        self._method_set_bake_quality_1192215803 = StringName(from: "set_bake_quality")
+        assert(self._method_set_bake_quality_1192215803 != nil)
+        self._method_get_bake_quality_688832735 = StringName(from: "get_bake_quality")
+        assert(self._method_get_bake_quality_688832735 != nil)
+        self._method_set_bounces_1286410249 = StringName(from: "set_bounces")
+        assert(self._method_set_bounces_1286410249 != nil)
+        self._method_get_bounces_3905245786 = StringName(from: "get_bounces")
+        assert(self._method_get_bounces_3905245786 != nil)
+        self._method_set_generate_probes_549981046 = StringName(from: "set_generate_probes")
+        assert(self._method_set_generate_probes_549981046 != nil)
+        self._method_get_generate_probes_3930596226 = StringName(from: "get_generate_probes")
+        assert(self._method_get_generate_probes_3930596226 != nil)
+        self._method_set_bias_373806689 = StringName(from: "set_bias")
+        assert(self._method_set_bias_373806689 != nil)
+        self._method_get_bias_1740695150 = StringName(from: "get_bias")
+        assert(self._method_get_bias_1740695150 != nil)
+        self._method_set_environment_mode_2282650285 = StringName(from: "set_environment_mode")
+        assert(self._method_set_environment_mode_2282650285 != nil)
+        self._method_get_environment_mode_4128646479 = StringName(from: "get_environment_mode")
+        assert(self._method_get_environment_mode_4128646479 != nil)
+        self._method_set_environment_custom_sky_3336722921 = StringName(from: "set_environment_custom_sky")
+        assert(self._method_set_environment_custom_sky_3336722921 != nil)
+        self._method_get_environment_custom_sky_1177136966 = StringName(from: "get_environment_custom_sky")
+        assert(self._method_get_environment_custom_sky_1177136966 != nil)
+        self._method_set_environment_custom_color_2920490490 = StringName(from: "set_environment_custom_color")
+        assert(self._method_set_environment_custom_color_2920490490 != nil)
+        self._method_get_environment_custom_color_3444240500 = StringName(from: "get_environment_custom_color")
+        assert(self._method_get_environment_custom_color_3444240500 != nil)
+        self._method_set_environment_custom_energy_373806689 = StringName(from: "set_environment_custom_energy")
+        assert(self._method_set_environment_custom_energy_373806689 != nil)
+        self._method_get_environment_custom_energy_1740695150 = StringName(from: "get_environment_custom_energy")
+        assert(self._method_get_environment_custom_energy_1740695150 != nil)
+        self._method_set_max_texture_size_1286410249 = StringName(from: "set_max_texture_size")
+        assert(self._method_set_max_texture_size_1286410249 != nil)
+        self._method_get_max_texture_size_3905245786 = StringName(from: "get_max_texture_size")
+        assert(self._method_get_max_texture_size_3905245786 != nil)
+        self._method_set_use_denoiser_2586408642 = StringName(from: "set_use_denoiser")
+        assert(self._method_set_use_denoiser_2586408642 != nil)
+        self._method_is_using_denoiser_36873697 = StringName(from: "is_using_denoiser")
+        assert(self._method_is_using_denoiser_36873697 != nil)
+        self._method_set_interior_2586408642 = StringName(from: "set_interior")
+        assert(self._method_set_interior_2586408642 != nil)
+        self._method_is_interior_36873697 = StringName(from: "is_interior")
+        assert(self._method_is_interior_36873697 != nil)
+        self._method_set_directional_2586408642 = StringName(from: "set_directional")
+        assert(self._method_set_directional_2586408642 != nil)
+        self._method_is_directional_36873697 = StringName(from: "is_directional")
+        assert(self._method_is_directional_36873697 != nil)
+        self._method_set_camera_attributes_2817810567 = StringName(from: "set_camera_attributes")
+        assert(self._method_set_camera_attributes_2817810567 != nil)
+        self._method_get_camera_attributes_3921283215 = StringName(from: "get_camera_attributes")
+        assert(self._method_get_camera_attributes_3921283215 != nil)
     }
 
     public func set_light_data(data: LightmapGIData)  {
@@ -181,8 +154,13 @@ open class LightmapGI : VisualInstance3D {
                 .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_light_data_1790597277,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_light_data_1790597277._native_ptr(),
+                    1790597277)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -196,8 +174,13 @@ open class LightmapGI : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_light_data_290354153,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_light_data_290354153._native_ptr(),
+                    290354153)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -212,8 +195,13 @@ open class LightmapGI : VisualInstance3D {
                 .init(bake_quality_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bake_quality_1192215803,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bake_quality_1192215803._native_ptr(),
+                    1192215803)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -228,8 +216,13 @@ open class LightmapGI : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bake_quality_688832735,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bake_quality_688832735._native_ptr(),
+                    688832735)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -244,8 +237,13 @@ open class LightmapGI : VisualInstance3D {
                 .init(bounces_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bounces_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bounces_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -261,8 +259,13 @@ open class LightmapGI : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bounces_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bounces_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -277,8 +280,13 @@ open class LightmapGI : VisualInstance3D {
                 .init(subdivision_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_generate_probes_549981046,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_generate_probes_549981046._native_ptr(),
+                    549981046)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -293,8 +301,13 @@ open class LightmapGI : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_generate_probes_3930596226,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_generate_probes_3930596226._native_ptr(),
+                    3930596226)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -309,8 +322,13 @@ open class LightmapGI : VisualInstance3D {
                 .init(bias_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bias_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bias_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -326,8 +344,13 @@ open class LightmapGI : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bias_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bias_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -342,8 +365,13 @@ open class LightmapGI : VisualInstance3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_environment_mode_2282650285,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_environment_mode_2282650285._native_ptr(),
+                    2282650285)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -358,8 +386,13 @@ open class LightmapGI : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_environment_mode_4128646479,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_environment_mode_4128646479._native_ptr(),
+                    4128646479)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -374,8 +407,13 @@ open class LightmapGI : VisualInstance3D {
                 .init(sky_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_environment_custom_sky_3336722921,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_environment_custom_sky_3336722921._native_ptr(),
+                    3336722921)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -389,8 +427,13 @@ open class LightmapGI : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_environment_custom_sky_1177136966,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_environment_custom_sky_1177136966._native_ptr(),
+                    1177136966)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -405,8 +448,13 @@ open class LightmapGI : VisualInstance3D {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_environment_custom_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_environment_custom_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -420,8 +468,13 @@ open class LightmapGI : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_environment_custom_color_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_environment_custom_color_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -436,8 +489,13 @@ open class LightmapGI : VisualInstance3D {
                 .init(energy_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_environment_custom_energy_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_environment_custom_energy_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -453,8 +511,13 @@ open class LightmapGI : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_environment_custom_energy_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_environment_custom_energy_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -469,8 +532,13 @@ open class LightmapGI : VisualInstance3D {
                 .init(max_texture_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_max_texture_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_max_texture_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -486,8 +554,13 @@ open class LightmapGI : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_max_texture_size_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_max_texture_size_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -502,8 +575,13 @@ open class LightmapGI : VisualInstance3D {
                 .init(use_denoiser_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_denoiser_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_denoiser_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -519,8 +597,13 @@ open class LightmapGI : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_using_denoiser_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_using_denoiser_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -535,8 +618,13 @@ open class LightmapGI : VisualInstance3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_interior_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_interior_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -552,8 +640,13 @@ open class LightmapGI : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_interior_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_interior_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -568,8 +661,13 @@ open class LightmapGI : VisualInstance3D {
                 .init(directional_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_directional_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_directional_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -585,8 +683,13 @@ open class LightmapGI : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_directional_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_directional_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -601,8 +704,13 @@ open class LightmapGI : VisualInstance3D {
                 .init(camera_attributes_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_camera_attributes_2817810567,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_camera_attributes_2817810567._native_ptr(),
+                    2817810567)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -616,8 +724,13 @@ open class LightmapGI : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_camera_attributes_3921283215,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_camera_attributes_3921283215._native_ptr(),
+                    3921283215)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

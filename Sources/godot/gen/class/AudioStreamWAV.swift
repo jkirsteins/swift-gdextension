@@ -23,75 +23,61 @@ open class AudioStreamWAV : AudioStream {
 
     public override class var __godot_name: StringName { __godot_name_AudioStreamWAV }
 
-    static var _method_set_data_2971499966: GDExtensionMethodBindPtr! = nil
-    static var _method_get_data_2362200018: GDExtensionMethodBindPtr! = nil
-    static var _method_set_format_60648488: GDExtensionMethodBindPtr! = nil
-    static var _method_get_format_3151724922: GDExtensionMethodBindPtr! = nil
-    static var _method_set_loop_mode_2444882972: GDExtensionMethodBindPtr! = nil
-    static var _method_get_loop_mode_393560655: GDExtensionMethodBindPtr! = nil
-    static var _method_set_loop_begin_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_loop_begin_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_loop_end_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_loop_end_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_mix_rate_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_mix_rate_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_stereo_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_stereo_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_save_to_wav_166001499: GDExtensionMethodBindPtr! = nil
+    static var _method_set_data_2971499966: StringName! = nil
+    static var _method_get_data_2362200018: StringName! = nil
+    static var _method_set_format_60648488: StringName! = nil
+    static var _method_get_format_3151724922: StringName! = nil
+    static var _method_set_loop_mode_2444882972: StringName! = nil
+    static var _method_get_loop_mode_393560655: StringName! = nil
+    static var _method_set_loop_begin_1286410249: StringName! = nil
+    static var _method_get_loop_begin_3905245786: StringName! = nil
+    static var _method_set_loop_end_1286410249: StringName! = nil
+    static var _method_get_loop_end_3905245786: StringName! = nil
+    static var _method_set_mix_rate_1286410249: StringName! = nil
+    static var _method_get_mix_rate_3905245786: StringName! = nil
+    static var _method_set_stereo_2586408642: StringName! = nil
+    static var _method_is_stereo_36873697: StringName! = nil
+    static var _method_save_to_wav_166001499: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AudioStreamWAV == nil)
         __godot_name_AudioStreamWAV = StringName(from: "AudioStreamWAV")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_data_2971499966_name = StringName(from: "set_data")
-        self._method_set_data_2971499966 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamWAV._native_ptr(), _method_set_data_2971499966_name._native_ptr(), 2971499966)
-        assert(AudioStreamWAV._method_set_data_2971499966 != nil)
-        let _method_get_data_2362200018_name = StringName(from: "get_data")
-        self._method_get_data_2362200018 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamWAV._native_ptr(), _method_get_data_2362200018_name._native_ptr(), 2362200018)
-        assert(AudioStreamWAV._method_get_data_2362200018 != nil)
-        let _method_set_format_60648488_name = StringName(from: "set_format")
-        self._method_set_format_60648488 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamWAV._native_ptr(), _method_set_format_60648488_name._native_ptr(), 60648488)
-        assert(AudioStreamWAV._method_set_format_60648488 != nil)
-        let _method_get_format_3151724922_name = StringName(from: "get_format")
-        self._method_get_format_3151724922 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamWAV._native_ptr(), _method_get_format_3151724922_name._native_ptr(), 3151724922)
-        assert(AudioStreamWAV._method_get_format_3151724922 != nil)
-        let _method_set_loop_mode_2444882972_name = StringName(from: "set_loop_mode")
-        self._method_set_loop_mode_2444882972 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamWAV._native_ptr(), _method_set_loop_mode_2444882972_name._native_ptr(), 2444882972)
-        assert(AudioStreamWAV._method_set_loop_mode_2444882972 != nil)
-        let _method_get_loop_mode_393560655_name = StringName(from: "get_loop_mode")
-        self._method_get_loop_mode_393560655 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamWAV._native_ptr(), _method_get_loop_mode_393560655_name._native_ptr(), 393560655)
-        assert(AudioStreamWAV._method_get_loop_mode_393560655 != nil)
-        let _method_set_loop_begin_1286410249_name = StringName(from: "set_loop_begin")
-        self._method_set_loop_begin_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamWAV._native_ptr(), _method_set_loop_begin_1286410249_name._native_ptr(), 1286410249)
-        assert(AudioStreamWAV._method_set_loop_begin_1286410249 != nil)
-        let _method_get_loop_begin_3905245786_name = StringName(from: "get_loop_begin")
-        self._method_get_loop_begin_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamWAV._native_ptr(), _method_get_loop_begin_3905245786_name._native_ptr(), 3905245786)
-        assert(AudioStreamWAV._method_get_loop_begin_3905245786 != nil)
-        let _method_set_loop_end_1286410249_name = StringName(from: "set_loop_end")
-        self._method_set_loop_end_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamWAV._native_ptr(), _method_set_loop_end_1286410249_name._native_ptr(), 1286410249)
-        assert(AudioStreamWAV._method_set_loop_end_1286410249 != nil)
-        let _method_get_loop_end_3905245786_name = StringName(from: "get_loop_end")
-        self._method_get_loop_end_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamWAV._native_ptr(), _method_get_loop_end_3905245786_name._native_ptr(), 3905245786)
-        assert(AudioStreamWAV._method_get_loop_end_3905245786 != nil)
-        let _method_set_mix_rate_1286410249_name = StringName(from: "set_mix_rate")
-        self._method_set_mix_rate_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamWAV._native_ptr(), _method_set_mix_rate_1286410249_name._native_ptr(), 1286410249)
-        assert(AudioStreamWAV._method_set_mix_rate_1286410249 != nil)
-        let _method_get_mix_rate_3905245786_name = StringName(from: "get_mix_rate")
-        self._method_get_mix_rate_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamWAV._native_ptr(), _method_get_mix_rate_3905245786_name._native_ptr(), 3905245786)
-        assert(AudioStreamWAV._method_get_mix_rate_3905245786 != nil)
-        let _method_set_stereo_2586408642_name = StringName(from: "set_stereo")
-        self._method_set_stereo_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamWAV._native_ptr(), _method_set_stereo_2586408642_name._native_ptr(), 2586408642)
-        assert(AudioStreamWAV._method_set_stereo_2586408642 != nil)
-        let _method_is_stereo_36873697_name = StringName(from: "is_stereo")
-        self._method_is_stereo_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamWAV._native_ptr(), _method_is_stereo_36873697_name._native_ptr(), 36873697)
-        assert(AudioStreamWAV._method_is_stereo_36873697 != nil)
-        let _method_save_to_wav_166001499_name = StringName(from: "save_to_wav")
-        self._method_save_to_wav_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioStreamWAV._native_ptr(), _method_save_to_wav_166001499_name._native_ptr(), 166001499)
-        assert(AudioStreamWAV._method_save_to_wav_166001499 != nil)
+        self._method_set_data_2971499966 = StringName(from: "set_data")
+        assert(self._method_set_data_2971499966 != nil)
+        self._method_get_data_2362200018 = StringName(from: "get_data")
+        assert(self._method_get_data_2362200018 != nil)
+        self._method_set_format_60648488 = StringName(from: "set_format")
+        assert(self._method_set_format_60648488 != nil)
+        self._method_get_format_3151724922 = StringName(from: "get_format")
+        assert(self._method_get_format_3151724922 != nil)
+        self._method_set_loop_mode_2444882972 = StringName(from: "set_loop_mode")
+        assert(self._method_set_loop_mode_2444882972 != nil)
+        self._method_get_loop_mode_393560655 = StringName(from: "get_loop_mode")
+        assert(self._method_get_loop_mode_393560655 != nil)
+        self._method_set_loop_begin_1286410249 = StringName(from: "set_loop_begin")
+        assert(self._method_set_loop_begin_1286410249 != nil)
+        self._method_get_loop_begin_3905245786 = StringName(from: "get_loop_begin")
+        assert(self._method_get_loop_begin_3905245786 != nil)
+        self._method_set_loop_end_1286410249 = StringName(from: "set_loop_end")
+        assert(self._method_set_loop_end_1286410249 != nil)
+        self._method_get_loop_end_3905245786 = StringName(from: "get_loop_end")
+        assert(self._method_get_loop_end_3905245786 != nil)
+        self._method_set_mix_rate_1286410249 = StringName(from: "set_mix_rate")
+        assert(self._method_set_mix_rate_1286410249 != nil)
+        self._method_get_mix_rate_3905245786 = StringName(from: "get_mix_rate")
+        assert(self._method_get_mix_rate_3905245786 != nil)
+        self._method_set_stereo_2586408642 = StringName(from: "set_stereo")
+        assert(self._method_set_stereo_2586408642 != nil)
+        self._method_is_stereo_36873697 = StringName(from: "is_stereo")
+        assert(self._method_is_stereo_36873697 != nil)
+        self._method_save_to_wav_166001499 = StringName(from: "save_to_wav")
+        assert(self._method_save_to_wav_166001499 != nil)
     }
 
     public func set_data(data: PackedByteArray)  {
@@ -102,8 +88,13 @@ open class AudioStreamWAV : AudioStream {
                 .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_data_2971499966,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_data_2971499966._native_ptr(),
+                    2971499966)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -117,8 +108,13 @@ open class AudioStreamWAV : AudioStream {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_data_2362200018,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_data_2362200018._native_ptr(),
+                    2362200018)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -133,8 +129,13 @@ open class AudioStreamWAV : AudioStream {
                 .init(format_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_format_60648488,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_format_60648488._native_ptr(),
+                    60648488)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -149,8 +150,13 @@ open class AudioStreamWAV : AudioStream {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_format_3151724922,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_format_3151724922._native_ptr(),
+                    3151724922)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -165,8 +171,13 @@ open class AudioStreamWAV : AudioStream {
                 .init(loop_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_loop_mode_2444882972,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_loop_mode_2444882972._native_ptr(),
+                    2444882972)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -181,8 +192,13 @@ open class AudioStreamWAV : AudioStream {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_loop_mode_393560655,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_loop_mode_393560655._native_ptr(),
+                    393560655)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -197,8 +213,13 @@ open class AudioStreamWAV : AudioStream {
                 .init(loop_begin_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_loop_begin_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_loop_begin_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -214,8 +235,13 @@ open class AudioStreamWAV : AudioStream {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_loop_begin_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_loop_begin_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -230,8 +256,13 @@ open class AudioStreamWAV : AudioStream {
                 .init(loop_end_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_loop_end_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_loop_end_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -247,8 +278,13 @@ open class AudioStreamWAV : AudioStream {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_loop_end_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_loop_end_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -263,8 +299,13 @@ open class AudioStreamWAV : AudioStream {
                 .init(mix_rate_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_mix_rate_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_mix_rate_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -280,8 +321,13 @@ open class AudioStreamWAV : AudioStream {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_mix_rate_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_mix_rate_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -296,8 +342,13 @@ open class AudioStreamWAV : AudioStream {
                 .init(stereo_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_stereo_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_stereo_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -313,8 +364,13 @@ open class AudioStreamWAV : AudioStream {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_stereo_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_stereo_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -330,8 +386,13 @@ open class AudioStreamWAV : AudioStream {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_to_wav_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_to_wav_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

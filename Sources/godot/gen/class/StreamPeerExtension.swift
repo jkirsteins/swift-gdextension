@@ -11,16 +11,17 @@ open class StreamPeerExtension : StreamPeer {
 
     public override class var __godot_name: StringName { __godot_name_StreamPeerExtension }
 
-    static var _method__get_data_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_partial_data_0: GDExtensionMethodBindPtr! = nil
-    static var _method__put_data_0: GDExtensionMethodBindPtr! = nil
-    static var _method__put_partial_data_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_available_bytes_0: GDExtensionMethodBindPtr! = nil
+    static var _method__get_data_0: StringName! = nil
+    static var _method__get_partial_data_0: StringName! = nil
+    static var _method__put_data_0: StringName! = nil
+    static var _method__put_partial_data_0: StringName! = nil
+    static var _method__get_available_bytes_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_StreamPeerExtension == nil)
         __godot_name_StreamPeerExtension = StringName(from: "StreamPeerExtension")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -39,12 +40,7 @@ open class StreamPeerExtension : StreamPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_data_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
         }
         }
@@ -61,12 +57,7 @@ open class StreamPeerExtension : StreamPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_partial_data_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
         }
         }
@@ -83,12 +74,7 @@ open class StreamPeerExtension : StreamPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__put_data_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
         }
         }
@@ -105,12 +91,7 @@ open class StreamPeerExtension : StreamPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__put_partial_data_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
         }
         }
@@ -125,12 +106,7 @@ open class StreamPeerExtension : StreamPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_available_bytes_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
 }

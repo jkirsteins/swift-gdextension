@@ -15,23 +15,22 @@ open class PlaceholderTexture3D : Texture3D {
 
     public override class var __godot_name: StringName { __godot_name_PlaceholderTexture3D }
 
-    static var _method_set_size_560364750: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_2785653706: GDExtensionMethodBindPtr! = nil
+    static var _method_set_size_560364750: StringName! = nil
+    static var _method_get_size_2785653706: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PlaceholderTexture3D == nil)
         __godot_name_PlaceholderTexture3D = StringName(from: "PlaceholderTexture3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_size_560364750_name = StringName(from: "set_size")
-        self._method_set_size_560364750 = self.interface.pointee.classdb_get_method_bind(__godot_name_PlaceholderTexture3D._native_ptr(), _method_set_size_560364750_name._native_ptr(), 560364750)
-        assert(PlaceholderTexture3D._method_set_size_560364750 != nil)
-        let _method_get_size_2785653706_name = StringName(from: "get_size")
-        self._method_get_size_2785653706 = self.interface.pointee.classdb_get_method_bind(__godot_name_PlaceholderTexture3D._native_ptr(), _method_get_size_2785653706_name._native_ptr(), 2785653706)
-        assert(PlaceholderTexture3D._method_get_size_2785653706 != nil)
+        self._method_set_size_560364750 = StringName(from: "set_size")
+        assert(self._method_set_size_560364750 != nil)
+        self._method_get_size_2785653706 = StringName(from: "get_size")
+        assert(self._method_get_size_2785653706 != nil)
     }
 
     public func set_size(size: Vector3i)  {
@@ -42,8 +41,13 @@ open class PlaceholderTexture3D : Texture3D {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_size_560364750,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_size_560364750._native_ptr(),
+                    560364750)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -57,8 +61,13 @@ open class PlaceholderTexture3D : Texture3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_2785653706,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_2785653706._native_ptr(),
+                    2785653706)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

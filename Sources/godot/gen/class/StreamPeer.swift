@@ -13,147 +13,115 @@ open class StreamPeer : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_StreamPeer }
 
-    static var _method_put_data_680677267: GDExtensionMethodBindPtr! = nil
-    static var _method_put_partial_data_2934048347: GDExtensionMethodBindPtr! = nil
-    static var _method_get_data_1171824711: GDExtensionMethodBindPtr! = nil
-    static var _method_get_partial_data_1171824711: GDExtensionMethodBindPtr! = nil
-    static var _method_get_available_bytes_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_big_endian_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_big_endian_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_put_8_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_put_u8_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_put_16_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_put_u16_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_put_32_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_put_u32_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_put_64_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_put_u64_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_put_float_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_put_double_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_put_string_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_put_utf8_string_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_put_var_738511890: GDExtensionMethodBindPtr! = nil
-    static var _method_get_8_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_u8_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_16_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_u16_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_32_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_u32_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_64_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_u64_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_float_191475506: GDExtensionMethodBindPtr! = nil
-    static var _method_get_double_191475506: GDExtensionMethodBindPtr! = nil
-    static var _method_get_string_2309358862: GDExtensionMethodBindPtr! = nil
-    static var _method_get_utf8_string_2309358862: GDExtensionMethodBindPtr! = nil
-    static var _method_get_var_3442865206: GDExtensionMethodBindPtr! = nil
+    static var _method_put_data_680677267: StringName! = nil
+    static var _method_put_partial_data_2934048347: StringName! = nil
+    static var _method_get_data_1171824711: StringName! = nil
+    static var _method_get_partial_data_1171824711: StringName! = nil
+    static var _method_get_available_bytes_3905245786: StringName! = nil
+    static var _method_set_big_endian_2586408642: StringName! = nil
+    static var _method_is_big_endian_enabled_36873697: StringName! = nil
+    static var _method_put_8_1286410249: StringName! = nil
+    static var _method_put_u8_1286410249: StringName! = nil
+    static var _method_put_16_1286410249: StringName! = nil
+    static var _method_put_u16_1286410249: StringName! = nil
+    static var _method_put_32_1286410249: StringName! = nil
+    static var _method_put_u32_1286410249: StringName! = nil
+    static var _method_put_64_1286410249: StringName! = nil
+    static var _method_put_u64_1286410249: StringName! = nil
+    static var _method_put_float_373806689: StringName! = nil
+    static var _method_put_double_373806689: StringName! = nil
+    static var _method_put_string_83702148: StringName! = nil
+    static var _method_put_utf8_string_83702148: StringName! = nil
+    static var _method_put_var_738511890: StringName! = nil
+    static var _method_get_8_2455072627: StringName! = nil
+    static var _method_get_u8_2455072627: StringName! = nil
+    static var _method_get_16_2455072627: StringName! = nil
+    static var _method_get_u16_2455072627: StringName! = nil
+    static var _method_get_32_2455072627: StringName! = nil
+    static var _method_get_u32_2455072627: StringName! = nil
+    static var _method_get_64_2455072627: StringName! = nil
+    static var _method_get_u64_2455072627: StringName! = nil
+    static var _method_get_float_191475506: StringName! = nil
+    static var _method_get_double_191475506: StringName! = nil
+    static var _method_get_string_2309358862: StringName! = nil
+    static var _method_get_utf8_string_2309358862: StringName! = nil
+    static var _method_get_var_3442865206: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_StreamPeer == nil)
         __godot_name_StreamPeer = StringName(from: "StreamPeer")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_put_data_680677267_name = StringName(from: "put_data")
-        self._method_put_data_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_put_data_680677267_name._native_ptr(), 680677267)
-        assert(StreamPeer._method_put_data_680677267 != nil)
-        let _method_put_partial_data_2934048347_name = StringName(from: "put_partial_data")
-        self._method_put_partial_data_2934048347 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_put_partial_data_2934048347_name._native_ptr(), 2934048347)
-        assert(StreamPeer._method_put_partial_data_2934048347 != nil)
-        let _method_get_data_1171824711_name = StringName(from: "get_data")
-        self._method_get_data_1171824711 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_get_data_1171824711_name._native_ptr(), 1171824711)
-        assert(StreamPeer._method_get_data_1171824711 != nil)
-        let _method_get_partial_data_1171824711_name = StringName(from: "get_partial_data")
-        self._method_get_partial_data_1171824711 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_get_partial_data_1171824711_name._native_ptr(), 1171824711)
-        assert(StreamPeer._method_get_partial_data_1171824711 != nil)
-        let _method_get_available_bytes_3905245786_name = StringName(from: "get_available_bytes")
-        self._method_get_available_bytes_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_get_available_bytes_3905245786_name._native_ptr(), 3905245786)
-        assert(StreamPeer._method_get_available_bytes_3905245786 != nil)
-        let _method_set_big_endian_2586408642_name = StringName(from: "set_big_endian")
-        self._method_set_big_endian_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_set_big_endian_2586408642_name._native_ptr(), 2586408642)
-        assert(StreamPeer._method_set_big_endian_2586408642 != nil)
-        let _method_is_big_endian_enabled_36873697_name = StringName(from: "is_big_endian_enabled")
-        self._method_is_big_endian_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_is_big_endian_enabled_36873697_name._native_ptr(), 36873697)
-        assert(StreamPeer._method_is_big_endian_enabled_36873697 != nil)
-        let _method_put_8_1286410249_name = StringName(from: "put_8")
-        self._method_put_8_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_put_8_1286410249_name._native_ptr(), 1286410249)
-        assert(StreamPeer._method_put_8_1286410249 != nil)
-        let _method_put_u8_1286410249_name = StringName(from: "put_u8")
-        self._method_put_u8_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_put_u8_1286410249_name._native_ptr(), 1286410249)
-        assert(StreamPeer._method_put_u8_1286410249 != nil)
-        let _method_put_16_1286410249_name = StringName(from: "put_16")
-        self._method_put_16_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_put_16_1286410249_name._native_ptr(), 1286410249)
-        assert(StreamPeer._method_put_16_1286410249 != nil)
-        let _method_put_u16_1286410249_name = StringName(from: "put_u16")
-        self._method_put_u16_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_put_u16_1286410249_name._native_ptr(), 1286410249)
-        assert(StreamPeer._method_put_u16_1286410249 != nil)
-        let _method_put_32_1286410249_name = StringName(from: "put_32")
-        self._method_put_32_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_put_32_1286410249_name._native_ptr(), 1286410249)
-        assert(StreamPeer._method_put_32_1286410249 != nil)
-        let _method_put_u32_1286410249_name = StringName(from: "put_u32")
-        self._method_put_u32_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_put_u32_1286410249_name._native_ptr(), 1286410249)
-        assert(StreamPeer._method_put_u32_1286410249 != nil)
-        let _method_put_64_1286410249_name = StringName(from: "put_64")
-        self._method_put_64_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_put_64_1286410249_name._native_ptr(), 1286410249)
-        assert(StreamPeer._method_put_64_1286410249 != nil)
-        let _method_put_u64_1286410249_name = StringName(from: "put_u64")
-        self._method_put_u64_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_put_u64_1286410249_name._native_ptr(), 1286410249)
-        assert(StreamPeer._method_put_u64_1286410249 != nil)
-        let _method_put_float_373806689_name = StringName(from: "put_float")
-        self._method_put_float_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_put_float_373806689_name._native_ptr(), 373806689)
-        assert(StreamPeer._method_put_float_373806689 != nil)
-        let _method_put_double_373806689_name = StringName(from: "put_double")
-        self._method_put_double_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_put_double_373806689_name._native_ptr(), 373806689)
-        assert(StreamPeer._method_put_double_373806689 != nil)
-        let _method_put_string_83702148_name = StringName(from: "put_string")
-        self._method_put_string_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_put_string_83702148_name._native_ptr(), 83702148)
-        assert(StreamPeer._method_put_string_83702148 != nil)
-        let _method_put_utf8_string_83702148_name = StringName(from: "put_utf8_string")
-        self._method_put_utf8_string_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_put_utf8_string_83702148_name._native_ptr(), 83702148)
-        assert(StreamPeer._method_put_utf8_string_83702148 != nil)
-        let _method_put_var_738511890_name = StringName(from: "put_var")
-        self._method_put_var_738511890 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_put_var_738511890_name._native_ptr(), 738511890)
-        assert(StreamPeer._method_put_var_738511890 != nil)
-        let _method_get_8_2455072627_name = StringName(from: "get_8")
-        self._method_get_8_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_get_8_2455072627_name._native_ptr(), 2455072627)
-        assert(StreamPeer._method_get_8_2455072627 != nil)
-        let _method_get_u8_2455072627_name = StringName(from: "get_u8")
-        self._method_get_u8_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_get_u8_2455072627_name._native_ptr(), 2455072627)
-        assert(StreamPeer._method_get_u8_2455072627 != nil)
-        let _method_get_16_2455072627_name = StringName(from: "get_16")
-        self._method_get_16_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_get_16_2455072627_name._native_ptr(), 2455072627)
-        assert(StreamPeer._method_get_16_2455072627 != nil)
-        let _method_get_u16_2455072627_name = StringName(from: "get_u16")
-        self._method_get_u16_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_get_u16_2455072627_name._native_ptr(), 2455072627)
-        assert(StreamPeer._method_get_u16_2455072627 != nil)
-        let _method_get_32_2455072627_name = StringName(from: "get_32")
-        self._method_get_32_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_get_32_2455072627_name._native_ptr(), 2455072627)
-        assert(StreamPeer._method_get_32_2455072627 != nil)
-        let _method_get_u32_2455072627_name = StringName(from: "get_u32")
-        self._method_get_u32_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_get_u32_2455072627_name._native_ptr(), 2455072627)
-        assert(StreamPeer._method_get_u32_2455072627 != nil)
-        let _method_get_64_2455072627_name = StringName(from: "get_64")
-        self._method_get_64_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_get_64_2455072627_name._native_ptr(), 2455072627)
-        assert(StreamPeer._method_get_64_2455072627 != nil)
-        let _method_get_u64_2455072627_name = StringName(from: "get_u64")
-        self._method_get_u64_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_get_u64_2455072627_name._native_ptr(), 2455072627)
-        assert(StreamPeer._method_get_u64_2455072627 != nil)
-        let _method_get_float_191475506_name = StringName(from: "get_float")
-        self._method_get_float_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_get_float_191475506_name._native_ptr(), 191475506)
-        assert(StreamPeer._method_get_float_191475506 != nil)
-        let _method_get_double_191475506_name = StringName(from: "get_double")
-        self._method_get_double_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_get_double_191475506_name._native_ptr(), 191475506)
-        assert(StreamPeer._method_get_double_191475506 != nil)
-        let _method_get_string_2309358862_name = StringName(from: "get_string")
-        self._method_get_string_2309358862 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_get_string_2309358862_name._native_ptr(), 2309358862)
-        assert(StreamPeer._method_get_string_2309358862 != nil)
-        let _method_get_utf8_string_2309358862_name = StringName(from: "get_utf8_string")
-        self._method_get_utf8_string_2309358862 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_get_utf8_string_2309358862_name._native_ptr(), 2309358862)
-        assert(StreamPeer._method_get_utf8_string_2309358862 != nil)
-        let _method_get_var_3442865206_name = StringName(from: "get_var")
-        self._method_get_var_3442865206 = self.interface.pointee.classdb_get_method_bind(__godot_name_StreamPeer._native_ptr(), _method_get_var_3442865206_name._native_ptr(), 3442865206)
-        assert(StreamPeer._method_get_var_3442865206 != nil)
+        self._method_put_data_680677267 = StringName(from: "put_data")
+        assert(self._method_put_data_680677267 != nil)
+        self._method_put_partial_data_2934048347 = StringName(from: "put_partial_data")
+        assert(self._method_put_partial_data_2934048347 != nil)
+        self._method_get_data_1171824711 = StringName(from: "get_data")
+        assert(self._method_get_data_1171824711 != nil)
+        self._method_get_partial_data_1171824711 = StringName(from: "get_partial_data")
+        assert(self._method_get_partial_data_1171824711 != nil)
+        self._method_get_available_bytes_3905245786 = StringName(from: "get_available_bytes")
+        assert(self._method_get_available_bytes_3905245786 != nil)
+        self._method_set_big_endian_2586408642 = StringName(from: "set_big_endian")
+        assert(self._method_set_big_endian_2586408642 != nil)
+        self._method_is_big_endian_enabled_36873697 = StringName(from: "is_big_endian_enabled")
+        assert(self._method_is_big_endian_enabled_36873697 != nil)
+        self._method_put_8_1286410249 = StringName(from: "put_8")
+        assert(self._method_put_8_1286410249 != nil)
+        self._method_put_u8_1286410249 = StringName(from: "put_u8")
+        assert(self._method_put_u8_1286410249 != nil)
+        self._method_put_16_1286410249 = StringName(from: "put_16")
+        assert(self._method_put_16_1286410249 != nil)
+        self._method_put_u16_1286410249 = StringName(from: "put_u16")
+        assert(self._method_put_u16_1286410249 != nil)
+        self._method_put_32_1286410249 = StringName(from: "put_32")
+        assert(self._method_put_32_1286410249 != nil)
+        self._method_put_u32_1286410249 = StringName(from: "put_u32")
+        assert(self._method_put_u32_1286410249 != nil)
+        self._method_put_64_1286410249 = StringName(from: "put_64")
+        assert(self._method_put_64_1286410249 != nil)
+        self._method_put_u64_1286410249 = StringName(from: "put_u64")
+        assert(self._method_put_u64_1286410249 != nil)
+        self._method_put_float_373806689 = StringName(from: "put_float")
+        assert(self._method_put_float_373806689 != nil)
+        self._method_put_double_373806689 = StringName(from: "put_double")
+        assert(self._method_put_double_373806689 != nil)
+        self._method_put_string_83702148 = StringName(from: "put_string")
+        assert(self._method_put_string_83702148 != nil)
+        self._method_put_utf8_string_83702148 = StringName(from: "put_utf8_string")
+        assert(self._method_put_utf8_string_83702148 != nil)
+        self._method_put_var_738511890 = StringName(from: "put_var")
+        assert(self._method_put_var_738511890 != nil)
+        self._method_get_8_2455072627 = StringName(from: "get_8")
+        assert(self._method_get_8_2455072627 != nil)
+        self._method_get_u8_2455072627 = StringName(from: "get_u8")
+        assert(self._method_get_u8_2455072627 != nil)
+        self._method_get_16_2455072627 = StringName(from: "get_16")
+        assert(self._method_get_16_2455072627 != nil)
+        self._method_get_u16_2455072627 = StringName(from: "get_u16")
+        assert(self._method_get_u16_2455072627 != nil)
+        self._method_get_32_2455072627 = StringName(from: "get_32")
+        assert(self._method_get_32_2455072627 != nil)
+        self._method_get_u32_2455072627 = StringName(from: "get_u32")
+        assert(self._method_get_u32_2455072627 != nil)
+        self._method_get_64_2455072627 = StringName(from: "get_64")
+        assert(self._method_get_64_2455072627 != nil)
+        self._method_get_u64_2455072627 = StringName(from: "get_u64")
+        assert(self._method_get_u64_2455072627 != nil)
+        self._method_get_float_191475506 = StringName(from: "get_float")
+        assert(self._method_get_float_191475506 != nil)
+        self._method_get_double_191475506 = StringName(from: "get_double")
+        assert(self._method_get_double_191475506 != nil)
+        self._method_get_string_2309358862 = StringName(from: "get_string")
+        assert(self._method_get_string_2309358862 != nil)
+        self._method_get_utf8_string_2309358862 = StringName(from: "get_utf8_string")
+        assert(self._method_get_utf8_string_2309358862 != nil)
+        self._method_get_var_3442865206 = StringName(from: "get_var")
+        assert(self._method_get_var_3442865206 != nil)
     }
 
     public func put_data(data: PackedByteArray) -> Error {
@@ -165,8 +133,13 @@ open class StreamPeer : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_put_data_680677267,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_put_data_680677267._native_ptr(),
+                    680677267)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -182,8 +155,13 @@ open class StreamPeer : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_put_partial_data_2934048347,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_put_partial_data_2934048347._native_ptr(),
+                    2934048347)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -199,8 +177,13 @@ open class StreamPeer : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_data_1171824711,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_data_1171824711._native_ptr(),
+                    1171824711)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -217,8 +200,13 @@ open class StreamPeer : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_partial_data_1171824711,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_partial_data_1171824711._native_ptr(),
+                    1171824711)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -235,8 +223,13 @@ open class StreamPeer : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_available_bytes_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_available_bytes_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -251,8 +244,13 @@ open class StreamPeer : RefCounted {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_big_endian_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_big_endian_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -268,8 +266,13 @@ open class StreamPeer : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_big_endian_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_big_endian_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -284,8 +287,13 @@ open class StreamPeer : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_put_8_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_put_8_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -300,8 +308,13 @@ open class StreamPeer : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_put_u8_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_put_u8_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -316,8 +329,13 @@ open class StreamPeer : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_put_16_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_put_16_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -332,8 +350,13 @@ open class StreamPeer : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_put_u16_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_put_u16_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -348,8 +371,13 @@ open class StreamPeer : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_put_32_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_put_32_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -364,8 +392,13 @@ open class StreamPeer : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_put_u32_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_put_u32_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -380,8 +413,13 @@ open class StreamPeer : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_put_64_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_put_64_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -396,8 +434,13 @@ open class StreamPeer : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_put_u64_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_put_u64_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -412,8 +455,13 @@ open class StreamPeer : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_put_float_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_put_float_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -428,8 +476,13 @@ open class StreamPeer : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_put_double_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_put_double_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -444,8 +497,13 @@ open class StreamPeer : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_put_string_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_put_string_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -459,8 +517,13 @@ open class StreamPeer : RefCounted {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_put_utf8_string_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_put_utf8_string_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -475,8 +538,13 @@ open class StreamPeer : RefCounted {
                 .init(value_native), .init(full_objects_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_put_var_738511890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_put_var_738511890._native_ptr(),
+                    738511890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -492,8 +560,13 @@ open class StreamPeer : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_8_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_8_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -509,8 +582,13 @@ open class StreamPeer : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_u8_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_u8_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -526,8 +604,13 @@ open class StreamPeer : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_16_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_16_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -543,8 +626,13 @@ open class StreamPeer : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_u16_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_u16_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -560,8 +648,13 @@ open class StreamPeer : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_32_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_32_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -577,8 +670,13 @@ open class StreamPeer : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_u32_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_u32_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -594,8 +692,13 @@ open class StreamPeer : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_64_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_64_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -611,8 +714,13 @@ open class StreamPeer : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_u64_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_u64_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -628,8 +736,13 @@ open class StreamPeer : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_float_191475506,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_float_191475506._native_ptr(),
+                    191475506)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -645,8 +758,13 @@ open class StreamPeer : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_double_191475506,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_double_191475506._native_ptr(),
+                    191475506)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -662,8 +780,13 @@ open class StreamPeer : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_string_2309358862,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_string_2309358862._native_ptr(),
+                    2309358862)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -680,8 +803,13 @@ open class StreamPeer : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_utf8_string_2309358862,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_utf8_string_2309358862._native_ptr(),
+                    2309358862)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -698,8 +826,13 @@ open class StreamPeer : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_var_3442865206,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_var_3442865206._native_ptr(),
+                    3442865206)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

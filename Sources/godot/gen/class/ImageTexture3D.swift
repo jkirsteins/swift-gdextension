@@ -13,23 +13,22 @@ open class ImageTexture3D : Texture3D {
 
     public override class var __godot_name: StringName { __godot_name_ImageTexture3D }
 
-    static var _method_create_1130379827: GDExtensionMethodBindPtr! = nil
-    static var _method_update_381264803: GDExtensionMethodBindPtr! = nil
+    static var _method_create_1130379827: StringName! = nil
+    static var _method_update_381264803: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ImageTexture3D == nil)
         __godot_name_ImageTexture3D = StringName(from: "ImageTexture3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_create_1130379827_name = StringName(from: "create")
-        self._method_create_1130379827 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImageTexture3D._native_ptr(), _method_create_1130379827_name._native_ptr(), 1130379827)
-        assert(ImageTexture3D._method_create_1130379827 != nil)
-        let _method_update_381264803_name = StringName(from: "update")
-        self._method_update_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_ImageTexture3D._native_ptr(), _method_update_381264803_name._native_ptr(), 381264803)
-        assert(ImageTexture3D._method_update_381264803 != nil)
+        self._method_create_1130379827 = StringName(from: "create")
+        assert(self._method_create_1130379827 != nil)
+        self._method_update_381264803 = StringName(from: "update")
+        assert(self._method_update_381264803 != nil)
     }
 
     public func create(format: Image.Format, width: Int64, height: Int64, depth: Int64, use_mipmaps: UInt8, data: [Image]) -> Error {
@@ -46,8 +45,13 @@ open class ImageTexture3D : Texture3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_1130379827,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_1130379827._native_ptr(),
+                    1130379827)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -67,8 +71,13 @@ open class ImageTexture3D : Texture3D {
                 .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_update_381264803,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_update_381264803._native_ptr(),
+                    381264803)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

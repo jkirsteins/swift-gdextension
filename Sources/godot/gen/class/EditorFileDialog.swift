@@ -26,95 +26,76 @@ open class EditorFileDialog : ConfirmationDialog {
 
     public override class var __godot_name: StringName { __godot_name_EditorFileDialog }
 
-    static var _method_clear_filters_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_add_filter_233059325: GDExtensionMethodBindPtr! = nil
-    static var _method_get_current_dir_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_current_file_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_current_path_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_current_dir_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_set_current_file_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_set_current_path_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_set_file_mode_274150415: GDExtensionMethodBindPtr! = nil
-    static var _method_get_file_mode_2681044145: GDExtensionMethodBindPtr! = nil
-    static var _method_get_vbox_915758477: GDExtensionMethodBindPtr! = nil
-    static var _method_set_access_3882893764: GDExtensionMethodBindPtr! = nil
-    static var _method_get_access_778734016: GDExtensionMethodBindPtr! = nil
-    static var _method_set_show_hidden_files_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_showing_hidden_files_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_display_mode_3049004050: GDExtensionMethodBindPtr! = nil
-    static var _method_get_display_mode_3517174669: GDExtensionMethodBindPtr! = nil
-    static var _method_set_disable_overwrite_warning_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_overwrite_warning_disabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_invalidate_3218959716: GDExtensionMethodBindPtr! = nil
+    static var _method_clear_filters_3218959716: StringName! = nil
+    static var _method_add_filter_233059325: StringName! = nil
+    static var _method_get_current_dir_201670096: StringName! = nil
+    static var _method_get_current_file_201670096: StringName! = nil
+    static var _method_get_current_path_201670096: StringName! = nil
+    static var _method_set_current_dir_83702148: StringName! = nil
+    static var _method_set_current_file_83702148: StringName! = nil
+    static var _method_set_current_path_83702148: StringName! = nil
+    static var _method_set_file_mode_274150415: StringName! = nil
+    static var _method_get_file_mode_2681044145: StringName! = nil
+    static var _method_get_vbox_915758477: StringName! = nil
+    static var _method_set_access_3882893764: StringName! = nil
+    static var _method_get_access_778734016: StringName! = nil
+    static var _method_set_show_hidden_files_2586408642: StringName! = nil
+    static var _method_is_showing_hidden_files_36873697: StringName! = nil
+    static var _method_set_display_mode_3049004050: StringName! = nil
+    static var _method_get_display_mode_3517174669: StringName! = nil
+    static var _method_set_disable_overwrite_warning_2586408642: StringName! = nil
+    static var _method_is_overwrite_warning_disabled_36873697: StringName! = nil
+    static var _method_invalidate_3218959716: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorFileDialog == nil)
         __godot_name_EditorFileDialog = StringName(from: "EditorFileDialog")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_clear_filters_3218959716_name = StringName(from: "clear_filters")
-        self._method_clear_filters_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_clear_filters_3218959716_name._native_ptr(), 3218959716)
-        assert(EditorFileDialog._method_clear_filters_3218959716 != nil)
-        let _method_add_filter_233059325_name = StringName(from: "add_filter")
-        self._method_add_filter_233059325 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_add_filter_233059325_name._native_ptr(), 233059325)
-        assert(EditorFileDialog._method_add_filter_233059325 != nil)
-        let _method_get_current_dir_201670096_name = StringName(from: "get_current_dir")
-        self._method_get_current_dir_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_get_current_dir_201670096_name._native_ptr(), 201670096)
-        assert(EditorFileDialog._method_get_current_dir_201670096 != nil)
-        let _method_get_current_file_201670096_name = StringName(from: "get_current_file")
-        self._method_get_current_file_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_get_current_file_201670096_name._native_ptr(), 201670096)
-        assert(EditorFileDialog._method_get_current_file_201670096 != nil)
-        let _method_get_current_path_201670096_name = StringName(from: "get_current_path")
-        self._method_get_current_path_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_get_current_path_201670096_name._native_ptr(), 201670096)
-        assert(EditorFileDialog._method_get_current_path_201670096 != nil)
-        let _method_set_current_dir_83702148_name = StringName(from: "set_current_dir")
-        self._method_set_current_dir_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_set_current_dir_83702148_name._native_ptr(), 83702148)
-        assert(EditorFileDialog._method_set_current_dir_83702148 != nil)
-        let _method_set_current_file_83702148_name = StringName(from: "set_current_file")
-        self._method_set_current_file_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_set_current_file_83702148_name._native_ptr(), 83702148)
-        assert(EditorFileDialog._method_set_current_file_83702148 != nil)
-        let _method_set_current_path_83702148_name = StringName(from: "set_current_path")
-        self._method_set_current_path_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_set_current_path_83702148_name._native_ptr(), 83702148)
-        assert(EditorFileDialog._method_set_current_path_83702148 != nil)
-        let _method_set_file_mode_274150415_name = StringName(from: "set_file_mode")
-        self._method_set_file_mode_274150415 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_set_file_mode_274150415_name._native_ptr(), 274150415)
-        assert(EditorFileDialog._method_set_file_mode_274150415 != nil)
-        let _method_get_file_mode_2681044145_name = StringName(from: "get_file_mode")
-        self._method_get_file_mode_2681044145 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_get_file_mode_2681044145_name._native_ptr(), 2681044145)
-        assert(EditorFileDialog._method_get_file_mode_2681044145 != nil)
-        let _method_get_vbox_915758477_name = StringName(from: "get_vbox")
-        self._method_get_vbox_915758477 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_get_vbox_915758477_name._native_ptr(), 915758477)
-        assert(EditorFileDialog._method_get_vbox_915758477 != nil)
-        let _method_set_access_3882893764_name = StringName(from: "set_access")
-        self._method_set_access_3882893764 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_set_access_3882893764_name._native_ptr(), 3882893764)
-        assert(EditorFileDialog._method_set_access_3882893764 != nil)
-        let _method_get_access_778734016_name = StringName(from: "get_access")
-        self._method_get_access_778734016 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_get_access_778734016_name._native_ptr(), 778734016)
-        assert(EditorFileDialog._method_get_access_778734016 != nil)
-        let _method_set_show_hidden_files_2586408642_name = StringName(from: "set_show_hidden_files")
-        self._method_set_show_hidden_files_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_set_show_hidden_files_2586408642_name._native_ptr(), 2586408642)
-        assert(EditorFileDialog._method_set_show_hidden_files_2586408642 != nil)
-        let _method_is_showing_hidden_files_36873697_name = StringName(from: "is_showing_hidden_files")
-        self._method_is_showing_hidden_files_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_is_showing_hidden_files_36873697_name._native_ptr(), 36873697)
-        assert(EditorFileDialog._method_is_showing_hidden_files_36873697 != nil)
-        let _method_set_display_mode_3049004050_name = StringName(from: "set_display_mode")
-        self._method_set_display_mode_3049004050 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_set_display_mode_3049004050_name._native_ptr(), 3049004050)
-        assert(EditorFileDialog._method_set_display_mode_3049004050 != nil)
-        let _method_get_display_mode_3517174669_name = StringName(from: "get_display_mode")
-        self._method_get_display_mode_3517174669 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_get_display_mode_3517174669_name._native_ptr(), 3517174669)
-        assert(EditorFileDialog._method_get_display_mode_3517174669 != nil)
-        let _method_set_disable_overwrite_warning_2586408642_name = StringName(from: "set_disable_overwrite_warning")
-        self._method_set_disable_overwrite_warning_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_set_disable_overwrite_warning_2586408642_name._native_ptr(), 2586408642)
-        assert(EditorFileDialog._method_set_disable_overwrite_warning_2586408642 != nil)
-        let _method_is_overwrite_warning_disabled_36873697_name = StringName(from: "is_overwrite_warning_disabled")
-        self._method_is_overwrite_warning_disabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_is_overwrite_warning_disabled_36873697_name._native_ptr(), 36873697)
-        assert(EditorFileDialog._method_is_overwrite_warning_disabled_36873697 != nil)
-        let _method_invalidate_3218959716_name = StringName(from: "invalidate")
-        self._method_invalidate_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorFileDialog._native_ptr(), _method_invalidate_3218959716_name._native_ptr(), 3218959716)
-        assert(EditorFileDialog._method_invalidate_3218959716 != nil)
+        self._method_clear_filters_3218959716 = StringName(from: "clear_filters")
+        assert(self._method_clear_filters_3218959716 != nil)
+        self._method_add_filter_233059325 = StringName(from: "add_filter")
+        assert(self._method_add_filter_233059325 != nil)
+        self._method_get_current_dir_201670096 = StringName(from: "get_current_dir")
+        assert(self._method_get_current_dir_201670096 != nil)
+        self._method_get_current_file_201670096 = StringName(from: "get_current_file")
+        assert(self._method_get_current_file_201670096 != nil)
+        self._method_get_current_path_201670096 = StringName(from: "get_current_path")
+        assert(self._method_get_current_path_201670096 != nil)
+        self._method_set_current_dir_83702148 = StringName(from: "set_current_dir")
+        assert(self._method_set_current_dir_83702148 != nil)
+        self._method_set_current_file_83702148 = StringName(from: "set_current_file")
+        assert(self._method_set_current_file_83702148 != nil)
+        self._method_set_current_path_83702148 = StringName(from: "set_current_path")
+        assert(self._method_set_current_path_83702148 != nil)
+        self._method_set_file_mode_274150415 = StringName(from: "set_file_mode")
+        assert(self._method_set_file_mode_274150415 != nil)
+        self._method_get_file_mode_2681044145 = StringName(from: "get_file_mode")
+        assert(self._method_get_file_mode_2681044145 != nil)
+        self._method_get_vbox_915758477 = StringName(from: "get_vbox")
+        assert(self._method_get_vbox_915758477 != nil)
+        self._method_set_access_3882893764 = StringName(from: "set_access")
+        assert(self._method_set_access_3882893764 != nil)
+        self._method_get_access_778734016 = StringName(from: "get_access")
+        assert(self._method_get_access_778734016 != nil)
+        self._method_set_show_hidden_files_2586408642 = StringName(from: "set_show_hidden_files")
+        assert(self._method_set_show_hidden_files_2586408642 != nil)
+        self._method_is_showing_hidden_files_36873697 = StringName(from: "is_showing_hidden_files")
+        assert(self._method_is_showing_hidden_files_36873697 != nil)
+        self._method_set_display_mode_3049004050 = StringName(from: "set_display_mode")
+        assert(self._method_set_display_mode_3049004050 != nil)
+        self._method_get_display_mode_3517174669 = StringName(from: "get_display_mode")
+        assert(self._method_get_display_mode_3517174669 != nil)
+        self._method_set_disable_overwrite_warning_2586408642 = StringName(from: "set_disable_overwrite_warning")
+        assert(self._method_set_disable_overwrite_warning_2586408642 != nil)
+        self._method_is_overwrite_warning_disabled_36873697 = StringName(from: "is_overwrite_warning_disabled")
+        assert(self._method_is_overwrite_warning_disabled_36873697 != nil)
+        self._method_invalidate_3218959716 = StringName(from: "invalidate")
+        assert(self._method_invalidate_3218959716 != nil)
     }
 
     public func clear_filters()  {
@@ -124,8 +105,13 @@ open class EditorFileDialog : ConfirmationDialog {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_filters_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_filters_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -140,8 +126,13 @@ open class EditorFileDialog : ConfirmationDialog {
                 .init(filter_native), .init(description_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_filter_233059325,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_filter_233059325._native_ptr(),
+                    233059325)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -155,8 +146,13 @@ open class EditorFileDialog : ConfirmationDialog {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_current_dir_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_current_dir_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -171,8 +167,13 @@ open class EditorFileDialog : ConfirmationDialog {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_current_file_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_current_file_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -187,8 +188,13 @@ open class EditorFileDialog : ConfirmationDialog {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_current_path_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_current_path_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -203,8 +209,13 @@ open class EditorFileDialog : ConfirmationDialog {
                 .init(dir_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_current_dir_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_current_dir_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -218,8 +229,13 @@ open class EditorFileDialog : ConfirmationDialog {
                 .init(file_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_current_file_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_current_file_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -233,8 +249,13 @@ open class EditorFileDialog : ConfirmationDialog {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_current_path_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_current_path_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -248,8 +269,13 @@ open class EditorFileDialog : ConfirmationDialog {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_file_mode_274150415,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_file_mode_274150415._native_ptr(),
+                    274150415)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -264,8 +290,13 @@ open class EditorFileDialog : ConfirmationDialog {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_file_mode_2681044145,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_file_mode_2681044145._native_ptr(),
+                    2681044145)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -280,8 +311,13 @@ open class EditorFileDialog : ConfirmationDialog {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_vbox_915758477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_vbox_915758477._native_ptr(),
+                    915758477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -296,8 +332,13 @@ open class EditorFileDialog : ConfirmationDialog {
                 .init(access_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_access_3882893764,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_access_3882893764._native_ptr(),
+                    3882893764)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -312,8 +353,13 @@ open class EditorFileDialog : ConfirmationDialog {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_access_778734016,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_access_778734016._native_ptr(),
+                    778734016)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -328,8 +374,13 @@ open class EditorFileDialog : ConfirmationDialog {
                 .init(show_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_show_hidden_files_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_show_hidden_files_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -345,8 +396,13 @@ open class EditorFileDialog : ConfirmationDialog {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_showing_hidden_files_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_showing_hidden_files_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -361,8 +417,13 @@ open class EditorFileDialog : ConfirmationDialog {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_display_mode_3049004050,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_display_mode_3049004050._native_ptr(),
+                    3049004050)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -377,8 +438,13 @@ open class EditorFileDialog : ConfirmationDialog {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_display_mode_3517174669,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_display_mode_3517174669._native_ptr(),
+                    3517174669)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -393,8 +459,13 @@ open class EditorFileDialog : ConfirmationDialog {
                 .init(disable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_disable_overwrite_warning_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_disable_overwrite_warning_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -410,8 +481,13 @@ open class EditorFileDialog : ConfirmationDialog {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_overwrite_warning_disabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_overwrite_warning_disabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -425,8 +501,13 @@ open class EditorFileDialog : ConfirmationDialog {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_invalidate_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_invalidate_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

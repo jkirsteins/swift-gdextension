@@ -11,19 +11,19 @@ open class OptimizedTranslation : Translation {
 
     public override class var __godot_name: StringName { __godot_name_OptimizedTranslation }
 
-    static var _method_generate_1466479800: GDExtensionMethodBindPtr! = nil
+    static var _method_generate_1466479800: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_OptimizedTranslation == nil)
         __godot_name_OptimizedTranslation = StringName(from: "OptimizedTranslation")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_generate_1466479800_name = StringName(from: "generate")
-        self._method_generate_1466479800 = self.interface.pointee.classdb_get_method_bind(__godot_name_OptimizedTranslation._native_ptr(), _method_generate_1466479800_name._native_ptr(), 1466479800)
-        assert(OptimizedTranslation._method_generate_1466479800 != nil)
+        self._method_generate_1466479800 = StringName(from: "generate")
+        assert(self._method_generate_1466479800 != nil)
     }
 
     public func generate(from: Translation)  {
@@ -34,8 +34,13 @@ open class OptimizedTranslation : Translation {
                 .init(from_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_generate_1466479800,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_generate_1466479800._native_ptr(),
+                    1466479800)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

@@ -189,6 +189,7 @@ struct ConfigurationSpecificMethod: ConfigurationSpecificCallable {
     }
     
     var is_constructor: Bool { false }
+    var is_virtual: Bool { self.method.is_virtual }
     
     var method_name: String? {
         method.name
@@ -226,6 +227,7 @@ protocol ConfigurationSpecificCallable {
     var method_name: String? { get }
     var method_hash: Int? { get }
     var is_constructor: Bool { get }
+    var is_virtual: Bool { get }
     var builtin_size: Int { get }
 }
 
@@ -235,6 +237,7 @@ struct ConfigurationSpecificConstructor: ConfigurationSpecificCallable {
     let builtin_size: Int
     
     var is_constructor: Bool { true }
+    var is_virtual: Bool { false }
     
     var method_name: String? {
         nil
@@ -285,6 +288,7 @@ open class ${classNameWithParents} {
         
         guard p_level == ${expectedInitLevel} else { return }
 
+        assert(__godot_name_${className} == nil)
         __godot_name_${className} = StringName(from: "${className}")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -345,7 +349,7 @@ fileprivate let staticMethodBindingDecl: RenderFunc = {
     
     let methods = sut.methods ?? []
     let renderables = methods.map { m in
-        "static var _method_\(m.name)_\(m.hash ?? 0): GDExtensionMethodBindPtr! = nil"
+        "static var _method_\(m.name)_\(m.hash ?? 0): StringName! = nil"
     }
     
     return MultiLineRenderable(lines: renderables, indent: 4, prefix: nil)
@@ -370,9 +374,8 @@ fileprivate let staticMethodBindingAssign_nonVirtual: RenderFunc = {
 //                123
 //            )
                 
-            "let \(m_name)_name = StringName(from: \"\(m.name)\")",
-            "self.\(m_name) = self.interface.pointee.classdb_get_method_bind(__godot_name_\(sut.name)._native_ptr(), \(m_name)_name._native_ptr(), \(hash))",
-            "assert(\(sut.name).\(m_name) != nil)"
+            "self.\(m_name) = StringName(from: \"\(m.name)\")",
+            "assert(self.\(m_name) != nil)"
         ]
     }
     
@@ -467,7 +470,7 @@ struct ClassTemplate {
             
             let typeToVarName: [String?:String] = [
                 "editor": "GDEXTENSION_INITIALIZATION_EDITOR",
-                "core": "GDEXTENSION_INITIALIZATION_CORE"
+//                "core": "GDEXTENSION_INITIALIZATION_CORE"
             ]
             
             let level = typeToVarName[s.api_type] ?? "GDEXTENSION_INITIALIZATION_SCENE"

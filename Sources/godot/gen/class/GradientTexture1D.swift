@@ -11,35 +11,31 @@ open class GradientTexture1D : Texture2D {
 
     public override class var __godot_name: StringName { __godot_name_GradientTexture1D }
 
-    static var _method_set_gradient_2756054477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_gradient_132272999: GDExtensionMethodBindPtr! = nil
-    static var _method_set_width_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_hdr_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_using_hdr_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_gradient_2756054477: StringName! = nil
+    static var _method_get_gradient_132272999: StringName! = nil
+    static var _method_set_width_1286410249: StringName! = nil
+    static var _method_set_use_hdr_2586408642: StringName! = nil
+    static var _method_is_using_hdr_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_GradientTexture1D == nil)
         __godot_name_GradientTexture1D = StringName(from: "GradientTexture1D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_gradient_2756054477_name = StringName(from: "set_gradient")
-        self._method_set_gradient_2756054477 = self.interface.pointee.classdb_get_method_bind(__godot_name_GradientTexture1D._native_ptr(), _method_set_gradient_2756054477_name._native_ptr(), 2756054477)
-        assert(GradientTexture1D._method_set_gradient_2756054477 != nil)
-        let _method_get_gradient_132272999_name = StringName(from: "get_gradient")
-        self._method_get_gradient_132272999 = self.interface.pointee.classdb_get_method_bind(__godot_name_GradientTexture1D._native_ptr(), _method_get_gradient_132272999_name._native_ptr(), 132272999)
-        assert(GradientTexture1D._method_get_gradient_132272999 != nil)
-        let _method_set_width_1286410249_name = StringName(from: "set_width")
-        self._method_set_width_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_GradientTexture1D._native_ptr(), _method_set_width_1286410249_name._native_ptr(), 1286410249)
-        assert(GradientTexture1D._method_set_width_1286410249 != nil)
-        let _method_set_use_hdr_2586408642_name = StringName(from: "set_use_hdr")
-        self._method_set_use_hdr_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_GradientTexture1D._native_ptr(), _method_set_use_hdr_2586408642_name._native_ptr(), 2586408642)
-        assert(GradientTexture1D._method_set_use_hdr_2586408642 != nil)
-        let _method_is_using_hdr_36873697_name = StringName(from: "is_using_hdr")
-        self._method_is_using_hdr_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_GradientTexture1D._native_ptr(), _method_is_using_hdr_36873697_name._native_ptr(), 36873697)
-        assert(GradientTexture1D._method_is_using_hdr_36873697 != nil)
+        self._method_set_gradient_2756054477 = StringName(from: "set_gradient")
+        assert(self._method_set_gradient_2756054477 != nil)
+        self._method_get_gradient_132272999 = StringName(from: "get_gradient")
+        assert(self._method_get_gradient_132272999 != nil)
+        self._method_set_width_1286410249 = StringName(from: "set_width")
+        assert(self._method_set_width_1286410249 != nil)
+        self._method_set_use_hdr_2586408642 = StringName(from: "set_use_hdr")
+        assert(self._method_set_use_hdr_2586408642 != nil)
+        self._method_is_using_hdr_36873697 = StringName(from: "is_using_hdr")
+        assert(self._method_is_using_hdr_36873697 != nil)
     }
 
     public func set_gradient(gradient: Gradient)  {
@@ -50,8 +46,13 @@ open class GradientTexture1D : Texture2D {
                 .init(gradient_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_gradient_2756054477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_gradient_2756054477._native_ptr(),
+                    2756054477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -65,8 +66,13 @@ open class GradientTexture1D : Texture2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_gradient_132272999,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_gradient_132272999._native_ptr(),
+                    132272999)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -81,8 +87,13 @@ open class GradientTexture1D : Texture2D {
                 .init(width_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_width_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_width_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -97,8 +108,13 @@ open class GradientTexture1D : Texture2D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_hdr_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_hdr_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -114,8 +130,13 @@ open class GradientTexture1D : Texture2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_using_hdr_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_using_hdr_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

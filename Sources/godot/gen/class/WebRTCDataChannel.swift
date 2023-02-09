@@ -20,71 +20,58 @@ open class WebRTCDataChannel : PacketPeer {
 
     public override class var __godot_name: StringName { __godot_name_WebRTCDataChannel }
 
-    static var _method_poll_166280745: GDExtensionMethodBindPtr! = nil
-    static var _method_close_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_was_string_packet_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_write_mode_1999768052: GDExtensionMethodBindPtr! = nil
-    static var _method_get_write_mode_2848495172: GDExtensionMethodBindPtr! = nil
-    static var _method_get_ready_state_3501143017: GDExtensionMethodBindPtr! = nil
-    static var _method_get_label_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_is_ordered_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_id_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_max_packet_life_time_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_max_retransmits_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_protocol_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_is_negotiated_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_buffered_amount_3905245786: GDExtensionMethodBindPtr! = nil
+    static var _method_poll_166280745: StringName! = nil
+    static var _method_close_3218959716: StringName! = nil
+    static var _method_was_string_packet_36873697: StringName! = nil
+    static var _method_set_write_mode_1999768052: StringName! = nil
+    static var _method_get_write_mode_2848495172: StringName! = nil
+    static var _method_get_ready_state_3501143017: StringName! = nil
+    static var _method_get_label_201670096: StringName! = nil
+    static var _method_is_ordered_36873697: StringName! = nil
+    static var _method_get_id_3905245786: StringName! = nil
+    static var _method_get_max_packet_life_time_3905245786: StringName! = nil
+    static var _method_get_max_retransmits_3905245786: StringName! = nil
+    static var _method_get_protocol_201670096: StringName! = nil
+    static var _method_is_negotiated_36873697: StringName! = nil
+    static var _method_get_buffered_amount_3905245786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_WebRTCDataChannel == nil)
         __godot_name_WebRTCDataChannel = StringName(from: "WebRTCDataChannel")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_poll_166280745_name = StringName(from: "poll")
-        self._method_poll_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCDataChannel._native_ptr(), _method_poll_166280745_name._native_ptr(), 166280745)
-        assert(WebRTCDataChannel._method_poll_166280745 != nil)
-        let _method_close_3218959716_name = StringName(from: "close")
-        self._method_close_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCDataChannel._native_ptr(), _method_close_3218959716_name._native_ptr(), 3218959716)
-        assert(WebRTCDataChannel._method_close_3218959716 != nil)
-        let _method_was_string_packet_36873697_name = StringName(from: "was_string_packet")
-        self._method_was_string_packet_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCDataChannel._native_ptr(), _method_was_string_packet_36873697_name._native_ptr(), 36873697)
-        assert(WebRTCDataChannel._method_was_string_packet_36873697 != nil)
-        let _method_set_write_mode_1999768052_name = StringName(from: "set_write_mode")
-        self._method_set_write_mode_1999768052 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCDataChannel._native_ptr(), _method_set_write_mode_1999768052_name._native_ptr(), 1999768052)
-        assert(WebRTCDataChannel._method_set_write_mode_1999768052 != nil)
-        let _method_get_write_mode_2848495172_name = StringName(from: "get_write_mode")
-        self._method_get_write_mode_2848495172 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCDataChannel._native_ptr(), _method_get_write_mode_2848495172_name._native_ptr(), 2848495172)
-        assert(WebRTCDataChannel._method_get_write_mode_2848495172 != nil)
-        let _method_get_ready_state_3501143017_name = StringName(from: "get_ready_state")
-        self._method_get_ready_state_3501143017 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCDataChannel._native_ptr(), _method_get_ready_state_3501143017_name._native_ptr(), 3501143017)
-        assert(WebRTCDataChannel._method_get_ready_state_3501143017 != nil)
-        let _method_get_label_201670096_name = StringName(from: "get_label")
-        self._method_get_label_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCDataChannel._native_ptr(), _method_get_label_201670096_name._native_ptr(), 201670096)
-        assert(WebRTCDataChannel._method_get_label_201670096 != nil)
-        let _method_is_ordered_36873697_name = StringName(from: "is_ordered")
-        self._method_is_ordered_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCDataChannel._native_ptr(), _method_is_ordered_36873697_name._native_ptr(), 36873697)
-        assert(WebRTCDataChannel._method_is_ordered_36873697 != nil)
-        let _method_get_id_3905245786_name = StringName(from: "get_id")
-        self._method_get_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCDataChannel._native_ptr(), _method_get_id_3905245786_name._native_ptr(), 3905245786)
-        assert(WebRTCDataChannel._method_get_id_3905245786 != nil)
-        let _method_get_max_packet_life_time_3905245786_name = StringName(from: "get_max_packet_life_time")
-        self._method_get_max_packet_life_time_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCDataChannel._native_ptr(), _method_get_max_packet_life_time_3905245786_name._native_ptr(), 3905245786)
-        assert(WebRTCDataChannel._method_get_max_packet_life_time_3905245786 != nil)
-        let _method_get_max_retransmits_3905245786_name = StringName(from: "get_max_retransmits")
-        self._method_get_max_retransmits_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCDataChannel._native_ptr(), _method_get_max_retransmits_3905245786_name._native_ptr(), 3905245786)
-        assert(WebRTCDataChannel._method_get_max_retransmits_3905245786 != nil)
-        let _method_get_protocol_201670096_name = StringName(from: "get_protocol")
-        self._method_get_protocol_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCDataChannel._native_ptr(), _method_get_protocol_201670096_name._native_ptr(), 201670096)
-        assert(WebRTCDataChannel._method_get_protocol_201670096 != nil)
-        let _method_is_negotiated_36873697_name = StringName(from: "is_negotiated")
-        self._method_is_negotiated_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCDataChannel._native_ptr(), _method_is_negotiated_36873697_name._native_ptr(), 36873697)
-        assert(WebRTCDataChannel._method_is_negotiated_36873697 != nil)
-        let _method_get_buffered_amount_3905245786_name = StringName(from: "get_buffered_amount")
-        self._method_get_buffered_amount_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_WebRTCDataChannel._native_ptr(), _method_get_buffered_amount_3905245786_name._native_ptr(), 3905245786)
-        assert(WebRTCDataChannel._method_get_buffered_amount_3905245786 != nil)
+        self._method_poll_166280745 = StringName(from: "poll")
+        assert(self._method_poll_166280745 != nil)
+        self._method_close_3218959716 = StringName(from: "close")
+        assert(self._method_close_3218959716 != nil)
+        self._method_was_string_packet_36873697 = StringName(from: "was_string_packet")
+        assert(self._method_was_string_packet_36873697 != nil)
+        self._method_set_write_mode_1999768052 = StringName(from: "set_write_mode")
+        assert(self._method_set_write_mode_1999768052 != nil)
+        self._method_get_write_mode_2848495172 = StringName(from: "get_write_mode")
+        assert(self._method_get_write_mode_2848495172 != nil)
+        self._method_get_ready_state_3501143017 = StringName(from: "get_ready_state")
+        assert(self._method_get_ready_state_3501143017 != nil)
+        self._method_get_label_201670096 = StringName(from: "get_label")
+        assert(self._method_get_label_201670096 != nil)
+        self._method_is_ordered_36873697 = StringName(from: "is_ordered")
+        assert(self._method_is_ordered_36873697 != nil)
+        self._method_get_id_3905245786 = StringName(from: "get_id")
+        assert(self._method_get_id_3905245786 != nil)
+        self._method_get_max_packet_life_time_3905245786 = StringName(from: "get_max_packet_life_time")
+        assert(self._method_get_max_packet_life_time_3905245786 != nil)
+        self._method_get_max_retransmits_3905245786 = StringName(from: "get_max_retransmits")
+        assert(self._method_get_max_retransmits_3905245786 != nil)
+        self._method_get_protocol_201670096 = StringName(from: "get_protocol")
+        assert(self._method_get_protocol_201670096 != nil)
+        self._method_is_negotiated_36873697 = StringName(from: "is_negotiated")
+        assert(self._method_is_negotiated_36873697 != nil)
+        self._method_get_buffered_amount_3905245786 = StringName(from: "get_buffered_amount")
+        assert(self._method_get_buffered_amount_3905245786 != nil)
     }
 
     public func poll() -> Error {
@@ -95,8 +82,13 @@ open class WebRTCDataChannel : PacketPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_poll_166280745,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_poll_166280745._native_ptr(),
+                    166280745)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -110,8 +102,13 @@ open class WebRTCDataChannel : PacketPeer {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_close_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_close_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -126,8 +123,13 @@ open class WebRTCDataChannel : PacketPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_was_string_packet_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_was_string_packet_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -142,8 +144,13 @@ open class WebRTCDataChannel : PacketPeer {
                 .init(write_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_write_mode_1999768052,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_write_mode_1999768052._native_ptr(),
+                    1999768052)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -158,8 +165,13 @@ open class WebRTCDataChannel : PacketPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_write_mode_2848495172,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_write_mode_2848495172._native_ptr(),
+                    2848495172)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -174,8 +186,13 @@ open class WebRTCDataChannel : PacketPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_ready_state_3501143017,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_ready_state_3501143017._native_ptr(),
+                    3501143017)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -190,8 +207,13 @@ open class WebRTCDataChannel : PacketPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_label_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_label_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -207,8 +229,13 @@ open class WebRTCDataChannel : PacketPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_ordered_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_ordered_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -224,8 +251,13 @@ open class WebRTCDataChannel : PacketPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_id_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_id_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -241,8 +273,13 @@ open class WebRTCDataChannel : PacketPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_max_packet_life_time_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_max_packet_life_time_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -258,8 +295,13 @@ open class WebRTCDataChannel : PacketPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_max_retransmits_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_max_retransmits_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -274,8 +316,13 @@ open class WebRTCDataChannel : PacketPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_protocol_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_protocol_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -291,8 +338,13 @@ open class WebRTCDataChannel : PacketPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_negotiated_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_negotiated_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -308,8 +360,13 @@ open class WebRTCDataChannel : PacketPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_buffered_amount_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_buffered_amount_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

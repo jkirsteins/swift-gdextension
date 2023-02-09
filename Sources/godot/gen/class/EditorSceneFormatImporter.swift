@@ -13,16 +13,17 @@ open class EditorSceneFormatImporter : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_EditorSceneFormatImporter }
 
-    static var _method__get_import_flags_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_extensions_0: GDExtensionMethodBindPtr! = nil
-    static var _method__import_scene_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_import_options_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_option_visibility_0: GDExtensionMethodBindPtr! = nil
+    static var _method__get_import_flags_0: StringName! = nil
+    static var _method__get_extensions_0: StringName! = nil
+    static var _method__import_scene_0: StringName! = nil
+    static var _method__get_import_options_0: StringName! = nil
+    static var _method__get_option_visibility_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorSceneFormatImporter == nil)
         __godot_name_EditorSceneFormatImporter = StringName(from: "EditorSceneFormatImporter")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -39,12 +40,7 @@ open class EditorSceneFormatImporter : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_import_flags_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _get_extensions() -> PackedStringArray {
@@ -55,12 +51,7 @@ open class EditorSceneFormatImporter : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_extensions_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _import_scene(path: godot.String, flags: Int64, options: Dictionary) -> Object {
@@ -74,12 +65,7 @@ open class EditorSceneFormatImporter : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__import_scene_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Object(godot: __resPtr.pointee)
         }
     }
@@ -91,12 +77,7 @@ open class EditorSceneFormatImporter : RefCounted {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_import_options_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _get_option_visibility(path: godot.String, for_animation: UInt8, option: godot.String) -> Variant {
         withUnsafePointer(to: for_animation) { for_animation_native in
@@ -109,12 +90,7 @@ open class EditorSceneFormatImporter : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_option_visibility_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Variant(godot: __resPtr.pointee)
         }
     }

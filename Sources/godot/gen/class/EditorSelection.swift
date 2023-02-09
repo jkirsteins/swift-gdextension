@@ -13,35 +13,31 @@ open class EditorSelection : Object {
 
     public override class var __godot_name: StringName { __godot_name_EditorSelection }
 
-    static var _method_clear_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_add_node_1078189570: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_node_1078189570: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selected_nodes_2915620761: GDExtensionMethodBindPtr! = nil
-    static var _method_get_transformable_selected_nodes_2915620761: GDExtensionMethodBindPtr! = nil
+    static var _method_clear_3218959716: StringName! = nil
+    static var _method_add_node_1078189570: StringName! = nil
+    static var _method_remove_node_1078189570: StringName! = nil
+    static var _method_get_selected_nodes_2915620761: StringName! = nil
+    static var _method_get_transformable_selected_nodes_2915620761: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorSelection == nil)
         __godot_name_EditorSelection = StringName(from: "EditorSelection")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorSelection._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
-        assert(EditorSelection._method_clear_3218959716 != nil)
-        let _method_add_node_1078189570_name = StringName(from: "add_node")
-        self._method_add_node_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorSelection._native_ptr(), _method_add_node_1078189570_name._native_ptr(), 1078189570)
-        assert(EditorSelection._method_add_node_1078189570 != nil)
-        let _method_remove_node_1078189570_name = StringName(from: "remove_node")
-        self._method_remove_node_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorSelection._native_ptr(), _method_remove_node_1078189570_name._native_ptr(), 1078189570)
-        assert(EditorSelection._method_remove_node_1078189570 != nil)
-        let _method_get_selected_nodes_2915620761_name = StringName(from: "get_selected_nodes")
-        self._method_get_selected_nodes_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorSelection._native_ptr(), _method_get_selected_nodes_2915620761_name._native_ptr(), 2915620761)
-        assert(EditorSelection._method_get_selected_nodes_2915620761 != nil)
-        let _method_get_transformable_selected_nodes_2915620761_name = StringName(from: "get_transformable_selected_nodes")
-        self._method_get_transformable_selected_nodes_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorSelection._native_ptr(), _method_get_transformable_selected_nodes_2915620761_name._native_ptr(), 2915620761)
-        assert(EditorSelection._method_get_transformable_selected_nodes_2915620761 != nil)
+        self._method_clear_3218959716 = StringName(from: "clear")
+        assert(self._method_clear_3218959716 != nil)
+        self._method_add_node_1078189570 = StringName(from: "add_node")
+        assert(self._method_add_node_1078189570 != nil)
+        self._method_remove_node_1078189570 = StringName(from: "remove_node")
+        assert(self._method_remove_node_1078189570 != nil)
+        self._method_get_selected_nodes_2915620761 = StringName(from: "get_selected_nodes")
+        assert(self._method_get_selected_nodes_2915620761 != nil)
+        self._method_get_transformable_selected_nodes_2915620761 = StringName(from: "get_transformable_selected_nodes")
+        assert(self._method_get_transformable_selected_nodes_2915620761 != nil)
     }
 
     public func clear()  {
@@ -51,8 +47,13 @@ open class EditorSelection : Object {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -66,8 +67,13 @@ open class EditorSelection : Object {
                 .init(node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_node_1078189570,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_node_1078189570._native_ptr(),
+                    1078189570)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -81,8 +87,13 @@ open class EditorSelection : Object {
                 .init(node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_node_1078189570,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_node_1078189570._native_ptr(),
+                    1078189570)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -96,8 +107,13 @@ open class EditorSelection : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selected_nodes_2915620761,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selected_nodes_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -112,8 +128,13 @@ open class EditorSelection : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_transformable_selected_nodes_2915620761,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_transformable_selected_nodes_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

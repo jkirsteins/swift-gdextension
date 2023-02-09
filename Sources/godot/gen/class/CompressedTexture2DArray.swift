@@ -29,8 +29,9 @@ open class CompressedTexture2DArray : CompressedTextureLayered {
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CompressedTexture2DArray == nil)
         __godot_name_CompressedTexture2DArray = StringName(from: "CompressedTexture2DArray")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library

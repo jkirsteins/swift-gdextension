@@ -13,179 +13,139 @@ open class EditorInterface : Node {
 
     public override class var __godot_name: StringName { __godot_name_EditorInterface }
 
-    static var _method_inspect_object_2564140749: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selection_50507531: GDExtensionMethodBindPtr! = nil
-    static var _method_get_editor_settings_2469088558: GDExtensionMethodBindPtr! = nil
-    static var _method_get_script_editor_3947407316: GDExtensionMethodBindPtr! = nil
-    static var _method_get_base_control_829782337: GDExtensionMethodBindPtr! = nil
-    static var _method_get_editor_scale_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_edit_resource_968641751: GDExtensionMethodBindPtr! = nil
-    static var _method_edit_node_1078189570: GDExtensionMethodBindPtr! = nil
-    static var _method_edit_script_3664508569: GDExtensionMethodBindPtr! = nil
-    static var _method_open_scene_from_path_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_reload_scene_from_path_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_play_main_scene_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_play_current_scene_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_play_custom_scene_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_stop_playing_scene_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_is_playing_scene_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_playing_scene_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_open_scenes_1139954409: GDExtensionMethodBindPtr! = nil
-    static var _method_get_edited_scene_root_1818953479: GDExtensionMethodBindPtr! = nil
-    static var _method_get_resource_previewer_1578506115: GDExtensionMethodBindPtr! = nil
-    static var _method_get_resource_filesystem_492575303: GDExtensionMethodBindPtr! = nil
-    static var _method_get_editor_main_screen_915758477: GDExtensionMethodBindPtr! = nil
-    static var _method_make_mesh_previews_878078554: GDExtensionMethodBindPtr! = nil
-    static var _method_select_file_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selected_paths_1139954409: GDExtensionMethodBindPtr! = nil
-    static var _method_get_current_path_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_current_directory_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_file_system_dock_561123517: GDExtensionMethodBindPtr! = nil
-    static var _method_get_editor_paths_4197665367: GDExtensionMethodBindPtr! = nil
-    static var _method_get_command_palette_2471163807: GDExtensionMethodBindPtr! = nil
-    static var _method_set_plugin_enabled_2678287736: GDExtensionMethodBindPtr! = nil
-    static var _method_is_plugin_enabled_3927539163: GDExtensionMethodBindPtr! = nil
-    static var _method_set_movie_maker_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_movie_maker_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_inspector_3517113938: GDExtensionMethodBindPtr! = nil
-    static var _method_save_scene_166280745: GDExtensionMethodBindPtr! = nil
-    static var _method_save_scene_as_1168363258: GDExtensionMethodBindPtr! = nil
-    static var _method_restart_editor_3216645846: GDExtensionMethodBindPtr! = nil
-    static var _method_set_main_screen_editor_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_set_distraction_free_mode_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_distraction_free_mode_enabled_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_inspect_object_2564140749: StringName! = nil
+    static var _method_get_selection_50507531: StringName! = nil
+    static var _method_get_editor_settings_2469088558: StringName! = nil
+    static var _method_get_script_editor_3947407316: StringName! = nil
+    static var _method_get_base_control_829782337: StringName! = nil
+    static var _method_get_editor_scale_1740695150: StringName! = nil
+    static var _method_edit_resource_968641751: StringName! = nil
+    static var _method_edit_node_1078189570: StringName! = nil
+    static var _method_edit_script_3664508569: StringName! = nil
+    static var _method_open_scene_from_path_83702148: StringName! = nil
+    static var _method_reload_scene_from_path_83702148: StringName! = nil
+    static var _method_play_main_scene_3218959716: StringName! = nil
+    static var _method_play_current_scene_3218959716: StringName! = nil
+    static var _method_play_custom_scene_83702148: StringName! = nil
+    static var _method_stop_playing_scene_3218959716: StringName! = nil
+    static var _method_is_playing_scene_36873697: StringName! = nil
+    static var _method_get_playing_scene_201670096: StringName! = nil
+    static var _method_get_open_scenes_1139954409: StringName! = nil
+    static var _method_get_edited_scene_root_1818953479: StringName! = nil
+    static var _method_get_resource_previewer_1578506115: StringName! = nil
+    static var _method_get_resource_filesystem_492575303: StringName! = nil
+    static var _method_get_editor_main_screen_915758477: StringName! = nil
+    static var _method_make_mesh_previews_878078554: StringName! = nil
+    static var _method_select_file_83702148: StringName! = nil
+    static var _method_get_selected_paths_1139954409: StringName! = nil
+    static var _method_get_current_path_201670096: StringName! = nil
+    static var _method_get_current_directory_201670096: StringName! = nil
+    static var _method_get_file_system_dock_561123517: StringName! = nil
+    static var _method_get_editor_paths_4197665367: StringName! = nil
+    static var _method_get_command_palette_2471163807: StringName! = nil
+    static var _method_set_plugin_enabled_2678287736: StringName! = nil
+    static var _method_is_plugin_enabled_3927539163: StringName! = nil
+    static var _method_set_movie_maker_enabled_2586408642: StringName! = nil
+    static var _method_is_movie_maker_enabled_36873697: StringName! = nil
+    static var _method_get_inspector_3517113938: StringName! = nil
+    static var _method_save_scene_166280745: StringName! = nil
+    static var _method_save_scene_as_1168363258: StringName! = nil
+    static var _method_restart_editor_3216645846: StringName! = nil
+    static var _method_set_main_screen_editor_83702148: StringName! = nil
+    static var _method_set_distraction_free_mode_2586408642: StringName! = nil
+    static var _method_is_distraction_free_mode_enabled_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorInterface == nil)
         __godot_name_EditorInterface = StringName(from: "EditorInterface")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_inspect_object_2564140749_name = StringName(from: "inspect_object")
-        self._method_inspect_object_2564140749 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_inspect_object_2564140749_name._native_ptr(), 2564140749)
-        assert(EditorInterface._method_inspect_object_2564140749 != nil)
-        let _method_get_selection_50507531_name = StringName(from: "get_selection")
-        self._method_get_selection_50507531 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_selection_50507531_name._native_ptr(), 50507531)
-        assert(EditorInterface._method_get_selection_50507531 != nil)
-        let _method_get_editor_settings_2469088558_name = StringName(from: "get_editor_settings")
-        self._method_get_editor_settings_2469088558 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_editor_settings_2469088558_name._native_ptr(), 2469088558)
-        assert(EditorInterface._method_get_editor_settings_2469088558 != nil)
-        let _method_get_script_editor_3947407316_name = StringName(from: "get_script_editor")
-        self._method_get_script_editor_3947407316 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_script_editor_3947407316_name._native_ptr(), 3947407316)
-        assert(EditorInterface._method_get_script_editor_3947407316 != nil)
-        let _method_get_base_control_829782337_name = StringName(from: "get_base_control")
-        self._method_get_base_control_829782337 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_base_control_829782337_name._native_ptr(), 829782337)
-        assert(EditorInterface._method_get_base_control_829782337 != nil)
-        let _method_get_editor_scale_1740695150_name = StringName(from: "get_editor_scale")
-        self._method_get_editor_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_editor_scale_1740695150_name._native_ptr(), 1740695150)
-        assert(EditorInterface._method_get_editor_scale_1740695150 != nil)
-        let _method_edit_resource_968641751_name = StringName(from: "edit_resource")
-        self._method_edit_resource_968641751 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_edit_resource_968641751_name._native_ptr(), 968641751)
-        assert(EditorInterface._method_edit_resource_968641751 != nil)
-        let _method_edit_node_1078189570_name = StringName(from: "edit_node")
-        self._method_edit_node_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_edit_node_1078189570_name._native_ptr(), 1078189570)
-        assert(EditorInterface._method_edit_node_1078189570 != nil)
-        let _method_edit_script_3664508569_name = StringName(from: "edit_script")
-        self._method_edit_script_3664508569 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_edit_script_3664508569_name._native_ptr(), 3664508569)
-        assert(EditorInterface._method_edit_script_3664508569 != nil)
-        let _method_open_scene_from_path_83702148_name = StringName(from: "open_scene_from_path")
-        self._method_open_scene_from_path_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_open_scene_from_path_83702148_name._native_ptr(), 83702148)
-        assert(EditorInterface._method_open_scene_from_path_83702148 != nil)
-        let _method_reload_scene_from_path_83702148_name = StringName(from: "reload_scene_from_path")
-        self._method_reload_scene_from_path_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_reload_scene_from_path_83702148_name._native_ptr(), 83702148)
-        assert(EditorInterface._method_reload_scene_from_path_83702148 != nil)
-        let _method_play_main_scene_3218959716_name = StringName(from: "play_main_scene")
-        self._method_play_main_scene_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_play_main_scene_3218959716_name._native_ptr(), 3218959716)
-        assert(EditorInterface._method_play_main_scene_3218959716 != nil)
-        let _method_play_current_scene_3218959716_name = StringName(from: "play_current_scene")
-        self._method_play_current_scene_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_play_current_scene_3218959716_name._native_ptr(), 3218959716)
-        assert(EditorInterface._method_play_current_scene_3218959716 != nil)
-        let _method_play_custom_scene_83702148_name = StringName(from: "play_custom_scene")
-        self._method_play_custom_scene_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_play_custom_scene_83702148_name._native_ptr(), 83702148)
-        assert(EditorInterface._method_play_custom_scene_83702148 != nil)
-        let _method_stop_playing_scene_3218959716_name = StringName(from: "stop_playing_scene")
-        self._method_stop_playing_scene_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_stop_playing_scene_3218959716_name._native_ptr(), 3218959716)
-        assert(EditorInterface._method_stop_playing_scene_3218959716 != nil)
-        let _method_is_playing_scene_36873697_name = StringName(from: "is_playing_scene")
-        self._method_is_playing_scene_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_is_playing_scene_36873697_name._native_ptr(), 36873697)
-        assert(EditorInterface._method_is_playing_scene_36873697 != nil)
-        let _method_get_playing_scene_201670096_name = StringName(from: "get_playing_scene")
-        self._method_get_playing_scene_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_playing_scene_201670096_name._native_ptr(), 201670096)
-        assert(EditorInterface._method_get_playing_scene_201670096 != nil)
-        let _method_get_open_scenes_1139954409_name = StringName(from: "get_open_scenes")
-        self._method_get_open_scenes_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_open_scenes_1139954409_name._native_ptr(), 1139954409)
-        assert(EditorInterface._method_get_open_scenes_1139954409 != nil)
-        let _method_get_edited_scene_root_1818953479_name = StringName(from: "get_edited_scene_root")
-        self._method_get_edited_scene_root_1818953479 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_edited_scene_root_1818953479_name._native_ptr(), 1818953479)
-        assert(EditorInterface._method_get_edited_scene_root_1818953479 != nil)
-        let _method_get_resource_previewer_1578506115_name = StringName(from: "get_resource_previewer")
-        self._method_get_resource_previewer_1578506115 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_resource_previewer_1578506115_name._native_ptr(), 1578506115)
-        assert(EditorInterface._method_get_resource_previewer_1578506115 != nil)
-        let _method_get_resource_filesystem_492575303_name = StringName(from: "get_resource_filesystem")
-        self._method_get_resource_filesystem_492575303 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_resource_filesystem_492575303_name._native_ptr(), 492575303)
-        assert(EditorInterface._method_get_resource_filesystem_492575303 != nil)
-        let _method_get_editor_main_screen_915758477_name = StringName(from: "get_editor_main_screen")
-        self._method_get_editor_main_screen_915758477 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_editor_main_screen_915758477_name._native_ptr(), 915758477)
-        assert(EditorInterface._method_get_editor_main_screen_915758477 != nil)
-        let _method_make_mesh_previews_878078554_name = StringName(from: "make_mesh_previews")
-        self._method_make_mesh_previews_878078554 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_make_mesh_previews_878078554_name._native_ptr(), 878078554)
-        assert(EditorInterface._method_make_mesh_previews_878078554 != nil)
-        let _method_select_file_83702148_name = StringName(from: "select_file")
-        self._method_select_file_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_select_file_83702148_name._native_ptr(), 83702148)
-        assert(EditorInterface._method_select_file_83702148 != nil)
-        let _method_get_selected_paths_1139954409_name = StringName(from: "get_selected_paths")
-        self._method_get_selected_paths_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_selected_paths_1139954409_name._native_ptr(), 1139954409)
-        assert(EditorInterface._method_get_selected_paths_1139954409 != nil)
-        let _method_get_current_path_201670096_name = StringName(from: "get_current_path")
-        self._method_get_current_path_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_current_path_201670096_name._native_ptr(), 201670096)
-        assert(EditorInterface._method_get_current_path_201670096 != nil)
-        let _method_get_current_directory_201670096_name = StringName(from: "get_current_directory")
-        self._method_get_current_directory_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_current_directory_201670096_name._native_ptr(), 201670096)
-        assert(EditorInterface._method_get_current_directory_201670096 != nil)
-        let _method_get_file_system_dock_561123517_name = StringName(from: "get_file_system_dock")
-        self._method_get_file_system_dock_561123517 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_file_system_dock_561123517_name._native_ptr(), 561123517)
-        assert(EditorInterface._method_get_file_system_dock_561123517 != nil)
-        let _method_get_editor_paths_4197665367_name = StringName(from: "get_editor_paths")
-        self._method_get_editor_paths_4197665367 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_editor_paths_4197665367_name._native_ptr(), 4197665367)
-        assert(EditorInterface._method_get_editor_paths_4197665367 != nil)
-        let _method_get_command_palette_2471163807_name = StringName(from: "get_command_palette")
-        self._method_get_command_palette_2471163807 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_command_palette_2471163807_name._native_ptr(), 2471163807)
-        assert(EditorInterface._method_get_command_palette_2471163807 != nil)
-        let _method_set_plugin_enabled_2678287736_name = StringName(from: "set_plugin_enabled")
-        self._method_set_plugin_enabled_2678287736 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_set_plugin_enabled_2678287736_name._native_ptr(), 2678287736)
-        assert(EditorInterface._method_set_plugin_enabled_2678287736 != nil)
-        let _method_is_plugin_enabled_3927539163_name = StringName(from: "is_plugin_enabled")
-        self._method_is_plugin_enabled_3927539163 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_is_plugin_enabled_3927539163_name._native_ptr(), 3927539163)
-        assert(EditorInterface._method_is_plugin_enabled_3927539163 != nil)
-        let _method_set_movie_maker_enabled_2586408642_name = StringName(from: "set_movie_maker_enabled")
-        self._method_set_movie_maker_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_set_movie_maker_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(EditorInterface._method_set_movie_maker_enabled_2586408642 != nil)
-        let _method_is_movie_maker_enabled_36873697_name = StringName(from: "is_movie_maker_enabled")
-        self._method_is_movie_maker_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_is_movie_maker_enabled_36873697_name._native_ptr(), 36873697)
-        assert(EditorInterface._method_is_movie_maker_enabled_36873697 != nil)
-        let _method_get_inspector_3517113938_name = StringName(from: "get_inspector")
-        self._method_get_inspector_3517113938 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_get_inspector_3517113938_name._native_ptr(), 3517113938)
-        assert(EditorInterface._method_get_inspector_3517113938 != nil)
-        let _method_save_scene_166280745_name = StringName(from: "save_scene")
-        self._method_save_scene_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_save_scene_166280745_name._native_ptr(), 166280745)
-        assert(EditorInterface._method_save_scene_166280745 != nil)
-        let _method_save_scene_as_1168363258_name = StringName(from: "save_scene_as")
-        self._method_save_scene_as_1168363258 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_save_scene_as_1168363258_name._native_ptr(), 1168363258)
-        assert(EditorInterface._method_save_scene_as_1168363258 != nil)
-        let _method_restart_editor_3216645846_name = StringName(from: "restart_editor")
-        self._method_restart_editor_3216645846 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_restart_editor_3216645846_name._native_ptr(), 3216645846)
-        assert(EditorInterface._method_restart_editor_3216645846 != nil)
-        let _method_set_main_screen_editor_83702148_name = StringName(from: "set_main_screen_editor")
-        self._method_set_main_screen_editor_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_set_main_screen_editor_83702148_name._native_ptr(), 83702148)
-        assert(EditorInterface._method_set_main_screen_editor_83702148 != nil)
-        let _method_set_distraction_free_mode_2586408642_name = StringName(from: "set_distraction_free_mode")
-        self._method_set_distraction_free_mode_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_set_distraction_free_mode_2586408642_name._native_ptr(), 2586408642)
-        assert(EditorInterface._method_set_distraction_free_mode_2586408642 != nil)
-        let _method_is_distraction_free_mode_enabled_36873697_name = StringName(from: "is_distraction_free_mode_enabled")
-        self._method_is_distraction_free_mode_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorInterface._native_ptr(), _method_is_distraction_free_mode_enabled_36873697_name._native_ptr(), 36873697)
-        assert(EditorInterface._method_is_distraction_free_mode_enabled_36873697 != nil)
+        self._method_inspect_object_2564140749 = StringName(from: "inspect_object")
+        assert(self._method_inspect_object_2564140749 != nil)
+        self._method_get_selection_50507531 = StringName(from: "get_selection")
+        assert(self._method_get_selection_50507531 != nil)
+        self._method_get_editor_settings_2469088558 = StringName(from: "get_editor_settings")
+        assert(self._method_get_editor_settings_2469088558 != nil)
+        self._method_get_script_editor_3947407316 = StringName(from: "get_script_editor")
+        assert(self._method_get_script_editor_3947407316 != nil)
+        self._method_get_base_control_829782337 = StringName(from: "get_base_control")
+        assert(self._method_get_base_control_829782337 != nil)
+        self._method_get_editor_scale_1740695150 = StringName(from: "get_editor_scale")
+        assert(self._method_get_editor_scale_1740695150 != nil)
+        self._method_edit_resource_968641751 = StringName(from: "edit_resource")
+        assert(self._method_edit_resource_968641751 != nil)
+        self._method_edit_node_1078189570 = StringName(from: "edit_node")
+        assert(self._method_edit_node_1078189570 != nil)
+        self._method_edit_script_3664508569 = StringName(from: "edit_script")
+        assert(self._method_edit_script_3664508569 != nil)
+        self._method_open_scene_from_path_83702148 = StringName(from: "open_scene_from_path")
+        assert(self._method_open_scene_from_path_83702148 != nil)
+        self._method_reload_scene_from_path_83702148 = StringName(from: "reload_scene_from_path")
+        assert(self._method_reload_scene_from_path_83702148 != nil)
+        self._method_play_main_scene_3218959716 = StringName(from: "play_main_scene")
+        assert(self._method_play_main_scene_3218959716 != nil)
+        self._method_play_current_scene_3218959716 = StringName(from: "play_current_scene")
+        assert(self._method_play_current_scene_3218959716 != nil)
+        self._method_play_custom_scene_83702148 = StringName(from: "play_custom_scene")
+        assert(self._method_play_custom_scene_83702148 != nil)
+        self._method_stop_playing_scene_3218959716 = StringName(from: "stop_playing_scene")
+        assert(self._method_stop_playing_scene_3218959716 != nil)
+        self._method_is_playing_scene_36873697 = StringName(from: "is_playing_scene")
+        assert(self._method_is_playing_scene_36873697 != nil)
+        self._method_get_playing_scene_201670096 = StringName(from: "get_playing_scene")
+        assert(self._method_get_playing_scene_201670096 != nil)
+        self._method_get_open_scenes_1139954409 = StringName(from: "get_open_scenes")
+        assert(self._method_get_open_scenes_1139954409 != nil)
+        self._method_get_edited_scene_root_1818953479 = StringName(from: "get_edited_scene_root")
+        assert(self._method_get_edited_scene_root_1818953479 != nil)
+        self._method_get_resource_previewer_1578506115 = StringName(from: "get_resource_previewer")
+        assert(self._method_get_resource_previewer_1578506115 != nil)
+        self._method_get_resource_filesystem_492575303 = StringName(from: "get_resource_filesystem")
+        assert(self._method_get_resource_filesystem_492575303 != nil)
+        self._method_get_editor_main_screen_915758477 = StringName(from: "get_editor_main_screen")
+        assert(self._method_get_editor_main_screen_915758477 != nil)
+        self._method_make_mesh_previews_878078554 = StringName(from: "make_mesh_previews")
+        assert(self._method_make_mesh_previews_878078554 != nil)
+        self._method_select_file_83702148 = StringName(from: "select_file")
+        assert(self._method_select_file_83702148 != nil)
+        self._method_get_selected_paths_1139954409 = StringName(from: "get_selected_paths")
+        assert(self._method_get_selected_paths_1139954409 != nil)
+        self._method_get_current_path_201670096 = StringName(from: "get_current_path")
+        assert(self._method_get_current_path_201670096 != nil)
+        self._method_get_current_directory_201670096 = StringName(from: "get_current_directory")
+        assert(self._method_get_current_directory_201670096 != nil)
+        self._method_get_file_system_dock_561123517 = StringName(from: "get_file_system_dock")
+        assert(self._method_get_file_system_dock_561123517 != nil)
+        self._method_get_editor_paths_4197665367 = StringName(from: "get_editor_paths")
+        assert(self._method_get_editor_paths_4197665367 != nil)
+        self._method_get_command_palette_2471163807 = StringName(from: "get_command_palette")
+        assert(self._method_get_command_palette_2471163807 != nil)
+        self._method_set_plugin_enabled_2678287736 = StringName(from: "set_plugin_enabled")
+        assert(self._method_set_plugin_enabled_2678287736 != nil)
+        self._method_is_plugin_enabled_3927539163 = StringName(from: "is_plugin_enabled")
+        assert(self._method_is_plugin_enabled_3927539163 != nil)
+        self._method_set_movie_maker_enabled_2586408642 = StringName(from: "set_movie_maker_enabled")
+        assert(self._method_set_movie_maker_enabled_2586408642 != nil)
+        self._method_is_movie_maker_enabled_36873697 = StringName(from: "is_movie_maker_enabled")
+        assert(self._method_is_movie_maker_enabled_36873697 != nil)
+        self._method_get_inspector_3517113938 = StringName(from: "get_inspector")
+        assert(self._method_get_inspector_3517113938 != nil)
+        self._method_save_scene_166280745 = StringName(from: "save_scene")
+        assert(self._method_save_scene_166280745 != nil)
+        self._method_save_scene_as_1168363258 = StringName(from: "save_scene_as")
+        assert(self._method_save_scene_as_1168363258 != nil)
+        self._method_restart_editor_3216645846 = StringName(from: "restart_editor")
+        assert(self._method_restart_editor_3216645846 != nil)
+        self._method_set_main_screen_editor_83702148 = StringName(from: "set_main_screen_editor")
+        assert(self._method_set_main_screen_editor_83702148 != nil)
+        self._method_set_distraction_free_mode_2586408642 = StringName(from: "set_distraction_free_mode")
+        assert(self._method_set_distraction_free_mode_2586408642 != nil)
+        self._method_is_distraction_free_mode_enabled_36873697 = StringName(from: "is_distraction_free_mode_enabled")
+        assert(self._method_is_distraction_free_mode_enabled_36873697 != nil)
     }
 
     public func inspect_object(object: Object, for_property: godot.String, inspector_only: UInt8)  {
@@ -198,8 +158,13 @@ open class EditorInterface : Node {
                 .init(object_native), .init(for_property_native), .init(inspector_only_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_inspect_object_2564140749,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_inspect_object_2564140749._native_ptr(),
+                    2564140749)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -214,8 +179,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selection_50507531,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selection_50507531._native_ptr(),
+                    50507531)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -230,8 +200,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_editor_settings_2469088558,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_editor_settings_2469088558._native_ptr(),
+                    2469088558)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -246,8 +221,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_script_editor_3947407316,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_script_editor_3947407316._native_ptr(),
+                    3947407316)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -262,8 +242,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_base_control_829782337,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_base_control_829782337._native_ptr(),
+                    829782337)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -279,8 +264,13 @@ open class EditorInterface : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_editor_scale_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_editor_scale_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -295,8 +285,13 @@ open class EditorInterface : Node {
                 .init(resource_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_edit_resource_968641751,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_edit_resource_968641751._native_ptr(),
+                    968641751)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -310,8 +305,13 @@ open class EditorInterface : Node {
                 .init(node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_edit_node_1078189570,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_edit_node_1078189570._native_ptr(),
+                    1078189570)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -328,8 +328,13 @@ open class EditorInterface : Node {
                 .init(script_native), .init(line_native), .init(column_native), .init(grab_focus_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_edit_script_3664508569,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_edit_script_3664508569._native_ptr(),
+                    3664508569)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -346,8 +351,13 @@ open class EditorInterface : Node {
                 .init(scene_filepath_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_open_scene_from_path_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_open_scene_from_path_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -361,8 +371,13 @@ open class EditorInterface : Node {
                 .init(scene_filepath_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_reload_scene_from_path_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_reload_scene_from_path_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -375,8 +390,13 @@ open class EditorInterface : Node {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_play_main_scene_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_play_main_scene_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -389,8 +409,13 @@ open class EditorInterface : Node {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_play_current_scene_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_play_current_scene_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -404,8 +429,13 @@ open class EditorInterface : Node {
                 .init(scene_filepath_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_play_custom_scene_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_play_custom_scene_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -418,8 +448,13 @@ open class EditorInterface : Node {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_stop_playing_scene_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_stop_playing_scene_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -434,8 +469,13 @@ open class EditorInterface : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_playing_scene_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_playing_scene_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -450,8 +490,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_playing_scene_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_playing_scene_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -466,8 +511,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_open_scenes_1139954409,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_open_scenes_1139954409._native_ptr(),
+                    1139954409)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -482,8 +532,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_edited_scene_root_1818953479,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_edited_scene_root_1818953479._native_ptr(),
+                    1818953479)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -498,8 +553,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_resource_previewer_1578506115,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_resource_previewer_1578506115._native_ptr(),
+                    1578506115)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -514,8 +574,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_resource_filesystem_492575303,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_resource_filesystem_492575303._native_ptr(),
+                    492575303)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -530,8 +595,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_editor_main_screen_915758477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_editor_main_screen_915758477._native_ptr(),
+                    915758477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -548,8 +618,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_make_mesh_previews_878078554,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_make_mesh_previews_878078554._native_ptr(),
+                    878078554)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -565,8 +640,13 @@ open class EditorInterface : Node {
                 .init(file_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_select_file_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_select_file_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -580,8 +660,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selected_paths_1139954409,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selected_paths_1139954409._native_ptr(),
+                    1139954409)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -596,8 +681,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_current_path_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_current_path_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -612,8 +702,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_current_directory_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_current_directory_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -628,8 +723,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_file_system_dock_561123517,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_file_system_dock_561123517._native_ptr(),
+                    561123517)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -644,8 +744,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_editor_paths_4197665367,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_editor_paths_4197665367._native_ptr(),
+                    4197665367)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -660,8 +765,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_command_palette_2471163807,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_command_palette_2471163807._native_ptr(),
+                    2471163807)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -677,8 +787,13 @@ open class EditorInterface : Node {
                 .init(plugin_native), .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_plugin_enabled_2678287736,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_plugin_enabled_2678287736._native_ptr(),
+                    2678287736)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -695,8 +810,13 @@ open class EditorInterface : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_plugin_enabled_3927539163,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_plugin_enabled_3927539163._native_ptr(),
+                    3927539163)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -711,8 +831,13 @@ open class EditorInterface : Node {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_movie_maker_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_movie_maker_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -728,8 +853,13 @@ open class EditorInterface : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_movie_maker_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_movie_maker_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -744,8 +874,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_inspector_3517113938,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_inspector_3517113938._native_ptr(),
+                    3517113938)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -760,8 +895,13 @@ open class EditorInterface : Node {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_scene_166280745,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_scene_166280745._native_ptr(),
+                    166280745)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -777,8 +917,13 @@ open class EditorInterface : Node {
                 .init(path_native), .init(with_preview_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_scene_as_1168363258,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_scene_as_1168363258._native_ptr(),
+                    1168363258)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -793,8 +938,13 @@ open class EditorInterface : Node {
                 .init(save_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_restart_editor_3216645846,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_restart_editor_3216645846._native_ptr(),
+                    3216645846)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -809,8 +959,13 @@ open class EditorInterface : Node {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_main_screen_editor_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_main_screen_editor_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -824,8 +979,13 @@ open class EditorInterface : Node {
                 .init(enter_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_distraction_free_mode_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_distraction_free_mode_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -841,8 +1001,13 @@ open class EditorInterface : Node {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_distraction_free_mode_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_distraction_free_mode_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

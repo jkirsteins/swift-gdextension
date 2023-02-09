@@ -19,295 +19,226 @@ open class PopupMenu : Popup {
 
     public override class var __godot_name: StringName { __godot_name_PopupMenu }
 
-    static var _method_add_item_3224536192: GDExtensionMethodBindPtr! = nil
-    static var _method_add_icon_item_1200674553: GDExtensionMethodBindPtr! = nil
-    static var _method_add_check_item_3224536192: GDExtensionMethodBindPtr! = nil
-    static var _method_add_icon_check_item_1200674553: GDExtensionMethodBindPtr! = nil
-    static var _method_add_radio_check_item_3224536192: GDExtensionMethodBindPtr! = nil
-    static var _method_add_icon_radio_check_item_1200674553: GDExtensionMethodBindPtr! = nil
-    static var _method_add_multistate_item_1585218420: GDExtensionMethodBindPtr! = nil
-    static var _method_add_shortcut_2168272394: GDExtensionMethodBindPtr! = nil
-    static var _method_add_icon_shortcut_68101841: GDExtensionMethodBindPtr! = nil
-    static var _method_add_check_shortcut_2168272394: GDExtensionMethodBindPtr! = nil
-    static var _method_add_icon_check_shortcut_68101841: GDExtensionMethodBindPtr! = nil
-    static var _method_add_radio_check_shortcut_2168272394: GDExtensionMethodBindPtr! = nil
-    static var _method_add_icon_radio_check_shortcut_68101841: GDExtensionMethodBindPtr! = nil
-    static var _method_add_submenu_item_3728518296: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_text_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_text_direction_1707680378: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_language_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_icon_666127730: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_checked_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_id_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_accelerator_2992817551: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_metadata_2152698145: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_disabled_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_submenu_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_as_separator_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_as_checkable_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_as_radio_checkable_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_tooltip_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_shortcut_825127832: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_indent_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_multistate_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_shortcut_disabled_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_toggle_item_checked_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_toggle_item_multistate_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_text_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_text_direction_4235602388: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_language_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_icon_3536238170: GDExtensionMethodBindPtr! = nil
-    static var _method_is_item_checked_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_id_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_index_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_accelerator_253789942: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_metadata_4227898402: GDExtensionMethodBindPtr! = nil
-    static var _method_is_item_disabled_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_submenu_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_is_item_separator_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_is_item_checkable_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_is_item_radio_checkable_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_is_item_shortcut_disabled_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_tooltip_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_shortcut_1449483325: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_indent_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_set_focused_item_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_focused_item_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_count_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_scroll_to_item_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_item_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_add_separator_2266703459: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_hide_on_item_selection_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_hide_on_item_selection_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_hide_on_checkable_item_selection_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_hide_on_checkable_item_selection_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_hide_on_state_item_selection_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_hide_on_state_item_selection_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_submenu_popup_delay_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_submenu_popup_delay_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_allow_search_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_allow_search_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_add_item_3224536192: StringName! = nil
+    static var _method_add_icon_item_1200674553: StringName! = nil
+    static var _method_add_check_item_3224536192: StringName! = nil
+    static var _method_add_icon_check_item_1200674553: StringName! = nil
+    static var _method_add_radio_check_item_3224536192: StringName! = nil
+    static var _method_add_icon_radio_check_item_1200674553: StringName! = nil
+    static var _method_add_multistate_item_1585218420: StringName! = nil
+    static var _method_add_shortcut_2168272394: StringName! = nil
+    static var _method_add_icon_shortcut_68101841: StringName! = nil
+    static var _method_add_check_shortcut_2168272394: StringName! = nil
+    static var _method_add_icon_check_shortcut_68101841: StringName! = nil
+    static var _method_add_radio_check_shortcut_2168272394: StringName! = nil
+    static var _method_add_icon_radio_check_shortcut_68101841: StringName! = nil
+    static var _method_add_submenu_item_3728518296: StringName! = nil
+    static var _method_set_item_text_501894301: StringName! = nil
+    static var _method_set_item_text_direction_1707680378: StringName! = nil
+    static var _method_set_item_language_501894301: StringName! = nil
+    static var _method_set_item_icon_666127730: StringName! = nil
+    static var _method_set_item_checked_300928843: StringName! = nil
+    static var _method_set_item_id_3937882851: StringName! = nil
+    static var _method_set_item_accelerator_2992817551: StringName! = nil
+    static var _method_set_item_metadata_2152698145: StringName! = nil
+    static var _method_set_item_disabled_300928843: StringName! = nil
+    static var _method_set_item_submenu_501894301: StringName! = nil
+    static var _method_set_item_as_separator_300928843: StringName! = nil
+    static var _method_set_item_as_checkable_300928843: StringName! = nil
+    static var _method_set_item_as_radio_checkable_300928843: StringName! = nil
+    static var _method_set_item_tooltip_501894301: StringName! = nil
+    static var _method_set_item_shortcut_825127832: StringName! = nil
+    static var _method_set_item_indent_3937882851: StringName! = nil
+    static var _method_set_item_multistate_3937882851: StringName! = nil
+    static var _method_set_item_shortcut_disabled_300928843: StringName! = nil
+    static var _method_toggle_item_checked_1286410249: StringName! = nil
+    static var _method_toggle_item_multistate_1286410249: StringName! = nil
+    static var _method_get_item_text_844755477: StringName! = nil
+    static var _method_get_item_text_direction_4235602388: StringName! = nil
+    static var _method_get_item_language_844755477: StringName! = nil
+    static var _method_get_item_icon_3536238170: StringName! = nil
+    static var _method_is_item_checked_1116898809: StringName! = nil
+    static var _method_get_item_id_923996154: StringName! = nil
+    static var _method_get_item_index_923996154: StringName! = nil
+    static var _method_get_item_accelerator_253789942: StringName! = nil
+    static var _method_get_item_metadata_4227898402: StringName! = nil
+    static var _method_is_item_disabled_1116898809: StringName! = nil
+    static var _method_get_item_submenu_844755477: StringName! = nil
+    static var _method_is_item_separator_1116898809: StringName! = nil
+    static var _method_is_item_checkable_1116898809: StringName! = nil
+    static var _method_is_item_radio_checkable_1116898809: StringName! = nil
+    static var _method_is_item_shortcut_disabled_1116898809: StringName! = nil
+    static var _method_get_item_tooltip_844755477: StringName! = nil
+    static var _method_get_item_shortcut_1449483325: StringName! = nil
+    static var _method_get_item_indent_923996154: StringName! = nil
+    static var _method_set_focused_item_1286410249: StringName! = nil
+    static var _method_get_focused_item_3905245786: StringName! = nil
+    static var _method_set_item_count_1286410249: StringName! = nil
+    static var _method_get_item_count_3905245786: StringName! = nil
+    static var _method_scroll_to_item_1286410249: StringName! = nil
+    static var _method_remove_item_1286410249: StringName! = nil
+    static var _method_add_separator_2266703459: StringName! = nil
+    static var _method_clear_3218959716: StringName! = nil
+    static var _method_set_hide_on_item_selection_2586408642: StringName! = nil
+    static var _method_is_hide_on_item_selection_36873697: StringName! = nil
+    static var _method_set_hide_on_checkable_item_selection_2586408642: StringName! = nil
+    static var _method_is_hide_on_checkable_item_selection_36873697: StringName! = nil
+    static var _method_set_hide_on_state_item_selection_2586408642: StringName! = nil
+    static var _method_is_hide_on_state_item_selection_36873697: StringName! = nil
+    static var _method_set_submenu_popup_delay_373806689: StringName! = nil
+    static var _method_get_submenu_popup_delay_1740695150: StringName! = nil
+    static var _method_set_allow_search_2586408642: StringName! = nil
+    static var _method_get_allow_search_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PopupMenu == nil)
         __godot_name_PopupMenu = StringName(from: "PopupMenu")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_add_item_3224536192_name = StringName(from: "add_item")
-        self._method_add_item_3224536192 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_add_item_3224536192_name._native_ptr(), 3224536192)
-        assert(PopupMenu._method_add_item_3224536192 != nil)
-        let _method_add_icon_item_1200674553_name = StringName(from: "add_icon_item")
-        self._method_add_icon_item_1200674553 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_add_icon_item_1200674553_name._native_ptr(), 1200674553)
-        assert(PopupMenu._method_add_icon_item_1200674553 != nil)
-        let _method_add_check_item_3224536192_name = StringName(from: "add_check_item")
-        self._method_add_check_item_3224536192 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_add_check_item_3224536192_name._native_ptr(), 3224536192)
-        assert(PopupMenu._method_add_check_item_3224536192 != nil)
-        let _method_add_icon_check_item_1200674553_name = StringName(from: "add_icon_check_item")
-        self._method_add_icon_check_item_1200674553 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_add_icon_check_item_1200674553_name._native_ptr(), 1200674553)
-        assert(PopupMenu._method_add_icon_check_item_1200674553 != nil)
-        let _method_add_radio_check_item_3224536192_name = StringName(from: "add_radio_check_item")
-        self._method_add_radio_check_item_3224536192 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_add_radio_check_item_3224536192_name._native_ptr(), 3224536192)
-        assert(PopupMenu._method_add_radio_check_item_3224536192 != nil)
-        let _method_add_icon_radio_check_item_1200674553_name = StringName(from: "add_icon_radio_check_item")
-        self._method_add_icon_radio_check_item_1200674553 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_add_icon_radio_check_item_1200674553_name._native_ptr(), 1200674553)
-        assert(PopupMenu._method_add_icon_radio_check_item_1200674553 != nil)
-        let _method_add_multistate_item_1585218420_name = StringName(from: "add_multistate_item")
-        self._method_add_multistate_item_1585218420 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_add_multistate_item_1585218420_name._native_ptr(), 1585218420)
-        assert(PopupMenu._method_add_multistate_item_1585218420 != nil)
-        let _method_add_shortcut_2168272394_name = StringName(from: "add_shortcut")
-        self._method_add_shortcut_2168272394 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_add_shortcut_2168272394_name._native_ptr(), 2168272394)
-        assert(PopupMenu._method_add_shortcut_2168272394 != nil)
-        let _method_add_icon_shortcut_68101841_name = StringName(from: "add_icon_shortcut")
-        self._method_add_icon_shortcut_68101841 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_add_icon_shortcut_68101841_name._native_ptr(), 68101841)
-        assert(PopupMenu._method_add_icon_shortcut_68101841 != nil)
-        let _method_add_check_shortcut_2168272394_name = StringName(from: "add_check_shortcut")
-        self._method_add_check_shortcut_2168272394 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_add_check_shortcut_2168272394_name._native_ptr(), 2168272394)
-        assert(PopupMenu._method_add_check_shortcut_2168272394 != nil)
-        let _method_add_icon_check_shortcut_68101841_name = StringName(from: "add_icon_check_shortcut")
-        self._method_add_icon_check_shortcut_68101841 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_add_icon_check_shortcut_68101841_name._native_ptr(), 68101841)
-        assert(PopupMenu._method_add_icon_check_shortcut_68101841 != nil)
-        let _method_add_radio_check_shortcut_2168272394_name = StringName(from: "add_radio_check_shortcut")
-        self._method_add_radio_check_shortcut_2168272394 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_add_radio_check_shortcut_2168272394_name._native_ptr(), 2168272394)
-        assert(PopupMenu._method_add_radio_check_shortcut_2168272394 != nil)
-        let _method_add_icon_radio_check_shortcut_68101841_name = StringName(from: "add_icon_radio_check_shortcut")
-        self._method_add_icon_radio_check_shortcut_68101841 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_add_icon_radio_check_shortcut_68101841_name._native_ptr(), 68101841)
-        assert(PopupMenu._method_add_icon_radio_check_shortcut_68101841 != nil)
-        let _method_add_submenu_item_3728518296_name = StringName(from: "add_submenu_item")
-        self._method_add_submenu_item_3728518296 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_add_submenu_item_3728518296_name._native_ptr(), 3728518296)
-        assert(PopupMenu._method_add_submenu_item_3728518296 != nil)
-        let _method_set_item_text_501894301_name = StringName(from: "set_item_text")
-        self._method_set_item_text_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_text_501894301_name._native_ptr(), 501894301)
-        assert(PopupMenu._method_set_item_text_501894301 != nil)
-        let _method_set_item_text_direction_1707680378_name = StringName(from: "set_item_text_direction")
-        self._method_set_item_text_direction_1707680378 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_text_direction_1707680378_name._native_ptr(), 1707680378)
-        assert(PopupMenu._method_set_item_text_direction_1707680378 != nil)
-        let _method_set_item_language_501894301_name = StringName(from: "set_item_language")
-        self._method_set_item_language_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_language_501894301_name._native_ptr(), 501894301)
-        assert(PopupMenu._method_set_item_language_501894301 != nil)
-        let _method_set_item_icon_666127730_name = StringName(from: "set_item_icon")
-        self._method_set_item_icon_666127730 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_icon_666127730_name._native_ptr(), 666127730)
-        assert(PopupMenu._method_set_item_icon_666127730 != nil)
-        let _method_set_item_checked_300928843_name = StringName(from: "set_item_checked")
-        self._method_set_item_checked_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_checked_300928843_name._native_ptr(), 300928843)
-        assert(PopupMenu._method_set_item_checked_300928843 != nil)
-        let _method_set_item_id_3937882851_name = StringName(from: "set_item_id")
-        self._method_set_item_id_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_id_3937882851_name._native_ptr(), 3937882851)
-        assert(PopupMenu._method_set_item_id_3937882851 != nil)
-        let _method_set_item_accelerator_2992817551_name = StringName(from: "set_item_accelerator")
-        self._method_set_item_accelerator_2992817551 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_accelerator_2992817551_name._native_ptr(), 2992817551)
-        assert(PopupMenu._method_set_item_accelerator_2992817551 != nil)
-        let _method_set_item_metadata_2152698145_name = StringName(from: "set_item_metadata")
-        self._method_set_item_metadata_2152698145 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_metadata_2152698145_name._native_ptr(), 2152698145)
-        assert(PopupMenu._method_set_item_metadata_2152698145 != nil)
-        let _method_set_item_disabled_300928843_name = StringName(from: "set_item_disabled")
-        self._method_set_item_disabled_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_disabled_300928843_name._native_ptr(), 300928843)
-        assert(PopupMenu._method_set_item_disabled_300928843 != nil)
-        let _method_set_item_submenu_501894301_name = StringName(from: "set_item_submenu")
-        self._method_set_item_submenu_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_submenu_501894301_name._native_ptr(), 501894301)
-        assert(PopupMenu._method_set_item_submenu_501894301 != nil)
-        let _method_set_item_as_separator_300928843_name = StringName(from: "set_item_as_separator")
-        self._method_set_item_as_separator_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_as_separator_300928843_name._native_ptr(), 300928843)
-        assert(PopupMenu._method_set_item_as_separator_300928843 != nil)
-        let _method_set_item_as_checkable_300928843_name = StringName(from: "set_item_as_checkable")
-        self._method_set_item_as_checkable_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_as_checkable_300928843_name._native_ptr(), 300928843)
-        assert(PopupMenu._method_set_item_as_checkable_300928843 != nil)
-        let _method_set_item_as_radio_checkable_300928843_name = StringName(from: "set_item_as_radio_checkable")
-        self._method_set_item_as_radio_checkable_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_as_radio_checkable_300928843_name._native_ptr(), 300928843)
-        assert(PopupMenu._method_set_item_as_radio_checkable_300928843 != nil)
-        let _method_set_item_tooltip_501894301_name = StringName(from: "set_item_tooltip")
-        self._method_set_item_tooltip_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_tooltip_501894301_name._native_ptr(), 501894301)
-        assert(PopupMenu._method_set_item_tooltip_501894301 != nil)
-        let _method_set_item_shortcut_825127832_name = StringName(from: "set_item_shortcut")
-        self._method_set_item_shortcut_825127832 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_shortcut_825127832_name._native_ptr(), 825127832)
-        assert(PopupMenu._method_set_item_shortcut_825127832 != nil)
-        let _method_set_item_indent_3937882851_name = StringName(from: "set_item_indent")
-        self._method_set_item_indent_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_indent_3937882851_name._native_ptr(), 3937882851)
-        assert(PopupMenu._method_set_item_indent_3937882851 != nil)
-        let _method_set_item_multistate_3937882851_name = StringName(from: "set_item_multistate")
-        self._method_set_item_multistate_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_multistate_3937882851_name._native_ptr(), 3937882851)
-        assert(PopupMenu._method_set_item_multistate_3937882851 != nil)
-        let _method_set_item_shortcut_disabled_300928843_name = StringName(from: "set_item_shortcut_disabled")
-        self._method_set_item_shortcut_disabled_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_shortcut_disabled_300928843_name._native_ptr(), 300928843)
-        assert(PopupMenu._method_set_item_shortcut_disabled_300928843 != nil)
-        let _method_toggle_item_checked_1286410249_name = StringName(from: "toggle_item_checked")
-        self._method_toggle_item_checked_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_toggle_item_checked_1286410249_name._native_ptr(), 1286410249)
-        assert(PopupMenu._method_toggle_item_checked_1286410249 != nil)
-        let _method_toggle_item_multistate_1286410249_name = StringName(from: "toggle_item_multistate")
-        self._method_toggle_item_multistate_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_toggle_item_multistate_1286410249_name._native_ptr(), 1286410249)
-        assert(PopupMenu._method_toggle_item_multistate_1286410249 != nil)
-        let _method_get_item_text_844755477_name = StringName(from: "get_item_text")
-        self._method_get_item_text_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_get_item_text_844755477_name._native_ptr(), 844755477)
-        assert(PopupMenu._method_get_item_text_844755477 != nil)
-        let _method_get_item_text_direction_4235602388_name = StringName(from: "get_item_text_direction")
-        self._method_get_item_text_direction_4235602388 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_get_item_text_direction_4235602388_name._native_ptr(), 4235602388)
-        assert(PopupMenu._method_get_item_text_direction_4235602388 != nil)
-        let _method_get_item_language_844755477_name = StringName(from: "get_item_language")
-        self._method_get_item_language_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_get_item_language_844755477_name._native_ptr(), 844755477)
-        assert(PopupMenu._method_get_item_language_844755477 != nil)
-        let _method_get_item_icon_3536238170_name = StringName(from: "get_item_icon")
-        self._method_get_item_icon_3536238170 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_get_item_icon_3536238170_name._native_ptr(), 3536238170)
-        assert(PopupMenu._method_get_item_icon_3536238170 != nil)
-        let _method_is_item_checked_1116898809_name = StringName(from: "is_item_checked")
-        self._method_is_item_checked_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_is_item_checked_1116898809_name._native_ptr(), 1116898809)
-        assert(PopupMenu._method_is_item_checked_1116898809 != nil)
-        let _method_get_item_id_923996154_name = StringName(from: "get_item_id")
-        self._method_get_item_id_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_get_item_id_923996154_name._native_ptr(), 923996154)
-        assert(PopupMenu._method_get_item_id_923996154 != nil)
-        let _method_get_item_index_923996154_name = StringName(from: "get_item_index")
-        self._method_get_item_index_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_get_item_index_923996154_name._native_ptr(), 923996154)
-        assert(PopupMenu._method_get_item_index_923996154 != nil)
-        let _method_get_item_accelerator_253789942_name = StringName(from: "get_item_accelerator")
-        self._method_get_item_accelerator_253789942 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_get_item_accelerator_253789942_name._native_ptr(), 253789942)
-        assert(PopupMenu._method_get_item_accelerator_253789942 != nil)
-        let _method_get_item_metadata_4227898402_name = StringName(from: "get_item_metadata")
-        self._method_get_item_metadata_4227898402 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_get_item_metadata_4227898402_name._native_ptr(), 4227898402)
-        assert(PopupMenu._method_get_item_metadata_4227898402 != nil)
-        let _method_is_item_disabled_1116898809_name = StringName(from: "is_item_disabled")
-        self._method_is_item_disabled_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_is_item_disabled_1116898809_name._native_ptr(), 1116898809)
-        assert(PopupMenu._method_is_item_disabled_1116898809 != nil)
-        let _method_get_item_submenu_844755477_name = StringName(from: "get_item_submenu")
-        self._method_get_item_submenu_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_get_item_submenu_844755477_name._native_ptr(), 844755477)
-        assert(PopupMenu._method_get_item_submenu_844755477 != nil)
-        let _method_is_item_separator_1116898809_name = StringName(from: "is_item_separator")
-        self._method_is_item_separator_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_is_item_separator_1116898809_name._native_ptr(), 1116898809)
-        assert(PopupMenu._method_is_item_separator_1116898809 != nil)
-        let _method_is_item_checkable_1116898809_name = StringName(from: "is_item_checkable")
-        self._method_is_item_checkable_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_is_item_checkable_1116898809_name._native_ptr(), 1116898809)
-        assert(PopupMenu._method_is_item_checkable_1116898809 != nil)
-        let _method_is_item_radio_checkable_1116898809_name = StringName(from: "is_item_radio_checkable")
-        self._method_is_item_radio_checkable_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_is_item_radio_checkable_1116898809_name._native_ptr(), 1116898809)
-        assert(PopupMenu._method_is_item_radio_checkable_1116898809 != nil)
-        let _method_is_item_shortcut_disabled_1116898809_name = StringName(from: "is_item_shortcut_disabled")
-        self._method_is_item_shortcut_disabled_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_is_item_shortcut_disabled_1116898809_name._native_ptr(), 1116898809)
-        assert(PopupMenu._method_is_item_shortcut_disabled_1116898809 != nil)
-        let _method_get_item_tooltip_844755477_name = StringName(from: "get_item_tooltip")
-        self._method_get_item_tooltip_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_get_item_tooltip_844755477_name._native_ptr(), 844755477)
-        assert(PopupMenu._method_get_item_tooltip_844755477 != nil)
-        let _method_get_item_shortcut_1449483325_name = StringName(from: "get_item_shortcut")
-        self._method_get_item_shortcut_1449483325 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_get_item_shortcut_1449483325_name._native_ptr(), 1449483325)
-        assert(PopupMenu._method_get_item_shortcut_1449483325 != nil)
-        let _method_get_item_indent_923996154_name = StringName(from: "get_item_indent")
-        self._method_get_item_indent_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_get_item_indent_923996154_name._native_ptr(), 923996154)
-        assert(PopupMenu._method_get_item_indent_923996154 != nil)
-        let _method_set_focused_item_1286410249_name = StringName(from: "set_focused_item")
-        self._method_set_focused_item_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_focused_item_1286410249_name._native_ptr(), 1286410249)
-        assert(PopupMenu._method_set_focused_item_1286410249 != nil)
-        let _method_get_focused_item_3905245786_name = StringName(from: "get_focused_item")
-        self._method_get_focused_item_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_get_focused_item_3905245786_name._native_ptr(), 3905245786)
-        assert(PopupMenu._method_get_focused_item_3905245786 != nil)
-        let _method_set_item_count_1286410249_name = StringName(from: "set_item_count")
-        self._method_set_item_count_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_item_count_1286410249_name._native_ptr(), 1286410249)
-        assert(PopupMenu._method_set_item_count_1286410249 != nil)
-        let _method_get_item_count_3905245786_name = StringName(from: "get_item_count")
-        self._method_get_item_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_get_item_count_3905245786_name._native_ptr(), 3905245786)
-        assert(PopupMenu._method_get_item_count_3905245786 != nil)
-        let _method_scroll_to_item_1286410249_name = StringName(from: "scroll_to_item")
-        self._method_scroll_to_item_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_scroll_to_item_1286410249_name._native_ptr(), 1286410249)
-        assert(PopupMenu._method_scroll_to_item_1286410249 != nil)
-        let _method_remove_item_1286410249_name = StringName(from: "remove_item")
-        self._method_remove_item_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_remove_item_1286410249_name._native_ptr(), 1286410249)
-        assert(PopupMenu._method_remove_item_1286410249 != nil)
-        let _method_add_separator_2266703459_name = StringName(from: "add_separator")
-        self._method_add_separator_2266703459 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_add_separator_2266703459_name._native_ptr(), 2266703459)
-        assert(PopupMenu._method_add_separator_2266703459 != nil)
-        let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
-        assert(PopupMenu._method_clear_3218959716 != nil)
-        let _method_set_hide_on_item_selection_2586408642_name = StringName(from: "set_hide_on_item_selection")
-        self._method_set_hide_on_item_selection_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_hide_on_item_selection_2586408642_name._native_ptr(), 2586408642)
-        assert(PopupMenu._method_set_hide_on_item_selection_2586408642 != nil)
-        let _method_is_hide_on_item_selection_36873697_name = StringName(from: "is_hide_on_item_selection")
-        self._method_is_hide_on_item_selection_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_is_hide_on_item_selection_36873697_name._native_ptr(), 36873697)
-        assert(PopupMenu._method_is_hide_on_item_selection_36873697 != nil)
-        let _method_set_hide_on_checkable_item_selection_2586408642_name = StringName(from: "set_hide_on_checkable_item_selection")
-        self._method_set_hide_on_checkable_item_selection_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_hide_on_checkable_item_selection_2586408642_name._native_ptr(), 2586408642)
-        assert(PopupMenu._method_set_hide_on_checkable_item_selection_2586408642 != nil)
-        let _method_is_hide_on_checkable_item_selection_36873697_name = StringName(from: "is_hide_on_checkable_item_selection")
-        self._method_is_hide_on_checkable_item_selection_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_is_hide_on_checkable_item_selection_36873697_name._native_ptr(), 36873697)
-        assert(PopupMenu._method_is_hide_on_checkable_item_selection_36873697 != nil)
-        let _method_set_hide_on_state_item_selection_2586408642_name = StringName(from: "set_hide_on_state_item_selection")
-        self._method_set_hide_on_state_item_selection_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_hide_on_state_item_selection_2586408642_name._native_ptr(), 2586408642)
-        assert(PopupMenu._method_set_hide_on_state_item_selection_2586408642 != nil)
-        let _method_is_hide_on_state_item_selection_36873697_name = StringName(from: "is_hide_on_state_item_selection")
-        self._method_is_hide_on_state_item_selection_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_is_hide_on_state_item_selection_36873697_name._native_ptr(), 36873697)
-        assert(PopupMenu._method_is_hide_on_state_item_selection_36873697 != nil)
-        let _method_set_submenu_popup_delay_373806689_name = StringName(from: "set_submenu_popup_delay")
-        self._method_set_submenu_popup_delay_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_submenu_popup_delay_373806689_name._native_ptr(), 373806689)
-        assert(PopupMenu._method_set_submenu_popup_delay_373806689 != nil)
-        let _method_get_submenu_popup_delay_1740695150_name = StringName(from: "get_submenu_popup_delay")
-        self._method_get_submenu_popup_delay_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_get_submenu_popup_delay_1740695150_name._native_ptr(), 1740695150)
-        assert(PopupMenu._method_get_submenu_popup_delay_1740695150 != nil)
-        let _method_set_allow_search_2586408642_name = StringName(from: "set_allow_search")
-        self._method_set_allow_search_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_set_allow_search_2586408642_name._native_ptr(), 2586408642)
-        assert(PopupMenu._method_set_allow_search_2586408642 != nil)
-        let _method_get_allow_search_36873697_name = StringName(from: "get_allow_search")
-        self._method_get_allow_search_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PopupMenu._native_ptr(), _method_get_allow_search_36873697_name._native_ptr(), 36873697)
-        assert(PopupMenu._method_get_allow_search_36873697 != nil)
+        self._method_add_item_3224536192 = StringName(from: "add_item")
+        assert(self._method_add_item_3224536192 != nil)
+        self._method_add_icon_item_1200674553 = StringName(from: "add_icon_item")
+        assert(self._method_add_icon_item_1200674553 != nil)
+        self._method_add_check_item_3224536192 = StringName(from: "add_check_item")
+        assert(self._method_add_check_item_3224536192 != nil)
+        self._method_add_icon_check_item_1200674553 = StringName(from: "add_icon_check_item")
+        assert(self._method_add_icon_check_item_1200674553 != nil)
+        self._method_add_radio_check_item_3224536192 = StringName(from: "add_radio_check_item")
+        assert(self._method_add_radio_check_item_3224536192 != nil)
+        self._method_add_icon_radio_check_item_1200674553 = StringName(from: "add_icon_radio_check_item")
+        assert(self._method_add_icon_radio_check_item_1200674553 != nil)
+        self._method_add_multistate_item_1585218420 = StringName(from: "add_multistate_item")
+        assert(self._method_add_multistate_item_1585218420 != nil)
+        self._method_add_shortcut_2168272394 = StringName(from: "add_shortcut")
+        assert(self._method_add_shortcut_2168272394 != nil)
+        self._method_add_icon_shortcut_68101841 = StringName(from: "add_icon_shortcut")
+        assert(self._method_add_icon_shortcut_68101841 != nil)
+        self._method_add_check_shortcut_2168272394 = StringName(from: "add_check_shortcut")
+        assert(self._method_add_check_shortcut_2168272394 != nil)
+        self._method_add_icon_check_shortcut_68101841 = StringName(from: "add_icon_check_shortcut")
+        assert(self._method_add_icon_check_shortcut_68101841 != nil)
+        self._method_add_radio_check_shortcut_2168272394 = StringName(from: "add_radio_check_shortcut")
+        assert(self._method_add_radio_check_shortcut_2168272394 != nil)
+        self._method_add_icon_radio_check_shortcut_68101841 = StringName(from: "add_icon_radio_check_shortcut")
+        assert(self._method_add_icon_radio_check_shortcut_68101841 != nil)
+        self._method_add_submenu_item_3728518296 = StringName(from: "add_submenu_item")
+        assert(self._method_add_submenu_item_3728518296 != nil)
+        self._method_set_item_text_501894301 = StringName(from: "set_item_text")
+        assert(self._method_set_item_text_501894301 != nil)
+        self._method_set_item_text_direction_1707680378 = StringName(from: "set_item_text_direction")
+        assert(self._method_set_item_text_direction_1707680378 != nil)
+        self._method_set_item_language_501894301 = StringName(from: "set_item_language")
+        assert(self._method_set_item_language_501894301 != nil)
+        self._method_set_item_icon_666127730 = StringName(from: "set_item_icon")
+        assert(self._method_set_item_icon_666127730 != nil)
+        self._method_set_item_checked_300928843 = StringName(from: "set_item_checked")
+        assert(self._method_set_item_checked_300928843 != nil)
+        self._method_set_item_id_3937882851 = StringName(from: "set_item_id")
+        assert(self._method_set_item_id_3937882851 != nil)
+        self._method_set_item_accelerator_2992817551 = StringName(from: "set_item_accelerator")
+        assert(self._method_set_item_accelerator_2992817551 != nil)
+        self._method_set_item_metadata_2152698145 = StringName(from: "set_item_metadata")
+        assert(self._method_set_item_metadata_2152698145 != nil)
+        self._method_set_item_disabled_300928843 = StringName(from: "set_item_disabled")
+        assert(self._method_set_item_disabled_300928843 != nil)
+        self._method_set_item_submenu_501894301 = StringName(from: "set_item_submenu")
+        assert(self._method_set_item_submenu_501894301 != nil)
+        self._method_set_item_as_separator_300928843 = StringName(from: "set_item_as_separator")
+        assert(self._method_set_item_as_separator_300928843 != nil)
+        self._method_set_item_as_checkable_300928843 = StringName(from: "set_item_as_checkable")
+        assert(self._method_set_item_as_checkable_300928843 != nil)
+        self._method_set_item_as_radio_checkable_300928843 = StringName(from: "set_item_as_radio_checkable")
+        assert(self._method_set_item_as_radio_checkable_300928843 != nil)
+        self._method_set_item_tooltip_501894301 = StringName(from: "set_item_tooltip")
+        assert(self._method_set_item_tooltip_501894301 != nil)
+        self._method_set_item_shortcut_825127832 = StringName(from: "set_item_shortcut")
+        assert(self._method_set_item_shortcut_825127832 != nil)
+        self._method_set_item_indent_3937882851 = StringName(from: "set_item_indent")
+        assert(self._method_set_item_indent_3937882851 != nil)
+        self._method_set_item_multistate_3937882851 = StringName(from: "set_item_multistate")
+        assert(self._method_set_item_multistate_3937882851 != nil)
+        self._method_set_item_shortcut_disabled_300928843 = StringName(from: "set_item_shortcut_disabled")
+        assert(self._method_set_item_shortcut_disabled_300928843 != nil)
+        self._method_toggle_item_checked_1286410249 = StringName(from: "toggle_item_checked")
+        assert(self._method_toggle_item_checked_1286410249 != nil)
+        self._method_toggle_item_multistate_1286410249 = StringName(from: "toggle_item_multistate")
+        assert(self._method_toggle_item_multistate_1286410249 != nil)
+        self._method_get_item_text_844755477 = StringName(from: "get_item_text")
+        assert(self._method_get_item_text_844755477 != nil)
+        self._method_get_item_text_direction_4235602388 = StringName(from: "get_item_text_direction")
+        assert(self._method_get_item_text_direction_4235602388 != nil)
+        self._method_get_item_language_844755477 = StringName(from: "get_item_language")
+        assert(self._method_get_item_language_844755477 != nil)
+        self._method_get_item_icon_3536238170 = StringName(from: "get_item_icon")
+        assert(self._method_get_item_icon_3536238170 != nil)
+        self._method_is_item_checked_1116898809 = StringName(from: "is_item_checked")
+        assert(self._method_is_item_checked_1116898809 != nil)
+        self._method_get_item_id_923996154 = StringName(from: "get_item_id")
+        assert(self._method_get_item_id_923996154 != nil)
+        self._method_get_item_index_923996154 = StringName(from: "get_item_index")
+        assert(self._method_get_item_index_923996154 != nil)
+        self._method_get_item_accelerator_253789942 = StringName(from: "get_item_accelerator")
+        assert(self._method_get_item_accelerator_253789942 != nil)
+        self._method_get_item_metadata_4227898402 = StringName(from: "get_item_metadata")
+        assert(self._method_get_item_metadata_4227898402 != nil)
+        self._method_is_item_disabled_1116898809 = StringName(from: "is_item_disabled")
+        assert(self._method_is_item_disabled_1116898809 != nil)
+        self._method_get_item_submenu_844755477 = StringName(from: "get_item_submenu")
+        assert(self._method_get_item_submenu_844755477 != nil)
+        self._method_is_item_separator_1116898809 = StringName(from: "is_item_separator")
+        assert(self._method_is_item_separator_1116898809 != nil)
+        self._method_is_item_checkable_1116898809 = StringName(from: "is_item_checkable")
+        assert(self._method_is_item_checkable_1116898809 != nil)
+        self._method_is_item_radio_checkable_1116898809 = StringName(from: "is_item_radio_checkable")
+        assert(self._method_is_item_radio_checkable_1116898809 != nil)
+        self._method_is_item_shortcut_disabled_1116898809 = StringName(from: "is_item_shortcut_disabled")
+        assert(self._method_is_item_shortcut_disabled_1116898809 != nil)
+        self._method_get_item_tooltip_844755477 = StringName(from: "get_item_tooltip")
+        assert(self._method_get_item_tooltip_844755477 != nil)
+        self._method_get_item_shortcut_1449483325 = StringName(from: "get_item_shortcut")
+        assert(self._method_get_item_shortcut_1449483325 != nil)
+        self._method_get_item_indent_923996154 = StringName(from: "get_item_indent")
+        assert(self._method_get_item_indent_923996154 != nil)
+        self._method_set_focused_item_1286410249 = StringName(from: "set_focused_item")
+        assert(self._method_set_focused_item_1286410249 != nil)
+        self._method_get_focused_item_3905245786 = StringName(from: "get_focused_item")
+        assert(self._method_get_focused_item_3905245786 != nil)
+        self._method_set_item_count_1286410249 = StringName(from: "set_item_count")
+        assert(self._method_set_item_count_1286410249 != nil)
+        self._method_get_item_count_3905245786 = StringName(from: "get_item_count")
+        assert(self._method_get_item_count_3905245786 != nil)
+        self._method_scroll_to_item_1286410249 = StringName(from: "scroll_to_item")
+        assert(self._method_scroll_to_item_1286410249 != nil)
+        self._method_remove_item_1286410249 = StringName(from: "remove_item")
+        assert(self._method_remove_item_1286410249 != nil)
+        self._method_add_separator_2266703459 = StringName(from: "add_separator")
+        assert(self._method_add_separator_2266703459 != nil)
+        self._method_clear_3218959716 = StringName(from: "clear")
+        assert(self._method_clear_3218959716 != nil)
+        self._method_set_hide_on_item_selection_2586408642 = StringName(from: "set_hide_on_item_selection")
+        assert(self._method_set_hide_on_item_selection_2586408642 != nil)
+        self._method_is_hide_on_item_selection_36873697 = StringName(from: "is_hide_on_item_selection")
+        assert(self._method_is_hide_on_item_selection_36873697 != nil)
+        self._method_set_hide_on_checkable_item_selection_2586408642 = StringName(from: "set_hide_on_checkable_item_selection")
+        assert(self._method_set_hide_on_checkable_item_selection_2586408642 != nil)
+        self._method_is_hide_on_checkable_item_selection_36873697 = StringName(from: "is_hide_on_checkable_item_selection")
+        assert(self._method_is_hide_on_checkable_item_selection_36873697 != nil)
+        self._method_set_hide_on_state_item_selection_2586408642 = StringName(from: "set_hide_on_state_item_selection")
+        assert(self._method_set_hide_on_state_item_selection_2586408642 != nil)
+        self._method_is_hide_on_state_item_selection_36873697 = StringName(from: "is_hide_on_state_item_selection")
+        assert(self._method_is_hide_on_state_item_selection_36873697 != nil)
+        self._method_set_submenu_popup_delay_373806689 = StringName(from: "set_submenu_popup_delay")
+        assert(self._method_set_submenu_popup_delay_373806689 != nil)
+        self._method_get_submenu_popup_delay_1740695150 = StringName(from: "get_submenu_popup_delay")
+        assert(self._method_get_submenu_popup_delay_1740695150 != nil)
+        self._method_set_allow_search_2586408642 = StringName(from: "set_allow_search")
+        assert(self._method_set_allow_search_2586408642 != nil)
+        self._method_get_allow_search_36873697 = StringName(from: "get_allow_search")
+        assert(self._method_get_allow_search_36873697 != nil)
     }
 
     public func add_item(label: godot.String, id: Int64, accel: Key)  {
@@ -320,8 +251,13 @@ open class PopupMenu : Popup {
                 .init(label_native), .init(id_native), .init(accel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_item_3224536192,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_item_3224536192._native_ptr(),
+                    3224536192)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -340,8 +276,13 @@ open class PopupMenu : Popup {
                 .init(texture_native), .init(label_native), .init(id_native), .init(accel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_icon_item_1200674553,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_icon_item_1200674553._native_ptr(),
+                    1200674553)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -359,8 +300,13 @@ open class PopupMenu : Popup {
                 .init(label_native), .init(id_native), .init(accel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_check_item_3224536192,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_check_item_3224536192._native_ptr(),
+                    3224536192)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -379,8 +325,13 @@ open class PopupMenu : Popup {
                 .init(texture_native), .init(label_native), .init(id_native), .init(accel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_icon_check_item_1200674553,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_icon_check_item_1200674553._native_ptr(),
+                    1200674553)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -398,8 +349,13 @@ open class PopupMenu : Popup {
                 .init(label_native), .init(id_native), .init(accel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_radio_check_item_3224536192,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_radio_check_item_3224536192._native_ptr(),
+                    3224536192)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -418,8 +374,13 @@ open class PopupMenu : Popup {
                 .init(texture_native), .init(label_native), .init(id_native), .init(accel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_icon_radio_check_item_1200674553,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_icon_radio_check_item_1200674553._native_ptr(),
+                    1200674553)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -439,8 +400,13 @@ open class PopupMenu : Popup {
                 .init(label_native), .init(max_states_native), .init(default_state_native), .init(id_native), .init(accel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_multistate_item_1585218420,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_multistate_item_1585218420._native_ptr(),
+                    1585218420)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -460,8 +426,13 @@ open class PopupMenu : Popup {
                 .init(shortcut_native), .init(id_native), .init(global_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_shortcut_2168272394,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_shortcut_2168272394._native_ptr(),
+                    2168272394)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -480,8 +451,13 @@ open class PopupMenu : Popup {
                 .init(texture_native), .init(shortcut_native), .init(id_native), .init(global_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_icon_shortcut_68101841,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_icon_shortcut_68101841._native_ptr(),
+                    68101841)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -499,8 +475,13 @@ open class PopupMenu : Popup {
                 .init(shortcut_native), .init(id_native), .init(global_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_check_shortcut_2168272394,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_check_shortcut_2168272394._native_ptr(),
+                    2168272394)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -519,8 +500,13 @@ open class PopupMenu : Popup {
                 .init(texture_native), .init(shortcut_native), .init(id_native), .init(global_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_icon_check_shortcut_68101841,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_icon_check_shortcut_68101841._native_ptr(),
+                    68101841)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -538,8 +524,13 @@ open class PopupMenu : Popup {
                 .init(shortcut_native), .init(id_native), .init(global_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_radio_check_shortcut_2168272394,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_radio_check_shortcut_2168272394._native_ptr(),
+                    2168272394)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -558,8 +549,13 @@ open class PopupMenu : Popup {
                 .init(texture_native), .init(shortcut_native), .init(id_native), .init(global_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_icon_radio_check_shortcut_68101841,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_icon_radio_check_shortcut_68101841._native_ptr(),
+                    68101841)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -577,8 +573,13 @@ open class PopupMenu : Popup {
                 .init(label_native), .init(submenu_native), .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_submenu_item_3728518296,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_submenu_item_3728518296._native_ptr(),
+                    3728518296)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -594,8 +595,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_text_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_text_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -611,8 +617,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(direction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_text_direction_1707680378,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_text_direction_1707680378._native_ptr(),
+                    1707680378)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -629,8 +640,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(language_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_language_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_language_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -646,8 +662,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(icon_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_icon_666127730,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_icon_666127730._native_ptr(),
+                    666127730)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -663,8 +684,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(checked_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_checked_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_checked_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -681,8 +707,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_id_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_id_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -699,8 +730,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(accel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_accelerator_2992817551,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_accelerator_2992817551._native_ptr(),
+                    2992817551)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -717,8 +753,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(metadata_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_metadata_2152698145,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_metadata_2152698145._native_ptr(),
+                    2152698145)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -734,8 +775,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(disabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_disabled_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_disabled_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -752,8 +798,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(submenu_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_submenu_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_submenu_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -769,8 +820,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_as_separator_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_as_separator_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -787,8 +843,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_as_checkable_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_as_checkable_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -805,8 +866,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_as_radio_checkable_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_as_radio_checkable_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -823,8 +889,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(tooltip_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_tooltip_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_tooltip_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -841,8 +912,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(shortcut_native), .init(global_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_shortcut_825127832,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_shortcut_825127832._native_ptr(),
+                    825127832)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -859,8 +935,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(indent_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_indent_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_indent_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -877,8 +958,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(state_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_multistate_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_multistate_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -895,8 +981,13 @@ open class PopupMenu : Popup {
                 .init(index_native), .init(disabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_shortcut_disabled_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_shortcut_disabled_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -912,8 +1003,13 @@ open class PopupMenu : Popup {
                 .init(index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_toggle_item_checked_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_toggle_item_checked_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -928,8 +1024,13 @@ open class PopupMenu : Popup {
                 .init(index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_toggle_item_multistate_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_toggle_item_multistate_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -945,8 +1046,13 @@ open class PopupMenu : Popup {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_text_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_text_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -963,8 +1069,13 @@ open class PopupMenu : Popup {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_text_direction_4235602388,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_text_direction_4235602388._native_ptr(),
+                    4235602388)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -981,8 +1092,13 @@ open class PopupMenu : Popup {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_language_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_language_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -999,8 +1115,13 @@ open class PopupMenu : Popup {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_icon_3536238170,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_icon_3536238170._native_ptr(),
+                    3536238170)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1018,8 +1139,13 @@ open class PopupMenu : Popup {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_item_checked_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_item_checked_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1037,8 +1163,13 @@ open class PopupMenu : Popup {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_id_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_id_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1056,8 +1187,13 @@ open class PopupMenu : Popup {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_index_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_index_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1074,8 +1210,13 @@ open class PopupMenu : Popup {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_accelerator_253789942,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_accelerator_253789942._native_ptr(),
+                    253789942)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1092,8 +1233,13 @@ open class PopupMenu : Popup {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_metadata_4227898402,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_metadata_4227898402._native_ptr(),
+                    4227898402)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1111,8 +1257,13 @@ open class PopupMenu : Popup {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_item_disabled_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_item_disabled_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1129,8 +1280,13 @@ open class PopupMenu : Popup {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_submenu_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_submenu_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1148,8 +1304,13 @@ open class PopupMenu : Popup {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_item_separator_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_item_separator_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1167,8 +1328,13 @@ open class PopupMenu : Popup {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_item_checkable_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_item_checkable_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1186,8 +1352,13 @@ open class PopupMenu : Popup {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_item_radio_checkable_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_item_radio_checkable_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1205,8 +1376,13 @@ open class PopupMenu : Popup {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_item_shortcut_disabled_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_item_shortcut_disabled_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1223,8 +1399,13 @@ open class PopupMenu : Popup {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_tooltip_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_tooltip_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1241,8 +1422,13 @@ open class PopupMenu : Popup {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_shortcut_1449483325,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_shortcut_1449483325._native_ptr(),
+                    1449483325)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1260,8 +1446,13 @@ open class PopupMenu : Popup {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_indent_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_indent_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1277,8 +1468,13 @@ open class PopupMenu : Popup {
                 .init(index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_focused_item_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_focused_item_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1294,8 +1490,13 @@ open class PopupMenu : Popup {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_focused_item_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_focused_item_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1310,8 +1511,13 @@ open class PopupMenu : Popup {
                 .init(count_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_count_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_count_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1327,8 +1533,13 @@ open class PopupMenu : Popup {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1343,8 +1554,13 @@ open class PopupMenu : Popup {
                 .init(index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_scroll_to_item_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_scroll_to_item_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1359,8 +1575,13 @@ open class PopupMenu : Popup {
                 .init(index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_item_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_item_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1376,8 +1597,13 @@ open class PopupMenu : Popup {
                 .init(label_native), .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_separator_2266703459,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_separator_2266703459._native_ptr(),
+                    2266703459)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1391,8 +1617,13 @@ open class PopupMenu : Popup {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1406,8 +1637,13 @@ open class PopupMenu : Popup {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_hide_on_item_selection_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_hide_on_item_selection_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1423,8 +1659,13 @@ open class PopupMenu : Popup {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_hide_on_item_selection_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_hide_on_item_selection_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1439,8 +1680,13 @@ open class PopupMenu : Popup {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_hide_on_checkable_item_selection_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_hide_on_checkable_item_selection_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1456,8 +1702,13 @@ open class PopupMenu : Popup {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_hide_on_checkable_item_selection_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_hide_on_checkable_item_selection_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1472,8 +1723,13 @@ open class PopupMenu : Popup {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_hide_on_state_item_selection_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_hide_on_state_item_selection_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1489,8 +1745,13 @@ open class PopupMenu : Popup {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_hide_on_state_item_selection_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_hide_on_state_item_selection_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1505,8 +1766,13 @@ open class PopupMenu : Popup {
                 .init(seconds_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_submenu_popup_delay_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_submenu_popup_delay_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1522,8 +1788,13 @@ open class PopupMenu : Popup {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_submenu_popup_delay_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_submenu_popup_delay_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1538,8 +1809,13 @@ open class PopupMenu : Popup {
                 .init(allow_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_allow_search_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_allow_search_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1555,8 +1831,13 @@ open class PopupMenu : Popup {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_allow_search_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_allow_search_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

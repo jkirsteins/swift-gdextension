@@ -15,87 +15,70 @@ open class StyleBoxTexture : StyleBox {
 
     public override class var __godot_name: StringName { __godot_name_StyleBoxTexture }
 
-    static var _method_set_texture_4051416890: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_3635182373: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_margin_4290182280: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_margin_all_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_margin_2869120046: GDExtensionMethodBindPtr! = nil
-    static var _method_set_expand_margin_4290182280: GDExtensionMethodBindPtr! = nil
-    static var _method_set_expand_margin_all_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_expand_margin_2869120046: GDExtensionMethodBindPtr! = nil
-    static var _method_set_region_rect_2046264180: GDExtensionMethodBindPtr! = nil
-    static var _method_get_region_rect_1639390495: GDExtensionMethodBindPtr! = nil
-    static var _method_set_draw_center_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_draw_center_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_modulate_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_modulate_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_h_axis_stretch_mode_2965538783: GDExtensionMethodBindPtr! = nil
-    static var _method_get_h_axis_stretch_mode_3807744063: GDExtensionMethodBindPtr! = nil
-    static var _method_set_v_axis_stretch_mode_2965538783: GDExtensionMethodBindPtr! = nil
-    static var _method_get_v_axis_stretch_mode_3807744063: GDExtensionMethodBindPtr! = nil
+    static var _method_set_texture_4051416890: StringName! = nil
+    static var _method_get_texture_3635182373: StringName! = nil
+    static var _method_set_texture_margin_4290182280: StringName! = nil
+    static var _method_set_texture_margin_all_373806689: StringName! = nil
+    static var _method_get_texture_margin_2869120046: StringName! = nil
+    static var _method_set_expand_margin_4290182280: StringName! = nil
+    static var _method_set_expand_margin_all_373806689: StringName! = nil
+    static var _method_get_expand_margin_2869120046: StringName! = nil
+    static var _method_set_region_rect_2046264180: StringName! = nil
+    static var _method_get_region_rect_1639390495: StringName! = nil
+    static var _method_set_draw_center_2586408642: StringName! = nil
+    static var _method_is_draw_center_enabled_36873697: StringName! = nil
+    static var _method_set_modulate_2920490490: StringName! = nil
+    static var _method_get_modulate_3444240500: StringName! = nil
+    static var _method_set_h_axis_stretch_mode_2965538783: StringName! = nil
+    static var _method_get_h_axis_stretch_mode_3807744063: StringName! = nil
+    static var _method_set_v_axis_stretch_mode_2965538783: StringName! = nil
+    static var _method_get_v_axis_stretch_mode_3807744063: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_StyleBoxTexture == nil)
         __godot_name_StyleBoxTexture = StringName(from: "StyleBoxTexture")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_texture_4051416890_name = StringName(from: "set_texture")
-        self._method_set_texture_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_set_texture_4051416890_name._native_ptr(), 4051416890)
-        assert(StyleBoxTexture._method_set_texture_4051416890 != nil)
-        let _method_get_texture_3635182373_name = StringName(from: "get_texture")
-        self._method_get_texture_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_get_texture_3635182373_name._native_ptr(), 3635182373)
-        assert(StyleBoxTexture._method_get_texture_3635182373 != nil)
-        let _method_set_texture_margin_4290182280_name = StringName(from: "set_texture_margin")
-        self._method_set_texture_margin_4290182280 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_set_texture_margin_4290182280_name._native_ptr(), 4290182280)
-        assert(StyleBoxTexture._method_set_texture_margin_4290182280 != nil)
-        let _method_set_texture_margin_all_373806689_name = StringName(from: "set_texture_margin_all")
-        self._method_set_texture_margin_all_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_set_texture_margin_all_373806689_name._native_ptr(), 373806689)
-        assert(StyleBoxTexture._method_set_texture_margin_all_373806689 != nil)
-        let _method_get_texture_margin_2869120046_name = StringName(from: "get_texture_margin")
-        self._method_get_texture_margin_2869120046 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_get_texture_margin_2869120046_name._native_ptr(), 2869120046)
-        assert(StyleBoxTexture._method_get_texture_margin_2869120046 != nil)
-        let _method_set_expand_margin_4290182280_name = StringName(from: "set_expand_margin")
-        self._method_set_expand_margin_4290182280 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_set_expand_margin_4290182280_name._native_ptr(), 4290182280)
-        assert(StyleBoxTexture._method_set_expand_margin_4290182280 != nil)
-        let _method_set_expand_margin_all_373806689_name = StringName(from: "set_expand_margin_all")
-        self._method_set_expand_margin_all_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_set_expand_margin_all_373806689_name._native_ptr(), 373806689)
-        assert(StyleBoxTexture._method_set_expand_margin_all_373806689 != nil)
-        let _method_get_expand_margin_2869120046_name = StringName(from: "get_expand_margin")
-        self._method_get_expand_margin_2869120046 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_get_expand_margin_2869120046_name._native_ptr(), 2869120046)
-        assert(StyleBoxTexture._method_get_expand_margin_2869120046 != nil)
-        let _method_set_region_rect_2046264180_name = StringName(from: "set_region_rect")
-        self._method_set_region_rect_2046264180 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_set_region_rect_2046264180_name._native_ptr(), 2046264180)
-        assert(StyleBoxTexture._method_set_region_rect_2046264180 != nil)
-        let _method_get_region_rect_1639390495_name = StringName(from: "get_region_rect")
-        self._method_get_region_rect_1639390495 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_get_region_rect_1639390495_name._native_ptr(), 1639390495)
-        assert(StyleBoxTexture._method_get_region_rect_1639390495 != nil)
-        let _method_set_draw_center_2586408642_name = StringName(from: "set_draw_center")
-        self._method_set_draw_center_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_set_draw_center_2586408642_name._native_ptr(), 2586408642)
-        assert(StyleBoxTexture._method_set_draw_center_2586408642 != nil)
-        let _method_is_draw_center_enabled_36873697_name = StringName(from: "is_draw_center_enabled")
-        self._method_is_draw_center_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_is_draw_center_enabled_36873697_name._native_ptr(), 36873697)
-        assert(StyleBoxTexture._method_is_draw_center_enabled_36873697 != nil)
-        let _method_set_modulate_2920490490_name = StringName(from: "set_modulate")
-        self._method_set_modulate_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_set_modulate_2920490490_name._native_ptr(), 2920490490)
-        assert(StyleBoxTexture._method_set_modulate_2920490490 != nil)
-        let _method_get_modulate_3444240500_name = StringName(from: "get_modulate")
-        self._method_get_modulate_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_get_modulate_3444240500_name._native_ptr(), 3444240500)
-        assert(StyleBoxTexture._method_get_modulate_3444240500 != nil)
-        let _method_set_h_axis_stretch_mode_2965538783_name = StringName(from: "set_h_axis_stretch_mode")
-        self._method_set_h_axis_stretch_mode_2965538783 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_set_h_axis_stretch_mode_2965538783_name._native_ptr(), 2965538783)
-        assert(StyleBoxTexture._method_set_h_axis_stretch_mode_2965538783 != nil)
-        let _method_get_h_axis_stretch_mode_3807744063_name = StringName(from: "get_h_axis_stretch_mode")
-        self._method_get_h_axis_stretch_mode_3807744063 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_get_h_axis_stretch_mode_3807744063_name._native_ptr(), 3807744063)
-        assert(StyleBoxTexture._method_get_h_axis_stretch_mode_3807744063 != nil)
-        let _method_set_v_axis_stretch_mode_2965538783_name = StringName(from: "set_v_axis_stretch_mode")
-        self._method_set_v_axis_stretch_mode_2965538783 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_set_v_axis_stretch_mode_2965538783_name._native_ptr(), 2965538783)
-        assert(StyleBoxTexture._method_set_v_axis_stretch_mode_2965538783 != nil)
-        let _method_get_v_axis_stretch_mode_3807744063_name = StringName(from: "get_v_axis_stretch_mode")
-        self._method_get_v_axis_stretch_mode_3807744063 = self.interface.pointee.classdb_get_method_bind(__godot_name_StyleBoxTexture._native_ptr(), _method_get_v_axis_stretch_mode_3807744063_name._native_ptr(), 3807744063)
-        assert(StyleBoxTexture._method_get_v_axis_stretch_mode_3807744063 != nil)
+        self._method_set_texture_4051416890 = StringName(from: "set_texture")
+        assert(self._method_set_texture_4051416890 != nil)
+        self._method_get_texture_3635182373 = StringName(from: "get_texture")
+        assert(self._method_get_texture_3635182373 != nil)
+        self._method_set_texture_margin_4290182280 = StringName(from: "set_texture_margin")
+        assert(self._method_set_texture_margin_4290182280 != nil)
+        self._method_set_texture_margin_all_373806689 = StringName(from: "set_texture_margin_all")
+        assert(self._method_set_texture_margin_all_373806689 != nil)
+        self._method_get_texture_margin_2869120046 = StringName(from: "get_texture_margin")
+        assert(self._method_get_texture_margin_2869120046 != nil)
+        self._method_set_expand_margin_4290182280 = StringName(from: "set_expand_margin")
+        assert(self._method_set_expand_margin_4290182280 != nil)
+        self._method_set_expand_margin_all_373806689 = StringName(from: "set_expand_margin_all")
+        assert(self._method_set_expand_margin_all_373806689 != nil)
+        self._method_get_expand_margin_2869120046 = StringName(from: "get_expand_margin")
+        assert(self._method_get_expand_margin_2869120046 != nil)
+        self._method_set_region_rect_2046264180 = StringName(from: "set_region_rect")
+        assert(self._method_set_region_rect_2046264180 != nil)
+        self._method_get_region_rect_1639390495 = StringName(from: "get_region_rect")
+        assert(self._method_get_region_rect_1639390495 != nil)
+        self._method_set_draw_center_2586408642 = StringName(from: "set_draw_center")
+        assert(self._method_set_draw_center_2586408642 != nil)
+        self._method_is_draw_center_enabled_36873697 = StringName(from: "is_draw_center_enabled")
+        assert(self._method_is_draw_center_enabled_36873697 != nil)
+        self._method_set_modulate_2920490490 = StringName(from: "set_modulate")
+        assert(self._method_set_modulate_2920490490 != nil)
+        self._method_get_modulate_3444240500 = StringName(from: "get_modulate")
+        assert(self._method_get_modulate_3444240500 != nil)
+        self._method_set_h_axis_stretch_mode_2965538783 = StringName(from: "set_h_axis_stretch_mode")
+        assert(self._method_set_h_axis_stretch_mode_2965538783 != nil)
+        self._method_get_h_axis_stretch_mode_3807744063 = StringName(from: "get_h_axis_stretch_mode")
+        assert(self._method_get_h_axis_stretch_mode_3807744063 != nil)
+        self._method_set_v_axis_stretch_mode_2965538783 = StringName(from: "set_v_axis_stretch_mode")
+        assert(self._method_set_v_axis_stretch_mode_2965538783 != nil)
+        self._method_get_v_axis_stretch_mode_3807744063 = StringName(from: "get_v_axis_stretch_mode")
+        assert(self._method_get_v_axis_stretch_mode_3807744063 != nil)
     }
 
     public func set_texture(texture: Texture2D)  {
@@ -106,8 +89,13 @@ open class StyleBoxTexture : StyleBox {
                 .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_4051416890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_4051416890._native_ptr(),
+                    4051416890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -121,8 +109,13 @@ open class StyleBoxTexture : StyleBox {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_3635182373,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_3635182373._native_ptr(),
+                    3635182373)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -138,8 +131,13 @@ open class StyleBoxTexture : StyleBox {
                 .init(margin_native), .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_margin_4290182280,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_margin_4290182280._native_ptr(),
+                    4290182280)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -155,8 +153,13 @@ open class StyleBoxTexture : StyleBox {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_margin_all_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_margin_all_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -173,8 +176,13 @@ open class StyleBoxTexture : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_margin_2869120046,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_margin_2869120046._native_ptr(),
+                    2869120046)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -191,8 +199,13 @@ open class StyleBoxTexture : StyleBox {
                 .init(margin_native), .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_expand_margin_4290182280,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_expand_margin_4290182280._native_ptr(),
+                    4290182280)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -208,8 +221,13 @@ open class StyleBoxTexture : StyleBox {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_expand_margin_all_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_expand_margin_all_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -226,8 +244,13 @@ open class StyleBoxTexture : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_expand_margin_2869120046,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_expand_margin_2869120046._native_ptr(),
+                    2869120046)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -243,8 +266,13 @@ open class StyleBoxTexture : StyleBox {
                 .init(region_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_region_rect_2046264180,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_region_rect_2046264180._native_ptr(),
+                    2046264180)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -258,8 +286,13 @@ open class StyleBoxTexture : StyleBox {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_region_rect_1639390495,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_region_rect_1639390495._native_ptr(),
+                    1639390495)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -274,8 +307,13 @@ open class StyleBoxTexture : StyleBox {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_draw_center_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_draw_center_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -291,8 +329,13 @@ open class StyleBoxTexture : StyleBox {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_draw_center_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_draw_center_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -307,8 +350,13 @@ open class StyleBoxTexture : StyleBox {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_modulate_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_modulate_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -322,8 +370,13 @@ open class StyleBoxTexture : StyleBox {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_modulate_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_modulate_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -338,8 +391,13 @@ open class StyleBoxTexture : StyleBox {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_h_axis_stretch_mode_2965538783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_h_axis_stretch_mode_2965538783._native_ptr(),
+                    2965538783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -354,8 +412,13 @@ open class StyleBoxTexture : StyleBox {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_h_axis_stretch_mode_3807744063,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_h_axis_stretch_mode_3807744063._native_ptr(),
+                    3807744063)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -370,8 +433,13 @@ open class StyleBoxTexture : StyleBox {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_v_axis_stretch_mode_2965538783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_v_axis_stretch_mode_2965538783._native_ptr(),
+                    2965538783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -386,8 +454,13 @@ open class StyleBoxTexture : StyleBox {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_v_axis_stretch_mode_3807744063,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_v_axis_stretch_mode_3807744063._native_ptr(),
+                    3807744063)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -11,16 +11,17 @@ open class EditorResourcePreviewGenerator : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_EditorResourcePreviewGenerator }
 
-    static var _method__handles_0: GDExtensionMethodBindPtr! = nil
-    static var _method__generate_0: GDExtensionMethodBindPtr! = nil
-    static var _method__generate_from_path_0: GDExtensionMethodBindPtr! = nil
-    static var _method__generate_small_preview_automatically_0: GDExtensionMethodBindPtr! = nil
-    static var _method__can_generate_small_preview_0: GDExtensionMethodBindPtr! = nil
+    static var _method__handles_0: StringName! = nil
+    static var _method__generate_0: StringName! = nil
+    static var _method__generate_from_path_0: StringName! = nil
+    static var _method__generate_small_preview_automatically_0: StringName! = nil
+    static var _method__can_generate_small_preview_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorResourcePreviewGenerator == nil)
         __godot_name_EditorResourcePreviewGenerator = StringName(from: "EditorResourcePreviewGenerator")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -38,12 +39,7 @@ open class EditorResourcePreviewGenerator : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__handles_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _generate(resource: Resource, size: Vector2i) -> Texture2D {
@@ -56,12 +52,7 @@ open class EditorResourcePreviewGenerator : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__generate_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Texture2D(godot: __resPtr.pointee)
     }
     public func _generate_from_path(path: godot.String, size: Vector2i) -> Texture2D {
@@ -74,12 +65,7 @@ open class EditorResourcePreviewGenerator : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__generate_from_path_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Texture2D(godot: __resPtr.pointee)
     }
     public func _generate_small_preview_automatically() -> UInt8 {
@@ -91,12 +77,7 @@ open class EditorResourcePreviewGenerator : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__generate_small_preview_automatically_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _can_generate_small_preview() -> UInt8 {
@@ -108,12 +89,7 @@ open class EditorResourcePreviewGenerator : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__can_generate_small_preview_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
 }

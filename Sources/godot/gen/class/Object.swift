@@ -50,187 +50,145 @@ open class Object : Wrapped {
 
     public override class var __godot_name: StringName { __godot_name_Object }
 
-    static var _method_get_class_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_is_class_3927539163: GDExtensionMethodBindPtr! = nil
-    static var _method_set_3776071444: GDExtensionMethodBindPtr! = nil
-    static var _method_get_2760726917: GDExtensionMethodBindPtr! = nil
-    static var _method_set_indexed_3500910842: GDExtensionMethodBindPtr! = nil
-    static var _method_get_indexed_4006125091: GDExtensionMethodBindPtr! = nil
-    static var _method_get_property_list_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_get_method_list_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_property_can_revert_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_property_get_revert_2760726917: GDExtensionMethodBindPtr! = nil
-    static var _method_notification_4023243586: GDExtensionMethodBindPtr! = nil
-    static var _method_to_string_2841200299: GDExtensionMethodBindPtr! = nil
-    static var _method_get_instance_id_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_script_1114965689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_script_1214101251: GDExtensionMethodBindPtr! = nil
-    static var _method_set_meta_3776071444: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_meta_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_get_meta_3990617847: GDExtensionMethodBindPtr! = nil
-    static var _method_has_meta_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_get_meta_list_1139954409: GDExtensionMethodBindPtr! = nil
-    static var _method_add_user_signal_3780025912: GDExtensionMethodBindPtr! = nil
-    static var _method_has_user_signal_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_emit_signal_4047867050: GDExtensionMethodBindPtr! = nil
-    static var _method_call_3400424181: GDExtensionMethodBindPtr! = nil
-    static var _method_call_deferred_3400424181: GDExtensionMethodBindPtr! = nil
-    static var _method_set_deferred_3776071444: GDExtensionMethodBindPtr! = nil
-    static var _method_callv_1260104456: GDExtensionMethodBindPtr! = nil
-    static var _method_has_method_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_has_signal_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_get_signal_list_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_get_signal_connection_list_3147814860: GDExtensionMethodBindPtr! = nil
-    static var _method_get_incoming_connections_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_connect_1469446357: GDExtensionMethodBindPtr! = nil
-    static var _method_disconnect_1874754934: GDExtensionMethodBindPtr! = nil
-    static var _method_is_connected_768136979: GDExtensionMethodBindPtr! = nil
-    static var _method_set_block_signals_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_blocking_signals_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_notify_property_list_changed_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_message_translation_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_can_translate_messages_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_tr_2475554935: GDExtensionMethodBindPtr! = nil
-    static var _method_tr_n_4021311862: GDExtensionMethodBindPtr! = nil
-    static var _method_is_queued_for_deletion_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_get_class_201670096: StringName! = nil
+    static var _method_is_class_3927539163: StringName! = nil
+    static var _method_set_3776071444: StringName! = nil
+    static var _method_get_2760726917: StringName! = nil
+    static var _method_set_indexed_3500910842: StringName! = nil
+    static var _method_get_indexed_4006125091: StringName! = nil
+    static var _method_get_property_list_3995934104: StringName! = nil
+    static var _method_get_method_list_3995934104: StringName! = nil
+    static var _method_property_can_revert_2619796661: StringName! = nil
+    static var _method_property_get_revert_2760726917: StringName! = nil
+    static var _method_notification_4023243586: StringName! = nil
+    static var _method_to_string_2841200299: StringName! = nil
+    static var _method_get_instance_id_3905245786: StringName! = nil
+    static var _method_set_script_1114965689: StringName! = nil
+    static var _method_get_script_1214101251: StringName! = nil
+    static var _method_set_meta_3776071444: StringName! = nil
+    static var _method_remove_meta_3304788590: StringName! = nil
+    static var _method_get_meta_3990617847: StringName! = nil
+    static var _method_has_meta_2619796661: StringName! = nil
+    static var _method_get_meta_list_1139954409: StringName! = nil
+    static var _method_add_user_signal_3780025912: StringName! = nil
+    static var _method_has_user_signal_2619796661: StringName! = nil
+    static var _method_emit_signal_4047867050: StringName! = nil
+    static var _method_call_3400424181: StringName! = nil
+    static var _method_call_deferred_3400424181: StringName! = nil
+    static var _method_set_deferred_3776071444: StringName! = nil
+    static var _method_callv_1260104456: StringName! = nil
+    static var _method_has_method_2619796661: StringName! = nil
+    static var _method_has_signal_2619796661: StringName! = nil
+    static var _method_get_signal_list_3995934104: StringName! = nil
+    static var _method_get_signal_connection_list_3147814860: StringName! = nil
+    static var _method_get_incoming_connections_3995934104: StringName! = nil
+    static var _method_connect_1469446357: StringName! = nil
+    static var _method_disconnect_1874754934: StringName! = nil
+    static var _method_is_connected_768136979: StringName! = nil
+    static var _method_set_block_signals_2586408642: StringName! = nil
+    static var _method_is_blocking_signals_36873697: StringName! = nil
+    static var _method_notify_property_list_changed_3218959716: StringName! = nil
+    static var _method_set_message_translation_2586408642: StringName! = nil
+    static var _method_can_translate_messages_36873697: StringName! = nil
+    static var _method_tr_2475554935: StringName! = nil
+    static var _method_tr_n_4021311862: StringName! = nil
+    static var _method_is_queued_for_deletion_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Object == nil)
         __godot_name_Object = StringName(from: "Object")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_class_201670096_name = StringName(from: "get_class")
-        self._method_get_class_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_get_class_201670096_name._native_ptr(), 201670096)
-        assert(Object._method_get_class_201670096 != nil)
-        let _method_is_class_3927539163_name = StringName(from: "is_class")
-        self._method_is_class_3927539163 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_is_class_3927539163_name._native_ptr(), 3927539163)
-        assert(Object._method_is_class_3927539163 != nil)
-        let _method_set_3776071444_name = StringName(from: "set")
-        self._method_set_3776071444 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_set_3776071444_name._native_ptr(), 3776071444)
-        assert(Object._method_set_3776071444 != nil)
-        let _method_get_2760726917_name = StringName(from: "get")
-        self._method_get_2760726917 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_get_2760726917_name._native_ptr(), 2760726917)
-        assert(Object._method_get_2760726917 != nil)
-        let _method_set_indexed_3500910842_name = StringName(from: "set_indexed")
-        self._method_set_indexed_3500910842 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_set_indexed_3500910842_name._native_ptr(), 3500910842)
-        assert(Object._method_set_indexed_3500910842 != nil)
-        let _method_get_indexed_4006125091_name = StringName(from: "get_indexed")
-        self._method_get_indexed_4006125091 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_get_indexed_4006125091_name._native_ptr(), 4006125091)
-        assert(Object._method_get_indexed_4006125091 != nil)
-        let _method_get_property_list_3995934104_name = StringName(from: "get_property_list")
-        self._method_get_property_list_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_get_property_list_3995934104_name._native_ptr(), 3995934104)
-        assert(Object._method_get_property_list_3995934104 != nil)
-        let _method_get_method_list_3995934104_name = StringName(from: "get_method_list")
-        self._method_get_method_list_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_get_method_list_3995934104_name._native_ptr(), 3995934104)
-        assert(Object._method_get_method_list_3995934104 != nil)
-        let _method_property_can_revert_2619796661_name = StringName(from: "property_can_revert")
-        self._method_property_can_revert_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_property_can_revert_2619796661_name._native_ptr(), 2619796661)
-        assert(Object._method_property_can_revert_2619796661 != nil)
-        let _method_property_get_revert_2760726917_name = StringName(from: "property_get_revert")
-        self._method_property_get_revert_2760726917 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_property_get_revert_2760726917_name._native_ptr(), 2760726917)
-        assert(Object._method_property_get_revert_2760726917 != nil)
-        let _method_notification_4023243586_name = StringName(from: "notification")
-        self._method_notification_4023243586 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_notification_4023243586_name._native_ptr(), 4023243586)
-        assert(Object._method_notification_4023243586 != nil)
-        let _method_to_string_2841200299_name = StringName(from: "to_string")
-        self._method_to_string_2841200299 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_to_string_2841200299_name._native_ptr(), 2841200299)
-        assert(Object._method_to_string_2841200299 != nil)
-        let _method_get_instance_id_3905245786_name = StringName(from: "get_instance_id")
-        self._method_get_instance_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_get_instance_id_3905245786_name._native_ptr(), 3905245786)
-        assert(Object._method_get_instance_id_3905245786 != nil)
-        let _method_set_script_1114965689_name = StringName(from: "set_script")
-        self._method_set_script_1114965689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_set_script_1114965689_name._native_ptr(), 1114965689)
-        assert(Object._method_set_script_1114965689 != nil)
-        let _method_get_script_1214101251_name = StringName(from: "get_script")
-        self._method_get_script_1214101251 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_get_script_1214101251_name._native_ptr(), 1214101251)
-        assert(Object._method_get_script_1214101251 != nil)
-        let _method_set_meta_3776071444_name = StringName(from: "set_meta")
-        self._method_set_meta_3776071444 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_set_meta_3776071444_name._native_ptr(), 3776071444)
-        assert(Object._method_set_meta_3776071444 != nil)
-        let _method_remove_meta_3304788590_name = StringName(from: "remove_meta")
-        self._method_remove_meta_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_remove_meta_3304788590_name._native_ptr(), 3304788590)
-        assert(Object._method_remove_meta_3304788590 != nil)
-        let _method_get_meta_3990617847_name = StringName(from: "get_meta")
-        self._method_get_meta_3990617847 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_get_meta_3990617847_name._native_ptr(), 3990617847)
-        assert(Object._method_get_meta_3990617847 != nil)
-        let _method_has_meta_2619796661_name = StringName(from: "has_meta")
-        self._method_has_meta_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_has_meta_2619796661_name._native_ptr(), 2619796661)
-        assert(Object._method_has_meta_2619796661 != nil)
-        let _method_get_meta_list_1139954409_name = StringName(from: "get_meta_list")
-        self._method_get_meta_list_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_get_meta_list_1139954409_name._native_ptr(), 1139954409)
-        assert(Object._method_get_meta_list_1139954409 != nil)
-        let _method_add_user_signal_3780025912_name = StringName(from: "add_user_signal")
-        self._method_add_user_signal_3780025912 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_add_user_signal_3780025912_name._native_ptr(), 3780025912)
-        assert(Object._method_add_user_signal_3780025912 != nil)
-        let _method_has_user_signal_2619796661_name = StringName(from: "has_user_signal")
-        self._method_has_user_signal_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_has_user_signal_2619796661_name._native_ptr(), 2619796661)
-        assert(Object._method_has_user_signal_2619796661 != nil)
-        let _method_emit_signal_4047867050_name = StringName(from: "emit_signal")
-        self._method_emit_signal_4047867050 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_emit_signal_4047867050_name._native_ptr(), 4047867050)
-        assert(Object._method_emit_signal_4047867050 != nil)
-        let _method_call_3400424181_name = StringName(from: "call")
-        self._method_call_3400424181 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_call_3400424181_name._native_ptr(), 3400424181)
-        assert(Object._method_call_3400424181 != nil)
-        let _method_call_deferred_3400424181_name = StringName(from: "call_deferred")
-        self._method_call_deferred_3400424181 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_call_deferred_3400424181_name._native_ptr(), 3400424181)
-        assert(Object._method_call_deferred_3400424181 != nil)
-        let _method_set_deferred_3776071444_name = StringName(from: "set_deferred")
-        self._method_set_deferred_3776071444 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_set_deferred_3776071444_name._native_ptr(), 3776071444)
-        assert(Object._method_set_deferred_3776071444 != nil)
-        let _method_callv_1260104456_name = StringName(from: "callv")
-        self._method_callv_1260104456 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_callv_1260104456_name._native_ptr(), 1260104456)
-        assert(Object._method_callv_1260104456 != nil)
-        let _method_has_method_2619796661_name = StringName(from: "has_method")
-        self._method_has_method_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_has_method_2619796661_name._native_ptr(), 2619796661)
-        assert(Object._method_has_method_2619796661 != nil)
-        let _method_has_signal_2619796661_name = StringName(from: "has_signal")
-        self._method_has_signal_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_has_signal_2619796661_name._native_ptr(), 2619796661)
-        assert(Object._method_has_signal_2619796661 != nil)
-        let _method_get_signal_list_3995934104_name = StringName(from: "get_signal_list")
-        self._method_get_signal_list_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_get_signal_list_3995934104_name._native_ptr(), 3995934104)
-        assert(Object._method_get_signal_list_3995934104 != nil)
-        let _method_get_signal_connection_list_3147814860_name = StringName(from: "get_signal_connection_list")
-        self._method_get_signal_connection_list_3147814860 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_get_signal_connection_list_3147814860_name._native_ptr(), 3147814860)
-        assert(Object._method_get_signal_connection_list_3147814860 != nil)
-        let _method_get_incoming_connections_3995934104_name = StringName(from: "get_incoming_connections")
-        self._method_get_incoming_connections_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_get_incoming_connections_3995934104_name._native_ptr(), 3995934104)
-        assert(Object._method_get_incoming_connections_3995934104 != nil)
-        let _method_connect_1469446357_name = StringName(from: "connect")
-        self._method_connect_1469446357 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_connect_1469446357_name._native_ptr(), 1469446357)
-        assert(Object._method_connect_1469446357 != nil)
-        let _method_disconnect_1874754934_name = StringName(from: "disconnect")
-        self._method_disconnect_1874754934 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_disconnect_1874754934_name._native_ptr(), 1874754934)
-        assert(Object._method_disconnect_1874754934 != nil)
-        let _method_is_connected_768136979_name = StringName(from: "is_connected")
-        self._method_is_connected_768136979 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_is_connected_768136979_name._native_ptr(), 768136979)
-        assert(Object._method_is_connected_768136979 != nil)
-        let _method_set_block_signals_2586408642_name = StringName(from: "set_block_signals")
-        self._method_set_block_signals_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_set_block_signals_2586408642_name._native_ptr(), 2586408642)
-        assert(Object._method_set_block_signals_2586408642 != nil)
-        let _method_is_blocking_signals_36873697_name = StringName(from: "is_blocking_signals")
-        self._method_is_blocking_signals_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_is_blocking_signals_36873697_name._native_ptr(), 36873697)
-        assert(Object._method_is_blocking_signals_36873697 != nil)
-        let _method_notify_property_list_changed_3218959716_name = StringName(from: "notify_property_list_changed")
-        self._method_notify_property_list_changed_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_notify_property_list_changed_3218959716_name._native_ptr(), 3218959716)
-        assert(Object._method_notify_property_list_changed_3218959716 != nil)
-        let _method_set_message_translation_2586408642_name = StringName(from: "set_message_translation")
-        self._method_set_message_translation_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_set_message_translation_2586408642_name._native_ptr(), 2586408642)
-        assert(Object._method_set_message_translation_2586408642 != nil)
-        let _method_can_translate_messages_36873697_name = StringName(from: "can_translate_messages")
-        self._method_can_translate_messages_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_can_translate_messages_36873697_name._native_ptr(), 36873697)
-        assert(Object._method_can_translate_messages_36873697 != nil)
-        let _method_tr_2475554935_name = StringName(from: "tr")
-        self._method_tr_2475554935 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_tr_2475554935_name._native_ptr(), 2475554935)
-        assert(Object._method_tr_2475554935 != nil)
-        let _method_tr_n_4021311862_name = StringName(from: "tr_n")
-        self._method_tr_n_4021311862 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_tr_n_4021311862_name._native_ptr(), 4021311862)
-        assert(Object._method_tr_n_4021311862 != nil)
-        let _method_is_queued_for_deletion_36873697_name = StringName(from: "is_queued_for_deletion")
-        self._method_is_queued_for_deletion_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Object._native_ptr(), _method_is_queued_for_deletion_36873697_name._native_ptr(), 36873697)
-        assert(Object._method_is_queued_for_deletion_36873697 != nil)
+        self._method_get_class_201670096 = StringName(from: "get_class")
+        assert(self._method_get_class_201670096 != nil)
+        self._method_is_class_3927539163 = StringName(from: "is_class")
+        assert(self._method_is_class_3927539163 != nil)
+        self._method_set_3776071444 = StringName(from: "set")
+        assert(self._method_set_3776071444 != nil)
+        self._method_get_2760726917 = StringName(from: "get")
+        assert(self._method_get_2760726917 != nil)
+        self._method_set_indexed_3500910842 = StringName(from: "set_indexed")
+        assert(self._method_set_indexed_3500910842 != nil)
+        self._method_get_indexed_4006125091 = StringName(from: "get_indexed")
+        assert(self._method_get_indexed_4006125091 != nil)
+        self._method_get_property_list_3995934104 = StringName(from: "get_property_list")
+        assert(self._method_get_property_list_3995934104 != nil)
+        self._method_get_method_list_3995934104 = StringName(from: "get_method_list")
+        assert(self._method_get_method_list_3995934104 != nil)
+        self._method_property_can_revert_2619796661 = StringName(from: "property_can_revert")
+        assert(self._method_property_can_revert_2619796661 != nil)
+        self._method_property_get_revert_2760726917 = StringName(from: "property_get_revert")
+        assert(self._method_property_get_revert_2760726917 != nil)
+        self._method_notification_4023243586 = StringName(from: "notification")
+        assert(self._method_notification_4023243586 != nil)
+        self._method_to_string_2841200299 = StringName(from: "to_string")
+        assert(self._method_to_string_2841200299 != nil)
+        self._method_get_instance_id_3905245786 = StringName(from: "get_instance_id")
+        assert(self._method_get_instance_id_3905245786 != nil)
+        self._method_set_script_1114965689 = StringName(from: "set_script")
+        assert(self._method_set_script_1114965689 != nil)
+        self._method_get_script_1214101251 = StringName(from: "get_script")
+        assert(self._method_get_script_1214101251 != nil)
+        self._method_set_meta_3776071444 = StringName(from: "set_meta")
+        assert(self._method_set_meta_3776071444 != nil)
+        self._method_remove_meta_3304788590 = StringName(from: "remove_meta")
+        assert(self._method_remove_meta_3304788590 != nil)
+        self._method_get_meta_3990617847 = StringName(from: "get_meta")
+        assert(self._method_get_meta_3990617847 != nil)
+        self._method_has_meta_2619796661 = StringName(from: "has_meta")
+        assert(self._method_has_meta_2619796661 != nil)
+        self._method_get_meta_list_1139954409 = StringName(from: "get_meta_list")
+        assert(self._method_get_meta_list_1139954409 != nil)
+        self._method_add_user_signal_3780025912 = StringName(from: "add_user_signal")
+        assert(self._method_add_user_signal_3780025912 != nil)
+        self._method_has_user_signal_2619796661 = StringName(from: "has_user_signal")
+        assert(self._method_has_user_signal_2619796661 != nil)
+        self._method_emit_signal_4047867050 = StringName(from: "emit_signal")
+        assert(self._method_emit_signal_4047867050 != nil)
+        self._method_call_3400424181 = StringName(from: "call")
+        assert(self._method_call_3400424181 != nil)
+        self._method_call_deferred_3400424181 = StringName(from: "call_deferred")
+        assert(self._method_call_deferred_3400424181 != nil)
+        self._method_set_deferred_3776071444 = StringName(from: "set_deferred")
+        assert(self._method_set_deferred_3776071444 != nil)
+        self._method_callv_1260104456 = StringName(from: "callv")
+        assert(self._method_callv_1260104456 != nil)
+        self._method_has_method_2619796661 = StringName(from: "has_method")
+        assert(self._method_has_method_2619796661 != nil)
+        self._method_has_signal_2619796661 = StringName(from: "has_signal")
+        assert(self._method_has_signal_2619796661 != nil)
+        self._method_get_signal_list_3995934104 = StringName(from: "get_signal_list")
+        assert(self._method_get_signal_list_3995934104 != nil)
+        self._method_get_signal_connection_list_3147814860 = StringName(from: "get_signal_connection_list")
+        assert(self._method_get_signal_connection_list_3147814860 != nil)
+        self._method_get_incoming_connections_3995934104 = StringName(from: "get_incoming_connections")
+        assert(self._method_get_incoming_connections_3995934104 != nil)
+        self._method_connect_1469446357 = StringName(from: "connect")
+        assert(self._method_connect_1469446357 != nil)
+        self._method_disconnect_1874754934 = StringName(from: "disconnect")
+        assert(self._method_disconnect_1874754934 != nil)
+        self._method_is_connected_768136979 = StringName(from: "is_connected")
+        assert(self._method_is_connected_768136979 != nil)
+        self._method_set_block_signals_2586408642 = StringName(from: "set_block_signals")
+        assert(self._method_set_block_signals_2586408642 != nil)
+        self._method_is_blocking_signals_36873697 = StringName(from: "is_blocking_signals")
+        assert(self._method_is_blocking_signals_36873697 != nil)
+        self._method_notify_property_list_changed_3218959716 = StringName(from: "notify_property_list_changed")
+        assert(self._method_notify_property_list_changed_3218959716 != nil)
+        self._method_set_message_translation_2586408642 = StringName(from: "set_message_translation")
+        assert(self._method_set_message_translation_2586408642 != nil)
+        self._method_can_translate_messages_36873697 = StringName(from: "can_translate_messages")
+        assert(self._method_can_translate_messages_36873697 != nil)
+        self._method_tr_2475554935 = StringName(from: "tr")
+        assert(self._method_tr_2475554935 != nil)
+        self._method_tr_n_4021311862 = StringName(from: "tr_n")
+        assert(self._method_tr_n_4021311862 != nil)
+        self._method_is_queued_for_deletion_36873697 = StringName(from: "is_queued_for_deletion")
+        assert(self._method_is_queued_for_deletion_36873697 != nil)
     }
 
     public func get_class() -> godot.String {
@@ -241,8 +199,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_class_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_class_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -259,8 +222,13 @@ open class Object : Wrapped {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_class_3927539163,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_class_3927539163._native_ptr(),
+                    3927539163)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -276,8 +244,13 @@ open class Object : Wrapped {
                 .init(property_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_3776071444,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_3776071444._native_ptr(),
+                    3776071444)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -292,8 +265,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_2760726917,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_2760726917._native_ptr(),
+                    2760726917)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -309,8 +287,13 @@ open class Object : Wrapped {
                 .init(property_path_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_indexed_3500910842,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_indexed_3500910842._native_ptr(),
+                    3500910842)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -325,8 +308,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_indexed_4006125091,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_indexed_4006125091._native_ptr(),
+                    4006125091)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -341,8 +329,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_property_list_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_property_list_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -357,8 +350,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_method_list_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_method_list_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -375,8 +373,13 @@ open class Object : Wrapped {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_property_can_revert_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_property_can_revert_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -392,8 +395,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_property_get_revert_2760726917,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_property_get_revert_2760726917._native_ptr(),
+                    2760726917)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -409,8 +417,13 @@ open class Object : Wrapped {
                 .init(what_native), .init(reversed_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_notification_4023243586,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_notification_4023243586._native_ptr(),
+                    4023243586)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -426,8 +439,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_to_string_2841200299,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_to_string_2841200299._native_ptr(),
+                    2841200299)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -443,8 +461,13 @@ open class Object : Wrapped {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_instance_id_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_instance_id_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -459,8 +482,13 @@ open class Object : Wrapped {
                 .init(script_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_script_1114965689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_script_1114965689._native_ptr(),
+                    1114965689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -474,8 +502,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_script_1214101251,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_script_1214101251._native_ptr(),
+                    1214101251)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -491,8 +524,13 @@ open class Object : Wrapped {
                 .init(name_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_meta_3776071444,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_meta_3776071444._native_ptr(),
+                    3776071444)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -506,8 +544,13 @@ open class Object : Wrapped {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_meta_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_meta_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -523,8 +566,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_meta_3990617847,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_meta_3990617847._native_ptr(),
+                    3990617847)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -541,8 +589,13 @@ open class Object : Wrapped {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_meta_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_meta_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -557,8 +610,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_meta_list_1139954409,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_meta_list_1139954409._native_ptr(),
+                    1139954409)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -574,8 +632,13 @@ open class Object : Wrapped {
                 .init(signal_native), .init(arguments_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_user_signal_3780025912,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_user_signal_3780025912._native_ptr(),
+                    3780025912)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -591,8 +654,13 @@ open class Object : Wrapped {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_user_signal_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_user_signal_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -608,8 +676,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_emit_signal_4047867050,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_emit_signal_4047867050._native_ptr(),
+                    4047867050)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -625,8 +698,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_call_3400424181,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_call_3400424181._native_ptr(),
+                    3400424181)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -642,8 +720,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_call_deferred_3400424181,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_call_deferred_3400424181._native_ptr(),
+                    3400424181)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -659,8 +742,13 @@ open class Object : Wrapped {
                 .init(property_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_deferred_3776071444,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_deferred_3776071444._native_ptr(),
+                    3776071444)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -676,8 +764,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_callv_1260104456,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_callv_1260104456._native_ptr(),
+                    1260104456)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -694,8 +787,13 @@ open class Object : Wrapped {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_method_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_method_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -712,8 +810,13 @@ open class Object : Wrapped {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_signal_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_signal_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -728,8 +831,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_signal_list_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_signal_list_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -745,8 +853,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_signal_connection_list_3147814860,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_signal_connection_list_3147814860._native_ptr(),
+                    3147814860)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -761,8 +874,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_incoming_connections_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_incoming_connections_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -780,8 +898,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_connect_1469446357,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_connect_1469446357._native_ptr(),
+                    1469446357)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -798,8 +921,13 @@ open class Object : Wrapped {
                 .init(signal_native), .init(callable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_disconnect_1874754934,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_disconnect_1874754934._native_ptr(),
+                    1874754934)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -816,8 +944,13 @@ open class Object : Wrapped {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_connected_768136979,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_connected_768136979._native_ptr(),
+                    768136979)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -832,8 +965,13 @@ open class Object : Wrapped {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_block_signals_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_block_signals_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -849,8 +987,13 @@ open class Object : Wrapped {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_blocking_signals_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_blocking_signals_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -864,8 +1007,13 @@ open class Object : Wrapped {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_notify_property_list_changed_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_notify_property_list_changed_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -879,8 +1027,13 @@ open class Object : Wrapped {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_message_translation_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_message_translation_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -896,8 +1049,13 @@ open class Object : Wrapped {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_can_translate_messages_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_can_translate_messages_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -914,8 +1072,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_tr_2475554935,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_tr_2475554935._native_ptr(),
+                    2475554935)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -934,8 +1097,13 @@ open class Object : Wrapped {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_tr_n_4021311862,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_tr_n_4021311862._native_ptr(),
+                    4021311862)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -952,8 +1120,13 @@ open class Object : Wrapped {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_queued_for_deletion_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_queued_for_deletion_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

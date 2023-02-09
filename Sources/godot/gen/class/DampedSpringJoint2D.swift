@@ -11,47 +11,40 @@ open class DampedSpringJoint2D : Joint2D {
 
     public override class var __godot_name: StringName { __godot_name_DampedSpringJoint2D }
 
-    static var _method_set_length_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_length_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_rest_length_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rest_length_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_stiffness_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_stiffness_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_damping_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_damping_1740695150: GDExtensionMethodBindPtr! = nil
+    static var _method_set_length_373806689: StringName! = nil
+    static var _method_get_length_1740695150: StringName! = nil
+    static var _method_set_rest_length_373806689: StringName! = nil
+    static var _method_get_rest_length_1740695150: StringName! = nil
+    static var _method_set_stiffness_373806689: StringName! = nil
+    static var _method_get_stiffness_1740695150: StringName! = nil
+    static var _method_set_damping_373806689: StringName! = nil
+    static var _method_get_damping_1740695150: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_DampedSpringJoint2D == nil)
         __godot_name_DampedSpringJoint2D = StringName(from: "DampedSpringJoint2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_length_373806689_name = StringName(from: "set_length")
-        self._method_set_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_DampedSpringJoint2D._native_ptr(), _method_set_length_373806689_name._native_ptr(), 373806689)
-        assert(DampedSpringJoint2D._method_set_length_373806689 != nil)
-        let _method_get_length_1740695150_name = StringName(from: "get_length")
-        self._method_get_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_DampedSpringJoint2D._native_ptr(), _method_get_length_1740695150_name._native_ptr(), 1740695150)
-        assert(DampedSpringJoint2D._method_get_length_1740695150 != nil)
-        let _method_set_rest_length_373806689_name = StringName(from: "set_rest_length")
-        self._method_set_rest_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_DampedSpringJoint2D._native_ptr(), _method_set_rest_length_373806689_name._native_ptr(), 373806689)
-        assert(DampedSpringJoint2D._method_set_rest_length_373806689 != nil)
-        let _method_get_rest_length_1740695150_name = StringName(from: "get_rest_length")
-        self._method_get_rest_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_DampedSpringJoint2D._native_ptr(), _method_get_rest_length_1740695150_name._native_ptr(), 1740695150)
-        assert(DampedSpringJoint2D._method_get_rest_length_1740695150 != nil)
-        let _method_set_stiffness_373806689_name = StringName(from: "set_stiffness")
-        self._method_set_stiffness_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_DampedSpringJoint2D._native_ptr(), _method_set_stiffness_373806689_name._native_ptr(), 373806689)
-        assert(DampedSpringJoint2D._method_set_stiffness_373806689 != nil)
-        let _method_get_stiffness_1740695150_name = StringName(from: "get_stiffness")
-        self._method_get_stiffness_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_DampedSpringJoint2D._native_ptr(), _method_get_stiffness_1740695150_name._native_ptr(), 1740695150)
-        assert(DampedSpringJoint2D._method_get_stiffness_1740695150 != nil)
-        let _method_set_damping_373806689_name = StringName(from: "set_damping")
-        self._method_set_damping_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_DampedSpringJoint2D._native_ptr(), _method_set_damping_373806689_name._native_ptr(), 373806689)
-        assert(DampedSpringJoint2D._method_set_damping_373806689 != nil)
-        let _method_get_damping_1740695150_name = StringName(from: "get_damping")
-        self._method_get_damping_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_DampedSpringJoint2D._native_ptr(), _method_get_damping_1740695150_name._native_ptr(), 1740695150)
-        assert(DampedSpringJoint2D._method_get_damping_1740695150 != nil)
+        self._method_set_length_373806689 = StringName(from: "set_length")
+        assert(self._method_set_length_373806689 != nil)
+        self._method_get_length_1740695150 = StringName(from: "get_length")
+        assert(self._method_get_length_1740695150 != nil)
+        self._method_set_rest_length_373806689 = StringName(from: "set_rest_length")
+        assert(self._method_set_rest_length_373806689 != nil)
+        self._method_get_rest_length_1740695150 = StringName(from: "get_rest_length")
+        assert(self._method_get_rest_length_1740695150 != nil)
+        self._method_set_stiffness_373806689 = StringName(from: "set_stiffness")
+        assert(self._method_set_stiffness_373806689 != nil)
+        self._method_get_stiffness_1740695150 = StringName(from: "get_stiffness")
+        assert(self._method_get_stiffness_1740695150 != nil)
+        self._method_set_damping_373806689 = StringName(from: "set_damping")
+        assert(self._method_set_damping_373806689 != nil)
+        self._method_get_damping_1740695150 = StringName(from: "get_damping")
+        assert(self._method_get_damping_1740695150 != nil)
     }
 
     public func set_length(length: Float64)  {
@@ -62,8 +55,13 @@ open class DampedSpringJoint2D : Joint2D {
                 .init(length_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_length_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_length_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -79,8 +77,13 @@ open class DampedSpringJoint2D : Joint2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_length_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_length_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -95,8 +98,13 @@ open class DampedSpringJoint2D : Joint2D {
                 .init(rest_length_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_rest_length_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_rest_length_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -112,8 +120,13 @@ open class DampedSpringJoint2D : Joint2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rest_length_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rest_length_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -128,8 +141,13 @@ open class DampedSpringJoint2D : Joint2D {
                 .init(stiffness_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_stiffness_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_stiffness_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -145,8 +163,13 @@ open class DampedSpringJoint2D : Joint2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_stiffness_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_stiffness_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -161,8 +184,13 @@ open class DampedSpringJoint2D : Joint2D {
                 .init(damping_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_damping_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_damping_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -178,8 +206,13 @@ open class DampedSpringJoint2D : Joint2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_damping_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_damping_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

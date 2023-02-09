@@ -11,67 +11,55 @@ open class InputEvent : Resource {
 
     public override class var __godot_name: StringName { __godot_name_InputEvent }
 
-    static var _method_set_device_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_device_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_is_action_1558498928: GDExtensionMethodBindPtr! = nil
-    static var _method_is_action_pressed_1631499404: GDExtensionMethodBindPtr! = nil
-    static var _method_is_action_released_1558498928: GDExtensionMethodBindPtr! = nil
-    static var _method_get_action_strength_801543509: GDExtensionMethodBindPtr! = nil
-    static var _method_is_pressed_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_is_echo_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_as_text_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_is_match_3392494811: GDExtensionMethodBindPtr! = nil
-    static var _method_is_action_type_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_accumulate_1062211774: GDExtensionMethodBindPtr! = nil
-    static var _method_xformed_by_2747409789: GDExtensionMethodBindPtr! = nil
+    static var _method_set_device_1286410249: StringName! = nil
+    static var _method_get_device_3905245786: StringName! = nil
+    static var _method_is_action_1558498928: StringName! = nil
+    static var _method_is_action_pressed_1631499404: StringName! = nil
+    static var _method_is_action_released_1558498928: StringName! = nil
+    static var _method_get_action_strength_801543509: StringName! = nil
+    static var _method_is_pressed_36873697: StringName! = nil
+    static var _method_is_echo_36873697: StringName! = nil
+    static var _method_as_text_201670096: StringName! = nil
+    static var _method_is_match_3392494811: StringName! = nil
+    static var _method_is_action_type_36873697: StringName! = nil
+    static var _method_accumulate_1062211774: StringName! = nil
+    static var _method_xformed_by_2747409789: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_InputEvent == nil)
         __godot_name_InputEvent = StringName(from: "InputEvent")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_device_1286410249_name = StringName(from: "set_device")
-        self._method_set_device_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEvent._native_ptr(), _method_set_device_1286410249_name._native_ptr(), 1286410249)
-        assert(InputEvent._method_set_device_1286410249 != nil)
-        let _method_get_device_3905245786_name = StringName(from: "get_device")
-        self._method_get_device_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEvent._native_ptr(), _method_get_device_3905245786_name._native_ptr(), 3905245786)
-        assert(InputEvent._method_get_device_3905245786 != nil)
-        let _method_is_action_1558498928_name = StringName(from: "is_action")
-        self._method_is_action_1558498928 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEvent._native_ptr(), _method_is_action_1558498928_name._native_ptr(), 1558498928)
-        assert(InputEvent._method_is_action_1558498928 != nil)
-        let _method_is_action_pressed_1631499404_name = StringName(from: "is_action_pressed")
-        self._method_is_action_pressed_1631499404 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEvent._native_ptr(), _method_is_action_pressed_1631499404_name._native_ptr(), 1631499404)
-        assert(InputEvent._method_is_action_pressed_1631499404 != nil)
-        let _method_is_action_released_1558498928_name = StringName(from: "is_action_released")
-        self._method_is_action_released_1558498928 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEvent._native_ptr(), _method_is_action_released_1558498928_name._native_ptr(), 1558498928)
-        assert(InputEvent._method_is_action_released_1558498928 != nil)
-        let _method_get_action_strength_801543509_name = StringName(from: "get_action_strength")
-        self._method_get_action_strength_801543509 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEvent._native_ptr(), _method_get_action_strength_801543509_name._native_ptr(), 801543509)
-        assert(InputEvent._method_get_action_strength_801543509 != nil)
-        let _method_is_pressed_36873697_name = StringName(from: "is_pressed")
-        self._method_is_pressed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEvent._native_ptr(), _method_is_pressed_36873697_name._native_ptr(), 36873697)
-        assert(InputEvent._method_is_pressed_36873697 != nil)
-        let _method_is_echo_36873697_name = StringName(from: "is_echo")
-        self._method_is_echo_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEvent._native_ptr(), _method_is_echo_36873697_name._native_ptr(), 36873697)
-        assert(InputEvent._method_is_echo_36873697 != nil)
-        let _method_as_text_201670096_name = StringName(from: "as_text")
-        self._method_as_text_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEvent._native_ptr(), _method_as_text_201670096_name._native_ptr(), 201670096)
-        assert(InputEvent._method_as_text_201670096 != nil)
-        let _method_is_match_3392494811_name = StringName(from: "is_match")
-        self._method_is_match_3392494811 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEvent._native_ptr(), _method_is_match_3392494811_name._native_ptr(), 3392494811)
-        assert(InputEvent._method_is_match_3392494811 != nil)
-        let _method_is_action_type_36873697_name = StringName(from: "is_action_type")
-        self._method_is_action_type_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEvent._native_ptr(), _method_is_action_type_36873697_name._native_ptr(), 36873697)
-        assert(InputEvent._method_is_action_type_36873697 != nil)
-        let _method_accumulate_1062211774_name = StringName(from: "accumulate")
-        self._method_accumulate_1062211774 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEvent._native_ptr(), _method_accumulate_1062211774_name._native_ptr(), 1062211774)
-        assert(InputEvent._method_accumulate_1062211774 != nil)
-        let _method_xformed_by_2747409789_name = StringName(from: "xformed_by")
-        self._method_xformed_by_2747409789 = self.interface.pointee.classdb_get_method_bind(__godot_name_InputEvent._native_ptr(), _method_xformed_by_2747409789_name._native_ptr(), 2747409789)
-        assert(InputEvent._method_xformed_by_2747409789 != nil)
+        self._method_set_device_1286410249 = StringName(from: "set_device")
+        assert(self._method_set_device_1286410249 != nil)
+        self._method_get_device_3905245786 = StringName(from: "get_device")
+        assert(self._method_get_device_3905245786 != nil)
+        self._method_is_action_1558498928 = StringName(from: "is_action")
+        assert(self._method_is_action_1558498928 != nil)
+        self._method_is_action_pressed_1631499404 = StringName(from: "is_action_pressed")
+        assert(self._method_is_action_pressed_1631499404 != nil)
+        self._method_is_action_released_1558498928 = StringName(from: "is_action_released")
+        assert(self._method_is_action_released_1558498928 != nil)
+        self._method_get_action_strength_801543509 = StringName(from: "get_action_strength")
+        assert(self._method_get_action_strength_801543509 != nil)
+        self._method_is_pressed_36873697 = StringName(from: "is_pressed")
+        assert(self._method_is_pressed_36873697 != nil)
+        self._method_is_echo_36873697 = StringName(from: "is_echo")
+        assert(self._method_is_echo_36873697 != nil)
+        self._method_as_text_201670096 = StringName(from: "as_text")
+        assert(self._method_as_text_201670096 != nil)
+        self._method_is_match_3392494811 = StringName(from: "is_match")
+        assert(self._method_is_match_3392494811 != nil)
+        self._method_is_action_type_36873697 = StringName(from: "is_action_type")
+        assert(self._method_is_action_type_36873697 != nil)
+        self._method_accumulate_1062211774 = StringName(from: "accumulate")
+        assert(self._method_accumulate_1062211774 != nil)
+        self._method_xformed_by_2747409789 = StringName(from: "xformed_by")
+        assert(self._method_xformed_by_2747409789 != nil)
     }
 
     public func set_device(device: Int64)  {
@@ -82,8 +70,13 @@ open class InputEvent : Resource {
                 .init(device_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_device_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_device_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -99,8 +92,13 @@ open class InputEvent : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_device_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_device_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -118,8 +116,13 @@ open class InputEvent : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_action_1558498928,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_action_1558498928._native_ptr(),
+                    1558498928)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -139,8 +142,13 @@ open class InputEvent : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_action_pressed_1631499404,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_action_pressed_1631499404._native_ptr(),
+                    1631499404)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -160,8 +168,13 @@ open class InputEvent : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_action_released_1558498928,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_action_released_1558498928._native_ptr(),
+                    1558498928)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -180,8 +193,13 @@ open class InputEvent : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_action_strength_801543509,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_action_strength_801543509._native_ptr(),
+                    801543509)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -198,8 +216,13 @@ open class InputEvent : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_pressed_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_pressed_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -215,8 +238,13 @@ open class InputEvent : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_echo_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_echo_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -231,8 +259,13 @@ open class InputEvent : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_as_text_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_as_text_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -250,8 +283,13 @@ open class InputEvent : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_match_3392494811,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_match_3392494811._native_ptr(),
+                    3392494811)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -268,8 +306,13 @@ open class InputEvent : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_action_type_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_action_type_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -286,8 +329,13 @@ open class InputEvent : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_accumulate_1062211774,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_accumulate_1062211774._native_ptr(),
+                    1062211774)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -304,8 +352,13 @@ open class InputEvent : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_xformed_by_2747409789,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_xformed_by_2747409789._native_ptr(),
+                    2747409789)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

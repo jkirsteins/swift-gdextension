@@ -11,22 +11,23 @@ open class WebRTCPeerConnectionExtension : WebRTCPeerConnection {
 
     public override class var __godot_name: StringName { __godot_name_WebRTCPeerConnectionExtension }
 
-    static var _method__get_connection_state_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_gathering_state_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_signaling_state_0: GDExtensionMethodBindPtr! = nil
-    static var _method__initialize_0: GDExtensionMethodBindPtr! = nil
-    static var _method__create_data_channel_0: GDExtensionMethodBindPtr! = nil
-    static var _method__create_offer_0: GDExtensionMethodBindPtr! = nil
-    static var _method__set_remote_description_0: GDExtensionMethodBindPtr! = nil
-    static var _method__set_local_description_0: GDExtensionMethodBindPtr! = nil
-    static var _method__add_ice_candidate_0: GDExtensionMethodBindPtr! = nil
-    static var _method__poll_0: GDExtensionMethodBindPtr! = nil
-    static var _method__close_0: GDExtensionMethodBindPtr! = nil
+    static var _method__get_connection_state_0: StringName! = nil
+    static var _method__get_gathering_state_0: StringName! = nil
+    static var _method__get_signaling_state_0: StringName! = nil
+    static var _method__initialize_0: StringName! = nil
+    static var _method__create_data_channel_0: StringName! = nil
+    static var _method__create_offer_0: StringName! = nil
+    static var _method__set_remote_description_0: StringName! = nil
+    static var _method__set_local_description_0: StringName! = nil
+    static var _method__add_ice_candidate_0: StringName! = nil
+    static var _method__poll_0: StringName! = nil
+    static var _method__close_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_WebRTCPeerConnectionExtension == nil)
         __godot_name_WebRTCPeerConnectionExtension = StringName(from: "WebRTCPeerConnectionExtension")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -42,12 +43,7 @@ open class WebRTCPeerConnectionExtension : WebRTCPeerConnection {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_connection_state_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return WebRTCPeerConnection.ConnectionState(godot: __resPtr.pointee)
     }
     public func _get_gathering_state() -> WebRTCPeerConnection.GatheringState {
@@ -58,12 +54,7 @@ open class WebRTCPeerConnectionExtension : WebRTCPeerConnection {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_gathering_state_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return WebRTCPeerConnection.GatheringState(godot: __resPtr.pointee)
     }
     public func _get_signaling_state() -> WebRTCPeerConnection.SignalingState {
@@ -74,12 +65,7 @@ open class WebRTCPeerConnectionExtension : WebRTCPeerConnection {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_signaling_state_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return WebRTCPeerConnection.SignalingState(godot: __resPtr.pointee)
     }
     public func _initialize(p_config: Dictionary) -> Error {
@@ -91,12 +77,7 @@ open class WebRTCPeerConnectionExtension : WebRTCPeerConnection {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__initialize_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _create_data_channel(p_label: godot.String, p_config: Dictionary) -> Object {
@@ -109,12 +90,7 @@ open class WebRTCPeerConnectionExtension : WebRTCPeerConnection {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__create_data_channel_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Object(godot: __resPtr.pointee)
     }
     public func _create_offer() -> Error {
@@ -125,12 +101,7 @@ open class WebRTCPeerConnectionExtension : WebRTCPeerConnection {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__create_offer_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _set_remote_description(p_type: godot.String, p_sdp: godot.String) -> Error {
@@ -143,12 +114,7 @@ open class WebRTCPeerConnectionExtension : WebRTCPeerConnection {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__set_remote_description_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _set_local_description(p_type: godot.String, p_sdp: godot.String) -> Error {
@@ -161,12 +127,7 @@ open class WebRTCPeerConnectionExtension : WebRTCPeerConnection {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__set_local_description_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _add_ice_candidate(p_sdp_mid_name: godot.String, p_sdp_mline_index: Int64, p_sdp_name: godot.String) -> Error {
@@ -180,12 +141,7 @@ open class WebRTCPeerConnectionExtension : WebRTCPeerConnection {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__add_ice_candidate_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
         }
     }
@@ -197,12 +153,7 @@ open class WebRTCPeerConnectionExtension : WebRTCPeerConnection {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__poll_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _close()  {
@@ -212,11 +163,6 @@ open class WebRTCPeerConnectionExtension : WebRTCPeerConnection {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__close_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
 }

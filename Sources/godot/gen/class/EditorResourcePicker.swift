@@ -13,57 +13,48 @@ open class EditorResourcePicker : HBoxContainer {
 
     public override class var __godot_name: StringName { __godot_name_EditorResourcePicker }
 
-    static var _method__set_create_options_0: GDExtensionMethodBindPtr! = nil
-    static var _method__handle_menu_selected_0: GDExtensionMethodBindPtr! = nil
-    static var _method_set_base_type_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_base_type_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_allowed_types_1139954409: GDExtensionMethodBindPtr! = nil
-    static var _method_set_edited_resource_968641751: GDExtensionMethodBindPtr! = nil
-    static var _method_get_edited_resource_2674603643: GDExtensionMethodBindPtr! = nil
-    static var _method_set_toggle_mode_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_toggle_mode_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_toggle_pressed_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_editable_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_editable_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method__set_create_options_0: StringName! = nil
+    static var _method__handle_menu_selected_0: StringName! = nil
+    static var _method_set_base_type_83702148: StringName! = nil
+    static var _method_get_base_type_201670096: StringName! = nil
+    static var _method_get_allowed_types_1139954409: StringName! = nil
+    static var _method_set_edited_resource_968641751: StringName! = nil
+    static var _method_get_edited_resource_2674603643: StringName! = nil
+    static var _method_set_toggle_mode_2586408642: StringName! = nil
+    static var _method_is_toggle_mode_36873697: StringName! = nil
+    static var _method_set_toggle_pressed_2586408642: StringName! = nil
+    static var _method_set_editable_2586408642: StringName! = nil
+    static var _method_is_editable_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorResourcePicker == nil)
         __godot_name_EditorResourcePicker = StringName(from: "EditorResourcePicker")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_base_type_83702148_name = StringName(from: "set_base_type")
-        self._method_set_base_type_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorResourcePicker._native_ptr(), _method_set_base_type_83702148_name._native_ptr(), 83702148)
-        assert(EditorResourcePicker._method_set_base_type_83702148 != nil)
-        let _method_get_base_type_201670096_name = StringName(from: "get_base_type")
-        self._method_get_base_type_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorResourcePicker._native_ptr(), _method_get_base_type_201670096_name._native_ptr(), 201670096)
-        assert(EditorResourcePicker._method_get_base_type_201670096 != nil)
-        let _method_get_allowed_types_1139954409_name = StringName(from: "get_allowed_types")
-        self._method_get_allowed_types_1139954409 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorResourcePicker._native_ptr(), _method_get_allowed_types_1139954409_name._native_ptr(), 1139954409)
-        assert(EditorResourcePicker._method_get_allowed_types_1139954409 != nil)
-        let _method_set_edited_resource_968641751_name = StringName(from: "set_edited_resource")
-        self._method_set_edited_resource_968641751 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorResourcePicker._native_ptr(), _method_set_edited_resource_968641751_name._native_ptr(), 968641751)
-        assert(EditorResourcePicker._method_set_edited_resource_968641751 != nil)
-        let _method_get_edited_resource_2674603643_name = StringName(from: "get_edited_resource")
-        self._method_get_edited_resource_2674603643 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorResourcePicker._native_ptr(), _method_get_edited_resource_2674603643_name._native_ptr(), 2674603643)
-        assert(EditorResourcePicker._method_get_edited_resource_2674603643 != nil)
-        let _method_set_toggle_mode_2586408642_name = StringName(from: "set_toggle_mode")
-        self._method_set_toggle_mode_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorResourcePicker._native_ptr(), _method_set_toggle_mode_2586408642_name._native_ptr(), 2586408642)
-        assert(EditorResourcePicker._method_set_toggle_mode_2586408642 != nil)
-        let _method_is_toggle_mode_36873697_name = StringName(from: "is_toggle_mode")
-        self._method_is_toggle_mode_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorResourcePicker._native_ptr(), _method_is_toggle_mode_36873697_name._native_ptr(), 36873697)
-        assert(EditorResourcePicker._method_is_toggle_mode_36873697 != nil)
-        let _method_set_toggle_pressed_2586408642_name = StringName(from: "set_toggle_pressed")
-        self._method_set_toggle_pressed_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorResourcePicker._native_ptr(), _method_set_toggle_pressed_2586408642_name._native_ptr(), 2586408642)
-        assert(EditorResourcePicker._method_set_toggle_pressed_2586408642 != nil)
-        let _method_set_editable_2586408642_name = StringName(from: "set_editable")
-        self._method_set_editable_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorResourcePicker._native_ptr(), _method_set_editable_2586408642_name._native_ptr(), 2586408642)
-        assert(EditorResourcePicker._method_set_editable_2586408642 != nil)
-        let _method_is_editable_36873697_name = StringName(from: "is_editable")
-        self._method_is_editable_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorResourcePicker._native_ptr(), _method_is_editable_36873697_name._native_ptr(), 36873697)
-        assert(EditorResourcePicker._method_is_editable_36873697 != nil)
+        self._method_set_base_type_83702148 = StringName(from: "set_base_type")
+        assert(self._method_set_base_type_83702148 != nil)
+        self._method_get_base_type_201670096 = StringName(from: "get_base_type")
+        assert(self._method_get_base_type_201670096 != nil)
+        self._method_get_allowed_types_1139954409 = StringName(from: "get_allowed_types")
+        assert(self._method_get_allowed_types_1139954409 != nil)
+        self._method_set_edited_resource_968641751 = StringName(from: "set_edited_resource")
+        assert(self._method_set_edited_resource_968641751 != nil)
+        self._method_get_edited_resource_2674603643 = StringName(from: "get_edited_resource")
+        assert(self._method_get_edited_resource_2674603643 != nil)
+        self._method_set_toggle_mode_2586408642 = StringName(from: "set_toggle_mode")
+        assert(self._method_set_toggle_mode_2586408642 != nil)
+        self._method_is_toggle_mode_36873697 = StringName(from: "is_toggle_mode")
+        assert(self._method_is_toggle_mode_36873697 != nil)
+        self._method_set_toggle_pressed_2586408642 = StringName(from: "set_toggle_pressed")
+        assert(self._method_set_toggle_pressed_2586408642 != nil)
+        self._method_set_editable_2586408642 = StringName(from: "set_editable")
+        assert(self._method_set_editable_2586408642 != nil)
+        self._method_is_editable_36873697 = StringName(from: "is_editable")
+        assert(self._method_is_editable_36873697 != nil)
     }
 
     public func _set_create_options(menu_node: Object)  {
@@ -74,12 +65,7 @@ open class EditorResourcePicker : HBoxContainer {
                 .init(menu_node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__set_create_options_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _handle_menu_selected(id: Int64) -> UInt8 {
         withUnsafePointer(to: id) { id_native in
@@ -91,12 +77,7 @@ open class EditorResourcePicker : HBoxContainer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__handle_menu_selected_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
     }
@@ -108,8 +89,13 @@ open class EditorResourcePicker : HBoxContainer {
                 .init(base_type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_base_type_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_base_type_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -123,8 +109,13 @@ open class EditorResourcePicker : HBoxContainer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_base_type_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_base_type_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -139,8 +130,13 @@ open class EditorResourcePicker : HBoxContainer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_allowed_types_1139954409,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_allowed_types_1139954409._native_ptr(),
+                    1139954409)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -155,8 +151,13 @@ open class EditorResourcePicker : HBoxContainer {
                 .init(resource_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_edited_resource_968641751,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_edited_resource_968641751._native_ptr(),
+                    968641751)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -170,8 +171,13 @@ open class EditorResourcePicker : HBoxContainer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_edited_resource_2674603643,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_edited_resource_2674603643._native_ptr(),
+                    2674603643)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -186,8 +192,13 @@ open class EditorResourcePicker : HBoxContainer {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_toggle_mode_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_toggle_mode_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -203,8 +214,13 @@ open class EditorResourcePicker : HBoxContainer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_toggle_mode_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_toggle_mode_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -219,8 +235,13 @@ open class EditorResourcePicker : HBoxContainer {
                 .init(pressed_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_toggle_pressed_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_toggle_pressed_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -235,8 +256,13 @@ open class EditorResourcePicker : HBoxContainer {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_editable_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_editable_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -252,8 +278,13 @@ open class EditorResourcePicker : HBoxContainer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_editable_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_editable_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

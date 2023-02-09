@@ -25,7 +25,7 @@ guard let builtin_member_offsets = decodedData.builtin_class_member_offsets.firs
     fatalError("Failed to fetch builtin member offsets for config \(config)")
 }
 
-let globalAllowAll = false
+let globalAllowAll = FileManager.default.fileExists(atPath: "/tmp/all") || false
 
 print("==> Generating Variant")
 export_builtin_variant(builtin_sizes, builtin_member_offsets, decodedData)

@@ -11,15 +11,16 @@ open class PacketPeerExtension : PacketPeer {
 
     public override class var __godot_name: StringName { __godot_name_PacketPeerExtension }
 
-    static var _method__get_packet_0: GDExtensionMethodBindPtr! = nil
-    static var _method__put_packet_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_available_packet_count_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_max_packet_size_0: GDExtensionMethodBindPtr! = nil
+    static var _method__get_packet_0: StringName! = nil
+    static var _method__put_packet_0: StringName! = nil
+    static var _method__get_available_packet_count_0: StringName! = nil
+    static var _method__get_max_packet_size_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PacketPeerExtension == nil)
         __godot_name_PacketPeerExtension = StringName(from: "PacketPeerExtension")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -37,12 +38,7 @@ open class PacketPeerExtension : PacketPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_packet_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
         }
         }
@@ -57,12 +53,7 @@ open class PacketPeerExtension : PacketPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__put_packet_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
         }
         }
@@ -76,12 +67,7 @@ open class PacketPeerExtension : PacketPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_available_packet_count_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _get_max_packet_size() -> Int64 {
@@ -93,12 +79,7 @@ open class PacketPeerExtension : PacketPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_max_packet_size_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
 }

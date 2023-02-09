@@ -21,109 +21,87 @@ open class BaseButton : Control {
 
     public override class var __godot_name: StringName { __godot_name_BaseButton }
 
-    static var _method__pressed_0: GDExtensionMethodBindPtr! = nil
-    static var _method__toggled_0: GDExtensionMethodBindPtr! = nil
-    static var _method_set_pressed_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_pressed_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_pressed_no_signal_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_hovered_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_toggle_mode_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_toggle_mode_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shortcut_in_tooltip_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_shortcut_in_tooltip_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_disabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_disabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_action_mode_1985162088: GDExtensionMethodBindPtr! = nil
-    static var _method_get_action_mode_2589712189: GDExtensionMethodBindPtr! = nil
-    static var _method_set_button_mask_3950145251: GDExtensionMethodBindPtr! = nil
-    static var _method_get_button_mask_2512161324: GDExtensionMethodBindPtr! = nil
-    static var _method_get_draw_mode_2492721305: GDExtensionMethodBindPtr! = nil
-    static var _method_set_keep_pressed_outside_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_keep_pressed_outside_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shortcut_feedback_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_shortcut_feedback_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shortcut_857163497: GDExtensionMethodBindPtr! = nil
-    static var _method_get_shortcut_3415666916: GDExtensionMethodBindPtr! = nil
-    static var _method_set_button_group_1794463739: GDExtensionMethodBindPtr! = nil
-    static var _method_get_button_group_281644053: GDExtensionMethodBindPtr! = nil
+    static var _method__pressed_0: StringName! = nil
+    static var _method__toggled_0: StringName! = nil
+    static var _method_set_pressed_2586408642: StringName! = nil
+    static var _method_is_pressed_36873697: StringName! = nil
+    static var _method_set_pressed_no_signal_2586408642: StringName! = nil
+    static var _method_is_hovered_36873697: StringName! = nil
+    static var _method_set_toggle_mode_2586408642: StringName! = nil
+    static var _method_is_toggle_mode_36873697: StringName! = nil
+    static var _method_set_shortcut_in_tooltip_2586408642: StringName! = nil
+    static var _method_is_shortcut_in_tooltip_enabled_36873697: StringName! = nil
+    static var _method_set_disabled_2586408642: StringName! = nil
+    static var _method_is_disabled_36873697: StringName! = nil
+    static var _method_set_action_mode_1985162088: StringName! = nil
+    static var _method_get_action_mode_2589712189: StringName! = nil
+    static var _method_set_button_mask_3950145251: StringName! = nil
+    static var _method_get_button_mask_2512161324: StringName! = nil
+    static var _method_get_draw_mode_2492721305: StringName! = nil
+    static var _method_set_keep_pressed_outside_2586408642: StringName! = nil
+    static var _method_is_keep_pressed_outside_36873697: StringName! = nil
+    static var _method_set_shortcut_feedback_2586408642: StringName! = nil
+    static var _method_is_shortcut_feedback_36873697: StringName! = nil
+    static var _method_set_shortcut_857163497: StringName! = nil
+    static var _method_get_shortcut_3415666916: StringName! = nil
+    static var _method_set_button_group_1794463739: StringName! = nil
+    static var _method_get_button_group_281644053: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_BaseButton == nil)
         __godot_name_BaseButton = StringName(from: "BaseButton")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_pressed_2586408642_name = StringName(from: "set_pressed")
-        self._method_set_pressed_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_set_pressed_2586408642_name._native_ptr(), 2586408642)
-        assert(BaseButton._method_set_pressed_2586408642 != nil)
-        let _method_is_pressed_36873697_name = StringName(from: "is_pressed")
-        self._method_is_pressed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_is_pressed_36873697_name._native_ptr(), 36873697)
-        assert(BaseButton._method_is_pressed_36873697 != nil)
-        let _method_set_pressed_no_signal_2586408642_name = StringName(from: "set_pressed_no_signal")
-        self._method_set_pressed_no_signal_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_set_pressed_no_signal_2586408642_name._native_ptr(), 2586408642)
-        assert(BaseButton._method_set_pressed_no_signal_2586408642 != nil)
-        let _method_is_hovered_36873697_name = StringName(from: "is_hovered")
-        self._method_is_hovered_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_is_hovered_36873697_name._native_ptr(), 36873697)
-        assert(BaseButton._method_is_hovered_36873697 != nil)
-        let _method_set_toggle_mode_2586408642_name = StringName(from: "set_toggle_mode")
-        self._method_set_toggle_mode_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_set_toggle_mode_2586408642_name._native_ptr(), 2586408642)
-        assert(BaseButton._method_set_toggle_mode_2586408642 != nil)
-        let _method_is_toggle_mode_36873697_name = StringName(from: "is_toggle_mode")
-        self._method_is_toggle_mode_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_is_toggle_mode_36873697_name._native_ptr(), 36873697)
-        assert(BaseButton._method_is_toggle_mode_36873697 != nil)
-        let _method_set_shortcut_in_tooltip_2586408642_name = StringName(from: "set_shortcut_in_tooltip")
-        self._method_set_shortcut_in_tooltip_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_set_shortcut_in_tooltip_2586408642_name._native_ptr(), 2586408642)
-        assert(BaseButton._method_set_shortcut_in_tooltip_2586408642 != nil)
-        let _method_is_shortcut_in_tooltip_enabled_36873697_name = StringName(from: "is_shortcut_in_tooltip_enabled")
-        self._method_is_shortcut_in_tooltip_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_is_shortcut_in_tooltip_enabled_36873697_name._native_ptr(), 36873697)
-        assert(BaseButton._method_is_shortcut_in_tooltip_enabled_36873697 != nil)
-        let _method_set_disabled_2586408642_name = StringName(from: "set_disabled")
-        self._method_set_disabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_set_disabled_2586408642_name._native_ptr(), 2586408642)
-        assert(BaseButton._method_set_disabled_2586408642 != nil)
-        let _method_is_disabled_36873697_name = StringName(from: "is_disabled")
-        self._method_is_disabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_is_disabled_36873697_name._native_ptr(), 36873697)
-        assert(BaseButton._method_is_disabled_36873697 != nil)
-        let _method_set_action_mode_1985162088_name = StringName(from: "set_action_mode")
-        self._method_set_action_mode_1985162088 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_set_action_mode_1985162088_name._native_ptr(), 1985162088)
-        assert(BaseButton._method_set_action_mode_1985162088 != nil)
-        let _method_get_action_mode_2589712189_name = StringName(from: "get_action_mode")
-        self._method_get_action_mode_2589712189 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_get_action_mode_2589712189_name._native_ptr(), 2589712189)
-        assert(BaseButton._method_get_action_mode_2589712189 != nil)
-        let _method_set_button_mask_3950145251_name = StringName(from: "set_button_mask")
-        self._method_set_button_mask_3950145251 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_set_button_mask_3950145251_name._native_ptr(), 3950145251)
-        assert(BaseButton._method_set_button_mask_3950145251 != nil)
-        let _method_get_button_mask_2512161324_name = StringName(from: "get_button_mask")
-        self._method_get_button_mask_2512161324 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_get_button_mask_2512161324_name._native_ptr(), 2512161324)
-        assert(BaseButton._method_get_button_mask_2512161324 != nil)
-        let _method_get_draw_mode_2492721305_name = StringName(from: "get_draw_mode")
-        self._method_get_draw_mode_2492721305 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_get_draw_mode_2492721305_name._native_ptr(), 2492721305)
-        assert(BaseButton._method_get_draw_mode_2492721305 != nil)
-        let _method_set_keep_pressed_outside_2586408642_name = StringName(from: "set_keep_pressed_outside")
-        self._method_set_keep_pressed_outside_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_set_keep_pressed_outside_2586408642_name._native_ptr(), 2586408642)
-        assert(BaseButton._method_set_keep_pressed_outside_2586408642 != nil)
-        let _method_is_keep_pressed_outside_36873697_name = StringName(from: "is_keep_pressed_outside")
-        self._method_is_keep_pressed_outside_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_is_keep_pressed_outside_36873697_name._native_ptr(), 36873697)
-        assert(BaseButton._method_is_keep_pressed_outside_36873697 != nil)
-        let _method_set_shortcut_feedback_2586408642_name = StringName(from: "set_shortcut_feedback")
-        self._method_set_shortcut_feedback_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_set_shortcut_feedback_2586408642_name._native_ptr(), 2586408642)
-        assert(BaseButton._method_set_shortcut_feedback_2586408642 != nil)
-        let _method_is_shortcut_feedback_36873697_name = StringName(from: "is_shortcut_feedback")
-        self._method_is_shortcut_feedback_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_is_shortcut_feedback_36873697_name._native_ptr(), 36873697)
-        assert(BaseButton._method_is_shortcut_feedback_36873697 != nil)
-        let _method_set_shortcut_857163497_name = StringName(from: "set_shortcut")
-        self._method_set_shortcut_857163497 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_set_shortcut_857163497_name._native_ptr(), 857163497)
-        assert(BaseButton._method_set_shortcut_857163497 != nil)
-        let _method_get_shortcut_3415666916_name = StringName(from: "get_shortcut")
-        self._method_get_shortcut_3415666916 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_get_shortcut_3415666916_name._native_ptr(), 3415666916)
-        assert(BaseButton._method_get_shortcut_3415666916 != nil)
-        let _method_set_button_group_1794463739_name = StringName(from: "set_button_group")
-        self._method_set_button_group_1794463739 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_set_button_group_1794463739_name._native_ptr(), 1794463739)
-        assert(BaseButton._method_set_button_group_1794463739 != nil)
-        let _method_get_button_group_281644053_name = StringName(from: "get_button_group")
-        self._method_get_button_group_281644053 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseButton._native_ptr(), _method_get_button_group_281644053_name._native_ptr(), 281644053)
-        assert(BaseButton._method_get_button_group_281644053 != nil)
+        self._method_set_pressed_2586408642 = StringName(from: "set_pressed")
+        assert(self._method_set_pressed_2586408642 != nil)
+        self._method_is_pressed_36873697 = StringName(from: "is_pressed")
+        assert(self._method_is_pressed_36873697 != nil)
+        self._method_set_pressed_no_signal_2586408642 = StringName(from: "set_pressed_no_signal")
+        assert(self._method_set_pressed_no_signal_2586408642 != nil)
+        self._method_is_hovered_36873697 = StringName(from: "is_hovered")
+        assert(self._method_is_hovered_36873697 != nil)
+        self._method_set_toggle_mode_2586408642 = StringName(from: "set_toggle_mode")
+        assert(self._method_set_toggle_mode_2586408642 != nil)
+        self._method_is_toggle_mode_36873697 = StringName(from: "is_toggle_mode")
+        assert(self._method_is_toggle_mode_36873697 != nil)
+        self._method_set_shortcut_in_tooltip_2586408642 = StringName(from: "set_shortcut_in_tooltip")
+        assert(self._method_set_shortcut_in_tooltip_2586408642 != nil)
+        self._method_is_shortcut_in_tooltip_enabled_36873697 = StringName(from: "is_shortcut_in_tooltip_enabled")
+        assert(self._method_is_shortcut_in_tooltip_enabled_36873697 != nil)
+        self._method_set_disabled_2586408642 = StringName(from: "set_disabled")
+        assert(self._method_set_disabled_2586408642 != nil)
+        self._method_is_disabled_36873697 = StringName(from: "is_disabled")
+        assert(self._method_is_disabled_36873697 != nil)
+        self._method_set_action_mode_1985162088 = StringName(from: "set_action_mode")
+        assert(self._method_set_action_mode_1985162088 != nil)
+        self._method_get_action_mode_2589712189 = StringName(from: "get_action_mode")
+        assert(self._method_get_action_mode_2589712189 != nil)
+        self._method_set_button_mask_3950145251 = StringName(from: "set_button_mask")
+        assert(self._method_set_button_mask_3950145251 != nil)
+        self._method_get_button_mask_2512161324 = StringName(from: "get_button_mask")
+        assert(self._method_get_button_mask_2512161324 != nil)
+        self._method_get_draw_mode_2492721305 = StringName(from: "get_draw_mode")
+        assert(self._method_get_draw_mode_2492721305 != nil)
+        self._method_set_keep_pressed_outside_2586408642 = StringName(from: "set_keep_pressed_outside")
+        assert(self._method_set_keep_pressed_outside_2586408642 != nil)
+        self._method_is_keep_pressed_outside_36873697 = StringName(from: "is_keep_pressed_outside")
+        assert(self._method_is_keep_pressed_outside_36873697 != nil)
+        self._method_set_shortcut_feedback_2586408642 = StringName(from: "set_shortcut_feedback")
+        assert(self._method_set_shortcut_feedback_2586408642 != nil)
+        self._method_is_shortcut_feedback_36873697 = StringName(from: "is_shortcut_feedback")
+        assert(self._method_is_shortcut_feedback_36873697 != nil)
+        self._method_set_shortcut_857163497 = StringName(from: "set_shortcut")
+        assert(self._method_set_shortcut_857163497 != nil)
+        self._method_get_shortcut_3415666916 = StringName(from: "get_shortcut")
+        assert(self._method_get_shortcut_3415666916 != nil)
+        self._method_set_button_group_1794463739 = StringName(from: "set_button_group")
+        assert(self._method_set_button_group_1794463739 != nil)
+        self._method_get_button_group_281644053 = StringName(from: "get_button_group")
+        assert(self._method_get_button_group_281644053 != nil)
     }
 
     public func _pressed()  {
@@ -133,12 +111,7 @@ open class BaseButton : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__pressed_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _toggled(button_pressed: UInt8)  {
         withUnsafePointer(to: button_pressed) { button_pressed_native in
@@ -148,12 +121,7 @@ open class BaseButton : Control {
                 .init(button_pressed_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__toggled_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func set_pressed(pressed: UInt8)  {
@@ -164,8 +132,13 @@ open class BaseButton : Control {
                 .init(pressed_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pressed_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pressed_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -181,8 +154,13 @@ open class BaseButton : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_pressed_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_pressed_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -197,8 +175,13 @@ open class BaseButton : Control {
                 .init(pressed_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pressed_no_signal_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pressed_no_signal_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -214,8 +197,13 @@ open class BaseButton : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_hovered_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_hovered_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -230,8 +218,13 @@ open class BaseButton : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_toggle_mode_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_toggle_mode_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -247,8 +240,13 @@ open class BaseButton : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_toggle_mode_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_toggle_mode_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -263,8 +261,13 @@ open class BaseButton : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shortcut_in_tooltip_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shortcut_in_tooltip_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -280,8 +283,13 @@ open class BaseButton : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_shortcut_in_tooltip_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_shortcut_in_tooltip_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -296,8 +304,13 @@ open class BaseButton : Control {
                 .init(disabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_disabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_disabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -313,8 +326,13 @@ open class BaseButton : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_disabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_disabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -329,8 +347,13 @@ open class BaseButton : Control {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_action_mode_1985162088,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_action_mode_1985162088._native_ptr(),
+                    1985162088)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -345,8 +368,13 @@ open class BaseButton : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_action_mode_2589712189,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_action_mode_2589712189._native_ptr(),
+                    2589712189)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -361,8 +389,13 @@ open class BaseButton : Control {
                 .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_button_mask_3950145251,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_button_mask_3950145251._native_ptr(),
+                    3950145251)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -377,8 +410,13 @@ open class BaseButton : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_button_mask_2512161324,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_button_mask_2512161324._native_ptr(),
+                    2512161324)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -393,8 +431,13 @@ open class BaseButton : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_draw_mode_2492721305,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_draw_mode_2492721305._native_ptr(),
+                    2492721305)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -409,8 +452,13 @@ open class BaseButton : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_keep_pressed_outside_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_keep_pressed_outside_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -426,8 +474,13 @@ open class BaseButton : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_keep_pressed_outside_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_keep_pressed_outside_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -442,8 +495,13 @@ open class BaseButton : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shortcut_feedback_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shortcut_feedback_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -459,8 +517,13 @@ open class BaseButton : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_shortcut_feedback_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_shortcut_feedback_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -475,8 +538,13 @@ open class BaseButton : Control {
                 .init(shortcut_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shortcut_857163497,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shortcut_857163497._native_ptr(),
+                    857163497)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -490,8 +558,13 @@ open class BaseButton : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_shortcut_3415666916,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_shortcut_3415666916._native_ptr(),
+                    3415666916)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -506,8 +579,13 @@ open class BaseButton : Control {
                 .init(button_group_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_button_group_1794463739,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_button_group_1794463739._native_ptr(),
+                    1794463739)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -521,8 +599,13 @@ open class BaseButton : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_button_group_281644053,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_button_group_281644053._native_ptr(),
+                    281644053)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

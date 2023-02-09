@@ -18,91 +18,73 @@ open class TouchScreenButton : Node2D {
 
     public override class var __godot_name: StringName { __godot_name_TouchScreenButton }
 
-    static var _method_set_texture_normal_4051416890: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_normal_3635182373: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_pressed_4051416890: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_pressed_3635182373: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bitmask_698588216: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bitmask_2459671998: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shape_771364740: GDExtensionMethodBindPtr! = nil
-    static var _method_get_shape_522005891: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shape_centered_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_shape_centered_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shape_visible_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_shape_visible_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_action_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_action_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_visibility_mode_3031128463: GDExtensionMethodBindPtr! = nil
-    static var _method_get_visibility_mode_2558996468: GDExtensionMethodBindPtr! = nil
-    static var _method_set_passby_press_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_passby_press_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_is_pressed_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_texture_normal_4051416890: StringName! = nil
+    static var _method_get_texture_normal_3635182373: StringName! = nil
+    static var _method_set_texture_pressed_4051416890: StringName! = nil
+    static var _method_get_texture_pressed_3635182373: StringName! = nil
+    static var _method_set_bitmask_698588216: StringName! = nil
+    static var _method_get_bitmask_2459671998: StringName! = nil
+    static var _method_set_shape_771364740: StringName! = nil
+    static var _method_get_shape_522005891: StringName! = nil
+    static var _method_set_shape_centered_2586408642: StringName! = nil
+    static var _method_is_shape_centered_36873697: StringName! = nil
+    static var _method_set_shape_visible_2586408642: StringName! = nil
+    static var _method_is_shape_visible_36873697: StringName! = nil
+    static var _method_set_action_83702148: StringName! = nil
+    static var _method_get_action_201670096: StringName! = nil
+    static var _method_set_visibility_mode_3031128463: StringName! = nil
+    static var _method_get_visibility_mode_2558996468: StringName! = nil
+    static var _method_set_passby_press_2586408642: StringName! = nil
+    static var _method_is_passby_press_enabled_36873697: StringName! = nil
+    static var _method_is_pressed_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_TouchScreenButton == nil)
         __godot_name_TouchScreenButton = StringName(from: "TouchScreenButton")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_texture_normal_4051416890_name = StringName(from: "set_texture_normal")
-        self._method_set_texture_normal_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_set_texture_normal_4051416890_name._native_ptr(), 4051416890)
-        assert(TouchScreenButton._method_set_texture_normal_4051416890 != nil)
-        let _method_get_texture_normal_3635182373_name = StringName(from: "get_texture_normal")
-        self._method_get_texture_normal_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_get_texture_normal_3635182373_name._native_ptr(), 3635182373)
-        assert(TouchScreenButton._method_get_texture_normal_3635182373 != nil)
-        let _method_set_texture_pressed_4051416890_name = StringName(from: "set_texture_pressed")
-        self._method_set_texture_pressed_4051416890 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_set_texture_pressed_4051416890_name._native_ptr(), 4051416890)
-        assert(TouchScreenButton._method_set_texture_pressed_4051416890 != nil)
-        let _method_get_texture_pressed_3635182373_name = StringName(from: "get_texture_pressed")
-        self._method_get_texture_pressed_3635182373 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_get_texture_pressed_3635182373_name._native_ptr(), 3635182373)
-        assert(TouchScreenButton._method_get_texture_pressed_3635182373 != nil)
-        let _method_set_bitmask_698588216_name = StringName(from: "set_bitmask")
-        self._method_set_bitmask_698588216 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_set_bitmask_698588216_name._native_ptr(), 698588216)
-        assert(TouchScreenButton._method_set_bitmask_698588216 != nil)
-        let _method_get_bitmask_2459671998_name = StringName(from: "get_bitmask")
-        self._method_get_bitmask_2459671998 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_get_bitmask_2459671998_name._native_ptr(), 2459671998)
-        assert(TouchScreenButton._method_get_bitmask_2459671998 != nil)
-        let _method_set_shape_771364740_name = StringName(from: "set_shape")
-        self._method_set_shape_771364740 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_set_shape_771364740_name._native_ptr(), 771364740)
-        assert(TouchScreenButton._method_set_shape_771364740 != nil)
-        let _method_get_shape_522005891_name = StringName(from: "get_shape")
-        self._method_get_shape_522005891 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_get_shape_522005891_name._native_ptr(), 522005891)
-        assert(TouchScreenButton._method_get_shape_522005891 != nil)
-        let _method_set_shape_centered_2586408642_name = StringName(from: "set_shape_centered")
-        self._method_set_shape_centered_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_set_shape_centered_2586408642_name._native_ptr(), 2586408642)
-        assert(TouchScreenButton._method_set_shape_centered_2586408642 != nil)
-        let _method_is_shape_centered_36873697_name = StringName(from: "is_shape_centered")
-        self._method_is_shape_centered_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_is_shape_centered_36873697_name._native_ptr(), 36873697)
-        assert(TouchScreenButton._method_is_shape_centered_36873697 != nil)
-        let _method_set_shape_visible_2586408642_name = StringName(from: "set_shape_visible")
-        self._method_set_shape_visible_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_set_shape_visible_2586408642_name._native_ptr(), 2586408642)
-        assert(TouchScreenButton._method_set_shape_visible_2586408642 != nil)
-        let _method_is_shape_visible_36873697_name = StringName(from: "is_shape_visible")
-        self._method_is_shape_visible_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_is_shape_visible_36873697_name._native_ptr(), 36873697)
-        assert(TouchScreenButton._method_is_shape_visible_36873697 != nil)
-        let _method_set_action_83702148_name = StringName(from: "set_action")
-        self._method_set_action_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_set_action_83702148_name._native_ptr(), 83702148)
-        assert(TouchScreenButton._method_set_action_83702148 != nil)
-        let _method_get_action_201670096_name = StringName(from: "get_action")
-        self._method_get_action_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_get_action_201670096_name._native_ptr(), 201670096)
-        assert(TouchScreenButton._method_get_action_201670096 != nil)
-        let _method_set_visibility_mode_3031128463_name = StringName(from: "set_visibility_mode")
-        self._method_set_visibility_mode_3031128463 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_set_visibility_mode_3031128463_name._native_ptr(), 3031128463)
-        assert(TouchScreenButton._method_set_visibility_mode_3031128463 != nil)
-        let _method_get_visibility_mode_2558996468_name = StringName(from: "get_visibility_mode")
-        self._method_get_visibility_mode_2558996468 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_get_visibility_mode_2558996468_name._native_ptr(), 2558996468)
-        assert(TouchScreenButton._method_get_visibility_mode_2558996468 != nil)
-        let _method_set_passby_press_2586408642_name = StringName(from: "set_passby_press")
-        self._method_set_passby_press_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_set_passby_press_2586408642_name._native_ptr(), 2586408642)
-        assert(TouchScreenButton._method_set_passby_press_2586408642 != nil)
-        let _method_is_passby_press_enabled_36873697_name = StringName(from: "is_passby_press_enabled")
-        self._method_is_passby_press_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_is_passby_press_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TouchScreenButton._method_is_passby_press_enabled_36873697 != nil)
-        let _method_is_pressed_36873697_name = StringName(from: "is_pressed")
-        self._method_is_pressed_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TouchScreenButton._native_ptr(), _method_is_pressed_36873697_name._native_ptr(), 36873697)
-        assert(TouchScreenButton._method_is_pressed_36873697 != nil)
+        self._method_set_texture_normal_4051416890 = StringName(from: "set_texture_normal")
+        assert(self._method_set_texture_normal_4051416890 != nil)
+        self._method_get_texture_normal_3635182373 = StringName(from: "get_texture_normal")
+        assert(self._method_get_texture_normal_3635182373 != nil)
+        self._method_set_texture_pressed_4051416890 = StringName(from: "set_texture_pressed")
+        assert(self._method_set_texture_pressed_4051416890 != nil)
+        self._method_get_texture_pressed_3635182373 = StringName(from: "get_texture_pressed")
+        assert(self._method_get_texture_pressed_3635182373 != nil)
+        self._method_set_bitmask_698588216 = StringName(from: "set_bitmask")
+        assert(self._method_set_bitmask_698588216 != nil)
+        self._method_get_bitmask_2459671998 = StringName(from: "get_bitmask")
+        assert(self._method_get_bitmask_2459671998 != nil)
+        self._method_set_shape_771364740 = StringName(from: "set_shape")
+        assert(self._method_set_shape_771364740 != nil)
+        self._method_get_shape_522005891 = StringName(from: "get_shape")
+        assert(self._method_get_shape_522005891 != nil)
+        self._method_set_shape_centered_2586408642 = StringName(from: "set_shape_centered")
+        assert(self._method_set_shape_centered_2586408642 != nil)
+        self._method_is_shape_centered_36873697 = StringName(from: "is_shape_centered")
+        assert(self._method_is_shape_centered_36873697 != nil)
+        self._method_set_shape_visible_2586408642 = StringName(from: "set_shape_visible")
+        assert(self._method_set_shape_visible_2586408642 != nil)
+        self._method_is_shape_visible_36873697 = StringName(from: "is_shape_visible")
+        assert(self._method_is_shape_visible_36873697 != nil)
+        self._method_set_action_83702148 = StringName(from: "set_action")
+        assert(self._method_set_action_83702148 != nil)
+        self._method_get_action_201670096 = StringName(from: "get_action")
+        assert(self._method_get_action_201670096 != nil)
+        self._method_set_visibility_mode_3031128463 = StringName(from: "set_visibility_mode")
+        assert(self._method_set_visibility_mode_3031128463 != nil)
+        self._method_get_visibility_mode_2558996468 = StringName(from: "get_visibility_mode")
+        assert(self._method_get_visibility_mode_2558996468 != nil)
+        self._method_set_passby_press_2586408642 = StringName(from: "set_passby_press")
+        assert(self._method_set_passby_press_2586408642 != nil)
+        self._method_is_passby_press_enabled_36873697 = StringName(from: "is_passby_press_enabled")
+        assert(self._method_is_passby_press_enabled_36873697 != nil)
+        self._method_is_pressed_36873697 = StringName(from: "is_pressed")
+        assert(self._method_is_pressed_36873697 != nil)
     }
 
     public func set_texture_normal(texture: Texture2D)  {
@@ -113,8 +95,13 @@ open class TouchScreenButton : Node2D {
                 .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_normal_4051416890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_normal_4051416890._native_ptr(),
+                    4051416890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -128,8 +115,13 @@ open class TouchScreenButton : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_normal_3635182373,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_normal_3635182373._native_ptr(),
+                    3635182373)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -144,8 +136,13 @@ open class TouchScreenButton : Node2D {
                 .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_pressed_4051416890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_pressed_4051416890._native_ptr(),
+                    4051416890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -159,8 +156,13 @@ open class TouchScreenButton : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_pressed_3635182373,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_pressed_3635182373._native_ptr(),
+                    3635182373)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -175,8 +177,13 @@ open class TouchScreenButton : Node2D {
                 .init(bitmask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bitmask_698588216,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bitmask_698588216._native_ptr(),
+                    698588216)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -190,8 +197,13 @@ open class TouchScreenButton : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bitmask_2459671998,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bitmask_2459671998._native_ptr(),
+                    2459671998)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -206,8 +218,13 @@ open class TouchScreenButton : Node2D {
                 .init(shape_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shape_771364740,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shape_771364740._native_ptr(),
+                    771364740)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -221,8 +238,13 @@ open class TouchScreenButton : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_shape_522005891,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_shape_522005891._native_ptr(),
+                    522005891)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -237,8 +259,13 @@ open class TouchScreenButton : Node2D {
                 .init(bool_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shape_centered_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shape_centered_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -254,8 +281,13 @@ open class TouchScreenButton : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_shape_centered_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_shape_centered_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -270,8 +302,13 @@ open class TouchScreenButton : Node2D {
                 .init(bool_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shape_visible_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shape_visible_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -287,8 +324,13 @@ open class TouchScreenButton : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_shape_visible_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_shape_visible_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -303,8 +345,13 @@ open class TouchScreenButton : Node2D {
                 .init(action_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_action_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_action_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -318,8 +365,13 @@ open class TouchScreenButton : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_action_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_action_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -334,8 +386,13 @@ open class TouchScreenButton : Node2D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_visibility_mode_3031128463,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_visibility_mode_3031128463._native_ptr(),
+                    3031128463)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -350,8 +407,13 @@ open class TouchScreenButton : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_visibility_mode_2558996468,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_visibility_mode_2558996468._native_ptr(),
+                    2558996468)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -366,8 +428,13 @@ open class TouchScreenButton : Node2D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_passby_press_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_passby_press_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -383,8 +450,13 @@ open class TouchScreenButton : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_passby_press_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_passby_press_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -400,8 +472,13 @@ open class TouchScreenButton : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_pressed_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_pressed_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

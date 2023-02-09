@@ -151,31 +151,28 @@ open class AESContext : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_AESContext }
 
-    static var _method_start_3167574919: GDExtensionMethodBindPtr! = nil
-    static var _method_update_527836100: GDExtensionMethodBindPtr! = nil
-    static var _method_get_iv_state_2115431945: GDExtensionMethodBindPtr! = nil
-    static var _method_finish_3218959716: GDExtensionMethodBindPtr! = nil
+    static var _method_start_3167574919: StringName! = nil
+    static var _method_update_527836100: StringName! = nil
+    static var _method_get_iv_state_2115431945: StringName! = nil
+    static var _method_finish_3218959716: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AESContext == nil)
         __godot_name_AESContext = StringName(from: "AESContext")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_start_3167574919_name = StringName(from: "start")
-        self._method_start_3167574919 = self.interface.pointee.classdb_get_method_bind(__godot_name_AESContext._native_ptr(), _method_start_3167574919_name._native_ptr(), 3167574919)
-        assert(AESContext._method_start_3167574919 != nil)
-        let _method_update_527836100_name = StringName(from: "update")
-        self._method_update_527836100 = self.interface.pointee.classdb_get_method_bind(__godot_name_AESContext._native_ptr(), _method_update_527836100_name._native_ptr(), 527836100)
-        assert(AESContext._method_update_527836100 != nil)
-        let _method_get_iv_state_2115431945_name = StringName(from: "get_iv_state")
-        self._method_get_iv_state_2115431945 = self.interface.pointee.classdb_get_method_bind(__godot_name_AESContext._native_ptr(), _method_get_iv_state_2115431945_name._native_ptr(), 2115431945)
-        assert(AESContext._method_get_iv_state_2115431945 != nil)
-        let _method_finish_3218959716_name = StringName(from: "finish")
-        self._method_finish_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_AESContext._native_ptr(), _method_finish_3218959716_name._native_ptr(), 3218959716)
-        assert(AESContext._method_finish_3218959716 != nil)
+        self._method_start_3167574919 = StringName(from: "start")
+        assert(self._method_start_3167574919 != nil)
+        self._method_update_527836100 = StringName(from: "update")
+        assert(self._method_update_527836100 != nil)
+        self._method_get_iv_state_2115431945 = StringName(from: "get_iv_state")
+        assert(self._method_get_iv_state_2115431945 != nil)
+        self._method_finish_3218959716 = StringName(from: "finish")
+        assert(self._method_finish_3218959716 != nil)
     }
 
     public func start(mode: AESContext.Mode, key: PackedByteArray, iv: PackedByteArray) -> Error {
@@ -189,8 +186,13 @@ open class AESContext : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_start_3167574919,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_start_3167574919._native_ptr(),
+                    3167574919)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -207,8 +209,13 @@ open class AESContext : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_update_527836100,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_update_527836100._native_ptr(),
+                    527836100)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -223,8 +230,13 @@ open class AESContext : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_iv_state_2115431945,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_iv_state_2115431945._native_ptr(),
+                    2115431945)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -238,8 +250,13 @@ open class AESContext : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_finish_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_finish_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

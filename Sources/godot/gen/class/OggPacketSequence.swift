@@ -11,43 +11,37 @@ open class OggPacketSequence : Resource {
 
     public override class var __godot_name: StringName { __godot_name_OggPacketSequence }
 
-    static var _method_set_packet_data_381264803: GDExtensionMethodBindPtr! = nil
-    static var _method_get_packet_data_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_set_packet_granule_positions_3709968205: GDExtensionMethodBindPtr! = nil
-    static var _method_get_packet_granule_positions_235988956: GDExtensionMethodBindPtr! = nil
-    static var _method_set_sampling_rate_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_sampling_rate_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_length_1740695150: GDExtensionMethodBindPtr! = nil
+    static var _method_set_packet_data_381264803: StringName! = nil
+    static var _method_get_packet_data_3995934104: StringName! = nil
+    static var _method_set_packet_granule_positions_3709968205: StringName! = nil
+    static var _method_get_packet_granule_positions_235988956: StringName! = nil
+    static var _method_set_sampling_rate_373806689: StringName! = nil
+    static var _method_get_sampling_rate_1740695150: StringName! = nil
+    static var _method_get_length_1740695150: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_OggPacketSequence == nil)
         __godot_name_OggPacketSequence = StringName(from: "OggPacketSequence")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_packet_data_381264803_name = StringName(from: "set_packet_data")
-        self._method_set_packet_data_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_OggPacketSequence._native_ptr(), _method_set_packet_data_381264803_name._native_ptr(), 381264803)
-        assert(OggPacketSequence._method_set_packet_data_381264803 != nil)
-        let _method_get_packet_data_3995934104_name = StringName(from: "get_packet_data")
-        self._method_get_packet_data_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_OggPacketSequence._native_ptr(), _method_get_packet_data_3995934104_name._native_ptr(), 3995934104)
-        assert(OggPacketSequence._method_get_packet_data_3995934104 != nil)
-        let _method_set_packet_granule_positions_3709968205_name = StringName(from: "set_packet_granule_positions")
-        self._method_set_packet_granule_positions_3709968205 = self.interface.pointee.classdb_get_method_bind(__godot_name_OggPacketSequence._native_ptr(), _method_set_packet_granule_positions_3709968205_name._native_ptr(), 3709968205)
-        assert(OggPacketSequence._method_set_packet_granule_positions_3709968205 != nil)
-        let _method_get_packet_granule_positions_235988956_name = StringName(from: "get_packet_granule_positions")
-        self._method_get_packet_granule_positions_235988956 = self.interface.pointee.classdb_get_method_bind(__godot_name_OggPacketSequence._native_ptr(), _method_get_packet_granule_positions_235988956_name._native_ptr(), 235988956)
-        assert(OggPacketSequence._method_get_packet_granule_positions_235988956 != nil)
-        let _method_set_sampling_rate_373806689_name = StringName(from: "set_sampling_rate")
-        self._method_set_sampling_rate_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_OggPacketSequence._native_ptr(), _method_set_sampling_rate_373806689_name._native_ptr(), 373806689)
-        assert(OggPacketSequence._method_set_sampling_rate_373806689 != nil)
-        let _method_get_sampling_rate_1740695150_name = StringName(from: "get_sampling_rate")
-        self._method_get_sampling_rate_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_OggPacketSequence._native_ptr(), _method_get_sampling_rate_1740695150_name._native_ptr(), 1740695150)
-        assert(OggPacketSequence._method_get_sampling_rate_1740695150 != nil)
-        let _method_get_length_1740695150_name = StringName(from: "get_length")
-        self._method_get_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_OggPacketSequence._native_ptr(), _method_get_length_1740695150_name._native_ptr(), 1740695150)
-        assert(OggPacketSequence._method_get_length_1740695150 != nil)
+        self._method_set_packet_data_381264803 = StringName(from: "set_packet_data")
+        assert(self._method_set_packet_data_381264803 != nil)
+        self._method_get_packet_data_3995934104 = StringName(from: "get_packet_data")
+        assert(self._method_get_packet_data_3995934104 != nil)
+        self._method_set_packet_granule_positions_3709968205 = StringName(from: "set_packet_granule_positions")
+        assert(self._method_set_packet_granule_positions_3709968205 != nil)
+        self._method_get_packet_granule_positions_235988956 = StringName(from: "get_packet_granule_positions")
+        assert(self._method_get_packet_granule_positions_235988956 != nil)
+        self._method_set_sampling_rate_373806689 = StringName(from: "set_sampling_rate")
+        assert(self._method_set_sampling_rate_373806689 != nil)
+        self._method_get_sampling_rate_1740695150 = StringName(from: "get_sampling_rate")
+        assert(self._method_get_sampling_rate_1740695150 != nil)
+        self._method_get_length_1740695150 = StringName(from: "get_length")
+        assert(self._method_get_length_1740695150 != nil)
     }
 
     public func set_packet_data(packet_data: [Array])  {
@@ -58,8 +52,13 @@ open class OggPacketSequence : Resource {
                 .init(packet_data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_packet_data_381264803,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_packet_data_381264803._native_ptr(),
+                    381264803)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -73,8 +72,13 @@ open class OggPacketSequence : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_packet_data_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_packet_data_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -89,8 +93,13 @@ open class OggPacketSequence : Resource {
                 .init(granule_positions_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_packet_granule_positions_3709968205,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_packet_granule_positions_3709968205._native_ptr(),
+                    3709968205)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -104,8 +113,13 @@ open class OggPacketSequence : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_packet_granule_positions_235988956,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_packet_granule_positions_235988956._native_ptr(),
+                    235988956)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -120,8 +134,13 @@ open class OggPacketSequence : Resource {
                 .init(sampling_rate_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_sampling_rate_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_sampling_rate_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -137,8 +156,13 @@ open class OggPacketSequence : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_sampling_rate_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_sampling_rate_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -154,8 +178,13 @@ open class OggPacketSequence : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_length_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_length_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -13,14 +13,15 @@ open class EngineProfiler : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_EngineProfiler }
 
-    static var _method__toggle_0: GDExtensionMethodBindPtr! = nil
-    static var _method__add_frame_0: GDExtensionMethodBindPtr! = nil
-    static var _method__tick_0: GDExtensionMethodBindPtr! = nil
+    static var _method__toggle_0: StringName! = nil
+    static var _method__add_frame_0: StringName! = nil
+    static var _method__tick_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_EngineProfiler == nil)
         __godot_name_EngineProfiler = StringName(from: "EngineProfiler")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -37,12 +38,7 @@ open class EngineProfiler : RefCounted {
                 .init(enable_native), .init(options_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__toggle_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _add_frame(data: Array)  {
@@ -53,12 +49,7 @@ open class EngineProfiler : RefCounted {
                 .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__add_frame_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _tick(frame_time: Float64, process_time: Float64, physics_time: Float64, physics_frame_time: Float64)  {
         withUnsafePointer(to: physics_frame_time) { physics_frame_time_native in
@@ -71,12 +62,7 @@ open class EngineProfiler : RefCounted {
                 .init(frame_time_native), .init(process_time_native), .init(physics_time_native), .init(physics_frame_time_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__tick_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
         }

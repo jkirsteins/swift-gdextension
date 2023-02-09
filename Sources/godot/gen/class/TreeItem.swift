@@ -19,403 +19,307 @@ open class TreeItem : Object {
 
     public override class var __godot_name: StringName { __godot_name_TreeItem }
 
-    static var _method_set_cell_mode_289920701: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cell_mode_3406114978: GDExtensionMethodBindPtr! = nil
-    static var _method_set_checked_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_set_indeterminate_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_is_checked_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_is_indeterminate_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_propagate_check_4023243586: GDExtensionMethodBindPtr! = nil
-    static var _method_set_text_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_set_text_direction_1707680378: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_direction_4235602388: GDExtensionMethodBindPtr! = nil
-    static var _method_set_structured_text_bidi_override_868756907: GDExtensionMethodBindPtr! = nil
-    static var _method_get_structured_text_bidi_override_3377823772: GDExtensionMethodBindPtr! = nil
-    static var _method_set_structured_text_bidi_override_options_537221740: GDExtensionMethodBindPtr! = nil
-    static var _method_get_structured_text_bidi_override_options_663333327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_language_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_get_language_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_set_suffix_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_get_suffix_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_set_icon_666127730: GDExtensionMethodBindPtr! = nil
-    static var _method_get_icon_3536238170: GDExtensionMethodBindPtr! = nil
-    static var _method_set_icon_region_1356297692: GDExtensionMethodBindPtr! = nil
-    static var _method_get_icon_region_3327874267: GDExtensionMethodBindPtr! = nil
-    static var _method_set_icon_max_width_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_get_icon_max_width_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_set_icon_modulate_2878471219: GDExtensionMethodBindPtr! = nil
-    static var _method_get_icon_modulate_3457211756: GDExtensionMethodBindPtr! = nil
-    static var _method_set_range_1602489585: GDExtensionMethodBindPtr! = nil
-    static var _method_get_range_2339986948: GDExtensionMethodBindPtr! = nil
-    static var _method_set_range_config_1547181014: GDExtensionMethodBindPtr! = nil
-    static var _method_get_range_config_3554694381: GDExtensionMethodBindPtr! = nil
-    static var _method_set_metadata_2152698145: GDExtensionMethodBindPtr! = nil
-    static var _method_get_metadata_4227898402: GDExtensionMethodBindPtr! = nil
-    static var _method_set_custom_draw_272420368: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collapsed_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_collapsed_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collapsed_recursive_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_any_collapsed_2595650253: GDExtensionMethodBindPtr! = nil
-    static var _method_set_visible_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_visible_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_uncollapse_tree_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_custom_minimum_height_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_minimum_height_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_selectable_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_is_selectable_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_is_selected_3067735520: GDExtensionMethodBindPtr! = nil
-    static var _method_select_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_deselect_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_editable_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_is_editable_3067735520: GDExtensionMethodBindPtr! = nil
-    static var _method_set_custom_color_2878471219: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_color_3457211756: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_custom_color_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_custom_font_2637609184: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_font_4244553094: GDExtensionMethodBindPtr! = nil
-    static var _method_set_custom_font_size_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_font_size_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_set_custom_bg_color_894174518: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_custom_bg_color_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_custom_bg_color_3457211756: GDExtensionMethodBindPtr! = nil
-    static var _method_set_custom_as_button_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_is_custom_set_as_button_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_add_button_1507727907: GDExtensionMethodBindPtr! = nil
-    static var _method_get_button_count_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_get_button_tooltip_text_1391810591: GDExtensionMethodBindPtr! = nil
-    static var _method_get_button_id_3175239445: GDExtensionMethodBindPtr! = nil
-    static var _method_get_button_by_id_3175239445: GDExtensionMethodBindPtr! = nil
-    static var _method_get_button_2584904275: GDExtensionMethodBindPtr! = nil
-    static var _method_set_button_176101966: GDExtensionMethodBindPtr! = nil
-    static var _method_erase_button_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_set_button_disabled_1383440665: GDExtensionMethodBindPtr! = nil
-    static var _method_set_button_color_3733378741: GDExtensionMethodBindPtr! = nil
-    static var _method_is_button_disabled_2522259332: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tooltip_text_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tooltip_text_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_set_text_alignment_3276431499: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_alignment_4171562184: GDExtensionMethodBindPtr! = nil
-    static var _method_set_expand_right_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_get_expand_right_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_set_disable_folding_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_folding_disabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_create_child_954243986: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tree_2243340556: GDExtensionMethodBindPtr! = nil
-    static var _method_get_next_1514277247: GDExtensionMethodBindPtr! = nil
-    static var _method_get_prev_2768121250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_parent_1514277247: GDExtensionMethodBindPtr! = nil
-    static var _method_get_first_child_1514277247: GDExtensionMethodBindPtr! = nil
-    static var _method_get_next_visible_1666920593: GDExtensionMethodBindPtr! = nil
-    static var _method_get_prev_visible_1666920593: GDExtensionMethodBindPtr! = nil
-    static var _method_get_child_306700752: GDExtensionMethodBindPtr! = nil
-    static var _method_get_child_count_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_children_2915620761: GDExtensionMethodBindPtr! = nil
-    static var _method_get_index_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_move_before_1819951137: GDExtensionMethodBindPtr! = nil
-    static var _method_move_after_1819951137: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_child_1819951137: GDExtensionMethodBindPtr! = nil
-    static var _method_call_recursive_2866548813: GDExtensionMethodBindPtr! = nil
+    static var _method_set_cell_mode_289920701: StringName! = nil
+    static var _method_get_cell_mode_3406114978: StringName! = nil
+    static var _method_set_checked_300928843: StringName! = nil
+    static var _method_set_indeterminate_300928843: StringName! = nil
+    static var _method_is_checked_1116898809: StringName! = nil
+    static var _method_is_indeterminate_1116898809: StringName! = nil
+    static var _method_propagate_check_4023243586: StringName! = nil
+    static var _method_set_text_501894301: StringName! = nil
+    static var _method_get_text_844755477: StringName! = nil
+    static var _method_set_text_direction_1707680378: StringName! = nil
+    static var _method_get_text_direction_4235602388: StringName! = nil
+    static var _method_set_structured_text_bidi_override_868756907: StringName! = nil
+    static var _method_get_structured_text_bidi_override_3377823772: StringName! = nil
+    static var _method_set_structured_text_bidi_override_options_537221740: StringName! = nil
+    static var _method_get_structured_text_bidi_override_options_663333327: StringName! = nil
+    static var _method_set_language_501894301: StringName! = nil
+    static var _method_get_language_844755477: StringName! = nil
+    static var _method_set_suffix_501894301: StringName! = nil
+    static var _method_get_suffix_844755477: StringName! = nil
+    static var _method_set_icon_666127730: StringName! = nil
+    static var _method_get_icon_3536238170: StringName! = nil
+    static var _method_set_icon_region_1356297692: StringName! = nil
+    static var _method_get_icon_region_3327874267: StringName! = nil
+    static var _method_set_icon_max_width_3937882851: StringName! = nil
+    static var _method_get_icon_max_width_923996154: StringName! = nil
+    static var _method_set_icon_modulate_2878471219: StringName! = nil
+    static var _method_get_icon_modulate_3457211756: StringName! = nil
+    static var _method_set_range_1602489585: StringName! = nil
+    static var _method_get_range_2339986948: StringName! = nil
+    static var _method_set_range_config_1547181014: StringName! = nil
+    static var _method_get_range_config_3554694381: StringName! = nil
+    static var _method_set_metadata_2152698145: StringName! = nil
+    static var _method_get_metadata_4227898402: StringName! = nil
+    static var _method_set_custom_draw_272420368: StringName! = nil
+    static var _method_set_collapsed_2586408642: StringName! = nil
+    static var _method_is_collapsed_2240911060: StringName! = nil
+    static var _method_set_collapsed_recursive_2586408642: StringName! = nil
+    static var _method_is_any_collapsed_2595650253: StringName! = nil
+    static var _method_set_visible_2586408642: StringName! = nil
+    static var _method_is_visible_2240911060: StringName! = nil
+    static var _method_uncollapse_tree_3218959716: StringName! = nil
+    static var _method_set_custom_minimum_height_1286410249: StringName! = nil
+    static var _method_get_custom_minimum_height_3905245786: StringName! = nil
+    static var _method_set_selectable_300928843: StringName! = nil
+    static var _method_is_selectable_1116898809: StringName! = nil
+    static var _method_is_selected_3067735520: StringName! = nil
+    static var _method_select_1286410249: StringName! = nil
+    static var _method_deselect_1286410249: StringName! = nil
+    static var _method_set_editable_300928843: StringName! = nil
+    static var _method_is_editable_3067735520: StringName! = nil
+    static var _method_set_custom_color_2878471219: StringName! = nil
+    static var _method_get_custom_color_3457211756: StringName! = nil
+    static var _method_clear_custom_color_1286410249: StringName! = nil
+    static var _method_set_custom_font_2637609184: StringName! = nil
+    static var _method_get_custom_font_4244553094: StringName! = nil
+    static var _method_set_custom_font_size_3937882851: StringName! = nil
+    static var _method_get_custom_font_size_923996154: StringName! = nil
+    static var _method_set_custom_bg_color_894174518: StringName! = nil
+    static var _method_clear_custom_bg_color_1286410249: StringName! = nil
+    static var _method_get_custom_bg_color_3457211756: StringName! = nil
+    static var _method_set_custom_as_button_300928843: StringName! = nil
+    static var _method_is_custom_set_as_button_1116898809: StringName! = nil
+    static var _method_add_button_1507727907: StringName! = nil
+    static var _method_get_button_count_923996154: StringName! = nil
+    static var _method_get_button_tooltip_text_1391810591: StringName! = nil
+    static var _method_get_button_id_3175239445: StringName! = nil
+    static var _method_get_button_by_id_3175239445: StringName! = nil
+    static var _method_get_button_2584904275: StringName! = nil
+    static var _method_set_button_176101966: StringName! = nil
+    static var _method_erase_button_3937882851: StringName! = nil
+    static var _method_set_button_disabled_1383440665: StringName! = nil
+    static var _method_set_button_color_3733378741: StringName! = nil
+    static var _method_is_button_disabled_2522259332: StringName! = nil
+    static var _method_set_tooltip_text_501894301: StringName! = nil
+    static var _method_get_tooltip_text_844755477: StringName! = nil
+    static var _method_set_text_alignment_3276431499: StringName! = nil
+    static var _method_get_text_alignment_4171562184: StringName! = nil
+    static var _method_set_expand_right_300928843: StringName! = nil
+    static var _method_get_expand_right_1116898809: StringName! = nil
+    static var _method_set_disable_folding_2586408642: StringName! = nil
+    static var _method_is_folding_disabled_36873697: StringName! = nil
+    static var _method_create_child_954243986: StringName! = nil
+    static var _method_get_tree_2243340556: StringName! = nil
+    static var _method_get_next_1514277247: StringName! = nil
+    static var _method_get_prev_2768121250: StringName! = nil
+    static var _method_get_parent_1514277247: StringName! = nil
+    static var _method_get_first_child_1514277247: StringName! = nil
+    static var _method_get_next_visible_1666920593: StringName! = nil
+    static var _method_get_prev_visible_1666920593: StringName! = nil
+    static var _method_get_child_306700752: StringName! = nil
+    static var _method_get_child_count_2455072627: StringName! = nil
+    static var _method_get_children_2915620761: StringName! = nil
+    static var _method_get_index_2455072627: StringName! = nil
+    static var _method_move_before_1819951137: StringName! = nil
+    static var _method_move_after_1819951137: StringName! = nil
+    static var _method_remove_child_1819951137: StringName! = nil
+    static var _method_call_recursive_2866548813: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_TreeItem == nil)
         __godot_name_TreeItem = StringName(from: "TreeItem")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_cell_mode_289920701_name = StringName(from: "set_cell_mode")
-        self._method_set_cell_mode_289920701 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_cell_mode_289920701_name._native_ptr(), 289920701)
-        assert(TreeItem._method_set_cell_mode_289920701 != nil)
-        let _method_get_cell_mode_3406114978_name = StringName(from: "get_cell_mode")
-        self._method_get_cell_mode_3406114978 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_cell_mode_3406114978_name._native_ptr(), 3406114978)
-        assert(TreeItem._method_get_cell_mode_3406114978 != nil)
-        let _method_set_checked_300928843_name = StringName(from: "set_checked")
-        self._method_set_checked_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_checked_300928843_name._native_ptr(), 300928843)
-        assert(TreeItem._method_set_checked_300928843 != nil)
-        let _method_set_indeterminate_300928843_name = StringName(from: "set_indeterminate")
-        self._method_set_indeterminate_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_indeterminate_300928843_name._native_ptr(), 300928843)
-        assert(TreeItem._method_set_indeterminate_300928843 != nil)
-        let _method_is_checked_1116898809_name = StringName(from: "is_checked")
-        self._method_is_checked_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_is_checked_1116898809_name._native_ptr(), 1116898809)
-        assert(TreeItem._method_is_checked_1116898809 != nil)
-        let _method_is_indeterminate_1116898809_name = StringName(from: "is_indeterminate")
-        self._method_is_indeterminate_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_is_indeterminate_1116898809_name._native_ptr(), 1116898809)
-        assert(TreeItem._method_is_indeterminate_1116898809 != nil)
-        let _method_propagate_check_4023243586_name = StringName(from: "propagate_check")
-        self._method_propagate_check_4023243586 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_propagate_check_4023243586_name._native_ptr(), 4023243586)
-        assert(TreeItem._method_propagate_check_4023243586 != nil)
-        let _method_set_text_501894301_name = StringName(from: "set_text")
-        self._method_set_text_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_text_501894301_name._native_ptr(), 501894301)
-        assert(TreeItem._method_set_text_501894301 != nil)
-        let _method_get_text_844755477_name = StringName(from: "get_text")
-        self._method_get_text_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_text_844755477_name._native_ptr(), 844755477)
-        assert(TreeItem._method_get_text_844755477 != nil)
-        let _method_set_text_direction_1707680378_name = StringName(from: "set_text_direction")
-        self._method_set_text_direction_1707680378 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_text_direction_1707680378_name._native_ptr(), 1707680378)
-        assert(TreeItem._method_set_text_direction_1707680378 != nil)
-        let _method_get_text_direction_4235602388_name = StringName(from: "get_text_direction")
-        self._method_get_text_direction_4235602388 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_text_direction_4235602388_name._native_ptr(), 4235602388)
-        assert(TreeItem._method_get_text_direction_4235602388 != nil)
-        let _method_set_structured_text_bidi_override_868756907_name = StringName(from: "set_structured_text_bidi_override")
-        self._method_set_structured_text_bidi_override_868756907 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_structured_text_bidi_override_868756907_name._native_ptr(), 868756907)
-        assert(TreeItem._method_set_structured_text_bidi_override_868756907 != nil)
-        let _method_get_structured_text_bidi_override_3377823772_name = StringName(from: "get_structured_text_bidi_override")
-        self._method_get_structured_text_bidi_override_3377823772 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_structured_text_bidi_override_3377823772_name._native_ptr(), 3377823772)
-        assert(TreeItem._method_get_structured_text_bidi_override_3377823772 != nil)
-        let _method_set_structured_text_bidi_override_options_537221740_name = StringName(from: "set_structured_text_bidi_override_options")
-        self._method_set_structured_text_bidi_override_options_537221740 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_structured_text_bidi_override_options_537221740_name._native_ptr(), 537221740)
-        assert(TreeItem._method_set_structured_text_bidi_override_options_537221740 != nil)
-        let _method_get_structured_text_bidi_override_options_663333327_name = StringName(from: "get_structured_text_bidi_override_options")
-        self._method_get_structured_text_bidi_override_options_663333327 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_structured_text_bidi_override_options_663333327_name._native_ptr(), 663333327)
-        assert(TreeItem._method_get_structured_text_bidi_override_options_663333327 != nil)
-        let _method_set_language_501894301_name = StringName(from: "set_language")
-        self._method_set_language_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_language_501894301_name._native_ptr(), 501894301)
-        assert(TreeItem._method_set_language_501894301 != nil)
-        let _method_get_language_844755477_name = StringName(from: "get_language")
-        self._method_get_language_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_language_844755477_name._native_ptr(), 844755477)
-        assert(TreeItem._method_get_language_844755477 != nil)
-        let _method_set_suffix_501894301_name = StringName(from: "set_suffix")
-        self._method_set_suffix_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_suffix_501894301_name._native_ptr(), 501894301)
-        assert(TreeItem._method_set_suffix_501894301 != nil)
-        let _method_get_suffix_844755477_name = StringName(from: "get_suffix")
-        self._method_get_suffix_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_suffix_844755477_name._native_ptr(), 844755477)
-        assert(TreeItem._method_get_suffix_844755477 != nil)
-        let _method_set_icon_666127730_name = StringName(from: "set_icon")
-        self._method_set_icon_666127730 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_icon_666127730_name._native_ptr(), 666127730)
-        assert(TreeItem._method_set_icon_666127730 != nil)
-        let _method_get_icon_3536238170_name = StringName(from: "get_icon")
-        self._method_get_icon_3536238170 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_icon_3536238170_name._native_ptr(), 3536238170)
-        assert(TreeItem._method_get_icon_3536238170 != nil)
-        let _method_set_icon_region_1356297692_name = StringName(from: "set_icon_region")
-        self._method_set_icon_region_1356297692 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_icon_region_1356297692_name._native_ptr(), 1356297692)
-        assert(TreeItem._method_set_icon_region_1356297692 != nil)
-        let _method_get_icon_region_3327874267_name = StringName(from: "get_icon_region")
-        self._method_get_icon_region_3327874267 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_icon_region_3327874267_name._native_ptr(), 3327874267)
-        assert(TreeItem._method_get_icon_region_3327874267 != nil)
-        let _method_set_icon_max_width_3937882851_name = StringName(from: "set_icon_max_width")
-        self._method_set_icon_max_width_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_icon_max_width_3937882851_name._native_ptr(), 3937882851)
-        assert(TreeItem._method_set_icon_max_width_3937882851 != nil)
-        let _method_get_icon_max_width_923996154_name = StringName(from: "get_icon_max_width")
-        self._method_get_icon_max_width_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_icon_max_width_923996154_name._native_ptr(), 923996154)
-        assert(TreeItem._method_get_icon_max_width_923996154 != nil)
-        let _method_set_icon_modulate_2878471219_name = StringName(from: "set_icon_modulate")
-        self._method_set_icon_modulate_2878471219 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_icon_modulate_2878471219_name._native_ptr(), 2878471219)
-        assert(TreeItem._method_set_icon_modulate_2878471219 != nil)
-        let _method_get_icon_modulate_3457211756_name = StringName(from: "get_icon_modulate")
-        self._method_get_icon_modulate_3457211756 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_icon_modulate_3457211756_name._native_ptr(), 3457211756)
-        assert(TreeItem._method_get_icon_modulate_3457211756 != nil)
-        let _method_set_range_1602489585_name = StringName(from: "set_range")
-        self._method_set_range_1602489585 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_range_1602489585_name._native_ptr(), 1602489585)
-        assert(TreeItem._method_set_range_1602489585 != nil)
-        let _method_get_range_2339986948_name = StringName(from: "get_range")
-        self._method_get_range_2339986948 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_range_2339986948_name._native_ptr(), 2339986948)
-        assert(TreeItem._method_get_range_2339986948 != nil)
-        let _method_set_range_config_1547181014_name = StringName(from: "set_range_config")
-        self._method_set_range_config_1547181014 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_range_config_1547181014_name._native_ptr(), 1547181014)
-        assert(TreeItem._method_set_range_config_1547181014 != nil)
-        let _method_get_range_config_3554694381_name = StringName(from: "get_range_config")
-        self._method_get_range_config_3554694381 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_range_config_3554694381_name._native_ptr(), 3554694381)
-        assert(TreeItem._method_get_range_config_3554694381 != nil)
-        let _method_set_metadata_2152698145_name = StringName(from: "set_metadata")
-        self._method_set_metadata_2152698145 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_metadata_2152698145_name._native_ptr(), 2152698145)
-        assert(TreeItem._method_set_metadata_2152698145 != nil)
-        let _method_get_metadata_4227898402_name = StringName(from: "get_metadata")
-        self._method_get_metadata_4227898402 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_metadata_4227898402_name._native_ptr(), 4227898402)
-        assert(TreeItem._method_get_metadata_4227898402 != nil)
-        let _method_set_custom_draw_272420368_name = StringName(from: "set_custom_draw")
-        self._method_set_custom_draw_272420368 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_custom_draw_272420368_name._native_ptr(), 272420368)
-        assert(TreeItem._method_set_custom_draw_272420368 != nil)
-        let _method_set_collapsed_2586408642_name = StringName(from: "set_collapsed")
-        self._method_set_collapsed_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_collapsed_2586408642_name._native_ptr(), 2586408642)
-        assert(TreeItem._method_set_collapsed_2586408642 != nil)
-        let _method_is_collapsed_2240911060_name = StringName(from: "is_collapsed")
-        self._method_is_collapsed_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_is_collapsed_2240911060_name._native_ptr(), 2240911060)
-        assert(TreeItem._method_is_collapsed_2240911060 != nil)
-        let _method_set_collapsed_recursive_2586408642_name = StringName(from: "set_collapsed_recursive")
-        self._method_set_collapsed_recursive_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_collapsed_recursive_2586408642_name._native_ptr(), 2586408642)
-        assert(TreeItem._method_set_collapsed_recursive_2586408642 != nil)
-        let _method_is_any_collapsed_2595650253_name = StringName(from: "is_any_collapsed")
-        self._method_is_any_collapsed_2595650253 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_is_any_collapsed_2595650253_name._native_ptr(), 2595650253)
-        assert(TreeItem._method_is_any_collapsed_2595650253 != nil)
-        let _method_set_visible_2586408642_name = StringName(from: "set_visible")
-        self._method_set_visible_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_visible_2586408642_name._native_ptr(), 2586408642)
-        assert(TreeItem._method_set_visible_2586408642 != nil)
-        let _method_is_visible_2240911060_name = StringName(from: "is_visible")
-        self._method_is_visible_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_is_visible_2240911060_name._native_ptr(), 2240911060)
-        assert(TreeItem._method_is_visible_2240911060 != nil)
-        let _method_uncollapse_tree_3218959716_name = StringName(from: "uncollapse_tree")
-        self._method_uncollapse_tree_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_uncollapse_tree_3218959716_name._native_ptr(), 3218959716)
-        assert(TreeItem._method_uncollapse_tree_3218959716 != nil)
-        let _method_set_custom_minimum_height_1286410249_name = StringName(from: "set_custom_minimum_height")
-        self._method_set_custom_minimum_height_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_custom_minimum_height_1286410249_name._native_ptr(), 1286410249)
-        assert(TreeItem._method_set_custom_minimum_height_1286410249 != nil)
-        let _method_get_custom_minimum_height_3905245786_name = StringName(from: "get_custom_minimum_height")
-        self._method_get_custom_minimum_height_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_custom_minimum_height_3905245786_name._native_ptr(), 3905245786)
-        assert(TreeItem._method_get_custom_minimum_height_3905245786 != nil)
-        let _method_set_selectable_300928843_name = StringName(from: "set_selectable")
-        self._method_set_selectable_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_selectable_300928843_name._native_ptr(), 300928843)
-        assert(TreeItem._method_set_selectable_300928843 != nil)
-        let _method_is_selectable_1116898809_name = StringName(from: "is_selectable")
-        self._method_is_selectable_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_is_selectable_1116898809_name._native_ptr(), 1116898809)
-        assert(TreeItem._method_is_selectable_1116898809 != nil)
-        let _method_is_selected_3067735520_name = StringName(from: "is_selected")
-        self._method_is_selected_3067735520 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_is_selected_3067735520_name._native_ptr(), 3067735520)
-        assert(TreeItem._method_is_selected_3067735520 != nil)
-        let _method_select_1286410249_name = StringName(from: "select")
-        self._method_select_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_select_1286410249_name._native_ptr(), 1286410249)
-        assert(TreeItem._method_select_1286410249 != nil)
-        let _method_deselect_1286410249_name = StringName(from: "deselect")
-        self._method_deselect_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_deselect_1286410249_name._native_ptr(), 1286410249)
-        assert(TreeItem._method_deselect_1286410249 != nil)
-        let _method_set_editable_300928843_name = StringName(from: "set_editable")
-        self._method_set_editable_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_editable_300928843_name._native_ptr(), 300928843)
-        assert(TreeItem._method_set_editable_300928843 != nil)
-        let _method_is_editable_3067735520_name = StringName(from: "is_editable")
-        self._method_is_editable_3067735520 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_is_editable_3067735520_name._native_ptr(), 3067735520)
-        assert(TreeItem._method_is_editable_3067735520 != nil)
-        let _method_set_custom_color_2878471219_name = StringName(from: "set_custom_color")
-        self._method_set_custom_color_2878471219 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_custom_color_2878471219_name._native_ptr(), 2878471219)
-        assert(TreeItem._method_set_custom_color_2878471219 != nil)
-        let _method_get_custom_color_3457211756_name = StringName(from: "get_custom_color")
-        self._method_get_custom_color_3457211756 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_custom_color_3457211756_name._native_ptr(), 3457211756)
-        assert(TreeItem._method_get_custom_color_3457211756 != nil)
-        let _method_clear_custom_color_1286410249_name = StringName(from: "clear_custom_color")
-        self._method_clear_custom_color_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_clear_custom_color_1286410249_name._native_ptr(), 1286410249)
-        assert(TreeItem._method_clear_custom_color_1286410249 != nil)
-        let _method_set_custom_font_2637609184_name = StringName(from: "set_custom_font")
-        self._method_set_custom_font_2637609184 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_custom_font_2637609184_name._native_ptr(), 2637609184)
-        assert(TreeItem._method_set_custom_font_2637609184 != nil)
-        let _method_get_custom_font_4244553094_name = StringName(from: "get_custom_font")
-        self._method_get_custom_font_4244553094 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_custom_font_4244553094_name._native_ptr(), 4244553094)
-        assert(TreeItem._method_get_custom_font_4244553094 != nil)
-        let _method_set_custom_font_size_3937882851_name = StringName(from: "set_custom_font_size")
-        self._method_set_custom_font_size_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_custom_font_size_3937882851_name._native_ptr(), 3937882851)
-        assert(TreeItem._method_set_custom_font_size_3937882851 != nil)
-        let _method_get_custom_font_size_923996154_name = StringName(from: "get_custom_font_size")
-        self._method_get_custom_font_size_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_custom_font_size_923996154_name._native_ptr(), 923996154)
-        assert(TreeItem._method_get_custom_font_size_923996154 != nil)
-        let _method_set_custom_bg_color_894174518_name = StringName(from: "set_custom_bg_color")
-        self._method_set_custom_bg_color_894174518 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_custom_bg_color_894174518_name._native_ptr(), 894174518)
-        assert(TreeItem._method_set_custom_bg_color_894174518 != nil)
-        let _method_clear_custom_bg_color_1286410249_name = StringName(from: "clear_custom_bg_color")
-        self._method_clear_custom_bg_color_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_clear_custom_bg_color_1286410249_name._native_ptr(), 1286410249)
-        assert(TreeItem._method_clear_custom_bg_color_1286410249 != nil)
-        let _method_get_custom_bg_color_3457211756_name = StringName(from: "get_custom_bg_color")
-        self._method_get_custom_bg_color_3457211756 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_custom_bg_color_3457211756_name._native_ptr(), 3457211756)
-        assert(TreeItem._method_get_custom_bg_color_3457211756 != nil)
-        let _method_set_custom_as_button_300928843_name = StringName(from: "set_custom_as_button")
-        self._method_set_custom_as_button_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_custom_as_button_300928843_name._native_ptr(), 300928843)
-        assert(TreeItem._method_set_custom_as_button_300928843 != nil)
-        let _method_is_custom_set_as_button_1116898809_name = StringName(from: "is_custom_set_as_button")
-        self._method_is_custom_set_as_button_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_is_custom_set_as_button_1116898809_name._native_ptr(), 1116898809)
-        assert(TreeItem._method_is_custom_set_as_button_1116898809 != nil)
-        let _method_add_button_1507727907_name = StringName(from: "add_button")
-        self._method_add_button_1507727907 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_add_button_1507727907_name._native_ptr(), 1507727907)
-        assert(TreeItem._method_add_button_1507727907 != nil)
-        let _method_get_button_count_923996154_name = StringName(from: "get_button_count")
-        self._method_get_button_count_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_button_count_923996154_name._native_ptr(), 923996154)
-        assert(TreeItem._method_get_button_count_923996154 != nil)
-        let _method_get_button_tooltip_text_1391810591_name = StringName(from: "get_button_tooltip_text")
-        self._method_get_button_tooltip_text_1391810591 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_button_tooltip_text_1391810591_name._native_ptr(), 1391810591)
-        assert(TreeItem._method_get_button_tooltip_text_1391810591 != nil)
-        let _method_get_button_id_3175239445_name = StringName(from: "get_button_id")
-        self._method_get_button_id_3175239445 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_button_id_3175239445_name._native_ptr(), 3175239445)
-        assert(TreeItem._method_get_button_id_3175239445 != nil)
-        let _method_get_button_by_id_3175239445_name = StringName(from: "get_button_by_id")
-        self._method_get_button_by_id_3175239445 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_button_by_id_3175239445_name._native_ptr(), 3175239445)
-        assert(TreeItem._method_get_button_by_id_3175239445 != nil)
-        let _method_get_button_2584904275_name = StringName(from: "get_button")
-        self._method_get_button_2584904275 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_button_2584904275_name._native_ptr(), 2584904275)
-        assert(TreeItem._method_get_button_2584904275 != nil)
-        let _method_set_button_176101966_name = StringName(from: "set_button")
-        self._method_set_button_176101966 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_button_176101966_name._native_ptr(), 176101966)
-        assert(TreeItem._method_set_button_176101966 != nil)
-        let _method_erase_button_3937882851_name = StringName(from: "erase_button")
-        self._method_erase_button_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_erase_button_3937882851_name._native_ptr(), 3937882851)
-        assert(TreeItem._method_erase_button_3937882851 != nil)
-        let _method_set_button_disabled_1383440665_name = StringName(from: "set_button_disabled")
-        self._method_set_button_disabled_1383440665 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_button_disabled_1383440665_name._native_ptr(), 1383440665)
-        assert(TreeItem._method_set_button_disabled_1383440665 != nil)
-        let _method_set_button_color_3733378741_name = StringName(from: "set_button_color")
-        self._method_set_button_color_3733378741 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_button_color_3733378741_name._native_ptr(), 3733378741)
-        assert(TreeItem._method_set_button_color_3733378741 != nil)
-        let _method_is_button_disabled_2522259332_name = StringName(from: "is_button_disabled")
-        self._method_is_button_disabled_2522259332 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_is_button_disabled_2522259332_name._native_ptr(), 2522259332)
-        assert(TreeItem._method_is_button_disabled_2522259332 != nil)
-        let _method_set_tooltip_text_501894301_name = StringName(from: "set_tooltip_text")
-        self._method_set_tooltip_text_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_tooltip_text_501894301_name._native_ptr(), 501894301)
-        assert(TreeItem._method_set_tooltip_text_501894301 != nil)
-        let _method_get_tooltip_text_844755477_name = StringName(from: "get_tooltip_text")
-        self._method_get_tooltip_text_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_tooltip_text_844755477_name._native_ptr(), 844755477)
-        assert(TreeItem._method_get_tooltip_text_844755477 != nil)
-        let _method_set_text_alignment_3276431499_name = StringName(from: "set_text_alignment")
-        self._method_set_text_alignment_3276431499 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_text_alignment_3276431499_name._native_ptr(), 3276431499)
-        assert(TreeItem._method_set_text_alignment_3276431499 != nil)
-        let _method_get_text_alignment_4171562184_name = StringName(from: "get_text_alignment")
-        self._method_get_text_alignment_4171562184 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_text_alignment_4171562184_name._native_ptr(), 4171562184)
-        assert(TreeItem._method_get_text_alignment_4171562184 != nil)
-        let _method_set_expand_right_300928843_name = StringName(from: "set_expand_right")
-        self._method_set_expand_right_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_expand_right_300928843_name._native_ptr(), 300928843)
-        assert(TreeItem._method_set_expand_right_300928843 != nil)
-        let _method_get_expand_right_1116898809_name = StringName(from: "get_expand_right")
-        self._method_get_expand_right_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_expand_right_1116898809_name._native_ptr(), 1116898809)
-        assert(TreeItem._method_get_expand_right_1116898809 != nil)
-        let _method_set_disable_folding_2586408642_name = StringName(from: "set_disable_folding")
-        self._method_set_disable_folding_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_set_disable_folding_2586408642_name._native_ptr(), 2586408642)
-        assert(TreeItem._method_set_disable_folding_2586408642 != nil)
-        let _method_is_folding_disabled_36873697_name = StringName(from: "is_folding_disabled")
-        self._method_is_folding_disabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_is_folding_disabled_36873697_name._native_ptr(), 36873697)
-        assert(TreeItem._method_is_folding_disabled_36873697 != nil)
-        let _method_create_child_954243986_name = StringName(from: "create_child")
-        self._method_create_child_954243986 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_create_child_954243986_name._native_ptr(), 954243986)
-        assert(TreeItem._method_create_child_954243986 != nil)
-        let _method_get_tree_2243340556_name = StringName(from: "get_tree")
-        self._method_get_tree_2243340556 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_tree_2243340556_name._native_ptr(), 2243340556)
-        assert(TreeItem._method_get_tree_2243340556 != nil)
-        let _method_get_next_1514277247_name = StringName(from: "get_next")
-        self._method_get_next_1514277247 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_next_1514277247_name._native_ptr(), 1514277247)
-        assert(TreeItem._method_get_next_1514277247 != nil)
-        let _method_get_prev_2768121250_name = StringName(from: "get_prev")
-        self._method_get_prev_2768121250 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_prev_2768121250_name._native_ptr(), 2768121250)
-        assert(TreeItem._method_get_prev_2768121250 != nil)
-        let _method_get_parent_1514277247_name = StringName(from: "get_parent")
-        self._method_get_parent_1514277247 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_parent_1514277247_name._native_ptr(), 1514277247)
-        assert(TreeItem._method_get_parent_1514277247 != nil)
-        let _method_get_first_child_1514277247_name = StringName(from: "get_first_child")
-        self._method_get_first_child_1514277247 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_first_child_1514277247_name._native_ptr(), 1514277247)
-        assert(TreeItem._method_get_first_child_1514277247 != nil)
-        let _method_get_next_visible_1666920593_name = StringName(from: "get_next_visible")
-        self._method_get_next_visible_1666920593 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_next_visible_1666920593_name._native_ptr(), 1666920593)
-        assert(TreeItem._method_get_next_visible_1666920593 != nil)
-        let _method_get_prev_visible_1666920593_name = StringName(from: "get_prev_visible")
-        self._method_get_prev_visible_1666920593 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_prev_visible_1666920593_name._native_ptr(), 1666920593)
-        assert(TreeItem._method_get_prev_visible_1666920593 != nil)
-        let _method_get_child_306700752_name = StringName(from: "get_child")
-        self._method_get_child_306700752 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_child_306700752_name._native_ptr(), 306700752)
-        assert(TreeItem._method_get_child_306700752 != nil)
-        let _method_get_child_count_2455072627_name = StringName(from: "get_child_count")
-        self._method_get_child_count_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_child_count_2455072627_name._native_ptr(), 2455072627)
-        assert(TreeItem._method_get_child_count_2455072627 != nil)
-        let _method_get_children_2915620761_name = StringName(from: "get_children")
-        self._method_get_children_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_children_2915620761_name._native_ptr(), 2915620761)
-        assert(TreeItem._method_get_children_2915620761 != nil)
-        let _method_get_index_2455072627_name = StringName(from: "get_index")
-        self._method_get_index_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_get_index_2455072627_name._native_ptr(), 2455072627)
-        assert(TreeItem._method_get_index_2455072627 != nil)
-        let _method_move_before_1819951137_name = StringName(from: "move_before")
-        self._method_move_before_1819951137 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_move_before_1819951137_name._native_ptr(), 1819951137)
-        assert(TreeItem._method_move_before_1819951137 != nil)
-        let _method_move_after_1819951137_name = StringName(from: "move_after")
-        self._method_move_after_1819951137 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_move_after_1819951137_name._native_ptr(), 1819951137)
-        assert(TreeItem._method_move_after_1819951137 != nil)
-        let _method_remove_child_1819951137_name = StringName(from: "remove_child")
-        self._method_remove_child_1819951137 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_remove_child_1819951137_name._native_ptr(), 1819951137)
-        assert(TreeItem._method_remove_child_1819951137 != nil)
-        let _method_call_recursive_2866548813_name = StringName(from: "call_recursive")
-        self._method_call_recursive_2866548813 = self.interface.pointee.classdb_get_method_bind(__godot_name_TreeItem._native_ptr(), _method_call_recursive_2866548813_name._native_ptr(), 2866548813)
-        assert(TreeItem._method_call_recursive_2866548813 != nil)
+        self._method_set_cell_mode_289920701 = StringName(from: "set_cell_mode")
+        assert(self._method_set_cell_mode_289920701 != nil)
+        self._method_get_cell_mode_3406114978 = StringName(from: "get_cell_mode")
+        assert(self._method_get_cell_mode_3406114978 != nil)
+        self._method_set_checked_300928843 = StringName(from: "set_checked")
+        assert(self._method_set_checked_300928843 != nil)
+        self._method_set_indeterminate_300928843 = StringName(from: "set_indeterminate")
+        assert(self._method_set_indeterminate_300928843 != nil)
+        self._method_is_checked_1116898809 = StringName(from: "is_checked")
+        assert(self._method_is_checked_1116898809 != nil)
+        self._method_is_indeterminate_1116898809 = StringName(from: "is_indeterminate")
+        assert(self._method_is_indeterminate_1116898809 != nil)
+        self._method_propagate_check_4023243586 = StringName(from: "propagate_check")
+        assert(self._method_propagate_check_4023243586 != nil)
+        self._method_set_text_501894301 = StringName(from: "set_text")
+        assert(self._method_set_text_501894301 != nil)
+        self._method_get_text_844755477 = StringName(from: "get_text")
+        assert(self._method_get_text_844755477 != nil)
+        self._method_set_text_direction_1707680378 = StringName(from: "set_text_direction")
+        assert(self._method_set_text_direction_1707680378 != nil)
+        self._method_get_text_direction_4235602388 = StringName(from: "get_text_direction")
+        assert(self._method_get_text_direction_4235602388 != nil)
+        self._method_set_structured_text_bidi_override_868756907 = StringName(from: "set_structured_text_bidi_override")
+        assert(self._method_set_structured_text_bidi_override_868756907 != nil)
+        self._method_get_structured_text_bidi_override_3377823772 = StringName(from: "get_structured_text_bidi_override")
+        assert(self._method_get_structured_text_bidi_override_3377823772 != nil)
+        self._method_set_structured_text_bidi_override_options_537221740 = StringName(from: "set_structured_text_bidi_override_options")
+        assert(self._method_set_structured_text_bidi_override_options_537221740 != nil)
+        self._method_get_structured_text_bidi_override_options_663333327 = StringName(from: "get_structured_text_bidi_override_options")
+        assert(self._method_get_structured_text_bidi_override_options_663333327 != nil)
+        self._method_set_language_501894301 = StringName(from: "set_language")
+        assert(self._method_set_language_501894301 != nil)
+        self._method_get_language_844755477 = StringName(from: "get_language")
+        assert(self._method_get_language_844755477 != nil)
+        self._method_set_suffix_501894301 = StringName(from: "set_suffix")
+        assert(self._method_set_suffix_501894301 != nil)
+        self._method_get_suffix_844755477 = StringName(from: "get_suffix")
+        assert(self._method_get_suffix_844755477 != nil)
+        self._method_set_icon_666127730 = StringName(from: "set_icon")
+        assert(self._method_set_icon_666127730 != nil)
+        self._method_get_icon_3536238170 = StringName(from: "get_icon")
+        assert(self._method_get_icon_3536238170 != nil)
+        self._method_set_icon_region_1356297692 = StringName(from: "set_icon_region")
+        assert(self._method_set_icon_region_1356297692 != nil)
+        self._method_get_icon_region_3327874267 = StringName(from: "get_icon_region")
+        assert(self._method_get_icon_region_3327874267 != nil)
+        self._method_set_icon_max_width_3937882851 = StringName(from: "set_icon_max_width")
+        assert(self._method_set_icon_max_width_3937882851 != nil)
+        self._method_get_icon_max_width_923996154 = StringName(from: "get_icon_max_width")
+        assert(self._method_get_icon_max_width_923996154 != nil)
+        self._method_set_icon_modulate_2878471219 = StringName(from: "set_icon_modulate")
+        assert(self._method_set_icon_modulate_2878471219 != nil)
+        self._method_get_icon_modulate_3457211756 = StringName(from: "get_icon_modulate")
+        assert(self._method_get_icon_modulate_3457211756 != nil)
+        self._method_set_range_1602489585 = StringName(from: "set_range")
+        assert(self._method_set_range_1602489585 != nil)
+        self._method_get_range_2339986948 = StringName(from: "get_range")
+        assert(self._method_get_range_2339986948 != nil)
+        self._method_set_range_config_1547181014 = StringName(from: "set_range_config")
+        assert(self._method_set_range_config_1547181014 != nil)
+        self._method_get_range_config_3554694381 = StringName(from: "get_range_config")
+        assert(self._method_get_range_config_3554694381 != nil)
+        self._method_set_metadata_2152698145 = StringName(from: "set_metadata")
+        assert(self._method_set_metadata_2152698145 != nil)
+        self._method_get_metadata_4227898402 = StringName(from: "get_metadata")
+        assert(self._method_get_metadata_4227898402 != nil)
+        self._method_set_custom_draw_272420368 = StringName(from: "set_custom_draw")
+        assert(self._method_set_custom_draw_272420368 != nil)
+        self._method_set_collapsed_2586408642 = StringName(from: "set_collapsed")
+        assert(self._method_set_collapsed_2586408642 != nil)
+        self._method_is_collapsed_2240911060 = StringName(from: "is_collapsed")
+        assert(self._method_is_collapsed_2240911060 != nil)
+        self._method_set_collapsed_recursive_2586408642 = StringName(from: "set_collapsed_recursive")
+        assert(self._method_set_collapsed_recursive_2586408642 != nil)
+        self._method_is_any_collapsed_2595650253 = StringName(from: "is_any_collapsed")
+        assert(self._method_is_any_collapsed_2595650253 != nil)
+        self._method_set_visible_2586408642 = StringName(from: "set_visible")
+        assert(self._method_set_visible_2586408642 != nil)
+        self._method_is_visible_2240911060 = StringName(from: "is_visible")
+        assert(self._method_is_visible_2240911060 != nil)
+        self._method_uncollapse_tree_3218959716 = StringName(from: "uncollapse_tree")
+        assert(self._method_uncollapse_tree_3218959716 != nil)
+        self._method_set_custom_minimum_height_1286410249 = StringName(from: "set_custom_minimum_height")
+        assert(self._method_set_custom_minimum_height_1286410249 != nil)
+        self._method_get_custom_minimum_height_3905245786 = StringName(from: "get_custom_minimum_height")
+        assert(self._method_get_custom_minimum_height_3905245786 != nil)
+        self._method_set_selectable_300928843 = StringName(from: "set_selectable")
+        assert(self._method_set_selectable_300928843 != nil)
+        self._method_is_selectable_1116898809 = StringName(from: "is_selectable")
+        assert(self._method_is_selectable_1116898809 != nil)
+        self._method_is_selected_3067735520 = StringName(from: "is_selected")
+        assert(self._method_is_selected_3067735520 != nil)
+        self._method_select_1286410249 = StringName(from: "select")
+        assert(self._method_select_1286410249 != nil)
+        self._method_deselect_1286410249 = StringName(from: "deselect")
+        assert(self._method_deselect_1286410249 != nil)
+        self._method_set_editable_300928843 = StringName(from: "set_editable")
+        assert(self._method_set_editable_300928843 != nil)
+        self._method_is_editable_3067735520 = StringName(from: "is_editable")
+        assert(self._method_is_editable_3067735520 != nil)
+        self._method_set_custom_color_2878471219 = StringName(from: "set_custom_color")
+        assert(self._method_set_custom_color_2878471219 != nil)
+        self._method_get_custom_color_3457211756 = StringName(from: "get_custom_color")
+        assert(self._method_get_custom_color_3457211756 != nil)
+        self._method_clear_custom_color_1286410249 = StringName(from: "clear_custom_color")
+        assert(self._method_clear_custom_color_1286410249 != nil)
+        self._method_set_custom_font_2637609184 = StringName(from: "set_custom_font")
+        assert(self._method_set_custom_font_2637609184 != nil)
+        self._method_get_custom_font_4244553094 = StringName(from: "get_custom_font")
+        assert(self._method_get_custom_font_4244553094 != nil)
+        self._method_set_custom_font_size_3937882851 = StringName(from: "set_custom_font_size")
+        assert(self._method_set_custom_font_size_3937882851 != nil)
+        self._method_get_custom_font_size_923996154 = StringName(from: "get_custom_font_size")
+        assert(self._method_get_custom_font_size_923996154 != nil)
+        self._method_set_custom_bg_color_894174518 = StringName(from: "set_custom_bg_color")
+        assert(self._method_set_custom_bg_color_894174518 != nil)
+        self._method_clear_custom_bg_color_1286410249 = StringName(from: "clear_custom_bg_color")
+        assert(self._method_clear_custom_bg_color_1286410249 != nil)
+        self._method_get_custom_bg_color_3457211756 = StringName(from: "get_custom_bg_color")
+        assert(self._method_get_custom_bg_color_3457211756 != nil)
+        self._method_set_custom_as_button_300928843 = StringName(from: "set_custom_as_button")
+        assert(self._method_set_custom_as_button_300928843 != nil)
+        self._method_is_custom_set_as_button_1116898809 = StringName(from: "is_custom_set_as_button")
+        assert(self._method_is_custom_set_as_button_1116898809 != nil)
+        self._method_add_button_1507727907 = StringName(from: "add_button")
+        assert(self._method_add_button_1507727907 != nil)
+        self._method_get_button_count_923996154 = StringName(from: "get_button_count")
+        assert(self._method_get_button_count_923996154 != nil)
+        self._method_get_button_tooltip_text_1391810591 = StringName(from: "get_button_tooltip_text")
+        assert(self._method_get_button_tooltip_text_1391810591 != nil)
+        self._method_get_button_id_3175239445 = StringName(from: "get_button_id")
+        assert(self._method_get_button_id_3175239445 != nil)
+        self._method_get_button_by_id_3175239445 = StringName(from: "get_button_by_id")
+        assert(self._method_get_button_by_id_3175239445 != nil)
+        self._method_get_button_2584904275 = StringName(from: "get_button")
+        assert(self._method_get_button_2584904275 != nil)
+        self._method_set_button_176101966 = StringName(from: "set_button")
+        assert(self._method_set_button_176101966 != nil)
+        self._method_erase_button_3937882851 = StringName(from: "erase_button")
+        assert(self._method_erase_button_3937882851 != nil)
+        self._method_set_button_disabled_1383440665 = StringName(from: "set_button_disabled")
+        assert(self._method_set_button_disabled_1383440665 != nil)
+        self._method_set_button_color_3733378741 = StringName(from: "set_button_color")
+        assert(self._method_set_button_color_3733378741 != nil)
+        self._method_is_button_disabled_2522259332 = StringName(from: "is_button_disabled")
+        assert(self._method_is_button_disabled_2522259332 != nil)
+        self._method_set_tooltip_text_501894301 = StringName(from: "set_tooltip_text")
+        assert(self._method_set_tooltip_text_501894301 != nil)
+        self._method_get_tooltip_text_844755477 = StringName(from: "get_tooltip_text")
+        assert(self._method_get_tooltip_text_844755477 != nil)
+        self._method_set_text_alignment_3276431499 = StringName(from: "set_text_alignment")
+        assert(self._method_set_text_alignment_3276431499 != nil)
+        self._method_get_text_alignment_4171562184 = StringName(from: "get_text_alignment")
+        assert(self._method_get_text_alignment_4171562184 != nil)
+        self._method_set_expand_right_300928843 = StringName(from: "set_expand_right")
+        assert(self._method_set_expand_right_300928843 != nil)
+        self._method_get_expand_right_1116898809 = StringName(from: "get_expand_right")
+        assert(self._method_get_expand_right_1116898809 != nil)
+        self._method_set_disable_folding_2586408642 = StringName(from: "set_disable_folding")
+        assert(self._method_set_disable_folding_2586408642 != nil)
+        self._method_is_folding_disabled_36873697 = StringName(from: "is_folding_disabled")
+        assert(self._method_is_folding_disabled_36873697 != nil)
+        self._method_create_child_954243986 = StringName(from: "create_child")
+        assert(self._method_create_child_954243986 != nil)
+        self._method_get_tree_2243340556 = StringName(from: "get_tree")
+        assert(self._method_get_tree_2243340556 != nil)
+        self._method_get_next_1514277247 = StringName(from: "get_next")
+        assert(self._method_get_next_1514277247 != nil)
+        self._method_get_prev_2768121250 = StringName(from: "get_prev")
+        assert(self._method_get_prev_2768121250 != nil)
+        self._method_get_parent_1514277247 = StringName(from: "get_parent")
+        assert(self._method_get_parent_1514277247 != nil)
+        self._method_get_first_child_1514277247 = StringName(from: "get_first_child")
+        assert(self._method_get_first_child_1514277247 != nil)
+        self._method_get_next_visible_1666920593 = StringName(from: "get_next_visible")
+        assert(self._method_get_next_visible_1666920593 != nil)
+        self._method_get_prev_visible_1666920593 = StringName(from: "get_prev_visible")
+        assert(self._method_get_prev_visible_1666920593 != nil)
+        self._method_get_child_306700752 = StringName(from: "get_child")
+        assert(self._method_get_child_306700752 != nil)
+        self._method_get_child_count_2455072627 = StringName(from: "get_child_count")
+        assert(self._method_get_child_count_2455072627 != nil)
+        self._method_get_children_2915620761 = StringName(from: "get_children")
+        assert(self._method_get_children_2915620761 != nil)
+        self._method_get_index_2455072627 = StringName(from: "get_index")
+        assert(self._method_get_index_2455072627 != nil)
+        self._method_move_before_1819951137 = StringName(from: "move_before")
+        assert(self._method_move_before_1819951137 != nil)
+        self._method_move_after_1819951137 = StringName(from: "move_after")
+        assert(self._method_move_after_1819951137 != nil)
+        self._method_remove_child_1819951137 = StringName(from: "remove_child")
+        assert(self._method_remove_child_1819951137 != nil)
+        self._method_call_recursive_2866548813 = StringName(from: "call_recursive")
+        assert(self._method_call_recursive_2866548813 != nil)
     }
 
     public func set_cell_mode(column: Int64, mode: TreeItem.TreeCellMode)  {
@@ -427,8 +331,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cell_mode_289920701,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cell_mode_289920701._native_ptr(),
+                    289920701)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -445,8 +354,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cell_mode_3406114978,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cell_mode_3406114978._native_ptr(),
+                    3406114978)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -463,8 +377,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(checked_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_checked_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_checked_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -481,8 +400,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(indeterminate_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_indeterminate_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_indeterminate_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -500,8 +424,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_checked_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_checked_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -519,8 +448,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_indeterminate_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_indeterminate_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -537,8 +471,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(emit_signal_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_propagate_check_4023243586,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_propagate_check_4023243586._native_ptr(),
+                    4023243586)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -555,8 +494,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_text_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_text_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -572,8 +516,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -590,8 +539,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(direction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_text_direction_1707680378,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_text_direction_1707680378._native_ptr(),
+                    1707680378)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -608,8 +562,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_direction_4235602388,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_direction_4235602388._native_ptr(),
+                    4235602388)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -626,8 +585,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(parser_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_structured_text_bidi_override_868756907,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_structured_text_bidi_override_868756907._native_ptr(),
+                    868756907)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -644,8 +608,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_structured_text_bidi_override_3377823772,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_structured_text_bidi_override_3377823772._native_ptr(),
+                    3377823772)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -662,8 +631,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(args_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_structured_text_bidi_override_options_537221740,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_structured_text_bidi_override_options_537221740._native_ptr(),
+                    537221740)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -679,8 +653,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_structured_text_bidi_override_options_663333327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_structured_text_bidi_override_options_663333327._native_ptr(),
+                    663333327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -697,8 +676,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(language_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_language_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_language_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -714,8 +698,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_language_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_language_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -732,8 +721,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_suffix_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_suffix_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -749,8 +743,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_suffix_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_suffix_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -767,8 +766,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_icon_666127730,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_icon_666127730._native_ptr(),
+                    666127730)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -784,8 +788,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_icon_3536238170,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_icon_3536238170._native_ptr(),
+                    3536238170)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -802,8 +811,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(region_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_icon_region_1356297692,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_icon_region_1356297692._native_ptr(),
+                    1356297692)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -819,8 +833,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_icon_region_3327874267,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_icon_region_3327874267._native_ptr(),
+                    3327874267)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -837,8 +856,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(width_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_icon_max_width_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_icon_max_width_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -856,8 +880,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_icon_max_width_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_icon_max_width_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -874,8 +903,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(modulate_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_icon_modulate_2878471219,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_icon_modulate_2878471219._native_ptr(),
+                    2878471219)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -891,8 +925,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_icon_modulate_3457211756,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_icon_modulate_3457211756._native_ptr(),
+                    3457211756)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -909,8 +948,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_range_1602489585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_range_1602489585._native_ptr(),
+                    1602489585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -928,8 +972,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_range_2339986948,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_range_2339986948._native_ptr(),
+                    2339986948)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -949,8 +998,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(min_native), .init(max_native), .init(step_native), .init(expr_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_range_config_1547181014,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_range_config_1547181014._native_ptr(),
+                    1547181014)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -970,8 +1024,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_range_config_3554694381,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_range_config_3554694381._native_ptr(),
+                    3554694381)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -988,8 +1047,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(meta_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_metadata_2152698145,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_metadata_2152698145._native_ptr(),
+                    2152698145)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1005,8 +1069,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_metadata_4227898402,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_metadata_4227898402._native_ptr(),
+                    4227898402)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1024,8 +1093,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(object_native), .init(callback_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_custom_draw_272420368,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_custom_draw_272420368._native_ptr(),
+                    272420368)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1040,8 +1114,13 @@ open class TreeItem : Object {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collapsed_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collapsed_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1057,8 +1136,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_collapsed_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_collapsed_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1073,8 +1157,13 @@ open class TreeItem : Object {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collapsed_recursive_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collapsed_recursive_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1091,8 +1180,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_any_collapsed_2595650253,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_any_collapsed_2595650253._native_ptr(),
+                    2595650253)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1108,8 +1202,13 @@ open class TreeItem : Object {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_visible_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_visible_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1125,8 +1224,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_visible_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_visible_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1140,8 +1244,13 @@ open class TreeItem : Object {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_uncollapse_tree_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_uncollapse_tree_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1155,8 +1264,13 @@ open class TreeItem : Object {
                 .init(height_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_custom_minimum_height_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_custom_minimum_height_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1172,8 +1286,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_minimum_height_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_minimum_height_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1189,8 +1308,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(selectable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_selectable_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_selectable_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1208,8 +1332,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_selectable_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_selectable_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1227,8 +1356,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_selected_3067735520,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_selected_3067735520._native_ptr(),
+                    3067735520)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1244,8 +1378,13 @@ open class TreeItem : Object {
                 .init(column_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_select_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_select_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1260,8 +1399,13 @@ open class TreeItem : Object {
                 .init(column_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_deselect_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_deselect_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1277,8 +1421,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_editable_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_editable_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1296,8 +1445,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_editable_3067735520,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_editable_3067735520._native_ptr(),
+                    3067735520)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1314,8 +1468,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_custom_color_2878471219,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_custom_color_2878471219._native_ptr(),
+                    2878471219)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1331,8 +1490,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_color_3457211756,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_color_3457211756._native_ptr(),
+                    3457211756)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1348,8 +1512,13 @@ open class TreeItem : Object {
                 .init(column_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_custom_color_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_custom_color_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1365,8 +1534,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(font_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_custom_font_2637609184,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_custom_font_2637609184._native_ptr(),
+                    2637609184)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1382,8 +1556,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_font_4244553094,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_font_4244553094._native_ptr(),
+                    4244553094)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1400,8 +1579,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(font_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_custom_font_size_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_custom_font_size_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1419,8 +1603,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_font_size_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_font_size_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1438,8 +1627,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(color_native), .init(just_outline_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_custom_bg_color_894174518,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_custom_bg_color_894174518._native_ptr(),
+                    894174518)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1455,8 +1649,13 @@ open class TreeItem : Object {
                 .init(column_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_custom_bg_color_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_custom_bg_color_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1472,8 +1671,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_custom_bg_color_3457211756,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_custom_bg_color_3457211756._native_ptr(),
+                    3457211756)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1490,8 +1694,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_custom_as_button_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_custom_as_button_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1509,8 +1718,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_custom_set_as_button_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_custom_set_as_button_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1530,8 +1744,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(button_native), .init(id_native), .init(disabled_native), .init(tooltip_text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_button_1507727907,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_button_1507727907._native_ptr(),
+                    1507727907)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1550,8 +1769,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_button_count_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_button_count_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1569,8 +1793,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_button_tooltip_text_1391810591,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_button_tooltip_text_1391810591._native_ptr(),
+                    1391810591)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1590,8 +1819,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_button_id_3175239445,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_button_id_3175239445._native_ptr(),
+                    3175239445)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1611,8 +1845,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_button_by_id_3175239445,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_button_by_id_3175239445._native_ptr(),
+                    3175239445)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1631,8 +1870,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_button_2584904275,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_button_2584904275._native_ptr(),
+                    2584904275)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1651,8 +1895,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(button_index_native), .init(button_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_button_176101966,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_button_176101966._native_ptr(),
+                    176101966)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1669,8 +1918,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(button_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_erase_button_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_erase_button_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1688,8 +1942,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(button_index_native), .init(disabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_button_disabled_1383440665,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_button_disabled_1383440665._native_ptr(),
+                    1383440665)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1708,8 +1967,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(button_index_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_button_color_3733378741,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_button_color_3733378741._native_ptr(),
+                    3733378741)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1728,8 +1992,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_button_disabled_2522259332,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_button_disabled_2522259332._native_ptr(),
+                    2522259332)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1747,8 +2016,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(tooltip_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tooltip_text_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tooltip_text_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1764,8 +2038,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tooltip_text_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tooltip_text_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1782,8 +2061,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(text_alignment_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_text_alignment_3276431499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_text_alignment_3276431499._native_ptr(),
+                    3276431499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1800,8 +2084,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_alignment_4171562184,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_alignment_4171562184._native_ptr(),
+                    4171562184)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1818,8 +2107,13 @@ open class TreeItem : Object {
                 .init(column_native), .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_expand_right_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_expand_right_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1837,8 +2131,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_expand_right_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_expand_right_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1854,8 +2153,13 @@ open class TreeItem : Object {
                 .init(disable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_disable_folding_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_disable_folding_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1871,8 +2175,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_folding_disabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_folding_disabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1888,8 +2197,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_child_954243986,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_child_954243986._native_ptr(),
+                    954243986)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1905,8 +2219,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tree_2243340556,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tree_2243340556._native_ptr(),
+                    2243340556)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1921,8 +2240,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_next_1514277247,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_next_1514277247._native_ptr(),
+                    1514277247)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1937,8 +2261,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_prev_2768121250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_prev_2768121250._native_ptr(),
+                    2768121250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1953,8 +2282,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_parent_1514277247,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_parent_1514277247._native_ptr(),
+                    1514277247)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1969,8 +2303,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_first_child_1514277247,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_first_child_1514277247._native_ptr(),
+                    1514277247)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1986,8 +2325,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_next_visible_1666920593,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_next_visible_1666920593._native_ptr(),
+                    1666920593)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2004,8 +2348,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_prev_visible_1666920593,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_prev_visible_1666920593._native_ptr(),
+                    1666920593)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2022,8 +2371,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_child_306700752,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_child_306700752._native_ptr(),
+                    306700752)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2040,8 +2394,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_child_count_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_child_count_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2056,8 +2415,13 @@ open class TreeItem : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_children_2915620761,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_children_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2073,8 +2437,13 @@ open class TreeItem : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_index_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_index_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2089,8 +2458,13 @@ open class TreeItem : Object {
                 .init(item_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_move_before_1819951137,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_move_before_1819951137._native_ptr(),
+                    1819951137)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2104,8 +2478,13 @@ open class TreeItem : Object {
                 .init(item_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_move_after_1819951137,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_move_after_1819951137._native_ptr(),
+                    1819951137)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2119,8 +2498,13 @@ open class TreeItem : Object {
                 .init(child_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_child_1819951137,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_child_1819951137._native_ptr(),
+                    1819951137)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2134,8 +2518,13 @@ open class TreeItem : Object {
                 .init(method_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_call_recursive_2866548813,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_call_recursive_2866548813._native_ptr(),
+                    2866548813)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

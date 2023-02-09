@@ -226,6 +226,7 @@ struct BuiltinClassTemplate {
             fatalError("Size information not found for builtin \(sut.name)")
         }
         
+        print("    rendering \(sut.name)")
         return transforms.reduce(template) {
             res, renderFunc in
             res.replacing("${\(renderFunc.key)}", with: renderFunc.value(sut, sizes, sizeItem, full, doc).render())

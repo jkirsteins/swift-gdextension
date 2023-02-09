@@ -15,35 +15,31 @@ open class ZIPPacker : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_ZIPPacker }
 
-    static var _method_open_3715508516: GDExtensionMethodBindPtr! = nil
-    static var _method_start_file_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_write_file_680677267: GDExtensionMethodBindPtr! = nil
-    static var _method_close_file_166280745: GDExtensionMethodBindPtr! = nil
-    static var _method_close_166280745: GDExtensionMethodBindPtr! = nil
+    static var _method_open_3715508516: StringName! = nil
+    static var _method_start_file_166001499: StringName! = nil
+    static var _method_write_file_680677267: StringName! = nil
+    static var _method_close_file_166280745: StringName! = nil
+    static var _method_close_166280745: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ZIPPacker == nil)
         __godot_name_ZIPPacker = StringName(from: "ZIPPacker")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_open_3715508516_name = StringName(from: "open")
-        self._method_open_3715508516 = self.interface.pointee.classdb_get_method_bind(__godot_name_ZIPPacker._native_ptr(), _method_open_3715508516_name._native_ptr(), 3715508516)
-        assert(ZIPPacker._method_open_3715508516 != nil)
-        let _method_start_file_166001499_name = StringName(from: "start_file")
-        self._method_start_file_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_ZIPPacker._native_ptr(), _method_start_file_166001499_name._native_ptr(), 166001499)
-        assert(ZIPPacker._method_start_file_166001499 != nil)
-        let _method_write_file_680677267_name = StringName(from: "write_file")
-        self._method_write_file_680677267 = self.interface.pointee.classdb_get_method_bind(__godot_name_ZIPPacker._native_ptr(), _method_write_file_680677267_name._native_ptr(), 680677267)
-        assert(ZIPPacker._method_write_file_680677267 != nil)
-        let _method_close_file_166280745_name = StringName(from: "close_file")
-        self._method_close_file_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_ZIPPacker._native_ptr(), _method_close_file_166280745_name._native_ptr(), 166280745)
-        assert(ZIPPacker._method_close_file_166280745 != nil)
-        let _method_close_166280745_name = StringName(from: "close")
-        self._method_close_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_ZIPPacker._native_ptr(), _method_close_166280745_name._native_ptr(), 166280745)
-        assert(ZIPPacker._method_close_166280745 != nil)
+        self._method_open_3715508516 = StringName(from: "open")
+        assert(self._method_open_3715508516 != nil)
+        self._method_start_file_166001499 = StringName(from: "start_file")
+        assert(self._method_start_file_166001499 != nil)
+        self._method_write_file_680677267 = StringName(from: "write_file")
+        assert(self._method_write_file_680677267 != nil)
+        self._method_close_file_166280745 = StringName(from: "close_file")
+        assert(self._method_close_file_166280745 != nil)
+        self._method_close_166280745 = StringName(from: "close")
+        assert(self._method_close_166280745 != nil)
     }
 
     public func open(path: godot.String, append: ZIPPacker.ZipAppend) -> Error {
@@ -56,8 +52,13 @@ open class ZIPPacker : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_open_3715508516,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_open_3715508516._native_ptr(),
+                    3715508516)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -74,8 +75,13 @@ open class ZIPPacker : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_start_file_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_start_file_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -91,8 +97,13 @@ open class ZIPPacker : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_write_file_680677267,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_write_file_680677267._native_ptr(),
+                    680677267)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -107,8 +118,13 @@ open class ZIPPacker : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_close_file_166280745,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_close_file_166280745._native_ptr(),
+                    166280745)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -123,8 +139,13 @@ open class ZIPPacker : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_close_166280745,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_close_166280745._native_ptr(),
+                    166280745)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

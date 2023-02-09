@@ -27,55 +27,46 @@ open class RandomNumberGenerator : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_RandomNumberGenerator }
 
-    static var _method_set_seed_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_seed_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_set_state_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_state_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_randi_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_randf_191475506: GDExtensionMethodBindPtr! = nil
-    static var _method_randfn_2207676613: GDExtensionMethodBindPtr! = nil
-    static var _method_randf_range_4269894367: GDExtensionMethodBindPtr! = nil
-    static var _method_randi_range_50157827: GDExtensionMethodBindPtr! = nil
-    static var _method_randomize_3218959716: GDExtensionMethodBindPtr! = nil
+    static var _method_set_seed_1286410249: StringName! = nil
+    static var _method_get_seed_2455072627: StringName! = nil
+    static var _method_set_state_1286410249: StringName! = nil
+    static var _method_get_state_3905245786: StringName! = nil
+    static var _method_randi_2455072627: StringName! = nil
+    static var _method_randf_191475506: StringName! = nil
+    static var _method_randfn_2207676613: StringName! = nil
+    static var _method_randf_range_4269894367: StringName! = nil
+    static var _method_randi_range_50157827: StringName! = nil
+    static var _method_randomize_3218959716: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_RandomNumberGenerator == nil)
         __godot_name_RandomNumberGenerator = StringName(from: "RandomNumberGenerator")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_seed_1286410249_name = StringName(from: "set_seed")
-        self._method_set_seed_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_set_seed_1286410249_name._native_ptr(), 1286410249)
-        assert(RandomNumberGenerator._method_set_seed_1286410249 != nil)
-        let _method_get_seed_2455072627_name = StringName(from: "get_seed")
-        self._method_get_seed_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_get_seed_2455072627_name._native_ptr(), 2455072627)
-        assert(RandomNumberGenerator._method_get_seed_2455072627 != nil)
-        let _method_set_state_1286410249_name = StringName(from: "set_state")
-        self._method_set_state_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_set_state_1286410249_name._native_ptr(), 1286410249)
-        assert(RandomNumberGenerator._method_set_state_1286410249 != nil)
-        let _method_get_state_3905245786_name = StringName(from: "get_state")
-        self._method_get_state_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_get_state_3905245786_name._native_ptr(), 3905245786)
-        assert(RandomNumberGenerator._method_get_state_3905245786 != nil)
-        let _method_randi_2455072627_name = StringName(from: "randi")
-        self._method_randi_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_randi_2455072627_name._native_ptr(), 2455072627)
-        assert(RandomNumberGenerator._method_randi_2455072627 != nil)
-        let _method_randf_191475506_name = StringName(from: "randf")
-        self._method_randf_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_randf_191475506_name._native_ptr(), 191475506)
-        assert(RandomNumberGenerator._method_randf_191475506 != nil)
-        let _method_randfn_2207676613_name = StringName(from: "randfn")
-        self._method_randfn_2207676613 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_randfn_2207676613_name._native_ptr(), 2207676613)
-        assert(RandomNumberGenerator._method_randfn_2207676613 != nil)
-        let _method_randf_range_4269894367_name = StringName(from: "randf_range")
-        self._method_randf_range_4269894367 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_randf_range_4269894367_name._native_ptr(), 4269894367)
-        assert(RandomNumberGenerator._method_randf_range_4269894367 != nil)
-        let _method_randi_range_50157827_name = StringName(from: "randi_range")
-        self._method_randi_range_50157827 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_randi_range_50157827_name._native_ptr(), 50157827)
-        assert(RandomNumberGenerator._method_randi_range_50157827 != nil)
-        let _method_randomize_3218959716_name = StringName(from: "randomize")
-        self._method_randomize_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_RandomNumberGenerator._native_ptr(), _method_randomize_3218959716_name._native_ptr(), 3218959716)
-        assert(RandomNumberGenerator._method_randomize_3218959716 != nil)
+        self._method_set_seed_1286410249 = StringName(from: "set_seed")
+        assert(self._method_set_seed_1286410249 != nil)
+        self._method_get_seed_2455072627 = StringName(from: "get_seed")
+        assert(self._method_get_seed_2455072627 != nil)
+        self._method_set_state_1286410249 = StringName(from: "set_state")
+        assert(self._method_set_state_1286410249 != nil)
+        self._method_get_state_3905245786 = StringName(from: "get_state")
+        assert(self._method_get_state_3905245786 != nil)
+        self._method_randi_2455072627 = StringName(from: "randi")
+        assert(self._method_randi_2455072627 != nil)
+        self._method_randf_191475506 = StringName(from: "randf")
+        assert(self._method_randf_191475506 != nil)
+        self._method_randfn_2207676613 = StringName(from: "randfn")
+        assert(self._method_randfn_2207676613 != nil)
+        self._method_randf_range_4269894367 = StringName(from: "randf_range")
+        assert(self._method_randf_range_4269894367 != nil)
+        self._method_randi_range_50157827 = StringName(from: "randi_range")
+        assert(self._method_randi_range_50157827 != nil)
+        self._method_randomize_3218959716 = StringName(from: "randomize")
+        assert(self._method_randomize_3218959716 != nil)
     }
 
     public func set_seed(seed: Int64)  {
@@ -86,8 +77,13 @@ open class RandomNumberGenerator : RefCounted {
                 .init(seed_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_seed_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_seed_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -103,8 +99,13 @@ open class RandomNumberGenerator : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_seed_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_seed_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -119,8 +120,13 @@ open class RandomNumberGenerator : RefCounted {
                 .init(state_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_state_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_state_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -136,8 +142,13 @@ open class RandomNumberGenerator : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_state_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_state_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -153,8 +164,13 @@ open class RandomNumberGenerator : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_randi_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_randi_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -170,8 +186,13 @@ open class RandomNumberGenerator : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_randf_191475506,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_randf_191475506._native_ptr(),
+                    191475506)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -189,8 +210,13 @@ open class RandomNumberGenerator : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_randfn_2207676613,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_randfn_2207676613._native_ptr(),
+                    2207676613)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -210,8 +236,13 @@ open class RandomNumberGenerator : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_randf_range_4269894367,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_randf_range_4269894367._native_ptr(),
+                    4269894367)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -231,8 +262,13 @@ open class RandomNumberGenerator : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_randi_range_50157827,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_randi_range_50157827._native_ptr(),
+                    50157827)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -248,8 +284,13 @@ open class RandomNumberGenerator : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_randomize_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_randomize_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

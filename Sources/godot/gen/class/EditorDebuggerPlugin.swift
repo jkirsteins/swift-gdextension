@@ -80,26 +80,25 @@ open class EditorDebuggerPlugin : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_EditorDebuggerPlugin }
 
-    static var _method__setup_session_0: GDExtensionMethodBindPtr! = nil
-    static var _method__has_capture_0: GDExtensionMethodBindPtr! = nil
-    static var _method__capture_0: GDExtensionMethodBindPtr! = nil
-    static var _method_get_session_3061968499: GDExtensionMethodBindPtr! = nil
-    static var _method_get_sessions_2915620761: GDExtensionMethodBindPtr! = nil
+    static var _method__setup_session_0: StringName! = nil
+    static var _method__has_capture_0: StringName! = nil
+    static var _method__capture_0: StringName! = nil
+    static var _method_get_session_3061968499: StringName! = nil
+    static var _method_get_sessions_2915620761: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorDebuggerPlugin == nil)
         __godot_name_EditorDebuggerPlugin = StringName(from: "EditorDebuggerPlugin")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_session_3061968499_name = StringName(from: "get_session")
-        self._method_get_session_3061968499 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorDebuggerPlugin._native_ptr(), _method_get_session_3061968499_name._native_ptr(), 3061968499)
-        assert(EditorDebuggerPlugin._method_get_session_3061968499 != nil)
-        let _method_get_sessions_2915620761_name = StringName(from: "get_sessions")
-        self._method_get_sessions_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorDebuggerPlugin._native_ptr(), _method_get_sessions_2915620761_name._native_ptr(), 2915620761)
-        assert(EditorDebuggerPlugin._method_get_sessions_2915620761 != nil)
+        self._method_get_session_3061968499 = StringName(from: "get_session")
+        assert(self._method_get_session_3061968499 != nil)
+        self._method_get_sessions_2915620761 = StringName(from: "get_sessions")
+        assert(self._method_get_sessions_2915620761 != nil)
     }
 
     public func _setup_session(session_id: Int64)  {
@@ -110,12 +109,7 @@ open class EditorDebuggerPlugin : RefCounted {
                 .init(session_id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__setup_session_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _has_capture(capture: godot.String) -> UInt8 {
@@ -128,12 +122,7 @@ open class EditorDebuggerPlugin : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__has_capture_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _capture(message: godot.String, data: Array, session_id: Int64) -> UInt8 {
@@ -148,12 +137,7 @@ open class EditorDebuggerPlugin : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__capture_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
         }
     }
@@ -166,8 +150,13 @@ open class EditorDebuggerPlugin : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_session_3061968499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_session_3061968499._native_ptr(),
+                    3061968499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -183,8 +172,13 @@ open class EditorDebuggerPlugin : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_sessions_2915620761,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_sessions_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

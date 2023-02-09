@@ -21,71 +21,58 @@ open class MultiplayerAPI : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_MultiplayerAPI }
 
-    static var _method_has_multiplayer_peer_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_get_multiplayer_peer_3223692825: GDExtensionMethodBindPtr! = nil
-    static var _method_set_multiplayer_peer_3694835298: GDExtensionMethodBindPtr! = nil
-    static var _method_get_unique_id_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_is_server_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_get_remote_sender_id_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_poll_166280745: GDExtensionMethodBindPtr! = nil
-    static var _method_rpc_1833408346: GDExtensionMethodBindPtr! = nil
-    static var _method_object_configuration_add_1171879464: GDExtensionMethodBindPtr! = nil
-    static var _method_object_configuration_remove_1171879464: GDExtensionMethodBindPtr! = nil
-    static var _method_get_peers_969006518: GDExtensionMethodBindPtr! = nil
-    static var _method_set_default_interface_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_get_default_interface_2737447660: GDExtensionMethodBindPtr! = nil
-    static var _method_create_default_interface_3294156723: GDExtensionMethodBindPtr! = nil
+    static var _method_has_multiplayer_peer_2240911060: StringName! = nil
+    static var _method_get_multiplayer_peer_3223692825: StringName! = nil
+    static var _method_set_multiplayer_peer_3694835298: StringName! = nil
+    static var _method_get_unique_id_2455072627: StringName! = nil
+    static var _method_is_server_2240911060: StringName! = nil
+    static var _method_get_remote_sender_id_2455072627: StringName! = nil
+    static var _method_poll_166280745: StringName! = nil
+    static var _method_rpc_1833408346: StringName! = nil
+    static var _method_object_configuration_add_1171879464: StringName! = nil
+    static var _method_object_configuration_remove_1171879464: StringName! = nil
+    static var _method_get_peers_969006518: StringName! = nil
+    static var _method_set_default_interface_3304788590: StringName! = nil
+    static var _method_get_default_interface_2737447660: StringName! = nil
+    static var _method_create_default_interface_3294156723: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_MultiplayerAPI == nil)
         __godot_name_MultiplayerAPI = StringName(from: "MultiplayerAPI")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_has_multiplayer_peer_2240911060_name = StringName(from: "has_multiplayer_peer")
-        self._method_has_multiplayer_peer_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerAPI._native_ptr(), _method_has_multiplayer_peer_2240911060_name._native_ptr(), 2240911060)
-        assert(MultiplayerAPI._method_has_multiplayer_peer_2240911060 != nil)
-        let _method_get_multiplayer_peer_3223692825_name = StringName(from: "get_multiplayer_peer")
-        self._method_get_multiplayer_peer_3223692825 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerAPI._native_ptr(), _method_get_multiplayer_peer_3223692825_name._native_ptr(), 3223692825)
-        assert(MultiplayerAPI._method_get_multiplayer_peer_3223692825 != nil)
-        let _method_set_multiplayer_peer_3694835298_name = StringName(from: "set_multiplayer_peer")
-        self._method_set_multiplayer_peer_3694835298 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerAPI._native_ptr(), _method_set_multiplayer_peer_3694835298_name._native_ptr(), 3694835298)
-        assert(MultiplayerAPI._method_set_multiplayer_peer_3694835298 != nil)
-        let _method_get_unique_id_2455072627_name = StringName(from: "get_unique_id")
-        self._method_get_unique_id_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerAPI._native_ptr(), _method_get_unique_id_2455072627_name._native_ptr(), 2455072627)
-        assert(MultiplayerAPI._method_get_unique_id_2455072627 != nil)
-        let _method_is_server_2240911060_name = StringName(from: "is_server")
-        self._method_is_server_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerAPI._native_ptr(), _method_is_server_2240911060_name._native_ptr(), 2240911060)
-        assert(MultiplayerAPI._method_is_server_2240911060 != nil)
-        let _method_get_remote_sender_id_2455072627_name = StringName(from: "get_remote_sender_id")
-        self._method_get_remote_sender_id_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerAPI._native_ptr(), _method_get_remote_sender_id_2455072627_name._native_ptr(), 2455072627)
-        assert(MultiplayerAPI._method_get_remote_sender_id_2455072627 != nil)
-        let _method_poll_166280745_name = StringName(from: "poll")
-        self._method_poll_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerAPI._native_ptr(), _method_poll_166280745_name._native_ptr(), 166280745)
-        assert(MultiplayerAPI._method_poll_166280745 != nil)
-        let _method_rpc_1833408346_name = StringName(from: "rpc")
-        self._method_rpc_1833408346 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerAPI._native_ptr(), _method_rpc_1833408346_name._native_ptr(), 1833408346)
-        assert(MultiplayerAPI._method_rpc_1833408346 != nil)
-        let _method_object_configuration_add_1171879464_name = StringName(from: "object_configuration_add")
-        self._method_object_configuration_add_1171879464 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerAPI._native_ptr(), _method_object_configuration_add_1171879464_name._native_ptr(), 1171879464)
-        assert(MultiplayerAPI._method_object_configuration_add_1171879464 != nil)
-        let _method_object_configuration_remove_1171879464_name = StringName(from: "object_configuration_remove")
-        self._method_object_configuration_remove_1171879464 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerAPI._native_ptr(), _method_object_configuration_remove_1171879464_name._native_ptr(), 1171879464)
-        assert(MultiplayerAPI._method_object_configuration_remove_1171879464 != nil)
-        let _method_get_peers_969006518_name = StringName(from: "get_peers")
-        self._method_get_peers_969006518 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerAPI._native_ptr(), _method_get_peers_969006518_name._native_ptr(), 969006518)
-        assert(MultiplayerAPI._method_get_peers_969006518 != nil)
-        let _method_set_default_interface_3304788590_name = StringName(from: "set_default_interface")
-        self._method_set_default_interface_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerAPI._native_ptr(), _method_set_default_interface_3304788590_name._native_ptr(), 3304788590)
-        assert(MultiplayerAPI._method_set_default_interface_3304788590 != nil)
-        let _method_get_default_interface_2737447660_name = StringName(from: "get_default_interface")
-        self._method_get_default_interface_2737447660 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerAPI._native_ptr(), _method_get_default_interface_2737447660_name._native_ptr(), 2737447660)
-        assert(MultiplayerAPI._method_get_default_interface_2737447660 != nil)
-        let _method_create_default_interface_3294156723_name = StringName(from: "create_default_interface")
-        self._method_create_default_interface_3294156723 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiplayerAPI._native_ptr(), _method_create_default_interface_3294156723_name._native_ptr(), 3294156723)
-        assert(MultiplayerAPI._method_create_default_interface_3294156723 != nil)
+        self._method_has_multiplayer_peer_2240911060 = StringName(from: "has_multiplayer_peer")
+        assert(self._method_has_multiplayer_peer_2240911060 != nil)
+        self._method_get_multiplayer_peer_3223692825 = StringName(from: "get_multiplayer_peer")
+        assert(self._method_get_multiplayer_peer_3223692825 != nil)
+        self._method_set_multiplayer_peer_3694835298 = StringName(from: "set_multiplayer_peer")
+        assert(self._method_set_multiplayer_peer_3694835298 != nil)
+        self._method_get_unique_id_2455072627 = StringName(from: "get_unique_id")
+        assert(self._method_get_unique_id_2455072627 != nil)
+        self._method_is_server_2240911060 = StringName(from: "is_server")
+        assert(self._method_is_server_2240911060 != nil)
+        self._method_get_remote_sender_id_2455072627 = StringName(from: "get_remote_sender_id")
+        assert(self._method_get_remote_sender_id_2455072627 != nil)
+        self._method_poll_166280745 = StringName(from: "poll")
+        assert(self._method_poll_166280745 != nil)
+        self._method_rpc_1833408346 = StringName(from: "rpc")
+        assert(self._method_rpc_1833408346 != nil)
+        self._method_object_configuration_add_1171879464 = StringName(from: "object_configuration_add")
+        assert(self._method_object_configuration_add_1171879464 != nil)
+        self._method_object_configuration_remove_1171879464 = StringName(from: "object_configuration_remove")
+        assert(self._method_object_configuration_remove_1171879464 != nil)
+        self._method_get_peers_969006518 = StringName(from: "get_peers")
+        assert(self._method_get_peers_969006518 != nil)
+        self._method_set_default_interface_3304788590 = StringName(from: "set_default_interface")
+        assert(self._method_set_default_interface_3304788590 != nil)
+        self._method_get_default_interface_2737447660 = StringName(from: "get_default_interface")
+        assert(self._method_get_default_interface_2737447660 != nil)
+        self._method_create_default_interface_3294156723 = StringName(from: "create_default_interface")
+        assert(self._method_create_default_interface_3294156723 != nil)
     }
 
     public func has_multiplayer_peer() -> UInt8 {
@@ -97,8 +84,13 @@ open class MultiplayerAPI : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_multiplayer_peer_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_multiplayer_peer_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -113,8 +105,13 @@ open class MultiplayerAPI : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_multiplayer_peer_3223692825,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_multiplayer_peer_3223692825._native_ptr(),
+                    3223692825)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -129,8 +126,13 @@ open class MultiplayerAPI : RefCounted {
                 .init(peer_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_multiplayer_peer_3694835298,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_multiplayer_peer_3694835298._native_ptr(),
+                    3694835298)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -145,8 +147,13 @@ open class MultiplayerAPI : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_unique_id_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_unique_id_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -162,8 +169,13 @@ open class MultiplayerAPI : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_server_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_server_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -179,8 +191,13 @@ open class MultiplayerAPI : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_remote_sender_id_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_remote_sender_id_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -195,8 +212,13 @@ open class MultiplayerAPI : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_poll_166280745,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_poll_166280745._native_ptr(),
+                    166280745)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -215,8 +237,13 @@ open class MultiplayerAPI : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_rpc_1833408346,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_rpc_1833408346._native_ptr(),
+                    1833408346)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -234,8 +261,13 @@ open class MultiplayerAPI : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_object_configuration_add_1171879464,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_object_configuration_add_1171879464._native_ptr(),
+                    1171879464)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -252,8 +284,13 @@ open class MultiplayerAPI : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_object_configuration_remove_1171879464,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_object_configuration_remove_1171879464._native_ptr(),
+                    1171879464)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -268,8 +305,13 @@ open class MultiplayerAPI : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_peers_969006518,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_peers_969006518._native_ptr(),
+                    969006518)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -284,8 +326,13 @@ open class MultiplayerAPI : RefCounted {
                 .init(interface_name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_default_interface_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_default_interface_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -299,8 +346,13 @@ open class MultiplayerAPI : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_default_interface_2737447660,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_default_interface_2737447660._native_ptr(),
+                    2737447660)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -315,8 +367,13 @@ open class MultiplayerAPI : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_default_interface_3294156723,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_default_interface_3294156723._native_ptr(),
+                    3294156723)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

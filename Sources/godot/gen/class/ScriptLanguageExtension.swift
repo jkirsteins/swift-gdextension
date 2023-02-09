@@ -41,70 +41,71 @@ open class ScriptLanguageExtension : ScriptLanguage {
 
     public override class var __godot_name: StringName { __godot_name_ScriptLanguageExtension }
 
-    static var _method__get_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method__init_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_type_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_extension_0: GDExtensionMethodBindPtr! = nil
-    static var _method__execute_file_0: GDExtensionMethodBindPtr! = nil
-    static var _method__finish_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_reserved_words_0: GDExtensionMethodBindPtr! = nil
-    static var _method__is_control_flow_keyword_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_comment_delimiters_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_string_delimiters_0: GDExtensionMethodBindPtr! = nil
-    static var _method__make_template_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_built_in_templates_0: GDExtensionMethodBindPtr! = nil
-    static var _method__is_using_templates_0: GDExtensionMethodBindPtr! = nil
-    static var _method__validate_0: GDExtensionMethodBindPtr! = nil
-    static var _method__validate_path_0: GDExtensionMethodBindPtr! = nil
-    static var _method__create_script_0: GDExtensionMethodBindPtr! = nil
-    static var _method__has_named_classes_0: GDExtensionMethodBindPtr! = nil
-    static var _method__supports_builtin_mode_0: GDExtensionMethodBindPtr! = nil
-    static var _method__supports_documentation_0: GDExtensionMethodBindPtr! = nil
-    static var _method__can_inherit_from_file_0: GDExtensionMethodBindPtr! = nil
-    static var _method__find_function_0: GDExtensionMethodBindPtr! = nil
-    static var _method__make_function_0: GDExtensionMethodBindPtr! = nil
-    static var _method__open_in_external_editor_0: GDExtensionMethodBindPtr! = nil
-    static var _method__overrides_external_editor_0: GDExtensionMethodBindPtr! = nil
-    static var _method__complete_code_0: GDExtensionMethodBindPtr! = nil
-    static var _method__lookup_code_0: GDExtensionMethodBindPtr! = nil
-    static var _method__auto_indent_code_0: GDExtensionMethodBindPtr! = nil
-    static var _method__add_global_constant_0: GDExtensionMethodBindPtr! = nil
-    static var _method__add_named_global_constant_0: GDExtensionMethodBindPtr! = nil
-    static var _method__remove_named_global_constant_0: GDExtensionMethodBindPtr! = nil
-    static var _method__thread_enter_0: GDExtensionMethodBindPtr! = nil
-    static var _method__thread_exit_0: GDExtensionMethodBindPtr! = nil
-    static var _method__debug_get_error_0: GDExtensionMethodBindPtr! = nil
-    static var _method__debug_get_stack_level_count_0: GDExtensionMethodBindPtr! = nil
-    static var _method__debug_get_stack_level_line_0: GDExtensionMethodBindPtr! = nil
-    static var _method__debug_get_stack_level_function_0: GDExtensionMethodBindPtr! = nil
-    static var _method__debug_get_stack_level_locals_0: GDExtensionMethodBindPtr! = nil
-    static var _method__debug_get_stack_level_members_0: GDExtensionMethodBindPtr! = nil
-    static var _method__debug_get_stack_level_instance_0: GDExtensionMethodBindPtr! = nil
-    static var _method__debug_get_globals_0: GDExtensionMethodBindPtr! = nil
-    static var _method__debug_parse_stack_level_expression_0: GDExtensionMethodBindPtr! = nil
-    static var _method__debug_get_current_stack_info_0: GDExtensionMethodBindPtr! = nil
-    static var _method__reload_all_scripts_0: GDExtensionMethodBindPtr! = nil
-    static var _method__reload_tool_script_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_recognized_extensions_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_public_functions_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_public_constants_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_public_annotations_0: GDExtensionMethodBindPtr! = nil
-    static var _method__profiling_start_0: GDExtensionMethodBindPtr! = nil
-    static var _method__profiling_stop_0: GDExtensionMethodBindPtr! = nil
-    static var _method__profiling_get_accumulated_data_0: GDExtensionMethodBindPtr! = nil
-    static var _method__profiling_get_frame_data_0: GDExtensionMethodBindPtr! = nil
-    static var _method__alloc_instance_binding_data_0: GDExtensionMethodBindPtr! = nil
-    static var _method__free_instance_binding_data_0: GDExtensionMethodBindPtr! = nil
-    static var _method__refcount_incremented_instance_binding_0: GDExtensionMethodBindPtr! = nil
-    static var _method__refcount_decremented_instance_binding_0: GDExtensionMethodBindPtr! = nil
-    static var _method__frame_0: GDExtensionMethodBindPtr! = nil
-    static var _method__handles_global_class_type_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_global_class_name_0: GDExtensionMethodBindPtr! = nil
+    static var _method__get_name_0: StringName! = nil
+    static var _method__init_0: StringName! = nil
+    static var _method__get_type_0: StringName! = nil
+    static var _method__get_extension_0: StringName! = nil
+    static var _method__execute_file_0: StringName! = nil
+    static var _method__finish_0: StringName! = nil
+    static var _method__get_reserved_words_0: StringName! = nil
+    static var _method__is_control_flow_keyword_0: StringName! = nil
+    static var _method__get_comment_delimiters_0: StringName! = nil
+    static var _method__get_string_delimiters_0: StringName! = nil
+    static var _method__make_template_0: StringName! = nil
+    static var _method__get_built_in_templates_0: StringName! = nil
+    static var _method__is_using_templates_0: StringName! = nil
+    static var _method__validate_0: StringName! = nil
+    static var _method__validate_path_0: StringName! = nil
+    static var _method__create_script_0: StringName! = nil
+    static var _method__has_named_classes_0: StringName! = nil
+    static var _method__supports_builtin_mode_0: StringName! = nil
+    static var _method__supports_documentation_0: StringName! = nil
+    static var _method__can_inherit_from_file_0: StringName! = nil
+    static var _method__find_function_0: StringName! = nil
+    static var _method__make_function_0: StringName! = nil
+    static var _method__open_in_external_editor_0: StringName! = nil
+    static var _method__overrides_external_editor_0: StringName! = nil
+    static var _method__complete_code_0: StringName! = nil
+    static var _method__lookup_code_0: StringName! = nil
+    static var _method__auto_indent_code_0: StringName! = nil
+    static var _method__add_global_constant_0: StringName! = nil
+    static var _method__add_named_global_constant_0: StringName! = nil
+    static var _method__remove_named_global_constant_0: StringName! = nil
+    static var _method__thread_enter_0: StringName! = nil
+    static var _method__thread_exit_0: StringName! = nil
+    static var _method__debug_get_error_0: StringName! = nil
+    static var _method__debug_get_stack_level_count_0: StringName! = nil
+    static var _method__debug_get_stack_level_line_0: StringName! = nil
+    static var _method__debug_get_stack_level_function_0: StringName! = nil
+    static var _method__debug_get_stack_level_locals_0: StringName! = nil
+    static var _method__debug_get_stack_level_members_0: StringName! = nil
+    static var _method__debug_get_stack_level_instance_0: StringName! = nil
+    static var _method__debug_get_globals_0: StringName! = nil
+    static var _method__debug_parse_stack_level_expression_0: StringName! = nil
+    static var _method__debug_get_current_stack_info_0: StringName! = nil
+    static var _method__reload_all_scripts_0: StringName! = nil
+    static var _method__reload_tool_script_0: StringName! = nil
+    static var _method__get_recognized_extensions_0: StringName! = nil
+    static var _method__get_public_functions_0: StringName! = nil
+    static var _method__get_public_constants_0: StringName! = nil
+    static var _method__get_public_annotations_0: StringName! = nil
+    static var _method__profiling_start_0: StringName! = nil
+    static var _method__profiling_stop_0: StringName! = nil
+    static var _method__profiling_get_accumulated_data_0: StringName! = nil
+    static var _method__profiling_get_frame_data_0: StringName! = nil
+    static var _method__alloc_instance_binding_data_0: StringName! = nil
+    static var _method__free_instance_binding_data_0: StringName! = nil
+    static var _method__refcount_incremented_instance_binding_0: StringName! = nil
+    static var _method__refcount_decremented_instance_binding_0: StringName! = nil
+    static var _method__frame_0: StringName! = nil
+    static var _method__handles_global_class_type_0: StringName! = nil
+    static var _method__get_global_class_name_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ScriptLanguageExtension == nil)
         __godot_name_ScriptLanguageExtension = StringName(from: "ScriptLanguageExtension")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -120,12 +121,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _init()  {
@@ -135,12 +131,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__init_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _get_type() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -150,12 +141,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_type_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _get_extension() -> godot.String {
@@ -166,12 +152,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_extension_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _execute_file(path: godot.String) -> Error {
@@ -183,12 +164,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__execute_file_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
     }
     public func _finish()  {
@@ -198,12 +174,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__finish_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _get_reserved_words() -> PackedStringArray {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -213,12 +184,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_reserved_words_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _is_control_flow_keyword(keyword: godot.String) -> UInt8 {
@@ -231,12 +197,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__is_control_flow_keyword_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _get_comment_delimiters() -> PackedStringArray {
@@ -247,12 +208,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_comment_delimiters_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _get_string_delimiters() -> PackedStringArray {
@@ -263,12 +219,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_string_delimiters_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _make_template(template: godot.String, class_name: godot.String, base_class_name: godot.String) -> Script {
@@ -282,12 +233,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__make_template_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Script(godot: __resPtr.pointee)
     }
     public func _get_built_in_templates(object: StringName) -> [Dictionary] {
@@ -299,12 +245,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_built_in_templates_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return [Dictionary](godot: __resPtr.pointee)
     }
     public func _is_using_templates() -> UInt8 {
@@ -316,12 +257,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__is_using_templates_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _validate(script: godot.String, path: godot.String, validate_functions: UInt8, validate_errors: UInt8, validate_warnings: UInt8, validate_safe_lines: UInt8) -> Dictionary {
@@ -338,12 +274,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__validate_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Dictionary(godot: __resPtr.pointee)
         }
         }
@@ -359,12 +290,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__validate_path_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _create_script() -> Object {
@@ -375,12 +301,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__create_script_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Object(godot: __resPtr.pointee)
     }
     public func _has_named_classes() -> UInt8 {
@@ -392,12 +313,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__has_named_classes_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _supports_builtin_mode() -> UInt8 {
@@ -409,12 +325,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__supports_builtin_mode_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _supports_documentation() -> UInt8 {
@@ -426,12 +337,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__supports_documentation_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _can_inherit_from_file() -> UInt8 {
@@ -443,12 +349,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__can_inherit_from_file_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _find_function(class_name: godot.String, function_name: godot.String) -> Int64 {
@@ -462,12 +363,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__find_function_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _make_function(class_name: godot.String, function_name: godot.String, function_args: PackedStringArray) -> godot.String {
@@ -481,12 +377,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__make_function_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _open_in_external_editor(script: Script, line: Int64, column: Int64) -> Error {
@@ -500,12 +391,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__open_in_external_editor_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Error(godot: __resPtr.pointee)
         }
         }
@@ -519,12 +405,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__overrides_external_editor_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _complete_code(code: godot.String, path: godot.String, owner: Object) -> Dictionary {
@@ -538,12 +419,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__complete_code_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Dictionary(godot: __resPtr.pointee)
     }
     public func _lookup_code(code: godot.String, symbol: godot.String, path: godot.String, owner: Object) -> Dictionary {
@@ -558,12 +434,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__lookup_code_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Dictionary(godot: __resPtr.pointee)
     }
     public func _auto_indent_code(code: godot.String, from_line: Int64, to_line: Int64) -> godot.String {
@@ -577,12 +448,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__auto_indent_code_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
         }
         }
@@ -596,12 +462,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
                 .init(name_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__add_global_constant_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _add_named_global_constant(name: StringName, value: Variant)  {
         let value_native = value._native_ptr()
@@ -612,12 +473,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
                 .init(name_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__add_named_global_constant_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _remove_named_global_constant(name: StringName)  {
         let name_native = name._native_ptr()
@@ -627,12 +483,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__remove_named_global_constant_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _thread_enter()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -641,12 +492,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__thread_enter_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _thread_exit()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -655,12 +501,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__thread_exit_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _debug_get_error() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -670,12 +511,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__debug_get_error_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func _debug_get_stack_level_count() -> Int64 {
@@ -687,12 +523,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__debug_get_stack_level_count_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _debug_get_stack_level_line(level: Int64) -> Int64 {
@@ -705,12 +536,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__debug_get_stack_level_line_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
         }
     }
@@ -723,12 +549,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__debug_get_stack_level_function_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
         }
     }
@@ -743,12 +564,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__debug_get_stack_level_locals_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Dictionary(godot: __resPtr.pointee)
         }
         }
@@ -765,12 +581,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__debug_get_stack_level_members_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Dictionary(godot: __resPtr.pointee)
         }
         }
@@ -785,12 +596,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__debug_get_stack_level_instance_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UnsafeMutableRawPointer(godot: __resPtr.pointee)
         }
     }
@@ -804,12 +610,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__debug_get_globals_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Dictionary(godot: __resPtr.pointee)
         }
         }
@@ -826,12 +627,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__debug_parse_stack_level_expression_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
         }
         }
@@ -845,12 +641,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__debug_get_current_stack_info_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return [Dictionary](godot: __resPtr.pointee)
     }
     public func _reload_all_scripts()  {
@@ -860,12 +651,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__reload_all_scripts_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _reload_tool_script(script: Script, soft_reload: UInt8)  {
         withUnsafePointer(to: soft_reload) { soft_reload_native in
@@ -876,12 +662,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
                 .init(script_native), .init(soft_reload_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__reload_tool_script_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _get_recognized_extensions() -> PackedStringArray {
@@ -892,12 +673,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_recognized_extensions_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedStringArray(godot: __resPtr.pointee)
     }
     public func _get_public_functions() -> [Dictionary] {
@@ -908,12 +684,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_public_functions_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return [Dictionary](godot: __resPtr.pointee)
     }
     public func _get_public_constants() -> Dictionary {
@@ -924,12 +695,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_public_constants_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Dictionary(godot: __resPtr.pointee)
     }
     public func _get_public_annotations() -> [Dictionary] {
@@ -940,12 +706,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_public_annotations_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return [Dictionary](godot: __resPtr.pointee)
     }
     public func _profiling_start()  {
@@ -955,12 +716,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__profiling_start_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _profiling_stop()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -969,12 +725,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__profiling_stop_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _profiling_get_accumulated_data(info_array: UnsafePointer<ScriptLanguageExtensionProfilingInfo>, info_max: Int64) -> Int64 {
         withUnsafePointer(to: info_max) { info_max_native in
@@ -987,12 +738,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__profiling_get_accumulated_data_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
         }
         }
@@ -1008,12 +754,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__profiling_get_frame_data_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
         }
         }
@@ -1027,12 +768,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__alloc_instance_binding_data_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UnsafeMutableRawPointer(godot: __resPtr.pointee)
     }
     public func _free_instance_binding_data(data: UnsafeMutableRawPointer)  {
@@ -1043,12 +779,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
                 .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__free_instance_binding_data_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _refcount_incremented_instance_binding(object: Object)  {
@@ -1059,12 +790,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
                 .init(object_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__refcount_incremented_instance_binding_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _refcount_decremented_instance_binding(object: Object) -> UInt8 {
         let object_native = object._native_ptr()
@@ -1076,12 +802,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__refcount_decremented_instance_binding_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _frame()  {
@@ -1091,12 +812,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__frame_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _handles_global_class_type(`type`: godot.String) -> UInt8 {
         let type_native = `type`._native_ptr()
@@ -1108,12 +824,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__handles_global_class_type_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _get_global_class_name(path: godot.String) -> Dictionary {
@@ -1125,12 +836,7 @@ open class ScriptLanguageExtension : ScriptLanguage {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_global_class_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Dictionary(godot: __resPtr.pointee)
     }
 }

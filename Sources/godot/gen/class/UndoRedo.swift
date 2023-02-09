@@ -114,99 +114,79 @@ open class UndoRedo : Object {
 
     public override class var __godot_name: StringName { __godot_name_UndoRedo }
 
-    static var _method_create_action_183245820: GDExtensionMethodBindPtr! = nil
-    static var _method_commit_action_3216645846: GDExtensionMethodBindPtr! = nil
-    static var _method_is_committing_action_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_add_do_method_1611583062: GDExtensionMethodBindPtr! = nil
-    static var _method_add_undo_method_1611583062: GDExtensionMethodBindPtr! = nil
-    static var _method_add_do_property_1017172818: GDExtensionMethodBindPtr! = nil
-    static var _method_add_undo_property_1017172818: GDExtensionMethodBindPtr! = nil
-    static var _method_add_do_reference_3975164845: GDExtensionMethodBindPtr! = nil
-    static var _method_add_undo_reference_3975164845: GDExtensionMethodBindPtr! = nil
-    static var _method_start_force_keep_in_merge_ends_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_end_force_keep_in_merge_ends_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_history_count_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_current_action_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_action_name_990163283: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_history_3216645846: GDExtensionMethodBindPtr! = nil
-    static var _method_get_current_action_name_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_has_undo_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_has_redo_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_version_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_redo_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_undo_2240911060: GDExtensionMethodBindPtr! = nil
+    static var _method_create_action_183245820: StringName! = nil
+    static var _method_commit_action_3216645846: StringName! = nil
+    static var _method_is_committing_action_36873697: StringName! = nil
+    static var _method_add_do_method_1611583062: StringName! = nil
+    static var _method_add_undo_method_1611583062: StringName! = nil
+    static var _method_add_do_property_1017172818: StringName! = nil
+    static var _method_add_undo_property_1017172818: StringName! = nil
+    static var _method_add_do_reference_3975164845: StringName! = nil
+    static var _method_add_undo_reference_3975164845: StringName! = nil
+    static var _method_start_force_keep_in_merge_ends_3218959716: StringName! = nil
+    static var _method_end_force_keep_in_merge_ends_3218959716: StringName! = nil
+    static var _method_get_history_count_2455072627: StringName! = nil
+    static var _method_get_current_action_2455072627: StringName! = nil
+    static var _method_get_action_name_990163283: StringName! = nil
+    static var _method_clear_history_3216645846: StringName! = nil
+    static var _method_get_current_action_name_201670096: StringName! = nil
+    static var _method_has_undo_36873697: StringName! = nil
+    static var _method_has_redo_36873697: StringName! = nil
+    static var _method_get_version_3905245786: StringName! = nil
+    static var _method_redo_2240911060: StringName! = nil
+    static var _method_undo_2240911060: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_UndoRedo == nil)
         __godot_name_UndoRedo = StringName(from: "UndoRedo")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_create_action_183245820_name = StringName(from: "create_action")
-        self._method_create_action_183245820 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_create_action_183245820_name._native_ptr(), 183245820)
-        assert(UndoRedo._method_create_action_183245820 != nil)
-        let _method_commit_action_3216645846_name = StringName(from: "commit_action")
-        self._method_commit_action_3216645846 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_commit_action_3216645846_name._native_ptr(), 3216645846)
-        assert(UndoRedo._method_commit_action_3216645846 != nil)
-        let _method_is_committing_action_36873697_name = StringName(from: "is_committing_action")
-        self._method_is_committing_action_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_is_committing_action_36873697_name._native_ptr(), 36873697)
-        assert(UndoRedo._method_is_committing_action_36873697 != nil)
-        let _method_add_do_method_1611583062_name = StringName(from: "add_do_method")
-        self._method_add_do_method_1611583062 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_add_do_method_1611583062_name._native_ptr(), 1611583062)
-        assert(UndoRedo._method_add_do_method_1611583062 != nil)
-        let _method_add_undo_method_1611583062_name = StringName(from: "add_undo_method")
-        self._method_add_undo_method_1611583062 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_add_undo_method_1611583062_name._native_ptr(), 1611583062)
-        assert(UndoRedo._method_add_undo_method_1611583062 != nil)
-        let _method_add_do_property_1017172818_name = StringName(from: "add_do_property")
-        self._method_add_do_property_1017172818 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_add_do_property_1017172818_name._native_ptr(), 1017172818)
-        assert(UndoRedo._method_add_do_property_1017172818 != nil)
-        let _method_add_undo_property_1017172818_name = StringName(from: "add_undo_property")
-        self._method_add_undo_property_1017172818 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_add_undo_property_1017172818_name._native_ptr(), 1017172818)
-        assert(UndoRedo._method_add_undo_property_1017172818 != nil)
-        let _method_add_do_reference_3975164845_name = StringName(from: "add_do_reference")
-        self._method_add_do_reference_3975164845 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_add_do_reference_3975164845_name._native_ptr(), 3975164845)
-        assert(UndoRedo._method_add_do_reference_3975164845 != nil)
-        let _method_add_undo_reference_3975164845_name = StringName(from: "add_undo_reference")
-        self._method_add_undo_reference_3975164845 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_add_undo_reference_3975164845_name._native_ptr(), 3975164845)
-        assert(UndoRedo._method_add_undo_reference_3975164845 != nil)
-        let _method_start_force_keep_in_merge_ends_3218959716_name = StringName(from: "start_force_keep_in_merge_ends")
-        self._method_start_force_keep_in_merge_ends_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_start_force_keep_in_merge_ends_3218959716_name._native_ptr(), 3218959716)
-        assert(UndoRedo._method_start_force_keep_in_merge_ends_3218959716 != nil)
-        let _method_end_force_keep_in_merge_ends_3218959716_name = StringName(from: "end_force_keep_in_merge_ends")
-        self._method_end_force_keep_in_merge_ends_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_end_force_keep_in_merge_ends_3218959716_name._native_ptr(), 3218959716)
-        assert(UndoRedo._method_end_force_keep_in_merge_ends_3218959716 != nil)
-        let _method_get_history_count_2455072627_name = StringName(from: "get_history_count")
-        self._method_get_history_count_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_get_history_count_2455072627_name._native_ptr(), 2455072627)
-        assert(UndoRedo._method_get_history_count_2455072627 != nil)
-        let _method_get_current_action_2455072627_name = StringName(from: "get_current_action")
-        self._method_get_current_action_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_get_current_action_2455072627_name._native_ptr(), 2455072627)
-        assert(UndoRedo._method_get_current_action_2455072627 != nil)
-        let _method_get_action_name_990163283_name = StringName(from: "get_action_name")
-        self._method_get_action_name_990163283 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_get_action_name_990163283_name._native_ptr(), 990163283)
-        assert(UndoRedo._method_get_action_name_990163283 != nil)
-        let _method_clear_history_3216645846_name = StringName(from: "clear_history")
-        self._method_clear_history_3216645846 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_clear_history_3216645846_name._native_ptr(), 3216645846)
-        assert(UndoRedo._method_clear_history_3216645846 != nil)
-        let _method_get_current_action_name_201670096_name = StringName(from: "get_current_action_name")
-        self._method_get_current_action_name_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_get_current_action_name_201670096_name._native_ptr(), 201670096)
-        assert(UndoRedo._method_get_current_action_name_201670096 != nil)
-        let _method_has_undo_36873697_name = StringName(from: "has_undo")
-        self._method_has_undo_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_has_undo_36873697_name._native_ptr(), 36873697)
-        assert(UndoRedo._method_has_undo_36873697 != nil)
-        let _method_has_redo_36873697_name = StringName(from: "has_redo")
-        self._method_has_redo_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_has_redo_36873697_name._native_ptr(), 36873697)
-        assert(UndoRedo._method_has_redo_36873697 != nil)
-        let _method_get_version_3905245786_name = StringName(from: "get_version")
-        self._method_get_version_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_get_version_3905245786_name._native_ptr(), 3905245786)
-        assert(UndoRedo._method_get_version_3905245786 != nil)
-        let _method_redo_2240911060_name = StringName(from: "redo")
-        self._method_redo_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_redo_2240911060_name._native_ptr(), 2240911060)
-        assert(UndoRedo._method_redo_2240911060 != nil)
-        let _method_undo_2240911060_name = StringName(from: "undo")
-        self._method_undo_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_UndoRedo._native_ptr(), _method_undo_2240911060_name._native_ptr(), 2240911060)
-        assert(UndoRedo._method_undo_2240911060 != nil)
+        self._method_create_action_183245820 = StringName(from: "create_action")
+        assert(self._method_create_action_183245820 != nil)
+        self._method_commit_action_3216645846 = StringName(from: "commit_action")
+        assert(self._method_commit_action_3216645846 != nil)
+        self._method_is_committing_action_36873697 = StringName(from: "is_committing_action")
+        assert(self._method_is_committing_action_36873697 != nil)
+        self._method_add_do_method_1611583062 = StringName(from: "add_do_method")
+        assert(self._method_add_do_method_1611583062 != nil)
+        self._method_add_undo_method_1611583062 = StringName(from: "add_undo_method")
+        assert(self._method_add_undo_method_1611583062 != nil)
+        self._method_add_do_property_1017172818 = StringName(from: "add_do_property")
+        assert(self._method_add_do_property_1017172818 != nil)
+        self._method_add_undo_property_1017172818 = StringName(from: "add_undo_property")
+        assert(self._method_add_undo_property_1017172818 != nil)
+        self._method_add_do_reference_3975164845 = StringName(from: "add_do_reference")
+        assert(self._method_add_do_reference_3975164845 != nil)
+        self._method_add_undo_reference_3975164845 = StringName(from: "add_undo_reference")
+        assert(self._method_add_undo_reference_3975164845 != nil)
+        self._method_start_force_keep_in_merge_ends_3218959716 = StringName(from: "start_force_keep_in_merge_ends")
+        assert(self._method_start_force_keep_in_merge_ends_3218959716 != nil)
+        self._method_end_force_keep_in_merge_ends_3218959716 = StringName(from: "end_force_keep_in_merge_ends")
+        assert(self._method_end_force_keep_in_merge_ends_3218959716 != nil)
+        self._method_get_history_count_2455072627 = StringName(from: "get_history_count")
+        assert(self._method_get_history_count_2455072627 != nil)
+        self._method_get_current_action_2455072627 = StringName(from: "get_current_action")
+        assert(self._method_get_current_action_2455072627 != nil)
+        self._method_get_action_name_990163283 = StringName(from: "get_action_name")
+        assert(self._method_get_action_name_990163283 != nil)
+        self._method_clear_history_3216645846 = StringName(from: "clear_history")
+        assert(self._method_clear_history_3216645846 != nil)
+        self._method_get_current_action_name_201670096 = StringName(from: "get_current_action_name")
+        assert(self._method_get_current_action_name_201670096 != nil)
+        self._method_has_undo_36873697 = StringName(from: "has_undo")
+        assert(self._method_has_undo_36873697 != nil)
+        self._method_has_redo_36873697 = StringName(from: "has_redo")
+        assert(self._method_has_redo_36873697 != nil)
+        self._method_get_version_3905245786 = StringName(from: "get_version")
+        assert(self._method_get_version_3905245786 != nil)
+        self._method_redo_2240911060 = StringName(from: "redo")
+        assert(self._method_redo_2240911060 != nil)
+        self._method_undo_2240911060 = StringName(from: "undo")
+        assert(self._method_undo_2240911060 != nil)
     }
 
     public func create_action(name: godot.String, merge_mode: UndoRedo.MergeMode)  {
@@ -218,8 +198,13 @@ open class UndoRedo : Object {
                 .init(name_native), .init(merge_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_action_183245820,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_action_183245820._native_ptr(),
+                    183245820)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -234,8 +219,13 @@ open class UndoRedo : Object {
                 .init(execute_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_commit_action_3216645846,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_commit_action_3216645846._native_ptr(),
+                    3216645846)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -251,8 +241,13 @@ open class UndoRedo : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_committing_action_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_committing_action_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -267,8 +262,13 @@ open class UndoRedo : Object {
                 .init(callable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_do_method_1611583062,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_do_method_1611583062._native_ptr(),
+                    1611583062)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -282,8 +282,13 @@ open class UndoRedo : Object {
                 .init(callable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_undo_method_1611583062,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_undo_method_1611583062._native_ptr(),
+                    1611583062)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -299,8 +304,13 @@ open class UndoRedo : Object {
                 .init(object_native), .init(property_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_do_property_1017172818,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_do_property_1017172818._native_ptr(),
+                    1017172818)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -316,8 +326,13 @@ open class UndoRedo : Object {
                 .init(object_native), .init(property_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_undo_property_1017172818,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_undo_property_1017172818._native_ptr(),
+                    1017172818)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -331,8 +346,13 @@ open class UndoRedo : Object {
                 .init(object_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_do_reference_3975164845,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_do_reference_3975164845._native_ptr(),
+                    3975164845)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -346,8 +366,13 @@ open class UndoRedo : Object {
                 .init(object_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_undo_reference_3975164845,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_undo_reference_3975164845._native_ptr(),
+                    3975164845)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -360,8 +385,13 @@ open class UndoRedo : Object {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_start_force_keep_in_merge_ends_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_start_force_keep_in_merge_ends_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -374,8 +404,13 @@ open class UndoRedo : Object {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_end_force_keep_in_merge_ends_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_end_force_keep_in_merge_ends_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -390,8 +425,13 @@ open class UndoRedo : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_history_count_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_history_count_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -407,8 +447,13 @@ open class UndoRedo : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_current_action_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_current_action_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -424,8 +469,13 @@ open class UndoRedo : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_action_name_990163283,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_action_name_990163283._native_ptr(),
+                    990163283)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -441,8 +491,13 @@ open class UndoRedo : Object {
                 .init(increase_version_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_history_3216645846,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_history_3216645846._native_ptr(),
+                    3216645846)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -457,8 +512,13 @@ open class UndoRedo : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_current_action_name_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_current_action_name_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -474,8 +534,13 @@ open class UndoRedo : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_undo_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_undo_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -491,8 +556,13 @@ open class UndoRedo : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_redo_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_redo_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -508,8 +578,13 @@ open class UndoRedo : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_version_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_version_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -525,8 +600,13 @@ open class UndoRedo : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_redo_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_redo_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -542,8 +622,13 @@ open class UndoRedo : Object {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_undo_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_undo_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

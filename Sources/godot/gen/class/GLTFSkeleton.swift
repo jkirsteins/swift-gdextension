@@ -11,59 +11,49 @@ open class GLTFSkeleton : Resource {
 
     public override class var __godot_name: StringName { __godot_name_GLTFSkeleton }
 
-    static var _method_get_joints_969006518: GDExtensionMethodBindPtr! = nil
-    static var _method_set_joints_3614634198: GDExtensionMethodBindPtr! = nil
-    static var _method_get_roots_969006518: GDExtensionMethodBindPtr! = nil
-    static var _method_set_roots_3614634198: GDExtensionMethodBindPtr! = nil
-    static var _method_get_godot_skeleton_1814733083: GDExtensionMethodBindPtr! = nil
-    static var _method_get_unique_names_2915620761: GDExtensionMethodBindPtr! = nil
-    static var _method_set_unique_names_381264803: GDExtensionMethodBindPtr! = nil
-    static var _method_get_godot_bone_node_2382534195: GDExtensionMethodBindPtr! = nil
-    static var _method_set_godot_bone_node_4155329257: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone_attachment_count_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone_attachment_945440495: GDExtensionMethodBindPtr! = nil
+    static var _method_get_joints_969006518: StringName! = nil
+    static var _method_set_joints_3614634198: StringName! = nil
+    static var _method_get_roots_969006518: StringName! = nil
+    static var _method_set_roots_3614634198: StringName! = nil
+    static var _method_get_godot_skeleton_1814733083: StringName! = nil
+    static var _method_get_unique_names_2915620761: StringName! = nil
+    static var _method_set_unique_names_381264803: StringName! = nil
+    static var _method_get_godot_bone_node_2382534195: StringName! = nil
+    static var _method_set_godot_bone_node_4155329257: StringName! = nil
+    static var _method_get_bone_attachment_count_2455072627: StringName! = nil
+    static var _method_get_bone_attachment_945440495: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_GLTFSkeleton == nil)
         __godot_name_GLTFSkeleton = StringName(from: "GLTFSkeleton")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_joints_969006518_name = StringName(from: "get_joints")
-        self._method_get_joints_969006518 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkeleton._native_ptr(), _method_get_joints_969006518_name._native_ptr(), 969006518)
-        assert(GLTFSkeleton._method_get_joints_969006518 != nil)
-        let _method_set_joints_3614634198_name = StringName(from: "set_joints")
-        self._method_set_joints_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkeleton._native_ptr(), _method_set_joints_3614634198_name._native_ptr(), 3614634198)
-        assert(GLTFSkeleton._method_set_joints_3614634198 != nil)
-        let _method_get_roots_969006518_name = StringName(from: "get_roots")
-        self._method_get_roots_969006518 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkeleton._native_ptr(), _method_get_roots_969006518_name._native_ptr(), 969006518)
-        assert(GLTFSkeleton._method_get_roots_969006518 != nil)
-        let _method_set_roots_3614634198_name = StringName(from: "set_roots")
-        self._method_set_roots_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkeleton._native_ptr(), _method_set_roots_3614634198_name._native_ptr(), 3614634198)
-        assert(GLTFSkeleton._method_set_roots_3614634198 != nil)
-        let _method_get_godot_skeleton_1814733083_name = StringName(from: "get_godot_skeleton")
-        self._method_get_godot_skeleton_1814733083 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkeleton._native_ptr(), _method_get_godot_skeleton_1814733083_name._native_ptr(), 1814733083)
-        assert(GLTFSkeleton._method_get_godot_skeleton_1814733083 != nil)
-        let _method_get_unique_names_2915620761_name = StringName(from: "get_unique_names")
-        self._method_get_unique_names_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkeleton._native_ptr(), _method_get_unique_names_2915620761_name._native_ptr(), 2915620761)
-        assert(GLTFSkeleton._method_get_unique_names_2915620761 != nil)
-        let _method_set_unique_names_381264803_name = StringName(from: "set_unique_names")
-        self._method_set_unique_names_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkeleton._native_ptr(), _method_set_unique_names_381264803_name._native_ptr(), 381264803)
-        assert(GLTFSkeleton._method_set_unique_names_381264803 != nil)
-        let _method_get_godot_bone_node_2382534195_name = StringName(from: "get_godot_bone_node")
-        self._method_get_godot_bone_node_2382534195 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkeleton._native_ptr(), _method_get_godot_bone_node_2382534195_name._native_ptr(), 2382534195)
-        assert(GLTFSkeleton._method_get_godot_bone_node_2382534195 != nil)
-        let _method_set_godot_bone_node_4155329257_name = StringName(from: "set_godot_bone_node")
-        self._method_set_godot_bone_node_4155329257 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkeleton._native_ptr(), _method_set_godot_bone_node_4155329257_name._native_ptr(), 4155329257)
-        assert(GLTFSkeleton._method_set_godot_bone_node_4155329257 != nil)
-        let _method_get_bone_attachment_count_2455072627_name = StringName(from: "get_bone_attachment_count")
-        self._method_get_bone_attachment_count_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkeleton._native_ptr(), _method_get_bone_attachment_count_2455072627_name._native_ptr(), 2455072627)
-        assert(GLTFSkeleton._method_get_bone_attachment_count_2455072627 != nil)
-        let _method_get_bone_attachment_945440495_name = StringName(from: "get_bone_attachment")
-        self._method_get_bone_attachment_945440495 = self.interface.pointee.classdb_get_method_bind(__godot_name_GLTFSkeleton._native_ptr(), _method_get_bone_attachment_945440495_name._native_ptr(), 945440495)
-        assert(GLTFSkeleton._method_get_bone_attachment_945440495 != nil)
+        self._method_get_joints_969006518 = StringName(from: "get_joints")
+        assert(self._method_get_joints_969006518 != nil)
+        self._method_set_joints_3614634198 = StringName(from: "set_joints")
+        assert(self._method_set_joints_3614634198 != nil)
+        self._method_get_roots_969006518 = StringName(from: "get_roots")
+        assert(self._method_get_roots_969006518 != nil)
+        self._method_set_roots_3614634198 = StringName(from: "set_roots")
+        assert(self._method_set_roots_3614634198 != nil)
+        self._method_get_godot_skeleton_1814733083 = StringName(from: "get_godot_skeleton")
+        assert(self._method_get_godot_skeleton_1814733083 != nil)
+        self._method_get_unique_names_2915620761 = StringName(from: "get_unique_names")
+        assert(self._method_get_unique_names_2915620761 != nil)
+        self._method_set_unique_names_381264803 = StringName(from: "set_unique_names")
+        assert(self._method_set_unique_names_381264803 != nil)
+        self._method_get_godot_bone_node_2382534195 = StringName(from: "get_godot_bone_node")
+        assert(self._method_get_godot_bone_node_2382534195 != nil)
+        self._method_set_godot_bone_node_4155329257 = StringName(from: "set_godot_bone_node")
+        assert(self._method_set_godot_bone_node_4155329257 != nil)
+        self._method_get_bone_attachment_count_2455072627 = StringName(from: "get_bone_attachment_count")
+        assert(self._method_get_bone_attachment_count_2455072627 != nil)
+        self._method_get_bone_attachment_945440495 = StringName(from: "get_bone_attachment")
+        assert(self._method_get_bone_attachment_945440495 != nil)
     }
 
     public func get_joints() -> PackedInt32Array {
@@ -74,8 +64,13 @@ open class GLTFSkeleton : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_joints_969006518,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_joints_969006518._native_ptr(),
+                    969006518)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -90,8 +85,13 @@ open class GLTFSkeleton : Resource {
                 .init(joints_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_joints_3614634198,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_joints_3614634198._native_ptr(),
+                    3614634198)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -105,8 +105,13 @@ open class GLTFSkeleton : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_roots_969006518,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_roots_969006518._native_ptr(),
+                    969006518)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -121,8 +126,13 @@ open class GLTFSkeleton : Resource {
                 .init(roots_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_roots_3614634198,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_roots_3614634198._native_ptr(),
+                    3614634198)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -136,8 +146,13 @@ open class GLTFSkeleton : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_godot_skeleton_1814733083,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_godot_skeleton_1814733083._native_ptr(),
+                    1814733083)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -152,8 +167,13 @@ open class GLTFSkeleton : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_unique_names_2915620761,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_unique_names_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -168,8 +188,13 @@ open class GLTFSkeleton : Resource {
                 .init(unique_names_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_unique_names_381264803,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_unique_names_381264803._native_ptr(),
+                    381264803)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -183,8 +208,13 @@ open class GLTFSkeleton : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_godot_bone_node_2382534195,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_godot_bone_node_2382534195._native_ptr(),
+                    2382534195)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -199,8 +229,13 @@ open class GLTFSkeleton : Resource {
                 .init(godot_bone_node_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_godot_bone_node_4155329257,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_godot_bone_node_4155329257._native_ptr(),
+                    4155329257)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -215,8 +250,13 @@ open class GLTFSkeleton : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_attachment_count_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_attachment_count_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -232,8 +272,13 @@ open class GLTFSkeleton : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone_attachment_945440495,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone_attachment_945440495._native_ptr(),
+                    945440495)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

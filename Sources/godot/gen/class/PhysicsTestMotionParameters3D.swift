@@ -11,79 +11,64 @@ open class PhysicsTestMotionParameters3D : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_PhysicsTestMotionParameters3D }
 
-    static var _method_get_from_3229777777: GDExtensionMethodBindPtr! = nil
-    static var _method_set_from_2952846383: GDExtensionMethodBindPtr! = nil
-    static var _method_get_motion_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_motion_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_margin_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_margin_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_max_collisions_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_max_collisions_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_is_collide_separation_ray_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collide_separation_ray_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_exclude_bodies_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_set_exclude_bodies_381264803: GDExtensionMethodBindPtr! = nil
-    static var _method_get_exclude_objects_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_set_exclude_objects_381264803: GDExtensionMethodBindPtr! = nil
-    static var _method_is_recovery_as_collision_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_recovery_as_collision_enabled_2586408642: GDExtensionMethodBindPtr! = nil
+    static var _method_get_from_3229777777: StringName! = nil
+    static var _method_set_from_2952846383: StringName! = nil
+    static var _method_get_motion_3360562783: StringName! = nil
+    static var _method_set_motion_3460891852: StringName! = nil
+    static var _method_get_margin_1740695150: StringName! = nil
+    static var _method_set_margin_373806689: StringName! = nil
+    static var _method_get_max_collisions_3905245786: StringName! = nil
+    static var _method_set_max_collisions_1286410249: StringName! = nil
+    static var _method_is_collide_separation_ray_enabled_36873697: StringName! = nil
+    static var _method_set_collide_separation_ray_enabled_2586408642: StringName! = nil
+    static var _method_get_exclude_bodies_3995934104: StringName! = nil
+    static var _method_set_exclude_bodies_381264803: StringName! = nil
+    static var _method_get_exclude_objects_3995934104: StringName! = nil
+    static var _method_set_exclude_objects_381264803: StringName! = nil
+    static var _method_is_recovery_as_collision_enabled_36873697: StringName! = nil
+    static var _method_set_recovery_as_collision_enabled_2586408642: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PhysicsTestMotionParameters3D == nil)
         __godot_name_PhysicsTestMotionParameters3D = StringName(from: "PhysicsTestMotionParameters3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_from_3229777777_name = StringName(from: "get_from")
-        self._method_get_from_3229777777 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionParameters3D._native_ptr(), _method_get_from_3229777777_name._native_ptr(), 3229777777)
-        assert(PhysicsTestMotionParameters3D._method_get_from_3229777777 != nil)
-        let _method_set_from_2952846383_name = StringName(from: "set_from")
-        self._method_set_from_2952846383 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionParameters3D._native_ptr(), _method_set_from_2952846383_name._native_ptr(), 2952846383)
-        assert(PhysicsTestMotionParameters3D._method_set_from_2952846383 != nil)
-        let _method_get_motion_3360562783_name = StringName(from: "get_motion")
-        self._method_get_motion_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionParameters3D._native_ptr(), _method_get_motion_3360562783_name._native_ptr(), 3360562783)
-        assert(PhysicsTestMotionParameters3D._method_get_motion_3360562783 != nil)
-        let _method_set_motion_3460891852_name = StringName(from: "set_motion")
-        self._method_set_motion_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionParameters3D._native_ptr(), _method_set_motion_3460891852_name._native_ptr(), 3460891852)
-        assert(PhysicsTestMotionParameters3D._method_set_motion_3460891852 != nil)
-        let _method_get_margin_1740695150_name = StringName(from: "get_margin")
-        self._method_get_margin_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionParameters3D._native_ptr(), _method_get_margin_1740695150_name._native_ptr(), 1740695150)
-        assert(PhysicsTestMotionParameters3D._method_get_margin_1740695150 != nil)
-        let _method_set_margin_373806689_name = StringName(from: "set_margin")
-        self._method_set_margin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionParameters3D._native_ptr(), _method_set_margin_373806689_name._native_ptr(), 373806689)
-        assert(PhysicsTestMotionParameters3D._method_set_margin_373806689 != nil)
-        let _method_get_max_collisions_3905245786_name = StringName(from: "get_max_collisions")
-        self._method_get_max_collisions_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionParameters3D._native_ptr(), _method_get_max_collisions_3905245786_name._native_ptr(), 3905245786)
-        assert(PhysicsTestMotionParameters3D._method_get_max_collisions_3905245786 != nil)
-        let _method_set_max_collisions_1286410249_name = StringName(from: "set_max_collisions")
-        self._method_set_max_collisions_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionParameters3D._native_ptr(), _method_set_max_collisions_1286410249_name._native_ptr(), 1286410249)
-        assert(PhysicsTestMotionParameters3D._method_set_max_collisions_1286410249 != nil)
-        let _method_is_collide_separation_ray_enabled_36873697_name = StringName(from: "is_collide_separation_ray_enabled")
-        self._method_is_collide_separation_ray_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionParameters3D._native_ptr(), _method_is_collide_separation_ray_enabled_36873697_name._native_ptr(), 36873697)
-        assert(PhysicsTestMotionParameters3D._method_is_collide_separation_ray_enabled_36873697 != nil)
-        let _method_set_collide_separation_ray_enabled_2586408642_name = StringName(from: "set_collide_separation_ray_enabled")
-        self._method_set_collide_separation_ray_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionParameters3D._native_ptr(), _method_set_collide_separation_ray_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(PhysicsTestMotionParameters3D._method_set_collide_separation_ray_enabled_2586408642 != nil)
-        let _method_get_exclude_bodies_3995934104_name = StringName(from: "get_exclude_bodies")
-        self._method_get_exclude_bodies_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionParameters3D._native_ptr(), _method_get_exclude_bodies_3995934104_name._native_ptr(), 3995934104)
-        assert(PhysicsTestMotionParameters3D._method_get_exclude_bodies_3995934104 != nil)
-        let _method_set_exclude_bodies_381264803_name = StringName(from: "set_exclude_bodies")
-        self._method_set_exclude_bodies_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionParameters3D._native_ptr(), _method_set_exclude_bodies_381264803_name._native_ptr(), 381264803)
-        assert(PhysicsTestMotionParameters3D._method_set_exclude_bodies_381264803 != nil)
-        let _method_get_exclude_objects_3995934104_name = StringName(from: "get_exclude_objects")
-        self._method_get_exclude_objects_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionParameters3D._native_ptr(), _method_get_exclude_objects_3995934104_name._native_ptr(), 3995934104)
-        assert(PhysicsTestMotionParameters3D._method_get_exclude_objects_3995934104 != nil)
-        let _method_set_exclude_objects_381264803_name = StringName(from: "set_exclude_objects")
-        self._method_set_exclude_objects_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionParameters3D._native_ptr(), _method_set_exclude_objects_381264803_name._native_ptr(), 381264803)
-        assert(PhysicsTestMotionParameters3D._method_set_exclude_objects_381264803 != nil)
-        let _method_is_recovery_as_collision_enabled_36873697_name = StringName(from: "is_recovery_as_collision_enabled")
-        self._method_is_recovery_as_collision_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionParameters3D._native_ptr(), _method_is_recovery_as_collision_enabled_36873697_name._native_ptr(), 36873697)
-        assert(PhysicsTestMotionParameters3D._method_is_recovery_as_collision_enabled_36873697 != nil)
-        let _method_set_recovery_as_collision_enabled_2586408642_name = StringName(from: "set_recovery_as_collision_enabled")
-        self._method_set_recovery_as_collision_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsTestMotionParameters3D._native_ptr(), _method_set_recovery_as_collision_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(PhysicsTestMotionParameters3D._method_set_recovery_as_collision_enabled_2586408642 != nil)
+        self._method_get_from_3229777777 = StringName(from: "get_from")
+        assert(self._method_get_from_3229777777 != nil)
+        self._method_set_from_2952846383 = StringName(from: "set_from")
+        assert(self._method_set_from_2952846383 != nil)
+        self._method_get_motion_3360562783 = StringName(from: "get_motion")
+        assert(self._method_get_motion_3360562783 != nil)
+        self._method_set_motion_3460891852 = StringName(from: "set_motion")
+        assert(self._method_set_motion_3460891852 != nil)
+        self._method_get_margin_1740695150 = StringName(from: "get_margin")
+        assert(self._method_get_margin_1740695150 != nil)
+        self._method_set_margin_373806689 = StringName(from: "set_margin")
+        assert(self._method_set_margin_373806689 != nil)
+        self._method_get_max_collisions_3905245786 = StringName(from: "get_max_collisions")
+        assert(self._method_get_max_collisions_3905245786 != nil)
+        self._method_set_max_collisions_1286410249 = StringName(from: "set_max_collisions")
+        assert(self._method_set_max_collisions_1286410249 != nil)
+        self._method_is_collide_separation_ray_enabled_36873697 = StringName(from: "is_collide_separation_ray_enabled")
+        assert(self._method_is_collide_separation_ray_enabled_36873697 != nil)
+        self._method_set_collide_separation_ray_enabled_2586408642 = StringName(from: "set_collide_separation_ray_enabled")
+        assert(self._method_set_collide_separation_ray_enabled_2586408642 != nil)
+        self._method_get_exclude_bodies_3995934104 = StringName(from: "get_exclude_bodies")
+        assert(self._method_get_exclude_bodies_3995934104 != nil)
+        self._method_set_exclude_bodies_381264803 = StringName(from: "set_exclude_bodies")
+        assert(self._method_set_exclude_bodies_381264803 != nil)
+        self._method_get_exclude_objects_3995934104 = StringName(from: "get_exclude_objects")
+        assert(self._method_get_exclude_objects_3995934104 != nil)
+        self._method_set_exclude_objects_381264803 = StringName(from: "set_exclude_objects")
+        assert(self._method_set_exclude_objects_381264803 != nil)
+        self._method_is_recovery_as_collision_enabled_36873697 = StringName(from: "is_recovery_as_collision_enabled")
+        assert(self._method_is_recovery_as_collision_enabled_36873697 != nil)
+        self._method_set_recovery_as_collision_enabled_2586408642 = StringName(from: "set_recovery_as_collision_enabled")
+        assert(self._method_set_recovery_as_collision_enabled_2586408642 != nil)
     }
 
     public func get_from() -> Transform3D {
@@ -94,8 +79,13 @@ open class PhysicsTestMotionParameters3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_from_3229777777,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_from_3229777777._native_ptr(),
+                    3229777777)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -110,8 +100,13 @@ open class PhysicsTestMotionParameters3D : RefCounted {
                 .init(from_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_from_2952846383,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_from_2952846383._native_ptr(),
+                    2952846383)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -125,8 +120,13 @@ open class PhysicsTestMotionParameters3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_motion_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_motion_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -141,8 +141,13 @@ open class PhysicsTestMotionParameters3D : RefCounted {
                 .init(motion_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_motion_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_motion_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -157,8 +162,13 @@ open class PhysicsTestMotionParameters3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_margin_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_margin_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -173,8 +183,13 @@ open class PhysicsTestMotionParameters3D : RefCounted {
                 .init(margin_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_margin_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_margin_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -190,8 +205,13 @@ open class PhysicsTestMotionParameters3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_max_collisions_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_max_collisions_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -206,8 +226,13 @@ open class PhysicsTestMotionParameters3D : RefCounted {
                 .init(max_collisions_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_max_collisions_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_max_collisions_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -223,8 +248,13 @@ open class PhysicsTestMotionParameters3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_collide_separation_ray_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_collide_separation_ray_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -239,8 +269,13 @@ open class PhysicsTestMotionParameters3D : RefCounted {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collide_separation_ray_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collide_separation_ray_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -255,8 +290,13 @@ open class PhysicsTestMotionParameters3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_exclude_bodies_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_exclude_bodies_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -271,8 +311,13 @@ open class PhysicsTestMotionParameters3D : RefCounted {
                 .init(exclude_list_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_exclude_bodies_381264803,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_exclude_bodies_381264803._native_ptr(),
+                    381264803)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -286,8 +331,13 @@ open class PhysicsTestMotionParameters3D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_exclude_objects_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_exclude_objects_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -302,8 +352,13 @@ open class PhysicsTestMotionParameters3D : RefCounted {
                 .init(exclude_list_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_exclude_objects_381264803,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_exclude_objects_381264803._native_ptr(),
+                    381264803)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -318,8 +373,13 @@ open class PhysicsTestMotionParameters3D : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_recovery_as_collision_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_recovery_as_collision_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -334,8 +394,13 @@ open class PhysicsTestMotionParameters3D : RefCounted {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_recovery_as_collision_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_recovery_as_collision_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

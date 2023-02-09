@@ -152,559 +152,424 @@ open class BaseMaterial3D : Material {
 
     public override class var __godot_name: StringName { __godot_name_BaseMaterial3D }
 
-    static var _method_set_albedo_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_albedo_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_transparency_3435651667: GDExtensionMethodBindPtr! = nil
-    static var _method_get_transparency_990903061: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alpha_antialiasing_3212649852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alpha_antialiasing_2889939400: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alpha_antialiasing_edge_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alpha_antialiasing_edge_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shading_mode_3368750322: GDExtensionMethodBindPtr! = nil
-    static var _method_get_shading_mode_2132070559: GDExtensionMethodBindPtr! = nil
-    static var _method_set_specular_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_specular_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_metallic_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_metallic_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_roughness_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_roughness_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_emission_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_emission_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_emission_energy_multiplier_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_emission_energy_multiplier_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_emission_intensity_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_emission_intensity_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_normal_scale_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_normal_scale_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_rim_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rim_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_rim_tint_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rim_tint_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_clearcoat_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_clearcoat_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_clearcoat_roughness_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_clearcoat_roughness_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_anisotropy_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_anisotropy_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_heightmap_scale_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_heightmap_scale_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_subsurface_scattering_strength_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_subsurface_scattering_strength_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_transmittance_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_transmittance_color_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_transmittance_depth_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_transmittance_depth_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_transmittance_boost_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_transmittance_boost_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_backlight_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_backlight_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_refraction_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_refraction_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_point_size_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_point_size_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_detail_uv_456801921: GDExtensionMethodBindPtr! = nil
-    static var _method_get_detail_uv_2306920512: GDExtensionMethodBindPtr! = nil
-    static var _method_set_blend_mode_2830186259: GDExtensionMethodBindPtr! = nil
-    static var _method_get_blend_mode_4022690962: GDExtensionMethodBindPtr! = nil
-    static var _method_set_depth_draw_mode_1456584748: GDExtensionMethodBindPtr! = nil
-    static var _method_get_depth_draw_mode_2578197639: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cull_mode_2338909218: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cull_mode_1941499586: GDExtensionMethodBindPtr! = nil
-    static var _method_set_diffuse_mode_1045299638: GDExtensionMethodBindPtr! = nil
-    static var _method_get_diffuse_mode_3973617136: GDExtensionMethodBindPtr! = nil
-    static var _method_set_specular_mode_584737147: GDExtensionMethodBindPtr! = nil
-    static var _method_get_specular_mode_2569953298: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flag_3070159527: GDExtensionMethodBindPtr! = nil
-    static var _method_get_flag_1286410065: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_filter_22904437: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_filter_3289213076: GDExtensionMethodBindPtr! = nil
-    static var _method_set_feature_2819288693: GDExtensionMethodBindPtr! = nil
-    static var _method_get_feature_1965241794: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_464208135: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_329605813: GDExtensionMethodBindPtr! = nil
-    static var _method_set_detail_blend_mode_2830186259: GDExtensionMethodBindPtr! = nil
-    static var _method_get_detail_blend_mode_4022690962: GDExtensionMethodBindPtr! = nil
-    static var _method_set_uv1_scale_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_uv1_scale_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_uv1_offset_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_uv1_offset_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_uv1_triplanar_blend_sharpness_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_uv1_triplanar_blend_sharpness_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_uv2_scale_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_uv2_scale_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_uv2_offset_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_uv2_offset_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_uv2_triplanar_blend_sharpness_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_uv2_triplanar_blend_sharpness_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_billboard_mode_4202036497: GDExtensionMethodBindPtr! = nil
-    static var _method_get_billboard_mode_1283840139: GDExtensionMethodBindPtr! = nil
-    static var _method_set_particles_anim_h_frames_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_particles_anim_h_frames_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_particles_anim_v_frames_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_particles_anim_v_frames_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_particles_anim_loop_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_particles_anim_loop_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_heightmap_deep_parallax_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_heightmap_deep_parallax_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_heightmap_deep_parallax_min_layers_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_heightmap_deep_parallax_min_layers_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_heightmap_deep_parallax_max_layers_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_heightmap_deep_parallax_max_layers_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_heightmap_deep_parallax_flip_tangent_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_heightmap_deep_parallax_flip_tangent_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_heightmap_deep_parallax_flip_binormal_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_heightmap_deep_parallax_flip_binormal_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_grow_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_grow_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_emission_operator_3825128922: GDExtensionMethodBindPtr! = nil
-    static var _method_get_emission_operator_974205018: GDExtensionMethodBindPtr! = nil
-    static var _method_set_ao_light_affect_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_ao_light_affect_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alpha_scissor_threshold_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alpha_scissor_threshold_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alpha_hash_scale_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alpha_hash_scale_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_grow_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_grow_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_metallic_texture_channel_744167988: GDExtensionMethodBindPtr! = nil
-    static var _method_get_metallic_texture_channel_568133867: GDExtensionMethodBindPtr! = nil
-    static var _method_set_roughness_texture_channel_744167988: GDExtensionMethodBindPtr! = nil
-    static var _method_get_roughness_texture_channel_568133867: GDExtensionMethodBindPtr! = nil
-    static var _method_set_ao_texture_channel_744167988: GDExtensionMethodBindPtr! = nil
-    static var _method_get_ao_texture_channel_568133867: GDExtensionMethodBindPtr! = nil
-    static var _method_set_refraction_texture_channel_744167988: GDExtensionMethodBindPtr! = nil
-    static var _method_get_refraction_texture_channel_568133867: GDExtensionMethodBindPtr! = nil
-    static var _method_set_proximity_fade_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_proximity_fade_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_proximity_fade_distance_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_proximity_fade_distance_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_msdf_pixel_range_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_msdf_pixel_range_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_msdf_outline_size_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_msdf_outline_size_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_distance_fade_1379478617: GDExtensionMethodBindPtr! = nil
-    static var _method_get_distance_fade_2694575734: GDExtensionMethodBindPtr! = nil
-    static var _method_set_distance_fade_max_distance_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_distance_fade_max_distance_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_distance_fade_min_distance_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_distance_fade_min_distance_1740695150: GDExtensionMethodBindPtr! = nil
+    static var _method_set_albedo_2920490490: StringName! = nil
+    static var _method_get_albedo_3444240500: StringName! = nil
+    static var _method_set_transparency_3435651667: StringName! = nil
+    static var _method_get_transparency_990903061: StringName! = nil
+    static var _method_set_alpha_antialiasing_3212649852: StringName! = nil
+    static var _method_get_alpha_antialiasing_2889939400: StringName! = nil
+    static var _method_set_alpha_antialiasing_edge_373806689: StringName! = nil
+    static var _method_get_alpha_antialiasing_edge_1740695150: StringName! = nil
+    static var _method_set_shading_mode_3368750322: StringName! = nil
+    static var _method_get_shading_mode_2132070559: StringName! = nil
+    static var _method_set_specular_373806689: StringName! = nil
+    static var _method_get_specular_1740695150: StringName! = nil
+    static var _method_set_metallic_373806689: StringName! = nil
+    static var _method_get_metallic_1740695150: StringName! = nil
+    static var _method_set_roughness_373806689: StringName! = nil
+    static var _method_get_roughness_1740695150: StringName! = nil
+    static var _method_set_emission_2920490490: StringName! = nil
+    static var _method_get_emission_3444240500: StringName! = nil
+    static var _method_set_emission_energy_multiplier_373806689: StringName! = nil
+    static var _method_get_emission_energy_multiplier_1740695150: StringName! = nil
+    static var _method_set_emission_intensity_373806689: StringName! = nil
+    static var _method_get_emission_intensity_1740695150: StringName! = nil
+    static var _method_set_normal_scale_373806689: StringName! = nil
+    static var _method_get_normal_scale_1740695150: StringName! = nil
+    static var _method_set_rim_373806689: StringName! = nil
+    static var _method_get_rim_1740695150: StringName! = nil
+    static var _method_set_rim_tint_373806689: StringName! = nil
+    static var _method_get_rim_tint_1740695150: StringName! = nil
+    static var _method_set_clearcoat_373806689: StringName! = nil
+    static var _method_get_clearcoat_1740695150: StringName! = nil
+    static var _method_set_clearcoat_roughness_373806689: StringName! = nil
+    static var _method_get_clearcoat_roughness_1740695150: StringName! = nil
+    static var _method_set_anisotropy_373806689: StringName! = nil
+    static var _method_get_anisotropy_1740695150: StringName! = nil
+    static var _method_set_heightmap_scale_373806689: StringName! = nil
+    static var _method_get_heightmap_scale_1740695150: StringName! = nil
+    static var _method_set_subsurface_scattering_strength_373806689: StringName! = nil
+    static var _method_get_subsurface_scattering_strength_1740695150: StringName! = nil
+    static var _method_set_transmittance_color_2920490490: StringName! = nil
+    static var _method_get_transmittance_color_3444240500: StringName! = nil
+    static var _method_set_transmittance_depth_373806689: StringName! = nil
+    static var _method_get_transmittance_depth_1740695150: StringName! = nil
+    static var _method_set_transmittance_boost_373806689: StringName! = nil
+    static var _method_get_transmittance_boost_1740695150: StringName! = nil
+    static var _method_set_backlight_2920490490: StringName! = nil
+    static var _method_get_backlight_3444240500: StringName! = nil
+    static var _method_set_refraction_373806689: StringName! = nil
+    static var _method_get_refraction_1740695150: StringName! = nil
+    static var _method_set_point_size_373806689: StringName! = nil
+    static var _method_get_point_size_1740695150: StringName! = nil
+    static var _method_set_detail_uv_456801921: StringName! = nil
+    static var _method_get_detail_uv_2306920512: StringName! = nil
+    static var _method_set_blend_mode_2830186259: StringName! = nil
+    static var _method_get_blend_mode_4022690962: StringName! = nil
+    static var _method_set_depth_draw_mode_1456584748: StringName! = nil
+    static var _method_get_depth_draw_mode_2578197639: StringName! = nil
+    static var _method_set_cull_mode_2338909218: StringName! = nil
+    static var _method_get_cull_mode_1941499586: StringName! = nil
+    static var _method_set_diffuse_mode_1045299638: StringName! = nil
+    static var _method_get_diffuse_mode_3973617136: StringName! = nil
+    static var _method_set_specular_mode_584737147: StringName! = nil
+    static var _method_get_specular_mode_2569953298: StringName! = nil
+    static var _method_set_flag_3070159527: StringName! = nil
+    static var _method_get_flag_1286410065: StringName! = nil
+    static var _method_set_texture_filter_22904437: StringName! = nil
+    static var _method_get_texture_filter_3289213076: StringName! = nil
+    static var _method_set_feature_2819288693: StringName! = nil
+    static var _method_get_feature_1965241794: StringName! = nil
+    static var _method_set_texture_464208135: StringName! = nil
+    static var _method_get_texture_329605813: StringName! = nil
+    static var _method_set_detail_blend_mode_2830186259: StringName! = nil
+    static var _method_get_detail_blend_mode_4022690962: StringName! = nil
+    static var _method_set_uv1_scale_3460891852: StringName! = nil
+    static var _method_get_uv1_scale_3360562783: StringName! = nil
+    static var _method_set_uv1_offset_3460891852: StringName! = nil
+    static var _method_get_uv1_offset_3360562783: StringName! = nil
+    static var _method_set_uv1_triplanar_blend_sharpness_373806689: StringName! = nil
+    static var _method_get_uv1_triplanar_blend_sharpness_1740695150: StringName! = nil
+    static var _method_set_uv2_scale_3460891852: StringName! = nil
+    static var _method_get_uv2_scale_3360562783: StringName! = nil
+    static var _method_set_uv2_offset_3460891852: StringName! = nil
+    static var _method_get_uv2_offset_3360562783: StringName! = nil
+    static var _method_set_uv2_triplanar_blend_sharpness_373806689: StringName! = nil
+    static var _method_get_uv2_triplanar_blend_sharpness_1740695150: StringName! = nil
+    static var _method_set_billboard_mode_4202036497: StringName! = nil
+    static var _method_get_billboard_mode_1283840139: StringName! = nil
+    static var _method_set_particles_anim_h_frames_1286410249: StringName! = nil
+    static var _method_get_particles_anim_h_frames_3905245786: StringName! = nil
+    static var _method_set_particles_anim_v_frames_1286410249: StringName! = nil
+    static var _method_get_particles_anim_v_frames_3905245786: StringName! = nil
+    static var _method_set_particles_anim_loop_2586408642: StringName! = nil
+    static var _method_get_particles_anim_loop_36873697: StringName! = nil
+    static var _method_set_heightmap_deep_parallax_2586408642: StringName! = nil
+    static var _method_is_heightmap_deep_parallax_enabled_36873697: StringName! = nil
+    static var _method_set_heightmap_deep_parallax_min_layers_1286410249: StringName! = nil
+    static var _method_get_heightmap_deep_parallax_min_layers_3905245786: StringName! = nil
+    static var _method_set_heightmap_deep_parallax_max_layers_1286410249: StringName! = nil
+    static var _method_get_heightmap_deep_parallax_max_layers_3905245786: StringName! = nil
+    static var _method_set_heightmap_deep_parallax_flip_tangent_2586408642: StringName! = nil
+    static var _method_get_heightmap_deep_parallax_flip_tangent_36873697: StringName! = nil
+    static var _method_set_heightmap_deep_parallax_flip_binormal_2586408642: StringName! = nil
+    static var _method_get_heightmap_deep_parallax_flip_binormal_36873697: StringName! = nil
+    static var _method_set_grow_373806689: StringName! = nil
+    static var _method_get_grow_1740695150: StringName! = nil
+    static var _method_set_emission_operator_3825128922: StringName! = nil
+    static var _method_get_emission_operator_974205018: StringName! = nil
+    static var _method_set_ao_light_affect_373806689: StringName! = nil
+    static var _method_get_ao_light_affect_1740695150: StringName! = nil
+    static var _method_set_alpha_scissor_threshold_373806689: StringName! = nil
+    static var _method_get_alpha_scissor_threshold_1740695150: StringName! = nil
+    static var _method_set_alpha_hash_scale_373806689: StringName! = nil
+    static var _method_get_alpha_hash_scale_1740695150: StringName! = nil
+    static var _method_set_grow_enabled_2586408642: StringName! = nil
+    static var _method_is_grow_enabled_36873697: StringName! = nil
+    static var _method_set_metallic_texture_channel_744167988: StringName! = nil
+    static var _method_get_metallic_texture_channel_568133867: StringName! = nil
+    static var _method_set_roughness_texture_channel_744167988: StringName! = nil
+    static var _method_get_roughness_texture_channel_568133867: StringName! = nil
+    static var _method_set_ao_texture_channel_744167988: StringName! = nil
+    static var _method_get_ao_texture_channel_568133867: StringName! = nil
+    static var _method_set_refraction_texture_channel_744167988: StringName! = nil
+    static var _method_get_refraction_texture_channel_568133867: StringName! = nil
+    static var _method_set_proximity_fade_enabled_2586408642: StringName! = nil
+    static var _method_is_proximity_fade_enabled_36873697: StringName! = nil
+    static var _method_set_proximity_fade_distance_373806689: StringName! = nil
+    static var _method_get_proximity_fade_distance_1740695150: StringName! = nil
+    static var _method_set_msdf_pixel_range_373806689: StringName! = nil
+    static var _method_get_msdf_pixel_range_1740695150: StringName! = nil
+    static var _method_set_msdf_outline_size_373806689: StringName! = nil
+    static var _method_get_msdf_outline_size_1740695150: StringName! = nil
+    static var _method_set_distance_fade_1379478617: StringName! = nil
+    static var _method_get_distance_fade_2694575734: StringName! = nil
+    static var _method_set_distance_fade_max_distance_373806689: StringName! = nil
+    static var _method_get_distance_fade_max_distance_1740695150: StringName! = nil
+    static var _method_set_distance_fade_min_distance_373806689: StringName! = nil
+    static var _method_get_distance_fade_min_distance_1740695150: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_BaseMaterial3D == nil)
         __godot_name_BaseMaterial3D = StringName(from: "BaseMaterial3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_albedo_2920490490_name = StringName(from: "set_albedo")
-        self._method_set_albedo_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_albedo_2920490490_name._native_ptr(), 2920490490)
-        assert(BaseMaterial3D._method_set_albedo_2920490490 != nil)
-        let _method_get_albedo_3444240500_name = StringName(from: "get_albedo")
-        self._method_get_albedo_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_albedo_3444240500_name._native_ptr(), 3444240500)
-        assert(BaseMaterial3D._method_get_albedo_3444240500 != nil)
-        let _method_set_transparency_3435651667_name = StringName(from: "set_transparency")
-        self._method_set_transparency_3435651667 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_transparency_3435651667_name._native_ptr(), 3435651667)
-        assert(BaseMaterial3D._method_set_transparency_3435651667 != nil)
-        let _method_get_transparency_990903061_name = StringName(from: "get_transparency")
-        self._method_get_transparency_990903061 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_transparency_990903061_name._native_ptr(), 990903061)
-        assert(BaseMaterial3D._method_get_transparency_990903061 != nil)
-        let _method_set_alpha_antialiasing_3212649852_name = StringName(from: "set_alpha_antialiasing")
-        self._method_set_alpha_antialiasing_3212649852 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_alpha_antialiasing_3212649852_name._native_ptr(), 3212649852)
-        assert(BaseMaterial3D._method_set_alpha_antialiasing_3212649852 != nil)
-        let _method_get_alpha_antialiasing_2889939400_name = StringName(from: "get_alpha_antialiasing")
-        self._method_get_alpha_antialiasing_2889939400 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_alpha_antialiasing_2889939400_name._native_ptr(), 2889939400)
-        assert(BaseMaterial3D._method_get_alpha_antialiasing_2889939400 != nil)
-        let _method_set_alpha_antialiasing_edge_373806689_name = StringName(from: "set_alpha_antialiasing_edge")
-        self._method_set_alpha_antialiasing_edge_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_alpha_antialiasing_edge_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_alpha_antialiasing_edge_373806689 != nil)
-        let _method_get_alpha_antialiasing_edge_1740695150_name = StringName(from: "get_alpha_antialiasing_edge")
-        self._method_get_alpha_antialiasing_edge_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_alpha_antialiasing_edge_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_alpha_antialiasing_edge_1740695150 != nil)
-        let _method_set_shading_mode_3368750322_name = StringName(from: "set_shading_mode")
-        self._method_set_shading_mode_3368750322 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_shading_mode_3368750322_name._native_ptr(), 3368750322)
-        assert(BaseMaterial3D._method_set_shading_mode_3368750322 != nil)
-        let _method_get_shading_mode_2132070559_name = StringName(from: "get_shading_mode")
-        self._method_get_shading_mode_2132070559 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_shading_mode_2132070559_name._native_ptr(), 2132070559)
-        assert(BaseMaterial3D._method_get_shading_mode_2132070559 != nil)
-        let _method_set_specular_373806689_name = StringName(from: "set_specular")
-        self._method_set_specular_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_specular_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_specular_373806689 != nil)
-        let _method_get_specular_1740695150_name = StringName(from: "get_specular")
-        self._method_get_specular_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_specular_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_specular_1740695150 != nil)
-        let _method_set_metallic_373806689_name = StringName(from: "set_metallic")
-        self._method_set_metallic_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_metallic_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_metallic_373806689 != nil)
-        let _method_get_metallic_1740695150_name = StringName(from: "get_metallic")
-        self._method_get_metallic_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_metallic_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_metallic_1740695150 != nil)
-        let _method_set_roughness_373806689_name = StringName(from: "set_roughness")
-        self._method_set_roughness_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_roughness_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_roughness_373806689 != nil)
-        let _method_get_roughness_1740695150_name = StringName(from: "get_roughness")
-        self._method_get_roughness_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_roughness_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_roughness_1740695150 != nil)
-        let _method_set_emission_2920490490_name = StringName(from: "set_emission")
-        self._method_set_emission_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_emission_2920490490_name._native_ptr(), 2920490490)
-        assert(BaseMaterial3D._method_set_emission_2920490490 != nil)
-        let _method_get_emission_3444240500_name = StringName(from: "get_emission")
-        self._method_get_emission_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_emission_3444240500_name._native_ptr(), 3444240500)
-        assert(BaseMaterial3D._method_get_emission_3444240500 != nil)
-        let _method_set_emission_energy_multiplier_373806689_name = StringName(from: "set_emission_energy_multiplier")
-        self._method_set_emission_energy_multiplier_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_emission_energy_multiplier_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_emission_energy_multiplier_373806689 != nil)
-        let _method_get_emission_energy_multiplier_1740695150_name = StringName(from: "get_emission_energy_multiplier")
-        self._method_get_emission_energy_multiplier_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_emission_energy_multiplier_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_emission_energy_multiplier_1740695150 != nil)
-        let _method_set_emission_intensity_373806689_name = StringName(from: "set_emission_intensity")
-        self._method_set_emission_intensity_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_emission_intensity_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_emission_intensity_373806689 != nil)
-        let _method_get_emission_intensity_1740695150_name = StringName(from: "get_emission_intensity")
-        self._method_get_emission_intensity_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_emission_intensity_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_emission_intensity_1740695150 != nil)
-        let _method_set_normal_scale_373806689_name = StringName(from: "set_normal_scale")
-        self._method_set_normal_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_normal_scale_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_normal_scale_373806689 != nil)
-        let _method_get_normal_scale_1740695150_name = StringName(from: "get_normal_scale")
-        self._method_get_normal_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_normal_scale_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_normal_scale_1740695150 != nil)
-        let _method_set_rim_373806689_name = StringName(from: "set_rim")
-        self._method_set_rim_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_rim_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_rim_373806689 != nil)
-        let _method_get_rim_1740695150_name = StringName(from: "get_rim")
-        self._method_get_rim_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_rim_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_rim_1740695150 != nil)
-        let _method_set_rim_tint_373806689_name = StringName(from: "set_rim_tint")
-        self._method_set_rim_tint_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_rim_tint_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_rim_tint_373806689 != nil)
-        let _method_get_rim_tint_1740695150_name = StringName(from: "get_rim_tint")
-        self._method_get_rim_tint_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_rim_tint_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_rim_tint_1740695150 != nil)
-        let _method_set_clearcoat_373806689_name = StringName(from: "set_clearcoat")
-        self._method_set_clearcoat_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_clearcoat_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_clearcoat_373806689 != nil)
-        let _method_get_clearcoat_1740695150_name = StringName(from: "get_clearcoat")
-        self._method_get_clearcoat_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_clearcoat_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_clearcoat_1740695150 != nil)
-        let _method_set_clearcoat_roughness_373806689_name = StringName(from: "set_clearcoat_roughness")
-        self._method_set_clearcoat_roughness_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_clearcoat_roughness_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_clearcoat_roughness_373806689 != nil)
-        let _method_get_clearcoat_roughness_1740695150_name = StringName(from: "get_clearcoat_roughness")
-        self._method_get_clearcoat_roughness_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_clearcoat_roughness_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_clearcoat_roughness_1740695150 != nil)
-        let _method_set_anisotropy_373806689_name = StringName(from: "set_anisotropy")
-        self._method_set_anisotropy_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_anisotropy_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_anisotropy_373806689 != nil)
-        let _method_get_anisotropy_1740695150_name = StringName(from: "get_anisotropy")
-        self._method_get_anisotropy_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_anisotropy_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_anisotropy_1740695150 != nil)
-        let _method_set_heightmap_scale_373806689_name = StringName(from: "set_heightmap_scale")
-        self._method_set_heightmap_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_heightmap_scale_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_heightmap_scale_373806689 != nil)
-        let _method_get_heightmap_scale_1740695150_name = StringName(from: "get_heightmap_scale")
-        self._method_get_heightmap_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_heightmap_scale_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_heightmap_scale_1740695150 != nil)
-        let _method_set_subsurface_scattering_strength_373806689_name = StringName(from: "set_subsurface_scattering_strength")
-        self._method_set_subsurface_scattering_strength_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_subsurface_scattering_strength_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_subsurface_scattering_strength_373806689 != nil)
-        let _method_get_subsurface_scattering_strength_1740695150_name = StringName(from: "get_subsurface_scattering_strength")
-        self._method_get_subsurface_scattering_strength_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_subsurface_scattering_strength_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_subsurface_scattering_strength_1740695150 != nil)
-        let _method_set_transmittance_color_2920490490_name = StringName(from: "set_transmittance_color")
-        self._method_set_transmittance_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_transmittance_color_2920490490_name._native_ptr(), 2920490490)
-        assert(BaseMaterial3D._method_set_transmittance_color_2920490490 != nil)
-        let _method_get_transmittance_color_3444240500_name = StringName(from: "get_transmittance_color")
-        self._method_get_transmittance_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_transmittance_color_3444240500_name._native_ptr(), 3444240500)
-        assert(BaseMaterial3D._method_get_transmittance_color_3444240500 != nil)
-        let _method_set_transmittance_depth_373806689_name = StringName(from: "set_transmittance_depth")
-        self._method_set_transmittance_depth_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_transmittance_depth_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_transmittance_depth_373806689 != nil)
-        let _method_get_transmittance_depth_1740695150_name = StringName(from: "get_transmittance_depth")
-        self._method_get_transmittance_depth_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_transmittance_depth_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_transmittance_depth_1740695150 != nil)
-        let _method_set_transmittance_boost_373806689_name = StringName(from: "set_transmittance_boost")
-        self._method_set_transmittance_boost_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_transmittance_boost_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_transmittance_boost_373806689 != nil)
-        let _method_get_transmittance_boost_1740695150_name = StringName(from: "get_transmittance_boost")
-        self._method_get_transmittance_boost_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_transmittance_boost_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_transmittance_boost_1740695150 != nil)
-        let _method_set_backlight_2920490490_name = StringName(from: "set_backlight")
-        self._method_set_backlight_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_backlight_2920490490_name._native_ptr(), 2920490490)
-        assert(BaseMaterial3D._method_set_backlight_2920490490 != nil)
-        let _method_get_backlight_3444240500_name = StringName(from: "get_backlight")
-        self._method_get_backlight_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_backlight_3444240500_name._native_ptr(), 3444240500)
-        assert(BaseMaterial3D._method_get_backlight_3444240500 != nil)
-        let _method_set_refraction_373806689_name = StringName(from: "set_refraction")
-        self._method_set_refraction_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_refraction_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_refraction_373806689 != nil)
-        let _method_get_refraction_1740695150_name = StringName(from: "get_refraction")
-        self._method_get_refraction_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_refraction_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_refraction_1740695150 != nil)
-        let _method_set_point_size_373806689_name = StringName(from: "set_point_size")
-        self._method_set_point_size_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_point_size_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_point_size_373806689 != nil)
-        let _method_get_point_size_1740695150_name = StringName(from: "get_point_size")
-        self._method_get_point_size_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_point_size_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_point_size_1740695150 != nil)
-        let _method_set_detail_uv_456801921_name = StringName(from: "set_detail_uv")
-        self._method_set_detail_uv_456801921 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_detail_uv_456801921_name._native_ptr(), 456801921)
-        assert(BaseMaterial3D._method_set_detail_uv_456801921 != nil)
-        let _method_get_detail_uv_2306920512_name = StringName(from: "get_detail_uv")
-        self._method_get_detail_uv_2306920512 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_detail_uv_2306920512_name._native_ptr(), 2306920512)
-        assert(BaseMaterial3D._method_get_detail_uv_2306920512 != nil)
-        let _method_set_blend_mode_2830186259_name = StringName(from: "set_blend_mode")
-        self._method_set_blend_mode_2830186259 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_blend_mode_2830186259_name._native_ptr(), 2830186259)
-        assert(BaseMaterial3D._method_set_blend_mode_2830186259 != nil)
-        let _method_get_blend_mode_4022690962_name = StringName(from: "get_blend_mode")
-        self._method_get_blend_mode_4022690962 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_blend_mode_4022690962_name._native_ptr(), 4022690962)
-        assert(BaseMaterial3D._method_get_blend_mode_4022690962 != nil)
-        let _method_set_depth_draw_mode_1456584748_name = StringName(from: "set_depth_draw_mode")
-        self._method_set_depth_draw_mode_1456584748 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_depth_draw_mode_1456584748_name._native_ptr(), 1456584748)
-        assert(BaseMaterial3D._method_set_depth_draw_mode_1456584748 != nil)
-        let _method_get_depth_draw_mode_2578197639_name = StringName(from: "get_depth_draw_mode")
-        self._method_get_depth_draw_mode_2578197639 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_depth_draw_mode_2578197639_name._native_ptr(), 2578197639)
-        assert(BaseMaterial3D._method_get_depth_draw_mode_2578197639 != nil)
-        let _method_set_cull_mode_2338909218_name = StringName(from: "set_cull_mode")
-        self._method_set_cull_mode_2338909218 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_cull_mode_2338909218_name._native_ptr(), 2338909218)
-        assert(BaseMaterial3D._method_set_cull_mode_2338909218 != nil)
-        let _method_get_cull_mode_1941499586_name = StringName(from: "get_cull_mode")
-        self._method_get_cull_mode_1941499586 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_cull_mode_1941499586_name._native_ptr(), 1941499586)
-        assert(BaseMaterial3D._method_get_cull_mode_1941499586 != nil)
-        let _method_set_diffuse_mode_1045299638_name = StringName(from: "set_diffuse_mode")
-        self._method_set_diffuse_mode_1045299638 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_diffuse_mode_1045299638_name._native_ptr(), 1045299638)
-        assert(BaseMaterial3D._method_set_diffuse_mode_1045299638 != nil)
-        let _method_get_diffuse_mode_3973617136_name = StringName(from: "get_diffuse_mode")
-        self._method_get_diffuse_mode_3973617136 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_diffuse_mode_3973617136_name._native_ptr(), 3973617136)
-        assert(BaseMaterial3D._method_get_diffuse_mode_3973617136 != nil)
-        let _method_set_specular_mode_584737147_name = StringName(from: "set_specular_mode")
-        self._method_set_specular_mode_584737147 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_specular_mode_584737147_name._native_ptr(), 584737147)
-        assert(BaseMaterial3D._method_set_specular_mode_584737147 != nil)
-        let _method_get_specular_mode_2569953298_name = StringName(from: "get_specular_mode")
-        self._method_get_specular_mode_2569953298 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_specular_mode_2569953298_name._native_ptr(), 2569953298)
-        assert(BaseMaterial3D._method_get_specular_mode_2569953298 != nil)
-        let _method_set_flag_3070159527_name = StringName(from: "set_flag")
-        self._method_set_flag_3070159527 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_flag_3070159527_name._native_ptr(), 3070159527)
-        assert(BaseMaterial3D._method_set_flag_3070159527 != nil)
-        let _method_get_flag_1286410065_name = StringName(from: "get_flag")
-        self._method_get_flag_1286410065 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_flag_1286410065_name._native_ptr(), 1286410065)
-        assert(BaseMaterial3D._method_get_flag_1286410065 != nil)
-        let _method_set_texture_filter_22904437_name = StringName(from: "set_texture_filter")
-        self._method_set_texture_filter_22904437 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_texture_filter_22904437_name._native_ptr(), 22904437)
-        assert(BaseMaterial3D._method_set_texture_filter_22904437 != nil)
-        let _method_get_texture_filter_3289213076_name = StringName(from: "get_texture_filter")
-        self._method_get_texture_filter_3289213076 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_texture_filter_3289213076_name._native_ptr(), 3289213076)
-        assert(BaseMaterial3D._method_get_texture_filter_3289213076 != nil)
-        let _method_set_feature_2819288693_name = StringName(from: "set_feature")
-        self._method_set_feature_2819288693 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_feature_2819288693_name._native_ptr(), 2819288693)
-        assert(BaseMaterial3D._method_set_feature_2819288693 != nil)
-        let _method_get_feature_1965241794_name = StringName(from: "get_feature")
-        self._method_get_feature_1965241794 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_feature_1965241794_name._native_ptr(), 1965241794)
-        assert(BaseMaterial3D._method_get_feature_1965241794 != nil)
-        let _method_set_texture_464208135_name = StringName(from: "set_texture")
-        self._method_set_texture_464208135 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_texture_464208135_name._native_ptr(), 464208135)
-        assert(BaseMaterial3D._method_set_texture_464208135 != nil)
-        let _method_get_texture_329605813_name = StringName(from: "get_texture")
-        self._method_get_texture_329605813 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_texture_329605813_name._native_ptr(), 329605813)
-        assert(BaseMaterial3D._method_get_texture_329605813 != nil)
-        let _method_set_detail_blend_mode_2830186259_name = StringName(from: "set_detail_blend_mode")
-        self._method_set_detail_blend_mode_2830186259 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_detail_blend_mode_2830186259_name._native_ptr(), 2830186259)
-        assert(BaseMaterial3D._method_set_detail_blend_mode_2830186259 != nil)
-        let _method_get_detail_blend_mode_4022690962_name = StringName(from: "get_detail_blend_mode")
-        self._method_get_detail_blend_mode_4022690962 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_detail_blend_mode_4022690962_name._native_ptr(), 4022690962)
-        assert(BaseMaterial3D._method_get_detail_blend_mode_4022690962 != nil)
-        let _method_set_uv1_scale_3460891852_name = StringName(from: "set_uv1_scale")
-        self._method_set_uv1_scale_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_uv1_scale_3460891852_name._native_ptr(), 3460891852)
-        assert(BaseMaterial3D._method_set_uv1_scale_3460891852 != nil)
-        let _method_get_uv1_scale_3360562783_name = StringName(from: "get_uv1_scale")
-        self._method_get_uv1_scale_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_uv1_scale_3360562783_name._native_ptr(), 3360562783)
-        assert(BaseMaterial3D._method_get_uv1_scale_3360562783 != nil)
-        let _method_set_uv1_offset_3460891852_name = StringName(from: "set_uv1_offset")
-        self._method_set_uv1_offset_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_uv1_offset_3460891852_name._native_ptr(), 3460891852)
-        assert(BaseMaterial3D._method_set_uv1_offset_3460891852 != nil)
-        let _method_get_uv1_offset_3360562783_name = StringName(from: "get_uv1_offset")
-        self._method_get_uv1_offset_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_uv1_offset_3360562783_name._native_ptr(), 3360562783)
-        assert(BaseMaterial3D._method_get_uv1_offset_3360562783 != nil)
-        let _method_set_uv1_triplanar_blend_sharpness_373806689_name = StringName(from: "set_uv1_triplanar_blend_sharpness")
-        self._method_set_uv1_triplanar_blend_sharpness_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_uv1_triplanar_blend_sharpness_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_uv1_triplanar_blend_sharpness_373806689 != nil)
-        let _method_get_uv1_triplanar_blend_sharpness_1740695150_name = StringName(from: "get_uv1_triplanar_blend_sharpness")
-        self._method_get_uv1_triplanar_blend_sharpness_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_uv1_triplanar_blend_sharpness_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_uv1_triplanar_blend_sharpness_1740695150 != nil)
-        let _method_set_uv2_scale_3460891852_name = StringName(from: "set_uv2_scale")
-        self._method_set_uv2_scale_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_uv2_scale_3460891852_name._native_ptr(), 3460891852)
-        assert(BaseMaterial3D._method_set_uv2_scale_3460891852 != nil)
-        let _method_get_uv2_scale_3360562783_name = StringName(from: "get_uv2_scale")
-        self._method_get_uv2_scale_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_uv2_scale_3360562783_name._native_ptr(), 3360562783)
-        assert(BaseMaterial3D._method_get_uv2_scale_3360562783 != nil)
-        let _method_set_uv2_offset_3460891852_name = StringName(from: "set_uv2_offset")
-        self._method_set_uv2_offset_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_uv2_offset_3460891852_name._native_ptr(), 3460891852)
-        assert(BaseMaterial3D._method_set_uv2_offset_3460891852 != nil)
-        let _method_get_uv2_offset_3360562783_name = StringName(from: "get_uv2_offset")
-        self._method_get_uv2_offset_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_uv2_offset_3360562783_name._native_ptr(), 3360562783)
-        assert(BaseMaterial3D._method_get_uv2_offset_3360562783 != nil)
-        let _method_set_uv2_triplanar_blend_sharpness_373806689_name = StringName(from: "set_uv2_triplanar_blend_sharpness")
-        self._method_set_uv2_triplanar_blend_sharpness_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_uv2_triplanar_blend_sharpness_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_uv2_triplanar_blend_sharpness_373806689 != nil)
-        let _method_get_uv2_triplanar_blend_sharpness_1740695150_name = StringName(from: "get_uv2_triplanar_blend_sharpness")
-        self._method_get_uv2_triplanar_blend_sharpness_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_uv2_triplanar_blend_sharpness_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_uv2_triplanar_blend_sharpness_1740695150 != nil)
-        let _method_set_billboard_mode_4202036497_name = StringName(from: "set_billboard_mode")
-        self._method_set_billboard_mode_4202036497 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_billboard_mode_4202036497_name._native_ptr(), 4202036497)
-        assert(BaseMaterial3D._method_set_billboard_mode_4202036497 != nil)
-        let _method_get_billboard_mode_1283840139_name = StringName(from: "get_billboard_mode")
-        self._method_get_billboard_mode_1283840139 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_billboard_mode_1283840139_name._native_ptr(), 1283840139)
-        assert(BaseMaterial3D._method_get_billboard_mode_1283840139 != nil)
-        let _method_set_particles_anim_h_frames_1286410249_name = StringName(from: "set_particles_anim_h_frames")
-        self._method_set_particles_anim_h_frames_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_particles_anim_h_frames_1286410249_name._native_ptr(), 1286410249)
-        assert(BaseMaterial3D._method_set_particles_anim_h_frames_1286410249 != nil)
-        let _method_get_particles_anim_h_frames_3905245786_name = StringName(from: "get_particles_anim_h_frames")
-        self._method_get_particles_anim_h_frames_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_particles_anim_h_frames_3905245786_name._native_ptr(), 3905245786)
-        assert(BaseMaterial3D._method_get_particles_anim_h_frames_3905245786 != nil)
-        let _method_set_particles_anim_v_frames_1286410249_name = StringName(from: "set_particles_anim_v_frames")
-        self._method_set_particles_anim_v_frames_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_particles_anim_v_frames_1286410249_name._native_ptr(), 1286410249)
-        assert(BaseMaterial3D._method_set_particles_anim_v_frames_1286410249 != nil)
-        let _method_get_particles_anim_v_frames_3905245786_name = StringName(from: "get_particles_anim_v_frames")
-        self._method_get_particles_anim_v_frames_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_particles_anim_v_frames_3905245786_name._native_ptr(), 3905245786)
-        assert(BaseMaterial3D._method_get_particles_anim_v_frames_3905245786 != nil)
-        let _method_set_particles_anim_loop_2586408642_name = StringName(from: "set_particles_anim_loop")
-        self._method_set_particles_anim_loop_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_particles_anim_loop_2586408642_name._native_ptr(), 2586408642)
-        assert(BaseMaterial3D._method_set_particles_anim_loop_2586408642 != nil)
-        let _method_get_particles_anim_loop_36873697_name = StringName(from: "get_particles_anim_loop")
-        self._method_get_particles_anim_loop_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_particles_anim_loop_36873697_name._native_ptr(), 36873697)
-        assert(BaseMaterial3D._method_get_particles_anim_loop_36873697 != nil)
-        let _method_set_heightmap_deep_parallax_2586408642_name = StringName(from: "set_heightmap_deep_parallax")
-        self._method_set_heightmap_deep_parallax_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_heightmap_deep_parallax_2586408642_name._native_ptr(), 2586408642)
-        assert(BaseMaterial3D._method_set_heightmap_deep_parallax_2586408642 != nil)
-        let _method_is_heightmap_deep_parallax_enabled_36873697_name = StringName(from: "is_heightmap_deep_parallax_enabled")
-        self._method_is_heightmap_deep_parallax_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_is_heightmap_deep_parallax_enabled_36873697_name._native_ptr(), 36873697)
-        assert(BaseMaterial3D._method_is_heightmap_deep_parallax_enabled_36873697 != nil)
-        let _method_set_heightmap_deep_parallax_min_layers_1286410249_name = StringName(from: "set_heightmap_deep_parallax_min_layers")
-        self._method_set_heightmap_deep_parallax_min_layers_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_heightmap_deep_parallax_min_layers_1286410249_name._native_ptr(), 1286410249)
-        assert(BaseMaterial3D._method_set_heightmap_deep_parallax_min_layers_1286410249 != nil)
-        let _method_get_heightmap_deep_parallax_min_layers_3905245786_name = StringName(from: "get_heightmap_deep_parallax_min_layers")
-        self._method_get_heightmap_deep_parallax_min_layers_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_heightmap_deep_parallax_min_layers_3905245786_name._native_ptr(), 3905245786)
-        assert(BaseMaterial3D._method_get_heightmap_deep_parallax_min_layers_3905245786 != nil)
-        let _method_set_heightmap_deep_parallax_max_layers_1286410249_name = StringName(from: "set_heightmap_deep_parallax_max_layers")
-        self._method_set_heightmap_deep_parallax_max_layers_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_heightmap_deep_parallax_max_layers_1286410249_name._native_ptr(), 1286410249)
-        assert(BaseMaterial3D._method_set_heightmap_deep_parallax_max_layers_1286410249 != nil)
-        let _method_get_heightmap_deep_parallax_max_layers_3905245786_name = StringName(from: "get_heightmap_deep_parallax_max_layers")
-        self._method_get_heightmap_deep_parallax_max_layers_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_heightmap_deep_parallax_max_layers_3905245786_name._native_ptr(), 3905245786)
-        assert(BaseMaterial3D._method_get_heightmap_deep_parallax_max_layers_3905245786 != nil)
-        let _method_set_heightmap_deep_parallax_flip_tangent_2586408642_name = StringName(from: "set_heightmap_deep_parallax_flip_tangent")
-        self._method_set_heightmap_deep_parallax_flip_tangent_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_heightmap_deep_parallax_flip_tangent_2586408642_name._native_ptr(), 2586408642)
-        assert(BaseMaterial3D._method_set_heightmap_deep_parallax_flip_tangent_2586408642 != nil)
-        let _method_get_heightmap_deep_parallax_flip_tangent_36873697_name = StringName(from: "get_heightmap_deep_parallax_flip_tangent")
-        self._method_get_heightmap_deep_parallax_flip_tangent_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_heightmap_deep_parallax_flip_tangent_36873697_name._native_ptr(), 36873697)
-        assert(BaseMaterial3D._method_get_heightmap_deep_parallax_flip_tangent_36873697 != nil)
-        let _method_set_heightmap_deep_parallax_flip_binormal_2586408642_name = StringName(from: "set_heightmap_deep_parallax_flip_binormal")
-        self._method_set_heightmap_deep_parallax_flip_binormal_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_heightmap_deep_parallax_flip_binormal_2586408642_name._native_ptr(), 2586408642)
-        assert(BaseMaterial3D._method_set_heightmap_deep_parallax_flip_binormal_2586408642 != nil)
-        let _method_get_heightmap_deep_parallax_flip_binormal_36873697_name = StringName(from: "get_heightmap_deep_parallax_flip_binormal")
-        self._method_get_heightmap_deep_parallax_flip_binormal_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_heightmap_deep_parallax_flip_binormal_36873697_name._native_ptr(), 36873697)
-        assert(BaseMaterial3D._method_get_heightmap_deep_parallax_flip_binormal_36873697 != nil)
-        let _method_set_grow_373806689_name = StringName(from: "set_grow")
-        self._method_set_grow_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_grow_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_grow_373806689 != nil)
-        let _method_get_grow_1740695150_name = StringName(from: "get_grow")
-        self._method_get_grow_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_grow_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_grow_1740695150 != nil)
-        let _method_set_emission_operator_3825128922_name = StringName(from: "set_emission_operator")
-        self._method_set_emission_operator_3825128922 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_emission_operator_3825128922_name._native_ptr(), 3825128922)
-        assert(BaseMaterial3D._method_set_emission_operator_3825128922 != nil)
-        let _method_get_emission_operator_974205018_name = StringName(from: "get_emission_operator")
-        self._method_get_emission_operator_974205018 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_emission_operator_974205018_name._native_ptr(), 974205018)
-        assert(BaseMaterial3D._method_get_emission_operator_974205018 != nil)
-        let _method_set_ao_light_affect_373806689_name = StringName(from: "set_ao_light_affect")
-        self._method_set_ao_light_affect_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_ao_light_affect_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_ao_light_affect_373806689 != nil)
-        let _method_get_ao_light_affect_1740695150_name = StringName(from: "get_ao_light_affect")
-        self._method_get_ao_light_affect_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_ao_light_affect_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_ao_light_affect_1740695150 != nil)
-        let _method_set_alpha_scissor_threshold_373806689_name = StringName(from: "set_alpha_scissor_threshold")
-        self._method_set_alpha_scissor_threshold_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_alpha_scissor_threshold_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_alpha_scissor_threshold_373806689 != nil)
-        let _method_get_alpha_scissor_threshold_1740695150_name = StringName(from: "get_alpha_scissor_threshold")
-        self._method_get_alpha_scissor_threshold_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_alpha_scissor_threshold_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_alpha_scissor_threshold_1740695150 != nil)
-        let _method_set_alpha_hash_scale_373806689_name = StringName(from: "set_alpha_hash_scale")
-        self._method_set_alpha_hash_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_alpha_hash_scale_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_alpha_hash_scale_373806689 != nil)
-        let _method_get_alpha_hash_scale_1740695150_name = StringName(from: "get_alpha_hash_scale")
-        self._method_get_alpha_hash_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_alpha_hash_scale_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_alpha_hash_scale_1740695150 != nil)
-        let _method_set_grow_enabled_2586408642_name = StringName(from: "set_grow_enabled")
-        self._method_set_grow_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_grow_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(BaseMaterial3D._method_set_grow_enabled_2586408642 != nil)
-        let _method_is_grow_enabled_36873697_name = StringName(from: "is_grow_enabled")
-        self._method_is_grow_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_is_grow_enabled_36873697_name._native_ptr(), 36873697)
-        assert(BaseMaterial3D._method_is_grow_enabled_36873697 != nil)
-        let _method_set_metallic_texture_channel_744167988_name = StringName(from: "set_metallic_texture_channel")
-        self._method_set_metallic_texture_channel_744167988 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_metallic_texture_channel_744167988_name._native_ptr(), 744167988)
-        assert(BaseMaterial3D._method_set_metallic_texture_channel_744167988 != nil)
-        let _method_get_metallic_texture_channel_568133867_name = StringName(from: "get_metallic_texture_channel")
-        self._method_get_metallic_texture_channel_568133867 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_metallic_texture_channel_568133867_name._native_ptr(), 568133867)
-        assert(BaseMaterial3D._method_get_metallic_texture_channel_568133867 != nil)
-        let _method_set_roughness_texture_channel_744167988_name = StringName(from: "set_roughness_texture_channel")
-        self._method_set_roughness_texture_channel_744167988 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_roughness_texture_channel_744167988_name._native_ptr(), 744167988)
-        assert(BaseMaterial3D._method_set_roughness_texture_channel_744167988 != nil)
-        let _method_get_roughness_texture_channel_568133867_name = StringName(from: "get_roughness_texture_channel")
-        self._method_get_roughness_texture_channel_568133867 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_roughness_texture_channel_568133867_name._native_ptr(), 568133867)
-        assert(BaseMaterial3D._method_get_roughness_texture_channel_568133867 != nil)
-        let _method_set_ao_texture_channel_744167988_name = StringName(from: "set_ao_texture_channel")
-        self._method_set_ao_texture_channel_744167988 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_ao_texture_channel_744167988_name._native_ptr(), 744167988)
-        assert(BaseMaterial3D._method_set_ao_texture_channel_744167988 != nil)
-        let _method_get_ao_texture_channel_568133867_name = StringName(from: "get_ao_texture_channel")
-        self._method_get_ao_texture_channel_568133867 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_ao_texture_channel_568133867_name._native_ptr(), 568133867)
-        assert(BaseMaterial3D._method_get_ao_texture_channel_568133867 != nil)
-        let _method_set_refraction_texture_channel_744167988_name = StringName(from: "set_refraction_texture_channel")
-        self._method_set_refraction_texture_channel_744167988 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_refraction_texture_channel_744167988_name._native_ptr(), 744167988)
-        assert(BaseMaterial3D._method_set_refraction_texture_channel_744167988 != nil)
-        let _method_get_refraction_texture_channel_568133867_name = StringName(from: "get_refraction_texture_channel")
-        self._method_get_refraction_texture_channel_568133867 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_refraction_texture_channel_568133867_name._native_ptr(), 568133867)
-        assert(BaseMaterial3D._method_get_refraction_texture_channel_568133867 != nil)
-        let _method_set_proximity_fade_enabled_2586408642_name = StringName(from: "set_proximity_fade_enabled")
-        self._method_set_proximity_fade_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_proximity_fade_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(BaseMaterial3D._method_set_proximity_fade_enabled_2586408642 != nil)
-        let _method_is_proximity_fade_enabled_36873697_name = StringName(from: "is_proximity_fade_enabled")
-        self._method_is_proximity_fade_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_is_proximity_fade_enabled_36873697_name._native_ptr(), 36873697)
-        assert(BaseMaterial3D._method_is_proximity_fade_enabled_36873697 != nil)
-        let _method_set_proximity_fade_distance_373806689_name = StringName(from: "set_proximity_fade_distance")
-        self._method_set_proximity_fade_distance_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_proximity_fade_distance_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_proximity_fade_distance_373806689 != nil)
-        let _method_get_proximity_fade_distance_1740695150_name = StringName(from: "get_proximity_fade_distance")
-        self._method_get_proximity_fade_distance_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_proximity_fade_distance_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_proximity_fade_distance_1740695150 != nil)
-        let _method_set_msdf_pixel_range_373806689_name = StringName(from: "set_msdf_pixel_range")
-        self._method_set_msdf_pixel_range_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_msdf_pixel_range_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_msdf_pixel_range_373806689 != nil)
-        let _method_get_msdf_pixel_range_1740695150_name = StringName(from: "get_msdf_pixel_range")
-        self._method_get_msdf_pixel_range_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_msdf_pixel_range_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_msdf_pixel_range_1740695150 != nil)
-        let _method_set_msdf_outline_size_373806689_name = StringName(from: "set_msdf_outline_size")
-        self._method_set_msdf_outline_size_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_msdf_outline_size_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_msdf_outline_size_373806689 != nil)
-        let _method_get_msdf_outline_size_1740695150_name = StringName(from: "get_msdf_outline_size")
-        self._method_get_msdf_outline_size_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_msdf_outline_size_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_msdf_outline_size_1740695150 != nil)
-        let _method_set_distance_fade_1379478617_name = StringName(from: "set_distance_fade")
-        self._method_set_distance_fade_1379478617 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_distance_fade_1379478617_name._native_ptr(), 1379478617)
-        assert(BaseMaterial3D._method_set_distance_fade_1379478617 != nil)
-        let _method_get_distance_fade_2694575734_name = StringName(from: "get_distance_fade")
-        self._method_get_distance_fade_2694575734 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_distance_fade_2694575734_name._native_ptr(), 2694575734)
-        assert(BaseMaterial3D._method_get_distance_fade_2694575734 != nil)
-        let _method_set_distance_fade_max_distance_373806689_name = StringName(from: "set_distance_fade_max_distance")
-        self._method_set_distance_fade_max_distance_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_distance_fade_max_distance_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_distance_fade_max_distance_373806689 != nil)
-        let _method_get_distance_fade_max_distance_1740695150_name = StringName(from: "get_distance_fade_max_distance")
-        self._method_get_distance_fade_max_distance_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_distance_fade_max_distance_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_distance_fade_max_distance_1740695150 != nil)
-        let _method_set_distance_fade_min_distance_373806689_name = StringName(from: "set_distance_fade_min_distance")
-        self._method_set_distance_fade_min_distance_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_set_distance_fade_min_distance_373806689_name._native_ptr(), 373806689)
-        assert(BaseMaterial3D._method_set_distance_fade_min_distance_373806689 != nil)
-        let _method_get_distance_fade_min_distance_1740695150_name = StringName(from: "get_distance_fade_min_distance")
-        self._method_get_distance_fade_min_distance_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_BaseMaterial3D._native_ptr(), _method_get_distance_fade_min_distance_1740695150_name._native_ptr(), 1740695150)
-        assert(BaseMaterial3D._method_get_distance_fade_min_distance_1740695150 != nil)
+        self._method_set_albedo_2920490490 = StringName(from: "set_albedo")
+        assert(self._method_set_albedo_2920490490 != nil)
+        self._method_get_albedo_3444240500 = StringName(from: "get_albedo")
+        assert(self._method_get_albedo_3444240500 != nil)
+        self._method_set_transparency_3435651667 = StringName(from: "set_transparency")
+        assert(self._method_set_transparency_3435651667 != nil)
+        self._method_get_transparency_990903061 = StringName(from: "get_transparency")
+        assert(self._method_get_transparency_990903061 != nil)
+        self._method_set_alpha_antialiasing_3212649852 = StringName(from: "set_alpha_antialiasing")
+        assert(self._method_set_alpha_antialiasing_3212649852 != nil)
+        self._method_get_alpha_antialiasing_2889939400 = StringName(from: "get_alpha_antialiasing")
+        assert(self._method_get_alpha_antialiasing_2889939400 != nil)
+        self._method_set_alpha_antialiasing_edge_373806689 = StringName(from: "set_alpha_antialiasing_edge")
+        assert(self._method_set_alpha_antialiasing_edge_373806689 != nil)
+        self._method_get_alpha_antialiasing_edge_1740695150 = StringName(from: "get_alpha_antialiasing_edge")
+        assert(self._method_get_alpha_antialiasing_edge_1740695150 != nil)
+        self._method_set_shading_mode_3368750322 = StringName(from: "set_shading_mode")
+        assert(self._method_set_shading_mode_3368750322 != nil)
+        self._method_get_shading_mode_2132070559 = StringName(from: "get_shading_mode")
+        assert(self._method_get_shading_mode_2132070559 != nil)
+        self._method_set_specular_373806689 = StringName(from: "set_specular")
+        assert(self._method_set_specular_373806689 != nil)
+        self._method_get_specular_1740695150 = StringName(from: "get_specular")
+        assert(self._method_get_specular_1740695150 != nil)
+        self._method_set_metallic_373806689 = StringName(from: "set_metallic")
+        assert(self._method_set_metallic_373806689 != nil)
+        self._method_get_metallic_1740695150 = StringName(from: "get_metallic")
+        assert(self._method_get_metallic_1740695150 != nil)
+        self._method_set_roughness_373806689 = StringName(from: "set_roughness")
+        assert(self._method_set_roughness_373806689 != nil)
+        self._method_get_roughness_1740695150 = StringName(from: "get_roughness")
+        assert(self._method_get_roughness_1740695150 != nil)
+        self._method_set_emission_2920490490 = StringName(from: "set_emission")
+        assert(self._method_set_emission_2920490490 != nil)
+        self._method_get_emission_3444240500 = StringName(from: "get_emission")
+        assert(self._method_get_emission_3444240500 != nil)
+        self._method_set_emission_energy_multiplier_373806689 = StringName(from: "set_emission_energy_multiplier")
+        assert(self._method_set_emission_energy_multiplier_373806689 != nil)
+        self._method_get_emission_energy_multiplier_1740695150 = StringName(from: "get_emission_energy_multiplier")
+        assert(self._method_get_emission_energy_multiplier_1740695150 != nil)
+        self._method_set_emission_intensity_373806689 = StringName(from: "set_emission_intensity")
+        assert(self._method_set_emission_intensity_373806689 != nil)
+        self._method_get_emission_intensity_1740695150 = StringName(from: "get_emission_intensity")
+        assert(self._method_get_emission_intensity_1740695150 != nil)
+        self._method_set_normal_scale_373806689 = StringName(from: "set_normal_scale")
+        assert(self._method_set_normal_scale_373806689 != nil)
+        self._method_get_normal_scale_1740695150 = StringName(from: "get_normal_scale")
+        assert(self._method_get_normal_scale_1740695150 != nil)
+        self._method_set_rim_373806689 = StringName(from: "set_rim")
+        assert(self._method_set_rim_373806689 != nil)
+        self._method_get_rim_1740695150 = StringName(from: "get_rim")
+        assert(self._method_get_rim_1740695150 != nil)
+        self._method_set_rim_tint_373806689 = StringName(from: "set_rim_tint")
+        assert(self._method_set_rim_tint_373806689 != nil)
+        self._method_get_rim_tint_1740695150 = StringName(from: "get_rim_tint")
+        assert(self._method_get_rim_tint_1740695150 != nil)
+        self._method_set_clearcoat_373806689 = StringName(from: "set_clearcoat")
+        assert(self._method_set_clearcoat_373806689 != nil)
+        self._method_get_clearcoat_1740695150 = StringName(from: "get_clearcoat")
+        assert(self._method_get_clearcoat_1740695150 != nil)
+        self._method_set_clearcoat_roughness_373806689 = StringName(from: "set_clearcoat_roughness")
+        assert(self._method_set_clearcoat_roughness_373806689 != nil)
+        self._method_get_clearcoat_roughness_1740695150 = StringName(from: "get_clearcoat_roughness")
+        assert(self._method_get_clearcoat_roughness_1740695150 != nil)
+        self._method_set_anisotropy_373806689 = StringName(from: "set_anisotropy")
+        assert(self._method_set_anisotropy_373806689 != nil)
+        self._method_get_anisotropy_1740695150 = StringName(from: "get_anisotropy")
+        assert(self._method_get_anisotropy_1740695150 != nil)
+        self._method_set_heightmap_scale_373806689 = StringName(from: "set_heightmap_scale")
+        assert(self._method_set_heightmap_scale_373806689 != nil)
+        self._method_get_heightmap_scale_1740695150 = StringName(from: "get_heightmap_scale")
+        assert(self._method_get_heightmap_scale_1740695150 != nil)
+        self._method_set_subsurface_scattering_strength_373806689 = StringName(from: "set_subsurface_scattering_strength")
+        assert(self._method_set_subsurface_scattering_strength_373806689 != nil)
+        self._method_get_subsurface_scattering_strength_1740695150 = StringName(from: "get_subsurface_scattering_strength")
+        assert(self._method_get_subsurface_scattering_strength_1740695150 != nil)
+        self._method_set_transmittance_color_2920490490 = StringName(from: "set_transmittance_color")
+        assert(self._method_set_transmittance_color_2920490490 != nil)
+        self._method_get_transmittance_color_3444240500 = StringName(from: "get_transmittance_color")
+        assert(self._method_get_transmittance_color_3444240500 != nil)
+        self._method_set_transmittance_depth_373806689 = StringName(from: "set_transmittance_depth")
+        assert(self._method_set_transmittance_depth_373806689 != nil)
+        self._method_get_transmittance_depth_1740695150 = StringName(from: "get_transmittance_depth")
+        assert(self._method_get_transmittance_depth_1740695150 != nil)
+        self._method_set_transmittance_boost_373806689 = StringName(from: "set_transmittance_boost")
+        assert(self._method_set_transmittance_boost_373806689 != nil)
+        self._method_get_transmittance_boost_1740695150 = StringName(from: "get_transmittance_boost")
+        assert(self._method_get_transmittance_boost_1740695150 != nil)
+        self._method_set_backlight_2920490490 = StringName(from: "set_backlight")
+        assert(self._method_set_backlight_2920490490 != nil)
+        self._method_get_backlight_3444240500 = StringName(from: "get_backlight")
+        assert(self._method_get_backlight_3444240500 != nil)
+        self._method_set_refraction_373806689 = StringName(from: "set_refraction")
+        assert(self._method_set_refraction_373806689 != nil)
+        self._method_get_refraction_1740695150 = StringName(from: "get_refraction")
+        assert(self._method_get_refraction_1740695150 != nil)
+        self._method_set_point_size_373806689 = StringName(from: "set_point_size")
+        assert(self._method_set_point_size_373806689 != nil)
+        self._method_get_point_size_1740695150 = StringName(from: "get_point_size")
+        assert(self._method_get_point_size_1740695150 != nil)
+        self._method_set_detail_uv_456801921 = StringName(from: "set_detail_uv")
+        assert(self._method_set_detail_uv_456801921 != nil)
+        self._method_get_detail_uv_2306920512 = StringName(from: "get_detail_uv")
+        assert(self._method_get_detail_uv_2306920512 != nil)
+        self._method_set_blend_mode_2830186259 = StringName(from: "set_blend_mode")
+        assert(self._method_set_blend_mode_2830186259 != nil)
+        self._method_get_blend_mode_4022690962 = StringName(from: "get_blend_mode")
+        assert(self._method_get_blend_mode_4022690962 != nil)
+        self._method_set_depth_draw_mode_1456584748 = StringName(from: "set_depth_draw_mode")
+        assert(self._method_set_depth_draw_mode_1456584748 != nil)
+        self._method_get_depth_draw_mode_2578197639 = StringName(from: "get_depth_draw_mode")
+        assert(self._method_get_depth_draw_mode_2578197639 != nil)
+        self._method_set_cull_mode_2338909218 = StringName(from: "set_cull_mode")
+        assert(self._method_set_cull_mode_2338909218 != nil)
+        self._method_get_cull_mode_1941499586 = StringName(from: "get_cull_mode")
+        assert(self._method_get_cull_mode_1941499586 != nil)
+        self._method_set_diffuse_mode_1045299638 = StringName(from: "set_diffuse_mode")
+        assert(self._method_set_diffuse_mode_1045299638 != nil)
+        self._method_get_diffuse_mode_3973617136 = StringName(from: "get_diffuse_mode")
+        assert(self._method_get_diffuse_mode_3973617136 != nil)
+        self._method_set_specular_mode_584737147 = StringName(from: "set_specular_mode")
+        assert(self._method_set_specular_mode_584737147 != nil)
+        self._method_get_specular_mode_2569953298 = StringName(from: "get_specular_mode")
+        assert(self._method_get_specular_mode_2569953298 != nil)
+        self._method_set_flag_3070159527 = StringName(from: "set_flag")
+        assert(self._method_set_flag_3070159527 != nil)
+        self._method_get_flag_1286410065 = StringName(from: "get_flag")
+        assert(self._method_get_flag_1286410065 != nil)
+        self._method_set_texture_filter_22904437 = StringName(from: "set_texture_filter")
+        assert(self._method_set_texture_filter_22904437 != nil)
+        self._method_get_texture_filter_3289213076 = StringName(from: "get_texture_filter")
+        assert(self._method_get_texture_filter_3289213076 != nil)
+        self._method_set_feature_2819288693 = StringName(from: "set_feature")
+        assert(self._method_set_feature_2819288693 != nil)
+        self._method_get_feature_1965241794 = StringName(from: "get_feature")
+        assert(self._method_get_feature_1965241794 != nil)
+        self._method_set_texture_464208135 = StringName(from: "set_texture")
+        assert(self._method_set_texture_464208135 != nil)
+        self._method_get_texture_329605813 = StringName(from: "get_texture")
+        assert(self._method_get_texture_329605813 != nil)
+        self._method_set_detail_blend_mode_2830186259 = StringName(from: "set_detail_blend_mode")
+        assert(self._method_set_detail_blend_mode_2830186259 != nil)
+        self._method_get_detail_blend_mode_4022690962 = StringName(from: "get_detail_blend_mode")
+        assert(self._method_get_detail_blend_mode_4022690962 != nil)
+        self._method_set_uv1_scale_3460891852 = StringName(from: "set_uv1_scale")
+        assert(self._method_set_uv1_scale_3460891852 != nil)
+        self._method_get_uv1_scale_3360562783 = StringName(from: "get_uv1_scale")
+        assert(self._method_get_uv1_scale_3360562783 != nil)
+        self._method_set_uv1_offset_3460891852 = StringName(from: "set_uv1_offset")
+        assert(self._method_set_uv1_offset_3460891852 != nil)
+        self._method_get_uv1_offset_3360562783 = StringName(from: "get_uv1_offset")
+        assert(self._method_get_uv1_offset_3360562783 != nil)
+        self._method_set_uv1_triplanar_blend_sharpness_373806689 = StringName(from: "set_uv1_triplanar_blend_sharpness")
+        assert(self._method_set_uv1_triplanar_blend_sharpness_373806689 != nil)
+        self._method_get_uv1_triplanar_blend_sharpness_1740695150 = StringName(from: "get_uv1_triplanar_blend_sharpness")
+        assert(self._method_get_uv1_triplanar_blend_sharpness_1740695150 != nil)
+        self._method_set_uv2_scale_3460891852 = StringName(from: "set_uv2_scale")
+        assert(self._method_set_uv2_scale_3460891852 != nil)
+        self._method_get_uv2_scale_3360562783 = StringName(from: "get_uv2_scale")
+        assert(self._method_get_uv2_scale_3360562783 != nil)
+        self._method_set_uv2_offset_3460891852 = StringName(from: "set_uv2_offset")
+        assert(self._method_set_uv2_offset_3460891852 != nil)
+        self._method_get_uv2_offset_3360562783 = StringName(from: "get_uv2_offset")
+        assert(self._method_get_uv2_offset_3360562783 != nil)
+        self._method_set_uv2_triplanar_blend_sharpness_373806689 = StringName(from: "set_uv2_triplanar_blend_sharpness")
+        assert(self._method_set_uv2_triplanar_blend_sharpness_373806689 != nil)
+        self._method_get_uv2_triplanar_blend_sharpness_1740695150 = StringName(from: "get_uv2_triplanar_blend_sharpness")
+        assert(self._method_get_uv2_triplanar_blend_sharpness_1740695150 != nil)
+        self._method_set_billboard_mode_4202036497 = StringName(from: "set_billboard_mode")
+        assert(self._method_set_billboard_mode_4202036497 != nil)
+        self._method_get_billboard_mode_1283840139 = StringName(from: "get_billboard_mode")
+        assert(self._method_get_billboard_mode_1283840139 != nil)
+        self._method_set_particles_anim_h_frames_1286410249 = StringName(from: "set_particles_anim_h_frames")
+        assert(self._method_set_particles_anim_h_frames_1286410249 != nil)
+        self._method_get_particles_anim_h_frames_3905245786 = StringName(from: "get_particles_anim_h_frames")
+        assert(self._method_get_particles_anim_h_frames_3905245786 != nil)
+        self._method_set_particles_anim_v_frames_1286410249 = StringName(from: "set_particles_anim_v_frames")
+        assert(self._method_set_particles_anim_v_frames_1286410249 != nil)
+        self._method_get_particles_anim_v_frames_3905245786 = StringName(from: "get_particles_anim_v_frames")
+        assert(self._method_get_particles_anim_v_frames_3905245786 != nil)
+        self._method_set_particles_anim_loop_2586408642 = StringName(from: "set_particles_anim_loop")
+        assert(self._method_set_particles_anim_loop_2586408642 != nil)
+        self._method_get_particles_anim_loop_36873697 = StringName(from: "get_particles_anim_loop")
+        assert(self._method_get_particles_anim_loop_36873697 != nil)
+        self._method_set_heightmap_deep_parallax_2586408642 = StringName(from: "set_heightmap_deep_parallax")
+        assert(self._method_set_heightmap_deep_parallax_2586408642 != nil)
+        self._method_is_heightmap_deep_parallax_enabled_36873697 = StringName(from: "is_heightmap_deep_parallax_enabled")
+        assert(self._method_is_heightmap_deep_parallax_enabled_36873697 != nil)
+        self._method_set_heightmap_deep_parallax_min_layers_1286410249 = StringName(from: "set_heightmap_deep_parallax_min_layers")
+        assert(self._method_set_heightmap_deep_parallax_min_layers_1286410249 != nil)
+        self._method_get_heightmap_deep_parallax_min_layers_3905245786 = StringName(from: "get_heightmap_deep_parallax_min_layers")
+        assert(self._method_get_heightmap_deep_parallax_min_layers_3905245786 != nil)
+        self._method_set_heightmap_deep_parallax_max_layers_1286410249 = StringName(from: "set_heightmap_deep_parallax_max_layers")
+        assert(self._method_set_heightmap_deep_parallax_max_layers_1286410249 != nil)
+        self._method_get_heightmap_deep_parallax_max_layers_3905245786 = StringName(from: "get_heightmap_deep_parallax_max_layers")
+        assert(self._method_get_heightmap_deep_parallax_max_layers_3905245786 != nil)
+        self._method_set_heightmap_deep_parallax_flip_tangent_2586408642 = StringName(from: "set_heightmap_deep_parallax_flip_tangent")
+        assert(self._method_set_heightmap_deep_parallax_flip_tangent_2586408642 != nil)
+        self._method_get_heightmap_deep_parallax_flip_tangent_36873697 = StringName(from: "get_heightmap_deep_parallax_flip_tangent")
+        assert(self._method_get_heightmap_deep_parallax_flip_tangent_36873697 != nil)
+        self._method_set_heightmap_deep_parallax_flip_binormal_2586408642 = StringName(from: "set_heightmap_deep_parallax_flip_binormal")
+        assert(self._method_set_heightmap_deep_parallax_flip_binormal_2586408642 != nil)
+        self._method_get_heightmap_deep_parallax_flip_binormal_36873697 = StringName(from: "get_heightmap_deep_parallax_flip_binormal")
+        assert(self._method_get_heightmap_deep_parallax_flip_binormal_36873697 != nil)
+        self._method_set_grow_373806689 = StringName(from: "set_grow")
+        assert(self._method_set_grow_373806689 != nil)
+        self._method_get_grow_1740695150 = StringName(from: "get_grow")
+        assert(self._method_get_grow_1740695150 != nil)
+        self._method_set_emission_operator_3825128922 = StringName(from: "set_emission_operator")
+        assert(self._method_set_emission_operator_3825128922 != nil)
+        self._method_get_emission_operator_974205018 = StringName(from: "get_emission_operator")
+        assert(self._method_get_emission_operator_974205018 != nil)
+        self._method_set_ao_light_affect_373806689 = StringName(from: "set_ao_light_affect")
+        assert(self._method_set_ao_light_affect_373806689 != nil)
+        self._method_get_ao_light_affect_1740695150 = StringName(from: "get_ao_light_affect")
+        assert(self._method_get_ao_light_affect_1740695150 != nil)
+        self._method_set_alpha_scissor_threshold_373806689 = StringName(from: "set_alpha_scissor_threshold")
+        assert(self._method_set_alpha_scissor_threshold_373806689 != nil)
+        self._method_get_alpha_scissor_threshold_1740695150 = StringName(from: "get_alpha_scissor_threshold")
+        assert(self._method_get_alpha_scissor_threshold_1740695150 != nil)
+        self._method_set_alpha_hash_scale_373806689 = StringName(from: "set_alpha_hash_scale")
+        assert(self._method_set_alpha_hash_scale_373806689 != nil)
+        self._method_get_alpha_hash_scale_1740695150 = StringName(from: "get_alpha_hash_scale")
+        assert(self._method_get_alpha_hash_scale_1740695150 != nil)
+        self._method_set_grow_enabled_2586408642 = StringName(from: "set_grow_enabled")
+        assert(self._method_set_grow_enabled_2586408642 != nil)
+        self._method_is_grow_enabled_36873697 = StringName(from: "is_grow_enabled")
+        assert(self._method_is_grow_enabled_36873697 != nil)
+        self._method_set_metallic_texture_channel_744167988 = StringName(from: "set_metallic_texture_channel")
+        assert(self._method_set_metallic_texture_channel_744167988 != nil)
+        self._method_get_metallic_texture_channel_568133867 = StringName(from: "get_metallic_texture_channel")
+        assert(self._method_get_metallic_texture_channel_568133867 != nil)
+        self._method_set_roughness_texture_channel_744167988 = StringName(from: "set_roughness_texture_channel")
+        assert(self._method_set_roughness_texture_channel_744167988 != nil)
+        self._method_get_roughness_texture_channel_568133867 = StringName(from: "get_roughness_texture_channel")
+        assert(self._method_get_roughness_texture_channel_568133867 != nil)
+        self._method_set_ao_texture_channel_744167988 = StringName(from: "set_ao_texture_channel")
+        assert(self._method_set_ao_texture_channel_744167988 != nil)
+        self._method_get_ao_texture_channel_568133867 = StringName(from: "get_ao_texture_channel")
+        assert(self._method_get_ao_texture_channel_568133867 != nil)
+        self._method_set_refraction_texture_channel_744167988 = StringName(from: "set_refraction_texture_channel")
+        assert(self._method_set_refraction_texture_channel_744167988 != nil)
+        self._method_get_refraction_texture_channel_568133867 = StringName(from: "get_refraction_texture_channel")
+        assert(self._method_get_refraction_texture_channel_568133867 != nil)
+        self._method_set_proximity_fade_enabled_2586408642 = StringName(from: "set_proximity_fade_enabled")
+        assert(self._method_set_proximity_fade_enabled_2586408642 != nil)
+        self._method_is_proximity_fade_enabled_36873697 = StringName(from: "is_proximity_fade_enabled")
+        assert(self._method_is_proximity_fade_enabled_36873697 != nil)
+        self._method_set_proximity_fade_distance_373806689 = StringName(from: "set_proximity_fade_distance")
+        assert(self._method_set_proximity_fade_distance_373806689 != nil)
+        self._method_get_proximity_fade_distance_1740695150 = StringName(from: "get_proximity_fade_distance")
+        assert(self._method_get_proximity_fade_distance_1740695150 != nil)
+        self._method_set_msdf_pixel_range_373806689 = StringName(from: "set_msdf_pixel_range")
+        assert(self._method_set_msdf_pixel_range_373806689 != nil)
+        self._method_get_msdf_pixel_range_1740695150 = StringName(from: "get_msdf_pixel_range")
+        assert(self._method_get_msdf_pixel_range_1740695150 != nil)
+        self._method_set_msdf_outline_size_373806689 = StringName(from: "set_msdf_outline_size")
+        assert(self._method_set_msdf_outline_size_373806689 != nil)
+        self._method_get_msdf_outline_size_1740695150 = StringName(from: "get_msdf_outline_size")
+        assert(self._method_get_msdf_outline_size_1740695150 != nil)
+        self._method_set_distance_fade_1379478617 = StringName(from: "set_distance_fade")
+        assert(self._method_set_distance_fade_1379478617 != nil)
+        self._method_get_distance_fade_2694575734 = StringName(from: "get_distance_fade")
+        assert(self._method_get_distance_fade_2694575734 != nil)
+        self._method_set_distance_fade_max_distance_373806689 = StringName(from: "set_distance_fade_max_distance")
+        assert(self._method_set_distance_fade_max_distance_373806689 != nil)
+        self._method_get_distance_fade_max_distance_1740695150 = StringName(from: "get_distance_fade_max_distance")
+        assert(self._method_get_distance_fade_max_distance_1740695150 != nil)
+        self._method_set_distance_fade_min_distance_373806689 = StringName(from: "set_distance_fade_min_distance")
+        assert(self._method_set_distance_fade_min_distance_373806689 != nil)
+        self._method_get_distance_fade_min_distance_1740695150 = StringName(from: "get_distance_fade_min_distance")
+        assert(self._method_get_distance_fade_min_distance_1740695150 != nil)
     }
 
     public func set_albedo(albedo: Color)  {
@@ -715,8 +580,13 @@ open class BaseMaterial3D : Material {
                 .init(albedo_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_albedo_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_albedo_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -730,8 +600,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_albedo_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_albedo_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -746,8 +621,13 @@ open class BaseMaterial3D : Material {
                 .init(transparency_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_transparency_3435651667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_transparency_3435651667._native_ptr(),
+                    3435651667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -762,8 +642,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_transparency_990903061,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_transparency_990903061._native_ptr(),
+                    990903061)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -778,8 +663,13 @@ open class BaseMaterial3D : Material {
                 .init(alpha_aa_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alpha_antialiasing_3212649852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alpha_antialiasing_3212649852._native_ptr(),
+                    3212649852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -794,8 +684,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alpha_antialiasing_2889939400,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alpha_antialiasing_2889939400._native_ptr(),
+                    2889939400)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -810,8 +705,13 @@ open class BaseMaterial3D : Material {
                 .init(edge_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alpha_antialiasing_edge_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alpha_antialiasing_edge_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -827,8 +727,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alpha_antialiasing_edge_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alpha_antialiasing_edge_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -843,8 +748,13 @@ open class BaseMaterial3D : Material {
                 .init(shading_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shading_mode_3368750322,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shading_mode_3368750322._native_ptr(),
+                    3368750322)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -859,8 +769,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_shading_mode_2132070559,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_shading_mode_2132070559._native_ptr(),
+                    2132070559)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -875,8 +790,13 @@ open class BaseMaterial3D : Material {
                 .init(specular_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_specular_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_specular_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -892,8 +812,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_specular_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_specular_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -908,8 +833,13 @@ open class BaseMaterial3D : Material {
                 .init(metallic_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_metallic_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_metallic_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -925,8 +855,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_metallic_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_metallic_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -941,8 +876,13 @@ open class BaseMaterial3D : Material {
                 .init(roughness_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_roughness_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_roughness_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -958,8 +898,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_roughness_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_roughness_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -974,8 +919,13 @@ open class BaseMaterial3D : Material {
                 .init(emission_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_emission_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_emission_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -989,8 +939,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_emission_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_emission_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1005,8 +960,13 @@ open class BaseMaterial3D : Material {
                 .init(emission_energy_multiplier_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_emission_energy_multiplier_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_emission_energy_multiplier_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1022,8 +982,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_emission_energy_multiplier_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_emission_energy_multiplier_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1038,8 +1003,13 @@ open class BaseMaterial3D : Material {
                 .init(emission_energy_multiplier_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_emission_intensity_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_emission_intensity_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1055,8 +1025,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_emission_intensity_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_emission_intensity_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1071,8 +1046,13 @@ open class BaseMaterial3D : Material {
                 .init(normal_scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_normal_scale_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_normal_scale_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1088,8 +1068,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_normal_scale_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_normal_scale_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1104,8 +1089,13 @@ open class BaseMaterial3D : Material {
                 .init(rim_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_rim_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_rim_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1121,8 +1111,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rim_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rim_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1137,8 +1132,13 @@ open class BaseMaterial3D : Material {
                 .init(rim_tint_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_rim_tint_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_rim_tint_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1154,8 +1154,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rim_tint_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rim_tint_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1170,8 +1175,13 @@ open class BaseMaterial3D : Material {
                 .init(clearcoat_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_clearcoat_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_clearcoat_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1187,8 +1197,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_clearcoat_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_clearcoat_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1203,8 +1218,13 @@ open class BaseMaterial3D : Material {
                 .init(clearcoat_roughness_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_clearcoat_roughness_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_clearcoat_roughness_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1220,8 +1240,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_clearcoat_roughness_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_clearcoat_roughness_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1236,8 +1261,13 @@ open class BaseMaterial3D : Material {
                 .init(anisotropy_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_anisotropy_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_anisotropy_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1253,8 +1283,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_anisotropy_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_anisotropy_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1269,8 +1304,13 @@ open class BaseMaterial3D : Material {
                 .init(heightmap_scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_heightmap_scale_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_heightmap_scale_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1286,8 +1326,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_heightmap_scale_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_heightmap_scale_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1302,8 +1347,13 @@ open class BaseMaterial3D : Material {
                 .init(strength_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_subsurface_scattering_strength_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_subsurface_scattering_strength_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1319,8 +1369,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_subsurface_scattering_strength_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_subsurface_scattering_strength_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1335,8 +1390,13 @@ open class BaseMaterial3D : Material {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_transmittance_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_transmittance_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1350,8 +1410,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_transmittance_color_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_transmittance_color_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1366,8 +1431,13 @@ open class BaseMaterial3D : Material {
                 .init(depth_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_transmittance_depth_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_transmittance_depth_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1383,8 +1453,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_transmittance_depth_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_transmittance_depth_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1399,8 +1474,13 @@ open class BaseMaterial3D : Material {
                 .init(boost_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_transmittance_boost_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_transmittance_boost_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1416,8 +1496,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_transmittance_boost_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_transmittance_boost_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1432,8 +1517,13 @@ open class BaseMaterial3D : Material {
                 .init(backlight_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_backlight_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_backlight_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1447,8 +1537,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_backlight_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_backlight_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1463,8 +1558,13 @@ open class BaseMaterial3D : Material {
                 .init(refraction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_refraction_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_refraction_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1480,8 +1580,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_refraction_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_refraction_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1496,8 +1601,13 @@ open class BaseMaterial3D : Material {
                 .init(point_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_point_size_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_point_size_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1513,8 +1623,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_point_size_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_point_size_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1529,8 +1644,13 @@ open class BaseMaterial3D : Material {
                 .init(detail_uv_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_detail_uv_456801921,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_detail_uv_456801921._native_ptr(),
+                    456801921)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1545,8 +1665,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_detail_uv_2306920512,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_detail_uv_2306920512._native_ptr(),
+                    2306920512)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1561,8 +1686,13 @@ open class BaseMaterial3D : Material {
                 .init(blend_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_blend_mode_2830186259,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_blend_mode_2830186259._native_ptr(),
+                    2830186259)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1577,8 +1707,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_blend_mode_4022690962,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_blend_mode_4022690962._native_ptr(),
+                    4022690962)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1593,8 +1728,13 @@ open class BaseMaterial3D : Material {
                 .init(depth_draw_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_depth_draw_mode_1456584748,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_depth_draw_mode_1456584748._native_ptr(),
+                    1456584748)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1609,8 +1749,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_depth_draw_mode_2578197639,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_depth_draw_mode_2578197639._native_ptr(),
+                    2578197639)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1625,8 +1770,13 @@ open class BaseMaterial3D : Material {
                 .init(cull_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cull_mode_2338909218,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cull_mode_2338909218._native_ptr(),
+                    2338909218)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1641,8 +1791,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cull_mode_1941499586,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cull_mode_1941499586._native_ptr(),
+                    1941499586)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1657,8 +1812,13 @@ open class BaseMaterial3D : Material {
                 .init(diffuse_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_diffuse_mode_1045299638,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_diffuse_mode_1045299638._native_ptr(),
+                    1045299638)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1673,8 +1833,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_diffuse_mode_3973617136,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_diffuse_mode_3973617136._native_ptr(),
+                    3973617136)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1689,8 +1854,13 @@ open class BaseMaterial3D : Material {
                 .init(specular_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_specular_mode_584737147,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_specular_mode_584737147._native_ptr(),
+                    584737147)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1705,8 +1875,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_specular_mode_2569953298,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_specular_mode_2569953298._native_ptr(),
+                    2569953298)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1722,8 +1897,13 @@ open class BaseMaterial3D : Material {
                 .init(flag_native), .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flag_3070159527,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flag_3070159527._native_ptr(),
+                    3070159527)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1741,8 +1921,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_flag_1286410065,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_flag_1286410065._native_ptr(),
+                    1286410065)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1758,8 +1943,13 @@ open class BaseMaterial3D : Material {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_filter_22904437,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_filter_22904437._native_ptr(),
+                    22904437)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1774,8 +1964,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_filter_3289213076,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_filter_3289213076._native_ptr(),
+                    3289213076)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1791,8 +1986,13 @@ open class BaseMaterial3D : Material {
                 .init(feature_native), .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_feature_2819288693,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_feature_2819288693._native_ptr(),
+                    2819288693)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1810,8 +2010,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_feature_1965241794,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_feature_1965241794._native_ptr(),
+                    1965241794)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1828,8 +2033,13 @@ open class BaseMaterial3D : Material {
                 .init(param_native), .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_464208135,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_464208135._native_ptr(),
+                    464208135)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1845,8 +2055,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_329605813,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_329605813._native_ptr(),
+                    329605813)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1862,8 +2077,13 @@ open class BaseMaterial3D : Material {
                 .init(detail_blend_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_detail_blend_mode_2830186259,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_detail_blend_mode_2830186259._native_ptr(),
+                    2830186259)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1878,8 +2098,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_detail_blend_mode_4022690962,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_detail_blend_mode_4022690962._native_ptr(),
+                    4022690962)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1894,8 +2119,13 @@ open class BaseMaterial3D : Material {
                 .init(scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_uv1_scale_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_uv1_scale_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1909,8 +2139,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_uv1_scale_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_uv1_scale_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1925,8 +2160,13 @@ open class BaseMaterial3D : Material {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_uv1_offset_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_uv1_offset_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1940,8 +2180,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_uv1_offset_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_uv1_offset_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1956,8 +2201,13 @@ open class BaseMaterial3D : Material {
                 .init(sharpness_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_uv1_triplanar_blend_sharpness_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_uv1_triplanar_blend_sharpness_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1973,8 +2223,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_uv1_triplanar_blend_sharpness_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_uv1_triplanar_blend_sharpness_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1989,8 +2244,13 @@ open class BaseMaterial3D : Material {
                 .init(scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_uv2_scale_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_uv2_scale_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2004,8 +2264,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_uv2_scale_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_uv2_scale_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2020,8 +2285,13 @@ open class BaseMaterial3D : Material {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_uv2_offset_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_uv2_offset_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2035,8 +2305,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_uv2_offset_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_uv2_offset_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2051,8 +2326,13 @@ open class BaseMaterial3D : Material {
                 .init(sharpness_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_uv2_triplanar_blend_sharpness_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_uv2_triplanar_blend_sharpness_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2068,8 +2348,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_uv2_triplanar_blend_sharpness_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_uv2_triplanar_blend_sharpness_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2084,8 +2369,13 @@ open class BaseMaterial3D : Material {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_billboard_mode_4202036497,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_billboard_mode_4202036497._native_ptr(),
+                    4202036497)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2100,8 +2390,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_billboard_mode_1283840139,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_billboard_mode_1283840139._native_ptr(),
+                    1283840139)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2116,8 +2411,13 @@ open class BaseMaterial3D : Material {
                 .init(frames_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_particles_anim_h_frames_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_particles_anim_h_frames_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2133,8 +2433,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_particles_anim_h_frames_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_particles_anim_h_frames_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2149,8 +2454,13 @@ open class BaseMaterial3D : Material {
                 .init(frames_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_particles_anim_v_frames_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_particles_anim_v_frames_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2166,8 +2476,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_particles_anim_v_frames_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_particles_anim_v_frames_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2182,8 +2497,13 @@ open class BaseMaterial3D : Material {
                 .init(loop_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_particles_anim_loop_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_particles_anim_loop_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2199,8 +2519,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_particles_anim_loop_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_particles_anim_loop_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2215,8 +2540,13 @@ open class BaseMaterial3D : Material {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_heightmap_deep_parallax_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_heightmap_deep_parallax_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2232,8 +2562,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_heightmap_deep_parallax_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_heightmap_deep_parallax_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2248,8 +2583,13 @@ open class BaseMaterial3D : Material {
                 .init(layer_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_heightmap_deep_parallax_min_layers_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_heightmap_deep_parallax_min_layers_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2265,8 +2605,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_heightmap_deep_parallax_min_layers_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_heightmap_deep_parallax_min_layers_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2281,8 +2626,13 @@ open class BaseMaterial3D : Material {
                 .init(layer_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_heightmap_deep_parallax_max_layers_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_heightmap_deep_parallax_max_layers_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2298,8 +2648,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_heightmap_deep_parallax_max_layers_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_heightmap_deep_parallax_max_layers_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2314,8 +2669,13 @@ open class BaseMaterial3D : Material {
                 .init(flip_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_heightmap_deep_parallax_flip_tangent_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_heightmap_deep_parallax_flip_tangent_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2331,8 +2691,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_heightmap_deep_parallax_flip_tangent_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_heightmap_deep_parallax_flip_tangent_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2347,8 +2712,13 @@ open class BaseMaterial3D : Material {
                 .init(flip_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_heightmap_deep_parallax_flip_binormal_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_heightmap_deep_parallax_flip_binormal_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2364,8 +2734,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_heightmap_deep_parallax_flip_binormal_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_heightmap_deep_parallax_flip_binormal_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2380,8 +2755,13 @@ open class BaseMaterial3D : Material {
                 .init(amount_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_grow_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_grow_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2397,8 +2777,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_grow_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_grow_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2413,8 +2798,13 @@ open class BaseMaterial3D : Material {
                 .init(operator_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_emission_operator_3825128922,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_emission_operator_3825128922._native_ptr(),
+                    3825128922)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2429,8 +2819,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_emission_operator_974205018,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_emission_operator_974205018._native_ptr(),
+                    974205018)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2445,8 +2840,13 @@ open class BaseMaterial3D : Material {
                 .init(amount_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_ao_light_affect_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_ao_light_affect_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2462,8 +2862,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_ao_light_affect_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_ao_light_affect_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2478,8 +2883,13 @@ open class BaseMaterial3D : Material {
                 .init(threshold_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alpha_scissor_threshold_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alpha_scissor_threshold_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2495,8 +2905,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alpha_scissor_threshold_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alpha_scissor_threshold_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2511,8 +2926,13 @@ open class BaseMaterial3D : Material {
                 .init(threshold_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alpha_hash_scale_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alpha_hash_scale_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2528,8 +2948,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alpha_hash_scale_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alpha_hash_scale_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2544,8 +2969,13 @@ open class BaseMaterial3D : Material {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_grow_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_grow_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2561,8 +2991,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_grow_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_grow_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2577,8 +3012,13 @@ open class BaseMaterial3D : Material {
                 .init(channel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_metallic_texture_channel_744167988,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_metallic_texture_channel_744167988._native_ptr(),
+                    744167988)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2593,8 +3033,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_metallic_texture_channel_568133867,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_metallic_texture_channel_568133867._native_ptr(),
+                    568133867)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2609,8 +3054,13 @@ open class BaseMaterial3D : Material {
                 .init(channel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_roughness_texture_channel_744167988,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_roughness_texture_channel_744167988._native_ptr(),
+                    744167988)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2625,8 +3075,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_roughness_texture_channel_568133867,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_roughness_texture_channel_568133867._native_ptr(),
+                    568133867)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2641,8 +3096,13 @@ open class BaseMaterial3D : Material {
                 .init(channel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_ao_texture_channel_744167988,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_ao_texture_channel_744167988._native_ptr(),
+                    744167988)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2657,8 +3117,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_ao_texture_channel_568133867,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_ao_texture_channel_568133867._native_ptr(),
+                    568133867)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2673,8 +3138,13 @@ open class BaseMaterial3D : Material {
                 .init(channel_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_refraction_texture_channel_744167988,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_refraction_texture_channel_744167988._native_ptr(),
+                    744167988)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2689,8 +3159,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_refraction_texture_channel_568133867,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_refraction_texture_channel_568133867._native_ptr(),
+                    568133867)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2705,8 +3180,13 @@ open class BaseMaterial3D : Material {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_proximity_fade_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_proximity_fade_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2722,8 +3202,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_proximity_fade_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_proximity_fade_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2738,8 +3223,13 @@ open class BaseMaterial3D : Material {
                 .init(distance_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_proximity_fade_distance_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_proximity_fade_distance_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2755,8 +3245,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_proximity_fade_distance_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_proximity_fade_distance_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2771,8 +3266,13 @@ open class BaseMaterial3D : Material {
                 .init(range_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_msdf_pixel_range_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_msdf_pixel_range_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2788,8 +3288,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_msdf_pixel_range_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_msdf_pixel_range_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2804,8 +3309,13 @@ open class BaseMaterial3D : Material {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_msdf_outline_size_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_msdf_outline_size_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2821,8 +3331,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_msdf_outline_size_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_msdf_outline_size_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2837,8 +3352,13 @@ open class BaseMaterial3D : Material {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_distance_fade_1379478617,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_distance_fade_1379478617._native_ptr(),
+                    1379478617)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2853,8 +3373,13 @@ open class BaseMaterial3D : Material {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_distance_fade_2694575734,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_distance_fade_2694575734._native_ptr(),
+                    2694575734)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2869,8 +3394,13 @@ open class BaseMaterial3D : Material {
                 .init(distance_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_distance_fade_max_distance_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_distance_fade_max_distance_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2886,8 +3416,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_distance_fade_max_distance_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_distance_fade_max_distance_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2902,8 +3437,13 @@ open class BaseMaterial3D : Material {
                 .init(distance_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_distance_fade_min_distance_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_distance_fade_min_distance_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2919,8 +3459,13 @@ open class BaseMaterial3D : Material {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_distance_fade_min_distance_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_distance_fade_min_distance_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

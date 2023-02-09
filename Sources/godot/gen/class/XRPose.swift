@@ -17,67 +17,55 @@ open class XRPose : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_XRPose }
 
-    static var _method_set_has_tracking_data_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_has_tracking_data_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_name_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_get_name_2002593661: GDExtensionMethodBindPtr! = nil
-    static var _method_set_transform_2952846383: GDExtensionMethodBindPtr! = nil
-    static var _method_get_transform_3229777777: GDExtensionMethodBindPtr! = nil
-    static var _method_get_adjusted_transform_3229777777: GDExtensionMethodBindPtr! = nil
-    static var _method_set_linear_velocity_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_linear_velocity_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_angular_velocity_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_angular_velocity_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tracking_confidence_4171656666: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tracking_confidence_2064923680: GDExtensionMethodBindPtr! = nil
+    static var _method_set_has_tracking_data_2586408642: StringName! = nil
+    static var _method_get_has_tracking_data_36873697: StringName! = nil
+    static var _method_set_name_3304788590: StringName! = nil
+    static var _method_get_name_2002593661: StringName! = nil
+    static var _method_set_transform_2952846383: StringName! = nil
+    static var _method_get_transform_3229777777: StringName! = nil
+    static var _method_get_adjusted_transform_3229777777: StringName! = nil
+    static var _method_set_linear_velocity_3460891852: StringName! = nil
+    static var _method_get_linear_velocity_3360562783: StringName! = nil
+    static var _method_set_angular_velocity_3460891852: StringName! = nil
+    static var _method_get_angular_velocity_3360562783: StringName! = nil
+    static var _method_set_tracking_confidence_4171656666: StringName! = nil
+    static var _method_get_tracking_confidence_2064923680: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_XRPose == nil)
         __godot_name_XRPose = StringName(from: "XRPose")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_has_tracking_data_2586408642_name = StringName(from: "set_has_tracking_data")
-        self._method_set_has_tracking_data_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPose._native_ptr(), _method_set_has_tracking_data_2586408642_name._native_ptr(), 2586408642)
-        assert(XRPose._method_set_has_tracking_data_2586408642 != nil)
-        let _method_get_has_tracking_data_36873697_name = StringName(from: "get_has_tracking_data")
-        self._method_get_has_tracking_data_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPose._native_ptr(), _method_get_has_tracking_data_36873697_name._native_ptr(), 36873697)
-        assert(XRPose._method_get_has_tracking_data_36873697 != nil)
-        let _method_set_name_3304788590_name = StringName(from: "set_name")
-        self._method_set_name_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPose._native_ptr(), _method_set_name_3304788590_name._native_ptr(), 3304788590)
-        assert(XRPose._method_set_name_3304788590 != nil)
-        let _method_get_name_2002593661_name = StringName(from: "get_name")
-        self._method_get_name_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPose._native_ptr(), _method_get_name_2002593661_name._native_ptr(), 2002593661)
-        assert(XRPose._method_get_name_2002593661 != nil)
-        let _method_set_transform_2952846383_name = StringName(from: "set_transform")
-        self._method_set_transform_2952846383 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPose._native_ptr(), _method_set_transform_2952846383_name._native_ptr(), 2952846383)
-        assert(XRPose._method_set_transform_2952846383 != nil)
-        let _method_get_transform_3229777777_name = StringName(from: "get_transform")
-        self._method_get_transform_3229777777 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPose._native_ptr(), _method_get_transform_3229777777_name._native_ptr(), 3229777777)
-        assert(XRPose._method_get_transform_3229777777 != nil)
-        let _method_get_adjusted_transform_3229777777_name = StringName(from: "get_adjusted_transform")
-        self._method_get_adjusted_transform_3229777777 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPose._native_ptr(), _method_get_adjusted_transform_3229777777_name._native_ptr(), 3229777777)
-        assert(XRPose._method_get_adjusted_transform_3229777777 != nil)
-        let _method_set_linear_velocity_3460891852_name = StringName(from: "set_linear_velocity")
-        self._method_set_linear_velocity_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPose._native_ptr(), _method_set_linear_velocity_3460891852_name._native_ptr(), 3460891852)
-        assert(XRPose._method_set_linear_velocity_3460891852 != nil)
-        let _method_get_linear_velocity_3360562783_name = StringName(from: "get_linear_velocity")
-        self._method_get_linear_velocity_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPose._native_ptr(), _method_get_linear_velocity_3360562783_name._native_ptr(), 3360562783)
-        assert(XRPose._method_get_linear_velocity_3360562783 != nil)
-        let _method_set_angular_velocity_3460891852_name = StringName(from: "set_angular_velocity")
-        self._method_set_angular_velocity_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPose._native_ptr(), _method_set_angular_velocity_3460891852_name._native_ptr(), 3460891852)
-        assert(XRPose._method_set_angular_velocity_3460891852 != nil)
-        let _method_get_angular_velocity_3360562783_name = StringName(from: "get_angular_velocity")
-        self._method_get_angular_velocity_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPose._native_ptr(), _method_get_angular_velocity_3360562783_name._native_ptr(), 3360562783)
-        assert(XRPose._method_get_angular_velocity_3360562783 != nil)
-        let _method_set_tracking_confidence_4171656666_name = StringName(from: "set_tracking_confidence")
-        self._method_set_tracking_confidence_4171656666 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPose._native_ptr(), _method_set_tracking_confidence_4171656666_name._native_ptr(), 4171656666)
-        assert(XRPose._method_set_tracking_confidence_4171656666 != nil)
-        let _method_get_tracking_confidence_2064923680_name = StringName(from: "get_tracking_confidence")
-        self._method_get_tracking_confidence_2064923680 = self.interface.pointee.classdb_get_method_bind(__godot_name_XRPose._native_ptr(), _method_get_tracking_confidence_2064923680_name._native_ptr(), 2064923680)
-        assert(XRPose._method_get_tracking_confidence_2064923680 != nil)
+        self._method_set_has_tracking_data_2586408642 = StringName(from: "set_has_tracking_data")
+        assert(self._method_set_has_tracking_data_2586408642 != nil)
+        self._method_get_has_tracking_data_36873697 = StringName(from: "get_has_tracking_data")
+        assert(self._method_get_has_tracking_data_36873697 != nil)
+        self._method_set_name_3304788590 = StringName(from: "set_name")
+        assert(self._method_set_name_3304788590 != nil)
+        self._method_get_name_2002593661 = StringName(from: "get_name")
+        assert(self._method_get_name_2002593661 != nil)
+        self._method_set_transform_2952846383 = StringName(from: "set_transform")
+        assert(self._method_set_transform_2952846383 != nil)
+        self._method_get_transform_3229777777 = StringName(from: "get_transform")
+        assert(self._method_get_transform_3229777777 != nil)
+        self._method_get_adjusted_transform_3229777777 = StringName(from: "get_adjusted_transform")
+        assert(self._method_get_adjusted_transform_3229777777 != nil)
+        self._method_set_linear_velocity_3460891852 = StringName(from: "set_linear_velocity")
+        assert(self._method_set_linear_velocity_3460891852 != nil)
+        self._method_get_linear_velocity_3360562783 = StringName(from: "get_linear_velocity")
+        assert(self._method_get_linear_velocity_3360562783 != nil)
+        self._method_set_angular_velocity_3460891852 = StringName(from: "set_angular_velocity")
+        assert(self._method_set_angular_velocity_3460891852 != nil)
+        self._method_get_angular_velocity_3360562783 = StringName(from: "get_angular_velocity")
+        assert(self._method_get_angular_velocity_3360562783 != nil)
+        self._method_set_tracking_confidence_4171656666 = StringName(from: "set_tracking_confidence")
+        assert(self._method_set_tracking_confidence_4171656666 != nil)
+        self._method_get_tracking_confidence_2064923680 = StringName(from: "get_tracking_confidence")
+        assert(self._method_get_tracking_confidence_2064923680 != nil)
     }
 
     public func set_has_tracking_data(has_tracking_data: UInt8)  {
@@ -88,8 +76,13 @@ open class XRPose : RefCounted {
                 .init(has_tracking_data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_has_tracking_data_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_has_tracking_data_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -105,8 +98,13 @@ open class XRPose : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_has_tracking_data_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_has_tracking_data_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -121,8 +119,13 @@ open class XRPose : RefCounted {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_name_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_name_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -136,8 +139,13 @@ open class XRPose : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_name_2002593661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_name_2002593661._native_ptr(),
+                    2002593661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -152,8 +160,13 @@ open class XRPose : RefCounted {
                 .init(transform_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_transform_2952846383,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_transform_2952846383._native_ptr(),
+                    2952846383)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -167,8 +180,13 @@ open class XRPose : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_transform_3229777777,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_transform_3229777777._native_ptr(),
+                    3229777777)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -183,8 +201,13 @@ open class XRPose : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_adjusted_transform_3229777777,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_adjusted_transform_3229777777._native_ptr(),
+                    3229777777)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -199,8 +222,13 @@ open class XRPose : RefCounted {
                 .init(velocity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_linear_velocity_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_linear_velocity_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -214,8 +242,13 @@ open class XRPose : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_linear_velocity_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_linear_velocity_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -230,8 +263,13 @@ open class XRPose : RefCounted {
                 .init(velocity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_angular_velocity_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_angular_velocity_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -245,8 +283,13 @@ open class XRPose : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_angular_velocity_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_angular_velocity_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -261,8 +304,13 @@ open class XRPose : RefCounted {
                 .init(tracking_confidence_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tracking_confidence_4171656666,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tracking_confidence_4171656666._native_ptr(),
+                    4171656666)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -277,8 +325,13 @@ open class XRPose : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tracking_confidence_2064923680,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tracking_confidence_2064923680._native_ptr(),
+                    2064923680)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

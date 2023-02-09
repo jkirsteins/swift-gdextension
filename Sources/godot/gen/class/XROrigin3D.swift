@@ -17,31 +17,28 @@ open class XROrigin3D : Node3D {
 
     public override class var __godot_name: StringName { __godot_name_XROrigin3D }
 
-    static var _method_set_world_scale_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_world_scale_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_current_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_current_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_world_scale_373806689: StringName! = nil
+    static var _method_get_world_scale_1740695150: StringName! = nil
+    static var _method_set_current_2586408642: StringName! = nil
+    static var _method_is_current_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_XROrigin3D == nil)
         __godot_name_XROrigin3D = StringName(from: "XROrigin3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_world_scale_373806689_name = StringName(from: "set_world_scale")
-        self._method_set_world_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_XROrigin3D._native_ptr(), _method_set_world_scale_373806689_name._native_ptr(), 373806689)
-        assert(XROrigin3D._method_set_world_scale_373806689 != nil)
-        let _method_get_world_scale_1740695150_name = StringName(from: "get_world_scale")
-        self._method_get_world_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_XROrigin3D._native_ptr(), _method_get_world_scale_1740695150_name._native_ptr(), 1740695150)
-        assert(XROrigin3D._method_get_world_scale_1740695150 != nil)
-        let _method_set_current_2586408642_name = StringName(from: "set_current")
-        self._method_set_current_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_XROrigin3D._native_ptr(), _method_set_current_2586408642_name._native_ptr(), 2586408642)
-        assert(XROrigin3D._method_set_current_2586408642 != nil)
-        let _method_is_current_36873697_name = StringName(from: "is_current")
-        self._method_is_current_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_XROrigin3D._native_ptr(), _method_is_current_36873697_name._native_ptr(), 36873697)
-        assert(XROrigin3D._method_is_current_36873697 != nil)
+        self._method_set_world_scale_373806689 = StringName(from: "set_world_scale")
+        assert(self._method_set_world_scale_373806689 != nil)
+        self._method_get_world_scale_1740695150 = StringName(from: "get_world_scale")
+        assert(self._method_get_world_scale_1740695150 != nil)
+        self._method_set_current_2586408642 = StringName(from: "set_current")
+        assert(self._method_set_current_2586408642 != nil)
+        self._method_is_current_36873697 = StringName(from: "is_current")
+        assert(self._method_is_current_36873697 != nil)
     }
 
     public func set_world_scale(world_scale: Float64)  {
@@ -52,8 +49,13 @@ open class XROrigin3D : Node3D {
                 .init(world_scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_world_scale_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_world_scale_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -69,8 +71,13 @@ open class XROrigin3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_world_scale_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_world_scale_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -85,8 +92,13 @@ open class XROrigin3D : Node3D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_current_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_current_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -102,8 +114,13 @@ open class XROrigin3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_current_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_current_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

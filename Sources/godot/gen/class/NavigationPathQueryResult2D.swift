@@ -14,51 +14,43 @@ open class NavigationPathQueryResult2D : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_NavigationPathQueryResult2D }
 
-    static var _method_set_path_1509147220: GDExtensionMethodBindPtr! = nil
-    static var _method_get_path_2961356807: GDExtensionMethodBindPtr! = nil
-    static var _method_set_path_types_3614634198: GDExtensionMethodBindPtr! = nil
-    static var _method_get_path_types_1930428628: GDExtensionMethodBindPtr! = nil
-    static var _method_set_path_rids_381264803: GDExtensionMethodBindPtr! = nil
-    static var _method_get_path_rids_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_set_path_owner_ids_3709968205: GDExtensionMethodBindPtr! = nil
-    static var _method_get_path_owner_ids_235988956: GDExtensionMethodBindPtr! = nil
-    static var _method_reset_3218959716: GDExtensionMethodBindPtr! = nil
+    static var _method_set_path_1509147220: StringName! = nil
+    static var _method_get_path_2961356807: StringName! = nil
+    static var _method_set_path_types_3614634198: StringName! = nil
+    static var _method_get_path_types_1930428628: StringName! = nil
+    static var _method_set_path_rids_381264803: StringName! = nil
+    static var _method_get_path_rids_3995934104: StringName! = nil
+    static var _method_set_path_owner_ids_3709968205: StringName! = nil
+    static var _method_get_path_owner_ids_235988956: StringName! = nil
+    static var _method_reset_3218959716: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_NavigationPathQueryResult2D == nil)
         __godot_name_NavigationPathQueryResult2D = StringName(from: "NavigationPathQueryResult2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_path_1509147220_name = StringName(from: "set_path")
-        self._method_set_path_1509147220 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryResult2D._native_ptr(), _method_set_path_1509147220_name._native_ptr(), 1509147220)
-        assert(NavigationPathQueryResult2D._method_set_path_1509147220 != nil)
-        let _method_get_path_2961356807_name = StringName(from: "get_path")
-        self._method_get_path_2961356807 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryResult2D._native_ptr(), _method_get_path_2961356807_name._native_ptr(), 2961356807)
-        assert(NavigationPathQueryResult2D._method_get_path_2961356807 != nil)
-        let _method_set_path_types_3614634198_name = StringName(from: "set_path_types")
-        self._method_set_path_types_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryResult2D._native_ptr(), _method_set_path_types_3614634198_name._native_ptr(), 3614634198)
-        assert(NavigationPathQueryResult2D._method_set_path_types_3614634198 != nil)
-        let _method_get_path_types_1930428628_name = StringName(from: "get_path_types")
-        self._method_get_path_types_1930428628 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryResult2D._native_ptr(), _method_get_path_types_1930428628_name._native_ptr(), 1930428628)
-        assert(NavigationPathQueryResult2D._method_get_path_types_1930428628 != nil)
-        let _method_set_path_rids_381264803_name = StringName(from: "set_path_rids")
-        self._method_set_path_rids_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryResult2D._native_ptr(), _method_set_path_rids_381264803_name._native_ptr(), 381264803)
-        assert(NavigationPathQueryResult2D._method_set_path_rids_381264803 != nil)
-        let _method_get_path_rids_3995934104_name = StringName(from: "get_path_rids")
-        self._method_get_path_rids_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryResult2D._native_ptr(), _method_get_path_rids_3995934104_name._native_ptr(), 3995934104)
-        assert(NavigationPathQueryResult2D._method_get_path_rids_3995934104 != nil)
-        let _method_set_path_owner_ids_3709968205_name = StringName(from: "set_path_owner_ids")
-        self._method_set_path_owner_ids_3709968205 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryResult2D._native_ptr(), _method_set_path_owner_ids_3709968205_name._native_ptr(), 3709968205)
-        assert(NavigationPathQueryResult2D._method_set_path_owner_ids_3709968205 != nil)
-        let _method_get_path_owner_ids_235988956_name = StringName(from: "get_path_owner_ids")
-        self._method_get_path_owner_ids_235988956 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryResult2D._native_ptr(), _method_get_path_owner_ids_235988956_name._native_ptr(), 235988956)
-        assert(NavigationPathQueryResult2D._method_get_path_owner_ids_235988956 != nil)
-        let _method_reset_3218959716_name = StringName(from: "reset")
-        self._method_reset_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationPathQueryResult2D._native_ptr(), _method_reset_3218959716_name._native_ptr(), 3218959716)
-        assert(NavigationPathQueryResult2D._method_reset_3218959716 != nil)
+        self._method_set_path_1509147220 = StringName(from: "set_path")
+        assert(self._method_set_path_1509147220 != nil)
+        self._method_get_path_2961356807 = StringName(from: "get_path")
+        assert(self._method_get_path_2961356807 != nil)
+        self._method_set_path_types_3614634198 = StringName(from: "set_path_types")
+        assert(self._method_set_path_types_3614634198 != nil)
+        self._method_get_path_types_1930428628 = StringName(from: "get_path_types")
+        assert(self._method_get_path_types_1930428628 != nil)
+        self._method_set_path_rids_381264803 = StringName(from: "set_path_rids")
+        assert(self._method_set_path_rids_381264803 != nil)
+        self._method_get_path_rids_3995934104 = StringName(from: "get_path_rids")
+        assert(self._method_get_path_rids_3995934104 != nil)
+        self._method_set_path_owner_ids_3709968205 = StringName(from: "set_path_owner_ids")
+        assert(self._method_set_path_owner_ids_3709968205 != nil)
+        self._method_get_path_owner_ids_235988956 = StringName(from: "get_path_owner_ids")
+        assert(self._method_get_path_owner_ids_235988956 != nil)
+        self._method_reset_3218959716 = StringName(from: "reset")
+        assert(self._method_reset_3218959716 != nil)
     }
 
     public func set_path(path: PackedVector2Array)  {
@@ -69,8 +61,13 @@ open class NavigationPathQueryResult2D : RefCounted {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_path_1509147220,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_path_1509147220._native_ptr(),
+                    1509147220)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -84,8 +81,13 @@ open class NavigationPathQueryResult2D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_path_2961356807,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_path_2961356807._native_ptr(),
+                    2961356807)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -100,8 +102,13 @@ open class NavigationPathQueryResult2D : RefCounted {
                 .init(path_types_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_path_types_3614634198,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_path_types_3614634198._native_ptr(),
+                    3614634198)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -115,8 +122,13 @@ open class NavigationPathQueryResult2D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_path_types_1930428628,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_path_types_1930428628._native_ptr(),
+                    1930428628)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -131,8 +143,13 @@ open class NavigationPathQueryResult2D : RefCounted {
                 .init(path_rids_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_path_rids_381264803,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_path_rids_381264803._native_ptr(),
+                    381264803)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -146,8 +163,13 @@ open class NavigationPathQueryResult2D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_path_rids_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_path_rids_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -162,8 +184,13 @@ open class NavigationPathQueryResult2D : RefCounted {
                 .init(path_owner_ids_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_path_owner_ids_3709968205,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_path_owner_ids_3709968205._native_ptr(),
+                    3709968205)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -177,8 +204,13 @@ open class NavigationPathQueryResult2D : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_path_owner_ids_235988956,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_path_owner_ids_235988956._native_ptr(),
+                    235988956)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -192,8 +224,13 @@ open class NavigationPathQueryResult2D : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_reset_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_reset_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

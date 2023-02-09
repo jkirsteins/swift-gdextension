@@ -15,75 +15,61 @@ open class Script : Resource {
 
     public override class var __godot_name: StringName { __godot_name_Script }
 
-    static var _method_can_instantiate_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_instance_has_397768994: GDExtensionMethodBindPtr! = nil
-    static var _method_has_source_code_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_source_code_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_source_code_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_reload_1633102583: GDExtensionMethodBindPtr! = nil
-    static var _method_get_base_script_278624046: GDExtensionMethodBindPtr! = nil
-    static var _method_get_instance_base_type_2002593661: GDExtensionMethodBindPtr! = nil
-    static var _method_has_script_signal_2619796661: GDExtensionMethodBindPtr! = nil
-    static var _method_get_script_property_list_2915620761: GDExtensionMethodBindPtr! = nil
-    static var _method_get_script_method_list_2915620761: GDExtensionMethodBindPtr! = nil
-    static var _method_get_script_signal_list_2915620761: GDExtensionMethodBindPtr! = nil
-    static var _method_get_script_constant_map_2382534195: GDExtensionMethodBindPtr! = nil
-    static var _method_get_property_default_value_2138907829: GDExtensionMethodBindPtr! = nil
-    static var _method_is_tool_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_can_instantiate_36873697: StringName! = nil
+    static var _method_instance_has_397768994: StringName! = nil
+    static var _method_has_source_code_36873697: StringName! = nil
+    static var _method_get_source_code_201670096: StringName! = nil
+    static var _method_set_source_code_83702148: StringName! = nil
+    static var _method_reload_1633102583: StringName! = nil
+    static var _method_get_base_script_278624046: StringName! = nil
+    static var _method_get_instance_base_type_2002593661: StringName! = nil
+    static var _method_has_script_signal_2619796661: StringName! = nil
+    static var _method_get_script_property_list_2915620761: StringName! = nil
+    static var _method_get_script_method_list_2915620761: StringName! = nil
+    static var _method_get_script_signal_list_2915620761: StringName! = nil
+    static var _method_get_script_constant_map_2382534195: StringName! = nil
+    static var _method_get_property_default_value_2138907829: StringName! = nil
+    static var _method_is_tool_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Script == nil)
         __godot_name_Script = StringName(from: "Script")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_can_instantiate_36873697_name = StringName(from: "can_instantiate")
-        self._method_can_instantiate_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Script._native_ptr(), _method_can_instantiate_36873697_name._native_ptr(), 36873697)
-        assert(Script._method_can_instantiate_36873697 != nil)
-        let _method_instance_has_397768994_name = StringName(from: "instance_has")
-        self._method_instance_has_397768994 = self.interface.pointee.classdb_get_method_bind(__godot_name_Script._native_ptr(), _method_instance_has_397768994_name._native_ptr(), 397768994)
-        assert(Script._method_instance_has_397768994 != nil)
-        let _method_has_source_code_36873697_name = StringName(from: "has_source_code")
-        self._method_has_source_code_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Script._native_ptr(), _method_has_source_code_36873697_name._native_ptr(), 36873697)
-        assert(Script._method_has_source_code_36873697 != nil)
-        let _method_get_source_code_201670096_name = StringName(from: "get_source_code")
-        self._method_get_source_code_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_Script._native_ptr(), _method_get_source_code_201670096_name._native_ptr(), 201670096)
-        assert(Script._method_get_source_code_201670096 != nil)
-        let _method_set_source_code_83702148_name = StringName(from: "set_source_code")
-        self._method_set_source_code_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_Script._native_ptr(), _method_set_source_code_83702148_name._native_ptr(), 83702148)
-        assert(Script._method_set_source_code_83702148 != nil)
-        let _method_reload_1633102583_name = StringName(from: "reload")
-        self._method_reload_1633102583 = self.interface.pointee.classdb_get_method_bind(__godot_name_Script._native_ptr(), _method_reload_1633102583_name._native_ptr(), 1633102583)
-        assert(Script._method_reload_1633102583 != nil)
-        let _method_get_base_script_278624046_name = StringName(from: "get_base_script")
-        self._method_get_base_script_278624046 = self.interface.pointee.classdb_get_method_bind(__godot_name_Script._native_ptr(), _method_get_base_script_278624046_name._native_ptr(), 278624046)
-        assert(Script._method_get_base_script_278624046 != nil)
-        let _method_get_instance_base_type_2002593661_name = StringName(from: "get_instance_base_type")
-        self._method_get_instance_base_type_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_Script._native_ptr(), _method_get_instance_base_type_2002593661_name._native_ptr(), 2002593661)
-        assert(Script._method_get_instance_base_type_2002593661 != nil)
-        let _method_has_script_signal_2619796661_name = StringName(from: "has_script_signal")
-        self._method_has_script_signal_2619796661 = self.interface.pointee.classdb_get_method_bind(__godot_name_Script._native_ptr(), _method_has_script_signal_2619796661_name._native_ptr(), 2619796661)
-        assert(Script._method_has_script_signal_2619796661 != nil)
-        let _method_get_script_property_list_2915620761_name = StringName(from: "get_script_property_list")
-        self._method_get_script_property_list_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_Script._native_ptr(), _method_get_script_property_list_2915620761_name._native_ptr(), 2915620761)
-        assert(Script._method_get_script_property_list_2915620761 != nil)
-        let _method_get_script_method_list_2915620761_name = StringName(from: "get_script_method_list")
-        self._method_get_script_method_list_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_Script._native_ptr(), _method_get_script_method_list_2915620761_name._native_ptr(), 2915620761)
-        assert(Script._method_get_script_method_list_2915620761 != nil)
-        let _method_get_script_signal_list_2915620761_name = StringName(from: "get_script_signal_list")
-        self._method_get_script_signal_list_2915620761 = self.interface.pointee.classdb_get_method_bind(__godot_name_Script._native_ptr(), _method_get_script_signal_list_2915620761_name._native_ptr(), 2915620761)
-        assert(Script._method_get_script_signal_list_2915620761 != nil)
-        let _method_get_script_constant_map_2382534195_name = StringName(from: "get_script_constant_map")
-        self._method_get_script_constant_map_2382534195 = self.interface.pointee.classdb_get_method_bind(__godot_name_Script._native_ptr(), _method_get_script_constant_map_2382534195_name._native_ptr(), 2382534195)
-        assert(Script._method_get_script_constant_map_2382534195 != nil)
-        let _method_get_property_default_value_2138907829_name = StringName(from: "get_property_default_value")
-        self._method_get_property_default_value_2138907829 = self.interface.pointee.classdb_get_method_bind(__godot_name_Script._native_ptr(), _method_get_property_default_value_2138907829_name._native_ptr(), 2138907829)
-        assert(Script._method_get_property_default_value_2138907829 != nil)
-        let _method_is_tool_36873697_name = StringName(from: "is_tool")
-        self._method_is_tool_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Script._native_ptr(), _method_is_tool_36873697_name._native_ptr(), 36873697)
-        assert(Script._method_is_tool_36873697 != nil)
+        self._method_can_instantiate_36873697 = StringName(from: "can_instantiate")
+        assert(self._method_can_instantiate_36873697 != nil)
+        self._method_instance_has_397768994 = StringName(from: "instance_has")
+        assert(self._method_instance_has_397768994 != nil)
+        self._method_has_source_code_36873697 = StringName(from: "has_source_code")
+        assert(self._method_has_source_code_36873697 != nil)
+        self._method_get_source_code_201670096 = StringName(from: "get_source_code")
+        assert(self._method_get_source_code_201670096 != nil)
+        self._method_set_source_code_83702148 = StringName(from: "set_source_code")
+        assert(self._method_set_source_code_83702148 != nil)
+        self._method_reload_1633102583 = StringName(from: "reload")
+        assert(self._method_reload_1633102583 != nil)
+        self._method_get_base_script_278624046 = StringName(from: "get_base_script")
+        assert(self._method_get_base_script_278624046 != nil)
+        self._method_get_instance_base_type_2002593661 = StringName(from: "get_instance_base_type")
+        assert(self._method_get_instance_base_type_2002593661 != nil)
+        self._method_has_script_signal_2619796661 = StringName(from: "has_script_signal")
+        assert(self._method_has_script_signal_2619796661 != nil)
+        self._method_get_script_property_list_2915620761 = StringName(from: "get_script_property_list")
+        assert(self._method_get_script_property_list_2915620761 != nil)
+        self._method_get_script_method_list_2915620761 = StringName(from: "get_script_method_list")
+        assert(self._method_get_script_method_list_2915620761 != nil)
+        self._method_get_script_signal_list_2915620761 = StringName(from: "get_script_signal_list")
+        assert(self._method_get_script_signal_list_2915620761 != nil)
+        self._method_get_script_constant_map_2382534195 = StringName(from: "get_script_constant_map")
+        assert(self._method_get_script_constant_map_2382534195 != nil)
+        self._method_get_property_default_value_2138907829 = StringName(from: "get_property_default_value")
+        assert(self._method_get_property_default_value_2138907829 != nil)
+        self._method_is_tool_36873697 = StringName(from: "is_tool")
+        assert(self._method_is_tool_36873697 != nil)
     }
 
     public func can_instantiate() -> UInt8 {
@@ -95,8 +81,13 @@ open class Script : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_can_instantiate_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_can_instantiate_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -113,8 +104,13 @@ open class Script : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_instance_has_397768994,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_instance_has_397768994._native_ptr(),
+                    397768994)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -130,8 +126,13 @@ open class Script : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_source_code_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_source_code_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -146,8 +147,13 @@ open class Script : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_source_code_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_source_code_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -162,8 +168,13 @@ open class Script : Resource {
                 .init(source_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_source_code_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_source_code_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -178,8 +189,13 @@ open class Script : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_reload_1633102583,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_reload_1633102583._native_ptr(),
+                    1633102583)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -195,8 +211,13 @@ open class Script : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_base_script_278624046,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_base_script_278624046._native_ptr(),
+                    278624046)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -211,8 +232,13 @@ open class Script : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_instance_base_type_2002593661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_instance_base_type_2002593661._native_ptr(),
+                    2002593661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -229,8 +255,13 @@ open class Script : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_script_signal_2619796661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_script_signal_2619796661._native_ptr(),
+                    2619796661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -245,8 +276,13 @@ open class Script : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_script_property_list_2915620761,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_script_property_list_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -261,8 +297,13 @@ open class Script : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_script_method_list_2915620761,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_script_method_list_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -277,8 +318,13 @@ open class Script : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_script_signal_list_2915620761,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_script_signal_list_2915620761._native_ptr(),
+                    2915620761)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -293,8 +339,13 @@ open class Script : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_script_constant_map_2382534195,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_script_constant_map_2382534195._native_ptr(),
+                    2382534195)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -310,8 +361,13 @@ open class Script : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_property_default_value_2138907829,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_property_default_value_2138907829._native_ptr(),
+                    2138907829)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -327,8 +383,13 @@ open class Script : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_tool_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_tool_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

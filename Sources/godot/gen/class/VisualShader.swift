@@ -41,95 +41,76 @@ open class VisualShader : Shader {
 
     public override class var __godot_name: StringName { __godot_name_VisualShader }
 
-    static var _method_set_mode_3978014962: GDExtensionMethodBindPtr! = nil
-    static var _method_add_node_1560769431: GDExtensionMethodBindPtr! = nil
-    static var _method_get_node_3784670312: GDExtensionMethodBindPtr! = nil
-    static var _method_set_node_position_2726660721: GDExtensionMethodBindPtr! = nil
-    static var _method_get_node_position_2175036082: GDExtensionMethodBindPtr! = nil
-    static var _method_get_node_list_2370592410: GDExtensionMethodBindPtr! = nil
-    static var _method_get_valid_node_id_629467342: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_node_844050912: GDExtensionMethodBindPtr! = nil
-    static var _method_replace_node_3144735253: GDExtensionMethodBindPtr! = nil
-    static var _method_is_node_connection_3922381898: GDExtensionMethodBindPtr! = nil
-    static var _method_can_connect_nodes_3922381898: GDExtensionMethodBindPtr! = nil
-    static var _method_connect_nodes_3081049573: GDExtensionMethodBindPtr! = nil
-    static var _method_disconnect_nodes_2268060358: GDExtensionMethodBindPtr! = nil
-    static var _method_connect_nodes_forced_2268060358: GDExtensionMethodBindPtr! = nil
-    static var _method_get_node_connections_1441964831: GDExtensionMethodBindPtr! = nil
-    static var _method_set_graph_offset_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_graph_offset_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_add_varying_2084110726: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_varying_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_has_varying_3927539163: GDExtensionMethodBindPtr! = nil
+    static var _method_set_mode_3978014962: StringName! = nil
+    static var _method_add_node_1560769431: StringName! = nil
+    static var _method_get_node_3784670312: StringName! = nil
+    static var _method_set_node_position_2726660721: StringName! = nil
+    static var _method_get_node_position_2175036082: StringName! = nil
+    static var _method_get_node_list_2370592410: StringName! = nil
+    static var _method_get_valid_node_id_629467342: StringName! = nil
+    static var _method_remove_node_844050912: StringName! = nil
+    static var _method_replace_node_3144735253: StringName! = nil
+    static var _method_is_node_connection_3922381898: StringName! = nil
+    static var _method_can_connect_nodes_3922381898: StringName! = nil
+    static var _method_connect_nodes_3081049573: StringName! = nil
+    static var _method_disconnect_nodes_2268060358: StringName! = nil
+    static var _method_connect_nodes_forced_2268060358: StringName! = nil
+    static var _method_get_node_connections_1441964831: StringName! = nil
+    static var _method_set_graph_offset_743155724: StringName! = nil
+    static var _method_get_graph_offset_3341600327: StringName! = nil
+    static var _method_add_varying_2084110726: StringName! = nil
+    static var _method_remove_varying_83702148: StringName! = nil
+    static var _method_has_varying_3927539163: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShader == nil)
         __godot_name_VisualShader = StringName(from: "VisualShader")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_mode_3978014962_name = StringName(from: "set_mode")
-        self._method_set_mode_3978014962 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_set_mode_3978014962_name._native_ptr(), 3978014962)
-        assert(VisualShader._method_set_mode_3978014962 != nil)
-        let _method_add_node_1560769431_name = StringName(from: "add_node")
-        self._method_add_node_1560769431 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_add_node_1560769431_name._native_ptr(), 1560769431)
-        assert(VisualShader._method_add_node_1560769431 != nil)
-        let _method_get_node_3784670312_name = StringName(from: "get_node")
-        self._method_get_node_3784670312 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_get_node_3784670312_name._native_ptr(), 3784670312)
-        assert(VisualShader._method_get_node_3784670312 != nil)
-        let _method_set_node_position_2726660721_name = StringName(from: "set_node_position")
-        self._method_set_node_position_2726660721 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_set_node_position_2726660721_name._native_ptr(), 2726660721)
-        assert(VisualShader._method_set_node_position_2726660721 != nil)
-        let _method_get_node_position_2175036082_name = StringName(from: "get_node_position")
-        self._method_get_node_position_2175036082 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_get_node_position_2175036082_name._native_ptr(), 2175036082)
-        assert(VisualShader._method_get_node_position_2175036082 != nil)
-        let _method_get_node_list_2370592410_name = StringName(from: "get_node_list")
-        self._method_get_node_list_2370592410 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_get_node_list_2370592410_name._native_ptr(), 2370592410)
-        assert(VisualShader._method_get_node_list_2370592410 != nil)
-        let _method_get_valid_node_id_629467342_name = StringName(from: "get_valid_node_id")
-        self._method_get_valid_node_id_629467342 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_get_valid_node_id_629467342_name._native_ptr(), 629467342)
-        assert(VisualShader._method_get_valid_node_id_629467342 != nil)
-        let _method_remove_node_844050912_name = StringName(from: "remove_node")
-        self._method_remove_node_844050912 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_remove_node_844050912_name._native_ptr(), 844050912)
-        assert(VisualShader._method_remove_node_844050912 != nil)
-        let _method_replace_node_3144735253_name = StringName(from: "replace_node")
-        self._method_replace_node_3144735253 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_replace_node_3144735253_name._native_ptr(), 3144735253)
-        assert(VisualShader._method_replace_node_3144735253 != nil)
-        let _method_is_node_connection_3922381898_name = StringName(from: "is_node_connection")
-        self._method_is_node_connection_3922381898 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_is_node_connection_3922381898_name._native_ptr(), 3922381898)
-        assert(VisualShader._method_is_node_connection_3922381898 != nil)
-        let _method_can_connect_nodes_3922381898_name = StringName(from: "can_connect_nodes")
-        self._method_can_connect_nodes_3922381898 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_can_connect_nodes_3922381898_name._native_ptr(), 3922381898)
-        assert(VisualShader._method_can_connect_nodes_3922381898 != nil)
-        let _method_connect_nodes_3081049573_name = StringName(from: "connect_nodes")
-        self._method_connect_nodes_3081049573 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_connect_nodes_3081049573_name._native_ptr(), 3081049573)
-        assert(VisualShader._method_connect_nodes_3081049573 != nil)
-        let _method_disconnect_nodes_2268060358_name = StringName(from: "disconnect_nodes")
-        self._method_disconnect_nodes_2268060358 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_disconnect_nodes_2268060358_name._native_ptr(), 2268060358)
-        assert(VisualShader._method_disconnect_nodes_2268060358 != nil)
-        let _method_connect_nodes_forced_2268060358_name = StringName(from: "connect_nodes_forced")
-        self._method_connect_nodes_forced_2268060358 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_connect_nodes_forced_2268060358_name._native_ptr(), 2268060358)
-        assert(VisualShader._method_connect_nodes_forced_2268060358 != nil)
-        let _method_get_node_connections_1441964831_name = StringName(from: "get_node_connections")
-        self._method_get_node_connections_1441964831 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_get_node_connections_1441964831_name._native_ptr(), 1441964831)
-        assert(VisualShader._method_get_node_connections_1441964831 != nil)
-        let _method_set_graph_offset_743155724_name = StringName(from: "set_graph_offset")
-        self._method_set_graph_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_set_graph_offset_743155724_name._native_ptr(), 743155724)
-        assert(VisualShader._method_set_graph_offset_743155724 != nil)
-        let _method_get_graph_offset_3341600327_name = StringName(from: "get_graph_offset")
-        self._method_get_graph_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_get_graph_offset_3341600327_name._native_ptr(), 3341600327)
-        assert(VisualShader._method_get_graph_offset_3341600327 != nil)
-        let _method_add_varying_2084110726_name = StringName(from: "add_varying")
-        self._method_add_varying_2084110726 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_add_varying_2084110726_name._native_ptr(), 2084110726)
-        assert(VisualShader._method_add_varying_2084110726 != nil)
-        let _method_remove_varying_83702148_name = StringName(from: "remove_varying")
-        self._method_remove_varying_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_remove_varying_83702148_name._native_ptr(), 83702148)
-        assert(VisualShader._method_remove_varying_83702148 != nil)
-        let _method_has_varying_3927539163_name = StringName(from: "has_varying")
-        self._method_has_varying_3927539163 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShader._native_ptr(), _method_has_varying_3927539163_name._native_ptr(), 3927539163)
-        assert(VisualShader._method_has_varying_3927539163 != nil)
+        self._method_set_mode_3978014962 = StringName(from: "set_mode")
+        assert(self._method_set_mode_3978014962 != nil)
+        self._method_add_node_1560769431 = StringName(from: "add_node")
+        assert(self._method_add_node_1560769431 != nil)
+        self._method_get_node_3784670312 = StringName(from: "get_node")
+        assert(self._method_get_node_3784670312 != nil)
+        self._method_set_node_position_2726660721 = StringName(from: "set_node_position")
+        assert(self._method_set_node_position_2726660721 != nil)
+        self._method_get_node_position_2175036082 = StringName(from: "get_node_position")
+        assert(self._method_get_node_position_2175036082 != nil)
+        self._method_get_node_list_2370592410 = StringName(from: "get_node_list")
+        assert(self._method_get_node_list_2370592410 != nil)
+        self._method_get_valid_node_id_629467342 = StringName(from: "get_valid_node_id")
+        assert(self._method_get_valid_node_id_629467342 != nil)
+        self._method_remove_node_844050912 = StringName(from: "remove_node")
+        assert(self._method_remove_node_844050912 != nil)
+        self._method_replace_node_3144735253 = StringName(from: "replace_node")
+        assert(self._method_replace_node_3144735253 != nil)
+        self._method_is_node_connection_3922381898 = StringName(from: "is_node_connection")
+        assert(self._method_is_node_connection_3922381898 != nil)
+        self._method_can_connect_nodes_3922381898 = StringName(from: "can_connect_nodes")
+        assert(self._method_can_connect_nodes_3922381898 != nil)
+        self._method_connect_nodes_3081049573 = StringName(from: "connect_nodes")
+        assert(self._method_connect_nodes_3081049573 != nil)
+        self._method_disconnect_nodes_2268060358 = StringName(from: "disconnect_nodes")
+        assert(self._method_disconnect_nodes_2268060358 != nil)
+        self._method_connect_nodes_forced_2268060358 = StringName(from: "connect_nodes_forced")
+        assert(self._method_connect_nodes_forced_2268060358 != nil)
+        self._method_get_node_connections_1441964831 = StringName(from: "get_node_connections")
+        assert(self._method_get_node_connections_1441964831 != nil)
+        self._method_set_graph_offset_743155724 = StringName(from: "set_graph_offset")
+        assert(self._method_set_graph_offset_743155724 != nil)
+        self._method_get_graph_offset_3341600327 = StringName(from: "get_graph_offset")
+        assert(self._method_get_graph_offset_3341600327 != nil)
+        self._method_add_varying_2084110726 = StringName(from: "add_varying")
+        assert(self._method_add_varying_2084110726 != nil)
+        self._method_remove_varying_83702148 = StringName(from: "remove_varying")
+        assert(self._method_remove_varying_83702148 != nil)
+        self._method_has_varying_3927539163 = StringName(from: "has_varying")
+        assert(self._method_has_varying_3927539163 != nil)
     }
 
     public func set_mode(mode: Shader.Mode)  {
@@ -140,8 +121,13 @@ open class VisualShader : Shader {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_mode_3978014962,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_mode_3978014962._native_ptr(),
+                    3978014962)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -159,8 +145,13 @@ open class VisualShader : Shader {
                 .init(type_native), .init(node_native), .init(position_native), .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_node_1560769431,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_node_1560769431._native_ptr(),
+                    1560769431)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -178,8 +169,13 @@ open class VisualShader : Shader {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_node_3784670312,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_node_3784670312._native_ptr(),
+                    3784670312)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -198,8 +194,13 @@ open class VisualShader : Shader {
                 .init(type_native), .init(id_native), .init(position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_node_position_2726660721,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_node_position_2726660721._native_ptr(),
+                    2726660721)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -217,8 +218,13 @@ open class VisualShader : Shader {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_node_position_2175036082,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_node_position_2175036082._native_ptr(),
+                    2175036082)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -236,8 +242,13 @@ open class VisualShader : Shader {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_node_list_2370592410,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_node_list_2370592410._native_ptr(),
+                    2370592410)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -255,8 +266,13 @@ open class VisualShader : Shader {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_valid_node_id_629467342,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_valid_node_id_629467342._native_ptr(),
+                    629467342)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -273,8 +289,13 @@ open class VisualShader : Shader {
                 .init(type_native), .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_node_844050912,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_node_844050912._native_ptr(),
+                    844050912)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -292,8 +313,13 @@ open class VisualShader : Shader {
                 .init(type_native), .init(id_native), .init(new_class_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_replace_node_3144735253,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_replace_node_3144735253._native_ptr(),
+                    3144735253)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -315,8 +341,13 @@ open class VisualShader : Shader {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_node_connection_3922381898,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_node_connection_3922381898._native_ptr(),
+                    3922381898)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -342,8 +373,13 @@ open class VisualShader : Shader {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_can_connect_nodes_3922381898,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_can_connect_nodes_3922381898._native_ptr(),
+                    3922381898)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -368,8 +404,13 @@ open class VisualShader : Shader {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_connect_nodes_3081049573,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_connect_nodes_3081049573._native_ptr(),
+                    3081049573)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -393,8 +434,13 @@ open class VisualShader : Shader {
                 .init(type_native), .init(from_node_native), .init(from_port_native), .init(to_node_native), .init(to_port_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_disconnect_nodes_2268060358,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_disconnect_nodes_2268060358._native_ptr(),
+                    2268060358)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -417,8 +463,13 @@ open class VisualShader : Shader {
                 .init(type_native), .init(from_node_native), .init(from_port_native), .init(to_node_native), .init(to_port_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_connect_nodes_forced_2268060358,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_connect_nodes_forced_2268060358._native_ptr(),
+                    2268060358)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -438,8 +489,13 @@ open class VisualShader : Shader {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_node_connections_1441964831,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_node_connections_1441964831._native_ptr(),
+                    1441964831)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -455,8 +511,13 @@ open class VisualShader : Shader {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_graph_offset_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_graph_offset_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -470,8 +531,13 @@ open class VisualShader : Shader {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_graph_offset_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_graph_offset_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -488,8 +554,13 @@ open class VisualShader : Shader {
                 .init(name_native), .init(mode_native), .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_varying_2084110726,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_varying_2084110726._native_ptr(),
+                    2084110726)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -505,8 +576,13 @@ open class VisualShader : Shader {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_varying_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_varying_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -522,8 +598,13 @@ open class VisualShader : Shader {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_varying_3927539163,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_varying_3927539163._native_ptr(),
+                    3927539163)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

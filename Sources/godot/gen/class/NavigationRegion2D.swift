@@ -23,67 +23,55 @@ open class NavigationRegion2D : Node2D {
 
     public override class var __godot_name: StringName { __godot_name_NavigationRegion2D }
 
-    static var _method_set_navigation_polygon_1515040758: GDExtensionMethodBindPtr! = nil
-    static var _method_get_navigation_polygon_1046532237: GDExtensionMethodBindPtr! = nil
-    static var _method_set_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_navigation_layers_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_navigation_layers_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_navigation_layer_value_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_get_navigation_layer_value_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_get_region_rid_2944877500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_enter_cost_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_enter_cost_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_travel_cost_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_travel_cost_1740695150: GDExtensionMethodBindPtr! = nil
+    static var _method_set_navigation_polygon_1515040758: StringName! = nil
+    static var _method_get_navigation_polygon_1046532237: StringName! = nil
+    static var _method_set_enabled_2586408642: StringName! = nil
+    static var _method_is_enabled_36873697: StringName! = nil
+    static var _method_set_navigation_layers_1286410249: StringName! = nil
+    static var _method_get_navigation_layers_3905245786: StringName! = nil
+    static var _method_set_navigation_layer_value_300928843: StringName! = nil
+    static var _method_get_navigation_layer_value_1116898809: StringName! = nil
+    static var _method_get_region_rid_2944877500: StringName! = nil
+    static var _method_set_enter_cost_373806689: StringName! = nil
+    static var _method_get_enter_cost_1740695150: StringName! = nil
+    static var _method_set_travel_cost_373806689: StringName! = nil
+    static var _method_get_travel_cost_1740695150: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_NavigationRegion2D == nil)
         __godot_name_NavigationRegion2D = StringName(from: "NavigationRegion2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_navigation_polygon_1515040758_name = StringName(from: "set_navigation_polygon")
-        self._method_set_navigation_polygon_1515040758 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationRegion2D._native_ptr(), _method_set_navigation_polygon_1515040758_name._native_ptr(), 1515040758)
-        assert(NavigationRegion2D._method_set_navigation_polygon_1515040758 != nil)
-        let _method_get_navigation_polygon_1046532237_name = StringName(from: "get_navigation_polygon")
-        self._method_get_navigation_polygon_1046532237 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationRegion2D._native_ptr(), _method_get_navigation_polygon_1046532237_name._native_ptr(), 1046532237)
-        assert(NavigationRegion2D._method_get_navigation_polygon_1046532237 != nil)
-        let _method_set_enabled_2586408642_name = StringName(from: "set_enabled")
-        self._method_set_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationRegion2D._native_ptr(), _method_set_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(NavigationRegion2D._method_set_enabled_2586408642 != nil)
-        let _method_is_enabled_36873697_name = StringName(from: "is_enabled")
-        self._method_is_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationRegion2D._native_ptr(), _method_is_enabled_36873697_name._native_ptr(), 36873697)
-        assert(NavigationRegion2D._method_is_enabled_36873697 != nil)
-        let _method_set_navigation_layers_1286410249_name = StringName(from: "set_navigation_layers")
-        self._method_set_navigation_layers_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationRegion2D._native_ptr(), _method_set_navigation_layers_1286410249_name._native_ptr(), 1286410249)
-        assert(NavigationRegion2D._method_set_navigation_layers_1286410249 != nil)
-        let _method_get_navigation_layers_3905245786_name = StringName(from: "get_navigation_layers")
-        self._method_get_navigation_layers_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationRegion2D._native_ptr(), _method_get_navigation_layers_3905245786_name._native_ptr(), 3905245786)
-        assert(NavigationRegion2D._method_get_navigation_layers_3905245786 != nil)
-        let _method_set_navigation_layer_value_300928843_name = StringName(from: "set_navigation_layer_value")
-        self._method_set_navigation_layer_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationRegion2D._native_ptr(), _method_set_navigation_layer_value_300928843_name._native_ptr(), 300928843)
-        assert(NavigationRegion2D._method_set_navigation_layer_value_300928843 != nil)
-        let _method_get_navigation_layer_value_1116898809_name = StringName(from: "get_navigation_layer_value")
-        self._method_get_navigation_layer_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationRegion2D._native_ptr(), _method_get_navigation_layer_value_1116898809_name._native_ptr(), 1116898809)
-        assert(NavigationRegion2D._method_get_navigation_layer_value_1116898809 != nil)
-        let _method_get_region_rid_2944877500_name = StringName(from: "get_region_rid")
-        self._method_get_region_rid_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationRegion2D._native_ptr(), _method_get_region_rid_2944877500_name._native_ptr(), 2944877500)
-        assert(NavigationRegion2D._method_get_region_rid_2944877500 != nil)
-        let _method_set_enter_cost_373806689_name = StringName(from: "set_enter_cost")
-        self._method_set_enter_cost_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationRegion2D._native_ptr(), _method_set_enter_cost_373806689_name._native_ptr(), 373806689)
-        assert(NavigationRegion2D._method_set_enter_cost_373806689 != nil)
-        let _method_get_enter_cost_1740695150_name = StringName(from: "get_enter_cost")
-        self._method_get_enter_cost_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationRegion2D._native_ptr(), _method_get_enter_cost_1740695150_name._native_ptr(), 1740695150)
-        assert(NavigationRegion2D._method_get_enter_cost_1740695150 != nil)
-        let _method_set_travel_cost_373806689_name = StringName(from: "set_travel_cost")
-        self._method_set_travel_cost_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationRegion2D._native_ptr(), _method_set_travel_cost_373806689_name._native_ptr(), 373806689)
-        assert(NavigationRegion2D._method_set_travel_cost_373806689 != nil)
-        let _method_get_travel_cost_1740695150_name = StringName(from: "get_travel_cost")
-        self._method_get_travel_cost_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationRegion2D._native_ptr(), _method_get_travel_cost_1740695150_name._native_ptr(), 1740695150)
-        assert(NavigationRegion2D._method_get_travel_cost_1740695150 != nil)
+        self._method_set_navigation_polygon_1515040758 = StringName(from: "set_navigation_polygon")
+        assert(self._method_set_navigation_polygon_1515040758 != nil)
+        self._method_get_navigation_polygon_1046532237 = StringName(from: "get_navigation_polygon")
+        assert(self._method_get_navigation_polygon_1046532237 != nil)
+        self._method_set_enabled_2586408642 = StringName(from: "set_enabled")
+        assert(self._method_set_enabled_2586408642 != nil)
+        self._method_is_enabled_36873697 = StringName(from: "is_enabled")
+        assert(self._method_is_enabled_36873697 != nil)
+        self._method_set_navigation_layers_1286410249 = StringName(from: "set_navigation_layers")
+        assert(self._method_set_navigation_layers_1286410249 != nil)
+        self._method_get_navigation_layers_3905245786 = StringName(from: "get_navigation_layers")
+        assert(self._method_get_navigation_layers_3905245786 != nil)
+        self._method_set_navigation_layer_value_300928843 = StringName(from: "set_navigation_layer_value")
+        assert(self._method_set_navigation_layer_value_300928843 != nil)
+        self._method_get_navigation_layer_value_1116898809 = StringName(from: "get_navigation_layer_value")
+        assert(self._method_get_navigation_layer_value_1116898809 != nil)
+        self._method_get_region_rid_2944877500 = StringName(from: "get_region_rid")
+        assert(self._method_get_region_rid_2944877500 != nil)
+        self._method_set_enter_cost_373806689 = StringName(from: "set_enter_cost")
+        assert(self._method_set_enter_cost_373806689 != nil)
+        self._method_get_enter_cost_1740695150 = StringName(from: "get_enter_cost")
+        assert(self._method_get_enter_cost_1740695150 != nil)
+        self._method_set_travel_cost_373806689 = StringName(from: "set_travel_cost")
+        assert(self._method_set_travel_cost_373806689 != nil)
+        self._method_get_travel_cost_1740695150 = StringName(from: "get_travel_cost")
+        assert(self._method_get_travel_cost_1740695150 != nil)
     }
 
     public func set_navigation_polygon(navigation_polygon: NavigationPolygon)  {
@@ -94,8 +82,13 @@ open class NavigationRegion2D : Node2D {
                 .init(navigation_polygon_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_navigation_polygon_1515040758,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_navigation_polygon_1515040758._native_ptr(),
+                    1515040758)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -109,8 +102,13 @@ open class NavigationRegion2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_navigation_polygon_1046532237,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_navigation_polygon_1046532237._native_ptr(),
+                    1046532237)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -125,8 +123,13 @@ open class NavigationRegion2D : Node2D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -142,8 +145,13 @@ open class NavigationRegion2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -158,8 +166,13 @@ open class NavigationRegion2D : Node2D {
                 .init(navigation_layers_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_navigation_layers_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_navigation_layers_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -175,8 +188,13 @@ open class NavigationRegion2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_navigation_layers_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_navigation_layers_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -192,8 +210,13 @@ open class NavigationRegion2D : Node2D {
                 .init(layer_number_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_navigation_layer_value_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_navigation_layer_value_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -211,8 +234,13 @@ open class NavigationRegion2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_navigation_layer_value_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_navigation_layer_value_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -228,8 +256,13 @@ open class NavigationRegion2D : Node2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_region_rid_2944877500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_region_rid_2944877500._native_ptr(),
+                    2944877500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -244,8 +277,13 @@ open class NavigationRegion2D : Node2D {
                 .init(enter_cost_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_enter_cost_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_enter_cost_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -261,8 +299,13 @@ open class NavigationRegion2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_enter_cost_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_enter_cost_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -277,8 +320,13 @@ open class NavigationRegion2D : Node2D {
                 .init(travel_cost_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_travel_cost_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_travel_cost_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -294,8 +342,13 @@ open class NavigationRegion2D : Node2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_travel_cost_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_travel_cost_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

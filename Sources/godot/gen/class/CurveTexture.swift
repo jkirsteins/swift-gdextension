@@ -16,35 +16,31 @@ open class CurveTexture : Texture2D {
 
     public override class var __godot_name: StringName { __godot_name_CurveTexture }
 
-    static var _method_set_width_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_curve_270443179: GDExtensionMethodBindPtr! = nil
-    static var _method_get_curve_2460114913: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_mode_1321955367: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_mode_715756376: GDExtensionMethodBindPtr! = nil
+    static var _method_set_width_1286410249: StringName! = nil
+    static var _method_set_curve_270443179: StringName! = nil
+    static var _method_get_curve_2460114913: StringName! = nil
+    static var _method_set_texture_mode_1321955367: StringName! = nil
+    static var _method_get_texture_mode_715756376: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CurveTexture == nil)
         __godot_name_CurveTexture = StringName(from: "CurveTexture")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_width_1286410249_name = StringName(from: "set_width")
-        self._method_set_width_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CurveTexture._native_ptr(), _method_set_width_1286410249_name._native_ptr(), 1286410249)
-        assert(CurveTexture._method_set_width_1286410249 != nil)
-        let _method_set_curve_270443179_name = StringName(from: "set_curve")
-        self._method_set_curve_270443179 = self.interface.pointee.classdb_get_method_bind(__godot_name_CurveTexture._native_ptr(), _method_set_curve_270443179_name._native_ptr(), 270443179)
-        assert(CurveTexture._method_set_curve_270443179 != nil)
-        let _method_get_curve_2460114913_name = StringName(from: "get_curve")
-        self._method_get_curve_2460114913 = self.interface.pointee.classdb_get_method_bind(__godot_name_CurveTexture._native_ptr(), _method_get_curve_2460114913_name._native_ptr(), 2460114913)
-        assert(CurveTexture._method_get_curve_2460114913 != nil)
-        let _method_set_texture_mode_1321955367_name = StringName(from: "set_texture_mode")
-        self._method_set_texture_mode_1321955367 = self.interface.pointee.classdb_get_method_bind(__godot_name_CurveTexture._native_ptr(), _method_set_texture_mode_1321955367_name._native_ptr(), 1321955367)
-        assert(CurveTexture._method_set_texture_mode_1321955367 != nil)
-        let _method_get_texture_mode_715756376_name = StringName(from: "get_texture_mode")
-        self._method_get_texture_mode_715756376 = self.interface.pointee.classdb_get_method_bind(__godot_name_CurveTexture._native_ptr(), _method_get_texture_mode_715756376_name._native_ptr(), 715756376)
-        assert(CurveTexture._method_get_texture_mode_715756376 != nil)
+        self._method_set_width_1286410249 = StringName(from: "set_width")
+        assert(self._method_set_width_1286410249 != nil)
+        self._method_set_curve_270443179 = StringName(from: "set_curve")
+        assert(self._method_set_curve_270443179 != nil)
+        self._method_get_curve_2460114913 = StringName(from: "get_curve")
+        assert(self._method_get_curve_2460114913 != nil)
+        self._method_set_texture_mode_1321955367 = StringName(from: "set_texture_mode")
+        assert(self._method_set_texture_mode_1321955367 != nil)
+        self._method_get_texture_mode_715756376 = StringName(from: "get_texture_mode")
+        assert(self._method_get_texture_mode_715756376 != nil)
     }
 
     public func set_width(width: Int64)  {
@@ -55,8 +51,13 @@ open class CurveTexture : Texture2D {
                 .init(width_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_width_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_width_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -71,8 +72,13 @@ open class CurveTexture : Texture2D {
                 .init(curve_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_curve_270443179,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_curve_270443179._native_ptr(),
+                    270443179)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -86,8 +92,13 @@ open class CurveTexture : Texture2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_curve_2460114913,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_curve_2460114913._native_ptr(),
+                    2460114913)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -102,8 +113,13 @@ open class CurveTexture : Texture2D {
                 .init(texture_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_mode_1321955367,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_mode_1321955367._native_ptr(),
+                    1321955367)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -118,8 +134,13 @@ open class CurveTexture : Texture2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_mode_715756376,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_mode_715756376._native_ptr(),
+                    715756376)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

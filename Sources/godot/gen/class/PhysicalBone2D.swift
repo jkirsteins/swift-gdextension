@@ -15,63 +15,52 @@ open class PhysicalBone2D : RigidBody2D {
 
     public override class var __godot_name: StringName { __godot_name_PhysicalBone2D }
 
-    static var _method_get_joint_3582132112: GDExtensionMethodBindPtr! = nil
-    static var _method_get_auto_configure_joint_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_auto_configure_joint_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_simulate_physics_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_simulate_physics_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_is_simulating_physics_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bone2d_nodepath_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone2d_nodepath_4075236667: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bone2d_index_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bone2d_index_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_follow_bone_when_simulating_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_follow_bone_when_simulating_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_get_joint_3582132112: StringName! = nil
+    static var _method_get_auto_configure_joint_36873697: StringName! = nil
+    static var _method_set_auto_configure_joint_2586408642: StringName! = nil
+    static var _method_set_simulate_physics_2586408642: StringName! = nil
+    static var _method_get_simulate_physics_36873697: StringName! = nil
+    static var _method_is_simulating_physics_36873697: StringName! = nil
+    static var _method_set_bone2d_nodepath_1348162250: StringName! = nil
+    static var _method_get_bone2d_nodepath_4075236667: StringName! = nil
+    static var _method_set_bone2d_index_1286410249: StringName! = nil
+    static var _method_get_bone2d_index_3905245786: StringName! = nil
+    static var _method_set_follow_bone_when_simulating_2586408642: StringName! = nil
+    static var _method_get_follow_bone_when_simulating_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PhysicalBone2D == nil)
         __godot_name_PhysicalBone2D = StringName(from: "PhysicalBone2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_joint_3582132112_name = StringName(from: "get_joint")
-        self._method_get_joint_3582132112 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone2D._native_ptr(), _method_get_joint_3582132112_name._native_ptr(), 3582132112)
-        assert(PhysicalBone2D._method_get_joint_3582132112 != nil)
-        let _method_get_auto_configure_joint_36873697_name = StringName(from: "get_auto_configure_joint")
-        self._method_get_auto_configure_joint_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone2D._native_ptr(), _method_get_auto_configure_joint_36873697_name._native_ptr(), 36873697)
-        assert(PhysicalBone2D._method_get_auto_configure_joint_36873697 != nil)
-        let _method_set_auto_configure_joint_2586408642_name = StringName(from: "set_auto_configure_joint")
-        self._method_set_auto_configure_joint_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone2D._native_ptr(), _method_set_auto_configure_joint_2586408642_name._native_ptr(), 2586408642)
-        assert(PhysicalBone2D._method_set_auto_configure_joint_2586408642 != nil)
-        let _method_set_simulate_physics_2586408642_name = StringName(from: "set_simulate_physics")
-        self._method_set_simulate_physics_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone2D._native_ptr(), _method_set_simulate_physics_2586408642_name._native_ptr(), 2586408642)
-        assert(PhysicalBone2D._method_set_simulate_physics_2586408642 != nil)
-        let _method_get_simulate_physics_36873697_name = StringName(from: "get_simulate_physics")
-        self._method_get_simulate_physics_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone2D._native_ptr(), _method_get_simulate_physics_36873697_name._native_ptr(), 36873697)
-        assert(PhysicalBone2D._method_get_simulate_physics_36873697 != nil)
-        let _method_is_simulating_physics_36873697_name = StringName(from: "is_simulating_physics")
-        self._method_is_simulating_physics_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone2D._native_ptr(), _method_is_simulating_physics_36873697_name._native_ptr(), 36873697)
-        assert(PhysicalBone2D._method_is_simulating_physics_36873697 != nil)
-        let _method_set_bone2d_nodepath_1348162250_name = StringName(from: "set_bone2d_nodepath")
-        self._method_set_bone2d_nodepath_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone2D._native_ptr(), _method_set_bone2d_nodepath_1348162250_name._native_ptr(), 1348162250)
-        assert(PhysicalBone2D._method_set_bone2d_nodepath_1348162250 != nil)
-        let _method_get_bone2d_nodepath_4075236667_name = StringName(from: "get_bone2d_nodepath")
-        self._method_get_bone2d_nodepath_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone2D._native_ptr(), _method_get_bone2d_nodepath_4075236667_name._native_ptr(), 4075236667)
-        assert(PhysicalBone2D._method_get_bone2d_nodepath_4075236667 != nil)
-        let _method_set_bone2d_index_1286410249_name = StringName(from: "set_bone2d_index")
-        self._method_set_bone2d_index_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone2D._native_ptr(), _method_set_bone2d_index_1286410249_name._native_ptr(), 1286410249)
-        assert(PhysicalBone2D._method_set_bone2d_index_1286410249 != nil)
-        let _method_get_bone2d_index_3905245786_name = StringName(from: "get_bone2d_index")
-        self._method_get_bone2d_index_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone2D._native_ptr(), _method_get_bone2d_index_3905245786_name._native_ptr(), 3905245786)
-        assert(PhysicalBone2D._method_get_bone2d_index_3905245786 != nil)
-        let _method_set_follow_bone_when_simulating_2586408642_name = StringName(from: "set_follow_bone_when_simulating")
-        self._method_set_follow_bone_when_simulating_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone2D._native_ptr(), _method_set_follow_bone_when_simulating_2586408642_name._native_ptr(), 2586408642)
-        assert(PhysicalBone2D._method_set_follow_bone_when_simulating_2586408642 != nil)
-        let _method_get_follow_bone_when_simulating_36873697_name = StringName(from: "get_follow_bone_when_simulating")
-        self._method_get_follow_bone_when_simulating_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicalBone2D._native_ptr(), _method_get_follow_bone_when_simulating_36873697_name._native_ptr(), 36873697)
-        assert(PhysicalBone2D._method_get_follow_bone_when_simulating_36873697 != nil)
+        self._method_get_joint_3582132112 = StringName(from: "get_joint")
+        assert(self._method_get_joint_3582132112 != nil)
+        self._method_get_auto_configure_joint_36873697 = StringName(from: "get_auto_configure_joint")
+        assert(self._method_get_auto_configure_joint_36873697 != nil)
+        self._method_set_auto_configure_joint_2586408642 = StringName(from: "set_auto_configure_joint")
+        assert(self._method_set_auto_configure_joint_2586408642 != nil)
+        self._method_set_simulate_physics_2586408642 = StringName(from: "set_simulate_physics")
+        assert(self._method_set_simulate_physics_2586408642 != nil)
+        self._method_get_simulate_physics_36873697 = StringName(from: "get_simulate_physics")
+        assert(self._method_get_simulate_physics_36873697 != nil)
+        self._method_is_simulating_physics_36873697 = StringName(from: "is_simulating_physics")
+        assert(self._method_is_simulating_physics_36873697 != nil)
+        self._method_set_bone2d_nodepath_1348162250 = StringName(from: "set_bone2d_nodepath")
+        assert(self._method_set_bone2d_nodepath_1348162250 != nil)
+        self._method_get_bone2d_nodepath_4075236667 = StringName(from: "get_bone2d_nodepath")
+        assert(self._method_get_bone2d_nodepath_4075236667 != nil)
+        self._method_set_bone2d_index_1286410249 = StringName(from: "set_bone2d_index")
+        assert(self._method_set_bone2d_index_1286410249 != nil)
+        self._method_get_bone2d_index_3905245786 = StringName(from: "get_bone2d_index")
+        assert(self._method_get_bone2d_index_3905245786 != nil)
+        self._method_set_follow_bone_when_simulating_2586408642 = StringName(from: "set_follow_bone_when_simulating")
+        assert(self._method_set_follow_bone_when_simulating_2586408642 != nil)
+        self._method_get_follow_bone_when_simulating_36873697 = StringName(from: "get_follow_bone_when_simulating")
+        assert(self._method_get_follow_bone_when_simulating_36873697 != nil)
     }
 
     public func get_joint() -> Joint2D {
@@ -82,8 +71,13 @@ open class PhysicalBone2D : RigidBody2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_joint_3582132112,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_joint_3582132112._native_ptr(),
+                    3582132112)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -99,8 +93,13 @@ open class PhysicalBone2D : RigidBody2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_auto_configure_joint_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_auto_configure_joint_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -115,8 +114,13 @@ open class PhysicalBone2D : RigidBody2D {
                 .init(auto_configure_joint_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_auto_configure_joint_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_auto_configure_joint_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -131,8 +135,13 @@ open class PhysicalBone2D : RigidBody2D {
                 .init(simulate_physics_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_simulate_physics_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_simulate_physics_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -148,8 +157,13 @@ open class PhysicalBone2D : RigidBody2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_simulate_physics_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_simulate_physics_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -165,8 +179,13 @@ open class PhysicalBone2D : RigidBody2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_simulating_physics_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_simulating_physics_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -181,8 +200,13 @@ open class PhysicalBone2D : RigidBody2D {
                 .init(nodepath_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bone2d_nodepath_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bone2d_nodepath_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -196,8 +220,13 @@ open class PhysicalBone2D : RigidBody2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone2d_nodepath_4075236667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone2d_nodepath_4075236667._native_ptr(),
+                    4075236667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -212,8 +241,13 @@ open class PhysicalBone2D : RigidBody2D {
                 .init(bone_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bone2d_index_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bone2d_index_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -229,8 +263,13 @@ open class PhysicalBone2D : RigidBody2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bone2d_index_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bone2d_index_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -245,8 +284,13 @@ open class PhysicalBone2D : RigidBody2D {
                 .init(follow_bone_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_follow_bone_when_simulating_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_follow_bone_when_simulating_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -262,8 +306,13 @@ open class PhysicalBone2D : RigidBody2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_follow_bone_when_simulating_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_follow_bone_when_simulating_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

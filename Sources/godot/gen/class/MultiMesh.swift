@@ -24,107 +24,85 @@ open class MultiMesh : Resource {
 
     public override class var __godot_name: StringName { __godot_name_MultiMesh }
 
-    static var _method_set_mesh_194775623: GDExtensionMethodBindPtr! = nil
-    static var _method_get_mesh_1808005922: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_colors_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_using_colors_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_custom_data_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_using_custom_data_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_transform_format_2404750322: GDExtensionMethodBindPtr! = nil
-    static var _method_get_transform_format_2444156481: GDExtensionMethodBindPtr! = nil
-    static var _method_set_instance_count_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_instance_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_visible_instance_count_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_visible_instance_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_instance_transform_3616898986: GDExtensionMethodBindPtr! = nil
-    static var _method_set_instance_transform_2d_30160968: GDExtensionMethodBindPtr! = nil
-    static var _method_get_instance_transform_1965739696: GDExtensionMethodBindPtr! = nil
-    static var _method_get_instance_transform_2d_3836996910: GDExtensionMethodBindPtr! = nil
-    static var _method_set_instance_color_2878471219: GDExtensionMethodBindPtr! = nil
-    static var _method_get_instance_color_3457211756: GDExtensionMethodBindPtr! = nil
-    static var _method_set_instance_custom_data_2878471219: GDExtensionMethodBindPtr! = nil
-    static var _method_get_instance_custom_data_3457211756: GDExtensionMethodBindPtr! = nil
-    static var _method_get_aabb_1068685055: GDExtensionMethodBindPtr! = nil
-    static var _method_get_buffer_675695659: GDExtensionMethodBindPtr! = nil
-    static var _method_set_buffer_2899603908: GDExtensionMethodBindPtr! = nil
+    static var _method_set_mesh_194775623: StringName! = nil
+    static var _method_get_mesh_1808005922: StringName! = nil
+    static var _method_set_use_colors_2586408642: StringName! = nil
+    static var _method_is_using_colors_36873697: StringName! = nil
+    static var _method_set_use_custom_data_2586408642: StringName! = nil
+    static var _method_is_using_custom_data_36873697: StringName! = nil
+    static var _method_set_transform_format_2404750322: StringName! = nil
+    static var _method_get_transform_format_2444156481: StringName! = nil
+    static var _method_set_instance_count_1286410249: StringName! = nil
+    static var _method_get_instance_count_3905245786: StringName! = nil
+    static var _method_set_visible_instance_count_1286410249: StringName! = nil
+    static var _method_get_visible_instance_count_3905245786: StringName! = nil
+    static var _method_set_instance_transform_3616898986: StringName! = nil
+    static var _method_set_instance_transform_2d_30160968: StringName! = nil
+    static var _method_get_instance_transform_1965739696: StringName! = nil
+    static var _method_get_instance_transform_2d_3836996910: StringName! = nil
+    static var _method_set_instance_color_2878471219: StringName! = nil
+    static var _method_get_instance_color_3457211756: StringName! = nil
+    static var _method_set_instance_custom_data_2878471219: StringName! = nil
+    static var _method_get_instance_custom_data_3457211756: StringName! = nil
+    static var _method_get_aabb_1068685055: StringName! = nil
+    static var _method_get_buffer_675695659: StringName! = nil
+    static var _method_set_buffer_2899603908: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_MultiMesh == nil)
         __godot_name_MultiMesh = StringName(from: "MultiMesh")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_mesh_194775623_name = StringName(from: "set_mesh")
-        self._method_set_mesh_194775623 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_set_mesh_194775623_name._native_ptr(), 194775623)
-        assert(MultiMesh._method_set_mesh_194775623 != nil)
-        let _method_get_mesh_1808005922_name = StringName(from: "get_mesh")
-        self._method_get_mesh_1808005922 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_get_mesh_1808005922_name._native_ptr(), 1808005922)
-        assert(MultiMesh._method_get_mesh_1808005922 != nil)
-        let _method_set_use_colors_2586408642_name = StringName(from: "set_use_colors")
-        self._method_set_use_colors_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_set_use_colors_2586408642_name._native_ptr(), 2586408642)
-        assert(MultiMesh._method_set_use_colors_2586408642 != nil)
-        let _method_is_using_colors_36873697_name = StringName(from: "is_using_colors")
-        self._method_is_using_colors_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_is_using_colors_36873697_name._native_ptr(), 36873697)
-        assert(MultiMesh._method_is_using_colors_36873697 != nil)
-        let _method_set_use_custom_data_2586408642_name = StringName(from: "set_use_custom_data")
-        self._method_set_use_custom_data_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_set_use_custom_data_2586408642_name._native_ptr(), 2586408642)
-        assert(MultiMesh._method_set_use_custom_data_2586408642 != nil)
-        let _method_is_using_custom_data_36873697_name = StringName(from: "is_using_custom_data")
-        self._method_is_using_custom_data_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_is_using_custom_data_36873697_name._native_ptr(), 36873697)
-        assert(MultiMesh._method_is_using_custom_data_36873697 != nil)
-        let _method_set_transform_format_2404750322_name = StringName(from: "set_transform_format")
-        self._method_set_transform_format_2404750322 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_set_transform_format_2404750322_name._native_ptr(), 2404750322)
-        assert(MultiMesh._method_set_transform_format_2404750322 != nil)
-        let _method_get_transform_format_2444156481_name = StringName(from: "get_transform_format")
-        self._method_get_transform_format_2444156481 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_get_transform_format_2444156481_name._native_ptr(), 2444156481)
-        assert(MultiMesh._method_get_transform_format_2444156481 != nil)
-        let _method_set_instance_count_1286410249_name = StringName(from: "set_instance_count")
-        self._method_set_instance_count_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_set_instance_count_1286410249_name._native_ptr(), 1286410249)
-        assert(MultiMesh._method_set_instance_count_1286410249 != nil)
-        let _method_get_instance_count_3905245786_name = StringName(from: "get_instance_count")
-        self._method_get_instance_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_get_instance_count_3905245786_name._native_ptr(), 3905245786)
-        assert(MultiMesh._method_get_instance_count_3905245786 != nil)
-        let _method_set_visible_instance_count_1286410249_name = StringName(from: "set_visible_instance_count")
-        self._method_set_visible_instance_count_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_set_visible_instance_count_1286410249_name._native_ptr(), 1286410249)
-        assert(MultiMesh._method_set_visible_instance_count_1286410249 != nil)
-        let _method_get_visible_instance_count_3905245786_name = StringName(from: "get_visible_instance_count")
-        self._method_get_visible_instance_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_get_visible_instance_count_3905245786_name._native_ptr(), 3905245786)
-        assert(MultiMesh._method_get_visible_instance_count_3905245786 != nil)
-        let _method_set_instance_transform_3616898986_name = StringName(from: "set_instance_transform")
-        self._method_set_instance_transform_3616898986 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_set_instance_transform_3616898986_name._native_ptr(), 3616898986)
-        assert(MultiMesh._method_set_instance_transform_3616898986 != nil)
-        let _method_set_instance_transform_2d_30160968_name = StringName(from: "set_instance_transform_2d")
-        self._method_set_instance_transform_2d_30160968 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_set_instance_transform_2d_30160968_name._native_ptr(), 30160968)
-        assert(MultiMesh._method_set_instance_transform_2d_30160968 != nil)
-        let _method_get_instance_transform_1965739696_name = StringName(from: "get_instance_transform")
-        self._method_get_instance_transform_1965739696 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_get_instance_transform_1965739696_name._native_ptr(), 1965739696)
-        assert(MultiMesh._method_get_instance_transform_1965739696 != nil)
-        let _method_get_instance_transform_2d_3836996910_name = StringName(from: "get_instance_transform_2d")
-        self._method_get_instance_transform_2d_3836996910 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_get_instance_transform_2d_3836996910_name._native_ptr(), 3836996910)
-        assert(MultiMesh._method_get_instance_transform_2d_3836996910 != nil)
-        let _method_set_instance_color_2878471219_name = StringName(from: "set_instance_color")
-        self._method_set_instance_color_2878471219 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_set_instance_color_2878471219_name._native_ptr(), 2878471219)
-        assert(MultiMesh._method_set_instance_color_2878471219 != nil)
-        let _method_get_instance_color_3457211756_name = StringName(from: "get_instance_color")
-        self._method_get_instance_color_3457211756 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_get_instance_color_3457211756_name._native_ptr(), 3457211756)
-        assert(MultiMesh._method_get_instance_color_3457211756 != nil)
-        let _method_set_instance_custom_data_2878471219_name = StringName(from: "set_instance_custom_data")
-        self._method_set_instance_custom_data_2878471219 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_set_instance_custom_data_2878471219_name._native_ptr(), 2878471219)
-        assert(MultiMesh._method_set_instance_custom_data_2878471219 != nil)
-        let _method_get_instance_custom_data_3457211756_name = StringName(from: "get_instance_custom_data")
-        self._method_get_instance_custom_data_3457211756 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_get_instance_custom_data_3457211756_name._native_ptr(), 3457211756)
-        assert(MultiMesh._method_get_instance_custom_data_3457211756 != nil)
-        let _method_get_aabb_1068685055_name = StringName(from: "get_aabb")
-        self._method_get_aabb_1068685055 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_get_aabb_1068685055_name._native_ptr(), 1068685055)
-        assert(MultiMesh._method_get_aabb_1068685055 != nil)
-        let _method_get_buffer_675695659_name = StringName(from: "get_buffer")
-        self._method_get_buffer_675695659 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_get_buffer_675695659_name._native_ptr(), 675695659)
-        assert(MultiMesh._method_get_buffer_675695659 != nil)
-        let _method_set_buffer_2899603908_name = StringName(from: "set_buffer")
-        self._method_set_buffer_2899603908 = self.interface.pointee.classdb_get_method_bind(__godot_name_MultiMesh._native_ptr(), _method_set_buffer_2899603908_name._native_ptr(), 2899603908)
-        assert(MultiMesh._method_set_buffer_2899603908 != nil)
+        self._method_set_mesh_194775623 = StringName(from: "set_mesh")
+        assert(self._method_set_mesh_194775623 != nil)
+        self._method_get_mesh_1808005922 = StringName(from: "get_mesh")
+        assert(self._method_get_mesh_1808005922 != nil)
+        self._method_set_use_colors_2586408642 = StringName(from: "set_use_colors")
+        assert(self._method_set_use_colors_2586408642 != nil)
+        self._method_is_using_colors_36873697 = StringName(from: "is_using_colors")
+        assert(self._method_is_using_colors_36873697 != nil)
+        self._method_set_use_custom_data_2586408642 = StringName(from: "set_use_custom_data")
+        assert(self._method_set_use_custom_data_2586408642 != nil)
+        self._method_is_using_custom_data_36873697 = StringName(from: "is_using_custom_data")
+        assert(self._method_is_using_custom_data_36873697 != nil)
+        self._method_set_transform_format_2404750322 = StringName(from: "set_transform_format")
+        assert(self._method_set_transform_format_2404750322 != nil)
+        self._method_get_transform_format_2444156481 = StringName(from: "get_transform_format")
+        assert(self._method_get_transform_format_2444156481 != nil)
+        self._method_set_instance_count_1286410249 = StringName(from: "set_instance_count")
+        assert(self._method_set_instance_count_1286410249 != nil)
+        self._method_get_instance_count_3905245786 = StringName(from: "get_instance_count")
+        assert(self._method_get_instance_count_3905245786 != nil)
+        self._method_set_visible_instance_count_1286410249 = StringName(from: "set_visible_instance_count")
+        assert(self._method_set_visible_instance_count_1286410249 != nil)
+        self._method_get_visible_instance_count_3905245786 = StringName(from: "get_visible_instance_count")
+        assert(self._method_get_visible_instance_count_3905245786 != nil)
+        self._method_set_instance_transform_3616898986 = StringName(from: "set_instance_transform")
+        assert(self._method_set_instance_transform_3616898986 != nil)
+        self._method_set_instance_transform_2d_30160968 = StringName(from: "set_instance_transform_2d")
+        assert(self._method_set_instance_transform_2d_30160968 != nil)
+        self._method_get_instance_transform_1965739696 = StringName(from: "get_instance_transform")
+        assert(self._method_get_instance_transform_1965739696 != nil)
+        self._method_get_instance_transform_2d_3836996910 = StringName(from: "get_instance_transform_2d")
+        assert(self._method_get_instance_transform_2d_3836996910 != nil)
+        self._method_set_instance_color_2878471219 = StringName(from: "set_instance_color")
+        assert(self._method_set_instance_color_2878471219 != nil)
+        self._method_get_instance_color_3457211756 = StringName(from: "get_instance_color")
+        assert(self._method_get_instance_color_3457211756 != nil)
+        self._method_set_instance_custom_data_2878471219 = StringName(from: "set_instance_custom_data")
+        assert(self._method_set_instance_custom_data_2878471219 != nil)
+        self._method_get_instance_custom_data_3457211756 = StringName(from: "get_instance_custom_data")
+        assert(self._method_get_instance_custom_data_3457211756 != nil)
+        self._method_get_aabb_1068685055 = StringName(from: "get_aabb")
+        assert(self._method_get_aabb_1068685055 != nil)
+        self._method_get_buffer_675695659 = StringName(from: "get_buffer")
+        assert(self._method_get_buffer_675695659 != nil)
+        self._method_set_buffer_2899603908 = StringName(from: "set_buffer")
+        assert(self._method_set_buffer_2899603908 != nil)
     }
 
     public func set_mesh(mesh: Mesh)  {
@@ -135,8 +113,13 @@ open class MultiMesh : Resource {
                 .init(mesh_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_mesh_194775623,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_mesh_194775623._native_ptr(),
+                    194775623)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -150,8 +133,13 @@ open class MultiMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_mesh_1808005922,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_mesh_1808005922._native_ptr(),
+                    1808005922)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -166,8 +154,13 @@ open class MultiMesh : Resource {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_colors_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_colors_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -183,8 +176,13 @@ open class MultiMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_using_colors_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_using_colors_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -199,8 +197,13 @@ open class MultiMesh : Resource {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_custom_data_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_custom_data_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -216,8 +219,13 @@ open class MultiMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_using_custom_data_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_using_custom_data_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -232,8 +240,13 @@ open class MultiMesh : Resource {
                 .init(format_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_transform_format_2404750322,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_transform_format_2404750322._native_ptr(),
+                    2404750322)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -248,8 +261,13 @@ open class MultiMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_transform_format_2444156481,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_transform_format_2444156481._native_ptr(),
+                    2444156481)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -264,8 +282,13 @@ open class MultiMesh : Resource {
                 .init(count_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_instance_count_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_instance_count_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -281,8 +304,13 @@ open class MultiMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_instance_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_instance_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -297,8 +325,13 @@ open class MultiMesh : Resource {
                 .init(count_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_visible_instance_count_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_visible_instance_count_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -314,8 +347,13 @@ open class MultiMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_visible_instance_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_visible_instance_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -331,8 +369,13 @@ open class MultiMesh : Resource {
                 .init(instance_native), .init(transform_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_instance_transform_3616898986,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_instance_transform_3616898986._native_ptr(),
+                    3616898986)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -348,8 +391,13 @@ open class MultiMesh : Resource {
                 .init(instance_native), .init(transform_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_instance_transform_2d_30160968,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_instance_transform_2d_30160968._native_ptr(),
+                    30160968)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -365,8 +413,13 @@ open class MultiMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_instance_transform_1965739696,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_instance_transform_1965739696._native_ptr(),
+                    1965739696)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -383,8 +436,13 @@ open class MultiMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_instance_transform_2d_3836996910,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_instance_transform_2d_3836996910._native_ptr(),
+                    3836996910)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -401,8 +459,13 @@ open class MultiMesh : Resource {
                 .init(instance_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_instance_color_2878471219,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_instance_color_2878471219._native_ptr(),
+                    2878471219)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -418,8 +481,13 @@ open class MultiMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_instance_color_3457211756,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_instance_color_3457211756._native_ptr(),
+                    3457211756)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -436,8 +504,13 @@ open class MultiMesh : Resource {
                 .init(instance_native), .init(custom_data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_instance_custom_data_2878471219,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_instance_custom_data_2878471219._native_ptr(),
+                    2878471219)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -453,8 +526,13 @@ open class MultiMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_instance_custom_data_3457211756,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_instance_custom_data_3457211756._native_ptr(),
+                    3457211756)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -470,8 +548,13 @@ open class MultiMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_aabb_1068685055,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_aabb_1068685055._native_ptr(),
+                    1068685055)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -486,8 +569,13 @@ open class MultiMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_buffer_675695659,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_buffer_675695659._native_ptr(),
+                    675695659)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -502,8 +590,13 @@ open class MultiMesh : Resource {
                 .init(buffer_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_buffer_2899603908,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_buffer_2899603908._native_ptr(),
+                    2899603908)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

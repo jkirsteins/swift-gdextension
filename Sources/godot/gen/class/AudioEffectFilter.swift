@@ -16,47 +16,40 @@ open class AudioEffectFilter : AudioEffect {
 
     public override class var __godot_name: StringName { __godot_name_AudioEffectFilter }
 
-    static var _method_set_cutoff_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cutoff_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_resonance_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_resonance_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_gain_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_gain_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_db_771740901: GDExtensionMethodBindPtr! = nil
-    static var _method_get_db_3981721890: GDExtensionMethodBindPtr! = nil
+    static var _method_set_cutoff_373806689: StringName! = nil
+    static var _method_get_cutoff_1740695150: StringName! = nil
+    static var _method_set_resonance_373806689: StringName! = nil
+    static var _method_get_resonance_1740695150: StringName! = nil
+    static var _method_set_gain_373806689: StringName! = nil
+    static var _method_get_gain_1740695150: StringName! = nil
+    static var _method_set_db_771740901: StringName! = nil
+    static var _method_get_db_3981721890: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AudioEffectFilter == nil)
         __godot_name_AudioEffectFilter = StringName(from: "AudioEffectFilter")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_cutoff_373806689_name = StringName(from: "set_cutoff")
-        self._method_set_cutoff_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectFilter._native_ptr(), _method_set_cutoff_373806689_name._native_ptr(), 373806689)
-        assert(AudioEffectFilter._method_set_cutoff_373806689 != nil)
-        let _method_get_cutoff_1740695150_name = StringName(from: "get_cutoff")
-        self._method_get_cutoff_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectFilter._native_ptr(), _method_get_cutoff_1740695150_name._native_ptr(), 1740695150)
-        assert(AudioEffectFilter._method_get_cutoff_1740695150 != nil)
-        let _method_set_resonance_373806689_name = StringName(from: "set_resonance")
-        self._method_set_resonance_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectFilter._native_ptr(), _method_set_resonance_373806689_name._native_ptr(), 373806689)
-        assert(AudioEffectFilter._method_set_resonance_373806689 != nil)
-        let _method_get_resonance_1740695150_name = StringName(from: "get_resonance")
-        self._method_get_resonance_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectFilter._native_ptr(), _method_get_resonance_1740695150_name._native_ptr(), 1740695150)
-        assert(AudioEffectFilter._method_get_resonance_1740695150 != nil)
-        let _method_set_gain_373806689_name = StringName(from: "set_gain")
-        self._method_set_gain_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectFilter._native_ptr(), _method_set_gain_373806689_name._native_ptr(), 373806689)
-        assert(AudioEffectFilter._method_set_gain_373806689 != nil)
-        let _method_get_gain_1740695150_name = StringName(from: "get_gain")
-        self._method_get_gain_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectFilter._native_ptr(), _method_get_gain_1740695150_name._native_ptr(), 1740695150)
-        assert(AudioEffectFilter._method_get_gain_1740695150 != nil)
-        let _method_set_db_771740901_name = StringName(from: "set_db")
-        self._method_set_db_771740901 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectFilter._native_ptr(), _method_set_db_771740901_name._native_ptr(), 771740901)
-        assert(AudioEffectFilter._method_set_db_771740901 != nil)
-        let _method_get_db_3981721890_name = StringName(from: "get_db")
-        self._method_get_db_3981721890 = self.interface.pointee.classdb_get_method_bind(__godot_name_AudioEffectFilter._native_ptr(), _method_get_db_3981721890_name._native_ptr(), 3981721890)
-        assert(AudioEffectFilter._method_get_db_3981721890 != nil)
+        self._method_set_cutoff_373806689 = StringName(from: "set_cutoff")
+        assert(self._method_set_cutoff_373806689 != nil)
+        self._method_get_cutoff_1740695150 = StringName(from: "get_cutoff")
+        assert(self._method_get_cutoff_1740695150 != nil)
+        self._method_set_resonance_373806689 = StringName(from: "set_resonance")
+        assert(self._method_set_resonance_373806689 != nil)
+        self._method_get_resonance_1740695150 = StringName(from: "get_resonance")
+        assert(self._method_get_resonance_1740695150 != nil)
+        self._method_set_gain_373806689 = StringName(from: "set_gain")
+        assert(self._method_set_gain_373806689 != nil)
+        self._method_get_gain_1740695150 = StringName(from: "get_gain")
+        assert(self._method_get_gain_1740695150 != nil)
+        self._method_set_db_771740901 = StringName(from: "set_db")
+        assert(self._method_set_db_771740901 != nil)
+        self._method_get_db_3981721890 = StringName(from: "get_db")
+        assert(self._method_get_db_3981721890 != nil)
     }
 
     public func set_cutoff(freq: Float64)  {
@@ -67,8 +60,13 @@ open class AudioEffectFilter : AudioEffect {
                 .init(freq_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cutoff_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cutoff_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -84,8 +82,13 @@ open class AudioEffectFilter : AudioEffect {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cutoff_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cutoff_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -100,8 +103,13 @@ open class AudioEffectFilter : AudioEffect {
                 .init(amount_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_resonance_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_resonance_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -117,8 +125,13 @@ open class AudioEffectFilter : AudioEffect {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_resonance_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_resonance_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -133,8 +146,13 @@ open class AudioEffectFilter : AudioEffect {
                 .init(amount_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_gain_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_gain_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -150,8 +168,13 @@ open class AudioEffectFilter : AudioEffect {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_gain_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_gain_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -166,8 +189,13 @@ open class AudioEffectFilter : AudioEffect {
                 .init(amount_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_db_771740901,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_db_771740901._native_ptr(),
+                    771740901)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -182,8 +210,13 @@ open class AudioEffectFilter : AudioEffect {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_db_3981721890,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_db_3981721890._native_ptr(),
+                    3981721890)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

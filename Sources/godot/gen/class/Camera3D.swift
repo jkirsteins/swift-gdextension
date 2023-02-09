@@ -24,199 +24,154 @@ open class Camera3D : Node3D {
 
     public override class var __godot_name: StringName { __godot_name_Camera3D }
 
-    static var _method_project_ray_normal_1718073306: GDExtensionMethodBindPtr! = nil
-    static var _method_project_local_ray_normal_1718073306: GDExtensionMethodBindPtr! = nil
-    static var _method_project_ray_origin_1718073306: GDExtensionMethodBindPtr! = nil
-    static var _method_unproject_position_3758901831: GDExtensionMethodBindPtr! = nil
-    static var _method_is_position_behind_3108956480: GDExtensionMethodBindPtr! = nil
-    static var _method_project_position_2171975744: GDExtensionMethodBindPtr! = nil
-    static var _method_set_perspective_2385087082: GDExtensionMethodBindPtr! = nil
-    static var _method_set_orthogonal_2385087082: GDExtensionMethodBindPtr! = nil
-    static var _method_set_frustum_354890663: GDExtensionMethodBindPtr! = nil
-    static var _method_make_current_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_current_3216645846: GDExtensionMethodBindPtr! = nil
-    static var _method_set_current_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_current_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_camera_transform_3229777777: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fov_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_frustum_offset_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_far_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_near_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fov_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_set_frustum_offset_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_set_size_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_set_far_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_set_near_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_projection_2624185235: GDExtensionMethodBindPtr! = nil
-    static var _method_set_projection_4218540108: GDExtensionMethodBindPtr! = nil
-    static var _method_set_h_offset_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_h_offset_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_v_offset_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_v_offset_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cull_mask_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cull_mask_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_environment_4143518816: GDExtensionMethodBindPtr! = nil
-    static var _method_get_environment_3082064660: GDExtensionMethodBindPtr! = nil
-    static var _method_set_attributes_2817810567: GDExtensionMethodBindPtr! = nil
-    static var _method_get_attributes_3921283215: GDExtensionMethodBindPtr! = nil
-    static var _method_set_keep_aspect_mode_1740651252: GDExtensionMethodBindPtr! = nil
-    static var _method_get_keep_aspect_mode_2790278316: GDExtensionMethodBindPtr! = nil
-    static var _method_set_doppler_tracking_3109431270: GDExtensionMethodBindPtr! = nil
-    static var _method_get_doppler_tracking_1584483649: GDExtensionMethodBindPtr! = nil
-    static var _method_get_frustum_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_is_position_in_frustum_3108956480: GDExtensionMethodBindPtr! = nil
-    static var _method_get_camera_rid_2944877500: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pyramid_shape_rid_529393457: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cull_mask_value_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cull_mask_value_1116898809: GDExtensionMethodBindPtr! = nil
+    static var _method_project_ray_normal_1718073306: StringName! = nil
+    static var _method_project_local_ray_normal_1718073306: StringName! = nil
+    static var _method_project_ray_origin_1718073306: StringName! = nil
+    static var _method_unproject_position_3758901831: StringName! = nil
+    static var _method_is_position_behind_3108956480: StringName! = nil
+    static var _method_project_position_2171975744: StringName! = nil
+    static var _method_set_perspective_2385087082: StringName! = nil
+    static var _method_set_orthogonal_2385087082: StringName! = nil
+    static var _method_set_frustum_354890663: StringName! = nil
+    static var _method_make_current_3218959716: StringName! = nil
+    static var _method_clear_current_3216645846: StringName! = nil
+    static var _method_set_current_2586408642: StringName! = nil
+    static var _method_is_current_36873697: StringName! = nil
+    static var _method_get_camera_transform_3229777777: StringName! = nil
+    static var _method_get_fov_1740695150: StringName! = nil
+    static var _method_get_frustum_offset_3341600327: StringName! = nil
+    static var _method_get_size_1740695150: StringName! = nil
+    static var _method_get_far_1740695150: StringName! = nil
+    static var _method_get_near_1740695150: StringName! = nil
+    static var _method_set_fov_373806689: StringName! = nil
+    static var _method_set_frustum_offset_743155724: StringName! = nil
+    static var _method_set_size_373806689: StringName! = nil
+    static var _method_set_far_373806689: StringName! = nil
+    static var _method_set_near_373806689: StringName! = nil
+    static var _method_get_projection_2624185235: StringName! = nil
+    static var _method_set_projection_4218540108: StringName! = nil
+    static var _method_set_h_offset_373806689: StringName! = nil
+    static var _method_get_h_offset_1740695150: StringName! = nil
+    static var _method_set_v_offset_373806689: StringName! = nil
+    static var _method_get_v_offset_1740695150: StringName! = nil
+    static var _method_set_cull_mask_1286410249: StringName! = nil
+    static var _method_get_cull_mask_3905245786: StringName! = nil
+    static var _method_set_environment_4143518816: StringName! = nil
+    static var _method_get_environment_3082064660: StringName! = nil
+    static var _method_set_attributes_2817810567: StringName! = nil
+    static var _method_get_attributes_3921283215: StringName! = nil
+    static var _method_set_keep_aspect_mode_1740651252: StringName! = nil
+    static var _method_get_keep_aspect_mode_2790278316: StringName! = nil
+    static var _method_set_doppler_tracking_3109431270: StringName! = nil
+    static var _method_get_doppler_tracking_1584483649: StringName! = nil
+    static var _method_get_frustum_3995934104: StringName! = nil
+    static var _method_is_position_in_frustum_3108956480: StringName! = nil
+    static var _method_get_camera_rid_2944877500: StringName! = nil
+    static var _method_get_pyramid_shape_rid_529393457: StringName! = nil
+    static var _method_set_cull_mask_value_300928843: StringName! = nil
+    static var _method_get_cull_mask_value_1116898809: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Camera3D == nil)
         __godot_name_Camera3D = StringName(from: "Camera3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_project_ray_normal_1718073306_name = StringName(from: "project_ray_normal")
-        self._method_project_ray_normal_1718073306 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_project_ray_normal_1718073306_name._native_ptr(), 1718073306)
-        assert(Camera3D._method_project_ray_normal_1718073306 != nil)
-        let _method_project_local_ray_normal_1718073306_name = StringName(from: "project_local_ray_normal")
-        self._method_project_local_ray_normal_1718073306 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_project_local_ray_normal_1718073306_name._native_ptr(), 1718073306)
-        assert(Camera3D._method_project_local_ray_normal_1718073306 != nil)
-        let _method_project_ray_origin_1718073306_name = StringName(from: "project_ray_origin")
-        self._method_project_ray_origin_1718073306 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_project_ray_origin_1718073306_name._native_ptr(), 1718073306)
-        assert(Camera3D._method_project_ray_origin_1718073306 != nil)
-        let _method_unproject_position_3758901831_name = StringName(from: "unproject_position")
-        self._method_unproject_position_3758901831 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_unproject_position_3758901831_name._native_ptr(), 3758901831)
-        assert(Camera3D._method_unproject_position_3758901831 != nil)
-        let _method_is_position_behind_3108956480_name = StringName(from: "is_position_behind")
-        self._method_is_position_behind_3108956480 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_is_position_behind_3108956480_name._native_ptr(), 3108956480)
-        assert(Camera3D._method_is_position_behind_3108956480 != nil)
-        let _method_project_position_2171975744_name = StringName(from: "project_position")
-        self._method_project_position_2171975744 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_project_position_2171975744_name._native_ptr(), 2171975744)
-        assert(Camera3D._method_project_position_2171975744 != nil)
-        let _method_set_perspective_2385087082_name = StringName(from: "set_perspective")
-        self._method_set_perspective_2385087082 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_perspective_2385087082_name._native_ptr(), 2385087082)
-        assert(Camera3D._method_set_perspective_2385087082 != nil)
-        let _method_set_orthogonal_2385087082_name = StringName(from: "set_orthogonal")
-        self._method_set_orthogonal_2385087082 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_orthogonal_2385087082_name._native_ptr(), 2385087082)
-        assert(Camera3D._method_set_orthogonal_2385087082 != nil)
-        let _method_set_frustum_354890663_name = StringName(from: "set_frustum")
-        self._method_set_frustum_354890663 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_frustum_354890663_name._native_ptr(), 354890663)
-        assert(Camera3D._method_set_frustum_354890663 != nil)
-        let _method_make_current_3218959716_name = StringName(from: "make_current")
-        self._method_make_current_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_make_current_3218959716_name._native_ptr(), 3218959716)
-        assert(Camera3D._method_make_current_3218959716 != nil)
-        let _method_clear_current_3216645846_name = StringName(from: "clear_current")
-        self._method_clear_current_3216645846 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_clear_current_3216645846_name._native_ptr(), 3216645846)
-        assert(Camera3D._method_clear_current_3216645846 != nil)
-        let _method_set_current_2586408642_name = StringName(from: "set_current")
-        self._method_set_current_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_current_2586408642_name._native_ptr(), 2586408642)
-        assert(Camera3D._method_set_current_2586408642 != nil)
-        let _method_is_current_36873697_name = StringName(from: "is_current")
-        self._method_is_current_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_is_current_36873697_name._native_ptr(), 36873697)
-        assert(Camera3D._method_is_current_36873697 != nil)
-        let _method_get_camera_transform_3229777777_name = StringName(from: "get_camera_transform")
-        self._method_get_camera_transform_3229777777 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_camera_transform_3229777777_name._native_ptr(), 3229777777)
-        assert(Camera3D._method_get_camera_transform_3229777777 != nil)
-        let _method_get_fov_1740695150_name = StringName(from: "get_fov")
-        self._method_get_fov_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_fov_1740695150_name._native_ptr(), 1740695150)
-        assert(Camera3D._method_get_fov_1740695150 != nil)
-        let _method_get_frustum_offset_3341600327_name = StringName(from: "get_frustum_offset")
-        self._method_get_frustum_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_frustum_offset_3341600327_name._native_ptr(), 3341600327)
-        assert(Camera3D._method_get_frustum_offset_3341600327 != nil)
-        let _method_get_size_1740695150_name = StringName(from: "get_size")
-        self._method_get_size_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_size_1740695150_name._native_ptr(), 1740695150)
-        assert(Camera3D._method_get_size_1740695150 != nil)
-        let _method_get_far_1740695150_name = StringName(from: "get_far")
-        self._method_get_far_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_far_1740695150_name._native_ptr(), 1740695150)
-        assert(Camera3D._method_get_far_1740695150 != nil)
-        let _method_get_near_1740695150_name = StringName(from: "get_near")
-        self._method_get_near_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_near_1740695150_name._native_ptr(), 1740695150)
-        assert(Camera3D._method_get_near_1740695150 != nil)
-        let _method_set_fov_373806689_name = StringName(from: "set_fov")
-        self._method_set_fov_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_fov_373806689_name._native_ptr(), 373806689)
-        assert(Camera3D._method_set_fov_373806689 != nil)
-        let _method_set_frustum_offset_743155724_name = StringName(from: "set_frustum_offset")
-        self._method_set_frustum_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_frustum_offset_743155724_name._native_ptr(), 743155724)
-        assert(Camera3D._method_set_frustum_offset_743155724 != nil)
-        let _method_set_size_373806689_name = StringName(from: "set_size")
-        self._method_set_size_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_size_373806689_name._native_ptr(), 373806689)
-        assert(Camera3D._method_set_size_373806689 != nil)
-        let _method_set_far_373806689_name = StringName(from: "set_far")
-        self._method_set_far_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_far_373806689_name._native_ptr(), 373806689)
-        assert(Camera3D._method_set_far_373806689 != nil)
-        let _method_set_near_373806689_name = StringName(from: "set_near")
-        self._method_set_near_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_near_373806689_name._native_ptr(), 373806689)
-        assert(Camera3D._method_set_near_373806689 != nil)
-        let _method_get_projection_2624185235_name = StringName(from: "get_projection")
-        self._method_get_projection_2624185235 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_projection_2624185235_name._native_ptr(), 2624185235)
-        assert(Camera3D._method_get_projection_2624185235 != nil)
-        let _method_set_projection_4218540108_name = StringName(from: "set_projection")
-        self._method_set_projection_4218540108 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_projection_4218540108_name._native_ptr(), 4218540108)
-        assert(Camera3D._method_set_projection_4218540108 != nil)
-        let _method_set_h_offset_373806689_name = StringName(from: "set_h_offset")
-        self._method_set_h_offset_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_h_offset_373806689_name._native_ptr(), 373806689)
-        assert(Camera3D._method_set_h_offset_373806689 != nil)
-        let _method_get_h_offset_1740695150_name = StringName(from: "get_h_offset")
-        self._method_get_h_offset_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_h_offset_1740695150_name._native_ptr(), 1740695150)
-        assert(Camera3D._method_get_h_offset_1740695150 != nil)
-        let _method_set_v_offset_373806689_name = StringName(from: "set_v_offset")
-        self._method_set_v_offset_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_v_offset_373806689_name._native_ptr(), 373806689)
-        assert(Camera3D._method_set_v_offset_373806689 != nil)
-        let _method_get_v_offset_1740695150_name = StringName(from: "get_v_offset")
-        self._method_get_v_offset_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_v_offset_1740695150_name._native_ptr(), 1740695150)
-        assert(Camera3D._method_get_v_offset_1740695150 != nil)
-        let _method_set_cull_mask_1286410249_name = StringName(from: "set_cull_mask")
-        self._method_set_cull_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_cull_mask_1286410249_name._native_ptr(), 1286410249)
-        assert(Camera3D._method_set_cull_mask_1286410249 != nil)
-        let _method_get_cull_mask_3905245786_name = StringName(from: "get_cull_mask")
-        self._method_get_cull_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_cull_mask_3905245786_name._native_ptr(), 3905245786)
-        assert(Camera3D._method_get_cull_mask_3905245786 != nil)
-        let _method_set_environment_4143518816_name = StringName(from: "set_environment")
-        self._method_set_environment_4143518816 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_environment_4143518816_name._native_ptr(), 4143518816)
-        assert(Camera3D._method_set_environment_4143518816 != nil)
-        let _method_get_environment_3082064660_name = StringName(from: "get_environment")
-        self._method_get_environment_3082064660 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_environment_3082064660_name._native_ptr(), 3082064660)
-        assert(Camera3D._method_get_environment_3082064660 != nil)
-        let _method_set_attributes_2817810567_name = StringName(from: "set_attributes")
-        self._method_set_attributes_2817810567 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_attributes_2817810567_name._native_ptr(), 2817810567)
-        assert(Camera3D._method_set_attributes_2817810567 != nil)
-        let _method_get_attributes_3921283215_name = StringName(from: "get_attributes")
-        self._method_get_attributes_3921283215 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_attributes_3921283215_name._native_ptr(), 3921283215)
-        assert(Camera3D._method_get_attributes_3921283215 != nil)
-        let _method_set_keep_aspect_mode_1740651252_name = StringName(from: "set_keep_aspect_mode")
-        self._method_set_keep_aspect_mode_1740651252 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_keep_aspect_mode_1740651252_name._native_ptr(), 1740651252)
-        assert(Camera3D._method_set_keep_aspect_mode_1740651252 != nil)
-        let _method_get_keep_aspect_mode_2790278316_name = StringName(from: "get_keep_aspect_mode")
-        self._method_get_keep_aspect_mode_2790278316 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_keep_aspect_mode_2790278316_name._native_ptr(), 2790278316)
-        assert(Camera3D._method_get_keep_aspect_mode_2790278316 != nil)
-        let _method_set_doppler_tracking_3109431270_name = StringName(from: "set_doppler_tracking")
-        self._method_set_doppler_tracking_3109431270 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_doppler_tracking_3109431270_name._native_ptr(), 3109431270)
-        assert(Camera3D._method_set_doppler_tracking_3109431270 != nil)
-        let _method_get_doppler_tracking_1584483649_name = StringName(from: "get_doppler_tracking")
-        self._method_get_doppler_tracking_1584483649 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_doppler_tracking_1584483649_name._native_ptr(), 1584483649)
-        assert(Camera3D._method_get_doppler_tracking_1584483649 != nil)
-        let _method_get_frustum_3995934104_name = StringName(from: "get_frustum")
-        self._method_get_frustum_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_frustum_3995934104_name._native_ptr(), 3995934104)
-        assert(Camera3D._method_get_frustum_3995934104 != nil)
-        let _method_is_position_in_frustum_3108956480_name = StringName(from: "is_position_in_frustum")
-        self._method_is_position_in_frustum_3108956480 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_is_position_in_frustum_3108956480_name._native_ptr(), 3108956480)
-        assert(Camera3D._method_is_position_in_frustum_3108956480 != nil)
-        let _method_get_camera_rid_2944877500_name = StringName(from: "get_camera_rid")
-        self._method_get_camera_rid_2944877500 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_camera_rid_2944877500_name._native_ptr(), 2944877500)
-        assert(Camera3D._method_get_camera_rid_2944877500 != nil)
-        let _method_get_pyramid_shape_rid_529393457_name = StringName(from: "get_pyramid_shape_rid")
-        self._method_get_pyramid_shape_rid_529393457 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_pyramid_shape_rid_529393457_name._native_ptr(), 529393457)
-        assert(Camera3D._method_get_pyramid_shape_rid_529393457 != nil)
-        let _method_set_cull_mask_value_300928843_name = StringName(from: "set_cull_mask_value")
-        self._method_set_cull_mask_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_set_cull_mask_value_300928843_name._native_ptr(), 300928843)
-        assert(Camera3D._method_set_cull_mask_value_300928843 != nil)
-        let _method_get_cull_mask_value_1116898809_name = StringName(from: "get_cull_mask_value")
-        self._method_get_cull_mask_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_Camera3D._native_ptr(), _method_get_cull_mask_value_1116898809_name._native_ptr(), 1116898809)
-        assert(Camera3D._method_get_cull_mask_value_1116898809 != nil)
+        self._method_project_ray_normal_1718073306 = StringName(from: "project_ray_normal")
+        assert(self._method_project_ray_normal_1718073306 != nil)
+        self._method_project_local_ray_normal_1718073306 = StringName(from: "project_local_ray_normal")
+        assert(self._method_project_local_ray_normal_1718073306 != nil)
+        self._method_project_ray_origin_1718073306 = StringName(from: "project_ray_origin")
+        assert(self._method_project_ray_origin_1718073306 != nil)
+        self._method_unproject_position_3758901831 = StringName(from: "unproject_position")
+        assert(self._method_unproject_position_3758901831 != nil)
+        self._method_is_position_behind_3108956480 = StringName(from: "is_position_behind")
+        assert(self._method_is_position_behind_3108956480 != nil)
+        self._method_project_position_2171975744 = StringName(from: "project_position")
+        assert(self._method_project_position_2171975744 != nil)
+        self._method_set_perspective_2385087082 = StringName(from: "set_perspective")
+        assert(self._method_set_perspective_2385087082 != nil)
+        self._method_set_orthogonal_2385087082 = StringName(from: "set_orthogonal")
+        assert(self._method_set_orthogonal_2385087082 != nil)
+        self._method_set_frustum_354890663 = StringName(from: "set_frustum")
+        assert(self._method_set_frustum_354890663 != nil)
+        self._method_make_current_3218959716 = StringName(from: "make_current")
+        assert(self._method_make_current_3218959716 != nil)
+        self._method_clear_current_3216645846 = StringName(from: "clear_current")
+        assert(self._method_clear_current_3216645846 != nil)
+        self._method_set_current_2586408642 = StringName(from: "set_current")
+        assert(self._method_set_current_2586408642 != nil)
+        self._method_is_current_36873697 = StringName(from: "is_current")
+        assert(self._method_is_current_36873697 != nil)
+        self._method_get_camera_transform_3229777777 = StringName(from: "get_camera_transform")
+        assert(self._method_get_camera_transform_3229777777 != nil)
+        self._method_get_fov_1740695150 = StringName(from: "get_fov")
+        assert(self._method_get_fov_1740695150 != nil)
+        self._method_get_frustum_offset_3341600327 = StringName(from: "get_frustum_offset")
+        assert(self._method_get_frustum_offset_3341600327 != nil)
+        self._method_get_size_1740695150 = StringName(from: "get_size")
+        assert(self._method_get_size_1740695150 != nil)
+        self._method_get_far_1740695150 = StringName(from: "get_far")
+        assert(self._method_get_far_1740695150 != nil)
+        self._method_get_near_1740695150 = StringName(from: "get_near")
+        assert(self._method_get_near_1740695150 != nil)
+        self._method_set_fov_373806689 = StringName(from: "set_fov")
+        assert(self._method_set_fov_373806689 != nil)
+        self._method_set_frustum_offset_743155724 = StringName(from: "set_frustum_offset")
+        assert(self._method_set_frustum_offset_743155724 != nil)
+        self._method_set_size_373806689 = StringName(from: "set_size")
+        assert(self._method_set_size_373806689 != nil)
+        self._method_set_far_373806689 = StringName(from: "set_far")
+        assert(self._method_set_far_373806689 != nil)
+        self._method_set_near_373806689 = StringName(from: "set_near")
+        assert(self._method_set_near_373806689 != nil)
+        self._method_get_projection_2624185235 = StringName(from: "get_projection")
+        assert(self._method_get_projection_2624185235 != nil)
+        self._method_set_projection_4218540108 = StringName(from: "set_projection")
+        assert(self._method_set_projection_4218540108 != nil)
+        self._method_set_h_offset_373806689 = StringName(from: "set_h_offset")
+        assert(self._method_set_h_offset_373806689 != nil)
+        self._method_get_h_offset_1740695150 = StringName(from: "get_h_offset")
+        assert(self._method_get_h_offset_1740695150 != nil)
+        self._method_set_v_offset_373806689 = StringName(from: "set_v_offset")
+        assert(self._method_set_v_offset_373806689 != nil)
+        self._method_get_v_offset_1740695150 = StringName(from: "get_v_offset")
+        assert(self._method_get_v_offset_1740695150 != nil)
+        self._method_set_cull_mask_1286410249 = StringName(from: "set_cull_mask")
+        assert(self._method_set_cull_mask_1286410249 != nil)
+        self._method_get_cull_mask_3905245786 = StringName(from: "get_cull_mask")
+        assert(self._method_get_cull_mask_3905245786 != nil)
+        self._method_set_environment_4143518816 = StringName(from: "set_environment")
+        assert(self._method_set_environment_4143518816 != nil)
+        self._method_get_environment_3082064660 = StringName(from: "get_environment")
+        assert(self._method_get_environment_3082064660 != nil)
+        self._method_set_attributes_2817810567 = StringName(from: "set_attributes")
+        assert(self._method_set_attributes_2817810567 != nil)
+        self._method_get_attributes_3921283215 = StringName(from: "get_attributes")
+        assert(self._method_get_attributes_3921283215 != nil)
+        self._method_set_keep_aspect_mode_1740651252 = StringName(from: "set_keep_aspect_mode")
+        assert(self._method_set_keep_aspect_mode_1740651252 != nil)
+        self._method_get_keep_aspect_mode_2790278316 = StringName(from: "get_keep_aspect_mode")
+        assert(self._method_get_keep_aspect_mode_2790278316 != nil)
+        self._method_set_doppler_tracking_3109431270 = StringName(from: "set_doppler_tracking")
+        assert(self._method_set_doppler_tracking_3109431270 != nil)
+        self._method_get_doppler_tracking_1584483649 = StringName(from: "get_doppler_tracking")
+        assert(self._method_get_doppler_tracking_1584483649 != nil)
+        self._method_get_frustum_3995934104 = StringName(from: "get_frustum")
+        assert(self._method_get_frustum_3995934104 != nil)
+        self._method_is_position_in_frustum_3108956480 = StringName(from: "is_position_in_frustum")
+        assert(self._method_is_position_in_frustum_3108956480 != nil)
+        self._method_get_camera_rid_2944877500 = StringName(from: "get_camera_rid")
+        assert(self._method_get_camera_rid_2944877500 != nil)
+        self._method_get_pyramid_shape_rid_529393457 = StringName(from: "get_pyramid_shape_rid")
+        assert(self._method_get_pyramid_shape_rid_529393457 != nil)
+        self._method_set_cull_mask_value_300928843 = StringName(from: "set_cull_mask_value")
+        assert(self._method_set_cull_mask_value_300928843 != nil)
+        self._method_get_cull_mask_value_1116898809 = StringName(from: "get_cull_mask_value")
+        assert(self._method_get_cull_mask_value_1116898809 != nil)
     }
 
     public func project_ray_normal(screen_point: Vector2) -> Vector3 {
@@ -228,8 +183,13 @@ open class Camera3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_project_ray_normal_1718073306,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_project_ray_normal_1718073306._native_ptr(),
+                    1718073306)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -245,8 +205,13 @@ open class Camera3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_project_local_ray_normal_1718073306,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_project_local_ray_normal_1718073306._native_ptr(),
+                    1718073306)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -262,8 +227,13 @@ open class Camera3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_project_ray_origin_1718073306,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_project_ray_origin_1718073306._native_ptr(),
+                    1718073306)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -279,8 +249,13 @@ open class Camera3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_unproject_position_3758901831,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_unproject_position_3758901831._native_ptr(),
+                    3758901831)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -297,8 +272,13 @@ open class Camera3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_position_behind_3108956480,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_position_behind_3108956480._native_ptr(),
+                    3108956480)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -315,8 +295,13 @@ open class Camera3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_project_position_2171975744,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_project_position_2171975744._native_ptr(),
+                    2171975744)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -334,8 +319,13 @@ open class Camera3D : Node3D {
                 .init(fov_native), .init(z_near_native), .init(z_far_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_perspective_2385087082,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_perspective_2385087082._native_ptr(),
+                    2385087082)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -354,8 +344,13 @@ open class Camera3D : Node3D {
                 .init(size_native), .init(z_near_native), .init(z_far_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_orthogonal_2385087082,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_orthogonal_2385087082._native_ptr(),
+                    2385087082)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -375,8 +370,13 @@ open class Camera3D : Node3D {
                 .init(size_native), .init(offset_native), .init(z_near_native), .init(z_far_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_frustum_354890663,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_frustum_354890663._native_ptr(),
+                    354890663)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -392,8 +392,13 @@ open class Camera3D : Node3D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_make_current_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_make_current_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -407,8 +412,13 @@ open class Camera3D : Node3D {
                 .init(enable_next_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_current_3216645846,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_current_3216645846._native_ptr(),
+                    3216645846)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -423,8 +433,13 @@ open class Camera3D : Node3D {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_current_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_current_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -440,8 +455,13 @@ open class Camera3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_current_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_current_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -456,8 +476,13 @@ open class Camera3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_camera_transform_3229777777,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_camera_transform_3229777777._native_ptr(),
+                    3229777777)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -473,8 +498,13 @@ open class Camera3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fov_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fov_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -489,8 +519,13 @@ open class Camera3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_frustum_offset_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_frustum_offset_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -506,8 +541,13 @@ open class Camera3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -523,8 +563,13 @@ open class Camera3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_far_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_far_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -540,8 +585,13 @@ open class Camera3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_near_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_near_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -556,8 +606,13 @@ open class Camera3D : Node3D {
                 .init(fov_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fov_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fov_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -572,8 +627,13 @@ open class Camera3D : Node3D {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_frustum_offset_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_frustum_offset_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -587,8 +647,13 @@ open class Camera3D : Node3D {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_size_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_size_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -603,8 +668,13 @@ open class Camera3D : Node3D {
                 .init(far_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_far_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_far_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -619,8 +689,13 @@ open class Camera3D : Node3D {
                 .init(near_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_near_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_near_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -635,8 +710,13 @@ open class Camera3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_projection_2624185235,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_projection_2624185235._native_ptr(),
+                    2624185235)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -651,8 +731,13 @@ open class Camera3D : Node3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_projection_4218540108,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_projection_4218540108._native_ptr(),
+                    4218540108)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -667,8 +752,13 @@ open class Camera3D : Node3D {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_h_offset_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_h_offset_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -684,8 +774,13 @@ open class Camera3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_h_offset_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_h_offset_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -700,8 +795,13 @@ open class Camera3D : Node3D {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_v_offset_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_v_offset_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -717,8 +817,13 @@ open class Camera3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_v_offset_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_v_offset_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -733,8 +838,13 @@ open class Camera3D : Node3D {
                 .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cull_mask_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cull_mask_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -750,8 +860,13 @@ open class Camera3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cull_mask_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cull_mask_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -766,8 +881,13 @@ open class Camera3D : Node3D {
                 .init(env_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_environment_4143518816,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_environment_4143518816._native_ptr(),
+                    4143518816)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -781,8 +901,13 @@ open class Camera3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_environment_3082064660,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_environment_3082064660._native_ptr(),
+                    3082064660)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -797,8 +922,13 @@ open class Camera3D : Node3D {
                 .init(env_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_attributes_2817810567,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_attributes_2817810567._native_ptr(),
+                    2817810567)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -812,8 +942,13 @@ open class Camera3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_attributes_3921283215,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_attributes_3921283215._native_ptr(),
+                    3921283215)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -828,8 +963,13 @@ open class Camera3D : Node3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_keep_aspect_mode_1740651252,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_keep_aspect_mode_1740651252._native_ptr(),
+                    1740651252)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -844,8 +984,13 @@ open class Camera3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_keep_aspect_mode_2790278316,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_keep_aspect_mode_2790278316._native_ptr(),
+                    2790278316)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -860,8 +1005,13 @@ open class Camera3D : Node3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_doppler_tracking_3109431270,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_doppler_tracking_3109431270._native_ptr(),
+                    3109431270)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -876,8 +1026,13 @@ open class Camera3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_doppler_tracking_1584483649,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_doppler_tracking_1584483649._native_ptr(),
+                    1584483649)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -892,8 +1047,13 @@ open class Camera3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_frustum_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_frustum_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -910,8 +1070,13 @@ open class Camera3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_position_in_frustum_3108956480,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_position_in_frustum_3108956480._native_ptr(),
+                    3108956480)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -926,8 +1091,13 @@ open class Camera3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_camera_rid_2944877500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_camera_rid_2944877500._native_ptr(),
+                    2944877500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -942,8 +1112,13 @@ open class Camera3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pyramid_shape_rid_529393457,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pyramid_shape_rid_529393457._native_ptr(),
+                    529393457)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -959,8 +1134,13 @@ open class Camera3D : Node3D {
                 .init(layer_number_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cull_mask_value_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cull_mask_value_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -978,8 +1158,13 @@ open class Camera3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cull_mask_value_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cull_mask_value_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

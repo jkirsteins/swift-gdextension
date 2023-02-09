@@ -17,23 +17,22 @@ open class VisualShaderNodeParticleRandomness : VisualShaderNode {
 
     public override class var __godot_name: StringName { __godot_name_VisualShaderNodeParticleRandomness }
 
-    static var _method_set_op_type_2060089061: GDExtensionMethodBindPtr! = nil
-    static var _method_get_op_type_3597061078: GDExtensionMethodBindPtr! = nil
+    static var _method_set_op_type_2060089061: StringName! = nil
+    static var _method_get_op_type_3597061078: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShaderNodeParticleRandomness == nil)
         __godot_name_VisualShaderNodeParticleRandomness = StringName(from: "VisualShaderNodeParticleRandomness")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_op_type_2060089061_name = StringName(from: "set_op_type")
-        self._method_set_op_type_2060089061 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParticleRandomness._native_ptr(), _method_set_op_type_2060089061_name._native_ptr(), 2060089061)
-        assert(VisualShaderNodeParticleRandomness._method_set_op_type_2060089061 != nil)
-        let _method_get_op_type_3597061078_name = StringName(from: "get_op_type")
-        self._method_get_op_type_3597061078 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParticleRandomness._native_ptr(), _method_get_op_type_3597061078_name._native_ptr(), 3597061078)
-        assert(VisualShaderNodeParticleRandomness._method_get_op_type_3597061078 != nil)
+        self._method_set_op_type_2060089061 = StringName(from: "set_op_type")
+        assert(self._method_set_op_type_2060089061 != nil)
+        self._method_get_op_type_3597061078 = StringName(from: "get_op_type")
+        assert(self._method_get_op_type_3597061078 != nil)
     }
 
     public func set_op_type(`type`: VisualShaderNodeParticleRandomness.OpType)  {
@@ -44,8 +43,13 @@ open class VisualShaderNodeParticleRandomness : VisualShaderNode {
                 .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_op_type_2060089061,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_op_type_2060089061._native_ptr(),
+                    2060089061)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -60,8 +64,13 @@ open class VisualShaderNodeParticleRandomness : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_op_type_3597061078,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_op_type_3597061078._native_ptr(),
+                    3597061078)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -277,23 +277,22 @@ open class DTLSServer : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_DTLSServer }
 
-    static var _method_setup_1262296096: GDExtensionMethodBindPtr! = nil
-    static var _method_take_connection_3946580474: GDExtensionMethodBindPtr! = nil
+    static var _method_setup_1262296096: StringName! = nil
+    static var _method_take_connection_3946580474: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_DTLSServer == nil)
         __godot_name_DTLSServer = StringName(from: "DTLSServer")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_setup_1262296096_name = StringName(from: "setup")
-        self._method_setup_1262296096 = self.interface.pointee.classdb_get_method_bind(__godot_name_DTLSServer._native_ptr(), _method_setup_1262296096_name._native_ptr(), 1262296096)
-        assert(DTLSServer._method_setup_1262296096 != nil)
-        let _method_take_connection_3946580474_name = StringName(from: "take_connection")
-        self._method_take_connection_3946580474 = self.interface.pointee.classdb_get_method_bind(__godot_name_DTLSServer._native_ptr(), _method_take_connection_3946580474_name._native_ptr(), 3946580474)
-        assert(DTLSServer._method_take_connection_3946580474 != nil)
+        self._method_setup_1262296096 = StringName(from: "setup")
+        assert(self._method_setup_1262296096 != nil)
+        self._method_take_connection_3946580474 = StringName(from: "take_connection")
+        assert(self._method_take_connection_3946580474 != nil)
     }
 
     public func setup(server_options: TLSOptions) -> Error {
@@ -305,8 +304,13 @@ open class DTLSServer : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_setup_1262296096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_setup_1262296096._native_ptr(),
+                    1262296096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -322,8 +326,13 @@ open class DTLSServer : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_take_connection_3946580474,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_take_connection_3946580474._native_ptr(),
+                    3946580474)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

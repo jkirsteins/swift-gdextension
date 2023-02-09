@@ -15,23 +15,22 @@ open class VisualShaderNodeIs : VisualShaderNode {
 
     public override class var __godot_name: StringName { __godot_name_VisualShaderNodeIs }
 
-    static var _method_set_function_1438374690: GDExtensionMethodBindPtr! = nil
-    static var _method_get_function_580678557: GDExtensionMethodBindPtr! = nil
+    static var _method_set_function_1438374690: StringName! = nil
+    static var _method_get_function_580678557: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShaderNodeIs == nil)
         __godot_name_VisualShaderNodeIs = StringName(from: "VisualShaderNodeIs")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_function_1438374690_name = StringName(from: "set_function")
-        self._method_set_function_1438374690 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeIs._native_ptr(), _method_set_function_1438374690_name._native_ptr(), 1438374690)
-        assert(VisualShaderNodeIs._method_set_function_1438374690 != nil)
-        let _method_get_function_580678557_name = StringName(from: "get_function")
-        self._method_get_function_580678557 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeIs._native_ptr(), _method_get_function_580678557_name._native_ptr(), 580678557)
-        assert(VisualShaderNodeIs._method_get_function_580678557 != nil)
+        self._method_set_function_1438374690 = StringName(from: "set_function")
+        assert(self._method_set_function_1438374690 != nil)
+        self._method_get_function_580678557 = StringName(from: "get_function")
+        assert(self._method_get_function_580678557 != nil)
     }
 
     public func set_function(`func`: VisualShaderNodeIs.Function)  {
@@ -42,8 +41,13 @@ open class VisualShaderNodeIs : VisualShaderNode {
                 .init(func_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_function_1438374690,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_function_1438374690._native_ptr(),
+                    1438374690)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -58,8 +62,13 @@ open class VisualShaderNodeIs : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_function_580678557,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_function_580678557._native_ptr(),
+                    580678557)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

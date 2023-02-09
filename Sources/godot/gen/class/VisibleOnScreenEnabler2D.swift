@@ -15,31 +15,28 @@ open class VisibleOnScreenEnabler2D : VisibleOnScreenNotifier2D {
 
     public override class var __godot_name: StringName { __godot_name_VisibleOnScreenEnabler2D }
 
-    static var _method_set_enable_mode_2961788752: GDExtensionMethodBindPtr! = nil
-    static var _method_get_enable_mode_2650445576: GDExtensionMethodBindPtr! = nil
-    static var _method_set_enable_node_path_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_enable_node_path_277076166: GDExtensionMethodBindPtr! = nil
+    static var _method_set_enable_mode_2961788752: StringName! = nil
+    static var _method_get_enable_mode_2650445576: StringName! = nil
+    static var _method_set_enable_node_path_1348162250: StringName! = nil
+    static var _method_get_enable_node_path_277076166: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisibleOnScreenEnabler2D == nil)
         __godot_name_VisibleOnScreenEnabler2D = StringName(from: "VisibleOnScreenEnabler2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_enable_mode_2961788752_name = StringName(from: "set_enable_mode")
-        self._method_set_enable_mode_2961788752 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisibleOnScreenEnabler2D._native_ptr(), _method_set_enable_mode_2961788752_name._native_ptr(), 2961788752)
-        assert(VisibleOnScreenEnabler2D._method_set_enable_mode_2961788752 != nil)
-        let _method_get_enable_mode_2650445576_name = StringName(from: "get_enable_mode")
-        self._method_get_enable_mode_2650445576 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisibleOnScreenEnabler2D._native_ptr(), _method_get_enable_mode_2650445576_name._native_ptr(), 2650445576)
-        assert(VisibleOnScreenEnabler2D._method_get_enable_mode_2650445576 != nil)
-        let _method_set_enable_node_path_1348162250_name = StringName(from: "set_enable_node_path")
-        self._method_set_enable_node_path_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisibleOnScreenEnabler2D._native_ptr(), _method_set_enable_node_path_1348162250_name._native_ptr(), 1348162250)
-        assert(VisibleOnScreenEnabler2D._method_set_enable_node_path_1348162250 != nil)
-        let _method_get_enable_node_path_277076166_name = StringName(from: "get_enable_node_path")
-        self._method_get_enable_node_path_277076166 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisibleOnScreenEnabler2D._native_ptr(), _method_get_enable_node_path_277076166_name._native_ptr(), 277076166)
-        assert(VisibleOnScreenEnabler2D._method_get_enable_node_path_277076166 != nil)
+        self._method_set_enable_mode_2961788752 = StringName(from: "set_enable_mode")
+        assert(self._method_set_enable_mode_2961788752 != nil)
+        self._method_get_enable_mode_2650445576 = StringName(from: "get_enable_mode")
+        assert(self._method_get_enable_mode_2650445576 != nil)
+        self._method_set_enable_node_path_1348162250 = StringName(from: "set_enable_node_path")
+        assert(self._method_set_enable_node_path_1348162250 != nil)
+        self._method_get_enable_node_path_277076166 = StringName(from: "get_enable_node_path")
+        assert(self._method_get_enable_node_path_277076166 != nil)
     }
 
     public func set_enable_mode(mode: VisibleOnScreenEnabler2D.EnableMode)  {
@@ -50,8 +47,13 @@ open class VisibleOnScreenEnabler2D : VisibleOnScreenNotifier2D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_enable_mode_2961788752,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_enable_mode_2961788752._native_ptr(),
+                    2961788752)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -66,8 +68,13 @@ open class VisibleOnScreenEnabler2D : VisibleOnScreenNotifier2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_enable_mode_2650445576,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_enable_mode_2650445576._native_ptr(),
+                    2650445576)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -82,8 +89,13 @@ open class VisibleOnScreenEnabler2D : VisibleOnScreenNotifier2D {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_enable_node_path_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_enable_node_path_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -97,8 +109,13 @@ open class VisibleOnScreenEnabler2D : VisibleOnScreenNotifier2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_enable_node_path_277076166,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_enable_node_path_277076166._native_ptr(),
+                    277076166)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

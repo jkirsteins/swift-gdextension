@@ -15,43 +15,37 @@ open class MenuButton : Button {
 
     public override class var __godot_name: StringName { __godot_name_MenuButton }
 
-    static var _method_get_popup_229722558: GDExtensionMethodBindPtr! = nil
-    static var _method_show_popup_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_switch_on_hover_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_switch_on_hover_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_set_disable_shortcuts_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_count_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_count_3905245786: GDExtensionMethodBindPtr! = nil
+    static var _method_get_popup_229722558: StringName! = nil
+    static var _method_show_popup_3218959716: StringName! = nil
+    static var _method_set_switch_on_hover_2586408642: StringName! = nil
+    static var _method_is_switch_on_hover_2240911060: StringName! = nil
+    static var _method_set_disable_shortcuts_2586408642: StringName! = nil
+    static var _method_set_item_count_1286410249: StringName! = nil
+    static var _method_get_item_count_3905245786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_MenuButton == nil)
         __godot_name_MenuButton = StringName(from: "MenuButton")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_popup_229722558_name = StringName(from: "get_popup")
-        self._method_get_popup_229722558 = self.interface.pointee.classdb_get_method_bind(__godot_name_MenuButton._native_ptr(), _method_get_popup_229722558_name._native_ptr(), 229722558)
-        assert(MenuButton._method_get_popup_229722558 != nil)
-        let _method_show_popup_3218959716_name = StringName(from: "show_popup")
-        self._method_show_popup_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_MenuButton._native_ptr(), _method_show_popup_3218959716_name._native_ptr(), 3218959716)
-        assert(MenuButton._method_show_popup_3218959716 != nil)
-        let _method_set_switch_on_hover_2586408642_name = StringName(from: "set_switch_on_hover")
-        self._method_set_switch_on_hover_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_MenuButton._native_ptr(), _method_set_switch_on_hover_2586408642_name._native_ptr(), 2586408642)
-        assert(MenuButton._method_set_switch_on_hover_2586408642 != nil)
-        let _method_is_switch_on_hover_2240911060_name = StringName(from: "is_switch_on_hover")
-        self._method_is_switch_on_hover_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_MenuButton._native_ptr(), _method_is_switch_on_hover_2240911060_name._native_ptr(), 2240911060)
-        assert(MenuButton._method_is_switch_on_hover_2240911060 != nil)
-        let _method_set_disable_shortcuts_2586408642_name = StringName(from: "set_disable_shortcuts")
-        self._method_set_disable_shortcuts_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_MenuButton._native_ptr(), _method_set_disable_shortcuts_2586408642_name._native_ptr(), 2586408642)
-        assert(MenuButton._method_set_disable_shortcuts_2586408642 != nil)
-        let _method_set_item_count_1286410249_name = StringName(from: "set_item_count")
-        self._method_set_item_count_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_MenuButton._native_ptr(), _method_set_item_count_1286410249_name._native_ptr(), 1286410249)
-        assert(MenuButton._method_set_item_count_1286410249 != nil)
-        let _method_get_item_count_3905245786_name = StringName(from: "get_item_count")
-        self._method_get_item_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_MenuButton._native_ptr(), _method_get_item_count_3905245786_name._native_ptr(), 3905245786)
-        assert(MenuButton._method_get_item_count_3905245786 != nil)
+        self._method_get_popup_229722558 = StringName(from: "get_popup")
+        assert(self._method_get_popup_229722558 != nil)
+        self._method_show_popup_3218959716 = StringName(from: "show_popup")
+        assert(self._method_show_popup_3218959716 != nil)
+        self._method_set_switch_on_hover_2586408642 = StringName(from: "set_switch_on_hover")
+        assert(self._method_set_switch_on_hover_2586408642 != nil)
+        self._method_is_switch_on_hover_2240911060 = StringName(from: "is_switch_on_hover")
+        assert(self._method_is_switch_on_hover_2240911060 != nil)
+        self._method_set_disable_shortcuts_2586408642 = StringName(from: "set_disable_shortcuts")
+        assert(self._method_set_disable_shortcuts_2586408642 != nil)
+        self._method_set_item_count_1286410249 = StringName(from: "set_item_count")
+        assert(self._method_set_item_count_1286410249 != nil)
+        self._method_get_item_count_3905245786 = StringName(from: "get_item_count")
+        assert(self._method_get_item_count_3905245786 != nil)
     }
 
     public func get_popup() -> PopupMenu {
@@ -62,8 +56,13 @@ open class MenuButton : Button {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_popup_229722558,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_popup_229722558._native_ptr(),
+                    229722558)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -77,8 +76,13 @@ open class MenuButton : Button {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_show_popup_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_show_popup_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -92,8 +96,13 @@ open class MenuButton : Button {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_switch_on_hover_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_switch_on_hover_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -109,8 +118,13 @@ open class MenuButton : Button {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_switch_on_hover_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_switch_on_hover_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -125,8 +139,13 @@ open class MenuButton : Button {
                 .init(disabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_disable_shortcuts_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_disable_shortcuts_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -141,8 +160,13 @@ open class MenuButton : Button {
                 .init(count_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_count_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_count_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -158,8 +182,13 @@ open class MenuButton : Button {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

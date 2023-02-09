@@ -17,63 +17,52 @@ open class SpringArm3D : Node3D {
 
     public override class var __godot_name: StringName { __godot_name_SpringArm3D }
 
-    static var _method_get_hit_length_191475506: GDExtensionMethodBindPtr! = nil
-    static var _method_set_length_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_length_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shape_1549710052: GDExtensionMethodBindPtr! = nil
-    static var _method_get_shape_3214262478: GDExtensionMethodBindPtr! = nil
-    static var _method_add_excluded_object_2722037293: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_excluded_object_3521089500: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_excluded_objects_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_mask_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_mask_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_set_margin_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_margin_191475506: GDExtensionMethodBindPtr! = nil
+    static var _method_get_hit_length_191475506: StringName! = nil
+    static var _method_set_length_373806689: StringName! = nil
+    static var _method_get_length_1740695150: StringName! = nil
+    static var _method_set_shape_1549710052: StringName! = nil
+    static var _method_get_shape_3214262478: StringName! = nil
+    static var _method_add_excluded_object_2722037293: StringName! = nil
+    static var _method_remove_excluded_object_3521089500: StringName! = nil
+    static var _method_clear_excluded_objects_3218959716: StringName! = nil
+    static var _method_set_collision_mask_1286410249: StringName! = nil
+    static var _method_get_collision_mask_2455072627: StringName! = nil
+    static var _method_set_margin_373806689: StringName! = nil
+    static var _method_get_margin_191475506: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_SpringArm3D == nil)
         __godot_name_SpringArm3D = StringName(from: "SpringArm3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_get_hit_length_191475506_name = StringName(from: "get_hit_length")
-        self._method_get_hit_length_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpringArm3D._native_ptr(), _method_get_hit_length_191475506_name._native_ptr(), 191475506)
-        assert(SpringArm3D._method_get_hit_length_191475506 != nil)
-        let _method_set_length_373806689_name = StringName(from: "set_length")
-        self._method_set_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpringArm3D._native_ptr(), _method_set_length_373806689_name._native_ptr(), 373806689)
-        assert(SpringArm3D._method_set_length_373806689 != nil)
-        let _method_get_length_1740695150_name = StringName(from: "get_length")
-        self._method_get_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpringArm3D._native_ptr(), _method_get_length_1740695150_name._native_ptr(), 1740695150)
-        assert(SpringArm3D._method_get_length_1740695150 != nil)
-        let _method_set_shape_1549710052_name = StringName(from: "set_shape")
-        self._method_set_shape_1549710052 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpringArm3D._native_ptr(), _method_set_shape_1549710052_name._native_ptr(), 1549710052)
-        assert(SpringArm3D._method_set_shape_1549710052 != nil)
-        let _method_get_shape_3214262478_name = StringName(from: "get_shape")
-        self._method_get_shape_3214262478 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpringArm3D._native_ptr(), _method_get_shape_3214262478_name._native_ptr(), 3214262478)
-        assert(SpringArm3D._method_get_shape_3214262478 != nil)
-        let _method_add_excluded_object_2722037293_name = StringName(from: "add_excluded_object")
-        self._method_add_excluded_object_2722037293 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpringArm3D._native_ptr(), _method_add_excluded_object_2722037293_name._native_ptr(), 2722037293)
-        assert(SpringArm3D._method_add_excluded_object_2722037293 != nil)
-        let _method_remove_excluded_object_3521089500_name = StringName(from: "remove_excluded_object")
-        self._method_remove_excluded_object_3521089500 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpringArm3D._native_ptr(), _method_remove_excluded_object_3521089500_name._native_ptr(), 3521089500)
-        assert(SpringArm3D._method_remove_excluded_object_3521089500 != nil)
-        let _method_clear_excluded_objects_3218959716_name = StringName(from: "clear_excluded_objects")
-        self._method_clear_excluded_objects_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpringArm3D._native_ptr(), _method_clear_excluded_objects_3218959716_name._native_ptr(), 3218959716)
-        assert(SpringArm3D._method_clear_excluded_objects_3218959716 != nil)
-        let _method_set_collision_mask_1286410249_name = StringName(from: "set_collision_mask")
-        self._method_set_collision_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpringArm3D._native_ptr(), _method_set_collision_mask_1286410249_name._native_ptr(), 1286410249)
-        assert(SpringArm3D._method_set_collision_mask_1286410249 != nil)
-        let _method_get_collision_mask_2455072627_name = StringName(from: "get_collision_mask")
-        self._method_get_collision_mask_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpringArm3D._native_ptr(), _method_get_collision_mask_2455072627_name._native_ptr(), 2455072627)
-        assert(SpringArm3D._method_get_collision_mask_2455072627 != nil)
-        let _method_set_margin_373806689_name = StringName(from: "set_margin")
-        self._method_set_margin_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpringArm3D._native_ptr(), _method_set_margin_373806689_name._native_ptr(), 373806689)
-        assert(SpringArm3D._method_set_margin_373806689 != nil)
-        let _method_get_margin_191475506_name = StringName(from: "get_margin")
-        self._method_get_margin_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_SpringArm3D._native_ptr(), _method_get_margin_191475506_name._native_ptr(), 191475506)
-        assert(SpringArm3D._method_get_margin_191475506 != nil)
+        self._method_get_hit_length_191475506 = StringName(from: "get_hit_length")
+        assert(self._method_get_hit_length_191475506 != nil)
+        self._method_set_length_373806689 = StringName(from: "set_length")
+        assert(self._method_set_length_373806689 != nil)
+        self._method_get_length_1740695150 = StringName(from: "get_length")
+        assert(self._method_get_length_1740695150 != nil)
+        self._method_set_shape_1549710052 = StringName(from: "set_shape")
+        assert(self._method_set_shape_1549710052 != nil)
+        self._method_get_shape_3214262478 = StringName(from: "get_shape")
+        assert(self._method_get_shape_3214262478 != nil)
+        self._method_add_excluded_object_2722037293 = StringName(from: "add_excluded_object")
+        assert(self._method_add_excluded_object_2722037293 != nil)
+        self._method_remove_excluded_object_3521089500 = StringName(from: "remove_excluded_object")
+        assert(self._method_remove_excluded_object_3521089500 != nil)
+        self._method_clear_excluded_objects_3218959716 = StringName(from: "clear_excluded_objects")
+        assert(self._method_clear_excluded_objects_3218959716 != nil)
+        self._method_set_collision_mask_1286410249 = StringName(from: "set_collision_mask")
+        assert(self._method_set_collision_mask_1286410249 != nil)
+        self._method_get_collision_mask_2455072627 = StringName(from: "get_collision_mask")
+        assert(self._method_get_collision_mask_2455072627 != nil)
+        self._method_set_margin_373806689 = StringName(from: "set_margin")
+        assert(self._method_set_margin_373806689 != nil)
+        self._method_get_margin_191475506 = StringName(from: "get_margin")
+        assert(self._method_get_margin_191475506 != nil)
     }
 
     public func get_hit_length() -> Float64 {
@@ -85,8 +74,13 @@ open class SpringArm3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_hit_length_191475506,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_hit_length_191475506._native_ptr(),
+                    191475506)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -101,8 +95,13 @@ open class SpringArm3D : Node3D {
                 .init(length_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_length_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_length_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -118,8 +117,13 @@ open class SpringArm3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_length_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_length_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -134,8 +138,13 @@ open class SpringArm3D : Node3D {
                 .init(shape_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shape_1549710052,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shape_1549710052._native_ptr(),
+                    1549710052)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -149,8 +158,13 @@ open class SpringArm3D : Node3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_shape_3214262478,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_shape_3214262478._native_ptr(),
+                    3214262478)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -165,8 +179,13 @@ open class SpringArm3D : Node3D {
                 .init(RID_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_excluded_object_2722037293,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_excluded_object_2722037293._native_ptr(),
+                    2722037293)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -182,8 +201,13 @@ open class SpringArm3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_excluded_object_3521089500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_excluded_object_3521089500._native_ptr(),
+                    3521089500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -197,8 +221,13 @@ open class SpringArm3D : Node3D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_excluded_objects_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_excluded_objects_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -212,8 +241,13 @@ open class SpringArm3D : Node3D {
                 .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_mask_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_mask_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -229,8 +263,13 @@ open class SpringArm3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_mask_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_mask_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -245,8 +284,13 @@ open class SpringArm3D : Node3D {
                 .init(margin_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_margin_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_margin_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -262,8 +306,13 @@ open class SpringArm3D : Node3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_margin_191475506,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_margin_191475506._native_ptr(),
+                    191475506)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

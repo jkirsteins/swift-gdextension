@@ -11,71 +11,58 @@ open class CylinderMesh : PrimitiveMesh {
 
     public override class var __godot_name: StringName { __godot_name_CylinderMesh }
 
-    static var _method_set_top_radius_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_top_radius_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_bottom_radius_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_bottom_radius_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_height_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_height_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_radial_segments_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_radial_segments_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_rings_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rings_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cap_top_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_cap_top_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cap_bottom_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_cap_bottom_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_set_top_radius_373806689: StringName! = nil
+    static var _method_get_top_radius_1740695150: StringName! = nil
+    static var _method_set_bottom_radius_373806689: StringName! = nil
+    static var _method_get_bottom_radius_1740695150: StringName! = nil
+    static var _method_set_height_373806689: StringName! = nil
+    static var _method_get_height_1740695150: StringName! = nil
+    static var _method_set_radial_segments_1286410249: StringName! = nil
+    static var _method_get_radial_segments_3905245786: StringName! = nil
+    static var _method_set_rings_1286410249: StringName! = nil
+    static var _method_get_rings_3905245786: StringName! = nil
+    static var _method_set_cap_top_2586408642: StringName! = nil
+    static var _method_is_cap_top_36873697: StringName! = nil
+    static var _method_set_cap_bottom_2586408642: StringName! = nil
+    static var _method_is_cap_bottom_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CylinderMesh == nil)
         __godot_name_CylinderMesh = StringName(from: "CylinderMesh")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_top_radius_373806689_name = StringName(from: "set_top_radius")
-        self._method_set_top_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderMesh._native_ptr(), _method_set_top_radius_373806689_name._native_ptr(), 373806689)
-        assert(CylinderMesh._method_set_top_radius_373806689 != nil)
-        let _method_get_top_radius_1740695150_name = StringName(from: "get_top_radius")
-        self._method_get_top_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderMesh._native_ptr(), _method_get_top_radius_1740695150_name._native_ptr(), 1740695150)
-        assert(CylinderMesh._method_get_top_radius_1740695150 != nil)
-        let _method_set_bottom_radius_373806689_name = StringName(from: "set_bottom_radius")
-        self._method_set_bottom_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderMesh._native_ptr(), _method_set_bottom_radius_373806689_name._native_ptr(), 373806689)
-        assert(CylinderMesh._method_set_bottom_radius_373806689 != nil)
-        let _method_get_bottom_radius_1740695150_name = StringName(from: "get_bottom_radius")
-        self._method_get_bottom_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderMesh._native_ptr(), _method_get_bottom_radius_1740695150_name._native_ptr(), 1740695150)
-        assert(CylinderMesh._method_get_bottom_radius_1740695150 != nil)
-        let _method_set_height_373806689_name = StringName(from: "set_height")
-        self._method_set_height_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderMesh._native_ptr(), _method_set_height_373806689_name._native_ptr(), 373806689)
-        assert(CylinderMesh._method_set_height_373806689 != nil)
-        let _method_get_height_1740695150_name = StringName(from: "get_height")
-        self._method_get_height_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderMesh._native_ptr(), _method_get_height_1740695150_name._native_ptr(), 1740695150)
-        assert(CylinderMesh._method_get_height_1740695150 != nil)
-        let _method_set_radial_segments_1286410249_name = StringName(from: "set_radial_segments")
-        self._method_set_radial_segments_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderMesh._native_ptr(), _method_set_radial_segments_1286410249_name._native_ptr(), 1286410249)
-        assert(CylinderMesh._method_set_radial_segments_1286410249 != nil)
-        let _method_get_radial_segments_3905245786_name = StringName(from: "get_radial_segments")
-        self._method_get_radial_segments_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderMesh._native_ptr(), _method_get_radial_segments_3905245786_name._native_ptr(), 3905245786)
-        assert(CylinderMesh._method_get_radial_segments_3905245786 != nil)
-        let _method_set_rings_1286410249_name = StringName(from: "set_rings")
-        self._method_set_rings_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderMesh._native_ptr(), _method_set_rings_1286410249_name._native_ptr(), 1286410249)
-        assert(CylinderMesh._method_set_rings_1286410249 != nil)
-        let _method_get_rings_3905245786_name = StringName(from: "get_rings")
-        self._method_get_rings_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderMesh._native_ptr(), _method_get_rings_3905245786_name._native_ptr(), 3905245786)
-        assert(CylinderMesh._method_get_rings_3905245786 != nil)
-        let _method_set_cap_top_2586408642_name = StringName(from: "set_cap_top")
-        self._method_set_cap_top_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderMesh._native_ptr(), _method_set_cap_top_2586408642_name._native_ptr(), 2586408642)
-        assert(CylinderMesh._method_set_cap_top_2586408642 != nil)
-        let _method_is_cap_top_36873697_name = StringName(from: "is_cap_top")
-        self._method_is_cap_top_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderMesh._native_ptr(), _method_is_cap_top_36873697_name._native_ptr(), 36873697)
-        assert(CylinderMesh._method_is_cap_top_36873697 != nil)
-        let _method_set_cap_bottom_2586408642_name = StringName(from: "set_cap_bottom")
-        self._method_set_cap_bottom_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderMesh._native_ptr(), _method_set_cap_bottom_2586408642_name._native_ptr(), 2586408642)
-        assert(CylinderMesh._method_set_cap_bottom_2586408642 != nil)
-        let _method_is_cap_bottom_36873697_name = StringName(from: "is_cap_bottom")
-        self._method_is_cap_bottom_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CylinderMesh._native_ptr(), _method_is_cap_bottom_36873697_name._native_ptr(), 36873697)
-        assert(CylinderMesh._method_is_cap_bottom_36873697 != nil)
+        self._method_set_top_radius_373806689 = StringName(from: "set_top_radius")
+        assert(self._method_set_top_radius_373806689 != nil)
+        self._method_get_top_radius_1740695150 = StringName(from: "get_top_radius")
+        assert(self._method_get_top_radius_1740695150 != nil)
+        self._method_set_bottom_radius_373806689 = StringName(from: "set_bottom_radius")
+        assert(self._method_set_bottom_radius_373806689 != nil)
+        self._method_get_bottom_radius_1740695150 = StringName(from: "get_bottom_radius")
+        assert(self._method_get_bottom_radius_1740695150 != nil)
+        self._method_set_height_373806689 = StringName(from: "set_height")
+        assert(self._method_set_height_373806689 != nil)
+        self._method_get_height_1740695150 = StringName(from: "get_height")
+        assert(self._method_get_height_1740695150 != nil)
+        self._method_set_radial_segments_1286410249 = StringName(from: "set_radial_segments")
+        assert(self._method_set_radial_segments_1286410249 != nil)
+        self._method_get_radial_segments_3905245786 = StringName(from: "get_radial_segments")
+        assert(self._method_get_radial_segments_3905245786 != nil)
+        self._method_set_rings_1286410249 = StringName(from: "set_rings")
+        assert(self._method_set_rings_1286410249 != nil)
+        self._method_get_rings_3905245786 = StringName(from: "get_rings")
+        assert(self._method_get_rings_3905245786 != nil)
+        self._method_set_cap_top_2586408642 = StringName(from: "set_cap_top")
+        assert(self._method_set_cap_top_2586408642 != nil)
+        self._method_is_cap_top_36873697 = StringName(from: "is_cap_top")
+        assert(self._method_is_cap_top_36873697 != nil)
+        self._method_set_cap_bottom_2586408642 = StringName(from: "set_cap_bottom")
+        assert(self._method_set_cap_bottom_2586408642 != nil)
+        self._method_is_cap_bottom_36873697 = StringName(from: "is_cap_bottom")
+        assert(self._method_is_cap_bottom_36873697 != nil)
     }
 
     public func set_top_radius(radius: Float64)  {
@@ -86,8 +73,13 @@ open class CylinderMesh : PrimitiveMesh {
                 .init(radius_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_top_radius_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_top_radius_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -103,8 +95,13 @@ open class CylinderMesh : PrimitiveMesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_top_radius_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_top_radius_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -119,8 +116,13 @@ open class CylinderMesh : PrimitiveMesh {
                 .init(radius_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_bottom_radius_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_bottom_radius_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -136,8 +138,13 @@ open class CylinderMesh : PrimitiveMesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_bottom_radius_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_bottom_radius_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -152,8 +159,13 @@ open class CylinderMesh : PrimitiveMesh {
                 .init(height_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_height_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_height_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -169,8 +181,13 @@ open class CylinderMesh : PrimitiveMesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_height_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_height_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -185,8 +202,13 @@ open class CylinderMesh : PrimitiveMesh {
                 .init(segments_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_radial_segments_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_radial_segments_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -202,8 +224,13 @@ open class CylinderMesh : PrimitiveMesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_radial_segments_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_radial_segments_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -218,8 +245,13 @@ open class CylinderMesh : PrimitiveMesh {
                 .init(rings_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_rings_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_rings_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -235,8 +267,13 @@ open class CylinderMesh : PrimitiveMesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rings_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rings_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -251,8 +288,13 @@ open class CylinderMesh : PrimitiveMesh {
                 .init(cap_top_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cap_top_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cap_top_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -268,8 +310,13 @@ open class CylinderMesh : PrimitiveMesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_cap_top_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_cap_top_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -284,8 +331,13 @@ open class CylinderMesh : PrimitiveMesh {
                 .init(cap_bottom_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cap_bottom_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cap_bottom_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -301,8 +353,13 @@ open class CylinderMesh : PrimitiveMesh {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_cap_bottom_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_cap_bottom_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -49,183 +49,142 @@ open class FastNoiseLite : Noise {
 
     public override class var __godot_name: StringName { __godot_name_FastNoiseLite }
 
-    static var _method_set_noise_type_2624461392: GDExtensionMethodBindPtr! = nil
-    static var _method_get_noise_type_1458108610: GDExtensionMethodBindPtr! = nil
-    static var _method_set_seed_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_seed_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_frequency_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_frequency_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_offset_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_offset_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fractal_type_4132731174: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fractal_type_1036889279: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fractal_octaves_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fractal_octaves_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fractal_lacunarity_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fractal_lacunarity_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fractal_gain_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fractal_gain_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fractal_weighted_strength_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fractal_weighted_strength_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fractal_ping_pong_strength_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fractal_ping_pong_strength_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cellular_distance_function_1006013267: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cellular_distance_function_2021274088: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cellular_jitter_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cellular_jitter_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cellular_return_type_2654169698: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cellular_return_type_3699796343: GDExtensionMethodBindPtr! = nil
-    static var _method_set_domain_warp_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_domain_warp_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_domain_warp_type_3629692980: GDExtensionMethodBindPtr! = nil
-    static var _method_get_domain_warp_type_2980162020: GDExtensionMethodBindPtr! = nil
-    static var _method_set_domain_warp_amplitude_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_domain_warp_amplitude_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_domain_warp_frequency_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_domain_warp_frequency_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_domain_warp_fractal_type_3999408287: GDExtensionMethodBindPtr! = nil
-    static var _method_get_domain_warp_fractal_type_407716934: GDExtensionMethodBindPtr! = nil
-    static var _method_set_domain_warp_fractal_octaves_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_domain_warp_fractal_octaves_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_domain_warp_fractal_lacunarity_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_domain_warp_fractal_lacunarity_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_domain_warp_fractal_gain_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_domain_warp_fractal_gain_1740695150: GDExtensionMethodBindPtr! = nil
+    static var _method_set_noise_type_2624461392: StringName! = nil
+    static var _method_get_noise_type_1458108610: StringName! = nil
+    static var _method_set_seed_1286410249: StringName! = nil
+    static var _method_get_seed_3905245786: StringName! = nil
+    static var _method_set_frequency_373806689: StringName! = nil
+    static var _method_get_frequency_1740695150: StringName! = nil
+    static var _method_set_offset_3460891852: StringName! = nil
+    static var _method_get_offset_3360562783: StringName! = nil
+    static var _method_set_fractal_type_4132731174: StringName! = nil
+    static var _method_get_fractal_type_1036889279: StringName! = nil
+    static var _method_set_fractal_octaves_1286410249: StringName! = nil
+    static var _method_get_fractal_octaves_3905245786: StringName! = nil
+    static var _method_set_fractal_lacunarity_373806689: StringName! = nil
+    static var _method_get_fractal_lacunarity_1740695150: StringName! = nil
+    static var _method_set_fractal_gain_373806689: StringName! = nil
+    static var _method_get_fractal_gain_1740695150: StringName! = nil
+    static var _method_set_fractal_weighted_strength_373806689: StringName! = nil
+    static var _method_get_fractal_weighted_strength_1740695150: StringName! = nil
+    static var _method_set_fractal_ping_pong_strength_373806689: StringName! = nil
+    static var _method_get_fractal_ping_pong_strength_1740695150: StringName! = nil
+    static var _method_set_cellular_distance_function_1006013267: StringName! = nil
+    static var _method_get_cellular_distance_function_2021274088: StringName! = nil
+    static var _method_set_cellular_jitter_373806689: StringName! = nil
+    static var _method_get_cellular_jitter_1740695150: StringName! = nil
+    static var _method_set_cellular_return_type_2654169698: StringName! = nil
+    static var _method_get_cellular_return_type_3699796343: StringName! = nil
+    static var _method_set_domain_warp_enabled_2586408642: StringName! = nil
+    static var _method_is_domain_warp_enabled_36873697: StringName! = nil
+    static var _method_set_domain_warp_type_3629692980: StringName! = nil
+    static var _method_get_domain_warp_type_2980162020: StringName! = nil
+    static var _method_set_domain_warp_amplitude_373806689: StringName! = nil
+    static var _method_get_domain_warp_amplitude_1740695150: StringName! = nil
+    static var _method_set_domain_warp_frequency_373806689: StringName! = nil
+    static var _method_get_domain_warp_frequency_1740695150: StringName! = nil
+    static var _method_set_domain_warp_fractal_type_3999408287: StringName! = nil
+    static var _method_get_domain_warp_fractal_type_407716934: StringName! = nil
+    static var _method_set_domain_warp_fractal_octaves_1286410249: StringName! = nil
+    static var _method_get_domain_warp_fractal_octaves_3905245786: StringName! = nil
+    static var _method_set_domain_warp_fractal_lacunarity_373806689: StringName! = nil
+    static var _method_get_domain_warp_fractal_lacunarity_1740695150: StringName! = nil
+    static var _method_set_domain_warp_fractal_gain_373806689: StringName! = nil
+    static var _method_get_domain_warp_fractal_gain_1740695150: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_FastNoiseLite == nil)
         __godot_name_FastNoiseLite = StringName(from: "FastNoiseLite")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_noise_type_2624461392_name = StringName(from: "set_noise_type")
-        self._method_set_noise_type_2624461392 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_noise_type_2624461392_name._native_ptr(), 2624461392)
-        assert(FastNoiseLite._method_set_noise_type_2624461392 != nil)
-        let _method_get_noise_type_1458108610_name = StringName(from: "get_noise_type")
-        self._method_get_noise_type_1458108610 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_noise_type_1458108610_name._native_ptr(), 1458108610)
-        assert(FastNoiseLite._method_get_noise_type_1458108610 != nil)
-        let _method_set_seed_1286410249_name = StringName(from: "set_seed")
-        self._method_set_seed_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_seed_1286410249_name._native_ptr(), 1286410249)
-        assert(FastNoiseLite._method_set_seed_1286410249 != nil)
-        let _method_get_seed_3905245786_name = StringName(from: "get_seed")
-        self._method_get_seed_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_seed_3905245786_name._native_ptr(), 3905245786)
-        assert(FastNoiseLite._method_get_seed_3905245786 != nil)
-        let _method_set_frequency_373806689_name = StringName(from: "set_frequency")
-        self._method_set_frequency_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_frequency_373806689_name._native_ptr(), 373806689)
-        assert(FastNoiseLite._method_set_frequency_373806689 != nil)
-        let _method_get_frequency_1740695150_name = StringName(from: "get_frequency")
-        self._method_get_frequency_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_frequency_1740695150_name._native_ptr(), 1740695150)
-        assert(FastNoiseLite._method_get_frequency_1740695150 != nil)
-        let _method_set_offset_3460891852_name = StringName(from: "set_offset")
-        self._method_set_offset_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_offset_3460891852_name._native_ptr(), 3460891852)
-        assert(FastNoiseLite._method_set_offset_3460891852 != nil)
-        let _method_get_offset_3360562783_name = StringName(from: "get_offset")
-        self._method_get_offset_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_offset_3360562783_name._native_ptr(), 3360562783)
-        assert(FastNoiseLite._method_get_offset_3360562783 != nil)
-        let _method_set_fractal_type_4132731174_name = StringName(from: "set_fractal_type")
-        self._method_set_fractal_type_4132731174 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_fractal_type_4132731174_name._native_ptr(), 4132731174)
-        assert(FastNoiseLite._method_set_fractal_type_4132731174 != nil)
-        let _method_get_fractal_type_1036889279_name = StringName(from: "get_fractal_type")
-        self._method_get_fractal_type_1036889279 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_fractal_type_1036889279_name._native_ptr(), 1036889279)
-        assert(FastNoiseLite._method_get_fractal_type_1036889279 != nil)
-        let _method_set_fractal_octaves_1286410249_name = StringName(from: "set_fractal_octaves")
-        self._method_set_fractal_octaves_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_fractal_octaves_1286410249_name._native_ptr(), 1286410249)
-        assert(FastNoiseLite._method_set_fractal_octaves_1286410249 != nil)
-        let _method_get_fractal_octaves_3905245786_name = StringName(from: "get_fractal_octaves")
-        self._method_get_fractal_octaves_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_fractal_octaves_3905245786_name._native_ptr(), 3905245786)
-        assert(FastNoiseLite._method_get_fractal_octaves_3905245786 != nil)
-        let _method_set_fractal_lacunarity_373806689_name = StringName(from: "set_fractal_lacunarity")
-        self._method_set_fractal_lacunarity_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_fractal_lacunarity_373806689_name._native_ptr(), 373806689)
-        assert(FastNoiseLite._method_set_fractal_lacunarity_373806689 != nil)
-        let _method_get_fractal_lacunarity_1740695150_name = StringName(from: "get_fractal_lacunarity")
-        self._method_get_fractal_lacunarity_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_fractal_lacunarity_1740695150_name._native_ptr(), 1740695150)
-        assert(FastNoiseLite._method_get_fractal_lacunarity_1740695150 != nil)
-        let _method_set_fractal_gain_373806689_name = StringName(from: "set_fractal_gain")
-        self._method_set_fractal_gain_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_fractal_gain_373806689_name._native_ptr(), 373806689)
-        assert(FastNoiseLite._method_set_fractal_gain_373806689 != nil)
-        let _method_get_fractal_gain_1740695150_name = StringName(from: "get_fractal_gain")
-        self._method_get_fractal_gain_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_fractal_gain_1740695150_name._native_ptr(), 1740695150)
-        assert(FastNoiseLite._method_get_fractal_gain_1740695150 != nil)
-        let _method_set_fractal_weighted_strength_373806689_name = StringName(from: "set_fractal_weighted_strength")
-        self._method_set_fractal_weighted_strength_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_fractal_weighted_strength_373806689_name._native_ptr(), 373806689)
-        assert(FastNoiseLite._method_set_fractal_weighted_strength_373806689 != nil)
-        let _method_get_fractal_weighted_strength_1740695150_name = StringName(from: "get_fractal_weighted_strength")
-        self._method_get_fractal_weighted_strength_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_fractal_weighted_strength_1740695150_name._native_ptr(), 1740695150)
-        assert(FastNoiseLite._method_get_fractal_weighted_strength_1740695150 != nil)
-        let _method_set_fractal_ping_pong_strength_373806689_name = StringName(from: "set_fractal_ping_pong_strength")
-        self._method_set_fractal_ping_pong_strength_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_fractal_ping_pong_strength_373806689_name._native_ptr(), 373806689)
-        assert(FastNoiseLite._method_set_fractal_ping_pong_strength_373806689 != nil)
-        let _method_get_fractal_ping_pong_strength_1740695150_name = StringName(from: "get_fractal_ping_pong_strength")
-        self._method_get_fractal_ping_pong_strength_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_fractal_ping_pong_strength_1740695150_name._native_ptr(), 1740695150)
-        assert(FastNoiseLite._method_get_fractal_ping_pong_strength_1740695150 != nil)
-        let _method_set_cellular_distance_function_1006013267_name = StringName(from: "set_cellular_distance_function")
-        self._method_set_cellular_distance_function_1006013267 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_cellular_distance_function_1006013267_name._native_ptr(), 1006013267)
-        assert(FastNoiseLite._method_set_cellular_distance_function_1006013267 != nil)
-        let _method_get_cellular_distance_function_2021274088_name = StringName(from: "get_cellular_distance_function")
-        self._method_get_cellular_distance_function_2021274088 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_cellular_distance_function_2021274088_name._native_ptr(), 2021274088)
-        assert(FastNoiseLite._method_get_cellular_distance_function_2021274088 != nil)
-        let _method_set_cellular_jitter_373806689_name = StringName(from: "set_cellular_jitter")
-        self._method_set_cellular_jitter_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_cellular_jitter_373806689_name._native_ptr(), 373806689)
-        assert(FastNoiseLite._method_set_cellular_jitter_373806689 != nil)
-        let _method_get_cellular_jitter_1740695150_name = StringName(from: "get_cellular_jitter")
-        self._method_get_cellular_jitter_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_cellular_jitter_1740695150_name._native_ptr(), 1740695150)
-        assert(FastNoiseLite._method_get_cellular_jitter_1740695150 != nil)
-        let _method_set_cellular_return_type_2654169698_name = StringName(from: "set_cellular_return_type")
-        self._method_set_cellular_return_type_2654169698 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_cellular_return_type_2654169698_name._native_ptr(), 2654169698)
-        assert(FastNoiseLite._method_set_cellular_return_type_2654169698 != nil)
-        let _method_get_cellular_return_type_3699796343_name = StringName(from: "get_cellular_return_type")
-        self._method_get_cellular_return_type_3699796343 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_cellular_return_type_3699796343_name._native_ptr(), 3699796343)
-        assert(FastNoiseLite._method_get_cellular_return_type_3699796343 != nil)
-        let _method_set_domain_warp_enabled_2586408642_name = StringName(from: "set_domain_warp_enabled")
-        self._method_set_domain_warp_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_domain_warp_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(FastNoiseLite._method_set_domain_warp_enabled_2586408642 != nil)
-        let _method_is_domain_warp_enabled_36873697_name = StringName(from: "is_domain_warp_enabled")
-        self._method_is_domain_warp_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_is_domain_warp_enabled_36873697_name._native_ptr(), 36873697)
-        assert(FastNoiseLite._method_is_domain_warp_enabled_36873697 != nil)
-        let _method_set_domain_warp_type_3629692980_name = StringName(from: "set_domain_warp_type")
-        self._method_set_domain_warp_type_3629692980 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_domain_warp_type_3629692980_name._native_ptr(), 3629692980)
-        assert(FastNoiseLite._method_set_domain_warp_type_3629692980 != nil)
-        let _method_get_domain_warp_type_2980162020_name = StringName(from: "get_domain_warp_type")
-        self._method_get_domain_warp_type_2980162020 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_domain_warp_type_2980162020_name._native_ptr(), 2980162020)
-        assert(FastNoiseLite._method_get_domain_warp_type_2980162020 != nil)
-        let _method_set_domain_warp_amplitude_373806689_name = StringName(from: "set_domain_warp_amplitude")
-        self._method_set_domain_warp_amplitude_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_domain_warp_amplitude_373806689_name._native_ptr(), 373806689)
-        assert(FastNoiseLite._method_set_domain_warp_amplitude_373806689 != nil)
-        let _method_get_domain_warp_amplitude_1740695150_name = StringName(from: "get_domain_warp_amplitude")
-        self._method_get_domain_warp_amplitude_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_domain_warp_amplitude_1740695150_name._native_ptr(), 1740695150)
-        assert(FastNoiseLite._method_get_domain_warp_amplitude_1740695150 != nil)
-        let _method_set_domain_warp_frequency_373806689_name = StringName(from: "set_domain_warp_frequency")
-        self._method_set_domain_warp_frequency_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_domain_warp_frequency_373806689_name._native_ptr(), 373806689)
-        assert(FastNoiseLite._method_set_domain_warp_frequency_373806689 != nil)
-        let _method_get_domain_warp_frequency_1740695150_name = StringName(from: "get_domain_warp_frequency")
-        self._method_get_domain_warp_frequency_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_domain_warp_frequency_1740695150_name._native_ptr(), 1740695150)
-        assert(FastNoiseLite._method_get_domain_warp_frequency_1740695150 != nil)
-        let _method_set_domain_warp_fractal_type_3999408287_name = StringName(from: "set_domain_warp_fractal_type")
-        self._method_set_domain_warp_fractal_type_3999408287 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_domain_warp_fractal_type_3999408287_name._native_ptr(), 3999408287)
-        assert(FastNoiseLite._method_set_domain_warp_fractal_type_3999408287 != nil)
-        let _method_get_domain_warp_fractal_type_407716934_name = StringName(from: "get_domain_warp_fractal_type")
-        self._method_get_domain_warp_fractal_type_407716934 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_domain_warp_fractal_type_407716934_name._native_ptr(), 407716934)
-        assert(FastNoiseLite._method_get_domain_warp_fractal_type_407716934 != nil)
-        let _method_set_domain_warp_fractal_octaves_1286410249_name = StringName(from: "set_domain_warp_fractal_octaves")
-        self._method_set_domain_warp_fractal_octaves_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_domain_warp_fractal_octaves_1286410249_name._native_ptr(), 1286410249)
-        assert(FastNoiseLite._method_set_domain_warp_fractal_octaves_1286410249 != nil)
-        let _method_get_domain_warp_fractal_octaves_3905245786_name = StringName(from: "get_domain_warp_fractal_octaves")
-        self._method_get_domain_warp_fractal_octaves_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_domain_warp_fractal_octaves_3905245786_name._native_ptr(), 3905245786)
-        assert(FastNoiseLite._method_get_domain_warp_fractal_octaves_3905245786 != nil)
-        let _method_set_domain_warp_fractal_lacunarity_373806689_name = StringName(from: "set_domain_warp_fractal_lacunarity")
-        self._method_set_domain_warp_fractal_lacunarity_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_domain_warp_fractal_lacunarity_373806689_name._native_ptr(), 373806689)
-        assert(FastNoiseLite._method_set_domain_warp_fractal_lacunarity_373806689 != nil)
-        let _method_get_domain_warp_fractal_lacunarity_1740695150_name = StringName(from: "get_domain_warp_fractal_lacunarity")
-        self._method_get_domain_warp_fractal_lacunarity_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_domain_warp_fractal_lacunarity_1740695150_name._native_ptr(), 1740695150)
-        assert(FastNoiseLite._method_get_domain_warp_fractal_lacunarity_1740695150 != nil)
-        let _method_set_domain_warp_fractal_gain_373806689_name = StringName(from: "set_domain_warp_fractal_gain")
-        self._method_set_domain_warp_fractal_gain_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_set_domain_warp_fractal_gain_373806689_name._native_ptr(), 373806689)
-        assert(FastNoiseLite._method_set_domain_warp_fractal_gain_373806689 != nil)
-        let _method_get_domain_warp_fractal_gain_1740695150_name = StringName(from: "get_domain_warp_fractal_gain")
-        self._method_get_domain_warp_fractal_gain_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_FastNoiseLite._native_ptr(), _method_get_domain_warp_fractal_gain_1740695150_name._native_ptr(), 1740695150)
-        assert(FastNoiseLite._method_get_domain_warp_fractal_gain_1740695150 != nil)
+        self._method_set_noise_type_2624461392 = StringName(from: "set_noise_type")
+        assert(self._method_set_noise_type_2624461392 != nil)
+        self._method_get_noise_type_1458108610 = StringName(from: "get_noise_type")
+        assert(self._method_get_noise_type_1458108610 != nil)
+        self._method_set_seed_1286410249 = StringName(from: "set_seed")
+        assert(self._method_set_seed_1286410249 != nil)
+        self._method_get_seed_3905245786 = StringName(from: "get_seed")
+        assert(self._method_get_seed_3905245786 != nil)
+        self._method_set_frequency_373806689 = StringName(from: "set_frequency")
+        assert(self._method_set_frequency_373806689 != nil)
+        self._method_get_frequency_1740695150 = StringName(from: "get_frequency")
+        assert(self._method_get_frequency_1740695150 != nil)
+        self._method_set_offset_3460891852 = StringName(from: "set_offset")
+        assert(self._method_set_offset_3460891852 != nil)
+        self._method_get_offset_3360562783 = StringName(from: "get_offset")
+        assert(self._method_get_offset_3360562783 != nil)
+        self._method_set_fractal_type_4132731174 = StringName(from: "set_fractal_type")
+        assert(self._method_set_fractal_type_4132731174 != nil)
+        self._method_get_fractal_type_1036889279 = StringName(from: "get_fractal_type")
+        assert(self._method_get_fractal_type_1036889279 != nil)
+        self._method_set_fractal_octaves_1286410249 = StringName(from: "set_fractal_octaves")
+        assert(self._method_set_fractal_octaves_1286410249 != nil)
+        self._method_get_fractal_octaves_3905245786 = StringName(from: "get_fractal_octaves")
+        assert(self._method_get_fractal_octaves_3905245786 != nil)
+        self._method_set_fractal_lacunarity_373806689 = StringName(from: "set_fractal_lacunarity")
+        assert(self._method_set_fractal_lacunarity_373806689 != nil)
+        self._method_get_fractal_lacunarity_1740695150 = StringName(from: "get_fractal_lacunarity")
+        assert(self._method_get_fractal_lacunarity_1740695150 != nil)
+        self._method_set_fractal_gain_373806689 = StringName(from: "set_fractal_gain")
+        assert(self._method_set_fractal_gain_373806689 != nil)
+        self._method_get_fractal_gain_1740695150 = StringName(from: "get_fractal_gain")
+        assert(self._method_get_fractal_gain_1740695150 != nil)
+        self._method_set_fractal_weighted_strength_373806689 = StringName(from: "set_fractal_weighted_strength")
+        assert(self._method_set_fractal_weighted_strength_373806689 != nil)
+        self._method_get_fractal_weighted_strength_1740695150 = StringName(from: "get_fractal_weighted_strength")
+        assert(self._method_get_fractal_weighted_strength_1740695150 != nil)
+        self._method_set_fractal_ping_pong_strength_373806689 = StringName(from: "set_fractal_ping_pong_strength")
+        assert(self._method_set_fractal_ping_pong_strength_373806689 != nil)
+        self._method_get_fractal_ping_pong_strength_1740695150 = StringName(from: "get_fractal_ping_pong_strength")
+        assert(self._method_get_fractal_ping_pong_strength_1740695150 != nil)
+        self._method_set_cellular_distance_function_1006013267 = StringName(from: "set_cellular_distance_function")
+        assert(self._method_set_cellular_distance_function_1006013267 != nil)
+        self._method_get_cellular_distance_function_2021274088 = StringName(from: "get_cellular_distance_function")
+        assert(self._method_get_cellular_distance_function_2021274088 != nil)
+        self._method_set_cellular_jitter_373806689 = StringName(from: "set_cellular_jitter")
+        assert(self._method_set_cellular_jitter_373806689 != nil)
+        self._method_get_cellular_jitter_1740695150 = StringName(from: "get_cellular_jitter")
+        assert(self._method_get_cellular_jitter_1740695150 != nil)
+        self._method_set_cellular_return_type_2654169698 = StringName(from: "set_cellular_return_type")
+        assert(self._method_set_cellular_return_type_2654169698 != nil)
+        self._method_get_cellular_return_type_3699796343 = StringName(from: "get_cellular_return_type")
+        assert(self._method_get_cellular_return_type_3699796343 != nil)
+        self._method_set_domain_warp_enabled_2586408642 = StringName(from: "set_domain_warp_enabled")
+        assert(self._method_set_domain_warp_enabled_2586408642 != nil)
+        self._method_is_domain_warp_enabled_36873697 = StringName(from: "is_domain_warp_enabled")
+        assert(self._method_is_domain_warp_enabled_36873697 != nil)
+        self._method_set_domain_warp_type_3629692980 = StringName(from: "set_domain_warp_type")
+        assert(self._method_set_domain_warp_type_3629692980 != nil)
+        self._method_get_domain_warp_type_2980162020 = StringName(from: "get_domain_warp_type")
+        assert(self._method_get_domain_warp_type_2980162020 != nil)
+        self._method_set_domain_warp_amplitude_373806689 = StringName(from: "set_domain_warp_amplitude")
+        assert(self._method_set_domain_warp_amplitude_373806689 != nil)
+        self._method_get_domain_warp_amplitude_1740695150 = StringName(from: "get_domain_warp_amplitude")
+        assert(self._method_get_domain_warp_amplitude_1740695150 != nil)
+        self._method_set_domain_warp_frequency_373806689 = StringName(from: "set_domain_warp_frequency")
+        assert(self._method_set_domain_warp_frequency_373806689 != nil)
+        self._method_get_domain_warp_frequency_1740695150 = StringName(from: "get_domain_warp_frequency")
+        assert(self._method_get_domain_warp_frequency_1740695150 != nil)
+        self._method_set_domain_warp_fractal_type_3999408287 = StringName(from: "set_domain_warp_fractal_type")
+        assert(self._method_set_domain_warp_fractal_type_3999408287 != nil)
+        self._method_get_domain_warp_fractal_type_407716934 = StringName(from: "get_domain_warp_fractal_type")
+        assert(self._method_get_domain_warp_fractal_type_407716934 != nil)
+        self._method_set_domain_warp_fractal_octaves_1286410249 = StringName(from: "set_domain_warp_fractal_octaves")
+        assert(self._method_set_domain_warp_fractal_octaves_1286410249 != nil)
+        self._method_get_domain_warp_fractal_octaves_3905245786 = StringName(from: "get_domain_warp_fractal_octaves")
+        assert(self._method_get_domain_warp_fractal_octaves_3905245786 != nil)
+        self._method_set_domain_warp_fractal_lacunarity_373806689 = StringName(from: "set_domain_warp_fractal_lacunarity")
+        assert(self._method_set_domain_warp_fractal_lacunarity_373806689 != nil)
+        self._method_get_domain_warp_fractal_lacunarity_1740695150 = StringName(from: "get_domain_warp_fractal_lacunarity")
+        assert(self._method_get_domain_warp_fractal_lacunarity_1740695150 != nil)
+        self._method_set_domain_warp_fractal_gain_373806689 = StringName(from: "set_domain_warp_fractal_gain")
+        assert(self._method_set_domain_warp_fractal_gain_373806689 != nil)
+        self._method_get_domain_warp_fractal_gain_1740695150 = StringName(from: "get_domain_warp_fractal_gain")
+        assert(self._method_get_domain_warp_fractal_gain_1740695150 != nil)
     }
 
     public func set_noise_type(`type`: FastNoiseLite.NoiseType)  {
@@ -236,8 +195,13 @@ open class FastNoiseLite : Noise {
                 .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_noise_type_2624461392,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_noise_type_2624461392._native_ptr(),
+                    2624461392)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -252,8 +216,13 @@ open class FastNoiseLite : Noise {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_noise_type_1458108610,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_noise_type_1458108610._native_ptr(),
+                    1458108610)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -268,8 +237,13 @@ open class FastNoiseLite : Noise {
                 .init(seed_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_seed_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_seed_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -285,8 +259,13 @@ open class FastNoiseLite : Noise {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_seed_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_seed_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -301,8 +280,13 @@ open class FastNoiseLite : Noise {
                 .init(freq_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_frequency_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_frequency_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -318,8 +302,13 @@ open class FastNoiseLite : Noise {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_frequency_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_frequency_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -334,8 +323,13 @@ open class FastNoiseLite : Noise {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_offset_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_offset_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -349,8 +343,13 @@ open class FastNoiseLite : Noise {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_offset_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_offset_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -365,8 +364,13 @@ open class FastNoiseLite : Noise {
                 .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fractal_type_4132731174,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fractal_type_4132731174._native_ptr(),
+                    4132731174)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -381,8 +385,13 @@ open class FastNoiseLite : Noise {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fractal_type_1036889279,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fractal_type_1036889279._native_ptr(),
+                    1036889279)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -397,8 +406,13 @@ open class FastNoiseLite : Noise {
                 .init(octave_count_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fractal_octaves_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fractal_octaves_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -414,8 +428,13 @@ open class FastNoiseLite : Noise {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fractal_octaves_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fractal_octaves_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -430,8 +449,13 @@ open class FastNoiseLite : Noise {
                 .init(lacunarity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fractal_lacunarity_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fractal_lacunarity_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -447,8 +471,13 @@ open class FastNoiseLite : Noise {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fractal_lacunarity_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fractal_lacunarity_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -463,8 +492,13 @@ open class FastNoiseLite : Noise {
                 .init(gain_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fractal_gain_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fractal_gain_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -480,8 +514,13 @@ open class FastNoiseLite : Noise {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fractal_gain_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fractal_gain_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -496,8 +535,13 @@ open class FastNoiseLite : Noise {
                 .init(weighted_strength_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fractal_weighted_strength_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fractal_weighted_strength_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -513,8 +557,13 @@ open class FastNoiseLite : Noise {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fractal_weighted_strength_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fractal_weighted_strength_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -529,8 +578,13 @@ open class FastNoiseLite : Noise {
                 .init(ping_pong_strength_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fractal_ping_pong_strength_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fractal_ping_pong_strength_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -546,8 +600,13 @@ open class FastNoiseLite : Noise {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fractal_ping_pong_strength_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fractal_ping_pong_strength_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -562,8 +621,13 @@ open class FastNoiseLite : Noise {
                 .init(func_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cellular_distance_function_1006013267,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cellular_distance_function_1006013267._native_ptr(),
+                    1006013267)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -578,8 +642,13 @@ open class FastNoiseLite : Noise {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cellular_distance_function_2021274088,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cellular_distance_function_2021274088._native_ptr(),
+                    2021274088)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -594,8 +663,13 @@ open class FastNoiseLite : Noise {
                 .init(jitter_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cellular_jitter_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cellular_jitter_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -611,8 +685,13 @@ open class FastNoiseLite : Noise {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cellular_jitter_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cellular_jitter_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -627,8 +706,13 @@ open class FastNoiseLite : Noise {
                 .init(ret_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cellular_return_type_2654169698,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cellular_return_type_2654169698._native_ptr(),
+                    2654169698)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -643,8 +727,13 @@ open class FastNoiseLite : Noise {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cellular_return_type_3699796343,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cellular_return_type_3699796343._native_ptr(),
+                    3699796343)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -659,8 +748,13 @@ open class FastNoiseLite : Noise {
                 .init(domain_warp_enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_domain_warp_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_domain_warp_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -676,8 +770,13 @@ open class FastNoiseLite : Noise {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_domain_warp_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_domain_warp_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -692,8 +791,13 @@ open class FastNoiseLite : Noise {
                 .init(domain_warp_type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_domain_warp_type_3629692980,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_domain_warp_type_3629692980._native_ptr(),
+                    3629692980)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -708,8 +812,13 @@ open class FastNoiseLite : Noise {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_domain_warp_type_2980162020,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_domain_warp_type_2980162020._native_ptr(),
+                    2980162020)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -724,8 +833,13 @@ open class FastNoiseLite : Noise {
                 .init(domain_warp_amplitude_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_domain_warp_amplitude_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_domain_warp_amplitude_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -741,8 +855,13 @@ open class FastNoiseLite : Noise {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_domain_warp_amplitude_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_domain_warp_amplitude_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -757,8 +876,13 @@ open class FastNoiseLite : Noise {
                 .init(domain_warp_frequency_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_domain_warp_frequency_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_domain_warp_frequency_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -774,8 +898,13 @@ open class FastNoiseLite : Noise {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_domain_warp_frequency_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_domain_warp_frequency_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -790,8 +919,13 @@ open class FastNoiseLite : Noise {
                 .init(domain_warp_fractal_type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_domain_warp_fractal_type_3999408287,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_domain_warp_fractal_type_3999408287._native_ptr(),
+                    3999408287)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -806,8 +940,13 @@ open class FastNoiseLite : Noise {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_domain_warp_fractal_type_407716934,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_domain_warp_fractal_type_407716934._native_ptr(),
+                    407716934)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -822,8 +961,13 @@ open class FastNoiseLite : Noise {
                 .init(domain_warp_octave_count_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_domain_warp_fractal_octaves_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_domain_warp_fractal_octaves_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -839,8 +983,13 @@ open class FastNoiseLite : Noise {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_domain_warp_fractal_octaves_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_domain_warp_fractal_octaves_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -855,8 +1004,13 @@ open class FastNoiseLite : Noise {
                 .init(domain_warp_lacunarity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_domain_warp_fractal_lacunarity_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_domain_warp_fractal_lacunarity_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -872,8 +1026,13 @@ open class FastNoiseLite : Noise {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_domain_warp_fractal_lacunarity_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_domain_warp_fractal_lacunarity_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -888,8 +1047,13 @@ open class FastNoiseLite : Noise {
                 .init(domain_warp_gain_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_domain_warp_fractal_gain_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_domain_warp_fractal_gain_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -905,8 +1069,13 @@ open class FastNoiseLite : Noise {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_domain_warp_fractal_gain_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_domain_warp_fractal_gain_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

@@ -19,19 +19,19 @@ open class CubemapArray : ImageTextureLayered {
 
     public override class var __godot_name: StringName { __godot_name_CubemapArray }
 
-    static var _method_create_placeholder_121922552: GDExtensionMethodBindPtr! = nil
+    static var _method_create_placeholder_121922552: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CubemapArray == nil)
         __godot_name_CubemapArray = StringName(from: "CubemapArray")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_create_placeholder_121922552_name = StringName(from: "create_placeholder")
-        self._method_create_placeholder_121922552 = self.interface.pointee.classdb_get_method_bind(__godot_name_CubemapArray._native_ptr(), _method_create_placeholder_121922552_name._native_ptr(), 121922552)
-        assert(CubemapArray._method_create_placeholder_121922552 != nil)
+        self._method_create_placeholder_121922552 = StringName(from: "create_placeholder")
+        assert(self._method_create_placeholder_121922552 != nil)
     }
 
     public func create_placeholder() -> Resource {
@@ -42,8 +42,13 @@ open class CubemapArray : ImageTextureLayered {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_placeholder_121922552,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_placeholder_121922552._native_ptr(),
+                    121922552)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

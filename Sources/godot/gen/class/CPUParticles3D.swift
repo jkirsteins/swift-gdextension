@@ -48,335 +48,256 @@ open class CPUParticles3D : GeometryInstance3D {
 
     public override class var __godot_name: StringName { __godot_name_CPUParticles3D }
 
-    static var _method_set_emitting_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_amount_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_lifetime_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_set_one_shot_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_pre_process_time_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_set_explosiveness_ratio_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_set_randomness_ratio_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_set_lifetime_randomness_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_local_coordinates_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fixed_fps_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fractional_delta_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_speed_scale_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_is_emitting_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_amount_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_lifetime_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_one_shot_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pre_process_time_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_explosiveness_ratio_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_randomness_ratio_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_lifetime_randomness_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_use_local_coordinates_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fixed_fps_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fractional_delta_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_speed_scale_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_draw_order_1427401774: GDExtensionMethodBindPtr! = nil
-    static var _method_get_draw_order_1321900776: GDExtensionMethodBindPtr! = nil
-    static var _method_set_mesh_194775623: GDExtensionMethodBindPtr! = nil
-    static var _method_get_mesh_1808005922: GDExtensionMethodBindPtr! = nil
-    static var _method_restart_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_direction_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_direction_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_spread_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_spread_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_flatness_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_flatness_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_param_min_557936109: GDExtensionMethodBindPtr! = nil
-    static var _method_get_param_min_597646162: GDExtensionMethodBindPtr! = nil
-    static var _method_set_param_max_557936109: GDExtensionMethodBindPtr! = nil
-    static var _method_get_param_max_597646162: GDExtensionMethodBindPtr! = nil
-    static var _method_set_param_curve_4044142537: GDExtensionMethodBindPtr! = nil
-    static var _method_get_param_curve_4132790277: GDExtensionMethodBindPtr! = nil
-    static var _method_set_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_color_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_color_ramp_2756054477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_color_ramp_132272999: GDExtensionMethodBindPtr! = nil
-    static var _method_set_color_initial_ramp_2756054477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_color_initial_ramp_132272999: GDExtensionMethodBindPtr! = nil
-    static var _method_set_particle_flag_3515406498: GDExtensionMethodBindPtr! = nil
-    static var _method_get_particle_flag_2845201987: GDExtensionMethodBindPtr! = nil
-    static var _method_set_emission_shape_491823814: GDExtensionMethodBindPtr! = nil
-    static var _method_get_emission_shape_2961454842: GDExtensionMethodBindPtr! = nil
-    static var _method_set_emission_sphere_radius_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_emission_sphere_radius_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_emission_box_extents_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_emission_box_extents_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_emission_points_334873810: GDExtensionMethodBindPtr! = nil
-    static var _method_get_emission_points_497664490: GDExtensionMethodBindPtr! = nil
-    static var _method_set_emission_normals_334873810: GDExtensionMethodBindPtr! = nil
-    static var _method_get_emission_normals_497664490: GDExtensionMethodBindPtr! = nil
-    static var _method_set_emission_colors_3546319833: GDExtensionMethodBindPtr! = nil
-    static var _method_get_emission_colors_1392750486: GDExtensionMethodBindPtr! = nil
-    static var _method_set_emission_ring_axis_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_emission_ring_axis_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_emission_ring_height_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_emission_ring_height_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_emission_ring_radius_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_emission_ring_radius_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_emission_ring_inner_radius_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_emission_ring_inner_radius_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_get_gravity_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_gravity_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_split_scale_2240911060: GDExtensionMethodBindPtr! = nil
-    static var _method_set_split_scale_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_scale_curve_x_2460114913: GDExtensionMethodBindPtr! = nil
-    static var _method_set_scale_curve_x_270443179: GDExtensionMethodBindPtr! = nil
-    static var _method_get_scale_curve_y_2460114913: GDExtensionMethodBindPtr! = nil
-    static var _method_set_scale_curve_y_270443179: GDExtensionMethodBindPtr! = nil
-    static var _method_get_scale_curve_z_2460114913: GDExtensionMethodBindPtr! = nil
-    static var _method_set_scale_curve_z_270443179: GDExtensionMethodBindPtr! = nil
-    static var _method_convert_from_particles_1078189570: GDExtensionMethodBindPtr! = nil
+    static var _method_set_emitting_2586408642: StringName! = nil
+    static var _method_set_amount_1286410249: StringName! = nil
+    static var _method_set_lifetime_373806689: StringName! = nil
+    static var _method_set_one_shot_2586408642: StringName! = nil
+    static var _method_set_pre_process_time_373806689: StringName! = nil
+    static var _method_set_explosiveness_ratio_373806689: StringName! = nil
+    static var _method_set_randomness_ratio_373806689: StringName! = nil
+    static var _method_set_lifetime_randomness_373806689: StringName! = nil
+    static var _method_set_use_local_coordinates_2586408642: StringName! = nil
+    static var _method_set_fixed_fps_1286410249: StringName! = nil
+    static var _method_set_fractional_delta_2586408642: StringName! = nil
+    static var _method_set_speed_scale_373806689: StringName! = nil
+    static var _method_is_emitting_36873697: StringName! = nil
+    static var _method_get_amount_3905245786: StringName! = nil
+    static var _method_get_lifetime_1740695150: StringName! = nil
+    static var _method_get_one_shot_36873697: StringName! = nil
+    static var _method_get_pre_process_time_1740695150: StringName! = nil
+    static var _method_get_explosiveness_ratio_1740695150: StringName! = nil
+    static var _method_get_randomness_ratio_1740695150: StringName! = nil
+    static var _method_get_lifetime_randomness_1740695150: StringName! = nil
+    static var _method_get_use_local_coordinates_36873697: StringName! = nil
+    static var _method_get_fixed_fps_3905245786: StringName! = nil
+    static var _method_get_fractional_delta_36873697: StringName! = nil
+    static var _method_get_speed_scale_1740695150: StringName! = nil
+    static var _method_set_draw_order_1427401774: StringName! = nil
+    static var _method_get_draw_order_1321900776: StringName! = nil
+    static var _method_set_mesh_194775623: StringName! = nil
+    static var _method_get_mesh_1808005922: StringName! = nil
+    static var _method_restart_3218959716: StringName! = nil
+    static var _method_set_direction_3460891852: StringName! = nil
+    static var _method_get_direction_3360562783: StringName! = nil
+    static var _method_set_spread_373806689: StringName! = nil
+    static var _method_get_spread_1740695150: StringName! = nil
+    static var _method_set_flatness_373806689: StringName! = nil
+    static var _method_get_flatness_1740695150: StringName! = nil
+    static var _method_set_param_min_557936109: StringName! = nil
+    static var _method_get_param_min_597646162: StringName! = nil
+    static var _method_set_param_max_557936109: StringName! = nil
+    static var _method_get_param_max_597646162: StringName! = nil
+    static var _method_set_param_curve_4044142537: StringName! = nil
+    static var _method_get_param_curve_4132790277: StringName! = nil
+    static var _method_set_color_2920490490: StringName! = nil
+    static var _method_get_color_3444240500: StringName! = nil
+    static var _method_set_color_ramp_2756054477: StringName! = nil
+    static var _method_get_color_ramp_132272999: StringName! = nil
+    static var _method_set_color_initial_ramp_2756054477: StringName! = nil
+    static var _method_get_color_initial_ramp_132272999: StringName! = nil
+    static var _method_set_particle_flag_3515406498: StringName! = nil
+    static var _method_get_particle_flag_2845201987: StringName! = nil
+    static var _method_set_emission_shape_491823814: StringName! = nil
+    static var _method_get_emission_shape_2961454842: StringName! = nil
+    static var _method_set_emission_sphere_radius_373806689: StringName! = nil
+    static var _method_get_emission_sphere_radius_1740695150: StringName! = nil
+    static var _method_set_emission_box_extents_3460891852: StringName! = nil
+    static var _method_get_emission_box_extents_3360562783: StringName! = nil
+    static var _method_set_emission_points_334873810: StringName! = nil
+    static var _method_get_emission_points_497664490: StringName! = nil
+    static var _method_set_emission_normals_334873810: StringName! = nil
+    static var _method_get_emission_normals_497664490: StringName! = nil
+    static var _method_set_emission_colors_3546319833: StringName! = nil
+    static var _method_get_emission_colors_1392750486: StringName! = nil
+    static var _method_set_emission_ring_axis_3460891852: StringName! = nil
+    static var _method_get_emission_ring_axis_3360562783: StringName! = nil
+    static var _method_set_emission_ring_height_373806689: StringName! = nil
+    static var _method_get_emission_ring_height_1740695150: StringName! = nil
+    static var _method_set_emission_ring_radius_373806689: StringName! = nil
+    static var _method_get_emission_ring_radius_1740695150: StringName! = nil
+    static var _method_set_emission_ring_inner_radius_373806689: StringName! = nil
+    static var _method_get_emission_ring_inner_radius_1740695150: StringName! = nil
+    static var _method_get_gravity_3360562783: StringName! = nil
+    static var _method_set_gravity_3460891852: StringName! = nil
+    static var _method_get_split_scale_2240911060: StringName! = nil
+    static var _method_set_split_scale_2586408642: StringName! = nil
+    static var _method_get_scale_curve_x_2460114913: StringName! = nil
+    static var _method_set_scale_curve_x_270443179: StringName! = nil
+    static var _method_get_scale_curve_y_2460114913: StringName! = nil
+    static var _method_set_scale_curve_y_270443179: StringName! = nil
+    static var _method_get_scale_curve_z_2460114913: StringName! = nil
+    static var _method_set_scale_curve_z_270443179: StringName! = nil
+    static var _method_convert_from_particles_1078189570: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_CPUParticles3D == nil)
         __godot_name_CPUParticles3D = StringName(from: "CPUParticles3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_emitting_2586408642_name = StringName(from: "set_emitting")
-        self._method_set_emitting_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_emitting_2586408642_name._native_ptr(), 2586408642)
-        assert(CPUParticles3D._method_set_emitting_2586408642 != nil)
-        let _method_set_amount_1286410249_name = StringName(from: "set_amount")
-        self._method_set_amount_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_amount_1286410249_name._native_ptr(), 1286410249)
-        assert(CPUParticles3D._method_set_amount_1286410249 != nil)
-        let _method_set_lifetime_373806689_name = StringName(from: "set_lifetime")
-        self._method_set_lifetime_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_lifetime_373806689_name._native_ptr(), 373806689)
-        assert(CPUParticles3D._method_set_lifetime_373806689 != nil)
-        let _method_set_one_shot_2586408642_name = StringName(from: "set_one_shot")
-        self._method_set_one_shot_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_one_shot_2586408642_name._native_ptr(), 2586408642)
-        assert(CPUParticles3D._method_set_one_shot_2586408642 != nil)
-        let _method_set_pre_process_time_373806689_name = StringName(from: "set_pre_process_time")
-        self._method_set_pre_process_time_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_pre_process_time_373806689_name._native_ptr(), 373806689)
-        assert(CPUParticles3D._method_set_pre_process_time_373806689 != nil)
-        let _method_set_explosiveness_ratio_373806689_name = StringName(from: "set_explosiveness_ratio")
-        self._method_set_explosiveness_ratio_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_explosiveness_ratio_373806689_name._native_ptr(), 373806689)
-        assert(CPUParticles3D._method_set_explosiveness_ratio_373806689 != nil)
-        let _method_set_randomness_ratio_373806689_name = StringName(from: "set_randomness_ratio")
-        self._method_set_randomness_ratio_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_randomness_ratio_373806689_name._native_ptr(), 373806689)
-        assert(CPUParticles3D._method_set_randomness_ratio_373806689 != nil)
-        let _method_set_lifetime_randomness_373806689_name = StringName(from: "set_lifetime_randomness")
-        self._method_set_lifetime_randomness_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_lifetime_randomness_373806689_name._native_ptr(), 373806689)
-        assert(CPUParticles3D._method_set_lifetime_randomness_373806689 != nil)
-        let _method_set_use_local_coordinates_2586408642_name = StringName(from: "set_use_local_coordinates")
-        self._method_set_use_local_coordinates_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_use_local_coordinates_2586408642_name._native_ptr(), 2586408642)
-        assert(CPUParticles3D._method_set_use_local_coordinates_2586408642 != nil)
-        let _method_set_fixed_fps_1286410249_name = StringName(from: "set_fixed_fps")
-        self._method_set_fixed_fps_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_fixed_fps_1286410249_name._native_ptr(), 1286410249)
-        assert(CPUParticles3D._method_set_fixed_fps_1286410249 != nil)
-        let _method_set_fractional_delta_2586408642_name = StringName(from: "set_fractional_delta")
-        self._method_set_fractional_delta_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_fractional_delta_2586408642_name._native_ptr(), 2586408642)
-        assert(CPUParticles3D._method_set_fractional_delta_2586408642 != nil)
-        let _method_set_speed_scale_373806689_name = StringName(from: "set_speed_scale")
-        self._method_set_speed_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_speed_scale_373806689_name._native_ptr(), 373806689)
-        assert(CPUParticles3D._method_set_speed_scale_373806689 != nil)
-        let _method_is_emitting_36873697_name = StringName(from: "is_emitting")
-        self._method_is_emitting_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_is_emitting_36873697_name._native_ptr(), 36873697)
-        assert(CPUParticles3D._method_is_emitting_36873697 != nil)
-        let _method_get_amount_3905245786_name = StringName(from: "get_amount")
-        self._method_get_amount_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_amount_3905245786_name._native_ptr(), 3905245786)
-        assert(CPUParticles3D._method_get_amount_3905245786 != nil)
-        let _method_get_lifetime_1740695150_name = StringName(from: "get_lifetime")
-        self._method_get_lifetime_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_lifetime_1740695150_name._native_ptr(), 1740695150)
-        assert(CPUParticles3D._method_get_lifetime_1740695150 != nil)
-        let _method_get_one_shot_36873697_name = StringName(from: "get_one_shot")
-        self._method_get_one_shot_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_one_shot_36873697_name._native_ptr(), 36873697)
-        assert(CPUParticles3D._method_get_one_shot_36873697 != nil)
-        let _method_get_pre_process_time_1740695150_name = StringName(from: "get_pre_process_time")
-        self._method_get_pre_process_time_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_pre_process_time_1740695150_name._native_ptr(), 1740695150)
-        assert(CPUParticles3D._method_get_pre_process_time_1740695150 != nil)
-        let _method_get_explosiveness_ratio_1740695150_name = StringName(from: "get_explosiveness_ratio")
-        self._method_get_explosiveness_ratio_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_explosiveness_ratio_1740695150_name._native_ptr(), 1740695150)
-        assert(CPUParticles3D._method_get_explosiveness_ratio_1740695150 != nil)
-        let _method_get_randomness_ratio_1740695150_name = StringName(from: "get_randomness_ratio")
-        self._method_get_randomness_ratio_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_randomness_ratio_1740695150_name._native_ptr(), 1740695150)
-        assert(CPUParticles3D._method_get_randomness_ratio_1740695150 != nil)
-        let _method_get_lifetime_randomness_1740695150_name = StringName(from: "get_lifetime_randomness")
-        self._method_get_lifetime_randomness_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_lifetime_randomness_1740695150_name._native_ptr(), 1740695150)
-        assert(CPUParticles3D._method_get_lifetime_randomness_1740695150 != nil)
-        let _method_get_use_local_coordinates_36873697_name = StringName(from: "get_use_local_coordinates")
-        self._method_get_use_local_coordinates_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_use_local_coordinates_36873697_name._native_ptr(), 36873697)
-        assert(CPUParticles3D._method_get_use_local_coordinates_36873697 != nil)
-        let _method_get_fixed_fps_3905245786_name = StringName(from: "get_fixed_fps")
-        self._method_get_fixed_fps_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_fixed_fps_3905245786_name._native_ptr(), 3905245786)
-        assert(CPUParticles3D._method_get_fixed_fps_3905245786 != nil)
-        let _method_get_fractional_delta_36873697_name = StringName(from: "get_fractional_delta")
-        self._method_get_fractional_delta_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_fractional_delta_36873697_name._native_ptr(), 36873697)
-        assert(CPUParticles3D._method_get_fractional_delta_36873697 != nil)
-        let _method_get_speed_scale_1740695150_name = StringName(from: "get_speed_scale")
-        self._method_get_speed_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_speed_scale_1740695150_name._native_ptr(), 1740695150)
-        assert(CPUParticles3D._method_get_speed_scale_1740695150 != nil)
-        let _method_set_draw_order_1427401774_name = StringName(from: "set_draw_order")
-        self._method_set_draw_order_1427401774 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_draw_order_1427401774_name._native_ptr(), 1427401774)
-        assert(CPUParticles3D._method_set_draw_order_1427401774 != nil)
-        let _method_get_draw_order_1321900776_name = StringName(from: "get_draw_order")
-        self._method_get_draw_order_1321900776 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_draw_order_1321900776_name._native_ptr(), 1321900776)
-        assert(CPUParticles3D._method_get_draw_order_1321900776 != nil)
-        let _method_set_mesh_194775623_name = StringName(from: "set_mesh")
-        self._method_set_mesh_194775623 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_mesh_194775623_name._native_ptr(), 194775623)
-        assert(CPUParticles3D._method_set_mesh_194775623 != nil)
-        let _method_get_mesh_1808005922_name = StringName(from: "get_mesh")
-        self._method_get_mesh_1808005922 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_mesh_1808005922_name._native_ptr(), 1808005922)
-        assert(CPUParticles3D._method_get_mesh_1808005922 != nil)
-        let _method_restart_3218959716_name = StringName(from: "restart")
-        self._method_restart_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_restart_3218959716_name._native_ptr(), 3218959716)
-        assert(CPUParticles3D._method_restart_3218959716 != nil)
-        let _method_set_direction_3460891852_name = StringName(from: "set_direction")
-        self._method_set_direction_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_direction_3460891852_name._native_ptr(), 3460891852)
-        assert(CPUParticles3D._method_set_direction_3460891852 != nil)
-        let _method_get_direction_3360562783_name = StringName(from: "get_direction")
-        self._method_get_direction_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_direction_3360562783_name._native_ptr(), 3360562783)
-        assert(CPUParticles3D._method_get_direction_3360562783 != nil)
-        let _method_set_spread_373806689_name = StringName(from: "set_spread")
-        self._method_set_spread_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_spread_373806689_name._native_ptr(), 373806689)
-        assert(CPUParticles3D._method_set_spread_373806689 != nil)
-        let _method_get_spread_1740695150_name = StringName(from: "get_spread")
-        self._method_get_spread_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_spread_1740695150_name._native_ptr(), 1740695150)
-        assert(CPUParticles3D._method_get_spread_1740695150 != nil)
-        let _method_set_flatness_373806689_name = StringName(from: "set_flatness")
-        self._method_set_flatness_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_flatness_373806689_name._native_ptr(), 373806689)
-        assert(CPUParticles3D._method_set_flatness_373806689 != nil)
-        let _method_get_flatness_1740695150_name = StringName(from: "get_flatness")
-        self._method_get_flatness_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_flatness_1740695150_name._native_ptr(), 1740695150)
-        assert(CPUParticles3D._method_get_flatness_1740695150 != nil)
-        let _method_set_param_min_557936109_name = StringName(from: "set_param_min")
-        self._method_set_param_min_557936109 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_param_min_557936109_name._native_ptr(), 557936109)
-        assert(CPUParticles3D._method_set_param_min_557936109 != nil)
-        let _method_get_param_min_597646162_name = StringName(from: "get_param_min")
-        self._method_get_param_min_597646162 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_param_min_597646162_name._native_ptr(), 597646162)
-        assert(CPUParticles3D._method_get_param_min_597646162 != nil)
-        let _method_set_param_max_557936109_name = StringName(from: "set_param_max")
-        self._method_set_param_max_557936109 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_param_max_557936109_name._native_ptr(), 557936109)
-        assert(CPUParticles3D._method_set_param_max_557936109 != nil)
-        let _method_get_param_max_597646162_name = StringName(from: "get_param_max")
-        self._method_get_param_max_597646162 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_param_max_597646162_name._native_ptr(), 597646162)
-        assert(CPUParticles3D._method_get_param_max_597646162 != nil)
-        let _method_set_param_curve_4044142537_name = StringName(from: "set_param_curve")
-        self._method_set_param_curve_4044142537 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_param_curve_4044142537_name._native_ptr(), 4044142537)
-        assert(CPUParticles3D._method_set_param_curve_4044142537 != nil)
-        let _method_get_param_curve_4132790277_name = StringName(from: "get_param_curve")
-        self._method_get_param_curve_4132790277 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_param_curve_4132790277_name._native_ptr(), 4132790277)
-        assert(CPUParticles3D._method_get_param_curve_4132790277 != nil)
-        let _method_set_color_2920490490_name = StringName(from: "set_color")
-        self._method_set_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_color_2920490490_name._native_ptr(), 2920490490)
-        assert(CPUParticles3D._method_set_color_2920490490 != nil)
-        let _method_get_color_3444240500_name = StringName(from: "get_color")
-        self._method_get_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_color_3444240500_name._native_ptr(), 3444240500)
-        assert(CPUParticles3D._method_get_color_3444240500 != nil)
-        let _method_set_color_ramp_2756054477_name = StringName(from: "set_color_ramp")
-        self._method_set_color_ramp_2756054477 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_color_ramp_2756054477_name._native_ptr(), 2756054477)
-        assert(CPUParticles3D._method_set_color_ramp_2756054477 != nil)
-        let _method_get_color_ramp_132272999_name = StringName(from: "get_color_ramp")
-        self._method_get_color_ramp_132272999 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_color_ramp_132272999_name._native_ptr(), 132272999)
-        assert(CPUParticles3D._method_get_color_ramp_132272999 != nil)
-        let _method_set_color_initial_ramp_2756054477_name = StringName(from: "set_color_initial_ramp")
-        self._method_set_color_initial_ramp_2756054477 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_color_initial_ramp_2756054477_name._native_ptr(), 2756054477)
-        assert(CPUParticles3D._method_set_color_initial_ramp_2756054477 != nil)
-        let _method_get_color_initial_ramp_132272999_name = StringName(from: "get_color_initial_ramp")
-        self._method_get_color_initial_ramp_132272999 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_color_initial_ramp_132272999_name._native_ptr(), 132272999)
-        assert(CPUParticles3D._method_get_color_initial_ramp_132272999 != nil)
-        let _method_set_particle_flag_3515406498_name = StringName(from: "set_particle_flag")
-        self._method_set_particle_flag_3515406498 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_particle_flag_3515406498_name._native_ptr(), 3515406498)
-        assert(CPUParticles3D._method_set_particle_flag_3515406498 != nil)
-        let _method_get_particle_flag_2845201987_name = StringName(from: "get_particle_flag")
-        self._method_get_particle_flag_2845201987 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_particle_flag_2845201987_name._native_ptr(), 2845201987)
-        assert(CPUParticles3D._method_get_particle_flag_2845201987 != nil)
-        let _method_set_emission_shape_491823814_name = StringName(from: "set_emission_shape")
-        self._method_set_emission_shape_491823814 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_emission_shape_491823814_name._native_ptr(), 491823814)
-        assert(CPUParticles3D._method_set_emission_shape_491823814 != nil)
-        let _method_get_emission_shape_2961454842_name = StringName(from: "get_emission_shape")
-        self._method_get_emission_shape_2961454842 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_emission_shape_2961454842_name._native_ptr(), 2961454842)
-        assert(CPUParticles3D._method_get_emission_shape_2961454842 != nil)
-        let _method_set_emission_sphere_radius_373806689_name = StringName(from: "set_emission_sphere_radius")
-        self._method_set_emission_sphere_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_emission_sphere_radius_373806689_name._native_ptr(), 373806689)
-        assert(CPUParticles3D._method_set_emission_sphere_radius_373806689 != nil)
-        let _method_get_emission_sphere_radius_1740695150_name = StringName(from: "get_emission_sphere_radius")
-        self._method_get_emission_sphere_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_emission_sphere_radius_1740695150_name._native_ptr(), 1740695150)
-        assert(CPUParticles3D._method_get_emission_sphere_radius_1740695150 != nil)
-        let _method_set_emission_box_extents_3460891852_name = StringName(from: "set_emission_box_extents")
-        self._method_set_emission_box_extents_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_emission_box_extents_3460891852_name._native_ptr(), 3460891852)
-        assert(CPUParticles3D._method_set_emission_box_extents_3460891852 != nil)
-        let _method_get_emission_box_extents_3360562783_name = StringName(from: "get_emission_box_extents")
-        self._method_get_emission_box_extents_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_emission_box_extents_3360562783_name._native_ptr(), 3360562783)
-        assert(CPUParticles3D._method_get_emission_box_extents_3360562783 != nil)
-        let _method_set_emission_points_334873810_name = StringName(from: "set_emission_points")
-        self._method_set_emission_points_334873810 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_emission_points_334873810_name._native_ptr(), 334873810)
-        assert(CPUParticles3D._method_set_emission_points_334873810 != nil)
-        let _method_get_emission_points_497664490_name = StringName(from: "get_emission_points")
-        self._method_get_emission_points_497664490 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_emission_points_497664490_name._native_ptr(), 497664490)
-        assert(CPUParticles3D._method_get_emission_points_497664490 != nil)
-        let _method_set_emission_normals_334873810_name = StringName(from: "set_emission_normals")
-        self._method_set_emission_normals_334873810 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_emission_normals_334873810_name._native_ptr(), 334873810)
-        assert(CPUParticles3D._method_set_emission_normals_334873810 != nil)
-        let _method_get_emission_normals_497664490_name = StringName(from: "get_emission_normals")
-        self._method_get_emission_normals_497664490 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_emission_normals_497664490_name._native_ptr(), 497664490)
-        assert(CPUParticles3D._method_get_emission_normals_497664490 != nil)
-        let _method_set_emission_colors_3546319833_name = StringName(from: "set_emission_colors")
-        self._method_set_emission_colors_3546319833 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_emission_colors_3546319833_name._native_ptr(), 3546319833)
-        assert(CPUParticles3D._method_set_emission_colors_3546319833 != nil)
-        let _method_get_emission_colors_1392750486_name = StringName(from: "get_emission_colors")
-        self._method_get_emission_colors_1392750486 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_emission_colors_1392750486_name._native_ptr(), 1392750486)
-        assert(CPUParticles3D._method_get_emission_colors_1392750486 != nil)
-        let _method_set_emission_ring_axis_3460891852_name = StringName(from: "set_emission_ring_axis")
-        self._method_set_emission_ring_axis_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_emission_ring_axis_3460891852_name._native_ptr(), 3460891852)
-        assert(CPUParticles3D._method_set_emission_ring_axis_3460891852 != nil)
-        let _method_get_emission_ring_axis_3360562783_name = StringName(from: "get_emission_ring_axis")
-        self._method_get_emission_ring_axis_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_emission_ring_axis_3360562783_name._native_ptr(), 3360562783)
-        assert(CPUParticles3D._method_get_emission_ring_axis_3360562783 != nil)
-        let _method_set_emission_ring_height_373806689_name = StringName(from: "set_emission_ring_height")
-        self._method_set_emission_ring_height_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_emission_ring_height_373806689_name._native_ptr(), 373806689)
-        assert(CPUParticles3D._method_set_emission_ring_height_373806689 != nil)
-        let _method_get_emission_ring_height_1740695150_name = StringName(from: "get_emission_ring_height")
-        self._method_get_emission_ring_height_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_emission_ring_height_1740695150_name._native_ptr(), 1740695150)
-        assert(CPUParticles3D._method_get_emission_ring_height_1740695150 != nil)
-        let _method_set_emission_ring_radius_373806689_name = StringName(from: "set_emission_ring_radius")
-        self._method_set_emission_ring_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_emission_ring_radius_373806689_name._native_ptr(), 373806689)
-        assert(CPUParticles3D._method_set_emission_ring_radius_373806689 != nil)
-        let _method_get_emission_ring_radius_1740695150_name = StringName(from: "get_emission_ring_radius")
-        self._method_get_emission_ring_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_emission_ring_radius_1740695150_name._native_ptr(), 1740695150)
-        assert(CPUParticles3D._method_get_emission_ring_radius_1740695150 != nil)
-        let _method_set_emission_ring_inner_radius_373806689_name = StringName(from: "set_emission_ring_inner_radius")
-        self._method_set_emission_ring_inner_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_emission_ring_inner_radius_373806689_name._native_ptr(), 373806689)
-        assert(CPUParticles3D._method_set_emission_ring_inner_radius_373806689 != nil)
-        let _method_get_emission_ring_inner_radius_1740695150_name = StringName(from: "get_emission_ring_inner_radius")
-        self._method_get_emission_ring_inner_radius_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_emission_ring_inner_radius_1740695150_name._native_ptr(), 1740695150)
-        assert(CPUParticles3D._method_get_emission_ring_inner_radius_1740695150 != nil)
-        let _method_get_gravity_3360562783_name = StringName(from: "get_gravity")
-        self._method_get_gravity_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_gravity_3360562783_name._native_ptr(), 3360562783)
-        assert(CPUParticles3D._method_get_gravity_3360562783 != nil)
-        let _method_set_gravity_3460891852_name = StringName(from: "set_gravity")
-        self._method_set_gravity_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_gravity_3460891852_name._native_ptr(), 3460891852)
-        assert(CPUParticles3D._method_set_gravity_3460891852 != nil)
-        let _method_get_split_scale_2240911060_name = StringName(from: "get_split_scale")
-        self._method_get_split_scale_2240911060 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_split_scale_2240911060_name._native_ptr(), 2240911060)
-        assert(CPUParticles3D._method_get_split_scale_2240911060 != nil)
-        let _method_set_split_scale_2586408642_name = StringName(from: "set_split_scale")
-        self._method_set_split_scale_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_split_scale_2586408642_name._native_ptr(), 2586408642)
-        assert(CPUParticles3D._method_set_split_scale_2586408642 != nil)
-        let _method_get_scale_curve_x_2460114913_name = StringName(from: "get_scale_curve_x")
-        self._method_get_scale_curve_x_2460114913 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_scale_curve_x_2460114913_name._native_ptr(), 2460114913)
-        assert(CPUParticles3D._method_get_scale_curve_x_2460114913 != nil)
-        let _method_set_scale_curve_x_270443179_name = StringName(from: "set_scale_curve_x")
-        self._method_set_scale_curve_x_270443179 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_scale_curve_x_270443179_name._native_ptr(), 270443179)
-        assert(CPUParticles3D._method_set_scale_curve_x_270443179 != nil)
-        let _method_get_scale_curve_y_2460114913_name = StringName(from: "get_scale_curve_y")
-        self._method_get_scale_curve_y_2460114913 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_scale_curve_y_2460114913_name._native_ptr(), 2460114913)
-        assert(CPUParticles3D._method_get_scale_curve_y_2460114913 != nil)
-        let _method_set_scale_curve_y_270443179_name = StringName(from: "set_scale_curve_y")
-        self._method_set_scale_curve_y_270443179 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_scale_curve_y_270443179_name._native_ptr(), 270443179)
-        assert(CPUParticles3D._method_set_scale_curve_y_270443179 != nil)
-        let _method_get_scale_curve_z_2460114913_name = StringName(from: "get_scale_curve_z")
-        self._method_get_scale_curve_z_2460114913 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_get_scale_curve_z_2460114913_name._native_ptr(), 2460114913)
-        assert(CPUParticles3D._method_get_scale_curve_z_2460114913 != nil)
-        let _method_set_scale_curve_z_270443179_name = StringName(from: "set_scale_curve_z")
-        self._method_set_scale_curve_z_270443179 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_set_scale_curve_z_270443179_name._native_ptr(), 270443179)
-        assert(CPUParticles3D._method_set_scale_curve_z_270443179 != nil)
-        let _method_convert_from_particles_1078189570_name = StringName(from: "convert_from_particles")
-        self._method_convert_from_particles_1078189570 = self.interface.pointee.classdb_get_method_bind(__godot_name_CPUParticles3D._native_ptr(), _method_convert_from_particles_1078189570_name._native_ptr(), 1078189570)
-        assert(CPUParticles3D._method_convert_from_particles_1078189570 != nil)
+        self._method_set_emitting_2586408642 = StringName(from: "set_emitting")
+        assert(self._method_set_emitting_2586408642 != nil)
+        self._method_set_amount_1286410249 = StringName(from: "set_amount")
+        assert(self._method_set_amount_1286410249 != nil)
+        self._method_set_lifetime_373806689 = StringName(from: "set_lifetime")
+        assert(self._method_set_lifetime_373806689 != nil)
+        self._method_set_one_shot_2586408642 = StringName(from: "set_one_shot")
+        assert(self._method_set_one_shot_2586408642 != nil)
+        self._method_set_pre_process_time_373806689 = StringName(from: "set_pre_process_time")
+        assert(self._method_set_pre_process_time_373806689 != nil)
+        self._method_set_explosiveness_ratio_373806689 = StringName(from: "set_explosiveness_ratio")
+        assert(self._method_set_explosiveness_ratio_373806689 != nil)
+        self._method_set_randomness_ratio_373806689 = StringName(from: "set_randomness_ratio")
+        assert(self._method_set_randomness_ratio_373806689 != nil)
+        self._method_set_lifetime_randomness_373806689 = StringName(from: "set_lifetime_randomness")
+        assert(self._method_set_lifetime_randomness_373806689 != nil)
+        self._method_set_use_local_coordinates_2586408642 = StringName(from: "set_use_local_coordinates")
+        assert(self._method_set_use_local_coordinates_2586408642 != nil)
+        self._method_set_fixed_fps_1286410249 = StringName(from: "set_fixed_fps")
+        assert(self._method_set_fixed_fps_1286410249 != nil)
+        self._method_set_fractional_delta_2586408642 = StringName(from: "set_fractional_delta")
+        assert(self._method_set_fractional_delta_2586408642 != nil)
+        self._method_set_speed_scale_373806689 = StringName(from: "set_speed_scale")
+        assert(self._method_set_speed_scale_373806689 != nil)
+        self._method_is_emitting_36873697 = StringName(from: "is_emitting")
+        assert(self._method_is_emitting_36873697 != nil)
+        self._method_get_amount_3905245786 = StringName(from: "get_amount")
+        assert(self._method_get_amount_3905245786 != nil)
+        self._method_get_lifetime_1740695150 = StringName(from: "get_lifetime")
+        assert(self._method_get_lifetime_1740695150 != nil)
+        self._method_get_one_shot_36873697 = StringName(from: "get_one_shot")
+        assert(self._method_get_one_shot_36873697 != nil)
+        self._method_get_pre_process_time_1740695150 = StringName(from: "get_pre_process_time")
+        assert(self._method_get_pre_process_time_1740695150 != nil)
+        self._method_get_explosiveness_ratio_1740695150 = StringName(from: "get_explosiveness_ratio")
+        assert(self._method_get_explosiveness_ratio_1740695150 != nil)
+        self._method_get_randomness_ratio_1740695150 = StringName(from: "get_randomness_ratio")
+        assert(self._method_get_randomness_ratio_1740695150 != nil)
+        self._method_get_lifetime_randomness_1740695150 = StringName(from: "get_lifetime_randomness")
+        assert(self._method_get_lifetime_randomness_1740695150 != nil)
+        self._method_get_use_local_coordinates_36873697 = StringName(from: "get_use_local_coordinates")
+        assert(self._method_get_use_local_coordinates_36873697 != nil)
+        self._method_get_fixed_fps_3905245786 = StringName(from: "get_fixed_fps")
+        assert(self._method_get_fixed_fps_3905245786 != nil)
+        self._method_get_fractional_delta_36873697 = StringName(from: "get_fractional_delta")
+        assert(self._method_get_fractional_delta_36873697 != nil)
+        self._method_get_speed_scale_1740695150 = StringName(from: "get_speed_scale")
+        assert(self._method_get_speed_scale_1740695150 != nil)
+        self._method_set_draw_order_1427401774 = StringName(from: "set_draw_order")
+        assert(self._method_set_draw_order_1427401774 != nil)
+        self._method_get_draw_order_1321900776 = StringName(from: "get_draw_order")
+        assert(self._method_get_draw_order_1321900776 != nil)
+        self._method_set_mesh_194775623 = StringName(from: "set_mesh")
+        assert(self._method_set_mesh_194775623 != nil)
+        self._method_get_mesh_1808005922 = StringName(from: "get_mesh")
+        assert(self._method_get_mesh_1808005922 != nil)
+        self._method_restart_3218959716 = StringName(from: "restart")
+        assert(self._method_restart_3218959716 != nil)
+        self._method_set_direction_3460891852 = StringName(from: "set_direction")
+        assert(self._method_set_direction_3460891852 != nil)
+        self._method_get_direction_3360562783 = StringName(from: "get_direction")
+        assert(self._method_get_direction_3360562783 != nil)
+        self._method_set_spread_373806689 = StringName(from: "set_spread")
+        assert(self._method_set_spread_373806689 != nil)
+        self._method_get_spread_1740695150 = StringName(from: "get_spread")
+        assert(self._method_get_spread_1740695150 != nil)
+        self._method_set_flatness_373806689 = StringName(from: "set_flatness")
+        assert(self._method_set_flatness_373806689 != nil)
+        self._method_get_flatness_1740695150 = StringName(from: "get_flatness")
+        assert(self._method_get_flatness_1740695150 != nil)
+        self._method_set_param_min_557936109 = StringName(from: "set_param_min")
+        assert(self._method_set_param_min_557936109 != nil)
+        self._method_get_param_min_597646162 = StringName(from: "get_param_min")
+        assert(self._method_get_param_min_597646162 != nil)
+        self._method_set_param_max_557936109 = StringName(from: "set_param_max")
+        assert(self._method_set_param_max_557936109 != nil)
+        self._method_get_param_max_597646162 = StringName(from: "get_param_max")
+        assert(self._method_get_param_max_597646162 != nil)
+        self._method_set_param_curve_4044142537 = StringName(from: "set_param_curve")
+        assert(self._method_set_param_curve_4044142537 != nil)
+        self._method_get_param_curve_4132790277 = StringName(from: "get_param_curve")
+        assert(self._method_get_param_curve_4132790277 != nil)
+        self._method_set_color_2920490490 = StringName(from: "set_color")
+        assert(self._method_set_color_2920490490 != nil)
+        self._method_get_color_3444240500 = StringName(from: "get_color")
+        assert(self._method_get_color_3444240500 != nil)
+        self._method_set_color_ramp_2756054477 = StringName(from: "set_color_ramp")
+        assert(self._method_set_color_ramp_2756054477 != nil)
+        self._method_get_color_ramp_132272999 = StringName(from: "get_color_ramp")
+        assert(self._method_get_color_ramp_132272999 != nil)
+        self._method_set_color_initial_ramp_2756054477 = StringName(from: "set_color_initial_ramp")
+        assert(self._method_set_color_initial_ramp_2756054477 != nil)
+        self._method_get_color_initial_ramp_132272999 = StringName(from: "get_color_initial_ramp")
+        assert(self._method_get_color_initial_ramp_132272999 != nil)
+        self._method_set_particle_flag_3515406498 = StringName(from: "set_particle_flag")
+        assert(self._method_set_particle_flag_3515406498 != nil)
+        self._method_get_particle_flag_2845201987 = StringName(from: "get_particle_flag")
+        assert(self._method_get_particle_flag_2845201987 != nil)
+        self._method_set_emission_shape_491823814 = StringName(from: "set_emission_shape")
+        assert(self._method_set_emission_shape_491823814 != nil)
+        self._method_get_emission_shape_2961454842 = StringName(from: "get_emission_shape")
+        assert(self._method_get_emission_shape_2961454842 != nil)
+        self._method_set_emission_sphere_radius_373806689 = StringName(from: "set_emission_sphere_radius")
+        assert(self._method_set_emission_sphere_radius_373806689 != nil)
+        self._method_get_emission_sphere_radius_1740695150 = StringName(from: "get_emission_sphere_radius")
+        assert(self._method_get_emission_sphere_radius_1740695150 != nil)
+        self._method_set_emission_box_extents_3460891852 = StringName(from: "set_emission_box_extents")
+        assert(self._method_set_emission_box_extents_3460891852 != nil)
+        self._method_get_emission_box_extents_3360562783 = StringName(from: "get_emission_box_extents")
+        assert(self._method_get_emission_box_extents_3360562783 != nil)
+        self._method_set_emission_points_334873810 = StringName(from: "set_emission_points")
+        assert(self._method_set_emission_points_334873810 != nil)
+        self._method_get_emission_points_497664490 = StringName(from: "get_emission_points")
+        assert(self._method_get_emission_points_497664490 != nil)
+        self._method_set_emission_normals_334873810 = StringName(from: "set_emission_normals")
+        assert(self._method_set_emission_normals_334873810 != nil)
+        self._method_get_emission_normals_497664490 = StringName(from: "get_emission_normals")
+        assert(self._method_get_emission_normals_497664490 != nil)
+        self._method_set_emission_colors_3546319833 = StringName(from: "set_emission_colors")
+        assert(self._method_set_emission_colors_3546319833 != nil)
+        self._method_get_emission_colors_1392750486 = StringName(from: "get_emission_colors")
+        assert(self._method_get_emission_colors_1392750486 != nil)
+        self._method_set_emission_ring_axis_3460891852 = StringName(from: "set_emission_ring_axis")
+        assert(self._method_set_emission_ring_axis_3460891852 != nil)
+        self._method_get_emission_ring_axis_3360562783 = StringName(from: "get_emission_ring_axis")
+        assert(self._method_get_emission_ring_axis_3360562783 != nil)
+        self._method_set_emission_ring_height_373806689 = StringName(from: "set_emission_ring_height")
+        assert(self._method_set_emission_ring_height_373806689 != nil)
+        self._method_get_emission_ring_height_1740695150 = StringName(from: "get_emission_ring_height")
+        assert(self._method_get_emission_ring_height_1740695150 != nil)
+        self._method_set_emission_ring_radius_373806689 = StringName(from: "set_emission_ring_radius")
+        assert(self._method_set_emission_ring_radius_373806689 != nil)
+        self._method_get_emission_ring_radius_1740695150 = StringName(from: "get_emission_ring_radius")
+        assert(self._method_get_emission_ring_radius_1740695150 != nil)
+        self._method_set_emission_ring_inner_radius_373806689 = StringName(from: "set_emission_ring_inner_radius")
+        assert(self._method_set_emission_ring_inner_radius_373806689 != nil)
+        self._method_get_emission_ring_inner_radius_1740695150 = StringName(from: "get_emission_ring_inner_radius")
+        assert(self._method_get_emission_ring_inner_radius_1740695150 != nil)
+        self._method_get_gravity_3360562783 = StringName(from: "get_gravity")
+        assert(self._method_get_gravity_3360562783 != nil)
+        self._method_set_gravity_3460891852 = StringName(from: "set_gravity")
+        assert(self._method_set_gravity_3460891852 != nil)
+        self._method_get_split_scale_2240911060 = StringName(from: "get_split_scale")
+        assert(self._method_get_split_scale_2240911060 != nil)
+        self._method_set_split_scale_2586408642 = StringName(from: "set_split_scale")
+        assert(self._method_set_split_scale_2586408642 != nil)
+        self._method_get_scale_curve_x_2460114913 = StringName(from: "get_scale_curve_x")
+        assert(self._method_get_scale_curve_x_2460114913 != nil)
+        self._method_set_scale_curve_x_270443179 = StringName(from: "set_scale_curve_x")
+        assert(self._method_set_scale_curve_x_270443179 != nil)
+        self._method_get_scale_curve_y_2460114913 = StringName(from: "get_scale_curve_y")
+        assert(self._method_get_scale_curve_y_2460114913 != nil)
+        self._method_set_scale_curve_y_270443179 = StringName(from: "set_scale_curve_y")
+        assert(self._method_set_scale_curve_y_270443179 != nil)
+        self._method_get_scale_curve_z_2460114913 = StringName(from: "get_scale_curve_z")
+        assert(self._method_get_scale_curve_z_2460114913 != nil)
+        self._method_set_scale_curve_z_270443179 = StringName(from: "set_scale_curve_z")
+        assert(self._method_set_scale_curve_z_270443179 != nil)
+        self._method_convert_from_particles_1078189570 = StringName(from: "convert_from_particles")
+        assert(self._method_convert_from_particles_1078189570 != nil)
     }
 
     public func set_emitting(emitting: UInt8)  {
@@ -387,8 +308,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(emitting_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_emitting_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_emitting_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -403,8 +329,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(amount_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_amount_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_amount_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -419,8 +350,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(secs_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_lifetime_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_lifetime_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -435,8 +371,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_one_shot_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_one_shot_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -451,8 +392,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(secs_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pre_process_time_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pre_process_time_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -467,8 +413,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(ratio_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_explosiveness_ratio_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_explosiveness_ratio_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -483,8 +434,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(ratio_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_randomness_ratio_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_randomness_ratio_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -499,8 +455,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(random_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_lifetime_randomness_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_lifetime_randomness_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -515,8 +476,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_local_coordinates_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_local_coordinates_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -531,8 +497,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(fps_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fixed_fps_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fixed_fps_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -547,8 +518,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fractional_delta_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fractional_delta_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -563,8 +539,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_speed_scale_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_speed_scale_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -580,8 +561,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_emitting_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_emitting_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -597,8 +583,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_amount_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_amount_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -614,8 +605,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_lifetime_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_lifetime_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -631,8 +627,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_one_shot_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_one_shot_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -648,8 +649,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pre_process_time_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pre_process_time_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -665,8 +671,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_explosiveness_ratio_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_explosiveness_ratio_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -682,8 +693,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_randomness_ratio_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_randomness_ratio_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -699,8 +715,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_lifetime_randomness_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_lifetime_randomness_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -716,8 +737,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_use_local_coordinates_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_use_local_coordinates_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -733,8 +759,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fixed_fps_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fixed_fps_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -750,8 +781,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fractional_delta_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fractional_delta_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -767,8 +803,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_speed_scale_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_speed_scale_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -783,8 +824,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(order_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_draw_order_1427401774,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_draw_order_1427401774._native_ptr(),
+                    1427401774)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -799,8 +845,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_draw_order_1321900776,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_draw_order_1321900776._native_ptr(),
+                    1321900776)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -815,8 +866,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(mesh_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_mesh_194775623,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_mesh_194775623._native_ptr(),
+                    194775623)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -830,8 +886,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_mesh_1808005922,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_mesh_1808005922._native_ptr(),
+                    1808005922)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -845,8 +906,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_restart_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_restart_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -860,8 +926,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(direction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_direction_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_direction_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -875,8 +946,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_direction_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_direction_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -891,8 +967,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(degrees_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_spread_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_spread_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -908,8 +989,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_spread_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_spread_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -924,8 +1010,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(amount_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_flatness_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_flatness_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -941,8 +1032,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_flatness_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_flatness_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -958,8 +1054,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(param_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_param_min_557936109,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_param_min_557936109._native_ptr(),
+                    557936109)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -977,8 +1078,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_param_min_597646162,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_param_min_597646162._native_ptr(),
+                    597646162)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -995,8 +1101,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(param_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_param_max_557936109,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_param_max_557936109._native_ptr(),
+                    557936109)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1014,8 +1125,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_param_max_597646162,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_param_max_597646162._native_ptr(),
+                    597646162)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1032,8 +1148,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(param_native), .init(curve_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_param_curve_4044142537,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_param_curve_4044142537._native_ptr(),
+                    4044142537)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1049,8 +1170,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_param_curve_4132790277,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_param_curve_4132790277._native_ptr(),
+                    4132790277)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1066,8 +1192,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1081,8 +1212,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_color_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_color_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1097,8 +1233,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(ramp_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_color_ramp_2756054477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_color_ramp_2756054477._native_ptr(),
+                    2756054477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1112,8 +1253,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_color_ramp_132272999,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_color_ramp_132272999._native_ptr(),
+                    132272999)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1128,8 +1274,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(ramp_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_color_initial_ramp_2756054477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_color_initial_ramp_2756054477._native_ptr(),
+                    2756054477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1143,8 +1294,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_color_initial_ramp_132272999,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_color_initial_ramp_132272999._native_ptr(),
+                    132272999)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1160,8 +1316,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(particle_flag_native), .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_particle_flag_3515406498,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_particle_flag_3515406498._native_ptr(),
+                    3515406498)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1179,8 +1340,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_particle_flag_2845201987,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_particle_flag_2845201987._native_ptr(),
+                    2845201987)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1196,8 +1362,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(shape_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_emission_shape_491823814,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_emission_shape_491823814._native_ptr(),
+                    491823814)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1212,8 +1383,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_emission_shape_2961454842,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_emission_shape_2961454842._native_ptr(),
+                    2961454842)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1228,8 +1404,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(radius_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_emission_sphere_radius_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_emission_sphere_radius_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1245,8 +1426,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_emission_sphere_radius_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_emission_sphere_radius_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1261,8 +1447,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(extents_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_emission_box_extents_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_emission_box_extents_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1276,8 +1467,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_emission_box_extents_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_emission_box_extents_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1292,8 +1488,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(array_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_emission_points_334873810,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_emission_points_334873810._native_ptr(),
+                    334873810)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1307,8 +1508,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_emission_points_497664490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_emission_points_497664490._native_ptr(),
+                    497664490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1323,8 +1529,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(array_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_emission_normals_334873810,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_emission_normals_334873810._native_ptr(),
+                    334873810)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1338,8 +1549,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_emission_normals_497664490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_emission_normals_497664490._native_ptr(),
+                    497664490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1354,8 +1570,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(array_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_emission_colors_3546319833,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_emission_colors_3546319833._native_ptr(),
+                    3546319833)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1369,8 +1590,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_emission_colors_1392750486,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_emission_colors_1392750486._native_ptr(),
+                    1392750486)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1385,8 +1611,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(axis_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_emission_ring_axis_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_emission_ring_axis_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1400,8 +1631,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_emission_ring_axis_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_emission_ring_axis_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1416,8 +1652,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(height_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_emission_ring_height_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_emission_ring_height_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1433,8 +1674,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_emission_ring_height_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_emission_ring_height_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1449,8 +1695,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(radius_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_emission_ring_radius_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_emission_ring_radius_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1466,8 +1717,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_emission_ring_radius_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_emission_ring_radius_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1482,8 +1738,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(inner_radius_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_emission_ring_inner_radius_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_emission_ring_inner_radius_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1499,8 +1760,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_emission_ring_inner_radius_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_emission_ring_inner_radius_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1515,8 +1781,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_gravity_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_gravity_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1531,8 +1802,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(accel_vec_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_gravity_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_gravity_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1547,8 +1823,13 @@ open class CPUParticles3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_split_scale_2240911060,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_split_scale_2240911060._native_ptr(),
+                    2240911060)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1563,8 +1844,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(split_scale_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_split_scale_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_split_scale_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1579,8 +1865,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_scale_curve_x_2460114913,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_scale_curve_x_2460114913._native_ptr(),
+                    2460114913)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1595,8 +1886,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(scale_curve_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_scale_curve_x_270443179,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_scale_curve_x_270443179._native_ptr(),
+                    270443179)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1610,8 +1906,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_scale_curve_y_2460114913,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_scale_curve_y_2460114913._native_ptr(),
+                    2460114913)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1626,8 +1927,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(scale_curve_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_scale_curve_y_270443179,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_scale_curve_y_270443179._native_ptr(),
+                    270443179)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1641,8 +1947,13 @@ open class CPUParticles3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_scale_curve_z_2460114913,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_scale_curve_z_2460114913._native_ptr(),
+                    2460114913)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1657,8 +1968,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(scale_curve_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_scale_curve_z_270443179,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_scale_curve_z_270443179._native_ptr(),
+                    270443179)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1672,8 +1988,13 @@ open class CPUParticles3D : GeometryInstance3D {
                 .init(particles_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_convert_from_particles_1078189570,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_convert_from_particles_1078189570._native_ptr(),
+                    1078189570)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

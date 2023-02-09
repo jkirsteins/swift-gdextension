@@ -19,63 +19,52 @@ open class SkeletonModification2DFABRIK : SkeletonModification2D {
 
     public override class var __godot_name: StringName { __godot_name_SkeletonModification2DFABRIK }
 
-    static var _method_set_target_node_1348162250: GDExtensionMethodBindPtr! = nil
-    static var _method_get_target_node_4075236667: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fabrik_data_chain_length_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fabrik_data_chain_length_2455072627: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fabrik_joint_bone2d_node_2761262315: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fabrik_joint_bone2d_node_408788394: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fabrik_joint_bone_index_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fabrik_joint_bone_index_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fabrik_joint_magnet_position_163021252: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fabrik_joint_magnet_position_2299179447: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fabrik_joint_use_target_rotation_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_get_fabrik_joint_use_target_rotation_1116898809: GDExtensionMethodBindPtr! = nil
+    static var _method_set_target_node_1348162250: StringName! = nil
+    static var _method_get_target_node_4075236667: StringName! = nil
+    static var _method_set_fabrik_data_chain_length_1286410249: StringName! = nil
+    static var _method_get_fabrik_data_chain_length_2455072627: StringName! = nil
+    static var _method_set_fabrik_joint_bone2d_node_2761262315: StringName! = nil
+    static var _method_get_fabrik_joint_bone2d_node_408788394: StringName! = nil
+    static var _method_set_fabrik_joint_bone_index_3937882851: StringName! = nil
+    static var _method_get_fabrik_joint_bone_index_923996154: StringName! = nil
+    static var _method_set_fabrik_joint_magnet_position_163021252: StringName! = nil
+    static var _method_get_fabrik_joint_magnet_position_2299179447: StringName! = nil
+    static var _method_set_fabrik_joint_use_target_rotation_300928843: StringName! = nil
+    static var _method_get_fabrik_joint_use_target_rotation_1116898809: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_SkeletonModification2DFABRIK == nil)
         __godot_name_SkeletonModification2DFABRIK = StringName(from: "SkeletonModification2DFABRIK")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_target_node_1348162250_name = StringName(from: "set_target_node")
-        self._method_set_target_node_1348162250 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DFABRIK._native_ptr(), _method_set_target_node_1348162250_name._native_ptr(), 1348162250)
-        assert(SkeletonModification2DFABRIK._method_set_target_node_1348162250 != nil)
-        let _method_get_target_node_4075236667_name = StringName(from: "get_target_node")
-        self._method_get_target_node_4075236667 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DFABRIK._native_ptr(), _method_get_target_node_4075236667_name._native_ptr(), 4075236667)
-        assert(SkeletonModification2DFABRIK._method_get_target_node_4075236667 != nil)
-        let _method_set_fabrik_data_chain_length_1286410249_name = StringName(from: "set_fabrik_data_chain_length")
-        self._method_set_fabrik_data_chain_length_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DFABRIK._native_ptr(), _method_set_fabrik_data_chain_length_1286410249_name._native_ptr(), 1286410249)
-        assert(SkeletonModification2DFABRIK._method_set_fabrik_data_chain_length_1286410249 != nil)
-        let _method_get_fabrik_data_chain_length_2455072627_name = StringName(from: "get_fabrik_data_chain_length")
-        self._method_get_fabrik_data_chain_length_2455072627 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DFABRIK._native_ptr(), _method_get_fabrik_data_chain_length_2455072627_name._native_ptr(), 2455072627)
-        assert(SkeletonModification2DFABRIK._method_get_fabrik_data_chain_length_2455072627 != nil)
-        let _method_set_fabrik_joint_bone2d_node_2761262315_name = StringName(from: "set_fabrik_joint_bone2d_node")
-        self._method_set_fabrik_joint_bone2d_node_2761262315 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DFABRIK._native_ptr(), _method_set_fabrik_joint_bone2d_node_2761262315_name._native_ptr(), 2761262315)
-        assert(SkeletonModification2DFABRIK._method_set_fabrik_joint_bone2d_node_2761262315 != nil)
-        let _method_get_fabrik_joint_bone2d_node_408788394_name = StringName(from: "get_fabrik_joint_bone2d_node")
-        self._method_get_fabrik_joint_bone2d_node_408788394 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DFABRIK._native_ptr(), _method_get_fabrik_joint_bone2d_node_408788394_name._native_ptr(), 408788394)
-        assert(SkeletonModification2DFABRIK._method_get_fabrik_joint_bone2d_node_408788394 != nil)
-        let _method_set_fabrik_joint_bone_index_3937882851_name = StringName(from: "set_fabrik_joint_bone_index")
-        self._method_set_fabrik_joint_bone_index_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DFABRIK._native_ptr(), _method_set_fabrik_joint_bone_index_3937882851_name._native_ptr(), 3937882851)
-        assert(SkeletonModification2DFABRIK._method_set_fabrik_joint_bone_index_3937882851 != nil)
-        let _method_get_fabrik_joint_bone_index_923996154_name = StringName(from: "get_fabrik_joint_bone_index")
-        self._method_get_fabrik_joint_bone_index_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DFABRIK._native_ptr(), _method_get_fabrik_joint_bone_index_923996154_name._native_ptr(), 923996154)
-        assert(SkeletonModification2DFABRIK._method_get_fabrik_joint_bone_index_923996154 != nil)
-        let _method_set_fabrik_joint_magnet_position_163021252_name = StringName(from: "set_fabrik_joint_magnet_position")
-        self._method_set_fabrik_joint_magnet_position_163021252 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DFABRIK._native_ptr(), _method_set_fabrik_joint_magnet_position_163021252_name._native_ptr(), 163021252)
-        assert(SkeletonModification2DFABRIK._method_set_fabrik_joint_magnet_position_163021252 != nil)
-        let _method_get_fabrik_joint_magnet_position_2299179447_name = StringName(from: "get_fabrik_joint_magnet_position")
-        self._method_get_fabrik_joint_magnet_position_2299179447 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DFABRIK._native_ptr(), _method_get_fabrik_joint_magnet_position_2299179447_name._native_ptr(), 2299179447)
-        assert(SkeletonModification2DFABRIK._method_get_fabrik_joint_magnet_position_2299179447 != nil)
-        let _method_set_fabrik_joint_use_target_rotation_300928843_name = StringName(from: "set_fabrik_joint_use_target_rotation")
-        self._method_set_fabrik_joint_use_target_rotation_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DFABRIK._native_ptr(), _method_set_fabrik_joint_use_target_rotation_300928843_name._native_ptr(), 300928843)
-        assert(SkeletonModification2DFABRIK._method_set_fabrik_joint_use_target_rotation_300928843 != nil)
-        let _method_get_fabrik_joint_use_target_rotation_1116898809_name = StringName(from: "get_fabrik_joint_use_target_rotation")
-        self._method_get_fabrik_joint_use_target_rotation_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_SkeletonModification2DFABRIK._native_ptr(), _method_get_fabrik_joint_use_target_rotation_1116898809_name._native_ptr(), 1116898809)
-        assert(SkeletonModification2DFABRIK._method_get_fabrik_joint_use_target_rotation_1116898809 != nil)
+        self._method_set_target_node_1348162250 = StringName(from: "set_target_node")
+        assert(self._method_set_target_node_1348162250 != nil)
+        self._method_get_target_node_4075236667 = StringName(from: "get_target_node")
+        assert(self._method_get_target_node_4075236667 != nil)
+        self._method_set_fabrik_data_chain_length_1286410249 = StringName(from: "set_fabrik_data_chain_length")
+        assert(self._method_set_fabrik_data_chain_length_1286410249 != nil)
+        self._method_get_fabrik_data_chain_length_2455072627 = StringName(from: "get_fabrik_data_chain_length")
+        assert(self._method_get_fabrik_data_chain_length_2455072627 != nil)
+        self._method_set_fabrik_joint_bone2d_node_2761262315 = StringName(from: "set_fabrik_joint_bone2d_node")
+        assert(self._method_set_fabrik_joint_bone2d_node_2761262315 != nil)
+        self._method_get_fabrik_joint_bone2d_node_408788394 = StringName(from: "get_fabrik_joint_bone2d_node")
+        assert(self._method_get_fabrik_joint_bone2d_node_408788394 != nil)
+        self._method_set_fabrik_joint_bone_index_3937882851 = StringName(from: "set_fabrik_joint_bone_index")
+        assert(self._method_set_fabrik_joint_bone_index_3937882851 != nil)
+        self._method_get_fabrik_joint_bone_index_923996154 = StringName(from: "get_fabrik_joint_bone_index")
+        assert(self._method_get_fabrik_joint_bone_index_923996154 != nil)
+        self._method_set_fabrik_joint_magnet_position_163021252 = StringName(from: "set_fabrik_joint_magnet_position")
+        assert(self._method_set_fabrik_joint_magnet_position_163021252 != nil)
+        self._method_get_fabrik_joint_magnet_position_2299179447 = StringName(from: "get_fabrik_joint_magnet_position")
+        assert(self._method_get_fabrik_joint_magnet_position_2299179447 != nil)
+        self._method_set_fabrik_joint_use_target_rotation_300928843 = StringName(from: "set_fabrik_joint_use_target_rotation")
+        assert(self._method_set_fabrik_joint_use_target_rotation_300928843 != nil)
+        self._method_get_fabrik_joint_use_target_rotation_1116898809 = StringName(from: "get_fabrik_joint_use_target_rotation")
+        assert(self._method_get_fabrik_joint_use_target_rotation_1116898809 != nil)
     }
 
     public func set_target_node(target_nodepath: NodePath)  {
@@ -86,8 +75,13 @@ open class SkeletonModification2DFABRIK : SkeletonModification2D {
                 .init(target_nodepath_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_target_node_1348162250,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_target_node_1348162250._native_ptr(),
+                    1348162250)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -101,8 +95,13 @@ open class SkeletonModification2DFABRIK : SkeletonModification2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_target_node_4075236667,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_target_node_4075236667._native_ptr(),
+                    4075236667)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -117,8 +116,13 @@ open class SkeletonModification2DFABRIK : SkeletonModification2D {
                 .init(length_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fabrik_data_chain_length_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fabrik_data_chain_length_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -134,8 +138,13 @@ open class SkeletonModification2DFABRIK : SkeletonModification2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fabrik_data_chain_length_2455072627,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fabrik_data_chain_length_2455072627._native_ptr(),
+                    2455072627)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -151,8 +160,13 @@ open class SkeletonModification2DFABRIK : SkeletonModification2D {
                 .init(joint_idx_native), .init(bone2d_nodepath_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fabrik_joint_bone2d_node_2761262315,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fabrik_joint_bone2d_node_2761262315._native_ptr(),
+                    2761262315)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -168,8 +182,13 @@ open class SkeletonModification2DFABRIK : SkeletonModification2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fabrik_joint_bone2d_node_408788394,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fabrik_joint_bone2d_node_408788394._native_ptr(),
+                    408788394)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -186,8 +205,13 @@ open class SkeletonModification2DFABRIK : SkeletonModification2D {
                 .init(joint_idx_native), .init(bone_idx_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fabrik_joint_bone_index_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fabrik_joint_bone_index_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -205,8 +229,13 @@ open class SkeletonModification2DFABRIK : SkeletonModification2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fabrik_joint_bone_index_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fabrik_joint_bone_index_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -223,8 +252,13 @@ open class SkeletonModification2DFABRIK : SkeletonModification2D {
                 .init(joint_idx_native), .init(magnet_position_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fabrik_joint_magnet_position_163021252,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fabrik_joint_magnet_position_163021252._native_ptr(),
+                    163021252)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -240,8 +274,13 @@ open class SkeletonModification2DFABRIK : SkeletonModification2D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fabrik_joint_magnet_position_2299179447,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fabrik_joint_magnet_position_2299179447._native_ptr(),
+                    2299179447)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -258,8 +297,13 @@ open class SkeletonModification2DFABRIK : SkeletonModification2D {
                 .init(joint_idx_native), .init(use_target_rotation_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fabrik_joint_use_target_rotation_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fabrik_joint_use_target_rotation_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -277,8 +321,13 @@ open class SkeletonModification2DFABRIK : SkeletonModification2D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_fabrik_joint_use_target_rotation_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_fabrik_joint_use_target_rotation_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

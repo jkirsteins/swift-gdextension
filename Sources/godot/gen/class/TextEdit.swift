@@ -78,833 +78,631 @@ open class TextEdit : Control {
 
     public override class var __godot_name: StringName { __godot_name_TextEdit }
 
-    static var _method__handle_unicode_input_0: GDExtensionMethodBindPtr! = nil
-    static var _method__backspace_0: GDExtensionMethodBindPtr! = nil
-    static var _method__cut_0: GDExtensionMethodBindPtr! = nil
-    static var _method__copy_0: GDExtensionMethodBindPtr! = nil
-    static var _method__paste_0: GDExtensionMethodBindPtr! = nil
-    static var _method__paste_primary_clipboard_0: GDExtensionMethodBindPtr! = nil
-    static var _method_has_ime_text_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_editable_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_editable_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_text_direction_119160795: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_direction_797257663: GDExtensionMethodBindPtr! = nil
-    static var _method_set_language_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_language_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_structured_text_bidi_override_55961453: GDExtensionMethodBindPtr! = nil
-    static var _method_get_structured_text_bidi_override_3385126229: GDExtensionMethodBindPtr! = nil
-    static var _method_set_structured_text_bidi_override_options_381264803: GDExtensionMethodBindPtr! = nil
-    static var _method_get_structured_text_bidi_override_options_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tab_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_tab_size_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_overtype_mode_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_overtype_mode_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_context_menu_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_context_menu_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_shortcut_keys_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_shortcut_keys_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_virtual_keyboard_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_virtual_keyboard_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_middle_mouse_paste_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_middle_mouse_paste_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_text_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_placeholder_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_placeholder_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_line_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_width_3294126239: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_height_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_indent_level_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_get_first_non_whitespace_column_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_swap_lines_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_insert_line_at_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_insert_text_at_caret_3043792800: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_text_4275841770: GDExtensionMethodBindPtr! = nil
-    static var _method_get_last_unhidden_line_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_next_visible_line_offset_from_3175239445: GDExtensionMethodBindPtr! = nil
-    static var _method_get_next_visible_line_index_offset_from_3386475622: GDExtensionMethodBindPtr! = nil
-    static var _method_backspace_1025054187: GDExtensionMethodBindPtr! = nil
-    static var _method_cut_1025054187: GDExtensionMethodBindPtr! = nil
-    static var _method_copy_1025054187: GDExtensionMethodBindPtr! = nil
-    static var _method_paste_1025054187: GDExtensionMethodBindPtr! = nil
-    static var _method_paste_primary_clipboard_1025054187: GDExtensionMethodBindPtr! = nil
-    static var _method_start_action_2834827583: GDExtensionMethodBindPtr! = nil
-    static var _method_end_action_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_begin_complex_operation_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_end_complex_operation_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_has_undo_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_has_redo_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_undo_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_redo_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_undo_history_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_tag_saved_version_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_version_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_saved_version_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_search_text_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_set_search_flags_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_search_1203739136: GDExtensionMethodBindPtr! = nil
-    static var _method_set_tooltip_request_func_1611583062: GDExtensionMethodBindPtr! = nil
-    static var _method_get_local_mouse_pos_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_get_word_at_pos_3674420000: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_column_at_pos_850652858: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pos_at_line_column_410388347: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rect_at_line_column_3256618057: GDExtensionMethodBindPtr! = nil
-    static var _method_get_minimap_line_at_pos_2485466453: GDExtensionMethodBindPtr! = nil
-    static var _method_is_dragging_cursor_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_is_mouse_over_selection_1099474134: GDExtensionMethodBindPtr! = nil
-    static var _method_set_caret_type_1211596914: GDExtensionMethodBindPtr! = nil
-    static var _method_get_caret_type_2830252959: GDExtensionMethodBindPtr! = nil
-    static var _method_set_caret_blink_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_caret_blink_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_caret_blink_interval_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_caret_blink_interval_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_move_caret_on_right_click_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_move_caret_on_right_click_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_caret_mid_grapheme_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_caret_mid_grapheme_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_multiple_carets_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_multiple_carets_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_add_caret_50157827: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_caret_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_secondary_carets_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_merge_overlapping_carets_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_caret_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_add_caret_at_carets_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_caret_index_edit_order_969006518: GDExtensionMethodBindPtr! = nil
-    static var _method_adjust_carets_after_edit_1770277138: GDExtensionMethodBindPtr! = nil
-    static var _method_is_caret_visible_1051549951: GDExtensionMethodBindPtr! = nil
-    static var _method_get_caret_draw_pos_478253731: GDExtensionMethodBindPtr! = nil
-    static var _method_set_caret_line_1413195636: GDExtensionMethodBindPtr! = nil
-    static var _method_get_caret_line_1591665591: GDExtensionMethodBindPtr! = nil
-    static var _method_set_caret_column_1071284433: GDExtensionMethodBindPtr! = nil
-    static var _method_get_caret_column_1591665591: GDExtensionMethodBindPtr! = nil
-    static var _method_get_caret_wrap_index_1591665591: GDExtensionMethodBindPtr! = nil
-    static var _method_get_word_under_caret_3929349208: GDExtensionMethodBindPtr! = nil
-    static var _method_set_selecting_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_selecting_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_deselect_on_focus_loss_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_deselect_on_focus_loss_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_drag_and_drop_selection_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_drag_and_drop_selection_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_selection_mode_2920622473: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selection_mode_3750106938: GDExtensionMethodBindPtr! = nil
-    static var _method_select_all_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_select_word_under_caret_1025054187: GDExtensionMethodBindPtr! = nil
-    static var _method_add_selection_for_next_occurrence_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_select_4269665324: GDExtensionMethodBindPtr! = nil
-    static var _method_has_selection_2824505868: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selected_text_2309358862: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selection_line_1591665591: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selection_column_1591665591: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selection_from_line_1591665591: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selection_from_column_1591665591: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selection_to_line_1591665591: GDExtensionMethodBindPtr! = nil
-    static var _method_get_selection_to_column_1591665591: GDExtensionMethodBindPtr! = nil
-    static var _method_deselect_1025054187: GDExtensionMethodBindPtr! = nil
-    static var _method_delete_selection_1025054187: GDExtensionMethodBindPtr! = nil
-    static var _method_set_line_wrapping_mode_2525115309: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_wrapping_mode_3562716114: GDExtensionMethodBindPtr! = nil
-    static var _method_is_line_wrapped_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_wrap_count_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_wrap_index_at_column_3175239445: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_wrapped_text_647634434: GDExtensionMethodBindPtr! = nil
-    static var _method_set_smooth_scroll_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_smooth_scroll_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_v_scroll_bar_3226026593: GDExtensionMethodBindPtr! = nil
-    static var _method_get_h_scroll_bar_3774687988: GDExtensionMethodBindPtr! = nil
-    static var _method_set_v_scroll_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_v_scroll_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_h_scroll_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_h_scroll_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_scroll_past_end_of_file_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_scroll_past_end_of_file_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_v_scroll_speed_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_v_scroll_speed_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_fit_content_height_enabled_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_fit_content_height_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_scroll_pos_for_line_3274652423: GDExtensionMethodBindPtr! = nil
-    static var _method_set_line_as_first_visible_3023605688: GDExtensionMethodBindPtr! = nil
-    static var _method_get_first_visible_line_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_line_as_center_visible_3023605688: GDExtensionMethodBindPtr! = nil
-    static var _method_set_line_as_last_visible_3023605688: GDExtensionMethodBindPtr! = nil
-    static var _method_get_last_full_visible_line_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_last_full_visible_line_wrap_index_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_visible_line_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_visible_line_count_in_range_3175239445: GDExtensionMethodBindPtr! = nil
-    static var _method_get_total_visible_line_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_adjust_viewport_to_caret_1995695955: GDExtensionMethodBindPtr! = nil
-    static var _method_center_viewport_to_caret_1995695955: GDExtensionMethodBindPtr! = nil
-    static var _method_set_draw_minimap_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_drawing_minimap_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_minimap_width_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_minimap_width_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_minimap_visible_lines_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_add_gutter_1025054187: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_gutter_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_gutter_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_gutter_name_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_get_gutter_name_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_set_gutter_type_1088959071: GDExtensionMethodBindPtr! = nil
-    static var _method_get_gutter_type_1159699127: GDExtensionMethodBindPtr! = nil
-    static var _method_set_gutter_width_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_get_gutter_width_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_set_gutter_draw_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_is_gutter_drawn_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_set_gutter_clickable_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_is_gutter_clickable_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_set_gutter_overwritable_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_is_gutter_overwritable_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_merge_gutters_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_set_gutter_custom_draw_957362965: GDExtensionMethodBindPtr! = nil
-    static var _method_get_total_gutter_width_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_line_gutter_metadata_2060538656: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_gutter_metadata_678354945: GDExtensionMethodBindPtr! = nil
-    static var _method_set_line_gutter_text_2285447957: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_gutter_text_1391810591: GDExtensionMethodBindPtr! = nil
-    static var _method_set_line_gutter_icon_176101966: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_gutter_icon_2584904275: GDExtensionMethodBindPtr! = nil
-    static var _method_set_line_gutter_item_color_3733378741: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_gutter_item_color_2165839948: GDExtensionMethodBindPtr! = nil
-    static var _method_set_line_gutter_clickable_1383440665: GDExtensionMethodBindPtr! = nil
-    static var _method_is_line_gutter_clickable_2522259332: GDExtensionMethodBindPtr! = nil
-    static var _method_set_line_background_color_2878471219: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_background_color_3457211756: GDExtensionMethodBindPtr! = nil
-    static var _method_set_syntax_highlighter_2765644541: GDExtensionMethodBindPtr! = nil
-    static var _method_get_syntax_highlighter_2721131626: GDExtensionMethodBindPtr! = nil
-    static var _method_set_highlight_current_line_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_highlight_current_line_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_highlight_all_occurrences_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_highlight_all_occurrences_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_draw_control_chars_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_draw_control_chars_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_draw_tabs_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_drawing_tabs_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_draw_spaces_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_drawing_spaces_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_menu_229722558: GDExtensionMethodBindPtr! = nil
-    static var _method_is_menu_visible_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_menu_option_1286410249: GDExtensionMethodBindPtr! = nil
+    static var _method__handle_unicode_input_0: StringName! = nil
+    static var _method__backspace_0: StringName! = nil
+    static var _method__cut_0: StringName! = nil
+    static var _method__copy_0: StringName! = nil
+    static var _method__paste_0: StringName! = nil
+    static var _method__paste_primary_clipboard_0: StringName! = nil
+    static var _method_has_ime_text_36873697: StringName! = nil
+    static var _method_set_editable_2586408642: StringName! = nil
+    static var _method_is_editable_36873697: StringName! = nil
+    static var _method_set_text_direction_119160795: StringName! = nil
+    static var _method_get_text_direction_797257663: StringName! = nil
+    static var _method_set_language_83702148: StringName! = nil
+    static var _method_get_language_201670096: StringName! = nil
+    static var _method_set_structured_text_bidi_override_55961453: StringName! = nil
+    static var _method_get_structured_text_bidi_override_3385126229: StringName! = nil
+    static var _method_set_structured_text_bidi_override_options_381264803: StringName! = nil
+    static var _method_get_structured_text_bidi_override_options_3995934104: StringName! = nil
+    static var _method_set_tab_size_1286410249: StringName! = nil
+    static var _method_get_tab_size_3905245786: StringName! = nil
+    static var _method_set_overtype_mode_enabled_2586408642: StringName! = nil
+    static var _method_is_overtype_mode_enabled_36873697: StringName! = nil
+    static var _method_set_context_menu_enabled_2586408642: StringName! = nil
+    static var _method_is_context_menu_enabled_36873697: StringName! = nil
+    static var _method_set_shortcut_keys_enabled_2586408642: StringName! = nil
+    static var _method_is_shortcut_keys_enabled_36873697: StringName! = nil
+    static var _method_set_virtual_keyboard_enabled_2586408642: StringName! = nil
+    static var _method_is_virtual_keyboard_enabled_36873697: StringName! = nil
+    static var _method_set_middle_mouse_paste_enabled_2586408642: StringName! = nil
+    static var _method_is_middle_mouse_paste_enabled_36873697: StringName! = nil
+    static var _method_clear_3218959716: StringName! = nil
+    static var _method_set_text_83702148: StringName! = nil
+    static var _method_get_text_201670096: StringName! = nil
+    static var _method_get_line_count_3905245786: StringName! = nil
+    static var _method_set_placeholder_83702148: StringName! = nil
+    static var _method_get_placeholder_201670096: StringName! = nil
+    static var _method_set_line_501894301: StringName! = nil
+    static var _method_get_line_844755477: StringName! = nil
+    static var _method_get_line_width_3294126239: StringName! = nil
+    static var _method_get_line_height_3905245786: StringName! = nil
+    static var _method_get_indent_level_923996154: StringName! = nil
+    static var _method_get_first_non_whitespace_column_923996154: StringName! = nil
+    static var _method_swap_lines_3937882851: StringName! = nil
+    static var _method_insert_line_at_501894301: StringName! = nil
+    static var _method_insert_text_at_caret_3043792800: StringName! = nil
+    static var _method_remove_text_4275841770: StringName! = nil
+    static var _method_get_last_unhidden_line_3905245786: StringName! = nil
+    static var _method_get_next_visible_line_offset_from_3175239445: StringName! = nil
+    static var _method_get_next_visible_line_index_offset_from_3386475622: StringName! = nil
+    static var _method_backspace_1025054187: StringName! = nil
+    static var _method_cut_1025054187: StringName! = nil
+    static var _method_copy_1025054187: StringName! = nil
+    static var _method_paste_1025054187: StringName! = nil
+    static var _method_paste_primary_clipboard_1025054187: StringName! = nil
+    static var _method_start_action_2834827583: StringName! = nil
+    static var _method_end_action_3218959716: StringName! = nil
+    static var _method_begin_complex_operation_3218959716: StringName! = nil
+    static var _method_end_complex_operation_3218959716: StringName! = nil
+    static var _method_has_undo_36873697: StringName! = nil
+    static var _method_has_redo_36873697: StringName! = nil
+    static var _method_undo_3218959716: StringName! = nil
+    static var _method_redo_3218959716: StringName! = nil
+    static var _method_clear_undo_history_3218959716: StringName! = nil
+    static var _method_tag_saved_version_3218959716: StringName! = nil
+    static var _method_get_version_3905245786: StringName! = nil
+    static var _method_get_saved_version_3905245786: StringName! = nil
+    static var _method_set_search_text_83702148: StringName! = nil
+    static var _method_set_search_flags_1286410249: StringName! = nil
+    static var _method_search_1203739136: StringName! = nil
+    static var _method_set_tooltip_request_func_1611583062: StringName! = nil
+    static var _method_get_local_mouse_pos_3341600327: StringName! = nil
+    static var _method_get_word_at_pos_3674420000: StringName! = nil
+    static var _method_get_line_column_at_pos_850652858: StringName! = nil
+    static var _method_get_pos_at_line_column_410388347: StringName! = nil
+    static var _method_get_rect_at_line_column_3256618057: StringName! = nil
+    static var _method_get_minimap_line_at_pos_2485466453: StringName! = nil
+    static var _method_is_dragging_cursor_36873697: StringName! = nil
+    static var _method_is_mouse_over_selection_1099474134: StringName! = nil
+    static var _method_set_caret_type_1211596914: StringName! = nil
+    static var _method_get_caret_type_2830252959: StringName! = nil
+    static var _method_set_caret_blink_enabled_2586408642: StringName! = nil
+    static var _method_is_caret_blink_enabled_36873697: StringName! = nil
+    static var _method_set_caret_blink_interval_373806689: StringName! = nil
+    static var _method_get_caret_blink_interval_1740695150: StringName! = nil
+    static var _method_set_move_caret_on_right_click_enabled_2586408642: StringName! = nil
+    static var _method_is_move_caret_on_right_click_enabled_36873697: StringName! = nil
+    static var _method_set_caret_mid_grapheme_enabled_2586408642: StringName! = nil
+    static var _method_is_caret_mid_grapheme_enabled_36873697: StringName! = nil
+    static var _method_set_multiple_carets_enabled_2586408642: StringName! = nil
+    static var _method_is_multiple_carets_enabled_36873697: StringName! = nil
+    static var _method_add_caret_50157827: StringName! = nil
+    static var _method_remove_caret_1286410249: StringName! = nil
+    static var _method_remove_secondary_carets_3218959716: StringName! = nil
+    static var _method_merge_overlapping_carets_3218959716: StringName! = nil
+    static var _method_get_caret_count_3905245786: StringName! = nil
+    static var _method_add_caret_at_carets_2586408642: StringName! = nil
+    static var _method_get_caret_index_edit_order_969006518: StringName! = nil
+    static var _method_adjust_carets_after_edit_1770277138: StringName! = nil
+    static var _method_is_caret_visible_1051549951: StringName! = nil
+    static var _method_get_caret_draw_pos_478253731: StringName! = nil
+    static var _method_set_caret_line_1413195636: StringName! = nil
+    static var _method_get_caret_line_1591665591: StringName! = nil
+    static var _method_set_caret_column_1071284433: StringName! = nil
+    static var _method_get_caret_column_1591665591: StringName! = nil
+    static var _method_get_caret_wrap_index_1591665591: StringName! = nil
+    static var _method_get_word_under_caret_3929349208: StringName! = nil
+    static var _method_set_selecting_enabled_2586408642: StringName! = nil
+    static var _method_is_selecting_enabled_36873697: StringName! = nil
+    static var _method_set_deselect_on_focus_loss_enabled_2586408642: StringName! = nil
+    static var _method_is_deselect_on_focus_loss_enabled_36873697: StringName! = nil
+    static var _method_set_drag_and_drop_selection_enabled_2586408642: StringName! = nil
+    static var _method_is_drag_and_drop_selection_enabled_36873697: StringName! = nil
+    static var _method_set_selection_mode_2920622473: StringName! = nil
+    static var _method_get_selection_mode_3750106938: StringName! = nil
+    static var _method_select_all_3218959716: StringName! = nil
+    static var _method_select_word_under_caret_1025054187: StringName! = nil
+    static var _method_add_selection_for_next_occurrence_3218959716: StringName! = nil
+    static var _method_select_4269665324: StringName! = nil
+    static var _method_has_selection_2824505868: StringName! = nil
+    static var _method_get_selected_text_2309358862: StringName! = nil
+    static var _method_get_selection_line_1591665591: StringName! = nil
+    static var _method_get_selection_column_1591665591: StringName! = nil
+    static var _method_get_selection_from_line_1591665591: StringName! = nil
+    static var _method_get_selection_from_column_1591665591: StringName! = nil
+    static var _method_get_selection_to_line_1591665591: StringName! = nil
+    static var _method_get_selection_to_column_1591665591: StringName! = nil
+    static var _method_deselect_1025054187: StringName! = nil
+    static var _method_delete_selection_1025054187: StringName! = nil
+    static var _method_set_line_wrapping_mode_2525115309: StringName! = nil
+    static var _method_get_line_wrapping_mode_3562716114: StringName! = nil
+    static var _method_is_line_wrapped_1116898809: StringName! = nil
+    static var _method_get_line_wrap_count_923996154: StringName! = nil
+    static var _method_get_line_wrap_index_at_column_3175239445: StringName! = nil
+    static var _method_get_line_wrapped_text_647634434: StringName! = nil
+    static var _method_set_smooth_scroll_enabled_2586408642: StringName! = nil
+    static var _method_is_smooth_scroll_enabled_36873697: StringName! = nil
+    static var _method_get_v_scroll_bar_3226026593: StringName! = nil
+    static var _method_get_h_scroll_bar_3774687988: StringName! = nil
+    static var _method_set_v_scroll_373806689: StringName! = nil
+    static var _method_get_v_scroll_1740695150: StringName! = nil
+    static var _method_set_h_scroll_1286410249: StringName! = nil
+    static var _method_get_h_scroll_3905245786: StringName! = nil
+    static var _method_set_scroll_past_end_of_file_enabled_2586408642: StringName! = nil
+    static var _method_is_scroll_past_end_of_file_enabled_36873697: StringName! = nil
+    static var _method_set_v_scroll_speed_373806689: StringName! = nil
+    static var _method_get_v_scroll_speed_1740695150: StringName! = nil
+    static var _method_set_fit_content_height_enabled_2586408642: StringName! = nil
+    static var _method_is_fit_content_height_enabled_36873697: StringName! = nil
+    static var _method_get_scroll_pos_for_line_3274652423: StringName! = nil
+    static var _method_set_line_as_first_visible_3023605688: StringName! = nil
+    static var _method_get_first_visible_line_3905245786: StringName! = nil
+    static var _method_set_line_as_center_visible_3023605688: StringName! = nil
+    static var _method_set_line_as_last_visible_3023605688: StringName! = nil
+    static var _method_get_last_full_visible_line_3905245786: StringName! = nil
+    static var _method_get_last_full_visible_line_wrap_index_3905245786: StringName! = nil
+    static var _method_get_visible_line_count_3905245786: StringName! = nil
+    static var _method_get_visible_line_count_in_range_3175239445: StringName! = nil
+    static var _method_get_total_visible_line_count_3905245786: StringName! = nil
+    static var _method_adjust_viewport_to_caret_1995695955: StringName! = nil
+    static var _method_center_viewport_to_caret_1995695955: StringName! = nil
+    static var _method_set_draw_minimap_2586408642: StringName! = nil
+    static var _method_is_drawing_minimap_36873697: StringName! = nil
+    static var _method_set_minimap_width_1286410249: StringName! = nil
+    static var _method_get_minimap_width_3905245786: StringName! = nil
+    static var _method_get_minimap_visible_lines_3905245786: StringName! = nil
+    static var _method_add_gutter_1025054187: StringName! = nil
+    static var _method_remove_gutter_1286410249: StringName! = nil
+    static var _method_get_gutter_count_3905245786: StringName! = nil
+    static var _method_set_gutter_name_501894301: StringName! = nil
+    static var _method_get_gutter_name_844755477: StringName! = nil
+    static var _method_set_gutter_type_1088959071: StringName! = nil
+    static var _method_get_gutter_type_1159699127: StringName! = nil
+    static var _method_set_gutter_width_3937882851: StringName! = nil
+    static var _method_get_gutter_width_923996154: StringName! = nil
+    static var _method_set_gutter_draw_300928843: StringName! = nil
+    static var _method_is_gutter_drawn_1116898809: StringName! = nil
+    static var _method_set_gutter_clickable_300928843: StringName! = nil
+    static var _method_is_gutter_clickable_1116898809: StringName! = nil
+    static var _method_set_gutter_overwritable_300928843: StringName! = nil
+    static var _method_is_gutter_overwritable_1116898809: StringName! = nil
+    static var _method_merge_gutters_3937882851: StringName! = nil
+    static var _method_set_gutter_custom_draw_957362965: StringName! = nil
+    static var _method_get_total_gutter_width_3905245786: StringName! = nil
+    static var _method_set_line_gutter_metadata_2060538656: StringName! = nil
+    static var _method_get_line_gutter_metadata_678354945: StringName! = nil
+    static var _method_set_line_gutter_text_2285447957: StringName! = nil
+    static var _method_get_line_gutter_text_1391810591: StringName! = nil
+    static var _method_set_line_gutter_icon_176101966: StringName! = nil
+    static var _method_get_line_gutter_icon_2584904275: StringName! = nil
+    static var _method_set_line_gutter_item_color_3733378741: StringName! = nil
+    static var _method_get_line_gutter_item_color_2165839948: StringName! = nil
+    static var _method_set_line_gutter_clickable_1383440665: StringName! = nil
+    static var _method_is_line_gutter_clickable_2522259332: StringName! = nil
+    static var _method_set_line_background_color_2878471219: StringName! = nil
+    static var _method_get_line_background_color_3457211756: StringName! = nil
+    static var _method_set_syntax_highlighter_2765644541: StringName! = nil
+    static var _method_get_syntax_highlighter_2721131626: StringName! = nil
+    static var _method_set_highlight_current_line_2586408642: StringName! = nil
+    static var _method_is_highlight_current_line_enabled_36873697: StringName! = nil
+    static var _method_set_highlight_all_occurrences_2586408642: StringName! = nil
+    static var _method_is_highlight_all_occurrences_enabled_36873697: StringName! = nil
+    static var _method_get_draw_control_chars_36873697: StringName! = nil
+    static var _method_set_draw_control_chars_2586408642: StringName! = nil
+    static var _method_set_draw_tabs_2586408642: StringName! = nil
+    static var _method_is_drawing_tabs_36873697: StringName! = nil
+    static var _method_set_draw_spaces_2586408642: StringName! = nil
+    static var _method_is_drawing_spaces_36873697: StringName! = nil
+    static var _method_get_menu_229722558: StringName! = nil
+    static var _method_is_menu_visible_36873697: StringName! = nil
+    static var _method_menu_option_1286410249: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_TextEdit == nil)
         __godot_name_TextEdit = StringName(from: "TextEdit")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_has_ime_text_36873697_name = StringName(from: "has_ime_text")
-        self._method_has_ime_text_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_has_ime_text_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_has_ime_text_36873697 != nil)
-        let _method_set_editable_2586408642_name = StringName(from: "set_editable")
-        self._method_set_editable_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_editable_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_editable_2586408642 != nil)
-        let _method_is_editable_36873697_name = StringName(from: "is_editable")
-        self._method_is_editable_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_editable_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_editable_36873697 != nil)
-        let _method_set_text_direction_119160795_name = StringName(from: "set_text_direction")
-        self._method_set_text_direction_119160795 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_text_direction_119160795_name._native_ptr(), 119160795)
-        assert(TextEdit._method_set_text_direction_119160795 != nil)
-        let _method_get_text_direction_797257663_name = StringName(from: "get_text_direction")
-        self._method_get_text_direction_797257663 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_text_direction_797257663_name._native_ptr(), 797257663)
-        assert(TextEdit._method_get_text_direction_797257663 != nil)
-        let _method_set_language_83702148_name = StringName(from: "set_language")
-        self._method_set_language_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_language_83702148_name._native_ptr(), 83702148)
-        assert(TextEdit._method_set_language_83702148 != nil)
-        let _method_get_language_201670096_name = StringName(from: "get_language")
-        self._method_get_language_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_language_201670096_name._native_ptr(), 201670096)
-        assert(TextEdit._method_get_language_201670096 != nil)
-        let _method_set_structured_text_bidi_override_55961453_name = StringName(from: "set_structured_text_bidi_override")
-        self._method_set_structured_text_bidi_override_55961453 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_structured_text_bidi_override_55961453_name._native_ptr(), 55961453)
-        assert(TextEdit._method_set_structured_text_bidi_override_55961453 != nil)
-        let _method_get_structured_text_bidi_override_3385126229_name = StringName(from: "get_structured_text_bidi_override")
-        self._method_get_structured_text_bidi_override_3385126229 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_structured_text_bidi_override_3385126229_name._native_ptr(), 3385126229)
-        assert(TextEdit._method_get_structured_text_bidi_override_3385126229 != nil)
-        let _method_set_structured_text_bidi_override_options_381264803_name = StringName(from: "set_structured_text_bidi_override_options")
-        self._method_set_structured_text_bidi_override_options_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_structured_text_bidi_override_options_381264803_name._native_ptr(), 381264803)
-        assert(TextEdit._method_set_structured_text_bidi_override_options_381264803 != nil)
-        let _method_get_structured_text_bidi_override_options_3995934104_name = StringName(from: "get_structured_text_bidi_override_options")
-        self._method_get_structured_text_bidi_override_options_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_structured_text_bidi_override_options_3995934104_name._native_ptr(), 3995934104)
-        assert(TextEdit._method_get_structured_text_bidi_override_options_3995934104 != nil)
-        let _method_set_tab_size_1286410249_name = StringName(from: "set_tab_size")
-        self._method_set_tab_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_tab_size_1286410249_name._native_ptr(), 1286410249)
-        assert(TextEdit._method_set_tab_size_1286410249 != nil)
-        let _method_get_tab_size_3905245786_name = StringName(from: "get_tab_size")
-        self._method_get_tab_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_tab_size_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_tab_size_3905245786 != nil)
-        let _method_set_overtype_mode_enabled_2586408642_name = StringName(from: "set_overtype_mode_enabled")
-        self._method_set_overtype_mode_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_overtype_mode_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_overtype_mode_enabled_2586408642 != nil)
-        let _method_is_overtype_mode_enabled_36873697_name = StringName(from: "is_overtype_mode_enabled")
-        self._method_is_overtype_mode_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_overtype_mode_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_overtype_mode_enabled_36873697 != nil)
-        let _method_set_context_menu_enabled_2586408642_name = StringName(from: "set_context_menu_enabled")
-        self._method_set_context_menu_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_context_menu_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_context_menu_enabled_2586408642 != nil)
-        let _method_is_context_menu_enabled_36873697_name = StringName(from: "is_context_menu_enabled")
-        self._method_is_context_menu_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_context_menu_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_context_menu_enabled_36873697 != nil)
-        let _method_set_shortcut_keys_enabled_2586408642_name = StringName(from: "set_shortcut_keys_enabled")
-        self._method_set_shortcut_keys_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_shortcut_keys_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_shortcut_keys_enabled_2586408642 != nil)
-        let _method_is_shortcut_keys_enabled_36873697_name = StringName(from: "is_shortcut_keys_enabled")
-        self._method_is_shortcut_keys_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_shortcut_keys_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_shortcut_keys_enabled_36873697 != nil)
-        let _method_set_virtual_keyboard_enabled_2586408642_name = StringName(from: "set_virtual_keyboard_enabled")
-        self._method_set_virtual_keyboard_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_virtual_keyboard_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_virtual_keyboard_enabled_2586408642 != nil)
-        let _method_is_virtual_keyboard_enabled_36873697_name = StringName(from: "is_virtual_keyboard_enabled")
-        self._method_is_virtual_keyboard_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_virtual_keyboard_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_virtual_keyboard_enabled_36873697 != nil)
-        let _method_set_middle_mouse_paste_enabled_2586408642_name = StringName(from: "set_middle_mouse_paste_enabled")
-        self._method_set_middle_mouse_paste_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_middle_mouse_paste_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_middle_mouse_paste_enabled_2586408642 != nil)
-        let _method_is_middle_mouse_paste_enabled_36873697_name = StringName(from: "is_middle_mouse_paste_enabled")
-        self._method_is_middle_mouse_paste_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_middle_mouse_paste_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_middle_mouse_paste_enabled_36873697 != nil)
-        let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
-        assert(TextEdit._method_clear_3218959716 != nil)
-        let _method_set_text_83702148_name = StringName(from: "set_text")
-        self._method_set_text_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_text_83702148_name._native_ptr(), 83702148)
-        assert(TextEdit._method_set_text_83702148 != nil)
-        let _method_get_text_201670096_name = StringName(from: "get_text")
-        self._method_get_text_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_text_201670096_name._native_ptr(), 201670096)
-        assert(TextEdit._method_get_text_201670096 != nil)
-        let _method_get_line_count_3905245786_name = StringName(from: "get_line_count")
-        self._method_get_line_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_line_count_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_line_count_3905245786 != nil)
-        let _method_set_placeholder_83702148_name = StringName(from: "set_placeholder")
-        self._method_set_placeholder_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_placeholder_83702148_name._native_ptr(), 83702148)
-        assert(TextEdit._method_set_placeholder_83702148 != nil)
-        let _method_get_placeholder_201670096_name = StringName(from: "get_placeholder")
-        self._method_get_placeholder_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_placeholder_201670096_name._native_ptr(), 201670096)
-        assert(TextEdit._method_get_placeholder_201670096 != nil)
-        let _method_set_line_501894301_name = StringName(from: "set_line")
-        self._method_set_line_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_line_501894301_name._native_ptr(), 501894301)
-        assert(TextEdit._method_set_line_501894301 != nil)
-        let _method_get_line_844755477_name = StringName(from: "get_line")
-        self._method_get_line_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_line_844755477_name._native_ptr(), 844755477)
-        assert(TextEdit._method_get_line_844755477 != nil)
-        let _method_get_line_width_3294126239_name = StringName(from: "get_line_width")
-        self._method_get_line_width_3294126239 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_line_width_3294126239_name._native_ptr(), 3294126239)
-        assert(TextEdit._method_get_line_width_3294126239 != nil)
-        let _method_get_line_height_3905245786_name = StringName(from: "get_line_height")
-        self._method_get_line_height_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_line_height_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_line_height_3905245786 != nil)
-        let _method_get_indent_level_923996154_name = StringName(from: "get_indent_level")
-        self._method_get_indent_level_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_indent_level_923996154_name._native_ptr(), 923996154)
-        assert(TextEdit._method_get_indent_level_923996154 != nil)
-        let _method_get_first_non_whitespace_column_923996154_name = StringName(from: "get_first_non_whitespace_column")
-        self._method_get_first_non_whitespace_column_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_first_non_whitespace_column_923996154_name._native_ptr(), 923996154)
-        assert(TextEdit._method_get_first_non_whitespace_column_923996154 != nil)
-        let _method_swap_lines_3937882851_name = StringName(from: "swap_lines")
-        self._method_swap_lines_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_swap_lines_3937882851_name._native_ptr(), 3937882851)
-        assert(TextEdit._method_swap_lines_3937882851 != nil)
-        let _method_insert_line_at_501894301_name = StringName(from: "insert_line_at")
-        self._method_insert_line_at_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_insert_line_at_501894301_name._native_ptr(), 501894301)
-        assert(TextEdit._method_insert_line_at_501894301 != nil)
-        let _method_insert_text_at_caret_3043792800_name = StringName(from: "insert_text_at_caret")
-        self._method_insert_text_at_caret_3043792800 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_insert_text_at_caret_3043792800_name._native_ptr(), 3043792800)
-        assert(TextEdit._method_insert_text_at_caret_3043792800 != nil)
-        let _method_remove_text_4275841770_name = StringName(from: "remove_text")
-        self._method_remove_text_4275841770 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_remove_text_4275841770_name._native_ptr(), 4275841770)
-        assert(TextEdit._method_remove_text_4275841770 != nil)
-        let _method_get_last_unhidden_line_3905245786_name = StringName(from: "get_last_unhidden_line")
-        self._method_get_last_unhidden_line_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_last_unhidden_line_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_last_unhidden_line_3905245786 != nil)
-        let _method_get_next_visible_line_offset_from_3175239445_name = StringName(from: "get_next_visible_line_offset_from")
-        self._method_get_next_visible_line_offset_from_3175239445 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_next_visible_line_offset_from_3175239445_name._native_ptr(), 3175239445)
-        assert(TextEdit._method_get_next_visible_line_offset_from_3175239445 != nil)
-        let _method_get_next_visible_line_index_offset_from_3386475622_name = StringName(from: "get_next_visible_line_index_offset_from")
-        self._method_get_next_visible_line_index_offset_from_3386475622 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_next_visible_line_index_offset_from_3386475622_name._native_ptr(), 3386475622)
-        assert(TextEdit._method_get_next_visible_line_index_offset_from_3386475622 != nil)
-        let _method_backspace_1025054187_name = StringName(from: "backspace")
-        self._method_backspace_1025054187 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_backspace_1025054187_name._native_ptr(), 1025054187)
-        assert(TextEdit._method_backspace_1025054187 != nil)
-        let _method_cut_1025054187_name = StringName(from: "cut")
-        self._method_cut_1025054187 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_cut_1025054187_name._native_ptr(), 1025054187)
-        assert(TextEdit._method_cut_1025054187 != nil)
-        let _method_copy_1025054187_name = StringName(from: "copy")
-        self._method_copy_1025054187 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_copy_1025054187_name._native_ptr(), 1025054187)
-        assert(TextEdit._method_copy_1025054187 != nil)
-        let _method_paste_1025054187_name = StringName(from: "paste")
-        self._method_paste_1025054187 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_paste_1025054187_name._native_ptr(), 1025054187)
-        assert(TextEdit._method_paste_1025054187 != nil)
-        let _method_paste_primary_clipboard_1025054187_name = StringName(from: "paste_primary_clipboard")
-        self._method_paste_primary_clipboard_1025054187 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_paste_primary_clipboard_1025054187_name._native_ptr(), 1025054187)
-        assert(TextEdit._method_paste_primary_clipboard_1025054187 != nil)
-        let _method_start_action_2834827583_name = StringName(from: "start_action")
-        self._method_start_action_2834827583 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_start_action_2834827583_name._native_ptr(), 2834827583)
-        assert(TextEdit._method_start_action_2834827583 != nil)
-        let _method_end_action_3218959716_name = StringName(from: "end_action")
-        self._method_end_action_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_end_action_3218959716_name._native_ptr(), 3218959716)
-        assert(TextEdit._method_end_action_3218959716 != nil)
-        let _method_begin_complex_operation_3218959716_name = StringName(from: "begin_complex_operation")
-        self._method_begin_complex_operation_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_begin_complex_operation_3218959716_name._native_ptr(), 3218959716)
-        assert(TextEdit._method_begin_complex_operation_3218959716 != nil)
-        let _method_end_complex_operation_3218959716_name = StringName(from: "end_complex_operation")
-        self._method_end_complex_operation_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_end_complex_operation_3218959716_name._native_ptr(), 3218959716)
-        assert(TextEdit._method_end_complex_operation_3218959716 != nil)
-        let _method_has_undo_36873697_name = StringName(from: "has_undo")
-        self._method_has_undo_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_has_undo_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_has_undo_36873697 != nil)
-        let _method_has_redo_36873697_name = StringName(from: "has_redo")
-        self._method_has_redo_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_has_redo_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_has_redo_36873697 != nil)
-        let _method_undo_3218959716_name = StringName(from: "undo")
-        self._method_undo_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_undo_3218959716_name._native_ptr(), 3218959716)
-        assert(TextEdit._method_undo_3218959716 != nil)
-        let _method_redo_3218959716_name = StringName(from: "redo")
-        self._method_redo_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_redo_3218959716_name._native_ptr(), 3218959716)
-        assert(TextEdit._method_redo_3218959716 != nil)
-        let _method_clear_undo_history_3218959716_name = StringName(from: "clear_undo_history")
-        self._method_clear_undo_history_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_clear_undo_history_3218959716_name._native_ptr(), 3218959716)
-        assert(TextEdit._method_clear_undo_history_3218959716 != nil)
-        let _method_tag_saved_version_3218959716_name = StringName(from: "tag_saved_version")
-        self._method_tag_saved_version_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_tag_saved_version_3218959716_name._native_ptr(), 3218959716)
-        assert(TextEdit._method_tag_saved_version_3218959716 != nil)
-        let _method_get_version_3905245786_name = StringName(from: "get_version")
-        self._method_get_version_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_version_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_version_3905245786 != nil)
-        let _method_get_saved_version_3905245786_name = StringName(from: "get_saved_version")
-        self._method_get_saved_version_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_saved_version_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_saved_version_3905245786 != nil)
-        let _method_set_search_text_83702148_name = StringName(from: "set_search_text")
-        self._method_set_search_text_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_search_text_83702148_name._native_ptr(), 83702148)
-        assert(TextEdit._method_set_search_text_83702148 != nil)
-        let _method_set_search_flags_1286410249_name = StringName(from: "set_search_flags")
-        self._method_set_search_flags_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_search_flags_1286410249_name._native_ptr(), 1286410249)
-        assert(TextEdit._method_set_search_flags_1286410249 != nil)
-        let _method_search_1203739136_name = StringName(from: "search")
-        self._method_search_1203739136 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_search_1203739136_name._native_ptr(), 1203739136)
-        assert(TextEdit._method_search_1203739136 != nil)
-        let _method_set_tooltip_request_func_1611583062_name = StringName(from: "set_tooltip_request_func")
-        self._method_set_tooltip_request_func_1611583062 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_tooltip_request_func_1611583062_name._native_ptr(), 1611583062)
-        assert(TextEdit._method_set_tooltip_request_func_1611583062 != nil)
-        let _method_get_local_mouse_pos_3341600327_name = StringName(from: "get_local_mouse_pos")
-        self._method_get_local_mouse_pos_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_local_mouse_pos_3341600327_name._native_ptr(), 3341600327)
-        assert(TextEdit._method_get_local_mouse_pos_3341600327 != nil)
-        let _method_get_word_at_pos_3674420000_name = StringName(from: "get_word_at_pos")
-        self._method_get_word_at_pos_3674420000 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_word_at_pos_3674420000_name._native_ptr(), 3674420000)
-        assert(TextEdit._method_get_word_at_pos_3674420000 != nil)
-        let _method_get_line_column_at_pos_850652858_name = StringName(from: "get_line_column_at_pos")
-        self._method_get_line_column_at_pos_850652858 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_line_column_at_pos_850652858_name._native_ptr(), 850652858)
-        assert(TextEdit._method_get_line_column_at_pos_850652858 != nil)
-        let _method_get_pos_at_line_column_410388347_name = StringName(from: "get_pos_at_line_column")
-        self._method_get_pos_at_line_column_410388347 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_pos_at_line_column_410388347_name._native_ptr(), 410388347)
-        assert(TextEdit._method_get_pos_at_line_column_410388347 != nil)
-        let _method_get_rect_at_line_column_3256618057_name = StringName(from: "get_rect_at_line_column")
-        self._method_get_rect_at_line_column_3256618057 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_rect_at_line_column_3256618057_name._native_ptr(), 3256618057)
-        assert(TextEdit._method_get_rect_at_line_column_3256618057 != nil)
-        let _method_get_minimap_line_at_pos_2485466453_name = StringName(from: "get_minimap_line_at_pos")
-        self._method_get_minimap_line_at_pos_2485466453 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_minimap_line_at_pos_2485466453_name._native_ptr(), 2485466453)
-        assert(TextEdit._method_get_minimap_line_at_pos_2485466453 != nil)
-        let _method_is_dragging_cursor_36873697_name = StringName(from: "is_dragging_cursor")
-        self._method_is_dragging_cursor_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_dragging_cursor_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_dragging_cursor_36873697 != nil)
-        let _method_is_mouse_over_selection_1099474134_name = StringName(from: "is_mouse_over_selection")
-        self._method_is_mouse_over_selection_1099474134 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_mouse_over_selection_1099474134_name._native_ptr(), 1099474134)
-        assert(TextEdit._method_is_mouse_over_selection_1099474134 != nil)
-        let _method_set_caret_type_1211596914_name = StringName(from: "set_caret_type")
-        self._method_set_caret_type_1211596914 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_caret_type_1211596914_name._native_ptr(), 1211596914)
-        assert(TextEdit._method_set_caret_type_1211596914 != nil)
-        let _method_get_caret_type_2830252959_name = StringName(from: "get_caret_type")
-        self._method_get_caret_type_2830252959 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_caret_type_2830252959_name._native_ptr(), 2830252959)
-        assert(TextEdit._method_get_caret_type_2830252959 != nil)
-        let _method_set_caret_blink_enabled_2586408642_name = StringName(from: "set_caret_blink_enabled")
-        self._method_set_caret_blink_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_caret_blink_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_caret_blink_enabled_2586408642 != nil)
-        let _method_is_caret_blink_enabled_36873697_name = StringName(from: "is_caret_blink_enabled")
-        self._method_is_caret_blink_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_caret_blink_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_caret_blink_enabled_36873697 != nil)
-        let _method_set_caret_blink_interval_373806689_name = StringName(from: "set_caret_blink_interval")
-        self._method_set_caret_blink_interval_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_caret_blink_interval_373806689_name._native_ptr(), 373806689)
-        assert(TextEdit._method_set_caret_blink_interval_373806689 != nil)
-        let _method_get_caret_blink_interval_1740695150_name = StringName(from: "get_caret_blink_interval")
-        self._method_get_caret_blink_interval_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_caret_blink_interval_1740695150_name._native_ptr(), 1740695150)
-        assert(TextEdit._method_get_caret_blink_interval_1740695150 != nil)
-        let _method_set_move_caret_on_right_click_enabled_2586408642_name = StringName(from: "set_move_caret_on_right_click_enabled")
-        self._method_set_move_caret_on_right_click_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_move_caret_on_right_click_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_move_caret_on_right_click_enabled_2586408642 != nil)
-        let _method_is_move_caret_on_right_click_enabled_36873697_name = StringName(from: "is_move_caret_on_right_click_enabled")
-        self._method_is_move_caret_on_right_click_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_move_caret_on_right_click_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_move_caret_on_right_click_enabled_36873697 != nil)
-        let _method_set_caret_mid_grapheme_enabled_2586408642_name = StringName(from: "set_caret_mid_grapheme_enabled")
-        self._method_set_caret_mid_grapheme_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_caret_mid_grapheme_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_caret_mid_grapheme_enabled_2586408642 != nil)
-        let _method_is_caret_mid_grapheme_enabled_36873697_name = StringName(from: "is_caret_mid_grapheme_enabled")
-        self._method_is_caret_mid_grapheme_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_caret_mid_grapheme_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_caret_mid_grapheme_enabled_36873697 != nil)
-        let _method_set_multiple_carets_enabled_2586408642_name = StringName(from: "set_multiple_carets_enabled")
-        self._method_set_multiple_carets_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_multiple_carets_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_multiple_carets_enabled_2586408642 != nil)
-        let _method_is_multiple_carets_enabled_36873697_name = StringName(from: "is_multiple_carets_enabled")
-        self._method_is_multiple_carets_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_multiple_carets_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_multiple_carets_enabled_36873697 != nil)
-        let _method_add_caret_50157827_name = StringName(from: "add_caret")
-        self._method_add_caret_50157827 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_add_caret_50157827_name._native_ptr(), 50157827)
-        assert(TextEdit._method_add_caret_50157827 != nil)
-        let _method_remove_caret_1286410249_name = StringName(from: "remove_caret")
-        self._method_remove_caret_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_remove_caret_1286410249_name._native_ptr(), 1286410249)
-        assert(TextEdit._method_remove_caret_1286410249 != nil)
-        let _method_remove_secondary_carets_3218959716_name = StringName(from: "remove_secondary_carets")
-        self._method_remove_secondary_carets_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_remove_secondary_carets_3218959716_name._native_ptr(), 3218959716)
-        assert(TextEdit._method_remove_secondary_carets_3218959716 != nil)
-        let _method_merge_overlapping_carets_3218959716_name = StringName(from: "merge_overlapping_carets")
-        self._method_merge_overlapping_carets_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_merge_overlapping_carets_3218959716_name._native_ptr(), 3218959716)
-        assert(TextEdit._method_merge_overlapping_carets_3218959716 != nil)
-        let _method_get_caret_count_3905245786_name = StringName(from: "get_caret_count")
-        self._method_get_caret_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_caret_count_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_caret_count_3905245786 != nil)
-        let _method_add_caret_at_carets_2586408642_name = StringName(from: "add_caret_at_carets")
-        self._method_add_caret_at_carets_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_add_caret_at_carets_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_add_caret_at_carets_2586408642 != nil)
-        let _method_get_caret_index_edit_order_969006518_name = StringName(from: "get_caret_index_edit_order")
-        self._method_get_caret_index_edit_order_969006518 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_caret_index_edit_order_969006518_name._native_ptr(), 969006518)
-        assert(TextEdit._method_get_caret_index_edit_order_969006518 != nil)
-        let _method_adjust_carets_after_edit_1770277138_name = StringName(from: "adjust_carets_after_edit")
-        self._method_adjust_carets_after_edit_1770277138 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_adjust_carets_after_edit_1770277138_name._native_ptr(), 1770277138)
-        assert(TextEdit._method_adjust_carets_after_edit_1770277138 != nil)
-        let _method_is_caret_visible_1051549951_name = StringName(from: "is_caret_visible")
-        self._method_is_caret_visible_1051549951 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_caret_visible_1051549951_name._native_ptr(), 1051549951)
-        assert(TextEdit._method_is_caret_visible_1051549951 != nil)
-        let _method_get_caret_draw_pos_478253731_name = StringName(from: "get_caret_draw_pos")
-        self._method_get_caret_draw_pos_478253731 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_caret_draw_pos_478253731_name._native_ptr(), 478253731)
-        assert(TextEdit._method_get_caret_draw_pos_478253731 != nil)
-        let _method_set_caret_line_1413195636_name = StringName(from: "set_caret_line")
-        self._method_set_caret_line_1413195636 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_caret_line_1413195636_name._native_ptr(), 1413195636)
-        assert(TextEdit._method_set_caret_line_1413195636 != nil)
-        let _method_get_caret_line_1591665591_name = StringName(from: "get_caret_line")
-        self._method_get_caret_line_1591665591 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_caret_line_1591665591_name._native_ptr(), 1591665591)
-        assert(TextEdit._method_get_caret_line_1591665591 != nil)
-        let _method_set_caret_column_1071284433_name = StringName(from: "set_caret_column")
-        self._method_set_caret_column_1071284433 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_caret_column_1071284433_name._native_ptr(), 1071284433)
-        assert(TextEdit._method_set_caret_column_1071284433 != nil)
-        let _method_get_caret_column_1591665591_name = StringName(from: "get_caret_column")
-        self._method_get_caret_column_1591665591 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_caret_column_1591665591_name._native_ptr(), 1591665591)
-        assert(TextEdit._method_get_caret_column_1591665591 != nil)
-        let _method_get_caret_wrap_index_1591665591_name = StringName(from: "get_caret_wrap_index")
-        self._method_get_caret_wrap_index_1591665591 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_caret_wrap_index_1591665591_name._native_ptr(), 1591665591)
-        assert(TextEdit._method_get_caret_wrap_index_1591665591 != nil)
-        let _method_get_word_under_caret_3929349208_name = StringName(from: "get_word_under_caret")
-        self._method_get_word_under_caret_3929349208 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_word_under_caret_3929349208_name._native_ptr(), 3929349208)
-        assert(TextEdit._method_get_word_under_caret_3929349208 != nil)
-        let _method_set_selecting_enabled_2586408642_name = StringName(from: "set_selecting_enabled")
-        self._method_set_selecting_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_selecting_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_selecting_enabled_2586408642 != nil)
-        let _method_is_selecting_enabled_36873697_name = StringName(from: "is_selecting_enabled")
-        self._method_is_selecting_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_selecting_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_selecting_enabled_36873697 != nil)
-        let _method_set_deselect_on_focus_loss_enabled_2586408642_name = StringName(from: "set_deselect_on_focus_loss_enabled")
-        self._method_set_deselect_on_focus_loss_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_deselect_on_focus_loss_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_deselect_on_focus_loss_enabled_2586408642 != nil)
-        let _method_is_deselect_on_focus_loss_enabled_36873697_name = StringName(from: "is_deselect_on_focus_loss_enabled")
-        self._method_is_deselect_on_focus_loss_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_deselect_on_focus_loss_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_deselect_on_focus_loss_enabled_36873697 != nil)
-        let _method_set_drag_and_drop_selection_enabled_2586408642_name = StringName(from: "set_drag_and_drop_selection_enabled")
-        self._method_set_drag_and_drop_selection_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_drag_and_drop_selection_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_drag_and_drop_selection_enabled_2586408642 != nil)
-        let _method_is_drag_and_drop_selection_enabled_36873697_name = StringName(from: "is_drag_and_drop_selection_enabled")
-        self._method_is_drag_and_drop_selection_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_drag_and_drop_selection_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_drag_and_drop_selection_enabled_36873697 != nil)
-        let _method_set_selection_mode_2920622473_name = StringName(from: "set_selection_mode")
-        self._method_set_selection_mode_2920622473 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_selection_mode_2920622473_name._native_ptr(), 2920622473)
-        assert(TextEdit._method_set_selection_mode_2920622473 != nil)
-        let _method_get_selection_mode_3750106938_name = StringName(from: "get_selection_mode")
-        self._method_get_selection_mode_3750106938 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_selection_mode_3750106938_name._native_ptr(), 3750106938)
-        assert(TextEdit._method_get_selection_mode_3750106938 != nil)
-        let _method_select_all_3218959716_name = StringName(from: "select_all")
-        self._method_select_all_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_select_all_3218959716_name._native_ptr(), 3218959716)
-        assert(TextEdit._method_select_all_3218959716 != nil)
-        let _method_select_word_under_caret_1025054187_name = StringName(from: "select_word_under_caret")
-        self._method_select_word_under_caret_1025054187 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_select_word_under_caret_1025054187_name._native_ptr(), 1025054187)
-        assert(TextEdit._method_select_word_under_caret_1025054187 != nil)
-        let _method_add_selection_for_next_occurrence_3218959716_name = StringName(from: "add_selection_for_next_occurrence")
-        self._method_add_selection_for_next_occurrence_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_add_selection_for_next_occurrence_3218959716_name._native_ptr(), 3218959716)
-        assert(TextEdit._method_add_selection_for_next_occurrence_3218959716 != nil)
-        let _method_select_4269665324_name = StringName(from: "select")
-        self._method_select_4269665324 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_select_4269665324_name._native_ptr(), 4269665324)
-        assert(TextEdit._method_select_4269665324 != nil)
-        let _method_has_selection_2824505868_name = StringName(from: "has_selection")
-        self._method_has_selection_2824505868 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_has_selection_2824505868_name._native_ptr(), 2824505868)
-        assert(TextEdit._method_has_selection_2824505868 != nil)
-        let _method_get_selected_text_2309358862_name = StringName(from: "get_selected_text")
-        self._method_get_selected_text_2309358862 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_selected_text_2309358862_name._native_ptr(), 2309358862)
-        assert(TextEdit._method_get_selected_text_2309358862 != nil)
-        let _method_get_selection_line_1591665591_name = StringName(from: "get_selection_line")
-        self._method_get_selection_line_1591665591 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_selection_line_1591665591_name._native_ptr(), 1591665591)
-        assert(TextEdit._method_get_selection_line_1591665591 != nil)
-        let _method_get_selection_column_1591665591_name = StringName(from: "get_selection_column")
-        self._method_get_selection_column_1591665591 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_selection_column_1591665591_name._native_ptr(), 1591665591)
-        assert(TextEdit._method_get_selection_column_1591665591 != nil)
-        let _method_get_selection_from_line_1591665591_name = StringName(from: "get_selection_from_line")
-        self._method_get_selection_from_line_1591665591 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_selection_from_line_1591665591_name._native_ptr(), 1591665591)
-        assert(TextEdit._method_get_selection_from_line_1591665591 != nil)
-        let _method_get_selection_from_column_1591665591_name = StringName(from: "get_selection_from_column")
-        self._method_get_selection_from_column_1591665591 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_selection_from_column_1591665591_name._native_ptr(), 1591665591)
-        assert(TextEdit._method_get_selection_from_column_1591665591 != nil)
-        let _method_get_selection_to_line_1591665591_name = StringName(from: "get_selection_to_line")
-        self._method_get_selection_to_line_1591665591 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_selection_to_line_1591665591_name._native_ptr(), 1591665591)
-        assert(TextEdit._method_get_selection_to_line_1591665591 != nil)
-        let _method_get_selection_to_column_1591665591_name = StringName(from: "get_selection_to_column")
-        self._method_get_selection_to_column_1591665591 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_selection_to_column_1591665591_name._native_ptr(), 1591665591)
-        assert(TextEdit._method_get_selection_to_column_1591665591 != nil)
-        let _method_deselect_1025054187_name = StringName(from: "deselect")
-        self._method_deselect_1025054187 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_deselect_1025054187_name._native_ptr(), 1025054187)
-        assert(TextEdit._method_deselect_1025054187 != nil)
-        let _method_delete_selection_1025054187_name = StringName(from: "delete_selection")
-        self._method_delete_selection_1025054187 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_delete_selection_1025054187_name._native_ptr(), 1025054187)
-        assert(TextEdit._method_delete_selection_1025054187 != nil)
-        let _method_set_line_wrapping_mode_2525115309_name = StringName(from: "set_line_wrapping_mode")
-        self._method_set_line_wrapping_mode_2525115309 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_line_wrapping_mode_2525115309_name._native_ptr(), 2525115309)
-        assert(TextEdit._method_set_line_wrapping_mode_2525115309 != nil)
-        let _method_get_line_wrapping_mode_3562716114_name = StringName(from: "get_line_wrapping_mode")
-        self._method_get_line_wrapping_mode_3562716114 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_line_wrapping_mode_3562716114_name._native_ptr(), 3562716114)
-        assert(TextEdit._method_get_line_wrapping_mode_3562716114 != nil)
-        let _method_is_line_wrapped_1116898809_name = StringName(from: "is_line_wrapped")
-        self._method_is_line_wrapped_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_line_wrapped_1116898809_name._native_ptr(), 1116898809)
-        assert(TextEdit._method_is_line_wrapped_1116898809 != nil)
-        let _method_get_line_wrap_count_923996154_name = StringName(from: "get_line_wrap_count")
-        self._method_get_line_wrap_count_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_line_wrap_count_923996154_name._native_ptr(), 923996154)
-        assert(TextEdit._method_get_line_wrap_count_923996154 != nil)
-        let _method_get_line_wrap_index_at_column_3175239445_name = StringName(from: "get_line_wrap_index_at_column")
-        self._method_get_line_wrap_index_at_column_3175239445 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_line_wrap_index_at_column_3175239445_name._native_ptr(), 3175239445)
-        assert(TextEdit._method_get_line_wrap_index_at_column_3175239445 != nil)
-        let _method_get_line_wrapped_text_647634434_name = StringName(from: "get_line_wrapped_text")
-        self._method_get_line_wrapped_text_647634434 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_line_wrapped_text_647634434_name._native_ptr(), 647634434)
-        assert(TextEdit._method_get_line_wrapped_text_647634434 != nil)
-        let _method_set_smooth_scroll_enabled_2586408642_name = StringName(from: "set_smooth_scroll_enabled")
-        self._method_set_smooth_scroll_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_smooth_scroll_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_smooth_scroll_enabled_2586408642 != nil)
-        let _method_is_smooth_scroll_enabled_36873697_name = StringName(from: "is_smooth_scroll_enabled")
-        self._method_is_smooth_scroll_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_smooth_scroll_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_smooth_scroll_enabled_36873697 != nil)
-        let _method_get_v_scroll_bar_3226026593_name = StringName(from: "get_v_scroll_bar")
-        self._method_get_v_scroll_bar_3226026593 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_v_scroll_bar_3226026593_name._native_ptr(), 3226026593)
-        assert(TextEdit._method_get_v_scroll_bar_3226026593 != nil)
-        let _method_get_h_scroll_bar_3774687988_name = StringName(from: "get_h_scroll_bar")
-        self._method_get_h_scroll_bar_3774687988 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_h_scroll_bar_3774687988_name._native_ptr(), 3774687988)
-        assert(TextEdit._method_get_h_scroll_bar_3774687988 != nil)
-        let _method_set_v_scroll_373806689_name = StringName(from: "set_v_scroll")
-        self._method_set_v_scroll_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_v_scroll_373806689_name._native_ptr(), 373806689)
-        assert(TextEdit._method_set_v_scroll_373806689 != nil)
-        let _method_get_v_scroll_1740695150_name = StringName(from: "get_v_scroll")
-        self._method_get_v_scroll_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_v_scroll_1740695150_name._native_ptr(), 1740695150)
-        assert(TextEdit._method_get_v_scroll_1740695150 != nil)
-        let _method_set_h_scroll_1286410249_name = StringName(from: "set_h_scroll")
-        self._method_set_h_scroll_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_h_scroll_1286410249_name._native_ptr(), 1286410249)
-        assert(TextEdit._method_set_h_scroll_1286410249 != nil)
-        let _method_get_h_scroll_3905245786_name = StringName(from: "get_h_scroll")
-        self._method_get_h_scroll_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_h_scroll_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_h_scroll_3905245786 != nil)
-        let _method_set_scroll_past_end_of_file_enabled_2586408642_name = StringName(from: "set_scroll_past_end_of_file_enabled")
-        self._method_set_scroll_past_end_of_file_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_scroll_past_end_of_file_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_scroll_past_end_of_file_enabled_2586408642 != nil)
-        let _method_is_scroll_past_end_of_file_enabled_36873697_name = StringName(from: "is_scroll_past_end_of_file_enabled")
-        self._method_is_scroll_past_end_of_file_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_scroll_past_end_of_file_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_scroll_past_end_of_file_enabled_36873697 != nil)
-        let _method_set_v_scroll_speed_373806689_name = StringName(from: "set_v_scroll_speed")
-        self._method_set_v_scroll_speed_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_v_scroll_speed_373806689_name._native_ptr(), 373806689)
-        assert(TextEdit._method_set_v_scroll_speed_373806689 != nil)
-        let _method_get_v_scroll_speed_1740695150_name = StringName(from: "get_v_scroll_speed")
-        self._method_get_v_scroll_speed_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_v_scroll_speed_1740695150_name._native_ptr(), 1740695150)
-        assert(TextEdit._method_get_v_scroll_speed_1740695150 != nil)
-        let _method_set_fit_content_height_enabled_2586408642_name = StringName(from: "set_fit_content_height_enabled")
-        self._method_set_fit_content_height_enabled_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_fit_content_height_enabled_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_fit_content_height_enabled_2586408642 != nil)
-        let _method_is_fit_content_height_enabled_36873697_name = StringName(from: "is_fit_content_height_enabled")
-        self._method_is_fit_content_height_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_fit_content_height_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_fit_content_height_enabled_36873697 != nil)
-        let _method_get_scroll_pos_for_line_3274652423_name = StringName(from: "get_scroll_pos_for_line")
-        self._method_get_scroll_pos_for_line_3274652423 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_scroll_pos_for_line_3274652423_name._native_ptr(), 3274652423)
-        assert(TextEdit._method_get_scroll_pos_for_line_3274652423 != nil)
-        let _method_set_line_as_first_visible_3023605688_name = StringName(from: "set_line_as_first_visible")
-        self._method_set_line_as_first_visible_3023605688 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_line_as_first_visible_3023605688_name._native_ptr(), 3023605688)
-        assert(TextEdit._method_set_line_as_first_visible_3023605688 != nil)
-        let _method_get_first_visible_line_3905245786_name = StringName(from: "get_first_visible_line")
-        self._method_get_first_visible_line_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_first_visible_line_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_first_visible_line_3905245786 != nil)
-        let _method_set_line_as_center_visible_3023605688_name = StringName(from: "set_line_as_center_visible")
-        self._method_set_line_as_center_visible_3023605688 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_line_as_center_visible_3023605688_name._native_ptr(), 3023605688)
-        assert(TextEdit._method_set_line_as_center_visible_3023605688 != nil)
-        let _method_set_line_as_last_visible_3023605688_name = StringName(from: "set_line_as_last_visible")
-        self._method_set_line_as_last_visible_3023605688 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_line_as_last_visible_3023605688_name._native_ptr(), 3023605688)
-        assert(TextEdit._method_set_line_as_last_visible_3023605688 != nil)
-        let _method_get_last_full_visible_line_3905245786_name = StringName(from: "get_last_full_visible_line")
-        self._method_get_last_full_visible_line_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_last_full_visible_line_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_last_full_visible_line_3905245786 != nil)
-        let _method_get_last_full_visible_line_wrap_index_3905245786_name = StringName(from: "get_last_full_visible_line_wrap_index")
-        self._method_get_last_full_visible_line_wrap_index_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_last_full_visible_line_wrap_index_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_last_full_visible_line_wrap_index_3905245786 != nil)
-        let _method_get_visible_line_count_3905245786_name = StringName(from: "get_visible_line_count")
-        self._method_get_visible_line_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_visible_line_count_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_visible_line_count_3905245786 != nil)
-        let _method_get_visible_line_count_in_range_3175239445_name = StringName(from: "get_visible_line_count_in_range")
-        self._method_get_visible_line_count_in_range_3175239445 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_visible_line_count_in_range_3175239445_name._native_ptr(), 3175239445)
-        assert(TextEdit._method_get_visible_line_count_in_range_3175239445 != nil)
-        let _method_get_total_visible_line_count_3905245786_name = StringName(from: "get_total_visible_line_count")
-        self._method_get_total_visible_line_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_total_visible_line_count_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_total_visible_line_count_3905245786 != nil)
-        let _method_adjust_viewport_to_caret_1995695955_name = StringName(from: "adjust_viewport_to_caret")
-        self._method_adjust_viewport_to_caret_1995695955 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_adjust_viewport_to_caret_1995695955_name._native_ptr(), 1995695955)
-        assert(TextEdit._method_adjust_viewport_to_caret_1995695955 != nil)
-        let _method_center_viewport_to_caret_1995695955_name = StringName(from: "center_viewport_to_caret")
-        self._method_center_viewport_to_caret_1995695955 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_center_viewport_to_caret_1995695955_name._native_ptr(), 1995695955)
-        assert(TextEdit._method_center_viewport_to_caret_1995695955 != nil)
-        let _method_set_draw_minimap_2586408642_name = StringName(from: "set_draw_minimap")
-        self._method_set_draw_minimap_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_draw_minimap_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_draw_minimap_2586408642 != nil)
-        let _method_is_drawing_minimap_36873697_name = StringName(from: "is_drawing_minimap")
-        self._method_is_drawing_minimap_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_drawing_minimap_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_drawing_minimap_36873697 != nil)
-        let _method_set_minimap_width_1286410249_name = StringName(from: "set_minimap_width")
-        self._method_set_minimap_width_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_minimap_width_1286410249_name._native_ptr(), 1286410249)
-        assert(TextEdit._method_set_minimap_width_1286410249 != nil)
-        let _method_get_minimap_width_3905245786_name = StringName(from: "get_minimap_width")
-        self._method_get_minimap_width_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_minimap_width_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_minimap_width_3905245786 != nil)
-        let _method_get_minimap_visible_lines_3905245786_name = StringName(from: "get_minimap_visible_lines")
-        self._method_get_minimap_visible_lines_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_minimap_visible_lines_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_minimap_visible_lines_3905245786 != nil)
-        let _method_add_gutter_1025054187_name = StringName(from: "add_gutter")
-        self._method_add_gutter_1025054187 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_add_gutter_1025054187_name._native_ptr(), 1025054187)
-        assert(TextEdit._method_add_gutter_1025054187 != nil)
-        let _method_remove_gutter_1286410249_name = StringName(from: "remove_gutter")
-        self._method_remove_gutter_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_remove_gutter_1286410249_name._native_ptr(), 1286410249)
-        assert(TextEdit._method_remove_gutter_1286410249 != nil)
-        let _method_get_gutter_count_3905245786_name = StringName(from: "get_gutter_count")
-        self._method_get_gutter_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_gutter_count_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_gutter_count_3905245786 != nil)
-        let _method_set_gutter_name_501894301_name = StringName(from: "set_gutter_name")
-        self._method_set_gutter_name_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_gutter_name_501894301_name._native_ptr(), 501894301)
-        assert(TextEdit._method_set_gutter_name_501894301 != nil)
-        let _method_get_gutter_name_844755477_name = StringName(from: "get_gutter_name")
-        self._method_get_gutter_name_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_gutter_name_844755477_name._native_ptr(), 844755477)
-        assert(TextEdit._method_get_gutter_name_844755477 != nil)
-        let _method_set_gutter_type_1088959071_name = StringName(from: "set_gutter_type")
-        self._method_set_gutter_type_1088959071 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_gutter_type_1088959071_name._native_ptr(), 1088959071)
-        assert(TextEdit._method_set_gutter_type_1088959071 != nil)
-        let _method_get_gutter_type_1159699127_name = StringName(from: "get_gutter_type")
-        self._method_get_gutter_type_1159699127 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_gutter_type_1159699127_name._native_ptr(), 1159699127)
-        assert(TextEdit._method_get_gutter_type_1159699127 != nil)
-        let _method_set_gutter_width_3937882851_name = StringName(from: "set_gutter_width")
-        self._method_set_gutter_width_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_gutter_width_3937882851_name._native_ptr(), 3937882851)
-        assert(TextEdit._method_set_gutter_width_3937882851 != nil)
-        let _method_get_gutter_width_923996154_name = StringName(from: "get_gutter_width")
-        self._method_get_gutter_width_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_gutter_width_923996154_name._native_ptr(), 923996154)
-        assert(TextEdit._method_get_gutter_width_923996154 != nil)
-        let _method_set_gutter_draw_300928843_name = StringName(from: "set_gutter_draw")
-        self._method_set_gutter_draw_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_gutter_draw_300928843_name._native_ptr(), 300928843)
-        assert(TextEdit._method_set_gutter_draw_300928843 != nil)
-        let _method_is_gutter_drawn_1116898809_name = StringName(from: "is_gutter_drawn")
-        self._method_is_gutter_drawn_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_gutter_drawn_1116898809_name._native_ptr(), 1116898809)
-        assert(TextEdit._method_is_gutter_drawn_1116898809 != nil)
-        let _method_set_gutter_clickable_300928843_name = StringName(from: "set_gutter_clickable")
-        self._method_set_gutter_clickable_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_gutter_clickable_300928843_name._native_ptr(), 300928843)
-        assert(TextEdit._method_set_gutter_clickable_300928843 != nil)
-        let _method_is_gutter_clickable_1116898809_name = StringName(from: "is_gutter_clickable")
-        self._method_is_gutter_clickable_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_gutter_clickable_1116898809_name._native_ptr(), 1116898809)
-        assert(TextEdit._method_is_gutter_clickable_1116898809 != nil)
-        let _method_set_gutter_overwritable_300928843_name = StringName(from: "set_gutter_overwritable")
-        self._method_set_gutter_overwritable_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_gutter_overwritable_300928843_name._native_ptr(), 300928843)
-        assert(TextEdit._method_set_gutter_overwritable_300928843 != nil)
-        let _method_is_gutter_overwritable_1116898809_name = StringName(from: "is_gutter_overwritable")
-        self._method_is_gutter_overwritable_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_gutter_overwritable_1116898809_name._native_ptr(), 1116898809)
-        assert(TextEdit._method_is_gutter_overwritable_1116898809 != nil)
-        let _method_merge_gutters_3937882851_name = StringName(from: "merge_gutters")
-        self._method_merge_gutters_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_merge_gutters_3937882851_name._native_ptr(), 3937882851)
-        assert(TextEdit._method_merge_gutters_3937882851 != nil)
-        let _method_set_gutter_custom_draw_957362965_name = StringName(from: "set_gutter_custom_draw")
-        self._method_set_gutter_custom_draw_957362965 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_gutter_custom_draw_957362965_name._native_ptr(), 957362965)
-        assert(TextEdit._method_set_gutter_custom_draw_957362965 != nil)
-        let _method_get_total_gutter_width_3905245786_name = StringName(from: "get_total_gutter_width")
-        self._method_get_total_gutter_width_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_total_gutter_width_3905245786_name._native_ptr(), 3905245786)
-        assert(TextEdit._method_get_total_gutter_width_3905245786 != nil)
-        let _method_set_line_gutter_metadata_2060538656_name = StringName(from: "set_line_gutter_metadata")
-        self._method_set_line_gutter_metadata_2060538656 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_line_gutter_metadata_2060538656_name._native_ptr(), 2060538656)
-        assert(TextEdit._method_set_line_gutter_metadata_2060538656 != nil)
-        let _method_get_line_gutter_metadata_678354945_name = StringName(from: "get_line_gutter_metadata")
-        self._method_get_line_gutter_metadata_678354945 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_line_gutter_metadata_678354945_name._native_ptr(), 678354945)
-        assert(TextEdit._method_get_line_gutter_metadata_678354945 != nil)
-        let _method_set_line_gutter_text_2285447957_name = StringName(from: "set_line_gutter_text")
-        self._method_set_line_gutter_text_2285447957 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_line_gutter_text_2285447957_name._native_ptr(), 2285447957)
-        assert(TextEdit._method_set_line_gutter_text_2285447957 != nil)
-        let _method_get_line_gutter_text_1391810591_name = StringName(from: "get_line_gutter_text")
-        self._method_get_line_gutter_text_1391810591 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_line_gutter_text_1391810591_name._native_ptr(), 1391810591)
-        assert(TextEdit._method_get_line_gutter_text_1391810591 != nil)
-        let _method_set_line_gutter_icon_176101966_name = StringName(from: "set_line_gutter_icon")
-        self._method_set_line_gutter_icon_176101966 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_line_gutter_icon_176101966_name._native_ptr(), 176101966)
-        assert(TextEdit._method_set_line_gutter_icon_176101966 != nil)
-        let _method_get_line_gutter_icon_2584904275_name = StringName(from: "get_line_gutter_icon")
-        self._method_get_line_gutter_icon_2584904275 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_line_gutter_icon_2584904275_name._native_ptr(), 2584904275)
-        assert(TextEdit._method_get_line_gutter_icon_2584904275 != nil)
-        let _method_set_line_gutter_item_color_3733378741_name = StringName(from: "set_line_gutter_item_color")
-        self._method_set_line_gutter_item_color_3733378741 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_line_gutter_item_color_3733378741_name._native_ptr(), 3733378741)
-        assert(TextEdit._method_set_line_gutter_item_color_3733378741 != nil)
-        let _method_get_line_gutter_item_color_2165839948_name = StringName(from: "get_line_gutter_item_color")
-        self._method_get_line_gutter_item_color_2165839948 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_line_gutter_item_color_2165839948_name._native_ptr(), 2165839948)
-        assert(TextEdit._method_get_line_gutter_item_color_2165839948 != nil)
-        let _method_set_line_gutter_clickable_1383440665_name = StringName(from: "set_line_gutter_clickable")
-        self._method_set_line_gutter_clickable_1383440665 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_line_gutter_clickable_1383440665_name._native_ptr(), 1383440665)
-        assert(TextEdit._method_set_line_gutter_clickable_1383440665 != nil)
-        let _method_is_line_gutter_clickable_2522259332_name = StringName(from: "is_line_gutter_clickable")
-        self._method_is_line_gutter_clickable_2522259332 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_line_gutter_clickable_2522259332_name._native_ptr(), 2522259332)
-        assert(TextEdit._method_is_line_gutter_clickable_2522259332 != nil)
-        let _method_set_line_background_color_2878471219_name = StringName(from: "set_line_background_color")
-        self._method_set_line_background_color_2878471219 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_line_background_color_2878471219_name._native_ptr(), 2878471219)
-        assert(TextEdit._method_set_line_background_color_2878471219 != nil)
-        let _method_get_line_background_color_3457211756_name = StringName(from: "get_line_background_color")
-        self._method_get_line_background_color_3457211756 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_line_background_color_3457211756_name._native_ptr(), 3457211756)
-        assert(TextEdit._method_get_line_background_color_3457211756 != nil)
-        let _method_set_syntax_highlighter_2765644541_name = StringName(from: "set_syntax_highlighter")
-        self._method_set_syntax_highlighter_2765644541 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_syntax_highlighter_2765644541_name._native_ptr(), 2765644541)
-        assert(TextEdit._method_set_syntax_highlighter_2765644541 != nil)
-        let _method_get_syntax_highlighter_2721131626_name = StringName(from: "get_syntax_highlighter")
-        self._method_get_syntax_highlighter_2721131626 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_syntax_highlighter_2721131626_name._native_ptr(), 2721131626)
-        assert(TextEdit._method_get_syntax_highlighter_2721131626 != nil)
-        let _method_set_highlight_current_line_2586408642_name = StringName(from: "set_highlight_current_line")
-        self._method_set_highlight_current_line_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_highlight_current_line_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_highlight_current_line_2586408642 != nil)
-        let _method_is_highlight_current_line_enabled_36873697_name = StringName(from: "is_highlight_current_line_enabled")
-        self._method_is_highlight_current_line_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_highlight_current_line_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_highlight_current_line_enabled_36873697 != nil)
-        let _method_set_highlight_all_occurrences_2586408642_name = StringName(from: "set_highlight_all_occurrences")
-        self._method_set_highlight_all_occurrences_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_highlight_all_occurrences_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_highlight_all_occurrences_2586408642 != nil)
-        let _method_is_highlight_all_occurrences_enabled_36873697_name = StringName(from: "is_highlight_all_occurrences_enabled")
-        self._method_is_highlight_all_occurrences_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_highlight_all_occurrences_enabled_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_highlight_all_occurrences_enabled_36873697 != nil)
-        let _method_get_draw_control_chars_36873697_name = StringName(from: "get_draw_control_chars")
-        self._method_get_draw_control_chars_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_draw_control_chars_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_get_draw_control_chars_36873697 != nil)
-        let _method_set_draw_control_chars_2586408642_name = StringName(from: "set_draw_control_chars")
-        self._method_set_draw_control_chars_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_draw_control_chars_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_draw_control_chars_2586408642 != nil)
-        let _method_set_draw_tabs_2586408642_name = StringName(from: "set_draw_tabs")
-        self._method_set_draw_tabs_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_draw_tabs_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_draw_tabs_2586408642 != nil)
-        let _method_is_drawing_tabs_36873697_name = StringName(from: "is_drawing_tabs")
-        self._method_is_drawing_tabs_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_drawing_tabs_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_drawing_tabs_36873697 != nil)
-        let _method_set_draw_spaces_2586408642_name = StringName(from: "set_draw_spaces")
-        self._method_set_draw_spaces_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_set_draw_spaces_2586408642_name._native_ptr(), 2586408642)
-        assert(TextEdit._method_set_draw_spaces_2586408642 != nil)
-        let _method_is_drawing_spaces_36873697_name = StringName(from: "is_drawing_spaces")
-        self._method_is_drawing_spaces_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_drawing_spaces_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_drawing_spaces_36873697 != nil)
-        let _method_get_menu_229722558_name = StringName(from: "get_menu")
-        self._method_get_menu_229722558 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_get_menu_229722558_name._native_ptr(), 229722558)
-        assert(TextEdit._method_get_menu_229722558 != nil)
-        let _method_is_menu_visible_36873697_name = StringName(from: "is_menu_visible")
-        self._method_is_menu_visible_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_is_menu_visible_36873697_name._native_ptr(), 36873697)
-        assert(TextEdit._method_is_menu_visible_36873697 != nil)
-        let _method_menu_option_1286410249_name = StringName(from: "menu_option")
-        self._method_menu_option_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_TextEdit._native_ptr(), _method_menu_option_1286410249_name._native_ptr(), 1286410249)
-        assert(TextEdit._method_menu_option_1286410249 != nil)
+        self._method_has_ime_text_36873697 = StringName(from: "has_ime_text")
+        assert(self._method_has_ime_text_36873697 != nil)
+        self._method_set_editable_2586408642 = StringName(from: "set_editable")
+        assert(self._method_set_editable_2586408642 != nil)
+        self._method_is_editable_36873697 = StringName(from: "is_editable")
+        assert(self._method_is_editable_36873697 != nil)
+        self._method_set_text_direction_119160795 = StringName(from: "set_text_direction")
+        assert(self._method_set_text_direction_119160795 != nil)
+        self._method_get_text_direction_797257663 = StringName(from: "get_text_direction")
+        assert(self._method_get_text_direction_797257663 != nil)
+        self._method_set_language_83702148 = StringName(from: "set_language")
+        assert(self._method_set_language_83702148 != nil)
+        self._method_get_language_201670096 = StringName(from: "get_language")
+        assert(self._method_get_language_201670096 != nil)
+        self._method_set_structured_text_bidi_override_55961453 = StringName(from: "set_structured_text_bidi_override")
+        assert(self._method_set_structured_text_bidi_override_55961453 != nil)
+        self._method_get_structured_text_bidi_override_3385126229 = StringName(from: "get_structured_text_bidi_override")
+        assert(self._method_get_structured_text_bidi_override_3385126229 != nil)
+        self._method_set_structured_text_bidi_override_options_381264803 = StringName(from: "set_structured_text_bidi_override_options")
+        assert(self._method_set_structured_text_bidi_override_options_381264803 != nil)
+        self._method_get_structured_text_bidi_override_options_3995934104 = StringName(from: "get_structured_text_bidi_override_options")
+        assert(self._method_get_structured_text_bidi_override_options_3995934104 != nil)
+        self._method_set_tab_size_1286410249 = StringName(from: "set_tab_size")
+        assert(self._method_set_tab_size_1286410249 != nil)
+        self._method_get_tab_size_3905245786 = StringName(from: "get_tab_size")
+        assert(self._method_get_tab_size_3905245786 != nil)
+        self._method_set_overtype_mode_enabled_2586408642 = StringName(from: "set_overtype_mode_enabled")
+        assert(self._method_set_overtype_mode_enabled_2586408642 != nil)
+        self._method_is_overtype_mode_enabled_36873697 = StringName(from: "is_overtype_mode_enabled")
+        assert(self._method_is_overtype_mode_enabled_36873697 != nil)
+        self._method_set_context_menu_enabled_2586408642 = StringName(from: "set_context_menu_enabled")
+        assert(self._method_set_context_menu_enabled_2586408642 != nil)
+        self._method_is_context_menu_enabled_36873697 = StringName(from: "is_context_menu_enabled")
+        assert(self._method_is_context_menu_enabled_36873697 != nil)
+        self._method_set_shortcut_keys_enabled_2586408642 = StringName(from: "set_shortcut_keys_enabled")
+        assert(self._method_set_shortcut_keys_enabled_2586408642 != nil)
+        self._method_is_shortcut_keys_enabled_36873697 = StringName(from: "is_shortcut_keys_enabled")
+        assert(self._method_is_shortcut_keys_enabled_36873697 != nil)
+        self._method_set_virtual_keyboard_enabled_2586408642 = StringName(from: "set_virtual_keyboard_enabled")
+        assert(self._method_set_virtual_keyboard_enabled_2586408642 != nil)
+        self._method_is_virtual_keyboard_enabled_36873697 = StringName(from: "is_virtual_keyboard_enabled")
+        assert(self._method_is_virtual_keyboard_enabled_36873697 != nil)
+        self._method_set_middle_mouse_paste_enabled_2586408642 = StringName(from: "set_middle_mouse_paste_enabled")
+        assert(self._method_set_middle_mouse_paste_enabled_2586408642 != nil)
+        self._method_is_middle_mouse_paste_enabled_36873697 = StringName(from: "is_middle_mouse_paste_enabled")
+        assert(self._method_is_middle_mouse_paste_enabled_36873697 != nil)
+        self._method_clear_3218959716 = StringName(from: "clear")
+        assert(self._method_clear_3218959716 != nil)
+        self._method_set_text_83702148 = StringName(from: "set_text")
+        assert(self._method_set_text_83702148 != nil)
+        self._method_get_text_201670096 = StringName(from: "get_text")
+        assert(self._method_get_text_201670096 != nil)
+        self._method_get_line_count_3905245786 = StringName(from: "get_line_count")
+        assert(self._method_get_line_count_3905245786 != nil)
+        self._method_set_placeholder_83702148 = StringName(from: "set_placeholder")
+        assert(self._method_set_placeholder_83702148 != nil)
+        self._method_get_placeholder_201670096 = StringName(from: "get_placeholder")
+        assert(self._method_get_placeholder_201670096 != nil)
+        self._method_set_line_501894301 = StringName(from: "set_line")
+        assert(self._method_set_line_501894301 != nil)
+        self._method_get_line_844755477 = StringName(from: "get_line")
+        assert(self._method_get_line_844755477 != nil)
+        self._method_get_line_width_3294126239 = StringName(from: "get_line_width")
+        assert(self._method_get_line_width_3294126239 != nil)
+        self._method_get_line_height_3905245786 = StringName(from: "get_line_height")
+        assert(self._method_get_line_height_3905245786 != nil)
+        self._method_get_indent_level_923996154 = StringName(from: "get_indent_level")
+        assert(self._method_get_indent_level_923996154 != nil)
+        self._method_get_first_non_whitespace_column_923996154 = StringName(from: "get_first_non_whitespace_column")
+        assert(self._method_get_first_non_whitespace_column_923996154 != nil)
+        self._method_swap_lines_3937882851 = StringName(from: "swap_lines")
+        assert(self._method_swap_lines_3937882851 != nil)
+        self._method_insert_line_at_501894301 = StringName(from: "insert_line_at")
+        assert(self._method_insert_line_at_501894301 != nil)
+        self._method_insert_text_at_caret_3043792800 = StringName(from: "insert_text_at_caret")
+        assert(self._method_insert_text_at_caret_3043792800 != nil)
+        self._method_remove_text_4275841770 = StringName(from: "remove_text")
+        assert(self._method_remove_text_4275841770 != nil)
+        self._method_get_last_unhidden_line_3905245786 = StringName(from: "get_last_unhidden_line")
+        assert(self._method_get_last_unhidden_line_3905245786 != nil)
+        self._method_get_next_visible_line_offset_from_3175239445 = StringName(from: "get_next_visible_line_offset_from")
+        assert(self._method_get_next_visible_line_offset_from_3175239445 != nil)
+        self._method_get_next_visible_line_index_offset_from_3386475622 = StringName(from: "get_next_visible_line_index_offset_from")
+        assert(self._method_get_next_visible_line_index_offset_from_3386475622 != nil)
+        self._method_backspace_1025054187 = StringName(from: "backspace")
+        assert(self._method_backspace_1025054187 != nil)
+        self._method_cut_1025054187 = StringName(from: "cut")
+        assert(self._method_cut_1025054187 != nil)
+        self._method_copy_1025054187 = StringName(from: "copy")
+        assert(self._method_copy_1025054187 != nil)
+        self._method_paste_1025054187 = StringName(from: "paste")
+        assert(self._method_paste_1025054187 != nil)
+        self._method_paste_primary_clipboard_1025054187 = StringName(from: "paste_primary_clipboard")
+        assert(self._method_paste_primary_clipboard_1025054187 != nil)
+        self._method_start_action_2834827583 = StringName(from: "start_action")
+        assert(self._method_start_action_2834827583 != nil)
+        self._method_end_action_3218959716 = StringName(from: "end_action")
+        assert(self._method_end_action_3218959716 != nil)
+        self._method_begin_complex_operation_3218959716 = StringName(from: "begin_complex_operation")
+        assert(self._method_begin_complex_operation_3218959716 != nil)
+        self._method_end_complex_operation_3218959716 = StringName(from: "end_complex_operation")
+        assert(self._method_end_complex_operation_3218959716 != nil)
+        self._method_has_undo_36873697 = StringName(from: "has_undo")
+        assert(self._method_has_undo_36873697 != nil)
+        self._method_has_redo_36873697 = StringName(from: "has_redo")
+        assert(self._method_has_redo_36873697 != nil)
+        self._method_undo_3218959716 = StringName(from: "undo")
+        assert(self._method_undo_3218959716 != nil)
+        self._method_redo_3218959716 = StringName(from: "redo")
+        assert(self._method_redo_3218959716 != nil)
+        self._method_clear_undo_history_3218959716 = StringName(from: "clear_undo_history")
+        assert(self._method_clear_undo_history_3218959716 != nil)
+        self._method_tag_saved_version_3218959716 = StringName(from: "tag_saved_version")
+        assert(self._method_tag_saved_version_3218959716 != nil)
+        self._method_get_version_3905245786 = StringName(from: "get_version")
+        assert(self._method_get_version_3905245786 != nil)
+        self._method_get_saved_version_3905245786 = StringName(from: "get_saved_version")
+        assert(self._method_get_saved_version_3905245786 != nil)
+        self._method_set_search_text_83702148 = StringName(from: "set_search_text")
+        assert(self._method_set_search_text_83702148 != nil)
+        self._method_set_search_flags_1286410249 = StringName(from: "set_search_flags")
+        assert(self._method_set_search_flags_1286410249 != nil)
+        self._method_search_1203739136 = StringName(from: "search")
+        assert(self._method_search_1203739136 != nil)
+        self._method_set_tooltip_request_func_1611583062 = StringName(from: "set_tooltip_request_func")
+        assert(self._method_set_tooltip_request_func_1611583062 != nil)
+        self._method_get_local_mouse_pos_3341600327 = StringName(from: "get_local_mouse_pos")
+        assert(self._method_get_local_mouse_pos_3341600327 != nil)
+        self._method_get_word_at_pos_3674420000 = StringName(from: "get_word_at_pos")
+        assert(self._method_get_word_at_pos_3674420000 != nil)
+        self._method_get_line_column_at_pos_850652858 = StringName(from: "get_line_column_at_pos")
+        assert(self._method_get_line_column_at_pos_850652858 != nil)
+        self._method_get_pos_at_line_column_410388347 = StringName(from: "get_pos_at_line_column")
+        assert(self._method_get_pos_at_line_column_410388347 != nil)
+        self._method_get_rect_at_line_column_3256618057 = StringName(from: "get_rect_at_line_column")
+        assert(self._method_get_rect_at_line_column_3256618057 != nil)
+        self._method_get_minimap_line_at_pos_2485466453 = StringName(from: "get_minimap_line_at_pos")
+        assert(self._method_get_minimap_line_at_pos_2485466453 != nil)
+        self._method_is_dragging_cursor_36873697 = StringName(from: "is_dragging_cursor")
+        assert(self._method_is_dragging_cursor_36873697 != nil)
+        self._method_is_mouse_over_selection_1099474134 = StringName(from: "is_mouse_over_selection")
+        assert(self._method_is_mouse_over_selection_1099474134 != nil)
+        self._method_set_caret_type_1211596914 = StringName(from: "set_caret_type")
+        assert(self._method_set_caret_type_1211596914 != nil)
+        self._method_get_caret_type_2830252959 = StringName(from: "get_caret_type")
+        assert(self._method_get_caret_type_2830252959 != nil)
+        self._method_set_caret_blink_enabled_2586408642 = StringName(from: "set_caret_blink_enabled")
+        assert(self._method_set_caret_blink_enabled_2586408642 != nil)
+        self._method_is_caret_blink_enabled_36873697 = StringName(from: "is_caret_blink_enabled")
+        assert(self._method_is_caret_blink_enabled_36873697 != nil)
+        self._method_set_caret_blink_interval_373806689 = StringName(from: "set_caret_blink_interval")
+        assert(self._method_set_caret_blink_interval_373806689 != nil)
+        self._method_get_caret_blink_interval_1740695150 = StringName(from: "get_caret_blink_interval")
+        assert(self._method_get_caret_blink_interval_1740695150 != nil)
+        self._method_set_move_caret_on_right_click_enabled_2586408642 = StringName(from: "set_move_caret_on_right_click_enabled")
+        assert(self._method_set_move_caret_on_right_click_enabled_2586408642 != nil)
+        self._method_is_move_caret_on_right_click_enabled_36873697 = StringName(from: "is_move_caret_on_right_click_enabled")
+        assert(self._method_is_move_caret_on_right_click_enabled_36873697 != nil)
+        self._method_set_caret_mid_grapheme_enabled_2586408642 = StringName(from: "set_caret_mid_grapheme_enabled")
+        assert(self._method_set_caret_mid_grapheme_enabled_2586408642 != nil)
+        self._method_is_caret_mid_grapheme_enabled_36873697 = StringName(from: "is_caret_mid_grapheme_enabled")
+        assert(self._method_is_caret_mid_grapheme_enabled_36873697 != nil)
+        self._method_set_multiple_carets_enabled_2586408642 = StringName(from: "set_multiple_carets_enabled")
+        assert(self._method_set_multiple_carets_enabled_2586408642 != nil)
+        self._method_is_multiple_carets_enabled_36873697 = StringName(from: "is_multiple_carets_enabled")
+        assert(self._method_is_multiple_carets_enabled_36873697 != nil)
+        self._method_add_caret_50157827 = StringName(from: "add_caret")
+        assert(self._method_add_caret_50157827 != nil)
+        self._method_remove_caret_1286410249 = StringName(from: "remove_caret")
+        assert(self._method_remove_caret_1286410249 != nil)
+        self._method_remove_secondary_carets_3218959716 = StringName(from: "remove_secondary_carets")
+        assert(self._method_remove_secondary_carets_3218959716 != nil)
+        self._method_merge_overlapping_carets_3218959716 = StringName(from: "merge_overlapping_carets")
+        assert(self._method_merge_overlapping_carets_3218959716 != nil)
+        self._method_get_caret_count_3905245786 = StringName(from: "get_caret_count")
+        assert(self._method_get_caret_count_3905245786 != nil)
+        self._method_add_caret_at_carets_2586408642 = StringName(from: "add_caret_at_carets")
+        assert(self._method_add_caret_at_carets_2586408642 != nil)
+        self._method_get_caret_index_edit_order_969006518 = StringName(from: "get_caret_index_edit_order")
+        assert(self._method_get_caret_index_edit_order_969006518 != nil)
+        self._method_adjust_carets_after_edit_1770277138 = StringName(from: "adjust_carets_after_edit")
+        assert(self._method_adjust_carets_after_edit_1770277138 != nil)
+        self._method_is_caret_visible_1051549951 = StringName(from: "is_caret_visible")
+        assert(self._method_is_caret_visible_1051549951 != nil)
+        self._method_get_caret_draw_pos_478253731 = StringName(from: "get_caret_draw_pos")
+        assert(self._method_get_caret_draw_pos_478253731 != nil)
+        self._method_set_caret_line_1413195636 = StringName(from: "set_caret_line")
+        assert(self._method_set_caret_line_1413195636 != nil)
+        self._method_get_caret_line_1591665591 = StringName(from: "get_caret_line")
+        assert(self._method_get_caret_line_1591665591 != nil)
+        self._method_set_caret_column_1071284433 = StringName(from: "set_caret_column")
+        assert(self._method_set_caret_column_1071284433 != nil)
+        self._method_get_caret_column_1591665591 = StringName(from: "get_caret_column")
+        assert(self._method_get_caret_column_1591665591 != nil)
+        self._method_get_caret_wrap_index_1591665591 = StringName(from: "get_caret_wrap_index")
+        assert(self._method_get_caret_wrap_index_1591665591 != nil)
+        self._method_get_word_under_caret_3929349208 = StringName(from: "get_word_under_caret")
+        assert(self._method_get_word_under_caret_3929349208 != nil)
+        self._method_set_selecting_enabled_2586408642 = StringName(from: "set_selecting_enabled")
+        assert(self._method_set_selecting_enabled_2586408642 != nil)
+        self._method_is_selecting_enabled_36873697 = StringName(from: "is_selecting_enabled")
+        assert(self._method_is_selecting_enabled_36873697 != nil)
+        self._method_set_deselect_on_focus_loss_enabled_2586408642 = StringName(from: "set_deselect_on_focus_loss_enabled")
+        assert(self._method_set_deselect_on_focus_loss_enabled_2586408642 != nil)
+        self._method_is_deselect_on_focus_loss_enabled_36873697 = StringName(from: "is_deselect_on_focus_loss_enabled")
+        assert(self._method_is_deselect_on_focus_loss_enabled_36873697 != nil)
+        self._method_set_drag_and_drop_selection_enabled_2586408642 = StringName(from: "set_drag_and_drop_selection_enabled")
+        assert(self._method_set_drag_and_drop_selection_enabled_2586408642 != nil)
+        self._method_is_drag_and_drop_selection_enabled_36873697 = StringName(from: "is_drag_and_drop_selection_enabled")
+        assert(self._method_is_drag_and_drop_selection_enabled_36873697 != nil)
+        self._method_set_selection_mode_2920622473 = StringName(from: "set_selection_mode")
+        assert(self._method_set_selection_mode_2920622473 != nil)
+        self._method_get_selection_mode_3750106938 = StringName(from: "get_selection_mode")
+        assert(self._method_get_selection_mode_3750106938 != nil)
+        self._method_select_all_3218959716 = StringName(from: "select_all")
+        assert(self._method_select_all_3218959716 != nil)
+        self._method_select_word_under_caret_1025054187 = StringName(from: "select_word_under_caret")
+        assert(self._method_select_word_under_caret_1025054187 != nil)
+        self._method_add_selection_for_next_occurrence_3218959716 = StringName(from: "add_selection_for_next_occurrence")
+        assert(self._method_add_selection_for_next_occurrence_3218959716 != nil)
+        self._method_select_4269665324 = StringName(from: "select")
+        assert(self._method_select_4269665324 != nil)
+        self._method_has_selection_2824505868 = StringName(from: "has_selection")
+        assert(self._method_has_selection_2824505868 != nil)
+        self._method_get_selected_text_2309358862 = StringName(from: "get_selected_text")
+        assert(self._method_get_selected_text_2309358862 != nil)
+        self._method_get_selection_line_1591665591 = StringName(from: "get_selection_line")
+        assert(self._method_get_selection_line_1591665591 != nil)
+        self._method_get_selection_column_1591665591 = StringName(from: "get_selection_column")
+        assert(self._method_get_selection_column_1591665591 != nil)
+        self._method_get_selection_from_line_1591665591 = StringName(from: "get_selection_from_line")
+        assert(self._method_get_selection_from_line_1591665591 != nil)
+        self._method_get_selection_from_column_1591665591 = StringName(from: "get_selection_from_column")
+        assert(self._method_get_selection_from_column_1591665591 != nil)
+        self._method_get_selection_to_line_1591665591 = StringName(from: "get_selection_to_line")
+        assert(self._method_get_selection_to_line_1591665591 != nil)
+        self._method_get_selection_to_column_1591665591 = StringName(from: "get_selection_to_column")
+        assert(self._method_get_selection_to_column_1591665591 != nil)
+        self._method_deselect_1025054187 = StringName(from: "deselect")
+        assert(self._method_deselect_1025054187 != nil)
+        self._method_delete_selection_1025054187 = StringName(from: "delete_selection")
+        assert(self._method_delete_selection_1025054187 != nil)
+        self._method_set_line_wrapping_mode_2525115309 = StringName(from: "set_line_wrapping_mode")
+        assert(self._method_set_line_wrapping_mode_2525115309 != nil)
+        self._method_get_line_wrapping_mode_3562716114 = StringName(from: "get_line_wrapping_mode")
+        assert(self._method_get_line_wrapping_mode_3562716114 != nil)
+        self._method_is_line_wrapped_1116898809 = StringName(from: "is_line_wrapped")
+        assert(self._method_is_line_wrapped_1116898809 != nil)
+        self._method_get_line_wrap_count_923996154 = StringName(from: "get_line_wrap_count")
+        assert(self._method_get_line_wrap_count_923996154 != nil)
+        self._method_get_line_wrap_index_at_column_3175239445 = StringName(from: "get_line_wrap_index_at_column")
+        assert(self._method_get_line_wrap_index_at_column_3175239445 != nil)
+        self._method_get_line_wrapped_text_647634434 = StringName(from: "get_line_wrapped_text")
+        assert(self._method_get_line_wrapped_text_647634434 != nil)
+        self._method_set_smooth_scroll_enabled_2586408642 = StringName(from: "set_smooth_scroll_enabled")
+        assert(self._method_set_smooth_scroll_enabled_2586408642 != nil)
+        self._method_is_smooth_scroll_enabled_36873697 = StringName(from: "is_smooth_scroll_enabled")
+        assert(self._method_is_smooth_scroll_enabled_36873697 != nil)
+        self._method_get_v_scroll_bar_3226026593 = StringName(from: "get_v_scroll_bar")
+        assert(self._method_get_v_scroll_bar_3226026593 != nil)
+        self._method_get_h_scroll_bar_3774687988 = StringName(from: "get_h_scroll_bar")
+        assert(self._method_get_h_scroll_bar_3774687988 != nil)
+        self._method_set_v_scroll_373806689 = StringName(from: "set_v_scroll")
+        assert(self._method_set_v_scroll_373806689 != nil)
+        self._method_get_v_scroll_1740695150 = StringName(from: "get_v_scroll")
+        assert(self._method_get_v_scroll_1740695150 != nil)
+        self._method_set_h_scroll_1286410249 = StringName(from: "set_h_scroll")
+        assert(self._method_set_h_scroll_1286410249 != nil)
+        self._method_get_h_scroll_3905245786 = StringName(from: "get_h_scroll")
+        assert(self._method_get_h_scroll_3905245786 != nil)
+        self._method_set_scroll_past_end_of_file_enabled_2586408642 = StringName(from: "set_scroll_past_end_of_file_enabled")
+        assert(self._method_set_scroll_past_end_of_file_enabled_2586408642 != nil)
+        self._method_is_scroll_past_end_of_file_enabled_36873697 = StringName(from: "is_scroll_past_end_of_file_enabled")
+        assert(self._method_is_scroll_past_end_of_file_enabled_36873697 != nil)
+        self._method_set_v_scroll_speed_373806689 = StringName(from: "set_v_scroll_speed")
+        assert(self._method_set_v_scroll_speed_373806689 != nil)
+        self._method_get_v_scroll_speed_1740695150 = StringName(from: "get_v_scroll_speed")
+        assert(self._method_get_v_scroll_speed_1740695150 != nil)
+        self._method_set_fit_content_height_enabled_2586408642 = StringName(from: "set_fit_content_height_enabled")
+        assert(self._method_set_fit_content_height_enabled_2586408642 != nil)
+        self._method_is_fit_content_height_enabled_36873697 = StringName(from: "is_fit_content_height_enabled")
+        assert(self._method_is_fit_content_height_enabled_36873697 != nil)
+        self._method_get_scroll_pos_for_line_3274652423 = StringName(from: "get_scroll_pos_for_line")
+        assert(self._method_get_scroll_pos_for_line_3274652423 != nil)
+        self._method_set_line_as_first_visible_3023605688 = StringName(from: "set_line_as_first_visible")
+        assert(self._method_set_line_as_first_visible_3023605688 != nil)
+        self._method_get_first_visible_line_3905245786 = StringName(from: "get_first_visible_line")
+        assert(self._method_get_first_visible_line_3905245786 != nil)
+        self._method_set_line_as_center_visible_3023605688 = StringName(from: "set_line_as_center_visible")
+        assert(self._method_set_line_as_center_visible_3023605688 != nil)
+        self._method_set_line_as_last_visible_3023605688 = StringName(from: "set_line_as_last_visible")
+        assert(self._method_set_line_as_last_visible_3023605688 != nil)
+        self._method_get_last_full_visible_line_3905245786 = StringName(from: "get_last_full_visible_line")
+        assert(self._method_get_last_full_visible_line_3905245786 != nil)
+        self._method_get_last_full_visible_line_wrap_index_3905245786 = StringName(from: "get_last_full_visible_line_wrap_index")
+        assert(self._method_get_last_full_visible_line_wrap_index_3905245786 != nil)
+        self._method_get_visible_line_count_3905245786 = StringName(from: "get_visible_line_count")
+        assert(self._method_get_visible_line_count_3905245786 != nil)
+        self._method_get_visible_line_count_in_range_3175239445 = StringName(from: "get_visible_line_count_in_range")
+        assert(self._method_get_visible_line_count_in_range_3175239445 != nil)
+        self._method_get_total_visible_line_count_3905245786 = StringName(from: "get_total_visible_line_count")
+        assert(self._method_get_total_visible_line_count_3905245786 != nil)
+        self._method_adjust_viewport_to_caret_1995695955 = StringName(from: "adjust_viewport_to_caret")
+        assert(self._method_adjust_viewport_to_caret_1995695955 != nil)
+        self._method_center_viewport_to_caret_1995695955 = StringName(from: "center_viewport_to_caret")
+        assert(self._method_center_viewport_to_caret_1995695955 != nil)
+        self._method_set_draw_minimap_2586408642 = StringName(from: "set_draw_minimap")
+        assert(self._method_set_draw_minimap_2586408642 != nil)
+        self._method_is_drawing_minimap_36873697 = StringName(from: "is_drawing_minimap")
+        assert(self._method_is_drawing_minimap_36873697 != nil)
+        self._method_set_minimap_width_1286410249 = StringName(from: "set_minimap_width")
+        assert(self._method_set_minimap_width_1286410249 != nil)
+        self._method_get_minimap_width_3905245786 = StringName(from: "get_minimap_width")
+        assert(self._method_get_minimap_width_3905245786 != nil)
+        self._method_get_minimap_visible_lines_3905245786 = StringName(from: "get_minimap_visible_lines")
+        assert(self._method_get_minimap_visible_lines_3905245786 != nil)
+        self._method_add_gutter_1025054187 = StringName(from: "add_gutter")
+        assert(self._method_add_gutter_1025054187 != nil)
+        self._method_remove_gutter_1286410249 = StringName(from: "remove_gutter")
+        assert(self._method_remove_gutter_1286410249 != nil)
+        self._method_get_gutter_count_3905245786 = StringName(from: "get_gutter_count")
+        assert(self._method_get_gutter_count_3905245786 != nil)
+        self._method_set_gutter_name_501894301 = StringName(from: "set_gutter_name")
+        assert(self._method_set_gutter_name_501894301 != nil)
+        self._method_get_gutter_name_844755477 = StringName(from: "get_gutter_name")
+        assert(self._method_get_gutter_name_844755477 != nil)
+        self._method_set_gutter_type_1088959071 = StringName(from: "set_gutter_type")
+        assert(self._method_set_gutter_type_1088959071 != nil)
+        self._method_get_gutter_type_1159699127 = StringName(from: "get_gutter_type")
+        assert(self._method_get_gutter_type_1159699127 != nil)
+        self._method_set_gutter_width_3937882851 = StringName(from: "set_gutter_width")
+        assert(self._method_set_gutter_width_3937882851 != nil)
+        self._method_get_gutter_width_923996154 = StringName(from: "get_gutter_width")
+        assert(self._method_get_gutter_width_923996154 != nil)
+        self._method_set_gutter_draw_300928843 = StringName(from: "set_gutter_draw")
+        assert(self._method_set_gutter_draw_300928843 != nil)
+        self._method_is_gutter_drawn_1116898809 = StringName(from: "is_gutter_drawn")
+        assert(self._method_is_gutter_drawn_1116898809 != nil)
+        self._method_set_gutter_clickable_300928843 = StringName(from: "set_gutter_clickable")
+        assert(self._method_set_gutter_clickable_300928843 != nil)
+        self._method_is_gutter_clickable_1116898809 = StringName(from: "is_gutter_clickable")
+        assert(self._method_is_gutter_clickable_1116898809 != nil)
+        self._method_set_gutter_overwritable_300928843 = StringName(from: "set_gutter_overwritable")
+        assert(self._method_set_gutter_overwritable_300928843 != nil)
+        self._method_is_gutter_overwritable_1116898809 = StringName(from: "is_gutter_overwritable")
+        assert(self._method_is_gutter_overwritable_1116898809 != nil)
+        self._method_merge_gutters_3937882851 = StringName(from: "merge_gutters")
+        assert(self._method_merge_gutters_3937882851 != nil)
+        self._method_set_gutter_custom_draw_957362965 = StringName(from: "set_gutter_custom_draw")
+        assert(self._method_set_gutter_custom_draw_957362965 != nil)
+        self._method_get_total_gutter_width_3905245786 = StringName(from: "get_total_gutter_width")
+        assert(self._method_get_total_gutter_width_3905245786 != nil)
+        self._method_set_line_gutter_metadata_2060538656 = StringName(from: "set_line_gutter_metadata")
+        assert(self._method_set_line_gutter_metadata_2060538656 != nil)
+        self._method_get_line_gutter_metadata_678354945 = StringName(from: "get_line_gutter_metadata")
+        assert(self._method_get_line_gutter_metadata_678354945 != nil)
+        self._method_set_line_gutter_text_2285447957 = StringName(from: "set_line_gutter_text")
+        assert(self._method_set_line_gutter_text_2285447957 != nil)
+        self._method_get_line_gutter_text_1391810591 = StringName(from: "get_line_gutter_text")
+        assert(self._method_get_line_gutter_text_1391810591 != nil)
+        self._method_set_line_gutter_icon_176101966 = StringName(from: "set_line_gutter_icon")
+        assert(self._method_set_line_gutter_icon_176101966 != nil)
+        self._method_get_line_gutter_icon_2584904275 = StringName(from: "get_line_gutter_icon")
+        assert(self._method_get_line_gutter_icon_2584904275 != nil)
+        self._method_set_line_gutter_item_color_3733378741 = StringName(from: "set_line_gutter_item_color")
+        assert(self._method_set_line_gutter_item_color_3733378741 != nil)
+        self._method_get_line_gutter_item_color_2165839948 = StringName(from: "get_line_gutter_item_color")
+        assert(self._method_get_line_gutter_item_color_2165839948 != nil)
+        self._method_set_line_gutter_clickable_1383440665 = StringName(from: "set_line_gutter_clickable")
+        assert(self._method_set_line_gutter_clickable_1383440665 != nil)
+        self._method_is_line_gutter_clickable_2522259332 = StringName(from: "is_line_gutter_clickable")
+        assert(self._method_is_line_gutter_clickable_2522259332 != nil)
+        self._method_set_line_background_color_2878471219 = StringName(from: "set_line_background_color")
+        assert(self._method_set_line_background_color_2878471219 != nil)
+        self._method_get_line_background_color_3457211756 = StringName(from: "get_line_background_color")
+        assert(self._method_get_line_background_color_3457211756 != nil)
+        self._method_set_syntax_highlighter_2765644541 = StringName(from: "set_syntax_highlighter")
+        assert(self._method_set_syntax_highlighter_2765644541 != nil)
+        self._method_get_syntax_highlighter_2721131626 = StringName(from: "get_syntax_highlighter")
+        assert(self._method_get_syntax_highlighter_2721131626 != nil)
+        self._method_set_highlight_current_line_2586408642 = StringName(from: "set_highlight_current_line")
+        assert(self._method_set_highlight_current_line_2586408642 != nil)
+        self._method_is_highlight_current_line_enabled_36873697 = StringName(from: "is_highlight_current_line_enabled")
+        assert(self._method_is_highlight_current_line_enabled_36873697 != nil)
+        self._method_set_highlight_all_occurrences_2586408642 = StringName(from: "set_highlight_all_occurrences")
+        assert(self._method_set_highlight_all_occurrences_2586408642 != nil)
+        self._method_is_highlight_all_occurrences_enabled_36873697 = StringName(from: "is_highlight_all_occurrences_enabled")
+        assert(self._method_is_highlight_all_occurrences_enabled_36873697 != nil)
+        self._method_get_draw_control_chars_36873697 = StringName(from: "get_draw_control_chars")
+        assert(self._method_get_draw_control_chars_36873697 != nil)
+        self._method_set_draw_control_chars_2586408642 = StringName(from: "set_draw_control_chars")
+        assert(self._method_set_draw_control_chars_2586408642 != nil)
+        self._method_set_draw_tabs_2586408642 = StringName(from: "set_draw_tabs")
+        assert(self._method_set_draw_tabs_2586408642 != nil)
+        self._method_is_drawing_tabs_36873697 = StringName(from: "is_drawing_tabs")
+        assert(self._method_is_drawing_tabs_36873697 != nil)
+        self._method_set_draw_spaces_2586408642 = StringName(from: "set_draw_spaces")
+        assert(self._method_set_draw_spaces_2586408642 != nil)
+        self._method_is_drawing_spaces_36873697 = StringName(from: "is_drawing_spaces")
+        assert(self._method_is_drawing_spaces_36873697 != nil)
+        self._method_get_menu_229722558 = StringName(from: "get_menu")
+        assert(self._method_get_menu_229722558 != nil)
+        self._method_is_menu_visible_36873697 = StringName(from: "is_menu_visible")
+        assert(self._method_is_menu_visible_36873697 != nil)
+        self._method_menu_option_1286410249 = StringName(from: "menu_option")
+        assert(self._method_menu_option_1286410249 != nil)
     }
 
     public func _handle_unicode_input(unicode_char: Int64, caret_index: Int64)  {
@@ -916,12 +714,7 @@ open class TextEdit : Control {
                 .init(unicode_char_native), .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__handle_unicode_input_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -933,12 +726,7 @@ open class TextEdit : Control {
                 .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__backspace_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _cut(caret_index: Int64)  {
@@ -949,12 +737,7 @@ open class TextEdit : Control {
                 .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__cut_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _copy(caret_index: Int64)  {
@@ -965,12 +748,7 @@ open class TextEdit : Control {
                 .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__copy_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _paste(caret_index: Int64)  {
@@ -981,12 +759,7 @@ open class TextEdit : Control {
                 .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__paste_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func _paste_primary_clipboard(caret_index: Int64)  {
@@ -997,12 +770,7 @@ open class TextEdit : Control {
                 .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__paste_primary_clipboard_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
     }
     public func has_ime_text() -> UInt8 {
@@ -1014,8 +782,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_ime_text_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_ime_text_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1030,8 +803,13 @@ open class TextEdit : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_editable_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_editable_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1047,8 +825,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_editable_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_editable_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1063,8 +846,13 @@ open class TextEdit : Control {
                 .init(direction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_text_direction_119160795,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_text_direction_119160795._native_ptr(),
+                    119160795)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1079,8 +867,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_direction_797257663,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_direction_797257663._native_ptr(),
+                    797257663)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1095,8 +888,13 @@ open class TextEdit : Control {
                 .init(language_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_language_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_language_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1110,8 +908,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_language_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_language_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1126,8 +929,13 @@ open class TextEdit : Control {
                 .init(parser_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_structured_text_bidi_override_55961453,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_structured_text_bidi_override_55961453._native_ptr(),
+                    55961453)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1142,8 +950,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_structured_text_bidi_override_3385126229,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_structured_text_bidi_override_3385126229._native_ptr(),
+                    3385126229)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1158,8 +971,13 @@ open class TextEdit : Control {
                 .init(args_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_structured_text_bidi_override_options_381264803,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_structured_text_bidi_override_options_381264803._native_ptr(),
+                    381264803)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1173,8 +991,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_structured_text_bidi_override_options_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_structured_text_bidi_override_options_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1189,8 +1012,13 @@ open class TextEdit : Control {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tab_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tab_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1206,8 +1034,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_tab_size_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_tab_size_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1222,8 +1055,13 @@ open class TextEdit : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_overtype_mode_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_overtype_mode_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1239,8 +1077,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_overtype_mode_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_overtype_mode_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1255,8 +1098,13 @@ open class TextEdit : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_context_menu_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_context_menu_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1272,8 +1120,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_context_menu_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_context_menu_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1288,8 +1141,13 @@ open class TextEdit : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_shortcut_keys_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_shortcut_keys_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1305,8 +1163,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_shortcut_keys_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_shortcut_keys_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1321,8 +1184,13 @@ open class TextEdit : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_virtual_keyboard_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_virtual_keyboard_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1338,8 +1206,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_virtual_keyboard_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_virtual_keyboard_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1354,8 +1227,13 @@ open class TextEdit : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_middle_mouse_paste_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_middle_mouse_paste_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1371,8 +1249,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_middle_mouse_paste_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_middle_mouse_paste_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1386,8 +1269,13 @@ open class TextEdit : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1401,8 +1289,13 @@ open class TextEdit : Control {
                 .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_text_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_text_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1416,8 +1309,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1433,8 +1331,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1449,8 +1352,13 @@ open class TextEdit : Control {
                 .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_placeholder_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_placeholder_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1464,8 +1372,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_placeholder_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_placeholder_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1481,8 +1394,13 @@ open class TextEdit : Control {
                 .init(line_native), .init(new_text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_line_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_line_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1498,8 +1416,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1518,8 +1441,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_width_3294126239,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_width_3294126239._native_ptr(),
+                    3294126239)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1537,8 +1465,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_height_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_height_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1555,8 +1488,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_indent_level_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_indent_level_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1574,8 +1512,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_first_non_whitespace_column_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_first_non_whitespace_column_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1592,8 +1535,13 @@ open class TextEdit : Control {
                 .init(from_line_native), .init(to_line_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_swap_lines_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_swap_lines_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1610,8 +1558,13 @@ open class TextEdit : Control {
                 .init(line_native), .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_insert_line_at_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_insert_line_at_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1627,8 +1580,13 @@ open class TextEdit : Control {
                 .init(text_native), .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_insert_text_at_caret_3043792800,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_insert_text_at_caret_3043792800._native_ptr(),
+                    3043792800)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1646,8 +1604,13 @@ open class TextEdit : Control {
                 .init(from_line_native), .init(from_column_native), .init(to_line_native), .init(to_column_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_text_4275841770,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_text_4275841770._native_ptr(),
+                    4275841770)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1666,8 +1629,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_last_unhidden_line_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_last_unhidden_line_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1685,8 +1653,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_next_visible_line_offset_from_3175239445,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_next_visible_line_offset_from_3175239445._native_ptr(),
+                    3175239445)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1706,8 +1679,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_next_visible_line_index_offset_from_3386475622,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_next_visible_line_index_offset_from_3386475622._native_ptr(),
+                    3386475622)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1725,8 +1703,13 @@ open class TextEdit : Control {
                 .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_backspace_1025054187,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_backspace_1025054187._native_ptr(),
+                    1025054187)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1741,8 +1724,13 @@ open class TextEdit : Control {
                 .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_cut_1025054187,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_cut_1025054187._native_ptr(),
+                    1025054187)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1757,8 +1745,13 @@ open class TextEdit : Control {
                 .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_copy_1025054187,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_copy_1025054187._native_ptr(),
+                    1025054187)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1773,8 +1766,13 @@ open class TextEdit : Control {
                 .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_paste_1025054187,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_paste_1025054187._native_ptr(),
+                    1025054187)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1789,8 +1787,13 @@ open class TextEdit : Control {
                 .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_paste_primary_clipboard_1025054187,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_paste_primary_clipboard_1025054187._native_ptr(),
+                    1025054187)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1805,8 +1808,13 @@ open class TextEdit : Control {
                 .init(action_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_start_action_2834827583,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_start_action_2834827583._native_ptr(),
+                    2834827583)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1820,8 +1828,13 @@ open class TextEdit : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_end_action_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_end_action_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1834,8 +1847,13 @@ open class TextEdit : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_begin_complex_operation_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_begin_complex_operation_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1848,8 +1866,13 @@ open class TextEdit : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_end_complex_operation_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_end_complex_operation_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1864,8 +1887,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_undo_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_undo_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1881,8 +1909,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_redo_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_redo_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1896,8 +1929,13 @@ open class TextEdit : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_undo_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_undo_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1910,8 +1948,13 @@ open class TextEdit : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_redo_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_redo_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1924,8 +1967,13 @@ open class TextEdit : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_undo_history_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_undo_history_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1938,8 +1986,13 @@ open class TextEdit : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_tag_saved_version_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_tag_saved_version_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1954,8 +2007,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_version_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_version_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1971,8 +2029,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_saved_version_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_saved_version_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1987,8 +2050,13 @@ open class TextEdit : Control {
                 .init(search_text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_search_text_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_search_text_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2002,8 +2070,13 @@ open class TextEdit : Control {
                 .init(flags_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_search_flags_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_search_flags_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2022,8 +2095,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_search_1203739136,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_search_1203739136._native_ptr(),
+                    1203739136)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2041,8 +2119,13 @@ open class TextEdit : Control {
                 .init(callback_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_tooltip_request_func_1611583062,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_tooltip_request_func_1611583062._native_ptr(),
+                    1611583062)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2056,8 +2139,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_local_mouse_pos_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_local_mouse_pos_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2073,8 +2161,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_word_at_pos_3674420000,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_word_at_pos_3674420000._native_ptr(),
+                    3674420000)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2091,8 +2184,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_column_at_pos_850652858,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_column_at_pos_850652858._native_ptr(),
+                    850652858)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2110,8 +2208,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pos_at_line_column_410388347,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pos_at_line_column_410388347._native_ptr(),
+                    410388347)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2130,8 +2233,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rect_at_line_column_3256618057,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rect_at_line_column_3256618057._native_ptr(),
+                    3256618057)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2150,8 +2258,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_minimap_line_at_pos_2485466453,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_minimap_line_at_pos_2485466453._native_ptr(),
+                    2485466453)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2167,8 +2280,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_dragging_cursor_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_dragging_cursor_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2186,8 +2304,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_mouse_over_selection_1099474134,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_mouse_over_selection_1099474134._native_ptr(),
+                    1099474134)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2204,8 +2327,13 @@ open class TextEdit : Control {
                 .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_caret_type_1211596914,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_caret_type_1211596914._native_ptr(),
+                    1211596914)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2220,8 +2348,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_caret_type_2830252959,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_caret_type_2830252959._native_ptr(),
+                    2830252959)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2236,8 +2369,13 @@ open class TextEdit : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_caret_blink_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_caret_blink_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2253,8 +2391,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_caret_blink_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_caret_blink_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2269,8 +2412,13 @@ open class TextEdit : Control {
                 .init(interval_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_caret_blink_interval_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_caret_blink_interval_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2286,8 +2434,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_caret_blink_interval_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_caret_blink_interval_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2302,8 +2455,13 @@ open class TextEdit : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_move_caret_on_right_click_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_move_caret_on_right_click_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2319,8 +2477,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_move_caret_on_right_click_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_move_caret_on_right_click_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2335,8 +2498,13 @@ open class TextEdit : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_caret_mid_grapheme_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_caret_mid_grapheme_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2352,8 +2520,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_caret_mid_grapheme_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_caret_mid_grapheme_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2368,8 +2541,13 @@ open class TextEdit : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_multiple_carets_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_multiple_carets_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2385,8 +2563,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_multiple_carets_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_multiple_carets_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2404,8 +2587,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_caret_50157827,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_caret_50157827._native_ptr(),
+                    50157827)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2422,8 +2610,13 @@ open class TextEdit : Control {
                 .init(caret_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_caret_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_caret_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2437,8 +2630,13 @@ open class TextEdit : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_secondary_carets_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_secondary_carets_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2451,8 +2649,13 @@ open class TextEdit : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_merge_overlapping_carets_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_merge_overlapping_carets_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2467,8 +2670,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_caret_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_caret_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2483,8 +2691,13 @@ open class TextEdit : Control {
                 .init(below_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_caret_at_carets_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_caret_at_carets_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2499,8 +2712,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_caret_index_edit_order_969006518,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_caret_index_edit_order_969006518._native_ptr(),
+                    969006518)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2519,8 +2737,13 @@ open class TextEdit : Control {
                 .init(caret_native), .init(from_line_native), .init(from_col_native), .init(to_line_native), .init(to_col_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_adjust_carets_after_edit_1770277138,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_adjust_carets_after_edit_1770277138._native_ptr(),
+                    1770277138)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2541,8 +2764,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_caret_visible_1051549951,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_caret_visible_1051549951._native_ptr(),
+                    1051549951)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2559,8 +2787,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_caret_draw_pos_478253731,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_caret_draw_pos_478253731._native_ptr(),
+                    478253731)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2580,8 +2813,13 @@ open class TextEdit : Control {
                 .init(line_native), .init(adjust_viewport_native), .init(can_be_hidden_native), .init(wrap_index_native), .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_caret_line_1413195636,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_caret_line_1413195636._native_ptr(),
+                    1413195636)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2602,8 +2840,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_caret_line_1591665591,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_caret_line_1591665591._native_ptr(),
+                    1591665591)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2621,8 +2864,13 @@ open class TextEdit : Control {
                 .init(column_native), .init(adjust_viewport_native), .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_caret_column_1071284433,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_caret_column_1071284433._native_ptr(),
+                    1071284433)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2641,8 +2889,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_caret_column_1591665591,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_caret_column_1591665591._native_ptr(),
+                    1591665591)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2660,8 +2913,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_caret_wrap_index_1591665591,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_caret_wrap_index_1591665591._native_ptr(),
+                    1591665591)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2678,8 +2936,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_word_under_caret_3929349208,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_word_under_caret_3929349208._native_ptr(),
+                    3929349208)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2695,8 +2958,13 @@ open class TextEdit : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_selecting_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_selecting_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2712,8 +2980,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_selecting_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_selecting_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2728,8 +3001,13 @@ open class TextEdit : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_deselect_on_focus_loss_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_deselect_on_focus_loss_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2745,8 +3023,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_deselect_on_focus_loss_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_deselect_on_focus_loss_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2761,8 +3044,13 @@ open class TextEdit : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_drag_and_drop_selection_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_drag_and_drop_selection_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2778,8 +3066,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_drag_and_drop_selection_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_drag_and_drop_selection_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2797,8 +3090,13 @@ open class TextEdit : Control {
                 .init(mode_native), .init(line_native), .init(column_native), .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_selection_mode_2920622473,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_selection_mode_2920622473._native_ptr(),
+                    2920622473)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2816,8 +3114,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selection_mode_3750106938,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selection_mode_3750106938._native_ptr(),
+                    3750106938)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2831,8 +3134,13 @@ open class TextEdit : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_select_all_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_select_all_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2846,8 +3154,13 @@ open class TextEdit : Control {
                 .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_select_word_under_caret_1025054187,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_select_word_under_caret_1025054187._native_ptr(),
+                    1025054187)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2861,8 +3174,13 @@ open class TextEdit : Control {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_selection_for_next_occurrence_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_selection_for_next_occurrence_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2880,8 +3198,13 @@ open class TextEdit : Control {
                 .init(from_line_native), .init(from_column_native), .init(to_line_native), .init(to_column_native), .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_select_4269665324,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_select_4269665324._native_ptr(),
+                    4269665324)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -2902,8 +3225,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_has_selection_2824505868,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_has_selection_2824505868._native_ptr(),
+                    2824505868)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2920,8 +3248,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selected_text_2309358862,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selected_text_2309358862._native_ptr(),
+                    2309358862)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2939,8 +3272,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selection_line_1591665591,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selection_line_1591665591._native_ptr(),
+                    1591665591)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2958,8 +3296,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selection_column_1591665591,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selection_column_1591665591._native_ptr(),
+                    1591665591)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2977,8 +3320,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selection_from_line_1591665591,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selection_from_line_1591665591._native_ptr(),
+                    1591665591)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -2996,8 +3344,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selection_from_column_1591665591,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selection_from_column_1591665591._native_ptr(),
+                    1591665591)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3015,8 +3368,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selection_to_line_1591665591,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selection_to_line_1591665591._native_ptr(),
+                    1591665591)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3034,8 +3392,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_selection_to_column_1591665591,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_selection_to_column_1591665591._native_ptr(),
+                    1591665591)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3051,8 +3414,13 @@ open class TextEdit : Control {
                 .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_deselect_1025054187,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_deselect_1025054187._native_ptr(),
+                    1025054187)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3067,8 +3435,13 @@ open class TextEdit : Control {
                 .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_delete_selection_1025054187,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_delete_selection_1025054187._native_ptr(),
+                    1025054187)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3083,8 +3456,13 @@ open class TextEdit : Control {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_line_wrapping_mode_2525115309,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_line_wrapping_mode_2525115309._native_ptr(),
+                    2525115309)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3099,8 +3477,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_wrapping_mode_3562716114,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_wrapping_mode_3562716114._native_ptr(),
+                    3562716114)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3117,8 +3500,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_line_wrapped_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_line_wrapped_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3136,8 +3524,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_wrap_count_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_wrap_count_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3156,8 +3549,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_wrap_index_at_column_3175239445,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_wrap_index_at_column_3175239445._native_ptr(),
+                    3175239445)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3175,8 +3573,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_wrapped_text_647634434,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_wrapped_text_647634434._native_ptr(),
+                    647634434)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3192,8 +3595,13 @@ open class TextEdit : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_smooth_scroll_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_smooth_scroll_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3209,8 +3617,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_smooth_scroll_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_smooth_scroll_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3225,8 +3638,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_v_scroll_bar_3226026593,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_v_scroll_bar_3226026593._native_ptr(),
+                    3226026593)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3241,8 +3659,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_h_scroll_bar_3774687988,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_h_scroll_bar_3774687988._native_ptr(),
+                    3774687988)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3257,8 +3680,13 @@ open class TextEdit : Control {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_v_scroll_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_v_scroll_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3274,8 +3702,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_v_scroll_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_v_scroll_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3290,8 +3723,13 @@ open class TextEdit : Control {
                 .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_h_scroll_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_h_scroll_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3307,8 +3745,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_h_scroll_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_h_scroll_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3323,8 +3766,13 @@ open class TextEdit : Control {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_scroll_past_end_of_file_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_scroll_past_end_of_file_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3340,8 +3788,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_scroll_past_end_of_file_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_scroll_past_end_of_file_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3356,8 +3809,13 @@ open class TextEdit : Control {
                 .init(speed_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_v_scroll_speed_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_v_scroll_speed_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3373,8 +3831,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_v_scroll_speed_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_v_scroll_speed_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3389,8 +3852,13 @@ open class TextEdit : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_fit_content_height_enabled_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_fit_content_height_enabled_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3406,8 +3874,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_fit_content_height_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_fit_content_height_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3425,8 +3898,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_scroll_pos_for_line_3274652423,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_scroll_pos_for_line_3274652423._native_ptr(),
+                    3274652423)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3444,8 +3922,13 @@ open class TextEdit : Control {
                 .init(line_native), .init(wrap_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_line_as_first_visible_3023605688,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_line_as_first_visible_3023605688._native_ptr(),
+                    3023605688)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3462,8 +3945,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_first_visible_line_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_first_visible_line_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3479,8 +3967,13 @@ open class TextEdit : Control {
                 .init(line_native), .init(wrap_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_line_as_center_visible_3023605688,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_line_as_center_visible_3023605688._native_ptr(),
+                    3023605688)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3497,8 +3990,13 @@ open class TextEdit : Control {
                 .init(line_native), .init(wrap_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_line_as_last_visible_3023605688,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_line_as_last_visible_3023605688._native_ptr(),
+                    3023605688)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3515,8 +4013,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_last_full_visible_line_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_last_full_visible_line_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3532,8 +4035,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_last_full_visible_line_wrap_index_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_last_full_visible_line_wrap_index_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3549,8 +4057,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_visible_line_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_visible_line_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3568,8 +4081,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_visible_line_count_in_range_3175239445,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_visible_line_count_in_range_3175239445._native_ptr(),
+                    3175239445)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3587,8 +4105,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_total_visible_line_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_total_visible_line_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3603,8 +4126,13 @@ open class TextEdit : Control {
                 .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_adjust_viewport_to_caret_1995695955,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_adjust_viewport_to_caret_1995695955._native_ptr(),
+                    1995695955)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3619,8 +4147,13 @@ open class TextEdit : Control {
                 .init(caret_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_center_viewport_to_caret_1995695955,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_center_viewport_to_caret_1995695955._native_ptr(),
+                    1995695955)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3635,8 +4168,13 @@ open class TextEdit : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_draw_minimap_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_draw_minimap_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3652,8 +4190,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_drawing_minimap_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_drawing_minimap_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3668,8 +4211,13 @@ open class TextEdit : Control {
                 .init(width_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_minimap_width_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_minimap_width_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3685,8 +4233,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_minimap_width_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_minimap_width_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3702,8 +4255,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_minimap_visible_lines_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_minimap_visible_lines_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3718,8 +4276,13 @@ open class TextEdit : Control {
                 .init(at_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_gutter_1025054187,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_gutter_1025054187._native_ptr(),
+                    1025054187)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3734,8 +4297,13 @@ open class TextEdit : Control {
                 .init(gutter_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_gutter_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_gutter_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3751,8 +4319,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_gutter_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_gutter_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3768,8 +4341,13 @@ open class TextEdit : Control {
                 .init(gutter_native), .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_gutter_name_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_gutter_name_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3785,8 +4363,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_gutter_name_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_gutter_name_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3803,8 +4386,13 @@ open class TextEdit : Control {
                 .init(gutter_native), .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_gutter_type_1088959071,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_gutter_type_1088959071._native_ptr(),
+                    1088959071)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3821,8 +4409,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_gutter_type_1159699127,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_gutter_type_1159699127._native_ptr(),
+                    1159699127)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3839,8 +4432,13 @@ open class TextEdit : Control {
                 .init(gutter_native), .init(width_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_gutter_width_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_gutter_width_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3858,8 +4456,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_gutter_width_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_gutter_width_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3876,8 +4479,13 @@ open class TextEdit : Control {
                 .init(gutter_native), .init(draw_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_gutter_draw_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_gutter_draw_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3895,8 +4503,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_gutter_drawn_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_gutter_drawn_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3913,8 +4526,13 @@ open class TextEdit : Control {
                 .init(gutter_native), .init(clickable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_gutter_clickable_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_gutter_clickable_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3932,8 +4550,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_gutter_clickable_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_gutter_clickable_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3950,8 +4573,13 @@ open class TextEdit : Control {
                 .init(gutter_native), .init(overwritable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_gutter_overwritable_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_gutter_overwritable_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -3969,8 +4597,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_gutter_overwritable_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_gutter_overwritable_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -3987,8 +4620,13 @@ open class TextEdit : Control {
                 .init(from_line_native), .init(to_line_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_merge_gutters_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_merge_gutters_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -4005,8 +4643,13 @@ open class TextEdit : Control {
                 .init(column_native), .init(draw_callback_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_gutter_custom_draw_957362965,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_gutter_custom_draw_957362965._native_ptr(),
+                    957362965)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -4022,8 +4665,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_total_gutter_width_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_total_gutter_width_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -4040,8 +4688,13 @@ open class TextEdit : Control {
                 .init(line_native), .init(gutter_native), .init(metadata_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_line_gutter_metadata_2060538656,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_line_gutter_metadata_2060538656._native_ptr(),
+                    2060538656)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -4059,8 +4712,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_gutter_metadata_678354945,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_gutter_metadata_678354945._native_ptr(),
+                    678354945)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -4079,8 +4737,13 @@ open class TextEdit : Control {
                 .init(line_native), .init(gutter_native), .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_line_gutter_text_2285447957,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_line_gutter_text_2285447957._native_ptr(),
+                    2285447957)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -4098,8 +4761,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_gutter_text_1391810591,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_gutter_text_1391810591._native_ptr(),
+                    1391810591)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -4118,8 +4786,13 @@ open class TextEdit : Control {
                 .init(line_native), .init(gutter_native), .init(icon_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_line_gutter_icon_176101966,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_line_gutter_icon_176101966._native_ptr(),
+                    176101966)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -4137,8 +4810,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_gutter_icon_2584904275,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_gutter_icon_2584904275._native_ptr(),
+                    2584904275)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -4157,8 +4835,13 @@ open class TextEdit : Control {
                 .init(line_native), .init(gutter_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_line_gutter_item_color_3733378741,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_line_gutter_item_color_3733378741._native_ptr(),
+                    3733378741)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -4176,8 +4859,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_gutter_item_color_2165839948,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_gutter_item_color_2165839948._native_ptr(),
+                    2165839948)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -4196,8 +4884,13 @@ open class TextEdit : Control {
                 .init(line_native), .init(gutter_native), .init(clickable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_line_gutter_clickable_1383440665,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_line_gutter_clickable_1383440665._native_ptr(),
+                    1383440665)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -4217,8 +4910,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_line_gutter_clickable_2522259332,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_line_gutter_clickable_2522259332._native_ptr(),
+                    2522259332)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -4236,8 +4934,13 @@ open class TextEdit : Control {
                 .init(line_native), .init(color_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_line_background_color_2878471219,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_line_background_color_2878471219._native_ptr(),
+                    2878471219)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -4253,8 +4956,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_background_color_3457211756,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_background_color_3457211756._native_ptr(),
+                    3457211756)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -4270,8 +4978,13 @@ open class TextEdit : Control {
                 .init(syntax_highlighter_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_syntax_highlighter_2765644541,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_syntax_highlighter_2765644541._native_ptr(),
+                    2765644541)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -4285,8 +4998,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_syntax_highlighter_2721131626,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_syntax_highlighter_2721131626._native_ptr(),
+                    2721131626)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -4301,8 +5019,13 @@ open class TextEdit : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_highlight_current_line_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_highlight_current_line_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -4318,8 +5041,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_highlight_current_line_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_highlight_current_line_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -4334,8 +5062,13 @@ open class TextEdit : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_highlight_all_occurrences_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_highlight_all_occurrences_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -4351,8 +5084,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_highlight_all_occurrences_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_highlight_all_occurrences_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -4368,8 +5106,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_draw_control_chars_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_draw_control_chars_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -4384,8 +5127,13 @@ open class TextEdit : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_draw_control_chars_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_draw_control_chars_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -4400,8 +5148,13 @@ open class TextEdit : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_draw_tabs_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_draw_tabs_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -4417,8 +5170,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_drawing_tabs_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_drawing_tabs_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -4433,8 +5191,13 @@ open class TextEdit : Control {
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_draw_spaces_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_draw_spaces_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -4450,8 +5213,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_drawing_spaces_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_drawing_spaces_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -4466,8 +5234,13 @@ open class TextEdit : Control {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_menu_229722558,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_menu_229722558._native_ptr(),
+                    229722558)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -4483,8 +5256,13 @@ open class TextEdit : Control {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_menu_visible_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_menu_visible_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -4499,8 +5277,13 @@ open class TextEdit : Control {
                 .init(option_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_menu_option_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_menu_option_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

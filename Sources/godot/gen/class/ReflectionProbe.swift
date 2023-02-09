@@ -23,119 +23,94 @@ open class ReflectionProbe : VisualInstance3D {
 
     public override class var __godot_name: StringName { __godot_name_ReflectionProbe }
 
-    static var _method_set_intensity_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_intensity_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_ambient_mode_1748981278: GDExtensionMethodBindPtr! = nil
-    static var _method_get_ambient_mode_1014607621: GDExtensionMethodBindPtr! = nil
-    static var _method_set_ambient_color_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_ambient_color_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_ambient_color_energy_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_ambient_color_energy_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_max_distance_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_max_distance_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_mesh_lod_threshold_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_mesh_lod_threshold_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_size_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_size_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_origin_offset_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_origin_offset_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_as_interior_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_set_as_interior_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_enable_box_projection_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_box_projection_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_enable_shadows_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_are_shadows_enabled_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cull_mask_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cull_mask_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_update_mode_4090221187: GDExtensionMethodBindPtr! = nil
-    static var _method_get_update_mode_2367550552: GDExtensionMethodBindPtr! = nil
+    static var _method_set_intensity_373806689: StringName! = nil
+    static var _method_get_intensity_1740695150: StringName! = nil
+    static var _method_set_ambient_mode_1748981278: StringName! = nil
+    static var _method_get_ambient_mode_1014607621: StringName! = nil
+    static var _method_set_ambient_color_2920490490: StringName! = nil
+    static var _method_get_ambient_color_3444240500: StringName! = nil
+    static var _method_set_ambient_color_energy_373806689: StringName! = nil
+    static var _method_get_ambient_color_energy_1740695150: StringName! = nil
+    static var _method_set_max_distance_373806689: StringName! = nil
+    static var _method_get_max_distance_1740695150: StringName! = nil
+    static var _method_set_mesh_lod_threshold_373806689: StringName! = nil
+    static var _method_get_mesh_lod_threshold_1740695150: StringName! = nil
+    static var _method_set_size_3460891852: StringName! = nil
+    static var _method_get_size_3360562783: StringName! = nil
+    static var _method_set_origin_offset_3460891852: StringName! = nil
+    static var _method_get_origin_offset_3360562783: StringName! = nil
+    static var _method_set_as_interior_2586408642: StringName! = nil
+    static var _method_is_set_as_interior_36873697: StringName! = nil
+    static var _method_set_enable_box_projection_2586408642: StringName! = nil
+    static var _method_is_box_projection_enabled_36873697: StringName! = nil
+    static var _method_set_enable_shadows_2586408642: StringName! = nil
+    static var _method_are_shadows_enabled_36873697: StringName! = nil
+    static var _method_set_cull_mask_1286410249: StringName! = nil
+    static var _method_get_cull_mask_3905245786: StringName! = nil
+    static var _method_set_update_mode_4090221187: StringName! = nil
+    static var _method_get_update_mode_2367550552: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ReflectionProbe == nil)
         __godot_name_ReflectionProbe = StringName(from: "ReflectionProbe")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_intensity_373806689_name = StringName(from: "set_intensity")
-        self._method_set_intensity_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_set_intensity_373806689_name._native_ptr(), 373806689)
-        assert(ReflectionProbe._method_set_intensity_373806689 != nil)
-        let _method_get_intensity_1740695150_name = StringName(from: "get_intensity")
-        self._method_get_intensity_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_get_intensity_1740695150_name._native_ptr(), 1740695150)
-        assert(ReflectionProbe._method_get_intensity_1740695150 != nil)
-        let _method_set_ambient_mode_1748981278_name = StringName(from: "set_ambient_mode")
-        self._method_set_ambient_mode_1748981278 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_set_ambient_mode_1748981278_name._native_ptr(), 1748981278)
-        assert(ReflectionProbe._method_set_ambient_mode_1748981278 != nil)
-        let _method_get_ambient_mode_1014607621_name = StringName(from: "get_ambient_mode")
-        self._method_get_ambient_mode_1014607621 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_get_ambient_mode_1014607621_name._native_ptr(), 1014607621)
-        assert(ReflectionProbe._method_get_ambient_mode_1014607621 != nil)
-        let _method_set_ambient_color_2920490490_name = StringName(from: "set_ambient_color")
-        self._method_set_ambient_color_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_set_ambient_color_2920490490_name._native_ptr(), 2920490490)
-        assert(ReflectionProbe._method_set_ambient_color_2920490490 != nil)
-        let _method_get_ambient_color_3444240500_name = StringName(from: "get_ambient_color")
-        self._method_get_ambient_color_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_get_ambient_color_3444240500_name._native_ptr(), 3444240500)
-        assert(ReflectionProbe._method_get_ambient_color_3444240500 != nil)
-        let _method_set_ambient_color_energy_373806689_name = StringName(from: "set_ambient_color_energy")
-        self._method_set_ambient_color_energy_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_set_ambient_color_energy_373806689_name._native_ptr(), 373806689)
-        assert(ReflectionProbe._method_set_ambient_color_energy_373806689 != nil)
-        let _method_get_ambient_color_energy_1740695150_name = StringName(from: "get_ambient_color_energy")
-        self._method_get_ambient_color_energy_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_get_ambient_color_energy_1740695150_name._native_ptr(), 1740695150)
-        assert(ReflectionProbe._method_get_ambient_color_energy_1740695150 != nil)
-        let _method_set_max_distance_373806689_name = StringName(from: "set_max_distance")
-        self._method_set_max_distance_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_set_max_distance_373806689_name._native_ptr(), 373806689)
-        assert(ReflectionProbe._method_set_max_distance_373806689 != nil)
-        let _method_get_max_distance_1740695150_name = StringName(from: "get_max_distance")
-        self._method_get_max_distance_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_get_max_distance_1740695150_name._native_ptr(), 1740695150)
-        assert(ReflectionProbe._method_get_max_distance_1740695150 != nil)
-        let _method_set_mesh_lod_threshold_373806689_name = StringName(from: "set_mesh_lod_threshold")
-        self._method_set_mesh_lod_threshold_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_set_mesh_lod_threshold_373806689_name._native_ptr(), 373806689)
-        assert(ReflectionProbe._method_set_mesh_lod_threshold_373806689 != nil)
-        let _method_get_mesh_lod_threshold_1740695150_name = StringName(from: "get_mesh_lod_threshold")
-        self._method_get_mesh_lod_threshold_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_get_mesh_lod_threshold_1740695150_name._native_ptr(), 1740695150)
-        assert(ReflectionProbe._method_get_mesh_lod_threshold_1740695150 != nil)
-        let _method_set_size_3460891852_name = StringName(from: "set_size")
-        self._method_set_size_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_set_size_3460891852_name._native_ptr(), 3460891852)
-        assert(ReflectionProbe._method_set_size_3460891852 != nil)
-        let _method_get_size_3360562783_name = StringName(from: "get_size")
-        self._method_get_size_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_get_size_3360562783_name._native_ptr(), 3360562783)
-        assert(ReflectionProbe._method_get_size_3360562783 != nil)
-        let _method_set_origin_offset_3460891852_name = StringName(from: "set_origin_offset")
-        self._method_set_origin_offset_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_set_origin_offset_3460891852_name._native_ptr(), 3460891852)
-        assert(ReflectionProbe._method_set_origin_offset_3460891852 != nil)
-        let _method_get_origin_offset_3360562783_name = StringName(from: "get_origin_offset")
-        self._method_get_origin_offset_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_get_origin_offset_3360562783_name._native_ptr(), 3360562783)
-        assert(ReflectionProbe._method_get_origin_offset_3360562783 != nil)
-        let _method_set_as_interior_2586408642_name = StringName(from: "set_as_interior")
-        self._method_set_as_interior_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_set_as_interior_2586408642_name._native_ptr(), 2586408642)
-        assert(ReflectionProbe._method_set_as_interior_2586408642 != nil)
-        let _method_is_set_as_interior_36873697_name = StringName(from: "is_set_as_interior")
-        self._method_is_set_as_interior_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_is_set_as_interior_36873697_name._native_ptr(), 36873697)
-        assert(ReflectionProbe._method_is_set_as_interior_36873697 != nil)
-        let _method_set_enable_box_projection_2586408642_name = StringName(from: "set_enable_box_projection")
-        self._method_set_enable_box_projection_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_set_enable_box_projection_2586408642_name._native_ptr(), 2586408642)
-        assert(ReflectionProbe._method_set_enable_box_projection_2586408642 != nil)
-        let _method_is_box_projection_enabled_36873697_name = StringName(from: "is_box_projection_enabled")
-        self._method_is_box_projection_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_is_box_projection_enabled_36873697_name._native_ptr(), 36873697)
-        assert(ReflectionProbe._method_is_box_projection_enabled_36873697 != nil)
-        let _method_set_enable_shadows_2586408642_name = StringName(from: "set_enable_shadows")
-        self._method_set_enable_shadows_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_set_enable_shadows_2586408642_name._native_ptr(), 2586408642)
-        assert(ReflectionProbe._method_set_enable_shadows_2586408642 != nil)
-        let _method_are_shadows_enabled_36873697_name = StringName(from: "are_shadows_enabled")
-        self._method_are_shadows_enabled_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_are_shadows_enabled_36873697_name._native_ptr(), 36873697)
-        assert(ReflectionProbe._method_are_shadows_enabled_36873697 != nil)
-        let _method_set_cull_mask_1286410249_name = StringName(from: "set_cull_mask")
-        self._method_set_cull_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_set_cull_mask_1286410249_name._native_ptr(), 1286410249)
-        assert(ReflectionProbe._method_set_cull_mask_1286410249 != nil)
-        let _method_get_cull_mask_3905245786_name = StringName(from: "get_cull_mask")
-        self._method_get_cull_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_get_cull_mask_3905245786_name._native_ptr(), 3905245786)
-        assert(ReflectionProbe._method_get_cull_mask_3905245786 != nil)
-        let _method_set_update_mode_4090221187_name = StringName(from: "set_update_mode")
-        self._method_set_update_mode_4090221187 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_set_update_mode_4090221187_name._native_ptr(), 4090221187)
-        assert(ReflectionProbe._method_set_update_mode_4090221187 != nil)
-        let _method_get_update_mode_2367550552_name = StringName(from: "get_update_mode")
-        self._method_get_update_mode_2367550552 = self.interface.pointee.classdb_get_method_bind(__godot_name_ReflectionProbe._native_ptr(), _method_get_update_mode_2367550552_name._native_ptr(), 2367550552)
-        assert(ReflectionProbe._method_get_update_mode_2367550552 != nil)
+        self._method_set_intensity_373806689 = StringName(from: "set_intensity")
+        assert(self._method_set_intensity_373806689 != nil)
+        self._method_get_intensity_1740695150 = StringName(from: "get_intensity")
+        assert(self._method_get_intensity_1740695150 != nil)
+        self._method_set_ambient_mode_1748981278 = StringName(from: "set_ambient_mode")
+        assert(self._method_set_ambient_mode_1748981278 != nil)
+        self._method_get_ambient_mode_1014607621 = StringName(from: "get_ambient_mode")
+        assert(self._method_get_ambient_mode_1014607621 != nil)
+        self._method_set_ambient_color_2920490490 = StringName(from: "set_ambient_color")
+        assert(self._method_set_ambient_color_2920490490 != nil)
+        self._method_get_ambient_color_3444240500 = StringName(from: "get_ambient_color")
+        assert(self._method_get_ambient_color_3444240500 != nil)
+        self._method_set_ambient_color_energy_373806689 = StringName(from: "set_ambient_color_energy")
+        assert(self._method_set_ambient_color_energy_373806689 != nil)
+        self._method_get_ambient_color_energy_1740695150 = StringName(from: "get_ambient_color_energy")
+        assert(self._method_get_ambient_color_energy_1740695150 != nil)
+        self._method_set_max_distance_373806689 = StringName(from: "set_max_distance")
+        assert(self._method_set_max_distance_373806689 != nil)
+        self._method_get_max_distance_1740695150 = StringName(from: "get_max_distance")
+        assert(self._method_get_max_distance_1740695150 != nil)
+        self._method_set_mesh_lod_threshold_373806689 = StringName(from: "set_mesh_lod_threshold")
+        assert(self._method_set_mesh_lod_threshold_373806689 != nil)
+        self._method_get_mesh_lod_threshold_1740695150 = StringName(from: "get_mesh_lod_threshold")
+        assert(self._method_get_mesh_lod_threshold_1740695150 != nil)
+        self._method_set_size_3460891852 = StringName(from: "set_size")
+        assert(self._method_set_size_3460891852 != nil)
+        self._method_get_size_3360562783 = StringName(from: "get_size")
+        assert(self._method_get_size_3360562783 != nil)
+        self._method_set_origin_offset_3460891852 = StringName(from: "set_origin_offset")
+        assert(self._method_set_origin_offset_3460891852 != nil)
+        self._method_get_origin_offset_3360562783 = StringName(from: "get_origin_offset")
+        assert(self._method_get_origin_offset_3360562783 != nil)
+        self._method_set_as_interior_2586408642 = StringName(from: "set_as_interior")
+        assert(self._method_set_as_interior_2586408642 != nil)
+        self._method_is_set_as_interior_36873697 = StringName(from: "is_set_as_interior")
+        assert(self._method_is_set_as_interior_36873697 != nil)
+        self._method_set_enable_box_projection_2586408642 = StringName(from: "set_enable_box_projection")
+        assert(self._method_set_enable_box_projection_2586408642 != nil)
+        self._method_is_box_projection_enabled_36873697 = StringName(from: "is_box_projection_enabled")
+        assert(self._method_is_box_projection_enabled_36873697 != nil)
+        self._method_set_enable_shadows_2586408642 = StringName(from: "set_enable_shadows")
+        assert(self._method_set_enable_shadows_2586408642 != nil)
+        self._method_are_shadows_enabled_36873697 = StringName(from: "are_shadows_enabled")
+        assert(self._method_are_shadows_enabled_36873697 != nil)
+        self._method_set_cull_mask_1286410249 = StringName(from: "set_cull_mask")
+        assert(self._method_set_cull_mask_1286410249 != nil)
+        self._method_get_cull_mask_3905245786 = StringName(from: "get_cull_mask")
+        assert(self._method_get_cull_mask_3905245786 != nil)
+        self._method_set_update_mode_4090221187 = StringName(from: "set_update_mode")
+        assert(self._method_set_update_mode_4090221187 != nil)
+        self._method_get_update_mode_2367550552 = StringName(from: "get_update_mode")
+        assert(self._method_get_update_mode_2367550552 != nil)
     }
 
     public func set_intensity(intensity: Float64)  {
@@ -146,8 +121,13 @@ open class ReflectionProbe : VisualInstance3D {
                 .init(intensity_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_intensity_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_intensity_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -163,8 +143,13 @@ open class ReflectionProbe : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_intensity_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_intensity_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -179,8 +164,13 @@ open class ReflectionProbe : VisualInstance3D {
                 .init(ambient_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_ambient_mode_1748981278,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_ambient_mode_1748981278._native_ptr(),
+                    1748981278)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -195,8 +185,13 @@ open class ReflectionProbe : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_ambient_mode_1014607621,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_ambient_mode_1014607621._native_ptr(),
+                    1014607621)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -211,8 +206,13 @@ open class ReflectionProbe : VisualInstance3D {
                 .init(ambient_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_ambient_color_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_ambient_color_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -226,8 +226,13 @@ open class ReflectionProbe : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_ambient_color_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_ambient_color_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -242,8 +247,13 @@ open class ReflectionProbe : VisualInstance3D {
                 .init(ambient_energy_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_ambient_color_energy_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_ambient_color_energy_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -259,8 +269,13 @@ open class ReflectionProbe : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_ambient_color_energy_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_ambient_color_energy_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -275,8 +290,13 @@ open class ReflectionProbe : VisualInstance3D {
                 .init(max_distance_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_max_distance_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_max_distance_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -292,8 +312,13 @@ open class ReflectionProbe : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_max_distance_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_max_distance_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -308,8 +333,13 @@ open class ReflectionProbe : VisualInstance3D {
                 .init(ratio_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_mesh_lod_threshold_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_mesh_lod_threshold_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -325,8 +355,13 @@ open class ReflectionProbe : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_mesh_lod_threshold_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_mesh_lod_threshold_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -341,8 +376,13 @@ open class ReflectionProbe : VisualInstance3D {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_size_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_size_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -356,8 +396,13 @@ open class ReflectionProbe : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_size_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_size_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -372,8 +417,13 @@ open class ReflectionProbe : VisualInstance3D {
                 .init(origin_offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_origin_offset_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_origin_offset_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -387,8 +437,13 @@ open class ReflectionProbe : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_origin_offset_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_origin_offset_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -403,8 +458,13 @@ open class ReflectionProbe : VisualInstance3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_as_interior_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_as_interior_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -420,8 +480,13 @@ open class ReflectionProbe : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_set_as_interior_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_set_as_interior_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -436,8 +501,13 @@ open class ReflectionProbe : VisualInstance3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_enable_box_projection_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_enable_box_projection_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -453,8 +523,13 @@ open class ReflectionProbe : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_box_projection_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_box_projection_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -469,8 +544,13 @@ open class ReflectionProbe : VisualInstance3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_enable_shadows_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_enable_shadows_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -486,8 +566,13 @@ open class ReflectionProbe : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_are_shadows_enabled_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_are_shadows_enabled_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -502,8 +587,13 @@ open class ReflectionProbe : VisualInstance3D {
                 .init(layers_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cull_mask_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cull_mask_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -519,8 +609,13 @@ open class ReflectionProbe : VisualInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cull_mask_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cull_mask_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -535,8 +630,13 @@ open class ReflectionProbe : VisualInstance3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_update_mode_4090221187,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_update_mode_4090221187._native_ptr(),
+                    4090221187)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -551,8 +651,13 @@ open class ReflectionProbe : VisualInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_update_mode_2367550552,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_update_mode_2367550552._native_ptr(),
+                    2367550552)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

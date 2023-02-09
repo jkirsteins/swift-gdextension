@@ -230,51 +230,43 @@ open class UDPServer : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_UDPServer }
 
-    static var _method_listen_4025329869: GDExtensionMethodBindPtr! = nil
-    static var _method_poll_166280745: GDExtensionMethodBindPtr! = nil
-    static var _method_is_connection_available_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_get_local_port_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_is_listening_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_take_connection_808734560: GDExtensionMethodBindPtr! = nil
-    static var _method_stop_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_set_max_pending_connections_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_max_pending_connections_3905245786: GDExtensionMethodBindPtr! = nil
+    static var _method_listen_4025329869: StringName! = nil
+    static var _method_poll_166280745: StringName! = nil
+    static var _method_is_connection_available_36873697: StringName! = nil
+    static var _method_get_local_port_3905245786: StringName! = nil
+    static var _method_is_listening_36873697: StringName! = nil
+    static var _method_take_connection_808734560: StringName! = nil
+    static var _method_stop_3218959716: StringName! = nil
+    static var _method_set_max_pending_connections_1286410249: StringName! = nil
+    static var _method_get_max_pending_connections_3905245786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_UDPServer == nil)
         __godot_name_UDPServer = StringName(from: "UDPServer")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_listen_4025329869_name = StringName(from: "listen")
-        self._method_listen_4025329869 = self.interface.pointee.classdb_get_method_bind(__godot_name_UDPServer._native_ptr(), _method_listen_4025329869_name._native_ptr(), 4025329869)
-        assert(UDPServer._method_listen_4025329869 != nil)
-        let _method_poll_166280745_name = StringName(from: "poll")
-        self._method_poll_166280745 = self.interface.pointee.classdb_get_method_bind(__godot_name_UDPServer._native_ptr(), _method_poll_166280745_name._native_ptr(), 166280745)
-        assert(UDPServer._method_poll_166280745 != nil)
-        let _method_is_connection_available_36873697_name = StringName(from: "is_connection_available")
-        self._method_is_connection_available_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_UDPServer._native_ptr(), _method_is_connection_available_36873697_name._native_ptr(), 36873697)
-        assert(UDPServer._method_is_connection_available_36873697 != nil)
-        let _method_get_local_port_3905245786_name = StringName(from: "get_local_port")
-        self._method_get_local_port_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_UDPServer._native_ptr(), _method_get_local_port_3905245786_name._native_ptr(), 3905245786)
-        assert(UDPServer._method_get_local_port_3905245786 != nil)
-        let _method_is_listening_36873697_name = StringName(from: "is_listening")
-        self._method_is_listening_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_UDPServer._native_ptr(), _method_is_listening_36873697_name._native_ptr(), 36873697)
-        assert(UDPServer._method_is_listening_36873697 != nil)
-        let _method_take_connection_808734560_name = StringName(from: "take_connection")
-        self._method_take_connection_808734560 = self.interface.pointee.classdb_get_method_bind(__godot_name_UDPServer._native_ptr(), _method_take_connection_808734560_name._native_ptr(), 808734560)
-        assert(UDPServer._method_take_connection_808734560 != nil)
-        let _method_stop_3218959716_name = StringName(from: "stop")
-        self._method_stop_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_UDPServer._native_ptr(), _method_stop_3218959716_name._native_ptr(), 3218959716)
-        assert(UDPServer._method_stop_3218959716 != nil)
-        let _method_set_max_pending_connections_1286410249_name = StringName(from: "set_max_pending_connections")
-        self._method_set_max_pending_connections_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_UDPServer._native_ptr(), _method_set_max_pending_connections_1286410249_name._native_ptr(), 1286410249)
-        assert(UDPServer._method_set_max_pending_connections_1286410249 != nil)
-        let _method_get_max_pending_connections_3905245786_name = StringName(from: "get_max_pending_connections")
-        self._method_get_max_pending_connections_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_UDPServer._native_ptr(), _method_get_max_pending_connections_3905245786_name._native_ptr(), 3905245786)
-        assert(UDPServer._method_get_max_pending_connections_3905245786 != nil)
+        self._method_listen_4025329869 = StringName(from: "listen")
+        assert(self._method_listen_4025329869 != nil)
+        self._method_poll_166280745 = StringName(from: "poll")
+        assert(self._method_poll_166280745 != nil)
+        self._method_is_connection_available_36873697 = StringName(from: "is_connection_available")
+        assert(self._method_is_connection_available_36873697 != nil)
+        self._method_get_local_port_3905245786 = StringName(from: "get_local_port")
+        assert(self._method_get_local_port_3905245786 != nil)
+        self._method_is_listening_36873697 = StringName(from: "is_listening")
+        assert(self._method_is_listening_36873697 != nil)
+        self._method_take_connection_808734560 = StringName(from: "take_connection")
+        assert(self._method_take_connection_808734560 != nil)
+        self._method_stop_3218959716 = StringName(from: "stop")
+        assert(self._method_stop_3218959716 != nil)
+        self._method_set_max_pending_connections_1286410249 = StringName(from: "set_max_pending_connections")
+        assert(self._method_set_max_pending_connections_1286410249 != nil)
+        self._method_get_max_pending_connections_3905245786 = StringName(from: "get_max_pending_connections")
+        assert(self._method_get_max_pending_connections_3905245786 != nil)
     }
 
     public func listen(port: Int64, bind_address: godot.String) -> Error {
@@ -287,8 +279,13 @@ open class UDPServer : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_listen_4025329869,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_listen_4025329869._native_ptr(),
+                    4025329869)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -304,8 +301,13 @@ open class UDPServer : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_poll_166280745,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_poll_166280745._native_ptr(),
+                    166280745)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -321,8 +323,13 @@ open class UDPServer : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_connection_available_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_connection_available_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -338,8 +345,13 @@ open class UDPServer : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_local_port_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_local_port_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -355,8 +367,13 @@ open class UDPServer : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_listening_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_listening_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -371,8 +388,13 @@ open class UDPServer : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_take_connection_808734560,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_take_connection_808734560._native_ptr(),
+                    808734560)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -386,8 +408,13 @@ open class UDPServer : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_stop_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_stop_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -401,8 +428,13 @@ open class UDPServer : RefCounted {
                 .init(max_pending_connections_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_max_pending_connections_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_max_pending_connections_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -418,8 +450,13 @@ open class UDPServer : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_max_pending_connections_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_max_pending_connections_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

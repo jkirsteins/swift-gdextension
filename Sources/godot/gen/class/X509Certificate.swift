@@ -13,23 +13,22 @@ open class X509Certificate : Resource {
 
     public override class var __godot_name: StringName { __godot_name_X509Certificate }
 
-    static var _method_save_166001499: GDExtensionMethodBindPtr! = nil
-    static var _method_load_166001499: GDExtensionMethodBindPtr! = nil
+    static var _method_save_166001499: StringName! = nil
+    static var _method_load_166001499: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_X509Certificate == nil)
         __godot_name_X509Certificate = StringName(from: "X509Certificate")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_save_166001499_name = StringName(from: "save")
-        self._method_save_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_X509Certificate._native_ptr(), _method_save_166001499_name._native_ptr(), 166001499)
-        assert(X509Certificate._method_save_166001499 != nil)
-        let _method_load_166001499_name = StringName(from: "load")
-        self._method_load_166001499 = self.interface.pointee.classdb_get_method_bind(__godot_name_X509Certificate._native_ptr(), _method_load_166001499_name._native_ptr(), 166001499)
-        assert(X509Certificate._method_load_166001499 != nil)
+        self._method_save_166001499 = StringName(from: "save")
+        assert(self._method_save_166001499 != nil)
+        self._method_load_166001499 = StringName(from: "load")
+        assert(self._method_load_166001499 != nil)
     }
 
     public func save(path: godot.String) -> Error {
@@ -41,8 +40,13 @@ open class X509Certificate : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_save_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_save_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -58,8 +62,13 @@ open class X509Certificate : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_load_166001499,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_load_166001499._native_ptr(),
+                    166001499)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

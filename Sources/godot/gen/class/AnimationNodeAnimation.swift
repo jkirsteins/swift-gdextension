@@ -14,31 +14,28 @@ open class AnimationNodeAnimation : AnimationRootNode {
 
     public override class var __godot_name: StringName { __godot_name_AnimationNodeAnimation }
 
-    static var _method_set_animation_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_get_animation_2002593661: GDExtensionMethodBindPtr! = nil
-    static var _method_set_play_mode_3347718873: GDExtensionMethodBindPtr! = nil
-    static var _method_get_play_mode_2061244637: GDExtensionMethodBindPtr! = nil
+    static var _method_set_animation_3304788590: StringName! = nil
+    static var _method_get_animation_2002593661: StringName! = nil
+    static var _method_set_play_mode_3347718873: StringName! = nil
+    static var _method_get_play_mode_2061244637: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_AnimationNodeAnimation == nil)
         __godot_name_AnimationNodeAnimation = StringName(from: "AnimationNodeAnimation")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_animation_3304788590_name = StringName(from: "set_animation")
-        self._method_set_animation_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeAnimation._native_ptr(), _method_set_animation_3304788590_name._native_ptr(), 3304788590)
-        assert(AnimationNodeAnimation._method_set_animation_3304788590 != nil)
-        let _method_get_animation_2002593661_name = StringName(from: "get_animation")
-        self._method_get_animation_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeAnimation._native_ptr(), _method_get_animation_2002593661_name._native_ptr(), 2002593661)
-        assert(AnimationNodeAnimation._method_get_animation_2002593661 != nil)
-        let _method_set_play_mode_3347718873_name = StringName(from: "set_play_mode")
-        self._method_set_play_mode_3347718873 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeAnimation._native_ptr(), _method_set_play_mode_3347718873_name._native_ptr(), 3347718873)
-        assert(AnimationNodeAnimation._method_set_play_mode_3347718873 != nil)
-        let _method_get_play_mode_2061244637_name = StringName(from: "get_play_mode")
-        self._method_get_play_mode_2061244637 = self.interface.pointee.classdb_get_method_bind(__godot_name_AnimationNodeAnimation._native_ptr(), _method_get_play_mode_2061244637_name._native_ptr(), 2061244637)
-        assert(AnimationNodeAnimation._method_get_play_mode_2061244637 != nil)
+        self._method_set_animation_3304788590 = StringName(from: "set_animation")
+        assert(self._method_set_animation_3304788590 != nil)
+        self._method_get_animation_2002593661 = StringName(from: "get_animation")
+        assert(self._method_get_animation_2002593661 != nil)
+        self._method_set_play_mode_3347718873 = StringName(from: "set_play_mode")
+        assert(self._method_set_play_mode_3347718873 != nil)
+        self._method_get_play_mode_2061244637 = StringName(from: "get_play_mode")
+        assert(self._method_get_play_mode_2061244637 != nil)
     }
 
     public func set_animation(name: StringName)  {
@@ -49,8 +46,13 @@ open class AnimationNodeAnimation : AnimationRootNode {
                 .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_animation_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_animation_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -64,8 +66,13 @@ open class AnimationNodeAnimation : AnimationRootNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_animation_2002593661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_animation_2002593661._native_ptr(),
+                    2002593661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -80,8 +87,13 @@ open class AnimationNodeAnimation : AnimationRootNode {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_play_mode_3347718873,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_play_mode_3347718873._native_ptr(),
+                    3347718873)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -96,8 +108,13 @@ open class AnimationNodeAnimation : AnimationRootNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_play_mode_2061244637,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_play_mode_2061244637._native_ptr(),
+                    2061244637)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

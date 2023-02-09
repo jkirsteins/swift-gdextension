@@ -17,23 +17,22 @@ open class VisualShaderNodeMultiplyAdd : VisualShaderNode {
 
     public override class var __godot_name: StringName { __godot_name_VisualShaderNodeMultiplyAdd }
 
-    static var _method_set_op_type_1409862380: GDExtensionMethodBindPtr! = nil
-    static var _method_get_op_type_2823201991: GDExtensionMethodBindPtr! = nil
+    static var _method_set_op_type_1409862380: StringName! = nil
+    static var _method_get_op_type_2823201991: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShaderNodeMultiplyAdd == nil)
         __godot_name_VisualShaderNodeMultiplyAdd = StringName(from: "VisualShaderNodeMultiplyAdd")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_op_type_1409862380_name = StringName(from: "set_op_type")
-        self._method_set_op_type_1409862380 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeMultiplyAdd._native_ptr(), _method_set_op_type_1409862380_name._native_ptr(), 1409862380)
-        assert(VisualShaderNodeMultiplyAdd._method_set_op_type_1409862380 != nil)
-        let _method_get_op_type_2823201991_name = StringName(from: "get_op_type")
-        self._method_get_op_type_2823201991 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeMultiplyAdd._native_ptr(), _method_get_op_type_2823201991_name._native_ptr(), 2823201991)
-        assert(VisualShaderNodeMultiplyAdd._method_get_op_type_2823201991 != nil)
+        self._method_set_op_type_1409862380 = StringName(from: "set_op_type")
+        assert(self._method_set_op_type_1409862380 != nil)
+        self._method_get_op_type_2823201991 = StringName(from: "get_op_type")
+        assert(self._method_get_op_type_2823201991 != nil)
     }
 
     public func set_op_type(`type`: VisualShaderNodeMultiplyAdd.OpType)  {
@@ -44,8 +43,13 @@ open class VisualShaderNodeMultiplyAdd : VisualShaderNode {
                 .init(type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_op_type_1409862380,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_op_type_1409862380._native_ptr(),
+                    1409862380)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -60,8 +64,13 @@ open class VisualShaderNodeMultiplyAdd : VisualShaderNode {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_op_type_2823201991,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_op_type_2823201991._native_ptr(),
+                    2823201991)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

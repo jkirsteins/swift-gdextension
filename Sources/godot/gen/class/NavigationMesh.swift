@@ -28,235 +28,181 @@ open class NavigationMesh : Resource {
 
     public override class var __godot_name: StringName { __godot_name_NavigationMesh }
 
-    static var _method_set_sample_partition_type_2472437533: GDExtensionMethodBindPtr! = nil
-    static var _method_get_sample_partition_type_833513918: GDExtensionMethodBindPtr! = nil
-    static var _method_set_parsed_geometry_type_3064713163: GDExtensionMethodBindPtr! = nil
-    static var _method_get_parsed_geometry_type_3928011953: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_mask_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_mask_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_collision_mask_value_300928843: GDExtensionMethodBindPtr! = nil
-    static var _method_get_collision_mask_value_1116898809: GDExtensionMethodBindPtr! = nil
-    static var _method_set_source_geometry_mode_2700825194: GDExtensionMethodBindPtr! = nil
-    static var _method_get_source_geometry_mode_2770484141: GDExtensionMethodBindPtr! = nil
-    static var _method_set_source_group_name_3304788590: GDExtensionMethodBindPtr! = nil
-    static var _method_get_source_group_name_2002593661: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cell_size_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cell_size_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_cell_height_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_cell_height_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_agent_height_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_agent_height_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_agent_radius_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_agent_radius_191475506: GDExtensionMethodBindPtr! = nil
-    static var _method_set_agent_max_climb_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_agent_max_climb_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_agent_max_slope_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_agent_max_slope_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_region_min_size_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_region_min_size_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_region_merge_size_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_region_merge_size_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_edge_max_length_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_edge_max_length_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_edge_max_error_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_edge_max_error_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_vertices_per_polygon_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_vertices_per_polygon_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_detail_sample_distance_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_detail_sample_distance_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_detail_sample_max_error_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_detail_sample_max_error_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_filter_low_hanging_obstacles_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_filter_low_hanging_obstacles_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_filter_ledge_spans_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_filter_ledge_spans_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_filter_walkable_low_height_spans_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_get_filter_walkable_low_height_spans_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_filter_baking_aabb_259215842: GDExtensionMethodBindPtr! = nil
-    static var _method_get_filter_baking_aabb_1068685055: GDExtensionMethodBindPtr! = nil
-    static var _method_set_filter_baking_aabb_offset_3460891852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_filter_baking_aabb_offset_3360562783: GDExtensionMethodBindPtr! = nil
-    static var _method_set_vertices_334873810: GDExtensionMethodBindPtr! = nil
-    static var _method_get_vertices_497664490: GDExtensionMethodBindPtr! = nil
-    static var _method_add_polygon_3614634198: GDExtensionMethodBindPtr! = nil
-    static var _method_get_polygon_count_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_polygon_3668444399: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_polygons_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_create_from_mesh_194775623: GDExtensionMethodBindPtr! = nil
+    static var _method_set_sample_partition_type_2472437533: StringName! = nil
+    static var _method_get_sample_partition_type_833513918: StringName! = nil
+    static var _method_set_parsed_geometry_type_3064713163: StringName! = nil
+    static var _method_get_parsed_geometry_type_3928011953: StringName! = nil
+    static var _method_set_collision_mask_1286410249: StringName! = nil
+    static var _method_get_collision_mask_3905245786: StringName! = nil
+    static var _method_set_collision_mask_value_300928843: StringName! = nil
+    static var _method_get_collision_mask_value_1116898809: StringName! = nil
+    static var _method_set_source_geometry_mode_2700825194: StringName! = nil
+    static var _method_get_source_geometry_mode_2770484141: StringName! = nil
+    static var _method_set_source_group_name_3304788590: StringName! = nil
+    static var _method_get_source_group_name_2002593661: StringName! = nil
+    static var _method_set_cell_size_373806689: StringName! = nil
+    static var _method_get_cell_size_1740695150: StringName! = nil
+    static var _method_set_cell_height_373806689: StringName! = nil
+    static var _method_get_cell_height_1740695150: StringName! = nil
+    static var _method_set_agent_height_373806689: StringName! = nil
+    static var _method_get_agent_height_1740695150: StringName! = nil
+    static var _method_set_agent_radius_373806689: StringName! = nil
+    static var _method_get_agent_radius_191475506: StringName! = nil
+    static var _method_set_agent_max_climb_373806689: StringName! = nil
+    static var _method_get_agent_max_climb_1740695150: StringName! = nil
+    static var _method_set_agent_max_slope_373806689: StringName! = nil
+    static var _method_get_agent_max_slope_1740695150: StringName! = nil
+    static var _method_set_region_min_size_373806689: StringName! = nil
+    static var _method_get_region_min_size_1740695150: StringName! = nil
+    static var _method_set_region_merge_size_373806689: StringName! = nil
+    static var _method_get_region_merge_size_1740695150: StringName! = nil
+    static var _method_set_edge_max_length_373806689: StringName! = nil
+    static var _method_get_edge_max_length_1740695150: StringName! = nil
+    static var _method_set_edge_max_error_373806689: StringName! = nil
+    static var _method_get_edge_max_error_1740695150: StringName! = nil
+    static var _method_set_vertices_per_polygon_373806689: StringName! = nil
+    static var _method_get_vertices_per_polygon_1740695150: StringName! = nil
+    static var _method_set_detail_sample_distance_373806689: StringName! = nil
+    static var _method_get_detail_sample_distance_1740695150: StringName! = nil
+    static var _method_set_detail_sample_max_error_373806689: StringName! = nil
+    static var _method_get_detail_sample_max_error_1740695150: StringName! = nil
+    static var _method_set_filter_low_hanging_obstacles_2586408642: StringName! = nil
+    static var _method_get_filter_low_hanging_obstacles_36873697: StringName! = nil
+    static var _method_set_filter_ledge_spans_2586408642: StringName! = nil
+    static var _method_get_filter_ledge_spans_36873697: StringName! = nil
+    static var _method_set_filter_walkable_low_height_spans_2586408642: StringName! = nil
+    static var _method_get_filter_walkable_low_height_spans_36873697: StringName! = nil
+    static var _method_set_filter_baking_aabb_259215842: StringName! = nil
+    static var _method_get_filter_baking_aabb_1068685055: StringName! = nil
+    static var _method_set_filter_baking_aabb_offset_3460891852: StringName! = nil
+    static var _method_get_filter_baking_aabb_offset_3360562783: StringName! = nil
+    static var _method_set_vertices_334873810: StringName! = nil
+    static var _method_get_vertices_497664490: StringName! = nil
+    static var _method_add_polygon_3614634198: StringName! = nil
+    static var _method_get_polygon_count_3905245786: StringName! = nil
+    static var _method_get_polygon_3668444399: StringName! = nil
+    static var _method_clear_polygons_3218959716: StringName! = nil
+    static var _method_create_from_mesh_194775623: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_NavigationMesh == nil)
         __godot_name_NavigationMesh = StringName(from: "NavigationMesh")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_sample_partition_type_2472437533_name = StringName(from: "set_sample_partition_type")
-        self._method_set_sample_partition_type_2472437533 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_sample_partition_type_2472437533_name._native_ptr(), 2472437533)
-        assert(NavigationMesh._method_set_sample_partition_type_2472437533 != nil)
-        let _method_get_sample_partition_type_833513918_name = StringName(from: "get_sample_partition_type")
-        self._method_get_sample_partition_type_833513918 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_sample_partition_type_833513918_name._native_ptr(), 833513918)
-        assert(NavigationMesh._method_get_sample_partition_type_833513918 != nil)
-        let _method_set_parsed_geometry_type_3064713163_name = StringName(from: "set_parsed_geometry_type")
-        self._method_set_parsed_geometry_type_3064713163 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_parsed_geometry_type_3064713163_name._native_ptr(), 3064713163)
-        assert(NavigationMesh._method_set_parsed_geometry_type_3064713163 != nil)
-        let _method_get_parsed_geometry_type_3928011953_name = StringName(from: "get_parsed_geometry_type")
-        self._method_get_parsed_geometry_type_3928011953 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_parsed_geometry_type_3928011953_name._native_ptr(), 3928011953)
-        assert(NavigationMesh._method_get_parsed_geometry_type_3928011953 != nil)
-        let _method_set_collision_mask_1286410249_name = StringName(from: "set_collision_mask")
-        self._method_set_collision_mask_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_collision_mask_1286410249_name._native_ptr(), 1286410249)
-        assert(NavigationMesh._method_set_collision_mask_1286410249 != nil)
-        let _method_get_collision_mask_3905245786_name = StringName(from: "get_collision_mask")
-        self._method_get_collision_mask_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_collision_mask_3905245786_name._native_ptr(), 3905245786)
-        assert(NavigationMesh._method_get_collision_mask_3905245786 != nil)
-        let _method_set_collision_mask_value_300928843_name = StringName(from: "set_collision_mask_value")
-        self._method_set_collision_mask_value_300928843 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_collision_mask_value_300928843_name._native_ptr(), 300928843)
-        assert(NavigationMesh._method_set_collision_mask_value_300928843 != nil)
-        let _method_get_collision_mask_value_1116898809_name = StringName(from: "get_collision_mask_value")
-        self._method_get_collision_mask_value_1116898809 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_collision_mask_value_1116898809_name._native_ptr(), 1116898809)
-        assert(NavigationMesh._method_get_collision_mask_value_1116898809 != nil)
-        let _method_set_source_geometry_mode_2700825194_name = StringName(from: "set_source_geometry_mode")
-        self._method_set_source_geometry_mode_2700825194 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_source_geometry_mode_2700825194_name._native_ptr(), 2700825194)
-        assert(NavigationMesh._method_set_source_geometry_mode_2700825194 != nil)
-        let _method_get_source_geometry_mode_2770484141_name = StringName(from: "get_source_geometry_mode")
-        self._method_get_source_geometry_mode_2770484141 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_source_geometry_mode_2770484141_name._native_ptr(), 2770484141)
-        assert(NavigationMesh._method_get_source_geometry_mode_2770484141 != nil)
-        let _method_set_source_group_name_3304788590_name = StringName(from: "set_source_group_name")
-        self._method_set_source_group_name_3304788590 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_source_group_name_3304788590_name._native_ptr(), 3304788590)
-        assert(NavigationMesh._method_set_source_group_name_3304788590 != nil)
-        let _method_get_source_group_name_2002593661_name = StringName(from: "get_source_group_name")
-        self._method_get_source_group_name_2002593661 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_source_group_name_2002593661_name._native_ptr(), 2002593661)
-        assert(NavigationMesh._method_get_source_group_name_2002593661 != nil)
-        let _method_set_cell_size_373806689_name = StringName(from: "set_cell_size")
-        self._method_set_cell_size_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_cell_size_373806689_name._native_ptr(), 373806689)
-        assert(NavigationMesh._method_set_cell_size_373806689 != nil)
-        let _method_get_cell_size_1740695150_name = StringName(from: "get_cell_size")
-        self._method_get_cell_size_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_cell_size_1740695150_name._native_ptr(), 1740695150)
-        assert(NavigationMesh._method_get_cell_size_1740695150 != nil)
-        let _method_set_cell_height_373806689_name = StringName(from: "set_cell_height")
-        self._method_set_cell_height_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_cell_height_373806689_name._native_ptr(), 373806689)
-        assert(NavigationMesh._method_set_cell_height_373806689 != nil)
-        let _method_get_cell_height_1740695150_name = StringName(from: "get_cell_height")
-        self._method_get_cell_height_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_cell_height_1740695150_name._native_ptr(), 1740695150)
-        assert(NavigationMesh._method_get_cell_height_1740695150 != nil)
-        let _method_set_agent_height_373806689_name = StringName(from: "set_agent_height")
-        self._method_set_agent_height_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_agent_height_373806689_name._native_ptr(), 373806689)
-        assert(NavigationMesh._method_set_agent_height_373806689 != nil)
-        let _method_get_agent_height_1740695150_name = StringName(from: "get_agent_height")
-        self._method_get_agent_height_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_agent_height_1740695150_name._native_ptr(), 1740695150)
-        assert(NavigationMesh._method_get_agent_height_1740695150 != nil)
-        let _method_set_agent_radius_373806689_name = StringName(from: "set_agent_radius")
-        self._method_set_agent_radius_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_agent_radius_373806689_name._native_ptr(), 373806689)
-        assert(NavigationMesh._method_set_agent_radius_373806689 != nil)
-        let _method_get_agent_radius_191475506_name = StringName(from: "get_agent_radius")
-        self._method_get_agent_radius_191475506 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_agent_radius_191475506_name._native_ptr(), 191475506)
-        assert(NavigationMesh._method_get_agent_radius_191475506 != nil)
-        let _method_set_agent_max_climb_373806689_name = StringName(from: "set_agent_max_climb")
-        self._method_set_agent_max_climb_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_agent_max_climb_373806689_name._native_ptr(), 373806689)
-        assert(NavigationMesh._method_set_agent_max_climb_373806689 != nil)
-        let _method_get_agent_max_climb_1740695150_name = StringName(from: "get_agent_max_climb")
-        self._method_get_agent_max_climb_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_agent_max_climb_1740695150_name._native_ptr(), 1740695150)
-        assert(NavigationMesh._method_get_agent_max_climb_1740695150 != nil)
-        let _method_set_agent_max_slope_373806689_name = StringName(from: "set_agent_max_slope")
-        self._method_set_agent_max_slope_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_agent_max_slope_373806689_name._native_ptr(), 373806689)
-        assert(NavigationMesh._method_set_agent_max_slope_373806689 != nil)
-        let _method_get_agent_max_slope_1740695150_name = StringName(from: "get_agent_max_slope")
-        self._method_get_agent_max_slope_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_agent_max_slope_1740695150_name._native_ptr(), 1740695150)
-        assert(NavigationMesh._method_get_agent_max_slope_1740695150 != nil)
-        let _method_set_region_min_size_373806689_name = StringName(from: "set_region_min_size")
-        self._method_set_region_min_size_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_region_min_size_373806689_name._native_ptr(), 373806689)
-        assert(NavigationMesh._method_set_region_min_size_373806689 != nil)
-        let _method_get_region_min_size_1740695150_name = StringName(from: "get_region_min_size")
-        self._method_get_region_min_size_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_region_min_size_1740695150_name._native_ptr(), 1740695150)
-        assert(NavigationMesh._method_get_region_min_size_1740695150 != nil)
-        let _method_set_region_merge_size_373806689_name = StringName(from: "set_region_merge_size")
-        self._method_set_region_merge_size_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_region_merge_size_373806689_name._native_ptr(), 373806689)
-        assert(NavigationMesh._method_set_region_merge_size_373806689 != nil)
-        let _method_get_region_merge_size_1740695150_name = StringName(from: "get_region_merge_size")
-        self._method_get_region_merge_size_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_region_merge_size_1740695150_name._native_ptr(), 1740695150)
-        assert(NavigationMesh._method_get_region_merge_size_1740695150 != nil)
-        let _method_set_edge_max_length_373806689_name = StringName(from: "set_edge_max_length")
-        self._method_set_edge_max_length_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_edge_max_length_373806689_name._native_ptr(), 373806689)
-        assert(NavigationMesh._method_set_edge_max_length_373806689 != nil)
-        let _method_get_edge_max_length_1740695150_name = StringName(from: "get_edge_max_length")
-        self._method_get_edge_max_length_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_edge_max_length_1740695150_name._native_ptr(), 1740695150)
-        assert(NavigationMesh._method_get_edge_max_length_1740695150 != nil)
-        let _method_set_edge_max_error_373806689_name = StringName(from: "set_edge_max_error")
-        self._method_set_edge_max_error_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_edge_max_error_373806689_name._native_ptr(), 373806689)
-        assert(NavigationMesh._method_set_edge_max_error_373806689 != nil)
-        let _method_get_edge_max_error_1740695150_name = StringName(from: "get_edge_max_error")
-        self._method_get_edge_max_error_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_edge_max_error_1740695150_name._native_ptr(), 1740695150)
-        assert(NavigationMesh._method_get_edge_max_error_1740695150 != nil)
-        let _method_set_vertices_per_polygon_373806689_name = StringName(from: "set_vertices_per_polygon")
-        self._method_set_vertices_per_polygon_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_vertices_per_polygon_373806689_name._native_ptr(), 373806689)
-        assert(NavigationMesh._method_set_vertices_per_polygon_373806689 != nil)
-        let _method_get_vertices_per_polygon_1740695150_name = StringName(from: "get_vertices_per_polygon")
-        self._method_get_vertices_per_polygon_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_vertices_per_polygon_1740695150_name._native_ptr(), 1740695150)
-        assert(NavigationMesh._method_get_vertices_per_polygon_1740695150 != nil)
-        let _method_set_detail_sample_distance_373806689_name = StringName(from: "set_detail_sample_distance")
-        self._method_set_detail_sample_distance_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_detail_sample_distance_373806689_name._native_ptr(), 373806689)
-        assert(NavigationMesh._method_set_detail_sample_distance_373806689 != nil)
-        let _method_get_detail_sample_distance_1740695150_name = StringName(from: "get_detail_sample_distance")
-        self._method_get_detail_sample_distance_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_detail_sample_distance_1740695150_name._native_ptr(), 1740695150)
-        assert(NavigationMesh._method_get_detail_sample_distance_1740695150 != nil)
-        let _method_set_detail_sample_max_error_373806689_name = StringName(from: "set_detail_sample_max_error")
-        self._method_set_detail_sample_max_error_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_detail_sample_max_error_373806689_name._native_ptr(), 373806689)
-        assert(NavigationMesh._method_set_detail_sample_max_error_373806689 != nil)
-        let _method_get_detail_sample_max_error_1740695150_name = StringName(from: "get_detail_sample_max_error")
-        self._method_get_detail_sample_max_error_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_detail_sample_max_error_1740695150_name._native_ptr(), 1740695150)
-        assert(NavigationMesh._method_get_detail_sample_max_error_1740695150 != nil)
-        let _method_set_filter_low_hanging_obstacles_2586408642_name = StringName(from: "set_filter_low_hanging_obstacles")
-        self._method_set_filter_low_hanging_obstacles_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_filter_low_hanging_obstacles_2586408642_name._native_ptr(), 2586408642)
-        assert(NavigationMesh._method_set_filter_low_hanging_obstacles_2586408642 != nil)
-        let _method_get_filter_low_hanging_obstacles_36873697_name = StringName(from: "get_filter_low_hanging_obstacles")
-        self._method_get_filter_low_hanging_obstacles_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_filter_low_hanging_obstacles_36873697_name._native_ptr(), 36873697)
-        assert(NavigationMesh._method_get_filter_low_hanging_obstacles_36873697 != nil)
-        let _method_set_filter_ledge_spans_2586408642_name = StringName(from: "set_filter_ledge_spans")
-        self._method_set_filter_ledge_spans_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_filter_ledge_spans_2586408642_name._native_ptr(), 2586408642)
-        assert(NavigationMesh._method_set_filter_ledge_spans_2586408642 != nil)
-        let _method_get_filter_ledge_spans_36873697_name = StringName(from: "get_filter_ledge_spans")
-        self._method_get_filter_ledge_spans_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_filter_ledge_spans_36873697_name._native_ptr(), 36873697)
-        assert(NavigationMesh._method_get_filter_ledge_spans_36873697 != nil)
-        let _method_set_filter_walkable_low_height_spans_2586408642_name = StringName(from: "set_filter_walkable_low_height_spans")
-        self._method_set_filter_walkable_low_height_spans_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_filter_walkable_low_height_spans_2586408642_name._native_ptr(), 2586408642)
-        assert(NavigationMesh._method_set_filter_walkable_low_height_spans_2586408642 != nil)
-        let _method_get_filter_walkable_low_height_spans_36873697_name = StringName(from: "get_filter_walkable_low_height_spans")
-        self._method_get_filter_walkable_low_height_spans_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_filter_walkable_low_height_spans_36873697_name._native_ptr(), 36873697)
-        assert(NavigationMesh._method_get_filter_walkable_low_height_spans_36873697 != nil)
-        let _method_set_filter_baking_aabb_259215842_name = StringName(from: "set_filter_baking_aabb")
-        self._method_set_filter_baking_aabb_259215842 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_filter_baking_aabb_259215842_name._native_ptr(), 259215842)
-        assert(NavigationMesh._method_set_filter_baking_aabb_259215842 != nil)
-        let _method_get_filter_baking_aabb_1068685055_name = StringName(from: "get_filter_baking_aabb")
-        self._method_get_filter_baking_aabb_1068685055 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_filter_baking_aabb_1068685055_name._native_ptr(), 1068685055)
-        assert(NavigationMesh._method_get_filter_baking_aabb_1068685055 != nil)
-        let _method_set_filter_baking_aabb_offset_3460891852_name = StringName(from: "set_filter_baking_aabb_offset")
-        self._method_set_filter_baking_aabb_offset_3460891852 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_filter_baking_aabb_offset_3460891852_name._native_ptr(), 3460891852)
-        assert(NavigationMesh._method_set_filter_baking_aabb_offset_3460891852 != nil)
-        let _method_get_filter_baking_aabb_offset_3360562783_name = StringName(from: "get_filter_baking_aabb_offset")
-        self._method_get_filter_baking_aabb_offset_3360562783 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_filter_baking_aabb_offset_3360562783_name._native_ptr(), 3360562783)
-        assert(NavigationMesh._method_get_filter_baking_aabb_offset_3360562783 != nil)
-        let _method_set_vertices_334873810_name = StringName(from: "set_vertices")
-        self._method_set_vertices_334873810 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_set_vertices_334873810_name._native_ptr(), 334873810)
-        assert(NavigationMesh._method_set_vertices_334873810 != nil)
-        let _method_get_vertices_497664490_name = StringName(from: "get_vertices")
-        self._method_get_vertices_497664490 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_vertices_497664490_name._native_ptr(), 497664490)
-        assert(NavigationMesh._method_get_vertices_497664490 != nil)
-        let _method_add_polygon_3614634198_name = StringName(from: "add_polygon")
-        self._method_add_polygon_3614634198 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_add_polygon_3614634198_name._native_ptr(), 3614634198)
-        assert(NavigationMesh._method_add_polygon_3614634198 != nil)
-        let _method_get_polygon_count_3905245786_name = StringName(from: "get_polygon_count")
-        self._method_get_polygon_count_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_polygon_count_3905245786_name._native_ptr(), 3905245786)
-        assert(NavigationMesh._method_get_polygon_count_3905245786 != nil)
-        let _method_get_polygon_3668444399_name = StringName(from: "get_polygon")
-        self._method_get_polygon_3668444399 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_get_polygon_3668444399_name._native_ptr(), 3668444399)
-        assert(NavigationMesh._method_get_polygon_3668444399 != nil)
-        let _method_clear_polygons_3218959716_name = StringName(from: "clear_polygons")
-        self._method_clear_polygons_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_clear_polygons_3218959716_name._native_ptr(), 3218959716)
-        assert(NavigationMesh._method_clear_polygons_3218959716 != nil)
-        let _method_create_from_mesh_194775623_name = StringName(from: "create_from_mesh")
-        self._method_create_from_mesh_194775623 = self.interface.pointee.classdb_get_method_bind(__godot_name_NavigationMesh._native_ptr(), _method_create_from_mesh_194775623_name._native_ptr(), 194775623)
-        assert(NavigationMesh._method_create_from_mesh_194775623 != nil)
+        self._method_set_sample_partition_type_2472437533 = StringName(from: "set_sample_partition_type")
+        assert(self._method_set_sample_partition_type_2472437533 != nil)
+        self._method_get_sample_partition_type_833513918 = StringName(from: "get_sample_partition_type")
+        assert(self._method_get_sample_partition_type_833513918 != nil)
+        self._method_set_parsed_geometry_type_3064713163 = StringName(from: "set_parsed_geometry_type")
+        assert(self._method_set_parsed_geometry_type_3064713163 != nil)
+        self._method_get_parsed_geometry_type_3928011953 = StringName(from: "get_parsed_geometry_type")
+        assert(self._method_get_parsed_geometry_type_3928011953 != nil)
+        self._method_set_collision_mask_1286410249 = StringName(from: "set_collision_mask")
+        assert(self._method_set_collision_mask_1286410249 != nil)
+        self._method_get_collision_mask_3905245786 = StringName(from: "get_collision_mask")
+        assert(self._method_get_collision_mask_3905245786 != nil)
+        self._method_set_collision_mask_value_300928843 = StringName(from: "set_collision_mask_value")
+        assert(self._method_set_collision_mask_value_300928843 != nil)
+        self._method_get_collision_mask_value_1116898809 = StringName(from: "get_collision_mask_value")
+        assert(self._method_get_collision_mask_value_1116898809 != nil)
+        self._method_set_source_geometry_mode_2700825194 = StringName(from: "set_source_geometry_mode")
+        assert(self._method_set_source_geometry_mode_2700825194 != nil)
+        self._method_get_source_geometry_mode_2770484141 = StringName(from: "get_source_geometry_mode")
+        assert(self._method_get_source_geometry_mode_2770484141 != nil)
+        self._method_set_source_group_name_3304788590 = StringName(from: "set_source_group_name")
+        assert(self._method_set_source_group_name_3304788590 != nil)
+        self._method_get_source_group_name_2002593661 = StringName(from: "get_source_group_name")
+        assert(self._method_get_source_group_name_2002593661 != nil)
+        self._method_set_cell_size_373806689 = StringName(from: "set_cell_size")
+        assert(self._method_set_cell_size_373806689 != nil)
+        self._method_get_cell_size_1740695150 = StringName(from: "get_cell_size")
+        assert(self._method_get_cell_size_1740695150 != nil)
+        self._method_set_cell_height_373806689 = StringName(from: "set_cell_height")
+        assert(self._method_set_cell_height_373806689 != nil)
+        self._method_get_cell_height_1740695150 = StringName(from: "get_cell_height")
+        assert(self._method_get_cell_height_1740695150 != nil)
+        self._method_set_agent_height_373806689 = StringName(from: "set_agent_height")
+        assert(self._method_set_agent_height_373806689 != nil)
+        self._method_get_agent_height_1740695150 = StringName(from: "get_agent_height")
+        assert(self._method_get_agent_height_1740695150 != nil)
+        self._method_set_agent_radius_373806689 = StringName(from: "set_agent_radius")
+        assert(self._method_set_agent_radius_373806689 != nil)
+        self._method_get_agent_radius_191475506 = StringName(from: "get_agent_radius")
+        assert(self._method_get_agent_radius_191475506 != nil)
+        self._method_set_agent_max_climb_373806689 = StringName(from: "set_agent_max_climb")
+        assert(self._method_set_agent_max_climb_373806689 != nil)
+        self._method_get_agent_max_climb_1740695150 = StringName(from: "get_agent_max_climb")
+        assert(self._method_get_agent_max_climb_1740695150 != nil)
+        self._method_set_agent_max_slope_373806689 = StringName(from: "set_agent_max_slope")
+        assert(self._method_set_agent_max_slope_373806689 != nil)
+        self._method_get_agent_max_slope_1740695150 = StringName(from: "get_agent_max_slope")
+        assert(self._method_get_agent_max_slope_1740695150 != nil)
+        self._method_set_region_min_size_373806689 = StringName(from: "set_region_min_size")
+        assert(self._method_set_region_min_size_373806689 != nil)
+        self._method_get_region_min_size_1740695150 = StringName(from: "get_region_min_size")
+        assert(self._method_get_region_min_size_1740695150 != nil)
+        self._method_set_region_merge_size_373806689 = StringName(from: "set_region_merge_size")
+        assert(self._method_set_region_merge_size_373806689 != nil)
+        self._method_get_region_merge_size_1740695150 = StringName(from: "get_region_merge_size")
+        assert(self._method_get_region_merge_size_1740695150 != nil)
+        self._method_set_edge_max_length_373806689 = StringName(from: "set_edge_max_length")
+        assert(self._method_set_edge_max_length_373806689 != nil)
+        self._method_get_edge_max_length_1740695150 = StringName(from: "get_edge_max_length")
+        assert(self._method_get_edge_max_length_1740695150 != nil)
+        self._method_set_edge_max_error_373806689 = StringName(from: "set_edge_max_error")
+        assert(self._method_set_edge_max_error_373806689 != nil)
+        self._method_get_edge_max_error_1740695150 = StringName(from: "get_edge_max_error")
+        assert(self._method_get_edge_max_error_1740695150 != nil)
+        self._method_set_vertices_per_polygon_373806689 = StringName(from: "set_vertices_per_polygon")
+        assert(self._method_set_vertices_per_polygon_373806689 != nil)
+        self._method_get_vertices_per_polygon_1740695150 = StringName(from: "get_vertices_per_polygon")
+        assert(self._method_get_vertices_per_polygon_1740695150 != nil)
+        self._method_set_detail_sample_distance_373806689 = StringName(from: "set_detail_sample_distance")
+        assert(self._method_set_detail_sample_distance_373806689 != nil)
+        self._method_get_detail_sample_distance_1740695150 = StringName(from: "get_detail_sample_distance")
+        assert(self._method_get_detail_sample_distance_1740695150 != nil)
+        self._method_set_detail_sample_max_error_373806689 = StringName(from: "set_detail_sample_max_error")
+        assert(self._method_set_detail_sample_max_error_373806689 != nil)
+        self._method_get_detail_sample_max_error_1740695150 = StringName(from: "get_detail_sample_max_error")
+        assert(self._method_get_detail_sample_max_error_1740695150 != nil)
+        self._method_set_filter_low_hanging_obstacles_2586408642 = StringName(from: "set_filter_low_hanging_obstacles")
+        assert(self._method_set_filter_low_hanging_obstacles_2586408642 != nil)
+        self._method_get_filter_low_hanging_obstacles_36873697 = StringName(from: "get_filter_low_hanging_obstacles")
+        assert(self._method_get_filter_low_hanging_obstacles_36873697 != nil)
+        self._method_set_filter_ledge_spans_2586408642 = StringName(from: "set_filter_ledge_spans")
+        assert(self._method_set_filter_ledge_spans_2586408642 != nil)
+        self._method_get_filter_ledge_spans_36873697 = StringName(from: "get_filter_ledge_spans")
+        assert(self._method_get_filter_ledge_spans_36873697 != nil)
+        self._method_set_filter_walkable_low_height_spans_2586408642 = StringName(from: "set_filter_walkable_low_height_spans")
+        assert(self._method_set_filter_walkable_low_height_spans_2586408642 != nil)
+        self._method_get_filter_walkable_low_height_spans_36873697 = StringName(from: "get_filter_walkable_low_height_spans")
+        assert(self._method_get_filter_walkable_low_height_spans_36873697 != nil)
+        self._method_set_filter_baking_aabb_259215842 = StringName(from: "set_filter_baking_aabb")
+        assert(self._method_set_filter_baking_aabb_259215842 != nil)
+        self._method_get_filter_baking_aabb_1068685055 = StringName(from: "get_filter_baking_aabb")
+        assert(self._method_get_filter_baking_aabb_1068685055 != nil)
+        self._method_set_filter_baking_aabb_offset_3460891852 = StringName(from: "set_filter_baking_aabb_offset")
+        assert(self._method_set_filter_baking_aabb_offset_3460891852 != nil)
+        self._method_get_filter_baking_aabb_offset_3360562783 = StringName(from: "get_filter_baking_aabb_offset")
+        assert(self._method_get_filter_baking_aabb_offset_3360562783 != nil)
+        self._method_set_vertices_334873810 = StringName(from: "set_vertices")
+        assert(self._method_set_vertices_334873810 != nil)
+        self._method_get_vertices_497664490 = StringName(from: "get_vertices")
+        assert(self._method_get_vertices_497664490 != nil)
+        self._method_add_polygon_3614634198 = StringName(from: "add_polygon")
+        assert(self._method_add_polygon_3614634198 != nil)
+        self._method_get_polygon_count_3905245786 = StringName(from: "get_polygon_count")
+        assert(self._method_get_polygon_count_3905245786 != nil)
+        self._method_get_polygon_3668444399 = StringName(from: "get_polygon")
+        assert(self._method_get_polygon_3668444399 != nil)
+        self._method_clear_polygons_3218959716 = StringName(from: "clear_polygons")
+        assert(self._method_clear_polygons_3218959716 != nil)
+        self._method_create_from_mesh_194775623 = StringName(from: "create_from_mesh")
+        assert(self._method_create_from_mesh_194775623 != nil)
     }
 
     public func set_sample_partition_type(sample_partition_type: NavigationMesh.SamplePartitionType)  {
@@ -267,8 +213,13 @@ open class NavigationMesh : Resource {
                 .init(sample_partition_type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_sample_partition_type_2472437533,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_sample_partition_type_2472437533._native_ptr(),
+                    2472437533)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -283,8 +234,13 @@ open class NavigationMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_sample_partition_type_833513918,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_sample_partition_type_833513918._native_ptr(),
+                    833513918)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -299,8 +255,13 @@ open class NavigationMesh : Resource {
                 .init(geometry_type_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_parsed_geometry_type_3064713163,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_parsed_geometry_type_3064713163._native_ptr(),
+                    3064713163)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -315,8 +276,13 @@ open class NavigationMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_parsed_geometry_type_3928011953,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_parsed_geometry_type_3928011953._native_ptr(),
+                    3928011953)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -331,8 +297,13 @@ open class NavigationMesh : Resource {
                 .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_mask_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_mask_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -348,8 +319,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_mask_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_mask_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -365,8 +341,13 @@ open class NavigationMesh : Resource {
                 .init(layer_number_native), .init(value_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_collision_mask_value_300928843,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_collision_mask_value_300928843._native_ptr(),
+                    300928843)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -384,8 +365,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_collision_mask_value_1116898809,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_collision_mask_value_1116898809._native_ptr(),
+                    1116898809)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -401,8 +387,13 @@ open class NavigationMesh : Resource {
                 .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_source_geometry_mode_2700825194,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_source_geometry_mode_2700825194._native_ptr(),
+                    2700825194)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -417,8 +408,13 @@ open class NavigationMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_source_geometry_mode_2770484141,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_source_geometry_mode_2770484141._native_ptr(),
+                    2770484141)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -433,8 +429,13 @@ open class NavigationMesh : Resource {
                 .init(mask_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_source_group_name_3304788590,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_source_group_name_3304788590._native_ptr(),
+                    3304788590)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -448,8 +449,13 @@ open class NavigationMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_source_group_name_2002593661,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_source_group_name_2002593661._native_ptr(),
+                    2002593661)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -464,8 +470,13 @@ open class NavigationMesh : Resource {
                 .init(cell_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cell_size_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cell_size_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -481,8 +492,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cell_size_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cell_size_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -497,8 +513,13 @@ open class NavigationMesh : Resource {
                 .init(cell_height_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_cell_height_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_cell_height_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -514,8 +535,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_cell_height_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_cell_height_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -530,8 +556,13 @@ open class NavigationMesh : Resource {
                 .init(agent_height_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_agent_height_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_agent_height_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -547,8 +578,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_agent_height_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_agent_height_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -563,8 +599,13 @@ open class NavigationMesh : Resource {
                 .init(agent_radius_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_agent_radius_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_agent_radius_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -580,8 +621,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_agent_radius_191475506,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_agent_radius_191475506._native_ptr(),
+                    191475506)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -596,8 +642,13 @@ open class NavigationMesh : Resource {
                 .init(agent_max_climb_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_agent_max_climb_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_agent_max_climb_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -613,8 +664,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_agent_max_climb_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_agent_max_climb_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -629,8 +685,13 @@ open class NavigationMesh : Resource {
                 .init(agent_max_slope_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_agent_max_slope_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_agent_max_slope_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -646,8 +707,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_agent_max_slope_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_agent_max_slope_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -662,8 +728,13 @@ open class NavigationMesh : Resource {
                 .init(region_min_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_region_min_size_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_region_min_size_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -679,8 +750,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_region_min_size_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_region_min_size_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -695,8 +771,13 @@ open class NavigationMesh : Resource {
                 .init(region_merge_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_region_merge_size_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_region_merge_size_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -712,8 +793,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_region_merge_size_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_region_merge_size_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -728,8 +814,13 @@ open class NavigationMesh : Resource {
                 .init(edge_max_length_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_edge_max_length_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_edge_max_length_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -745,8 +836,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_edge_max_length_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_edge_max_length_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -761,8 +857,13 @@ open class NavigationMesh : Resource {
                 .init(edge_max_error_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_edge_max_error_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_edge_max_error_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -778,8 +879,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_edge_max_error_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_edge_max_error_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -794,8 +900,13 @@ open class NavigationMesh : Resource {
                 .init(vertices_per_polygon_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_vertices_per_polygon_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_vertices_per_polygon_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -811,8 +922,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_vertices_per_polygon_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_vertices_per_polygon_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -827,8 +943,13 @@ open class NavigationMesh : Resource {
                 .init(detail_sample_dist_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_detail_sample_distance_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_detail_sample_distance_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -844,8 +965,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_detail_sample_distance_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_detail_sample_distance_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -860,8 +986,13 @@ open class NavigationMesh : Resource {
                 .init(detail_sample_max_error_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_detail_sample_max_error_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_detail_sample_max_error_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -877,8 +1008,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_detail_sample_max_error_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_detail_sample_max_error_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -893,8 +1029,13 @@ open class NavigationMesh : Resource {
                 .init(filter_low_hanging_obstacles_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_filter_low_hanging_obstacles_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_filter_low_hanging_obstacles_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -910,8 +1051,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_filter_low_hanging_obstacles_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_filter_low_hanging_obstacles_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -926,8 +1072,13 @@ open class NavigationMesh : Resource {
                 .init(filter_ledge_spans_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_filter_ledge_spans_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_filter_ledge_spans_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -943,8 +1094,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_filter_ledge_spans_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_filter_ledge_spans_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -959,8 +1115,13 @@ open class NavigationMesh : Resource {
                 .init(filter_walkable_low_height_spans_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_filter_walkable_low_height_spans_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_filter_walkable_low_height_spans_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -976,8 +1137,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_filter_walkable_low_height_spans_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_filter_walkable_low_height_spans_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -992,8 +1158,13 @@ open class NavigationMesh : Resource {
                 .init(baking_aabb_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_filter_baking_aabb_259215842,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_filter_baking_aabb_259215842._native_ptr(),
+                    259215842)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1007,8 +1178,13 @@ open class NavigationMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_filter_baking_aabb_1068685055,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_filter_baking_aabb_1068685055._native_ptr(),
+                    1068685055)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1023,8 +1199,13 @@ open class NavigationMesh : Resource {
                 .init(baking_aabb_offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_filter_baking_aabb_offset_3460891852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_filter_baking_aabb_offset_3460891852._native_ptr(),
+                    3460891852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1038,8 +1219,13 @@ open class NavigationMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_filter_baking_aabb_offset_3360562783,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_filter_baking_aabb_offset_3360562783._native_ptr(),
+                    3360562783)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1054,8 +1240,13 @@ open class NavigationMesh : Resource {
                 .init(vertices_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_vertices_334873810,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_vertices_334873810._native_ptr(),
+                    334873810)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1069,8 +1260,13 @@ open class NavigationMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_vertices_497664490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_vertices_497664490._native_ptr(),
+                    497664490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1085,8 +1281,13 @@ open class NavigationMesh : Resource {
                 .init(polygon_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_polygon_3614634198,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_polygon_3614634198._native_ptr(),
+                    3614634198)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1101,8 +1302,13 @@ open class NavigationMesh : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_polygon_count_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_polygon_count_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1118,8 +1324,13 @@ open class NavigationMesh : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_polygon_3668444399,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_polygon_3668444399._native_ptr(),
+                    3668444399)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1134,8 +1345,13 @@ open class NavigationMesh : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_polygons_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_polygons_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1149,8 +1365,13 @@ open class NavigationMesh : Resource {
                 .init(mesh_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_from_mesh_194775623,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_from_mesh_194775623._native_ptr(),
+                    194775623)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

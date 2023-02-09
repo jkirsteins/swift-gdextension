@@ -137,51 +137,43 @@ open class Crypto : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_Crypto }
 
-    static var _method_generate_random_bytes_47165747: GDExtensionMethodBindPtr! = nil
-    static var _method_generate_rsa_1237515462: GDExtensionMethodBindPtr! = nil
-    static var _method_generate_self_signed_certificate_947314696: GDExtensionMethodBindPtr! = nil
-    static var _method_sign_1673662703: GDExtensionMethodBindPtr! = nil
-    static var _method_verify_2805902225: GDExtensionMethodBindPtr! = nil
-    static var _method_encrypt_2361793670: GDExtensionMethodBindPtr! = nil
-    static var _method_decrypt_2361793670: GDExtensionMethodBindPtr! = nil
-    static var _method_hmac_digest_2368951203: GDExtensionMethodBindPtr! = nil
-    static var _method_constant_time_compare_1024142237: GDExtensionMethodBindPtr! = nil
+    static var _method_generate_random_bytes_47165747: StringName! = nil
+    static var _method_generate_rsa_1237515462: StringName! = nil
+    static var _method_generate_self_signed_certificate_947314696: StringName! = nil
+    static var _method_sign_1673662703: StringName! = nil
+    static var _method_verify_2805902225: StringName! = nil
+    static var _method_encrypt_2361793670: StringName! = nil
+    static var _method_decrypt_2361793670: StringName! = nil
+    static var _method_hmac_digest_2368951203: StringName! = nil
+    static var _method_constant_time_compare_1024142237: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Crypto == nil)
         __godot_name_Crypto = StringName(from: "Crypto")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_generate_random_bytes_47165747_name = StringName(from: "generate_random_bytes")
-        self._method_generate_random_bytes_47165747 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_generate_random_bytes_47165747_name._native_ptr(), 47165747)
-        assert(Crypto._method_generate_random_bytes_47165747 != nil)
-        let _method_generate_rsa_1237515462_name = StringName(from: "generate_rsa")
-        self._method_generate_rsa_1237515462 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_generate_rsa_1237515462_name._native_ptr(), 1237515462)
-        assert(Crypto._method_generate_rsa_1237515462 != nil)
-        let _method_generate_self_signed_certificate_947314696_name = StringName(from: "generate_self_signed_certificate")
-        self._method_generate_self_signed_certificate_947314696 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_generate_self_signed_certificate_947314696_name._native_ptr(), 947314696)
-        assert(Crypto._method_generate_self_signed_certificate_947314696 != nil)
-        let _method_sign_1673662703_name = StringName(from: "sign")
-        self._method_sign_1673662703 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_sign_1673662703_name._native_ptr(), 1673662703)
-        assert(Crypto._method_sign_1673662703 != nil)
-        let _method_verify_2805902225_name = StringName(from: "verify")
-        self._method_verify_2805902225 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_verify_2805902225_name._native_ptr(), 2805902225)
-        assert(Crypto._method_verify_2805902225 != nil)
-        let _method_encrypt_2361793670_name = StringName(from: "encrypt")
-        self._method_encrypt_2361793670 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_encrypt_2361793670_name._native_ptr(), 2361793670)
-        assert(Crypto._method_encrypt_2361793670 != nil)
-        let _method_decrypt_2361793670_name = StringName(from: "decrypt")
-        self._method_decrypt_2361793670 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_decrypt_2361793670_name._native_ptr(), 2361793670)
-        assert(Crypto._method_decrypt_2361793670 != nil)
-        let _method_hmac_digest_2368951203_name = StringName(from: "hmac_digest")
-        self._method_hmac_digest_2368951203 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_hmac_digest_2368951203_name._native_ptr(), 2368951203)
-        assert(Crypto._method_hmac_digest_2368951203 != nil)
-        let _method_constant_time_compare_1024142237_name = StringName(from: "constant_time_compare")
-        self._method_constant_time_compare_1024142237 = self.interface.pointee.classdb_get_method_bind(__godot_name_Crypto._native_ptr(), _method_constant_time_compare_1024142237_name._native_ptr(), 1024142237)
-        assert(Crypto._method_constant_time_compare_1024142237 != nil)
+        self._method_generate_random_bytes_47165747 = StringName(from: "generate_random_bytes")
+        assert(self._method_generate_random_bytes_47165747 != nil)
+        self._method_generate_rsa_1237515462 = StringName(from: "generate_rsa")
+        assert(self._method_generate_rsa_1237515462 != nil)
+        self._method_generate_self_signed_certificate_947314696 = StringName(from: "generate_self_signed_certificate")
+        assert(self._method_generate_self_signed_certificate_947314696 != nil)
+        self._method_sign_1673662703 = StringName(from: "sign")
+        assert(self._method_sign_1673662703 != nil)
+        self._method_verify_2805902225 = StringName(from: "verify")
+        assert(self._method_verify_2805902225 != nil)
+        self._method_encrypt_2361793670 = StringName(from: "encrypt")
+        assert(self._method_encrypt_2361793670 != nil)
+        self._method_decrypt_2361793670 = StringName(from: "decrypt")
+        assert(self._method_decrypt_2361793670 != nil)
+        self._method_hmac_digest_2368951203 = StringName(from: "hmac_digest")
+        assert(self._method_hmac_digest_2368951203 != nil)
+        self._method_constant_time_compare_1024142237 = StringName(from: "constant_time_compare")
+        assert(self._method_constant_time_compare_1024142237 != nil)
     }
 
     public func generate_random_bytes(size: Int64) -> PackedByteArray {
@@ -193,8 +185,13 @@ open class Crypto : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_generate_random_bytes_47165747,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_generate_random_bytes_47165747._native_ptr(),
+                    47165747)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -211,8 +208,13 @@ open class Crypto : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_generate_rsa_1237515462,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_generate_rsa_1237515462._native_ptr(),
+                    1237515462)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -232,8 +234,13 @@ open class Crypto : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_generate_self_signed_certificate_947314696,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_generate_self_signed_certificate_947314696._native_ptr(),
+                    947314696)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -251,8 +258,13 @@ open class Crypto : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_sign_1673662703,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_sign_1673662703._native_ptr(),
+                    1673662703)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -273,8 +285,13 @@ open class Crypto : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_verify_2805902225,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_verify_2805902225._native_ptr(),
+                    2805902225)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -292,8 +309,13 @@ open class Crypto : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_encrypt_2361793670,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_encrypt_2361793670._native_ptr(),
+                    2361793670)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -310,8 +332,13 @@ open class Crypto : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_decrypt_2361793670,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_decrypt_2361793670._native_ptr(),
+                    2361793670)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -329,8 +356,13 @@ open class Crypto : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_hmac_digest_2368951203,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_hmac_digest_2368951203._native_ptr(),
+                    2368951203)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -349,8 +381,13 @@ open class Crypto : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_constant_time_compare_1024142237,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_constant_time_compare_1024142237._native_ptr(),
+                    1024142237)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

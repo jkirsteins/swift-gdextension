@@ -13,70 +13,60 @@ open class EditorExportPlugin : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_EditorExportPlugin }
 
-    static var _method__export_file_0: GDExtensionMethodBindPtr! = nil
-    static var _method__export_begin_0: GDExtensionMethodBindPtr! = nil
-    static var _method__export_end_0: GDExtensionMethodBindPtr! = nil
-    static var _method__begin_customize_resources_0: GDExtensionMethodBindPtr! = nil
-    static var _method__customize_resource_0: GDExtensionMethodBindPtr! = nil
-    static var _method__begin_customize_scenes_0: GDExtensionMethodBindPtr! = nil
-    static var _method__customize_scene_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_customization_configuration_hash_0: GDExtensionMethodBindPtr! = nil
-    static var _method__end_customize_scenes_0: GDExtensionMethodBindPtr! = nil
-    static var _method__end_customize_resources_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_name_0: GDExtensionMethodBindPtr! = nil
-    static var _method_add_shared_object_3098291045: GDExtensionMethodBindPtr! = nil
-    static var _method_add_ios_project_static_lib_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_add_file_527928637: GDExtensionMethodBindPtr! = nil
-    static var _method_add_ios_framework_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_add_ios_embedded_framework_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_add_ios_plist_content_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_add_ios_linker_flags_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_add_ios_bundle_file_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_add_ios_cpp_code_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_add_macos_plugin_file_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_skip_3218959716: GDExtensionMethodBindPtr! = nil
+    static var _method__export_file_0: StringName! = nil
+    static var _method__export_begin_0: StringName! = nil
+    static var _method__export_end_0: StringName! = nil
+    static var _method__begin_customize_resources_0: StringName! = nil
+    static var _method__customize_resource_0: StringName! = nil
+    static var _method__begin_customize_scenes_0: StringName! = nil
+    static var _method__customize_scene_0: StringName! = nil
+    static var _method__get_customization_configuration_hash_0: StringName! = nil
+    static var _method__end_customize_scenes_0: StringName! = nil
+    static var _method__end_customize_resources_0: StringName! = nil
+    static var _method__get_name_0: StringName! = nil
+    static var _method_add_shared_object_3098291045: StringName! = nil
+    static var _method_add_ios_project_static_lib_83702148: StringName! = nil
+    static var _method_add_file_527928637: StringName! = nil
+    static var _method_add_ios_framework_83702148: StringName! = nil
+    static var _method_add_ios_embedded_framework_83702148: StringName! = nil
+    static var _method_add_ios_plist_content_83702148: StringName! = nil
+    static var _method_add_ios_linker_flags_83702148: StringName! = nil
+    static var _method_add_ios_bundle_file_83702148: StringName! = nil
+    static var _method_add_ios_cpp_code_83702148: StringName! = nil
+    static var _method_add_macos_plugin_file_83702148: StringName! = nil
+    static var _method_skip_3218959716: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorExportPlugin == nil)
         __godot_name_EditorExportPlugin = StringName(from: "EditorExportPlugin")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_add_shared_object_3098291045_name = StringName(from: "add_shared_object")
-        self._method_add_shared_object_3098291045 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorExportPlugin._native_ptr(), _method_add_shared_object_3098291045_name._native_ptr(), 3098291045)
-        assert(EditorExportPlugin._method_add_shared_object_3098291045 != nil)
-        let _method_add_ios_project_static_lib_83702148_name = StringName(from: "add_ios_project_static_lib")
-        self._method_add_ios_project_static_lib_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorExportPlugin._native_ptr(), _method_add_ios_project_static_lib_83702148_name._native_ptr(), 83702148)
-        assert(EditorExportPlugin._method_add_ios_project_static_lib_83702148 != nil)
-        let _method_add_file_527928637_name = StringName(from: "add_file")
-        self._method_add_file_527928637 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorExportPlugin._native_ptr(), _method_add_file_527928637_name._native_ptr(), 527928637)
-        assert(EditorExportPlugin._method_add_file_527928637 != nil)
-        let _method_add_ios_framework_83702148_name = StringName(from: "add_ios_framework")
-        self._method_add_ios_framework_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorExportPlugin._native_ptr(), _method_add_ios_framework_83702148_name._native_ptr(), 83702148)
-        assert(EditorExportPlugin._method_add_ios_framework_83702148 != nil)
-        let _method_add_ios_embedded_framework_83702148_name = StringName(from: "add_ios_embedded_framework")
-        self._method_add_ios_embedded_framework_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorExportPlugin._native_ptr(), _method_add_ios_embedded_framework_83702148_name._native_ptr(), 83702148)
-        assert(EditorExportPlugin._method_add_ios_embedded_framework_83702148 != nil)
-        let _method_add_ios_plist_content_83702148_name = StringName(from: "add_ios_plist_content")
-        self._method_add_ios_plist_content_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorExportPlugin._native_ptr(), _method_add_ios_plist_content_83702148_name._native_ptr(), 83702148)
-        assert(EditorExportPlugin._method_add_ios_plist_content_83702148 != nil)
-        let _method_add_ios_linker_flags_83702148_name = StringName(from: "add_ios_linker_flags")
-        self._method_add_ios_linker_flags_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorExportPlugin._native_ptr(), _method_add_ios_linker_flags_83702148_name._native_ptr(), 83702148)
-        assert(EditorExportPlugin._method_add_ios_linker_flags_83702148 != nil)
-        let _method_add_ios_bundle_file_83702148_name = StringName(from: "add_ios_bundle_file")
-        self._method_add_ios_bundle_file_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorExportPlugin._native_ptr(), _method_add_ios_bundle_file_83702148_name._native_ptr(), 83702148)
-        assert(EditorExportPlugin._method_add_ios_bundle_file_83702148 != nil)
-        let _method_add_ios_cpp_code_83702148_name = StringName(from: "add_ios_cpp_code")
-        self._method_add_ios_cpp_code_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorExportPlugin._native_ptr(), _method_add_ios_cpp_code_83702148_name._native_ptr(), 83702148)
-        assert(EditorExportPlugin._method_add_ios_cpp_code_83702148 != nil)
-        let _method_add_macos_plugin_file_83702148_name = StringName(from: "add_macos_plugin_file")
-        self._method_add_macos_plugin_file_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorExportPlugin._native_ptr(), _method_add_macos_plugin_file_83702148_name._native_ptr(), 83702148)
-        assert(EditorExportPlugin._method_add_macos_plugin_file_83702148 != nil)
-        let _method_skip_3218959716_name = StringName(from: "skip")
-        self._method_skip_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_EditorExportPlugin._native_ptr(), _method_skip_3218959716_name._native_ptr(), 3218959716)
-        assert(EditorExportPlugin._method_skip_3218959716 != nil)
+        self._method_add_shared_object_3098291045 = StringName(from: "add_shared_object")
+        assert(self._method_add_shared_object_3098291045 != nil)
+        self._method_add_ios_project_static_lib_83702148 = StringName(from: "add_ios_project_static_lib")
+        assert(self._method_add_ios_project_static_lib_83702148 != nil)
+        self._method_add_file_527928637 = StringName(from: "add_file")
+        assert(self._method_add_file_527928637 != nil)
+        self._method_add_ios_framework_83702148 = StringName(from: "add_ios_framework")
+        assert(self._method_add_ios_framework_83702148 != nil)
+        self._method_add_ios_embedded_framework_83702148 = StringName(from: "add_ios_embedded_framework")
+        assert(self._method_add_ios_embedded_framework_83702148 != nil)
+        self._method_add_ios_plist_content_83702148 = StringName(from: "add_ios_plist_content")
+        assert(self._method_add_ios_plist_content_83702148 != nil)
+        self._method_add_ios_linker_flags_83702148 = StringName(from: "add_ios_linker_flags")
+        assert(self._method_add_ios_linker_flags_83702148 != nil)
+        self._method_add_ios_bundle_file_83702148 = StringName(from: "add_ios_bundle_file")
+        assert(self._method_add_ios_bundle_file_83702148 != nil)
+        self._method_add_ios_cpp_code_83702148 = StringName(from: "add_ios_cpp_code")
+        assert(self._method_add_ios_cpp_code_83702148 != nil)
+        self._method_add_macos_plugin_file_83702148 = StringName(from: "add_macos_plugin_file")
+        assert(self._method_add_macos_plugin_file_83702148 != nil)
+        self._method_skip_3218959716 = StringName(from: "skip")
+        assert(self._method_skip_3218959716 != nil)
     }
 
     public func _export_file(path: godot.String, `type`: godot.String, features: PackedStringArray)  {
@@ -89,12 +79,7 @@ open class EditorExportPlugin : RefCounted {
                 .init(path_native), .init(type_native), .init(features_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__export_file_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _export_begin(features: PackedStringArray, is_debug: UInt8, path: godot.String, flags: Int64)  {
         withUnsafePointer(to: flags) { flags_native in
@@ -107,12 +92,7 @@ open class EditorExportPlugin : RefCounted {
                 .init(features_native), .init(is_debug_native), .init(path_native), .init(flags_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__export_begin_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
         }
         }
     }
@@ -123,12 +103,7 @@ open class EditorExportPlugin : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__export_end_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _begin_customize_resources(platform: EditorExportPlatform, features: PackedStringArray) -> UInt8 {
         let features_native = features._native_ptr()
@@ -141,12 +116,7 @@ open class EditorExportPlugin : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__begin_customize_resources_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _customize_resource(resource: Resource, path: godot.String) -> Resource {
@@ -159,12 +129,7 @@ open class EditorExportPlugin : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__customize_resource_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Resource(godot: __resPtr.pointee)
     }
     public func _begin_customize_scenes(platform: EditorExportPlatform, features: PackedStringArray) -> UInt8 {
@@ -178,12 +143,7 @@ open class EditorExportPlugin : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__begin_customize_scenes_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return UInt8(godot: __resPtr.pointee)
     }
     public func _customize_scene(scene: Node, path: godot.String) -> Node {
@@ -196,12 +156,7 @@ open class EditorExportPlugin : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__customize_scene_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Node(godot: __resPtr.pointee)
     }
     public func _get_customization_configuration_hash() -> Int64 {
@@ -213,12 +168,7 @@ open class EditorExportPlugin : RefCounted {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_customization_configuration_hash_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return Int64(godot: __resPtr.pointee)
     }
     public func _end_customize_scenes()  {
@@ -228,12 +178,7 @@ open class EditorExportPlugin : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__end_customize_scenes_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _end_customize_resources()  {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -242,12 +187,7 @@ open class EditorExportPlugin : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__end_customize_resources_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _get_name() -> godot.String {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -257,12 +197,7 @@ open class EditorExportPlugin : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_name_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return godot.String(godot: __resPtr.pointee)
     }
     public func add_shared_object(path: godot.String, tags: PackedStringArray, target: godot.String)  {
@@ -275,8 +210,13 @@ open class EditorExportPlugin : RefCounted {
                 .init(path_native), .init(tags_native), .init(target_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_shared_object_3098291045,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_shared_object_3098291045._native_ptr(),
+                    3098291045)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -290,8 +230,13 @@ open class EditorExportPlugin : RefCounted {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_ios_project_static_lib_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_ios_project_static_lib_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -307,8 +252,13 @@ open class EditorExportPlugin : RefCounted {
                 .init(path_native), .init(file_native), .init(remap_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_file_527928637,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_file_527928637._native_ptr(),
+                    527928637)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -323,8 +273,13 @@ open class EditorExportPlugin : RefCounted {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_ios_framework_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_ios_framework_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -338,8 +293,13 @@ open class EditorExportPlugin : RefCounted {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_ios_embedded_framework_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_ios_embedded_framework_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -353,8 +313,13 @@ open class EditorExportPlugin : RefCounted {
                 .init(plist_content_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_ios_plist_content_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_ios_plist_content_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -368,8 +333,13 @@ open class EditorExportPlugin : RefCounted {
                 .init(flags_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_ios_linker_flags_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_ios_linker_flags_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -383,8 +353,13 @@ open class EditorExportPlugin : RefCounted {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_ios_bundle_file_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_ios_bundle_file_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -398,8 +373,13 @@ open class EditorExportPlugin : RefCounted {
                 .init(code_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_ios_cpp_code_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_ios_cpp_code_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -413,8 +393,13 @@ open class EditorExportPlugin : RefCounted {
                 .init(path_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_add_macos_plugin_file_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_add_macos_plugin_file_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -427,8 +412,13 @@ open class EditorExportPlugin : RefCounted {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_skip_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_skip_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil

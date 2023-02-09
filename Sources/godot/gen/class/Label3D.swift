@@ -23,243 +23,187 @@ open class Label3D : GeometryInstance3D {
 
     public override class var __godot_name: StringName { __godot_name_Label3D }
 
-    static var _method_set_horizontal_alignment_2312603777: GDExtensionMethodBindPtr! = nil
-    static var _method_get_horizontal_alignment_341400642: GDExtensionMethodBindPtr! = nil
-    static var _method_set_vertical_alignment_1796458609: GDExtensionMethodBindPtr! = nil
-    static var _method_get_vertical_alignment_3274884059: GDExtensionMethodBindPtr! = nil
-    static var _method_set_modulate_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_modulate_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_outline_modulate_2920490490: GDExtensionMethodBindPtr! = nil
-    static var _method_get_outline_modulate_3444240500: GDExtensionMethodBindPtr! = nil
-    static var _method_set_text_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_text_direction_1418190634: GDExtensionMethodBindPtr! = nil
-    static var _method_get_text_direction_2516697328: GDExtensionMethodBindPtr! = nil
-    static var _method_set_language_83702148: GDExtensionMethodBindPtr! = nil
-    static var _method_get_language_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_set_structured_text_bidi_override_55961453: GDExtensionMethodBindPtr! = nil
-    static var _method_get_structured_text_bidi_override_3385126229: GDExtensionMethodBindPtr! = nil
-    static var _method_set_structured_text_bidi_override_options_381264803: GDExtensionMethodBindPtr! = nil
-    static var _method_get_structured_text_bidi_override_options_3995934104: GDExtensionMethodBindPtr! = nil
-    static var _method_set_uppercase_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_uppercase_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_render_priority_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_render_priority_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_outline_render_priority_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_outline_render_priority_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_font_1262170328: GDExtensionMethodBindPtr! = nil
-    static var _method_get_font_3229501585: GDExtensionMethodBindPtr! = nil
-    static var _method_set_font_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_font_size_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_outline_size_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_outline_size_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_set_line_spacing_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_line_spacing_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_autowrap_mode_3289138044: GDExtensionMethodBindPtr! = nil
-    static var _method_get_autowrap_mode_1549071663: GDExtensionMethodBindPtr! = nil
-    static var _method_set_width_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_width_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_pixel_size_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_pixel_size_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_offset_743155724: GDExtensionMethodBindPtr! = nil
-    static var _method_get_offset_3341600327: GDExtensionMethodBindPtr! = nil
-    static var _method_set_draw_flag_1285833066: GDExtensionMethodBindPtr! = nil
-    static var _method_get_draw_flag_259226453: GDExtensionMethodBindPtr! = nil
-    static var _method_set_billboard_mode_4202036497: GDExtensionMethodBindPtr! = nil
-    static var _method_get_billboard_mode_1283840139: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alpha_cut_mode_2549142916: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alpha_cut_mode_219468601: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alpha_scissor_threshold_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alpha_scissor_threshold_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alpha_hash_scale_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alpha_hash_scale_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alpha_antialiasing_3212649852: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alpha_antialiasing_2889939400: GDExtensionMethodBindPtr! = nil
-    static var _method_set_alpha_antialiasing_edge_373806689: GDExtensionMethodBindPtr! = nil
-    static var _method_get_alpha_antialiasing_edge_1740695150: GDExtensionMethodBindPtr! = nil
-    static var _method_set_texture_filter_22904437: GDExtensionMethodBindPtr! = nil
-    static var _method_get_texture_filter_3289213076: GDExtensionMethodBindPtr! = nil
-    static var _method_generate_triangle_mesh_3476533166: GDExtensionMethodBindPtr! = nil
+    static var _method_set_horizontal_alignment_2312603777: StringName! = nil
+    static var _method_get_horizontal_alignment_341400642: StringName! = nil
+    static var _method_set_vertical_alignment_1796458609: StringName! = nil
+    static var _method_get_vertical_alignment_3274884059: StringName! = nil
+    static var _method_set_modulate_2920490490: StringName! = nil
+    static var _method_get_modulate_3444240500: StringName! = nil
+    static var _method_set_outline_modulate_2920490490: StringName! = nil
+    static var _method_get_outline_modulate_3444240500: StringName! = nil
+    static var _method_set_text_83702148: StringName! = nil
+    static var _method_get_text_201670096: StringName! = nil
+    static var _method_set_text_direction_1418190634: StringName! = nil
+    static var _method_get_text_direction_2516697328: StringName! = nil
+    static var _method_set_language_83702148: StringName! = nil
+    static var _method_get_language_201670096: StringName! = nil
+    static var _method_set_structured_text_bidi_override_55961453: StringName! = nil
+    static var _method_get_structured_text_bidi_override_3385126229: StringName! = nil
+    static var _method_set_structured_text_bidi_override_options_381264803: StringName! = nil
+    static var _method_get_structured_text_bidi_override_options_3995934104: StringName! = nil
+    static var _method_set_uppercase_2586408642: StringName! = nil
+    static var _method_is_uppercase_36873697: StringName! = nil
+    static var _method_set_render_priority_1286410249: StringName! = nil
+    static var _method_get_render_priority_3905245786: StringName! = nil
+    static var _method_set_outline_render_priority_1286410249: StringName! = nil
+    static var _method_get_outline_render_priority_3905245786: StringName! = nil
+    static var _method_set_font_1262170328: StringName! = nil
+    static var _method_get_font_3229501585: StringName! = nil
+    static var _method_set_font_size_1286410249: StringName! = nil
+    static var _method_get_font_size_3905245786: StringName! = nil
+    static var _method_set_outline_size_1286410249: StringName! = nil
+    static var _method_get_outline_size_3905245786: StringName! = nil
+    static var _method_set_line_spacing_373806689: StringName! = nil
+    static var _method_get_line_spacing_1740695150: StringName! = nil
+    static var _method_set_autowrap_mode_3289138044: StringName! = nil
+    static var _method_get_autowrap_mode_1549071663: StringName! = nil
+    static var _method_set_width_373806689: StringName! = nil
+    static var _method_get_width_1740695150: StringName! = nil
+    static var _method_set_pixel_size_373806689: StringName! = nil
+    static var _method_get_pixel_size_1740695150: StringName! = nil
+    static var _method_set_offset_743155724: StringName! = nil
+    static var _method_get_offset_3341600327: StringName! = nil
+    static var _method_set_draw_flag_1285833066: StringName! = nil
+    static var _method_get_draw_flag_259226453: StringName! = nil
+    static var _method_set_billboard_mode_4202036497: StringName! = nil
+    static var _method_get_billboard_mode_1283840139: StringName! = nil
+    static var _method_set_alpha_cut_mode_2549142916: StringName! = nil
+    static var _method_get_alpha_cut_mode_219468601: StringName! = nil
+    static var _method_set_alpha_scissor_threshold_373806689: StringName! = nil
+    static var _method_get_alpha_scissor_threshold_1740695150: StringName! = nil
+    static var _method_set_alpha_hash_scale_373806689: StringName! = nil
+    static var _method_get_alpha_hash_scale_1740695150: StringName! = nil
+    static var _method_set_alpha_antialiasing_3212649852: StringName! = nil
+    static var _method_get_alpha_antialiasing_2889939400: StringName! = nil
+    static var _method_set_alpha_antialiasing_edge_373806689: StringName! = nil
+    static var _method_get_alpha_antialiasing_edge_1740695150: StringName! = nil
+    static var _method_set_texture_filter_22904437: StringName! = nil
+    static var _method_get_texture_filter_3289213076: StringName! = nil
+    static var _method_generate_triangle_mesh_3476533166: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_Label3D == nil)
         __godot_name_Label3D = StringName(from: "Label3D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_horizontal_alignment_2312603777_name = StringName(from: "set_horizontal_alignment")
-        self._method_set_horizontal_alignment_2312603777 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_horizontal_alignment_2312603777_name._native_ptr(), 2312603777)
-        assert(Label3D._method_set_horizontal_alignment_2312603777 != nil)
-        let _method_get_horizontal_alignment_341400642_name = StringName(from: "get_horizontal_alignment")
-        self._method_get_horizontal_alignment_341400642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_horizontal_alignment_341400642_name._native_ptr(), 341400642)
-        assert(Label3D._method_get_horizontal_alignment_341400642 != nil)
-        let _method_set_vertical_alignment_1796458609_name = StringName(from: "set_vertical_alignment")
-        self._method_set_vertical_alignment_1796458609 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_vertical_alignment_1796458609_name._native_ptr(), 1796458609)
-        assert(Label3D._method_set_vertical_alignment_1796458609 != nil)
-        let _method_get_vertical_alignment_3274884059_name = StringName(from: "get_vertical_alignment")
-        self._method_get_vertical_alignment_3274884059 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_vertical_alignment_3274884059_name._native_ptr(), 3274884059)
-        assert(Label3D._method_get_vertical_alignment_3274884059 != nil)
-        let _method_set_modulate_2920490490_name = StringName(from: "set_modulate")
-        self._method_set_modulate_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_modulate_2920490490_name._native_ptr(), 2920490490)
-        assert(Label3D._method_set_modulate_2920490490 != nil)
-        let _method_get_modulate_3444240500_name = StringName(from: "get_modulate")
-        self._method_get_modulate_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_modulate_3444240500_name._native_ptr(), 3444240500)
-        assert(Label3D._method_get_modulate_3444240500 != nil)
-        let _method_set_outline_modulate_2920490490_name = StringName(from: "set_outline_modulate")
-        self._method_set_outline_modulate_2920490490 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_outline_modulate_2920490490_name._native_ptr(), 2920490490)
-        assert(Label3D._method_set_outline_modulate_2920490490 != nil)
-        let _method_get_outline_modulate_3444240500_name = StringName(from: "get_outline_modulate")
-        self._method_get_outline_modulate_3444240500 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_outline_modulate_3444240500_name._native_ptr(), 3444240500)
-        assert(Label3D._method_get_outline_modulate_3444240500 != nil)
-        let _method_set_text_83702148_name = StringName(from: "set_text")
-        self._method_set_text_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_text_83702148_name._native_ptr(), 83702148)
-        assert(Label3D._method_set_text_83702148 != nil)
-        let _method_get_text_201670096_name = StringName(from: "get_text")
-        self._method_get_text_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_text_201670096_name._native_ptr(), 201670096)
-        assert(Label3D._method_get_text_201670096 != nil)
-        let _method_set_text_direction_1418190634_name = StringName(from: "set_text_direction")
-        self._method_set_text_direction_1418190634 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_text_direction_1418190634_name._native_ptr(), 1418190634)
-        assert(Label3D._method_set_text_direction_1418190634 != nil)
-        let _method_get_text_direction_2516697328_name = StringName(from: "get_text_direction")
-        self._method_get_text_direction_2516697328 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_text_direction_2516697328_name._native_ptr(), 2516697328)
-        assert(Label3D._method_get_text_direction_2516697328 != nil)
-        let _method_set_language_83702148_name = StringName(from: "set_language")
-        self._method_set_language_83702148 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_language_83702148_name._native_ptr(), 83702148)
-        assert(Label3D._method_set_language_83702148 != nil)
-        let _method_get_language_201670096_name = StringName(from: "get_language")
-        self._method_get_language_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_language_201670096_name._native_ptr(), 201670096)
-        assert(Label3D._method_get_language_201670096 != nil)
-        let _method_set_structured_text_bidi_override_55961453_name = StringName(from: "set_structured_text_bidi_override")
-        self._method_set_structured_text_bidi_override_55961453 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_structured_text_bidi_override_55961453_name._native_ptr(), 55961453)
-        assert(Label3D._method_set_structured_text_bidi_override_55961453 != nil)
-        let _method_get_structured_text_bidi_override_3385126229_name = StringName(from: "get_structured_text_bidi_override")
-        self._method_get_structured_text_bidi_override_3385126229 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_structured_text_bidi_override_3385126229_name._native_ptr(), 3385126229)
-        assert(Label3D._method_get_structured_text_bidi_override_3385126229 != nil)
-        let _method_set_structured_text_bidi_override_options_381264803_name = StringName(from: "set_structured_text_bidi_override_options")
-        self._method_set_structured_text_bidi_override_options_381264803 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_structured_text_bidi_override_options_381264803_name._native_ptr(), 381264803)
-        assert(Label3D._method_set_structured_text_bidi_override_options_381264803 != nil)
-        let _method_get_structured_text_bidi_override_options_3995934104_name = StringName(from: "get_structured_text_bidi_override_options")
-        self._method_get_structured_text_bidi_override_options_3995934104 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_structured_text_bidi_override_options_3995934104_name._native_ptr(), 3995934104)
-        assert(Label3D._method_get_structured_text_bidi_override_options_3995934104 != nil)
-        let _method_set_uppercase_2586408642_name = StringName(from: "set_uppercase")
-        self._method_set_uppercase_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_uppercase_2586408642_name._native_ptr(), 2586408642)
-        assert(Label3D._method_set_uppercase_2586408642 != nil)
-        let _method_is_uppercase_36873697_name = StringName(from: "is_uppercase")
-        self._method_is_uppercase_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_is_uppercase_36873697_name._native_ptr(), 36873697)
-        assert(Label3D._method_is_uppercase_36873697 != nil)
-        let _method_set_render_priority_1286410249_name = StringName(from: "set_render_priority")
-        self._method_set_render_priority_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_render_priority_1286410249_name._native_ptr(), 1286410249)
-        assert(Label3D._method_set_render_priority_1286410249 != nil)
-        let _method_get_render_priority_3905245786_name = StringName(from: "get_render_priority")
-        self._method_get_render_priority_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_render_priority_3905245786_name._native_ptr(), 3905245786)
-        assert(Label3D._method_get_render_priority_3905245786 != nil)
-        let _method_set_outline_render_priority_1286410249_name = StringName(from: "set_outline_render_priority")
-        self._method_set_outline_render_priority_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_outline_render_priority_1286410249_name._native_ptr(), 1286410249)
-        assert(Label3D._method_set_outline_render_priority_1286410249 != nil)
-        let _method_get_outline_render_priority_3905245786_name = StringName(from: "get_outline_render_priority")
-        self._method_get_outline_render_priority_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_outline_render_priority_3905245786_name._native_ptr(), 3905245786)
-        assert(Label3D._method_get_outline_render_priority_3905245786 != nil)
-        let _method_set_font_1262170328_name = StringName(from: "set_font")
-        self._method_set_font_1262170328 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_font_1262170328_name._native_ptr(), 1262170328)
-        assert(Label3D._method_set_font_1262170328 != nil)
-        let _method_get_font_3229501585_name = StringName(from: "get_font")
-        self._method_get_font_3229501585 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_font_3229501585_name._native_ptr(), 3229501585)
-        assert(Label3D._method_get_font_3229501585 != nil)
-        let _method_set_font_size_1286410249_name = StringName(from: "set_font_size")
-        self._method_set_font_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_font_size_1286410249_name._native_ptr(), 1286410249)
-        assert(Label3D._method_set_font_size_1286410249 != nil)
-        let _method_get_font_size_3905245786_name = StringName(from: "get_font_size")
-        self._method_get_font_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_font_size_3905245786_name._native_ptr(), 3905245786)
-        assert(Label3D._method_get_font_size_3905245786 != nil)
-        let _method_set_outline_size_1286410249_name = StringName(from: "set_outline_size")
-        self._method_set_outline_size_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_outline_size_1286410249_name._native_ptr(), 1286410249)
-        assert(Label3D._method_set_outline_size_1286410249 != nil)
-        let _method_get_outline_size_3905245786_name = StringName(from: "get_outline_size")
-        self._method_get_outline_size_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_outline_size_3905245786_name._native_ptr(), 3905245786)
-        assert(Label3D._method_get_outline_size_3905245786 != nil)
-        let _method_set_line_spacing_373806689_name = StringName(from: "set_line_spacing")
-        self._method_set_line_spacing_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_line_spacing_373806689_name._native_ptr(), 373806689)
-        assert(Label3D._method_set_line_spacing_373806689 != nil)
-        let _method_get_line_spacing_1740695150_name = StringName(from: "get_line_spacing")
-        self._method_get_line_spacing_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_line_spacing_1740695150_name._native_ptr(), 1740695150)
-        assert(Label3D._method_get_line_spacing_1740695150 != nil)
-        let _method_set_autowrap_mode_3289138044_name = StringName(from: "set_autowrap_mode")
-        self._method_set_autowrap_mode_3289138044 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_autowrap_mode_3289138044_name._native_ptr(), 3289138044)
-        assert(Label3D._method_set_autowrap_mode_3289138044 != nil)
-        let _method_get_autowrap_mode_1549071663_name = StringName(from: "get_autowrap_mode")
-        self._method_get_autowrap_mode_1549071663 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_autowrap_mode_1549071663_name._native_ptr(), 1549071663)
-        assert(Label3D._method_get_autowrap_mode_1549071663 != nil)
-        let _method_set_width_373806689_name = StringName(from: "set_width")
-        self._method_set_width_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_width_373806689_name._native_ptr(), 373806689)
-        assert(Label3D._method_set_width_373806689 != nil)
-        let _method_get_width_1740695150_name = StringName(from: "get_width")
-        self._method_get_width_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_width_1740695150_name._native_ptr(), 1740695150)
-        assert(Label3D._method_get_width_1740695150 != nil)
-        let _method_set_pixel_size_373806689_name = StringName(from: "set_pixel_size")
-        self._method_set_pixel_size_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_pixel_size_373806689_name._native_ptr(), 373806689)
-        assert(Label3D._method_set_pixel_size_373806689 != nil)
-        let _method_get_pixel_size_1740695150_name = StringName(from: "get_pixel_size")
-        self._method_get_pixel_size_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_pixel_size_1740695150_name._native_ptr(), 1740695150)
-        assert(Label3D._method_get_pixel_size_1740695150 != nil)
-        let _method_set_offset_743155724_name = StringName(from: "set_offset")
-        self._method_set_offset_743155724 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_offset_743155724_name._native_ptr(), 743155724)
-        assert(Label3D._method_set_offset_743155724 != nil)
-        let _method_get_offset_3341600327_name = StringName(from: "get_offset")
-        self._method_get_offset_3341600327 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_offset_3341600327_name._native_ptr(), 3341600327)
-        assert(Label3D._method_get_offset_3341600327 != nil)
-        let _method_set_draw_flag_1285833066_name = StringName(from: "set_draw_flag")
-        self._method_set_draw_flag_1285833066 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_draw_flag_1285833066_name._native_ptr(), 1285833066)
-        assert(Label3D._method_set_draw_flag_1285833066 != nil)
-        let _method_get_draw_flag_259226453_name = StringName(from: "get_draw_flag")
-        self._method_get_draw_flag_259226453 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_draw_flag_259226453_name._native_ptr(), 259226453)
-        assert(Label3D._method_get_draw_flag_259226453 != nil)
-        let _method_set_billboard_mode_4202036497_name = StringName(from: "set_billboard_mode")
-        self._method_set_billboard_mode_4202036497 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_billboard_mode_4202036497_name._native_ptr(), 4202036497)
-        assert(Label3D._method_set_billboard_mode_4202036497 != nil)
-        let _method_get_billboard_mode_1283840139_name = StringName(from: "get_billboard_mode")
-        self._method_get_billboard_mode_1283840139 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_billboard_mode_1283840139_name._native_ptr(), 1283840139)
-        assert(Label3D._method_get_billboard_mode_1283840139 != nil)
-        let _method_set_alpha_cut_mode_2549142916_name = StringName(from: "set_alpha_cut_mode")
-        self._method_set_alpha_cut_mode_2549142916 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_alpha_cut_mode_2549142916_name._native_ptr(), 2549142916)
-        assert(Label3D._method_set_alpha_cut_mode_2549142916 != nil)
-        let _method_get_alpha_cut_mode_219468601_name = StringName(from: "get_alpha_cut_mode")
-        self._method_get_alpha_cut_mode_219468601 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_alpha_cut_mode_219468601_name._native_ptr(), 219468601)
-        assert(Label3D._method_get_alpha_cut_mode_219468601 != nil)
-        let _method_set_alpha_scissor_threshold_373806689_name = StringName(from: "set_alpha_scissor_threshold")
-        self._method_set_alpha_scissor_threshold_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_alpha_scissor_threshold_373806689_name._native_ptr(), 373806689)
-        assert(Label3D._method_set_alpha_scissor_threshold_373806689 != nil)
-        let _method_get_alpha_scissor_threshold_1740695150_name = StringName(from: "get_alpha_scissor_threshold")
-        self._method_get_alpha_scissor_threshold_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_alpha_scissor_threshold_1740695150_name._native_ptr(), 1740695150)
-        assert(Label3D._method_get_alpha_scissor_threshold_1740695150 != nil)
-        let _method_set_alpha_hash_scale_373806689_name = StringName(from: "set_alpha_hash_scale")
-        self._method_set_alpha_hash_scale_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_alpha_hash_scale_373806689_name._native_ptr(), 373806689)
-        assert(Label3D._method_set_alpha_hash_scale_373806689 != nil)
-        let _method_get_alpha_hash_scale_1740695150_name = StringName(from: "get_alpha_hash_scale")
-        self._method_get_alpha_hash_scale_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_alpha_hash_scale_1740695150_name._native_ptr(), 1740695150)
-        assert(Label3D._method_get_alpha_hash_scale_1740695150 != nil)
-        let _method_set_alpha_antialiasing_3212649852_name = StringName(from: "set_alpha_antialiasing")
-        self._method_set_alpha_antialiasing_3212649852 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_alpha_antialiasing_3212649852_name._native_ptr(), 3212649852)
-        assert(Label3D._method_set_alpha_antialiasing_3212649852 != nil)
-        let _method_get_alpha_antialiasing_2889939400_name = StringName(from: "get_alpha_antialiasing")
-        self._method_get_alpha_antialiasing_2889939400 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_alpha_antialiasing_2889939400_name._native_ptr(), 2889939400)
-        assert(Label3D._method_get_alpha_antialiasing_2889939400 != nil)
-        let _method_set_alpha_antialiasing_edge_373806689_name = StringName(from: "set_alpha_antialiasing_edge")
-        self._method_set_alpha_antialiasing_edge_373806689 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_alpha_antialiasing_edge_373806689_name._native_ptr(), 373806689)
-        assert(Label3D._method_set_alpha_antialiasing_edge_373806689 != nil)
-        let _method_get_alpha_antialiasing_edge_1740695150_name = StringName(from: "get_alpha_antialiasing_edge")
-        self._method_get_alpha_antialiasing_edge_1740695150 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_alpha_antialiasing_edge_1740695150_name._native_ptr(), 1740695150)
-        assert(Label3D._method_get_alpha_antialiasing_edge_1740695150 != nil)
-        let _method_set_texture_filter_22904437_name = StringName(from: "set_texture_filter")
-        self._method_set_texture_filter_22904437 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_set_texture_filter_22904437_name._native_ptr(), 22904437)
-        assert(Label3D._method_set_texture_filter_22904437 != nil)
-        let _method_get_texture_filter_3289213076_name = StringName(from: "get_texture_filter")
-        self._method_get_texture_filter_3289213076 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_get_texture_filter_3289213076_name._native_ptr(), 3289213076)
-        assert(Label3D._method_get_texture_filter_3289213076 != nil)
-        let _method_generate_triangle_mesh_3476533166_name = StringName(from: "generate_triangle_mesh")
-        self._method_generate_triangle_mesh_3476533166 = self.interface.pointee.classdb_get_method_bind(__godot_name_Label3D._native_ptr(), _method_generate_triangle_mesh_3476533166_name._native_ptr(), 3476533166)
-        assert(Label3D._method_generate_triangle_mesh_3476533166 != nil)
+        self._method_set_horizontal_alignment_2312603777 = StringName(from: "set_horizontal_alignment")
+        assert(self._method_set_horizontal_alignment_2312603777 != nil)
+        self._method_get_horizontal_alignment_341400642 = StringName(from: "get_horizontal_alignment")
+        assert(self._method_get_horizontal_alignment_341400642 != nil)
+        self._method_set_vertical_alignment_1796458609 = StringName(from: "set_vertical_alignment")
+        assert(self._method_set_vertical_alignment_1796458609 != nil)
+        self._method_get_vertical_alignment_3274884059 = StringName(from: "get_vertical_alignment")
+        assert(self._method_get_vertical_alignment_3274884059 != nil)
+        self._method_set_modulate_2920490490 = StringName(from: "set_modulate")
+        assert(self._method_set_modulate_2920490490 != nil)
+        self._method_get_modulate_3444240500 = StringName(from: "get_modulate")
+        assert(self._method_get_modulate_3444240500 != nil)
+        self._method_set_outline_modulate_2920490490 = StringName(from: "set_outline_modulate")
+        assert(self._method_set_outline_modulate_2920490490 != nil)
+        self._method_get_outline_modulate_3444240500 = StringName(from: "get_outline_modulate")
+        assert(self._method_get_outline_modulate_3444240500 != nil)
+        self._method_set_text_83702148 = StringName(from: "set_text")
+        assert(self._method_set_text_83702148 != nil)
+        self._method_get_text_201670096 = StringName(from: "get_text")
+        assert(self._method_get_text_201670096 != nil)
+        self._method_set_text_direction_1418190634 = StringName(from: "set_text_direction")
+        assert(self._method_set_text_direction_1418190634 != nil)
+        self._method_get_text_direction_2516697328 = StringName(from: "get_text_direction")
+        assert(self._method_get_text_direction_2516697328 != nil)
+        self._method_set_language_83702148 = StringName(from: "set_language")
+        assert(self._method_set_language_83702148 != nil)
+        self._method_get_language_201670096 = StringName(from: "get_language")
+        assert(self._method_get_language_201670096 != nil)
+        self._method_set_structured_text_bidi_override_55961453 = StringName(from: "set_structured_text_bidi_override")
+        assert(self._method_set_structured_text_bidi_override_55961453 != nil)
+        self._method_get_structured_text_bidi_override_3385126229 = StringName(from: "get_structured_text_bidi_override")
+        assert(self._method_get_structured_text_bidi_override_3385126229 != nil)
+        self._method_set_structured_text_bidi_override_options_381264803 = StringName(from: "set_structured_text_bidi_override_options")
+        assert(self._method_set_structured_text_bidi_override_options_381264803 != nil)
+        self._method_get_structured_text_bidi_override_options_3995934104 = StringName(from: "get_structured_text_bidi_override_options")
+        assert(self._method_get_structured_text_bidi_override_options_3995934104 != nil)
+        self._method_set_uppercase_2586408642 = StringName(from: "set_uppercase")
+        assert(self._method_set_uppercase_2586408642 != nil)
+        self._method_is_uppercase_36873697 = StringName(from: "is_uppercase")
+        assert(self._method_is_uppercase_36873697 != nil)
+        self._method_set_render_priority_1286410249 = StringName(from: "set_render_priority")
+        assert(self._method_set_render_priority_1286410249 != nil)
+        self._method_get_render_priority_3905245786 = StringName(from: "get_render_priority")
+        assert(self._method_get_render_priority_3905245786 != nil)
+        self._method_set_outline_render_priority_1286410249 = StringName(from: "set_outline_render_priority")
+        assert(self._method_set_outline_render_priority_1286410249 != nil)
+        self._method_get_outline_render_priority_3905245786 = StringName(from: "get_outline_render_priority")
+        assert(self._method_get_outline_render_priority_3905245786 != nil)
+        self._method_set_font_1262170328 = StringName(from: "set_font")
+        assert(self._method_set_font_1262170328 != nil)
+        self._method_get_font_3229501585 = StringName(from: "get_font")
+        assert(self._method_get_font_3229501585 != nil)
+        self._method_set_font_size_1286410249 = StringName(from: "set_font_size")
+        assert(self._method_set_font_size_1286410249 != nil)
+        self._method_get_font_size_3905245786 = StringName(from: "get_font_size")
+        assert(self._method_get_font_size_3905245786 != nil)
+        self._method_set_outline_size_1286410249 = StringName(from: "set_outline_size")
+        assert(self._method_set_outline_size_1286410249 != nil)
+        self._method_get_outline_size_3905245786 = StringName(from: "get_outline_size")
+        assert(self._method_get_outline_size_3905245786 != nil)
+        self._method_set_line_spacing_373806689 = StringName(from: "set_line_spacing")
+        assert(self._method_set_line_spacing_373806689 != nil)
+        self._method_get_line_spacing_1740695150 = StringName(from: "get_line_spacing")
+        assert(self._method_get_line_spacing_1740695150 != nil)
+        self._method_set_autowrap_mode_3289138044 = StringName(from: "set_autowrap_mode")
+        assert(self._method_set_autowrap_mode_3289138044 != nil)
+        self._method_get_autowrap_mode_1549071663 = StringName(from: "get_autowrap_mode")
+        assert(self._method_get_autowrap_mode_1549071663 != nil)
+        self._method_set_width_373806689 = StringName(from: "set_width")
+        assert(self._method_set_width_373806689 != nil)
+        self._method_get_width_1740695150 = StringName(from: "get_width")
+        assert(self._method_get_width_1740695150 != nil)
+        self._method_set_pixel_size_373806689 = StringName(from: "set_pixel_size")
+        assert(self._method_set_pixel_size_373806689 != nil)
+        self._method_get_pixel_size_1740695150 = StringName(from: "get_pixel_size")
+        assert(self._method_get_pixel_size_1740695150 != nil)
+        self._method_set_offset_743155724 = StringName(from: "set_offset")
+        assert(self._method_set_offset_743155724 != nil)
+        self._method_get_offset_3341600327 = StringName(from: "get_offset")
+        assert(self._method_get_offset_3341600327 != nil)
+        self._method_set_draw_flag_1285833066 = StringName(from: "set_draw_flag")
+        assert(self._method_set_draw_flag_1285833066 != nil)
+        self._method_get_draw_flag_259226453 = StringName(from: "get_draw_flag")
+        assert(self._method_get_draw_flag_259226453 != nil)
+        self._method_set_billboard_mode_4202036497 = StringName(from: "set_billboard_mode")
+        assert(self._method_set_billboard_mode_4202036497 != nil)
+        self._method_get_billboard_mode_1283840139 = StringName(from: "get_billboard_mode")
+        assert(self._method_get_billboard_mode_1283840139 != nil)
+        self._method_set_alpha_cut_mode_2549142916 = StringName(from: "set_alpha_cut_mode")
+        assert(self._method_set_alpha_cut_mode_2549142916 != nil)
+        self._method_get_alpha_cut_mode_219468601 = StringName(from: "get_alpha_cut_mode")
+        assert(self._method_get_alpha_cut_mode_219468601 != nil)
+        self._method_set_alpha_scissor_threshold_373806689 = StringName(from: "set_alpha_scissor_threshold")
+        assert(self._method_set_alpha_scissor_threshold_373806689 != nil)
+        self._method_get_alpha_scissor_threshold_1740695150 = StringName(from: "get_alpha_scissor_threshold")
+        assert(self._method_get_alpha_scissor_threshold_1740695150 != nil)
+        self._method_set_alpha_hash_scale_373806689 = StringName(from: "set_alpha_hash_scale")
+        assert(self._method_set_alpha_hash_scale_373806689 != nil)
+        self._method_get_alpha_hash_scale_1740695150 = StringName(from: "get_alpha_hash_scale")
+        assert(self._method_get_alpha_hash_scale_1740695150 != nil)
+        self._method_set_alpha_antialiasing_3212649852 = StringName(from: "set_alpha_antialiasing")
+        assert(self._method_set_alpha_antialiasing_3212649852 != nil)
+        self._method_get_alpha_antialiasing_2889939400 = StringName(from: "get_alpha_antialiasing")
+        assert(self._method_get_alpha_antialiasing_2889939400 != nil)
+        self._method_set_alpha_antialiasing_edge_373806689 = StringName(from: "set_alpha_antialiasing_edge")
+        assert(self._method_set_alpha_antialiasing_edge_373806689 != nil)
+        self._method_get_alpha_antialiasing_edge_1740695150 = StringName(from: "get_alpha_antialiasing_edge")
+        assert(self._method_get_alpha_antialiasing_edge_1740695150 != nil)
+        self._method_set_texture_filter_22904437 = StringName(from: "set_texture_filter")
+        assert(self._method_set_texture_filter_22904437 != nil)
+        self._method_get_texture_filter_3289213076 = StringName(from: "get_texture_filter")
+        assert(self._method_get_texture_filter_3289213076 != nil)
+        self._method_generate_triangle_mesh_3476533166 = StringName(from: "generate_triangle_mesh")
+        assert(self._method_generate_triangle_mesh_3476533166 != nil)
     }
 
     public func set_horizontal_alignment(alignment: HorizontalAlignment)  {
@@ -270,8 +214,13 @@ open class Label3D : GeometryInstance3D {
                 .init(alignment_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_horizontal_alignment_2312603777,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_horizontal_alignment_2312603777._native_ptr(),
+                    2312603777)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -286,8 +235,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_horizontal_alignment_341400642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_horizontal_alignment_341400642._native_ptr(),
+                    341400642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -302,8 +256,13 @@ open class Label3D : GeometryInstance3D {
                 .init(alignment_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_vertical_alignment_1796458609,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_vertical_alignment_1796458609._native_ptr(),
+                    1796458609)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -318,8 +277,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_vertical_alignment_3274884059,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_vertical_alignment_3274884059._native_ptr(),
+                    3274884059)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -334,8 +298,13 @@ open class Label3D : GeometryInstance3D {
                 .init(modulate_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_modulate_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_modulate_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -349,8 +318,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_modulate_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_modulate_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -365,8 +339,13 @@ open class Label3D : GeometryInstance3D {
                 .init(modulate_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_outline_modulate_2920490490,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_outline_modulate_2920490490._native_ptr(),
+                    2920490490)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -380,8 +359,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_outline_modulate_3444240500,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_outline_modulate_3444240500._native_ptr(),
+                    3444240500)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -396,8 +380,13 @@ open class Label3D : GeometryInstance3D {
                 .init(text_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_text_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_text_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -411,8 +400,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -427,8 +421,13 @@ open class Label3D : GeometryInstance3D {
                 .init(direction_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_text_direction_1418190634,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_text_direction_1418190634._native_ptr(),
+                    1418190634)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -443,8 +442,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_text_direction_2516697328,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_text_direction_2516697328._native_ptr(),
+                    2516697328)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -459,8 +463,13 @@ open class Label3D : GeometryInstance3D {
                 .init(language_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_language_83702148,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_language_83702148._native_ptr(),
+                    83702148)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -474,8 +483,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_language_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_language_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -490,8 +504,13 @@ open class Label3D : GeometryInstance3D {
                 .init(parser_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_structured_text_bidi_override_55961453,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_structured_text_bidi_override_55961453._native_ptr(),
+                    55961453)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -506,8 +525,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_structured_text_bidi_override_3385126229,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_structured_text_bidi_override_3385126229._native_ptr(),
+                    3385126229)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -522,8 +546,13 @@ open class Label3D : GeometryInstance3D {
                 .init(args_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_structured_text_bidi_override_options_381264803,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_structured_text_bidi_override_options_381264803._native_ptr(),
+                    381264803)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -537,8 +566,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_structured_text_bidi_override_options_3995934104,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_structured_text_bidi_override_options_3995934104._native_ptr(),
+                    3995934104)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -553,8 +587,13 @@ open class Label3D : GeometryInstance3D {
                 .init(enable_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_uppercase_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_uppercase_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -570,8 +609,13 @@ open class Label3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_uppercase_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_uppercase_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -586,8 +630,13 @@ open class Label3D : GeometryInstance3D {
                 .init(priority_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_render_priority_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_render_priority_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -603,8 +652,13 @@ open class Label3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_render_priority_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_render_priority_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -619,8 +673,13 @@ open class Label3D : GeometryInstance3D {
                 .init(priority_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_outline_render_priority_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_outline_render_priority_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -636,8 +695,13 @@ open class Label3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_outline_render_priority_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_outline_render_priority_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -652,8 +716,13 @@ open class Label3D : GeometryInstance3D {
                 .init(font_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_font_1262170328,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_font_1262170328._native_ptr(),
+                    1262170328)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -667,8 +736,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_font_3229501585,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_font_3229501585._native_ptr(),
+                    3229501585)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -683,8 +757,13 @@ open class Label3D : GeometryInstance3D {
                 .init(size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_font_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_font_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -700,8 +779,13 @@ open class Label3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_font_size_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_font_size_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -716,8 +800,13 @@ open class Label3D : GeometryInstance3D {
                 .init(outline_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_outline_size_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_outline_size_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -733,8 +822,13 @@ open class Label3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_outline_size_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_outline_size_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -749,8 +843,13 @@ open class Label3D : GeometryInstance3D {
                 .init(line_spacing_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_line_spacing_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_line_spacing_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -766,8 +865,13 @@ open class Label3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_line_spacing_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_line_spacing_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -782,8 +886,13 @@ open class Label3D : GeometryInstance3D {
                 .init(autowrap_mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_autowrap_mode_3289138044,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_autowrap_mode_3289138044._native_ptr(),
+                    3289138044)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -798,8 +907,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_autowrap_mode_1549071663,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_autowrap_mode_1549071663._native_ptr(),
+                    1549071663)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -814,8 +928,13 @@ open class Label3D : GeometryInstance3D {
                 .init(width_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_width_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_width_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -831,8 +950,13 @@ open class Label3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_width_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_width_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -847,8 +971,13 @@ open class Label3D : GeometryInstance3D {
                 .init(pixel_size_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_pixel_size_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_pixel_size_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -864,8 +993,13 @@ open class Label3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_pixel_size_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_pixel_size_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -880,8 +1014,13 @@ open class Label3D : GeometryInstance3D {
                 .init(offset_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_offset_743155724,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_offset_743155724._native_ptr(),
+                    743155724)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -895,8 +1034,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_offset_3341600327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_offset_3341600327._native_ptr(),
+                    3341600327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -912,8 +1056,13 @@ open class Label3D : GeometryInstance3D {
                 .init(flag_native), .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_draw_flag_1285833066,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_draw_flag_1285833066._native_ptr(),
+                    1285833066)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -931,8 +1080,13 @@ open class Label3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_draw_flag_259226453,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_draw_flag_259226453._native_ptr(),
+                    259226453)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -948,8 +1102,13 @@ open class Label3D : GeometryInstance3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_billboard_mode_4202036497,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_billboard_mode_4202036497._native_ptr(),
+                    4202036497)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -964,8 +1123,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_billboard_mode_1283840139,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_billboard_mode_1283840139._native_ptr(),
+                    1283840139)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -980,8 +1144,13 @@ open class Label3D : GeometryInstance3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alpha_cut_mode_2549142916,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alpha_cut_mode_2549142916._native_ptr(),
+                    2549142916)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -996,8 +1165,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alpha_cut_mode_219468601,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alpha_cut_mode_219468601._native_ptr(),
+                    219468601)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1012,8 +1186,13 @@ open class Label3D : GeometryInstance3D {
                 .init(threshold_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alpha_scissor_threshold_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alpha_scissor_threshold_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1029,8 +1208,13 @@ open class Label3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alpha_scissor_threshold_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alpha_scissor_threshold_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1045,8 +1229,13 @@ open class Label3D : GeometryInstance3D {
                 .init(threshold_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alpha_hash_scale_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alpha_hash_scale_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1062,8 +1251,13 @@ open class Label3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alpha_hash_scale_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alpha_hash_scale_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1078,8 +1272,13 @@ open class Label3D : GeometryInstance3D {
                 .init(alpha_aa_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alpha_antialiasing_3212649852,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alpha_antialiasing_3212649852._native_ptr(),
+                    3212649852)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1094,8 +1293,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alpha_antialiasing_2889939400,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alpha_antialiasing_2889939400._native_ptr(),
+                    2889939400)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1110,8 +1314,13 @@ open class Label3D : GeometryInstance3D {
                 .init(edge_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_alpha_antialiasing_edge_373806689,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_alpha_antialiasing_edge_373806689._native_ptr(),
+                    373806689)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1127,8 +1336,13 @@ open class Label3D : GeometryInstance3D {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_alpha_antialiasing_edge_1740695150,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_alpha_antialiasing_edge_1740695150._native_ptr(),
+                    1740695150)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1143,8 +1357,13 @@ open class Label3D : GeometryInstance3D {
                 .init(mode_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_texture_filter_22904437,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_texture_filter_22904437._native_ptr(),
+                    22904437)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -1159,8 +1378,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_texture_filter_3289213076,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_texture_filter_3289213076._native_ptr(),
+                    3289213076)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -1175,8 +1399,13 @@ open class Label3D : GeometryInstance3D {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_generate_triangle_mesh_3476533166,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_generate_triangle_mesh_3476533166._native_ptr(),
+                    3476533166)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

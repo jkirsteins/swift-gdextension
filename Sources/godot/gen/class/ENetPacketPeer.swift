@@ -38,75 +38,61 @@ open class ENetPacketPeer : PacketPeer {
 
     public override class var __godot_name: StringName { __godot_name_ENetPacketPeer }
 
-    static var _method_peer_disconnect_1995695955: GDExtensionMethodBindPtr! = nil
-    static var _method_peer_disconnect_later_1995695955: GDExtensionMethodBindPtr! = nil
-    static var _method_peer_disconnect_now_1995695955: GDExtensionMethodBindPtr! = nil
-    static var _method_ping_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_ping_interval_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_reset_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_send_120522849: GDExtensionMethodBindPtr! = nil
-    static var _method_throttle_configure_1649997291: GDExtensionMethodBindPtr! = nil
-    static var _method_set_timeout_1649997291: GDExtensionMethodBindPtr! = nil
-    static var _method_get_remote_address_201670096: GDExtensionMethodBindPtr! = nil
-    static var _method_get_remote_port_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_get_statistic_1642578323: GDExtensionMethodBindPtr! = nil
-    static var _method_get_state_711068532: GDExtensionMethodBindPtr! = nil
-    static var _method_get_channels_3905245786: GDExtensionMethodBindPtr! = nil
-    static var _method_is_active_36873697: GDExtensionMethodBindPtr! = nil
+    static var _method_peer_disconnect_1995695955: StringName! = nil
+    static var _method_peer_disconnect_later_1995695955: StringName! = nil
+    static var _method_peer_disconnect_now_1995695955: StringName! = nil
+    static var _method_ping_3218959716: StringName! = nil
+    static var _method_ping_interval_1286410249: StringName! = nil
+    static var _method_reset_3218959716: StringName! = nil
+    static var _method_send_120522849: StringName! = nil
+    static var _method_throttle_configure_1649997291: StringName! = nil
+    static var _method_set_timeout_1649997291: StringName! = nil
+    static var _method_get_remote_address_201670096: StringName! = nil
+    static var _method_get_remote_port_3905245786: StringName! = nil
+    static var _method_get_statistic_1642578323: StringName! = nil
+    static var _method_get_state_711068532: StringName! = nil
+    static var _method_get_channels_3905245786: StringName! = nil
+    static var _method_is_active_36873697: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_ENetPacketPeer == nil)
         __godot_name_ENetPacketPeer = StringName(from: "ENetPacketPeer")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_peer_disconnect_1995695955_name = StringName(from: "peer_disconnect")
-        self._method_peer_disconnect_1995695955 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetPacketPeer._native_ptr(), _method_peer_disconnect_1995695955_name._native_ptr(), 1995695955)
-        assert(ENetPacketPeer._method_peer_disconnect_1995695955 != nil)
-        let _method_peer_disconnect_later_1995695955_name = StringName(from: "peer_disconnect_later")
-        self._method_peer_disconnect_later_1995695955 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetPacketPeer._native_ptr(), _method_peer_disconnect_later_1995695955_name._native_ptr(), 1995695955)
-        assert(ENetPacketPeer._method_peer_disconnect_later_1995695955 != nil)
-        let _method_peer_disconnect_now_1995695955_name = StringName(from: "peer_disconnect_now")
-        self._method_peer_disconnect_now_1995695955 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetPacketPeer._native_ptr(), _method_peer_disconnect_now_1995695955_name._native_ptr(), 1995695955)
-        assert(ENetPacketPeer._method_peer_disconnect_now_1995695955 != nil)
-        let _method_ping_3218959716_name = StringName(from: "ping")
-        self._method_ping_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetPacketPeer._native_ptr(), _method_ping_3218959716_name._native_ptr(), 3218959716)
-        assert(ENetPacketPeer._method_ping_3218959716 != nil)
-        let _method_ping_interval_1286410249_name = StringName(from: "ping_interval")
-        self._method_ping_interval_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetPacketPeer._native_ptr(), _method_ping_interval_1286410249_name._native_ptr(), 1286410249)
-        assert(ENetPacketPeer._method_ping_interval_1286410249 != nil)
-        let _method_reset_3218959716_name = StringName(from: "reset")
-        self._method_reset_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetPacketPeer._native_ptr(), _method_reset_3218959716_name._native_ptr(), 3218959716)
-        assert(ENetPacketPeer._method_reset_3218959716 != nil)
-        let _method_send_120522849_name = StringName(from: "send")
-        self._method_send_120522849 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetPacketPeer._native_ptr(), _method_send_120522849_name._native_ptr(), 120522849)
-        assert(ENetPacketPeer._method_send_120522849 != nil)
-        let _method_throttle_configure_1649997291_name = StringName(from: "throttle_configure")
-        self._method_throttle_configure_1649997291 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetPacketPeer._native_ptr(), _method_throttle_configure_1649997291_name._native_ptr(), 1649997291)
-        assert(ENetPacketPeer._method_throttle_configure_1649997291 != nil)
-        let _method_set_timeout_1649997291_name = StringName(from: "set_timeout")
-        self._method_set_timeout_1649997291 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetPacketPeer._native_ptr(), _method_set_timeout_1649997291_name._native_ptr(), 1649997291)
-        assert(ENetPacketPeer._method_set_timeout_1649997291 != nil)
-        let _method_get_remote_address_201670096_name = StringName(from: "get_remote_address")
-        self._method_get_remote_address_201670096 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetPacketPeer._native_ptr(), _method_get_remote_address_201670096_name._native_ptr(), 201670096)
-        assert(ENetPacketPeer._method_get_remote_address_201670096 != nil)
-        let _method_get_remote_port_3905245786_name = StringName(from: "get_remote_port")
-        self._method_get_remote_port_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetPacketPeer._native_ptr(), _method_get_remote_port_3905245786_name._native_ptr(), 3905245786)
-        assert(ENetPacketPeer._method_get_remote_port_3905245786 != nil)
-        let _method_get_statistic_1642578323_name = StringName(from: "get_statistic")
-        self._method_get_statistic_1642578323 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetPacketPeer._native_ptr(), _method_get_statistic_1642578323_name._native_ptr(), 1642578323)
-        assert(ENetPacketPeer._method_get_statistic_1642578323 != nil)
-        let _method_get_state_711068532_name = StringName(from: "get_state")
-        self._method_get_state_711068532 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetPacketPeer._native_ptr(), _method_get_state_711068532_name._native_ptr(), 711068532)
-        assert(ENetPacketPeer._method_get_state_711068532 != nil)
-        let _method_get_channels_3905245786_name = StringName(from: "get_channels")
-        self._method_get_channels_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetPacketPeer._native_ptr(), _method_get_channels_3905245786_name._native_ptr(), 3905245786)
-        assert(ENetPacketPeer._method_get_channels_3905245786 != nil)
-        let _method_is_active_36873697_name = StringName(from: "is_active")
-        self._method_is_active_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_ENetPacketPeer._native_ptr(), _method_is_active_36873697_name._native_ptr(), 36873697)
-        assert(ENetPacketPeer._method_is_active_36873697 != nil)
+        self._method_peer_disconnect_1995695955 = StringName(from: "peer_disconnect")
+        assert(self._method_peer_disconnect_1995695955 != nil)
+        self._method_peer_disconnect_later_1995695955 = StringName(from: "peer_disconnect_later")
+        assert(self._method_peer_disconnect_later_1995695955 != nil)
+        self._method_peer_disconnect_now_1995695955 = StringName(from: "peer_disconnect_now")
+        assert(self._method_peer_disconnect_now_1995695955 != nil)
+        self._method_ping_3218959716 = StringName(from: "ping")
+        assert(self._method_ping_3218959716 != nil)
+        self._method_ping_interval_1286410249 = StringName(from: "ping_interval")
+        assert(self._method_ping_interval_1286410249 != nil)
+        self._method_reset_3218959716 = StringName(from: "reset")
+        assert(self._method_reset_3218959716 != nil)
+        self._method_send_120522849 = StringName(from: "send")
+        assert(self._method_send_120522849 != nil)
+        self._method_throttle_configure_1649997291 = StringName(from: "throttle_configure")
+        assert(self._method_throttle_configure_1649997291 != nil)
+        self._method_set_timeout_1649997291 = StringName(from: "set_timeout")
+        assert(self._method_set_timeout_1649997291 != nil)
+        self._method_get_remote_address_201670096 = StringName(from: "get_remote_address")
+        assert(self._method_get_remote_address_201670096 != nil)
+        self._method_get_remote_port_3905245786 = StringName(from: "get_remote_port")
+        assert(self._method_get_remote_port_3905245786 != nil)
+        self._method_get_statistic_1642578323 = StringName(from: "get_statistic")
+        assert(self._method_get_statistic_1642578323 != nil)
+        self._method_get_state_711068532 = StringName(from: "get_state")
+        assert(self._method_get_state_711068532 != nil)
+        self._method_get_channels_3905245786 = StringName(from: "get_channels")
+        assert(self._method_get_channels_3905245786 != nil)
+        self._method_is_active_36873697 = StringName(from: "is_active")
+        assert(self._method_is_active_36873697 != nil)
     }
 
     public func peer_disconnect(data: Int64)  {
@@ -117,8 +103,13 @@ open class ENetPacketPeer : PacketPeer {
                 .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_peer_disconnect_1995695955,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_peer_disconnect_1995695955._native_ptr(),
+                    1995695955)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -133,8 +124,13 @@ open class ENetPacketPeer : PacketPeer {
                 .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_peer_disconnect_later_1995695955,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_peer_disconnect_later_1995695955._native_ptr(),
+                    1995695955)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -149,8 +145,13 @@ open class ENetPacketPeer : PacketPeer {
                 .init(data_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_peer_disconnect_now_1995695955,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_peer_disconnect_now_1995695955._native_ptr(),
+                    1995695955)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -164,8 +165,13 @@ open class ENetPacketPeer : PacketPeer {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_ping_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_ping_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -179,8 +185,13 @@ open class ENetPacketPeer : PacketPeer {
                 .init(ping_interval_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_ping_interval_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_ping_interval_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -194,8 +205,13 @@ open class ENetPacketPeer : PacketPeer {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_reset_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_reset_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -212,8 +228,13 @@ open class ENetPacketPeer : PacketPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_send_120522849,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_send_120522849._native_ptr(),
+                    120522849)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -232,8 +253,13 @@ open class ENetPacketPeer : PacketPeer {
                 .init(interval_native), .init(acceleration_native), .init(deceleration_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_throttle_configure_1649997291,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_throttle_configure_1649997291._native_ptr(),
+                    1649997291)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -252,8 +278,13 @@ open class ENetPacketPeer : PacketPeer {
                 .init(timeout_native), .init(timeout_min_native), .init(timeout_max_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_timeout_1649997291,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_timeout_1649997291._native_ptr(),
+                    1649997291)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -270,8 +301,13 @@ open class ENetPacketPeer : PacketPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_remote_address_201670096,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_remote_address_201670096._native_ptr(),
+                    201670096)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -287,8 +323,13 @@ open class ENetPacketPeer : PacketPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_remote_port_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_remote_port_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -305,8 +346,13 @@ open class ENetPacketPeer : PacketPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_statistic_1642578323,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_statistic_1642578323._native_ptr(),
+                    1642578323)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -322,8 +368,13 @@ open class ENetPacketPeer : PacketPeer {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_state_711068532,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_state_711068532._native_ptr(),
+                    711068532)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -339,8 +390,13 @@ open class ENetPacketPeer : PacketPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_channels_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_channels_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -356,8 +412,13 @@ open class ENetPacketPeer : PacketPeer {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_active_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_active_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

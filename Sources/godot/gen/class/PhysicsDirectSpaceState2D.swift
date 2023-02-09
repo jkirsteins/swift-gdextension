@@ -11,39 +11,34 @@ open class PhysicsDirectSpaceState2D : Object {
 
     public override class var __godot_name: StringName { __godot_name_PhysicsDirectSpaceState2D }
 
-    static var _method_intersect_point_3278207904: GDExtensionMethodBindPtr! = nil
-    static var _method_intersect_ray_1590275562: GDExtensionMethodBindPtr! = nil
-    static var _method_intersect_shape_3803848594: GDExtensionMethodBindPtr! = nil
-    static var _method_cast_motion_711275086: GDExtensionMethodBindPtr! = nil
-    static var _method_collide_shape_3803848594: GDExtensionMethodBindPtr! = nil
-    static var _method_get_rest_info_2803666496: GDExtensionMethodBindPtr! = nil
+    static var _method_intersect_point_3278207904: StringName! = nil
+    static var _method_intersect_ray_1590275562: StringName! = nil
+    static var _method_intersect_shape_3803848594: StringName! = nil
+    static var _method_cast_motion_711275086: StringName! = nil
+    static var _method_collide_shape_3803848594: StringName! = nil
+    static var _method_get_rest_info_2803666496: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_PhysicsDirectSpaceState2D == nil)
         __godot_name_PhysicsDirectSpaceState2D = StringName(from: "PhysicsDirectSpaceState2D")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_intersect_point_3278207904_name = StringName(from: "intersect_point")
-        self._method_intersect_point_3278207904 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectSpaceState2D._native_ptr(), _method_intersect_point_3278207904_name._native_ptr(), 3278207904)
-        assert(PhysicsDirectSpaceState2D._method_intersect_point_3278207904 != nil)
-        let _method_intersect_ray_1590275562_name = StringName(from: "intersect_ray")
-        self._method_intersect_ray_1590275562 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectSpaceState2D._native_ptr(), _method_intersect_ray_1590275562_name._native_ptr(), 1590275562)
-        assert(PhysicsDirectSpaceState2D._method_intersect_ray_1590275562 != nil)
-        let _method_intersect_shape_3803848594_name = StringName(from: "intersect_shape")
-        self._method_intersect_shape_3803848594 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectSpaceState2D._native_ptr(), _method_intersect_shape_3803848594_name._native_ptr(), 3803848594)
-        assert(PhysicsDirectSpaceState2D._method_intersect_shape_3803848594 != nil)
-        let _method_cast_motion_711275086_name = StringName(from: "cast_motion")
-        self._method_cast_motion_711275086 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectSpaceState2D._native_ptr(), _method_cast_motion_711275086_name._native_ptr(), 711275086)
-        assert(PhysicsDirectSpaceState2D._method_cast_motion_711275086 != nil)
-        let _method_collide_shape_3803848594_name = StringName(from: "collide_shape")
-        self._method_collide_shape_3803848594 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectSpaceState2D._native_ptr(), _method_collide_shape_3803848594_name._native_ptr(), 3803848594)
-        assert(PhysicsDirectSpaceState2D._method_collide_shape_3803848594 != nil)
-        let _method_get_rest_info_2803666496_name = StringName(from: "get_rest_info")
-        self._method_get_rest_info_2803666496 = self.interface.pointee.classdb_get_method_bind(__godot_name_PhysicsDirectSpaceState2D._native_ptr(), _method_get_rest_info_2803666496_name._native_ptr(), 2803666496)
-        assert(PhysicsDirectSpaceState2D._method_get_rest_info_2803666496 != nil)
+        self._method_intersect_point_3278207904 = StringName(from: "intersect_point")
+        assert(self._method_intersect_point_3278207904 != nil)
+        self._method_intersect_ray_1590275562 = StringName(from: "intersect_ray")
+        assert(self._method_intersect_ray_1590275562 != nil)
+        self._method_intersect_shape_3803848594 = StringName(from: "intersect_shape")
+        assert(self._method_intersect_shape_3803848594 != nil)
+        self._method_cast_motion_711275086 = StringName(from: "cast_motion")
+        assert(self._method_cast_motion_711275086 != nil)
+        self._method_collide_shape_3803848594 = StringName(from: "collide_shape")
+        assert(self._method_collide_shape_3803848594 != nil)
+        self._method_get_rest_info_2803666496 = StringName(from: "get_rest_info")
+        assert(self._method_get_rest_info_2803666496 != nil)
     }
 
     public func intersect_point(parameters: PhysicsPointQueryParameters2D, max_results: Int64) -> [Dictionary] {
@@ -56,8 +51,13 @@ open class PhysicsDirectSpaceState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_intersect_point_3278207904,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_intersect_point_3278207904._native_ptr(),
+                    3278207904)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -74,8 +74,13 @@ open class PhysicsDirectSpaceState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_intersect_ray_1590275562,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_intersect_ray_1590275562._native_ptr(),
+                    1590275562)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -92,8 +97,13 @@ open class PhysicsDirectSpaceState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_intersect_shape_3803848594,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_intersect_shape_3803848594._native_ptr(),
+                    3803848594)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -110,8 +120,13 @@ open class PhysicsDirectSpaceState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_cast_motion_711275086,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_cast_motion_711275086._native_ptr(),
+                    711275086)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -128,8 +143,13 @@ open class PhysicsDirectSpaceState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_collide_shape_3803848594,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_collide_shape_3803848594._native_ptr(),
+                    3803848594)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -146,8 +166,13 @@ open class PhysicsDirectSpaceState2D : Object {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_rest_info_2803666496,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_rest_info_2803666496._native_ptr(),
+                    2803666496)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

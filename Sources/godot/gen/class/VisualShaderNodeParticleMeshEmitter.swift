@@ -11,39 +11,34 @@ open class VisualShaderNodeParticleMeshEmitter : VisualShaderNodeParticleEmitter
 
     public override class var __godot_name: StringName { __godot_name_VisualShaderNodeParticleMeshEmitter }
 
-    static var _method_set_mesh_194775623: GDExtensionMethodBindPtr! = nil
-    static var _method_get_mesh_1808005922: GDExtensionMethodBindPtr! = nil
-    static var _method_set_use_all_surfaces_2586408642: GDExtensionMethodBindPtr! = nil
-    static var _method_is_use_all_surfaces_36873697: GDExtensionMethodBindPtr! = nil
-    static var _method_set_surface_index_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_get_surface_index_3905245786: GDExtensionMethodBindPtr! = nil
+    static var _method_set_mesh_194775623: StringName! = nil
+    static var _method_get_mesh_1808005922: StringName! = nil
+    static var _method_set_use_all_surfaces_2586408642: StringName! = nil
+    static var _method_is_use_all_surfaces_36873697: StringName! = nil
+    static var _method_set_surface_index_1286410249: StringName! = nil
+    static var _method_get_surface_index_3905245786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_VisualShaderNodeParticleMeshEmitter == nil)
         __godot_name_VisualShaderNodeParticleMeshEmitter = StringName(from: "VisualShaderNodeParticleMeshEmitter")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_set_mesh_194775623_name = StringName(from: "set_mesh")
-        self._method_set_mesh_194775623 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParticleMeshEmitter._native_ptr(), _method_set_mesh_194775623_name._native_ptr(), 194775623)
-        assert(VisualShaderNodeParticleMeshEmitter._method_set_mesh_194775623 != nil)
-        let _method_get_mesh_1808005922_name = StringName(from: "get_mesh")
-        self._method_get_mesh_1808005922 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParticleMeshEmitter._native_ptr(), _method_get_mesh_1808005922_name._native_ptr(), 1808005922)
-        assert(VisualShaderNodeParticleMeshEmitter._method_get_mesh_1808005922 != nil)
-        let _method_set_use_all_surfaces_2586408642_name = StringName(from: "set_use_all_surfaces")
-        self._method_set_use_all_surfaces_2586408642 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParticleMeshEmitter._native_ptr(), _method_set_use_all_surfaces_2586408642_name._native_ptr(), 2586408642)
-        assert(VisualShaderNodeParticleMeshEmitter._method_set_use_all_surfaces_2586408642 != nil)
-        let _method_is_use_all_surfaces_36873697_name = StringName(from: "is_use_all_surfaces")
-        self._method_is_use_all_surfaces_36873697 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParticleMeshEmitter._native_ptr(), _method_is_use_all_surfaces_36873697_name._native_ptr(), 36873697)
-        assert(VisualShaderNodeParticleMeshEmitter._method_is_use_all_surfaces_36873697 != nil)
-        let _method_set_surface_index_1286410249_name = StringName(from: "set_surface_index")
-        self._method_set_surface_index_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParticleMeshEmitter._native_ptr(), _method_set_surface_index_1286410249_name._native_ptr(), 1286410249)
-        assert(VisualShaderNodeParticleMeshEmitter._method_set_surface_index_1286410249 != nil)
-        let _method_get_surface_index_3905245786_name = StringName(from: "get_surface_index")
-        self._method_get_surface_index_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_VisualShaderNodeParticleMeshEmitter._native_ptr(), _method_get_surface_index_3905245786_name._native_ptr(), 3905245786)
-        assert(VisualShaderNodeParticleMeshEmitter._method_get_surface_index_3905245786 != nil)
+        self._method_set_mesh_194775623 = StringName(from: "set_mesh")
+        assert(self._method_set_mesh_194775623 != nil)
+        self._method_get_mesh_1808005922 = StringName(from: "get_mesh")
+        assert(self._method_get_mesh_1808005922 != nil)
+        self._method_set_use_all_surfaces_2586408642 = StringName(from: "set_use_all_surfaces")
+        assert(self._method_set_use_all_surfaces_2586408642 != nil)
+        self._method_is_use_all_surfaces_36873697 = StringName(from: "is_use_all_surfaces")
+        assert(self._method_is_use_all_surfaces_36873697 != nil)
+        self._method_set_surface_index_1286410249 = StringName(from: "set_surface_index")
+        assert(self._method_set_surface_index_1286410249 != nil)
+        self._method_get_surface_index_3905245786 = StringName(from: "get_surface_index")
+        assert(self._method_get_surface_index_3905245786 != nil)
     }
 
     public func set_mesh(mesh: Mesh)  {
@@ -54,8 +49,13 @@ open class VisualShaderNodeParticleMeshEmitter : VisualShaderNodeParticleEmitter
                 .init(mesh_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_mesh_194775623,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_mesh_194775623._native_ptr(),
+                    194775623)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -69,8 +69,13 @@ open class VisualShaderNodeParticleMeshEmitter : VisualShaderNodeParticleEmitter
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_mesh_1808005922,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_mesh_1808005922._native_ptr(),
+                    1808005922)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -85,8 +90,13 @@ open class VisualShaderNodeParticleMeshEmitter : VisualShaderNodeParticleEmitter
                 .init(enabled_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_use_all_surfaces_2586408642,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_use_all_surfaces_2586408642._native_ptr(),
+                    2586408642)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -102,8 +112,13 @@ open class VisualShaderNodeParticleMeshEmitter : VisualShaderNodeParticleEmitter
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_is_use_all_surfaces_36873697,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_is_use_all_surfaces_36873697._native_ptr(),
+                    36873697)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -118,8 +133,13 @@ open class VisualShaderNodeParticleMeshEmitter : VisualShaderNodeParticleEmitter
                 .init(surface_index_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_surface_index_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_surface_index_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -135,8 +155,13 @@ open class VisualShaderNodeParticleMeshEmitter : VisualShaderNodeParticleEmitter
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_surface_index_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_surface_index_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr

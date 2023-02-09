@@ -187,13 +187,14 @@ open class EditorTranslationParserPlugin : RefCounted {
 
     public override class var __godot_name: StringName { __godot_name_EditorTranslationParserPlugin }
 
-    static var _method__parse_file_0: GDExtensionMethodBindPtr! = nil
-    static var _method__get_recognized_extensions_0: GDExtensionMethodBindPtr! = nil
+    static var _method__parse_file_0: StringName! = nil
+    static var _method__get_recognized_extensions_0: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == GDEXTENSION_INITIALIZATION_EDITOR else { return }
 
+        assert(__godot_name_EditorTranslationParserPlugin == nil)
         __godot_name_EditorTranslationParserPlugin = StringName(from: "EditorTranslationParserPlugin")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
@@ -211,12 +212,7 @@ open class EditorTranslationParserPlugin : RefCounted {
                 .init(path_native), .init(msgids_native), .init(msgids_context_plural_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__parse_file_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    nil
-                )
+            fatalError("Not implemented: virtual default results")
     }
     public func _get_recognized_extensions() -> PackedStringArray {
         let args: UnsafeMutableBufferPointer<GDExtensionConstTypePtr?> = .allocate(capacity: 0)
@@ -226,12 +222,7 @@ open class EditorTranslationParserPlugin : RefCounted {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method__get_recognized_extensions_0,
-                    self._native_ptr(),
-                    args.baseAddress!,
-                    __resPtr
-                )
+            fatalError("Not implemented: virtual default results")
             return PackedStringArray(godot: __resPtr.pointee)
     }
 }

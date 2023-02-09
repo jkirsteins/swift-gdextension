@@ -11,103 +11,82 @@ open class MeshLibrary : Resource {
 
     public override class var __godot_name: StringName { __godot_name_MeshLibrary }
 
-    static var _method_create_item_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_name_501894301: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_mesh_969122797: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_mesh_transform_3616898986: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_navigation_mesh_3483353960: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_navigation_mesh_transform_3616898986: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_navigation_layers_3937882851: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_shapes_537221740: GDExtensionMethodBindPtr! = nil
-    static var _method_set_item_preview_666127730: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_name_844755477: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_mesh_1576363275: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_mesh_transform_1965739696: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_navigation_mesh_2729647406: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_navigation_mesh_transform_1965739696: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_navigation_layers_923996154: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_shapes_663333327: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_preview_3536238170: GDExtensionMethodBindPtr! = nil
-    static var _method_remove_item_1286410249: GDExtensionMethodBindPtr! = nil
-    static var _method_find_item_by_name_1321353865: GDExtensionMethodBindPtr! = nil
-    static var _method_clear_3218959716: GDExtensionMethodBindPtr! = nil
-    static var _method_get_item_list_1930428628: GDExtensionMethodBindPtr! = nil
-    static var _method_get_last_unused_item_id_3905245786: GDExtensionMethodBindPtr! = nil
+    static var _method_create_item_1286410249: StringName! = nil
+    static var _method_set_item_name_501894301: StringName! = nil
+    static var _method_set_item_mesh_969122797: StringName! = nil
+    static var _method_set_item_mesh_transform_3616898986: StringName! = nil
+    static var _method_set_item_navigation_mesh_3483353960: StringName! = nil
+    static var _method_set_item_navigation_mesh_transform_3616898986: StringName! = nil
+    static var _method_set_item_navigation_layers_3937882851: StringName! = nil
+    static var _method_set_item_shapes_537221740: StringName! = nil
+    static var _method_set_item_preview_666127730: StringName! = nil
+    static var _method_get_item_name_844755477: StringName! = nil
+    static var _method_get_item_mesh_1576363275: StringName! = nil
+    static var _method_get_item_mesh_transform_1965739696: StringName! = nil
+    static var _method_get_item_navigation_mesh_2729647406: StringName! = nil
+    static var _method_get_item_navigation_mesh_transform_1965739696: StringName! = nil
+    static var _method_get_item_navigation_layers_923996154: StringName! = nil
+    static var _method_get_item_shapes_663333327: StringName! = nil
+    static var _method_get_item_preview_3536238170: StringName! = nil
+    static var _method_remove_item_1286410249: StringName! = nil
+    static var _method_find_item_by_name_1321353865: StringName! = nil
+    static var _method_clear_3218959716: StringName! = nil
+    static var _method_get_item_list_1930428628: StringName! = nil
+    static var _method_get_last_unused_item_id_3905245786: StringName! = nil
     
     public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
         
-        guard p_level == GDEXTENSION_INITIALIZATION_CORE else { return }
+        guard p_level == GDEXTENSION_INITIALIZATION_SCENE else { return }
 
+        assert(__godot_name_MeshLibrary == nil)
         __godot_name_MeshLibrary = StringName(from: "MeshLibrary")
         Self.interface = ginit.p_interface
         Self.library = ginit.p_library
 
-        let _method_create_item_1286410249_name = StringName(from: "create_item")
-        self._method_create_item_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_create_item_1286410249_name._native_ptr(), 1286410249)
-        assert(MeshLibrary._method_create_item_1286410249 != nil)
-        let _method_set_item_name_501894301_name = StringName(from: "set_item_name")
-        self._method_set_item_name_501894301 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_set_item_name_501894301_name._native_ptr(), 501894301)
-        assert(MeshLibrary._method_set_item_name_501894301 != nil)
-        let _method_set_item_mesh_969122797_name = StringName(from: "set_item_mesh")
-        self._method_set_item_mesh_969122797 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_set_item_mesh_969122797_name._native_ptr(), 969122797)
-        assert(MeshLibrary._method_set_item_mesh_969122797 != nil)
-        let _method_set_item_mesh_transform_3616898986_name = StringName(from: "set_item_mesh_transform")
-        self._method_set_item_mesh_transform_3616898986 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_set_item_mesh_transform_3616898986_name._native_ptr(), 3616898986)
-        assert(MeshLibrary._method_set_item_mesh_transform_3616898986 != nil)
-        let _method_set_item_navigation_mesh_3483353960_name = StringName(from: "set_item_navigation_mesh")
-        self._method_set_item_navigation_mesh_3483353960 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_set_item_navigation_mesh_3483353960_name._native_ptr(), 3483353960)
-        assert(MeshLibrary._method_set_item_navigation_mesh_3483353960 != nil)
-        let _method_set_item_navigation_mesh_transform_3616898986_name = StringName(from: "set_item_navigation_mesh_transform")
-        self._method_set_item_navigation_mesh_transform_3616898986 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_set_item_navigation_mesh_transform_3616898986_name._native_ptr(), 3616898986)
-        assert(MeshLibrary._method_set_item_navigation_mesh_transform_3616898986 != nil)
-        let _method_set_item_navigation_layers_3937882851_name = StringName(from: "set_item_navigation_layers")
-        self._method_set_item_navigation_layers_3937882851 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_set_item_navigation_layers_3937882851_name._native_ptr(), 3937882851)
-        assert(MeshLibrary._method_set_item_navigation_layers_3937882851 != nil)
-        let _method_set_item_shapes_537221740_name = StringName(from: "set_item_shapes")
-        self._method_set_item_shapes_537221740 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_set_item_shapes_537221740_name._native_ptr(), 537221740)
-        assert(MeshLibrary._method_set_item_shapes_537221740 != nil)
-        let _method_set_item_preview_666127730_name = StringName(from: "set_item_preview")
-        self._method_set_item_preview_666127730 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_set_item_preview_666127730_name._native_ptr(), 666127730)
-        assert(MeshLibrary._method_set_item_preview_666127730 != nil)
-        let _method_get_item_name_844755477_name = StringName(from: "get_item_name")
-        self._method_get_item_name_844755477 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_get_item_name_844755477_name._native_ptr(), 844755477)
-        assert(MeshLibrary._method_get_item_name_844755477 != nil)
-        let _method_get_item_mesh_1576363275_name = StringName(from: "get_item_mesh")
-        self._method_get_item_mesh_1576363275 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_get_item_mesh_1576363275_name._native_ptr(), 1576363275)
-        assert(MeshLibrary._method_get_item_mesh_1576363275 != nil)
-        let _method_get_item_mesh_transform_1965739696_name = StringName(from: "get_item_mesh_transform")
-        self._method_get_item_mesh_transform_1965739696 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_get_item_mesh_transform_1965739696_name._native_ptr(), 1965739696)
-        assert(MeshLibrary._method_get_item_mesh_transform_1965739696 != nil)
-        let _method_get_item_navigation_mesh_2729647406_name = StringName(from: "get_item_navigation_mesh")
-        self._method_get_item_navigation_mesh_2729647406 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_get_item_navigation_mesh_2729647406_name._native_ptr(), 2729647406)
-        assert(MeshLibrary._method_get_item_navigation_mesh_2729647406 != nil)
-        let _method_get_item_navigation_mesh_transform_1965739696_name = StringName(from: "get_item_navigation_mesh_transform")
-        self._method_get_item_navigation_mesh_transform_1965739696 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_get_item_navigation_mesh_transform_1965739696_name._native_ptr(), 1965739696)
-        assert(MeshLibrary._method_get_item_navigation_mesh_transform_1965739696 != nil)
-        let _method_get_item_navigation_layers_923996154_name = StringName(from: "get_item_navigation_layers")
-        self._method_get_item_navigation_layers_923996154 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_get_item_navigation_layers_923996154_name._native_ptr(), 923996154)
-        assert(MeshLibrary._method_get_item_navigation_layers_923996154 != nil)
-        let _method_get_item_shapes_663333327_name = StringName(from: "get_item_shapes")
-        self._method_get_item_shapes_663333327 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_get_item_shapes_663333327_name._native_ptr(), 663333327)
-        assert(MeshLibrary._method_get_item_shapes_663333327 != nil)
-        let _method_get_item_preview_3536238170_name = StringName(from: "get_item_preview")
-        self._method_get_item_preview_3536238170 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_get_item_preview_3536238170_name._native_ptr(), 3536238170)
-        assert(MeshLibrary._method_get_item_preview_3536238170 != nil)
-        let _method_remove_item_1286410249_name = StringName(from: "remove_item")
-        self._method_remove_item_1286410249 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_remove_item_1286410249_name._native_ptr(), 1286410249)
-        assert(MeshLibrary._method_remove_item_1286410249 != nil)
-        let _method_find_item_by_name_1321353865_name = StringName(from: "find_item_by_name")
-        self._method_find_item_by_name_1321353865 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_find_item_by_name_1321353865_name._native_ptr(), 1321353865)
-        assert(MeshLibrary._method_find_item_by_name_1321353865 != nil)
-        let _method_clear_3218959716_name = StringName(from: "clear")
-        self._method_clear_3218959716 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_clear_3218959716_name._native_ptr(), 3218959716)
-        assert(MeshLibrary._method_clear_3218959716 != nil)
-        let _method_get_item_list_1930428628_name = StringName(from: "get_item_list")
-        self._method_get_item_list_1930428628 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_get_item_list_1930428628_name._native_ptr(), 1930428628)
-        assert(MeshLibrary._method_get_item_list_1930428628 != nil)
-        let _method_get_last_unused_item_id_3905245786_name = StringName(from: "get_last_unused_item_id")
-        self._method_get_last_unused_item_id_3905245786 = self.interface.pointee.classdb_get_method_bind(__godot_name_MeshLibrary._native_ptr(), _method_get_last_unused_item_id_3905245786_name._native_ptr(), 3905245786)
-        assert(MeshLibrary._method_get_last_unused_item_id_3905245786 != nil)
+        self._method_create_item_1286410249 = StringName(from: "create_item")
+        assert(self._method_create_item_1286410249 != nil)
+        self._method_set_item_name_501894301 = StringName(from: "set_item_name")
+        assert(self._method_set_item_name_501894301 != nil)
+        self._method_set_item_mesh_969122797 = StringName(from: "set_item_mesh")
+        assert(self._method_set_item_mesh_969122797 != nil)
+        self._method_set_item_mesh_transform_3616898986 = StringName(from: "set_item_mesh_transform")
+        assert(self._method_set_item_mesh_transform_3616898986 != nil)
+        self._method_set_item_navigation_mesh_3483353960 = StringName(from: "set_item_navigation_mesh")
+        assert(self._method_set_item_navigation_mesh_3483353960 != nil)
+        self._method_set_item_navigation_mesh_transform_3616898986 = StringName(from: "set_item_navigation_mesh_transform")
+        assert(self._method_set_item_navigation_mesh_transform_3616898986 != nil)
+        self._method_set_item_navigation_layers_3937882851 = StringName(from: "set_item_navigation_layers")
+        assert(self._method_set_item_navigation_layers_3937882851 != nil)
+        self._method_set_item_shapes_537221740 = StringName(from: "set_item_shapes")
+        assert(self._method_set_item_shapes_537221740 != nil)
+        self._method_set_item_preview_666127730 = StringName(from: "set_item_preview")
+        assert(self._method_set_item_preview_666127730 != nil)
+        self._method_get_item_name_844755477 = StringName(from: "get_item_name")
+        assert(self._method_get_item_name_844755477 != nil)
+        self._method_get_item_mesh_1576363275 = StringName(from: "get_item_mesh")
+        assert(self._method_get_item_mesh_1576363275 != nil)
+        self._method_get_item_mesh_transform_1965739696 = StringName(from: "get_item_mesh_transform")
+        assert(self._method_get_item_mesh_transform_1965739696 != nil)
+        self._method_get_item_navigation_mesh_2729647406 = StringName(from: "get_item_navigation_mesh")
+        assert(self._method_get_item_navigation_mesh_2729647406 != nil)
+        self._method_get_item_navigation_mesh_transform_1965739696 = StringName(from: "get_item_navigation_mesh_transform")
+        assert(self._method_get_item_navigation_mesh_transform_1965739696 != nil)
+        self._method_get_item_navigation_layers_923996154 = StringName(from: "get_item_navigation_layers")
+        assert(self._method_get_item_navigation_layers_923996154 != nil)
+        self._method_get_item_shapes_663333327 = StringName(from: "get_item_shapes")
+        assert(self._method_get_item_shapes_663333327 != nil)
+        self._method_get_item_preview_3536238170 = StringName(from: "get_item_preview")
+        assert(self._method_get_item_preview_3536238170 != nil)
+        self._method_remove_item_1286410249 = StringName(from: "remove_item")
+        assert(self._method_remove_item_1286410249 != nil)
+        self._method_find_item_by_name_1321353865 = StringName(from: "find_item_by_name")
+        assert(self._method_find_item_by_name_1321353865 != nil)
+        self._method_clear_3218959716 = StringName(from: "clear")
+        assert(self._method_clear_3218959716 != nil)
+        self._method_get_item_list_1930428628 = StringName(from: "get_item_list")
+        assert(self._method_get_item_list_1930428628 != nil)
+        self._method_get_last_unused_item_id_3905245786 = StringName(from: "get_last_unused_item_id")
+        assert(self._method_get_last_unused_item_id_3905245786 != nil)
     }
 
     public func create_item(id: Int64)  {
@@ -118,8 +97,13 @@ open class MeshLibrary : Resource {
                 .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_create_item_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_create_item_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -135,8 +119,13 @@ open class MeshLibrary : Resource {
                 .init(id_native), .init(name_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_name_501894301,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_name_501894301._native_ptr(),
+                    501894301)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -152,8 +141,13 @@ open class MeshLibrary : Resource {
                 .init(id_native), .init(mesh_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_mesh_969122797,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_mesh_969122797._native_ptr(),
+                    969122797)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -169,8 +163,13 @@ open class MeshLibrary : Resource {
                 .init(id_native), .init(mesh_transform_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_mesh_transform_3616898986,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_mesh_transform_3616898986._native_ptr(),
+                    3616898986)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -186,8 +185,13 @@ open class MeshLibrary : Resource {
                 .init(id_native), .init(navigation_mesh_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_navigation_mesh_3483353960,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_navigation_mesh_3483353960._native_ptr(),
+                    3483353960)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -203,8 +207,13 @@ open class MeshLibrary : Resource {
                 .init(id_native), .init(navigation_mesh_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_navigation_mesh_transform_3616898986,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_navigation_mesh_transform_3616898986._native_ptr(),
+                    3616898986)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -220,8 +229,13 @@ open class MeshLibrary : Resource {
                 .init(id_native), .init(navigation_layers_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_navigation_layers_3937882851,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_navigation_layers_3937882851._native_ptr(),
+                    3937882851)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -238,8 +252,13 @@ open class MeshLibrary : Resource {
                 .init(id_native), .init(shapes_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_shapes_537221740,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_shapes_537221740._native_ptr(),
+                    537221740)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -255,8 +274,13 @@ open class MeshLibrary : Resource {
                 .init(id_native), .init(texture_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_set_item_preview_666127730,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_set_item_preview_666127730._native_ptr(),
+                    666127730)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -272,8 +296,13 @@ open class MeshLibrary : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_name_844755477,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_name_844755477._native_ptr(),
+                    844755477)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -290,8 +319,13 @@ open class MeshLibrary : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_mesh_1576363275,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_mesh_1576363275._native_ptr(),
+                    1576363275)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -308,8 +342,13 @@ open class MeshLibrary : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_mesh_transform_1965739696,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_mesh_transform_1965739696._native_ptr(),
+                    1965739696)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -326,8 +365,13 @@ open class MeshLibrary : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_navigation_mesh_2729647406,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_navigation_mesh_2729647406._native_ptr(),
+                    2729647406)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -344,8 +388,13 @@ open class MeshLibrary : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_navigation_mesh_transform_1965739696,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_navigation_mesh_transform_1965739696._native_ptr(),
+                    1965739696)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -363,8 +412,13 @@ open class MeshLibrary : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_navigation_layers_923996154,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_navigation_layers_923996154._native_ptr(),
+                    923996154)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -381,8 +435,13 @@ open class MeshLibrary : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_shapes_663333327,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_shapes_663333327._native_ptr(),
+                    663333327)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -399,8 +458,13 @@ open class MeshLibrary : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_preview_3536238170,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_preview_3536238170._native_ptr(),
+                    3536238170)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -416,8 +480,13 @@ open class MeshLibrary : Resource {
                 .init(id_native)
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_remove_item_1286410249,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_remove_item_1286410249._native_ptr(),
+                    1286410249)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -434,8 +503,13 @@ open class MeshLibrary : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_find_item_by_name_1321353865,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_find_item_by_name_1321353865._native_ptr(),
+                    1321353865)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -449,8 +523,13 @@ open class MeshLibrary : Resource {
                 
             ])
             // call here
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_clear_3218959716,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_clear_3218959716._native_ptr(),
+                    3218959716)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     nil
@@ -464,8 +543,13 @@ open class MeshLibrary : Resource {
             ])
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_item_list_1930428628,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_item_list_1930428628._native_ptr(),
+                    1930428628)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
@@ -481,8 +565,13 @@ open class MeshLibrary : Resource {
             // call here
             let __resPtr: UnsafeMutablePointer<UnsafeRawPointer> = .allocate(capacity: 1)
             defer { __resPtr.deallocate() }
-            self.interface.pointee.object_method_bind_ptrcall(
-                    Self._method_get_last_unused_item_id_3905245786,
+            let _mbinding = self.interface.pointee.classdb_get_method_bind(
+                    Self.__godot_name._native_ptr(),
+                    Self._method_get_last_unused_item_id_3905245786._native_ptr(),
+                    3905245786)
+                assert(_mbinding != nil)
+                self.interface.pointee.object_method_bind_ptrcall(
+                    _mbinding,
                     self._native_ptr(),
                     args.baseAddress!,
                     __resPtr
