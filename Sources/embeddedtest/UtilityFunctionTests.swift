@@ -13,3 +13,4 @@ final class UtilityFunctionTests: XCTestCase {
         XCTAssertEqual(Utility.wrapf(-0.2, 1, 2.5), 1.3)
     }
 }
+

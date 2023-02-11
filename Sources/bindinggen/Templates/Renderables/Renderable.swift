@@ -82,7 +82,7 @@ struct InstanceMethodRenderable : Renderable {
         // assumption is that non-builtins don't need generated constructors
         
         self.outer_template = """
-   public init(${argSignature}) {
+   ${initAccessModifier} init(${argSignature}) {
        self.opaque = .allocate(byteCount: ${builtinSize}, alignment: 4)
    
        ${body}
@@ -153,7 +153,7 @@ __function!(__resPtr, args.baseAddress!, ${argCount})
 """
     
     let invoke_binding_template__method__virtual = """
-fatalError("Not implemented: virtual default results")
+
 """
     
     let invoke_binding_template__init = """
@@ -161,6 +161,7 @@ Self.${methodBindingName}!(self._native_ptr(), .init(args.baseAddress!))
 """
     
     func render() -> String {
+        
         let rawArgs = (self.method.args ?? [])
         let argNames = rawArgs.map {
             ".init(\($0.pointerName))"
@@ -176,6 +177,38 @@ Self.${methodBindingName}!(self._native_ptr(), .init(args.baseAddress!))
         }
         
         let returnSignature = self.method.has_return ? "-> \(self.method.sanitized_return_type!.sanitizedType)" : ""
+        
+        // early ret for virtual
+        guard !method.is_virtual else {
+            
+            let virtualRet: String
+            var allowOptional = false
+            if let ret = method.sanitized_return_type?.sanitizedType {
+                // TODO: less hacky virtual results
+                if ret == "UnsafeMutableRawPointer" || ret.contains("Pointer<") {
+                    virtualRet = "\(ret)(bitPattern: 0) // hardcoded in InstanceMethodRenderable"
+                    allowOptional = true
+                } else {
+                    virtualRet = "\(ret)()"
+                }
+            } else {
+                virtualRet = ""
+            }
+            
+            let outerRenderer = TemplatedRenderable(
+                variables: [
+                    "body": virtualRet,
+                    "methodName": self.method.method_name ?? "<unused for constructors>",
+                    "argSignature": argSignature,
+                    "returnSignature": "\(returnSignature)\(allowOptional ? "!" : "")",
+                    "builtinSize": self.method.builtin_size
+                ],
+                template: outer_template,
+                indent: 0)
+            
+            return outerRenderer.render()
+        }
+        //
         
         let bindingCall: any Renderable
         if self.method.is_utility {
@@ -280,8 +313,12 @@ Self.${methodBindingName}!(self._native_ptr(), .init(args.baseAddress!))
                 "body": argsSurroundingCall,
                 "methodName": self.method.method_name ?? "<unused for constructors>",
                 "argSignature": argSignature,
+                
+                // builtin constructors with no params need to satisfy a protocol constraint, so we add "required"
+                "initAccessModifier": (method.args?.count ?? 0) > 0 && method.is_constructor ? "public" : "required public",
+                
                 "returnSignature": returnSignature,
-                "builtinSize": self.method.builtin_size ?? 0
+                "builtinSize": self.method.builtin_size
             ],
             template: outer_template,
             indent: 0)

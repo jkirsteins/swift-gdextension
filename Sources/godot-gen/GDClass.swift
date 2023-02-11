@@ -24,6 +24,8 @@ public extension GDClass {
 
 public protocol BuiltinClass : Class {
     static var SIZE: Int { get }
+    
+    init()
 }
 
 public protocol Class {

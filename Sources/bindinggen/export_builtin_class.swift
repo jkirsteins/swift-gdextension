@@ -229,7 +229,7 @@ public class Variant : BuiltinClass {
         __godot_name_Variant = StringName(from: "Variant")
     }
 
-    public init() {
+    required public init() {
         self.opaque = Self.interface.pointee.mem_alloc(Self.SIZE)!
     }
 

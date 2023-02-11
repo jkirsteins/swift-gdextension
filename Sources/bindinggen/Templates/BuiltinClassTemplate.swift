@@ -48,8 +48,6 @@ public class ${classNameWithParents} {
             return
         }
 
-        Self.interface.pointee.print_warning("TEST: called String destructor")
-
         destructor(self._native_ptr())
     }
 }

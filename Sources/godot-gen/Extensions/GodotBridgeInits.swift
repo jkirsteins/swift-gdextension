@@ -19,6 +19,10 @@ public extension RawRepresentable {
         let target: UnsafePointer<Int32> = .init(OpaquePointer(unsafePointer))
         self.init(rawValue: target.pointee)!
     }
+    
+    init() where RawValue == Int32 {
+        self.init(rawValue: Int32())!
+    }
 }
 
 public extension Int64 {

@@ -42,7 +42,7 @@ for builtin_class in decodedData.builtin_classes {
     }
     
     // allowlist
-    let allowAll = globalAllowAll || false
+    let allowAll = globalAllowAll || true
     guard allowAll || [
         "String"
     ].contains(builtin_class.name) else {
@@ -86,7 +86,8 @@ for godot_class in decodedData.classes {
     // allowlist
     let allowAll = globalAllowAll || false
     guard allowAll || [
-        "Node"
+        "AnimationNode",
+        "ScriptLanguageExtension"
 //        "InputEvent",
 //        "SceneTree",
 //        "Window",
