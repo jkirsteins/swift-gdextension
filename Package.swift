@@ -49,6 +49,9 @@ let package = Package(
         ),
         .target(
             name: "godot",
+            dependencies: ["godot-gen", "godot-native"]),
+        .target(
+            name: "godot-gen",
             dependencies: ["godot-native"]),
         .testTarget(
             name: "swiftlibTests",

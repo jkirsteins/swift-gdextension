@@ -30,7 +30,7 @@ struct ConfigurationSpecificType {
             "int": "Int64",
             "uint": "UInt64",
             
-            "String": "godot.String",
+            "String": "godot_gen.String",
             
             "uint8_t": "UInt8",
             "uint16_t": "UInt16",
@@ -291,14 +291,14 @@ open class ${classNameWithParents} {
 
     ${staticMethodBindingDecl}
     
-    public override class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+    public override class func initialize_class(_ p_interface: UnsafePointer<GDExtensionInterface>, _ p_library: GDExtensionClassLibraryPtr, _ p_level: GDExtensionInitializationLevel) {
         
         guard p_level == ${expectedInitLevel} else { return }
 
         assert(__godot_name_${className} == nil)
         __godot_name_${className} = StringName(from: "${className}")
-        Self.interface = ginit.p_interface
-        Self.library = ginit.p_library
+        Self.interface = p_interface
+        Self.library = p_library
 
         ${staticMethodBindingAssign_nonVirtual}
     }

@@ -57,6 +57,29 @@ for builtin_class in decodedData.builtin_classes {
         decodedData)
 }
 
+// TODO: refactor typealias gen
+//print("==> Typealiases")
+//var _tals = """
+//import godot_gen
+//
+//public typealias Wrapped = godot_gen.Wrapped
+//public typealias Utility = godot_gen.Utility
+//"""
+//for godot_builtin in decodedData.builtin_classes {
+//    _tals = "\(_tals)\npublic typealias \(godot_builtin.name) = godot_gen.\(godot_builtin.name)"
+//}
+//for godot_class in decodedData.classes {
+//    _tals = "\(_tals)\npublic typealias \(godot_class.name) = godot_gen.\(godot_class.name)"
+//}
+//for godot_st in decodedData.native_structures {
+//    _tals = "\(_tals)\npublic typealias \(godot_st.name) = godot_gen.\(godot_st.name)"
+//}
+//for godot_e in decodedData.global_enums {
+//    _tals = "\(_tals)\npublic typealias \(godot_e.name) = godot_gen.\(godot_e.name)"
+//}
+//_store(_tals, "module", "Typealiases")
+//exit(1)
+
 print("==> Classes")
 
 for godot_class in decodedData.classes {

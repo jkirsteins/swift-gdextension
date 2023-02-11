@@ -1,9 +1,0 @@
-/// MISSING GODOT DOCUMENTATION
-/// 
-/// 
-public enum HorizontalAlignment : Int32 {
-    case HORIZONTAL_ALIGNMENT_LEFT = 0
-    case HORIZONTAL_ALIGNMENT_CENTER = 1
-    case HORIZONTAL_ALIGNMENT_RIGHT = 2
-    case HORIZONTAL_ALIGNMENT_FILL = 3
-}

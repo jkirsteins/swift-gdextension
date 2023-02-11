@@ -1,9 +1,9 @@
 fileprivate let template = """
 import godot_native
 
-public func initialize_classes(_ builtin: Bool, _ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
+public func initialize_classes(_ builtin: Bool, _ p_interface: UnsafePointer<GDExtensionInterface>, _ p_library: GDExtensionClassLibraryPtr, _ p_level: GDExtensionInitializationLevel) {
     if (builtin) {
-        Wrapped.initialize_class(ginit, p_level)
+        Wrapped.initialize_class(p_interface, p_library, p_level)
         ${builtinInitCalls}
     } else {
         ${classInitCalls}
@@ -28,7 +28,7 @@ func export_module_initializers(
                 "name": $0.sanitizedType
             ],
             template: """
-${name}.initialize_class(ginit, p_level)
+${name}.initialize_class(p_interface, p_library, p_level)
 ${name}.initialize_godot_name()
 """,
             indent: 0
@@ -37,9 +37,9 @@ ${name}.initialize_godot_name()
     
     let builtinInits: [any Renderable] = [
         "// String and StringName first ...",
-        "godot.String.initialize_class(ginit, p_level)",
-        "StringName.initialize_class(ginit, p_level)",
-        "godot.String.initialize_godot_name()",
+        "godot_gen.String.initialize_class(p_interface, p_library, p_level)",
+        "StringName.initialize_class(p_interface, p_library, p_level)",
+        "godot_gen.String.initialize_godot_name()",
         "StringName.initialize_godot_name()",
         "// -- rest"
     ] + builtinInits_withoutStrings
@@ -48,7 +48,7 @@ ${name}.initialize_godot_name()
             variables: [
                 "name": ConfigurationSpecificType(config: sizes, type: $0.name).sanitizedType
             ],
-            template: "${name}.initialize_class(ginit, p_level)",
+            template: "${name}.initialize_class(p_interface, p_library, p_level)",
             indent: 0
         )
     }

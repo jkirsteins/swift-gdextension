@@ -222,9 +222,9 @@ public class Variant : BuiltinClass {
 
     public let opaque: UnsafeMutableRawPointer
     
-    public class func initialize_class(_ ginit: GodotInitializer, _ p_level: GDExtensionInitializationLevel) {
-        Self.interface = ginit.p_interface
-        Self.library = ginit.p_library
+    public class func initialize_class(_ p_interface: UnsafePointer<GDExtensionInterface>, _ p_library: GDExtensionClassLibraryPtr, _ p_level: GDExtensionInitializationLevel) {
+        Self.interface = p_interface
+        Self.library = p_library
 
         __godot_name_Variant = StringName(from: "Variant")
     }

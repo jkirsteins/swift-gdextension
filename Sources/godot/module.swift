@@ -1,4 +1,5 @@
 import godot_native
+import godot_gen
 
 var gInit: GodotInitializer? = nil
 
@@ -28,6 +29,10 @@ public class GodotInitializer {
     var sceneInitializers: [InitializerType] = []
     var sceneTerminators: [DeinitializerType] = []
     var userData: OpaquePointer?
+    
+    public func register<T>(`class`: T) {
+        
+    }
     
     fileprivate let global_deinitialize: DeinitializerType = {
         userdata, p_level in
@@ -62,13 +67,13 @@ public class GodotInitializer {
         
         let obj: GodotInitializer = Unmanaged.fromOpaque(userdata).takeUnretainedValue()
         
-        // initialize builtins asap
+        // initialize builtins asap 
         if p_level == GDEXTENSION_INITIALIZATION_CORE {
-            initialize_classes(true, obj, p_level)
+            godot_gen.initialize_classes(true, obj.p_interface, obj.p_library, p_level)
         }
         
         // initialize classes before user initializers
-        initialize_classes(false, obj, p_level)
+        godot_gen.initialize_classes(false, obj.p_interface, obj.p_library, p_level)
         
         if p_level == GDEXTENSION_INITIALIZATION_SCENE {
             // user initializers

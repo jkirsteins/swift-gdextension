@@ -1,11 +1,5 @@
-//
-//  File.swift
-//  
-//
-//  Created by Janis Kirsteins on 05/02/2023.
-//
-
 import Foundation
+import godot_gen
 
 class ClassInitializer {
     static func initialize<T: Class>(_: T.Type) {

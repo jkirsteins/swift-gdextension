@@ -1,9 +1,0 @@
-/// MISSING GODOT DOCUMENTATION
-/// 
-/// 
-public enum VerticalAlignment : Int32 {
-    case VERTICAL_ALIGNMENT_TOP = 0
-    case VERTICAL_ALIGNMENT_CENTER = 1
-    case VERTICAL_ALIGNMENT_BOTTOM = 2
-    case VERTICAL_ALIGNMENT_FILL = 3
-}
