@@ -4,6 +4,19 @@ import godot_native
 import XCTest
 
 
+class TestClass : GDCustomClass
+{
+    static var parentName: Swift.String { "Sprite2D" }
+    
+    func whoami() -> Swift.String {
+        "TestClass in embeddedtest"
+    }
+    
+    public required init() {
+        print("Default init")
+    }
+}
+
 let global_initialize: (@convention(c) (_ userdata: UnsafeMutableRawPointer?, _ p_level: GDExtensionInitializationLevel)->()) = {userdata,p_level in
 
     let x = godot.String(from: "Hello Godot")
@@ -45,6 +58,8 @@ func hello_extension_entry(
 
     initializer.register_scene_initializer(global_initialize)
     initializer.register_scene_terminator(global_deinitialize)
+    
+    initializer.register(TestClass.self)
 
     return initializer.initialize();
 }

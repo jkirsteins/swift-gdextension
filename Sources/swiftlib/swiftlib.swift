@@ -1,29 +1,29 @@
 import godot
 import godot_native
-
-class ClassUserMetadata {
-    let type: Any.Type
-    let memoryLayoutSize: Int
-    
-    let className: Swift.String
-    let parentName: Swift.String
-    
-    let gClassName: StringName
-    let gParentName: StringName
-    
-    let createInstance: ()->any GDClass
-    
-    init<T: GDClass>(type: T.Type) {
-        self.type = type
-        self.memoryLayoutSize = MemoryLayout<T>.size
-        self.className = "className"//T.className
-        self.parentName = "parentName"//T.classNameT.parentName
-        self.gClassName = StringName(from: "gClassName")//T.classNameT.gClassName
-        self.gParentName = StringName(from: "gParentName")//T.classNameT.gParentName
-        self.createInstance = { fatalError("nop") }
-        print("Creating meta for", self)
-    }
-}
+//
+//class ClassUserMetadata {
+//    let type: Any.Type
+//    let memoryLayoutSize: Int
+//    
+//    let className: Swift.String
+//    let parentName: Swift.String
+//    
+//    let gClassName: StringName
+//    let gParentName: StringName
+//    
+//    let createInstance: ()->any GDClass
+//    
+//    init<T: GDClass>(type: T.Type) {
+//        self.type = type
+//        self.memoryLayoutSize = MemoryLayout<T>.size
+//        self.className = "className"//T.className
+//        self.parentName = "parentName"//T.classNameT.parentName
+//        self.gClassName = StringName(from: "gClassName")//T.classNameT.gClassName
+//        self.gParentName = StringName(from: "gParentName")//T.classNameT.gParentName
+//        self.createInstance = { fatalError("nop") }
+//        print("Creating meta for", self)
+//    }
+//}
 
 let global_initialize: (@convention(c) (_ userdata: UnsafeMutableRawPointer?, _ p_level: GDExtensionInitializationLevel)->()) = {userdata,p_level in
     
