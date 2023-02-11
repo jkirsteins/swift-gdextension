@@ -51,7 +51,6 @@ public class GodotInitializer {
         } else {
             
         }
-        print("Deinitializing level... \(p_level)")
     }
 
     fileprivate let global_initialize: InitializerType = {
@@ -77,8 +76,6 @@ public class GodotInitializer {
                 i(userdata, p_level)
             }
         }
-        
-        print("Initializing level... \(p_level)")
     }
     
     public func register_scene_initializer(_ i: InitializerType) {

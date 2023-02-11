@@ -42,8 +42,15 @@ public class ${classNameWithParents} {
     ${initializers}
 
     deinit {
-        Self._destructor?(self._native_ptr())
-        opaque.deallocate()
+        defer { opaque.deallocate() }
+        guard let destructor = Self._destructor else {
+            Self.interface.pointee.print_error("Class \("\\")(Swift.String(describing: self)) does not have the expected destructor")
+            return
+        }
+
+        Self.interface.pointee.print_warning("TEST: called String destructor")
+
+        destructor(self._native_ptr())
     }
 }
 """

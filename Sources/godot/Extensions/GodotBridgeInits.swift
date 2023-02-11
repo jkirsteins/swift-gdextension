@@ -9,8 +9,8 @@ public extension UInt8 {
 
 public extension Float64 {
     init(godot unsafePointer: UnsafeRawPointer) {
-        let target: UnsafePointer<Float64> = .init(OpaquePointer(unsafePointer))
-        self = target.pointee
+//        let target: UnsafePointer<Float64> = .init(OpaquePointer(unsafePointer))
+        self = Self(bitPattern: UInt64(bitPattern: Int64(Int(bitPattern: unsafePointer))))
     }
 }
 
@@ -23,8 +23,8 @@ public extension RawRepresentable {
 
 public extension Int64 {
     init(godot unsafePointer: UnsafeRawPointer) {
-        let target: UnsafePointer<Int64> = .init(OpaquePointer(unsafePointer))
-        self = target.pointee
+//        let target: UnsafePointer<Int64> = .init(OpaquePointer(unsafePointer))
+        self = Self(Int(bitPattern: unsafePointer))
     }
 }
 

@@ -1,0 +1,6 @@
+[configuration]
+entry_symbol = "godot_extension_entry"
+
+[libraries]
+macos = "libembeddedtest.dylib"
+

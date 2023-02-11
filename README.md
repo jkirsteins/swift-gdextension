@@ -14,3 +14,12 @@ Being tested with Godot v4 beta 17
 
     ./Godot --dump-extension-api --dump-gdextension-interface
 
+## Tests
+
+    ./_etest.sh
+
+## TODO tracking
+
+- [ ] Remove local paths from test scripts
+- [ ] Investigate why deinit not called on builtin classes
+

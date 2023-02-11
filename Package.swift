@@ -15,6 +15,14 @@ let package = Package(
             type: .dynamic,
             targets: ["swiftlib"]),
         .executable(name: "bindinggen", targets: ["bindinggen"]),
+        .library(
+            name: "embeddedtest",
+            type: .dynamic,
+            targets: ["embeddedtest"]),
+        .library(
+            name: "embeddedtest2",
+            type: .dynamic,
+            targets: ["swiftlibTests"])
     ],
     dependencies: [
         .package(url: "https://github.com/CoreOffice/XMLCoder.git", .upToNextMajor(from: "0.9.0"))
@@ -35,6 +43,10 @@ let package = Package(
         .target(
             name: "swiftlib",
             dependencies: ["godot"]),
+        .target(
+            name: "embeddedtest",
+            dependencies: ["godot"]
+        ),
         .target(
             name: "godot",
             dependencies: ["godot-native"]),
