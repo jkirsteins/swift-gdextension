@@ -21,5 +21,5 @@ Being tested with Godot v4 beta 17
 ## TODO tracking
 
 - [ ] Remove local paths from test scripts
-- [ ] Investigate why deinit not called on builtin classes
+- [ ] Implement deinit cleanup (for e.g. StringName etc.)
 
